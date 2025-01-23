@@ -56,11 +56,12 @@ public final class ConsentConfig extends com.google.api.client.json.GenericJson 
   private ConsentHeaderHandling consentHeaderHandling;
 
   /**
-   * The versioned names of the enforced admin Consent resource(s), in the format `projects/{project
-   * _id}/locations/{location}/datasets/{dataset_id}/fhirStores/{fhir_store_id}/fhir/Consent/{resour
-   * ce_id}/_history/{version_id}`. For FHIR stores with `disable_resource_versioning=true`, the
-   * format is `projects/{project_id}/locations/{location}/datasets/{dataset_id}/fhirStores/{fhir_st
-   * ore_id}/fhir/Consent/{resource_id}`. This field can only be updated using ApplyAdminConsents.
+   * Output only. The versioned names of the enforced admin Consent resource(s), in the format `proj
+   * ects/{project_id}/locations/{location}/datasets/{dataset_id}/fhirStores/{fhir_store_id}/fhir/Co
+   * nsent/{resource_id}/_history/{version_id}`. For FHIR stores with
+   * `disable_resource_versioning=true`, the format is `projects/{project_id}/locations/{location}/d
+   * atasets/{dataset_id}/fhirStores/{fhir_store_id}/fhir/Consent/{resource_id}`. This field can
+   * only be updated using ApplyAdminConsents.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -135,11 +136,12 @@ public final class ConsentConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The versioned names of the enforced admin Consent resource(s), in the format `projects/{project
-   * _id}/locations/{location}/datasets/{dataset_id}/fhirStores/{fhir_store_id}/fhir/Consent/{resour
-   * ce_id}/_history/{version_id}`. For FHIR stores with `disable_resource_versioning=true`, the
-   * format is `projects/{project_id}/locations/{location}/datasets/{dataset_id}/fhirStores/{fhir_st
-   * ore_id}/fhir/Consent/{resource_id}`. This field can only be updated using ApplyAdminConsents.
+   * Output only. The versioned names of the enforced admin Consent resource(s), in the format `proj
+   * ects/{project_id}/locations/{location}/datasets/{dataset_id}/fhirStores/{fhir_store_id}/fhir/Co
+   * nsent/{resource_id}/_history/{version_id}`. For FHIR stores with
+   * `disable_resource_versioning=true`, the format is `projects/{project_id}/locations/{location}/d
+   * atasets/{dataset_id}/fhirStores/{fhir_store_id}/fhir/Consent/{resource_id}`. This field can
+   * only be updated using ApplyAdminConsents.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getEnforcedAdminConsents() {
@@ -147,11 +149,12 @@ public final class ConsentConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The versioned names of the enforced admin Consent resource(s), in the format `projects/{project
-   * _id}/locations/{location}/datasets/{dataset_id}/fhirStores/{fhir_store_id}/fhir/Consent/{resour
-   * ce_id}/_history/{version_id}`. For FHIR stores with `disable_resource_versioning=true`, the
-   * format is `projects/{project_id}/locations/{location}/datasets/{dataset_id}/fhirStores/{fhir_st
-   * ore_id}/fhir/Consent/{resource_id}`. This field can only be updated using ApplyAdminConsents.
+   * Output only. The versioned names of the enforced admin Consent resource(s), in the format `proj
+   * ects/{project_id}/locations/{location}/datasets/{dataset_id}/fhirStores/{fhir_store_id}/fhir/Co
+   * nsent/{resource_id}/_history/{version_id}`. For FHIR stores with
+   * `disable_resource_versioning=true`, the format is `projects/{project_id}/locations/{location}/d
+   * atasets/{dataset_id}/fhirStores/{fhir_store_id}/fhir/Consent/{resource_id}`. This field can
+   * only be updated using ApplyAdminConsents.
    * @param enforcedAdminConsents enforcedAdminConsents or {@code null} for none
    */
   public ConsentConfig setEnforcedAdminConsents(java.util.List<java.lang.String> enforcedAdminConsents) {

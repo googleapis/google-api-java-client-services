@@ -1923,16 +1923,16 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
         }
       }
       /**
-       * Gets a custom constraint. Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
-       * custom constraint does not exist.
+       * Gets a custom or managed constraint. Returns a `google.rpc.Status` with
+       * `google.rpc.Code.NOT_FOUND` if the custom or managed constraint does not exist.
        *
        * Create a request for the method "customConstraints.get".
        *
        * This request holds the parameters needed by the orgpolicy server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. Resource name of the custom constraint. See the custom constraint entry for naming
-       *        requirements.
+       * @param name Required. Resource name of the custom or managed constraint. See the custom constraint entry for
+       *        naming requirements.
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -1949,8 +1949,8 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^organizations/[^/]+/customConstraints/[^/]+$");
 
         /**
-         * Gets a custom constraint. Returns a `google.rpc.Status` with `google.rpc.Code.NOT_FOUND` if the
-         * custom constraint does not exist.
+         * Gets a custom or managed constraint. Returns a `google.rpc.Status` with
+         * `google.rpc.Code.NOT_FOUND` if the custom or managed constraint does not exist.
          *
          * Create a request for the method "customConstraints.get".
          *
@@ -1959,8 +1959,8 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Resource name of the custom constraint. See the custom constraint entry for naming
-       *        requirements.
+         * @param name Required. Resource name of the custom or managed constraint. See the custom constraint entry for
+       *        naming requirements.
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -2039,22 +2039,22 @@ public class OrgPolicyAPI extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * Required. Resource name of the custom constraint. See the custom constraint entry for
-         * naming requirements.
+         * Required. Resource name of the custom or managed constraint. See the custom constraint
+         * entry for naming requirements.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. Resource name of the custom constraint. See the custom constraint entry for naming
-       requirements.
+        /** Required. Resource name of the custom or managed constraint. See the custom constraint entry for
+       naming requirements.
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Required. Resource name of the custom constraint. See the custom constraint entry for
-         * naming requirements.
+         * Required. Resource name of the custom or managed constraint. See the custom constraint
+         * entry for naming requirements.
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {

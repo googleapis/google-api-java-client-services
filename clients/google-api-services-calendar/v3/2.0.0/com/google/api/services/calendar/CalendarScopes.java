@@ -26,11 +26,47 @@ public class CalendarScopes {
   /** See, edit, share, and permanently delete all the calendars you can access using Google Calendar. */
   public static final String CALENDAR = "https://www.googleapis.com/auth/calendar";
 
+  /** See and change the sharing permissions of Google calendars you own. */
+  public static final String CALENDAR_ACLS = "https://www.googleapis.com/auth/calendar.acls";
+
+  /** See the sharing permissions of Google calendars you own. */
+  public static final String CALENDAR_ACLS_READONLY = "https://www.googleapis.com/auth/calendar.acls.readonly";
+
+  /** Make secondary Google calendars, and see, create, change, and delete events on them. */
+  public static final String CALENDAR_APP_CREATED = "https://www.googleapis.com/auth/calendar.app.created";
+
+  /** See, add, and remove Google calendars you’re subscribed to. */
+  public static final String CALENDAR_CALENDARLIST = "https://www.googleapis.com/auth/calendar.calendarlist";
+
+  /** See the list of Google calendars you’re subscribed to. */
+  public static final String CALENDAR_CALENDARLIST_READONLY = "https://www.googleapis.com/auth/calendar.calendarlist.readonly";
+
+  /** See and change the properties of Google calendars you have access to, and create secondary calendars. */
+  public static final String CALENDAR_CALENDARS = "https://www.googleapis.com/auth/calendar.calendars";
+
+  /** See the title, description, default time zone, and other properties of Google calendars you have access to. */
+  public static final String CALENDAR_CALENDARS_READONLY = "https://www.googleapis.com/auth/calendar.calendars.readonly";
+
   /** View and edit events on all your calendars. */
   public static final String CALENDAR_EVENTS = "https://www.googleapis.com/auth/calendar.events";
 
+  /** See the availability on Google calendars you have access to. */
+  public static final String CALENDAR_EVENTS_FREEBUSY = "https://www.googleapis.com/auth/calendar.events.freebusy";
+
+  /** See, create, change, and delete events on Google calendars you own. */
+  public static final String CALENDAR_EVENTS_OWNED = "https://www.googleapis.com/auth/calendar.events.owned";
+
+  /** See the events on Google calendars you own. */
+  public static final String CALENDAR_EVENTS_OWNED_READONLY = "https://www.googleapis.com/auth/calendar.events.owned.readonly";
+
+  /** See the events on public calendars. */
+  public static final String CALENDAR_EVENTS_PUBLIC_READONLY = "https://www.googleapis.com/auth/calendar.events.public.readonly";
+
   /** View events on all your calendars. */
   public static final String CALENDAR_EVENTS_READONLY = "https://www.googleapis.com/auth/calendar.events.readonly";
+
+  /** View your availability in your calendars. */
+  public static final String CALENDAR_FREEBUSY = "https://www.googleapis.com/auth/calendar.freebusy";
 
   /** See and download any calendar you can access using your Google Calendar. */
   public static final String CALENDAR_READONLY = "https://www.googleapis.com/auth/calendar.readonly";
@@ -46,8 +82,20 @@ public class CalendarScopes {
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
     set.add(CALENDAR);
+    set.add(CALENDAR_ACLS);
+    set.add(CALENDAR_ACLS_READONLY);
+    set.add(CALENDAR_APP_CREATED);
+    set.add(CALENDAR_CALENDARLIST);
+    set.add(CALENDAR_CALENDARLIST_READONLY);
+    set.add(CALENDAR_CALENDARS);
+    set.add(CALENDAR_CALENDARS_READONLY);
     set.add(CALENDAR_EVENTS);
+    set.add(CALENDAR_EVENTS_FREEBUSY);
+    set.add(CALENDAR_EVENTS_OWNED);
+    set.add(CALENDAR_EVENTS_OWNED_READONLY);
+    set.add(CALENDAR_EVENTS_PUBLIC_READONLY);
     set.add(CALENDAR_EVENTS_READONLY);
+    set.add(CALENDAR_FREEBUSY);
     set.add(CALENDAR_READONLY);
     set.add(CALENDAR_SETTINGS_READONLY);
     return java.util.Collections.unmodifiableSet(set);

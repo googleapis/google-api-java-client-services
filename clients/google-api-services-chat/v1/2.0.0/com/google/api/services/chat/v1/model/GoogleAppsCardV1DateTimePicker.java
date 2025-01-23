@@ -24,7 +24,7 @@ package com.google.api.services.chat.v1.model;
  * time](https://developers.google.com/workspace/chat/design-interactive-card-
  * dialog#let_a_user_pick_a_date_and_time). Users can input text or use the picker to select dates
  * and times. If users input an invalid date or time, the picker shows an error that prompts users
- * to input the information correctly. [Google Workspace Add-ons and Chat
+ * to input the information correctly. [Google Workspace add-ons and Chat
  * apps](https://developers.google.com/workspace/extend):
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

@@ -21,7 +21,7 @@ package com.google.api.services.chat.v1.model;
  * icon in front of the text, a selection widget, or a button after the text. For an example in
  * Google Chat apps, see [Display text with decorative
  * text](https://developers.google.com/workspace/chat/add-text-image-card-
- * dialog#display_text_with_decorative_elements). [Google Workspace Add-ons and Chat
+ * dialog#display_text_with_decorative_elements). [Google Workspace add-ons and Chat
  * apps](https://developers.google.com/workspace/extend):
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -89,7 +89,7 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
    * Required. The primary text. Supports simple formatting. For more information about formatting
    * text, see [Formatting text in Google Chat
    * apps](https://developers.google.com/workspace/chat/format-messages#card-formatting) and
-   * [Formatting text in Google Workspace Add-ons](https://developers.google.com/apps-script/add-
+   * [Formatting text in Google Workspace add-ons](https://developers.google.com/apps-script/add-
    * ons/concepts/widgets#text_formatting).
    * The value may be {@code null}.
    */
@@ -238,7 +238,7 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
    * Required. The primary text. Supports simple formatting. For more information about formatting
    * text, see [Formatting text in Google Chat
    * apps](https://developers.google.com/workspace/chat/format-messages#card-formatting) and
-   * [Formatting text in Google Workspace Add-ons](https://developers.google.com/apps-script/add-
+   * [Formatting text in Google Workspace add-ons](https://developers.google.com/apps-script/add-
    * ons/concepts/widgets#text_formatting).
    * @return value or {@code null} for none
    */
@@ -250,7 +250,7 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
    * Required. The primary text. Supports simple formatting. For more information about formatting
    * text, see [Formatting text in Google Chat
    * apps](https://developers.google.com/workspace/chat/format-messages#card-formatting) and
-   * [Formatting text in Google Workspace Add-ons](https://developers.google.com/apps-script/add-
+   * [Formatting text in Google Workspace add-ons](https://developers.google.com/apps-script/add-
    * ons/concepts/widgets#text_formatting).
    * @param text text or {@code null} for none
    */

@@ -17,7 +17,7 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * Represents the crop style applied to an image. [Google Workspace Add-ons and Chat
+ * Represents the crop style applied to an image. [Google Workspace add-ons and Chat
  * apps](https://developers.google.com/workspace/extend): For example, here's how to apply a 16:9
  * aspect ratio: ``` cropStyle { "type": "RECTANGLE_CUSTOM", "aspectRatio": 16/9 } ```
  *

@@ -20,7 +20,7 @@ package com.google.api.services.chat.v1.model;
  * A widget that presents a pop-up menu with one or more actions that users can invoke. For example,
  * showing non-primary actions in a card. You can use this widget when actions don't fit in the
  * available space. To use, specify this widget in the `OnClick` action of widgets that support it.
- * For example, in a `Button`. [Google Workspace Add-ons and Chat
+ * For example, in a `Button`. [Google Workspace add-ons and Chat
  * apps](https://developers.google.com/workspace/extend):
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

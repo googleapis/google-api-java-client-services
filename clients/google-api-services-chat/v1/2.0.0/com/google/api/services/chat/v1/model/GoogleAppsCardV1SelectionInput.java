@@ -26,7 +26,7 @@ package com.google.api.services.chat.v1.model;
  * dialog#add_selectable_ui_elements). Chat apps can process the value of items that users select or
  * input. For details about working with form inputs, see [Receive form
  * data](https://developers.google.com/workspace/chat/read-form-data). To collect undefined or
- * abstract data from users, use the TextInput widget. [Google Workspace Add-ons and Chat
+ * abstract data from users, use the TextInput widget. [Google Workspace add-ons and Chat
  * apps](https://developers.google.com/workspace/extend):
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

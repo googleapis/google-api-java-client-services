@@ -270,6 +270,29 @@ public class Webfonts extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
+      /**
+       * Filters by Webfont.category, if category is found in Webfont.categories. If not set,
+       * returns all families.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String category;
+
+      /** Filters by Webfont.category, if category is found in Webfont.categories. If not set, returns all
+     families.
+       */
+      public java.lang.String getCategory() {
+        return category;
+      }
+
+      /**
+       * Filters by Webfont.category, if category is found in Webfont.categories. If not set,
+       * returns all families.
+       */
+      public List setCategory(java.lang.String category) {
+        this.category = category;
+        return this;
+      }
+
       /** Filters by Webfont.family, using literal match. If not set, returns all families */
       @com.google.api.client.util.Key
       private java.util.List<java.lang.String> family;

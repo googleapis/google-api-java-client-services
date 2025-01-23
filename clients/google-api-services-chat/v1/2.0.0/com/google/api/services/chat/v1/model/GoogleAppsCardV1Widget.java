@@ -107,7 +107,7 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
    * Displays a grid with a collection of items. A grid supports any number of columns and items.
    * The number of rows is determined by the upper bounds of the number items divided by the number
    * of columns. A grid with 10 items and 2 columns has 5 rows. A grid with 11 items and 2 columns
-   * has 6 rows. [Google Workspace Add-ons and Chat
+   * has 6 rows. [Google Workspace add-ons and Chat
    * apps](https://developers.google.com/workspace/extend): For example, the following JSON creates
    * a 2 column grid with a single item: ``` "grid": { "title": "A fine collection of items",
    * "columnCount": 2, "borderStyle": { "type": "STROKE", "cornerRadius": 4 }, "items": [ { "image":
@@ -163,7 +163,7 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
    * Displays a text paragraph. Supports simple HTML formatted text. For more information about
    * formatting text, see [Formatting text in Google Chat
    * apps](https://developers.google.com/workspace/chat/format-messages#card-formatting) and
-   * [Formatting text in Google Workspace Add-ons](https://developers.google.com/apps-script/add-
+   * [Formatting text in Google Workspace add-ons](https://developers.google.com/apps-script/add-
    * ons/concepts/widgets#text_formatting). For example, the following JSON creates a bolded text:
    * ``` "textParagraph": { "text": " *bold text*" } ```
    * The value may be {@code null}.
@@ -342,7 +342,7 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
    * Displays a grid with a collection of items. A grid supports any number of columns and items.
    * The number of rows is determined by the upper bounds of the number items divided by the number
    * of columns. A grid with 10 items and 2 columns has 5 rows. A grid with 11 items and 2 columns
-   * has 6 rows. [Google Workspace Add-ons and Chat
+   * has 6 rows. [Google Workspace add-ons and Chat
    * apps](https://developers.google.com/workspace/extend): For example, the following JSON creates
    * a 2 column grid with a single item: ``` "grid": { "title": "A fine collection of items",
    * "columnCount": 2, "borderStyle": { "type": "STROKE", "cornerRadius": 4 }, "items": [ { "image":
@@ -359,7 +359,7 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
    * Displays a grid with a collection of items. A grid supports any number of columns and items.
    * The number of rows is determined by the upper bounds of the number items divided by the number
    * of columns. A grid with 10 items and 2 columns has 5 rows. A grid with 11 items and 2 columns
-   * has 6 rows. [Google Workspace Add-ons and Chat
+   * has 6 rows. [Google Workspace add-ons and Chat
    * apps](https://developers.google.com/workspace/extend): For example, the following JSON creates
    * a 2 column grid with a single item: ``` "grid": { "title": "A fine collection of items",
    * "columnCount": 2, "borderStyle": { "type": "STROKE", "cornerRadius": 4 }, "items": [ { "image":
@@ -469,7 +469,7 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
    * Displays a text paragraph. Supports simple HTML formatted text. For more information about
    * formatting text, see [Formatting text in Google Chat
    * apps](https://developers.google.com/workspace/chat/format-messages#card-formatting) and
-   * [Formatting text in Google Workspace Add-ons](https://developers.google.com/apps-script/add-
+   * [Formatting text in Google Workspace add-ons](https://developers.google.com/apps-script/add-
    * ons/concepts/widgets#text_formatting). For example, the following JSON creates a bolded text:
    * ``` "textParagraph": { "text": " *bold text*" } ```
    * @return value or {@code null} for none
@@ -482,7 +482,7 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
    * Displays a text paragraph. Supports simple HTML formatted text. For more information about
    * formatting text, see [Formatting text in Google Chat
    * apps](https://developers.google.com/workspace/chat/format-messages#card-formatting) and
-   * [Formatting text in Google Workspace Add-ons](https://developers.google.com/apps-script/add-
+   * [Formatting text in Google Workspace add-ons](https://developers.google.com/apps-script/add-
    * ons/concepts/widgets#text_formatting). For example, the following JSON creates a bolded text:
    * ``` "textParagraph": { "text": " *bold text*" } ```
    * @param textParagraph textParagraph or {@code null} for none

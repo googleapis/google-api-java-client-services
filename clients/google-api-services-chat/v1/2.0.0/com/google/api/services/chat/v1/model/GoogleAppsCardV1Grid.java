@@ -23,7 +23,7 @@ package com.google.api.services.chat.v1.model;
  * items](https://developers.google.com/workspace/chat/format-structure-card-
  * dialog#display_a_grid_with_a_collection_of_items). A grid supports any number of columns and
  * items. The number of rows is determined by items divided by columns. A grid with 10 items and 2
- * columns has 5 rows. A grid with 11 items and 2 columns has 6 rows. [Google Workspace Add-ons and
+ * columns has 5 rows. A grid with 11 items and 2 columns has 6 rows. [Google Workspace add-ons and
  * Chat apps](https://developers.google.com/workspace/extend): For example, the following JSON
  * creates a 2 column grid with a single item: ``` "grid": { "title": "A fine collection of items",
  * "columnCount": 2, "borderStyle": { "type": "STROKE", "cornerRadius": 4 }, "items": [ { "image": {

@@ -19,7 +19,7 @@ package com.google.api.services.chat.v1.model;
 /**
  * An image that is specified by a URL and can have an `onClick` action. For an example, see [Add an
  * image](https://developers.google.com/workspace/chat/add-text-image-card-dialog#add_an_image).
- * [Google Workspace Add-ons and Chat apps](https://developers.google.com/workspace/extend):
+ * [Google Workspace add-ons and Chat apps](https://developers.google.com/workspace/extend):
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:

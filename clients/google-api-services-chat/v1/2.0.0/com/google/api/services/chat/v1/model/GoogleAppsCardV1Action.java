@@ -19,7 +19,7 @@ package com.google.api.services.chat.v1.model;
 /**
  * An action that describes the behavior when the form is submitted. For example, you can invoke an
  * Apps Script script to handle the form. If the action is triggered, the form values are sent to
- * the server. [Google Workspace Add-ons and Chat
+ * the server. [Google Workspace add-ons and Chat
  * apps](https://developers.google.com/workspace/extend):
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -34,7 +34,7 @@ public final class GoogleAppsCardV1Action extends com.google.api.client.json.Gen
 
   /**
    * Optional. If this is true, then all widgets are considered required by this action. [Google
-   * Workspace Add-ons and Chat apps](https://developers.google.com/workspace/extend):
+   * Workspace add-ons and Chat apps](https://developers.google.com/workspace/extend):
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,7 +100,7 @@ public final class GoogleAppsCardV1Action extends com.google.api.client.json.Gen
   /**
    * Optional. Fill this list with the names of widgets that this Action needs for a valid
    * submission. If the widgets listed here don't have a value when this Action is invoked, the form
-   * submission is aborted. [Google Workspace Add-ons and Chat
+   * submission is aborted. [Google Workspace add-ons and Chat
    * apps](https://developers.google.com/workspace/extend):
    * The value may be {@code null}.
    */
@@ -109,7 +109,7 @@ public final class GoogleAppsCardV1Action extends com.google.api.client.json.Gen
 
   /**
    * Optional. If this is true, then all widgets are considered required by this action. [Google
-   * Workspace Add-ons and Chat apps](https://developers.google.com/workspace/extend):
+   * Workspace add-ons and Chat apps](https://developers.google.com/workspace/extend):
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAllWidgetsAreRequired() {
@@ -118,7 +118,7 @@ public final class GoogleAppsCardV1Action extends com.google.api.client.json.Gen
 
   /**
    * Optional. If this is true, then all widgets are considered required by this action. [Google
-   * Workspace Add-ons and Chat apps](https://developers.google.com/workspace/extend):
+   * Workspace add-ons and Chat apps](https://developers.google.com/workspace/extend):
    * @param allWidgetsAreRequired allWidgetsAreRequired or {@code null} for none
    */
   public GoogleAppsCardV1Action setAllWidgetsAreRequired(java.lang.Boolean allWidgetsAreRequired) {
@@ -258,7 +258,7 @@ public final class GoogleAppsCardV1Action extends com.google.api.client.json.Gen
   /**
    * Optional. Fill this list with the names of widgets that this Action needs for a valid
    * submission. If the widgets listed here don't have a value when this Action is invoked, the form
-   * submission is aborted. [Google Workspace Add-ons and Chat
+   * submission is aborted. [Google Workspace add-ons and Chat
    * apps](https://developers.google.com/workspace/extend):
    * @return value or {@code null} for none
    */
@@ -269,7 +269,7 @@ public final class GoogleAppsCardV1Action extends com.google.api.client.json.Gen
   /**
    * Optional. Fill this list with the names of widgets that this Action needs for a valid
    * submission. If the widgets listed here don't have a value when this Action is invoked, the form
-   * submission is aborted. [Google Workspace Add-ons and Chat
+   * submission is aborted. [Google Workspace add-ons and Chat
    * apps](https://developers.google.com/workspace/extend):
    * @param requiredWidgets requiredWidgets or {@code null} for none
    */

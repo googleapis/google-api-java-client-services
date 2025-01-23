@@ -19,7 +19,7 @@ package com.google.api.services.chat.v1.model;
 /**
  * Displays a divider between widgets as a horizontal line. For an example in Google Chat apps, see
  * [Add a horizontal divider between widgets](https://developers.google.com/workspace/chat/format-
- * structure-card-dialog#add_a_horizontal_divider_between_widgets). [Google Workspace Add-ons and
+ * structure-card-dialog#add_a_horizontal_divider_between_widgets). [Google Workspace add-ons and
  * Chat apps](https://developers.google.com/workspace/extend): For example, the following JSON
  * creates a divider: ``` "divider": {} ```
  *

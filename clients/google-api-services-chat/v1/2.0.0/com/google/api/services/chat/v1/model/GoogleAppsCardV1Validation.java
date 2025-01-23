@@ -17,7 +17,7 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * Represents the necessary data for validating the widget it's attached to. [Google Workspace Add-
+ * Represents the necessary data for validating the widget it's attached to. [Google Workspace add-
  * ons and Chat apps](https://developers.google.com/workspace/extend):
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -32,7 +32,7 @@ public final class GoogleAppsCardV1Validation extends com.google.api.client.json
 
   /**
    * Specify the character limit for text input widgets. Note that this is only used for text input
-   * and is ignored for other widgets. [Google Workspace Add-ons and Chat
+   * and is ignored for other widgets. [Google Workspace add-ons and Chat
    * apps](https://developers.google.com/workspace/extend):
    * The value may be {@code null}.
    */
@@ -40,7 +40,7 @@ public final class GoogleAppsCardV1Validation extends com.google.api.client.json
   private java.lang.Integer characterLimit;
 
   /**
-   * Specify the type of the input widgets. [Google Workspace Add-ons and Chat
+   * Specify the type of the input widgets. [Google Workspace add-ons and Chat
    * apps](https://developers.google.com/workspace/extend):
    * The value may be {@code null}.
    */
@@ -49,7 +49,7 @@ public final class GoogleAppsCardV1Validation extends com.google.api.client.json
 
   /**
    * Specify the character limit for text input widgets. Note that this is only used for text input
-   * and is ignored for other widgets. [Google Workspace Add-ons and Chat
+   * and is ignored for other widgets. [Google Workspace add-ons and Chat
    * apps](https://developers.google.com/workspace/extend):
    * @return value or {@code null} for none
    */
@@ -59,7 +59,7 @@ public final class GoogleAppsCardV1Validation extends com.google.api.client.json
 
   /**
    * Specify the character limit for text input widgets. Note that this is only used for text input
-   * and is ignored for other widgets. [Google Workspace Add-ons and Chat
+   * and is ignored for other widgets. [Google Workspace add-ons and Chat
    * apps](https://developers.google.com/workspace/extend):
    * @param characterLimit characterLimit or {@code null} for none
    */
@@ -69,7 +69,7 @@ public final class GoogleAppsCardV1Validation extends com.google.api.client.json
   }
 
   /**
-   * Specify the type of the input widgets. [Google Workspace Add-ons and Chat
+   * Specify the type of the input widgets. [Google Workspace add-ons and Chat
    * apps](https://developers.google.com/workspace/extend):
    * @return value or {@code null} for none
    */
@@ -78,7 +78,7 @@ public final class GoogleAppsCardV1Validation extends com.google.api.client.json
   }
 
   /**
-   * Specify the type of the input widgets. [Google Workspace Add-ons and Chat
+   * Specify the type of the input widgets. [Google Workspace add-ons and Chat
    * apps](https://developers.google.com/workspace/extend):
    * @param inputType inputType or {@code null} for none
    */

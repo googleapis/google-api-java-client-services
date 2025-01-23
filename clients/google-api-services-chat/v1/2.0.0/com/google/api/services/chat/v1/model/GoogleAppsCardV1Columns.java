@@ -30,7 +30,7 @@ package com.google.api.services.chat.v1.model;
  * column wraps if the screen width is less than or equal to 480 pixels. * On iOS devices, the
  * second column wraps if the screen width is less than or equal to 300 pt. * On Android devices,
  * the second column wraps if the screen width is less than or equal to 320 dp. To include more than
- * two columns, or to use rows, use the `Grid` widget. [Google Workspace Add-ons and Chat
+ * two columns, or to use rows, use the `Grid` widget. [Google Workspace add-ons and Chat
  * apps](https://developers.google.com/workspace/extend): The add-on UIs that support columns
  * include: * The dialog displayed when users open the add-on from an email draft. * The dialog
  * displayed when users open the add-on from the **Add attachment** menu in a Google Calendar event.

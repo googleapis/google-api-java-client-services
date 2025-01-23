@@ -17,8 +17,8 @@
 package com.google.api.services.orgpolicy.v2.model;
 
 /**
- * A constraint that allows or disallows a list of string values, which are configured by an
- * Organization Policy administrator with a policy.
+ * A constraint type that allows or disallows a list of string values, which are configured in the
+ * `PolicyRule`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Organization Policy API. For a detailed explanation

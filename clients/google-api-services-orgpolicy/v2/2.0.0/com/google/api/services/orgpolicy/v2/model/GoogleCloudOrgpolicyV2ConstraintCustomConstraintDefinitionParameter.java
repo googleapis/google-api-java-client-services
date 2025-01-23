@@ -38,8 +38,8 @@ public final class GoogleCloudOrgpolicyV2ConstraintCustomConstraintDefinitionPar
   private java.lang.Object defaultValue;
 
   /**
-   * Determines the parameter’s value structure. For example, LIST can be specified by defining type
-   * : LIST, and item type as : STRING.
+   * Determines the parameter's value structure. For example, `LIST` can be specified by defining
+   * `type: LIST`, and `item: STRING`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,8 +85,8 @@ public final class GoogleCloudOrgpolicyV2ConstraintCustomConstraintDefinitionPar
   }
 
   /**
-   * Determines the parameter’s value structure. For example, LIST can be specified by defining type
-   * : LIST, and item type as : STRING.
+   * Determines the parameter's value structure. For example, `LIST` can be specified by defining
+   * `type: LIST`, and `item: STRING`.
    * @return value or {@code null} for none
    */
   public java.lang.String getItem() {
@@ -94,8 +94,8 @@ public final class GoogleCloudOrgpolicyV2ConstraintCustomConstraintDefinitionPar
   }
 
   /**
-   * Determines the parameter’s value structure. For example, LIST can be specified by defining type
-   * : LIST, and item type as : STRING.
+   * Determines the parameter's value structure. For example, `LIST` can be specified by defining
+   * `type: LIST`, and `item: STRING`.
    * @param item item or {@code null} for none
    */
   public GoogleCloudOrgpolicyV2ConstraintCustomConstraintDefinitionParameter setItem(java.lang.String item) {

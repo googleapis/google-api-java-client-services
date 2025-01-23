@@ -17,7 +17,7 @@
 package com.google.api.services.orgpolicy.v2.model;
 
 /**
- * Defines Medata structure.
+ * Defines Metadata structure.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Organization Policy API. For a detailed explanation

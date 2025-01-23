@@ -40,8 +40,8 @@ public final class GoogleCloudOrgpolicyV2CustomConstraint extends com.google.api
   private java.lang.String actionType;
 
   /**
-   * Org policy condition/expression. For example:
-   * `resource.instanceName.matches("[production|test]_.*_(\d)+")` or,
+   * A Common Expression Language (CEL) condition which is used in the evaluation of the constraint.
+   * For example: `resource.instanceName.matches("[production|test]_.*_(\d)+")` or,
    * `resource.management.auto_upgrade == true` The max length of the condition is 1000 characters.
    * The value may be {@code null}.
    */
@@ -91,7 +91,7 @@ public final class GoogleCloudOrgpolicyV2CustomConstraint extends com.google.api
 
   /**
    * Output only. The last time this custom constraint was updated. This represents the last time
-   * that the `CreateCustomConstraint` or `UpdateCustomConstraint` RPC was called
+   * that the `CreateCustomConstraint` or `UpdateCustomConstraint` methods were called.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -115,8 +115,8 @@ public final class GoogleCloudOrgpolicyV2CustomConstraint extends com.google.api
   }
 
   /**
-   * Org policy condition/expression. For example:
-   * `resource.instanceName.matches("[production|test]_.*_(\d)+")` or,
+   * A Common Expression Language (CEL) condition which is used in the evaluation of the constraint.
+   * For example: `resource.instanceName.matches("[production|test]_.*_(\d)+")` or,
    * `resource.management.auto_upgrade == true` The max length of the condition is 1000 characters.
    * @return value or {@code null} for none
    */
@@ -125,8 +125,8 @@ public final class GoogleCloudOrgpolicyV2CustomConstraint extends com.google.api
   }
 
   /**
-   * Org policy condition/expression. For example:
-   * `resource.instanceName.matches("[production|test]_.*_(\d)+")` or,
+   * A Common Expression Language (CEL) condition which is used in the evaluation of the constraint.
+   * For example: `resource.instanceName.matches("[production|test]_.*_(\d)+")` or,
    * `resource.management.auto_upgrade == true` The max length of the condition is 1000 characters.
    * @param condition condition or {@code null} for none
    */
@@ -234,7 +234,7 @@ public final class GoogleCloudOrgpolicyV2CustomConstraint extends com.google.api
 
   /**
    * Output only. The last time this custom constraint was updated. This represents the last time
-   * that the `CreateCustomConstraint` or `UpdateCustomConstraint` RPC was called
+   * that the `CreateCustomConstraint` or `UpdateCustomConstraint` methods were called.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -243,7 +243,7 @@ public final class GoogleCloudOrgpolicyV2CustomConstraint extends com.google.api
 
   /**
    * Output only. The last time this custom constraint was updated. This represents the last time
-   * that the `CreateCustomConstraint` or `UpdateCustomConstraint` RPC was called
+   * that the `CreateCustomConstraint` or `UpdateCustomConstraint` methods were called.
    * @param updateTime updateTime or {@code null} for none
    */
   public GoogleCloudOrgpolicyV2CustomConstraint setUpdateTime(String updateTime) {

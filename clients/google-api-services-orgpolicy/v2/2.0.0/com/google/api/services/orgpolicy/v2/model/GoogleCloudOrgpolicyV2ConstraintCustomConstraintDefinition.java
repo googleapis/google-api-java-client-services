@@ -17,8 +17,7 @@
 package com.google.api.services.orgpolicy.v2.model;
 
 /**
- * Currently used for Managed Constraints. This represents a subset of fields missing from
- * Constraint proto that are required to describe CustomConstraint
+ * Custom constraint definition. Defines this as a managed constraint.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Organization Policy API. For a detailed explanation
@@ -55,8 +54,8 @@ public final class GoogleCloudOrgpolicyV2ConstraintCustomConstraintDefinition ex
   private java.util.List<java.lang.String> methodTypes;
 
   /**
-   * Stores Structure of parameters used by Constraint condition. Key of map represents name of the
-   * parameter.
+   * Stores the structure of `Parameters` used by the constraint condition. The key of `map`
+   * represents the name of the parameter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -126,8 +125,8 @@ public final class GoogleCloudOrgpolicyV2ConstraintCustomConstraintDefinition ex
   }
 
   /**
-   * Stores Structure of parameters used by Constraint condition. Key of map represents name of the
-   * parameter.
+   * Stores the structure of `Parameters` used by the constraint condition. The key of `map`
+   * represents the name of the parameter.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, GoogleCloudOrgpolicyV2ConstraintCustomConstraintDefinitionParameter> getParameters() {
@@ -135,8 +134,8 @@ public final class GoogleCloudOrgpolicyV2ConstraintCustomConstraintDefinition ex
   }
 
   /**
-   * Stores Structure of parameters used by Constraint condition. Key of map represents name of the
-   * parameter.
+   * Stores the structure of `Parameters` used by the constraint condition. The key of `map`
+   * represents the name of the parameter.
    * @param parameters parameters or {@code null} for none
    */
   public GoogleCloudOrgpolicyV2ConstraintCustomConstraintDefinition setParameters(java.util.Map<String, GoogleCloudOrgpolicyV2ConstraintCustomConstraintDefinitionParameter> parameters) {

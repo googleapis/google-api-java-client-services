@@ -55,9 +55,9 @@ public final class AclRule extends com.google.api.client.json.GenericJson {
    * "freeBusyReader" - Provides read access to free/busy information.  - "reader" - Provides read
    * access to the calendar. Private events will appear to users with reader access, but event
    * details will be hidden.  - "writer" - Provides read and write access to the calendar. Private
-   * events will appear to users with writer access, and event details will be visible.  - "owner" -
-   * Provides ownership of the calendar. This role has all of the permissions of the writer role
-   * with the additional ability to see and manipulate ACLs.
+   * events will appear to users with writer access, and event details will be visible. Provides
+   * read access to the calendar's ACLs.  - "owner" - Provides ownership of the calendar. This role
+   * has all of the permissions of the writer role with the additional ability to manipulate ACLs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -126,9 +126,9 @@ public final class AclRule extends com.google.api.client.json.GenericJson {
    * "freeBusyReader" - Provides read access to free/busy information.  - "reader" - Provides read
    * access to the calendar. Private events will appear to users with reader access, but event
    * details will be hidden.  - "writer" - Provides read and write access to the calendar. Private
-   * events will appear to users with writer access, and event details will be visible.  - "owner" -
-   * Provides ownership of the calendar. This role has all of the permissions of the writer role
-   * with the additional ability to see and manipulate ACLs.
+   * events will appear to users with writer access, and event details will be visible. Provides
+   * read access to the calendar's ACLs.  - "owner" - Provides ownership of the calendar. This role
+   * has all of the permissions of the writer role with the additional ability to manipulate ACLs.
    * @return value or {@code null} for none
    */
   public java.lang.String getRole() {
@@ -140,9 +140,9 @@ public final class AclRule extends com.google.api.client.json.GenericJson {
    * "freeBusyReader" - Provides read access to free/busy information.  - "reader" - Provides read
    * access to the calendar. Private events will appear to users with reader access, but event
    * details will be hidden.  - "writer" - Provides read and write access to the calendar. Private
-   * events will appear to users with writer access, and event details will be visible.  - "owner" -
-   * Provides ownership of the calendar. This role has all of the permissions of the writer role
-   * with the additional ability to see and manipulate ACLs.
+   * events will appear to users with writer access, and event details will be visible. Provides
+   * read access to the calendar's ACLs.  - "owner" - Provides ownership of the calendar. This role
+   * has all of the permissions of the writer role with the additional ability to manipulate ACLs.
    * @param role role or {@code null} for none
    */
   public AclRule setRole(java.lang.String role) {

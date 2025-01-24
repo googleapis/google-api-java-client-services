@@ -30,14 +30,16 @@ package com.google.api.services.dataform.v1beta1.model;
 public final class NotebookRuntimeOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The GCS location to upload the result to. Format: `gs://bucket-name`.
+   * Optional. The Google Cloud Storage location to upload the result to. Format: `gs://bucket-
+   * name`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String gcsOutputBucket;
 
   /**
-   * Optional. The GCS location to upload the result to. Format: `gs://bucket-name`.
+   * Optional. The Google Cloud Storage location to upload the result to. Format: `gs://bucket-
+   * name`.
    * @return value or {@code null} for none
    */
   public java.lang.String getGcsOutputBucket() {
@@ -45,7 +47,8 @@ public final class NotebookRuntimeOptions extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. The GCS location to upload the result to. Format: `gs://bucket-name`.
+   * Optional. The Google Cloud Storage location to upload the result to. Format: `gs://bucket-
+   * name`.
    * @param gcsOutputBucket gcsOutputBucket or {@code null} for none
    */
   public NotebookRuntimeOptions setGcsOutputBucket(java.lang.String gcsOutputBucket) {

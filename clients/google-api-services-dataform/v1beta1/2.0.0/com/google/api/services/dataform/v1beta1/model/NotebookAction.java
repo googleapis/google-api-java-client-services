@@ -38,7 +38,8 @@ public final class NotebookAction extends com.google.api.client.json.GenericJson
 
   /**
    * Output only. The ID of the Vertex job that executed the notebook in contents and also the ID
-   * used for the outputs created in GCS buckets. Only set once the job has started to run.
+   * used for the outputs created in Google Cloud Storage buckets. Only set once the job has started
+   * to run.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,7 +64,8 @@ public final class NotebookAction extends com.google.api.client.json.GenericJson
 
   /**
    * Output only. The ID of the Vertex job that executed the notebook in contents and also the ID
-   * used for the outputs created in GCS buckets. Only set once the job has started to run.
+   * used for the outputs created in Google Cloud Storage buckets. Only set once the job has started
+   * to run.
    * @return value or {@code null} for none
    */
   public java.lang.String getJobId() {
@@ -72,7 +74,8 @@ public final class NotebookAction extends com.google.api.client.json.GenericJson
 
   /**
    * Output only. The ID of the Vertex job that executed the notebook in contents and also the ID
-   * used for the outputs created in GCS buckets. Only set once the job has started to run.
+   * used for the outputs created in Google Cloud Storage buckets. Only set once the job has started
+   * to run.
    * @param jobId jobId or {@code null} for none
    */
   public NotebookAction setJobId(java.lang.String jobId) {

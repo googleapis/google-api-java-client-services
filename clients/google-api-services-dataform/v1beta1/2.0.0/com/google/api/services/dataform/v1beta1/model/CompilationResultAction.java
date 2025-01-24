@@ -60,6 +60,14 @@ public final class CompilationResultAction extends com.google.api.client.json.Ge
   private java.lang.String filePath;
 
   /**
+   * Output only. All the metadata information that is used internally to serve the resource. For
+   * example: timestamps, flags, status fields, etc. The format of this field is a JSON string.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String internalMetadata;
+
+  /**
    * The notebook executed by this action.
    * The value may be {@code null}.
    */
@@ -156,6 +164,25 @@ public final class CompilationResultAction extends com.google.api.client.json.Ge
    */
   public CompilationResultAction setFilePath(java.lang.String filePath) {
     this.filePath = filePath;
+    return this;
+  }
+
+  /**
+   * Output only. All the metadata information that is used internally to serve the resource. For
+   * example: timestamps, flags, status fields, etc. The format of this field is a JSON string.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getInternalMetadata() {
+    return internalMetadata;
+  }
+
+  /**
+   * Output only. All the metadata information that is used internally to serve the resource. For
+   * example: timestamps, flags, status fields, etc. The format of this field is a JSON string.
+   * @param internalMetadata internalMetadata or {@code null} for none
+   */
+  public CompilationResultAction setInternalMetadata(java.lang.String internalMetadata) {
+    this.internalMetadata = internalMetadata;
     return this;
   }
 

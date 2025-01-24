@@ -52,6 +52,14 @@ public final class WorkflowInvocationAction extends com.google.api.client.json.G
   private java.lang.String failureReason;
 
   /**
+   * Output only. All the metadata information that is used internally to serve the resource. For
+   * example: timestamps, flags, status fields, etc. The format of this field is a JSON string.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String internalMetadata;
+
+  /**
    * Output only. This action's timing details. `start_time` will be set if the action is in
    * [RUNNING, SUCCEEDED, CANCELLED, FAILED] state. `end_time` will be set if the action is in
    * [SUCCEEDED, CANCELLED, FAILED] state.
@@ -131,6 +139,25 @@ public final class WorkflowInvocationAction extends com.google.api.client.json.G
    */
   public WorkflowInvocationAction setFailureReason(java.lang.String failureReason) {
     this.failureReason = failureReason;
+    return this;
+  }
+
+  /**
+   * Output only. All the metadata information that is used internally to serve the resource. For
+   * example: timestamps, flags, status fields, etc. The format of this field is a JSON string.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getInternalMetadata() {
+    return internalMetadata;
+  }
+
+  /**
+   * Output only. All the metadata information that is used internally to serve the resource. For
+   * example: timestamps, flags, status fields, etc. The format of this field is a JSON string.
+   * @param internalMetadata internalMetadata or {@code null} for none
+   */
+  public WorkflowInvocationAction setInternalMetadata(java.lang.String internalMetadata) {
+    this.internalMetadata = internalMetadata;
     return this;
   }
 

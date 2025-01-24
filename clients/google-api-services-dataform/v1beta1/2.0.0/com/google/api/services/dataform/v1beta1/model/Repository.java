@@ -59,6 +59,14 @@ public final class Repository extends com.google.api.client.json.GenericJson {
   private GitRemoteSettings gitRemoteSettings;
 
   /**
+   * Output only. All the metadata information that is used internally to serve the resource. For
+   * example: timestamps, flags, status fields, etc. The format of this field is a JSON string.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String internalMetadata;
+
+  /**
    * Optional. The reference to a KMS encryption key. If provided, it will be used to encrypt user
    * data in the repository and all child resources. It is not possible to add or update the
    * encryption key after the repository is created. Example:
@@ -184,6 +192,25 @@ public final class Repository extends com.google.api.client.json.GenericJson {
    */
   public Repository setGitRemoteSettings(GitRemoteSettings gitRemoteSettings) {
     this.gitRemoteSettings = gitRemoteSettings;
+    return this;
+  }
+
+  /**
+   * Output only. All the metadata information that is used internally to serve the resource. For
+   * example: timestamps, flags, status fields, etc. The format of this field is a JSON string.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getInternalMetadata() {
+    return internalMetadata;
+  }
+
+  /**
+   * Output only. All the metadata information that is used internally to serve the resource. For
+   * example: timestamps, flags, status fields, etc. The format of this field is a JSON string.
+   * @param internalMetadata internalMetadata or {@code null} for none
+   */
+  public Repository setInternalMetadata(java.lang.String internalMetadata) {
+    this.internalMetadata = internalMetadata;
     return this;
   }
 

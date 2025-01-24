@@ -18,7 +18,7 @@ package com.google.api.services.policysimulator.v1alpha.model;
 
 /**
  * Similar to PolicySpec but with an extra 'launch' field for launch reference. The PolicySpec here
- * is specific for dry-run/darklaunch.
+ * is specific for dry-run.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Policy Simulator API. For a detailed explanation see:

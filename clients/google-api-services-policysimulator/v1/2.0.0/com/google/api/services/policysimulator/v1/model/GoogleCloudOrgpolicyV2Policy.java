@@ -70,7 +70,7 @@ public final class GoogleCloudOrgpolicyV2Policy extends com.google.api.client.js
   private java.lang.String name;
 
   /**
-   * Basic information about the Organization Policy.
+   * Basic information about the organization policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -167,7 +167,7 @@ public final class GoogleCloudOrgpolicyV2Policy extends com.google.api.client.js
   }
 
   /**
-   * Basic information about the Organization Policy.
+   * Basic information about the organization policy.
    * @return value or {@code null} for none
    */
   public GoogleCloudOrgpolicyV2PolicySpec getSpec() {
@@ -175,7 +175,7 @@ public final class GoogleCloudOrgpolicyV2Policy extends com.google.api.client.js
   }
 
   /**
-   * Basic information about the Organization Policy.
+   * Basic information about the organization policy.
    * @param spec spec or {@code null} for none
    */
   public GoogleCloudOrgpolicyV2Policy setSpec(GoogleCloudOrgpolicyV2PolicySpec spec) {

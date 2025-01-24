@@ -38,6 +38,7 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * A standard reservation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,6 +71,7 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * A standard reservation.
    * @return value or {@code null} for none
    */
   public Standard getStandard() {
@@ -77,6 +79,7 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * A standard reservation.
    * @param standard standard or {@code null} for none
    */
   public Reservation setStandard(Standard standard) {

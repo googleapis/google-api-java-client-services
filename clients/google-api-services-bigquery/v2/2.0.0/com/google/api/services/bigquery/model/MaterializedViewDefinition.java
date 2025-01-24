@@ -31,7 +31,9 @@ public final class MaterializedViewDefinition extends com.google.api.client.json
 
   /**
    * Optional. This option declares the intention to construct a materialized view that isn't
-   * refreshed incrementally.
+   * refreshed incrementally. Non-incremental materialized views support an expanded range of SQL
+   * queries. The `allow_non_incremental_definition` option can't be changed after the materialized
+   * view is created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,7 +80,9 @@ public final class MaterializedViewDefinition extends com.google.api.client.json
 
   /**
    * Optional. This option declares the intention to construct a materialized view that isn't
-   * refreshed incrementally.
+   * refreshed incrementally. Non-incremental materialized views support an expanded range of SQL
+   * queries. The `allow_non_incremental_definition` option can't be changed after the materialized
+   * view is created.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAllowNonIncrementalDefinition() {
@@ -87,7 +91,9 @@ public final class MaterializedViewDefinition extends com.google.api.client.json
 
   /**
    * Optional. This option declares the intention to construct a materialized view that isn't
-   * refreshed incrementally.
+   * refreshed incrementally. Non-incremental materialized views support an expanded range of SQL
+   * queries. The `allow_non_incremental_definition` option can't be changed after the materialized
+   * view is created.
    * @param allowNonIncrementalDefinition allowNonIncrementalDefinition or {@code null} for none
    */
   public MaterializedViewDefinition setAllowNonIncrementalDefinition(java.lang.Boolean allowNonIncrementalDefinition) {

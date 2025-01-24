@@ -45,8 +45,8 @@ public final class MysqlSslConfig extends com.google.api.client.json.GenericJson
   private java.lang.Boolean caCertificateSet;
 
   /**
-   * Input only. PEM-encoded certificate that will be used by the replica to authenticate against
-   * the source database server. If this field is used then the 'client_key' and the
+   * Optional. Input only. PEM-encoded certificate that will be used by the replica to authenticate
+   * against the source database server. If this field is used then the 'client_key' and the
    * 'ca_certificate' fields are mandatory.
    * The value may be {@code null}.
    */
@@ -61,8 +61,9 @@ public final class MysqlSslConfig extends com.google.api.client.json.GenericJson
   private java.lang.Boolean clientCertificateSet;
 
   /**
-   * Input only. PEM-encoded private key associated with the Client Certificate. If this field is
-   * used then the 'client_certificate' and the 'ca_certificate' fields are mandatory.
+   * Optional. Input only. PEM-encoded private key associated with the Client Certificate. If this
+   * field is used then the 'client_certificate' and the 'ca_certificate' fields are mandatory.
+   * Mutually exclusive with the `secret_manager_stored_client_key` field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -112,8 +113,8 @@ public final class MysqlSslConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Input only. PEM-encoded certificate that will be used by the replica to authenticate against
-   * the source database server. If this field is used then the 'client_key' and the
+   * Optional. Input only. PEM-encoded certificate that will be used by the replica to authenticate
+   * against the source database server. If this field is used then the 'client_key' and the
    * 'ca_certificate' fields are mandatory.
    * @return value or {@code null} for none
    */
@@ -122,8 +123,8 @@ public final class MysqlSslConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Input only. PEM-encoded certificate that will be used by the replica to authenticate against
-   * the source database server. If this field is used then the 'client_key' and the
+   * Optional. Input only. PEM-encoded certificate that will be used by the replica to authenticate
+   * against the source database server. If this field is used then the 'client_key' and the
    * 'ca_certificate' fields are mandatory.
    * @param clientCertificate clientCertificate or {@code null} for none
    */
@@ -150,8 +151,9 @@ public final class MysqlSslConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Input only. PEM-encoded private key associated with the Client Certificate. If this field is
-   * used then the 'client_certificate' and the 'ca_certificate' fields are mandatory.
+   * Optional. Input only. PEM-encoded private key associated with the Client Certificate. If this
+   * field is used then the 'client_certificate' and the 'ca_certificate' fields are mandatory.
+   * Mutually exclusive with the `secret_manager_stored_client_key` field.
    * @return value or {@code null} for none
    */
   public java.lang.String getClientKey() {
@@ -159,8 +161,9 @@ public final class MysqlSslConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Input only. PEM-encoded private key associated with the Client Certificate. If this field is
-   * used then the 'client_certificate' and the 'ca_certificate' fields are mandatory.
+   * Optional. Input only. PEM-encoded private key associated with the Client Certificate. If this
+   * field is used then the 'client_certificate' and the 'ca_certificate' fields are mandatory.
+   * Mutually exclusive with the `secret_manager_stored_client_key` field.
    * @param clientKey clientKey or {@code null} for none
    */
   public MysqlSslConfig setClientKey(java.lang.String clientKey) {

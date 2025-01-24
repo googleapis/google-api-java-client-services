@@ -37,11 +37,27 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
   private java.lang.Boolean cacheHit;
 
   /**
+   * Output only. Creation time of this query, in milliseconds since the epoch. This field will be
+   * present on all queries.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long creationTime;
+
+  /**
    * Output only. Detailed statistics for DML statements INSERT, UPDATE, DELETE, MERGE or TRUNCATE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DmlStatistics dmlStats;
+
+  /**
+   * Output only. End time of this query, in milliseconds since the epoch. This field will be
+   * present whenever a query job is in the DONE state.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long endTime;
 
   /**
    * Output only. The first errors or warnings encountered during the running of the job. The final
@@ -96,6 +112,14 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
   private java.lang.String kind;
 
   /**
+   * Output only. The geographic location of the query. For more information about BigQuery
+   * locations, see: https://cloud.google.com/bigquery/docs/locations
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String location;
+
+  /**
    * Output only. The number of rows affected by a DML statement. Present only for DML statements
    * INSERT, UPDATE or DELETE.
    * The value may be {@code null}.
@@ -145,6 +169,23 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
   private SessionInfo sessionInfo;
 
   /**
+   * Output only. Start time of this query, in milliseconds since the epoch. This field will be
+   * present when the query job transitions from the PENDING state to either RUNNING or DONE.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long startTime;
+
+  /**
+   * Output only. If the project is configured to use on-demand pricing, then this field contains
+   * the total bytes billed for the job. If the project is configured to use flat-rate pricing, then
+   * you are not billed for bytes and this field is informational only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long totalBytesBilled;
+
+  /**
    * The total number of bytes processed for this query. If this query was a dry run, this is the
    * number of bytes that would be processed if the query were run.
    * The value may be {@code null}.
@@ -159,6 +200,13 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.math.BigInteger totalRows;
+
+  /**
+   * Output only. Number of slot ms the user is actually billed for.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long totalSlotMs;
 
   /**
    * Whether the query result was fetched from the query cache.
@@ -178,6 +226,25 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * Output only. Creation time of this query, in milliseconds since the epoch. This field will be
+   * present on all queries.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getCreationTime() {
+    return creationTime;
+  }
+
+  /**
+   * Output only. Creation time of this query, in milliseconds since the epoch. This field will be
+   * present on all queries.
+   * @param creationTime creationTime or {@code null} for none
+   */
+  public QueryResponse setCreationTime(java.lang.Long creationTime) {
+    this.creationTime = creationTime;
+    return this;
+  }
+
+  /**
    * Output only. Detailed statistics for DML statements INSERT, UPDATE, DELETE, MERGE or TRUNCATE.
    * @return value or {@code null} for none
    */
@@ -191,6 +258,25 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
    */
   public QueryResponse setDmlStats(DmlStatistics dmlStats) {
     this.dmlStats = dmlStats;
+    return this;
+  }
+
+  /**
+   * Output only. End time of this query, in milliseconds since the epoch. This field will be
+   * present whenever a query job is in the DONE state.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getEndTime() {
+    return endTime;
+  }
+
+  /**
+   * Output only. End time of this query, in milliseconds since the epoch. This field will be
+   * present whenever a query job is in the DONE state.
+   * @param endTime endTime or {@code null} for none
+   */
+  public QueryResponse setEndTime(java.lang.Long endTime) {
+    this.endTime = endTime;
     return this;
   }
 
@@ -298,6 +384,25 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
    */
   public QueryResponse setKind(java.lang.String kind) {
     this.kind = kind;
+    return this;
+  }
+
+  /**
+   * Output only. The geographic location of the query. For more information about BigQuery
+   * locations, see: https://cloud.google.com/bigquery/docs/locations
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLocation() {
+    return location;
+  }
+
+  /**
+   * Output only. The geographic location of the query. For more information about BigQuery
+   * locations, see: https://cloud.google.com/bigquery/docs/locations
+   * @param location location or {@code null} for none
+   */
+  public QueryResponse setLocation(java.lang.String location) {
+    this.location = location;
     return this;
   }
 
@@ -418,6 +523,46 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * Output only. Start time of this query, in milliseconds since the epoch. This field will be
+   * present when the query job transitions from the PENDING state to either RUNNING or DONE.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getStartTime() {
+    return startTime;
+  }
+
+  /**
+   * Output only. Start time of this query, in milliseconds since the epoch. This field will be
+   * present when the query job transitions from the PENDING state to either RUNNING or DONE.
+   * @param startTime startTime or {@code null} for none
+   */
+  public QueryResponse setStartTime(java.lang.Long startTime) {
+    this.startTime = startTime;
+    return this;
+  }
+
+  /**
+   * Output only. If the project is configured to use on-demand pricing, then this field contains
+   * the total bytes billed for the job. If the project is configured to use flat-rate pricing, then
+   * you are not billed for bytes and this field is informational only.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getTotalBytesBilled() {
+    return totalBytesBilled;
+  }
+
+  /**
+   * Output only. If the project is configured to use on-demand pricing, then this field contains
+   * the total bytes billed for the job. If the project is configured to use flat-rate pricing, then
+   * you are not billed for bytes and this field is informational only.
+   * @param totalBytesBilled totalBytesBilled or {@code null} for none
+   */
+  public QueryResponse setTotalBytesBilled(java.lang.Long totalBytesBilled) {
+    this.totalBytesBilled = totalBytesBilled;
+    return this;
+  }
+
+  /**
    * The total number of bytes processed for this query. If this query was a dry run, this is the
    * number of bytes that would be processed if the query were run.
    * @return value or {@code null} for none
@@ -452,6 +597,23 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
    */
   public QueryResponse setTotalRows(java.math.BigInteger totalRows) {
     this.totalRows = totalRows;
+    return this;
+  }
+
+  /**
+   * Output only. Number of slot ms the user is actually billed for.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getTotalSlotMs() {
+    return totalSlotMs;
+  }
+
+  /**
+   * Output only. Number of slot ms the user is actually billed for.
+   * @param totalSlotMs totalSlotMs or {@code null} for none
+   */
+  public QueryResponse setTotalSlotMs(java.lang.Long totalSlotMs) {
+    this.totalSlotMs = totalSlotMs;
     return this;
   }
 

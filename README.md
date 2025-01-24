@@ -267,7 +267,6 @@ packages on [Maven Central][maven-search].
 | Real-time Bidding API | [v1](clients/google-api-services-realtimebidding/v1) |
 | Recommendations AI (Beta) | [v1beta1](clients/google-api-services-recommendationengine/v1beta1) |
 | Recommender API | [v1](clients/google-api-services-recommender/v1), [v1beta1](clients/google-api-services-recommender/v1beta1) |
-| Resource Settings API | [v1](clients/google-api-services-resourcesettings/v1) |
 | SAS Portal API | [v1alpha1](clients/google-api-services-sasportal/v1alpha1) |
 | SAS Portal API (Testing) | [v1alpha1](clients/google-api-services-prod_tt_sasportal/v1alpha1) |
 | Safe Browsing API | [v4](clients/google-api-services-safebrowsing/v4), [v5](clients/google-api-services-safebrowsing/v5) |

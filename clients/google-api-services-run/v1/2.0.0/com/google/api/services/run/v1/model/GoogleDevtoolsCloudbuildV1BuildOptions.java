@@ -64,6 +64,14 @@ public final class GoogleDevtoolsCloudbuildV1BuildOptions extends com.google.api
   private java.lang.Boolean dynamicSubstitutions;
 
   /**
+   * Optional. Option to specify whether structured logging is enabled. If true, JSON-formatted logs
+   * are parsed as structured logs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableStructuredLogging;
+
+  /**
    * A list of global environment variable definitions that will exist for all build steps in this
    * build. If a variable is defined in both globally and in a build step, the variable will use the
    * build step value. The elements are of the form "KEY=VALUE" for the environment variable "KEY"
@@ -230,6 +238,25 @@ public final class GoogleDevtoolsCloudbuildV1BuildOptions extends com.google.api
    */
   public GoogleDevtoolsCloudbuildV1BuildOptions setDynamicSubstitutions(java.lang.Boolean dynamicSubstitutions) {
     this.dynamicSubstitutions = dynamicSubstitutions;
+    return this;
+  }
+
+  /**
+   * Optional. Option to specify whether structured logging is enabled. If true, JSON-formatted logs
+   * are parsed as structured logs.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableStructuredLogging() {
+    return enableStructuredLogging;
+  }
+
+  /**
+   * Optional. Option to specify whether structured logging is enabled. If true, JSON-formatted logs
+   * are parsed as structured logs.
+   * @param enableStructuredLogging enableStructuredLogging or {@code null} for none
+   */
+  public GoogleDevtoolsCloudbuildV1BuildOptions setEnableStructuredLogging(java.lang.Boolean enableStructuredLogging) {
+    this.enableStructuredLogging = enableStructuredLogging;
     return this;
   }
 

@@ -4163,17 +4163,23 @@ public class TPU extends com.google.api.client.googleapis.services.json.Abstract
             return this;
           }
 
-          /** The maximum number of items to return. */
+          /**
+           * The maximum number of items to return. Defaults to 0 if not specified, which means no
+           * limit.
+           */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** The maximum number of items to return.
+          /** The maximum number of items to return. Defaults to 0 if not specified, which means no limit.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /** The maximum number of items to return. */
+          /**
+           * The maximum number of items to return. Defaults to 0 if not specified, which means no
+           * limit.
+           */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;

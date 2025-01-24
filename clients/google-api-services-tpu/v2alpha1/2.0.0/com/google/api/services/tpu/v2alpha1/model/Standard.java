@@ -17,7 +17,7 @@
 package com.google.api.services.tpu.v2alpha1.model;
 
 /**
- * Model definition for Standard.
+ * Details of a standard reservation.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud TPU API. For a detailed explanation see:
@@ -30,6 +30,7 @@ package com.google.api.services.tpu.v2alpha1.model;
 public final class Standard extends com.google.api.client.json.GenericJson {
 
   /**
+   * Capacity units this reservation is measured in.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,12 +58,14 @@ public final class Standard extends com.google.api.client.json.GenericJson {
   private java.lang.Integer size;
 
   /**
+   * The current usage of the reservation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Usage usage;
 
   /**
+   * Capacity units this reservation is measured in.
    * @return value or {@code null} for none
    */
   public java.lang.String getCapacityUnits() {
@@ -70,6 +73,7 @@ public final class Standard extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Capacity units this reservation is measured in.
    * @param capacityUnits capacityUnits or {@code null} for none
    */
   public Standard setCapacityUnits(java.lang.String capacityUnits) {
@@ -129,6 +133,7 @@ public final class Standard extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The current usage of the reservation.
    * @return value or {@code null} for none
    */
   public Usage getUsage() {
@@ -136,6 +141,7 @@ public final class Standard extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The current usage of the reservation.
    * @param usage usage or {@code null} for none
    */
   public Standard setUsage(Usage usage) {

@@ -17,7 +17,7 @@
 package com.google.api.services.tpu.v2alpha1.model;
 
 /**
- * Model definition for Usage.
+ * Usage details of a reservation.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud TPU API. For a detailed explanation see:

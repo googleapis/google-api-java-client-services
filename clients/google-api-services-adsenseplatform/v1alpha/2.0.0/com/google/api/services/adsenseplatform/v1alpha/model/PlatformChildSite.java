@@ -37,8 +37,8 @@ public final class PlatformChildSite extends com.google.api.client.json.GenericJ
   private java.lang.String domain;
 
   /**
-   * Identifier. Format:
-   * accounts/{account}/platforms/{platform}/childAccounts/{child}/sites/{platformChildSite}
+   * Identifier. Format: accounts/{account}/platforms/{platform}/childAccounts/{child_account}/sites
+   * /{platform_child_site}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,8 +69,8 @@ public final class PlatformChildSite extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Identifier. Format:
-   * accounts/{account}/platforms/{platform}/childAccounts/{child}/sites/{platformChildSite}
+   * Identifier. Format: accounts/{account}/platforms/{platform}/childAccounts/{child_account}/sites
+   * /{platform_child_site}
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -78,8 +78,8 @@ public final class PlatformChildSite extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Identifier. Format:
-   * accounts/{account}/platforms/{platform}/childAccounts/{child}/sites/{platformChildSite}
+   * Identifier. Format: accounts/{account}/platforms/{platform}/childAccounts/{child_account}/sites
+   * /{platform_child_site}
    * @param name name or {@code null} for none
    */
   public PlatformChildSite setName(java.lang.String name) {

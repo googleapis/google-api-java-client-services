@@ -30,6 +30,13 @@ package com.google.api.services.firebaseml.v2beta.model;
 public final class GoogleCloudAiplatformV1beta1CountTokensResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. List of modalities that were processed in the request input.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAiplatformV1beta1ModalityTokenCount> promptTokensDetails;
+
+  /**
    * The total number of billable characters counted across all instances from the request.
    * The value may be {@code null}.
    */
@@ -42,6 +49,23 @@ public final class GoogleCloudAiplatformV1beta1CountTokensResponse extends com.g
    */
   @com.google.api.client.util.Key
   private java.lang.Integer totalTokens;
+
+  /**
+   * Output only. List of modalities that were processed in the request input.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAiplatformV1beta1ModalityTokenCount> getPromptTokensDetails() {
+    return promptTokensDetails;
+  }
+
+  /**
+   * Output only. List of modalities that were processed in the request input.
+   * @param promptTokensDetails promptTokensDetails or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1CountTokensResponse setPromptTokensDetails(java.util.List<GoogleCloudAiplatformV1beta1ModalityTokenCount> promptTokensDetails) {
+    this.promptTokensDetails = promptTokensDetails;
+    return this;
+  }
 
   /**
    * The total number of billable characters counted across all instances from the request.

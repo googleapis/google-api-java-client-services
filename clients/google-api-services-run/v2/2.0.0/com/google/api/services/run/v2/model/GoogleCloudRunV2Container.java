@@ -39,6 +39,21 @@ public final class GoogleCloudRunV2Container extends com.google.api.client.json.
   private java.util.List<java.lang.String> args;
 
   /**
+   * Base image for this container. Only supported for services. If set. it indicates that the
+   * service is enrolled into automatic base image update.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String baseImageUri;
+
+  /**
+   * Output only. The build info of the container image.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRunV2BuildInfo buildInfo;
+
+  /**
    * Entrypoint array. Not executed within a shell. The docker image's ENTRYPOINT is used if this is
    * not provided.
    * The value may be {@code null}.
@@ -137,6 +152,42 @@ public final class GoogleCloudRunV2Container extends com.google.api.client.json.
    */
   public GoogleCloudRunV2Container setArgs(java.util.List<java.lang.String> args) {
     this.args = args;
+    return this;
+  }
+
+  /**
+   * Base image for this container. Only supported for services. If set. it indicates that the
+   * service is enrolled into automatic base image update.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBaseImageUri() {
+    return baseImageUri;
+  }
+
+  /**
+   * Base image for this container. Only supported for services. If set. it indicates that the
+   * service is enrolled into automatic base image update.
+   * @param baseImageUri baseImageUri or {@code null} for none
+   */
+  public GoogleCloudRunV2Container setBaseImageUri(java.lang.String baseImageUri) {
+    this.baseImageUri = baseImageUri;
+    return this;
+  }
+
+  /**
+   * Output only. The build info of the container image.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRunV2BuildInfo getBuildInfo() {
+    return buildInfo;
+  }
+
+  /**
+   * Output only. The build info of the container image.
+   * @param buildInfo buildInfo or {@code null} for none
+   */
+  public GoogleCloudRunV2Container setBuildInfo(GoogleCloudRunV2BuildInfo buildInfo) {
+    this.buildInfo = buildInfo;
     return this;
   }
 

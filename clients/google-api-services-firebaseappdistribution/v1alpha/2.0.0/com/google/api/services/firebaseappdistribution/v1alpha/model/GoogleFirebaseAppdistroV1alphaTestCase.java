@@ -38,6 +38,13 @@ public final class GoogleFirebaseAppdistroV1alphaTestCase extends com.google.api
   private GoogleFirebaseAppdistroV1alphaAiInstructions aiInstructions;
 
   /**
+   * Output only. Timestamp when the test case was created
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String createTime;
+
+  /**
    * Required. Display name of the test case.
    * The value may be {@code null}.
    */
@@ -66,6 +73,23 @@ public final class GoogleFirebaseAppdistroV1alphaTestCase extends com.google.api
    */
   public GoogleFirebaseAppdistroV1alphaTestCase setAiInstructions(GoogleFirebaseAppdistroV1alphaAiInstructions aiInstructions) {
     this.aiInstructions = aiInstructions;
+    return this;
+  }
+
+  /**
+   * Output only. Timestamp when the test case was created
+   * @return value or {@code null} for none
+   */
+  public String getCreateTime() {
+    return createTime;
+  }
+
+  /**
+   * Output only. Timestamp when the test case was created
+   * @param createTime createTime or {@code null} for none
+   */
+  public GoogleFirebaseAppdistroV1alphaTestCase setCreateTime(String createTime) {
+    this.createTime = createTime;
     return this;
   }
 

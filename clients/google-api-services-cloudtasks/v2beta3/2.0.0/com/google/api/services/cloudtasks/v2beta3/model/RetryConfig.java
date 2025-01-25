@@ -34,7 +34,12 @@ public final class RetryConfig extends com.google.api.client.json.GenericJson {
    * if the first attempt fails, then there will be `max_attempts - 1` retries). Must be >= -1. If
    * unspecified when the queue is created, Cloud Tasks will pick the default. -1 indicates
    * unlimited attempts. This field has the same meaning as [task_retry_limit in queue.yaml/xml](htt
-   * ps://cloud.google.com/appengine/docs/standard/python/config/queueref#retry_parameters).
+   * ps://cloud.google.com/appengine/docs/standard/python/config/queueref#retry_parameters). Note:
+   * Cloud Tasks stops retrying only when `max_attempts` and `max_retry_duration` are both
+   * satisfied. When the task has been attempted `max_attempts` times and when the
+   * `max_retry_duration` time has passed, no further attempts are made, and the task is deleted. If
+   * you want your task to retry infinitely, you must set `max_attempts` to -1 and
+   * `max_retry_duration` to 0.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,7 +113,12 @@ public final class RetryConfig extends com.google.api.client.json.GenericJson {
    * if the first attempt fails, then there will be `max_attempts - 1` retries). Must be >= -1. If
    * unspecified when the queue is created, Cloud Tasks will pick the default. -1 indicates
    * unlimited attempts. This field has the same meaning as [task_retry_limit in queue.yaml/xml](htt
-   * ps://cloud.google.com/appengine/docs/standard/python/config/queueref#retry_parameters).
+   * ps://cloud.google.com/appengine/docs/standard/python/config/queueref#retry_parameters). Note:
+   * Cloud Tasks stops retrying only when `max_attempts` and `max_retry_duration` are both
+   * satisfied. When the task has been attempted `max_attempts` times and when the
+   * `max_retry_duration` time has passed, no further attempts are made, and the task is deleted. If
+   * you want your task to retry infinitely, you must set `max_attempts` to -1 and
+   * `max_retry_duration` to 0.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxAttempts() {
@@ -120,7 +130,12 @@ public final class RetryConfig extends com.google.api.client.json.GenericJson {
    * if the first attempt fails, then there will be `max_attempts - 1` retries). Must be >= -1. If
    * unspecified when the queue is created, Cloud Tasks will pick the default. -1 indicates
    * unlimited attempts. This field has the same meaning as [task_retry_limit in queue.yaml/xml](htt
-   * ps://cloud.google.com/appengine/docs/standard/python/config/queueref#retry_parameters).
+   * ps://cloud.google.com/appengine/docs/standard/python/config/queueref#retry_parameters). Note:
+   * Cloud Tasks stops retrying only when `max_attempts` and `max_retry_duration` are both
+   * satisfied. When the task has been attempted `max_attempts` times and when the
+   * `max_retry_duration` time has passed, no further attempts are made, and the task is deleted. If
+   * you want your task to retry infinitely, you must set `max_attempts` to -1 and
+   * `max_retry_duration` to 0.
    * @param maxAttempts maxAttempts or {@code null} for none
    */
   public RetryConfig setMaxAttempts(java.lang.Integer maxAttempts) {

@@ -556,8 +556,8 @@ public class AdSensePlatform extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the adsenseplatform server.  After setting any
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The name of the platform to retrieve. Format:
-           *        accounts/{account}/platforms/{platform}/childAccounts/{child_publisher_code}
+           * @param parent Required. The name of the child account under the given platform which owns the platform child
+           *        sites. Format: accounts/{account}/platforms/{platform}/childAccounts/{child_account}
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -583,8 +583,8 @@ public class AdSensePlatform extends com.google.api.client.googleapis.services.j
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The name of the platform to retrieve. Format:
-           *        accounts/{account}/platforms/{platform}/childAccounts/{child_publisher_code}
+             * @param parent Required. The name of the child account under the given platform which owns the platform child
+           *        sites. Format: accounts/{account}/platforms/{platform}/childAccounts/{child_account}
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -663,22 +663,24 @@ public class AdSensePlatform extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Required. The name of the platform to retrieve. Format:
-             * accounts/{account}/platforms/{platform}/childAccounts/{child_publisher_code}
+             * Required. The name of the child account under the given platform which owns the
+             * platform child sites. Format:
+             * accounts/{account}/platforms/{platform}/childAccounts/{child_account}
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The name of the platform to retrieve. Format:
-           accounts/{account}/platforms/{platform}/childAccounts/{child_publisher_code}
+            /** Required. The name of the child account under the given platform which owns the platform child
+           sites. Format: accounts/{account}/platforms/{platform}/childAccounts/{child_account}
              */
             public java.lang.String getParent() {
               return parent;
             }
 
             /**
-             * Required. The name of the platform to retrieve. Format:
-             * accounts/{account}/platforms/{platform}/childAccounts/{child_publisher_code}
+             * Required. The name of the child account under the given platform which owns the
+             * platform child sites. Format:
+             * accounts/{account}/platforms/{platform}/childAccounts/{child_account}
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -756,7 +758,8 @@ public class AdSensePlatform extends com.google.api.client.googleapis.services.j
            * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
            * @param name Identifier. Format:
-           *        accounts/{account}/platforms/{platform}/childAccounts/{child}/sites/{platformChildSite}
+           *        accounts/{account}/platforms/{platform}/childAccounts/{child_account}/sites/{platform_chil
+           *        d_site}
            * @param content the {@link com.google.api.services.adsenseplatform.v1alpha.model.PlatformChildSite}
            * @return the request
            */
@@ -785,7 +788,8 @@ public class AdSensePlatform extends com.google.api.client.googleapis.services.j
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param name Identifier. Format:
-           *        accounts/{account}/platforms/{platform}/childAccounts/{child}/sites/{platformChildSite}
+           *        accounts/{account}/platforms/{platform}/childAccounts/{child_account}/sites/{platform_chil
+           *        d_site}
              * @param content the {@link com.google.api.services.adsenseplatform.v1alpha.model.PlatformChildSite}
              * @since 1.13
              */
@@ -855,22 +859,22 @@ public class AdSensePlatform extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Identifier. Format: accounts/{account}/platforms/{platform}/childAccounts/{child}/sit
-             * es/{platformChildSite}
+             * Identifier. Format: accounts/{account}/platforms/{platform}/childAccounts/{child_acco
+             * unt}/sites/{platform_child_site}
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Identifier. Format:
-           accounts/{account}/platforms/{platform}/childAccounts/{child}/sites/{platformChildSite}
+           accounts/{account}/platforms/{platform}/childAccounts/{child_account}/sites/{platform_child_site}
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Identifier. Format: accounts/{account}/platforms/{platform}/childAccounts/{child}/sit
-             * es/{platformChildSite}
+             * Identifier. Format: accounts/{account}/platforms/{platform}/childAccounts/{child_acco
+             * unt}/sites/{platform_child_site}
              */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {

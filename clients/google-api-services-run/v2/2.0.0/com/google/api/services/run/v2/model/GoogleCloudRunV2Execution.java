@@ -76,6 +76,13 @@ public final class GoogleCloudRunV2Execution extends com.google.api.client.json.
   private String createTime;
 
   /**
+   * Output only. Email address of the authenticated creator.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String creator;
+
+  /**
    * Output only. For a deleted resource, the deletion time. It is only populated as a response to a
    * Delete request.
    * The value may be {@code null}.
@@ -340,6 +347,23 @@ public final class GoogleCloudRunV2Execution extends com.google.api.client.json.
    */
   public GoogleCloudRunV2Execution setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Output only. Email address of the authenticated creator.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCreator() {
+    return creator;
+  }
+
+  /**
+   * Output only. Email address of the authenticated creator.
+   * @param creator creator or {@code null} for none
+   */
+  public GoogleCloudRunV2Execution setCreator(java.lang.String creator) {
+    this.creator = creator;
     return this;
   }
 

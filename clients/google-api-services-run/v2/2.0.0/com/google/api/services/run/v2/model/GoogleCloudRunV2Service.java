@@ -52,6 +52,13 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
   private GoogleCloudRunV2BinaryAuthorization binaryAuthorization;
 
   /**
+   * Optional. Configuration for building a Cloud Run function.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRunV2BuildConfig buildConfig;
+
+  /**
    * Arbitrary identifier for the API client.
    * The value may be {@code null}.
    */
@@ -371,6 +378,23 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
    */
   public GoogleCloudRunV2Service setBinaryAuthorization(GoogleCloudRunV2BinaryAuthorization binaryAuthorization) {
     this.binaryAuthorization = binaryAuthorization;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for building a Cloud Run function.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRunV2BuildConfig getBuildConfig() {
+    return buildConfig;
+  }
+
+  /**
+   * Optional. Configuration for building a Cloud Run function.
+   * @param buildConfig buildConfig or {@code null} for none
+   */
+  public GoogleCloudRunV2Service setBuildConfig(GoogleCloudRunV2BuildConfig buildConfig) {
+    this.buildConfig = buildConfig;
     return this;
   }
 

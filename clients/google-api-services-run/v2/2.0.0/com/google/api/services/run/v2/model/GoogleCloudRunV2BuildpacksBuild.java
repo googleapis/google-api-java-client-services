@@ -30,7 +30,7 @@ package com.google.api.services.run.v2.model;
 public final class GoogleCloudRunV2BuildpacksBuild extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The base image used to opt into automatic base image updates.
+   * Optional. The base image to use for the build.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,7 +86,7 @@ public final class GoogleCloudRunV2BuildpacksBuild extends com.google.api.client
   private java.lang.String runtime;
 
   /**
-   * Optional. The base image used to opt into automatic base image updates.
+   * Optional. The base image to use for the build.
    * @return value or {@code null} for none
    */
   public java.lang.String getBaseImage() {
@@ -94,7 +94,7 @@ public final class GoogleCloudRunV2BuildpacksBuild extends com.google.api.client
   }
 
   /**
-   * Optional. The base image used to opt into automatic base image updates.
+   * Optional. The base image to use for the build.
    * @param baseImage baseImage or {@code null} for none
    */
   public GoogleCloudRunV2BuildpacksBuild setBaseImage(java.lang.String baseImage) {

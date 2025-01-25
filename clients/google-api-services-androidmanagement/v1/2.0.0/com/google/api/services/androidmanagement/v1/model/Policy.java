@@ -47,7 +47,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean addUserDisabled;
 
   /**
-   * Whether adjusting the master volume is disabled. Also mutes the device.
+   * Whether adjusting the master volume is disabled. Also mutes the device. The setting has effect
+   * only on fully managed devices.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -653,7 +654,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean screenCaptureDisabled;
 
   /**
-   * Whether changing the user icon is disabled.
+   * Whether changing the user icon is disabled. The setting has effect only on fully managed
+   * devices.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -862,7 +864,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether adjusting the master volume is disabled. Also mutes the device.
+   * Whether adjusting the master volume is disabled. Also mutes the device. The setting has effect
+   * only on fully managed devices.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAdjustVolumeDisabled() {
@@ -870,7 +873,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether adjusting the master volume is disabled. Also mutes the device.
+   * Whether adjusting the master volume is disabled. Also mutes the device. The setting has effect
+   * only on fully managed devices.
    * @param adjustVolumeDisabled adjustVolumeDisabled or {@code null} for none
    */
   public Policy setAdjustVolumeDisabled(java.lang.Boolean adjustVolumeDisabled) {
@@ -2203,7 +2207,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether changing the user icon is disabled.
+   * Whether changing the user icon is disabled. The setting has effect only on fully managed
+   * devices.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSetUserIconDisabled() {
@@ -2211,7 +2216,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether changing the user icon is disabled.
+   * Whether changing the user icon is disabled. The setting has effect only on fully managed
+   * devices.
    * @param setUserIconDisabled setUserIconDisabled or {@code null} for none
    */
   public Policy setSetUserIconDisabled(java.lang.Boolean setUserIconDisabled) {

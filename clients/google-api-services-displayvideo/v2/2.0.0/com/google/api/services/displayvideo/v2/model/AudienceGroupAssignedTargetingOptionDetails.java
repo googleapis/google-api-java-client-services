@@ -21,6 +21,7 @@ package com.google.api.services.displayvideo.v2.model;
  * an AssignedTargetingOption when targeting_type is `TARGETING_TYPE_AUDIENCE_GROUP`. The relation
  * between each group is UNION, except for excluded_first_and_third_party_audience_group and
  * excluded_google_audience_group, of which COMPLEMENT is used as an INTERSECTION with other groups.
+ * NEXT_ID: 9
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Display & Video 360 API. For a detailed explanation
@@ -32,16 +33,6 @@ package com.google.api.services.displayvideo.v2.model;
  */
 @SuppressWarnings("javadoc")
 public final class AudienceGroupAssignedTargetingOptionDetails extends com.google.api.client.json.GenericJson {
-
-  /**
-   * The first and third party audience ids and recencies of the excluded first and third party
-   * audience group. Used for negative targeting. The COMPLEMENT of the UNION of this group and
-   * other excluded audience groups is used as an INTERSECTION to any positive audience targeting.
-   * All items are logically ‘OR’ of each other.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private FirstAndThirdPartyAudienceGroup excludedFirstAndThirdPartyAudienceGroup;
 
   /**
    * The Google audience ids of the excluded Google audience group. Used for negative targeting. The
@@ -69,46 +60,12 @@ public final class AudienceGroupAssignedTargetingOptionDetails extends com.googl
   private CustomListGroup includedCustomListGroup;
 
   /**
-   * The first and third party audience ids and recencies of included first and third party audience
-   * groups. Each first and third party audience group contains first and third party audience ids
-   * only. The relation between each first and third party audience group is INTERSECTION, and the
-   * result is UNION'ed with other audience groups. Repeated groups with same settings will be
-   * ignored.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<FirstAndThirdPartyAudienceGroup> includedFirstAndThirdPartyAudienceGroups;
-
-  /**
    * The Google audience ids of the included Google audience group. Contains Google audience ids
    * only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAudienceGroup includedGoogleAudienceGroup;
-
-  /**
-   * The first and third party audience ids and recencies of the excluded first and third party
-   * audience group. Used for negative targeting. The COMPLEMENT of the UNION of this group and
-   * other excluded audience groups is used as an INTERSECTION to any positive audience targeting.
-   * All items are logically ‘OR’ of each other.
-   * @return value or {@code null} for none
-   */
-  public FirstAndThirdPartyAudienceGroup getExcludedFirstAndThirdPartyAudienceGroup() {
-    return excludedFirstAndThirdPartyAudienceGroup;
-  }
-
-  /**
-   * The first and third party audience ids and recencies of the excluded first and third party
-   * audience group. Used for negative targeting. The COMPLEMENT of the UNION of this group and
-   * other excluded audience groups is used as an INTERSECTION to any positive audience targeting.
-   * All items are logically ‘OR’ of each other.
-   * @param excludedFirstAndThirdPartyAudienceGroup excludedFirstAndThirdPartyAudienceGroup or {@code null} for none
-   */
-  public AudienceGroupAssignedTargetingOptionDetails setExcludedFirstAndThirdPartyAudienceGroup(FirstAndThirdPartyAudienceGroup excludedFirstAndThirdPartyAudienceGroup) {
-    this.excludedFirstAndThirdPartyAudienceGroup = excludedFirstAndThirdPartyAudienceGroup;
-    return this;
-  }
 
   /**
    * The Google audience ids of the excluded Google audience group. Used for negative targeting. The
@@ -166,31 +123,6 @@ public final class AudienceGroupAssignedTargetingOptionDetails extends com.googl
    */
   public AudienceGroupAssignedTargetingOptionDetails setIncludedCustomListGroup(CustomListGroup includedCustomListGroup) {
     this.includedCustomListGroup = includedCustomListGroup;
-    return this;
-  }
-
-  /**
-   * The first and third party audience ids and recencies of included first and third party audience
-   * groups. Each first and third party audience group contains first and third party audience ids
-   * only. The relation between each first and third party audience group is INTERSECTION, and the
-   * result is UNION'ed with other audience groups. Repeated groups with same settings will be
-   * ignored.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<FirstAndThirdPartyAudienceGroup> getIncludedFirstAndThirdPartyAudienceGroups() {
-    return includedFirstAndThirdPartyAudienceGroups;
-  }
-
-  /**
-   * The first and third party audience ids and recencies of included first and third party audience
-   * groups. Each first and third party audience group contains first and third party audience ids
-   * only. The relation between each first and third party audience group is INTERSECTION, and the
-   * result is UNION'ed with other audience groups. Repeated groups with same settings will be
-   * ignored.
-   * @param includedFirstAndThirdPartyAudienceGroups includedFirstAndThirdPartyAudienceGroups or {@code null} for none
-   */
-  public AudienceGroupAssignedTargetingOptionDetails setIncludedFirstAndThirdPartyAudienceGroups(java.util.List<FirstAndThirdPartyAudienceGroup> includedFirstAndThirdPartyAudienceGroups) {
-    this.includedFirstAndThirdPartyAudienceGroups = includedFirstAndThirdPartyAudienceGroups;
     return this;
   }
 

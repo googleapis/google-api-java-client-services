@@ -21,6 +21,7 @@ package com.google.api.services.displayvideo.v3.model;
  * an AssignedTargetingOption when targeting_type is `TARGETING_TYPE_AUDIENCE_GROUP`. The relation
  * between each group is UNION, except for excluded_first_and_third_party_audience_group and
  * excluded_google_audience_group, of which COMPLEMENT is used as an INTERSECTION with other groups.
+ * NEXT_ID: 9
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Display & Video 360 API. For a detailed explanation

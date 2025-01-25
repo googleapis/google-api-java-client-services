@@ -31,6 +31,13 @@ package com.google.api.services.firebaseappdistribution.v1alpha.model;
 public final class GoogleFirebaseAppdistroV1alphaGoalAction extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Debug information explaining why the agent to the specific action
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleFirebaseAppdistroV1alphaGoalActionDebugInfo debugInfo;
+
+  /**
    * Output only. A high level action taken by the AI on the device.
    * The value may be {@code null}.
    */
@@ -50,6 +57,23 @@ public final class GoogleFirebaseAppdistroV1alphaGoalAction extends com.google.a
    */
   @com.google.api.client.util.Key
   private GoogleFirebaseAppdistroV1alphaTerminalAction terminalAction;
+
+  /**
+   * Output only. Debug information explaining why the agent to the specific action
+   * @return value or {@code null} for none
+   */
+  public GoogleFirebaseAppdistroV1alphaGoalActionDebugInfo getDebugInfo() {
+    return debugInfo;
+  }
+
+  /**
+   * Output only. Debug information explaining why the agent to the specific action
+   * @param debugInfo debugInfo or {@code null} for none
+   */
+  public GoogleFirebaseAppdistroV1alphaGoalAction setDebugInfo(GoogleFirebaseAppdistroV1alphaGoalActionDebugInfo debugInfo) {
+    this.debugInfo = debugInfo;
+    return this;
+  }
 
   /**
    * Output only. A high level action taken by the AI on the device.

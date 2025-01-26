@@ -73,6 +73,13 @@ public final class ColumnEntity extends com.google.api.client.json.GenericJson {
   private java.lang.String comment;
 
   /**
+   * Is the column a computed column.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean computed;
+
+  /**
    * Custom engine specific features.
    * The value may be {@code null}.
    */
@@ -255,6 +262,23 @@ public final class ColumnEntity extends com.google.api.client.json.GenericJson {
    */
   public ColumnEntity setComment(java.lang.String comment) {
     this.comment = comment;
+    return this;
+  }
+
+  /**
+   * Is the column a computed column.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getComputed() {
+    return computed;
+  }
+
+  /**
+   * Is the column a computed column.
+   * @param computed computed or {@code null} for none
+   */
+  public ColumnEntity setComputed(java.lang.Boolean computed) {
+    this.computed = computed;
     return this;
   }
 

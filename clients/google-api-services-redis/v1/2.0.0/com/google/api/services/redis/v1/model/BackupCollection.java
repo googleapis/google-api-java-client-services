@@ -46,6 +46,13 @@ public final class BackupCollection extends com.google.api.client.json.GenericJs
   private java.lang.String clusterUid;
 
   /**
+   * Output only. The time when the backup collection was created.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String createTime;
+
+  /**
    * Output only. The KMS key used to encrypt the backups under this backup collection.
    * The value may be {@code null}.
    */
@@ -99,6 +106,23 @@ public final class BackupCollection extends com.google.api.client.json.GenericJs
    */
   public BackupCollection setClusterUid(java.lang.String clusterUid) {
     this.clusterUid = clusterUid;
+    return this;
+  }
+
+  /**
+   * Output only. The time when the backup collection was created.
+   * @return value or {@code null} for none
+   */
+  public String getCreateTime() {
+    return createTime;
+  }
+
+  /**
+   * Output only. The time when the backup collection was created.
+   * @param createTime createTime or {@code null} for none
+   */
+  public BackupCollection setCreateTime(String createTime) {
+    this.createTime = createTime;
     return this;
   }
 

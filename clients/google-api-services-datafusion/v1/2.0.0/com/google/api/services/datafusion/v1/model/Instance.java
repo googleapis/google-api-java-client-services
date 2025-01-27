@@ -161,6 +161,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
+   * Output only. The maintenance events for this instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<MaintenanceEvent> maintenanceEvents;
+
+  /**
    * Optional. Configure the maintenance policy for this instance.
    * The value may be {@code null}.
    */
@@ -588,6 +595,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
+    return this;
+  }
+
+  /**
+   * Output only. The maintenance events for this instance.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<MaintenanceEvent> getMaintenanceEvents() {
+    return maintenanceEvents;
+  }
+
+  /**
+   * Output only. The maintenance events for this instance.
+   * @param maintenanceEvents maintenanceEvents or {@code null} for none
+   */
+  public Instance setMaintenanceEvents(java.util.List<MaintenanceEvent> maintenanceEvents) {
+    this.maintenanceEvents = maintenanceEvents;
     return this;
   }
 

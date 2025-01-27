@@ -58,6 +58,13 @@ public final class SapDiscoveryComponentDatabaseProperties extends com.google.ap
   private java.lang.String instanceNumber;
 
   /**
+   * Optional. Landscape ID from the HANA nameserver.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String landscapeId;
+
+  /**
    * Required. URI of the recognized primary instance of the database.
    * The value may be {@code null}.
    */
@@ -137,6 +144,23 @@ public final class SapDiscoveryComponentDatabaseProperties extends com.google.ap
    */
   public SapDiscoveryComponentDatabaseProperties setInstanceNumber(java.lang.String instanceNumber) {
     this.instanceNumber = instanceNumber;
+    return this;
+  }
+
+  /**
+   * Optional. Landscape ID from the HANA nameserver.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLandscapeId() {
+    return landscapeId;
+  }
+
+  /**
+   * Optional. Landscape ID from the HANA nameserver.
+   * @param landscapeId landscapeId or {@code null} for none
+   */
+  public SapDiscoveryComponentDatabaseProperties setLandscapeId(java.lang.String landscapeId) {
+    this.landscapeId = landscapeId;
     return this;
   }
 

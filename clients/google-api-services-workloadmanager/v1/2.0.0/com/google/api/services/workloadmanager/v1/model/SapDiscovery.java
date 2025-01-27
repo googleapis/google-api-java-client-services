@@ -73,6 +73,13 @@ public final class SapDiscovery extends com.google.api.client.json.GenericJson {
   private String updateTime;
 
   /**
+   * Optional. Whether to use DR reconciliation or not.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean useDrReconciliation;
+
+  /**
    * Optional. The properties of the workload.
    * The value may be {@code null}.
    */
@@ -180,6 +187,23 @@ public final class SapDiscovery extends com.google.api.client.json.GenericJson {
    */
   public SapDiscovery setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
+    return this;
+  }
+
+  /**
+   * Optional. Whether to use DR reconciliation or not.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getUseDrReconciliation() {
+    return useDrReconciliation;
+  }
+
+  /**
+   * Optional. Whether to use DR reconciliation or not.
+   * @param useDrReconciliation useDrReconciliation or {@code null} for none
+   */
+  public SapDiscovery setUseDrReconciliation(java.lang.Boolean useDrReconciliation) {
+    this.useDrReconciliation = useDrReconciliation;
     return this;
   }
 

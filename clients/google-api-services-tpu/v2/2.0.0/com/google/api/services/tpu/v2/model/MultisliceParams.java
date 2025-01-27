@@ -31,7 +31,7 @@ package com.google.api.services.tpu.v2.model;
 public final class MultisliceParams extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Number of nodes with this spec. The system will attempt to provison "node_count"
+   * Required. Number of nodes with this spec. The system will attempt to provision "node_count"
    * nodes as part of the request. This needs to be > 1.
    * The value may be {@code null}.
    */
@@ -49,7 +49,7 @@ public final class MultisliceParams extends com.google.api.client.json.GenericJs
   private java.lang.String nodeIdPrefix;
 
   /**
-   * Required. Number of nodes with this spec. The system will attempt to provison "node_count"
+   * Required. Number of nodes with this spec. The system will attempt to provision "node_count"
    * nodes as part of the request. This needs to be > 1.
    * @return value or {@code null} for none
    */
@@ -58,7 +58,7 @@ public final class MultisliceParams extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. Number of nodes with this spec. The system will attempt to provison "node_count"
+   * Required. Number of nodes with this spec. The system will attempt to provision "node_count"
    * nodes as part of the request. This needs to be > 1.
    * @param nodeCount nodeCount or {@code null} for none
    */

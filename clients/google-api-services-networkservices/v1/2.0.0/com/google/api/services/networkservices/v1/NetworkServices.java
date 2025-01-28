@@ -5354,6 +5354,31 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
             return this;
           }
 
+          /**
+           * Optional. Etag of the resource. If this is provided, it must match the server's etag.
+           * If the provided etag does not match the server's etag, the request will fail with a 409
+           * ABORTED error.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String etag;
+
+          /** Optional. Etag of the resource. If this is provided, it must match the server's etag. If the
+         provided etag does not match the server's etag, the request will fail with a 409 ABORTED error.
+           */
+          public java.lang.String getEtag() {
+            return etag;
+          }
+
+          /**
+           * Optional. Etag of the resource. If this is provided, it must match the server's etag.
+           * If the provided etag does not match the server's etag, the request will fail with a 409
+           * ABORTED error.
+           */
+          public Delete setEtag(java.lang.String etag) {
+            this.etag = etag;
+            return this;
+          }
+
           @Override
           public Delete set(String parameterName, Object value) {
             return (Delete) super.set(parameterName, value);
@@ -6168,6 +6193,31 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
                   "^projects/[^/]+/locations/[^/]+/httpRoutes/[^/]+$");
             }
             this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. Etag of the resource. If this is provided, it must match the server's etag.
+           * If the provided etag does not match the server's etag, the request will fail with a 409
+           * ABORTED error.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String etag;
+
+          /** Optional. Etag of the resource. If this is provided, it must match the server's etag. If the
+         provided etag does not match the server's etag, the request will fail with a 409 ABORTED error.
+           */
+          public java.lang.String getEtag() {
+            return etag;
+          }
+
+          /**
+           * Optional. Etag of the resource. If this is provided, it must match the server's etag.
+           * If the provided etag does not match the server's etag, the request will fail with a 409
+           * ABORTED error.
+           */
+          public Delete setEtag(java.lang.String etag) {
+            this.etag = etag;
             return this;
           }
 
@@ -12227,6 +12277,31 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
             return this;
           }
 
+          /**
+           * Optional. Etag of the resource. If this is provided, it must match the server's etag.
+           * If the provided etag does not match the server's etag, the request will fail with a 409
+           * ABORTED error.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String etag;
+
+          /** Optional. Etag of the resource. If this is provided, it must match the server's etag. If the
+         provided etag does not match the server's etag, the request will fail with a 409 ABORTED error.
+           */
+          public java.lang.String getEtag() {
+            return etag;
+          }
+
+          /**
+           * Optional. Etag of the resource. If this is provided, it must match the server's etag.
+           * If the provided etag does not match the server's etag, the request will fail with a 409
+           * ABORTED error.
+           */
+          public Delete setEtag(java.lang.String etag) {
+            this.etag = etag;
+            return this;
+          }
+
           @Override
           public Delete set(String parameterName, Object value) {
             return (Delete) super.set(parameterName, value);
@@ -13041,6 +13116,31 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
                   "^projects/[^/]+/locations/[^/]+/tlsRoutes/[^/]+$");
             }
             this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. Etag of the resource. If this is provided, it must match the server's etag.
+           * If the provided etag does not match the server's etag, the request will fail with a 409
+           * ABORTED error.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String etag;
+
+          /** Optional. Etag of the resource. If this is provided, it must match the server's etag. If the
+         provided etag does not match the server's etag, the request will fail with a 409 ABORTED error.
+           */
+          public java.lang.String getEtag() {
+            return etag;
+          }
+
+          /**
+           * Optional. Etag of the resource. If this is provided, it must match the server's etag.
+           * If the provided etag does not match the server's etag, the request will fail with a 409
+           * ABORTED error.
+           */
+          public Delete setEtag(java.lang.String etag) {
+            this.etag = etag;
             return this;
           }
 

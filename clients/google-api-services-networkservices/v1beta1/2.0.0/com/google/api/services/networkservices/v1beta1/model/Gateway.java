@@ -20,7 +20,6 @@ package com.google.api.services.networkservices.v1beta1.model;
  * Gateway represents the configuration for a proxy, typically a load balancer. It captures the
  * ip:port over which the services are exposed by the proxy, along with any policy configurations.
  * Routes have reference to to Gateways to dictate how requests should be routed by this Gateway.
- * Next id: 33
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Services API. For a detailed explanation see:
@@ -135,7 +134,7 @@ public final class Gateway extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Scope determines how configuration across multiple Gateway instances are merged. The
    * configuration for multiple Gateway instances with the same scope will be merged as presented as
-   * a single coniguration to the proxy/load balancer. Max length 64 characters. Scope should start
+   * a single configuration to the proxy/load balancer. Max length 64 characters. Scope should start
    * with a letter and can only have letters, numbers, hyphens.
    * The value may be {@code null}.
    */
@@ -420,7 +419,7 @@ public final class Gateway extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Scope determines how configuration across multiple Gateway instances are merged. The
    * configuration for multiple Gateway instances with the same scope will be merged as presented as
-   * a single coniguration to the proxy/load balancer. Max length 64 characters. Scope should start
+   * a single configuration to the proxy/load balancer. Max length 64 characters. Scope should start
    * with a letter and can only have letters, numbers, hyphens.
    * @return value or {@code null} for none
    */
@@ -431,7 +430,7 @@ public final class Gateway extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Scope determines how configuration across multiple Gateway instances are merged. The
    * configuration for multiple Gateway instances with the same scope will be merged as presented as
-   * a single coniguration to the proxy/load balancer. Max length 64 characters. Scope should start
+   * a single configuration to the proxy/load balancer. Max length 64 characters. Scope should start
    * with a letter and can only have letters, numbers, hyphens.
    * @param scope scope or {@code null} for none
    */

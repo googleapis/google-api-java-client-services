@@ -38,6 +38,20 @@ public final class GoogleCloudDocumentaiV1beta3ProcessOptionsLayoutConfig extend
   private GoogleCloudDocumentaiV1beta3ProcessOptionsLayoutConfigChunkingConfig chunkingConfig;
 
   /**
+   * Optional. Whether to include bounding boxes in layout parser processor response.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean returnBoundingBoxes;
+
+  /**
+   * Optional. Whether to include images in layout parser processor response.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean returnImages;
+
+  /**
    * Optional. Config for chunking in layout parser processor.
    * @return value or {@code null} for none
    */
@@ -51,6 +65,40 @@ public final class GoogleCloudDocumentaiV1beta3ProcessOptionsLayoutConfig extend
    */
   public GoogleCloudDocumentaiV1beta3ProcessOptionsLayoutConfig setChunkingConfig(GoogleCloudDocumentaiV1beta3ProcessOptionsLayoutConfigChunkingConfig chunkingConfig) {
     this.chunkingConfig = chunkingConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Whether to include bounding boxes in layout parser processor response.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getReturnBoundingBoxes() {
+    return returnBoundingBoxes;
+  }
+
+  /**
+   * Optional. Whether to include bounding boxes in layout parser processor response.
+   * @param returnBoundingBoxes returnBoundingBoxes or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3ProcessOptionsLayoutConfig setReturnBoundingBoxes(java.lang.Boolean returnBoundingBoxes) {
+    this.returnBoundingBoxes = returnBoundingBoxes;
+    return this;
+  }
+
+  /**
+   * Optional. Whether to include images in layout parser processor response.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getReturnImages() {
+    return returnImages;
+  }
+
+  /**
+   * Optional. Whether to include images in layout parser processor response.
+   * @param returnImages returnImages or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3ProcessOptionsLayoutConfig setReturnImages(java.lang.Boolean returnImages) {
+    this.returnImages = returnImages;
     return this;
   }
 

@@ -51,6 +51,28 @@ public final class HybridPeeringDetails extends com.google.api.client.json.Gener
   private java.lang.String passphrase;
 
   /**
+   * Optional. Name of the user's local source cluster to be peered with the destination cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String peerClusterName;
+
+  /**
+   * Optional. Name of the user's local source vserver svm to be peered with the destination vserver
+   * svm.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String peerSvmName;
+
+  /**
+   * Optional. Name of the user's local source volume to be peered with the destination volume.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String peerVolumeName;
+
+  /**
    * Optional. IP address of the subnet.
    * The value may be {@code null}.
    */
@@ -105,6 +127,59 @@ public final class HybridPeeringDetails extends com.google.api.client.json.Gener
    */
   public HybridPeeringDetails setPassphrase(java.lang.String passphrase) {
     this.passphrase = passphrase;
+    return this;
+  }
+
+  /**
+   * Optional. Name of the user's local source cluster to be peered with the destination cluster.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPeerClusterName() {
+    return peerClusterName;
+  }
+
+  /**
+   * Optional. Name of the user's local source cluster to be peered with the destination cluster.
+   * @param peerClusterName peerClusterName or {@code null} for none
+   */
+  public HybridPeeringDetails setPeerClusterName(java.lang.String peerClusterName) {
+    this.peerClusterName = peerClusterName;
+    return this;
+  }
+
+  /**
+   * Optional. Name of the user's local source vserver svm to be peered with the destination vserver
+   * svm.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPeerSvmName() {
+    return peerSvmName;
+  }
+
+  /**
+   * Optional. Name of the user's local source vserver svm to be peered with the destination vserver
+   * svm.
+   * @param peerSvmName peerSvmName or {@code null} for none
+   */
+  public HybridPeeringDetails setPeerSvmName(java.lang.String peerSvmName) {
+    this.peerSvmName = peerSvmName;
+    return this;
+  }
+
+  /**
+   * Optional. Name of the user's local source volume to be peered with the destination volume.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPeerVolumeName() {
+    return peerVolumeName;
+  }
+
+  /**
+   * Optional. Name of the user's local source volume to be peered with the destination volume.
+   * @param peerVolumeName peerVolumeName or {@code null} for none
+   */
+  public HybridPeeringDetails setPeerVolumeName(java.lang.String peerVolumeName) {
+    this.peerVolumeName = peerVolumeName;
     return this;
   }
 

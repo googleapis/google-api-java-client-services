@@ -35,10 +35,10 @@ public final class GooglePrivacyDlpV2Export extends com.google.api.client.json.G
    * Store all profiles to BigQuery. * The system will create a new dataset and table for you if
    * none are are provided. The dataset will be named `sensitive_data_protection_discovery` and
    * table will be named `discovery_profiles`. This table will be placed in the same project as the
-   * container project running the scan. The configuration will be updated with the fields set after
-   * the first profile is generated and the dataset and table are created. * See [Analyze data
-   * profiles stored in BigQuery](https://cloud.google.com/sensitive-data-protection/docs/analyze-
-   * data-profiles) * See [Sample queries for your BigQuery
+   * container project running the scan. After the first profile is generated and the dataset and
+   * table are created, the discovery scan configuration will be updated with the dataset and table
+   * names. * See [Analyze data profiles stored in BigQuery](https://cloud.google.com/sensitive-
+   * data-protection/docs/analyze-data-profiles). * See [Sample queries for your BigQuery
    * table](https://cloud.google.com/sensitive-data-protection/docs/analyze-data-
    * profiles#sample_sql_queries). * Data is inserted using [streaming
    * insert](https://cloud.google.com/blog/products/bigquery/life-of-a-bigquery-streaming-insert)
@@ -46,8 +46,9 @@ public final class GooglePrivacyDlpV2Export extends com.google.api.client.json.G
    * Pub/Sub notification is sent before the streaming buffer is guaranteed to be written, so data
    * may not be instantly visible to queries by the time your topic receives the Pub/Sub
    * notification. * The best practice is to use the same table for an entire organization so that
-   * you can take advantage of the provided Looker reports. If you use VPC Service Controls to
-   * define security perimeters, then you must use a separate table for each boundary.
+   * you can take advantage of the [provided Looker reports](https://cloud.google.com/sensitive-
+   * data-protection/docs/analyze-data-profiles#use_a_premade_report). If you use VPC Service
+   * Controls to define security perimeters, then you must use a separate table for each boundary.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,10 +58,10 @@ public final class GooglePrivacyDlpV2Export extends com.google.api.client.json.G
    * Store all profiles to BigQuery. * The system will create a new dataset and table for you if
    * none are are provided. The dataset will be named `sensitive_data_protection_discovery` and
    * table will be named `discovery_profiles`. This table will be placed in the same project as the
-   * container project running the scan. The configuration will be updated with the fields set after
-   * the first profile is generated and the dataset and table are created. * See [Analyze data
-   * profiles stored in BigQuery](https://cloud.google.com/sensitive-data-protection/docs/analyze-
-   * data-profiles) * See [Sample queries for your BigQuery
+   * container project running the scan. After the first profile is generated and the dataset and
+   * table are created, the discovery scan configuration will be updated with the dataset and table
+   * names. * See [Analyze data profiles stored in BigQuery](https://cloud.google.com/sensitive-
+   * data-protection/docs/analyze-data-profiles). * See [Sample queries for your BigQuery
    * table](https://cloud.google.com/sensitive-data-protection/docs/analyze-data-
    * profiles#sample_sql_queries). * Data is inserted using [streaming
    * insert](https://cloud.google.com/blog/products/bigquery/life-of-a-bigquery-streaming-insert)
@@ -68,8 +69,9 @@ public final class GooglePrivacyDlpV2Export extends com.google.api.client.json.G
    * Pub/Sub notification is sent before the streaming buffer is guaranteed to be written, so data
    * may not be instantly visible to queries by the time your topic receives the Pub/Sub
    * notification. * The best practice is to use the same table for an entire organization so that
-   * you can take advantage of the provided Looker reports. If you use VPC Service Controls to
-   * define security perimeters, then you must use a separate table for each boundary.
+   * you can take advantage of the [provided Looker reports](https://cloud.google.com/sensitive-
+   * data-protection/docs/analyze-data-profiles#use_a_premade_report). If you use VPC Service
+   * Controls to define security perimeters, then you must use a separate table for each boundary.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2BigQueryTable getProfileTable() {
@@ -80,10 +82,10 @@ public final class GooglePrivacyDlpV2Export extends com.google.api.client.json.G
    * Store all profiles to BigQuery. * The system will create a new dataset and table for you if
    * none are are provided. The dataset will be named `sensitive_data_protection_discovery` and
    * table will be named `discovery_profiles`. This table will be placed in the same project as the
-   * container project running the scan. The configuration will be updated with the fields set after
-   * the first profile is generated and the dataset and table are created. * See [Analyze data
-   * profiles stored in BigQuery](https://cloud.google.com/sensitive-data-protection/docs/analyze-
-   * data-profiles) * See [Sample queries for your BigQuery
+   * container project running the scan. After the first profile is generated and the dataset and
+   * table are created, the discovery scan configuration will be updated with the dataset and table
+   * names. * See [Analyze data profiles stored in BigQuery](https://cloud.google.com/sensitive-
+   * data-protection/docs/analyze-data-profiles). * See [Sample queries for your BigQuery
    * table](https://cloud.google.com/sensitive-data-protection/docs/analyze-data-
    * profiles#sample_sql_queries). * Data is inserted using [streaming
    * insert](https://cloud.google.com/blog/products/bigquery/life-of-a-bigquery-streaming-insert)
@@ -91,8 +93,9 @@ public final class GooglePrivacyDlpV2Export extends com.google.api.client.json.G
    * Pub/Sub notification is sent before the streaming buffer is guaranteed to be written, so data
    * may not be instantly visible to queries by the time your topic receives the Pub/Sub
    * notification. * The best practice is to use the same table for an entire organization so that
-   * you can take advantage of the provided Looker reports. If you use VPC Service Controls to
-   * define security perimeters, then you must use a separate table for each boundary.
+   * you can take advantage of the [provided Looker reports](https://cloud.google.com/sensitive-
+   * data-protection/docs/analyze-data-profiles#use_a_premade_report). If you use VPC Service
+   * Controls to define security perimeters, then you must use a separate table for each boundary.
    * @param profileTable profileTable or {@code null} for none
    */
   public GooglePrivacyDlpV2Export setProfileTable(GooglePrivacyDlpV2BigQueryTable profileTable) {

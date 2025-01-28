@@ -58,7 +58,7 @@ public final class GooglePrivacyDlpV2InfoTypeDescription extends com.google.api.
   private java.lang.String displayName;
 
   /**
-   * A sample true positive for this infoType.
+   * A sample that is a true positive for this infoType.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -144,7 +144,7 @@ public final class GooglePrivacyDlpV2InfoTypeDescription extends com.google.api.
   }
 
   /**
-   * A sample true positive for this infoType.
+   * A sample that is a true positive for this infoType.
    * @return value or {@code null} for none
    */
   public java.lang.String getExample() {
@@ -152,7 +152,7 @@ public final class GooglePrivacyDlpV2InfoTypeDescription extends com.google.api.
   }
 
   /**
-   * A sample true positive for this infoType.
+   * A sample that is a true positive for this infoType.
    * @param example example or {@code null} for none
    */
   public GooglePrivacyDlpV2InfoTypeDescription setExample(java.lang.String example) {

@@ -70,6 +70,15 @@ public final class Request extends com.google.api.client.json.GenericJson {
   private java.lang.String method;
 
   /**
+   * The values from Origin header from the HTTP request, such as
+   * "https://console.cloud.google.com". Modern browsers can only have one origin. Special browsers
+   * and/or HTTP clients may require multiple origins.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String origin;
+
+  /**
    * The HTTP URL path, excluding the query parameters.
    * The value may be {@code null}.
    */
@@ -212,6 +221,27 @@ public final class Request extends com.google.api.client.json.GenericJson {
    */
   public Request setMethod(java.lang.String method) {
     this.method = method;
+    return this;
+  }
+
+  /**
+   * The values from Origin header from the HTTP request, such as
+   * "https://console.cloud.google.com". Modern browsers can only have one origin. Special browsers
+   * and/or HTTP clients may require multiple origins.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOrigin() {
+    return origin;
+  }
+
+  /**
+   * The values from Origin header from the HTTP request, such as
+   * "https://console.cloud.google.com". Modern browsers can only have one origin. Special browsers
+   * and/or HTTP clients may require multiple origins.
+   * @param origin origin or {@code null} for none
+   */
+  public Request setOrigin(java.lang.String origin) {
+    this.origin = origin;
     return this;
   }
 

@@ -58,6 +58,20 @@ public final class CreateAndConfigureAccountRequest extends com.google.api.clien
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private java.util.List<AddUser> user;
+
+  static {
+    // hack to force ProGuard to consider AddUser used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(AddUser.class);
+  }
+
+  /**
+   * Optional. Users to be added to the account. This field is deprecated and will not exist after
+   * the API evolves out of beta. Use the `user` field instead.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.util.List<CreateUserRequest> users;
 
   /**
@@ -106,12 +120,31 @@ public final class CreateAndConfigureAccountRequest extends com.google.api.clien
    * Optional. Users to be added to the account.
    * @return value or {@code null} for none
    */
+  public java.util.List<AddUser> getUser() {
+    return user;
+  }
+
+  /**
+   * Optional. Users to be added to the account.
+   * @param user user or {@code null} for none
+   */
+  public CreateAndConfigureAccountRequest setUser(java.util.List<AddUser> user) {
+    this.user = user;
+    return this;
+  }
+
+  /**
+   * Optional. Users to be added to the account. This field is deprecated and will not exist after
+   * the API evolves out of beta. Use the `user` field instead.
+   * @return value or {@code null} for none
+   */
   public java.util.List<CreateUserRequest> getUsers() {
     return users;
   }
 
   /**
-   * Optional. Users to be added to the account.
+   * Optional. Users to be added to the account. This field is deprecated and will not exist after
+   * the API evolves out of beta. Use the `user` field instead.
    * @param users users or {@code null} for none
    */
   public CreateAndConfigureAccountRequest setUsers(java.util.List<CreateUserRequest> users) {

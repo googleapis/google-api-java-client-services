@@ -69,7 +69,7 @@ public final class Session extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Required. The resource name of the session.
+   * Identifier. The resource name of the session.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -244,7 +244,7 @@ public final class Session extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The resource name of the session.
+   * Identifier. The resource name of the session.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -252,7 +252,7 @@ public final class Session extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The resource name of the session.
+   * Identifier. The resource name of the session.
    * @param name name or {@code null} for none
    */
   public Session setName(java.lang.String name) {

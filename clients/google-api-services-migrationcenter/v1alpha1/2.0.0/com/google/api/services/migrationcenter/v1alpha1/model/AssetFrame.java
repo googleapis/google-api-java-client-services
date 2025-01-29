@@ -66,6 +66,13 @@ public final class AssetFrame extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
+   * Asset information specific for virtual and physical machines.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MachineDetails machineDetails;
+
+  /**
    * Asset performance data samples. Samples that are from more than 40 days ago or after tomorrow
    * are ignored.
    * The value may be {@code null}.
@@ -178,6 +185,23 @@ public final class AssetFrame extends com.google.api.client.json.GenericJson {
    */
   public AssetFrame setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
+    return this;
+  }
+
+  /**
+   * Asset information specific for virtual and physical machines.
+   * @return value or {@code null} for none
+   */
+  public MachineDetails getMachineDetails() {
+    return machineDetails;
+  }
+
+  /**
+   * Asset information specific for virtual and physical machines.
+   * @param machineDetails machineDetails or {@code null} for none
+   */
+  public AssetFrame setMachineDetails(MachineDetails machineDetails) {
+    this.machineDetails = machineDetails;
     return this;
   }
 

@@ -37,6 +37,13 @@ public final class GoogleFirestoreAdminV1Index extends com.google.api.client.jso
   private java.lang.String apiScope;
 
   /**
+   * Immutable. The density configuration of the index.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String density;
+
+  /**
    * The fields supported by this index. For composite indexes, this requires a minimum of 2 and a
    * maximum of 100 fields. The last field entry is always for the field path `__name__`. If, on
    * creation, `__name__` was not specified as the last field, it will be added automatically with
@@ -48,6 +55,17 @@ public final class GoogleFirestoreAdminV1Index extends com.google.api.client.jso
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleFirestoreAdminV1IndexField> fields;
+
+  /**
+   * Optional. Whether the index is multikey. By default, the index is not multikey. For non-
+   * multikey indexes, none of the paths in the index definition reach or traverse an array, except
+   * via an explicit array index. For multikey indexes, at most one of the paths in the index
+   * definition reach or traverse an array, except via an explicit array index. Violations will
+   * result in errors. Note this field only applies to index with IGNITE_API ApiScope.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean multikey;
 
   /**
    * Output only. A server defined name for this index. The form of this name for composite indexes
@@ -94,6 +112,23 @@ public final class GoogleFirestoreAdminV1Index extends com.google.api.client.jso
   }
 
   /**
+   * Immutable. The density configuration of the index.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDensity() {
+    return density;
+  }
+
+  /**
+   * Immutable. The density configuration of the index.
+   * @param density density or {@code null} for none
+   */
+  public GoogleFirestoreAdminV1Index setDensity(java.lang.String density) {
+    this.density = density;
+    return this;
+  }
+
+  /**
    * The fields supported by this index. For composite indexes, this requires a minimum of 2 and a
    * maximum of 100 fields. The last field entry is always for the field path `__name__`. If, on
    * creation, `__name__` was not specified as the last field, it will be added automatically with
@@ -119,6 +154,31 @@ public final class GoogleFirestoreAdminV1Index extends com.google.api.client.jso
    */
   public GoogleFirestoreAdminV1Index setFields(java.util.List<GoogleFirestoreAdminV1IndexField> fields) {
     this.fields = fields;
+    return this;
+  }
+
+  /**
+   * Optional. Whether the index is multikey. By default, the index is not multikey. For non-
+   * multikey indexes, none of the paths in the index definition reach or traverse an array, except
+   * via an explicit array index. For multikey indexes, at most one of the paths in the index
+   * definition reach or traverse an array, except via an explicit array index. Violations will
+   * result in errors. Note this field only applies to index with IGNITE_API ApiScope.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getMultikey() {
+    return multikey;
+  }
+
+  /**
+   * Optional. Whether the index is multikey. By default, the index is not multikey. For non-
+   * multikey indexes, none of the paths in the index definition reach or traverse an array, except
+   * via an explicit array index. For multikey indexes, at most one of the paths in the index
+   * definition reach or traverse an array, except via an explicit array index. Violations will
+   * result in errors. Note this field only applies to index with IGNITE_API ApiScope.
+   * @param multikey multikey or {@code null} for none
+   */
+  public GoogleFirestoreAdminV1Index setMultikey(java.lang.Boolean multikey) {
+    this.multikey = multikey;
     return this;
   }
 

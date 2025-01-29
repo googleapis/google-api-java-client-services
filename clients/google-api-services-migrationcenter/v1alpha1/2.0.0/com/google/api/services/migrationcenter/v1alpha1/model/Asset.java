@@ -101,6 +101,13 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
+   * Output only. Asset information specific for virtual machines.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MachineDetails machineDetails;
+
+  /**
    * Output only. The full name of the asset.
    * The value may be {@code null}.
    */
@@ -309,6 +316,23 @@ public final class Asset extends com.google.api.client.json.GenericJson {
    */
   public Asset setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
+    return this;
+  }
+
+  /**
+   * Output only. Asset information specific for virtual machines.
+   * @return value or {@code null} for none
+   */
+  public MachineDetails getMachineDetails() {
+    return machineDetails;
+  }
+
+  /**
+   * Output only. Asset information specific for virtual machines.
+   * @param machineDetails machineDetails or {@code null} for none
+   */
+  public Asset setMachineDetails(MachineDetails machineDetails) {
+    this.machineDetails = machineDetails;
     return this;
   }
 

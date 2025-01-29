@@ -30,11 +30,35 @@ package com.google.api.services.forms.v1.model;
 public final class FormSettings extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Kind of email collection configured in the form.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String emailCollectionType;
+
+  /**
    * Settings related to quiz forms and grading.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private QuizSettings quizSettings;
+
+  /**
+   * Optional. Kind of email collection configured in the form.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEmailCollectionType() {
+    return emailCollectionType;
+  }
+
+  /**
+   * Optional. Kind of email collection configured in the form.
+   * @param emailCollectionType emailCollectionType or {@code null} for none
+   */
+  public FormSettings setEmailCollectionType(java.lang.String emailCollectionType) {
+    this.emailCollectionType = emailCollectionType;
+    return this;
+  }
 
   /**
    * Settings related to quiz forms and grading.

@@ -153,6 +153,14 @@ public final class Application extends com.google.api.client.json.GenericJson {
   private java.lang.String servingStatus;
 
   /**
+   * The SSL policy that will be applied to the application. If set to Modern it will restrict
+   * traffic with TLS < 1.2 and allow only Modern Ciphers suite
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sslPolicy;
+
+  /**
    * Google Apps authentication domain that controls which users can access this
    * application.Defaults to open access for any Google Account.
    * @return value or {@code null} for none
@@ -443,6 +451,25 @@ public final class Application extends com.google.api.client.json.GenericJson {
    */
   public Application setServingStatus(java.lang.String servingStatus) {
     this.servingStatus = servingStatus;
+    return this;
+  }
+
+  /**
+   * The SSL policy that will be applied to the application. If set to Modern it will restrict
+   * traffic with TLS < 1.2 and allow only Modern Ciphers suite
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSslPolicy() {
+    return sslPolicy;
+  }
+
+  /**
+   * The SSL policy that will be applied to the application. If set to Modern it will restrict
+   * traffic with TLS < 1.2 and allow only Modern Ciphers suite
+   * @param sslPolicy sslPolicy or {@code null} for none
+   */
+  public Application setSslPolicy(java.lang.String sslPolicy) {
+    this.sslPolicy = sslPolicy;
     return this;
   }
 

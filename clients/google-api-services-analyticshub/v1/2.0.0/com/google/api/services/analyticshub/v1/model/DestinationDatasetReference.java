@@ -17,7 +17,7 @@
 package com.google.api.services.analyticshub.v1.model;
 
 /**
- * Contains the reference that identifies a destination bigquery dataset.
+ * Model definition for DestinationDatasetReference.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Analytics Hub API. For a detailed explanation see:

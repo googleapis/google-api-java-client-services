@@ -30,6 +30,13 @@ package com.google.api.services.youtube.model;
 public final class ChannelStatus extends com.google.api.client.json.GenericJson {
 
   /**
+   * Whether the channel is considered ypp monetization enabled. See go/yppornot for more details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isChannelMonetizationEnabled;
+
+  /**
    * If true, then the user is linked to either a YouTube username or G+ account. Otherwise, the
    * user doesn't have a public YouTube identity.
    * The value may be {@code null}.
@@ -63,6 +70,23 @@ public final class ChannelStatus extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean selfDeclaredMadeForKids;
+
+  /**
+   * Whether the channel is considered ypp monetization enabled. See go/yppornot for more details.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsChannelMonetizationEnabled() {
+    return isChannelMonetizationEnabled;
+  }
+
+  /**
+   * Whether the channel is considered ypp monetization enabled. See go/yppornot for more details.
+   * @param isChannelMonetizationEnabled isChannelMonetizationEnabled or {@code null} for none
+   */
+  public ChannelStatus setIsChannelMonetizationEnabled(java.lang.Boolean isChannelMonetizationEnabled) {
+    this.isChannelMonetizationEnabled = isChannelMonetizationEnabled;
+    return this;
+  }
 
   /**
    * If true, then the user is linked to either a YouTube username or G+ account. Otherwise, the

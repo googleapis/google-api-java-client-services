@@ -41,7 +41,7 @@ public final class Migration extends com.google.api.client.json.GenericJson {
 
   /**
    * Immutable. Resource path of the target resource. The target project can be different, as in the
-   * cases when migrating to peer networks. The resource For example:
+   * cases when migrating to peer networks. For example:
    * /projects/{project}/regions/{region}/subnetworks/{subnet}
    * The value may be {@code null}.
    */
@@ -71,7 +71,7 @@ public final class Migration extends com.google.api.client.json.GenericJson {
 
   /**
    * Immutable. Resource path of the target resource. The target project can be different, as in the
-   * cases when migrating to peer networks. The resource For example:
+   * cases when migrating to peer networks. For example:
    * /projects/{project}/regions/{region}/subnetworks/{subnet}
    * @return value or {@code null} for none
    */
@@ -81,7 +81,7 @@ public final class Migration extends com.google.api.client.json.GenericJson {
 
   /**
    * Immutable. Resource path of the target resource. The target project can be different, as in the
-   * cases when migrating to peer networks. The resource For example:
+   * cases when migrating to peer networks. For example:
    * /projects/{project}/regions/{region}/subnetworks/{subnet}
    * @param target target or {@code null} for none
    */

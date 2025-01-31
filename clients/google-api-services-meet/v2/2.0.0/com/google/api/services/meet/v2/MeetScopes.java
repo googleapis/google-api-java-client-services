@@ -29,6 +29,9 @@ public class MeetScopes {
   /** Read information about any of your Google Meet conferences. */
   public static final String MEETINGS_SPACE_READONLY = "https://www.googleapis.com/auth/meetings.space.readonly";
 
+  /** Edit, and see settings for all of your Google Meet calls.. */
+  public static final String MEETINGS_SPACE_SETTINGS = "https://www.googleapis.com/auth/meetings.space.settings";
+
   /**
    * Returns an unmodifiable set that contains all scopes declared by this class.
    *
@@ -38,6 +41,7 @@ public class MeetScopes {
     java.util.Set<String> set = new java.util.HashSet<String>();
     set.add(MEETINGS_SPACE_CREATED);
     set.add(MEETINGS_SPACE_READONLY);
+    set.add(MEETINGS_SPACE_SETTINGS);
     return java.util.Collections.unmodifiableSet(set);
   }
 

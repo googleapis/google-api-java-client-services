@@ -39,6 +39,20 @@ public final class Scorecard extends com.google.api.client.json.GenericJson {
   private Empty blankView;
 
   /**
+   * Optional. The collection of breakdowns to be applied to the dataset. A breakdown is a way to
+   * slice the data. For example, you can break down the data by region.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Breakdown> breakdowns;
+
+  static {
+    // hack to force ProGuard to consider Breakdown used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Breakdown.class);
+  }
+
+  /**
    * Optional. A dimension is a structured label, class, or category for a set of measurements in
    * your data.
    * The value may be {@code null}.
@@ -121,6 +135,25 @@ public final class Scorecard extends com.google.api.client.json.GenericJson {
    */
   public Scorecard setBlankView(Empty blankView) {
     this.blankView = blankView;
+    return this;
+  }
+
+  /**
+   * Optional. The collection of breakdowns to be applied to the dataset. A breakdown is a way to
+   * slice the data. For example, you can break down the data by region.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Breakdown> getBreakdowns() {
+    return breakdowns;
+  }
+
+  /**
+   * Optional. The collection of breakdowns to be applied to the dataset. A breakdown is a way to
+   * slice the data. For example, you can break down the data by region.
+   * @param breakdowns breakdowns or {@code null} for none
+   */
+  public Scorecard setBreakdowns(java.util.List<Breakdown> breakdowns) {
+    this.breakdowns = breakdowns;
     return this;
   }
 

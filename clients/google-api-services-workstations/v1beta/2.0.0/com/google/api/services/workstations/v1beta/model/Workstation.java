@@ -46,11 +46,32 @@ public final class Workstation extends com.google.api.client.json.GenericJson {
   private java.util.List<WorkstationBoostConfig> boostConfigs;
 
   /**
+   * Output only. Status conditions describing the workstation's current state.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Status> conditions;
+
+  static {
+    // hack to force ProGuard to consider Status used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Status.class);
+  }
+
+  /**
    * Output only. Time when this workstation was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
+
+  /**
+   * Output only. Whether this workstation is in degraded mode, in which case it may require user
+   * action to restore full functionality. Details can be found in conditions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean degraded;
 
   /**
    * Output only. Time when this workstation was soft-deleted.
@@ -218,6 +239,23 @@ public final class Workstation extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. Status conditions describing the workstation's current state.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Status> getConditions() {
+    return conditions;
+  }
+
+  /**
+   * Output only. Status conditions describing the workstation's current state.
+   * @param conditions conditions or {@code null} for none
+   */
+  public Workstation setConditions(java.util.List<Status> conditions) {
+    this.conditions = conditions;
+    return this;
+  }
+
+  /**
    * Output only. Time when this workstation was created.
    * @return value or {@code null} for none
    */
@@ -231,6 +269,25 @@ public final class Workstation extends com.google.api.client.json.GenericJson {
    */
   public Workstation setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Output only. Whether this workstation is in degraded mode, in which case it may require user
+   * action to restore full functionality. Details can be found in conditions.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDegraded() {
+    return degraded;
+  }
+
+  /**
+   * Output only. Whether this workstation is in degraded mode, in which case it may require user
+   * action to restore full functionality. Details can be found in conditions.
+   * @param degraded degraded or {@code null} for none
+   */
+  public Workstation setDegraded(java.lang.Boolean degraded) {
+    this.degraded = degraded;
     return this;
   }
 

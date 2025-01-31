@@ -82,8 +82,8 @@ public final class JobRun extends com.google.api.client.json.GenericJson {
   private java.lang.String jobId;
 
   /**
-   * Identifier. Name of the `JobRun`. Format is `projects/{project}/locations/{location}/deliveryPi
-   * pelines/{deliveryPipeline}/releases/{releases}/rollouts/{rollouts}/jobRuns/{uuid}`.
+   * Output only. Name of the `JobRun`. Format is `projects/{project}/locations/{location}/deliveryP
+   * ipelines/{deliveryPipeline}/releases/{releases}/rollouts/{rollouts}/jobRuns/{uuid}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -262,8 +262,8 @@ public final class JobRun extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier. Name of the `JobRun`. Format is `projects/{project}/locations/{location}/deliveryPi
-   * pelines/{deliveryPipeline}/releases/{releases}/rollouts/{rollouts}/jobRuns/{uuid}`.
+   * Output only. Name of the `JobRun`. Format is `projects/{project}/locations/{location}/deliveryP
+   * ipelines/{deliveryPipeline}/releases/{releases}/rollouts/{rollouts}/jobRuns/{uuid}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -271,8 +271,8 @@ public final class JobRun extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier. Name of the `JobRun`. Format is `projects/{project}/locations/{location}/deliveryPi
-   * pelines/{deliveryPipeline}/releases/{releases}/rollouts/{rollouts}/jobRuns/{uuid}`.
+   * Output only. Name of the `JobRun`. Format is `projects/{project}/locations/{location}/deliveryP
+   * ipelines/{deliveryPipeline}/releases/{releases}/rollouts/{rollouts}/jobRuns/{uuid}`.
    * @param name name or {@code null} for none
    */
   public JobRun setName(java.lang.String name) {

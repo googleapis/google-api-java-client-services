@@ -17,7 +17,7 @@
 package com.google.api.services.vault.v1.model;
 
 /**
- * Additional options for Drive search
+ * Additional options for Drive search.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Vault API. For a detailed explanation see:

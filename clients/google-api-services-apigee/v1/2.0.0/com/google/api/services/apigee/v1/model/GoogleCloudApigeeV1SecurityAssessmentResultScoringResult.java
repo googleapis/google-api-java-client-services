@@ -61,7 +61,6 @@ public final class GoogleCloudApigeeV1SecurityAssessmentResultScoringResult exte
   private java.lang.Integer score;
 
   /**
-   * The severity of the assessment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -142,7 +141,6 @@ public final class GoogleCloudApigeeV1SecurityAssessmentResultScoringResult exte
   }
 
   /**
-   * The severity of the assessment.
    * @return value or {@code null} for none
    */
   public java.lang.String getSeverity() {
@@ -150,7 +148,6 @@ public final class GoogleCloudApigeeV1SecurityAssessmentResultScoringResult exte
   }
 
   /**
-   * The severity of the assessment.
    * @param severity severity or {@code null} for none
    */
   public GoogleCloudApigeeV1SecurityAssessmentResultScoringResult setSeverity(java.lang.String severity) {

@@ -36,6 +36,13 @@ package com.google.api.services.chat.v1.model;
 public final class Annotation extends com.google.api.client.json.GenericJson {
 
   /**
+   * The metadata for a custom emoji.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CustomEmojiMetadata customEmojiMetadata;
+
+  /**
    * Length of the substring in the plain-text message body this annotation corresponds to.
    * The value may be {@code null}.
    */
@@ -76,6 +83,23 @@ public final class Annotation extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private UserMentionMetadata userMention;
+
+  /**
+   * The metadata for a custom emoji.
+   * @return value or {@code null} for none
+   */
+  public CustomEmojiMetadata getCustomEmojiMetadata() {
+    return customEmojiMetadata;
+  }
+
+  /**
+   * The metadata for a custom emoji.
+   * @param customEmojiMetadata customEmojiMetadata or {@code null} for none
+   */
+  public Annotation setCustomEmojiMetadata(CustomEmojiMetadata customEmojiMetadata) {
+    this.customEmojiMetadata = customEmojiMetadata;
+    return this;
+  }
 
   /**
    * Length of the substring in the plain-text message body this annotation corresponds to.

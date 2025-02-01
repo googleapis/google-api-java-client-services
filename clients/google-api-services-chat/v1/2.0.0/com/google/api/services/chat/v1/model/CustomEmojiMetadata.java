@@ -17,7 +17,7 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * An emoji that is used as a reaction to a message.
+ * Annotation metadata for custom emoji.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -27,24 +27,17 @@ package com.google.api.services.chat.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Emoji extends com.google.api.client.json.GenericJson {
+public final class CustomEmojiMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * A custom emoji.
+   * The custom emoji.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private CustomEmoji customEmoji;
 
   /**
-   * Optional. A basic emoji represented by a unicode string.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String unicode;
-
-  /**
-   * A custom emoji.
+   * The custom emoji.
    * @return value or {@code null} for none
    */
   public CustomEmoji getCustomEmoji() {
@@ -52,39 +45,22 @@ public final class Emoji extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A custom emoji.
+   * The custom emoji.
    * @param customEmoji customEmoji or {@code null} for none
    */
-  public Emoji setCustomEmoji(CustomEmoji customEmoji) {
+  public CustomEmojiMetadata setCustomEmoji(CustomEmoji customEmoji) {
     this.customEmoji = customEmoji;
     return this;
   }
 
-  /**
-   * Optional. A basic emoji represented by a unicode string.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getUnicode() {
-    return unicode;
-  }
-
-  /**
-   * Optional. A basic emoji represented by a unicode string.
-   * @param unicode unicode or {@code null} for none
-   */
-  public Emoji setUnicode(java.lang.String unicode) {
-    this.unicode = unicode;
-    return this;
+  @Override
+  public CustomEmojiMetadata set(String fieldName, Object value) {
+    return (CustomEmojiMetadata) super.set(fieldName, value);
   }
 
   @Override
-  public Emoji set(String fieldName, Object value) {
-    return (Emoji) super.set(fieldName, value);
-  }
-
-  @Override
-  public Emoji clone() {
-    return (Emoji) super.clone();
+  public CustomEmojiMetadata clone() {
+    return (CustomEmojiMetadata) super.clone();
   }
 
 }

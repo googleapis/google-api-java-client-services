@@ -33,10 +33,11 @@ public final class GoogleCloudDataplexV1MetadataJobImportJobSpecImportJobScope e
    * Optional. The aspect types that are in scope for the import job, specified as relative resource
    * names in the format
    * projects/{project_number_or_id}/locations/{location_id}/aspectTypes/{aspect_type_id}. The job
-   * modifies only the aspects that belong to these aspect types.If the metadata import file
-   * attempts to modify an aspect whose type isn't included in this list, the import job is halted
-   * before modifying any entries or aspects.The location of an aspect type must either match the
-   * location of the job, or the aspect type must be global.
+   * modifies only the aspects that belong to these aspect types.This field is required when
+   * creating an aspect-only import job.If the metadata import file attempts to modify an aspect
+   * whose type isn't included in this list, the import job is halted before modifying any entries
+   * or aspects.The location of an aspect type must either match the location of the job, or the
+   * aspect type must be global.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,8 +47,8 @@ public final class GoogleCloudDataplexV1MetadataJobImportJobSpecImportJobScope e
    * Required. The entry group that is in scope for the import job, specified as a relative resource
    * name in the format
    * projects/{project_number_or_id}/locations/{location_id}/entryGroups/{entry_group_id}. Only
-   * entries that belong to the specified entry group are affected by the job.Must contain exactly
-   * one element. The entry group and the job must be in the same location.
+   * entries and aspects that belong to the specified entry group are affected by the job.Must
+   * contain exactly one element. The entry group and the job must be in the same location.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,10 +58,10 @@ public final class GoogleCloudDataplexV1MetadataJobImportJobSpecImportJobScope e
    * Required. The entry types that are in scope for the import job, specified as relative resource
    * names in the format
    * projects/{project_number_or_id}/locations/{location_id}/entryTypes/{entry_type_id}. The job
-   * modifies only the entries that belong to these entry types.If the metadata import file attempts
-   * to modify an entry whose type isn't included in this list, the import job is halted before
-   * modifying any entries or aspects.The location of an entry type must either match the location
-   * of the job, or the entry type must be global.
+   * modifies only the entries and aspects that belong to these entry types.If the metadata import
+   * file attempts to modify an entry whose type isn't included in this list, the import job is
+   * halted before modifying any entries or aspects.The location of an entry type must either match
+   * the location of the job, or the entry type must be global.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,10 +71,11 @@ public final class GoogleCloudDataplexV1MetadataJobImportJobSpecImportJobScope e
    * Optional. The aspect types that are in scope for the import job, specified as relative resource
    * names in the format
    * projects/{project_number_or_id}/locations/{location_id}/aspectTypes/{aspect_type_id}. The job
-   * modifies only the aspects that belong to these aspect types.If the metadata import file
-   * attempts to modify an aspect whose type isn't included in this list, the import job is halted
-   * before modifying any entries or aspects.The location of an aspect type must either match the
-   * location of the job, or the aspect type must be global.
+   * modifies only the aspects that belong to these aspect types.This field is required when
+   * creating an aspect-only import job.If the metadata import file attempts to modify an aspect
+   * whose type isn't included in this list, the import job is halted before modifying any entries
+   * or aspects.The location of an aspect type must either match the location of the job, or the
+   * aspect type must be global.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAspectTypes() {
@@ -84,10 +86,11 @@ public final class GoogleCloudDataplexV1MetadataJobImportJobSpecImportJobScope e
    * Optional. The aspect types that are in scope for the import job, specified as relative resource
    * names in the format
    * projects/{project_number_or_id}/locations/{location_id}/aspectTypes/{aspect_type_id}. The job
-   * modifies only the aspects that belong to these aspect types.If the metadata import file
-   * attempts to modify an aspect whose type isn't included in this list, the import job is halted
-   * before modifying any entries or aspects.The location of an aspect type must either match the
-   * location of the job, or the aspect type must be global.
+   * modifies only the aspects that belong to these aspect types.This field is required when
+   * creating an aspect-only import job.If the metadata import file attempts to modify an aspect
+   * whose type isn't included in this list, the import job is halted before modifying any entries
+   * or aspects.The location of an aspect type must either match the location of the job, or the
+   * aspect type must be global.
    * @param aspectTypes aspectTypes or {@code null} for none
    */
   public GoogleCloudDataplexV1MetadataJobImportJobSpecImportJobScope setAspectTypes(java.util.List<java.lang.String> aspectTypes) {
@@ -99,8 +102,8 @@ public final class GoogleCloudDataplexV1MetadataJobImportJobSpecImportJobScope e
    * Required. The entry group that is in scope for the import job, specified as a relative resource
    * name in the format
    * projects/{project_number_or_id}/locations/{location_id}/entryGroups/{entry_group_id}. Only
-   * entries that belong to the specified entry group are affected by the job.Must contain exactly
-   * one element. The entry group and the job must be in the same location.
+   * entries and aspects that belong to the specified entry group are affected by the job.Must
+   * contain exactly one element. The entry group and the job must be in the same location.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getEntryGroups() {
@@ -111,8 +114,8 @@ public final class GoogleCloudDataplexV1MetadataJobImportJobSpecImportJobScope e
    * Required. The entry group that is in scope for the import job, specified as a relative resource
    * name in the format
    * projects/{project_number_or_id}/locations/{location_id}/entryGroups/{entry_group_id}. Only
-   * entries that belong to the specified entry group are affected by the job.Must contain exactly
-   * one element. The entry group and the job must be in the same location.
+   * entries and aspects that belong to the specified entry group are affected by the job.Must
+   * contain exactly one element. The entry group and the job must be in the same location.
    * @param entryGroups entryGroups or {@code null} for none
    */
   public GoogleCloudDataplexV1MetadataJobImportJobSpecImportJobScope setEntryGroups(java.util.List<java.lang.String> entryGroups) {
@@ -124,10 +127,10 @@ public final class GoogleCloudDataplexV1MetadataJobImportJobSpecImportJobScope e
    * Required. The entry types that are in scope for the import job, specified as relative resource
    * names in the format
    * projects/{project_number_or_id}/locations/{location_id}/entryTypes/{entry_type_id}. The job
-   * modifies only the entries that belong to these entry types.If the metadata import file attempts
-   * to modify an entry whose type isn't included in this list, the import job is halted before
-   * modifying any entries or aspects.The location of an entry type must either match the location
-   * of the job, or the entry type must be global.
+   * modifies only the entries and aspects that belong to these entry types.If the metadata import
+   * file attempts to modify an entry whose type isn't included in this list, the import job is
+   * halted before modifying any entries or aspects.The location of an entry type must either match
+   * the location of the job, or the entry type must be global.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getEntryTypes() {
@@ -138,10 +141,10 @@ public final class GoogleCloudDataplexV1MetadataJobImportJobSpecImportJobScope e
    * Required. The entry types that are in scope for the import job, specified as relative resource
    * names in the format
    * projects/{project_number_or_id}/locations/{location_id}/entryTypes/{entry_type_id}. The job
-   * modifies only the entries that belong to these entry types.If the metadata import file attempts
-   * to modify an entry whose type isn't included in this list, the import job is halted before
-   * modifying any entries or aspects.The location of an entry type must either match the location
-   * of the job, or the entry type must be global.
+   * modifies only the entries and aspects that belong to these entry types.If the metadata import
+   * file attempts to modify an entry whose type isn't included in this list, the import job is
+   * halted before modifying any entries or aspects.The location of an entry type must either match
+   * the location of the job, or the entry type must be global.
    * @param entryTypes entryTypes or {@code null} for none
    */
   public GoogleCloudDataplexV1MetadataJobImportJobSpecImportJobScope setEntryTypes(java.util.List<java.lang.String> entryTypes) {

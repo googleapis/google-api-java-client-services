@@ -64,11 +64,25 @@ public final class PartnerMetadata extends com.google.api.client.json.GenericJso
   private java.lang.String demoUri;
 
   /**
+   * Output only. Has dynamic open api spec uri.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean hasDynamicSpecUri;
+
+  /**
    * Required. Integration example templates for the custom connector.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String integrationTemplates;
+
+  /**
+   * Output only. Local spec path. Required if has_dynamic_spec_uri is true.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String localSpecPath;
 
   /**
    * Optional. Marketplace product name.
@@ -217,6 +231,23 @@ public final class PartnerMetadata extends com.google.api.client.json.GenericJso
   }
 
   /**
+   * Output only. Has dynamic open api spec uri.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getHasDynamicSpecUri() {
+    return hasDynamicSpecUri;
+  }
+
+  /**
+   * Output only. Has dynamic open api spec uri.
+   * @param hasDynamicSpecUri hasDynamicSpecUri or {@code null} for none
+   */
+  public PartnerMetadata setHasDynamicSpecUri(java.lang.Boolean hasDynamicSpecUri) {
+    this.hasDynamicSpecUri = hasDynamicSpecUri;
+    return this;
+  }
+
+  /**
    * Required. Integration example templates for the custom connector.
    * @return value or {@code null} for none
    */
@@ -230,6 +261,23 @@ public final class PartnerMetadata extends com.google.api.client.json.GenericJso
    */
   public PartnerMetadata setIntegrationTemplates(java.lang.String integrationTemplates) {
     this.integrationTemplates = integrationTemplates;
+    return this;
+  }
+
+  /**
+   * Output only. Local spec path. Required if has_dynamic_spec_uri is true.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLocalSpecPath() {
+    return localSpecPath;
+  }
+
+  /**
+   * Output only. Local spec path. Required if has_dynamic_spec_uri is true.
+   * @param localSpecPath localSpecPath or {@code null} for none
+   */
+  public PartnerMetadata setLocalSpecPath(java.lang.String localSpecPath) {
+    this.localSpecPath = localSpecPath;
     return this;
   }
 

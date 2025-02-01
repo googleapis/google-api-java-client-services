@@ -37,6 +37,13 @@ public final class EventSubscriptionDestination extends com.google.api.client.js
   private EndPoint endpoint;
 
   /**
+   * OPTION 3: Write the event to Pub/Sub topic.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PubSub pubsub;
+
+  /**
    * Service account needed for runtime plane to trigger IP workflow.
    * The value may be {@code null}.
    */
@@ -64,6 +71,23 @@ public final class EventSubscriptionDestination extends com.google.api.client.js
    */
   public EventSubscriptionDestination setEndpoint(EndPoint endpoint) {
     this.endpoint = endpoint;
+    return this;
+  }
+
+  /**
+   * OPTION 3: Write the event to Pub/Sub topic.
+   * @return value or {@code null} for none
+   */
+  public PubSub getPubsub() {
+    return pubsub;
+  }
+
+  /**
+   * OPTION 3: Write the event to Pub/Sub topic.
+   * @param pubsub pubsub or {@code null} for none
+   */
+  public EventSubscriptionDestination setPubsub(PubSub pubsub) {
+    this.pubsub = pubsub;
     return this;
   }
 

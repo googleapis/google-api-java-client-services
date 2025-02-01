@@ -63,6 +63,13 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1Results extends co
   private java.util.List<java.lang.String> buildStepOutputs;
 
   /**
+   * Optional. Go module artifacts uploaded to Artifact Registry at the end of the build.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ContaineranalysisGoogleDevtoolsCloudbuildV1UploadedGoModule> goModules;
+
+  /**
    * Container images that were built as a part of the build.
    * The value may be {@code null}.
    */
@@ -177,6 +184,23 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1Results extends co
    */
   public ContaineranalysisGoogleDevtoolsCloudbuildV1Results setBuildStepOutputs(java.util.List<java.lang.String> buildStepOutputs) {
     this.buildStepOutputs = buildStepOutputs;
+    return this;
+  }
+
+  /**
+   * Optional. Go module artifacts uploaded to Artifact Registry at the end of the build.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ContaineranalysisGoogleDevtoolsCloudbuildV1UploadedGoModule> getGoModules() {
+    return goModules;
+  }
+
+  /**
+   * Optional. Go module artifacts uploaded to Artifact Registry at the end of the build.
+   * @param goModules goModules or {@code null} for none
+   */
+  public ContaineranalysisGoogleDevtoolsCloudbuildV1Results setGoModules(java.util.List<ContaineranalysisGoogleDevtoolsCloudbuildV1UploadedGoModule> goModules) {
+    this.goModules = goModules;
     return this;
   }
 

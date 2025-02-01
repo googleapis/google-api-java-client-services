@@ -141,7 +141,7 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
   private java.lang.String etag;
 
   /**
-   * Output only. For a deleted resource, the time after which it will be permamently deleted.
+   * Output only. For a deleted resource, the time after which it will be permanently deleted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -246,7 +246,7 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
    * it into the desired state. When a new Service is created, or an existing one is updated, Cloud
    * Run will asynchronously perform all necessary steps to bring the Service to the desired serving
    * state. This process is called reconciliation. While reconciliation is in process,
-   * `observed_generation`, `latest_ready_revison`, `traffic_statuses`, and `uri` will have
+   * `observed_generation`, `latest_ready_revision`, `traffic_statuses`, and `uri` will have
    * transient values that might mismatch the intended state: Once reconciliation is over (and this
    * field is false), there are two possible outcomes: reconciliation succeeded and the serving
    * state matches the Service, or there was an error, and reconciliation failed. This state can be
@@ -581,7 +581,7 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. For a deleted resource, the time after which it will be permamently deleted.
+   * Output only. For a deleted resource, the time after which it will be permanently deleted.
    * @return value or {@code null} for none
    */
   public String getExpireTime() {
@@ -589,7 +589,7 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. For a deleted resource, the time after which it will be permamently deleted.
+   * Output only. For a deleted resource, the time after which it will be permanently deleted.
    * @param expireTime expireTime or {@code null} for none
    */
   public GoogleCloudRunV2Service setExpireTime(String expireTime) {
@@ -820,7 +820,7 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
    * it into the desired state. When a new Service is created, or an existing one is updated, Cloud
    * Run will asynchronously perform all necessary steps to bring the Service to the desired serving
    * state. This process is called reconciliation. While reconciliation is in process,
-   * `observed_generation`, `latest_ready_revison`, `traffic_statuses`, and `uri` will have
+   * `observed_generation`, `latest_ready_revision`, `traffic_statuses`, and `uri` will have
    * transient values that might mismatch the intended state: Once reconciliation is over (and this
    * field is false), there are two possible outcomes: reconciliation succeeded and the serving
    * state matches the Service, or there was an error, and reconciliation failed. This state can be
@@ -841,7 +841,7 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
    * it into the desired state. When a new Service is created, or an existing one is updated, Cloud
    * Run will asynchronously perform all necessary steps to bring the Service to the desired serving
    * state. This process is called reconciliation. While reconciliation is in process,
-   * `observed_generation`, `latest_ready_revison`, `traffic_statuses`, and `uri` will have
+   * `observed_generation`, `latest_ready_revision`, `traffic_statuses`, and `uri` will have
    * transient values that might mismatch the intended state: Once reconciliation is over (and this
    * field is false), there are two possible outcomes: reconciliation succeeded and the serving
    * state matches the Service, or there was an error, and reconciliation failed. This state can be

@@ -17,7 +17,11 @@
 package com.google.api.services.dataplex.v1.model;
 
 /**
- * Job specification for a metadata import job
+ * Job specification for a metadata import job.You can run the following kinds of metadata import
+ * jobs: Full sync of entries with incremental import of their aspects. Supported for custom
+ * entries. Incremental import of aspects only. Supported for aspects that belong to custom entries
+ * and system entries. For custom entries, you can modify both optional aspects and required
+ * aspects. For system entries, you can modify optional aspects.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataplex API. For a detailed explanation see:
@@ -30,18 +34,14 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1MetadataJobImportJobSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The sync mode for aspects. Only INCREMENTAL mode is supported for aspects. An aspect
-   * is modified only if the metadata import file includes a reference to the aspect in the
-   * update_mask field and the aspect_keys field.
+   * Required. The sync mode for aspects.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String aspectSyncMode;
 
   /**
-   * Required. The sync mode for entries. Only FULL mode is supported for entries. All entries in
-   * the job's scope are modified. If an entry exists in Dataplex but isn't included in the metadata
-   * import file, the entry is deleted when you run the metadata job.
+   * Required. The sync mode for entries.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,9 +88,7 @@ public final class GoogleCloudDataplexV1MetadataJobImportJobSpec extends com.goo
   private java.lang.String sourceStorageUri;
 
   /**
-   * Required. The sync mode for aspects. Only INCREMENTAL mode is supported for aspects. An aspect
-   * is modified only if the metadata import file includes a reference to the aspect in the
-   * update_mask field and the aspect_keys field.
+   * Required. The sync mode for aspects.
    * @return value or {@code null} for none
    */
   public java.lang.String getAspectSyncMode() {
@@ -98,9 +96,7 @@ public final class GoogleCloudDataplexV1MetadataJobImportJobSpec extends com.goo
   }
 
   /**
-   * Required. The sync mode for aspects. Only INCREMENTAL mode is supported for aspects. An aspect
-   * is modified only if the metadata import file includes a reference to the aspect in the
-   * update_mask field and the aspect_keys field.
+   * Required. The sync mode for aspects.
    * @param aspectSyncMode aspectSyncMode or {@code null} for none
    */
   public GoogleCloudDataplexV1MetadataJobImportJobSpec setAspectSyncMode(java.lang.String aspectSyncMode) {
@@ -109,9 +105,7 @@ public final class GoogleCloudDataplexV1MetadataJobImportJobSpec extends com.goo
   }
 
   /**
-   * Required. The sync mode for entries. Only FULL mode is supported for entries. All entries in
-   * the job's scope are modified. If an entry exists in Dataplex but isn't included in the metadata
-   * import file, the entry is deleted when you run the metadata job.
+   * Required. The sync mode for entries.
    * @return value or {@code null} for none
    */
   public java.lang.String getEntrySyncMode() {
@@ -119,9 +113,7 @@ public final class GoogleCloudDataplexV1MetadataJobImportJobSpec extends com.goo
   }
 
   /**
-   * Required. The sync mode for entries. Only FULL mode is supported for entries. All entries in
-   * the job's scope are modified. If an entry exists in Dataplex but isn't included in the metadata
-   * import file, the entry is deleted when you run the metadata job.
+   * Required. The sync mode for entries.
    * @param entrySyncMode entrySyncMode or {@code null} for none
    */
   public GoogleCloudDataplexV1MetadataJobImportJobSpec setEntrySyncMode(java.lang.String entrySyncMode) {

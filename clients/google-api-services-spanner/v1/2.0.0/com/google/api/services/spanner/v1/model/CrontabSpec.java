@@ -17,8 +17,7 @@
 package com.google.api.services.spanner.v1.model;
 
 /**
- * CrontabSpec can be used to specify the version time and frequency at which the backup should be
- * created.
+ * CrontabSpec can be used to specify the version time and frequency at which the backup is created.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Spanner API. For a detailed explanation see:
@@ -31,9 +30,9 @@ package com.google.api.services.spanner.v1.model;
 public final class CrontabSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Schedule backups will contain an externally consistent copy of the database at the
-   * version time specified in `schedule_spec.cron_spec`. However, Spanner may not initiate the
-   * creation of the scheduled backups at that version time. Spanner will initiate the creation of
+   * Output only. Scheduled backups contain an externally consistent copy of the database at the
+   * version time specified in `schedule_spec.cron_spec`. However, Spanner might not initiate the
+   * creation of the scheduled backups at that version time. Spanner initiates the creation of
    * scheduled backups within the time window bounded by the version_time specified in
    * `schedule_spec.cron_spec` and version_time + `creation_window`.
    * The value may be {@code null}.
@@ -47,7 +46,7 @@ public final class CrontabSpec extends com.google.api.client.json.GenericJson {
    * The backup will contain an externally consistent copy of the database at the version time. Full
    * backups must be scheduled a minimum of 12 hours apart and incremental backups must be scheduled
    * a minimum of 4 hours apart. Examples of valid cron specifications: * `0 2/12 * * *` : every 12
-   * hours at (2, 14) hours past midnight in UTC. * `0 2,14 * * *` : every 12 hours at (2,14) hours
+   * hours at (2, 14) hours past midnight in UTC. * `0 2,14 * * *` : every 12 hours at (2, 14) hours
    * past midnight in UTC. * `0 4 * * *` : (incremental backups only) every 4 hours at (0, 4, 8, 12,
    * 16, 20) hours past midnight in UTC. * `0 2 * * *` : once a day at 2 past midnight in UTC. * `0
    * 2 * * 0` : once a week every Sunday at 2 past midnight in UTC. * `0 2 8 * *` : once a month on
@@ -58,16 +57,17 @@ public final class CrontabSpec extends com.google.api.client.json.GenericJson {
   private java.lang.String text;
 
   /**
-   * Output only. The time zone of the times in `CrontabSpec.text`. Currently only UTC is supported.
+   * Output only. The time zone of the times in `CrontabSpec.text`. Currently, only UTC is
+   * supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String timeZone;
 
   /**
-   * Output only. Schedule backups will contain an externally consistent copy of the database at the
-   * version time specified in `schedule_spec.cron_spec`. However, Spanner may not initiate the
-   * creation of the scheduled backups at that version time. Spanner will initiate the creation of
+   * Output only. Scheduled backups contain an externally consistent copy of the database at the
+   * version time specified in `schedule_spec.cron_spec`. However, Spanner might not initiate the
+   * creation of the scheduled backups at that version time. Spanner initiates the creation of
    * scheduled backups within the time window bounded by the version_time specified in
    * `schedule_spec.cron_spec` and version_time + `creation_window`.
    * @return value or {@code null} for none
@@ -77,9 +77,9 @@ public final class CrontabSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Schedule backups will contain an externally consistent copy of the database at the
-   * version time specified in `schedule_spec.cron_spec`. However, Spanner may not initiate the
-   * creation of the scheduled backups at that version time. Spanner will initiate the creation of
+   * Output only. Scheduled backups contain an externally consistent copy of the database at the
+   * version time specified in `schedule_spec.cron_spec`. However, Spanner might not initiate the
+   * creation of the scheduled backups at that version time. Spanner initiates the creation of
    * scheduled backups within the time window bounded by the version_time specified in
    * `schedule_spec.cron_spec` and version_time + `creation_window`.
    * @param creationWindow creationWindow or {@code null} for none
@@ -95,7 +95,7 @@ public final class CrontabSpec extends com.google.api.client.json.GenericJson {
    * The backup will contain an externally consistent copy of the database at the version time. Full
    * backups must be scheduled a minimum of 12 hours apart and incremental backups must be scheduled
    * a minimum of 4 hours apart. Examples of valid cron specifications: * `0 2/12 * * *` : every 12
-   * hours at (2, 14) hours past midnight in UTC. * `0 2,14 * * *` : every 12 hours at (2,14) hours
+   * hours at (2, 14) hours past midnight in UTC. * `0 2,14 * * *` : every 12 hours at (2, 14) hours
    * past midnight in UTC. * `0 4 * * *` : (incremental backups only) every 4 hours at (0, 4, 8, 12,
    * 16, 20) hours past midnight in UTC. * `0 2 * * *` : once a day at 2 past midnight in UTC. * `0
    * 2 * * 0` : once a week every Sunday at 2 past midnight in UTC. * `0 2 8 * *` : once a month on
@@ -112,7 +112,7 @@ public final class CrontabSpec extends com.google.api.client.json.GenericJson {
    * The backup will contain an externally consistent copy of the database at the version time. Full
    * backups must be scheduled a minimum of 12 hours apart and incremental backups must be scheduled
    * a minimum of 4 hours apart. Examples of valid cron specifications: * `0 2/12 * * *` : every 12
-   * hours at (2, 14) hours past midnight in UTC. * `0 2,14 * * *` : every 12 hours at (2,14) hours
+   * hours at (2, 14) hours past midnight in UTC. * `0 2,14 * * *` : every 12 hours at (2, 14) hours
    * past midnight in UTC. * `0 4 * * *` : (incremental backups only) every 4 hours at (0, 4, 8, 12,
    * 16, 20) hours past midnight in UTC. * `0 2 * * *` : once a day at 2 past midnight in UTC. * `0
    * 2 * * 0` : once a week every Sunday at 2 past midnight in UTC. * `0 2 8 * *` : once a month on
@@ -125,7 +125,8 @@ public final class CrontabSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The time zone of the times in `CrontabSpec.text`. Currently only UTC is supported.
+   * Output only. The time zone of the times in `CrontabSpec.text`. Currently, only UTC is
+   * supported.
    * @return value or {@code null} for none
    */
   public java.lang.String getTimeZone() {
@@ -133,7 +134,8 @@ public final class CrontabSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The time zone of the times in `CrontabSpec.text`. Currently only UTC is supported.
+   * Output only. The time zone of the times in `CrontabSpec.text`. Currently, only UTC is
+   * supported.
    * @param timeZone timeZone or {@code null} for none
    */
   public CrontabSpec setTimeZone(java.lang.String timeZone) {

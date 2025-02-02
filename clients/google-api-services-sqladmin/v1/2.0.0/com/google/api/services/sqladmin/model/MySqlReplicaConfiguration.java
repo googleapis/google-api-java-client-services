@@ -44,7 +44,7 @@ public final class MySqlReplicaConfiguration extends com.google.api.client.json.
   private java.lang.String clientCertificate;
 
   /**
-   * PEM representation of the replica's private key. The corresponsing public key is encoded in the
+   * PEM representation of the replica's private key. The corresponding public key is encoded in the
    * client's certificate.
    * The value may be {@code null}.
    */
@@ -146,7 +146,7 @@ public final class MySqlReplicaConfiguration extends com.google.api.client.json.
   }
 
   /**
-   * PEM representation of the replica's private key. The corresponsing public key is encoded in the
+   * PEM representation of the replica's private key. The corresponding public key is encoded in the
    * client's certificate.
    * @return value or {@code null} for none
    */
@@ -155,7 +155,7 @@ public final class MySqlReplicaConfiguration extends com.google.api.client.json.
   }
 
   /**
-   * PEM representation of the replica's private key. The corresponsing public key is encoded in the
+   * PEM representation of the replica's private key. The corresponding public key is encoded in the
    * client's certificate.
    * @param clientKey clientKey or {@code null} for none
    */

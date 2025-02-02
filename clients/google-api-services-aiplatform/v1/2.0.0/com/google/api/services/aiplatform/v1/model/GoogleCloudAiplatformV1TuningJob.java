@@ -132,7 +132,7 @@ public final class GoogleCloudAiplatformV1TuningJob extends com.google.api.clien
   private GoogleCloudAiplatformV1SupervisedTuningSpec supervisedTuningSpec;
 
   /**
-   * Output only. The tuned model resources assiociated with this TuningJob.
+   * Output only. The tuned model resources associated with this TuningJob.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -404,7 +404,7 @@ public final class GoogleCloudAiplatformV1TuningJob extends com.google.api.clien
   }
 
   /**
-   * Output only. The tuned model resources assiociated with this TuningJob.
+   * Output only. The tuned model resources associated with this TuningJob.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1TunedModel getTunedModel() {
@@ -412,7 +412,7 @@ public final class GoogleCloudAiplatformV1TuningJob extends com.google.api.clien
   }
 
   /**
-   * Output only. The tuned model resources assiociated with this TuningJob.
+   * Output only. The tuned model resources associated with this TuningJob.
    * @param tunedModel tunedModel or {@code null} for none
    */
   public GoogleCloudAiplatformV1TuningJob setTunedModel(GoogleCloudAiplatformV1TunedModel tunedModel) {

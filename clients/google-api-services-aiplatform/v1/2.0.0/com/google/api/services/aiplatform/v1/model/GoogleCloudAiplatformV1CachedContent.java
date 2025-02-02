@@ -37,7 +37,7 @@ public final class GoogleCloudAiplatformV1CachedContent extends com.google.api.c
   private java.util.List<GoogleCloudAiplatformV1Content> contents;
 
   /**
-   * Output only. Creatation time of the cache entry.
+   * Output only. Creation time of the cache entry.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -135,7 +135,7 @@ public final class GoogleCloudAiplatformV1CachedContent extends com.google.api.c
   }
 
   /**
-   * Output only. Creatation time of the cache entry.
+   * Output only. Creation time of the cache entry.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -143,7 +143,7 @@ public final class GoogleCloudAiplatformV1CachedContent extends com.google.api.c
   }
 
   /**
-   * Output only. Creatation time of the cache entry.
+   * Output only. Creation time of the cache entry.
    * @param createTime createTime or {@code null} for none
    */
   public GoogleCloudAiplatformV1CachedContent setCreateTime(String createTime) {

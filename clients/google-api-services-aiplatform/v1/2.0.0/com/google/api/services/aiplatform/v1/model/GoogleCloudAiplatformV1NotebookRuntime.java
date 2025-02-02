@@ -219,6 +219,13 @@ public final class GoogleCloudAiplatformV1NotebookRuntime extends com.google.api
   private GoogleCloudAiplatformV1ShieldedVmConfig shieldedVmConfig;
 
   /**
+   * Output only. Software config of the notebook runtime.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1NotebookSoftwareConfig softwareConfig;
+
+  /**
    * Output only. Timestamp when this NotebookRuntime was most recently updated.
    * The value may be {@code null}.
    */
@@ -677,6 +684,23 @@ public final class GoogleCloudAiplatformV1NotebookRuntime extends com.google.api
    */
   public GoogleCloudAiplatformV1NotebookRuntime setShieldedVmConfig(GoogleCloudAiplatformV1ShieldedVmConfig shieldedVmConfig) {
     this.shieldedVmConfig = shieldedVmConfig;
+    return this;
+  }
+
+  /**
+   * Output only. Software config of the notebook runtime.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1NotebookSoftwareConfig getSoftwareConfig() {
+    return softwareConfig;
+  }
+
+  /**
+   * Output only. Software config of the notebook runtime.
+   * @param softwareConfig softwareConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1NotebookRuntime setSoftwareConfig(GoogleCloudAiplatformV1NotebookSoftwareConfig softwareConfig) {
+    this.softwareConfig = softwareConfig;
     return this;
   }
 

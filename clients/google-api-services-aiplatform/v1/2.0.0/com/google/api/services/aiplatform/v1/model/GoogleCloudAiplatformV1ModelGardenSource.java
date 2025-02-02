@@ -37,6 +37,20 @@ public final class GoogleCloudAiplatformV1ModelGardenSource extends com.google.a
   private java.lang.String publicModelName;
 
   /**
+   * Optional. Whether to avoid pulling the model from the HF cache.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean skipHfModelCache;
+
+  /**
+   * Optional. The model garden source model version ID.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String versionId;
+
+  /**
    * Required. The model garden source model resource name.
    * @return value or {@code null} for none
    */
@@ -50,6 +64,40 @@ public final class GoogleCloudAiplatformV1ModelGardenSource extends com.google.a
    */
   public GoogleCloudAiplatformV1ModelGardenSource setPublicModelName(java.lang.String publicModelName) {
     this.publicModelName = publicModelName;
+    return this;
+  }
+
+  /**
+   * Optional. Whether to avoid pulling the model from the HF cache.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSkipHfModelCache() {
+    return skipHfModelCache;
+  }
+
+  /**
+   * Optional. Whether to avoid pulling the model from the HF cache.
+   * @param skipHfModelCache skipHfModelCache or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1ModelGardenSource setSkipHfModelCache(java.lang.Boolean skipHfModelCache) {
+    this.skipHfModelCache = skipHfModelCache;
+    return this;
+  }
+
+  /**
+   * Optional. The model garden source model version ID.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVersionId() {
+    return versionId;
+  }
+
+  /**
+   * Optional. The model garden source model version ID.
+   * @param versionId versionId or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1ModelGardenSource setVersionId(java.lang.String versionId) {
+    this.versionId = versionId;
     return this;
   }
 

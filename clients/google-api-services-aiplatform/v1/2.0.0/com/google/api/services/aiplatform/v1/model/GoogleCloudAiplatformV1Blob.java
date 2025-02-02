@@ -37,6 +37,15 @@ public final class GoogleCloudAiplatformV1Blob extends com.google.api.client.jso
   private java.lang.String data;
 
   /**
+   * Optional. Display name of the blob. Used to provide a label or filename to distinguish blobs.
+   * This field is only returned in PromptMessage for prompt management. It is not currently used in
+   * the Gemini GenerateContent calls.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String displayName;
+
+  /**
    * Required. The IANA standard MIME type of the source data.
    * The value may be {@code null}.
    */
@@ -85,6 +94,27 @@ public final class GoogleCloudAiplatformV1Blob extends com.google.api.client.jso
    */
   public GoogleCloudAiplatformV1Blob encodeData(byte[] data) {
     this.data = com.google.api.client.util.Base64.encodeBase64URLSafeString(data);
+    return this;
+  }
+
+  /**
+   * Optional. Display name of the blob. Used to provide a label or filename to distinguish blobs.
+   * This field is only returned in PromptMessage for prompt management. It is not currently used in
+   * the Gemini GenerateContent calls.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDisplayName() {
+    return displayName;
+  }
+
+  /**
+   * Optional. Display name of the blob. Used to provide a label or filename to distinguish blobs.
+   * This field is only returned in PromptMessage for prompt management. It is not currently used in
+   * the Gemini GenerateContent calls.
+   * @param displayName displayName or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1Blob setDisplayName(java.lang.String displayName) {
+    this.displayName = displayName;
     return this;
   }
 

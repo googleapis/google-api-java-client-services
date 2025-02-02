@@ -43,6 +43,13 @@ public final class GoogleCloudAiplatformV1GenerateContentResponse extends com.go
   }
 
   /**
+   * Output only. Timestamp when the request is made to the server.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String createTime;
+
+  /**
    * Output only. The model version used to generate the response.
    * The value may be {@code null}.
    */
@@ -56,6 +63,13 @@ public final class GoogleCloudAiplatformV1GenerateContentResponse extends com.go
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1GenerateContentResponsePromptFeedback promptFeedback;
+
+  /**
+   * Output only. response_id is used to identify each response. It is the encoding of the event_id.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String responseId;
 
   /**
    * Usage metadata about the response(s).
@@ -78,6 +92,23 @@ public final class GoogleCloudAiplatformV1GenerateContentResponse extends com.go
    */
   public GoogleCloudAiplatformV1GenerateContentResponse setCandidates(java.util.List<GoogleCloudAiplatformV1Candidate> candidates) {
     this.candidates = candidates;
+    return this;
+  }
+
+  /**
+   * Output only. Timestamp when the request is made to the server.
+   * @return value or {@code null} for none
+   */
+  public String getCreateTime() {
+    return createTime;
+  }
+
+  /**
+   * Output only. Timestamp when the request is made to the server.
+   * @param createTime createTime or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1GenerateContentResponse setCreateTime(String createTime) {
+    this.createTime = createTime;
     return this;
   }
 
@@ -114,6 +145,23 @@ public final class GoogleCloudAiplatformV1GenerateContentResponse extends com.go
    */
   public GoogleCloudAiplatformV1GenerateContentResponse setPromptFeedback(GoogleCloudAiplatformV1GenerateContentResponsePromptFeedback promptFeedback) {
     this.promptFeedback = promptFeedback;
+    return this;
+  }
+
+  /**
+   * Output only. response_id is used to identify each response. It is the encoding of the event_id.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getResponseId() {
+    return responseId;
+  }
+
+  /**
+   * Output only. response_id is used to identify each response. It is the encoding of the event_id.
+   * @param responseId responseId or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1GenerateContentResponse setResponseId(java.lang.String responseId) {
+    this.responseId = responseId;
     return this;
   }
 

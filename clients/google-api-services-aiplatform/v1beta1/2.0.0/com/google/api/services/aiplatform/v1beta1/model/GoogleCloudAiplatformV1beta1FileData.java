@@ -30,6 +30,15 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1FileData extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Display name of the file data. Used to provide a label or filename to distinguish
+   * file datas. This field is only returned in PromptMessage for prompt management. It is not
+   * currently used in the Gemini GenerateContent calls.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String displayName;
+
+  /**
    * Required. URI.
    * The value may be {@code null}.
    */
@@ -42,6 +51,27 @@ public final class GoogleCloudAiplatformV1beta1FileData extends com.google.api.c
    */
   @com.google.api.client.util.Key
   private java.lang.String mimeType;
+
+  /**
+   * Optional. Display name of the file data. Used to provide a label or filename to distinguish
+   * file datas. This field is only returned in PromptMessage for prompt management. It is not
+   * currently used in the Gemini GenerateContent calls.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDisplayName() {
+    return displayName;
+  }
+
+  /**
+   * Optional. Display name of the file data. Used to provide a label or filename to distinguish
+   * file datas. This field is only returned in PromptMessage for prompt management. It is not
+   * currently used in the Gemini GenerateContent calls.
+   * @param displayName displayName or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1FileData setDisplayName(java.lang.String displayName) {
+    this.displayName = displayName;
+    return this;
+  }
 
   /**
    * Required. URI.

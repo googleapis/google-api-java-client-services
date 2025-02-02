@@ -118,6 +118,15 @@ public final class GoogleCloudAiplatformV1Endpoint extends com.google.api.client
   private java.lang.String etag;
 
   /**
+   * Optional. Configuration for GenAiAdvancedFeatures. If the endpoint is serving GenAI models,
+   * advanced features like native RAG integration can be configured. Currently, only Model Garden
+   * models are supported.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1GenAiAdvancedFeaturesConfig genAiAdvancedFeaturesConfig;
+
+  /**
    * The labels with user-defined metadata to organize your Endpoints. Label keys and values can be
    * no longer than 64 characters (Unicode codepoints), can only contain lowercase letters, numeric
    * characters, underscores and dashes. International characters are allowed. See
@@ -392,6 +401,27 @@ public final class GoogleCloudAiplatformV1Endpoint extends com.google.api.client
    */
   public GoogleCloudAiplatformV1Endpoint setEtag(java.lang.String etag) {
     this.etag = etag;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for GenAiAdvancedFeatures. If the endpoint is serving GenAI models,
+   * advanced features like native RAG integration can be configured. Currently, only Model Garden
+   * models are supported.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1GenAiAdvancedFeaturesConfig getGenAiAdvancedFeaturesConfig() {
+    return genAiAdvancedFeaturesConfig;
+  }
+
+  /**
+   * Optional. Configuration for GenAiAdvancedFeatures. If the endpoint is serving GenAI models,
+   * advanced features like native RAG integration can be configured. Currently, only Model Garden
+   * models are supported.
+   * @param genAiAdvancedFeaturesConfig genAiAdvancedFeaturesConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1Endpoint setGenAiAdvancedFeaturesConfig(GoogleCloudAiplatformV1GenAiAdvancedFeaturesConfig genAiAdvancedFeaturesConfig) {
+    this.genAiAdvancedFeaturesConfig = genAiAdvancedFeaturesConfig;
     return this;
   }
 

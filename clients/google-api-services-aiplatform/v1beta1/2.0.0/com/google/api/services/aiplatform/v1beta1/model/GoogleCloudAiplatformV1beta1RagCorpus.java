@@ -73,6 +73,13 @@ public final class GoogleCloudAiplatformV1beta1RagCorpus extends com.google.api.
   private GoogleCloudAiplatformV1beta1RagEmbeddingModelConfig ragEmbeddingModelConfig;
 
   /**
+   * Output only. Number of RagFiles in the RagCorpus.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer ragFilesCount;
+
+  /**
    * Optional. Immutable. The Vector DB config of the RagCorpus.
    * The value may be {@code null}.
    */
@@ -201,6 +208,23 @@ public final class GoogleCloudAiplatformV1beta1RagCorpus extends com.google.api.
    */
   public GoogleCloudAiplatformV1beta1RagCorpus setRagEmbeddingModelConfig(GoogleCloudAiplatformV1beta1RagEmbeddingModelConfig ragEmbeddingModelConfig) {
     this.ragEmbeddingModelConfig = ragEmbeddingModelConfig;
+    return this;
+  }
+
+  /**
+   * Output only. Number of RagFiles in the RagCorpus.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getRagFilesCount() {
+    return ragFilesCount;
+  }
+
+  /**
+   * Output only. Number of RagFiles in the RagCorpus.
+   * @param ragFilesCount ragFilesCount or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RagCorpus setRagFilesCount(java.lang.Integer ragFilesCount) {
+    this.ragFilesCount = ragFilesCount;
     return this;
   }
 

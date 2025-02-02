@@ -165,6 +165,13 @@ public final class GoogleCloudAiplatformV1DeployedModel extends com.google.api.c
   private java.lang.String sharedResources;
 
   /**
+   * Optional. Spec for configuring speculative decoding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1SpeculativeDecodingSpec speculativeDecodingSpec;
+
+  /**
    * Output only. Runtime status of the deployed model.
    * The value may be {@code null}.
    */
@@ -491,6 +498,23 @@ public final class GoogleCloudAiplatformV1DeployedModel extends com.google.api.c
    */
   public GoogleCloudAiplatformV1DeployedModel setSharedResources(java.lang.String sharedResources) {
     this.sharedResources = sharedResources;
+    return this;
+  }
+
+  /**
+   * Optional. Spec for configuring speculative decoding.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1SpeculativeDecodingSpec getSpeculativeDecodingSpec() {
+    return speculativeDecodingSpec;
+  }
+
+  /**
+   * Optional. Spec for configuring speculative decoding.
+   * @param speculativeDecodingSpec speculativeDecodingSpec or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1DeployedModel setSpeculativeDecodingSpec(GoogleCloudAiplatformV1SpeculativeDecodingSpec speculativeDecodingSpec) {
+    this.speculativeDecodingSpec = speculativeDecodingSpec;
     return this;
   }
 

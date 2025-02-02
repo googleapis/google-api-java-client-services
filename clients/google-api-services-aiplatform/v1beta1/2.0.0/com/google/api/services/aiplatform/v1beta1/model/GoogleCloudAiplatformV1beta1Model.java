@@ -62,6 +62,13 @@ public final class GoogleCloudAiplatformV1beta1Model extends com.google.api.clie
   private String createTime;
 
   /**
+   * The default checkpoint id of a model version.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String defaultCheckpointId;
+
+  /**
    * Output only. The pointers to DeployedModels created from this Model. Note that Model could have
    * been deployed to Endpoints in different Locations.
    * The value may be {@code null}.
@@ -394,6 +401,23 @@ public final class GoogleCloudAiplatformV1beta1Model extends com.google.api.clie
    */
   public GoogleCloudAiplatformV1beta1Model setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * The default checkpoint id of a model version.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDefaultCheckpointId() {
+    return defaultCheckpointId;
+  }
+
+  /**
+   * The default checkpoint id of a model version.
+   * @param defaultCheckpointId defaultCheckpointId or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Model setDefaultCheckpointId(java.lang.String defaultCheckpointId) {
+    this.defaultCheckpointId = defaultCheckpointId;
     return this;
   }
 

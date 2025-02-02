@@ -166,6 +166,13 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate extends c
   private GoogleCloudAiplatformV1beta1ShieldedVmConfig shieldedVmConfig;
 
   /**
+   * Optional. The notebook software configuration of the notebook runtime.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1NotebookSoftwareConfig softwareConfig;
+
+  /**
    * Output only. Timestamp when this NotebookRuntimeTemplate was most recently updated.
    * The value may be {@code null}.
    */
@@ -490,6 +497,23 @@ public final class GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate extends c
    */
   public GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate setShieldedVmConfig(GoogleCloudAiplatformV1beta1ShieldedVmConfig shieldedVmConfig) {
     this.shieldedVmConfig = shieldedVmConfig;
+    return this;
+  }
+
+  /**
+   * Optional. The notebook software configuration of the notebook runtime.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1NotebookSoftwareConfig getSoftwareConfig() {
+    return softwareConfig;
+  }
+
+  /**
+   * Optional. The notebook software configuration of the notebook runtime.
+   * @param softwareConfig softwareConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1NotebookRuntimeTemplate setSoftwareConfig(GoogleCloudAiplatformV1beta1NotebookSoftwareConfig softwareConfig) {
+    this.softwareConfig = softwareConfig;
     return this;
   }
 

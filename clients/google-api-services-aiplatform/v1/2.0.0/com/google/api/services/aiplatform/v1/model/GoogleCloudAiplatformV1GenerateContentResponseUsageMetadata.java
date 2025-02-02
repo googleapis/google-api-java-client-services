@@ -30,6 +30,13 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. List of modalities of the cached content in the request input.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAiplatformV1ModalityTokenCount> cacheTokensDetails;
+
+  /**
    * Output only. Number of tokens in the cached part in the input (the cached content).
    * The value may be {@code null}.
    */
@@ -44,6 +51,13 @@ public final class GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata e
   private java.lang.Integer candidatesTokenCount;
 
   /**
+   * Output only. List of modalities that were returned in the response.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAiplatformV1ModalityTokenCount> candidatesTokensDetails;
+
+  /**
    * Number of tokens in the request. When `cached_content` is set, this is still the total
    * effective prompt size meaning this includes the number of tokens in the cached content.
    * The value may be {@code null}.
@@ -52,11 +66,35 @@ public final class GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata e
   private java.lang.Integer promptTokenCount;
 
   /**
+   * Output only. List of modalities that were processed in the request input.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAiplatformV1ModalityTokenCount> promptTokensDetails;
+
+  /**
    * Total token count for prompt and response candidates.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer totalTokenCount;
+
+  /**
+   * Output only. List of modalities of the cached content in the request input.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAiplatformV1ModalityTokenCount> getCacheTokensDetails() {
+    return cacheTokensDetails;
+  }
+
+  /**
+   * Output only. List of modalities of the cached content in the request input.
+   * @param cacheTokensDetails cacheTokensDetails or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata setCacheTokensDetails(java.util.List<GoogleCloudAiplatformV1ModalityTokenCount> cacheTokensDetails) {
+    this.cacheTokensDetails = cacheTokensDetails;
+    return this;
+  }
 
   /**
    * Output only. Number of tokens in the cached part in the input (the cached content).
@@ -93,6 +131,23 @@ public final class GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata e
   }
 
   /**
+   * Output only. List of modalities that were returned in the response.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAiplatformV1ModalityTokenCount> getCandidatesTokensDetails() {
+    return candidatesTokensDetails;
+  }
+
+  /**
+   * Output only. List of modalities that were returned in the response.
+   * @param candidatesTokensDetails candidatesTokensDetails or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata setCandidatesTokensDetails(java.util.List<GoogleCloudAiplatformV1ModalityTokenCount> candidatesTokensDetails) {
+    this.candidatesTokensDetails = candidatesTokensDetails;
+    return this;
+  }
+
+  /**
    * Number of tokens in the request. When `cached_content` is set, this is still the total
    * effective prompt size meaning this includes the number of tokens in the cached content.
    * @return value or {@code null} for none
@@ -108,6 +163,23 @@ public final class GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata e
    */
   public GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata setPromptTokenCount(java.lang.Integer promptTokenCount) {
     this.promptTokenCount = promptTokenCount;
+    return this;
+  }
+
+  /**
+   * Output only. List of modalities that were processed in the request input.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAiplatformV1ModalityTokenCount> getPromptTokensDetails() {
+    return promptTokensDetails;
+  }
+
+  /**
+   * Output only. List of modalities that were processed in the request input.
+   * @param promptTokensDetails promptTokensDetails or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata setPromptTokensDetails(java.util.List<GoogleCloudAiplatformV1ModalityTokenCount> promptTokensDetails) {
+    this.promptTokensDetails = promptTokensDetails;
     return this;
   }
 

@@ -46,7 +46,8 @@ public final class GoogleCloudAiplatformV1beta1RagFileParsingConfigLlmParser ext
   private java.lang.Integer maxParsingRequestsPerMin;
 
   /**
-   * The name of a LLM model used for parsing. Format: `gemini-1.5-pro-002`
+   * The name of a LLM model used for parsing. Format: *
+   * `projects/{project_id}/locations/{location}/publishers/{publisher}/models/{model}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,7 +92,8 @@ public final class GoogleCloudAiplatformV1beta1RagFileParsingConfigLlmParser ext
   }
 
   /**
-   * The name of a LLM model used for parsing. Format: `gemini-1.5-pro-002`
+   * The name of a LLM model used for parsing. Format: *
+   * `projects/{project_id}/locations/{location}/publishers/{publisher}/models/{model}`
    * @return value or {@code null} for none
    */
   public java.lang.String getModelName() {
@@ -99,7 +101,8 @@ public final class GoogleCloudAiplatformV1beta1RagFileParsingConfigLlmParser ext
   }
 
   /**
-   * The name of a LLM model used for parsing. Format: `gemini-1.5-pro-002`
+   * The name of a LLM model used for parsing. Format: *
+   * `projects/{project_id}/locations/{location}/publishers/{publisher}/models/{model}`
    * @param modelName modelName or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1RagFileParsingConfigLlmParser setModelName(java.lang.String modelName) {

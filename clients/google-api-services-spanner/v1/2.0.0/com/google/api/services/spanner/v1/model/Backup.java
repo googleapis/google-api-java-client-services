@@ -127,14 +127,6 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private java.lang.String incrementalBackupChainId;
 
   /**
-   * Output only. The instance partition(s) storing the backup. This is the same as the list of the
-   * instance partition(s) that the database had footprint in at the backup's `version_time`.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<BackupInstancePartition> instancePartitions;
-
-  /**
    * Output only. The max allowed expiration time of the backup, with microseconds granularity. A
    * backup's expiration time can be configured in multiple APIs: CreateBackup, UpdateBackup,
    * CopyBackup. When updating or copying an existing backup, the expiration time specified must be
@@ -434,25 +426,6 @@ public final class Backup extends com.google.api.client.json.GenericJson {
    */
   public Backup setIncrementalBackupChainId(java.lang.String incrementalBackupChainId) {
     this.incrementalBackupChainId = incrementalBackupChainId;
-    return this;
-  }
-
-  /**
-   * Output only. The instance partition(s) storing the backup. This is the same as the list of the
-   * instance partition(s) that the database had footprint in at the backup's `version_time`.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<BackupInstancePartition> getInstancePartitions() {
-    return instancePartitions;
-  }
-
-  /**
-   * Output only. The instance partition(s) storing the backup. This is the same as the list of the
-   * instance partition(s) that the database had footprint in at the backup's `version_time`.
-   * @param instancePartitions instancePartitions or {@code null} for none
-   */
-  public Backup setInstancePartitions(java.util.List<BackupInstancePartition> instancePartitions) {
-    this.instancePartitions = instancePartitions;
     return this;
   }
 

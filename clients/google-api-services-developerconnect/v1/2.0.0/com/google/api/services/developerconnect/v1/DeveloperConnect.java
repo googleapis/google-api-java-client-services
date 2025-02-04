@@ -3311,6 +3311,292 @@ public class DeveloperConnect extends com.google.api.client.googleapis.services.
             }
           }
           /**
+           * ProcessBitbucketCloudWebhook is called by the external Bitbucket Cloud instances for notifying
+           * events.
+           *
+           * Create a request for the method "gitRepositoryLinks.processBitbucketCloudWebhook".
+           *
+           * This request holds the parameters needed by the developerconnect server.  After setting any
+           * optional parameters, call the {@link ProcessBitbucketCloudWebhook#execute()} method to invoke the
+           * remote operation.
+           *
+           * @param name Required. The GitRepositoryLink where the webhook will be received. Format:
+           *        `projects/locations/connections/gitRepositoryLinks`.
+           * @param content the {@link com.google.api.services.developerconnect.v1.model.ProcessBitbucketCloudWebhookRequest}
+           * @return the request
+           */
+          public ProcessBitbucketCloudWebhook processBitbucketCloudWebhook(java.lang.String name, com.google.api.services.developerconnect.v1.model.ProcessBitbucketCloudWebhookRequest content) throws java.io.IOException {
+            ProcessBitbucketCloudWebhook result = new ProcessBitbucketCloudWebhook(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class ProcessBitbucketCloudWebhook extends DeveloperConnectRequest<com.google.api.services.developerconnect.v1.model.Empty> {
+
+            private static final String REST_PATH = "v1/{+name}:processBitbucketCloudWebhook";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/connections/[^/]+/gitRepositoryLinks/[^/]+$");
+
+            /**
+             * ProcessBitbucketCloudWebhook is called by the external Bitbucket Cloud instances for notifying
+             * events.
+             *
+             * Create a request for the method "gitRepositoryLinks.processBitbucketCloudWebhook".
+             *
+             * This request holds the parameters needed by the the developerconnect server.  After setting any
+             * optional parameters, call the {@link ProcessBitbucketCloudWebhook#execute()} method to invoke
+             * the remote operation. <p> {@link ProcessBitbucketCloudWebhook#initialize(com.google.api.client.
+             * googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+             * immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The GitRepositoryLink where the webhook will be received. Format:
+           *        `projects/locations/connections/gitRepositoryLinks`.
+             * @param content the {@link com.google.api.services.developerconnect.v1.model.ProcessBitbucketCloudWebhookRequest}
+             * @since 1.13
+             */
+            protected ProcessBitbucketCloudWebhook(java.lang.String name, com.google.api.services.developerconnect.v1.model.ProcessBitbucketCloudWebhookRequest content) {
+              super(DeveloperConnect.this, "POST", REST_PATH, content, com.google.api.services.developerconnect.v1.model.Empty.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/connections/[^/]+/gitRepositoryLinks/[^/]+$");
+              }
+            }
+
+            @Override
+            public ProcessBitbucketCloudWebhook set$Xgafv(java.lang.String $Xgafv) {
+              return (ProcessBitbucketCloudWebhook) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public ProcessBitbucketCloudWebhook setAccessToken(java.lang.String accessToken) {
+              return (ProcessBitbucketCloudWebhook) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public ProcessBitbucketCloudWebhook setAlt(java.lang.String alt) {
+              return (ProcessBitbucketCloudWebhook) super.setAlt(alt);
+            }
+
+            @Override
+            public ProcessBitbucketCloudWebhook setCallback(java.lang.String callback) {
+              return (ProcessBitbucketCloudWebhook) super.setCallback(callback);
+            }
+
+            @Override
+            public ProcessBitbucketCloudWebhook setFields(java.lang.String fields) {
+              return (ProcessBitbucketCloudWebhook) super.setFields(fields);
+            }
+
+            @Override
+            public ProcessBitbucketCloudWebhook setKey(java.lang.String key) {
+              return (ProcessBitbucketCloudWebhook) super.setKey(key);
+            }
+
+            @Override
+            public ProcessBitbucketCloudWebhook setOauthToken(java.lang.String oauthToken) {
+              return (ProcessBitbucketCloudWebhook) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public ProcessBitbucketCloudWebhook setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (ProcessBitbucketCloudWebhook) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public ProcessBitbucketCloudWebhook setQuotaUser(java.lang.String quotaUser) {
+              return (ProcessBitbucketCloudWebhook) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public ProcessBitbucketCloudWebhook setUploadType(java.lang.String uploadType) {
+              return (ProcessBitbucketCloudWebhook) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public ProcessBitbucketCloudWebhook setUploadProtocol(java.lang.String uploadProtocol) {
+              return (ProcessBitbucketCloudWebhook) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The GitRepositoryLink where the webhook will be received. Format:
+             * `projects/locations/connections/gitRepositoryLinks`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The GitRepositoryLink where the webhook will be received. Format:
+           `projects/locations/connections/gitRepositoryLinks`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The GitRepositoryLink where the webhook will be received. Format:
+             * `projects/locations/connections/gitRepositoryLinks`.
+             */
+            public ProcessBitbucketCloudWebhook setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/connections/[^/]+/gitRepositoryLinks/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public ProcessBitbucketCloudWebhook set(String parameterName, Object value) {
+              return (ProcessBitbucketCloudWebhook) super.set(parameterName, value);
+            }
+          }
+          /**
+           * ProcessBitbucketDataCenterWebhook is called by the external Bitbucket Data Center instances for
+           * notifying events.
+           *
+           * Create a request for the method "gitRepositoryLinks.processBitbucketDataCenterWebhook".
+           *
+           * This request holds the parameters needed by the developerconnect server.  After setting any
+           * optional parameters, call the {@link ProcessBitbucketDataCenterWebhook#execute()} method to
+           * invoke the remote operation.
+           *
+           * @param name Required. The GitRepositoryLink where the webhook will be received. Format:
+           *        `projects/locations/connections/gitRepositoryLinks`.
+           * @param content the {@link com.google.api.services.developerconnect.v1.model.ProcessBitbucketDataCenterWebhookRequest}
+           * @return the request
+           */
+          public ProcessBitbucketDataCenterWebhook processBitbucketDataCenterWebhook(java.lang.String name, com.google.api.services.developerconnect.v1.model.ProcessBitbucketDataCenterWebhookRequest content) throws java.io.IOException {
+            ProcessBitbucketDataCenterWebhook result = new ProcessBitbucketDataCenterWebhook(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class ProcessBitbucketDataCenterWebhook extends DeveloperConnectRequest<com.google.api.services.developerconnect.v1.model.Empty> {
+
+            private static final String REST_PATH = "v1/{+name}:processBitbucketDataCenterWebhook";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/connections/[^/]+/gitRepositoryLinks/[^/]+$");
+
+            /**
+             * ProcessBitbucketDataCenterWebhook is called by the external Bitbucket Data Center instances for
+             * notifying events.
+             *
+             * Create a request for the method "gitRepositoryLinks.processBitbucketDataCenterWebhook".
+             *
+             * This request holds the parameters needed by the the developerconnect server.  After setting any
+             * optional parameters, call the {@link ProcessBitbucketDataCenterWebhook#execute()} method to
+             * invoke the remote operation. <p> {@link ProcessBitbucketDataCenterWebhook#initialize(com.google
+             * .api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this
+             * instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The GitRepositoryLink where the webhook will be received. Format:
+           *        `projects/locations/connections/gitRepositoryLinks`.
+             * @param content the {@link com.google.api.services.developerconnect.v1.model.ProcessBitbucketDataCenterWebhookRequest}
+             * @since 1.13
+             */
+            protected ProcessBitbucketDataCenterWebhook(java.lang.String name, com.google.api.services.developerconnect.v1.model.ProcessBitbucketDataCenterWebhookRequest content) {
+              super(DeveloperConnect.this, "POST", REST_PATH, content, com.google.api.services.developerconnect.v1.model.Empty.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/connections/[^/]+/gitRepositoryLinks/[^/]+$");
+              }
+            }
+
+            @Override
+            public ProcessBitbucketDataCenterWebhook set$Xgafv(java.lang.String $Xgafv) {
+              return (ProcessBitbucketDataCenterWebhook) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public ProcessBitbucketDataCenterWebhook setAccessToken(java.lang.String accessToken) {
+              return (ProcessBitbucketDataCenterWebhook) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public ProcessBitbucketDataCenterWebhook setAlt(java.lang.String alt) {
+              return (ProcessBitbucketDataCenterWebhook) super.setAlt(alt);
+            }
+
+            @Override
+            public ProcessBitbucketDataCenterWebhook setCallback(java.lang.String callback) {
+              return (ProcessBitbucketDataCenterWebhook) super.setCallback(callback);
+            }
+
+            @Override
+            public ProcessBitbucketDataCenterWebhook setFields(java.lang.String fields) {
+              return (ProcessBitbucketDataCenterWebhook) super.setFields(fields);
+            }
+
+            @Override
+            public ProcessBitbucketDataCenterWebhook setKey(java.lang.String key) {
+              return (ProcessBitbucketDataCenterWebhook) super.setKey(key);
+            }
+
+            @Override
+            public ProcessBitbucketDataCenterWebhook setOauthToken(java.lang.String oauthToken) {
+              return (ProcessBitbucketDataCenterWebhook) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public ProcessBitbucketDataCenterWebhook setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (ProcessBitbucketDataCenterWebhook) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public ProcessBitbucketDataCenterWebhook setQuotaUser(java.lang.String quotaUser) {
+              return (ProcessBitbucketDataCenterWebhook) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public ProcessBitbucketDataCenterWebhook setUploadType(java.lang.String uploadType) {
+              return (ProcessBitbucketDataCenterWebhook) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public ProcessBitbucketDataCenterWebhook setUploadProtocol(java.lang.String uploadProtocol) {
+              return (ProcessBitbucketDataCenterWebhook) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The GitRepositoryLink where the webhook will be received. Format:
+             * `projects/locations/connections/gitRepositoryLinks`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The GitRepositoryLink where the webhook will be received. Format:
+           `projects/locations/connections/gitRepositoryLinks`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The GitRepositoryLink where the webhook will be received. Format:
+             * `projects/locations/connections/gitRepositoryLinks`.
+             */
+            public ProcessBitbucketDataCenterWebhook setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/connections/[^/]+/gitRepositoryLinks/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public ProcessBitbucketDataCenterWebhook set(String parameterName, Object value) {
+              return (ProcessBitbucketDataCenterWebhook) super.set(parameterName, value);
+            }
+          }
+          /**
            * ProcessGitLabEnterpriseWebhook is called by the external GitLab Enterprise instances for
            * notifying events.
            *

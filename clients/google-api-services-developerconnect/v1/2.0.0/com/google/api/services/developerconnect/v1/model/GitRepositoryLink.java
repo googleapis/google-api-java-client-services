@@ -68,6 +68,14 @@ public final class GitRepositoryLink extends com.google.api.client.json.GenericJ
   private java.lang.String etag;
 
   /**
+   * Output only. URI to access the linked repository through the Git Proxy. This field is only
+   * populated if the git proxy is enabled for the connection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String gitProxyUri;
+
+  /**
    * Optional. Labels as key value pairs
    * The value may be {@code null}.
    */
@@ -196,6 +204,25 @@ public final class GitRepositoryLink extends com.google.api.client.json.GenericJ
    */
   public GitRepositoryLink setEtag(java.lang.String etag) {
     this.etag = etag;
+    return this;
+  }
+
+  /**
+   * Output only. URI to access the linked repository through the Git Proxy. This field is only
+   * populated if the git proxy is enabled for the connection.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGitProxyUri() {
+    return gitProxyUri;
+  }
+
+  /**
+   * Output only. URI to access the linked repository through the Git Proxy. This field is only
+   * populated if the git proxy is enabled for the connection.
+   * @param gitProxyUri gitProxyUri or {@code null} for none
+   */
+  public GitRepositoryLink setGitProxyUri(java.lang.String gitProxyUri) {
+    this.gitProxyUri = gitProxyUri;
     return this;
   }
 

@@ -38,6 +38,20 @@ public final class Connection extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> annotations;
 
   /**
+   * Configuration for connections to an instance of Bitbucket Clouds.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BitbucketCloudConfig bitbucketCloudConfig;
+
+  /**
+   * Configuration for connections to an instance of Bitbucket Data Center.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BitbucketDataCenterConfig bitbucketDataCenterConfig;
+
+  /**
    * Output only. [Output only] Create timestamp
    * The value may be {@code null}.
    */
@@ -75,6 +89,14 @@ public final class Connection extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String etag;
+
+  /**
+   * Optional. Configuration for the git proxy feature. Enabling the git proxy allows clients to
+   * perform git operations on the repositories linked in the connection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GitProxyConfig gitProxyConfig;
 
   /**
    * Configuration for connections to github.com.
@@ -161,6 +183,40 @@ public final class Connection extends com.google.api.client.json.GenericJson {
    */
   public Connection setAnnotations(java.util.Map<String, java.lang.String> annotations) {
     this.annotations = annotations;
+    return this;
+  }
+
+  /**
+   * Configuration for connections to an instance of Bitbucket Clouds.
+   * @return value or {@code null} for none
+   */
+  public BitbucketCloudConfig getBitbucketCloudConfig() {
+    return bitbucketCloudConfig;
+  }
+
+  /**
+   * Configuration for connections to an instance of Bitbucket Clouds.
+   * @param bitbucketCloudConfig bitbucketCloudConfig or {@code null} for none
+   */
+  public Connection setBitbucketCloudConfig(BitbucketCloudConfig bitbucketCloudConfig) {
+    this.bitbucketCloudConfig = bitbucketCloudConfig;
+    return this;
+  }
+
+  /**
+   * Configuration for connections to an instance of Bitbucket Data Center.
+   * @return value or {@code null} for none
+   */
+  public BitbucketDataCenterConfig getBitbucketDataCenterConfig() {
+    return bitbucketDataCenterConfig;
+  }
+
+  /**
+   * Configuration for connections to an instance of Bitbucket Data Center.
+   * @param bitbucketDataCenterConfig bitbucketDataCenterConfig or {@code null} for none
+   */
+  public Connection setBitbucketDataCenterConfig(BitbucketDataCenterConfig bitbucketDataCenterConfig) {
+    this.bitbucketDataCenterConfig = bitbucketDataCenterConfig;
     return this;
   }
 
@@ -254,6 +310,25 @@ public final class Connection extends com.google.api.client.json.GenericJson {
    */
   public Connection setEtag(java.lang.String etag) {
     this.etag = etag;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for the git proxy feature. Enabling the git proxy allows clients to
+   * perform git operations on the repositories linked in the connection.
+   * @return value or {@code null} for none
+   */
+  public GitProxyConfig getGitProxyConfig() {
+    return gitProxyConfig;
+  }
+
+  /**
+   * Optional. Configuration for the git proxy feature. Enabling the git proxy allows clients to
+   * perform git operations on the repositories linked in the connection.
+   * @param gitProxyConfig gitProxyConfig or {@code null} for none
+   */
+  public Connection setGitProxyConfig(GitProxyConfig gitProxyConfig) {
+    this.gitProxyConfig = gitProxyConfig;
     return this;
   }
 

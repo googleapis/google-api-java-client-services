@@ -44,6 +44,14 @@ public final class MirroringDeploymentGroup extends com.google.api.client.json.G
   private String createTime;
 
   /**
+   * Optional. User-provided description of the deployment group. Used as additional context for the
+   * deployment group.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String description;
+
+  /**
    * Optional. Labels as key value pairs
    * The value may be {@code null}.
    */
@@ -117,6 +125,25 @@ public final class MirroringDeploymentGroup extends com.google.api.client.json.G
    */
   public MirroringDeploymentGroup setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Optional. User-provided description of the deployment group. Used as additional context for the
+   * deployment group.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDescription() {
+    return description;
+  }
+
+  /**
+   * Optional. User-provided description of the deployment group. Used as additional context for the
+   * deployment group.
+   * @param description description or {@code null} for none
+   */
+  public MirroringDeploymentGroup setDescription(java.lang.String description) {
+    this.description = description;
     return this;
   }
 

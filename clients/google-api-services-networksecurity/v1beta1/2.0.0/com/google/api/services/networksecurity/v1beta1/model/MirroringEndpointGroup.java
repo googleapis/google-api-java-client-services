@@ -45,6 +45,14 @@ public final class MirroringEndpointGroup extends com.google.api.client.json.Gen
   private String createTime;
 
   /**
+   * Optional. User-provided description of the endpoint group. Used as additional context for the
+   * endpoint group.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String description;
+
+  /**
    * Optional. Labels as key value pairs
    * The value may be {@code null}.
    */
@@ -120,6 +128,25 @@ public final class MirroringEndpointGroup extends com.google.api.client.json.Gen
    */
   public MirroringEndpointGroup setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Optional. User-provided description of the endpoint group. Used as additional context for the
+   * endpoint group.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDescription() {
+    return description;
+  }
+
+  /**
+   * Optional. User-provided description of the endpoint group. Used as additional context for the
+   * endpoint group.
+   * @param description description or {@code null} for none
+   */
+  public MirroringEndpointGroup setDescription(java.lang.String description) {
+    this.description = description;
     return this;
   }
 

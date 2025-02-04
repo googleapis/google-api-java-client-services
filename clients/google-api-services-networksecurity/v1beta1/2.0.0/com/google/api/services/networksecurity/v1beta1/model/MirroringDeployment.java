@@ -37,6 +37,14 @@ public final class MirroringDeployment extends com.google.api.client.json.Generi
   private String createTime;
 
   /**
+   * Optional. User-provided description of the deployment. Used as additional context for the
+   * deployment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String description;
+
+  /**
    * Required. Immutable. The regional load balancer which the mirrored traffic should be forwarded
    * to. Format is: projects/{project}/regions/{region}/forwardingRules/{forwardingRule}
    * The value may be {@code null}.
@@ -101,6 +109,25 @@ public final class MirroringDeployment extends com.google.api.client.json.Generi
    */
   public MirroringDeployment setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Optional. User-provided description of the deployment. Used as additional context for the
+   * deployment.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDescription() {
+    return description;
+  }
+
+  /**
+   * Optional. User-provided description of the deployment. Used as additional context for the
+   * deployment.
+   * @param description description or {@code null} for none
+   */
+  public MirroringDeployment setDescription(java.lang.String description) {
+    this.description = description;
     return this;
   }
 

@@ -7151,8 +7151,9 @@ public class BigtableAdmin extends com.google.api.client.googleapis.services.jso
            * to the `table` field, not to the request message. The wildcard (*) path is currently
            * not supported. Currently UpdateTable is only supported for the following fields: *
            * `change_stream_config` * `change_stream_config.retention_period` *
-           * `deletion_protection` If `column_families` is set in `update_mask`, it will return an
-           * UNIMPLEMENTED error.
+           * `deletion_protection` * `automated_backup_policy` *
+           * `automated_backup_policy.retention_period` * `automated_backup_policy.frequency` If
+           * `column_families` is set in `update_mask`, it will return an UNIMPLEMENTED error.
            */
           @com.google.api.client.util.Key
           private String updateMask;
@@ -7161,8 +7162,9 @@ public class BigtableAdmin extends com.google.api.client.googleapis.services.jso
          `change_stream_config`) in the `table` field should be updated. This mask is relative to the
          `table` field, not to the request message. The wildcard (*) path is currently not supported.
          Currently UpdateTable is only supported for the following fields: * `change_stream_config` *
-         `change_stream_config.retention_period` * `deletion_protection` If `column_families` is set in
-         `update_mask`, it will return an UNIMPLEMENTED error.
+         `change_stream_config.retention_period` * `deletion_protection` * `automated_backup_policy` *
+         `automated_backup_policy.retention_period` * `automated_backup_policy.frequency` If
+         `column_families` is set in `update_mask`, it will return an UNIMPLEMENTED error.
            */
           public String getUpdateMask() {
             return updateMask;
@@ -7174,8 +7176,9 @@ public class BigtableAdmin extends com.google.api.client.googleapis.services.jso
            * to the `table` field, not to the request message. The wildcard (*) path is currently
            * not supported. Currently UpdateTable is only supported for the following fields: *
            * `change_stream_config` * `change_stream_config.retention_period` *
-           * `deletion_protection` If `column_families` is set in `update_mask`, it will return an
-           * UNIMPLEMENTED error.
+           * `deletion_protection` * `automated_backup_policy` *
+           * `automated_backup_policy.retention_period` * `automated_backup_policy.frequency` If
+           * `column_families` is set in `update_mask`, it will return an UNIMPLEMENTED error.
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;

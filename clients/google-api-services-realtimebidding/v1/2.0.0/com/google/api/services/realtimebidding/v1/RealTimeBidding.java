@@ -20,7 +20,7 @@ package com.google.api.services.realtimebidding.v1;
  * Service definition for RealTimeBidding (v1).
  *
  * <p>
- * Allows external bidders to manage their RTB integration with Google. This includes managing bidder endpoints, QPS quotas, configuring what ad inventory to receive via pretargeting, submitting creatives for verification, and accessing creative metadata such as approval status.
+ * Allows external bidders to manage their RTB integration with Google. This includes managing bidder endpoints, QPS quotas, configuring what ad inventory to receive with pretargeting, submitting creatives for verification, and accessing creative metadata such as approval status.
  * </p>
  *
  * <p>

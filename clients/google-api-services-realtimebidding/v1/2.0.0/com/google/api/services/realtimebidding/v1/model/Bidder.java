@@ -34,7 +34,7 @@ public final class Bidder extends com.google.api.client.json.GenericJson {
    * Output only. An option to bypass pretargeting for private auctions and preferred deals. When
    * true, bid requests from these nonguaranteed deals will always be sent. When false, bid requests
    * will be subject to regular pretargeting configurations. Programmatic Guaranteed deals will
-   * always be sent to the bidder, regardless of the value for this flag. Auction packages are not
+   * always be sent to the bidder, regardless of the value for this option. Auction packages are not
    * impacted by this value and are subject to the regular pretargeting configurations.
    * The value may be {@code null}.
    */
@@ -80,7 +80,7 @@ public final class Bidder extends com.google.api.client.json.GenericJson {
    * Output only. An option to bypass pretargeting for private auctions and preferred deals. When
    * true, bid requests from these nonguaranteed deals will always be sent. When false, bid requests
    * will be subject to regular pretargeting configurations. Programmatic Guaranteed deals will
-   * always be sent to the bidder, regardless of the value for this flag. Auction packages are not
+   * always be sent to the bidder, regardless of the value for this option. Auction packages are not
    * impacted by this value and are subject to the regular pretargeting configurations.
    * @return value or {@code null} for none
    */
@@ -92,7 +92,7 @@ public final class Bidder extends com.google.api.client.json.GenericJson {
    * Output only. An option to bypass pretargeting for private auctions and preferred deals. When
    * true, bid requests from these nonguaranteed deals will always be sent. When false, bid requests
    * will be subject to regular pretargeting configurations. Programmatic Guaranteed deals will
-   * always be sent to the bidder, regardless of the value for this flag. Auction packages are not
+   * always be sent to the bidder, regardless of the value for this option. Auction packages are not
    * impacted by this value and are subject to the regular pretargeting configurations.
    * @param bypassNonguaranteedDealsPretargeting bypassNonguaranteedDealsPretargeting or {@code null} for none
    */

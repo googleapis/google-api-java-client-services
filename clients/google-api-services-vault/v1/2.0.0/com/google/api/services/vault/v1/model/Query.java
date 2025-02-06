@@ -73,6 +73,13 @@ public final class Query extends com.google.api.client.json.GenericJson {
   private String endTime;
 
   /**
+   * Set Gemini search-specific options.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GeminiOptions geminiOptions;
+
+  /**
    * Required when **SearchMethod** is **ROOM**. (read-only)
    * The value may be {@code null}.
    */
@@ -270,6 +277,23 @@ public final class Query extends com.google.api.client.json.GenericJson {
    */
   public Query setEndTime(String endTime) {
     this.endTime = endTime;
+    return this;
+  }
+
+  /**
+   * Set Gemini search-specific options.
+   * @return value or {@code null} for none
+   */
+  public GeminiOptions getGeminiOptions() {
+    return geminiOptions;
+  }
+
+  /**
+   * Set Gemini search-specific options.
+   * @param geminiOptions geminiOptions or {@code null} for none
+   */
+  public Query setGeminiOptions(GeminiOptions geminiOptions) {
+    this.geminiOptions = geminiOptions;
     return this;
   }
 

@@ -13866,6 +13866,172 @@ public class Walletobjects extends com.google.api.client.googleapis.services.jso
   }
 
   /**
+   * An accessor for creating requests from the WalletobjectsOperations collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Walletobjects walletobjects = new Walletobjects(...);}
+   *   {@code Walletobjects.WalletobjectsOperations.List request = walletobjects.walletobjects().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public WalletobjectsOperations walletobjects() {
+    return new WalletobjectsOperations();
+  }
+
+  /**
+   * The "walletobjects" collection of methods.
+   */
+  public class WalletobjectsOperations {
+
+    /**
+     * An accessor for creating requests from the V1 collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Walletobjects walletobjects = new Walletobjects(...);}
+     *   {@code Walletobjects.V1.List request = walletobjects.v1().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public V1 v1() {
+      return new V1();
+    }
+
+    /**
+     * The "v1" collection of methods.
+     */
+    public class V1 {
+
+      /**
+       * An accessor for creating requests from the PrivateContent collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Walletobjects walletobjects = new Walletobjects(...);}
+       *   {@code Walletobjects.PrivateContent.List request = walletobjects.privateContent().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public PrivateContent privateContent() {
+        return new PrivateContent();
+      }
+
+      /**
+       * The "privateContent" collection of methods.
+       */
+      public class PrivateContent {
+
+        /**
+         * Provide Google with information about awaiting private pass update. This will allow Google to
+         * provide the update notification to the device that currently holds this pass.
+         *
+         * Create a request for the method "privateContent.setPassUpdateNotice".
+         *
+         * This request holds the parameters needed by the walletobjects server.  After setting any optional
+         * parameters, call the {@link SetPassUpdateNotice#execute()} method to invoke the remote operation.
+         *
+         * @param content the {@link com.google.api.services.walletobjects.model.SetPassUpdateNoticeRequest}
+         * @return the request
+         */
+        public SetPassUpdateNotice setPassUpdateNotice(com.google.api.services.walletobjects.model.SetPassUpdateNoticeRequest content) throws java.io.IOException {
+          SetPassUpdateNotice result = new SetPassUpdateNotice(content);
+          initialize(result);
+          return result;
+        }
+
+        public class SetPassUpdateNotice extends WalletobjectsRequest<com.google.api.services.walletobjects.model.SetPassUpdateNoticeResponse> {
+
+          private static final String REST_PATH = "walletobjects/v1/privateContent/setPassUpdateNotice";
+
+          /**
+           * Provide Google with information about awaiting private pass update. This will allow Google to
+           * provide the update notification to the device that currently holds this pass.
+           *
+           * Create a request for the method "privateContent.setPassUpdateNotice".
+           *
+           * This request holds the parameters needed by the the walletobjects server.  After setting any
+           * optional parameters, call the {@link SetPassUpdateNotice#execute()} method to invoke the remote
+           * operation. <p> {@link SetPassUpdateNotice#initialize(com.google.api.client.googleapis.services.
+           * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param content the {@link com.google.api.services.walletobjects.model.SetPassUpdateNoticeRequest}
+           * @since 1.13
+           */
+          protected SetPassUpdateNotice(com.google.api.services.walletobjects.model.SetPassUpdateNoticeRequest content) {
+            super(Walletobjects.this, "POST", REST_PATH, content, com.google.api.services.walletobjects.model.SetPassUpdateNoticeResponse.class);
+          }
+
+          @Override
+          public SetPassUpdateNotice set$Xgafv(java.lang.String $Xgafv) {
+            return (SetPassUpdateNotice) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public SetPassUpdateNotice setAccessToken(java.lang.String accessToken) {
+            return (SetPassUpdateNotice) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public SetPassUpdateNotice setAlt(java.lang.String alt) {
+            return (SetPassUpdateNotice) super.setAlt(alt);
+          }
+
+          @Override
+          public SetPassUpdateNotice setCallback(java.lang.String callback) {
+            return (SetPassUpdateNotice) super.setCallback(callback);
+          }
+
+          @Override
+          public SetPassUpdateNotice setFields(java.lang.String fields) {
+            return (SetPassUpdateNotice) super.setFields(fields);
+          }
+
+          @Override
+          public SetPassUpdateNotice setKey(java.lang.String key) {
+            return (SetPassUpdateNotice) super.setKey(key);
+          }
+
+          @Override
+          public SetPassUpdateNotice setOauthToken(java.lang.String oauthToken) {
+            return (SetPassUpdateNotice) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public SetPassUpdateNotice setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (SetPassUpdateNotice) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public SetPassUpdateNotice setQuotaUser(java.lang.String quotaUser) {
+            return (SetPassUpdateNotice) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public SetPassUpdateNotice setUploadType(java.lang.String uploadType) {
+            return (SetPassUpdateNotice) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public SetPassUpdateNotice setUploadProtocol(java.lang.String uploadProtocol) {
+            return (SetPassUpdateNotice) super.setUploadProtocol(uploadProtocol);
+          }
+
+          @Override
+          public SetPassUpdateNotice set(String parameterName, Object value) {
+            return (SetPassUpdateNotice) super.set(parameterName, value);
+          }
+        }
+
+      }
+    }
+  }
+
+  /**
    * Builder for {@link Walletobjects}.
    *
    * <p>

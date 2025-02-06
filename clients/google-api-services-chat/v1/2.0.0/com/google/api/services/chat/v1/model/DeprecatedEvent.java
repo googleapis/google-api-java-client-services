@@ -54,10 +54,13 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   private CommonEventObject common;
 
   /**
-   * For `MESSAGE` interaction events, the URL that users must be redirected to after they complete
-   * an authorization or configuration flow outside of Google Chat. For more information, see
-   * [Connect a Chat app with other services and
-   * tools](https://developers.google.com/workspace/chat/connect-web-services-tools).
+   * This URL is populated for `MESSAGE` and `ADDED_TO_SPACE` interaction events. After completing
+   * an authorization or configuration flow outside of Google Chat, users must be redirected to this
+   * URL to signal to Google Chat that the authorization or configuration flow was successful. For
+   * more information, see [Connect a Chat app with other services and
+   * tools](https://developers.google.com/workspace/chat/connect-web-services-tools). In [Developer
+   * Preview](https://developers.google.com/workspace/preview), this URL is also populated for
+   * `APP_COMMAND` interaction events.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -181,10 +184,13 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * For `MESSAGE` interaction events, the URL that users must be redirected to after they complete
-   * an authorization or configuration flow outside of Google Chat. For more information, see
-   * [Connect a Chat app with other services and
-   * tools](https://developers.google.com/workspace/chat/connect-web-services-tools).
+   * This URL is populated for `MESSAGE` and `ADDED_TO_SPACE` interaction events. After completing
+   * an authorization or configuration flow outside of Google Chat, users must be redirected to this
+   * URL to signal to Google Chat that the authorization or configuration flow was successful. For
+   * more information, see [Connect a Chat app with other services and
+   * tools](https://developers.google.com/workspace/chat/connect-web-services-tools). In [Developer
+   * Preview](https://developers.google.com/workspace/preview), this URL is also populated for
+   * `APP_COMMAND` interaction events.
    * @return value or {@code null} for none
    */
   public java.lang.String getConfigCompleteRedirectUrl() {
@@ -192,10 +198,13 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * For `MESSAGE` interaction events, the URL that users must be redirected to after they complete
-   * an authorization or configuration flow outside of Google Chat. For more information, see
-   * [Connect a Chat app with other services and
-   * tools](https://developers.google.com/workspace/chat/connect-web-services-tools).
+   * This URL is populated for `MESSAGE` and `ADDED_TO_SPACE` interaction events. After completing
+   * an authorization or configuration flow outside of Google Chat, users must be redirected to this
+   * URL to signal to Google Chat that the authorization or configuration flow was successful. For
+   * more information, see [Connect a Chat app with other services and
+   * tools](https://developers.google.com/workspace/chat/connect-web-services-tools). In [Developer
+   * Preview](https://developers.google.com/workspace/preview), this URL is also populated for
+   * `APP_COMMAND` interaction events.
    * @param configCompleteRedirectUrl configCompleteRedirectUrl or {@code null} for none
    */
   public DeprecatedEvent setConfigCompleteRedirectUrl(java.lang.String configCompleteRedirectUrl) {

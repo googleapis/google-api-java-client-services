@@ -112,6 +112,13 @@ public final class GoogleDevtoolsCloudbuildV1BuildOptions extends com.google.api
   private GoogleDevtoolsCloudbuildV1PoolOption pool;
 
   /**
+   * Optional. Option to specify the Pub/Sub topic to receive build status updates.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String pubsubTopic;
+
+  /**
    * Requested verifiability options.
    * The value may be {@code null}.
    */
@@ -352,6 +359,23 @@ public final class GoogleDevtoolsCloudbuildV1BuildOptions extends com.google.api
    */
   public GoogleDevtoolsCloudbuildV1BuildOptions setPool(GoogleDevtoolsCloudbuildV1PoolOption pool) {
     this.pool = pool;
+    return this;
+  }
+
+  /**
+   * Optional. Option to specify the Pub/Sub topic to receive build status updates.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPubsubTopic() {
+    return pubsubTopic;
+  }
+
+  /**
+   * Optional. Option to specify the Pub/Sub topic to receive build status updates.
+   * @param pubsubTopic pubsubTopic or {@code null} for none
+   */
+  public GoogleDevtoolsCloudbuildV1BuildOptions setPubsubTopic(java.lang.String pubsubTopic) {
+    this.pubsubTopic = pubsubTopic;
     return this;
   }
 

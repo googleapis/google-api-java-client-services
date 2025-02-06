@@ -32,9 +32,9 @@ package com.google.api.services.serviceconsumermanagement.v1beta1.model;
 public final class Page extends com.google.api.client.json.GenericJson {
 
   /**
-   * The Markdown content of the page. You can use (== include {path} ==) to include content from a
-   * Markdown file. The content can be used to produce the documentation page such as HTML format
-   * page.
+   * The Markdown content of the page. You can use ```(== include {path} ==)``` to include content
+   * from a Markdown file. The content can be used to produce the documentation page such as HTML
+   * format page.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,9 +61,9 @@ public final class Page extends com.google.api.client.json.GenericJson {
   private java.util.List<Page> subpages;
 
   /**
-   * The Markdown content of the page. You can use (== include {path} ==) to include content from a
-   * Markdown file. The content can be used to produce the documentation page such as HTML format
-   * page.
+   * The Markdown content of the page. You can use ```(== include {path} ==)``` to include content
+   * from a Markdown file. The content can be used to produce the documentation page such as HTML
+   * format page.
    * @return value or {@code null} for none
    */
   public java.lang.String getContent() {
@@ -71,9 +71,9 @@ public final class Page extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Markdown content of the page. You can use (== include {path} ==) to include content from a
-   * Markdown file. The content can be used to produce the documentation page such as HTML format
-   * page.
+   * The Markdown content of the page. You can use ```(== include {path} ==)``` to include content
+   * from a Markdown file. The content can be used to produce the documentation page such as HTML
+   * format page.
    * @param content content or {@code null} for none
    */
   public Page setContent(java.lang.String content) {

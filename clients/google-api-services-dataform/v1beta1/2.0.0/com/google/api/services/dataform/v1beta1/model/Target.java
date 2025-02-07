@@ -31,28 +31,28 @@ package com.google.api.services.dataform.v1beta1.model;
 public final class Target extends com.google.api.client.json.GenericJson {
 
   /**
-   * The action's database (Google Cloud project ID) .
+   * Optional. The action's database (Google Cloud project ID) .
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String database;
 
   /**
-   * The action's name, within `database` and `schema`.
+   * Optional. The action's name, within `database` and `schema`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The action's schema (BigQuery dataset ID), within `database`.
+   * Optional. The action's schema (BigQuery dataset ID), within `database`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String schema;
 
   /**
-   * The action's database (Google Cloud project ID) .
+   * Optional. The action's database (Google Cloud project ID) .
    * @return value or {@code null} for none
    */
   public java.lang.String getDatabase() {
@@ -60,7 +60,7 @@ public final class Target extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The action's database (Google Cloud project ID) .
+   * Optional. The action's database (Google Cloud project ID) .
    * @param database database or {@code null} for none
    */
   public Target setDatabase(java.lang.String database) {
@@ -69,7 +69,7 @@ public final class Target extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The action's name, within `database` and `schema`.
+   * Optional. The action's name, within `database` and `schema`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -77,7 +77,7 @@ public final class Target extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The action's name, within `database` and `schema`.
+   * Optional. The action's name, within `database` and `schema`.
    * @param name name or {@code null} for none
    */
   public Target setName(java.lang.String name) {
@@ -86,7 +86,7 @@ public final class Target extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The action's schema (BigQuery dataset ID), within `database`.
+   * Optional. The action's schema (BigQuery dataset ID), within `database`.
    * @return value or {@code null} for none
    */
   public java.lang.String getSchema() {
@@ -94,7 +94,7 @@ public final class Target extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The action's schema (BigQuery dataset ID), within `database`.
+   * Optional. The action's schema (BigQuery dataset ID), within `database`.
    * @param schema schema or {@code null} for none
    */
   public Target setSchema(java.lang.String schema) {

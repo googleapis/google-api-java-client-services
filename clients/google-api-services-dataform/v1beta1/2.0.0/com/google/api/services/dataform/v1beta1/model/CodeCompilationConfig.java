@@ -59,6 +59,7 @@ public final class CodeCompilationConfig extends com.google.api.client.json.Gene
   private java.lang.String defaultLocation;
 
   /**
+   * Optional. The default notebook runtime options.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -163,6 +164,7 @@ public final class CodeCompilationConfig extends com.google.api.client.json.Gene
   }
 
   /**
+   * Optional. The default notebook runtime options.
    * @return value or {@code null} for none
    */
   public NotebookRuntimeOptions getDefaultNotebookRuntimeOptions() {
@@ -170,6 +172,7 @@ public final class CodeCompilationConfig extends com.google.api.client.json.Gene
   }
 
   /**
+   * Optional. The default notebook runtime options.
    * @param defaultNotebookRuntimeOptions defaultNotebookRuntimeOptions or {@code null} for none
    */
   public CodeCompilationConfig setDefaultNotebookRuntimeOptions(NotebookRuntimeOptions defaultNotebookRuntimeOptions) {

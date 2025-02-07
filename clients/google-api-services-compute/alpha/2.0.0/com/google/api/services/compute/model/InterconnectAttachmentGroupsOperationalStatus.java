@@ -30,11 +30,66 @@ package com.google.api.services.compute.model;
 public final class InterconnectAttachmentGroupsOperationalStatus extends com.google.api.client.json.GenericJson {
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<InterconnectAttachmentGroupsOperationalStatusAttachmentStatus> attachmentStatuses;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InterconnectAttachmentGroupConfigured configured;
+
+  /**
    * Summarizes the status of the group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String groupStatus;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InterconnectAttachmentGroupIntent intent;
+
+  /**
+   * The operational state of the group, including only active Attachments.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InterconnectAttachmentGroupConfigured operational;
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.util.List<InterconnectAttachmentGroupsOperationalStatusAttachmentStatus> getAttachmentStatuses() {
+    return attachmentStatuses;
+  }
+
+  /**
+   * @param attachmentStatuses attachmentStatuses or {@code null} for none
+   */
+  public InterconnectAttachmentGroupsOperationalStatus setAttachmentStatuses(java.util.List<InterconnectAttachmentGroupsOperationalStatusAttachmentStatus> attachmentStatuses) {
+    this.attachmentStatuses = attachmentStatuses;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public InterconnectAttachmentGroupConfigured getConfigured() {
+    return configured;
+  }
+
+  /**
+   * @param configured configured or {@code null} for none
+   */
+  public InterconnectAttachmentGroupsOperationalStatus setConfigured(InterconnectAttachmentGroupConfigured configured) {
+    this.configured = configured;
+    return this;
+  }
 
   /**
    * Summarizes the status of the group.
@@ -50,6 +105,38 @@ public final class InterconnectAttachmentGroupsOperationalStatus extends com.goo
    */
   public InterconnectAttachmentGroupsOperationalStatus setGroupStatus(java.lang.String groupStatus) {
     this.groupStatus = groupStatus;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public InterconnectAttachmentGroupIntent getIntent() {
+    return intent;
+  }
+
+  /**
+   * @param intent intent or {@code null} for none
+   */
+  public InterconnectAttachmentGroupsOperationalStatus setIntent(InterconnectAttachmentGroupIntent intent) {
+    this.intent = intent;
+    return this;
+  }
+
+  /**
+   * The operational state of the group, including only active Attachments.
+   * @return value or {@code null} for none
+   */
+  public InterconnectAttachmentGroupConfigured getOperational() {
+    return operational;
+  }
+
+  /**
+   * The operational state of the group, including only active Attachments.
+   * @param operational operational or {@code null} for none
+   */
+  public InterconnectAttachmentGroupsOperationalStatus setOperational(InterconnectAttachmentGroupConfigured operational) {
+    this.operational = operational;
     return this;
   }
 

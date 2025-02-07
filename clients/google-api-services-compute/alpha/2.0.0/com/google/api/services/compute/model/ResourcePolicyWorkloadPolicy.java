@@ -33,7 +33,49 @@ public final class ResourcePolicyWorkloadPolicy extends com.google.api.client.js
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private java.lang.String acceleratorTopology;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String maxTopologyDistance;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAcceleratorTopology() {
+    return acceleratorTopology;
+  }
+
+  /**
+   * @param acceleratorTopology acceleratorTopology or {@code null} for none
+   */
+  public ResourcePolicyWorkloadPolicy setAcceleratorTopology(java.lang.String acceleratorTopology) {
+    this.acceleratorTopology = acceleratorTopology;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMaxTopologyDistance() {
+    return maxTopologyDistance;
+  }
+
+  /**
+   * @param maxTopologyDistance maxTopologyDistance or {@code null} for none
+   */
+  public ResourcePolicyWorkloadPolicy setMaxTopologyDistance(java.lang.String maxTopologyDistance) {
+    this.maxTopologyDistance = maxTopologyDistance;
+    return this;
+  }
 
   /**
    * @return value or {@code null} for none

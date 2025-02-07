@@ -30,28 +30,28 @@ package com.google.api.services.compute.model;
 public final class LicenseResourceCommitment extends com.google.api.client.json.GenericJson {
 
   /**
-   * The number of licenses purchased.
+   * The number of licenses you plan to purchase.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long amount;
 
   /**
-   * Specifies the core range of the instance for which this license applies.
+   * The number of cores per license.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String coresPerLicense;
 
   /**
-   * Any applicable license URI.
+   * The applicable license URI.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String license;
 
   /**
-   * The number of licenses purchased.
+   * The number of licenses you plan to purchase.
    * @return value or {@code null} for none
    */
   public java.lang.Long getAmount() {
@@ -59,7 +59,7 @@ public final class LicenseResourceCommitment extends com.google.api.client.json.
   }
 
   /**
-   * The number of licenses purchased.
+   * The number of licenses you plan to purchase.
    * @param amount amount or {@code null} for none
    */
   public LicenseResourceCommitment setAmount(java.lang.Long amount) {
@@ -68,7 +68,7 @@ public final class LicenseResourceCommitment extends com.google.api.client.json.
   }
 
   /**
-   * Specifies the core range of the instance for which this license applies.
+   * The number of cores per license.
    * @return value or {@code null} for none
    */
   public java.lang.String getCoresPerLicense() {
@@ -76,7 +76,7 @@ public final class LicenseResourceCommitment extends com.google.api.client.json.
   }
 
   /**
-   * Specifies the core range of the instance for which this license applies.
+   * The number of cores per license.
    * @param coresPerLicense coresPerLicense or {@code null} for none
    */
   public LicenseResourceCommitment setCoresPerLicense(java.lang.String coresPerLicense) {
@@ -85,7 +85,7 @@ public final class LicenseResourceCommitment extends com.google.api.client.json.
   }
 
   /**
-   * Any applicable license URI.
+   * The applicable license URI.
    * @return value or {@code null} for none
    */
   public java.lang.String getLicense() {
@@ -93,7 +93,7 @@ public final class LicenseResourceCommitment extends com.google.api.client.json.
   }
 
   /**
-   * Any applicable license URI.
+   * The applicable license URI.
    * @param license license or {@code null} for none
    */
   public LicenseResourceCommitment setLicense(java.lang.String license) {

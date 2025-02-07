@@ -1950,13 +1950,14 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
 
           /**
            * The sorting order of the resources returned. Value should be a comma separated list of
-           * fields. The default sorting oder is ascending. See https://google.aip.dev/132#ordering.
+           * fields. The default sorting order is ascending. See
+           * https://google.aip.dev/132#ordering.
            */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
           /** The sorting order of the resources returned. Value should be a comma separated list of fields. The
-         default sorting oder is ascending. See https://google.aip.dev/132#ordering.
+         default sorting order is ascending. See https://google.aip.dev/132#ordering.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
@@ -1964,7 +1965,8 @@ public class CloudFunctions extends com.google.api.client.googleapis.services.js
 
           /**
            * The sorting order of the resources returned. Value should be a comma separated list of
-           * fields. The default sorting oder is ascending. See https://google.aip.dev/132#ordering.
+           * fields. The default sorting order is ascending. See
+           * https://google.aip.dev/132#ordering.
            */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;

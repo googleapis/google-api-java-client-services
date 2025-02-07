@@ -122,7 +122,7 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
 
   /**
    * Output only. The relative name of the Google Compute Engine
-   * network(https://cloud.google.com/compute/docs/networks-and-firewalls#networks) to which the
+   * [network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks) to which the
    * cluster is connected. Example: projects/my-project/global/networks/my-network
    * The value may be {@code null}.
    */
@@ -378,7 +378,7 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
 
   /**
    * Output only. The relative name of the Google Compute Engine
-   * network(https://cloud.google.com/compute/docs/networks-and-firewalls#networks) to which the
+   * [network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks) to which the
    * cluster is connected. Example: projects/my-project/global/networks/my-network
    * @return value or {@code null} for none
    */
@@ -388,7 +388,7 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
 
   /**
    * Output only. The relative name of the Google Compute Engine
-   * network(https://cloud.google.com/compute/docs/networks-and-firewalls#networks) to which the
+   * [network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks) to which the
    * cluster is connected. Example: projects/my-project/global/networks/my-network
    * @param network network or {@code null} for none
    */

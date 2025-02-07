@@ -38,7 +38,7 @@ public final class ScheduledExecutionRecord extends com.google.api.client.json.G
   private Status errorStatus;
 
   /**
-   * The timestamp of this execution attempt.
+   * Output only. The timestamp of this execution attempt.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,7 +72,7 @@ public final class ScheduledExecutionRecord extends com.google.api.client.json.G
   }
 
   /**
-   * The timestamp of this execution attempt.
+   * Output only. The timestamp of this execution attempt.
    * @return value or {@code null} for none
    */
   public String getExecutionTime() {
@@ -80,7 +80,7 @@ public final class ScheduledExecutionRecord extends com.google.api.client.json.G
   }
 
   /**
-   * The timestamp of this execution attempt.
+   * Output only. The timestamp of this execution attempt.
    * @param executionTime executionTime or {@code null} for none
    */
   public ScheduledExecutionRecord setExecutionTime(String executionTime) {

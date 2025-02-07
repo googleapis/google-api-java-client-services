@@ -46,7 +46,7 @@ public final class ScheduledReleaseRecord extends com.google.api.client.json.Gen
   private Status errorStatus;
 
   /**
-   * The timestamp of this release attempt.
+   * Output only. The timestamp of this release attempt.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,7 +91,7 @@ public final class ScheduledReleaseRecord extends com.google.api.client.json.Gen
   }
 
   /**
-   * The timestamp of this release attempt.
+   * Output only. The timestamp of this release attempt.
    * @return value or {@code null} for none
    */
   public String getReleaseTime() {
@@ -99,7 +99,7 @@ public final class ScheduledReleaseRecord extends com.google.api.client.json.Gen
   }
 
   /**
-   * The timestamp of this release attempt.
+   * Output only. The timestamp of this release attempt.
    * @param releaseTime releaseTime or {@code null} for none
    */
   public ScheduledReleaseRecord setReleaseTime(String releaseTime) {

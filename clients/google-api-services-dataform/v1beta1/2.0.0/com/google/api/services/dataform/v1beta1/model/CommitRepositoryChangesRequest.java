@@ -37,8 +37,8 @@ public final class CommitRepositoryChangesRequest extends com.google.api.client.
   private CommitMetadata commitMetadata;
 
   /**
-   * A map to the path of the file to the operation. The path is the full file path including
-   * filename, from repository root.
+   * Optional. A map to the path of the file to the operation. The path is the full file path
+   * including filename, from repository root.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,8 +71,8 @@ public final class CommitRepositoryChangesRequest extends com.google.api.client.
   }
 
   /**
-   * A map to the path of the file to the operation. The path is the full file path including
-   * filename, from repository root.
+   * Optional. A map to the path of the file to the operation. The path is the full file path
+   * including filename, from repository root.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, FileOperation> getFileOperations() {
@@ -80,8 +80,8 @@ public final class CommitRepositoryChangesRequest extends com.google.api.client.
   }
 
   /**
-   * A map to the path of the file to the operation. The path is the full file path including
-   * filename, from repository root.
+   * Optional. A map to the path of the file to the operation. The path is the full file path
+   * including filename, from repository root.
    * @param fileOperations fileOperations or {@code null} for none
    */
   public CommitRepositoryChangesRequest setFileOperations(java.util.Map<String, FileOperation> fileOperations) {

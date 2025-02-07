@@ -30,14 +30,14 @@ package com.google.api.services.dataform.v1beta1.model;
 public final class DataEncryptionState extends com.google.api.client.json.GenericJson {
 
   /**
-   * The KMS key version name with which data of a resource is encrypted.
+   * Required. The KMS key version name with which data of a resource is encrypted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kmsKeyVersionName;
 
   /**
-   * The KMS key version name with which data of a resource is encrypted.
+   * Required. The KMS key version name with which data of a resource is encrypted.
    * @return value or {@code null} for none
    */
   public java.lang.String getKmsKeyVersionName() {
@@ -45,7 +45,7 @@ public final class DataEncryptionState extends com.google.api.client.json.Generi
   }
 
   /**
-   * The KMS key version name with which data of a resource is encrypted.
+   * Required. The KMS key version name with which data of a resource is encrypted.
    * @param kmsKeyVersionName kmsKeyVersionName or {@code null} for none
    */
   public DataEncryptionState setKmsKeyVersionName(java.lang.String kmsKeyVersionName) {

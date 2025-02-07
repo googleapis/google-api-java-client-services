@@ -37,7 +37,7 @@ public final class UncommittedFileChange extends com.google.api.client.json.Gene
   private java.lang.String path;
 
   /**
-   * Indicates the status of the file.
+   * Output only. Indicates the status of the file.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class UncommittedFileChange extends com.google.api.client.json.Gene
   }
 
   /**
-   * Indicates the status of the file.
+   * Output only. Indicates the status of the file.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -69,7 +69,7 @@ public final class UncommittedFileChange extends com.google.api.client.json.Gene
   }
 
   /**
-   * Indicates the status of the file.
+   * Output only. Indicates the status of the file.
    * @param state state or {@code null} for none
    */
   public UncommittedFileChange setState(java.lang.String state) {

@@ -32,12 +32,48 @@ package com.google.api.services.servicemanagement.model;
 public final class SelectiveGapicGeneration extends com.google.api.client.json.GenericJson {
 
   /**
+   * Setting this to true indicates to the client generators that methods that would be excluded
+   * from the generation should instead be generated in a way that indicates these methods should
+   * not be consumed by end users. How this is expressed is up to individual language
+   * implementations to decide. Some examples may be: added annotations, obfuscated identifiers, or
+   * other language idiomatic patterns.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean generateOmittedAsInternal;
+
+  /**
    * An allowlist of the fully qualified names of RPCs that should be included on public client
    * surfaces.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> methods;
+
+  /**
+   * Setting this to true indicates to the client generators that methods that would be excluded
+   * from the generation should instead be generated in a way that indicates these methods should
+   * not be consumed by end users. How this is expressed is up to individual language
+   * implementations to decide. Some examples may be: added annotations, obfuscated identifiers, or
+   * other language idiomatic patterns.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getGenerateOmittedAsInternal() {
+    return generateOmittedAsInternal;
+  }
+
+  /**
+   * Setting this to true indicates to the client generators that methods that would be excluded
+   * from the generation should instead be generated in a way that indicates these methods should
+   * not be consumed by end users. How this is expressed is up to individual language
+   * implementations to decide. Some examples may be: added annotations, obfuscated identifiers, or
+   * other language idiomatic patterns.
+   * @param generateOmittedAsInternal generateOmittedAsInternal or {@code null} for none
+   */
+  public SelectiveGapicGeneration setGenerateOmittedAsInternal(java.lang.Boolean generateOmittedAsInternal) {
+    this.generateOmittedAsInternal = generateOmittedAsInternal;
+    return this;
+  }
 
   /**
    * An allowlist of the fully qualified names of RPCs that should be included on public client

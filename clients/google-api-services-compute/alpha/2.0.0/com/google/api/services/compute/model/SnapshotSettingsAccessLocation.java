@@ -37,6 +37,13 @@ public final class SnapshotSettingsAccessLocation extends com.google.api.client.
   private java.util.Map<String, SnapshotSettingsAccessLocationAccessLocationPreference> locations;
 
   /**
+   * Policy of which location is allowed to access snapshot.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String policy;
+
+  /**
    * List of regions that can restore a regional snapshot from the current region
    * @return value or {@code null} for none
    */
@@ -50,6 +57,23 @@ public final class SnapshotSettingsAccessLocation extends com.google.api.client.
    */
   public SnapshotSettingsAccessLocation setLocations(java.util.Map<String, SnapshotSettingsAccessLocationAccessLocationPreference> locations) {
     this.locations = locations;
+    return this;
+  }
+
+  /**
+   * Policy of which location is allowed to access snapshot.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPolicy() {
+    return policy;
+  }
+
+  /**
+   * Policy of which location is allowed to access snapshot.
+   * @param policy policy or {@code null} for none
+   */
+  public SnapshotSettingsAccessLocation setPolicy(java.lang.String policy) {
+    this.policy = policy;
     return this;
   }
 

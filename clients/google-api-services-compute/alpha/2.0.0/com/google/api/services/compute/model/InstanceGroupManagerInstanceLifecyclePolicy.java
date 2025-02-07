@@ -71,7 +71,7 @@ public final class InstanceGroupManagerInstanceLifecyclePolicy extends com.googl
    * (default): MIG uses the same action configured for
    * instanceLifecyclePolicy.defaultActionOnFailure field. - REPAIR: MIG automatically repairs an
    * unhealthy VM by recreating it. - DO_NOTHING: MIG doesn't repair an unhealthy VM. For more
-   * information, see about repairing VMs in a MIG.
+   * information, see About repairing VMs in a MIG.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -164,7 +164,7 @@ public final class InstanceGroupManagerInstanceLifecyclePolicy extends com.googl
    * (default): MIG uses the same action configured for
    * instanceLifecyclePolicy.defaultActionOnFailure field. - REPAIR: MIG automatically repairs an
    * unhealthy VM by recreating it. - DO_NOTHING: MIG doesn't repair an unhealthy VM. For more
-   * information, see about repairing VMs in a MIG.
+   * information, see About repairing VMs in a MIG.
    * @return value or {@code null} for none
    */
   public java.lang.String getOnFailedHealthCheck() {
@@ -177,7 +177,7 @@ public final class InstanceGroupManagerInstanceLifecyclePolicy extends com.googl
    * (default): MIG uses the same action configured for
    * instanceLifecyclePolicy.defaultActionOnFailure field. - REPAIR: MIG automatically repairs an
    * unhealthy VM by recreating it. - DO_NOTHING: MIG doesn't repair an unhealthy VM. For more
-   * information, see about repairing VMs in a MIG.
+   * information, see About repairing VMs in a MIG.
    * @param onFailedHealthCheck onFailedHealthCheck or {@code null} for none
    */
   public InstanceGroupManagerInstanceLifecyclePolicy setOnFailedHealthCheck(java.lang.String onFailedHealthCheck) {

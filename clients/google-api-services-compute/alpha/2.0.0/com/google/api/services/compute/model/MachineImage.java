@@ -100,6 +100,14 @@ public final class MachineImage extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Input only. [Input Only] Additional parameters that are passed in the request, but are not
+   * persisted in the resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MachineImageParams params;
+
+  /**
    * Output only. Reserved for future use.
    * The value may be {@code null}.
    */
@@ -339,6 +347,25 @@ public final class MachineImage extends com.google.api.client.json.GenericJson {
    */
   public MachineImage setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Input only. [Input Only] Additional parameters that are passed in the request, but are not
+   * persisted in the resource.
+   * @return value or {@code null} for none
+   */
+  public MachineImageParams getParams() {
+    return params;
+  }
+
+  /**
+   * Input only. [Input Only] Additional parameters that are passed in the request, but are not
+   * persisted in the resource.
+   * @param params params or {@code null} for none
+   */
+  public MachineImage setParams(MachineImageParams params) {
+    this.params = params;
     return this;
   }
 

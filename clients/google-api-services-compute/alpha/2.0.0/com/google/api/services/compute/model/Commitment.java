@@ -17,10 +17,10 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents a regional Commitment resource. Creating a commitment resource means that you are
- * purchasing a committed use contract with an explicit start and end time. You can create
- * commitments based on vCPUs and memory usage and receive discounted rates. For full details, read
- * Signing Up for Committed Use Discounts.
+ * Represents a regional resource-based commitment resource. Creating this commitment resource means
+ * that you are purchasing a resource-based committed use contract, with an explicit start and end
+ * time. You can purchase resource-based commitments for both hardware and software resources. For
+ * more information, read Resource-based committed use discounts
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -33,20 +33,23 @@ package com.google.api.services.compute.model;
 public final class Commitment extends com.google.api.client.json.GenericJson {
 
   /**
-   * Specifies whether to enable automatic renewal for the commitment. The default value is false if
-   * not specified. The field can be updated until the day of the commitment expiration at 12:00am
-   * PST. If the field is set to true, the commitment will be automatically renewed for either one
-   * or three years according to the terms of the existing commitment.
+   * Specifies whether to automatically renew the commitment at the end of its current term. The
+   * default value is false. If you set the field to true, each time your commitment reaches the end
+   * of its term, Compute Engine automatically renews it for another term. You can update this field
+   * anytime before the commitment expires. For example, if the commitment is set to expire at 12 AM
+   * UTC-8 on January 3, 2027, you can update this field until 11:59 PM UTC-8 on January 2, 2027.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean autoRenew;
 
   /**
-   * The category of the commitment. Category MACHINE specifies commitments composed of machine
-   * resources such as VCPU or MEMORY, listed in resources. Category LICENSE specifies commitments
-   * composed of software licenses, listed in licenseResources. Note that only MACHINE commitments
-   * should have a Type specified.
+   * The category of the commitment; specifies whether the commitment is for hardware or software
+   * resources. Category MACHINE specifies that you are committing to hardware machine resources
+   * such as VCPU or MEMORY, listed in resources. Category LICENSE specifies that you are committing
+   * to software licenses, listed in licenseResources. Note that if you specify MACHINE commitments,
+   * then you must also specify a type to indicate the machine series of the hardware resource that
+   * you are committing to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,8 +63,8 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   private java.lang.String creationTimestamp;
 
   /**
-   * [Input Only] Optional, specifies the CUD end time requested by the customer in RFC3339 text
-   * format. Needed when the customer wants CUD's end date is later than the start date + term
+   * [Input Only] Optional, specifies the requested commitment end time in RFC3339 text format. Use
+   * this option when the desired commitment's end date is later than the start date + term
    * duration.
    * The value may be {@code null}.
    */
@@ -69,7 +72,8 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   private java.lang.String customEndTimestamp;
 
   /**
-   * An optional description of this resource. Provide this property when you create the resource.
+   * An optional description of the commitment. You can provide this property when you create the
+   * resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,10 +87,6 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   private java.lang.String endTimestamp;
 
   /**
-   * Specifies the already existing reservations to attach to the Commitment. This field is
-   * optional, and it can be a full or partial URL. For example, the following are valid URLs to an
-   * reservation: - https://www.googleapis.com/compute/v1/projects/project/zones/zone
-   * /reservations/reservation - projects/project/zones/zone/reservations/reservation
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -114,40 +114,48 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   private LicenseResourceCommitment licenseResource;
 
   /**
-   * List of source commitments to be merged into a new commitment.
+   * The list of source commitments that you are merging to create the new merged commitment. For
+   * more information, see Merging commitments.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> mergeSourceCommitments;
 
   /**
-   * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
-   * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
-   * character must be a lowercase letter, and all following characters must be a dash, lowercase
-   * letter, or digit, except the last character, which cannot be a dash.
+   * Name of the commitment. You must specify a name when you purchase the commitment. The name must
+   * be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63
+   * characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the
+   * first character must be a lowercase letter, and all following characters must be a dash,
+   * lowercase letter, or digit, except the last character, which cannot be a dash.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The plan for this commitment, which determines duration and discount rate. The currently
-   * supported plans are TWELVE_MONTH (1 year), and THIRTY_SIX_MONTH (3 years).
+   * The minimum time duration that you commit to purchasing resources. The plan that you choose
+   * determines the preset term length of the commitment (which is 1 year or 3 years) and affects
+   * the discount rate that you receive for your resources. Committing to a longer time duration
+   * typically gives you a higher discount rate. The supported values for this field are
+   * TWELVE_MONTH (1 year), and THIRTY_SIX_MONTH (3 years).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String plan;
 
   /**
-   * [Output Only] URL of the region where this commitment may be used.
+   * [Output Only] URL of the region where the commitment and committed resources are located.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String region;
 
   /**
-   * List of create-on-create reservations for this commitment.
+   * The list of new reservations that you want to create and attach to this commitment. You must
+   * attach reservations to your commitment if your commitment specifies any GPUs or Local SSD
+   * disks. For more information, see Attach reservations to resource-based commitments. Specify
+   * this property only if you want to create new reservations to attach. To attach existing
+   * reservations, specify the existingReservations property instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -161,8 +169,8 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   private CommitmentResourceStatus resourceStatus;
 
   /**
-   * A list of commitment amounts for particular resources. Note that VCPU and MEMORY resource
-   * commitments must occur together.
+   * The list of all the hardware resources, with their types and amounts, that you want to commit
+   * to. Specify as a separate entry in the list for each individual resource type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -183,7 +191,8 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   private java.lang.String selfLinkWithId;
 
   /**
-   * Source commitment to be split into a new commitment.
+   * The source commitment from which you are transferring resources to create the new split
+   * commitment. For more information, see Split commitments.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -198,7 +207,8 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output Only] Status of the commitment with regards to eventual expiration (each commitment has
-   * an end date defined). One of the following values: NOT_YET_ACTIVE, ACTIVE, EXPIRED.
+   * an end date defined). Status can be one of the following values: NOT_YET_ACTIVE, ACTIVE, or
+   * EXPIRED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -212,20 +222,28 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   private java.lang.String statusMessage;
 
   /**
-   * The type of commitment, which affects the discount rate and the eligible resources. Type
-   * MEMORY_OPTIMIZED specifies a commitment that will only apply to memory optimized machines. Type
-   * ACCELERATOR_OPTIMIZED specifies a commitment that will only apply to accelerator optimized
-   * machines.
+   * The type of commitment; specifies the machine series for which you want to commit to purchasing
+   * resources. The choice of machine series affects the discount rate and the eligible resource
+   * types. The type must be one of the following: ACCELERATOR_OPTIMIZED, ACCELERATOR_OPTIMIZED_A3,
+   * ACCELERATOR_OPTIMIZED_A3_MEGA, COMPUTE_OPTIMIZED, COMPUTE_OPTIMIZED_C2D, COMPUTE_OPTIMIZED_C3,
+   * COMPUTE_OPTIMIZED_C3D, COMPUTE_OPTIMIZED_H3, GENERAL_PURPOSE, GENERAL_PURPOSE_C4,
+   * GENERAL_PURPOSE_E2, GENERAL_PURPOSE_N2, GENERAL_PURPOSE_N2D, GENERAL_PURPOSE_N4,
+   * GENERAL_PURPOSE_T2D, GRAPHICS_OPTIMIZED, MEMORY_OPTIMIZED, MEMORY_OPTIMIZED_M3,
+   * MEMORY_OPTIMIZED_X4, STORAGE_OPTIMIZED_Z3. For example, type MEMORY_OPTIMIZED specifies a
+   * commitment that applies only to eligible resources of memory optimized M1 and M2 machine
+   * series. Type GENERAL_PURPOSE specifies a commitment that applies only to eligible resources of
+   * general purpose N1 machine series.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * Specifies whether to enable automatic renewal for the commitment. The default value is false if
-   * not specified. The field can be updated until the day of the commitment expiration at 12:00am
-   * PST. If the field is set to true, the commitment will be automatically renewed for either one
-   * or three years according to the terms of the existing commitment.
+   * Specifies whether to automatically renew the commitment at the end of its current term. The
+   * default value is false. If you set the field to true, each time your commitment reaches the end
+   * of its term, Compute Engine automatically renews it for another term. You can update this field
+   * anytime before the commitment expires. For example, if the commitment is set to expire at 12 AM
+   * UTC-8 on January 3, 2027, you can update this field until 11:59 PM UTC-8 on January 2, 2027.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAutoRenew() {
@@ -233,10 +251,11 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies whether to enable automatic renewal for the commitment. The default value is false if
-   * not specified. The field can be updated until the day of the commitment expiration at 12:00am
-   * PST. If the field is set to true, the commitment will be automatically renewed for either one
-   * or three years according to the terms of the existing commitment.
+   * Specifies whether to automatically renew the commitment at the end of its current term. The
+   * default value is false. If you set the field to true, each time your commitment reaches the end
+   * of its term, Compute Engine automatically renews it for another term. You can update this field
+   * anytime before the commitment expires. For example, if the commitment is set to expire at 12 AM
+   * UTC-8 on January 3, 2027, you can update this field until 11:59 PM UTC-8 on January 2, 2027.
    * @param autoRenew autoRenew or {@code null} for none
    */
   public Commitment setAutoRenew(java.lang.Boolean autoRenew) {
@@ -245,10 +264,12 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The category of the commitment. Category MACHINE specifies commitments composed of machine
-   * resources such as VCPU or MEMORY, listed in resources. Category LICENSE specifies commitments
-   * composed of software licenses, listed in licenseResources. Note that only MACHINE commitments
-   * should have a Type specified.
+   * The category of the commitment; specifies whether the commitment is for hardware or software
+   * resources. Category MACHINE specifies that you are committing to hardware machine resources
+   * such as VCPU or MEMORY, listed in resources. Category LICENSE specifies that you are committing
+   * to software licenses, listed in licenseResources. Note that if you specify MACHINE commitments,
+   * then you must also specify a type to indicate the machine series of the hardware resource that
+   * you are committing to.
    * @return value or {@code null} for none
    */
   public java.lang.String getCategory() {
@@ -256,10 +277,12 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The category of the commitment. Category MACHINE specifies commitments composed of machine
-   * resources such as VCPU or MEMORY, listed in resources. Category LICENSE specifies commitments
-   * composed of software licenses, listed in licenseResources. Note that only MACHINE commitments
-   * should have a Type specified.
+   * The category of the commitment; specifies whether the commitment is for hardware or software
+   * resources. Category MACHINE specifies that you are committing to hardware machine resources
+   * such as VCPU or MEMORY, listed in resources. Category LICENSE specifies that you are committing
+   * to software licenses, listed in licenseResources. Note that if you specify MACHINE commitments,
+   * then you must also specify a type to indicate the machine series of the hardware resource that
+   * you are committing to.
    * @param category category or {@code null} for none
    */
   public Commitment setCategory(java.lang.String category) {
@@ -285,8 +308,8 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Input Only] Optional, specifies the CUD end time requested by the customer in RFC3339 text
-   * format. Needed when the customer wants CUD's end date is later than the start date + term
+   * [Input Only] Optional, specifies the requested commitment end time in RFC3339 text format. Use
+   * this option when the desired commitment's end date is later than the start date + term
    * duration.
    * @return value or {@code null} for none
    */
@@ -295,8 +318,8 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Input Only] Optional, specifies the CUD end time requested by the customer in RFC3339 text
-   * format. Needed when the customer wants CUD's end date is later than the start date + term
+   * [Input Only] Optional, specifies the requested commitment end time in RFC3339 text format. Use
+   * this option when the desired commitment's end date is later than the start date + term
    * duration.
    * @param customEndTimestamp customEndTimestamp or {@code null} for none
    */
@@ -306,7 +329,8 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An optional description of this resource. Provide this property when you create the resource.
+   * An optional description of the commitment. You can provide this property when you create the
+   * resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -314,7 +338,8 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An optional description of this resource. Provide this property when you create the resource.
+   * An optional description of the commitment. You can provide this property when you create the
+   * resource.
    * @param description description or {@code null} for none
    */
   public Commitment setDescription(java.lang.String description) {
@@ -340,10 +365,6 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies the already existing reservations to attach to the Commitment. This field is
-   * optional, and it can be a full or partial URL. For example, the following are valid URLs to an
-   * reservation: - https://www.googleapis.com/compute/v1/projects/project/zones/zone
-   * /reservations/reservation - projects/project/zones/zone/reservations/reservation
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getExistingReservations() {
@@ -351,10 +372,6 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies the already existing reservations to attach to the Commitment. This field is
-   * optional, and it can be a full or partial URL. For example, the following are valid URLs to an
-   * reservation: - https://www.googleapis.com/compute/v1/projects/project/zones/zone
-   * /reservations/reservation - projects/project/zones/zone/reservations/reservation
    * @param existingReservations existingReservations or {@code null} for none
    */
   public Commitment setExistingReservations(java.util.List<java.lang.String> existingReservations) {
@@ -414,7 +431,8 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of source commitments to be merged into a new commitment.
+   * The list of source commitments that you are merging to create the new merged commitment. For
+   * more information, see Merging commitments.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getMergeSourceCommitments() {
@@ -422,7 +440,8 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of source commitments to be merged into a new commitment.
+   * The list of source commitments that you are merging to create the new merged commitment. For
+   * more information, see Merging commitments.
    * @param mergeSourceCommitments mergeSourceCommitments or {@code null} for none
    */
   public Commitment setMergeSourceCommitments(java.util.List<java.lang.String> mergeSourceCommitments) {
@@ -431,11 +450,11 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
-   * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
-   * character must be a lowercase letter, and all following characters must be a dash, lowercase
-   * letter, or digit, except the last character, which cannot be a dash.
+   * Name of the commitment. You must specify a name when you purchase the commitment. The name must
+   * be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63
+   * characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the
+   * first character must be a lowercase letter, and all following characters must be a dash,
+   * lowercase letter, or digit, except the last character, which cannot be a dash.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -443,11 +462,11 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
-   * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
-   * character must be a lowercase letter, and all following characters must be a dash, lowercase
-   * letter, or digit, except the last character, which cannot be a dash.
+   * Name of the commitment. You must specify a name when you purchase the commitment. The name must
+   * be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63
+   * characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the
+   * first character must be a lowercase letter, and all following characters must be a dash,
+   * lowercase letter, or digit, except the last character, which cannot be a dash.
    * @param name name or {@code null} for none
    */
   public Commitment setName(java.lang.String name) {
@@ -456,8 +475,11 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The plan for this commitment, which determines duration and discount rate. The currently
-   * supported plans are TWELVE_MONTH (1 year), and THIRTY_SIX_MONTH (3 years).
+   * The minimum time duration that you commit to purchasing resources. The plan that you choose
+   * determines the preset term length of the commitment (which is 1 year or 3 years) and affects
+   * the discount rate that you receive for your resources. Committing to a longer time duration
+   * typically gives you a higher discount rate. The supported values for this field are
+   * TWELVE_MONTH (1 year), and THIRTY_SIX_MONTH (3 years).
    * @return value or {@code null} for none
    */
   public java.lang.String getPlan() {
@@ -465,8 +487,11 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The plan for this commitment, which determines duration and discount rate. The currently
-   * supported plans are TWELVE_MONTH (1 year), and THIRTY_SIX_MONTH (3 years).
+   * The minimum time duration that you commit to purchasing resources. The plan that you choose
+   * determines the preset term length of the commitment (which is 1 year or 3 years) and affects
+   * the discount rate that you receive for your resources. Committing to a longer time duration
+   * typically gives you a higher discount rate. The supported values for this field are
+   * TWELVE_MONTH (1 year), and THIRTY_SIX_MONTH (3 years).
    * @param plan plan or {@code null} for none
    */
   public Commitment setPlan(java.lang.String plan) {
@@ -475,7 +500,7 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] URL of the region where this commitment may be used.
+   * [Output Only] URL of the region where the commitment and committed resources are located.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -483,7 +508,7 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] URL of the region where this commitment may be used.
+   * [Output Only] URL of the region where the commitment and committed resources are located.
    * @param region region or {@code null} for none
    */
   public Commitment setRegion(java.lang.String region) {
@@ -492,7 +517,11 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of create-on-create reservations for this commitment.
+   * The list of new reservations that you want to create and attach to this commitment. You must
+   * attach reservations to your commitment if your commitment specifies any GPUs or Local SSD
+   * disks. For more information, see Attach reservations to resource-based commitments. Specify
+   * this property only if you want to create new reservations to attach. To attach existing
+   * reservations, specify the existingReservations property instead.
    * @return value or {@code null} for none
    */
   public java.util.List<Reservation> getReservations() {
@@ -500,7 +529,11 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of create-on-create reservations for this commitment.
+   * The list of new reservations that you want to create and attach to this commitment. You must
+   * attach reservations to your commitment if your commitment specifies any GPUs or Local SSD
+   * disks. For more information, see Attach reservations to resource-based commitments. Specify
+   * this property only if you want to create new reservations to attach. To attach existing
+   * reservations, specify the existingReservations property instead.
    * @param reservations reservations or {@code null} for none
    */
   public Commitment setReservations(java.util.List<Reservation> reservations) {
@@ -526,8 +559,8 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of commitment amounts for particular resources. Note that VCPU and MEMORY resource
-   * commitments must occur together.
+   * The list of all the hardware resources, with their types and amounts, that you want to commit
+   * to. Specify as a separate entry in the list for each individual resource type.
    * @return value or {@code null} for none
    */
   public java.util.List<ResourceCommitment> getResources() {
@@ -535,8 +568,8 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of commitment amounts for particular resources. Note that VCPU and MEMORY resource
-   * commitments must occur together.
+   * The list of all the hardware resources, with their types and amounts, that you want to commit
+   * to. Specify as a separate entry in the list for each individual resource type.
    * @param resources resources or {@code null} for none
    */
   public Commitment setResources(java.util.List<ResourceCommitment> resources) {
@@ -579,7 +612,8 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Source commitment to be split into a new commitment.
+   * The source commitment from which you are transferring resources to create the new split
+   * commitment. For more information, see Split commitments.
    * @return value or {@code null} for none
    */
   public java.lang.String getSplitSourceCommitment() {
@@ -587,7 +621,8 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Source commitment to be split into a new commitment.
+   * The source commitment from which you are transferring resources to create the new split
+   * commitment. For more information, see Split commitments.
    * @param splitSourceCommitment splitSourceCommitment or {@code null} for none
    */
   public Commitment setSplitSourceCommitment(java.lang.String splitSourceCommitment) {
@@ -614,7 +649,8 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output Only] Status of the commitment with regards to eventual expiration (each commitment has
-   * an end date defined). One of the following values: NOT_YET_ACTIVE, ACTIVE, EXPIRED.
+   * an end date defined). Status can be one of the following values: NOT_YET_ACTIVE, ACTIVE, or
+   * EXPIRED.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -623,7 +659,8 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
 
   /**
    * [Output Only] Status of the commitment with regards to eventual expiration (each commitment has
-   * an end date defined). One of the following values: NOT_YET_ACTIVE, ACTIVE, EXPIRED.
+   * an end date defined). Status can be one of the following values: NOT_YET_ACTIVE, ACTIVE, or
+   * EXPIRED.
    * @param status status or {@code null} for none
    */
   public Commitment setStatus(java.lang.String status) {
@@ -649,10 +686,17 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of commitment, which affects the discount rate and the eligible resources. Type
-   * MEMORY_OPTIMIZED specifies a commitment that will only apply to memory optimized machines. Type
-   * ACCELERATOR_OPTIMIZED specifies a commitment that will only apply to accelerator optimized
-   * machines.
+   * The type of commitment; specifies the machine series for which you want to commit to purchasing
+   * resources. The choice of machine series affects the discount rate and the eligible resource
+   * types. The type must be one of the following: ACCELERATOR_OPTIMIZED, ACCELERATOR_OPTIMIZED_A3,
+   * ACCELERATOR_OPTIMIZED_A3_MEGA, COMPUTE_OPTIMIZED, COMPUTE_OPTIMIZED_C2D, COMPUTE_OPTIMIZED_C3,
+   * COMPUTE_OPTIMIZED_C3D, COMPUTE_OPTIMIZED_H3, GENERAL_PURPOSE, GENERAL_PURPOSE_C4,
+   * GENERAL_PURPOSE_E2, GENERAL_PURPOSE_N2, GENERAL_PURPOSE_N2D, GENERAL_PURPOSE_N4,
+   * GENERAL_PURPOSE_T2D, GRAPHICS_OPTIMIZED, MEMORY_OPTIMIZED, MEMORY_OPTIMIZED_M3,
+   * MEMORY_OPTIMIZED_X4, STORAGE_OPTIMIZED_Z3. For example, type MEMORY_OPTIMIZED specifies a
+   * commitment that applies only to eligible resources of memory optimized M1 and M2 machine
+   * series. Type GENERAL_PURPOSE specifies a commitment that applies only to eligible resources of
+   * general purpose N1 machine series.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -660,10 +704,17 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of commitment, which affects the discount rate and the eligible resources. Type
-   * MEMORY_OPTIMIZED specifies a commitment that will only apply to memory optimized machines. Type
-   * ACCELERATOR_OPTIMIZED specifies a commitment that will only apply to accelerator optimized
-   * machines.
+   * The type of commitment; specifies the machine series for which you want to commit to purchasing
+   * resources. The choice of machine series affects the discount rate and the eligible resource
+   * types. The type must be one of the following: ACCELERATOR_OPTIMIZED, ACCELERATOR_OPTIMIZED_A3,
+   * ACCELERATOR_OPTIMIZED_A3_MEGA, COMPUTE_OPTIMIZED, COMPUTE_OPTIMIZED_C2D, COMPUTE_OPTIMIZED_C3,
+   * COMPUTE_OPTIMIZED_C3D, COMPUTE_OPTIMIZED_H3, GENERAL_PURPOSE, GENERAL_PURPOSE_C4,
+   * GENERAL_PURPOSE_E2, GENERAL_PURPOSE_N2, GENERAL_PURPOSE_N2D, GENERAL_PURPOSE_N4,
+   * GENERAL_PURPOSE_T2D, GRAPHICS_OPTIMIZED, MEMORY_OPTIMIZED, MEMORY_OPTIMIZED_M3,
+   * MEMORY_OPTIMIZED_X4, STORAGE_OPTIMIZED_Z3. For example, type MEMORY_OPTIMIZED specifies a
+   * commitment that applies only to eligible resources of memory optimized M1 and M2 machine
+   * series. Type GENERAL_PURPOSE specifies a commitment that applies only to eligible resources of
+   * general purpose N1 machine series.
    * @param type type or {@code null} for none
    */
   public Commitment setType(java.lang.String type) {

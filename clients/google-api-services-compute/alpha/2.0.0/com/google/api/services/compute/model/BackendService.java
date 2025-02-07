@@ -152,6 +152,15 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   private java.lang.String description;
 
   /**
+   * Dynamic forwarding configuration. This field is used to configure the backend service with
+   * dynamic forwarding feature which together with Service Extension allows customized and complex
+   * routing logic.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BackendServiceDynamicForwarding dynamicForwarding;
+
+  /**
    * [Output Only] The resource URL for the edge security policy associated with this backend
    * service.
    * The value may be {@code null}.
@@ -806,6 +815,27 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    */
   public BackendService setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Dynamic forwarding configuration. This field is used to configure the backend service with
+   * dynamic forwarding feature which together with Service Extension allows customized and complex
+   * routing logic.
+   * @return value or {@code null} for none
+   */
+  public BackendServiceDynamicForwarding getDynamicForwarding() {
+    return dynamicForwarding;
+  }
+
+  /**
+   * Dynamic forwarding configuration. This field is used to configure the backend service with
+   * dynamic forwarding feature which together with Service Extension allows customized and complex
+   * routing logic.
+   * @param dynamicForwarding dynamicForwarding or {@code null} for none
+   */
+  public BackendService setDynamicForwarding(BackendServiceDynamicForwarding dynamicForwarding) {
+    this.dynamicForwarding = dynamicForwarding;
     return this;
   }
 

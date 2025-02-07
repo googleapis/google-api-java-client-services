@@ -17,7 +17,7 @@
 package com.google.api.services.compute.model;
 
 /**
- * Commitment for a particular resource (a Commitment is composed of one or more of these).
+ * Commitment for a particular hardware resource (a commitment is composed of one or more of these).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -30,31 +30,36 @@ package com.google.api.services.compute.model;
 public final class ResourceCommitment extends com.google.api.client.json.GenericJson {
 
   /**
-   * Name of the accelerator type resource. Applicable only when the type is ACCELERATOR.
+   * Name of the accelerator type or GPU resource. Specify this field only when the type of hardware
+   * resource is ACCELERATOR.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String acceleratorType;
 
   /**
-   * The amount of the resource purchased (in a type-dependent unit, such as bytes). For vCPUs, this
-   * can just be an integer. For memory, this must be provided in MB. Memory must be a multiple of
-   * 256 MB, with up to 6.5GB of memory per every vCPU.
+   * The quantity of the hardware resource that you want to commit to purchasing (in a type-
+   * dependent unit). - For vCPUs, you must specify an integer value. - For memory, you specify the
+   * amount of MB that you want. The value you specify must be a multiple of 256 MB, with up to 6.5
+   * GB of memory per every vCPU. - For GPUs, you must specify an integer value. - For Local SSD
+   * disks, you must specify the amount in GB. The size of a single Local SSD disk is 375 GB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long amount;
 
   /**
-   * Type of resource for which this commitment applies. Possible values are VCPU, MEMORY,
-   * LOCAL_SSD, and ACCELERATOR.
+   * The type of hardware resource that you want to specify. You can specify any of the following
+   * values: - VCPU - MEMORY - LOCAL_SSD - ACCELERATOR Specify as a separate entry in the list for
+   * each individual resource type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * Name of the accelerator type resource. Applicable only when the type is ACCELERATOR.
+   * Name of the accelerator type or GPU resource. Specify this field only when the type of hardware
+   * resource is ACCELERATOR.
    * @return value or {@code null} for none
    */
   public java.lang.String getAcceleratorType() {
@@ -62,7 +67,8 @@ public final class ResourceCommitment extends com.google.api.client.json.Generic
   }
 
   /**
-   * Name of the accelerator type resource. Applicable only when the type is ACCELERATOR.
+   * Name of the accelerator type or GPU resource. Specify this field only when the type of hardware
+   * resource is ACCELERATOR.
    * @param acceleratorType acceleratorType or {@code null} for none
    */
   public ResourceCommitment setAcceleratorType(java.lang.String acceleratorType) {
@@ -71,9 +77,11 @@ public final class ResourceCommitment extends com.google.api.client.json.Generic
   }
 
   /**
-   * The amount of the resource purchased (in a type-dependent unit, such as bytes). For vCPUs, this
-   * can just be an integer. For memory, this must be provided in MB. Memory must be a multiple of
-   * 256 MB, with up to 6.5GB of memory per every vCPU.
+   * The quantity of the hardware resource that you want to commit to purchasing (in a type-
+   * dependent unit). - For vCPUs, you must specify an integer value. - For memory, you specify the
+   * amount of MB that you want. The value you specify must be a multiple of 256 MB, with up to 6.5
+   * GB of memory per every vCPU. - For GPUs, you must specify an integer value. - For Local SSD
+   * disks, you must specify the amount in GB. The size of a single Local SSD disk is 375 GB.
    * @return value or {@code null} for none
    */
   public java.lang.Long getAmount() {
@@ -81,9 +89,11 @@ public final class ResourceCommitment extends com.google.api.client.json.Generic
   }
 
   /**
-   * The amount of the resource purchased (in a type-dependent unit, such as bytes). For vCPUs, this
-   * can just be an integer. For memory, this must be provided in MB. Memory must be a multiple of
-   * 256 MB, with up to 6.5GB of memory per every vCPU.
+   * The quantity of the hardware resource that you want to commit to purchasing (in a type-
+   * dependent unit). - For vCPUs, you must specify an integer value. - For memory, you specify the
+   * amount of MB that you want. The value you specify must be a multiple of 256 MB, with up to 6.5
+   * GB of memory per every vCPU. - For GPUs, you must specify an integer value. - For Local SSD
+   * disks, you must specify the amount in GB. The size of a single Local SSD disk is 375 GB.
    * @param amount amount or {@code null} for none
    */
   public ResourceCommitment setAmount(java.lang.Long amount) {
@@ -92,8 +102,9 @@ public final class ResourceCommitment extends com.google.api.client.json.Generic
   }
 
   /**
-   * Type of resource for which this commitment applies. Possible values are VCPU, MEMORY,
-   * LOCAL_SSD, and ACCELERATOR.
+   * The type of hardware resource that you want to specify. You can specify any of the following
+   * values: - VCPU - MEMORY - LOCAL_SSD - ACCELERATOR Specify as a separate entry in the list for
+   * each individual resource type.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -101,8 +112,9 @@ public final class ResourceCommitment extends com.google.api.client.json.Generic
   }
 
   /**
-   * Type of resource for which this commitment applies. Possible values are VCPU, MEMORY,
-   * LOCAL_SSD, and ACCELERATOR.
+   * The type of hardware resource that you want to specify. You can specify any of the following
+   * values: - VCPU - MEMORY - LOCAL_SSD - ACCELERATOR Specify as a separate entry in the list for
+   * each individual resource type.
    * @param type type or {@code null} for none
    */
   public ResourceCommitment setType(java.lang.String type) {

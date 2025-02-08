@@ -95,6 +95,14 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
   private ReservationAffinity reservationAffinity;
 
   /**
+   * Optional. Resource manager tags to add to all instances (see Resource manager tags resources
+   * (https://cloud.google.com/resource-manager/docs/tags/tags-creating-and-managing)).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> resourceManagerTags;
+
+  /**
    * Optional. The Dataproc service account
    * (https://cloud.google.com/dataproc/docs/concepts/configuring-clusters/service-
    * accounts#service_accounts_in_dataproc) (also see VM Data Plane identity
@@ -306,6 +314,25 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
    */
   public GceClusterConfig setReservationAffinity(ReservationAffinity reservationAffinity) {
     this.reservationAffinity = reservationAffinity;
+    return this;
+  }
+
+  /**
+   * Optional. Resource manager tags to add to all instances (see Resource manager tags resources
+   * (https://cloud.google.com/resource-manager/docs/tags/tags-creating-and-managing)).
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getResourceManagerTags() {
+    return resourceManagerTags;
+  }
+
+  /**
+   * Optional. Resource manager tags to add to all instances (see Resource manager tags resources
+   * (https://cloud.google.com/resource-manager/docs/tags/tags-creating-and-managing)).
+   * @param resourceManagerTags resourceManagerTags or {@code null} for none
+   */
+  public GceClusterConfig setResourceManagerTags(java.util.Map<String, java.lang.String> resourceManagerTags) {
+    this.resourceManagerTags = resourceManagerTags;
     return this;
   }
 

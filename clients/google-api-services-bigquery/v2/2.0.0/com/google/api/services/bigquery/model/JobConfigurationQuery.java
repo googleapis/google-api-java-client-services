@@ -289,6 +289,16 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
   private java.lang.String writeDisposition;
 
   /**
+   * Optional. This is only supported for a SELECT query using a temporary table. If set, the query
+   * is allowed to write results incrementally to the temporary result table. This may incur a
+   * performance penalty. This option cannot be used with Legacy SQL. This feature is not yet
+   * available.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean writeIncrementalResults;
+
+  /**
    * Optional. If true and query uses legacy SQL dialect, allows the query to produce arbitrarily
    * large result tables at a slight cost in performance. Requires destinationTable to be set. For
    * GoogleSQL queries, this flag is ignored and large results are always allowed. However, you must
@@ -978,6 +988,29 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
    */
   public JobConfigurationQuery setWriteDisposition(java.lang.String writeDisposition) {
     this.writeDisposition = writeDisposition;
+    return this;
+  }
+
+  /**
+   * Optional. This is only supported for a SELECT query using a temporary table. If set, the query
+   * is allowed to write results incrementally to the temporary result table. This may incur a
+   * performance penalty. This option cannot be used with Legacy SQL. This feature is not yet
+   * available.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getWriteIncrementalResults() {
+    return writeIncrementalResults;
+  }
+
+  /**
+   * Optional. This is only supported for a SELECT query using a temporary table. If set, the query
+   * is allowed to write results incrementally to the temporary result table. This may incur a
+   * performance penalty. This option cannot be used with Legacy SQL. This feature is not yet
+   * available.
+   * @param writeIncrementalResults writeIncrementalResults or {@code null} for none
+   */
+  public JobConfigurationQuery setWriteIncrementalResults(java.lang.Boolean writeIncrementalResults) {
+    this.writeIncrementalResults = writeIncrementalResults;
     return this;
   }
 

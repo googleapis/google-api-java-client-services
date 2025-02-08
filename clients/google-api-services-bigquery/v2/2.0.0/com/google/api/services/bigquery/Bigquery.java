@@ -5688,6 +5688,683 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
   public class RowAccessPolicies {
 
     /**
+     * Deletes provided row access policies.
+     *
+     * Create a request for the method "rowAccessPolicies.batchDelete".
+     *
+     * This request holds the parameters needed by the bigquery server.  After setting any optional
+     * parameters, call the {@link BatchDelete#execute()} method to invoke the remote operation.
+     *
+     * @param projectId Required. Project ID of the table to delete the row access policies.
+     * @param datasetId Required. Dataset ID of the table to delete the row access policies.
+     * @param tableId Required. Table ID of the table to delete the row access policies.
+     * @param content the {@link com.google.api.services.bigquery.model.BatchDeleteRowAccessPoliciesRequest}
+     * @return the request
+     */
+    public BatchDelete batchDelete(java.lang.String projectId, java.lang.String datasetId, java.lang.String tableId, com.google.api.services.bigquery.model.BatchDeleteRowAccessPoliciesRequest content) throws java.io.IOException {
+      BatchDelete result = new BatchDelete(projectId, datasetId, tableId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class BatchDelete extends BigqueryRequest<Void> {
+
+      private static final String REST_PATH = "projects/{+projectId}/datasets/{+datasetId}/tables/{+tableId}/rowAccessPolicies:batchDelete";
+
+      private final java.util.regex.Pattern PROJECT_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern DATASET_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern TABLE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      /**
+       * Deletes provided row access policies.
+       *
+       * Create a request for the method "rowAccessPolicies.batchDelete".
+       *
+       * This request holds the parameters needed by the the bigquery server.  After setting any
+       * optional parameters, call the {@link BatchDelete#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * BatchDelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param projectId Required. Project ID of the table to delete the row access policies.
+       * @param datasetId Required. Dataset ID of the table to delete the row access policies.
+       * @param tableId Required. Table ID of the table to delete the row access policies.
+       * @param content the {@link com.google.api.services.bigquery.model.BatchDeleteRowAccessPoliciesRequest}
+       * @since 1.13
+       */
+      protected BatchDelete(java.lang.String projectId, java.lang.String datasetId, java.lang.String tableId, com.google.api.services.bigquery.model.BatchDeleteRowAccessPoliciesRequest content) {
+        super(Bigquery.this, "POST", REST_PATH, content, Void.class);
+        this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.datasetId = com.google.api.client.util.Preconditions.checkNotNull(datasetId, "Required parameter datasetId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
+              "Parameter datasetId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.tableId = com.google.api.client.util.Preconditions.checkNotNull(tableId, "Required parameter tableId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(TABLE_ID_PATTERN.matcher(tableId).matches(),
+              "Parameter tableId must conform to the pattern " +
+              "^[^/]+$");
+        }
+      }
+
+      @Override
+      public BatchDelete set$Xgafv(java.lang.String $Xgafv) {
+        return (BatchDelete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public BatchDelete setAccessToken(java.lang.String accessToken) {
+        return (BatchDelete) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public BatchDelete setAlt(java.lang.String alt) {
+        return (BatchDelete) super.setAlt(alt);
+      }
+
+      @Override
+      public BatchDelete setCallback(java.lang.String callback) {
+        return (BatchDelete) super.setCallback(callback);
+      }
+
+      @Override
+      public BatchDelete setFields(java.lang.String fields) {
+        return (BatchDelete) super.setFields(fields);
+      }
+
+      @Override
+      public BatchDelete setKey(java.lang.String key) {
+        return (BatchDelete) super.setKey(key);
+      }
+
+      @Override
+      public BatchDelete setOauthToken(java.lang.String oauthToken) {
+        return (BatchDelete) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public BatchDelete setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (BatchDelete) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public BatchDelete setQuotaUser(java.lang.String quotaUser) {
+        return (BatchDelete) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public BatchDelete setUploadType(java.lang.String uploadType) {
+        return (BatchDelete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public BatchDelete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (BatchDelete) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Project ID of the table to delete the row access policies. */
+      @com.google.api.client.util.Key
+      private java.lang.String projectId;
+
+      /** Required. Project ID of the table to delete the row access policies.
+       */
+      public java.lang.String getProjectId() {
+        return projectId;
+      }
+
+      /** Required. Project ID of the table to delete the row access policies. */
+      public BatchDelete setProjectId(java.lang.String projectId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.projectId = projectId;
+        return this;
+      }
+
+      /** Required. Dataset ID of the table to delete the row access policies. */
+      @com.google.api.client.util.Key
+      private java.lang.String datasetId;
+
+      /** Required. Dataset ID of the table to delete the row access policies.
+       */
+      public java.lang.String getDatasetId() {
+        return datasetId;
+      }
+
+      /** Required. Dataset ID of the table to delete the row access policies. */
+      public BatchDelete setDatasetId(java.lang.String datasetId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
+              "Parameter datasetId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.datasetId = datasetId;
+        return this;
+      }
+
+      /** Required. Table ID of the table to delete the row access policies. */
+      @com.google.api.client.util.Key
+      private java.lang.String tableId;
+
+      /** Required. Table ID of the table to delete the row access policies.
+       */
+      public java.lang.String getTableId() {
+        return tableId;
+      }
+
+      /** Required. Table ID of the table to delete the row access policies. */
+      public BatchDelete setTableId(java.lang.String tableId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(TABLE_ID_PATTERN.matcher(tableId).matches(),
+              "Parameter tableId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.tableId = tableId;
+        return this;
+      }
+
+      @Override
+      public BatchDelete set(String parameterName, Object value) {
+        return (BatchDelete) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Deletes a row access policy.
+     *
+     * Create a request for the method "rowAccessPolicies.delete".
+     *
+     * This request holds the parameters needed by the bigquery server.  After setting any optional
+     * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+     *
+     * @param projectId Required. Project ID of the table to delete the row access policy.
+     * @param datasetId Required. Dataset ID of the table to delete the row access policy.
+     * @param tableId Required. Table ID of the table to delete the row access policy.
+     * @param policyId Required. Policy ID of the row access policy.
+     * @return the request
+     */
+    public Delete delete(java.lang.String projectId, java.lang.String datasetId, java.lang.String tableId, java.lang.String policyId) throws java.io.IOException {
+      Delete result = new Delete(projectId, datasetId, tableId, policyId);
+      initialize(result);
+      return result;
+    }
+
+    public class Delete extends BigqueryRequest<Void> {
+
+      private static final String REST_PATH = "projects/{+projectId}/datasets/{+datasetId}/tables/{+tableId}/rowAccessPolicies/{+policyId}";
+
+      private final java.util.regex.Pattern PROJECT_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern DATASET_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern TABLE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern POLICY_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      /**
+       * Deletes a row access policy.
+       *
+       * Create a request for the method "rowAccessPolicies.delete".
+       *
+       * This request holds the parameters needed by the the bigquery server.  After setting any
+       * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param projectId Required. Project ID of the table to delete the row access policy.
+       * @param datasetId Required. Dataset ID of the table to delete the row access policy.
+       * @param tableId Required. Table ID of the table to delete the row access policy.
+       * @param policyId Required. Policy ID of the row access policy.
+       * @since 1.13
+       */
+      protected Delete(java.lang.String projectId, java.lang.String datasetId, java.lang.String tableId, java.lang.String policyId) {
+        super(Bigquery.this, "DELETE", REST_PATH, null, Void.class);
+        this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.datasetId = com.google.api.client.util.Preconditions.checkNotNull(datasetId, "Required parameter datasetId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
+              "Parameter datasetId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.tableId = com.google.api.client.util.Preconditions.checkNotNull(tableId, "Required parameter tableId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(TABLE_ID_PATTERN.matcher(tableId).matches(),
+              "Parameter tableId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.policyId = com.google.api.client.util.Preconditions.checkNotNull(policyId, "Required parameter policyId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(POLICY_ID_PATTERN.matcher(policyId).matches(),
+              "Parameter policyId must conform to the pattern " +
+              "^[^/]+$");
+        }
+      }
+
+      @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Delete setAlt(java.lang.String alt) {
+        return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
+      }
+
+      @Override
+      public Delete setFields(java.lang.String fields) {
+        return (Delete) super.setFields(fields);
+      }
+
+      @Override
+      public Delete setKey(java.lang.String key) {
+        return (Delete) super.setKey(key);
+      }
+
+      @Override
+      public Delete setOauthToken(java.lang.String oauthToken) {
+        return (Delete) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Delete) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Delete setQuotaUser(java.lang.String quotaUser) {
+        return (Delete) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Project ID of the table to delete the row access policy. */
+      @com.google.api.client.util.Key
+      private java.lang.String projectId;
+
+      /** Required. Project ID of the table to delete the row access policy.
+       */
+      public java.lang.String getProjectId() {
+        return projectId;
+      }
+
+      /** Required. Project ID of the table to delete the row access policy. */
+      public Delete setProjectId(java.lang.String projectId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.projectId = projectId;
+        return this;
+      }
+
+      /** Required. Dataset ID of the table to delete the row access policy. */
+      @com.google.api.client.util.Key
+      private java.lang.String datasetId;
+
+      /** Required. Dataset ID of the table to delete the row access policy.
+       */
+      public java.lang.String getDatasetId() {
+        return datasetId;
+      }
+
+      /** Required. Dataset ID of the table to delete the row access policy. */
+      public Delete setDatasetId(java.lang.String datasetId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
+              "Parameter datasetId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.datasetId = datasetId;
+        return this;
+      }
+
+      /** Required. Table ID of the table to delete the row access policy. */
+      @com.google.api.client.util.Key
+      private java.lang.String tableId;
+
+      /** Required. Table ID of the table to delete the row access policy.
+       */
+      public java.lang.String getTableId() {
+        return tableId;
+      }
+
+      /** Required. Table ID of the table to delete the row access policy. */
+      public Delete setTableId(java.lang.String tableId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(TABLE_ID_PATTERN.matcher(tableId).matches(),
+              "Parameter tableId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.tableId = tableId;
+        return this;
+      }
+
+      /** Required. Policy ID of the row access policy. */
+      @com.google.api.client.util.Key
+      private java.lang.String policyId;
+
+      /** Required. Policy ID of the row access policy.
+       */
+      public java.lang.String getPolicyId() {
+        return policyId;
+      }
+
+      /** Required. Policy ID of the row access policy. */
+      public Delete setPolicyId(java.lang.String policyId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(POLICY_ID_PATTERN.matcher(policyId).matches(),
+              "Parameter policyId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.policyId = policyId;
+        return this;
+      }
+
+      /**
+       * If set to true, it deletes the row access policy even if it's the last row access policy on
+       * the table and the deletion will widen the access rather narrowing it.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean force;
+
+      /** If set to true, it deletes the row access policy even if it's the last row access policy on the
+     table and the deletion will widen the access rather narrowing it.
+       */
+      public java.lang.Boolean getForce() {
+        return force;
+      }
+
+      /**
+       * If set to true, it deletes the row access policy even if it's the last row access policy on
+       * the table and the deletion will widen the access rather narrowing it.
+       */
+      public Delete setForce(java.lang.Boolean force) {
+        this.force = force;
+        return this;
+      }
+
+      @Override
+      public Delete set(String parameterName, Object value) {
+        return (Delete) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Gets the specified row access policy by policy ID.
+     *
+     * Create a request for the method "rowAccessPolicies.get".
+     *
+     * This request holds the parameters needed by the bigquery server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param projectId Required. Project ID of the table to get the row access policy.
+     * @param datasetId Required. Dataset ID of the table to get the row access policy.
+     * @param tableId Required. Table ID of the table to get the row access policy.
+     * @param policyId Required. Policy ID of the row access policy.
+     * @return the request
+     */
+    public Get get(java.lang.String projectId, java.lang.String datasetId, java.lang.String tableId, java.lang.String policyId) throws java.io.IOException {
+      Get result = new Get(projectId, datasetId, tableId, policyId);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends BigqueryRequest<com.google.api.services.bigquery.model.RowAccessPolicy> {
+
+      private static final String REST_PATH = "projects/{+projectId}/datasets/{+datasetId}/tables/{+tableId}/rowAccessPolicies/{+policyId}";
+
+      private final java.util.regex.Pattern PROJECT_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern DATASET_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern TABLE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern POLICY_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      /**
+       * Gets the specified row access policy by policy ID.
+       *
+       * Create a request for the method "rowAccessPolicies.get".
+       *
+       * This request holds the parameters needed by the the bigquery server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+       * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param projectId Required. Project ID of the table to get the row access policy.
+       * @param datasetId Required. Dataset ID of the table to get the row access policy.
+       * @param tableId Required. Table ID of the table to get the row access policy.
+       * @param policyId Required. Policy ID of the row access policy.
+       * @since 1.13
+       */
+      protected Get(java.lang.String projectId, java.lang.String datasetId, java.lang.String tableId, java.lang.String policyId) {
+        super(Bigquery.this, "GET", REST_PATH, null, com.google.api.services.bigquery.model.RowAccessPolicy.class);
+        this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.datasetId = com.google.api.client.util.Preconditions.checkNotNull(datasetId, "Required parameter datasetId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
+              "Parameter datasetId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.tableId = com.google.api.client.util.Preconditions.checkNotNull(tableId, "Required parameter tableId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(TABLE_ID_PATTERN.matcher(tableId).matches(),
+              "Parameter tableId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.policyId = com.google.api.client.util.Preconditions.checkNotNull(policyId, "Required parameter policyId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(POLICY_ID_PATTERN.matcher(policyId).matches(),
+              "Parameter policyId must conform to the pattern " +
+              "^[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Project ID of the table to get the row access policy. */
+      @com.google.api.client.util.Key
+      private java.lang.String projectId;
+
+      /** Required. Project ID of the table to get the row access policy.
+       */
+      public java.lang.String getProjectId() {
+        return projectId;
+      }
+
+      /** Required. Project ID of the table to get the row access policy. */
+      public Get setProjectId(java.lang.String projectId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.projectId = projectId;
+        return this;
+      }
+
+      /** Required. Dataset ID of the table to get the row access policy. */
+      @com.google.api.client.util.Key
+      private java.lang.String datasetId;
+
+      /** Required. Dataset ID of the table to get the row access policy.
+       */
+      public java.lang.String getDatasetId() {
+        return datasetId;
+      }
+
+      /** Required. Dataset ID of the table to get the row access policy. */
+      public Get setDatasetId(java.lang.String datasetId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
+              "Parameter datasetId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.datasetId = datasetId;
+        return this;
+      }
+
+      /** Required. Table ID of the table to get the row access policy. */
+      @com.google.api.client.util.Key
+      private java.lang.String tableId;
+
+      /** Required. Table ID of the table to get the row access policy.
+       */
+      public java.lang.String getTableId() {
+        return tableId;
+      }
+
+      /** Required. Table ID of the table to get the row access policy. */
+      public Get setTableId(java.lang.String tableId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(TABLE_ID_PATTERN.matcher(tableId).matches(),
+              "Parameter tableId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.tableId = tableId;
+        return this;
+      }
+
+      /** Required. Policy ID of the row access policy. */
+      @com.google.api.client.util.Key
+      private java.lang.String policyId;
+
+      /** Required. Policy ID of the row access policy.
+       */
+      public java.lang.String getPolicyId() {
+        return policyId;
+      }
+
+      /** Required. Policy ID of the row access policy. */
+      public Get setPolicyId(java.lang.String policyId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(POLICY_ID_PATTERN.matcher(policyId).matches(),
+              "Parameter policyId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.policyId = policyId;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
      * Gets the access control policy for a resource. Returns an empty policy if the resource exists and
      * does not have a policy set.
      *
@@ -5832,6 +6509,201 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       @Override
       public GetIamPolicy set(String parameterName, Object value) {
         return (GetIamPolicy) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Creates a row access policy.
+     *
+     * Create a request for the method "rowAccessPolicies.insert".
+     *
+     * This request holds the parameters needed by the bigquery server.  After setting any optional
+     * parameters, call the {@link Insert#execute()} method to invoke the remote operation.
+     *
+     * @param projectId Required. Project ID of the table to get the row access policy.
+     * @param datasetId Required. Dataset ID of the table to get the row access policy.
+     * @param tableId Required. Table ID of the table to get the row access policy.
+     * @param content the {@link com.google.api.services.bigquery.model.RowAccessPolicy}
+     * @return the request
+     */
+    public Insert insert(java.lang.String projectId, java.lang.String datasetId, java.lang.String tableId, com.google.api.services.bigquery.model.RowAccessPolicy content) throws java.io.IOException {
+      Insert result = new Insert(projectId, datasetId, tableId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Insert extends BigqueryRequest<com.google.api.services.bigquery.model.RowAccessPolicy> {
+
+      private static final String REST_PATH = "projects/{+projectId}/datasets/{+datasetId}/tables/{+tableId}/rowAccessPolicies";
+
+      private final java.util.regex.Pattern PROJECT_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern DATASET_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern TABLE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      /**
+       * Creates a row access policy.
+       *
+       * Create a request for the method "rowAccessPolicies.insert".
+       *
+       * This request holds the parameters needed by the the bigquery server.  After setting any
+       * optional parameters, call the {@link Insert#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Insert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param projectId Required. Project ID of the table to get the row access policy.
+       * @param datasetId Required. Dataset ID of the table to get the row access policy.
+       * @param tableId Required. Table ID of the table to get the row access policy.
+       * @param content the {@link com.google.api.services.bigquery.model.RowAccessPolicy}
+       * @since 1.13
+       */
+      protected Insert(java.lang.String projectId, java.lang.String datasetId, java.lang.String tableId, com.google.api.services.bigquery.model.RowAccessPolicy content) {
+        super(Bigquery.this, "POST", REST_PATH, content, com.google.api.services.bigquery.model.RowAccessPolicy.class);
+        this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.datasetId = com.google.api.client.util.Preconditions.checkNotNull(datasetId, "Required parameter datasetId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
+              "Parameter datasetId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.tableId = com.google.api.client.util.Preconditions.checkNotNull(tableId, "Required parameter tableId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(TABLE_ID_PATTERN.matcher(tableId).matches(),
+              "Parameter tableId must conform to the pattern " +
+              "^[^/]+$");
+        }
+      }
+
+      @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Insert setAlt(java.lang.String alt) {
+        return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
+      }
+
+      @Override
+      public Insert setFields(java.lang.String fields) {
+        return (Insert) super.setFields(fields);
+      }
+
+      @Override
+      public Insert setKey(java.lang.String key) {
+        return (Insert) super.setKey(key);
+      }
+
+      @Override
+      public Insert setOauthToken(java.lang.String oauthToken) {
+        return (Insert) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Insert setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Insert) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Insert setQuotaUser(java.lang.String quotaUser) {
+        return (Insert) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Project ID of the table to get the row access policy. */
+      @com.google.api.client.util.Key
+      private java.lang.String projectId;
+
+      /** Required. Project ID of the table to get the row access policy.
+       */
+      public java.lang.String getProjectId() {
+        return projectId;
+      }
+
+      /** Required. Project ID of the table to get the row access policy. */
+      public Insert setProjectId(java.lang.String projectId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.projectId = projectId;
+        return this;
+      }
+
+      /** Required. Dataset ID of the table to get the row access policy. */
+      @com.google.api.client.util.Key
+      private java.lang.String datasetId;
+
+      /** Required. Dataset ID of the table to get the row access policy.
+       */
+      public java.lang.String getDatasetId() {
+        return datasetId;
+      }
+
+      /** Required. Dataset ID of the table to get the row access policy. */
+      public Insert setDatasetId(java.lang.String datasetId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
+              "Parameter datasetId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.datasetId = datasetId;
+        return this;
+      }
+
+      /** Required. Table ID of the table to get the row access policy. */
+      @com.google.api.client.util.Key
+      private java.lang.String tableId;
+
+      /** Required. Table ID of the table to get the row access policy.
+       */
+      public java.lang.String getTableId() {
+        return tableId;
+      }
+
+      /** Required. Table ID of the table to get the row access policy. */
+      public Insert setTableId(java.lang.String tableId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(TABLE_ID_PATTERN.matcher(tableId).matches(),
+              "Parameter tableId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.tableId = tableId;
+        return this;
+      }
+
+      @Override
+      public Insert set(String parameterName, Object value) {
+        return (Insert) super.set(parameterName, value);
       }
     }
     /**
@@ -6224,6 +7096,233 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
       @Override
       public TestIamPermissions set(String parameterName, Object value) {
         return (TestIamPermissions) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Updates a row access policy.
+     *
+     * Create a request for the method "rowAccessPolicies.update".
+     *
+     * This request holds the parameters needed by the bigquery server.  After setting any optional
+     * parameters, call the {@link Update#execute()} method to invoke the remote operation.
+     *
+     * @param projectId Required. Project ID of the table to get the row access policy.
+     * @param datasetId Required. Dataset ID of the table to get the row access policy.
+     * @param tableId Required. Table ID of the table to get the row access policy.
+     * @param policyId Required. Policy ID of the row access policy.
+     * @param content the {@link com.google.api.services.bigquery.model.RowAccessPolicy}
+     * @return the request
+     */
+    public Update update(java.lang.String projectId, java.lang.String datasetId, java.lang.String tableId, java.lang.String policyId, com.google.api.services.bigquery.model.RowAccessPolicy content) throws java.io.IOException {
+      Update result = new Update(projectId, datasetId, tableId, policyId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Update extends BigqueryRequest<com.google.api.services.bigquery.model.RowAccessPolicy> {
+
+      private static final String REST_PATH = "projects/{+projectId}/datasets/{+datasetId}/tables/{+tableId}/rowAccessPolicies/{+policyId}";
+
+      private final java.util.regex.Pattern PROJECT_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern DATASET_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern TABLE_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      private final java.util.regex.Pattern POLICY_ID_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      /**
+       * Updates a row access policy.
+       *
+       * Create a request for the method "rowAccessPolicies.update".
+       *
+       * This request holds the parameters needed by the the bigquery server.  After setting any
+       * optional parameters, call the {@link Update#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param projectId Required. Project ID of the table to get the row access policy.
+       * @param datasetId Required. Dataset ID of the table to get the row access policy.
+       * @param tableId Required. Table ID of the table to get the row access policy.
+       * @param policyId Required. Policy ID of the row access policy.
+       * @param content the {@link com.google.api.services.bigquery.model.RowAccessPolicy}
+       * @since 1.13
+       */
+      protected Update(java.lang.String projectId, java.lang.String datasetId, java.lang.String tableId, java.lang.String policyId, com.google.api.services.bigquery.model.RowAccessPolicy content) {
+        super(Bigquery.this, "PUT", REST_PATH, content, com.google.api.services.bigquery.model.RowAccessPolicy.class);
+        this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.datasetId = com.google.api.client.util.Preconditions.checkNotNull(datasetId, "Required parameter datasetId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
+              "Parameter datasetId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.tableId = com.google.api.client.util.Preconditions.checkNotNull(tableId, "Required parameter tableId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(TABLE_ID_PATTERN.matcher(tableId).matches(),
+              "Parameter tableId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.policyId = com.google.api.client.util.Preconditions.checkNotNull(policyId, "Required parameter policyId must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(POLICY_ID_PATTERN.matcher(policyId).matches(),
+              "Parameter policyId must conform to the pattern " +
+              "^[^/]+$");
+        }
+      }
+
+      @Override
+      public Update set$Xgafv(java.lang.String $Xgafv) {
+        return (Update) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Update setAccessToken(java.lang.String accessToken) {
+        return (Update) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Update setAlt(java.lang.String alt) {
+        return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setCallback(java.lang.String callback) {
+        return (Update) super.setCallback(callback);
+      }
+
+      @Override
+      public Update setFields(java.lang.String fields) {
+        return (Update) super.setFields(fields);
+      }
+
+      @Override
+      public Update setKey(java.lang.String key) {
+        return (Update) super.setKey(key);
+      }
+
+      @Override
+      public Update setOauthToken(java.lang.String oauthToken) {
+        return (Update) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Update setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Update) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Update setQuotaUser(java.lang.String quotaUser) {
+        return (Update) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Update) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Project ID of the table to get the row access policy. */
+      @com.google.api.client.util.Key
+      private java.lang.String projectId;
+
+      /** Required. Project ID of the table to get the row access policy.
+       */
+      public java.lang.String getProjectId() {
+        return projectId;
+      }
+
+      /** Required. Project ID of the table to get the row access policy. */
+      public Update setProjectId(java.lang.String projectId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_ID_PATTERN.matcher(projectId).matches(),
+              "Parameter projectId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.projectId = projectId;
+        return this;
+      }
+
+      /** Required. Dataset ID of the table to get the row access policy. */
+      @com.google.api.client.util.Key
+      private java.lang.String datasetId;
+
+      /** Required. Dataset ID of the table to get the row access policy.
+       */
+      public java.lang.String getDatasetId() {
+        return datasetId;
+      }
+
+      /** Required. Dataset ID of the table to get the row access policy. */
+      public Update setDatasetId(java.lang.String datasetId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DATASET_ID_PATTERN.matcher(datasetId).matches(),
+              "Parameter datasetId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.datasetId = datasetId;
+        return this;
+      }
+
+      /** Required. Table ID of the table to get the row access policy. */
+      @com.google.api.client.util.Key
+      private java.lang.String tableId;
+
+      /** Required. Table ID of the table to get the row access policy.
+       */
+      public java.lang.String getTableId() {
+        return tableId;
+      }
+
+      /** Required. Table ID of the table to get the row access policy. */
+      public Update setTableId(java.lang.String tableId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(TABLE_ID_PATTERN.matcher(tableId).matches(),
+              "Parameter tableId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.tableId = tableId;
+        return this;
+      }
+
+      /** Required. Policy ID of the row access policy. */
+      @com.google.api.client.util.Key
+      private java.lang.String policyId;
+
+      /** Required. Policy ID of the row access policy.
+       */
+      public java.lang.String getPolicyId() {
+        return policyId;
+      }
+
+      /** Required. Policy ID of the row access policy. */
+      public Update setPolicyId(java.lang.String policyId) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(POLICY_ID_PATTERN.matcher(policyId).matches(),
+              "Parameter policyId must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.policyId = policyId;
+        return this;
+      }
+
+      @Override
+      public Update set(String parameterName, Object value) {
+        return (Update) super.set(parameterName, value);
       }
     }
 

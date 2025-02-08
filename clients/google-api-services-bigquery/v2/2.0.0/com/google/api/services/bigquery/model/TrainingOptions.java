@@ -261,6 +261,21 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
   private java.lang.Boolean fitIntercept;
 
   /**
+   * The forecast limit lower bound that was used during ARIMA model training with limits. To see
+   * more details of the algorithm: https://otexts.com/fpp2/limits.html
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double forecastLimitLowerBound;
+
+  /**
+   * The forecast limit upper bound that was used during ARIMA model training with limits.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double forecastLimitUpperBound;
+
+  /**
    * Hidden units for dnn models.
    * The value may be {@code null}.
    */
@@ -1251,6 +1266,42 @@ public final class TrainingOptions extends com.google.api.client.json.GenericJso
    */
   public TrainingOptions setFitIntercept(java.lang.Boolean fitIntercept) {
     this.fitIntercept = fitIntercept;
+    return this;
+  }
+
+  /**
+   * The forecast limit lower bound that was used during ARIMA model training with limits. To see
+   * more details of the algorithm: https://otexts.com/fpp2/limits.html
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getForecastLimitLowerBound() {
+    return forecastLimitLowerBound;
+  }
+
+  /**
+   * The forecast limit lower bound that was used during ARIMA model training with limits. To see
+   * more details of the algorithm: https://otexts.com/fpp2/limits.html
+   * @param forecastLimitLowerBound forecastLimitLowerBound or {@code null} for none
+   */
+  public TrainingOptions setForecastLimitLowerBound(java.lang.Double forecastLimitLowerBound) {
+    this.forecastLimitLowerBound = forecastLimitLowerBound;
+    return this;
+  }
+
+  /**
+   * The forecast limit upper bound that was used during ARIMA model training with limits.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getForecastLimitUpperBound() {
+    return forecastLimitUpperBound;
+  }
+
+  /**
+   * The forecast limit upper bound that was used during ARIMA model training with limits.
+   * @param forecastLimitUpperBound forecastLimitUpperBound or {@code null} for none
+   */
+  public TrainingOptions setForecastLimitUpperBound(java.lang.Double forecastLimitUpperBound) {
+    this.forecastLimitUpperBound = forecastLimitUpperBound;
     return this;
   }
 

@@ -229,6 +229,15 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean useQueryCache;
 
   /**
+   * Optional. This is only supported for SELECT query. If set, the query is allowed to write
+   * results incrementally to the temporary result table. This may incur a performance penalty. This
+   * option cannot be used with Legacy SQL. This feature is not yet available.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean writeIncrementalResults;
+
+  /**
    * Optional. Connection properties which can modify the query behavior.
    * @return value or {@code null} for none
    */
@@ -718,6 +727,27 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
       return true;
     }
     return useQueryCache;
+  }
+
+  /**
+   * Optional. This is only supported for SELECT query. If set, the query is allowed to write
+   * results incrementally to the temporary result table. This may incur a performance penalty. This
+   * option cannot be used with Legacy SQL. This feature is not yet available.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getWriteIncrementalResults() {
+    return writeIncrementalResults;
+  }
+
+  /**
+   * Optional. This is only supported for SELECT query. If set, the query is allowed to write
+   * results incrementally to the temporary result table. This may incur a performance penalty. This
+   * option cannot be used with Legacy SQL. This feature is not yet available.
+   * @param writeIncrementalResults writeIncrementalResults or {@code null} for none
+   */
+  public QueryRequest setWriteIncrementalResults(java.lang.Boolean writeIncrementalResults) {
+    this.writeIncrementalResults = writeIncrementalResults;
+    return this;
   }
 
   @Override

@@ -93,13 +93,6 @@ public final class NetworkProfile extends com.google.api.client.json.GenericJson
   private java.lang.String selfLinkWithId;
 
   /**
-   * [Output Only] Zone to which the network is restricted.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String zone;
-
-  /**
    * [Output Only] Creation timestamp in RFC3339 text format.
    * @return value or {@code null} for none
    */
@@ -249,23 +242,6 @@ public final class NetworkProfile extends com.google.api.client.json.GenericJson
    */
   public NetworkProfile setSelfLinkWithId(java.lang.String selfLinkWithId) {
     this.selfLinkWithId = selfLinkWithId;
-    return this;
-  }
-
-  /**
-   * [Output Only] Zone to which the network is restricted.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getZone() {
-    return zone;
-  }
-
-  /**
-   * [Output Only] Zone to which the network is restricted.
-   * @param zone zone or {@code null} for none
-   */
-  public NetworkProfile setZone(java.lang.String zone) {
-    this.zone = zone;
     return this;
   }
 

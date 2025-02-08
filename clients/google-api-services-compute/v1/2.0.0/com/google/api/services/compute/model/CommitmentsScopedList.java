@@ -30,7 +30,7 @@ package com.google.api.services.compute.model;
 public final class CommitmentsScopedList extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] A list of commitments contained in this scope.
+   * [Output Only] The list of commitments contained in this scope.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +51,7 @@ public final class CommitmentsScopedList extends com.google.api.client.json.Gene
   private Warning warning;
 
   /**
-   * [Output Only] A list of commitments contained in this scope.
+   * [Output Only] The list of commitments contained in this scope.
    * @return value or {@code null} for none
    */
   public java.util.List<Commitment> getCommitments() {
@@ -59,7 +59,7 @@ public final class CommitmentsScopedList extends com.google.api.client.json.Gene
   }
 
   /**
-   * [Output Only] A list of commitments contained in this scope.
+   * [Output Only] The list of commitments contained in this scope.
    * @param commitments commitments or {@code null} for none
    */
   public CommitmentsScopedList setCommitments(java.util.List<Commitment> commitments) {

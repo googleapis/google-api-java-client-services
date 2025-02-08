@@ -30,6 +30,13 @@ package com.google.api.services.datastream.v1.model;
 public final class SpecificStartPosition extends com.google.api.client.json.GenericJson {
 
   /**
+   * MySQL GTID set to start replicating from.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MysqlGtidPosition mysqlGtidPosition;
+
+  /**
    * MySQL specific log position to start replicating from.
    * The value may be {@code null}.
    */
@@ -49,6 +56,23 @@ public final class SpecificStartPosition extends com.google.api.client.json.Gene
    */
   @com.google.api.client.util.Key
   private SqlServerLsnPosition sqlServerLsnPosition;
+
+  /**
+   * MySQL GTID set to start replicating from.
+   * @return value or {@code null} for none
+   */
+  public MysqlGtidPosition getMysqlGtidPosition() {
+    return mysqlGtidPosition;
+  }
+
+  /**
+   * MySQL GTID set to start replicating from.
+   * @param mysqlGtidPosition mysqlGtidPosition or {@code null} for none
+   */
+  public SpecificStartPosition setMysqlGtidPosition(MysqlGtidPosition mysqlGtidPosition) {
+    this.mysqlGtidPosition = mysqlGtidPosition;
+    return this;
+  }
 
   /**
    * MySQL specific log position to start replicating from.

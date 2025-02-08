@@ -39,7 +39,7 @@ public final class GoogleCloudRunV2Container extends com.google.api.client.json.
   private java.util.List<java.lang.String> args;
 
   /**
-   * Base image for this container. Only supported for services. If set. it indicates that the
+   * Base image for this container. Only supported for services. If set, it indicates that the
    * service is enrolled into automatic base image update.
    * The value may be {@code null}.
    */
@@ -156,7 +156,7 @@ public final class GoogleCloudRunV2Container extends com.google.api.client.json.
   }
 
   /**
-   * Base image for this container. Only supported for services. If set. it indicates that the
+   * Base image for this container. Only supported for services. If set, it indicates that the
    * service is enrolled into automatic base image update.
    * @return value or {@code null} for none
    */
@@ -165,7 +165,7 @@ public final class GoogleCloudRunV2Container extends com.google.api.client.json.
   }
 
   /**
-   * Base image for this container. Only supported for services. If set. it indicates that the
+   * Base image for this container. Only supported for services. If set, it indicates that the
    * service is enrolled into automatic base image update.
    * @param baseImageUri baseImageUri or {@code null} for none
    */

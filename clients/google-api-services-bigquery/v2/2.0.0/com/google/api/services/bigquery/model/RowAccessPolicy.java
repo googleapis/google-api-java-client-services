@@ -56,6 +56,26 @@ public final class RowAccessPolicy extends com.google.api.client.json.GenericJso
   private java.lang.String filterPredicate;
 
   /**
+   * Optional. Input only. The optional list of iam_member users or groups that specifies the
+   * initial members that the row-level access policy should be created with. grantees types: -
+   * "user:alice@example.com": An email address that represents a specific Google account. -
+   * "serviceAccount:my-other-app@appspot.gserviceaccount.com": An email address that represents a
+   * service account. - "group:admins@example.com": An email address that represents a Google group.
+   * - "domain:example.com":The Google Workspace domain (primary) that represents all the users of
+   * that domain. - "allAuthenticatedUsers": A special identifier that represents all service
+   * accounts and all users on the internet who have authenticated with a Google Account. This
+   * identifier includes accounts that aren't connected to a Google Workspace or Cloud Identity
+   * domain, such as personal Gmail accounts. Users who aren't authenticated, such as anonymous
+   * visitors, aren't included. - "allUsers":A special identifier that represents anyone who is on
+   * the internet, including authenticated and unauthenticated users. Because BigQuery requires
+   * authentication before a user can access the service, allUsers includes only authenticated
+   * users.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> grantees;
+
+  /**
    * Output only. The time when this row access policy was last modified, in milliseconds since the
    * epoch.
    * The value may be {@code null}.
@@ -126,6 +146,49 @@ public final class RowAccessPolicy extends com.google.api.client.json.GenericJso
    */
   public RowAccessPolicy setFilterPredicate(java.lang.String filterPredicate) {
     this.filterPredicate = filterPredicate;
+    return this;
+  }
+
+  /**
+   * Optional. Input only. The optional list of iam_member users or groups that specifies the
+   * initial members that the row-level access policy should be created with. grantees types: -
+   * "user:alice@example.com": An email address that represents a specific Google account. -
+   * "serviceAccount:my-other-app@appspot.gserviceaccount.com": An email address that represents a
+   * service account. - "group:admins@example.com": An email address that represents a Google group.
+   * - "domain:example.com":The Google Workspace domain (primary) that represents all the users of
+   * that domain. - "allAuthenticatedUsers": A special identifier that represents all service
+   * accounts and all users on the internet who have authenticated with a Google Account. This
+   * identifier includes accounts that aren't connected to a Google Workspace or Cloud Identity
+   * domain, such as personal Gmail accounts. Users who aren't authenticated, such as anonymous
+   * visitors, aren't included. - "allUsers":A special identifier that represents anyone who is on
+   * the internet, including authenticated and unauthenticated users. Because BigQuery requires
+   * authentication before a user can access the service, allUsers includes only authenticated
+   * users.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getGrantees() {
+    return grantees;
+  }
+
+  /**
+   * Optional. Input only. The optional list of iam_member users or groups that specifies the
+   * initial members that the row-level access policy should be created with. grantees types: -
+   * "user:alice@example.com": An email address that represents a specific Google account. -
+   * "serviceAccount:my-other-app@appspot.gserviceaccount.com": An email address that represents a
+   * service account. - "group:admins@example.com": An email address that represents a Google group.
+   * - "domain:example.com":The Google Workspace domain (primary) that represents all the users of
+   * that domain. - "allAuthenticatedUsers": A special identifier that represents all service
+   * accounts and all users on the internet who have authenticated with a Google Account. This
+   * identifier includes accounts that aren't connected to a Google Workspace or Cloud Identity
+   * domain, such as personal Gmail accounts. Users who aren't authenticated, such as anonymous
+   * visitors, aren't included. - "allUsers":A special identifier that represents anyone who is on
+   * the internet, including authenticated and unauthenticated users. Because BigQuery requires
+   * authentication before a user can access the service, allUsers includes only authenticated
+   * users.
+   * @param grantees grantees or {@code null} for none
+   */
+  public RowAccessPolicy setGrantees(java.util.List<java.lang.String> grantees) {
+    this.grantees = grantees;
     return this;
   }
 

@@ -52,6 +52,19 @@ public final class VectorSearchStatistics extends com.google.api.client.json.Gen
   private java.lang.String indexUsageMode;
 
   /**
+   * Specifies the usage of stored columns in the query when stored columns are used in the query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<StoredColumnsUsage> storedColumnsUsages;
+
+  static {
+    // hack to force ProGuard to consider StoredColumnsUsage used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(StoredColumnsUsage.class);
+  }
+
+  /**
    * When `indexUsageMode` is `UNUSED` or `PARTIALLY_USED`, this field explains why indexes were not
    * used in all or part of the vector search query. If `indexUsageMode` is `FULLY_USED`, this field
    * is not populated.
@@ -86,6 +99,23 @@ public final class VectorSearchStatistics extends com.google.api.client.json.Gen
    */
   public VectorSearchStatistics setIndexUsageMode(java.lang.String indexUsageMode) {
     this.indexUsageMode = indexUsageMode;
+    return this;
+  }
+
+  /**
+   * Specifies the usage of stored columns in the query when stored columns are used in the query.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<StoredColumnsUsage> getStoredColumnsUsages() {
+    return storedColumnsUsages;
+  }
+
+  /**
+   * Specifies the usage of stored columns in the query when stored columns are used in the query.
+   * @param storedColumnsUsages storedColumnsUsages or {@code null} for none
+   */
+  public VectorSearchStatistics setStoredColumnsUsages(java.util.List<StoredColumnsUsage> storedColumnsUsages) {
+    this.storedColumnsUsages = storedColumnsUsages;
     return this;
   }
 

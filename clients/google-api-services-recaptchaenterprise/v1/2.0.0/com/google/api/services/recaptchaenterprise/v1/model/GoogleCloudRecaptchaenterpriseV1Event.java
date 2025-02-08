@@ -77,11 +77,20 @@ public final class GoogleCloudRecaptchaenterpriseV1Event extends com.google.api.
   private java.util.List<java.lang.String> headers;
 
   /**
-   * Optional. JA3 fingerprint for SSL clients.
+   * Optional. JA3 fingerprint for SSL clients. To learn how to compute this fingerprint, please
+   * refer to https://github.com/salesforce/ja3.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ja3;
+
+  /**
+   * Optional. JA4 fingerprint for SSL clients. To learn how to compute this fingerprint, please
+   * refer to https://github.com/FoxIO-LLC/ja4.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ja4;
 
   /**
    * Optional. The URI resource the user requested that triggered an assessment.
@@ -287,7 +296,8 @@ public final class GoogleCloudRecaptchaenterpriseV1Event extends com.google.api.
   }
 
   /**
-   * Optional. JA3 fingerprint for SSL clients.
+   * Optional. JA3 fingerprint for SSL clients. To learn how to compute this fingerprint, please
+   * refer to https://github.com/salesforce/ja3.
    * @return value or {@code null} for none
    */
   public java.lang.String getJa3() {
@@ -295,11 +305,31 @@ public final class GoogleCloudRecaptchaenterpriseV1Event extends com.google.api.
   }
 
   /**
-   * Optional. JA3 fingerprint for SSL clients.
+   * Optional. JA3 fingerprint for SSL clients. To learn how to compute this fingerprint, please
+   * refer to https://github.com/salesforce/ja3.
    * @param ja3 ja3 or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1Event setJa3(java.lang.String ja3) {
     this.ja3 = ja3;
+    return this;
+  }
+
+  /**
+   * Optional. JA4 fingerprint for SSL clients. To learn how to compute this fingerprint, please
+   * refer to https://github.com/FoxIO-LLC/ja4.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getJa4() {
+    return ja4;
+  }
+
+  /**
+   * Optional. JA4 fingerprint for SSL clients. To learn how to compute this fingerprint, please
+   * refer to https://github.com/FoxIO-LLC/ja4.
+   * @param ja4 ja4 or {@code null} for none
+   */
+  public GoogleCloudRecaptchaenterpriseV1Event setJa4(java.lang.String ja4) {
+    this.ja4 = ja4;
     return this;
   }
 

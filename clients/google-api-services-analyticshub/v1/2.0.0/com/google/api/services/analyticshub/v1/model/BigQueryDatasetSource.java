@@ -33,7 +33,8 @@ package com.google.api.services.analyticshub.v1.model;
 public final class BigQueryDatasetSource extends com.google.api.client.json.GenericJson {
 
   /**
-   * Resource name of the dataset source for this listing. e.g. `projects/myproject/datasets/123`
+   * Optional. Resource name of the dataset source for this listing. e.g.
+   * `projects/myproject/datasets/123`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,7 +57,8 @@ public final class BigQueryDatasetSource extends com.google.api.client.json.Gene
   private java.util.List<SelectedResource> selectedResources;
 
   /**
-   * Resource name of the dataset source for this listing. e.g. `projects/myproject/datasets/123`
+   * Optional. Resource name of the dataset source for this listing. e.g.
+   * `projects/myproject/datasets/123`
    * @return value or {@code null} for none
    */
   public java.lang.String getDataset() {
@@ -64,7 +66,8 @@ public final class BigQueryDatasetSource extends com.google.api.client.json.Gene
   }
 
   /**
-   * Resource name of the dataset source for this listing. e.g. `projects/myproject/datasets/123`
+   * Optional. Resource name of the dataset source for this listing. e.g.
+   * `projects/myproject/datasets/123`
    * @param dataset dataset or {@code null} for none
    */
   public BigQueryDatasetSource setDataset(java.lang.String dataset) {

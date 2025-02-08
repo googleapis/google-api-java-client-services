@@ -156,6 +156,14 @@ public final class GooglePubsubV1Subscription extends com.google.api.client.json
   private String messageRetentionDuration;
 
   /**
+   * Optional. Transforms to be applied to messages before they are delivered to subscribers.
+   * Transforms are applied in the order specified.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<MessageTransform> messageTransforms;
+
+  /**
    * Required. Name of the subscription. Format is `projects/{project}/subscriptions/{sub}`.
    * The value may be {@code null}.
    */
@@ -490,6 +498,25 @@ public final class GooglePubsubV1Subscription extends com.google.api.client.json
    */
   public GooglePubsubV1Subscription setMessageRetentionDuration(String messageRetentionDuration) {
     this.messageRetentionDuration = messageRetentionDuration;
+    return this;
+  }
+
+  /**
+   * Optional. Transforms to be applied to messages before they are delivered to subscribers.
+   * Transforms are applied in the order specified.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<MessageTransform> getMessageTransforms() {
+    return messageTransforms;
+  }
+
+  /**
+   * Optional. Transforms to be applied to messages before they are delivered to subscribers.
+   * Transforms are applied in the order specified.
+   * @param messageTransforms messageTransforms or {@code null} for none
+   */
+  public GooglePubsubV1Subscription setMessageTransforms(java.util.List<MessageTransform> messageTransforms) {
+    this.messageTransforms = messageTransforms;
     return this;
   }
 

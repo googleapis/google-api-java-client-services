@@ -45,6 +45,14 @@ public final class EnterpriseCrmFrontendsEventbusProtoTaskConfig extends com.goo
   }
 
   /**
+   * Optional. Determines the number of times the task will be retried on failure and with what
+   * retry strategy. This is applicable for synchronous calls to Eventbus alone (Post).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EnterpriseCrmEventbusProtoConditionalFailurePolicies conditionalFailurePolicies;
+
+  /**
    * Auto-generated.
    * The value may be {@code null}.
    */
@@ -275,6 +283,25 @@ public final class EnterpriseCrmFrontendsEventbusProtoTaskConfig extends com.goo
    */
   public EnterpriseCrmFrontendsEventbusProtoTaskConfig setAlertConfigs(java.util.List<EnterpriseCrmEventbusProtoTaskAlertConfig> alertConfigs) {
     this.alertConfigs = alertConfigs;
+    return this;
+  }
+
+  /**
+   * Optional. Determines the number of times the task will be retried on failure and with what
+   * retry strategy. This is applicable for synchronous calls to Eventbus alone (Post).
+   * @return value or {@code null} for none
+   */
+  public EnterpriseCrmEventbusProtoConditionalFailurePolicies getConditionalFailurePolicies() {
+    return conditionalFailurePolicies;
+  }
+
+  /**
+   * Optional. Determines the number of times the task will be retried on failure and with what
+   * retry strategy. This is applicable for synchronous calls to Eventbus alone (Post).
+   * @param conditionalFailurePolicies conditionalFailurePolicies or {@code null} for none
+   */
+  public EnterpriseCrmFrontendsEventbusProtoTaskConfig setConditionalFailurePolicies(EnterpriseCrmEventbusProtoConditionalFailurePolicies conditionalFailurePolicies) {
+    this.conditionalFailurePolicies = conditionalFailurePolicies;
     return this;
   }
 

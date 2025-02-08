@@ -41,13 +41,6 @@ public final class EnterpriseCrmEventbusProtoLogSettings extends com.google.api.
   private java.lang.String logFieldName;
 
   /**
-   * Contains the scrubbing options, such as whether to scrub, obfuscate, etc.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private EnterpriseCrmLoggingGwsSanitizeOptions sanitizeOptions;
-
-  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,13 +51,6 @@ public final class EnterpriseCrmEventbusProtoLogSettings extends com.google.api.
    */
   @com.google.api.client.util.Key
   private java.lang.String seedScope;
-
-  /**
-   * Contains the field limits for shortening, such as max string length and max array length.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private EnterpriseCrmLoggingGwsFieldLimits shorteningLimits;
 
   /**
    * The name of corresponding logging field of the event property. If omitted, assumes the same
@@ -82,23 +68,6 @@ public final class EnterpriseCrmEventbusProtoLogSettings extends com.google.api.
    */
   public EnterpriseCrmEventbusProtoLogSettings setLogFieldName(java.lang.String logFieldName) {
     this.logFieldName = logFieldName;
-    return this;
-  }
-
-  /**
-   * Contains the scrubbing options, such as whether to scrub, obfuscate, etc.
-   * @return value or {@code null} for none
-   */
-  public EnterpriseCrmLoggingGwsSanitizeOptions getSanitizeOptions() {
-    return sanitizeOptions;
-  }
-
-  /**
-   * Contains the scrubbing options, such as whether to scrub, obfuscate, etc.
-   * @param sanitizeOptions sanitizeOptions or {@code null} for none
-   */
-  public EnterpriseCrmEventbusProtoLogSettings setSanitizeOptions(EnterpriseCrmLoggingGwsSanitizeOptions sanitizeOptions) {
-    this.sanitizeOptions = sanitizeOptions;
     return this;
   }
 
@@ -129,23 +98,6 @@ public final class EnterpriseCrmEventbusProtoLogSettings extends com.google.api.
    */
   public EnterpriseCrmEventbusProtoLogSettings setSeedScope(java.lang.String seedScope) {
     this.seedScope = seedScope;
-    return this;
-  }
-
-  /**
-   * Contains the field limits for shortening, such as max string length and max array length.
-   * @return value or {@code null} for none
-   */
-  public EnterpriseCrmLoggingGwsFieldLimits getShorteningLimits() {
-    return shorteningLimits;
-  }
-
-  /**
-   * Contains the field limits for shortening, such as max string length and max array length.
-   * @param shorteningLimits shorteningLimits or {@code null} for none
-   */
-  public EnterpriseCrmEventbusProtoLogSettings setShorteningLimits(EnterpriseCrmLoggingGwsFieldLimits shorteningLimits) {
-    this.shorteningLimits = shorteningLimits;
     return this;
   }
 

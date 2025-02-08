@@ -7236,15 +7236,15 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
 
         /**
          * Optional. Optional filter to restrict results to the given criteria. The following fields
-         * are supported. interval.start_time interval.end_timeFor example: ``` interval.start_time
-         * > "2022-03-11T00:00:00-08:00" AND interval.end_time < "2022-03-12T00:00:00-08:00" ```
+         * are supported. interval.start_time interval.end_timeFor example: interval.start_time >
+         * "2022-03-11T00:00:00-08:00" AND interval.end_time < "2022-03-12T00:00:00-08:00"
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
         /** Optional. Optional filter to restrict results to the given criteria. The following fields are
-       supported. interval.start_time interval.end_timeFor example: ``` interval.start_time >
-       "2022-03-11T00:00:00-08:00" AND interval.end_time < "2022-03-12T00:00:00-08:00" ```
+       supported. interval.start_time interval.end_timeFor example: interval.start_time >
+       "2022-03-11T00:00:00-08:00" AND interval.end_time < "2022-03-12T00:00:00-08:00"
          */
         public java.lang.String getFilter() {
           return filter;
@@ -7252,8 +7252,8 @@ public class Monitoring extends com.google.api.client.googleapis.services.json.A
 
         /**
          * Optional. Optional filter to restrict results to the given criteria. The following fields
-         * are supported. interval.start_time interval.end_timeFor example: ``` interval.start_time
-         * > "2022-03-11T00:00:00-08:00" AND interval.end_time < "2022-03-12T00:00:00-08:00" ```
+         * are supported. interval.start_time interval.end_timeFor example: interval.start_time >
+         * "2022-03-11T00:00:00-08:00" AND interval.end_time < "2022-03-12T00:00:00-08:00"
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;

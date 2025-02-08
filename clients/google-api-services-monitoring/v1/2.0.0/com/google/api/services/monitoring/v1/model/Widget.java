@@ -131,6 +131,13 @@ public final class Widget extends com.google.api.client.json.GenericJson {
   private java.lang.String title;
 
   /**
+   * Optional. If set, this widget is rendered only when the condition is evaluated to true.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private VisibilityCondition visibilityCondition;
+
+  /**
    * A chart of time series data.
    * The value may be {@code null}.
    */
@@ -376,6 +383,23 @@ public final class Widget extends com.google.api.client.json.GenericJson {
    */
   public Widget setTitle(java.lang.String title) {
     this.title = title;
+    return this;
+  }
+
+  /**
+   * Optional. If set, this widget is rendered only when the condition is evaluated to true.
+   * @return value or {@code null} for none
+   */
+  public VisibilityCondition getVisibilityCondition() {
+    return visibilityCondition;
+  }
+
+  /**
+   * Optional. If set, this widget is rendered only when the condition is evaluated to true.
+   * @param visibilityCondition visibilityCondition or {@code null} for none
+   */
+  public Widget setVisibilityCondition(VisibilityCondition visibilityCondition) {
+    this.visibilityCondition = visibilityCondition;
     return this;
   }
 

@@ -87,6 +87,13 @@ public final class TemplateMetadata extends com.google.api.client.json.GenericJs
   private java.lang.Boolean supportsExactlyOnce;
 
   /**
+   * Optional. For future use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String yamlDefinition;
+
+  /**
    * Optional. Indicates the default streaming mode for a streaming template. Only valid if both
    * supports_at_least_once and supports_exactly_once are true. Possible values: UNSPECIFIED,
    * EXACTLY_ONCE and AT_LEAST_ONCE
@@ -206,6 +213,23 @@ public final class TemplateMetadata extends com.google.api.client.json.GenericJs
    */
   public TemplateMetadata setSupportsExactlyOnce(java.lang.Boolean supportsExactlyOnce) {
     this.supportsExactlyOnce = supportsExactlyOnce;
+    return this;
+  }
+
+  /**
+   * Optional. For future use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getYamlDefinition() {
+    return yamlDefinition;
+  }
+
+  /**
+   * Optional. For future use.
+   * @param yamlDefinition yamlDefinition or {@code null} for none
+   */
+  public TemplateMetadata setYamlDefinition(java.lang.String yamlDefinition) {
+    this.yamlDefinition = yamlDefinition;
     return this;
   }
 

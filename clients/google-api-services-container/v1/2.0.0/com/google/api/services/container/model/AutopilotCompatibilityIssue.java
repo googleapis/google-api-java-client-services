@@ -46,7 +46,7 @@ public final class AutopilotCompatibilityIssue extends com.google.api.client.jso
   private java.lang.String description;
 
   /**
-   * A URL to a public documnetation, which addresses resolving this issue.
+   * A URL to a public documentation, which addresses resolving this issue.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,7 +108,7 @@ public final class AutopilotCompatibilityIssue extends com.google.api.client.jso
   }
 
   /**
-   * A URL to a public documnetation, which addresses resolving this issue.
+   * A URL to a public documentation, which addresses resolving this issue.
    * @return value or {@code null} for none
    */
   public java.lang.String getDocumentationUrl() {
@@ -116,7 +116,7 @@ public final class AutopilotCompatibilityIssue extends com.google.api.client.jso
   }
 
   /**
-   * A URL to a public documnetation, which addresses resolving this issue.
+   * A URL to a public documentation, which addresses resolving this issue.
    * @param documentationUrl documentationUrl or {@code null} for none
    */
   public AutopilotCompatibilityIssue setDocumentationUrl(java.lang.String documentationUrl) {

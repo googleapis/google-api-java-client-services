@@ -32,7 +32,7 @@ package com.google.api.services.container.model;
 public final class CertificateAuthorityDomainConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of fully qualified domain names (FQDN). Specifying port is supported. Wilcards are NOT
+   * List of fully qualified domain names (FQDN). Specifying port is supported. Wildcards are NOT
    * supported. Examples: - my.customdomain.com - 10.0.1.2:5000
    * The value may be {@code null}.
    */
@@ -47,7 +47,7 @@ public final class CertificateAuthorityDomainConfig extends com.google.api.clien
   private GCPSecretManagerCertificateConfig gcpSecretManagerCertificateConfig;
 
   /**
-   * List of fully qualified domain names (FQDN). Specifying port is supported. Wilcards are NOT
+   * List of fully qualified domain names (FQDN). Specifying port is supported. Wildcards are NOT
    * supported. Examples: - my.customdomain.com - 10.0.1.2:5000
    * @return value or {@code null} for none
    */
@@ -56,7 +56,7 @@ public final class CertificateAuthorityDomainConfig extends com.google.api.clien
   }
 
   /**
-   * List of fully qualified domain names (FQDN). Specifying port is supported. Wilcards are NOT
+   * List of fully qualified domain names (FQDN). Specifying port is supported. Wildcards are NOT
    * supported. Examples: - my.customdomain.com - 10.0.1.2:5000
    * @param fqdns fqdns or {@code null} for none
    */

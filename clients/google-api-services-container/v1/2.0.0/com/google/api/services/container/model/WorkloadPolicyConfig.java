@@ -38,6 +38,13 @@ public final class WorkloadPolicyConfig extends com.google.api.client.json.Gener
   private java.lang.Boolean allowNetAdmin;
 
   /**
+   * If true, enables the GCW Auditor that audits workloads on standard clusters.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean autopilotCompatibilityAuditingEnabled;
+
+  /**
    * If true, workloads can use NET_ADMIN capability.
    * @return value or {@code null} for none
    */
@@ -51,6 +58,23 @@ public final class WorkloadPolicyConfig extends com.google.api.client.json.Gener
    */
   public WorkloadPolicyConfig setAllowNetAdmin(java.lang.Boolean allowNetAdmin) {
     this.allowNetAdmin = allowNetAdmin;
+    return this;
+  }
+
+  /**
+   * If true, enables the GCW Auditor that audits workloads on standard clusters.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAutopilotCompatibilityAuditingEnabled() {
+    return autopilotCompatibilityAuditingEnabled;
+  }
+
+  /**
+   * If true, enables the GCW Auditor that audits workloads on standard clusters.
+   * @param autopilotCompatibilityAuditingEnabled autopilotCompatibilityAuditingEnabled or {@code null} for none
+   */
+  public WorkloadPolicyConfig setAutopilotCompatibilityAuditingEnabled(java.lang.Boolean autopilotCompatibilityAuditingEnabled) {
+    this.autopilotCompatibilityAuditingEnabled = autopilotCompatibilityAuditingEnabled;
     return this;
   }
 

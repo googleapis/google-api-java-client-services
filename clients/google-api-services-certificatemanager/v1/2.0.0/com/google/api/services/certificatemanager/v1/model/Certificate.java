@@ -111,6 +111,13 @@ public final class Certificate extends com.google.api.client.json.GenericJson {
   private String updateTime;
 
   /**
+   * Output only. The list of resources that use this Certificate.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<UsedBy> usedBy;
+
+  /**
    * Output only. The creation timestamp of a Certificate.
    * @return value or {@code null} for none
    */
@@ -300,6 +307,23 @@ public final class Certificate extends com.google.api.client.json.GenericJson {
    */
   public Certificate setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
+    return this;
+  }
+
+  /**
+   * Output only. The list of resources that use this Certificate.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<UsedBy> getUsedBy() {
+    return usedBy;
+  }
+
+  /**
+   * Output only. The list of resources that use this Certificate.
+   * @param usedBy usedBy or {@code null} for none
+   */
+  public Certificate setUsedBy(java.util.List<UsedBy> usedBy) {
+    this.usedBy = usedBy;
     return this;
   }
 

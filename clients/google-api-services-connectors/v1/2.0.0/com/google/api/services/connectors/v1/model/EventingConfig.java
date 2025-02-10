@@ -57,6 +57,13 @@ public final class EventingConfig extends com.google.api.client.json.GenericJson
   private DeadLetterConfig deadLetterConfig;
 
   /**
+   * Optional. Data enrichment configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EnrichmentConfig enrichmentConfig;
+
+  /**
    * Optional. Enrichment Enabled.
    * The value may be {@code null}.
    */
@@ -147,6 +154,23 @@ public final class EventingConfig extends com.google.api.client.json.GenericJson
    */
   public EventingConfig setDeadLetterConfig(DeadLetterConfig deadLetterConfig) {
     this.deadLetterConfig = deadLetterConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Data enrichment configuration.
+   * @return value or {@code null} for none
+   */
+  public EnrichmentConfig getEnrichmentConfig() {
+    return enrichmentConfig;
+  }
+
+  /**
+   * Optional. Data enrichment configuration.
+   * @param enrichmentConfig enrichmentConfig or {@code null} for none
+   */
+  public EventingConfig setEnrichmentConfig(EnrichmentConfig enrichmentConfig) {
+    this.enrichmentConfig = enrichmentConfig;
     return this;
   }
 

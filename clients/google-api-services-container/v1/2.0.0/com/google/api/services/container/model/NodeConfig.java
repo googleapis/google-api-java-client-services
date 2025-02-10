@@ -190,7 +190,7 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   private java.lang.Integer localSsdCount;
 
   /**
-   * Specifies which method should be used for encrypting the Local SSDs attahced to the node.
+   * Specifies which method should be used for encrypting the Local SSDs attached to the node.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -754,7 +754,7 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies which method should be used for encrypting the Local SSDs attahced to the node.
+   * Specifies which method should be used for encrypting the Local SSDs attached to the node.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocalSsdEncryptionMode() {
@@ -762,7 +762,7 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies which method should be used for encrypting the Local SSDs attahced to the node.
+   * Specifies which method should be used for encrypting the Local SSDs attached to the node.
    * @param localSsdEncryptionMode localSsdEncryptionMode or {@code null} for none
    */
   public NodeConfig setLocalSsdEncryptionMode(java.lang.String localSsdEncryptionMode) {

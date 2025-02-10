@@ -54,7 +54,7 @@ public final class MasterAuthorizedNetworksConfig extends com.google.api.client.
   private java.lang.Boolean enabled;
 
   /**
-   * Whether master is accessbile via Google Compute Engine Public IP addresses.
+   * Whether master is accessible via Google Compute Engine Public IP addresses.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -104,7 +104,7 @@ public final class MasterAuthorizedNetworksConfig extends com.google.api.client.
   }
 
   /**
-   * Whether master is accessbile via Google Compute Engine Public IP addresses.
+   * Whether master is accessible via Google Compute Engine Public IP addresses.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getGcpPublicCidrsAccessEnabled() {
@@ -112,7 +112,7 @@ public final class MasterAuthorizedNetworksConfig extends com.google.api.client.
   }
 
   /**
-   * Whether master is accessbile via Google Compute Engine Public IP addresses.
+   * Whether master is accessible via Google Compute Engine Public IP addresses.
    * @param gcpPublicCidrsAccessEnabled gcpPublicCidrsAccessEnabled or {@code null} for none
    */
   public MasterAuthorizedNetworksConfig setGcpPublicCidrsAccessEnabled(java.lang.Boolean gcpPublicCidrsAccessEnabled) {

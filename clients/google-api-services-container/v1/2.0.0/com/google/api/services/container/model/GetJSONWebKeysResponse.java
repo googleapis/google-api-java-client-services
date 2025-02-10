@@ -17,7 +17,7 @@
 package com.google.api.services.container.model;
 
 /**
- * GetJSONWebKeysResponse is a valid JSON Web Key Set as specififed in rfc 7517
+ * GetJSONWebKeysResponse is a valid JSON Web Key Set as specified in rfc 7517
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Kubernetes Engine API. For a detailed explanation

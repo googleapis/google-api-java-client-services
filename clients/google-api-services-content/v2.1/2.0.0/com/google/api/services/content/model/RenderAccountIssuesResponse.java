@@ -31,10 +31,8 @@ package com.google.api.services.content.model;
 public final class RenderAccountIssuesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The Alternate Dispute Resolution (ADR) contains a link to a page where merchant can bring their
-   * appeal to an [external body](https://support.google.com/european-union-digital-services-act-
-   * redress-options/answer/13535501). If the ADR is present, it MUST be available to the merchant
-   * on the page that shows the list with their account issues.
+   * Alternate Dispute Resolution (ADR) is deprecated. Use
+   * `prerendered_out_of_court_dispute_settlement` instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,10 +54,8 @@ public final class RenderAccountIssuesResponse extends com.google.api.client.jso
   }
 
   /**
-   * The Alternate Dispute Resolution (ADR) contains a link to a page where merchant can bring their
-   * appeal to an [external body](https://support.google.com/european-union-digital-services-act-
-   * redress-options/answer/13535501). If the ADR is present, it MUST be available to the merchant
-   * on the page that shows the list with their account issues.
+   * Alternate Dispute Resolution (ADR) is deprecated. Use
+   * `prerendered_out_of_court_dispute_settlement` instead.
    * @return value or {@code null} for none
    */
   public AlternateDisputeResolution getAlternateDisputeResolution() {
@@ -67,10 +63,8 @@ public final class RenderAccountIssuesResponse extends com.google.api.client.jso
   }
 
   /**
-   * The Alternate Dispute Resolution (ADR) contains a link to a page where merchant can bring their
-   * appeal to an [external body](https://support.google.com/european-union-digital-services-act-
-   * redress-options/answer/13535501). If the ADR is present, it MUST be available to the merchant
-   * on the page that shows the list with their account issues.
+   * Alternate Dispute Resolution (ADR) is deprecated. Use
+   * `prerendered_out_of_court_dispute_settlement` instead.
    * @param alternateDisputeResolution alternateDisputeResolution or {@code null} for none
    */
   public RenderAccountIssuesResponse setAlternateDisputeResolution(AlternateDisputeResolution alternateDisputeResolution) {

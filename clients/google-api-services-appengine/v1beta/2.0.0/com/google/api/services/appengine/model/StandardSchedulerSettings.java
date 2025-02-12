@@ -30,7 +30,7 @@ package com.google.api.services.appengine.model;
 public final class StandardSchedulerSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * Maximum number of instances to run for this version. Set to zero to disable max_instances
+   * Maximum number of instances to run for this version. Set to 2147483647 to disable max_instances
    * configuration.
    * The value may be {@code null}.
    */
@@ -60,7 +60,7 @@ public final class StandardSchedulerSettings extends com.google.api.client.json.
   private java.lang.Double targetThroughputUtilization;
 
   /**
-   * Maximum number of instances to run for this version. Set to zero to disable max_instances
+   * Maximum number of instances to run for this version. Set to 2147483647 to disable max_instances
    * configuration.
    * @return value or {@code null} for none
    */
@@ -69,7 +69,7 @@ public final class StandardSchedulerSettings extends com.google.api.client.json.
   }
 
   /**
-   * Maximum number of instances to run for this version. Set to zero to disable max_instances
+   * Maximum number of instances to run for this version. Set to 2147483647 to disable max_instances
    * configuration.
    * @param maxInstances maxInstances or {@code null} for none
    */

@@ -37,6 +37,13 @@ public final class GoogleCloudAiplatformV1PointwiseMetricSpec extends com.google
   private java.lang.String metricPromptTemplate;
 
   /**
+   * Optional. System instructions for pointwise metric.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String systemInstruction;
+
+  /**
    * Required. Metric prompt template for pointwise metric.
    * @return value or {@code null} for none
    */
@@ -50,6 +57,23 @@ public final class GoogleCloudAiplatformV1PointwiseMetricSpec extends com.google
    */
   public GoogleCloudAiplatformV1PointwiseMetricSpec setMetricPromptTemplate(java.lang.String metricPromptTemplate) {
     this.metricPromptTemplate = metricPromptTemplate;
+    return this;
+  }
+
+  /**
+   * Optional. System instructions for pointwise metric.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSystemInstruction() {
+    return systemInstruction;
+  }
+
+  /**
+   * Optional. System instructions for pointwise metric.
+   * @param systemInstruction systemInstruction or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1PointwiseMetricSpec setSystemInstruction(java.lang.String systemInstruction) {
+    this.systemInstruction = systemInstruction;
     return this;
   }
 

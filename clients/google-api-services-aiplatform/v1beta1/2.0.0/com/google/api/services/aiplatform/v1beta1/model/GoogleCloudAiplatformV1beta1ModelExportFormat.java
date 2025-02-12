@@ -42,7 +42,7 @@ public final class GoogleCloudAiplatformV1beta1ModelExportFormat extends com.goo
    * tpu/) devices. * `tf-saved-model` A tensorflow model in SavedModel format. * `tf-js` A
    * [TensorFlow.js](https://www.tensorflow.org/js) model that can be used in the browser and in
    * Node.js using JavaScript. * `core-ml` Used for iOS mobile devices. * `custom-trained` A Model
-   * that was uploaded or trained by custom code.
+   * that was uploaded or trained by custom code. * `genie` A tuned Model Garden model.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,7 +71,7 @@ public final class GoogleCloudAiplatformV1beta1ModelExportFormat extends com.goo
    * tpu/) devices. * `tf-saved-model` A tensorflow model in SavedModel format. * `tf-js` A
    * [TensorFlow.js](https://www.tensorflow.org/js) model that can be used in the browser and in
    * Node.js using JavaScript. * `core-ml` Used for iOS mobile devices. * `custom-trained` A Model
-   * that was uploaded or trained by custom code.
+   * that was uploaded or trained by custom code. * `genie` A tuned Model Garden model.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -84,7 +84,7 @@ public final class GoogleCloudAiplatformV1beta1ModelExportFormat extends com.goo
    * tpu/) devices. * `tf-saved-model` A tensorflow model in SavedModel format. * `tf-js` A
    * [TensorFlow.js](https://www.tensorflow.org/js) model that can be used in the browser and in
    * Node.js using JavaScript. * `core-ml` Used for iOS mobile devices. * `custom-trained` A Model
-   * that was uploaded or trained by custom code.
+   * that was uploaded or trained by custom code. * `genie` A tuned Model Garden model.
    * @param id id or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ModelExportFormat setId(java.lang.String id) {

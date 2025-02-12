@@ -144,6 +144,13 @@ public final class GoogleCloudAiplatformV1beta1DeployedModel extends com.google.
   private GoogleCloudAiplatformV1beta1PrivateEndpoints privateEndpoints;
 
   /**
+   * Options for configuring rolling deployments.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1RolloutOptions rolloutOptions;
+
+  /**
    * The service account that the DeployedModel's container runs as. Specify the email address of
    * the service account. If this service account is not specified, the container runs as a service
    * account that doesn't have access to the resource project. Users deploying the Model must have
@@ -447,6 +454,23 @@ public final class GoogleCloudAiplatformV1beta1DeployedModel extends com.google.
    */
   public GoogleCloudAiplatformV1beta1DeployedModel setPrivateEndpoints(GoogleCloudAiplatformV1beta1PrivateEndpoints privateEndpoints) {
     this.privateEndpoints = privateEndpoints;
+    return this;
+  }
+
+  /**
+   * Options for configuring rolling deployments.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RolloutOptions getRolloutOptions() {
+    return rolloutOptions;
+  }
+
+  /**
+   * Options for configuring rolling deployments.
+   * @param rolloutOptions rolloutOptions or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1DeployedModel setRolloutOptions(GoogleCloudAiplatformV1beta1RolloutOptions rolloutOptions) {
+    this.rolloutOptions = rolloutOptions;
     return this;
   }
 

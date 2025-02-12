@@ -4369,6 +4369,29 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
           return this;
         }
 
+        /**
+         * Optional. If set to true, any versions of this service will also be deleted. (Otherwise,
+         * the request will only succeed if the service has no versions.)
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean force;
+
+        /** Optional. If set to true, any versions of this service will also be deleted. (Otherwise, the
+       request will only succeed if the service has no versions.)
+         */
+        public java.lang.Boolean getForce() {
+          return force;
+        }
+
+        /**
+         * Optional. If set to true, any versions of this service will also be deleted. (Otherwise,
+         * the request will only succeed if the service has no versions.)
+         */
+        public Delete setForce(java.lang.Boolean force) {
+          this.force = force;
+          return this;
+        }
+
         @Override
         public Delete set(String parameterName, Object value) {
           return (Delete) super.set(parameterName, value);
@@ -7138,6 +7161,29 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
             /** Part of `name`. See documentation of `projectsId`. */
             public Delete setServicesId(java.lang.String servicesId) {
               this.servicesId = servicesId;
+              return this;
+            }
+
+            /**
+             * Optional. If set to true, any versions of this service will also be deleted.
+             * (Otherwise, the request will only succeed if the service has no versions.)
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean force;
+
+            /** Optional. If set to true, any versions of this service will also be deleted. (Otherwise, the
+           request will only succeed if the service has no versions.)
+             */
+            public java.lang.Boolean getForce() {
+              return force;
+            }
+
+            /**
+             * Optional. If set to true, any versions of this service will also be deleted.
+             * (Otherwise, the request will only succeed if the service has no versions.)
+             */
+            public Delete setForce(java.lang.Boolean force) {
+              this.force = force;
               return this;
             }
 

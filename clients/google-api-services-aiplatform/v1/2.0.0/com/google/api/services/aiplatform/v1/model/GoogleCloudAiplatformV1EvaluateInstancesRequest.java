@@ -30,6 +30,13 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1EvaluateInstancesRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Autorater config used for evaluation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1AutoraterConfig autoraterConfig;
+
+  /**
    * Instances and metric spec for bleu metric.
    * The value may be {@code null}.
    */
@@ -246,6 +253,23 @@ public final class GoogleCloudAiplatformV1EvaluateInstancesRequest extends com.g
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1TrajectorySingleToolUseInput trajectorySingleToolUseInput;
+
+  /**
+   * Optional. Autorater config used for evaluation.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1AutoraterConfig getAutoraterConfig() {
+    return autoraterConfig;
+  }
+
+  /**
+   * Optional. Autorater config used for evaluation.
+   * @param autoraterConfig autoraterConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1EvaluateInstancesRequest setAutoraterConfig(GoogleCloudAiplatformV1AutoraterConfig autoraterConfig) {
+    this.autoraterConfig = autoraterConfig;
+    return this;
+  }
 
   /**
    * Instances and metric spec for bleu metric.

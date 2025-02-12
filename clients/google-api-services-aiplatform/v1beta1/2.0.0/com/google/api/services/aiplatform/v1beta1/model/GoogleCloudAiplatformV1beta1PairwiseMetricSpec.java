@@ -30,11 +30,66 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1PairwiseMetricSpec extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The field name of the baseline response.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String baselineResponseFieldName;
+
+  /**
+   * Optional. The field name of the candidate response.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String candidateResponseFieldName;
+
+  /**
    * Required. Metric prompt template for pairwise metric.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String metricPromptTemplate;
+
+  /**
+   * Optional. System instructions for pairwise metric.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String systemInstruction;
+
+  /**
+   * Optional. The field name of the baseline response.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBaselineResponseFieldName() {
+    return baselineResponseFieldName;
+  }
+
+  /**
+   * Optional. The field name of the baseline response.
+   * @param baselineResponseFieldName baselineResponseFieldName or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1PairwiseMetricSpec setBaselineResponseFieldName(java.lang.String baselineResponseFieldName) {
+    this.baselineResponseFieldName = baselineResponseFieldName;
+    return this;
+  }
+
+  /**
+   * Optional. The field name of the candidate response.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCandidateResponseFieldName() {
+    return candidateResponseFieldName;
+  }
+
+  /**
+   * Optional. The field name of the candidate response.
+   * @param candidateResponseFieldName candidateResponseFieldName or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1PairwiseMetricSpec setCandidateResponseFieldName(java.lang.String candidateResponseFieldName) {
+    this.candidateResponseFieldName = candidateResponseFieldName;
+    return this;
+  }
 
   /**
    * Required. Metric prompt template for pairwise metric.
@@ -50,6 +105,23 @@ public final class GoogleCloudAiplatformV1beta1PairwiseMetricSpec extends com.go
    */
   public GoogleCloudAiplatformV1beta1PairwiseMetricSpec setMetricPromptTemplate(java.lang.String metricPromptTemplate) {
     this.metricPromptTemplate = metricPromptTemplate;
+    return this;
+  }
+
+  /**
+   * Optional. System instructions for pairwise metric.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSystemInstruction() {
+    return systemInstruction;
+  }
+
+  /**
+   * Optional. System instructions for pairwise metric.
+   * @param systemInstruction systemInstruction or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1PairwiseMetricSpec setSystemInstruction(java.lang.String systemInstruction) {
+    this.systemInstruction = systemInstruction;
     return this;
   }
 

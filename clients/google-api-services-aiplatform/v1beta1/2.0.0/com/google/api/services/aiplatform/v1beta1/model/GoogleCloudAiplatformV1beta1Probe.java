@@ -38,6 +38,14 @@ public final class GoogleCloudAiplatformV1beta1Probe extends com.google.api.clie
   private GoogleCloudAiplatformV1beta1ProbeExecAction exec;
 
   /**
+   * Number of consecutive failures before the probe is considered failed. Defaults to 3. Minimum
+   * value is 1. Maps to Kubernetes probe argument 'failureThreshold'.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer failureThreshold;
+
+  /**
    * GrpcAction probes the health of a container by sending a gRPC request.
    * The value may be {@code null}.
    */
@@ -52,12 +60,28 @@ public final class GoogleCloudAiplatformV1beta1Probe extends com.google.api.clie
   private GoogleCloudAiplatformV1beta1ProbeHttpGetAction httpGet;
 
   /**
+   * Number of seconds to wait before starting the probe. Defaults to 0. Minimum value is 0. Maps to
+   * Kubernetes probe argument 'initialDelaySeconds'.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer initialDelaySeconds;
+
+  /**
    * How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1. Must be
    * less than timeout_seconds. Maps to Kubernetes probe argument 'periodSeconds'.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer periodSeconds;
+
+  /**
+   * Number of consecutive successes before the probe is considered successful. Defaults to 1.
+   * Minimum value is 1. Maps to Kubernetes probe argument 'successThreshold'.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer successThreshold;
 
   /**
    * TcpSocketAction probes the health of a container by opening a TCP socket connection.
@@ -88,6 +112,25 @@ public final class GoogleCloudAiplatformV1beta1Probe extends com.google.api.clie
    */
   public GoogleCloudAiplatformV1beta1Probe setExec(GoogleCloudAiplatformV1beta1ProbeExecAction exec) {
     this.exec = exec;
+    return this;
+  }
+
+  /**
+   * Number of consecutive failures before the probe is considered failed. Defaults to 3. Minimum
+   * value is 1. Maps to Kubernetes probe argument 'failureThreshold'.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getFailureThreshold() {
+    return failureThreshold;
+  }
+
+  /**
+   * Number of consecutive failures before the probe is considered failed. Defaults to 3. Minimum
+   * value is 1. Maps to Kubernetes probe argument 'failureThreshold'.
+   * @param failureThreshold failureThreshold or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Probe setFailureThreshold(java.lang.Integer failureThreshold) {
+    this.failureThreshold = failureThreshold;
     return this;
   }
 
@@ -126,6 +169,25 @@ public final class GoogleCloudAiplatformV1beta1Probe extends com.google.api.clie
   }
 
   /**
+   * Number of seconds to wait before starting the probe. Defaults to 0. Minimum value is 0. Maps to
+   * Kubernetes probe argument 'initialDelaySeconds'.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getInitialDelaySeconds() {
+    return initialDelaySeconds;
+  }
+
+  /**
+   * Number of seconds to wait before starting the probe. Defaults to 0. Minimum value is 0. Maps to
+   * Kubernetes probe argument 'initialDelaySeconds'.
+   * @param initialDelaySeconds initialDelaySeconds or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Probe setInitialDelaySeconds(java.lang.Integer initialDelaySeconds) {
+    this.initialDelaySeconds = initialDelaySeconds;
+    return this;
+  }
+
+  /**
    * How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1. Must be
    * less than timeout_seconds. Maps to Kubernetes probe argument 'periodSeconds'.
    * @return value or {@code null} for none
@@ -141,6 +203,25 @@ public final class GoogleCloudAiplatformV1beta1Probe extends com.google.api.clie
    */
   public GoogleCloudAiplatformV1beta1Probe setPeriodSeconds(java.lang.Integer periodSeconds) {
     this.periodSeconds = periodSeconds;
+    return this;
+  }
+
+  /**
+   * Number of consecutive successes before the probe is considered successful. Defaults to 1.
+   * Minimum value is 1. Maps to Kubernetes probe argument 'successThreshold'.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getSuccessThreshold() {
+    return successThreshold;
+  }
+
+  /**
+   * Number of consecutive successes before the probe is considered successful. Defaults to 1.
+   * Minimum value is 1. Maps to Kubernetes probe argument 'successThreshold'.
+   * @param successThreshold successThreshold or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Probe setSuccessThreshold(java.lang.Integer successThreshold) {
+    this.successThreshold = successThreshold;
     return this;
   }
 

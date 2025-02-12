@@ -57,6 +57,13 @@ public final class GoogleCloudAiplatformV1beta1MachineSpec extends com.google.ap
   private java.lang.String machineType;
 
   /**
+   * Optional. Immutable. The number of nodes per replica for multihost GPU deployments.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer multihostGpuNodeCount;
+
+  /**
    * Optional. Immutable. Configuration controlling how this resource pool consumes reservation.
    * The value may be {@code null}.
    */
@@ -131,6 +138,23 @@ public final class GoogleCloudAiplatformV1beta1MachineSpec extends com.google.ap
    */
   public GoogleCloudAiplatformV1beta1MachineSpec setMachineType(java.lang.String machineType) {
     this.machineType = machineType;
+    return this;
+  }
+
+  /**
+   * Optional. Immutable. The number of nodes per replica for multihost GPU deployments.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMultihostGpuNodeCount() {
+    return multihostGpuNodeCount;
+  }
+
+  /**
+   * Optional. Immutable. The number of nodes per replica for multihost GPU deployments.
+   * @param multihostGpuNodeCount multihostGpuNodeCount or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1MachineSpec setMultihostGpuNodeCount(java.lang.Integer multihostGpuNodeCount) {
+    this.multihostGpuNodeCount = multihostGpuNodeCount;
     return this;
   }
 

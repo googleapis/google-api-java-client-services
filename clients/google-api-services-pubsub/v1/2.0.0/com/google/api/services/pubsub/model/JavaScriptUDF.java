@@ -30,15 +30,15 @@ package com.google.api.services.pubsub.model;
 public final class JavaScriptUDF extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. JavaScript code that contains a function `function_name` with the below signature: *
-   * * Transforms a Pub/Sub message. * @return {(Object)>|null)} - To * filter a message, return
-   * `null`. To transform a message return a map * with the following keys: * - (required) 'data' :
-   * {string} * - (optional) 'attributes' : {Object} * Returning empty `attributes` will remove all
-   * attributes from the * message. * * @param {(Object)>} Pub/Sub * message. Keys: * - (required)
-   * 'data' : {string} * - (required) 'attributes' : {Object} * * @param {Object} metadata - Pub/Sub
-   * message metadata. * Keys: * - (required) 'message_id' : {string} * - (optional) 'publish_time':
-   * {string} YYYY-MM-DDTHH:MM:SSZ format * - (optional) 'ordering_key': {string}  function
-   * (message, metadata) { }
+   * Required. JavaScript code that contains a function `function_name` with the below signature:
+   * ``` * * Transforms a Pub/Sub message. * @return {(Object)>|null)} - To * filter a message,
+   * return `null`. To transform a message return a map * with the following keys: * - (required)
+   * 'data' : {string} * - (optional) 'attributes' : {Object} * Returning empty `attributes` will
+   * remove all attributes from the * message. * * @param {(Object)>} Pub/Sub * message. Keys: * -
+   * (required) 'data' : {string} * - (required) 'attributes' : {Object} * * @param {Object}
+   * metadata - Pub/Sub message metadata. * Keys: * - (required) 'message_id' : {string} * -
+   * (optional) 'publish_time': {string} YYYY-MM-DDTHH:MM:SSZ format * - (optional) 'ordering_key':
+   * {string}  function (message, metadata) { } ```
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,15 +52,15 @@ public final class JavaScriptUDF extends com.google.api.client.json.GenericJson 
   private java.lang.String functionName;
 
   /**
-   * Required. JavaScript code that contains a function `function_name` with the below signature: *
-   * * Transforms a Pub/Sub message. * @return {(Object)>|null)} - To * filter a message, return
-   * `null`. To transform a message return a map * with the following keys: * - (required) 'data' :
-   * {string} * - (optional) 'attributes' : {Object} * Returning empty `attributes` will remove all
-   * attributes from the * message. * * @param {(Object)>} Pub/Sub * message. Keys: * - (required)
-   * 'data' : {string} * - (required) 'attributes' : {Object} * * @param {Object} metadata - Pub/Sub
-   * message metadata. * Keys: * - (required) 'message_id' : {string} * - (optional) 'publish_time':
-   * {string} YYYY-MM-DDTHH:MM:SSZ format * - (optional) 'ordering_key': {string}  function
-   * (message, metadata) { }
+   * Required. JavaScript code that contains a function `function_name` with the below signature:
+   * ``` * * Transforms a Pub/Sub message. * @return {(Object)>|null)} - To * filter a message,
+   * return `null`. To transform a message return a map * with the following keys: * - (required)
+   * 'data' : {string} * - (optional) 'attributes' : {Object} * Returning empty `attributes` will
+   * remove all attributes from the * message. * * @param {(Object)>} Pub/Sub * message. Keys: * -
+   * (required) 'data' : {string} * - (required) 'attributes' : {Object} * * @param {Object}
+   * metadata - Pub/Sub message metadata. * Keys: * - (required) 'message_id' : {string} * -
+   * (optional) 'publish_time': {string} YYYY-MM-DDTHH:MM:SSZ format * - (optional) 'ordering_key':
+   * {string}  function (message, metadata) { } ```
    * @return value or {@code null} for none
    */
   public java.lang.String getCode() {
@@ -68,15 +68,15 @@ public final class JavaScriptUDF extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Required. JavaScript code that contains a function `function_name` with the below signature: *
-   * * Transforms a Pub/Sub message. * @return {(Object)>|null)} - To * filter a message, return
-   * `null`. To transform a message return a map * with the following keys: * - (required) 'data' :
-   * {string} * - (optional) 'attributes' : {Object} * Returning empty `attributes` will remove all
-   * attributes from the * message. * * @param {(Object)>} Pub/Sub * message. Keys: * - (required)
-   * 'data' : {string} * - (required) 'attributes' : {Object} * * @param {Object} metadata - Pub/Sub
-   * message metadata. * Keys: * - (required) 'message_id' : {string} * - (optional) 'publish_time':
-   * {string} YYYY-MM-DDTHH:MM:SSZ format * - (optional) 'ordering_key': {string}  function
-   * (message, metadata) { }
+   * Required. JavaScript code that contains a function `function_name` with the below signature:
+   * ``` * * Transforms a Pub/Sub message. * @return {(Object)>|null)} - To * filter a message,
+   * return `null`. To transform a message return a map * with the following keys: * - (required)
+   * 'data' : {string} * - (optional) 'attributes' : {Object} * Returning empty `attributes` will
+   * remove all attributes from the * message. * * @param {(Object)>} Pub/Sub * message. Keys: * -
+   * (required) 'data' : {string} * - (required) 'attributes' : {Object} * * @param {Object}
+   * metadata - Pub/Sub message metadata. * Keys: * - (required) 'message_id' : {string} * -
+   * (optional) 'publish_time': {string} YYYY-MM-DDTHH:MM:SSZ format * - (optional) 'ordering_key':
+   * {string}  function (message, metadata) { } ```
    * @param code code or {@code null} for none
    */
   public JavaScriptUDF setCode(java.lang.String code) {

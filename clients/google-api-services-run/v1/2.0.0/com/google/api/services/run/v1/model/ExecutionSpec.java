@@ -31,10 +31,10 @@ public final class ExecutionSpec extends com.google.api.client.json.GenericJson 
 
   /**
    * Optional. Specifies the maximum desired number of tasks the execution should run at given time.
-   * Must be <= task_count. When the job is run, if this field is 0 or unset, the maximum possible
-   * value will be used for that execution. The actual number of tasks running in steady state will
-   * be less than this number when there are fewer tasks waiting to be completed, i.e. when the work
-   * left to do is less than max parallelism.
+   * When the job is run, if this field is 0 or unset, the maximum possible value will be used for
+   * that execution. The actual number of tasks running in steady state will be less than this
+   * number when there are fewer tasks waiting to be completed, i.e. when the work left to do is
+   * less than max parallelism.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,10 +58,10 @@ public final class ExecutionSpec extends com.google.api.client.json.GenericJson 
 
   /**
    * Optional. Specifies the maximum desired number of tasks the execution should run at given time.
-   * Must be <= task_count. When the job is run, if this field is 0 or unset, the maximum possible
-   * value will be used for that execution. The actual number of tasks running in steady state will
-   * be less than this number when there are fewer tasks waiting to be completed, i.e. when the work
-   * left to do is less than max parallelism.
+   * When the job is run, if this field is 0 or unset, the maximum possible value will be used for
+   * that execution. The actual number of tasks running in steady state will be less than this
+   * number when there are fewer tasks waiting to be completed, i.e. when the work left to do is
+   * less than max parallelism.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getParallelism() {
@@ -70,10 +70,10 @@ public final class ExecutionSpec extends com.google.api.client.json.GenericJson 
 
   /**
    * Optional. Specifies the maximum desired number of tasks the execution should run at given time.
-   * Must be <= task_count. When the job is run, if this field is 0 or unset, the maximum possible
-   * value will be used for that execution. The actual number of tasks running in steady state will
-   * be less than this number when there are fewer tasks waiting to be completed, i.e. when the work
-   * left to do is less than max parallelism.
+   * When the job is run, if this field is 0 or unset, the maximum possible value will be used for
+   * that execution. The actual number of tasks running in steady state will be less than this
+   * number when there are fewer tasks waiting to be completed, i.e. when the work left to do is
+   * less than max parallelism.
    * @param parallelism parallelism or {@code null} for none
    */
   public ExecutionSpec setParallelism(java.lang.Integer parallelism) {

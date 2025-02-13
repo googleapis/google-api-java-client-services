@@ -1560,6 +1560,29 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
             return this;
           }
 
+          /**
+           * Optional. If set to true, the response will return partial results when some regions
+           * are unreachable. If set to false, the response will fail if any region is unreachable.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean returnPartialSuccess;
+
+          /** Optional. If set to true, the response will return partial results when some regions are
+         unreachable. If set to false, the response will fail if any region is unreachable.
+           */
+          public java.lang.Boolean getReturnPartialSuccess() {
+            return returnPartialSuccess;
+          }
+
+          /**
+           * Optional. If set to true, the response will return partial results when some regions
+           * are unreachable. If set to false, the response will fail if any region is unreachable.
+           */
+          public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
+            this.returnPartialSuccess = returnPartialSuccess;
+            return this;
+          }
+
           @Override
           public List set(String parameterName, Object value) {
             return (List) super.set(parameterName, value);
@@ -3566,6 +3589,31 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
             /** Page start. */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
+              return this;
+            }
+
+            /**
+             * Optional. If set to true, the response will return partial results when some regions
+             * are unreachable. If set to false, the response will fail if any region is
+             * unreachable.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean returnPartialSuccess;
+
+            /** Optional. If set to true, the response will return partial results when some regions are
+           unreachable. If set to false, the response will fail if any region is unreachable.
+             */
+            public java.lang.Boolean getReturnPartialSuccess() {
+              return returnPartialSuccess;
+            }
+
+            /**
+             * Optional. If set to true, the response will return partial results when some regions
+             * are unreachable. If set to false, the response will fail if any region is
+             * unreachable.
+             */
+            public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
+              this.returnPartialSuccess = returnPartialSuccess;
               return this;
             }
 

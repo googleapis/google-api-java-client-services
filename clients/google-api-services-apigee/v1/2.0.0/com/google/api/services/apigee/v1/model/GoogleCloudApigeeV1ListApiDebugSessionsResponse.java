@@ -38,11 +38,18 @@ public final class GoogleCloudApigeeV1ListApiDebugSessionsResponse extends com.g
   private java.lang.String nextPageToken;
 
   /**
-   * Session info that includes debug session ID and the first transaction creation timestamp.
+   * Session info that includes debug session ID, environment ID, api proxy revision ID and the
+   * first transaction creation timestamp.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<GoogleCloudApigeeV1Session> sessions;
+  private java.util.List<GoogleCloudApigeeV1ApiDebugSession> sessions;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudApigeeV1ApiDebugSession used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudApigeeV1ApiDebugSession.class);
+  }
 
   /**
    * Page token that you can include in a ListApiDebugSessionsRequest to retrieve the next page. If
@@ -64,18 +71,20 @@ public final class GoogleCloudApigeeV1ListApiDebugSessionsResponse extends com.g
   }
 
   /**
-   * Session info that includes debug session ID and the first transaction creation timestamp.
+   * Session info that includes debug session ID, environment ID, api proxy revision ID and the
+   * first transaction creation timestamp.
    * @return value or {@code null} for none
    */
-  public java.util.List<GoogleCloudApigeeV1Session> getSessions() {
+  public java.util.List<GoogleCloudApigeeV1ApiDebugSession> getSessions() {
     return sessions;
   }
 
   /**
-   * Session info that includes debug session ID and the first transaction creation timestamp.
+   * Session info that includes debug session ID, environment ID, api proxy revision ID and the
+   * first transaction creation timestamp.
    * @param sessions sessions or {@code null} for none
    */
-  public GoogleCloudApigeeV1ListApiDebugSessionsResponse setSessions(java.util.List<GoogleCloudApigeeV1Session> sessions) {
+  public GoogleCloudApigeeV1ListApiDebugSessionsResponse setSessions(java.util.List<GoogleCloudApigeeV1ApiDebugSession> sessions) {
     this.sessions = sessions;
     return this;
   }

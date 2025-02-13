@@ -30,11 +30,51 @@ package com.google.api.services.sqladmin.model;
 public final class InstancesRestoreBackupRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * The name of the backup that's used to restore a Cloud SQL instance: Format: projects/{project-
+   * id}/backups/{backup-uid}. Only one of restore_backup_context, backup, backupdr_backup can be
+   * passed to the input.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String backup;
+
+  /**
    * Parameters required to perform the restore backup operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private RestoreBackupContext restoreBackupContext;
+
+  /**
+   * Optional. By using this parameter, Cloud SQL overrides any instance settings that it stored
+   * with the instance settings that you want to restore. You can't change the Instance's major
+   * database version and you can only increase the disk size. You can use this field to restore new
+   * instances only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DatabaseInstance restoreInstanceSettings;
+
+  /**
+   * The name of the backup that's used to restore a Cloud SQL instance: Format: projects/{project-
+   * id}/backups/{backup-uid}. Only one of restore_backup_context, backup, backupdr_backup can be
+   * passed to the input.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBackup() {
+    return backup;
+  }
+
+  /**
+   * The name of the backup that's used to restore a Cloud SQL instance: Format: projects/{project-
+   * id}/backups/{backup-uid}. Only one of restore_backup_context, backup, backupdr_backup can be
+   * passed to the input.
+   * @param backup backup or {@code null} for none
+   */
+  public InstancesRestoreBackupRequest setBackup(java.lang.String backup) {
+    this.backup = backup;
+    return this;
+  }
 
   /**
    * Parameters required to perform the restore backup operation.
@@ -50,6 +90,29 @@ public final class InstancesRestoreBackupRequest extends com.google.api.client.j
    */
   public InstancesRestoreBackupRequest setRestoreBackupContext(RestoreBackupContext restoreBackupContext) {
     this.restoreBackupContext = restoreBackupContext;
+    return this;
+  }
+
+  /**
+   * Optional. By using this parameter, Cloud SQL overrides any instance settings that it stored
+   * with the instance settings that you want to restore. You can't change the Instance's major
+   * database version and you can only increase the disk size. You can use this field to restore new
+   * instances only.
+   * @return value or {@code null} for none
+   */
+  public DatabaseInstance getRestoreInstanceSettings() {
+    return restoreInstanceSettings;
+  }
+
+  /**
+   * Optional. By using this parameter, Cloud SQL overrides any instance settings that it stored
+   * with the instance settings that you want to restore. You can't change the Instance's major
+   * database version and you can only increase the disk size. You can use this field to restore new
+   * instances only.
+   * @param restoreInstanceSettings restoreInstanceSettings or {@code null} for none
+   */
+  public InstancesRestoreBackupRequest setRestoreInstanceSettings(DatabaseInstance restoreInstanceSettings) {
+    this.restoreInstanceSettings = restoreInstanceSettings;
     return this;
   }
 

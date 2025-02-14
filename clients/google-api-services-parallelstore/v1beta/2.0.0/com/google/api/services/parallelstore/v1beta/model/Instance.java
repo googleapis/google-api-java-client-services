@@ -52,8 +52,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * Optional. The deployment type of the instance. Allowed values are: * `SCRATCH`: the instance is
-   * a scratch instance. * `PERSISTENT`: the instance is a persistent instance.
+   * Optional. Immutable. The deployment type of the instance. Allowed values are: * `SCRATCH`: the
+   * instance is a scratch instance. * `PERSISTENT`: the instance is a persistent instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,8 +67,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * Optional. Stripe level for directories. Allowed values are: * `DIRECTORY_STRIPE_LEVEL_MIN`:
-   * recommended when directories contain a small number of files. *
+   * Optional. Immutable. Stripe level for directories. Allowed values are: *
+   * `DIRECTORY_STRIPE_LEVEL_MIN`: recommended when directories contain a small number of files. *
    * `DIRECTORY_STRIPE_LEVEL_BALANCED`: balances performance for workloads involving a mix of small
    * and large directories. * `DIRECTORY_STRIPE_LEVEL_MAX`: recommended for directories with a large
    * number of files.
@@ -87,10 +87,10 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String effectiveReservedIpRange;
 
   /**
-   * Optional. Stripe level for files. Allowed values are: * `FILE_STRIPE_LEVEL_MIN`: offers the
-   * best performance for small size files. * `FILE_STRIPE_LEVEL_BALANCED`: balances performance for
-   * workloads involving a mix of small and large files. * `FILE_STRIPE_LEVEL_MAX`: higher
-   * throughput performance for larger files.
+   * Optional. Immutable. Stripe level for files. Allowed values are: * `FILE_STRIPE_LEVEL_MIN`:
+   * offers the best performance for small size files. * `FILE_STRIPE_LEVEL_BALANCED`: balances
+   * performance for workloads involving a mix of small and large files. * `FILE_STRIPE_LEVEL_MAX`:
+   * higher throughput performance for larger files.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -199,8 +199,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The deployment type of the instance. Allowed values are: * `SCRATCH`: the instance is
-   * a scratch instance. * `PERSISTENT`: the instance is a persistent instance.
+   * Optional. Immutable. The deployment type of the instance. Allowed values are: * `SCRATCH`: the
+   * instance is a scratch instance. * `PERSISTENT`: the instance is a persistent instance.
    * @return value or {@code null} for none
    */
   public java.lang.String getDeploymentType() {
@@ -208,8 +208,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The deployment type of the instance. Allowed values are: * `SCRATCH`: the instance is
-   * a scratch instance. * `PERSISTENT`: the instance is a persistent instance.
+   * Optional. Immutable. The deployment type of the instance. Allowed values are: * `SCRATCH`: the
+   * instance is a scratch instance. * `PERSISTENT`: the instance is a persistent instance.
    * @param deploymentType deploymentType or {@code null} for none
    */
   public Instance setDeploymentType(java.lang.String deploymentType) {
@@ -235,8 +235,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Stripe level for directories. Allowed values are: * `DIRECTORY_STRIPE_LEVEL_MIN`:
-   * recommended when directories contain a small number of files. *
+   * Optional. Immutable. Stripe level for directories. Allowed values are: *
+   * `DIRECTORY_STRIPE_LEVEL_MIN`: recommended when directories contain a small number of files. *
    * `DIRECTORY_STRIPE_LEVEL_BALANCED`: balances performance for workloads involving a mix of small
    * and large directories. * `DIRECTORY_STRIPE_LEVEL_MAX`: recommended for directories with a large
    * number of files.
@@ -247,8 +247,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Stripe level for directories. Allowed values are: * `DIRECTORY_STRIPE_LEVEL_MIN`:
-   * recommended when directories contain a small number of files. *
+   * Optional. Immutable. Stripe level for directories. Allowed values are: *
+   * `DIRECTORY_STRIPE_LEVEL_MIN`: recommended when directories contain a small number of files. *
    * `DIRECTORY_STRIPE_LEVEL_BALANCED`: balances performance for workloads involving a mix of small
    * and large directories. * `DIRECTORY_STRIPE_LEVEL_MAX`: recommended for directories with a large
    * number of files.
@@ -281,10 +281,10 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Stripe level for files. Allowed values are: * `FILE_STRIPE_LEVEL_MIN`: offers the
-   * best performance for small size files. * `FILE_STRIPE_LEVEL_BALANCED`: balances performance for
-   * workloads involving a mix of small and large files. * `FILE_STRIPE_LEVEL_MAX`: higher
-   * throughput performance for larger files.
+   * Optional. Immutable. Stripe level for files. Allowed values are: * `FILE_STRIPE_LEVEL_MIN`:
+   * offers the best performance for small size files. * `FILE_STRIPE_LEVEL_BALANCED`: balances
+   * performance for workloads involving a mix of small and large files. * `FILE_STRIPE_LEVEL_MAX`:
+   * higher throughput performance for larger files.
    * @return value or {@code null} for none
    */
   public java.lang.String getFileStripeLevel() {
@@ -292,10 +292,10 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Stripe level for files. Allowed values are: * `FILE_STRIPE_LEVEL_MIN`: offers the
-   * best performance for small size files. * `FILE_STRIPE_LEVEL_BALANCED`: balances performance for
-   * workloads involving a mix of small and large files. * `FILE_STRIPE_LEVEL_MAX`: higher
-   * throughput performance for larger files.
+   * Optional. Immutable. Stripe level for files. Allowed values are: * `FILE_STRIPE_LEVEL_MIN`:
+   * offers the best performance for small size files. * `FILE_STRIPE_LEVEL_BALANCED`: balances
+   * performance for workloads involving a mix of small and large files. * `FILE_STRIPE_LEVEL_MAX`:
+   * higher throughput performance for larger files.
    * @param fileStripeLevel fileStripeLevel or {@code null} for none
    */
   public Instance setFileStripeLevel(java.lang.String fileStripeLevel) {

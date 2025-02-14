@@ -42,7 +42,8 @@ public final class GoogleCloudDatacatalogLineageV1Origin extends com.google.api.
 
   /**
    * Type of the source. Use of a source_type other than `CUSTOM` for process creation or updating
-   * is highly discouraged, and may be restricted in the future without notice.
+   * is highly discouraged. It might be restricted in the future without notice. There will be
+   * increase in cost if you use any of the source types other than `CUSTOM`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,7 +76,8 @@ public final class GoogleCloudDatacatalogLineageV1Origin extends com.google.api.
 
   /**
    * Type of the source. Use of a source_type other than `CUSTOM` for process creation or updating
-   * is highly discouraged, and may be restricted in the future without notice.
+   * is highly discouraged. It might be restricted in the future without notice. There will be
+   * increase in cost if you use any of the source types other than `CUSTOM`.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceType() {
@@ -84,7 +86,8 @@ public final class GoogleCloudDatacatalogLineageV1Origin extends com.google.api.
 
   /**
    * Type of the source. Use of a source_type other than `CUSTOM` for process creation or updating
-   * is highly discouraged, and may be restricted in the future without notice.
+   * is highly discouraged. It might be restricted in the future without notice. There will be
+   * increase in cost if you use any of the source types other than `CUSTOM`.
    * @param sourceType sourceType or {@code null} for none
    */
   public GoogleCloudDatacatalogLineageV1Origin setSourceType(java.lang.String sourceType) {

@@ -86,6 +86,14 @@ public final class GoogleCloudDialogflowCxV3beta1Flow extends com.google.api.cli
   private GoogleCloudDialogflowCxV3beta1KnowledgeConnectorSettings knowledgeConnectorSettings;
 
   /**
+   * Indicates whether the flow is locked for changes. If the flow is locked, modifications to the
+   * flow will be rejected.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean locked;
+
+  /**
    * Optional. Multi-lingual agent settings for this flow.
    * The value may be {@code null}.
    */
@@ -226,6 +234,25 @@ public final class GoogleCloudDialogflowCxV3beta1Flow extends com.google.api.cli
    */
   public GoogleCloudDialogflowCxV3beta1Flow setKnowledgeConnectorSettings(GoogleCloudDialogflowCxV3beta1KnowledgeConnectorSettings knowledgeConnectorSettings) {
     this.knowledgeConnectorSettings = knowledgeConnectorSettings;
+    return this;
+  }
+
+  /**
+   * Indicates whether the flow is locked for changes. If the flow is locked, modifications to the
+   * flow will be rejected.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getLocked() {
+    return locked;
+  }
+
+  /**
+   * Indicates whether the flow is locked for changes. If the flow is locked, modifications to the
+   * flow will be rejected.
+   * @param locked locked or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1Flow setLocked(java.lang.Boolean locked) {
+    this.locked = locked;
     return this;
   }
 

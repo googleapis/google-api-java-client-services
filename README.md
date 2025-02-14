@@ -153,7 +153,7 @@ packages on [Maven Central][maven-search].
 | Dialogflow API | [v2](clients/google-api-services-dialogflow/v2), [v2beta1](clients/google-api-services-dialogflow/v2beta1), [v3](clients/google-api-services-dialogflow/v3), [v3beta1](clients/google-api-services-dialogflow/v3beta1) |
 | Digital Asset Links API | [v1](clients/google-api-services-digitalassetlinks/v1) |
 | Discovery Engine API | [v1](clients/google-api-services-discoveryengine/v1), [v1alpha](clients/google-api-services-discoveryengine/v1alpha), [v1beta](clients/google-api-services-discoveryengine/v1beta) |
-| Display & Video 360 API | [v2](clients/google-api-services-displayvideo/v2), [v3](clients/google-api-services-displayvideo/v3) |
+| Display & Video 360 API | [v2](clients/google-api-services-displayvideo/v2), [v3](clients/google-api-services-displayvideo/v3), [v4](clients/google-api-services-displayvideo/v4) |
 | Document AI Warehouse API | [v1](clients/google-api-services-contentwarehouse/v1) |
 | DoubleClick Bid Manager API | [v2](clients/google-api-services-doubleclickbidmanager/v2) |
 | Drive Activity API | [v2](clients/google-api-services-driveactivity/v2) |
@@ -294,6 +294,7 @@ packages on [Maven Central][maven-search].
 | Travel Impact Model API | [v1](clients/google-api-services-travelimpactmodel/v1) |
 | VM Migration API | [v1](clients/google-api-services-vmmigration/v1), [v1alpha1](clients/google-api-services-vmmigration/v1alpha1) |
 | VMware Engine API | [v1](clients/google-api-services-vmwareengine/v1) |
+| Vertex AI API | [v1](clients/google-api-services-aiplatform/v1), [v1beta1](clients/google-api-services-aiplatform/v1beta1) |
 | Vertex AI Search for commerce API | [v2](clients/google-api-services-retail/v2), [v2alpha](clients/google-api-services-retail/v2alpha), [v2beta](clients/google-api-services-retail/v2beta) |
 | Web Fonts Developer API | [v1](clients/google-api-services-webfonts/v1) |
 | Web Risk API | [v1](clients/google-api-services-webrisk/v1) |

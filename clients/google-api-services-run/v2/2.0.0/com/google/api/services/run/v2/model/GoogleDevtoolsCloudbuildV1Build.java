@@ -76,6 +76,13 @@ public final class GoogleDevtoolsCloudbuildV1Build extends com.google.api.client
   private String createTime;
 
   /**
+   * Optional. Dependencies that the Cloud Build worker will fetch before executing user steps.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleDevtoolsCloudbuildV1Dependency> dependencies;
+
+  /**
    * Output only. Contains information about the build when status=FAILURE.
    * The value may be {@code null}.
    */
@@ -356,6 +363,23 @@ public final class GoogleDevtoolsCloudbuildV1Build extends com.google.api.client
    */
   public GoogleDevtoolsCloudbuildV1Build setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Optional. Dependencies that the Cloud Build worker will fetch before executing user steps.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleDevtoolsCloudbuildV1Dependency> getDependencies() {
+    return dependencies;
+  }
+
+  /**
+   * Optional. Dependencies that the Cloud Build worker will fetch before executing user steps.
+   * @param dependencies dependencies or {@code null} for none
+   */
+  public GoogleDevtoolsCloudbuildV1Build setDependencies(java.util.List<GoogleDevtoolsCloudbuildV1Dependency> dependencies) {
+    this.dependencies = dependencies;
     return this;
   }
 

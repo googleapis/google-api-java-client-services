@@ -31,6 +31,13 @@ package com.google.api.services.paymentsresellersubscription.v1.model;
 public final class GoogleCloudPaymentsResellerSubscriptionV1ProductPayload extends com.google.api.client.json.GenericJson {
 
   /**
+   * Payload specific to Google Home products.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudPaymentsResellerSubscriptionV1GoogleHomePayload googleHomePayload;
+
+  /**
    * Product-specific payloads. Payload specific to Google One products.
    * The value may be {@code null}.
    */
@@ -43,6 +50,23 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1ProductPayload exten
    */
   @com.google.api.client.util.Key
   private GoogleCloudPaymentsResellerSubscriptionV1YoutubePayload youtubePayload;
+
+  /**
+   * Payload specific to Google Home products.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudPaymentsResellerSubscriptionV1GoogleHomePayload getGoogleHomePayload() {
+    return googleHomePayload;
+  }
+
+  /**
+   * Payload specific to Google Home products.
+   * @param googleHomePayload googleHomePayload or {@code null} for none
+   */
+  public GoogleCloudPaymentsResellerSubscriptionV1ProductPayload setGoogleHomePayload(GoogleCloudPaymentsResellerSubscriptionV1GoogleHomePayload googleHomePayload) {
+    this.googleHomePayload = googleHomePayload;
+    return this;
+  }
 
   /**
    * Product-specific payloads. Payload specific to Google One products.

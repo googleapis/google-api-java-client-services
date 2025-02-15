@@ -116,7 +116,7 @@ public final class GoogleCloudEventarcV1PipelineDestinationHttpEndpoint extends 
   private java.lang.String messageBindingTemplate;
 
   /**
-   * Required. The URI of the HTTP enpdoint. The value must be a RFC2396 URI string. Examples:
+   * Required. The URI of the HTTP endpoint. The value must be a RFC2396 URI string. Examples:
    * `https://svc.us-central1.p.local:8080/route`. Only the HTTPS protocol is supported.
    * The value may be {@code null}.
    */
@@ -299,7 +299,7 @@ public final class GoogleCloudEventarcV1PipelineDestinationHttpEndpoint extends 
   }
 
   /**
-   * Required. The URI of the HTTP enpdoint. The value must be a RFC2396 URI string. Examples:
+   * Required. The URI of the HTTP endpoint. The value must be a RFC2396 URI string. Examples:
    * `https://svc.us-central1.p.local:8080/route`. Only the HTTPS protocol is supported.
    * @return value or {@code null} for none
    */
@@ -308,7 +308,7 @@ public final class GoogleCloudEventarcV1PipelineDestinationHttpEndpoint extends 
   }
 
   /**
-   * Required. The URI of the HTTP enpdoint. The value must be a RFC2396 URI string. Examples:
+   * Required. The URI of the HTTP endpoint. The value must be a RFC2396 URI string. Examples:
    * `https://svc.us-central1.p.local:8080/route`. Only the HTTPS protocol is supported.
    * @param uri uri or {@code null} for none
    */

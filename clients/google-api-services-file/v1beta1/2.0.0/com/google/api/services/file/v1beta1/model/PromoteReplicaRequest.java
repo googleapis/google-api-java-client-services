@@ -29,6 +29,36 @@ package com.google.api.services.file.v1beta1.model;
 @SuppressWarnings("javadoc")
 public final class PromoteReplicaRequest extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Optional. The resource name of the peer instance to promote, in the format
+   * `projects/{project_id}/locations/{location_id}/instances/{instance_id}`. The peer instance is
+   * required if the operation is called on an active instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String peerInstance;
+
+  /**
+   * Optional. The resource name of the peer instance to promote, in the format
+   * `projects/{project_id}/locations/{location_id}/instances/{instance_id}`. The peer instance is
+   * required if the operation is called on an active instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPeerInstance() {
+    return peerInstance;
+  }
+
+  /**
+   * Optional. The resource name of the peer instance to promote, in the format
+   * `projects/{project_id}/locations/{location_id}/instances/{instance_id}`. The peer instance is
+   * required if the operation is called on an active instance.
+   * @param peerInstance peerInstance or {@code null} for none
+   */
+  public PromoteReplicaRequest setPeerInstance(java.lang.String peerInstance) {
+    this.peerInstance = peerInstance;
+    return this;
+  }
+
   @Override
   public PromoteReplicaRequest set(String fieldName, Object value) {
     return (PromoteReplicaRequest) super.set(fieldName, value);

@@ -2599,6 +2599,138 @@ public class CloudAlloyDBAdmin extends com.google.api.client.googleapis.services
           }
         }
         /**
+         * Imports data to the cluster. Imperative only.
+         *
+         * Create a request for the method "clusters.import".
+         *
+         * This request holds the parameters needed by the alloydb server.  After setting any optional
+         * parameters, call the {@link CloudAlloyDBAdminImport#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param name Required. The resource name of the cluster.
+         * @param content the {@link com.google.api.services.alloydb.v1alpha.model.ImportClusterRequest}
+         * @return the request
+         */
+        public CloudAlloyDBAdminImport alloydbImport(java.lang.String name, com.google.api.services.alloydb.v1alpha.model.ImportClusterRequest content) throws java.io.IOException {
+          CloudAlloyDBAdminImport result = new CloudAlloyDBAdminImport(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class CloudAlloyDBAdminImport extends CloudAlloyDBAdminRequest<com.google.api.services.alloydb.v1alpha.model.Operation> {
+
+          private static final String REST_PATH = "v1alpha/{+name}:import";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/clusters/[^/]+$");
+
+          /**
+           * Imports data to the cluster. Imperative only.
+           *
+           * Create a request for the method "clusters.import".
+           *
+           * This request holds the parameters needed by the the alloydb server.  After setting any optional
+           * parameters, call the {@link CloudAlloyDBAdminImport#execute()} method to invoke the remote
+           * operation. <p> {@link CloudAlloyDBAdminImport#initialize(com.google.api.client.googleapis.servi
+           * ces.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the cluster.
+           * @param content the {@link com.google.api.services.alloydb.v1alpha.model.ImportClusterRequest}
+           * @since 1.13
+           */
+          protected CloudAlloyDBAdminImport(java.lang.String name, com.google.api.services.alloydb.v1alpha.model.ImportClusterRequest content) {
+            super(CloudAlloyDBAdmin.this, "POST", REST_PATH, content, com.google.api.services.alloydb.v1alpha.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/clusters/[^/]+$");
+            }
+          }
+
+          @Override
+          public CloudAlloyDBAdminImport set$Xgafv(java.lang.String $Xgafv) {
+            return (CloudAlloyDBAdminImport) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public CloudAlloyDBAdminImport setAccessToken(java.lang.String accessToken) {
+            return (CloudAlloyDBAdminImport) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public CloudAlloyDBAdminImport setAlt(java.lang.String alt) {
+            return (CloudAlloyDBAdminImport) super.setAlt(alt);
+          }
+
+          @Override
+          public CloudAlloyDBAdminImport setCallback(java.lang.String callback) {
+            return (CloudAlloyDBAdminImport) super.setCallback(callback);
+          }
+
+          @Override
+          public CloudAlloyDBAdminImport setFields(java.lang.String fields) {
+            return (CloudAlloyDBAdminImport) super.setFields(fields);
+          }
+
+          @Override
+          public CloudAlloyDBAdminImport setKey(java.lang.String key) {
+            return (CloudAlloyDBAdminImport) super.setKey(key);
+          }
+
+          @Override
+          public CloudAlloyDBAdminImport setOauthToken(java.lang.String oauthToken) {
+            return (CloudAlloyDBAdminImport) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public CloudAlloyDBAdminImport setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (CloudAlloyDBAdminImport) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public CloudAlloyDBAdminImport setQuotaUser(java.lang.String quotaUser) {
+            return (CloudAlloyDBAdminImport) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public CloudAlloyDBAdminImport setUploadType(java.lang.String uploadType) {
+            return (CloudAlloyDBAdminImport) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public CloudAlloyDBAdminImport setUploadProtocol(java.lang.String uploadProtocol) {
+            return (CloudAlloyDBAdminImport) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The resource name of the cluster. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the cluster.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The resource name of the cluster. */
+          public CloudAlloyDBAdminImport setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/clusters/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public CloudAlloyDBAdminImport set(String parameterName, Object value) {
+            return (CloudAlloyDBAdminImport) super.set(parameterName, value);
+          }
+        }
+        /**
          * Lists Clusters in a given project and location.
          *
          * Create a request for the method "clusters.list".

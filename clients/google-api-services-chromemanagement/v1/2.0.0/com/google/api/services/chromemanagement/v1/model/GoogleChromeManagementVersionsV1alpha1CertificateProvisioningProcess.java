@@ -63,6 +63,20 @@ public final class GoogleChromeManagementVersionsV1alpha1CertificateProvisioning
   private java.lang.String failureMessage;
 
   /**
+   * Output only. The CA connection is a generic CA connection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleChromeManagementVersionsV1alpha1GenericCaConnection genericCaConnection;
+
+  /**
+   * Output only. The profile is a generic certificate provisioning profile.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleChromeManagementVersionsV1alpha1GenericProfile genericProfile;
+
+  /**
    * Output only. The issued certificate for this `CertificateProvisioningProcess` in PEM format.
    * The value may be {@code null}.
    */
@@ -209,6 +223,40 @@ public final class GoogleChromeManagementVersionsV1alpha1CertificateProvisioning
    */
   public GoogleChromeManagementVersionsV1alpha1CertificateProvisioningProcess setFailureMessage(java.lang.String failureMessage) {
     this.failureMessage = failureMessage;
+    return this;
+  }
+
+  /**
+   * Output only. The CA connection is a generic CA connection.
+   * @return value or {@code null} for none
+   */
+  public GoogleChromeManagementVersionsV1alpha1GenericCaConnection getGenericCaConnection() {
+    return genericCaConnection;
+  }
+
+  /**
+   * Output only. The CA connection is a generic CA connection.
+   * @param genericCaConnection genericCaConnection or {@code null} for none
+   */
+  public GoogleChromeManagementVersionsV1alpha1CertificateProvisioningProcess setGenericCaConnection(GoogleChromeManagementVersionsV1alpha1GenericCaConnection genericCaConnection) {
+    this.genericCaConnection = genericCaConnection;
+    return this;
+  }
+
+  /**
+   * Output only. The profile is a generic certificate provisioning profile.
+   * @return value or {@code null} for none
+   */
+  public GoogleChromeManagementVersionsV1alpha1GenericProfile getGenericProfile() {
+    return genericProfile;
+  }
+
+  /**
+   * Output only. The profile is a generic certificate provisioning profile.
+   * @param genericProfile genericProfile or {@code null} for none
+   */
+  public GoogleChromeManagementVersionsV1alpha1CertificateProvisioningProcess setGenericProfile(GoogleChromeManagementVersionsV1alpha1GenericProfile genericProfile) {
+    this.genericProfile = genericProfile;
     return this;
   }
 

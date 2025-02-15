@@ -31,35 +31,11 @@ package com.google.api.services.firebaseappdistribution.v1alpha.model;
 public final class GoogleFirebaseAppdistroV1alphaAiInstructions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Describes the app to give the AI some context
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String appDescription;
-
-  /**
    * Required. Steps to be accomplished by the AI
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleFirebaseAppdistroV1alphaAiStep> steps;
-
-  /**
-   * Optional. Describes the app to give the AI some context
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getAppDescription() {
-    return appDescription;
-  }
-
-  /**
-   * Optional. Describes the app to give the AI some context
-   * @param appDescription appDescription or {@code null} for none
-   */
-  public GoogleFirebaseAppdistroV1alphaAiInstructions setAppDescription(java.lang.String appDescription) {
-    this.appDescription = appDescription;
-    return this;
-  }
 
   /**
    * Required. Steps to be accomplished by the AI

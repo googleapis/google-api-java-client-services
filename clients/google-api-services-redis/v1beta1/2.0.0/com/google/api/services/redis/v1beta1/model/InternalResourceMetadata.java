@@ -47,6 +47,13 @@ public final class InternalResourceMetadata extends com.google.api.client.json.G
   private BackupRun backupRun;
 
   /**
+   * Whether deletion protection is enabled for this internal resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isDeletionProtectionEnabled;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,6 +104,23 @@ public final class InternalResourceMetadata extends com.google.api.client.json.G
    */
   public InternalResourceMetadata setBackupRun(BackupRun backupRun) {
     this.backupRun = backupRun;
+    return this;
+  }
+
+  /**
+   * Whether deletion protection is enabled for this internal resource.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsDeletionProtectionEnabled() {
+    return isDeletionProtectionEnabled;
+  }
+
+  /**
+   * Whether deletion protection is enabled for this internal resource.
+   * @param isDeletionProtectionEnabled isDeletionProtectionEnabled or {@code null} for none
+   */
+  public InternalResourceMetadata setIsDeletionProtectionEnabled(java.lang.Boolean isDeletionProtectionEnabled) {
+    this.isDeletionProtectionEnabled = isDeletionProtectionEnabled;
     return this;
   }
 

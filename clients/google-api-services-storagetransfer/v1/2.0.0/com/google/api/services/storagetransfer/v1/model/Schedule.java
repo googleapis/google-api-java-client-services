@@ -33,10 +33,10 @@ public final class Schedule extends com.google.api.client.json.GenericJson {
    * The time in UTC that no further transfer operations are scheduled. Combined with
    * schedule_end_date, `end_time_of_day` specifies the end date and time for starting new transfer
    * operations. This field must be greater than or equal to the timestamp corresponding to the
-   * combintation of schedule_start_date and start_time_of_day, and is subject to the following: *
-   * If `end_time_of_day` is not set and `schedule_end_date` is set, then a default value of
-   * `23:59:59` is used for `end_time_of_day`. * If `end_time_of_day` is set and `schedule_end_date`
-   * is not set, then INVALID_ARGUMENT is returned.
+   * combination of schedule_start_date and start_time_of_day, and is subject to the following: * If
+   * `end_time_of_day` is not set and `schedule_end_date` is set, then a default value of `23:59:59`
+   * is used for `end_time_of_day`. * If `end_time_of_day` is set and `schedule_end_date` is not
+   * set, then INVALID_ARGUMENT is returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,10 +91,10 @@ public final class Schedule extends com.google.api.client.json.GenericJson {
    * The time in UTC that no further transfer operations are scheduled. Combined with
    * schedule_end_date, `end_time_of_day` specifies the end date and time for starting new transfer
    * operations. This field must be greater than or equal to the timestamp corresponding to the
-   * combintation of schedule_start_date and start_time_of_day, and is subject to the following: *
-   * If `end_time_of_day` is not set and `schedule_end_date` is set, then a default value of
-   * `23:59:59` is used for `end_time_of_day`. * If `end_time_of_day` is set and `schedule_end_date`
-   * is not set, then INVALID_ARGUMENT is returned.
+   * combination of schedule_start_date and start_time_of_day, and is subject to the following: * If
+   * `end_time_of_day` is not set and `schedule_end_date` is set, then a default value of `23:59:59`
+   * is used for `end_time_of_day`. * If `end_time_of_day` is set and `schedule_end_date` is not
+   * set, then INVALID_ARGUMENT is returned.
    * @return value or {@code null} for none
    */
   public TimeOfDay getEndTimeOfDay() {
@@ -105,10 +105,10 @@ public final class Schedule extends com.google.api.client.json.GenericJson {
    * The time in UTC that no further transfer operations are scheduled. Combined with
    * schedule_end_date, `end_time_of_day` specifies the end date and time for starting new transfer
    * operations. This field must be greater than or equal to the timestamp corresponding to the
-   * combintation of schedule_start_date and start_time_of_day, and is subject to the following: *
-   * If `end_time_of_day` is not set and `schedule_end_date` is set, then a default value of
-   * `23:59:59` is used for `end_time_of_day`. * If `end_time_of_day` is set and `schedule_end_date`
-   * is not set, then INVALID_ARGUMENT is returned.
+   * combination of schedule_start_date and start_time_of_day, and is subject to the following: * If
+   * `end_time_of_day` is not set and `schedule_end_date` is set, then a default value of `23:59:59`
+   * is used for `end_time_of_day`. * If `end_time_of_day` is set and `schedule_end_date` is not
+   * set, then INVALID_ARGUMENT is returned.
    * @param endTimeOfDay endTimeOfDay or {@code null} for none
    */
   public Schedule setEndTimeOfDay(TimeOfDay endTimeOfDay) {

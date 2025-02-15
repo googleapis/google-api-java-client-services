@@ -102,6 +102,12 @@ public final class PackageData extends com.google.api.client.json.GenericJson {
   private java.lang.String hashDigest;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LayerDetails layerDetails;
+
+  /**
    * The list of licenses found that are related to a given package. Note that licenses may also be
    * stored on the BinarySourceInfo. If there is no BinarySourceInfo (because there's no concept of
    * source vs binary), then it will be stored here, while if there are BinarySourceInfos, it will
@@ -297,6 +303,21 @@ public final class PackageData extends com.google.api.client.json.GenericJson {
    */
   public PackageData setHashDigest(java.lang.String hashDigest) {
     this.hashDigest = hashDigest;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public LayerDetails getLayerDetails() {
+    return layerDetails;
+  }
+
+  /**
+   * @param layerDetails layerDetails or {@code null} for none
+   */
+  public PackageData setLayerDetails(LayerDetails layerDetails) {
+    this.layerDetails = layerDetails;
     return this;
   }
 

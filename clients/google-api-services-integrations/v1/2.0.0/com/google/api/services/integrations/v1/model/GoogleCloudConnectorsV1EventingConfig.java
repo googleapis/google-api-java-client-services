@@ -31,7 +31,7 @@ package com.google.api.services.integrations.v1.model;
 public final class GoogleCloudConnectorsV1EventingConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Additional eventing related field values
+   * Optional. Additional eventing related field values
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class GoogleCloudConnectorsV1EventingConfig extends com.google.api.
   }
 
   /**
-   * Auth details for the webhook adapter.
+   * Optional. Auth details for the webhook adapter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +58,14 @@ public final class GoogleCloudConnectorsV1EventingConfig extends com.google.api.
   private GoogleCloudConnectorsV1EventingConfigDeadLetterConfig deadLetterConfig;
 
   /**
-   * Enrichment Enabled.
+   * Optional. Data enrichment configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudConnectorsV1EnrichmentConfig enrichmentConfig;
+
+  /**
+   * Optional. Enrichment Enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,14 +101,14 @@ public final class GoogleCloudConnectorsV1EventingConfig extends com.google.api.
   private GoogleCloudConnectorsV1DestinationConfig proxyDestinationConfig;
 
   /**
-   * Registration endpoint for auto registration.
+   * Optional. Registration endpoint for auto registration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudConnectorsV1DestinationConfig registrationDestinationConfig;
 
   /**
-   * Additional eventing related field values
+   * Optional. Additional eventing related field values
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudConnectorsV1ConfigVariable> getAdditionalVariables() {
@@ -109,7 +116,7 @@ public final class GoogleCloudConnectorsV1EventingConfig extends com.google.api.
   }
 
   /**
-   * Additional eventing related field values
+   * Optional. Additional eventing related field values
    * @param additionalVariables additionalVariables or {@code null} for none
    */
   public GoogleCloudConnectorsV1EventingConfig setAdditionalVariables(java.util.List<GoogleCloudConnectorsV1ConfigVariable> additionalVariables) {
@@ -118,7 +125,7 @@ public final class GoogleCloudConnectorsV1EventingConfig extends com.google.api.
   }
 
   /**
-   * Auth details for the webhook adapter.
+   * Optional. Auth details for the webhook adapter.
    * @return value or {@code null} for none
    */
   public GoogleCloudConnectorsV1AuthConfig getAuthConfig() {
@@ -126,7 +133,7 @@ public final class GoogleCloudConnectorsV1EventingConfig extends com.google.api.
   }
 
   /**
-   * Auth details for the webhook adapter.
+   * Optional. Auth details for the webhook adapter.
    * @param authConfig authConfig or {@code null} for none
    */
   public GoogleCloudConnectorsV1EventingConfig setAuthConfig(GoogleCloudConnectorsV1AuthConfig authConfig) {
@@ -152,7 +159,24 @@ public final class GoogleCloudConnectorsV1EventingConfig extends com.google.api.
   }
 
   /**
-   * Enrichment Enabled.
+   * Optional. Data enrichment configuration.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1EnrichmentConfig getEnrichmentConfig() {
+    return enrichmentConfig;
+  }
+
+  /**
+   * Optional. Data enrichment configuration.
+   * @param enrichmentConfig enrichmentConfig or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1EventingConfig setEnrichmentConfig(GoogleCloudConnectorsV1EnrichmentConfig enrichmentConfig) {
+    this.enrichmentConfig = enrichmentConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Enrichment Enabled.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnrichmentEnabled() {
@@ -160,7 +184,7 @@ public final class GoogleCloudConnectorsV1EventingConfig extends com.google.api.
   }
 
   /**
-   * Enrichment Enabled.
+   * Optional. Enrichment Enabled.
    * @param enrichmentEnabled enrichmentEnabled or {@code null} for none
    */
   public GoogleCloudConnectorsV1EventingConfig setEnrichmentEnabled(java.lang.Boolean enrichmentEnabled) {
@@ -239,7 +263,7 @@ public final class GoogleCloudConnectorsV1EventingConfig extends com.google.api.
   }
 
   /**
-   * Registration endpoint for auto registration.
+   * Optional. Registration endpoint for auto registration.
    * @return value or {@code null} for none
    */
   public GoogleCloudConnectorsV1DestinationConfig getRegistrationDestinationConfig() {
@@ -247,7 +271,7 @@ public final class GoogleCloudConnectorsV1EventingConfig extends com.google.api.
   }
 
   /**
-   * Registration endpoint for auto registration.
+   * Optional. Registration endpoint for auto registration.
    * @param registrationDestinationConfig registrationDestinationConfig or {@code null} for none
    */
   public GoogleCloudConnectorsV1EventingConfig setRegistrationDestinationConfig(GoogleCloudConnectorsV1DestinationConfig registrationDestinationConfig) {

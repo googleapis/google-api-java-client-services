@@ -34,7 +34,6 @@ public final class GoogleCloudAiplatformV1beta1Tool extends com.google.api.clien
 
   /**
    * Optional. CodeExecution tool type. Enables the model to execute code as part of generation.
-   * This field is only used by the Gemini Developer API services.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,7 +82,6 @@ public final class GoogleCloudAiplatformV1beta1Tool extends com.google.api.clien
 
   /**
    * Optional. CodeExecution tool type. Enables the model to execute code as part of generation.
-   * This field is only used by the Gemini Developer API services.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ToolCodeExecution getCodeExecution() {
@@ -92,7 +90,6 @@ public final class GoogleCloudAiplatformV1beta1Tool extends com.google.api.clien
 
   /**
    * Optional. CodeExecution tool type. Enables the model to execute code as part of generation.
-   * This field is only used by the Gemini Developer API services.
    * @param codeExecution codeExecution or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Tool setCodeExecution(GoogleCloudAiplatformV1beta1ToolCodeExecution codeExecution) {

@@ -123,9 +123,7 @@ public final class InsertionOrder extends com.google.api.client.json.GenericJson
   private java.lang.String name;
 
   /**
-   * Optional. The optimization objective of the insertion order. **This field is only available to
-   * allowlisted customers.** If a customer is not allowlisted, this field will be null and attempts
-   * to set it will return an error.
+   * Optional. The optimization objective of the insertion order.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -383,9 +381,7 @@ public final class InsertionOrder extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. The optimization objective of the insertion order. **This field is only available to
-   * allowlisted customers.** If a customer is not allowlisted, this field will be null and attempts
-   * to set it will return an error.
+   * Optional. The optimization objective of the insertion order.
    * @return value or {@code null} for none
    */
   public java.lang.String getOptimizationObjective() {
@@ -393,9 +389,7 @@ public final class InsertionOrder extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. The optimization objective of the insertion order. **This field is only available to
-   * allowlisted customers.** If a customer is not allowlisted, this field will be null and attempts
-   * to set it will return an error.
+   * Optional. The optimization objective of the insertion order.
    * @param optimizationObjective optimizationObjective or {@code null} for none
    */
   public InsertionOrder setOptimizationObjective(java.lang.String optimizationObjective) {

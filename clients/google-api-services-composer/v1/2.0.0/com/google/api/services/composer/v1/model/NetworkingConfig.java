@@ -30,7 +30,7 @@ package com.google.api.services.composer.v1.model;
 public final class NetworkingConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Indicates the user requested specifc connection type between Tenant and Customer
+   * Optional. Indicates the user requested specific connection type between Tenant and Customer
    * projects. You cannot set networking connection type in public IP environment.
    * The value may be {@code null}.
    */
@@ -38,7 +38,7 @@ public final class NetworkingConfig extends com.google.api.client.json.GenericJs
   private java.lang.String connectionType;
 
   /**
-   * Optional. Indicates the user requested specifc connection type between Tenant and Customer
+   * Optional. Indicates the user requested specific connection type between Tenant and Customer
    * projects. You cannot set networking connection type in public IP environment.
    * @return value or {@code null} for none
    */
@@ -47,7 +47,7 @@ public final class NetworkingConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. Indicates the user requested specifc connection type between Tenant and Customer
+   * Optional. Indicates the user requested specific connection type between Tenant and Customer
    * projects. You cannot set networking connection type in public IP environment.
    * @param connectionType connectionType or {@code null} for none
    */

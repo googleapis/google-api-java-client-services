@@ -30,11 +30,35 @@ package com.google.api.services.dataportability.v1beta.model;
 public final class InitiatePortabilityArchiveResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * The access type of the Archive job initiated by the API.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String accessType;
+
+  /**
    * The archive job ID that is initiated in the API. This can be used to get the state of the job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String archiveJobId;
+
+  /**
+   * The access type of the Archive job initiated by the API.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAccessType() {
+    return accessType;
+  }
+
+  /**
+   * The access type of the Archive job initiated by the API.
+   * @param accessType accessType or {@code null} for none
+   */
+  public InitiatePortabilityArchiveResponse setAccessType(java.lang.String accessType) {
+    this.accessType = accessType;
+    return this;
+  }
 
   /**
    * The archive job ID that is initiated in the API. This can be used to get the state of the job.

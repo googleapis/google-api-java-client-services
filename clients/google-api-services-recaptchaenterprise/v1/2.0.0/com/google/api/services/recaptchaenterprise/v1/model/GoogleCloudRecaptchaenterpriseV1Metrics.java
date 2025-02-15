@@ -61,7 +61,7 @@ public final class GoogleCloudRecaptchaenterpriseV1Metrics extends com.google.ap
   private java.util.List<GoogleCloudRecaptchaenterpriseV1ScoreMetrics> scoreMetrics;
 
   /**
-   * Inclusive start time aligned to a day (UTC).
+   * Inclusive start time aligned to a day in the America/Los_Angeles (Pacific) timezone.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,7 +125,7 @@ public final class GoogleCloudRecaptchaenterpriseV1Metrics extends com.google.ap
   }
 
   /**
-   * Inclusive start time aligned to a day (UTC).
+   * Inclusive start time aligned to a day in the America/Los_Angeles (Pacific) timezone.
    * @return value or {@code null} for none
    */
   public String getStartTime() {
@@ -133,7 +133,7 @@ public final class GoogleCloudRecaptchaenterpriseV1Metrics extends com.google.ap
   }
 
   /**
-   * Inclusive start time aligned to a day (UTC).
+   * Inclusive start time aligned to a day in the America/Los_Angeles (Pacific) timezone.
    * @param startTime startTime or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1Metrics setStartTime(String startTime) {

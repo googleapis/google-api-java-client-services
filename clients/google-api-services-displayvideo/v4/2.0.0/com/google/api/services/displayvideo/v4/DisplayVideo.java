@@ -688,6 +688,190 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
   }
 
   /**
+   * An accessor for creating requests from the Sdfuploadtasks collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code DisplayVideo displayvideo = new DisplayVideo(...);}
+   *   {@code DisplayVideo.Sdfuploadtasks.List request = displayvideo.sdfuploadtasks().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Sdfuploadtasks sdfuploadtasks() {
+    return new Sdfuploadtasks();
+  }
+
+  /**
+   * The "sdfuploadtasks" collection of methods.
+   */
+  public class Sdfuploadtasks {
+
+    /**
+     * An accessor for creating requests from the Operations collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code DisplayVideo displayvideo = new DisplayVideo(...);}
+     *   {@code DisplayVideo.Operations.List request = displayvideo.operations().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Operations operations() {
+      return new Operations();
+    }
+
+    /**
+     * The "operations" collection of methods.
+     */
+    public class Operations {
+
+      /**
+       * Gets the latest state of an asynchronous SDF download task operation. Clients should poll this
+       * method at intervals of 30 seconds.
+       *
+       * Create a request for the method "operations.get".
+       *
+       * This request holds the parameters needed by the displayvideo server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name The name of the operation resource.
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends DisplayVideoRequest<com.google.api.services.displayvideo.v4.model.Operation> {
+
+        private static final String REST_PATH = "v4/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^sdfuploadtasks/operations/[^/]+$");
+
+        /**
+         * Gets the latest state of an asynchronous SDF download task operation. Clients should poll this
+         * method at intervals of 30 seconds.
+         *
+         * Create a request for the method "operations.get".
+         *
+         * This request holds the parameters needed by the the displayvideo server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name The name of the operation resource.
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(DisplayVideo.this, "GET", REST_PATH, null, com.google.api.services.displayvideo.v4.model.Operation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^sdfuploadtasks/operations/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** The name of the operation resource. */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** The name of the operation resource.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** The name of the operation resource. */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^sdfuploadtasks/operations/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+
+    }
+  }
+
+  /**
    * Builder for {@link DisplayVideo}.
    *
    * <p>
@@ -804,6 +988,11 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
     public Builder setGoogleClientRequestInitializer(
         com.google.api.client.googleapis.services.GoogleClientRequestInitializer googleClientRequestInitializer) {
       return (Builder) super.setGoogleClientRequestInitializer(googleClientRequestInitializer);
+    }
+
+    @Override
+    public Builder setUniverseDomain(String universeDomain) {
+      return (Builder) super.setUniverseDomain(universeDomain);
     }
   }
 }

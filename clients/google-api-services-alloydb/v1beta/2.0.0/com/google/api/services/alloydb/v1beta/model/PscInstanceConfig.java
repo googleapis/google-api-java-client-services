@@ -46,6 +46,15 @@ public final class PscInstanceConfig extends com.google.api.client.json.GenericJ
   private java.lang.String pscDnsName;
 
   /**
+   * Optional. Configurations for setting up PSC interfaces attached to the instance which are used
+   * for outbound connectivity. Only primary instances can have PSC interface attached. Currently we
+   * only support 0 or 1 PSC interface.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<PscInterfaceConfig> pscInterfaceConfigs;
+
+  /**
    * Output only. The service attachment created when Private Service Connect (PSC) is enabled for
    * the instance. The name of the resource will be in the format of
    * `projects//regions//serviceAttachments/`
@@ -89,6 +98,27 @@ public final class PscInstanceConfig extends com.google.api.client.json.GenericJ
    */
   public PscInstanceConfig setPscDnsName(java.lang.String pscDnsName) {
     this.pscDnsName = pscDnsName;
+    return this;
+  }
+
+  /**
+   * Optional. Configurations for setting up PSC interfaces attached to the instance which are used
+   * for outbound connectivity. Only primary instances can have PSC interface attached. Currently we
+   * only support 0 or 1 PSC interface.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<PscInterfaceConfig> getPscInterfaceConfigs() {
+    return pscInterfaceConfigs;
+  }
+
+  /**
+   * Optional. Configurations for setting up PSC interfaces attached to the instance which are used
+   * for outbound connectivity. Only primary instances can have PSC interface attached. Currently we
+   * only support 0 or 1 PSC interface.
+   * @param pscInterfaceConfigs pscInterfaceConfigs or {@code null} for none
+   */
+  public PscInstanceConfig setPscInterfaceConfigs(java.util.List<PscInterfaceConfig> pscInterfaceConfigs) {
+    this.pscInterfaceConfigs = pscInterfaceConfigs;
     return this;
   }
 

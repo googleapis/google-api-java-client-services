@@ -31,7 +31,7 @@ package com.google.api.services.securitycenter.v1beta1.model;
 public final class GoogleCloudSecuritycenterV2OrgPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * The resource name of the org policy. Example:
+   * Identifier. The resource name of the org policy. Example:
    * "organizations/{organization_id}/policies/{constraint_name}"
    * The value may be {@code null}.
    */
@@ -39,7 +39,7 @@ public final class GoogleCloudSecuritycenterV2OrgPolicy extends com.google.api.c
   private java.lang.String name;
 
   /**
-   * The resource name of the org policy. Example:
+   * Identifier. The resource name of the org policy. Example:
    * "organizations/{organization_id}/policies/{constraint_name}"
    * @return value or {@code null} for none
    */
@@ -48,7 +48,7 @@ public final class GoogleCloudSecuritycenterV2OrgPolicy extends com.google.api.c
   }
 
   /**
-   * The resource name of the org policy. Example:
+   * Identifier. The resource name of the org policy. Example:
    * "organizations/{organization_id}/policies/{constraint_name}"
    * @param name name or {@code null} for none
    */

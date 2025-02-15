@@ -57,6 +57,22 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Configuration aspects. This is a repeated field to allow multiple aspects to be configured. The
+   * kind field in each ConfigAspect specifies the type of aspect. The spec field contains the
+   * configuration for that aspect. The schema for the spec field is defined by the backend service
+   * owners.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Aspect> aspects;
+
+  static {
+    // hack to force ProGuard to consider Aspect used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Aspect.class);
+  }
+
+  /**
    * Auth configuration.
    * The value may be {@code null}.
    */
@@ -312,6 +328,29 @@ public final class Service extends com.google.api.client.json.GenericJson {
    */
   public Service setApis(java.util.List<Api> apis) {
     this.apis = apis;
+    return this;
+  }
+
+  /**
+   * Configuration aspects. This is a repeated field to allow multiple aspects to be configured. The
+   * kind field in each ConfigAspect specifies the type of aspect. The spec field contains the
+   * configuration for that aspect. The schema for the spec field is defined by the backend service
+   * owners.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Aspect> getAspects() {
+    return aspects;
+  }
+
+  /**
+   * Configuration aspects. This is a repeated field to allow multiple aspects to be configured. The
+   * kind field in each ConfigAspect specifies the type of aspect. The spec field contains the
+   * configuration for that aspect. The schema for the spec field is defined by the backend service
+   * owners.
+   * @param aspects aspects or {@code null} for none
+   */
+  public Service setAspects(java.util.List<Aspect> aspects) {
+    this.aspects = aspects;
     return this;
   }
 

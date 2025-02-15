@@ -117,6 +117,16 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   private java.lang.String primaryLocation;
 
   /**
+   * Output only. The Disater Recovery(DR) replication status of the reservation. This is only
+   * available for the primary replica of DR/failover reservations and provides information about
+   * the both the staleness of the secondary and the last error encountered while trying to
+   * replicate changes from the primary to the secondary.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ReplicationStatus replicationStatus;
+
+  /**
    * Optional. The current location of the reservation's secondary replica. This field is only set
    * for reservations using the managed disaster recovery feature. Users can set this in create
    * reservation calls to create a failover reservation or in update reservation calls to convert a
@@ -347,6 +357,29 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
    */
   public Reservation setPrimaryLocation(java.lang.String primaryLocation) {
     this.primaryLocation = primaryLocation;
+    return this;
+  }
+
+  /**
+   * Output only. The Disater Recovery(DR) replication status of the reservation. This is only
+   * available for the primary replica of DR/failover reservations and provides information about
+   * the both the staleness of the secondary and the last error encountered while trying to
+   * replicate changes from the primary to the secondary.
+   * @return value or {@code null} for none
+   */
+  public ReplicationStatus getReplicationStatus() {
+    return replicationStatus;
+  }
+
+  /**
+   * Output only. The Disater Recovery(DR) replication status of the reservation. This is only
+   * available for the primary replica of DR/failover reservations and provides information about
+   * the both the staleness of the secondary and the last error encountered while trying to
+   * replicate changes from the primary to the secondary.
+   * @param replicationStatus replicationStatus or {@code null} for none
+   */
+  public Reservation setReplicationStatus(ReplicationStatus replicationStatus) {
+    this.replicationStatus = replicationStatus;
     return this;
   }
 

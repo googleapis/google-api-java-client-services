@@ -82,6 +82,13 @@ public final class ImportContext extends com.google.api.client.json.GenericJson 
   private SqlImportOptions sqlImportOptions;
 
   /**
+   * Optional. Import parameters specific to SQL Server TDE certificates
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TdeImportOptions tdeImportOptions;
+
+  /**
    * Path to the import file in Cloud Storage, in the form `gs://bucketName/fileName`. Compressed
    * gzip files (.gz) are supported when `fileType` is `SQL`. The instance must have write
    * permissions to the bucket and read access to the file.
@@ -212,6 +219,23 @@ public final class ImportContext extends com.google.api.client.json.GenericJson 
    */
   public ImportContext setSqlImportOptions(SqlImportOptions sqlImportOptions) {
     this.sqlImportOptions = sqlImportOptions;
+    return this;
+  }
+
+  /**
+   * Optional. Import parameters specific to SQL Server TDE certificates
+   * @return value or {@code null} for none
+   */
+  public TdeImportOptions getTdeImportOptions() {
+    return tdeImportOptions;
+  }
+
+  /**
+   * Optional. Import parameters specific to SQL Server TDE certificates
+   * @param tdeImportOptions tdeImportOptions or {@code null} for none
+   */
+  public ImportContext setTdeImportOptions(TdeImportOptions tdeImportOptions) {
+    this.tdeImportOptions = tdeImportOptions;
     return this;
   }
 
@@ -461,6 +485,13 @@ public final class ImportContext extends com.google.api.client.json.GenericJson 
       private java.lang.String certPath;
 
       /**
+       * Optional. Whether the imported file remains encrypted.
+       * The value may be {@code null}.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean keepEncrypted;
+
+      /**
        * Password that encrypts the private key
        * The value may be {@code null}.
        */
@@ -492,6 +523,23 @@ public final class ImportContext extends com.google.api.client.json.GenericJson 
        */
       public EncryptionOptions setCertPath(java.lang.String certPath) {
         this.certPath = certPath;
+        return this;
+      }
+
+      /**
+       * Optional. Whether the imported file remains encrypted.
+       * @return value or {@code null} for none
+       */
+      public java.lang.Boolean getKeepEncrypted() {
+        return keepEncrypted;
+      }
+
+      /**
+       * Optional. Whether the imported file remains encrypted.
+       * @param keepEncrypted keepEncrypted or {@code null} for none
+       */
+      public EncryptionOptions setKeepEncrypted(java.lang.Boolean keepEncrypted) {
+        this.keepEncrypted = keepEncrypted;
         return this;
       }
 
@@ -870,6 +918,125 @@ public final class ImportContext extends com.google.api.client.json.GenericJson 
       }
 
     }
+  }
+
+  /**
+   * Optional. Import parameters specific to SQL Server TDE certificates
+   */
+  public static final class TdeImportOptions extends com.google.api.client.json.GenericJson {
+
+    /**
+     * Required. Path to the TDE certificate public key in the form gs://bucketName/fileName. The
+     * instance must have read access to the file. Applicable only for SQL Server instances.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String certificatePath;
+
+    /**
+     * Required. Certificate name. Applicable only for SQL Server instances.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String name;
+
+    /**
+     * Required. Password that encrypts the private key.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String privateKeyPassword;
+
+    /**
+     * Required. Path to the TDE certificate private key in the form gs://bucketName/fileName. The
+     * instance must have read access to the file. Applicable only for SQL Server instances.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String privateKeyPath;
+
+    /**
+     * Required. Path to the TDE certificate public key in the form gs://bucketName/fileName. The
+     * instance must have read access to the file. Applicable only for SQL Server instances.
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getCertificatePath() {
+      return certificatePath;
+    }
+
+    /**
+     * Required. Path to the TDE certificate public key in the form gs://bucketName/fileName. The
+     * instance must have read access to the file. Applicable only for SQL Server instances.
+     * @param certificatePath certificatePath or {@code null} for none
+     */
+    public TdeImportOptions setCertificatePath(java.lang.String certificatePath) {
+      this.certificatePath = certificatePath;
+      return this;
+    }
+
+    /**
+     * Required. Certificate name. Applicable only for SQL Server instances.
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getName() {
+      return name;
+    }
+
+    /**
+     * Required. Certificate name. Applicable only for SQL Server instances.
+     * @param name name or {@code null} for none
+     */
+    public TdeImportOptions setName(java.lang.String name) {
+      this.name = name;
+      return this;
+    }
+
+    /**
+     * Required. Password that encrypts the private key.
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getPrivateKeyPassword() {
+      return privateKeyPassword;
+    }
+
+    /**
+     * Required. Password that encrypts the private key.
+     * @param privateKeyPassword privateKeyPassword or {@code null} for none
+     */
+    public TdeImportOptions setPrivateKeyPassword(java.lang.String privateKeyPassword) {
+      this.privateKeyPassword = privateKeyPassword;
+      return this;
+    }
+
+    /**
+     * Required. Path to the TDE certificate private key in the form gs://bucketName/fileName. The
+     * instance must have read access to the file. Applicable only for SQL Server instances.
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getPrivateKeyPath() {
+      return privateKeyPath;
+    }
+
+    /**
+     * Required. Path to the TDE certificate private key in the form gs://bucketName/fileName. The
+     * instance must have read access to the file. Applicable only for SQL Server instances.
+     * @param privateKeyPath privateKeyPath or {@code null} for none
+     */
+    public TdeImportOptions setPrivateKeyPath(java.lang.String privateKeyPath) {
+      this.privateKeyPath = privateKeyPath;
+      return this;
+    }
+
+    @Override
+    public TdeImportOptions set(String fieldName, Object value) {
+      return (TdeImportOptions) super.set(fieldName, value);
+    }
+
+    @Override
+    public TdeImportOptions clone() {
+      return (TdeImportOptions) super.clone();
+    }
+
   }
 
 }

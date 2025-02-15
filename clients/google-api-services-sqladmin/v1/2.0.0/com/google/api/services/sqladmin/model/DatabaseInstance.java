@@ -139,6 +139,14 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   private GeminiInstanceConfig geminiConfig;
 
   /**
+   * Input only. Determines whether an in-place major version upgrade of replicas happens when an
+   * in-place major version upgrade of a primary instance is initiated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean includeReplicasForMajorVersionUpgrade;
+
+  /**
    * The instance type.
    * The value may be {@code null}.
    */
@@ -650,6 +658,25 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
    */
   public DatabaseInstance setGeminiConfig(GeminiInstanceConfig geminiConfig) {
     this.geminiConfig = geminiConfig;
+    return this;
+  }
+
+  /**
+   * Input only. Determines whether an in-place major version upgrade of replicas happens when an
+   * in-place major version upgrade of a primary instance is initiated.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIncludeReplicasForMajorVersionUpgrade() {
+    return includeReplicasForMajorVersionUpgrade;
+  }
+
+  /**
+   * Input only. Determines whether an in-place major version upgrade of replicas happens when an
+   * in-place major version upgrade of a primary instance is initiated.
+   * @param includeReplicasForMajorVersionUpgrade includeReplicasForMajorVersionUpgrade or {@code null} for none
+   */
+  public DatabaseInstance setIncludeReplicasForMajorVersionUpgrade(java.lang.Boolean includeReplicasForMajorVersionUpgrade) {
+    this.includeReplicasForMajorVersionUpgrade = includeReplicasForMajorVersionUpgrade;
     return this;
   }
 

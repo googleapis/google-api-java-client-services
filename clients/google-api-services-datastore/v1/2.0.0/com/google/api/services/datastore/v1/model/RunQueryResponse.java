@@ -30,7 +30,8 @@ package com.google.api.services.datastore.v1.model;
 public final class RunQueryResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * A batch of query results (always present).
+   * A batch of query results. This is always present unless running a query under explain-only
+   * mode: RunQueryRequest.explain_options was provided and ExplainOptions.analyze was set to false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,7 +61,8 @@ public final class RunQueryResponse extends com.google.api.client.json.GenericJs
   private java.lang.String transaction;
 
   /**
-   * A batch of query results (always present).
+   * A batch of query results. This is always present unless running a query under explain-only
+   * mode: RunQueryRequest.explain_options was provided and ExplainOptions.analyze was set to false.
    * @return value or {@code null} for none
    */
   public QueryResultBatch getBatch() {
@@ -68,7 +70,8 @@ public final class RunQueryResponse extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * A batch of query results (always present).
+   * A batch of query results. This is always present unless running a query under explain-only
+   * mode: RunQueryRequest.explain_options was provided and ExplainOptions.analyze was set to false.
    * @param batch batch or {@code null} for none
    */
   public RunQueryResponse setBatch(QueryResultBatch batch) {

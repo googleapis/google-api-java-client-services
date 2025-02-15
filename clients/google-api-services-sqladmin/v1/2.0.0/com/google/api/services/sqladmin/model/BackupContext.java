@@ -44,6 +44,13 @@ public final class BackupContext extends com.google.api.client.json.GenericJson 
   private java.lang.String kind;
 
   /**
+   * The name of the backup. Format: projects/{project}/backups/{backup}
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String name;
+
+  /**
    * The identifier of the backup.
    * @return value or {@code null} for none
    */
@@ -74,6 +81,23 @@ public final class BackupContext extends com.google.api.client.json.GenericJson 
    */
   public BackupContext setKind(java.lang.String kind) {
     this.kind = kind;
+    return this;
+  }
+
+  /**
+   * The name of the backup. Format: projects/{project}/backups/{backup}
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getName() {
+    return name;
+  }
+
+  /**
+   * The name of the backup. Format: projects/{project}/backups/{backup}
+   * @param name name or {@code null} for none
+   */
+  public BackupContext setName(java.lang.String name) {
+    this.name = name;
     return this;
   }
 

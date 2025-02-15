@@ -81,6 +81,20 @@ public final class SparkWrapperObject extends com.google.api.client.json.Generic
   private JobData jobData;
 
   /**
+   * Native Build Info
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NativeBuildInfoUiData nativeBuildInfoUiData;
+
+  /**
+   * Native SQL Execution Info
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NativeSqlExecutionUiData nativeSqlExecutionUiData;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -279,6 +293,40 @@ public final class SparkWrapperObject extends com.google.api.client.json.Generic
    */
   public SparkWrapperObject setJobData(JobData jobData) {
     this.jobData = jobData;
+    return this;
+  }
+
+  /**
+   * Native Build Info
+   * @return value or {@code null} for none
+   */
+  public NativeBuildInfoUiData getNativeBuildInfoUiData() {
+    return nativeBuildInfoUiData;
+  }
+
+  /**
+   * Native Build Info
+   * @param nativeBuildInfoUiData nativeBuildInfoUiData or {@code null} for none
+   */
+  public SparkWrapperObject setNativeBuildInfoUiData(NativeBuildInfoUiData nativeBuildInfoUiData) {
+    this.nativeBuildInfoUiData = nativeBuildInfoUiData;
+    return this;
+  }
+
+  /**
+   * Native SQL Execution Info
+   * @return value or {@code null} for none
+   */
+  public NativeSqlExecutionUiData getNativeSqlExecutionUiData() {
+    return nativeSqlExecutionUiData;
+  }
+
+  /**
+   * Native SQL Execution Info
+   * @param nativeSqlExecutionUiData nativeSqlExecutionUiData or {@code null} for none
+   */
+  public SparkWrapperObject setNativeSqlExecutionUiData(NativeSqlExecutionUiData nativeSqlExecutionUiData) {
+    this.nativeSqlExecutionUiData = nativeSqlExecutionUiData;
     return this;
   }
 

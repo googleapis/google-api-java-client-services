@@ -8587,24 +8587,24 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
   }
 
   /**
-   * An accessor for creating requests from the Operation collection.
+   * An accessor for creating requests from the Operations collection.
    *
    * <p>The typical use is:</p>
    * <pre>
    *   {@code Drive drive = new Drive(...);}
-   *   {@code Drive.Operation.List request = drive.operation().list(parameters ...)}
+   *   {@code Drive.Operations.List request = drive.operations().list(parameters ...)}
    * </pre>
    *
    * @return the resource collection
    */
-  public Operation operation() {
-    return new Operation();
+  public Operations operations() {
+    return new Operations();
   }
 
   /**
-   * The "operation" collection of methods.
+   * The "operations" collection of methods.
    */
-  public class Operation {
+  public class Operations {
 
     /**
      * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
@@ -8615,7 +8615,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
      * operation with an Operation.error value with a google.rpc.Status.code of `1`, corresponding to
      * `Code.CANCELLED`.
      *
-     * Create a request for the method "operation.cancel".
+     * Create a request for the method "operations.cancel".
      *
      * This request holds the parameters needed by the drive server.  After setting any optional
      * parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
@@ -8631,7 +8631,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
     public class Cancel extends DriveRequest<Void> {
 
-      private static final String REST_PATH = "operation/{name}:cancel";
+      private static final String REST_PATH = "operations/{name}:cancel";
 
       /**
        * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
@@ -8642,7 +8642,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * operation with an Operation.error value with a google.rpc.Status.code of `1`, corresponding to
        * `Code.CANCELLED`.
        *
-       * Create a request for the method "operation.cancel".
+       * Create a request for the method "operations.cancel".
        *
        * This request holds the parameters needed by the the drive server.  After setting any optional
        * parameters, call the {@link Cancel#execute()} method to invoke the remote operation. <p> {@link
@@ -8738,7 +8738,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
      * in the operation result. It does not cancel the operation. If the server doesn't support this
      * method, it returns `google.rpc.Code.UNIMPLEMENTED`.
      *
-     * Create a request for the method "operation.delete".
+     * Create a request for the method "operations.delete".
      *
      * This request holds the parameters needed by the drive server.  After setting any optional
      * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
@@ -8754,14 +8754,14 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
     public class Delete extends DriveRequest<Void> {
 
-      private static final String REST_PATH = "operation/{name}";
+      private static final String REST_PATH = "operations/{name}";
 
       /**
        * Deletes a long-running operation. This method indicates that the client is no longer interested
        * in the operation result. It does not cancel the operation. If the server doesn't support this
        * method, it returns `google.rpc.Code.UNIMPLEMENTED`.
        *
-       * Create a request for the method "operation.delete".
+       * Create a request for the method "operations.delete".
        *
        * This request holds the parameters needed by the the drive server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
@@ -8852,29 +8852,6 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return (Delete) super.set(parameterName, value);
       }
     }
-
-  }
-
-  /**
-   * An accessor for creating requests from the Operations collection.
-   *
-   * <p>The typical use is:</p>
-   * <pre>
-   *   {@code Drive drive = new Drive(...);}
-   *   {@code Drive.Operations.List request = drive.operations().list(parameters ...)}
-   * </pre>
-   *
-   * @return the resource collection
-   */
-  public Operations operations() {
-    return new Operations();
-  }
-
-  /**
-   * The "operations" collection of methods.
-   */
-  public class Operations {
-
     /**
      * Gets the latest state of a long-running operation. Clients can use this method to poll the
      * operation result at intervals as recommended by the API service.

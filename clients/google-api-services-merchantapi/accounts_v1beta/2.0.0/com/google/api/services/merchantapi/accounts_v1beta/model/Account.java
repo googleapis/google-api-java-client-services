@@ -52,7 +52,7 @@ public final class Account extends com.google.api.client.json.GenericJson {
   private java.lang.String accountName;
 
   /**
-   * Whether this account contains adult content.
+   * Optional. Whether this account contains adult content.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -129,7 +129,7 @@ public final class Account extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether this account contains adult content.
+   * Optional. Whether this account contains adult content.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAdultContent() {
@@ -137,7 +137,7 @@ public final class Account extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether this account contains adult content.
+   * Optional. Whether this account contains adult content.
    * @param adultContent adultContent or {@code null} for none
    */
   public Account setAdultContent(java.lang.Boolean adultContent) {

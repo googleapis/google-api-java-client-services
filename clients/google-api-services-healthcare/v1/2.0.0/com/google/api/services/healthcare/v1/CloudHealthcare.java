@@ -15119,6 +15119,29 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                     return this;
                   }
 
+                  /**
+                   * Optional. The viewport setting to use as specified in https://dicom.nema.org/me
+                   * dical/dicom/current/output/chtml/part18/sect_8.3.5.html#sect_8.3.5.1.3
+                   */
+                  @com.google.api.client.util.Key
+                  private java.lang.String viewport;
+
+                  /** Optional. The viewport setting to use as specified in
+                 https://dicom.nema.org/medical/dicom/current/output/chtml/part18/sect_8.3.5.html#sect_8.3.5.1.3
+                   */
+                  public java.lang.String getViewport() {
+                    return viewport;
+                  }
+
+                  /**
+                   * Optional. The viewport setting to use as specified in https://dicom.nema.org/me
+                   * dical/dicom/current/output/chtml/part18/sect_8.3.5.html#sect_8.3.5.1.3
+                   */
+                  public RetrieveRendered setViewport(java.lang.String viewport) {
+                    this.viewport = viewport;
+                    return this;
+                  }
+
                   @Override
                   public RetrieveRendered set(String parameterName, Object value) {
                     return (RetrieveRendered) super.set(parameterName, value);
@@ -15555,6 +15578,29 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
                             "^studies/[^/]+/series/[^/]+/instances/[^/]+/frames/[^/]+/rendered$");
                       }
                       this.dicomWebPath = dicomWebPath;
+                      return this;
+                    }
+
+                    /**
+                     * Optional. The viewport setting to use as specified in https://dicom.nema.org/
+                     * medical/dicom/current/output/chtml/part18/sect_8.3.5.html#sect_8.3.5.1.3
+                     */
+                    @com.google.api.client.util.Key
+                    private java.lang.String viewport;
+
+                    /** Optional. The viewport setting to use as specified in
+                   https://dicom.nema.org/medical/dicom/current/output/chtml/part18/sect_8.3.5.html#sect_8.3.5.1.3
+                     */
+                    public java.lang.String getViewport() {
+                      return viewport;
+                    }
+
+                    /**
+                     * Optional. The viewport setting to use as specified in https://dicom.nema.org/
+                     * medical/dicom/current/output/chtml/part18/sect_8.3.5.html#sect_8.3.5.1.3
+                     */
+                    public RetrieveRendered setViewport(java.lang.String viewport) {
+                      this.viewport = viewport;
                       return this;
                     }
 

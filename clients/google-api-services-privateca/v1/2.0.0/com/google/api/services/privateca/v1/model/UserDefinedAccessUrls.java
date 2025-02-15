@@ -32,7 +32,8 @@ public final class UserDefinedAccessUrls extends com.google.api.client.json.Gene
 
   /**
    * Optional. A list of URLs where the issuer CA certificate may be downloaded, which appears in
-   * the "Authority Information Access" extension in the certificate.
+   * the "Authority Information Access" extension in the certificate. If specified, the default GCS
+   * URLs will be omitted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,7 +41,8 @@ public final class UserDefinedAccessUrls extends com.google.api.client.json.Gene
 
   /**
    * Optional. A list of URLs where to obtain CRL information, i.e. the DistributionPoint.fullName
-   * described by https://tools.ietf.org/html/rfc5280#section-4.2.1.13
+   * described by https://tools.ietf.org/html/rfc5280#section-4.2.1.13. If specified, the default
+   * GCS URLs will be omitted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,7 +50,8 @@ public final class UserDefinedAccessUrls extends com.google.api.client.json.Gene
 
   /**
    * Optional. A list of URLs where the issuer CA certificate may be downloaded, which appears in
-   * the "Authority Information Access" extension in the certificate.
+   * the "Authority Information Access" extension in the certificate. If specified, the default GCS
+   * URLs will be omitted.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAiaIssuingCertificateUrls() {
@@ -57,7 +60,8 @@ public final class UserDefinedAccessUrls extends com.google.api.client.json.Gene
 
   /**
    * Optional. A list of URLs where the issuer CA certificate may be downloaded, which appears in
-   * the "Authority Information Access" extension in the certificate.
+   * the "Authority Information Access" extension in the certificate. If specified, the default GCS
+   * URLs will be omitted.
    * @param aiaIssuingCertificateUrls aiaIssuingCertificateUrls or {@code null} for none
    */
   public UserDefinedAccessUrls setAiaIssuingCertificateUrls(java.util.List<java.lang.String> aiaIssuingCertificateUrls) {
@@ -67,7 +71,8 @@ public final class UserDefinedAccessUrls extends com.google.api.client.json.Gene
 
   /**
    * Optional. A list of URLs where to obtain CRL information, i.e. the DistributionPoint.fullName
-   * described by https://tools.ietf.org/html/rfc5280#section-4.2.1.13
+   * described by https://tools.ietf.org/html/rfc5280#section-4.2.1.13. If specified, the default
+   * GCS URLs will be omitted.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getCrlAccessUrls() {
@@ -76,7 +81,8 @@ public final class UserDefinedAccessUrls extends com.google.api.client.json.Gene
 
   /**
    * Optional. A list of URLs where to obtain CRL information, i.e. the DistributionPoint.fullName
-   * described by https://tools.ietf.org/html/rfc5280#section-4.2.1.13
+   * described by https://tools.ietf.org/html/rfc5280#section-4.2.1.13. If specified, the default
+   * GCS URLs will be omitted.
    * @param crlAccessUrls crlAccessUrls or {@code null} for none
    */
   public UserDefinedAccessUrls setCrlAccessUrls(java.util.List<java.lang.String> crlAccessUrls) {

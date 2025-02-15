@@ -182,9 +182,8 @@ public final class CertificateAuthority extends com.google.api.client.json.Gener
   private String updateTime;
 
   /**
-   * Optional. User-defined URLs for accessing content published by this CertificateAuthority,
-   * including the CA certificate and the PEM-encoded CRLs. The service does not publish content to
-   * these URLs. It is up to the user to mirror content to these URLs.
+   * Optional. User-defined URLs for CA certificate and CRLs. The service does not publish content
+   * to these URLs. It is up to the user to mirror content to these URLs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -548,9 +547,8 @@ public final class CertificateAuthority extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. User-defined URLs for accessing content published by this CertificateAuthority,
-   * including the CA certificate and the PEM-encoded CRLs. The service does not publish content to
-   * these URLs. It is up to the user to mirror content to these URLs.
+   * Optional. User-defined URLs for CA certificate and CRLs. The service does not publish content
+   * to these URLs. It is up to the user to mirror content to these URLs.
    * @return value or {@code null} for none
    */
   public UserDefinedAccessUrls getUserDefinedAccessUrls() {
@@ -558,9 +556,8 @@ public final class CertificateAuthority extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. User-defined URLs for accessing content published by this CertificateAuthority,
-   * including the CA certificate and the PEM-encoded CRLs. The service does not publish content to
-   * these URLs. It is up to the user to mirror content to these URLs.
+   * Optional. User-defined URLs for CA certificate and CRLs. The service does not publish content
+   * to these URLs. It is up to the user to mirror content to these URLs.
    * @param userDefinedAccessUrls userDefinedAccessUrls or {@code null} for none
    */
   public CertificateAuthority setUserDefinedAccessUrls(UserDefinedAccessUrls userDefinedAccessUrls) {

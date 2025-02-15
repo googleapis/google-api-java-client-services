@@ -30,12 +30,51 @@ package com.google.api.services.dataportability.v1beta.model;
 public final class InitiatePortabilityArchiveRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The timestamp that represents the end point for the data you are exporting. If the
+   * end_time is not specified in the InitiatePortabilityArchiveRequest, this field is set to the
+   * latest available data.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String endTime;
+
+  /**
    * The resources from which you're exporting data. These values have a 1:1 correspondence with the
    * OAuth scopes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> resources;
+
+  /**
+   * Optional. The timestamp that represents the starting point for the data you are exporting. If
+   * the start_time is not specified in the InitiatePortabilityArchiveRequest, the field is set to
+   * the earliest available data.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String startTime;
+
+  /**
+   * Optional. The timestamp that represents the end point for the data you are exporting. If the
+   * end_time is not specified in the InitiatePortabilityArchiveRequest, this field is set to the
+   * latest available data.
+   * @return value or {@code null} for none
+   */
+  public String getEndTime() {
+    return endTime;
+  }
+
+  /**
+   * Optional. The timestamp that represents the end point for the data you are exporting. If the
+   * end_time is not specified in the InitiatePortabilityArchiveRequest, this field is set to the
+   * latest available data.
+   * @param endTime endTime or {@code null} for none
+   */
+  public InitiatePortabilityArchiveRequest setEndTime(String endTime) {
+    this.endTime = endTime;
+    return this;
+  }
 
   /**
    * The resources from which you're exporting data. These values have a 1:1 correspondence with the
@@ -53,6 +92,27 @@ public final class InitiatePortabilityArchiveRequest extends com.google.api.clie
    */
   public InitiatePortabilityArchiveRequest setResources(java.util.List<java.lang.String> resources) {
     this.resources = resources;
+    return this;
+  }
+
+  /**
+   * Optional. The timestamp that represents the starting point for the data you are exporting. If
+   * the start_time is not specified in the InitiatePortabilityArchiveRequest, the field is set to
+   * the earliest available data.
+   * @return value or {@code null} for none
+   */
+  public String getStartTime() {
+    return startTime;
+  }
+
+  /**
+   * Optional. The timestamp that represents the starting point for the data you are exporting. If
+   * the start_time is not specified in the InitiatePortabilityArchiveRequest, the field is set to
+   * the earliest available data.
+   * @param startTime startTime or {@code null} for none
+   */
+  public InitiatePortabilityArchiveRequest setStartTime(String startTime) {
+    this.startTime = startTime;
     return this;
   }
 

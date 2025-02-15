@@ -30,6 +30,15 @@ package com.google.api.services.dataportability.v1beta.model;
 public final class PortabilityArchiveState extends com.google.api.client.json.GenericJson {
 
   /**
+   * The timestamp that represents the end point for the data you are exporting. If the end_time
+   * value is set in the InitiatePortabilityArchiveRequest, this field is set to that value. If
+   * end_time is not set, this value is set to the time the export was requested.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String exportTime;
+
+  /**
    * The resource name of ArchiveJob's PortabilityArchiveState singleton. The format is:
    * archiveJobs/{archive_job}/portabilityArchiveState. archive_job is the job ID provided in the
    * request.
@@ -37,6 +46,14 @@ public final class PortabilityArchiveState extends com.google.api.client.json.Ge
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * The timestamp that represents the starting point for the data you are exporting. This field is
+   * set only if the start_time field is specified in the InitiatePortabilityArchiveRequest.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String startTime;
 
   /**
    * Resource that represents the state of the Archive job.
@@ -52,6 +69,27 @@ public final class PortabilityArchiveState extends com.google.api.client.json.Ge
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> urls;
+
+  /**
+   * The timestamp that represents the end point for the data you are exporting. If the end_time
+   * value is set in the InitiatePortabilityArchiveRequest, this field is set to that value. If
+   * end_time is not set, this value is set to the time the export was requested.
+   * @return value or {@code null} for none
+   */
+  public String getExportTime() {
+    return exportTime;
+  }
+
+  /**
+   * The timestamp that represents the end point for the data you are exporting. If the end_time
+   * value is set in the InitiatePortabilityArchiveRequest, this field is set to that value. If
+   * end_time is not set, this value is set to the time the export was requested.
+   * @param exportTime exportTime or {@code null} for none
+   */
+  public PortabilityArchiveState setExportTime(String exportTime) {
+    this.exportTime = exportTime;
+    return this;
+  }
 
   /**
    * The resource name of ArchiveJob's PortabilityArchiveState singleton. The format is:
@@ -71,6 +109,25 @@ public final class PortabilityArchiveState extends com.google.api.client.json.Ge
    */
   public PortabilityArchiveState setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * The timestamp that represents the starting point for the data you are exporting. This field is
+   * set only if the start_time field is specified in the InitiatePortabilityArchiveRequest.
+   * @return value or {@code null} for none
+   */
+  public String getStartTime() {
+    return startTime;
+  }
+
+  /**
+   * The timestamp that represents the starting point for the data you are exporting. This field is
+   * set only if the start_time field is specified in the InitiatePortabilityArchiveRequest.
+   * @param startTime startTime or {@code null} for none
+   */
+  public PortabilityArchiveState setStartTime(String startTime) {
+    this.startTime = startTime;
     return this;
   }
 

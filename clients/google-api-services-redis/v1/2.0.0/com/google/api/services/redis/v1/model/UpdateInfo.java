@@ -31,6 +31,13 @@ package com.google.api.services.redis.v1.model;
 public final class UpdateInfo extends com.google.api.client.json.GenericJson {
 
   /**
+   * Target node type for redis cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String targetNodeType;
+
+  /**
    * Target number of replica nodes per shard.
    * The value may be {@code null}.
    */
@@ -43,6 +50,23 @@ public final class UpdateInfo extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Integer targetShardCount;
+
+  /**
+   * Target node type for redis cluster.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTargetNodeType() {
+    return targetNodeType;
+  }
+
+  /**
+   * Target node type for redis cluster.
+   * @param targetNodeType targetNodeType or {@code null} for none
+   */
+  public UpdateInfo setTargetNodeType(java.lang.String targetNodeType) {
+    this.targetNodeType = targetNodeType;
+    return this;
+  }
 
   /**
    * Target number of replica nodes per shard.

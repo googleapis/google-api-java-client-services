@@ -17,7 +17,8 @@
 package com.google.api.services.networksecurity.v1.model;
 
 /**
- * CustomMirroringProfile defines an action for mirroring traffic to a collector's EndpointGroup
+ * CustomMirroringProfile defines out-of-band integration behavior (mirroring). It is used by
+ * mirroring rules with a MIRROR action.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Security API. For a detailed explanation see:
@@ -30,16 +31,18 @@ package com.google.api.services.networksecurity.v1.model;
 public final class CustomMirroringProfile extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The MirroringEndpointGroup to which traffic associated with the SP should be
-   * mirrored.
+   * Required. The target MirroringEndpointGroup. When a mirroring rule with this security profile
+   * attached matches a packet, a replica will be mirrored to the location-local target in this
+   * group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String mirroringEndpointGroup;
 
   /**
-   * Required. The MirroringEndpointGroup to which traffic associated with the SP should be
-   * mirrored.
+   * Required. The target MirroringEndpointGroup. When a mirroring rule with this security profile
+   * attached matches a packet, a replica will be mirrored to the location-local target in this
+   * group.
    * @return value or {@code null} for none
    */
   public java.lang.String getMirroringEndpointGroup() {
@@ -47,8 +50,9 @@ public final class CustomMirroringProfile extends com.google.api.client.json.Gen
   }
 
   /**
-   * Required. The MirroringEndpointGroup to which traffic associated with the SP should be
-   * mirrored.
+   * Required. The target MirroringEndpointGroup. When a mirroring rule with this security profile
+   * attached matches a packet, a replica will be mirrored to the location-local target in this
+   * group.
    * @param mirroringEndpointGroup mirroringEndpointGroup or {@code null} for none
    */
   public CustomMirroringProfile setMirroringEndpointGroup(java.lang.String mirroringEndpointGroup) {

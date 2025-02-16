@@ -17,8 +17,8 @@
 package com.google.api.services.networksecurity.v1beta1.model;
 
 /**
- * CustomInterceptProfile defines the Packet Intercept Endpoint Group used to intercept traffic to a
- * third-party firewall in a Firewall rule.
+ * CustomInterceptProfile defines in-band integration behavior (intercept). It is used by firewall
+ * rules with an APPLY_SECURITY_PROFILE_GROUP action.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Security API. For a detailed explanation see:
@@ -31,16 +31,18 @@ package com.google.api.services.networksecurity.v1beta1.model;
 public final class CustomInterceptProfile extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The InterceptEndpointGroup to which traffic associated with the SP should be
-   * mirrored.
+   * Required. The target InterceptEndpointGroup. When a firewall rule with this security profile
+   * attached matches a packet, the packet will be intercepted to the location-local target in this
+   * group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String interceptEndpointGroup;
 
   /**
-   * Required. The InterceptEndpointGroup to which traffic associated with the SP should be
-   * mirrored.
+   * Required. The target InterceptEndpointGroup. When a firewall rule with this security profile
+   * attached matches a packet, the packet will be intercepted to the location-local target in this
+   * group.
    * @return value or {@code null} for none
    */
   public java.lang.String getInterceptEndpointGroup() {
@@ -48,8 +50,9 @@ public final class CustomInterceptProfile extends com.google.api.client.json.Gen
   }
 
   /**
-   * Required. The InterceptEndpointGroup to which traffic associated with the SP should be
-   * mirrored.
+   * Required. The target InterceptEndpointGroup. When a firewall rule with this security profile
+   * attached matches a packet, the packet will be intercepted to the location-local target in this
+   * group.
    * @param interceptEndpointGroup interceptEndpointGroup or {@code null} for none
    */
   public CustomInterceptProfile setInterceptEndpointGroup(java.lang.String interceptEndpointGroup) {

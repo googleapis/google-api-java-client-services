@@ -59,6 +59,13 @@ public final class GoogleCloudConnectorsV1AuthConfig extends com.google.api.clie
   private GoogleCloudConnectorsV1AuthConfigOauth2AuthCodeFlow oauth2AuthCodeFlow;
 
   /**
+   * Oauth2AuthCodeFlowGoogleManaged.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudConnectorsV1AuthConfigOauth2AuthCodeFlowGoogleManaged oauth2AuthCodeFlowGoogleManaged;
+
+  /**
    * Oauth2ClientCredentials.
    * The value may be {@code null}.
    */
@@ -151,6 +158,23 @@ public final class GoogleCloudConnectorsV1AuthConfig extends com.google.api.clie
    */
   public GoogleCloudConnectorsV1AuthConfig setOauth2AuthCodeFlow(GoogleCloudConnectorsV1AuthConfigOauth2AuthCodeFlow oauth2AuthCodeFlow) {
     this.oauth2AuthCodeFlow = oauth2AuthCodeFlow;
+    return this;
+  }
+
+  /**
+   * Oauth2AuthCodeFlowGoogleManaged.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1AuthConfigOauth2AuthCodeFlowGoogleManaged getOauth2AuthCodeFlowGoogleManaged() {
+    return oauth2AuthCodeFlowGoogleManaged;
+  }
+
+  /**
+   * Oauth2AuthCodeFlowGoogleManaged.
+   * @param oauth2AuthCodeFlowGoogleManaged oauth2AuthCodeFlowGoogleManaged or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1AuthConfig setOauth2AuthCodeFlowGoogleManaged(GoogleCloudConnectorsV1AuthConfigOauth2AuthCodeFlowGoogleManaged oauth2AuthCodeFlowGoogleManaged) {
+    this.oauth2AuthCodeFlowGoogleManaged = oauth2AuthCodeFlowGoogleManaged;
     return this;
   }
 

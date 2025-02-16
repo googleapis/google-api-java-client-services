@@ -17,7 +17,7 @@
 package com.google.api.services.integrations.v1.model;
 
 /**
- * Model definition for GoogleProtobufStruct.
+ * Request for ExecuteTestCases.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Application Integration API. For a detailed
@@ -28,16 +28,16 @@ package com.google.api.services.integrations.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleProtobufStruct extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudIntegrationsV1alphaExecuteTestCasesRequest extends com.google.api.client.json.GenericJson {
 
   @Override
-  public GoogleProtobufStruct set(String fieldName, Object value) {
-    return (GoogleProtobufStruct) super.set(fieldName, value);
+  public GoogleCloudIntegrationsV1alphaExecuteTestCasesRequest set(String fieldName, Object value) {
+    return (GoogleCloudIntegrationsV1alphaExecuteTestCasesRequest) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleProtobufStruct clone() {
-    return (GoogleProtobufStruct) super.clone();
+  public GoogleCloudIntegrationsV1alphaExecuteTestCasesRequest clone() {
+    return (GoogleCloudIntegrationsV1alphaExecuteTestCasesRequest) super.clone();
   }
 
 }

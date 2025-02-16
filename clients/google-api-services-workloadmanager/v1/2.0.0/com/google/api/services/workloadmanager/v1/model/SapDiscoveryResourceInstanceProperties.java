@@ -44,6 +44,13 @@ public final class SapDiscoveryResourceInstanceProperties extends com.google.api
   private java.util.List<java.lang.String> clusterInstances;
 
   /**
+   * Optional. Disk mounts on the instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<SapDiscoveryResourceInstancePropertiesDiskMount> diskMounts;
+
+  /**
    * Optional. The VM's instance number.
    * The value may be {@code null}.
    */
@@ -102,6 +109,23 @@ public final class SapDiscoveryResourceInstanceProperties extends com.google.api
    */
   public SapDiscoveryResourceInstanceProperties setClusterInstances(java.util.List<java.lang.String> clusterInstances) {
     this.clusterInstances = clusterInstances;
+    return this;
+  }
+
+  /**
+   * Optional. Disk mounts on the instance.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<SapDiscoveryResourceInstancePropertiesDiskMount> getDiskMounts() {
+    return diskMounts;
+  }
+
+  /**
+   * Optional. Disk mounts on the instance.
+   * @param diskMounts diskMounts or {@code null} for none
+   */
+  public SapDiscoveryResourceInstanceProperties setDiskMounts(java.util.List<SapDiscoveryResourceInstancePropertiesDiskMount> diskMounts) {
+    this.diskMounts = diskMounts;
     return this;
   }
 

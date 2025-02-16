@@ -44,6 +44,14 @@ public final class VirtualMachineDetails extends com.google.api.client.json.Gene
   private String createTime;
 
   /**
+   * Optional. Disk partitions details. Note: Partitions are not necessarily mounted on local disks
+   * and therefore might not have a one-to-one correspondence with local disks.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DiskPartitionDetails diskPartitions;
+
+  /**
    * Guest OS information.
    * The value may be {@code null}.
    */
@@ -179,6 +187,25 @@ public final class VirtualMachineDetails extends com.google.api.client.json.Gene
    */
   public VirtualMachineDetails setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Optional. Disk partitions details. Note: Partitions are not necessarily mounted on local disks
+   * and therefore might not have a one-to-one correspondence with local disks.
+   * @return value or {@code null} for none
+   */
+  public DiskPartitionDetails getDiskPartitions() {
+    return diskPartitions;
+  }
+
+  /**
+   * Optional. Disk partitions details. Note: Partitions are not necessarily mounted on local disks
+   * and therefore might not have a one-to-one correspondence with local disks.
+   * @param diskPartitions diskPartitions or {@code null} for none
+   */
+  public VirtualMachineDetails setDiskPartitions(DiskPartitionDetails diskPartitions) {
+    this.diskPartitions = diskPartitions;
     return this;
   }
 

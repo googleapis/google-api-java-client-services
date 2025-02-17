@@ -111,6 +111,14 @@ public final class GoogleCloudIdentitytoolkitAdminV2Tenant extends com.google.ap
   private GoogleCloudIdentitytoolkitAdminV2MultiFactorAuthConfig mfaConfig;
 
   /**
+   * Optional. Deprecated. Never launched. Configuration for settings related to univeral links
+   * (iOS) and app links (Android).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudIdentitytoolkitAdminV2MobileLinksConfig mobileLinksConfig;
+
+  /**
    * Configuration related to monitoring project activity.
    * The value may be {@code null}.
    */
@@ -347,6 +355,25 @@ public final class GoogleCloudIdentitytoolkitAdminV2Tenant extends com.google.ap
    */
   public GoogleCloudIdentitytoolkitAdminV2Tenant setMfaConfig(GoogleCloudIdentitytoolkitAdminV2MultiFactorAuthConfig mfaConfig) {
     this.mfaConfig = mfaConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Deprecated. Never launched. Configuration for settings related to univeral links
+   * (iOS) and app links (Android).
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitAdminV2MobileLinksConfig getMobileLinksConfig() {
+    return mobileLinksConfig;
+  }
+
+  /**
+   * Optional. Deprecated. Never launched. Configuration for settings related to univeral links
+   * (iOS) and app links (Android).
+   * @param mobileLinksConfig mobileLinksConfig or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitAdminV2Tenant setMobileLinksConfig(GoogleCloudIdentitytoolkitAdminV2MobileLinksConfig mobileLinksConfig) {
+    this.mobileLinksConfig = mobileLinksConfig;
     return this;
   }
 

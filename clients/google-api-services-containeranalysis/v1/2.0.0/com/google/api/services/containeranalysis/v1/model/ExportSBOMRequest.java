@@ -31,14 +31,14 @@ package com.google.api.services.containeranalysis.v1.model;
 public final class ExportSBOMRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Empty placeholder to denote that this is a Google Cloud Storage export request.
+   * Optional. Empty placeholder to denote that this is a Google Cloud Storage export request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private CloudStorageLocation cloudStorageLocation;
 
   /**
-   * Empty placeholder to denote that this is a Google Cloud Storage export request.
+   * Optional. Empty placeholder to denote that this is a Google Cloud Storage export request.
    * @return value or {@code null} for none
    */
   public CloudStorageLocation getCloudStorageLocation() {
@@ -46,7 +46,7 @@ public final class ExportSBOMRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Empty placeholder to denote that this is a Google Cloud Storage export request.
+   * Optional. Empty placeholder to denote that this is a Google Cloud Storage export request.
    * @param cloudStorageLocation cloudStorageLocation or {@code null} for none
    */
   public ExportSBOMRequest setCloudStorageLocation(CloudStorageLocation cloudStorageLocation) {

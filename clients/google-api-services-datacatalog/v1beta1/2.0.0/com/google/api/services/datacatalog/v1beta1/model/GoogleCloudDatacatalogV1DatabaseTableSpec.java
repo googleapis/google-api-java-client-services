@@ -31,7 +31,7 @@ package com.google.api.services.datacatalog.v1beta1.model;
 public final class GoogleCloudDatacatalogV1DatabaseTableSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * Spec what aplies to tables that are actually views. Not set for "real" tables.
+   * Spec what applies to tables that are actually views. Not set for "real" tables.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +53,7 @@ public final class GoogleCloudDatacatalogV1DatabaseTableSpec extends com.google.
   private java.lang.String type;
 
   /**
-   * Spec what aplies to tables that are actually views. Not set for "real" tables.
+   * Spec what applies to tables that are actually views. Not set for "real" tables.
    * @return value or {@code null} for none
    */
   public GoogleCloudDatacatalogV1DatabaseTableSpecDatabaseViewSpec getDatabaseViewSpec() {
@@ -61,7 +61,7 @@ public final class GoogleCloudDatacatalogV1DatabaseTableSpec extends com.google.
   }
 
   /**
-   * Spec what aplies to tables that are actually views. Not set for "real" tables.
+   * Spec what applies to tables that are actually views. Not set for "real" tables.
    * @param databaseViewSpec databaseViewSpec or {@code null} for none
    */
   public GoogleCloudDatacatalogV1DatabaseTableSpec setDatabaseViewSpec(GoogleCloudDatacatalogV1DatabaseTableSpecDatabaseViewSpec databaseViewSpec) {

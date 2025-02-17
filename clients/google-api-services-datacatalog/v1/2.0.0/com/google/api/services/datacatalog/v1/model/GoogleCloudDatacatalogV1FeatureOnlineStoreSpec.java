@@ -31,14 +31,14 @@ package com.google.api.services.datacatalog.v1.model;
 public final class GoogleCloudDatacatalogV1FeatureOnlineStoreSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Type of underelaying storage for the FeatureOnlineStore.
+   * Output only. Type of underlying storage for the FeatureOnlineStore.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String storageType;
 
   /**
-   * Output only. Type of underelaying storage for the FeatureOnlineStore.
+   * Output only. Type of underlying storage for the FeatureOnlineStore.
    * @return value or {@code null} for none
    */
   public java.lang.String getStorageType() {
@@ -46,7 +46,7 @@ public final class GoogleCloudDatacatalogV1FeatureOnlineStoreSpec extends com.go
   }
 
   /**
-   * Output only. Type of underelaying storage for the FeatureOnlineStore.
+   * Output only. Type of underlying storage for the FeatureOnlineStore.
    * @param storageType storageType or {@code null} for none
    */
   public GoogleCloudDatacatalogV1FeatureOnlineStoreSpec setStorageType(java.lang.String storageType) {

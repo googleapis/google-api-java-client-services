@@ -37,6 +37,13 @@ public final class DatabaseDeploymentDetails extends com.google.api.client.json.
   private DatabaseDeploymentDetailsAggregatedStats aggregatedStats;
 
   /**
+   * Optional. Details of an AWS RDS instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AwsRds awsRds;
+
+  /**
    * The database deployment edition.
    * The value may be {@code null}.
    */
@@ -106,6 +113,23 @@ public final class DatabaseDeploymentDetails extends com.google.api.client.json.
    */
   public DatabaseDeploymentDetails setAggregatedStats(DatabaseDeploymentDetailsAggregatedStats aggregatedStats) {
     this.aggregatedStats = aggregatedStats;
+    return this;
+  }
+
+  /**
+   * Optional. Details of an AWS RDS instance.
+   * @return value or {@code null} for none
+   */
+  public AwsRds getAwsRds() {
+    return awsRds;
+  }
+
+  /**
+   * Optional. Details of an AWS RDS instance.
+   * @param awsRds awsRds or {@code null} for none
+   */
+  public DatabaseDeploymentDetails setAwsRds(AwsRds awsRds) {
+    this.awsRds = awsRds;
     return this;
   }
 

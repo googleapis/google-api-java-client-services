@@ -32,8 +32,8 @@ public final class BackupVault extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Note: This field is added for future use case and will not be supported in the
-   * current release. Optional. Access restriction for the backup vault. Default value is
-   * WITHIN_ORGANIZATION if not provided during creation.
+   * current release. Access restriction for the backup vault. Default value is WITHIN_ORGANIZATION
+   * if not provided during creation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -139,7 +139,7 @@ public final class BackupVault extends com.google.api.client.json.GenericJson {
   private java.lang.Long totalStoredBytes;
 
   /**
-   * Output only. Output only Immutable after resource creation until resource deletion.
+   * Output only. Immutable after resource creation until resource deletion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -154,8 +154,8 @@ public final class BackupVault extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Note: This field is added for future use case and will not be supported in the
-   * current release. Optional. Access restriction for the backup vault. Default value is
-   * WITHIN_ORGANIZATION if not provided during creation.
+   * current release. Access restriction for the backup vault. Default value is WITHIN_ORGANIZATION
+   * if not provided during creation.
    * @return value or {@code null} for none
    */
   public java.lang.String getAccessRestriction() {
@@ -164,8 +164,8 @@ public final class BackupVault extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Note: This field is added for future use case and will not be supported in the
-   * current release. Optional. Access restriction for the backup vault. Default value is
-   * WITHIN_ORGANIZATION if not provided during creation.
+   * current release. Access restriction for the backup vault. Default value is WITHIN_ORGANIZATION
+   * if not provided during creation.
    * @param accessRestriction accessRestriction or {@code null} for none
    */
   public BackupVault setAccessRestriction(java.lang.String accessRestriction) {
@@ -411,7 +411,7 @@ public final class BackupVault extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Output only Immutable after resource creation until resource deletion.
+   * Output only. Immutable after resource creation until resource deletion.
    * @return value or {@code null} for none
    */
   public java.lang.String getUid() {
@@ -419,7 +419,7 @@ public final class BackupVault extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Output only Immutable after resource creation until resource deletion.
+   * Output only. Immutable after resource creation until resource deletion.
    * @param uid uid or {@code null} for none
    */
   public BackupVault setUid(java.lang.String uid) {

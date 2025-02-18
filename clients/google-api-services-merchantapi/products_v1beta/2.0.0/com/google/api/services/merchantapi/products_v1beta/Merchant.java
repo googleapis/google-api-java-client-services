@@ -486,14 +486,15 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
         /**
          * Required. The primary or supplemental product data source name. If the product already
          * exists and data source provided is different, then the product will be moved to a new
-         * data source. Format: `accounts/{account}/dataSources/{datasource}`.
+         * data source. Only API data sources are supported. Format:
+         * `accounts/{account}/dataSources/{datasource}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String dataSource;
 
         /** Required. The primary or supplemental product data source name. If the product already exists and
-       data source provided is different, then the product will be moved to a new data source. Format:
-       `accounts/{account}/dataSources/{datasource}`.
+       data source provided is different, then the product will be moved to a new data source. Only API
+       data sources are supported. Format: `accounts/{account}/dataSources/{datasource}`.
          */
         public java.lang.String getDataSource() {
           return dataSource;
@@ -502,7 +503,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
         /**
          * Required. The primary or supplemental product data source name. If the product already
          * exists and data source provided is different, then the product will be moved to a new
-         * data source. Format: `accounts/{account}/dataSources/{datasource}`.
+         * data source. Only API data sources are supported. Format:
+         * `accounts/{account}/dataSources/{datasource}`.
          */
         public Insert setDataSource(java.lang.String dataSource) {
           this.dataSource = dataSource;

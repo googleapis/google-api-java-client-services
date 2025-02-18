@@ -556,7 +556,7 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
      * Lists accounts accessible to the calling user and matching the constraints of the request such as
      * page size or filters. This is not just listing the sub-accounts of an MCA, but all accounts the
      * calling user has access to including other MCAs, linked accounts, standalone accounts and so on.
-     * If no filter is provided, then it returns accounts the user is directly added to. This method is
+     * If no filter is provided, then it returns all the accounts the user has access to. This method is
      * eventually consistent, meaning changes such as creating, updating an account or a change of
      * relationships between accounts may not show up in the results immediately. Instead, these changes
      * propagate over a short period, after which the updated information can match the associated
@@ -584,7 +584,7 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
        * Lists accounts accessible to the calling user and matching the constraints of the request such
        * as page size or filters. This is not just listing the sub-accounts of an MCA, but all accounts
        * the calling user has access to including other MCAs, linked accounts, standalone accounts and
-       * so on. If no filter is provided, then it returns accounts the user is directly added to. This
+       * so on. If no filter is provided, then it returns all the accounts the user has access to. This
        * method is eventually consistent, meaning changes such as creating, updating an account or a
        * change of relationships between accounts may not show up in the results immediately. Instead,
        * these changes propagate over a short period, after which the updated information can match the
@@ -671,14 +671,17 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
 
       /**
        * Optional. Returns only accounts that match the
-       * [filter](/merchant/api/guides/accounts/filter). For more details, see the [filter syntax
-       * reference](/merchant/api/guides/accounts/filter-syntax).
+       * [filter](https://developers.google.com/merchant/api/guides/accounts/filter). For more
+       * details, see the [filter syntax
+       * reference](https://developers.google.com/merchant/api/guides/accounts/filter-syntax).
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
-      /** Optional. Returns only accounts that match the [filter](/merchant/api/guides/accounts/filter). For
-     more details, see the [filter syntax reference](/merchant/api/guides/accounts/filter-syntax).
+      /** Optional. Returns only accounts that match the
+     [filter](https://developers.google.com/merchant/api/guides/accounts/filter). For more details, see
+     the [filter syntax reference](https://developers.google.com/merchant/api/guides/accounts/filter-
+     syntax).
        */
       public java.lang.String getFilter() {
         return filter;
@@ -686,8 +689,9 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
 
       /**
        * Optional. Returns only accounts that match the
-       * [filter](/merchant/api/guides/accounts/filter). For more details, see the [filter syntax
-       * reference](/merchant/api/guides/accounts/filter-syntax).
+       * [filter](https://developers.google.com/merchant/api/guides/accounts/filter). For more
+       * details, see the [filter syntax
+       * reference](https://developers.google.com/merchant/api/guides/accounts/filter-syntax).
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;

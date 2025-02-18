@@ -30,8 +30,8 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3DeployFlowResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The name of the flow version Deployment. Format: `projects//locations//agents//
-   * environments//deployments/`.
+   * The name of the flow version Deployment. Format:
+   * `projects//locations//agents//environments//deployments/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,8 +45,8 @@ public final class GoogleCloudDialogflowCxV3DeployFlowResponse extends com.googl
   private GoogleCloudDialogflowCxV3Environment environment;
 
   /**
-   * The name of the flow version Deployment. Format: `projects//locations//agents//
-   * environments//deployments/`.
+   * The name of the flow version Deployment. Format:
+   * `projects//locations//agents//environments//deployments/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getDeployment() {
@@ -54,8 +54,8 @@ public final class GoogleCloudDialogflowCxV3DeployFlowResponse extends com.googl
   }
 
   /**
-   * The name of the flow version Deployment. Format: `projects//locations//agents//
-   * environments//deployments/`.
+   * The name of the flow version Deployment. Format:
+   * `projects//locations//agents//environments//deployments/`.
    * @param deployment deployment or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3DeployFlowResponse setDeployment(java.lang.String deployment) {

@@ -82,7 +82,7 @@ public final class GoogleCloudDialogflowCxV3Experiment extends com.google.api.cl
   private String lastUpdateTime;
 
   /**
-   * The name of the experiment. Format: projects//locations//agents//environments//experiments/..
+   * The name of the experiment. Format: projects//locations//agents//environments//experiments/.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -268,7 +268,7 @@ public final class GoogleCloudDialogflowCxV3Experiment extends com.google.api.cl
   }
 
   /**
-   * The name of the experiment. Format: projects//locations//agents//environments//experiments/..
+   * The name of the experiment. Format: projects//locations//agents//environments//experiments/.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -276,7 +276,7 @@ public final class GoogleCloudDialogflowCxV3Experiment extends com.google.api.cl
   }
 
   /**
-   * The name of the experiment. Format: projects//locations//agents//environments//experiments/..
+   * The name of the experiment. Format: projects//locations//agents//environments//experiments/.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Experiment setName(java.lang.String name) {

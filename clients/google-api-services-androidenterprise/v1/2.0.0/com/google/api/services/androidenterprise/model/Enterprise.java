@@ -52,6 +52,13 @@ public final class Enterprise extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The type of the enterprise.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String enterpriseType;
+
+  /**
    * Output only. Settings for Google-provided user authentication.
    * The value may be {@code null}.
    */
@@ -64,6 +71,13 @@ public final class Enterprise extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
+
+  /**
+   * The type of managed Google domain
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String managedGoogleDomainType;
 
   /**
    * The name of the enterprise, for example, "Example, Inc".
@@ -99,6 +113,23 @@ public final class Enterprise extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The type of the enterprise.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEnterpriseType() {
+    return enterpriseType;
+  }
+
+  /**
+   * The type of the enterprise.
+   * @param enterpriseType enterpriseType or {@code null} for none
+   */
+  public Enterprise setEnterpriseType(java.lang.String enterpriseType) {
+    this.enterpriseType = enterpriseType;
+    return this;
+  }
+
+  /**
    * Output only. Settings for Google-provided user authentication.
    * @return value or {@code null} for none
    */
@@ -129,6 +160,23 @@ public final class Enterprise extends com.google.api.client.json.GenericJson {
    */
   public Enterprise setId(java.lang.String id) {
     this.id = id;
+    return this;
+  }
+
+  /**
+   * The type of managed Google domain
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getManagedGoogleDomainType() {
+    return managedGoogleDomainType;
+  }
+
+  /**
+   * The type of managed Google domain
+   * @param managedGoogleDomainType managedGoogleDomainType or {@code null} for none
+   */
+  public Enterprise setManagedGoogleDomainType(java.lang.String managedGoogleDomainType) {
+    this.managedGoogleDomainType = managedGoogleDomainType;
     return this;
   }
 

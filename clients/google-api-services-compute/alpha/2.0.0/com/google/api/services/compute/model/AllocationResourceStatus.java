@@ -30,6 +30,13 @@ package com.google.api.services.compute.model;
 public final class AllocationResourceStatus extends com.google.api.client.json.GenericJson {
 
   /**
+   * Properties of this aggregatereservation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AllocationResourceStatusAggregateAllocation aggregateAllocation;
+
+  /**
    * The number of reservation blocks associated with this reservation.
    * The value may be {@code null}.
    */
@@ -49,6 +56,23 @@ public final class AllocationResourceStatus extends com.google.api.client.json.G
    */
   @com.google.api.client.util.Key
   private AllocationResourceStatusSpecificSKUAllocation specificSkuAllocation;
+
+  /**
+   * Properties of this aggregatereservation.
+   * @return value or {@code null} for none
+   */
+  public AllocationResourceStatusAggregateAllocation getAggregateAllocation() {
+    return aggregateAllocation;
+  }
+
+  /**
+   * Properties of this aggregatereservation.
+   * @param aggregateAllocation aggregateAllocation or {@code null} for none
+   */
+  public AllocationResourceStatus setAggregateAllocation(AllocationResourceStatusAggregateAllocation aggregateAllocation) {
+    this.aggregateAllocation = aggregateAllocation;
+    return this;
+  }
 
   /**
    * The number of reservation blocks associated with this reservation.

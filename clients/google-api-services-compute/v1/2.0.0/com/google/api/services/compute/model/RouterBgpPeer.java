@@ -120,8 +120,7 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
 
   /**
    * List of export policies applied to this peer, in the order they must be evaluated. The name
-   * must correspond to an existing policy that has ROUTE_POLICY_TYPE_EXPORT type. Note that Route
-   * Policies are currently available in preview. Please use Beta API to use Route Policies.
+   * must correspond to an existing policy that has ROUTE_POLICY_TYPE_EXPORT type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -129,8 +128,7 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
 
   /**
    * List of import policies applied to this peer, in the order they must be evaluated. The name
-   * must correspond to an existing policy that has ROUTE_POLICY_TYPE_IMPORT type. Note that Route
-   * Policies are currently available in preview. Please use Beta API to use Route Policies.
+   * must correspond to an existing policy that has ROUTE_POLICY_TYPE_IMPORT type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -430,8 +428,7 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
 
   /**
    * List of export policies applied to this peer, in the order they must be evaluated. The name
-   * must correspond to an existing policy that has ROUTE_POLICY_TYPE_EXPORT type. Note that Route
-   * Policies are currently available in preview. Please use Beta API to use Route Policies.
+   * must correspond to an existing policy that has ROUTE_POLICY_TYPE_EXPORT type.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getExportPolicies() {
@@ -440,8 +437,7 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
 
   /**
    * List of export policies applied to this peer, in the order they must be evaluated. The name
-   * must correspond to an existing policy that has ROUTE_POLICY_TYPE_EXPORT type. Note that Route
-   * Policies are currently available in preview. Please use Beta API to use Route Policies.
+   * must correspond to an existing policy that has ROUTE_POLICY_TYPE_EXPORT type.
    * @param exportPolicies exportPolicies or {@code null} for none
    */
   public RouterBgpPeer setExportPolicies(java.util.List<java.lang.String> exportPolicies) {
@@ -451,8 +447,7 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
 
   /**
    * List of import policies applied to this peer, in the order they must be evaluated. The name
-   * must correspond to an existing policy that has ROUTE_POLICY_TYPE_IMPORT type. Note that Route
-   * Policies are currently available in preview. Please use Beta API to use Route Policies.
+   * must correspond to an existing policy that has ROUTE_POLICY_TYPE_IMPORT type.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getImportPolicies() {
@@ -461,8 +456,7 @@ public final class RouterBgpPeer extends com.google.api.client.json.GenericJson 
 
   /**
    * List of import policies applied to this peer, in the order they must be evaluated. The name
-   * must correspond to an existing policy that has ROUTE_POLICY_TYPE_IMPORT type. Note that Route
-   * Policies are currently available in preview. Please use Beta API to use Route Policies.
+   * must correspond to an existing policy that has ROUTE_POLICY_TYPE_IMPORT type.
    * @param importPolicies importPolicies or {@code null} for none
    */
   public RouterBgpPeer setImportPolicies(java.util.List<java.lang.String> importPolicies) {

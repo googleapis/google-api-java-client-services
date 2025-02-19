@@ -93,15 +93,6 @@ public final class NetworkEndpoint extends com.google.api.client.json.GenericJso
   private java.lang.Integer port;
 
   /**
-   * The name of the zone where the instance hosting the network endpoint is located (valid only for
-   * regional GCE_VM_IP_PORT NEGs). It should comply with RFC1035. The zone must belong to the
-   * region of the Network Endpoint Group.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String zone;
-
-  /**
    * Optional metadata defined as annotations on the network endpoint.
    * @return value or {@code null} for none
    */
@@ -245,27 +236,6 @@ public final class NetworkEndpoint extends com.google.api.client.json.GenericJso
    */
   public NetworkEndpoint setPort(java.lang.Integer port) {
     this.port = port;
-    return this;
-  }
-
-  /**
-   * The name of the zone where the instance hosting the network endpoint is located (valid only for
-   * regional GCE_VM_IP_PORT NEGs). It should comply with RFC1035. The zone must belong to the
-   * region of the Network Endpoint Group.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getZone() {
-    return zone;
-  }
-
-  /**
-   * The name of the zone where the instance hosting the network endpoint is located (valid only for
-   * regional GCE_VM_IP_PORT NEGs). It should comply with RFC1035. The zone must belong to the
-   * region of the Network Endpoint Group.
-   * @param zone zone or {@code null} for none
-   */
-  public NetworkEndpoint setZone(java.lang.String zone) {
-    this.zone = zone;
     return this;
   }
 

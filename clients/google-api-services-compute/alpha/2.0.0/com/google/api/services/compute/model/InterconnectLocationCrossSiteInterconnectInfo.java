@@ -17,8 +17,8 @@
 package com.google.api.services.compute.model;
 
 /**
- * Information about any potential WireGroups between an Interconnect at a specific
- * InterconnectLocation, and an Interconnect in another metro.
+ * Information about Cross-Site Interconnect wires which may be created between the containing
+ * location and another remote location.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -31,7 +31,8 @@ package com.google.api.services.compute.model;
 public final class InterconnectLocationCrossSiteInterconnectInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Metropolitan area designator
+   * The remote location for Cross-Site Interconnect wires. This specifies an InterconnectLocation
+   * city (metropolitan area designator), which itself may match multiple InterconnectLocations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +47,8 @@ public final class InterconnectLocationCrossSiteInterconnectInfo extends com.goo
   private java.lang.Integer maxSingleFlowGbps;
 
   /**
-   * Metropolitan area designator
+   * The remote location for Cross-Site Interconnect wires. This specifies an InterconnectLocation
+   * city (metropolitan area designator), which itself may match multiple InterconnectLocations.
    * @return value or {@code null} for none
    */
   public java.lang.String getCity() {
@@ -54,7 +56,8 @@ public final class InterconnectLocationCrossSiteInterconnectInfo extends com.goo
   }
 
   /**
-   * Metropolitan area designator
+   * The remote location for Cross-Site Interconnect wires. This specifies an InterconnectLocation
+   * city (metropolitan area designator), which itself may match multiple InterconnectLocations.
    * @param city city or {@code null} for none
    */
   public InterconnectLocationCrossSiteInterconnectInfo setCity(java.lang.String city) {

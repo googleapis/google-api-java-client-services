@@ -54,7 +54,7 @@ public final class WireProperties extends com.google.api.client.json.GenericJson
 
   /**
    * The unmetered bandwidth in Gigabits per second, using decimal units. `10` is 10 Gbps, `100` is
-   * 100 Gbps. Must be a multiple of 10.
+   * 100 Gbps.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -130,7 +130,7 @@ public final class WireProperties extends com.google.api.client.json.GenericJson
 
   /**
    * The unmetered bandwidth in Gigabits per second, using decimal units. `10` is 10 Gbps, `100` is
-   * 100 Gbps. Must be a multiple of 10.
+   * 100 Gbps.
    * @return value or {@code null} for none
    */
   public java.lang.Long getBandwidthUnmetered() {
@@ -139,7 +139,7 @@ public final class WireProperties extends com.google.api.client.json.GenericJson
 
   /**
    * The unmetered bandwidth in Gigabits per second, using decimal units. `10` is 10 Gbps, `100` is
-   * 100 Gbps. Must be a multiple of 10.
+   * 100 Gbps.
    * @param bandwidthUnmetered bandwidthUnmetered or {@code null} for none
    */
   public WireProperties setBandwidthUnmetered(java.lang.Long bandwidthUnmetered) {

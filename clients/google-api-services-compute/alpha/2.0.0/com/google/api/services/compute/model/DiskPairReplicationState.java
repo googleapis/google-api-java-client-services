@@ -35,12 +35,15 @@ public final class DiskPairReplicationState extends com.google.api.client.json.G
    * ASYNC_REPLICATION_STATE_REPLICATING_HEALTHY: The primary disk is healthily replicating to the
    * secondary device i.e. last_replication_time is within RPO. -
    * ASYNC_REPLICATION_STATE_REPLICATING_BEHIND_HIGH_CHURN: The replication is lagging above the SLO
-   * limit due to some internal issue. - ASYNC_REPLICATION_STATE_REPLICATING_BEHIND_SYSTEM_LAGGING:
-   * The replication is lagging, and the RPO is not being met due to some internal issue. -
-   * ASYNC_REPLICATION_STATE_REPLICATION_STUCK: The replication is completely stuck due to some
-   * internal error. - ASYNC_REPLICATION_STATE_STOPPING: The replication is under the process of
-   * being stopped. This is a transient state. - ASYNC_REPLICATION_STATE_STOPPED: The replication
-   * between the disk-pairs have stopped.
+   * limit due to the disk's change rate being above the supported limit. -
+   * ASYNC_REPLICATION_STATE_REPLICATING_BEHIND_SYSTEM_LAGGING: The replication is lagging, and the
+   * RPO is not being met due to some internal issue. - ASYNC_REPLICATION_STATE_REPLICATION_STUCK:
+   * The replication is completely stuck due to some internal error. -
+   * ASYNC_REPLICATION_STATE_STOPPING: The replication is under the process of being stopped. This
+   * is a transient state. - ASYNC_REPLICATION_STATE_STOPPED: The replication between the disk-pairs
+   * have stopped. - ASYNC_REPLICATION_STATE_REPLICATING_BEHIND_CG_HIGH_CHURN: The replication is
+   * lagging above the SLO limit for the disk in the consistency group due to disk's change rate
+   * being above the supported limit.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,12 +61,15 @@ public final class DiskPairReplicationState extends com.google.api.client.json.G
    * ASYNC_REPLICATION_STATE_REPLICATING_HEALTHY: The primary disk is healthily replicating to the
    * secondary device i.e. last_replication_time is within RPO. -
    * ASYNC_REPLICATION_STATE_REPLICATING_BEHIND_HIGH_CHURN: The replication is lagging above the SLO
-   * limit due to some internal issue. - ASYNC_REPLICATION_STATE_REPLICATING_BEHIND_SYSTEM_LAGGING:
-   * The replication is lagging, and the RPO is not being met due to some internal issue. -
-   * ASYNC_REPLICATION_STATE_REPLICATION_STUCK: The replication is completely stuck due to some
-   * internal error. - ASYNC_REPLICATION_STATE_STOPPING: The replication is under the process of
-   * being stopped. This is a transient state. - ASYNC_REPLICATION_STATE_STOPPED: The replication
-   * between the disk-pairs have stopped.
+   * limit due to the disk's change rate being above the supported limit. -
+   * ASYNC_REPLICATION_STATE_REPLICATING_BEHIND_SYSTEM_LAGGING: The replication is lagging, and the
+   * RPO is not being met due to some internal issue. - ASYNC_REPLICATION_STATE_REPLICATION_STUCK:
+   * The replication is completely stuck due to some internal error. -
+   * ASYNC_REPLICATION_STATE_STOPPING: The replication is under the process of being stopped. This
+   * is a transient state. - ASYNC_REPLICATION_STATE_STOPPED: The replication between the disk-pairs
+   * have stopped. - ASYNC_REPLICATION_STATE_REPLICATING_BEHIND_CG_HIGH_CHURN: The replication is
+   * lagging above the SLO limit for the disk in the consistency group due to disk's change rate
+   * being above the supported limit.
    * @return value or {@code null} for none
    */
   public java.lang.String getDataReplicationState() {
@@ -76,12 +82,15 @@ public final class DiskPairReplicationState extends com.google.api.client.json.G
    * ASYNC_REPLICATION_STATE_REPLICATING_HEALTHY: The primary disk is healthily replicating to the
    * secondary device i.e. last_replication_time is within RPO. -
    * ASYNC_REPLICATION_STATE_REPLICATING_BEHIND_HIGH_CHURN: The replication is lagging above the SLO
-   * limit due to some internal issue. - ASYNC_REPLICATION_STATE_REPLICATING_BEHIND_SYSTEM_LAGGING:
-   * The replication is lagging, and the RPO is not being met due to some internal issue. -
-   * ASYNC_REPLICATION_STATE_REPLICATION_STUCK: The replication is completely stuck due to some
-   * internal error. - ASYNC_REPLICATION_STATE_STOPPING: The replication is under the process of
-   * being stopped. This is a transient state. - ASYNC_REPLICATION_STATE_STOPPED: The replication
-   * between the disk-pairs have stopped.
+   * limit due to the disk's change rate being above the supported limit. -
+   * ASYNC_REPLICATION_STATE_REPLICATING_BEHIND_SYSTEM_LAGGING: The replication is lagging, and the
+   * RPO is not being met due to some internal issue. - ASYNC_REPLICATION_STATE_REPLICATION_STUCK:
+   * The replication is completely stuck due to some internal error. -
+   * ASYNC_REPLICATION_STATE_STOPPING: The replication is under the process of being stopped. This
+   * is a transient state. - ASYNC_REPLICATION_STATE_STOPPED: The replication between the disk-pairs
+   * have stopped. - ASYNC_REPLICATION_STATE_REPLICATING_BEHIND_CG_HIGH_CHURN: The replication is
+   * lagging above the SLO limit for the disk in the consistency group due to disk's change rate
+   * being above the supported limit.
    * @param dataReplicationState dataReplicationState or {@code null} for none
    */
   public DiskPairReplicationState setDataReplicationState(java.lang.String dataReplicationState) {

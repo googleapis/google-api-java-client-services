@@ -89,8 +89,8 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
 
   /**
    * [Output Only] A list of InterconnectLocation.CrossSiteInterconnectInfo objects, that describe
-   * parameters pertaining to the relation between this InterconnectLocation and various
-   * Interconnect metros.
+   * where Cross-Site Interconnect wires may connect to from this location and associated connection
+   * parameters. Cross-Site Interconnect isn't allowed to locations which are not listed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -321,8 +321,8 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
 
   /**
    * [Output Only] A list of InterconnectLocation.CrossSiteInterconnectInfo objects, that describe
-   * parameters pertaining to the relation between this InterconnectLocation and various
-   * Interconnect metros.
+   * where Cross-Site Interconnect wires may connect to from this location and associated connection
+   * parameters. Cross-Site Interconnect isn't allowed to locations which are not listed.
    * @return value or {@code null} for none
    */
   public java.util.List<InterconnectLocationCrossSiteInterconnectInfo> getCrossSiteInterconnectInfos() {
@@ -331,8 +331,8 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
 
   /**
    * [Output Only] A list of InterconnectLocation.CrossSiteInterconnectInfo objects, that describe
-   * parameters pertaining to the relation between this InterconnectLocation and various
-   * Interconnect metros.
+   * where Cross-Site Interconnect wires may connect to from this location and associated connection
+   * parameters. Cross-Site Interconnect isn't allowed to locations which are not listed.
    * @param crossSiteInterconnectInfos crossSiteInterconnectInfos or {@code null} for none
    */
   public InterconnectLocation setCrossSiteInterconnectInfos(java.util.List<InterconnectLocationCrossSiteInterconnectInfo> crossSiteInterconnectInfos) {

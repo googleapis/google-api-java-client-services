@@ -37,6 +37,13 @@ public final class InstancesReportHostAsFaultyRequest extends com.google.api.cli
   private java.lang.String actionHint;
 
   /**
+   * The disruption schedule for the VM. Default to IMMEDIATE.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String disruptionSchedule;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,6 +63,23 @@ public final class InstancesReportHostAsFaultyRequest extends com.google.api.cli
    */
   public InstancesReportHostAsFaultyRequest setActionHint(java.lang.String actionHint) {
     this.actionHint = actionHint;
+    return this;
+  }
+
+  /**
+   * The disruption schedule for the VM. Default to IMMEDIATE.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDisruptionSchedule() {
+    return disruptionSchedule;
+  }
+
+  /**
+   * The disruption schedule for the VM. Default to IMMEDIATE.
+   * @param disruptionSchedule disruptionSchedule or {@code null} for none
+   */
+  public InstancesReportHostAsFaultyRequest setDisruptionSchedule(java.lang.String disruptionSchedule) {
+    this.disruptionSchedule = disruptionSchedule;
     return this;
   }
 

@@ -45,10 +45,10 @@ public final class WireGroupEndpointInterconnect extends com.google.api.client.j
    * `4093`. You can autoallocate a tag by entering `0`. To configure the wire group for port mode,
    * enter `-1`. Review the following guidelines: - A VLAN tag must be unique for an Interconnect
    * connection across all attachments and wire groups. - Both endpoints of a wire must use the same
-   * VLAN tag value. - Single wire and redundant type wire groups must have only one VLAN tag. - Box
-   * and cross type wire groups must have two VLAN tags. The first is for the same-zone pseudowire,
-   * and the second is for the cross-zone pseudowire. - Port mode pseudowires must configure a value
-   * of `-1` for both endpoints.
+   * VLAN tag value. - Single wire and redundant type wire groups must have only one VLAN tag. -
+   * Port mode pseudowires must have a single VLAN tag with a value of `-1` for both endpoints. -
+   * Box and cross type wire groups must have two VLAN tags. The first is for the same-zone
+   * pseudowire, and the second is for the cross-zone pseudowire.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,10 +84,10 @@ public final class WireGroupEndpointInterconnect extends com.google.api.client.j
    * `4093`. You can autoallocate a tag by entering `0`. To configure the wire group for port mode,
    * enter `-1`. Review the following guidelines: - A VLAN tag must be unique for an Interconnect
    * connection across all attachments and wire groups. - Both endpoints of a wire must use the same
-   * VLAN tag value. - Single wire and redundant type wire groups must have only one VLAN tag. - Box
-   * and cross type wire groups must have two VLAN tags. The first is for the same-zone pseudowire,
-   * and the second is for the cross-zone pseudowire. - Port mode pseudowires must configure a value
-   * of `-1` for both endpoints.
+   * VLAN tag value. - Single wire and redundant type wire groups must have only one VLAN tag. -
+   * Port mode pseudowires must have a single VLAN tag with a value of `-1` for both endpoints. -
+   * Box and cross type wire groups must have two VLAN tags. The first is for the same-zone
+   * pseudowire, and the second is for the cross-zone pseudowire.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.Integer> getVlanTags() {
@@ -99,10 +99,10 @@ public final class WireGroupEndpointInterconnect extends com.google.api.client.j
    * `4093`. You can autoallocate a tag by entering `0`. To configure the wire group for port mode,
    * enter `-1`. Review the following guidelines: - A VLAN tag must be unique for an Interconnect
    * connection across all attachments and wire groups. - Both endpoints of a wire must use the same
-   * VLAN tag value. - Single wire and redundant type wire groups must have only one VLAN tag. - Box
-   * and cross type wire groups must have two VLAN tags. The first is for the same-zone pseudowire,
-   * and the second is for the cross-zone pseudowire. - Port mode pseudowires must configure a value
-   * of `-1` for both endpoints.
+   * VLAN tag value. - Single wire and redundant type wire groups must have only one VLAN tag. -
+   * Port mode pseudowires must have a single VLAN tag with a value of `-1` for both endpoints. -
+   * Box and cross type wire groups must have two VLAN tags. The first is for the same-zone
+   * pseudowire, and the second is for the cross-zone pseudowire.
    * @param vlanTags vlanTags or {@code null} for none
    */
   public WireGroupEndpointInterconnect setVlanTags(java.util.List<java.lang.Integer> vlanTags) {

@@ -80,7 +80,9 @@ public final class Account extends com.google.api.client.json.GenericJson {
 
   /**
    * The CSS/MC account's parent resource. CSS group for CSS domains; CSS domain for MC accounts.
-   * Returned only if the user has access to the parent account.
+   * Returned only if the user has access to the parent account. Note: For MC sub-accounts, this is
+   * also the CSS domain that is the parent resource of the MCA account, since we are effectively
+   * flattening the hierarchy."
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -207,7 +209,9 @@ public final class Account extends com.google.api.client.json.GenericJson {
 
   /**
    * The CSS/MC account's parent resource. CSS group for CSS domains; CSS domain for MC accounts.
-   * Returned only if the user has access to the parent account.
+   * Returned only if the user has access to the parent account. Note: For MC sub-accounts, this is
+   * also the CSS domain that is the parent resource of the MCA account, since we are effectively
+   * flattening the hierarchy."
    * @return value or {@code null} for none
    */
   public java.lang.String getParent() {
@@ -216,7 +220,9 @@ public final class Account extends com.google.api.client.json.GenericJson {
 
   /**
    * The CSS/MC account's parent resource. CSS group for CSS domains; CSS domain for MC accounts.
-   * Returned only if the user has access to the parent account.
+   * Returned only if the user has access to the parent account. Note: For MC sub-accounts, this is
+   * also the CSS domain that is the parent resource of the MCA account, since we are effectively
+   * flattening the hierarchy."
    * @param parent parent or {@code null} for none
    */
   public Account setParent(java.lang.String parent) {

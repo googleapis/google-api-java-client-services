@@ -17,7 +17,7 @@
 package com.google.api.services.vmmigration.v1.model;
 
 /**
- * Holds informatiom about the available versions for upgrade.
+ * Holds information about the available versions for upgrade.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the VM Migration API. For a detailed explanation see:

@@ -18,7 +18,7 @@ package com.google.api.services.vmmigration.v1alpha1.model;
 
 /**
  * CutoverJob message describes a cutover of a migrating VM. The CutoverJob is the operation of
- * shutting down the VM, creating a snapshot and clonning the VM using the replicated snapshot.
+ * shutting down the VM, creating a snapshot and cloning the VM using the replicated snapshot.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the VM Migration API. For a detailed explanation see:

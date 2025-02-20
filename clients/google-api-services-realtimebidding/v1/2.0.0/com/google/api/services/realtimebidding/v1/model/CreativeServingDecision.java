@@ -79,9 +79,10 @@ public final class CreativeServingDecision extends com.google.api.client.json.Ge
   private java.util.List<java.lang.String> detectedAttributes;
 
   /**
-   * Output only. IDs of the detected categories, if any. The taxonomy in which the categories are
-   * expressed is specified by the detected_categories_taxonomy field. Can be used to filter the
-   * response of the creatives.list method.
+   * Output only. IDs of the detected categories. The taxonomy in which the categories are expressed
+   * is specified by the detected_categories_taxonomy field. Use this in conjunction with
+   * BidRequest.bcat to avoid bidding on impressions where a given ad category is blocked, or to
+   * troubleshoot filtered bids. Can be used to filter the response of the creatives.list method.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -285,9 +286,10 @@ public final class CreativeServingDecision extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. IDs of the detected categories, if any. The taxonomy in which the categories are
-   * expressed is specified by the detected_categories_taxonomy field. Can be used to filter the
-   * response of the creatives.list method.
+   * Output only. IDs of the detected categories. The taxonomy in which the categories are expressed
+   * is specified by the detected_categories_taxonomy field. Use this in conjunction with
+   * BidRequest.bcat to avoid bidding on impressions where a given ad category is blocked, or to
+   * troubleshoot filtered bids. Can be used to filter the response of the creatives.list method.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDetectedCategories() {
@@ -295,9 +297,10 @@ public final class CreativeServingDecision extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. IDs of the detected categories, if any. The taxonomy in which the categories are
-   * expressed is specified by the detected_categories_taxonomy field. Can be used to filter the
-   * response of the creatives.list method.
+   * Output only. IDs of the detected categories. The taxonomy in which the categories are expressed
+   * is specified by the detected_categories_taxonomy field. Use this in conjunction with
+   * BidRequest.bcat to avoid bidding on impressions where a given ad category is blocked, or to
+   * troubleshoot filtered bids. Can be used to filter the response of the creatives.list method.
    * @param detectedCategories detectedCategories or {@code null} for none
    */
   public CreativeServingDecision setDetectedCategories(java.util.List<java.lang.String> detectedCategories) {

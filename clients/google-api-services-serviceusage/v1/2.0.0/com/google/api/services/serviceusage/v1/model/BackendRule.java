@@ -67,6 +67,16 @@ public final class BackendRule extends com.google.api.client.json.GenericJson {
   private java.lang.String jwtAudience;
 
   /**
+   * The load balancing policy used for connection to the application backend. Defined as an
+   * arbitrary string to accomondate custom load balancing policies supported by the underlying
+   * channel, but suggest most users use one of the standard policies, such as the default,
+   * "RoundRobin".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String loadBalancingPolicy;
+
+  /**
    * Deprecated, do not use.
    * The value may be {@code null}.
    */
@@ -197,6 +207,29 @@ public final class BackendRule extends com.google.api.client.json.GenericJson {
    */
   public BackendRule setJwtAudience(java.lang.String jwtAudience) {
     this.jwtAudience = jwtAudience;
+    return this;
+  }
+
+  /**
+   * The load balancing policy used for connection to the application backend. Defined as an
+   * arbitrary string to accomondate custom load balancing policies supported by the underlying
+   * channel, but suggest most users use one of the standard policies, such as the default,
+   * "RoundRobin".
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLoadBalancingPolicy() {
+    return loadBalancingPolicy;
+  }
+
+  /**
+   * The load balancing policy used for connection to the application backend. Defined as an
+   * arbitrary string to accomondate custom load balancing policies supported by the underlying
+   * channel, but suggest most users use one of the standard policies, such as the default,
+   * "RoundRobin".
+   * @param loadBalancingPolicy loadBalancingPolicy or {@code null} for none
+   */
+  public BackendRule setLoadBalancingPolicy(java.lang.String loadBalancingPolicy) {
+    this.loadBalancingPolicy = loadBalancingPolicy;
     return this;
   }
 

@@ -34,7 +34,7 @@ public final class GoogleApiServiceusageV2betaAnalysis extends com.google.api.cl
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleApiServiceusageV2betaAnalysisResult analysis;
+  private GoogleApiServiceusageV2betaAnalysisResult analysisResult;
 
   /**
    * Output only. The type of analysis.
@@ -63,16 +63,16 @@ public final class GoogleApiServiceusageV2betaAnalysis extends com.google.api.cl
    * Output only. Analysis result of updating a policy.
    * @return value or {@code null} for none
    */
-  public GoogleApiServiceusageV2betaAnalysisResult getAnalysis() {
-    return analysis;
+  public GoogleApiServiceusageV2betaAnalysisResult getAnalysisResult() {
+    return analysisResult;
   }
 
   /**
    * Output only. Analysis result of updating a policy.
-   * @param analysis analysis or {@code null} for none
+   * @param analysisResult analysisResult or {@code null} for none
    */
-  public GoogleApiServiceusageV2betaAnalysis setAnalysis(GoogleApiServiceusageV2betaAnalysisResult analysis) {
-    this.analysis = analysis;
+  public GoogleApiServiceusageV2betaAnalysis setAnalysisResult(GoogleApiServiceusageV2betaAnalysisResult analysisResult) {
+    this.analysisResult = analysisResult;
     return this;
   }
 

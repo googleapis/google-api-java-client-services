@@ -30,7 +30,7 @@ package com.google.api.services.sheets.v4.model;
 public final class InsertRangeRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The range to insert new cells into.
+   * The range to insert new cells into. The range is constrained to the current sheet boundaries.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,7 @@ public final class InsertRangeRequest extends com.google.api.client.json.Generic
   private java.lang.String shiftDimension;
 
   /**
-   * The range to insert new cells into.
+   * The range to insert new cells into. The range is constrained to the current sheet boundaries.
    * @return value or {@code null} for none
    */
   public GridRange getRange() {
@@ -53,7 +53,7 @@ public final class InsertRangeRequest extends com.google.api.client.json.Generic
   }
 
   /**
-   * The range to insert new cells into.
+   * The range to insert new cells into. The range is constrained to the current sheet boundaries.
    * @param range range or {@code null} for none
    */
   public InsertRangeRequest setRange(GridRange range) {

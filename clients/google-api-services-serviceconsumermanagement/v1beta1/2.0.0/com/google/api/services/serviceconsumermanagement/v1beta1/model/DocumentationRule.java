@@ -49,7 +49,7 @@ public final class DocumentationRule extends com.google.api.client.json.GenericJ
 
   /**
    * String of comma or space separated case-sensitive words for which method/field name replacement
-   * will be disabled by go/api-docgen.
+   * will be disabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,7 +108,7 @@ public final class DocumentationRule extends com.google.api.client.json.GenericJ
 
   /**
    * String of comma or space separated case-sensitive words for which method/field name replacement
-   * will be disabled by go/api-docgen.
+   * will be disabled.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisableReplacementWords() {
@@ -117,7 +117,7 @@ public final class DocumentationRule extends com.google.api.client.json.GenericJ
 
   /**
    * String of comma or space separated case-sensitive words for which method/field name replacement
-   * will be disabled by go/api-docgen.
+   * will be disabled.
    * @param disableReplacementWords disableReplacementWords or {@code null} for none
    */
   public DocumentationRule setDisableReplacementWords(java.lang.String disableReplacementWords) {

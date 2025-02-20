@@ -50,6 +50,15 @@ public final class ExperimentalFeatures extends com.google.api.client.json.Gener
   private java.lang.Boolean restAsyncIoEnabled;
 
   /**
+   * Disables generation of an unversioned Python package for this client library. This means that
+   * the module names will need to be versioned in import statements. For example `import
+   * google.cloud.library_v2` instead of `import google.cloud.library`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean unversionedPackageDisabled;
+
+  /**
    * Enables generation of protobuf code using new types that are more Pythonic which are included
    * in `protobuf>=5.29.x`. This feature will be enabled by default 1 month after launching the
    * feature in preview packages.
@@ -88,6 +97,27 @@ public final class ExperimentalFeatures extends com.google.api.client.json.Gener
    */
   public ExperimentalFeatures setRestAsyncIoEnabled(java.lang.Boolean restAsyncIoEnabled) {
     this.restAsyncIoEnabled = restAsyncIoEnabled;
+    return this;
+  }
+
+  /**
+   * Disables generation of an unversioned Python package for this client library. This means that
+   * the module names will need to be versioned in import statements. For example `import
+   * google.cloud.library_v2` instead of `import google.cloud.library`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getUnversionedPackageDisabled() {
+    return unversionedPackageDisabled;
+  }
+
+  /**
+   * Disables generation of an unversioned Python package for this client library. This means that
+   * the module names will need to be versioned in import statements. For example `import
+   * google.cloud.library_v2` instead of `import google.cloud.library`.
+   * @param unversionedPackageDisabled unversionedPackageDisabled or {@code null} for none
+   */
+  public ExperimentalFeatures setUnversionedPackageDisabled(java.lang.Boolean unversionedPackageDisabled) {
+    this.unversionedPackageDisabled = unversionedPackageDisabled;
     return this;
   }
 

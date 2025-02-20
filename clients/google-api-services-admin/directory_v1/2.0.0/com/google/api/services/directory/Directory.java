@@ -17767,17 +17767,17 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         return this;
       }
 
-      /** Token to specify next page in the list */
+      /** Token to specify next page in the list. The page token is only valid for three days. */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
-      /** Token to specify next page in the list
+      /** Token to specify next page in the list. The page token is only valid for three days.
        */
       public java.lang.String getPageToken() {
         return pageToken;
       }
 
-      /** Token to specify next page in the list */
+      /** Token to specify next page in the list. The page token is only valid for three days. */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
         return this;

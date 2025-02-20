@@ -44,7 +44,7 @@ public final class Users extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
-   * Token used to access next page of this result.
+   * Token used to access next page of this result. The page token is only valid for three days.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -105,7 +105,7 @@ public final class Users extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Token used to access next page of this result.
+   * Token used to access next page of this result. The page token is only valid for three days.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -113,7 +113,7 @@ public final class Users extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Token used to access next page of this result.
+   * Token used to access next page of this result. The page token is only valid for three days.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public Users setNextPageToken(java.lang.String nextPageToken) {

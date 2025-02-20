@@ -58,6 +58,13 @@ public final class Query extends com.google.api.client.json.GenericJson {
   private java.lang.String dataScope;
 
   /**
+   * Required when **SearchMethod** is **DRIVE_DOCUMENT**.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DriveDocumentInfo driveDocumentInfo;
+
+  /**
    * Set Drive search-specific options.
    * The value may be {@code null}.
    */
@@ -241,6 +248,23 @@ public final class Query extends com.google.api.client.json.GenericJson {
    */
   public Query setDataScope(java.lang.String dataScope) {
     this.dataScope = dataScope;
+    return this;
+  }
+
+  /**
+   * Required when **SearchMethod** is **DRIVE_DOCUMENT**.
+   * @return value or {@code null} for none
+   */
+  public DriveDocumentInfo getDriveDocumentInfo() {
+    return driveDocumentInfo;
+  }
+
+  /**
+   * Required when **SearchMethod** is **DRIVE_DOCUMENT**.
+   * @param driveDocumentInfo driveDocumentInfo or {@code null} for none
+   */
+  public Query setDriveDocumentInfo(DriveDocumentInfo driveDocumentInfo) {
+    this.driveDocumentInfo = driveDocumentInfo;
     return this;
   }
 

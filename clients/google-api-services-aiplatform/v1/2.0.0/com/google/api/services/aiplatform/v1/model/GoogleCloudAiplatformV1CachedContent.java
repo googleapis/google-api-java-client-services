@@ -59,8 +59,9 @@ public final class GoogleCloudAiplatformV1CachedContent extends com.google.api.c
   private String expireTime;
 
   /**
-   * Immutable. The name of the publisher model to use for cached content. Format:
-   * projects/{project}/locations/{location}/publishers/{publisher}/models/{model}
+   * Immutable. The name of the `Model` to use for cached content. Currently, only the published
+   * Gemini base models are supported, in form of
+   * projects/{PROJECT}/locations/{LOCATION}/publishers/google/models/{MODEL}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -188,8 +189,9 @@ public final class GoogleCloudAiplatformV1CachedContent extends com.google.api.c
   }
 
   /**
-   * Immutable. The name of the publisher model to use for cached content. Format:
-   * projects/{project}/locations/{location}/publishers/{publisher}/models/{model}
+   * Immutable. The name of the `Model` to use for cached content. Currently, only the published
+   * Gemini base models are supported, in form of
+   * projects/{PROJECT}/locations/{LOCATION}/publishers/google/models/{MODEL}
    * @return value or {@code null} for none
    */
   public java.lang.String getModel() {
@@ -197,8 +199,9 @@ public final class GoogleCloudAiplatformV1CachedContent extends com.google.api.c
   }
 
   /**
-   * Immutable. The name of the publisher model to use for cached content. Format:
-   * projects/{project}/locations/{location}/publishers/{publisher}/models/{model}
+   * Immutable. The name of the `Model` to use for cached content. Currently, only the published
+   * Gemini base models are supported, in form of
+   * projects/{PROJECT}/locations/{LOCATION}/publishers/google/models/{MODEL}
    * @param model model or {@code null} for none
    */
   public GoogleCloudAiplatformV1CachedContent setModel(java.lang.String model) {

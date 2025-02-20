@@ -30,16 +30,16 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1SchemaTextDataItem extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Google Cloud Storage URI points to the original text in user's bucket. The text
-   * file is up to 10MB in size.
+   * Output only. Google Cloud Storage URI points to a copy of the original text in the Vertex-
+   * managed bucket in the user's project. The text file is up to 10MB in size.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String gcsUri;
 
   /**
-   * Output only. Google Cloud Storage URI points to the original text in user's bucket. The text
-   * file is up to 10MB in size.
+   * Output only. Google Cloud Storage URI points to a copy of the original text in the Vertex-
+   * managed bucket in the user's project. The text file is up to 10MB in size.
    * @return value or {@code null} for none
    */
   public java.lang.String getGcsUri() {
@@ -47,8 +47,8 @@ public final class GoogleCloudAiplatformV1beta1SchemaTextDataItem extends com.go
   }
 
   /**
-   * Output only. Google Cloud Storage URI points to the original text in user's bucket. The text
-   * file is up to 10MB in size.
+   * Output only. Google Cloud Storage URI points to a copy of the original text in the Vertex-
+   * managed bucket in the user's project. The text file is up to 10MB in size.
    * @param gcsUri gcsUri or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1SchemaTextDataItem setGcsUri(java.lang.String gcsUri) {

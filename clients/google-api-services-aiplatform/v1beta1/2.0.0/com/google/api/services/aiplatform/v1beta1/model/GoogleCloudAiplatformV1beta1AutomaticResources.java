@@ -32,36 +32,36 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1AutomaticResources extends com.google.api.client.json.GenericJson {
 
   /**
-   * Immutable. The maximum number of replicas this DeployedModel may be deployed on when the
-   * traffic against it increases. If the requested value is too large, the deployment will error,
-   * but if deployment succeeds then the ability to scale the model to that many replicas is
-   * guaranteed (barring service outages). If traffic against the DeployedModel increases beyond
-   * what its replicas at maximum may handle, a portion of the traffic will be dropped. If this
-   * value is not provided, a no upper bound for scaling under heavy traffic will be assume, though
-   * Vertex AI may be unable to scale beyond certain replica number.
+   * Immutable. The maximum number of replicas that may be deployed on when the traffic against it
+   * increases. If the requested value is too large, the deployment will error, but if deployment
+   * succeeds then the ability to scale to that many replicas is guaranteed (barring service
+   * outages). If traffic increases beyond what its replicas at maximum may handle, a portion of the
+   * traffic will be dropped. If this value is not provided, a no upper bound for scaling under
+   * heavy traffic will be assume, though Vertex AI may be unable to scale beyond certain replica
+   * number.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer maxReplicaCount;
 
   /**
-   * Immutable. The minimum number of replicas this DeployedModel will be always deployed on. If
-   * traffic against it increases, it may dynamically be deployed onto more replicas up to
-   * max_replica_count, and as traffic decreases, some of these extra replicas may be freed. If the
-   * requested value is too large, the deployment will error.
+   * Immutable. The minimum number of replicas that will be always deployed on. If traffic against
+   * it increases, it may dynamically be deployed onto more replicas up to max_replica_count, and as
+   * traffic decreases, some of these extra replicas may be freed. If the requested value is too
+   * large, the deployment will error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer minReplicaCount;
 
   /**
-   * Immutable. The maximum number of replicas this DeployedModel may be deployed on when the
-   * traffic against it increases. If the requested value is too large, the deployment will error,
-   * but if deployment succeeds then the ability to scale the model to that many replicas is
-   * guaranteed (barring service outages). If traffic against the DeployedModel increases beyond
-   * what its replicas at maximum may handle, a portion of the traffic will be dropped. If this
-   * value is not provided, a no upper bound for scaling under heavy traffic will be assume, though
-   * Vertex AI may be unable to scale beyond certain replica number.
+   * Immutable. The maximum number of replicas that may be deployed on when the traffic against it
+   * increases. If the requested value is too large, the deployment will error, but if deployment
+   * succeeds then the ability to scale to that many replicas is guaranteed (barring service
+   * outages). If traffic increases beyond what its replicas at maximum may handle, a portion of the
+   * traffic will be dropped. If this value is not provided, a no upper bound for scaling under
+   * heavy traffic will be assume, though Vertex AI may be unable to scale beyond certain replica
+   * number.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxReplicaCount() {
@@ -69,13 +69,13 @@ public final class GoogleCloudAiplatformV1beta1AutomaticResources extends com.go
   }
 
   /**
-   * Immutable. The maximum number of replicas this DeployedModel may be deployed on when the
-   * traffic against it increases. If the requested value is too large, the deployment will error,
-   * but if deployment succeeds then the ability to scale the model to that many replicas is
-   * guaranteed (barring service outages). If traffic against the DeployedModel increases beyond
-   * what its replicas at maximum may handle, a portion of the traffic will be dropped. If this
-   * value is not provided, a no upper bound for scaling under heavy traffic will be assume, though
-   * Vertex AI may be unable to scale beyond certain replica number.
+   * Immutable. The maximum number of replicas that may be deployed on when the traffic against it
+   * increases. If the requested value is too large, the deployment will error, but if deployment
+   * succeeds then the ability to scale to that many replicas is guaranteed (barring service
+   * outages). If traffic increases beyond what its replicas at maximum may handle, a portion of the
+   * traffic will be dropped. If this value is not provided, a no upper bound for scaling under
+   * heavy traffic will be assume, though Vertex AI may be unable to scale beyond certain replica
+   * number.
    * @param maxReplicaCount maxReplicaCount or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1AutomaticResources setMaxReplicaCount(java.lang.Integer maxReplicaCount) {
@@ -84,10 +84,10 @@ public final class GoogleCloudAiplatformV1beta1AutomaticResources extends com.go
   }
 
   /**
-   * Immutable. The minimum number of replicas this DeployedModel will be always deployed on. If
-   * traffic against it increases, it may dynamically be deployed onto more replicas up to
-   * max_replica_count, and as traffic decreases, some of these extra replicas may be freed. If the
-   * requested value is too large, the deployment will error.
+   * Immutable. The minimum number of replicas that will be always deployed on. If traffic against
+   * it increases, it may dynamically be deployed onto more replicas up to max_replica_count, and as
+   * traffic decreases, some of these extra replicas may be freed. If the requested value is too
+   * large, the deployment will error.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMinReplicaCount() {
@@ -95,10 +95,10 @@ public final class GoogleCloudAiplatformV1beta1AutomaticResources extends com.go
   }
 
   /**
-   * Immutable. The minimum number of replicas this DeployedModel will be always deployed on. If
-   * traffic against it increases, it may dynamically be deployed onto more replicas up to
-   * max_replica_count, and as traffic decreases, some of these extra replicas may be freed. If the
-   * requested value is too large, the deployment will error.
+   * Immutable. The minimum number of replicas that will be always deployed on. If traffic against
+   * it increases, it may dynamically be deployed onto more replicas up to max_replica_count, and as
+   * traffic decreases, some of these extra replicas may be freed. If the requested value is too
+   * large, the deployment will error.
    * @param minReplicaCount minReplicaCount or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1AutomaticResources setMinReplicaCount(java.lang.Integer minReplicaCount) {

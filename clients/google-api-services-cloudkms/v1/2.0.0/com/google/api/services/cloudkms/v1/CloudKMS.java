@@ -7441,6 +7441,35 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
                 return this;
               }
 
+              /**
+               * Optional. The PublicKey format specified by the user. This field is required for
+               * PQC algorithms. If specified, the public key will be exported through the
+               * public_key field in the requested format. Otherwise, the pem field will be
+               * populated for non-PQC algorithms, and an error will be returned for PQC algorithms.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String publicKeyFormat;
+
+              /** Optional. The PublicKey format specified by the user. This field is required for PQC algorithms. If
+             specified, the public key will be exported through the public_key field in the requested format.
+             Otherwise, the pem field will be populated for non-PQC algorithms, and an error will be returned
+             for PQC algorithms.
+               */
+              public java.lang.String getPublicKeyFormat() {
+                return publicKeyFormat;
+              }
+
+              /**
+               * Optional. The PublicKey format specified by the user. This field is required for
+               * PQC algorithms. If specified, the public key will be exported through the
+               * public_key field in the requested format. Otherwise, the pem field will be
+               * populated for non-PQC algorithms, and an error will be returned for PQC algorithms.
+               */
+              public GetPublicKey setPublicKeyFormat(java.lang.String publicKeyFormat) {
+                this.publicKeyFormat = publicKeyFormat;
+                return this;
+              }
+
               @Override
               public GetPublicKey set(String parameterName, Object value) {
                 return (GetPublicKey) super.set(parameterName, value);

@@ -77,6 +77,21 @@ public final class PublicKey extends com.google.api.client.json.GenericJson {
   private java.lang.String protectionLevel;
 
   /**
+   * This field contains the public key (with integrity verification), formatted according to the
+   * public_key_format field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ChecksummedData publicKey;
+
+  /**
+   * The PublicKey format specified by the customer through the public_key_format field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String publicKeyFormat;
+
+  /**
    * The Algorithm associated with this key.
    * @return value or {@code null} for none
    */
@@ -180,6 +195,42 @@ public final class PublicKey extends com.google.api.client.json.GenericJson {
    */
   public PublicKey setProtectionLevel(java.lang.String protectionLevel) {
     this.protectionLevel = protectionLevel;
+    return this;
+  }
+
+  /**
+   * This field contains the public key (with integrity verification), formatted according to the
+   * public_key_format field.
+   * @return value or {@code null} for none
+   */
+  public ChecksummedData getPublicKey() {
+    return publicKey;
+  }
+
+  /**
+   * This field contains the public key (with integrity verification), formatted according to the
+   * public_key_format field.
+   * @param publicKey publicKey or {@code null} for none
+   */
+  public PublicKey setPublicKey(ChecksummedData publicKey) {
+    this.publicKey = publicKey;
+    return this;
+  }
+
+  /**
+   * The PublicKey format specified by the customer through the public_key_format field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPublicKeyFormat() {
+    return publicKeyFormat;
+  }
+
+  /**
+   * The PublicKey format specified by the customer through the public_key_format field.
+   * @param publicKeyFormat publicKeyFormat or {@code null} for none
+   */
+  public PublicKey setPublicKeyFormat(java.lang.String publicKeyFormat) {
+    this.publicKeyFormat = publicKeyFormat;
     return this;
   }
 

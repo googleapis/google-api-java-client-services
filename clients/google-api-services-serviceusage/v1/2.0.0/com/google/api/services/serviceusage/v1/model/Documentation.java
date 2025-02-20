@@ -90,8 +90,8 @@ public final class Documentation extends com.google.api.client.json.GenericJson 
   private java.util.List<DocumentationRule> rules;
 
   /**
-   * Specifies section and content to override boilerplate content provided by go/api-docgen.
-   * Currently overrides following sections: 1. rest.service.client_libraries
+   * Specifies section and content to override the boilerplate content. Currently overrides
+   * following sections: 1. rest.service.client_libraries
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -211,8 +211,8 @@ public final class Documentation extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Specifies section and content to override boilerplate content provided by go/api-docgen.
-   * Currently overrides following sections: 1. rest.service.client_libraries
+   * Specifies section and content to override the boilerplate content. Currently overrides
+   * following sections: 1. rest.service.client_libraries
    * @return value or {@code null} for none
    */
   public java.util.List<Page> getSectionOverrides() {
@@ -220,8 +220,8 @@ public final class Documentation extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Specifies section and content to override boilerplate content provided by go/api-docgen.
-   * Currently overrides following sections: 1. rest.service.client_libraries
+   * Specifies section and content to override the boilerplate content. Currently overrides
+   * following sections: 1. rest.service.client_libraries
    * @param sectionOverrides sectionOverrides or {@code null} for none
    */
   public Documentation setSectionOverrides(java.util.List<Page> sectionOverrides) {

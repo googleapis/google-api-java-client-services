@@ -17,8 +17,7 @@
 package com.google.api.services.aiplatform.v1.model;
 
 /**
- * A proto representation of a Spanner-stored ModelVersionCheckpoint. The meaning of the fields is
- * equivalent to their in-Spanner counterparts.
+ * Describes the machine learning model version checkpoint.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -43,6 +42,14 @@ public final class GoogleCloudAiplatformV1ModelVersionCheckpoint extends com.goo
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long epoch;
+
+  /**
+   * Identifier. The resource name of the ModelVersionCheckpoint. Format: `projects/{project}/locati
+   * ons/{location}/models/{model}/versions/{version}/checkpoints/{checkpoint}`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String name;
 
   /**
    * The step of the checkpoint.
@@ -82,6 +89,25 @@ public final class GoogleCloudAiplatformV1ModelVersionCheckpoint extends com.goo
    */
   public GoogleCloudAiplatformV1ModelVersionCheckpoint setEpoch(java.lang.Long epoch) {
     this.epoch = epoch;
+    return this;
+  }
+
+  /**
+   * Identifier. The resource name of the ModelVersionCheckpoint. Format: `projects/{project}/locati
+   * ons/{location}/models/{model}/versions/{version}/checkpoints/{checkpoint}`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getName() {
+    return name;
+  }
+
+  /**
+   * Identifier. The resource name of the ModelVersionCheckpoint. Format: `projects/{project}/locati
+   * ons/{location}/models/{model}/versions/{version}/checkpoints/{checkpoint}`
+   * @param name name or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1ModelVersionCheckpoint setName(java.lang.String name) {
+    this.name = name;
     return this;
   }
 

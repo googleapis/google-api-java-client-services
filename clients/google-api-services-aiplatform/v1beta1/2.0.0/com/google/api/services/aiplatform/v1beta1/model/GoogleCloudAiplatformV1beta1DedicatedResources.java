@@ -17,8 +17,8 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * A description of resources that are dedicated to a DeployedModel, and that need a higher degree
- * of manual configuration.
+ * A description of resources that are dedicated to a DeployedModel or DeployedIndex, and that need
+ * a higher degree of manual configuration.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -55,32 +55,32 @@ public final class GoogleCloudAiplatformV1beta1DedicatedResources extends com.go
   }
 
   /**
-   * Required. Immutable. The specification of a single machine used by the prediction.
+   * Required. Immutable. The specification of a single machine being used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1MachineSpec machineSpec;
 
   /**
-   * Immutable. The maximum number of replicas this DeployedModel may be deployed on when the
-   * traffic against it increases. If the requested value is too large, the deployment will error,
-   * but if deployment succeeds then the ability to scale the model to that many replicas is
-   * guaranteed (barring service outages). If traffic against the DeployedModel increases beyond
-   * what its replicas at maximum may handle, a portion of the traffic will be dropped. If this
-   * value is not provided, will use min_replica_count as the default value. The value of this field
-   * impacts the charge against Vertex CPU and GPU quotas. Specifically, you will be charged for
-   * (max_replica_count * number of cores in the selected machine type) and (max_replica_count *
-   * number of GPUs per replica in the selected machine type).
+   * Immutable. The maximum number of replicas that may be deployed on when the traffic against it
+   * increases. If the requested value is too large, the deployment will error, but if deployment
+   * succeeds then the ability to scale to that many replicas is guaranteed (barring service
+   * outages). If traffic increases beyond what its replicas at maximum may handle, a portion of the
+   * traffic will be dropped. If this value is not provided, will use min_replica_count as the
+   * default value. The value of this field impacts the charge against Vertex CPU and GPU quotas.
+   * Specifically, you will be charged for (max_replica_count * number of cores in the selected
+   * machine type) and (max_replica_count * number of GPUs per replica in the selected machine
+   * type).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer maxReplicaCount;
 
   /**
-   * Required. Immutable. The minimum number of machine replicas this DeployedModel will be always
-   * deployed on. This value must be greater than or equal to 1. If traffic against the
-   * DeployedModel increases, it may dynamically be deployed onto more replicas, and as traffic
-   * decreases, some of these extra replicas may be freed.
+   * Required. Immutable. The minimum number of machine replicas that will be always deployed on.
+   * This value must be greater than or equal to 1. If traffic increases, it may dynamically be
+   * deployed onto more replicas, and as traffic decreases, some of these extra replicas may be
+   * freed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,9 +88,9 @@ public final class GoogleCloudAiplatformV1beta1DedicatedResources extends com.go
 
   /**
    * Optional. Number of required available replicas for the deployment to succeed. This field is
-   * only needed when partial model deployment/mutation is desired. If set, the model deploy/mutate
-   * operation will succeed once available_replica_count reaches required_replica_count, and the
-   * rest of the replicas will be retried. If not set, the default required_replica_count will be
+   * only needed when partial deployment/mutation is desired. If set, the deploy/mutate operation
+   * will succeed once available_replica_count reaches required_replica_count, and the rest of the
+   * replicas will be retried. If not set, the default required_replica_count will be
    * min_replica_count.
    * The value may be {@code null}.
    */
@@ -145,7 +145,7 @@ public final class GoogleCloudAiplatformV1beta1DedicatedResources extends com.go
   }
 
   /**
-   * Required. Immutable. The specification of a single machine used by the prediction.
+   * Required. Immutable. The specification of a single machine being used.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1MachineSpec getMachineSpec() {
@@ -153,7 +153,7 @@ public final class GoogleCloudAiplatformV1beta1DedicatedResources extends com.go
   }
 
   /**
-   * Required. Immutable. The specification of a single machine used by the prediction.
+   * Required. Immutable. The specification of a single machine being used.
    * @param machineSpec machineSpec or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1DedicatedResources setMachineSpec(GoogleCloudAiplatformV1beta1MachineSpec machineSpec) {
@@ -162,15 +162,15 @@ public final class GoogleCloudAiplatformV1beta1DedicatedResources extends com.go
   }
 
   /**
-   * Immutable. The maximum number of replicas this DeployedModel may be deployed on when the
-   * traffic against it increases. If the requested value is too large, the deployment will error,
-   * but if deployment succeeds then the ability to scale the model to that many replicas is
-   * guaranteed (barring service outages). If traffic against the DeployedModel increases beyond
-   * what its replicas at maximum may handle, a portion of the traffic will be dropped. If this
-   * value is not provided, will use min_replica_count as the default value. The value of this field
-   * impacts the charge against Vertex CPU and GPU quotas. Specifically, you will be charged for
-   * (max_replica_count * number of cores in the selected machine type) and (max_replica_count *
-   * number of GPUs per replica in the selected machine type).
+   * Immutable. The maximum number of replicas that may be deployed on when the traffic against it
+   * increases. If the requested value is too large, the deployment will error, but if deployment
+   * succeeds then the ability to scale to that many replicas is guaranteed (barring service
+   * outages). If traffic increases beyond what its replicas at maximum may handle, a portion of the
+   * traffic will be dropped. If this value is not provided, will use min_replica_count as the
+   * default value. The value of this field impacts the charge against Vertex CPU and GPU quotas.
+   * Specifically, you will be charged for (max_replica_count * number of cores in the selected
+   * machine type) and (max_replica_count * number of GPUs per replica in the selected machine
+   * type).
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxReplicaCount() {
@@ -178,15 +178,15 @@ public final class GoogleCloudAiplatformV1beta1DedicatedResources extends com.go
   }
 
   /**
-   * Immutable. The maximum number of replicas this DeployedModel may be deployed on when the
-   * traffic against it increases. If the requested value is too large, the deployment will error,
-   * but if deployment succeeds then the ability to scale the model to that many replicas is
-   * guaranteed (barring service outages). If traffic against the DeployedModel increases beyond
-   * what its replicas at maximum may handle, a portion of the traffic will be dropped. If this
-   * value is not provided, will use min_replica_count as the default value. The value of this field
-   * impacts the charge against Vertex CPU and GPU quotas. Specifically, you will be charged for
-   * (max_replica_count * number of cores in the selected machine type) and (max_replica_count *
-   * number of GPUs per replica in the selected machine type).
+   * Immutable. The maximum number of replicas that may be deployed on when the traffic against it
+   * increases. If the requested value is too large, the deployment will error, but if deployment
+   * succeeds then the ability to scale to that many replicas is guaranteed (barring service
+   * outages). If traffic increases beyond what its replicas at maximum may handle, a portion of the
+   * traffic will be dropped. If this value is not provided, will use min_replica_count as the
+   * default value. The value of this field impacts the charge against Vertex CPU and GPU quotas.
+   * Specifically, you will be charged for (max_replica_count * number of cores in the selected
+   * machine type) and (max_replica_count * number of GPUs per replica in the selected machine
+   * type).
    * @param maxReplicaCount maxReplicaCount or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1DedicatedResources setMaxReplicaCount(java.lang.Integer maxReplicaCount) {
@@ -195,10 +195,10 @@ public final class GoogleCloudAiplatformV1beta1DedicatedResources extends com.go
   }
 
   /**
-   * Required. Immutable. The minimum number of machine replicas this DeployedModel will be always
-   * deployed on. This value must be greater than or equal to 1. If traffic against the
-   * DeployedModel increases, it may dynamically be deployed onto more replicas, and as traffic
-   * decreases, some of these extra replicas may be freed.
+   * Required. Immutable. The minimum number of machine replicas that will be always deployed on.
+   * This value must be greater than or equal to 1. If traffic increases, it may dynamically be
+   * deployed onto more replicas, and as traffic decreases, some of these extra replicas may be
+   * freed.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMinReplicaCount() {
@@ -206,10 +206,10 @@ public final class GoogleCloudAiplatformV1beta1DedicatedResources extends com.go
   }
 
   /**
-   * Required. Immutable. The minimum number of machine replicas this DeployedModel will be always
-   * deployed on. This value must be greater than or equal to 1. If traffic against the
-   * DeployedModel increases, it may dynamically be deployed onto more replicas, and as traffic
-   * decreases, some of these extra replicas may be freed.
+   * Required. Immutable. The minimum number of machine replicas that will be always deployed on.
+   * This value must be greater than or equal to 1. If traffic increases, it may dynamically be
+   * deployed onto more replicas, and as traffic decreases, some of these extra replicas may be
+   * freed.
    * @param minReplicaCount minReplicaCount or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1DedicatedResources setMinReplicaCount(java.lang.Integer minReplicaCount) {
@@ -219,9 +219,9 @@ public final class GoogleCloudAiplatformV1beta1DedicatedResources extends com.go
 
   /**
    * Optional. Number of required available replicas for the deployment to succeed. This field is
-   * only needed when partial model deployment/mutation is desired. If set, the model deploy/mutate
-   * operation will succeed once available_replica_count reaches required_replica_count, and the
-   * rest of the replicas will be retried. If not set, the default required_replica_count will be
+   * only needed when partial deployment/mutation is desired. If set, the deploy/mutate operation
+   * will succeed once available_replica_count reaches required_replica_count, and the rest of the
+   * replicas will be retried. If not set, the default required_replica_count will be
    * min_replica_count.
    * @return value or {@code null} for none
    */
@@ -231,9 +231,9 @@ public final class GoogleCloudAiplatformV1beta1DedicatedResources extends com.go
 
   /**
    * Optional. Number of required available replicas for the deployment to succeed. This field is
-   * only needed when partial model deployment/mutation is desired. If set, the model deploy/mutate
-   * operation will succeed once available_replica_count reaches required_replica_count, and the
-   * rest of the replicas will be retried. If not set, the default required_replica_count will be
+   * only needed when partial deployment/mutation is desired. If set, the deploy/mutate operation
+   * will succeed once available_replica_count reaches required_replica_count, and the rest of the
+   * replicas will be retried. If not set, the default required_replica_count will be
    * min_replica_count.
    * @param requiredReplicaCount requiredReplicaCount or {@code null} for none
    */

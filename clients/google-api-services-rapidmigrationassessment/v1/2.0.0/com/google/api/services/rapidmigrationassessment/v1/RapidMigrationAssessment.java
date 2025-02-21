@@ -1011,7 +1011,7 @@ public class RapidMigrationAssessment extends com.google.api.client.googleapis.s
         }
         /**
          * Deletes a single Collector - changes state of collector to "Deleting". Background jobs does final
-         * deletion thorugh producer api.
+         * deletion through producer API.
          *
          * Create a request for the method "collectors.delete".
          *
@@ -1036,7 +1036,7 @@ public class RapidMigrationAssessment extends com.google.api.client.googleapis.s
 
           /**
            * Deletes a single Collector - changes state of collector to "Deleting". Background jobs does
-           * final deletion thorugh producer api.
+           * final deletion through producer API.
            *
            * Create a request for the method "collectors.delete".
            *

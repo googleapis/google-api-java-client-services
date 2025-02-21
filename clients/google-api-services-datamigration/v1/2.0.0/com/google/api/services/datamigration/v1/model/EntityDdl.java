@@ -38,11 +38,26 @@ public final class EntityDdl extends com.google.api.client.json.GenericJson {
   private java.lang.String ddl;
 
   /**
+   * The DDL Kind selected for apply, or SOURCE if getting the source tree.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ddlKind;
+
+  /**
    * Type of DDL (Create, Alter).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ddlType;
+
+  /**
+   * If ddl_kind is USER_EDIT, this holds the DDL kind of the original content - DETERMINISTIC or
+   * AI. Otherwise, this is DDL_KIND_UNSPECIFIED.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String editedDdlKind;
 
   /**
    * The name of the database entity the ddl refers to.
@@ -83,6 +98,23 @@ public final class EntityDdl extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The DDL Kind selected for apply, or SOURCE if getting the source tree.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDdlKind() {
+    return ddlKind;
+  }
+
+  /**
+   * The DDL Kind selected for apply, or SOURCE if getting the source tree.
+   * @param ddlKind ddlKind or {@code null} for none
+   */
+  public EntityDdl setDdlKind(java.lang.String ddlKind) {
+    this.ddlKind = ddlKind;
+    return this;
+  }
+
+  /**
    * Type of DDL (Create, Alter).
    * @return value or {@code null} for none
    */
@@ -96,6 +128,25 @@ public final class EntityDdl extends com.google.api.client.json.GenericJson {
    */
   public EntityDdl setDdlType(java.lang.String ddlType) {
     this.ddlType = ddlType;
+    return this;
+  }
+
+  /**
+   * If ddl_kind is USER_EDIT, this holds the DDL kind of the original content - DETERMINISTIC or
+   * AI. Otherwise, this is DDL_KIND_UNSPECIFIED.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEditedDdlKind() {
+    return editedDdlKind;
+  }
+
+  /**
+   * If ddl_kind is USER_EDIT, this holds the DDL kind of the original content - DETERMINISTIC or
+   * AI. Otherwise, this is DDL_KIND_UNSPECIFIED.
+   * @param editedDdlKind editedDdlKind or {@code null} for none
+   */
+  public EntityDdl setEditedDdlKind(java.lang.String editedDdlKind) {
+    this.editedDdlKind = editedDdlKind;
     return this;
   }
 

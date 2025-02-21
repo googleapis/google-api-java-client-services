@@ -45,7 +45,7 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   private FormAction action;
 
   /**
-   * Populated for app commands, including slash commands and quick commands.
+   * Metadata about a Chat app command.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -177,7 +177,7 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Populated for app commands, including slash commands and quick commands.
+   * Metadata about a Chat app command.
    * @return value or {@code null} for none
    */
   public AppCommandMetadata getAppCommandMetadata() {
@@ -185,7 +185,7 @@ public final class DeprecatedEvent extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Populated for app commands, including slash commands and quick commands.
+   * Metadata about a Chat app command.
    * @param appCommandMetadata appCommandMetadata or {@code null} for none
    */
   public DeprecatedEvent setAppCommandMetadata(AppCommandMetadata appCommandMetadata) {

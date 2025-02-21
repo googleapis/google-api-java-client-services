@@ -17,7 +17,8 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * A [slash command](https://developers.google.com/workspace/chat/slash-commands) in Google Chat.
+ * Metadata about a [slash command](https://developers.google.com/workspace/chat/commands) in Google
+ * Chat.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -30,14 +31,14 @@ package com.google.api.services.chat.v1.model;
 public final class SlashCommand extends com.google.api.client.json.GenericJson {
 
   /**
-   * The ID of the slash command invoked.
+   * The ID of the slash command.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long commandId;
 
   /**
-   * The ID of the slash command invoked.
+   * The ID of the slash command.
    * @return value or {@code null} for none
    */
   public java.lang.Long getCommandId() {
@@ -45,7 +46,7 @@ public final class SlashCommand extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ID of the slash command invoked.
+   * The ID of the slash command.
    * @param commandId commandId or {@code null} for none
    */
   public SlashCommand setCommandId(java.lang.Long commandId) {

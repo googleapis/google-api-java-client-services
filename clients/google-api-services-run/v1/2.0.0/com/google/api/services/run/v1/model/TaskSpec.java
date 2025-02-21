@@ -51,6 +51,13 @@ public final class TaskSpec extends com.google.api.client.json.GenericJson {
   private java.lang.Integer maxRetries;
 
   /**
+   * Optional. The Node Selector configuration. Map of selector key to a value which matches a node.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> nodeSelector;
+
+  /**
    * Optional. Email address of the IAM service account associated with the task of a job execution.
    * The service account represents the identity of the running task, and determines what
    * permissions the task has. If not provided, the task will use the project's default service
@@ -109,6 +116,23 @@ public final class TaskSpec extends com.google.api.client.json.GenericJson {
    */
   public TaskSpec setMaxRetries(java.lang.Integer maxRetries) {
     this.maxRetries = maxRetries;
+    return this;
+  }
+
+  /**
+   * Optional. The Node Selector configuration. Map of selector key to a value which matches a node.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getNodeSelector() {
+    return nodeSelector;
+  }
+
+  /**
+   * Optional. The Node Selector configuration. Map of selector key to a value which matches a node.
+   * @param nodeSelector nodeSelector or {@code null} for none
+   */
+  public TaskSpec setNodeSelector(java.util.Map<String, java.lang.String> nodeSelector) {
+    this.nodeSelector = nodeSelector;
     return this;
   }
 

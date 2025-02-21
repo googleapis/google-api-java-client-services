@@ -3536,16 +3536,16 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       /**
        * Required. Name of the Google Cloud folder or organization to reparent the target resource.
        * The analysis will be performed against hypothetically moving the resource to this specified
-       * desitination parent. This can only be a folder number (such as "folders/123") or an
+       * destination parent. This can only be a folder number (such as "folders/123") or an
        * organization number (such as "organizations/123").
        */
       @com.google.api.client.util.Key
       private java.lang.String destinationParent;
 
       /** Required. Name of the Google Cloud folder or organization to reparent the target resource. The
-     analysis will be performed against hypothetically moving the resource to this specified
-     desitination parent. This can only be a folder number (such as "folders/123") or an organization
-     number (such as "organizations/123").
+     analysis will be performed against hypothetically moving the resource to this specified destination
+     parent. This can only be a folder number (such as "folders/123") or an organization number (such as
+     "organizations/123").
        */
       public java.lang.String getDestinationParent() {
         return destinationParent;
@@ -3554,7 +3554,7 @@ public class CloudAsset extends com.google.api.client.googleapis.services.json.A
       /**
        * Required. Name of the Google Cloud folder or organization to reparent the target resource.
        * The analysis will be performed against hypothetically moving the resource to this specified
-       * desitination parent. This can only be a folder number (such as "folders/123") or an
+       * destination parent. This can only be a folder number (such as "folders/123") or an
        * organization number (such as "organizations/123").
        */
       public AnalyzeMove setDestinationParent(java.lang.String destinationParent) {

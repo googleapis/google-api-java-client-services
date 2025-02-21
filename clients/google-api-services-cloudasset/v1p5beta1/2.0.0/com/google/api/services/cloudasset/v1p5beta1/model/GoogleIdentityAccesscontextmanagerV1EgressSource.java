@@ -44,11 +44,10 @@ public final class GoogleIdentityAccesscontextmanagerV1EgressSource extends com.
   private java.lang.String accessLevel;
 
   /**
-   * A Google Cloud resource that you want to allow to egress the perimeter. These resources can
-   * access data outside the perimeter. This field only supports projects. The project format is
-   * `projects/{project_number}`. The resource can be in any Google Cloud organization, not just the
-   * organization where the perimeter is defined. You can't use `*` in this field to allow all
-   * Google Cloud resources.
+   * A Google Cloud resource from the service perimeter that you want to allow to access data
+   * outside the perimeter. This field supports only projects. The project format is
+   * `projects/{project_number}`. You can't use `*` in this field to allow all Google Cloud
+   * resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,11 +83,10 @@ public final class GoogleIdentityAccesscontextmanagerV1EgressSource extends com.
   }
 
   /**
-   * A Google Cloud resource that you want to allow to egress the perimeter. These resources can
-   * access data outside the perimeter. This field only supports projects. The project format is
-   * `projects/{project_number}`. The resource can be in any Google Cloud organization, not just the
-   * organization where the perimeter is defined. You can't use `*` in this field to allow all
-   * Google Cloud resources.
+   * A Google Cloud resource from the service perimeter that you want to allow to access data
+   * outside the perimeter. This field supports only projects. The project format is
+   * `projects/{project_number}`. You can't use `*` in this field to allow all Google Cloud
+   * resources.
    * @return value or {@code null} for none
    */
   public java.lang.String getResource() {
@@ -96,11 +94,10 @@ public final class GoogleIdentityAccesscontextmanagerV1EgressSource extends com.
   }
 
   /**
-   * A Google Cloud resource that you want to allow to egress the perimeter. These resources can
-   * access data outside the perimeter. This field only supports projects. The project format is
-   * `projects/{project_number}`. The resource can be in any Google Cloud organization, not just the
-   * organization where the perimeter is defined. You can't use `*` in this field to allow all
-   * Google Cloud resources.
+   * A Google Cloud resource from the service perimeter that you want to allow to access data
+   * outside the perimeter. This field supports only projects. The project format is
+   * `projects/{project_number}`. You can't use `*` in this field to allow all Google Cloud
+   * resources.
    * @param resource resource or {@code null} for none
    */
   public GoogleIdentityAccesscontextmanagerV1EgressSource setResource(java.lang.String resource) {

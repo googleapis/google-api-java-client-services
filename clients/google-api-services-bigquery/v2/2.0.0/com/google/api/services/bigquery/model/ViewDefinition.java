@@ -43,7 +43,7 @@ public final class ViewDefinition extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Specifices the privacy policy for the view.
+   * Optional. Specifies the privacy policy for the view.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -105,7 +105,7 @@ public final class ViewDefinition extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Specifices the privacy policy for the view.
+   * Optional. Specifies the privacy policy for the view.
    * @return value or {@code null} for none
    */
   public PrivacyPolicy getPrivacyPolicy() {
@@ -113,7 +113,7 @@ public final class ViewDefinition extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Specifices the privacy policy for the view.
+   * Optional. Specifies the privacy policy for the view.
    * @param privacyPolicy privacyPolicy or {@code null} for none
    */
   public ViewDefinition setPrivacyPolicy(PrivacyPolicy privacyPolicy) {

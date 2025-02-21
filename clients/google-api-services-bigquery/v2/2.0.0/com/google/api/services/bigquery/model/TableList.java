@@ -532,7 +532,7 @@ public final class TableList extends com.google.api.client.json.GenericJson {
     public static final class View extends com.google.api.client.json.GenericJson {
 
       /**
-       * Specifices the privacy policy for the view.
+       * Specifies the privacy policy for the view.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
@@ -546,7 +546,7 @@ public final class TableList extends com.google.api.client.json.GenericJson {
       private java.lang.Boolean useLegacySql;
 
       /**
-       * Specifices the privacy policy for the view.
+       * Specifies the privacy policy for the view.
        * @return value or {@code null} for none
        */
       public PrivacyPolicy getPrivacyPolicy() {
@@ -554,7 +554,7 @@ public final class TableList extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Specifices the privacy policy for the view.
+       * Specifies the privacy policy for the view.
        * @param privacyPolicy privacyPolicy or {@code null} for none
        */
       public View setPrivacyPolicy(PrivacyPolicy privacyPolicy) {

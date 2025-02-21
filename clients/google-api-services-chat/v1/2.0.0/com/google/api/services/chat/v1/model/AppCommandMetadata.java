@@ -17,10 +17,7 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * Metadata associated with app commands. App commands are a way for users to invoke and interact
- * with a Chat app. These can be slash commands typed in the compose box, or items directly selected
- * from the integration menu. For more information, see [Respond to quick
- * commands](https://developers.google.com/workspace/chat/quick-commands).
+ * Metadata about a [Chat app command](https://developers.google.com/workspace/chat/commands).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -33,21 +30,21 @@ package com.google.api.services.chat.v1.model;
 public final class AppCommandMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * The command ID for the given app interaction.
+   * The ID for the command specified in the Chat API configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer appCommandId;
 
   /**
-   * The type of the app command.
+   * The type of Chat app command.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String appCommandType;
 
   /**
-   * The command ID for the given app interaction.
+   * The ID for the command specified in the Chat API configuration.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getAppCommandId() {
@@ -55,7 +52,7 @@ public final class AppCommandMetadata extends com.google.api.client.json.Generic
   }
 
   /**
-   * The command ID for the given app interaction.
+   * The ID for the command specified in the Chat API configuration.
    * @param appCommandId appCommandId or {@code null} for none
    */
   public AppCommandMetadata setAppCommandId(java.lang.Integer appCommandId) {
@@ -64,7 +61,7 @@ public final class AppCommandMetadata extends com.google.api.client.json.Generic
   }
 
   /**
-   * The type of the app command.
+   * The type of Chat app command.
    * @return value or {@code null} for none
    */
   public java.lang.String getAppCommandType() {
@@ -72,7 +69,7 @@ public final class AppCommandMetadata extends com.google.api.client.json.Generic
   }
 
   /**
-   * The type of the app command.
+   * The type of Chat app command.
    * @param appCommandType appCommandType or {@code null} for none
    */
   public AppCommandMetadata setAppCommandType(java.lang.String appCommandType) {

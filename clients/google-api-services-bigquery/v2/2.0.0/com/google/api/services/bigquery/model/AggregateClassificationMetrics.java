@@ -80,7 +80,7 @@ public final class AggregateClassificationMetrics extends com.google.api.client.
 
   /**
    * Threshold at which the metrics are computed. For binary classification models this is the
-   * positive class threshold. For multi-class classfication models this is the confidence
+   * positive class threshold. For multi-class classification models this is the confidence
    * threshold.
    * The value may be {@code null}.
    */
@@ -199,7 +199,7 @@ public final class AggregateClassificationMetrics extends com.google.api.client.
 
   /**
    * Threshold at which the metrics are computed. For binary classification models this is the
-   * positive class threshold. For multi-class classfication models this is the confidence
+   * positive class threshold. For multi-class classification models this is the confidence
    * threshold.
    * @return value or {@code null} for none
    */
@@ -209,7 +209,7 @@ public final class AggregateClassificationMetrics extends com.google.api.client.
 
   /**
    * Threshold at which the metrics are computed. For binary classification models this is the
-   * positive class threshold. For multi-class classfication models this is the confidence
+   * positive class threshold. For multi-class classification models this is the confidence
    * threshold.
    * @param threshold threshold or {@code null} for none
    */

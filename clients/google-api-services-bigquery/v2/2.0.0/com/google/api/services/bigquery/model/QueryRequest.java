@@ -70,6 +70,13 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   private DatasetReference defaultDataset;
 
   /**
+   * Optional. Custom encryption configuration (e.g., Cloud KMS keys)
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EncryptionConfiguration destinationEncryptionConfiguration;
+
+  /**
    * Optional. If set to true, BigQuery doesn't run the job. Instead, if the query is valid,
    * BigQuery returns statistics about the job such as how many bytes would be processed. If the
    * query is invalid, an error returns. The default value is false.
@@ -93,6 +100,17 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String jobCreationMode;
+
+  /**
+   * Optional. Job timeout in milliseconds. If this time limit is exceeded, BigQuery will attempt to
+   * stop a longer job, but may not always succeed in canceling it before the job completes. For
+   * example, a job that takes more than 60 seconds to complete has a better chance of being stopped
+   * than a job that takes 10 seconds to complete. This timeout applies to the query even if a job
+   * does not need to be created.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long jobTimeoutMs;
 
   /**
    * The resource type of the request.
@@ -318,6 +336,23 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Custom encryption configuration (e.g., Cloud KMS keys)
+   * @return value or {@code null} for none
+   */
+  public EncryptionConfiguration getDestinationEncryptionConfiguration() {
+    return destinationEncryptionConfiguration;
+  }
+
+  /**
+   * Optional. Custom encryption configuration (e.g., Cloud KMS keys)
+   * @param destinationEncryptionConfiguration destinationEncryptionConfiguration or {@code null} for none
+   */
+  public QueryRequest setDestinationEncryptionConfiguration(EncryptionConfiguration destinationEncryptionConfiguration) {
+    this.destinationEncryptionConfiguration = destinationEncryptionConfiguration;
+    return this;
+  }
+
+  /**
    * Optional. If set to true, BigQuery doesn't run the job. Instead, if the query is valid,
    * BigQuery returns statistics about the job such as how many bytes would be processed. If the
    * query is invalid, an error returns. The default value is false.
@@ -373,6 +408,31 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
    */
   public QueryRequest setJobCreationMode(java.lang.String jobCreationMode) {
     this.jobCreationMode = jobCreationMode;
+    return this;
+  }
+
+  /**
+   * Optional. Job timeout in milliseconds. If this time limit is exceeded, BigQuery will attempt to
+   * stop a longer job, but may not always succeed in canceling it before the job completes. For
+   * example, a job that takes more than 60 seconds to complete has a better chance of being stopped
+   * than a job that takes 10 seconds to complete. This timeout applies to the query even if a job
+   * does not need to be created.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getJobTimeoutMs() {
+    return jobTimeoutMs;
+  }
+
+  /**
+   * Optional. Job timeout in milliseconds. If this time limit is exceeded, BigQuery will attempt to
+   * stop a longer job, but may not always succeed in canceling it before the job completes. For
+   * example, a job that takes more than 60 seconds to complete has a better chance of being stopped
+   * than a job that takes 10 seconds to complete. This timeout applies to the query even if a job
+   * does not need to be created.
+   * @param jobTimeoutMs jobTimeoutMs or {@code null} for none
+   */
+  public QueryRequest setJobTimeoutMs(java.lang.Long jobTimeoutMs) {
+    this.jobTimeoutMs = jobTimeoutMs;
     return this;
   }
 

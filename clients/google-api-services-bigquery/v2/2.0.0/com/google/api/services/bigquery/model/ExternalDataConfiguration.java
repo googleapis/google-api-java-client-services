@@ -78,6 +78,20 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   private CsvOptions csvOptions;
 
   /**
+   * Optional. Format used to parse DATE values. Supports C-style and SQL-style values.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String dateFormat;
+
+  /**
+   * Optional. Format used to parse DATETIME values. Supports C-style and SQL-style values.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String datetimeFormat;
+
+  /**
    * Defines the list of possible SQL data types to which the source decimal values are converted.
    * This list and the precision and the scale parameters of the decimal field determine the target
    * type. In the order of NUMERIC, BIGNUMERIC, and STRING, a type is picked if it is in the
@@ -88,7 +102,7 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
    * this field is ["NUMERIC", "BIGNUMERIC"]. If (precision,scale) is: * (38,9) -> NUMERIC; * (39,9)
    * -> BIGNUMERIC (NUMERIC cannot hold 30 integer digits); * (38,10) -> BIGNUMERIC (NUMERIC cannot
    * hold 10 fractional digits); * (76,38) -> BIGNUMERIC; * (77,38) -> BIGNUMERIC (error if value
-   * exeeds supported range). This field cannot contain duplicate types. The order of the types in
+   * exceeds supported range). This field cannot contain duplicate types. The order of the types in
    * this field is ignored. For example, ["BIGNUMERIC", "NUMERIC"] is the same as ["NUMERIC",
    * "BIGNUMERIC"] and NUMERIC always takes precedence over BIGNUMERIC. Defaults to ["NUMERIC",
    * "STRING"] for ORC and ["NUMERIC"] for the other file formats.
@@ -227,6 +241,29 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   private java.util.List<java.lang.String> sourceUris;
 
   /**
+   * Optional. Format used to parse TIME values. Supports C-style and SQL-style values.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String timeFormat;
+
+  /**
+   * Optional. Time zone used when parsing timestamp values that do not have specific time zone
+   * information (e.g. 2024-04-20 12:34:56). The expected format is a IANA timezone string (e.g.
+   * America/Los_Angeles).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String timeZone;
+
+  /**
+   * Optional. Format used to parse TIMESTAMP values. Supports C-style and SQL-style values.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String timestampFormat;
+
+  /**
    * Try to detect schema and format options automatically. Any option specified explicitly will be
    * honored.
    * @return value or {@code null} for none
@@ -341,6 +378,40 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
   }
 
   /**
+   * Optional. Format used to parse DATE values. Supports C-style and SQL-style values.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDateFormat() {
+    return dateFormat;
+  }
+
+  /**
+   * Optional. Format used to parse DATE values. Supports C-style and SQL-style values.
+   * @param dateFormat dateFormat or {@code null} for none
+   */
+  public ExternalDataConfiguration setDateFormat(java.lang.String dateFormat) {
+    this.dateFormat = dateFormat;
+    return this;
+  }
+
+  /**
+   * Optional. Format used to parse DATETIME values. Supports C-style and SQL-style values.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDatetimeFormat() {
+    return datetimeFormat;
+  }
+
+  /**
+   * Optional. Format used to parse DATETIME values. Supports C-style and SQL-style values.
+   * @param datetimeFormat datetimeFormat or {@code null} for none
+   */
+  public ExternalDataConfiguration setDatetimeFormat(java.lang.String datetimeFormat) {
+    this.datetimeFormat = datetimeFormat;
+    return this;
+  }
+
+  /**
    * Defines the list of possible SQL data types to which the source decimal values are converted.
    * This list and the precision and the scale parameters of the decimal field determine the target
    * type. In the order of NUMERIC, BIGNUMERIC, and STRING, a type is picked if it is in the
@@ -351,7 +422,7 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
    * this field is ["NUMERIC", "BIGNUMERIC"]. If (precision,scale) is: * (38,9) -> NUMERIC; * (39,9)
    * -> BIGNUMERIC (NUMERIC cannot hold 30 integer digits); * (38,10) -> BIGNUMERIC (NUMERIC cannot
    * hold 10 fractional digits); * (76,38) -> BIGNUMERIC; * (77,38) -> BIGNUMERIC (error if value
-   * exeeds supported range). This field cannot contain duplicate types. The order of the types in
+   * exceeds supported range). This field cannot contain duplicate types. The order of the types in
    * this field is ignored. For example, ["BIGNUMERIC", "NUMERIC"] is the same as ["NUMERIC",
    * "BIGNUMERIC"] and NUMERIC always takes precedence over BIGNUMERIC. Defaults to ["NUMERIC",
    * "STRING"] for ORC and ["NUMERIC"] for the other file formats.
@@ -372,7 +443,7 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
    * this field is ["NUMERIC", "BIGNUMERIC"]. If (precision,scale) is: * (38,9) -> NUMERIC; * (39,9)
    * -> BIGNUMERIC (NUMERIC cannot hold 30 integer digits); * (38,10) -> BIGNUMERIC (NUMERIC cannot
    * hold 10 fractional digits); * (76,38) -> BIGNUMERIC; * (77,38) -> BIGNUMERIC (error if value
-   * exeeds supported range). This field cannot contain duplicate types. The order of the types in
+   * exceeds supported range). This field cannot contain duplicate types. The order of the types in
    * this field is ignored. For example, ["BIGNUMERIC", "NUMERIC"] is the same as ["NUMERIC",
    * "BIGNUMERIC"] and NUMERIC always takes precedence over BIGNUMERIC. Defaults to ["NUMERIC",
    * "STRING"] for ORC and ["NUMERIC"] for the other file formats.
@@ -680,6 +751,61 @@ public final class ExternalDataConfiguration extends com.google.api.client.json.
    */
   public ExternalDataConfiguration setSourceUris(java.util.List<java.lang.String> sourceUris) {
     this.sourceUris = sourceUris;
+    return this;
+  }
+
+  /**
+   * Optional. Format used to parse TIME values. Supports C-style and SQL-style values.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTimeFormat() {
+    return timeFormat;
+  }
+
+  /**
+   * Optional. Format used to parse TIME values. Supports C-style and SQL-style values.
+   * @param timeFormat timeFormat or {@code null} for none
+   */
+  public ExternalDataConfiguration setTimeFormat(java.lang.String timeFormat) {
+    this.timeFormat = timeFormat;
+    return this;
+  }
+
+  /**
+   * Optional. Time zone used when parsing timestamp values that do not have specific time zone
+   * information (e.g. 2024-04-20 12:34:56). The expected format is a IANA timezone string (e.g.
+   * America/Los_Angeles).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTimeZone() {
+    return timeZone;
+  }
+
+  /**
+   * Optional. Time zone used when parsing timestamp values that do not have specific time zone
+   * information (e.g. 2024-04-20 12:34:56). The expected format is a IANA timezone string (e.g.
+   * America/Los_Angeles).
+   * @param timeZone timeZone or {@code null} for none
+   */
+  public ExternalDataConfiguration setTimeZone(java.lang.String timeZone) {
+    this.timeZone = timeZone;
+    return this;
+  }
+
+  /**
+   * Optional. Format used to parse TIMESTAMP values. Supports C-style and SQL-style values.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTimestampFormat() {
+    return timestampFormat;
+  }
+
+  /**
+   * Optional. Format used to parse TIMESTAMP values. Supports C-style and SQL-style values.
+   * @param timestampFormat timestampFormat or {@code null} for none
+   */
+  public ExternalDataConfiguration setTimestampFormat(java.lang.String timestampFormat) {
+    this.timestampFormat = timestampFormat;
     return this;
   }
 

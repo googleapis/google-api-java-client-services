@@ -124,6 +124,20 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   private java.lang.Boolean createSession;
 
   /**
+   * Optional. Date format used for parsing DATE values.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String dateFormat;
+
+  /**
+   * Optional. Date format used for parsing DATETIME values.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String datetimeFormat;
+
+  /**
    * Defines the list of possible SQL data types to which the source decimal values are converted.
    * This list and the precision and the scale parameters of the decimal field determine the target
    * type. In the order of NUMERIC, BIGNUMERIC, and STRING, a type is picked if it is in the
@@ -134,7 +148,7 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
    * this field is ["NUMERIC", "BIGNUMERIC"]. If (precision,scale) is: * (38,9) -> NUMERIC; * (39,9)
    * -> BIGNUMERIC (NUMERIC cannot hold 30 integer digits); * (38,10) -> BIGNUMERIC (NUMERIC cannot
    * hold 10 fractional digits); * (76,38) -> BIGNUMERIC; * (77,38) -> BIGNUMERIC (error if value
-   * exeeds supported range). This field cannot contain duplicate types. The order of the types in
+   * exceeds supported range). This field cannot contain duplicate types. The order of the types in
    * this field is ignored. For example, ["BIGNUMERIC", "NUMERIC"] is the same as ["NUMERIC",
    * "BIGNUMERIC"] and NUMERIC always takes precedence over BIGNUMERIC. Defaults to ["NUMERIC",
    * "STRING"] for ORC and ["NUMERIC"] for the other file formats.
@@ -386,12 +400,34 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   private java.util.List<java.lang.String> sourceUris;
 
   /**
+   * Optional. Date format used for parsing TIME values.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String timeFormat;
+
+  /**
    * Time-based partitioning specification for the destination table. Only one of timePartitioning
    * and rangePartitioning should be specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TimePartitioning timePartitioning;
+
+  /**
+   * Optional. [Experimental] Default time zone that will apply when parsing timestamp values that
+   * have no specific time zone.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String timeZone;
+
+  /**
+   * Optional. Date format used for parsing TIMESTAMP values.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String timestampFormat;
 
   /**
    * Optional. If sourceFormat is set to "AVRO", indicates whether to interpret logical types as the
@@ -618,6 +654,40 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
+   * Optional. Date format used for parsing DATE values.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDateFormat() {
+    return dateFormat;
+  }
+
+  /**
+   * Optional. Date format used for parsing DATE values.
+   * @param dateFormat dateFormat or {@code null} for none
+   */
+  public JobConfigurationLoad setDateFormat(java.lang.String dateFormat) {
+    this.dateFormat = dateFormat;
+    return this;
+  }
+
+  /**
+   * Optional. Date format used for parsing DATETIME values.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDatetimeFormat() {
+    return datetimeFormat;
+  }
+
+  /**
+   * Optional. Date format used for parsing DATETIME values.
+   * @param datetimeFormat datetimeFormat or {@code null} for none
+   */
+  public JobConfigurationLoad setDatetimeFormat(java.lang.String datetimeFormat) {
+    this.datetimeFormat = datetimeFormat;
+    return this;
+  }
+
+  /**
    * Defines the list of possible SQL data types to which the source decimal values are converted.
    * This list and the precision and the scale parameters of the decimal field determine the target
    * type. In the order of NUMERIC, BIGNUMERIC, and STRING, a type is picked if it is in the
@@ -628,7 +698,7 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
    * this field is ["NUMERIC", "BIGNUMERIC"]. If (precision,scale) is: * (38,9) -> NUMERIC; * (39,9)
    * -> BIGNUMERIC (NUMERIC cannot hold 30 integer digits); * (38,10) -> BIGNUMERIC (NUMERIC cannot
    * hold 10 fractional digits); * (76,38) -> BIGNUMERIC; * (77,38) -> BIGNUMERIC (error if value
-   * exeeds supported range). This field cannot contain duplicate types. The order of the types in
+   * exceeds supported range). This field cannot contain duplicate types. The order of the types in
    * this field is ignored. For example, ["BIGNUMERIC", "NUMERIC"] is the same as ["NUMERIC",
    * "BIGNUMERIC"] and NUMERIC always takes precedence over BIGNUMERIC. Defaults to ["NUMERIC",
    * "STRING"] for ORC and ["NUMERIC"] for the other file formats.
@@ -649,7 +719,7 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
    * this field is ["NUMERIC", "BIGNUMERIC"]. If (precision,scale) is: * (38,9) -> NUMERIC; * (39,9)
    * -> BIGNUMERIC (NUMERIC cannot hold 30 integer digits); * (38,10) -> BIGNUMERIC (NUMERIC cannot
    * hold 10 fractional digits); * (76,38) -> BIGNUMERIC; * (77,38) -> BIGNUMERIC (error if value
-   * exeeds supported range). This field cannot contain duplicate types. The order of the types in
+   * exceeds supported range). This field cannot contain duplicate types. The order of the types in
    * this field is ignored. For example, ["BIGNUMERIC", "NUMERIC"] is the same as ["NUMERIC",
    * "BIGNUMERIC"] and NUMERIC always takes precedence over BIGNUMERIC. Defaults to ["NUMERIC",
    * "STRING"] for ORC and ["NUMERIC"] for the other file formats.
@@ -1217,6 +1287,23 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
+   * Optional. Date format used for parsing TIME values.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTimeFormat() {
+    return timeFormat;
+  }
+
+  /**
+   * Optional. Date format used for parsing TIME values.
+   * @param timeFormat timeFormat or {@code null} for none
+   */
+  public JobConfigurationLoad setTimeFormat(java.lang.String timeFormat) {
+    this.timeFormat = timeFormat;
+    return this;
+  }
+
+  /**
    * Time-based partitioning specification for the destination table. Only one of timePartitioning
    * and rangePartitioning should be specified.
    * @return value or {@code null} for none
@@ -1232,6 +1319,42 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
    */
   public JobConfigurationLoad setTimePartitioning(TimePartitioning timePartitioning) {
     this.timePartitioning = timePartitioning;
+    return this;
+  }
+
+  /**
+   * Optional. [Experimental] Default time zone that will apply when parsing timestamp values that
+   * have no specific time zone.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTimeZone() {
+    return timeZone;
+  }
+
+  /**
+   * Optional. [Experimental] Default time zone that will apply when parsing timestamp values that
+   * have no specific time zone.
+   * @param timeZone timeZone or {@code null} for none
+   */
+  public JobConfigurationLoad setTimeZone(java.lang.String timeZone) {
+    this.timeZone = timeZone;
+    return this;
+  }
+
+  /**
+   * Optional. Date format used for parsing TIMESTAMP values.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTimestampFormat() {
+    return timestampFormat;
+  }
+
+  /**
+   * Optional. Date format used for parsing TIMESTAMP values.
+   * @param timestampFormat timestampFormat or {@code null} for none
+   */
+  public JobConfigurationLoad setTimestampFormat(java.lang.String timestampFormat) {
+    this.timestampFormat = timestampFormat;
     return this;
   }
 

@@ -317,6 +317,20 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   private GoogleCloudSecuritycenterV2Indicator indicator;
 
   /**
+   * IP rules associated with the finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudSecuritycenterV2IpRules ipRules;
+
+  /**
+   * Job associated with the finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudSecuritycenterV2Job job;
+
+  /**
    * Signature of the kernel rootkit.
    * The value may be {@code null}.
    */
@@ -404,6 +418,13 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Represents the VPC networks that the resource is attached to.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudSecuritycenterV2Network> networks;
 
   /**
    * Steps to address the finding.
@@ -1067,6 +1088,40 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
+   * IP rules associated with the finding.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2IpRules getIpRules() {
+    return ipRules;
+  }
+
+  /**
+   * IP rules associated with the finding.
+   * @param ipRules ipRules or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2Finding setIpRules(GoogleCloudSecuritycenterV2IpRules ipRules) {
+    this.ipRules = ipRules;
+    return this;
+  }
+
+  /**
+   * Job associated with the finding.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2Job getJob() {
+    return job;
+  }
+
+  /**
+   * Job associated with the finding.
+   * @param job job or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2Finding setJob(GoogleCloudSecuritycenterV2Job job) {
+    this.job = job;
+    return this;
+  }
+
+  /**
    * Signature of the kernel rootkit.
    * @return value or {@code null} for none
    */
@@ -1274,6 +1329,23 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
    */
   public GoogleCloudSecuritycenterV2Finding setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Represents the VPC networks that the resource is attached to.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudSecuritycenterV2Network> getNetworks() {
+    return networks;
+  }
+
+  /**
+   * Represents the VPC networks that the resource is attached to.
+   * @param networks networks or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2Finding setNetworks(java.util.List<GoogleCloudSecuritycenterV2Network> networks) {
+    this.networks = networks;
     return this;
   }
 

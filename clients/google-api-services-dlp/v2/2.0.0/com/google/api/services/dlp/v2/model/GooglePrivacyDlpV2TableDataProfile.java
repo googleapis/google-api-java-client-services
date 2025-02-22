@@ -172,6 +172,19 @@ public final class GooglePrivacyDlpV2TableDataProfile extends com.google.api.cli
   private java.lang.String projectDataProfile;
 
   /**
+   * Resources related to this profile.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GooglePrivacyDlpV2RelatedResource> relatedResources;
+
+  static {
+    // hack to force ProGuard to consider GooglePrivacyDlpV2RelatedResource used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GooglePrivacyDlpV2RelatedResource.class);
+  }
+
+  /**
    * The labels applied to the resource at the time the profile was generated.
    * The value may be {@code null}.
    */
@@ -537,6 +550,23 @@ public final class GooglePrivacyDlpV2TableDataProfile extends com.google.api.cli
    */
   public GooglePrivacyDlpV2TableDataProfile setProjectDataProfile(java.lang.String projectDataProfile) {
     this.projectDataProfile = projectDataProfile;
+    return this;
+  }
+
+  /**
+   * Resources related to this profile.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GooglePrivacyDlpV2RelatedResource> getRelatedResources() {
+    return relatedResources;
+  }
+
+  /**
+   * Resources related to this profile.
+   * @param relatedResources relatedResources or {@code null} for none
+   */
+  public GooglePrivacyDlpV2TableDataProfile setRelatedResources(java.util.List<GooglePrivacyDlpV2RelatedResource> relatedResources) {
+    this.relatedResources = relatedResources;
     return this;
   }
 

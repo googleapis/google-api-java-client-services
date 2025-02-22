@@ -37,6 +37,13 @@ public final class GoogleCloudDialogflowCxV3beta1ToolOpenApiTool extends com.goo
   private GoogleCloudDialogflowCxV3beta1ToolAuthentication authentication;
 
   /**
+   * Optional. Service Directory configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3beta1ToolServiceDirectoryConfig serviceDirectoryConfig;
+
+  /**
    * Required. The OpenAPI schema specified as a text.
    * The value may be {@code null}.
    */
@@ -64,6 +71,23 @@ public final class GoogleCloudDialogflowCxV3beta1ToolOpenApiTool extends com.goo
    */
   public GoogleCloudDialogflowCxV3beta1ToolOpenApiTool setAuthentication(GoogleCloudDialogflowCxV3beta1ToolAuthentication authentication) {
     this.authentication = authentication;
+    return this;
+  }
+
+  /**
+   * Optional. Service Directory configuration.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1ToolServiceDirectoryConfig getServiceDirectoryConfig() {
+    return serviceDirectoryConfig;
+  }
+
+  /**
+   * Optional. Service Directory configuration.
+   * @param serviceDirectoryConfig serviceDirectoryConfig or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1ToolOpenApiTool setServiceDirectoryConfig(GoogleCloudDialogflowCxV3beta1ToolServiceDirectoryConfig serviceDirectoryConfig) {
+    this.serviceDirectoryConfig = serviceDirectoryConfig;
     return this;
   }
 

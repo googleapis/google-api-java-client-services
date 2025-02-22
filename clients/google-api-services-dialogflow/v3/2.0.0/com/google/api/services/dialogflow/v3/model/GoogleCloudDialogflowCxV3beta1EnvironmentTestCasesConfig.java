@@ -47,7 +47,7 @@ public final class GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfig exte
 
   /**
    * A list of test case names to run. They should be under the same agent. Format of each test case
-   * name: `projects//locations/ /agents//testCases/`
+   * name: `projects//locations//agents//testCases/`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,7 +93,7 @@ public final class GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfig exte
 
   /**
    * A list of test case names to run. They should be under the same agent. Format of each test case
-   * name: `projects//locations/ /agents//testCases/`
+   * name: `projects//locations//agents//testCases/`
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTestCases() {
@@ -102,7 +102,7 @@ public final class GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfig exte
 
   /**
    * A list of test case names to run. They should be under the same agent. Format of each test case
-   * name: `projects//locations/ /agents//testCases/`
+   * name: `projects//locations//agents//testCases/`
    * @param testCases testCases or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfig setTestCases(java.util.List<java.lang.String> testCases) {

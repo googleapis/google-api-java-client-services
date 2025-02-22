@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.ondemandscanning.v1beta1.model;
+package com.google.api.services.ondemandscanning.v1.model;
 
 /**
  * BaseImage describes a base image of a container image.
@@ -28,7 +28,7 @@ package com.google.api.services.ondemandscanning.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class BaseImage extends com.google.api.client.json.GenericJson {
+public final class GrafeasV1BaseImage extends com.google.api.client.json.GenericJson {
 
   /**
    * The number of layers that the base image is composed of.
@@ -63,7 +63,7 @@ public final class BaseImage extends com.google.api.client.json.GenericJson {
    * The number of layers that the base image is composed of.
    * @param layerCount layerCount or {@code null} for none
    */
-  public BaseImage setLayerCount(java.lang.Integer layerCount) {
+  public GrafeasV1BaseImage setLayerCount(java.lang.Integer layerCount) {
     this.layerCount = layerCount;
     return this;
   }
@@ -80,7 +80,7 @@ public final class BaseImage extends com.google.api.client.json.GenericJson {
    * The name of the base image.
    * @param name name or {@code null} for none
    */
-  public BaseImage setName(java.lang.String name) {
+  public GrafeasV1BaseImage setName(java.lang.String name) {
     this.name = name;
     return this;
   }
@@ -97,19 +97,19 @@ public final class BaseImage extends com.google.api.client.json.GenericJson {
    * The repository name in which the base image is from.
    * @param repository repository or {@code null} for none
    */
-  public BaseImage setRepository(java.lang.String repository) {
+  public GrafeasV1BaseImage setRepository(java.lang.String repository) {
     this.repository = repository;
     return this;
   }
 
   @Override
-  public BaseImage set(String fieldName, Object value) {
-    return (BaseImage) super.set(fieldName, value);
+  public GrafeasV1BaseImage set(String fieldName, Object value) {
+    return (GrafeasV1BaseImage) super.set(fieldName, value);
   }
 
   @Override
-  public BaseImage clone() {
-    return (BaseImage) super.clone();
+  public GrafeasV1BaseImage clone() {
+    return (GrafeasV1BaseImage) super.clone();
   }
 
 }

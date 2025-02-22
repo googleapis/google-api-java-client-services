@@ -55,6 +55,14 @@ public final class TagSetting extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean includeClickTracking;
 
   /**
+   * Optional. Indicates that the unescapedlpurl macro should be included in the tag for the static
+   * landing page. New placements will default to the value set on their site.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean includeUnescapedlpurlMacro;
+
+  /**
    * Option specifying how keywords are embedded in ad tags. This setting can be used to specify
    * whether keyword placeholders are inserted in placement tags for this site. Publishers can then
    * add keywords to those placeholders.
@@ -117,6 +125,25 @@ public final class TagSetting extends com.google.api.client.json.GenericJson {
    */
   public TagSetting setIncludeClickTracking(java.lang.Boolean includeClickTracking) {
     this.includeClickTracking = includeClickTracking;
+    return this;
+  }
+
+  /**
+   * Optional. Indicates that the unescapedlpurl macro should be included in the tag for the static
+   * landing page. New placements will default to the value set on their site.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIncludeUnescapedlpurlMacro() {
+    return includeUnescapedlpurlMacro;
+  }
+
+  /**
+   * Optional. Indicates that the unescapedlpurl macro should be included in the tag for the static
+   * landing page. New placements will default to the value set on their site.
+   * @param includeUnescapedlpurlMacro includeUnescapedlpurlMacro or {@code null} for none
+   */
+  public TagSetting setIncludeUnescapedlpurlMacro(java.lang.Boolean includeUnescapedlpurlMacro) {
+    this.includeUnescapedlpurlMacro = includeUnescapedlpurlMacro;
     return this;
   }
 

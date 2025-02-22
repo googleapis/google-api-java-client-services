@@ -26077,7 +26077,10 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
            * `organizations/{org}/environments/{env}/apis/{api}/revisions/{rev}/deployments`, two permissions
            * are required: * `apigee.deployments.create` on the resource
            * `organizations/{org}/environments/{env}` * `apigee.proxyrevisions.deploy` on the resource
-           * `organizations/{org}/apis/{api}/revisions/{rev}`
+           * `organizations/{org}/apis/{api}/revisions/{rev}` Apigee hybrid validates the dependencies between
+           * shared flows and API proxies at deployment time. For example, if the Flow Callout policy in an
+           * API proxy references a shared flow that either doesn't exist or isn't deployed, the API proxy
+           * deployment fails.
            *
            * Create a request for the method "revisions.deploy".
            *
@@ -26110,7 +26113,10 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
              * `organizations/{org}/environments/{env}/apis/{api}/revisions/{rev}/deployments`, two
              * permissions are required: * `apigee.deployments.create` on the resource
              * `organizations/{org}/environments/{env}` * `apigee.proxyrevisions.deploy` on the resource
-             * `organizations/{org}/apis/{api}/revisions/{rev}`
+             * `organizations/{org}/apis/{api}/revisions/{rev}` Apigee hybrid validates the dependencies
+             * between shared flows and API proxies at deployment time. For example, if the Flow Callout
+             * policy in an API proxy references a shared flow that either doesn't exist or isn't deployed,
+             * the API proxy deployment fails.
              *
              * Create a request for the method "revisions.deploy".
              *

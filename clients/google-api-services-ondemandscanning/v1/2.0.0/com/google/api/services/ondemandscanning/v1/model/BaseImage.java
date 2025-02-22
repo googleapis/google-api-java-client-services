@@ -31,6 +31,13 @@ package com.google.api.services.ondemandscanning.v1.model;
 public final class BaseImage extends com.google.api.client.json.GenericJson {
 
   /**
+   * The number of layers that the base image is composed of.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer layerCount;
+
+  /**
    * The name of the base image.
    * The value may be {@code null}.
    */
@@ -38,18 +45,28 @@ public final class BaseImage extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * The number of layers that the base image is composed of.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String numLayers;
-
-  /**
    * The repository name in which the base image is from.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String repository;
+
+  /**
+   * The number of layers that the base image is composed of.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getLayerCount() {
+    return layerCount;
+  }
+
+  /**
+   * The number of layers that the base image is composed of.
+   * @param layerCount layerCount or {@code null} for none
+   */
+  public BaseImage setLayerCount(java.lang.Integer layerCount) {
+    this.layerCount = layerCount;
+    return this;
+  }
 
   /**
    * The name of the base image.
@@ -65,23 +82,6 @@ public final class BaseImage extends com.google.api.client.json.GenericJson {
    */
   public BaseImage setName(java.lang.String name) {
     this.name = name;
-    return this;
-  }
-
-  /**
-   * The number of layers that the base image is composed of.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getNumLayers() {
-    return numLayers;
-  }
-
-  /**
-   * The number of layers that the base image is composed of.
-   * @param numLayers numLayers or {@code null} for none
-   */
-  public BaseImage setNumLayers(java.lang.String numLayers) {
-    this.numLayers = numLayers;
     return this;
   }
 

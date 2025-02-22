@@ -52,6 +52,14 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
+   * Output only. Deprecated 'daos_version' field. Output only. The version of DAOS software running
+   * in the instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String daosVersion;
+
+  /**
    * Optional. Immutable. The deployment type of the instance. Allowed values are: * `SCRATCH`: the
    * instance is a scratch instance. * `PERSISTENT`: the instance is a persistent instance.
    * The value may be {@code null}.
@@ -195,6 +203,25 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Output only. Deprecated 'daos_version' field. Output only. The version of DAOS software running
+   * in the instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDaosVersion() {
+    return daosVersion;
+  }
+
+  /**
+   * Output only. Deprecated 'daos_version' field. Output only. The version of DAOS software running
+   * in the instance.
+   * @param daosVersion daosVersion or {@code null} for none
+   */
+  public Instance setDaosVersion(java.lang.String daosVersion) {
+    this.daosVersion = daosVersion;
     return this;
   }
 

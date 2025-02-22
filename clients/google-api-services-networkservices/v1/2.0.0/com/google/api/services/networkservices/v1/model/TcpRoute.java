@@ -44,14 +44,6 @@ public final class TcpRoute extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * Optional. Etag of the resource. If this is provided, it must match the server's etag. If the
-   * provided etag does not match the server's etag, the request will fail with a 409 ABORTED error.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String etag;
-
-  /**
    * Optional. Gateways defines a list of gateways this TcpRoute is attached to, as one of the
    * routing rules to route the requests served by the gateway. Each gateway reference should match
    * the pattern: `projects/locations/global/gateways/`
@@ -137,25 +129,6 @@ public final class TcpRoute extends com.google.api.client.json.GenericJson {
    */
   public TcpRoute setDescription(java.lang.String description) {
     this.description = description;
-    return this;
-  }
-
-  /**
-   * Optional. Etag of the resource. If this is provided, it must match the server's etag. If the
-   * provided etag does not match the server's etag, the request will fail with a 409 ABORTED error.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getEtag() {
-    return etag;
-  }
-
-  /**
-   * Optional. Etag of the resource. If this is provided, it must match the server's etag. If the
-   * provided etag does not match the server's etag, the request will fail with a 409 ABORTED error.
-   * @param etag etag or {@code null} for none
-   */
-  public TcpRoute setEtag(java.lang.String etag) {
-    this.etag = etag;
     return this;
   }
 

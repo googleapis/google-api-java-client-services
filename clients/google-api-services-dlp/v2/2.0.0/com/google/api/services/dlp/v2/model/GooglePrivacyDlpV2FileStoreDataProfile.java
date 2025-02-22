@@ -106,7 +106,8 @@ public final class GooglePrivacyDlpV2FileStoreDataProfile extends com.google.api
   private java.lang.String fileStoreLocation;
 
   /**
-   * The file store path. * Cloud Storage: `gs://{bucket}` * Amazon S3: `s3://{bucket}`
+   * The file store path. * Cloud Storage: `gs://{bucket}` * Amazon S3: `s3://{bucket}` * Vertex AI
+   * dataset: `projects/{project_number}/locations/{location}/datasets/{dataset_id}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -173,6 +174,13 @@ public final class GooglePrivacyDlpV2FileStoreDataProfile extends com.google.api
    */
   @com.google.api.client.util.Key
   private java.lang.String projectId;
+
+  /**
+   * Resources related to this profile.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GooglePrivacyDlpV2RelatedResource> relatedResources;
 
   /**
    * Attributes of the resource being profiled. Currently used attributes: *
@@ -375,7 +383,8 @@ public final class GooglePrivacyDlpV2FileStoreDataProfile extends com.google.api
   }
 
   /**
-   * The file store path. * Cloud Storage: `gs://{bucket}` * Amazon S3: `s3://{bucket}`
+   * The file store path. * Cloud Storage: `gs://{bucket}` * Amazon S3: `s3://{bucket}` * Vertex AI
+   * dataset: `projects/{project_number}/locations/{location}/datasets/{dataset_id}`
    * @return value or {@code null} for none
    */
   public java.lang.String getFileStorePath() {
@@ -383,7 +392,8 @@ public final class GooglePrivacyDlpV2FileStoreDataProfile extends com.google.api
   }
 
   /**
-   * The file store path. * Cloud Storage: `gs://{bucket}` * Amazon S3: `s3://{bucket}`
+   * The file store path. * Cloud Storage: `gs://{bucket}` * Amazon S3: `s3://{bucket}` * Vertex AI
+   * dataset: `projects/{project_number}/locations/{location}/datasets/{dataset_id}`
    * @param fileStorePath fileStorePath or {@code null} for none
    */
   public GooglePrivacyDlpV2FileStoreDataProfile setFileStorePath(java.lang.String fileStorePath) {
@@ -536,6 +546,23 @@ public final class GooglePrivacyDlpV2FileStoreDataProfile extends com.google.api
    */
   public GooglePrivacyDlpV2FileStoreDataProfile setProjectId(java.lang.String projectId) {
     this.projectId = projectId;
+    return this;
+  }
+
+  /**
+   * Resources related to this profile.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GooglePrivacyDlpV2RelatedResource> getRelatedResources() {
+    return relatedResources;
+  }
+
+  /**
+   * Resources related to this profile.
+   * @param relatedResources relatedResources or {@code null} for none
+   */
+  public GooglePrivacyDlpV2FileStoreDataProfile setRelatedResources(java.util.List<GooglePrivacyDlpV2RelatedResource> relatedResources) {
+    this.relatedResources = relatedResources;
     return this;
   }
 

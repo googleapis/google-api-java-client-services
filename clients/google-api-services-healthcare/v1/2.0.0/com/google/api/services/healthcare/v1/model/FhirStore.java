@@ -30,6 +30,16 @@ package com.google.api.services.healthcare.v1.model;
 public final class FhirStore extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. FHIR bulk export exports resources to the specified Cloud Storage destination. A
+   * Cloud Storage destination is a URI for a Cloud Storage directory where result files will be
+   * written. Only used in the spec-defined bulk $export methods. The Cloud Healthcare Service Agent
+   * requires the `roles/storage.objectAdmin` Cloud IAM role on the destination.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BulkExportGcsDestination bulkExportGcsDestination;
+
+  /**
    * Optional. Enable parsing of references within complex FHIR data types such as Extensions. If
    * this value is set to ENABLED, then features like referential integrity and Bundle reference
    * rewriting apply to all references. If this flag has not been specified the behavior of the FHIR
@@ -173,6 +183,29 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String version;
+
+  /**
+   * Optional. FHIR bulk export exports resources to the specified Cloud Storage destination. A
+   * Cloud Storage destination is a URI for a Cloud Storage directory where result files will be
+   * written. Only used in the spec-defined bulk $export methods. The Cloud Healthcare Service Agent
+   * requires the `roles/storage.objectAdmin` Cloud IAM role on the destination.
+   * @return value or {@code null} for none
+   */
+  public BulkExportGcsDestination getBulkExportGcsDestination() {
+    return bulkExportGcsDestination;
+  }
+
+  /**
+   * Optional. FHIR bulk export exports resources to the specified Cloud Storage destination. A
+   * Cloud Storage destination is a URI for a Cloud Storage directory where result files will be
+   * written. Only used in the spec-defined bulk $export methods. The Cloud Healthcare Service Agent
+   * requires the `roles/storage.objectAdmin` Cloud IAM role on the destination.
+   * @param bulkExportGcsDestination bulkExportGcsDestination or {@code null} for none
+   */
+  public FhirStore setBulkExportGcsDestination(BulkExportGcsDestination bulkExportGcsDestination) {
+    this.bulkExportGcsDestination = bulkExportGcsDestination;
+    return this;
+  }
 
   /**
    * Optional. Enable parsing of references within complex FHIR data types such as Extensions. If

@@ -37,6 +37,13 @@ public final class BigQueryDestinationConfig extends com.google.api.client.json.
   private AppendOnly appendOnly;
 
   /**
+   * Optional. Big Lake Managed Tables (BLMT) configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BlmtConfig blmtConfig;
+
+  /**
    * The guaranteed data freshness (in seconds) when querying tables created by the stream. Editing
    * this field will only affect new tables created in the future, but existing tables will not be
    * impacted. Lower values mean that queries will return fresher data, but may result in higher
@@ -81,6 +88,23 @@ public final class BigQueryDestinationConfig extends com.google.api.client.json.
    */
   public BigQueryDestinationConfig setAppendOnly(AppendOnly appendOnly) {
     this.appendOnly = appendOnly;
+    return this;
+  }
+
+  /**
+   * Optional. Big Lake Managed Tables (BLMT) configuration.
+   * @return value or {@code null} for none
+   */
+  public BlmtConfig getBlmtConfig() {
+    return blmtConfig;
+  }
+
+  /**
+   * Optional. Big Lake Managed Tables (BLMT) configuration.
+   * @param blmtConfig blmtConfig or {@code null} for none
+   */
+  public BigQueryDestinationConfig setBlmtConfig(BlmtConfig blmtConfig) {
+    this.blmtConfig = blmtConfig;
     return this;
   }
 

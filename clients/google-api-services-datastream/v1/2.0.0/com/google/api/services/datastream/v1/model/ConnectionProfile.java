@@ -107,6 +107,13 @@ public final class ConnectionProfile extends com.google.api.client.json.GenericJ
   private PrivateConnectivity privateConnectivity;
 
   /**
+   * Salesforce Connection Profile configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SalesforceProfile salesforceProfile;
+
+  /**
    * Output only. Reserved for future use.
    * The value may be {@code null}.
    */
@@ -325,6 +332,23 @@ public final class ConnectionProfile extends com.google.api.client.json.GenericJ
    */
   public ConnectionProfile setPrivateConnectivity(PrivateConnectivity privateConnectivity) {
     this.privateConnectivity = privateConnectivity;
+    return this;
+  }
+
+  /**
+   * Salesforce Connection Profile configuration.
+   * @return value or {@code null} for none
+   */
+  public SalesforceProfile getSalesforceProfile() {
+    return salesforceProfile;
+  }
+
+  /**
+   * Salesforce Connection Profile configuration.
+   * @param salesforceProfile salesforceProfile or {@code null} for none
+   */
+  public ConnectionProfile setSalesforceProfile(SalesforceProfile salesforceProfile) {
+    this.salesforceProfile = salesforceProfile;
     return this;
   }
 

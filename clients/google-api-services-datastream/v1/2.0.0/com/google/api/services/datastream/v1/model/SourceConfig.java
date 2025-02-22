@@ -51,6 +51,13 @@ public final class SourceConfig extends com.google.api.client.json.GenericJson {
   private PostgresqlSourceConfig postgresqlSourceConfig;
 
   /**
+   * Salesforce data source configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SalesforceSourceConfig salesforceSourceConfig;
+
+  /**
    * Required. Source connection profile resoource. Format:
    * `projects/{project}/locations/{location}/connectionProfiles/{name}`
    * The value may be {@code null}.
@@ -113,6 +120,23 @@ public final class SourceConfig extends com.google.api.client.json.GenericJson {
    */
   public SourceConfig setPostgresqlSourceConfig(PostgresqlSourceConfig postgresqlSourceConfig) {
     this.postgresqlSourceConfig = postgresqlSourceConfig;
+    return this;
+  }
+
+  /**
+   * Salesforce data source configuration.
+   * @return value or {@code null} for none
+   */
+  public SalesforceSourceConfig getSalesforceSourceConfig() {
+    return salesforceSourceConfig;
+  }
+
+  /**
+   * Salesforce data source configuration.
+   * @param salesforceSourceConfig salesforceSourceConfig or {@code null} for none
+   */
+  public SourceConfig setSalesforceSourceConfig(SalesforceSourceConfig salesforceSourceConfig) {
+    this.salesforceSourceConfig = salesforceSourceConfig;
     return this;
   }
 

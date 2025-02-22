@@ -30,11 +30,35 @@ package com.google.api.services.tagmanager.model;
 public final class GetContainerSnippetResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * Server container config param for manually provisioning a tagging server.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String containerConfig;
+
+  /**
    * Tagging snippet for a Container.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String snippet;
+
+  /**
+   * Server container config param for manually provisioning a tagging server.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getContainerConfig() {
+    return containerConfig;
+  }
+
+  /**
+   * Server container config param for manually provisioning a tagging server.
+   * @param containerConfig containerConfig or {@code null} for none
+   */
+  public GetContainerSnippetResponse setContainerConfig(java.lang.String containerConfig) {
+    this.containerConfig = containerConfig;
+    return this;
+  }
 
   /**
    * Tagging snippet for a Container.

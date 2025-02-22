@@ -12217,6 +12217,49 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
+      /** Whether the request should enforce expansive access rules. */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean enforceExpansiveAccess;
+
+      /** Whether the request should enforce expansive access rules. [default: false]
+       */
+      public java.lang.Boolean getEnforceExpansiveAccess() {
+        return enforceExpansiveAccess;
+      }
+
+      /** Whether the request should enforce expansive access rules. */
+      public Delete setEnforceExpansiveAccess(java.lang.Boolean enforceExpansiveAccess) {
+        this.enforceExpansiveAccess = enforceExpansiveAccess;
+        return this;
+      }
+
+      /**
+       * Convenience method that returns only {@link Boolean#TRUE} or {@link Boolean#FALSE}.
+       *
+       * <p>
+       * Boolean properties can have four possible values:
+       * {@code null}, {@link com.google.api.client.util.Data#NULL_BOOLEAN}, {@link Boolean#TRUE}
+       * or {@link Boolean#FALSE}.
+       * </p>
+       *
+       * <p>
+       * This method returns {@link Boolean#TRUE} if the default of the property is {@link Boolean#TRUE}
+       * and it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * {@link Boolean#FALSE} is returned if the default of the property is {@link Boolean#FALSE} and
+       * it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * </p>
+       *
+       * <p>
+       * Whether the request should enforce expansive access rules.
+       * </p>
+       */
+      public boolean isEnforceExpansiveAccess() {
+        if (enforceExpansiveAccess == null || enforceExpansiveAccess == com.google.api.client.util.Data.NULL_BOOLEAN) {
+          return false;
+        }
+        return enforceExpansiveAccess;
+      }
+
       /** Whether the requesting application supports both My Drives and shared drives. */
       @com.google.api.client.util.Key
       private java.lang.Boolean supportsAllDrives;
@@ -13680,6 +13723,49 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
+      /** Whether the request should enforce expansive access rules. */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean enforceExpansiveAccess;
+
+      /** Whether the request should enforce expansive access rules. [default: false]
+       */
+      public java.lang.Boolean getEnforceExpansiveAccess() {
+        return enforceExpansiveAccess;
+      }
+
+      /** Whether the request should enforce expansive access rules. */
+      public Patch setEnforceExpansiveAccess(java.lang.Boolean enforceExpansiveAccess) {
+        this.enforceExpansiveAccess = enforceExpansiveAccess;
+        return this;
+      }
+
+      /**
+       * Convenience method that returns only {@link Boolean#TRUE} or {@link Boolean#FALSE}.
+       *
+       * <p>
+       * Boolean properties can have four possible values:
+       * {@code null}, {@link com.google.api.client.util.Data#NULL_BOOLEAN}, {@link Boolean#TRUE}
+       * or {@link Boolean#FALSE}.
+       * </p>
+       *
+       * <p>
+       * This method returns {@link Boolean#TRUE} if the default of the property is {@link Boolean#TRUE}
+       * and it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * {@link Boolean#FALSE} is returned if the default of the property is {@link Boolean#FALSE} and
+       * it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * </p>
+       *
+       * <p>
+       * Whether the request should enforce expansive access rules.
+       * </p>
+       */
+      public boolean isEnforceExpansiveAccess() {
+        if (enforceExpansiveAccess == null || enforceExpansiveAccess == com.google.api.client.util.Data.NULL_BOOLEAN) {
+          return false;
+        }
+        return enforceExpansiveAccess;
+      }
+
       /** Whether to remove the expiration date. */
       @com.google.api.client.util.Key
       private java.lang.Boolean removeExpiration;
@@ -14051,6 +14137,49 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       public Update setPermissionId(java.lang.String permissionId) {
         this.permissionId = permissionId;
         return this;
+      }
+
+      /** Whether the request should enforce expansive access rules. */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean enforceExpansiveAccess;
+
+      /** Whether the request should enforce expansive access rules. [default: false]
+       */
+      public java.lang.Boolean getEnforceExpansiveAccess() {
+        return enforceExpansiveAccess;
+      }
+
+      /** Whether the request should enforce expansive access rules. */
+      public Update setEnforceExpansiveAccess(java.lang.Boolean enforceExpansiveAccess) {
+        this.enforceExpansiveAccess = enforceExpansiveAccess;
+        return this;
+      }
+
+      /**
+       * Convenience method that returns only {@link Boolean#TRUE} or {@link Boolean#FALSE}.
+       *
+       * <p>
+       * Boolean properties can have four possible values:
+       * {@code null}, {@link com.google.api.client.util.Data#NULL_BOOLEAN}, {@link Boolean#TRUE}
+       * or {@link Boolean#FALSE}.
+       * </p>
+       *
+       * <p>
+       * This method returns {@link Boolean#TRUE} if the default of the property is {@link Boolean#TRUE}
+       * and it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * {@link Boolean#FALSE} is returned if the default of the property is {@link Boolean#FALSE} and
+       * it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * </p>
+       *
+       * <p>
+       * Whether the request should enforce expansive access rules.
+       * </p>
+       */
+      public boolean isEnforceExpansiveAccess() {
+        if (enforceExpansiveAccess == null || enforceExpansiveAccess == com.google.api.client.util.Data.NULL_BOOLEAN) {
+          return false;
+        }
+        return enforceExpansiveAccess;
       }
 
       /** Whether to remove the expiration date. */

@@ -88,7 +88,9 @@ public final class CssProductInput extends com.google.api.client.json.GenericJso
 
   /**
    * The name of the CSS Product input. Format:
-   * `accounts/{account}/cssProductInputs/{css_product_input}`
+   * `accounts/{account}/cssProductInputs/{css_product_input}`, where the last section
+   * `css_product_input` consists of 3 parts: contentLanguage~feedLabel~offerId. Example:
+   * accounts/123/cssProductInputs/de~DE~rawProvidedId123
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -236,7 +238,9 @@ public final class CssProductInput extends com.google.api.client.json.GenericJso
 
   /**
    * The name of the CSS Product input. Format:
-   * `accounts/{account}/cssProductInputs/{css_product_input}`
+   * `accounts/{account}/cssProductInputs/{css_product_input}`, where the last section
+   * `css_product_input` consists of 3 parts: contentLanguage~feedLabel~offerId. Example:
+   * accounts/123/cssProductInputs/de~DE~rawProvidedId123
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -245,7 +249,9 @@ public final class CssProductInput extends com.google.api.client.json.GenericJso
 
   /**
    * The name of the CSS Product input. Format:
-   * `accounts/{account}/cssProductInputs/{css_product_input}`
+   * `accounts/{account}/cssProductInputs/{css_product_input}`, where the last section
+   * `css_product_input` consists of 3 parts: contentLanguage~feedLabel~offerId. Example:
+   * accounts/123/cssProductInputs/de~DE~rawProvidedId123
    * @param name name or {@code null} for none
    */
   public CssProductInput setName(java.lang.String name) {

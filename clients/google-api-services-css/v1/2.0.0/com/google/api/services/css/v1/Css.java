@@ -705,7 +705,9 @@ public class Css extends com.google.api.client.googleapis.services.json.Abstract
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
        * @param name Required. The name of the CSS product input resource to delete. Format:
-       *        accounts/{account}/cssProductInputs/{css_product_input}
+       *        accounts/{account}/cssProductInputs/{css_product_input}, where the last section
+       *        `css_product_input` consists of 3 parts: contentLanguage~feedLabel~offerId. Example:
+       *        accounts/123/cssProductInputs/de~DE~rawProvidedId123
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -733,7 +735,9 @@ public class Css extends com.google.api.client.googleapis.services.json.Abstract
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. The name of the CSS product input resource to delete. Format:
-       *        accounts/{account}/cssProductInputs/{css_product_input}
+       *        accounts/{account}/cssProductInputs/{css_product_input}, where the last section
+       *        `css_product_input` consists of 3 parts: contentLanguage~feedLabel~offerId. Example:
+       *        accounts/123/cssProductInputs/de~DE~rawProvidedId123
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -803,13 +807,17 @@ public class Css extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * Required. The name of the CSS product input resource to delete. Format:
-         * accounts/{account}/cssProductInputs/{css_product_input}
+         * accounts/{account}/cssProductInputs/{css_product_input}, where the last section
+         * `css_product_input` consists of 3 parts: contentLanguage~feedLabel~offerId. Example:
+         * accounts/123/cssProductInputs/de~DE~rawProvidedId123
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. The name of the CSS product input resource to delete. Format:
-       accounts/{account}/cssProductInputs/{css_product_input}
+       accounts/{account}/cssProductInputs/{css_product_input}, where the last section `css_product_input`
+       consists of 3 parts: contentLanguage~feedLabel~offerId. Example:
+       accounts/123/cssProductInputs/de~DE~rawProvidedId123
          */
         public java.lang.String getName() {
           return name;
@@ -817,7 +825,9 @@ public class Css extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * Required. The name of the CSS product input resource to delete. Format:
-         * accounts/{account}/cssProductInputs/{css_product_input}
+         * accounts/{account}/cssProductInputs/{css_product_input}, where the last section
+         * `css_product_input` consists of 3 parts: contentLanguage~feedLabel~offerId. Example:
+         * accounts/123/cssProductInputs/de~DE~rawProvidedId123
          */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -1041,7 +1051,10 @@ public class Css extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the css server.  After setting any optional
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the CSS Product input. Format: `accounts/{account}/cssProductInputs/{css_product_input}`
+       * @param name The name of the CSS Product input. Format:
+       *        `accounts/{account}/cssProductInputs/{css_product_input}`, where the last section
+       *        `css_product_input` consists of 3 parts: contentLanguage~feedLabel~offerId. Example:
+       *        accounts/123/cssProductInputs/de~DE~rawProvidedId123
        * @param content the {@link com.google.api.services.css.v1.model.CssProductInput}
        * @return the request
        */
@@ -1070,7 +1083,10 @@ public class Css extends com.google.api.client.googleapis.services.json.Abstract
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the CSS Product input. Format: `accounts/{account}/cssProductInputs/{css_product_input}`
+         * @param name The name of the CSS Product input. Format:
+       *        `accounts/{account}/cssProductInputs/{css_product_input}`, where the last section
+       *        `css_product_input` consists of 3 parts: contentLanguage~feedLabel~offerId. Example:
+       *        accounts/123/cssProductInputs/de~DE~rawProvidedId123
          * @param content the {@link com.google.api.services.css.v1.model.CssProductInput}
          * @since 1.13
          */
@@ -1141,13 +1157,17 @@ public class Css extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * The name of the CSS Product input. Format:
-         * `accounts/{account}/cssProductInputs/{css_product_input}`
+         * `accounts/{account}/cssProductInputs/{css_product_input}`, where the last section
+         * `css_product_input` consists of 3 parts: contentLanguage~feedLabel~offerId. Example:
+         * accounts/123/cssProductInputs/de~DE~rawProvidedId123
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** The name of the CSS Product input. Format:
-       `accounts/{account}/cssProductInputs/{css_product_input}`
+       `accounts/{account}/cssProductInputs/{css_product_input}`, where the last section
+       `css_product_input` consists of 3 parts: contentLanguage~feedLabel~offerId. Example:
+       accounts/123/cssProductInputs/de~DE~rawProvidedId123
          */
         public java.lang.String getName() {
           return name;
@@ -1155,7 +1175,9 @@ public class Css extends com.google.api.client.googleapis.services.json.Abstract
 
         /**
          * The name of the CSS Product input. Format:
-         * `accounts/{account}/cssProductInputs/{css_product_input}`
+         * `accounts/{account}/cssProductInputs/{css_product_input}`, where the last section
+         * `css_product_input` consists of 3 parts: contentLanguage~feedLabel~offerId. Example:
+         * accounts/123/cssProductInputs/de~DE~rawProvidedId123
          */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {

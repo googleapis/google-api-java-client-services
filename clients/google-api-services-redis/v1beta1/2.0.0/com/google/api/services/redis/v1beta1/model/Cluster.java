@@ -63,7 +63,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.String backupCollection;
 
   /**
-   * Optional. A list of cluster enpoints.
+   * Optional. A list of cluster endpoints.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -339,7 +339,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. A list of cluster enpoints.
+   * Optional. A list of cluster endpoints.
    * @return value or {@code null} for none
    */
   public java.util.List<ClusterEndpoint> getClusterEndpoints() {
@@ -347,7 +347,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. A list of cluster enpoints.
+   * Optional. A list of cluster endpoints.
    * @param clusterEndpoints clusterEndpoints or {@code null} for none
    */
   public Cluster setClusterEndpoints(java.util.List<ClusterEndpoint> clusterEndpoints) {

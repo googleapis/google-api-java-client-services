@@ -61,6 +61,13 @@ public final class PscConnection extends com.google.api.client.json.GenericJson 
   private java.lang.String network;
 
   /**
+   * Output only. The port number of the exposed discovery endpoint.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer port;
+
+  /**
    * Optional. Project ID of the consumer project where the forwarding rule is created in.
    * The value may be {@code null}.
    */
@@ -160,6 +167,23 @@ public final class PscConnection extends com.google.api.client.json.GenericJson 
    */
   public PscConnection setNetwork(java.lang.String network) {
     this.network = network;
+    return this;
+  }
+
+  /**
+   * Output only. The port number of the exposed discovery endpoint.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getPort() {
+    return port;
+  }
+
+  /**
+   * Output only. The port number of the exposed discovery endpoint.
+   * @param port port or {@code null} for none
+   */
+  public PscConnection setPort(java.lang.Integer port) {
+    this.port = port;
     return this;
   }
 

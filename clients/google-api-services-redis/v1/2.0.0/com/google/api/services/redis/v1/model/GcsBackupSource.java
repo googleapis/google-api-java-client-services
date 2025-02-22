@@ -32,7 +32,7 @@ package com.google.api.services.redis.v1.model;
 public final class GcsBackupSource extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. URIs of the GCS objects to import. Example: gs://bucket1/object1,
+   * Optional. URIs of the Cloud Storage objects to import. Example: gs://bucket1/object1,
    * gs://bucket2/folder2/object2
    * The value may be {@code null}.
    */
@@ -40,7 +40,7 @@ public final class GcsBackupSource extends com.google.api.client.json.GenericJso
   private java.util.List<java.lang.String> uris;
 
   /**
-   * Optional. URIs of the GCS objects to import. Example: gs://bucket1/object1,
+   * Optional. URIs of the Cloud Storage objects to import. Example: gs://bucket1/object1,
    * gs://bucket2/folder2/object2
    * @return value or {@code null} for none
    */
@@ -49,7 +49,7 @@ public final class GcsBackupSource extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. URIs of the GCS objects to import. Example: gs://bucket1/object1,
+   * Optional. URIs of the Cloud Storage objects to import. Example: gs://bucket1/object1,
    * gs://bucket2/folder2/object2
    * @param uris uris or {@code null} for none
    */

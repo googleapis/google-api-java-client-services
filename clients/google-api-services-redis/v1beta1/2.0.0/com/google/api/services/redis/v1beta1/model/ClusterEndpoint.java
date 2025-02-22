@@ -33,16 +33,16 @@ package com.google.api.services.redis.v1beta1.model;
 public final class ClusterEndpoint extends com.google.api.client.json.GenericJson {
 
   /**
-   * A group of PSC connections. They are created in the same VPC network, one for each service
-   * attachment in the cluster.
+   * Required. A group of PSC connections. They are created in the same VPC network, one for each
+   * service attachment in the cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<ConnectionDetail> connections;
 
   /**
-   * A group of PSC connections. They are created in the same VPC network, one for each service
-   * attachment in the cluster.
+   * Required. A group of PSC connections. They are created in the same VPC network, one for each
+   * service attachment in the cluster.
    * @return value or {@code null} for none
    */
   public java.util.List<ConnectionDetail> getConnections() {
@@ -50,8 +50,8 @@ public final class ClusterEndpoint extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * A group of PSC connections. They are created in the same VPC network, one for each service
-   * attachment in the cluster.
+   * Required. A group of PSC connections. They are created in the same VPC network, one for each
+   * service attachment in the cluster.
    * @param connections connections or {@code null} for none
    */
   public ClusterEndpoint setConnections(java.util.List<ConnectionDetail> connections) {

@@ -1912,17 +1912,17 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
             return this;
           }
 
-          /** Idempotent request UUID. */
+          /** Optional. Idempotent request UUID. */
           @com.google.api.client.util.Key
           private java.lang.String requestId;
 
-          /** Idempotent request UUID.
+          /** Optional. Idempotent request UUID.
            */
           public java.lang.String getRequestId() {
             return requestId;
           }
 
-          /** Idempotent request UUID. */
+          /** Optional. Idempotent request UUID. */
           public Create setRequestId(java.lang.String requestId) {
             this.requestId = requestId;
             return this;
@@ -2070,17 +2070,17 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
             return this;
           }
 
-          /** Idempotent request UUID. */
+          /** Optional. Idempotent request UUID. */
           @com.google.api.client.util.Key
           private java.lang.String requestId;
 
-          /** Idempotent request UUID.
+          /** Optional. Idempotent request UUID.
            */
           public java.lang.String getRequestId() {
             return requestId;
           }
 
-          /** Idempotent request UUID. */
+          /** Optional. Idempotent request UUID. */
           public Delete setRequestId(java.lang.String requestId) {
             this.requestId = requestId;
             return this;
@@ -2742,17 +2742,17 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
             return this;
           }
 
-          /** Idempotent request UUID. */
+          /** Optional. Idempotent request UUID. */
           @com.google.api.client.util.Key
           private java.lang.String requestId;
 
-          /** Idempotent request UUID.
+          /** Optional. Idempotent request UUID.
            */
           public java.lang.String getRequestId() {
             return requestId;
           }
 
-          /** Idempotent request UUID. */
+          /** Optional. Idempotent request UUID. */
           public Patch setRequestId(java.lang.String requestId) {
             this.requestId = requestId;
             return this;

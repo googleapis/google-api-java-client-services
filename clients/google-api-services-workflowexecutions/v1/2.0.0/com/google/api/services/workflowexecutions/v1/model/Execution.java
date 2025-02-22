@@ -86,10 +86,10 @@ public final class Execution extends com.google.api.client.json.GenericJson {
   private Error error;
 
   /**
-   * Optional. Describes the level of the execution history feature to apply to this execution. If
-   * not specified, the level of the execution history feature will be determined by its workflow's
-   * execution history level. If the value is different from its workflow's value, it will override
-   * the workflow's execution history level for this exeuction.
+   * Optional. Describes the execution history level to apply to this execution. If not specified,
+   * the execution history level is determined by its workflow's execution history level. If the
+   * levels are different, the executionHistoryLevel overrides the workflow's execution history
+   * level for this execution.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -289,10 +289,10 @@ public final class Execution extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Describes the level of the execution history feature to apply to this execution. If
-   * not specified, the level of the execution history feature will be determined by its workflow's
-   * execution history level. If the value is different from its workflow's value, it will override
-   * the workflow's execution history level for this exeuction.
+   * Optional. Describes the execution history level to apply to this execution. If not specified,
+   * the execution history level is determined by its workflow's execution history level. If the
+   * levels are different, the executionHistoryLevel overrides the workflow's execution history
+   * level for this execution.
    * @return value or {@code null} for none
    */
   public java.lang.String getExecutionHistoryLevel() {
@@ -300,10 +300,10 @@ public final class Execution extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Describes the level of the execution history feature to apply to this execution. If
-   * not specified, the level of the execution history feature will be determined by its workflow's
-   * execution history level. If the value is different from its workflow's value, it will override
-   * the workflow's execution history level for this exeuction.
+   * Optional. Describes the execution history level to apply to this execution. If not specified,
+   * the execution history level is determined by its workflow's execution history level. If the
+   * levels are different, the executionHistoryLevel overrides the workflow's execution history
+   * level for this execution.
    * @param executionHistoryLevel executionHistoryLevel or {@code null} for none
    */
   public Execution setExecutionHistoryLevel(java.lang.String executionHistoryLevel) {

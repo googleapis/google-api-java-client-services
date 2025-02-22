@@ -17,8 +17,7 @@
 package com.google.api.services.redis.v1beta1.model;
 
 /**
- * Backups stored in Cloud Storage buckets. The Cloud Storage buckets need to be the same region as
- * the clusters.
+ * GCBDR Configuration for the resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud Memorystore for Redis API. For a
@@ -29,43 +28,40 @@ package com.google.api.services.redis.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GcsBackupSource extends com.google.api.client.json.GenericJson {
+public final class GCBDRConfiguration extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. URIs of the Cloud Storage objects to import. Example: gs://bucket1/object1,
-   * gs://bucket2/folder2/object2
+   * Whether the resource is managed by GCBDR.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> uris;
+  private java.lang.Boolean gcbdrManaged;
 
   /**
-   * Optional. URIs of the Cloud Storage objects to import. Example: gs://bucket1/object1,
-   * gs://bucket2/folder2/object2
+   * Whether the resource is managed by GCBDR.
    * @return value or {@code null} for none
    */
-  public java.util.List<java.lang.String> getUris() {
-    return uris;
+  public java.lang.Boolean getGcbdrManaged() {
+    return gcbdrManaged;
   }
 
   /**
-   * Optional. URIs of the Cloud Storage objects to import. Example: gs://bucket1/object1,
-   * gs://bucket2/folder2/object2
-   * @param uris uris or {@code null} for none
+   * Whether the resource is managed by GCBDR.
+   * @param gcbdrManaged gcbdrManaged or {@code null} for none
    */
-  public GcsBackupSource setUris(java.util.List<java.lang.String> uris) {
-    this.uris = uris;
+  public GCBDRConfiguration setGcbdrManaged(java.lang.Boolean gcbdrManaged) {
+    this.gcbdrManaged = gcbdrManaged;
     return this;
   }
 
   @Override
-  public GcsBackupSource set(String fieldName, Object value) {
-    return (GcsBackupSource) super.set(fieldName, value);
+  public GCBDRConfiguration set(String fieldName, Object value) {
+    return (GCBDRConfiguration) super.set(fieldName, value);
   }
 
   @Override
-  public GcsBackupSource clone() {
-    return (GcsBackupSource) super.clone();
+  public GCBDRConfiguration clone() {
+    return (GCBDRConfiguration) super.clone();
   }
 
 }

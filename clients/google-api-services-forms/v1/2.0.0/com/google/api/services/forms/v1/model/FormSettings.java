@@ -30,7 +30,8 @@ package com.google.api.services.forms.v1.model;
 public final class FormSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Kind of email collection configured in the form.
+   * Optional. The setting that determines whether the form collects email addresses from
+   * respondents.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +45,8 @@ public final class FormSettings extends com.google.api.client.json.GenericJson {
   private QuizSettings quizSettings;
 
   /**
-   * Optional. Kind of email collection configured in the form.
+   * Optional. The setting that determines whether the form collects email addresses from
+   * respondents.
    * @return value or {@code null} for none
    */
   public java.lang.String getEmailCollectionType() {
@@ -52,7 +54,8 @@ public final class FormSettings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Kind of email collection configured in the form.
+   * Optional. The setting that determines whether the form collects email addresses from
+   * respondents.
    * @param emailCollectionType emailCollectionType or {@code null} for none
    */
   public FormSettings setEmailCollectionType(java.lang.String emailCollectionType) {

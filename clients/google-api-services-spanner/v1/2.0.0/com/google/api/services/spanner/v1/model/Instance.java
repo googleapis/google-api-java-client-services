@@ -135,8 +135,10 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    * specify the target number of nodes allocated to the instance. If autoscaling is enabled,
    * `node_count` is treated as an `OUTPUT_ONLY` field and reflects the current number of nodes
    * allocated to the instance. This might be zero in API responses for instances that are not yet
-   * in the `READY` state. For more information, see [Compute capacity, nodes, and processing
-   * units](https://cloud.google.com/spanner/docs/compute-capacity).
+   * in the `READY` state. If the instance has varying node count across replicas (achieved by
+   * setting `asymmetric_autoscaling_options` in the autoscaling configuration), the `node_count`
+   * set here is the maximum node count across all replicas. For more information, see [Compute
+   * capacity, nodes, and processing units](https://cloud.google.com/spanner/docs/compute-capacity).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -148,8 +150,10 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    * `processing_units` field to specify the target number of processing units allocated to the
    * instance. If autoscaling is enabled, `processing_units` is treated as an `OUTPUT_ONLY` field
    * and reflects the current number of processing units allocated to the instance. This might be
-   * zero in API responses for instances that are not yet in the `READY` state. For more
-   * information, see [Compute capacity, nodes and processing
+   * zero in API responses for instances that are not yet in the `READY` state. If the instance has
+   * varying processing units per replica (achieved by setting `asymmetric_autoscaling_options` in
+   * the autoscaling configuration), the `processing_units` set here is the maximum processing units
+   * across all replicas. For more information, see [Compute capacity, nodes and processing
    * units](https://cloud.google.com/spanner/docs/compute-capacity).
    * The value may be {@code null}.
    */
@@ -419,8 +423,10 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    * specify the target number of nodes allocated to the instance. If autoscaling is enabled,
    * `node_count` is treated as an `OUTPUT_ONLY` field and reflects the current number of nodes
    * allocated to the instance. This might be zero in API responses for instances that are not yet
-   * in the `READY` state. For more information, see [Compute capacity, nodes, and processing
-   * units](https://cloud.google.com/spanner/docs/compute-capacity).
+   * in the `READY` state. If the instance has varying node count across replicas (achieved by
+   * setting `asymmetric_autoscaling_options` in the autoscaling configuration), the `node_count`
+   * set here is the maximum node count across all replicas. For more information, see [Compute
+   * capacity, nodes, and processing units](https://cloud.google.com/spanner/docs/compute-capacity).
    * @return value or {@code null} for none
    */
   public java.lang.Integer getNodeCount() {
@@ -433,8 +439,10 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    * specify the target number of nodes allocated to the instance. If autoscaling is enabled,
    * `node_count` is treated as an `OUTPUT_ONLY` field and reflects the current number of nodes
    * allocated to the instance. This might be zero in API responses for instances that are not yet
-   * in the `READY` state. For more information, see [Compute capacity, nodes, and processing
-   * units](https://cloud.google.com/spanner/docs/compute-capacity).
+   * in the `READY` state. If the instance has varying node count across replicas (achieved by
+   * setting `asymmetric_autoscaling_options` in the autoscaling configuration), the `node_count`
+   * set here is the maximum node count across all replicas. For more information, see [Compute
+   * capacity, nodes, and processing units](https://cloud.google.com/spanner/docs/compute-capacity).
    * @param nodeCount nodeCount or {@code null} for none
    */
   public Instance setNodeCount(java.lang.Integer nodeCount) {
@@ -448,8 +456,10 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    * `processing_units` field to specify the target number of processing units allocated to the
    * instance. If autoscaling is enabled, `processing_units` is treated as an `OUTPUT_ONLY` field
    * and reflects the current number of processing units allocated to the instance. This might be
-   * zero in API responses for instances that are not yet in the `READY` state. For more
-   * information, see [Compute capacity, nodes and processing
+   * zero in API responses for instances that are not yet in the `READY` state. If the instance has
+   * varying processing units per replica (achieved by setting `asymmetric_autoscaling_options` in
+   * the autoscaling configuration), the `processing_units` set here is the maximum processing units
+   * across all replicas. For more information, see [Compute capacity, nodes and processing
    * units](https://cloud.google.com/spanner/docs/compute-capacity).
    * @return value or {@code null} for none
    */
@@ -463,8 +473,10 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    * `processing_units` field to specify the target number of processing units allocated to the
    * instance. If autoscaling is enabled, `processing_units` is treated as an `OUTPUT_ONLY` field
    * and reflects the current number of processing units allocated to the instance. This might be
-   * zero in API responses for instances that are not yet in the `READY` state. For more
-   * information, see [Compute capacity, nodes and processing
+   * zero in API responses for instances that are not yet in the `READY` state. If the instance has
+   * varying processing units per replica (achieved by setting `asymmetric_autoscaling_options` in
+   * the autoscaling configuration), the `processing_units` set here is the maximum processing units
+   * across all replicas. For more information, see [Compute capacity, nodes and processing
    * units](https://cloud.google.com/spanner/docs/compute-capacity).
    * @param processingUnits processingUnits or {@code null} for none
    */

@@ -31,7 +31,7 @@ public final class AddSplitPointsRequest extends com.google.api.client.json.Gene
 
   /**
    * Optional. A user-supplied tag associated with the split points. For example,
-   * "intital_data_load", "special_event_1". Defaults to "CloudAddSplitPointsAPI" if not specified.
+   * "initial_data_load", "special_event_1". Defaults to "CloudAddSplitPointsAPI" if not specified.
    * The length of the tag must not exceed 50 characters,else will be trimmed. Only valid UTF8
    * characters are allowed.
    * The value may be {@code null}.
@@ -48,7 +48,7 @@ public final class AddSplitPointsRequest extends com.google.api.client.json.Gene
 
   /**
    * Optional. A user-supplied tag associated with the split points. For example,
-   * "intital_data_load", "special_event_1". Defaults to "CloudAddSplitPointsAPI" if not specified.
+   * "initial_data_load", "special_event_1". Defaults to "CloudAddSplitPointsAPI" if not specified.
    * The length of the tag must not exceed 50 characters,else will be trimmed. Only valid UTF8
    * characters are allowed.
    * @return value or {@code null} for none
@@ -59,7 +59,7 @@ public final class AddSplitPointsRequest extends com.google.api.client.json.Gene
 
   /**
    * Optional. A user-supplied tag associated with the split points. For example,
-   * "intital_data_load", "special_event_1". Defaults to "CloudAddSplitPointsAPI" if not specified.
+   * "initial_data_load", "special_event_1". Defaults to "CloudAddSplitPointsAPI" if not specified.
    * The length of the tag must not exceed 50 characters,else will be trimmed. Only valid UTF8
    * characters are allowed.
    * @param initiator initiator or {@code null} for none

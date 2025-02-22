@@ -61,7 +61,7 @@ public final class StepEntry extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Output only. The NavigationInfo associated to this step.
+   * Output only. The NavigationInfo associated with this step.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,7 +90,7 @@ public final class StepEntry extends com.google.api.client.json.GenericJson {
   private java.lang.String step;
 
   /**
-   * Output only. The StepEntryMetadata associated to this step.
+   * Output only. The StepEntryMetadata associated with this step.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -111,7 +111,7 @@ public final class StepEntry extends com.google.api.client.json.GenericJson {
   private String updateTime;
 
   /**
-   * Output only. The VariableData associated to this step.
+   * Output only. The VariableData associated with this step.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -190,7 +190,7 @@ public final class StepEntry extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The NavigationInfo associated to this step.
+   * Output only. The NavigationInfo associated with this step.
    * @return value or {@code null} for none
    */
   public NavigationInfo getNavigationInfo() {
@@ -198,7 +198,7 @@ public final class StepEntry extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The NavigationInfo associated to this step.
+   * Output only. The NavigationInfo associated with this step.
    * @param navigationInfo navigationInfo or {@code null} for none
    */
   public StepEntry setNavigationInfo(NavigationInfo navigationInfo) {
@@ -260,7 +260,7 @@ public final class StepEntry extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The StepEntryMetadata associated to this step.
+   * Output only. The StepEntryMetadata associated with this step.
    * @return value or {@code null} for none
    */
   public StepEntryMetadata getStepEntryMetadata() {
@@ -268,7 +268,7 @@ public final class StepEntry extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The StepEntryMetadata associated to this step.
+   * Output only. The StepEntryMetadata associated with this step.
    * @param stepEntryMetadata stepEntryMetadata or {@code null} for none
    */
   public StepEntry setStepEntryMetadata(StepEntryMetadata stepEntryMetadata) {
@@ -311,7 +311,7 @@ public final class StepEntry extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The VariableData associated to this step.
+   * Output only. The VariableData associated with this step.
    * @return value or {@code null} for none
    */
   public VariableData getVariableData() {
@@ -319,7 +319,7 @@ public final class StepEntry extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The VariableData associated to this step.
+   * Output only. The VariableData associated with this step.
    * @param variableData variableData or {@code null} for none
    */
   public StepEntry setVariableData(VariableData variableData) {

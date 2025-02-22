@@ -17,8 +17,7 @@
 package com.google.api.services.networksecurity.v1beta1.model;
 
 /**
- * This is a subset of the MirroringEndpointGroupAssociation message, containing fields to be used
- * by the consumer.
+ * The endpoint group's view of a connected association.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Security API. For a detailed explanation see:
@@ -31,32 +30,33 @@ package com.google.api.services.networksecurity.v1beta1.model;
 public final class MirroringEndpointGroupAssociationDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The resource name of the MirroringEndpointGroupAssociation. Format: projects/{proj
-   * ect}/locations/{location}/mirroringEndpointGroupAssociations/{mirroringEndpointGroupAssociation
-   * }
+   * Output only. The connected association's resource name, for example:
+   * `projects/123456789/locations/global/mirroringEndpointGroupAssociations/my-ega`. See
+   * https://google.aip.dev/124.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output only. The VPC network associated. Format: projects/{project}/global/networks/{name}.
+   * Output only. The associated network, for example: projects/123456789/global/networks/my-
+   * network. See https://google.aip.dev/124.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String network;
 
   /**
-   * Output only. Current state of the association.
+   * Output only. Most recent known state of the association.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * Output only. The resource name of the MirroringEndpointGroupAssociation. Format: projects/{proj
-   * ect}/locations/{location}/mirroringEndpointGroupAssociations/{mirroringEndpointGroupAssociation
-   * }
+   * Output only. The connected association's resource name, for example:
+   * `projects/123456789/locations/global/mirroringEndpointGroupAssociations/my-ega`. See
+   * https://google.aip.dev/124.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -64,9 +64,9 @@ public final class MirroringEndpointGroupAssociationDetails extends com.google.a
   }
 
   /**
-   * Output only. The resource name of the MirroringEndpointGroupAssociation. Format: projects/{proj
-   * ect}/locations/{location}/mirroringEndpointGroupAssociations/{mirroringEndpointGroupAssociation
-   * }
+   * Output only. The connected association's resource name, for example:
+   * `projects/123456789/locations/global/mirroringEndpointGroupAssociations/my-ega`. See
+   * https://google.aip.dev/124.
    * @param name name or {@code null} for none
    */
   public MirroringEndpointGroupAssociationDetails setName(java.lang.String name) {
@@ -75,7 +75,8 @@ public final class MirroringEndpointGroupAssociationDetails extends com.google.a
   }
 
   /**
-   * Output only. The VPC network associated. Format: projects/{project}/global/networks/{name}.
+   * Output only. The associated network, for example: projects/123456789/global/networks/my-
+   * network. See https://google.aip.dev/124.
    * @return value or {@code null} for none
    */
   public java.lang.String getNetwork() {
@@ -83,7 +84,8 @@ public final class MirroringEndpointGroupAssociationDetails extends com.google.a
   }
 
   /**
-   * Output only. The VPC network associated. Format: projects/{project}/global/networks/{name}.
+   * Output only. The associated network, for example: projects/123456789/global/networks/my-
+   * network. See https://google.aip.dev/124.
    * @param network network or {@code null} for none
    */
   public MirroringEndpointGroupAssociationDetails setNetwork(java.lang.String network) {
@@ -92,7 +94,7 @@ public final class MirroringEndpointGroupAssociationDetails extends com.google.a
   }
 
   /**
-   * Output only. Current state of the association.
+   * Output only. Most recent known state of the association.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -100,7 +102,7 @@ public final class MirroringEndpointGroupAssociationDetails extends com.google.a
   }
 
   /**
-   * Output only. Current state of the association.
+   * Output only. Most recent known state of the association.
    * @param state state or {@code null} for none
    */
   public MirroringEndpointGroupAssociationDetails setState(java.lang.String state) {

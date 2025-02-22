@@ -17,7 +17,7 @@
 package com.google.api.services.networksecurity.v1beta1.model;
 
 /**
- * Message for response to listing MirroringEndpointGroupAssociations
+ * Response message for listing associations.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Security API. For a detailed explanation see:
@@ -30,21 +30,21 @@ package com.google.api.services.networksecurity.v1beta1.model;
 public final class ListMirroringEndpointGroupAssociationsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of MirroringEndpointGroupAssociation
+   * The list of associations returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<MirroringEndpointGroupAssociation> mirroringEndpointGroupAssociations;
 
   /**
-   * A token identifying a page of results the server should return.
+   * A token identifying a page of results the server should return. See https://google.aip.dev/158.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * The list of MirroringEndpointGroupAssociation
+   * The list of associations returned.
    * @return value or {@code null} for none
    */
   public java.util.List<MirroringEndpointGroupAssociation> getMirroringEndpointGroupAssociations() {
@@ -52,7 +52,7 @@ public final class ListMirroringEndpointGroupAssociationsResponse extends com.go
   }
 
   /**
-   * The list of MirroringEndpointGroupAssociation
+   * The list of associations returned.
    * @param mirroringEndpointGroupAssociations mirroringEndpointGroupAssociations or {@code null} for none
    */
   public ListMirroringEndpointGroupAssociationsResponse setMirroringEndpointGroupAssociations(java.util.List<MirroringEndpointGroupAssociation> mirroringEndpointGroupAssociations) {
@@ -61,7 +61,7 @@ public final class ListMirroringEndpointGroupAssociationsResponse extends com.go
   }
 
   /**
-   * A token identifying a page of results the server should return.
+   * A token identifying a page of results the server should return. See https://google.aip.dev/158.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -69,7 +69,7 @@ public final class ListMirroringEndpointGroupAssociationsResponse extends com.go
   }
 
   /**
-   * A token identifying a page of results the server should return.
+   * A token identifying a page of results the server should return. See https://google.aip.dev/158.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListMirroringEndpointGroupAssociationsResponse setNextPageToken(java.lang.String nextPageToken) {

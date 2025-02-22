@@ -17,7 +17,11 @@
 package com.google.api.services.networksecurity.v1.model;
 
 /**
- * Message describing MirroringEndpointGroupAssociation object
+ * An endpoint group association represents a link between a network and an endpoint group in the
+ * organization. Creating an association creates the networking infrastructure linking the network
+ * to the endpoint group, but does not enable mirroring by itself. To enable mirroring, the user
+ * must also create a network firewall policy containing mirroring rules and associate it with the
+ * network.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Security API. For a detailed explanation see:
@@ -30,51 +34,58 @@ package com.google.api.services.networksecurity.v1.model;
 public final class MirroringEndpointGroupAssociation extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. [Output only] Create time stamp
+   * Output only. The timestamp when the resource was created. See
+   * https://google.aip.dev/148#timestamps.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * Optional. Labels as key value pairs
+   * Optional. Labels are key/value pairs that help to organize and filter resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Output only. The list of locations that this association is in and its details.
+   * Output only. The list of locations where the association is present. This information is
+   * retrieved from the linked endpoint group, and not configured as part of the association itself.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<MirroringEndpointGroupAssociationLocationDetails> locationsDetails;
 
   /**
-   * Required. Immutable. The Mirroring Endpoint Group that this resource is connected to. Format
-   * is: `projects/{project}/locations/global/mirroringEndpointGroups/{mirroringEndpointGroup}`
+   * Immutable. The endpoint group that this association is connected to, for example:
+   * `projects/123456789/locations/global/mirroringEndpointGroups/my-eg`. See
+   * https://google.aip.dev/124.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String mirroringEndpointGroup;
 
   /**
-   * Immutable. Identifier. The name of the MirroringEndpointGroupAssociation.
+   * Immutable. Identifier. The resource name of this endpoint group association, for example:
+   * `projects/123456789/locations/global/mirroringEndpointGroupAssociations/my-eg-association`. See
+   * https://google.aip.dev/122 for more details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Required. Immutable. The VPC network associated. Format:
-   * projects/{project}/global/networks/{network}.
+   * Immutable. The VPC network that is associated. for example:
+   * `projects/123456789/global/networks/my-network`. See https://google.aip.dev/124.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String network;
 
   /**
-   * Output only. Whether reconciling is in progress, recommended per https://google.aip.dev/128.
+   * Output only. The current state of the resource does not match the user's intended state, and
+   * the system is working to reconcile them. This part of the normal operation (e.g. adding a new
+   * location to the target deployment group). See https://google.aip.dev/128.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,14 +99,16 @@ public final class MirroringEndpointGroupAssociation extends com.google.api.clie
   private java.lang.String state;
 
   /**
-   * Output only. [Output only] Update time stamp
+   * Output only. The timestamp when the resource was most recently updated. See
+   * https://google.aip.dev/148#timestamps.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Output only. [Output only] Create time stamp
+   * Output only. The timestamp when the resource was created. See
+   * https://google.aip.dev/148#timestamps.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -103,7 +116,8 @@ public final class MirroringEndpointGroupAssociation extends com.google.api.clie
   }
 
   /**
-   * Output only. [Output only] Create time stamp
+   * Output only. The timestamp when the resource was created. See
+   * https://google.aip.dev/148#timestamps.
    * @param createTime createTime or {@code null} for none
    */
   public MirroringEndpointGroupAssociation setCreateTime(String createTime) {
@@ -112,7 +126,7 @@ public final class MirroringEndpointGroupAssociation extends com.google.api.clie
   }
 
   /**
-   * Optional. Labels as key value pairs
+   * Optional. Labels are key/value pairs that help to organize and filter resources.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -120,7 +134,7 @@ public final class MirroringEndpointGroupAssociation extends com.google.api.clie
   }
 
   /**
-   * Optional. Labels as key value pairs
+   * Optional. Labels are key/value pairs that help to organize and filter resources.
    * @param labels labels or {@code null} for none
    */
   public MirroringEndpointGroupAssociation setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -129,7 +143,8 @@ public final class MirroringEndpointGroupAssociation extends com.google.api.clie
   }
 
   /**
-   * Output only. The list of locations that this association is in and its details.
+   * Output only. The list of locations where the association is present. This information is
+   * retrieved from the linked endpoint group, and not configured as part of the association itself.
    * @return value or {@code null} for none
    */
   public java.util.List<MirroringEndpointGroupAssociationLocationDetails> getLocationsDetails() {
@@ -137,7 +152,8 @@ public final class MirroringEndpointGroupAssociation extends com.google.api.clie
   }
 
   /**
-   * Output only. The list of locations that this association is in and its details.
+   * Output only. The list of locations where the association is present. This information is
+   * retrieved from the linked endpoint group, and not configured as part of the association itself.
    * @param locationsDetails locationsDetails or {@code null} for none
    */
   public MirroringEndpointGroupAssociation setLocationsDetails(java.util.List<MirroringEndpointGroupAssociationLocationDetails> locationsDetails) {
@@ -146,8 +162,9 @@ public final class MirroringEndpointGroupAssociation extends com.google.api.clie
   }
 
   /**
-   * Required. Immutable. The Mirroring Endpoint Group that this resource is connected to. Format
-   * is: `projects/{project}/locations/global/mirroringEndpointGroups/{mirroringEndpointGroup}`
+   * Immutable. The endpoint group that this association is connected to, for example:
+   * `projects/123456789/locations/global/mirroringEndpointGroups/my-eg`. See
+   * https://google.aip.dev/124.
    * @return value or {@code null} for none
    */
   public java.lang.String getMirroringEndpointGroup() {
@@ -155,8 +172,9 @@ public final class MirroringEndpointGroupAssociation extends com.google.api.clie
   }
 
   /**
-   * Required. Immutable. The Mirroring Endpoint Group that this resource is connected to. Format
-   * is: `projects/{project}/locations/global/mirroringEndpointGroups/{mirroringEndpointGroup}`
+   * Immutable. The endpoint group that this association is connected to, for example:
+   * `projects/123456789/locations/global/mirroringEndpointGroups/my-eg`. See
+   * https://google.aip.dev/124.
    * @param mirroringEndpointGroup mirroringEndpointGroup or {@code null} for none
    */
   public MirroringEndpointGroupAssociation setMirroringEndpointGroup(java.lang.String mirroringEndpointGroup) {
@@ -165,7 +183,9 @@ public final class MirroringEndpointGroupAssociation extends com.google.api.clie
   }
 
   /**
-   * Immutable. Identifier. The name of the MirroringEndpointGroupAssociation.
+   * Immutable. Identifier. The resource name of this endpoint group association, for example:
+   * `projects/123456789/locations/global/mirroringEndpointGroupAssociations/my-eg-association`. See
+   * https://google.aip.dev/122 for more details.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -173,7 +193,9 @@ public final class MirroringEndpointGroupAssociation extends com.google.api.clie
   }
 
   /**
-   * Immutable. Identifier. The name of the MirroringEndpointGroupAssociation.
+   * Immutable. Identifier. The resource name of this endpoint group association, for example:
+   * `projects/123456789/locations/global/mirroringEndpointGroupAssociations/my-eg-association`. See
+   * https://google.aip.dev/122 for more details.
    * @param name name or {@code null} for none
    */
   public MirroringEndpointGroupAssociation setName(java.lang.String name) {
@@ -182,8 +204,8 @@ public final class MirroringEndpointGroupAssociation extends com.google.api.clie
   }
 
   /**
-   * Required. Immutable. The VPC network associated. Format:
-   * projects/{project}/global/networks/{network}.
+   * Immutable. The VPC network that is associated. for example:
+   * `projects/123456789/global/networks/my-network`. See https://google.aip.dev/124.
    * @return value or {@code null} for none
    */
   public java.lang.String getNetwork() {
@@ -191,8 +213,8 @@ public final class MirroringEndpointGroupAssociation extends com.google.api.clie
   }
 
   /**
-   * Required. Immutable. The VPC network associated. Format:
-   * projects/{project}/global/networks/{network}.
+   * Immutable. The VPC network that is associated. for example:
+   * `projects/123456789/global/networks/my-network`. See https://google.aip.dev/124.
    * @param network network or {@code null} for none
    */
   public MirroringEndpointGroupAssociation setNetwork(java.lang.String network) {
@@ -201,7 +223,9 @@ public final class MirroringEndpointGroupAssociation extends com.google.api.clie
   }
 
   /**
-   * Output only. Whether reconciling is in progress, recommended per https://google.aip.dev/128.
+   * Output only. The current state of the resource does not match the user's intended state, and
+   * the system is working to reconcile them. This part of the normal operation (e.g. adding a new
+   * location to the target deployment group). See https://google.aip.dev/128.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getReconciling() {
@@ -209,7 +233,9 @@ public final class MirroringEndpointGroupAssociation extends com.google.api.clie
   }
 
   /**
-   * Output only. Whether reconciling is in progress, recommended per https://google.aip.dev/128.
+   * Output only. The current state of the resource does not match the user's intended state, and
+   * the system is working to reconcile them. This part of the normal operation (e.g. adding a new
+   * location to the target deployment group). See https://google.aip.dev/128.
    * @param reconciling reconciling or {@code null} for none
    */
   public MirroringEndpointGroupAssociation setReconciling(java.lang.Boolean reconciling) {
@@ -235,7 +261,8 @@ public final class MirroringEndpointGroupAssociation extends com.google.api.clie
   }
 
   /**
-   * Output only. [Output only] Update time stamp
+   * Output only. The timestamp when the resource was most recently updated. See
+   * https://google.aip.dev/148#timestamps.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -243,7 +270,8 @@ public final class MirroringEndpointGroupAssociation extends com.google.api.clie
   }
 
   /**
-   * Output only. [Output only] Update time stamp
+   * Output only. The timestamp when the resource was most recently updated. See
+   * https://google.aip.dev/148#timestamps.
    * @param updateTime updateTime or {@code null} for none
    */
   public MirroringEndpointGroupAssociation setUpdateTime(String updateTime) {

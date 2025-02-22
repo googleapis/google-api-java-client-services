@@ -30,14 +30,18 @@ package com.google.api.services.networksecurity.v1beta1.model;
 public final class MirroringDeploymentGroupConnectedEndpointGroup extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. A connected mirroring endpoint group.
+   * Output only. The connected endpoint group's resource name, for example:
+   * `projects/123456789/locations/global/mirroringEndpointGroups/my-eg`. See
+   * https://google.aip.dev/124.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output only. A connected mirroring endpoint group.
+   * Output only. The connected endpoint group's resource name, for example:
+   * `projects/123456789/locations/global/mirroringEndpointGroups/my-eg`. See
+   * https://google.aip.dev/124.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -45,7 +49,9 @@ public final class MirroringDeploymentGroupConnectedEndpointGroup extends com.go
   }
 
   /**
-   * Output only. A connected mirroring endpoint group.
+   * Output only. The connected endpoint group's resource name, for example:
+   * `projects/123456789/locations/global/mirroringEndpointGroups/my-eg`. See
+   * https://google.aip.dev/124.
    * @param name name or {@code null} for none
    */
   public MirroringDeploymentGroupConnectedEndpointGroup setName(java.lang.String name) {

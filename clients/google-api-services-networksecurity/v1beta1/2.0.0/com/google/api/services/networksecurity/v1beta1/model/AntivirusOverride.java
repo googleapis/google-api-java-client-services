@@ -17,7 +17,7 @@
 package com.google.api.services.networksecurity.v1beta1.model;
 
 /**
- * Contains details about the state of an association in a specific cloud location.
+ * Defines what action to take for antivirus threats per protocol.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Security API. For a detailed explanation see:
@@ -27,64 +27,64 @@ package com.google.api.services.networksecurity.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class MirroringEndpointGroupAssociationLocationDetails extends com.google.api.client.json.GenericJson {
+public final class AntivirusOverride extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The cloud location, e.g. "us-central1-a" or "asia-south1".
+   * Required. Threat action override. For some threat types, only a subset of actions applies.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String location;
+  private java.lang.String action;
 
   /**
-   * Output only. The current state of the association in this location.
+   * Required. Protocol to match.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String state;
+  private java.lang.String protocol;
 
   /**
-   * Output only. The cloud location, e.g. "us-central1-a" or "asia-south1".
+   * Required. Threat action override. For some threat types, only a subset of actions applies.
    * @return value or {@code null} for none
    */
-  public java.lang.String getLocation() {
-    return location;
+  public java.lang.String getAction() {
+    return action;
   }
 
   /**
-   * Output only. The cloud location, e.g. "us-central1-a" or "asia-south1".
-   * @param location location or {@code null} for none
+   * Required. Threat action override. For some threat types, only a subset of actions applies.
+   * @param action action or {@code null} for none
    */
-  public MirroringEndpointGroupAssociationLocationDetails setLocation(java.lang.String location) {
-    this.location = location;
+  public AntivirusOverride setAction(java.lang.String action) {
+    this.action = action;
     return this;
   }
 
   /**
-   * Output only. The current state of the association in this location.
+   * Required. Protocol to match.
    * @return value or {@code null} for none
    */
-  public java.lang.String getState() {
-    return state;
+  public java.lang.String getProtocol() {
+    return protocol;
   }
 
   /**
-   * Output only. The current state of the association in this location.
-   * @param state state or {@code null} for none
+   * Required. Protocol to match.
+   * @param protocol protocol or {@code null} for none
    */
-  public MirroringEndpointGroupAssociationLocationDetails setState(java.lang.String state) {
-    this.state = state;
+  public AntivirusOverride setProtocol(java.lang.String protocol) {
+    this.protocol = protocol;
     return this;
   }
 
   @Override
-  public MirroringEndpointGroupAssociationLocationDetails set(String fieldName, Object value) {
-    return (MirroringEndpointGroupAssociationLocationDetails) super.set(fieldName, value);
+  public AntivirusOverride set(String fieldName, Object value) {
+    return (AntivirusOverride) super.set(fieldName, value);
   }
 
   @Override
-  public MirroringEndpointGroupAssociationLocationDetails clone() {
-    return (MirroringEndpointGroupAssociationLocationDetails) super.clone();
+  public AntivirusOverride clone() {
+    return (AntivirusOverride) super.clone();
   }
 
 }

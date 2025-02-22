@@ -30,14 +30,14 @@ package com.google.api.services.datastore.v1beta3.model;
 public final class GoogleDatastoreAdminV1RedirectWritesStepDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * Ths concurrency mode for this database.
+   * The concurrency mode for this database.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String concurrencyMode;
 
   /**
-   * Ths concurrency mode for this database.
+   * The concurrency mode for this database.
    * @return value or {@code null} for none
    */
   public java.lang.String getConcurrencyMode() {
@@ -45,7 +45,7 @@ public final class GoogleDatastoreAdminV1RedirectWritesStepDetails extends com.g
   }
 
   /**
-   * Ths concurrency mode for this database.
+   * The concurrency mode for this database.
    * @param concurrencyMode concurrencyMode or {@code null} for none
    */
   public GoogleDatastoreAdminV1RedirectWritesStepDetails setConcurrencyMode(java.lang.String concurrencyMode) {

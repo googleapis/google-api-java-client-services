@@ -10293,6 +10293,863 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
 
       }
       /**
+       * An accessor for creating requests from the BackendAuthenticationConfigs collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code NetworkSecurity networksecurity = new NetworkSecurity(...);}
+       *   {@code NetworkSecurity.BackendAuthenticationConfigs.List request = networksecurity.backendAuthenticationConfigs().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public BackendAuthenticationConfigs backendAuthenticationConfigs() {
+        return new BackendAuthenticationConfigs();
+      }
+
+      /**
+       * The "backendAuthenticationConfigs" collection of methods.
+       */
+      public class BackendAuthenticationConfigs {
+
+        /**
+         * Creates a new BackendAuthenticationConfig in a given project and location.
+         *
+         * Create a request for the method "backendAuthenticationConfigs.create".
+         *
+         * This request holds the parameters needed by the networksecurity server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource of the BackendAuthenticationConfig. Must be in the format
+         *        `projects/locations/{location}`.
+         * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.BackendAuthenticationConfig}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.networksecurity.v1beta1.model.BackendAuthenticationConfig content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends NetworkSecurityRequest<com.google.api.services.networksecurity.v1beta1.model.Operation> {
+
+          private static final String REST_PATH = "v1beta1/{+parent}/backendAuthenticationConfigs";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a new BackendAuthenticationConfig in a given project and location.
+           *
+           * Create a request for the method "backendAuthenticationConfigs.create".
+           *
+           * This request holds the parameters needed by the the networksecurity server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource of the BackendAuthenticationConfig. Must be in the format
+         *        `projects/locations/{location}`.
+           * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.BackendAuthenticationConfig}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.networksecurity.v1beta1.model.BackendAuthenticationConfig content) {
+            super(NetworkSecurity.this, "POST", REST_PATH, content, com.google.api.services.networksecurity.v1beta1.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent resource of the BackendAuthenticationConfig. Must be in the format
+           * `projects/locations/{location}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource of the BackendAuthenticationConfig. Must be in the format
+         `projects/locations/{location}`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent resource of the BackendAuthenticationConfig. Must be in the format
+           * `projects/locations/{location}`.
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Required. Short name of the BackendAuthenticationConfig resource to be created. This
+           * value should be 1-63 characters long, containing only letters, numbers, hyphens, and
+           * underscores, and should not start with a number. E.g. "backend-auth-config".
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String backendAuthenticationConfigId;
+
+          /** Required. Short name of the BackendAuthenticationConfig resource to be created. This value should
+         be 1-63 characters long, containing only letters, numbers, hyphens, and underscores, and should not
+         start with a number. E.g. "backend-auth-config".
+           */
+          public java.lang.String getBackendAuthenticationConfigId() {
+            return backendAuthenticationConfigId;
+          }
+
+          /**
+           * Required. Short name of the BackendAuthenticationConfig resource to be created. This
+           * value should be 1-63 characters long, containing only letters, numbers, hyphens, and
+           * underscores, and should not start with a number. E.g. "backend-auth-config".
+           */
+          public Create setBackendAuthenticationConfigId(java.lang.String backendAuthenticationConfigId) {
+            this.backendAuthenticationConfigId = backendAuthenticationConfigId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a single BackendAuthenticationConfig to BackendAuthenticationConfig.
+         *
+         * Create a request for the method "backendAuthenticationConfigs.delete".
+         *
+         * This request holds the parameters needed by the networksecurity server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. A name of the BackendAuthenticationConfig to delete. Must be in the format
+         *        `projects/locations/{location}/backendAuthenticationConfigs`.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends NetworkSecurityRequest<com.google.api.services.networksecurity.v1beta1.model.Operation> {
+
+          private static final String REST_PATH = "v1beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/backendAuthenticationConfigs/[^/]+$");
+
+          /**
+           * Deletes a single BackendAuthenticationConfig to BackendAuthenticationConfig.
+           *
+           * Create a request for the method "backendAuthenticationConfigs.delete".
+           *
+           * This request holds the parameters needed by the the networksecurity server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. A name of the BackendAuthenticationConfig to delete. Must be in the format
+         *        `projects/locations/{location}/backendAuthenticationConfigs`.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(NetworkSecurity.this, "DELETE", REST_PATH, null, com.google.api.services.networksecurity.v1beta1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/backendAuthenticationConfigs/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. A name of the BackendAuthenticationConfig to delete. Must be in the format
+           * `projects/locations/{location}/backendAuthenticationConfigs`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. A name of the BackendAuthenticationConfig to delete. Must be in the format
+         `projects/locations/{location}/backendAuthenticationConfigs`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. A name of the BackendAuthenticationConfig to delete. Must be in the format
+           * `projects/locations/{location}/backendAuthenticationConfigs`.
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/backendAuthenticationConfigs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. Etag of the resource. If this is provided, it must match the server's etag.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String etag;
+
+          /** Optional. Etag of the resource. If this is provided, it must match the server's etag.
+           */
+          public java.lang.String getEtag() {
+            return etag;
+          }
+
+          /**
+           * Optional. Etag of the resource. If this is provided, it must match the server's etag.
+           */
+          public Delete setEtag(java.lang.String etag) {
+            this.etag = etag;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets details of a single BackendAuthenticationConfig to BackendAuthenticationConfig.
+         *
+         * Create a request for the method "backendAuthenticationConfigs.get".
+         *
+         * This request holds the parameters needed by the networksecurity server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. A name of the BackendAuthenticationConfig to get. Must be in the format
+         *        `projects/locations/{location}/backendAuthenticationConfigs`.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends NetworkSecurityRequest<com.google.api.services.networksecurity.v1beta1.model.BackendAuthenticationConfig> {
+
+          private static final String REST_PATH = "v1beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/backendAuthenticationConfigs/[^/]+$");
+
+          /**
+           * Gets details of a single BackendAuthenticationConfig to BackendAuthenticationConfig.
+           *
+           * Create a request for the method "backendAuthenticationConfigs.get".
+           *
+           * This request holds the parameters needed by the the networksecurity server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. A name of the BackendAuthenticationConfig to get. Must be in the format
+         *        `projects/locations/{location}/backendAuthenticationConfigs`.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(NetworkSecurity.this, "GET", REST_PATH, null, com.google.api.services.networksecurity.v1beta1.model.BackendAuthenticationConfig.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/backendAuthenticationConfigs/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. A name of the BackendAuthenticationConfig to get. Must be in the format
+           * `projects/locations/{location}/backendAuthenticationConfigs`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. A name of the BackendAuthenticationConfig to get. Must be in the format
+         `projects/locations/{location}/backendAuthenticationConfigs`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. A name of the BackendAuthenticationConfig to get. Must be in the format
+           * `projects/locations/{location}/backendAuthenticationConfigs`.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/backendAuthenticationConfigs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists BackendAuthenticationConfigs in a given project and location.
+         *
+         * Create a request for the method "backendAuthenticationConfigs.list".
+         *
+         * This request holds the parameters needed by the networksecurity server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The project and location from which the BackendAuthenticationConfigs should be listed,
+         *        specified in the format `projects/locations/{location}`.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends NetworkSecurityRequest<com.google.api.services.networksecurity.v1beta1.model.ListBackendAuthenticationConfigsResponse> {
+
+          private static final String REST_PATH = "v1beta1/{+parent}/backendAuthenticationConfigs";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists BackendAuthenticationConfigs in a given project and location.
+           *
+           * Create a request for the method "backendAuthenticationConfigs.list".
+           *
+           * This request holds the parameters needed by the the networksecurity server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The project and location from which the BackendAuthenticationConfigs should be listed,
+         *        specified in the format `projects/locations/{location}`.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(NetworkSecurity.this, "GET", REST_PATH, null, com.google.api.services.networksecurity.v1beta1.model.ListBackendAuthenticationConfigsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The project and location from which the BackendAuthenticationConfigs should
+           * be listed, specified in the format `projects/locations/{location}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The project and location from which the BackendAuthenticationConfigs should be listed,
+         specified in the format `projects/locations/{location}`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The project and location from which the BackendAuthenticationConfigs should
+           * be listed, specified in the format `projects/locations/{location}`.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Maximum number of BackendAuthenticationConfigs to return per call. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Maximum number of BackendAuthenticationConfigs to return per call.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** Maximum number of BackendAuthenticationConfigs to return per call. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * The value returned by the last `ListBackendAuthenticationConfigsResponse` Indicates
+           * that this is a continuation of a prior `ListBackendAuthenticationConfigs` call, and
+           * that the system should return the next page of data.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** The value returned by the last `ListBackendAuthenticationConfigsResponse` Indicates that this is a
+         continuation of a prior `ListBackendAuthenticationConfigs` call, and that the system should return
+         the next page of data.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * The value returned by the last `ListBackendAuthenticationConfigsResponse` Indicates
+           * that this is a continuation of a prior `ListBackendAuthenticationConfigs` call, and
+           * that the system should return the next page of data.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates the parameters of a single BackendAuthenticationConfig to BackendAuthenticationConfig.
+         *
+         * Create a request for the method "backendAuthenticationConfigs.patch".
+         *
+         * This request holds the parameters needed by the networksecurity server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the BackendAuthenticationConfig resource. It matches the pattern
+         *        `projects/locations/{location}/backendAuthenticationConfigs/{backend_authentication_config
+         *        }`
+         * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.BackendAuthenticationConfig}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.networksecurity.v1beta1.model.BackendAuthenticationConfig content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends NetworkSecurityRequest<com.google.api.services.networksecurity.v1beta1.model.Operation> {
+
+          private static final String REST_PATH = "v1beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/backendAuthenticationConfigs/[^/]+$");
+
+          /**
+           * Updates the parameters of a single BackendAuthenticationConfig to BackendAuthenticationConfig.
+           *
+           * Create a request for the method "backendAuthenticationConfigs.patch".
+           *
+           * This request holds the parameters needed by the the networksecurity server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the BackendAuthenticationConfig resource. It matches the pattern
+         *        `projects/locations/{location}/backendAuthenticationConfigs/{backend_authentication_config
+         *        }`
+           * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.BackendAuthenticationConfig}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.networksecurity.v1beta1.model.BackendAuthenticationConfig content) {
+            super(NetworkSecurity.this, "PATCH", REST_PATH, content, com.google.api.services.networksecurity.v1beta1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/backendAuthenticationConfigs/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the BackendAuthenticationConfig resource. It matches the pattern `pro
+           * jects/locations/{location}/backendAuthenticationConfigs/{backend_authentication_config}
+           * `
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the BackendAuthenticationConfig resource. It matches the pattern
+         `projects/locations/{location}/backendAuthenticationConfigs/{backend_authentication_config}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Name of the BackendAuthenticationConfig resource. It matches the pattern `pro
+           * jects/locations/{location}/backendAuthenticationConfigs/{backend_authentication_config}
+           * `
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/backendAuthenticationConfigs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. Field mask is used to specify the fields to be overwritten in the
+           * BackendAuthenticationConfig resource by the update. The fields specified in the
+           * update_mask are relative to the resource, not the full request. A field will be
+           * overwritten if it is in the mask. If the user does not provide a mask then all fields
+           * will be overwritten.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Optional. Field mask is used to specify the fields to be overwritten in the
+         BackendAuthenticationConfig resource by the update. The fields specified in the update_mask are
+         relative to the resource, not the full request. A field will be overwritten if it is in the mask.
+         If the user does not provide a mask then all fields will be overwritten.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Optional. Field mask is used to specify the fields to be overwritten in the
+           * BackendAuthenticationConfig resource by the update. The fields specified in the
+           * update_mask are relative to the resource, not the full request. A field will be
+           * overwritten if it is in the mask. If the user does not provide a mask then all fields
+           * will be overwritten.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the ClientTlsPolicies collection.
        *
        * <p>The typical use is:</p>
@@ -18761,7 +19618,9 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Immutable. Identifier. Then name of the MirroringDeploymentGroup.
+         * @param name Immutable. Identifier. The resource name of this deployment group, for example:
+         *        `projects/123456789/locations/global/mirroringDeploymentGroups/my-dg`. See
+         *        https://google.aip.dev/122 for more details.
          * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.MirroringDeploymentGroup}
          * @return the request
          */
@@ -18789,7 +19648,9 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Immutable. Identifier. Then name of the MirroringDeploymentGroup.
+           * @param name Immutable. Identifier. The resource name of this deployment group, for example:
+         *        `projects/123456789/locations/global/mirroringDeploymentGroups/my-dg`. See
+         *        https://google.aip.dev/122 for more details.
            * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.MirroringDeploymentGroup}
            * @since 1.13
            */
@@ -18858,17 +19719,27 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             return (Patch) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Immutable. Identifier. Then name of the MirroringDeploymentGroup. */
+          /**
+           * Immutable. Identifier. The resource name of this deployment group, for example:
+           * `projects/123456789/locations/global/mirroringDeploymentGroups/my-dg`. See
+           * https://google.aip.dev/122 for more details.
+           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Immutable. Identifier. Then name of the MirroringDeploymentGroup.
+          /** Immutable. Identifier. The resource name of this deployment group, for example:
+         `projects/123456789/locations/global/mirroringDeploymentGroups/my-dg`. See
+         https://google.aip.dev/122 for more details.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Immutable. Identifier. Then name of the MirroringDeploymentGroup. */
+          /**
+           * Immutable. Identifier. The resource name of this deployment group, for example:
+           * `projects/123456789/locations/global/mirroringDeploymentGroups/my-dg`. See
+           * https://google.aip.dev/122 for more details.
+           */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -18981,7 +19852,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
       public class MirroringDeployments {
 
         /**
-         * Creates a new MirroringDeployment in a given project and location.
+         * Creates a deployment in a given project and location. See https://google.aip.dev/133.
          *
          * Create a request for the method "mirroringDeployments.create".
          *
@@ -19006,7 +19877,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Creates a new MirroringDeployment in a given project and location.
+           * Creates a deployment in a given project and location. See https://google.aip.dev/133.
            *
            * Create a request for the method "mirroringDeployments.create".
            *
@@ -19178,7 +20049,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Deletes a single MirroringDeployment.
+         * Deletes a deployment. See https://google.aip.dev/135.
          *
          * Create a request for the method "mirroringDeployments.delete".
          *
@@ -19202,7 +20073,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/mirroringDeployments/[^/]+$");
 
           /**
-           * Deletes a single MirroringDeployment.
+           * Deletes a deployment. See https://google.aip.dev/135.
            *
            * Create a request for the method "mirroringDeployments.delete".
            *
@@ -19350,7 +20221,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Gets details of a single MirroringDeployment.
+         * Gets a specific deployment. See https://google.aip.dev/131.
          *
          * Create a request for the method "mirroringDeployments.get".
          *
@@ -19374,7 +20245,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/mirroringDeployments/[^/]+$");
 
           /**
-           * Gets details of a single MirroringDeployment.
+           * Gets a specific deployment. See https://google.aip.dev/131.
            *
            * Create a request for the method "mirroringDeployments.get".
            *
@@ -19488,7 +20359,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Lists MirroringDeployments in a given project and location.
+         * Lists deployments in a given project and location. See https://google.aip.dev/132.
          *
          * Create a request for the method "mirroringDeployments.list".
          *
@@ -19512,7 +20383,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists MirroringDeployments in a given project and location.
+           * Lists deployments in a given project and location. See https://google.aip.dev/132.
            *
            * Create a request for the method "mirroringDeployments.list".
            *
@@ -19697,14 +20568,16 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Updates a single MirroringDeployment.
+         * Updates a deployment. See https://google.aip.dev/134.
          *
          * Create a request for the method "mirroringDeployments.patch".
          *
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Immutable. Identifier. The name of the MirroringDeployment.
+         * @param name Immutable. Identifier. The resource name of this deployment, for example:
+         *        `projects/123456789/locations/us-central1-a/mirroringDeployments/my-dep`. See
+         *        https://google.aip.dev/122 for more details.
          * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.MirroringDeployment}
          * @return the request
          */
@@ -19722,7 +20595,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/mirroringDeployments/[^/]+$");
 
           /**
-           * Updates a single MirroringDeployment.
+           * Updates a deployment. See https://google.aip.dev/134.
            *
            * Create a request for the method "mirroringDeployments.patch".
            *
@@ -19732,7 +20605,9 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Immutable. Identifier. The name of the MirroringDeployment.
+           * @param name Immutable. Identifier. The resource name of this deployment, for example:
+         *        `projects/123456789/locations/us-central1-a/mirroringDeployments/my-dep`. See
+         *        https://google.aip.dev/122 for more details.
            * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.MirroringDeployment}
            * @since 1.13
            */
@@ -19801,17 +20676,27 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             return (Patch) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Immutable. Identifier. The name of the MirroringDeployment. */
+          /**
+           * Immutable. Identifier. The resource name of this deployment, for example:
+           * `projects/123456789/locations/us-central1-a/mirroringDeployments/my-dep`. See
+           * https://google.aip.dev/122 for more details.
+           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Immutable. Identifier. The name of the MirroringDeployment.
+          /** Immutable. Identifier. The resource name of this deployment, for example:
+         `projects/123456789/locations/us-central1-a/mirroringDeployments/my-dep`. See
+         https://google.aip.dev/122 for more details.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Immutable. Identifier. The name of the MirroringDeployment. */
+          /**
+           * Immutable. Identifier. The resource name of this deployment, for example:
+           * `projects/123456789/locations/us-central1-a/mirroringDeployments/my-dep`. See
+           * https://google.aip.dev/122 for more details.
+           */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -19922,14 +20807,15 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
       public class MirroringEndpointGroupAssociations {
 
         /**
-         * Creates a new MirroringEndpointGroupAssociation in a given project and location.
+         * Creates an association in a given project and location. See https://google.aip.dev/133.
          *
          * Create a request for the method "mirroringEndpointGroupAssociations.create".
          *
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Value for parent.
+         * @param parent Required. Container (project and location) where the association will be created, e.g.
+         *        `projects/123456789/locations/global`.
          * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.MirroringEndpointGroupAssociation}
          * @return the request
          */
@@ -19947,7 +20833,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Creates a new MirroringEndpointGroupAssociation in a given project and location.
+           * Creates an association in a given project and location. See https://google.aip.dev/133.
            *
            * Create a request for the method "mirroringEndpointGroupAssociations.create".
            *
@@ -19957,7 +20843,8 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Value for parent.
+           * @param parent Required. Container (project and location) where the association will be created, e.g.
+         *        `projects/123456789/locations/global`.
            * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.MirroringEndpointGroupAssociation}
            * @since 1.13
            */
@@ -20026,17 +20913,24 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             return (Create) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Value for parent. */
+          /**
+           * Required. Container (project and location) where the association will be created, e.g.
+           * `projects/123456789/locations/global`.
+           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Value for parent.
+          /** Required. Container (project and location) where the association will be created, e.g.
+         `projects/123456789/locations/global`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. Value for parent. */
+          /**
+           * Required. Container (project and location) where the association will be created, e.g.
+           * `projects/123456789/locations/global`.
+           */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -20048,24 +20942,33 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Optional. Id of the requesting object If auto-generating Id server-side, remove this
-           * field and mirroring_endpoint_group_association_id from the method_signature of Create
-           * RPC
+           * Optional. ID for the new association. If not provided, the server will generate a
+           * unique ID. The ID must be a valid RFC 1035 resource name. The ID must be 1-63
+           * characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`. The
+           * first character must be a lowercase letter, and all following characters (except for
+           * the last character) must be a dash, lowercase letter, or digit. The last character must
+           * be a
            */
           @com.google.api.client.util.Key
           private java.lang.String mirroringEndpointGroupAssociationId;
 
-          /** Optional. Id of the requesting object If auto-generating Id server-side, remove this field and
-         mirroring_endpoint_group_association_id from the method_signature of Create RPC
+          /** Optional. ID for the new association. If not provided, the server will generate a unique ID. The ID
+         must be a valid RFC 1035 resource name. The ID must be 1-63 characters long and match the regular
+         expression `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character must be a lowercase letter, and all
+         following characters (except for the last character) must be a dash, lowercase letter, or digit.
+         The last character must be a
            */
           public java.lang.String getMirroringEndpointGroupAssociationId() {
             return mirroringEndpointGroupAssociationId;
           }
 
           /**
-           * Optional. Id of the requesting object If auto-generating Id server-side, remove this
-           * field and mirroring_endpoint_group_association_id from the method_signature of Create
-           * RPC
+           * Optional. ID for the new association. If not provided, the server will generate a
+           * unique ID. The ID must be a valid RFC 1035 resource name. The ID must be 1-63
+           * characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`. The
+           * first character must be a lowercase letter, and all following characters (except for
+           * the last character) must be a dash, lowercase letter, or digit. The last character must
+           * be a
            */
           public Create setMirroringEndpointGroupAssociationId(java.lang.String mirroringEndpointGroupAssociationId) {
             this.mirroringEndpointGroupAssociationId = mirroringEndpointGroupAssociationId;
@@ -20121,14 +21024,15 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Deletes a single MirroringEndpointGroupAssociation.
+         * Deletes a single association. See https://google.aip.dev/135.
          *
          * Create a request for the method "mirroringEndpointGroupAssociations.delete".
          *
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the resource
+         * @param name Required. Full resource name of the association to delete, e.g.
+         *        projects/123456789/locations/global/mirroringEndpointGroupAssociations/my-eg-association.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -20145,7 +21049,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/mirroringEndpointGroupAssociations/[^/]+$");
 
           /**
-           * Deletes a single MirroringEndpointGroupAssociation.
+           * Deletes a single association. See https://google.aip.dev/135.
            *
            * Create a request for the method "mirroringEndpointGroupAssociations.delete".
            *
@@ -20155,7 +21059,8 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the resource
+           * @param name Required. Full resource name of the association to delete, e.g.
+         *        projects/123456789/locations/global/mirroringEndpointGroupAssociations/my-eg-association.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -20223,17 +21128,26 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             return (Delete) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Name of the resource */
+          /**
+           * Required. Full resource name of the association to delete, e.g.
+           * projects/123456789/locations/global/mirroringEndpointGroupAssociations/my-eg-
+           * association.
+           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the resource
+          /** Required. Full resource name of the association to delete, e.g.
+         projects/123456789/locations/global/mirroringEndpointGroupAssociations/my-eg-association.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. Name of the resource */
+          /**
+           * Required. Full resource name of the association to delete, e.g.
+           * projects/123456789/locations/global/mirroringEndpointGroupAssociations/my-eg-
+           * association.
+           */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -20293,14 +21207,15 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Gets details of a single MirroringEndpointGroupAssociation.
+         * Gets a specific association. See https://google.aip.dev/131.
          *
          * Create a request for the method "mirroringEndpointGroupAssociations.get".
          *
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the resource
+         * @param name Required. Full resource name of the association to get, e.g.
+         *        projects/123456789/locations/global/mirroringEndpointGroupAssociations/my-eg-association.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -20317,7 +21232,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/mirroringEndpointGroupAssociations/[^/]+$");
 
           /**
-           * Gets details of a single MirroringEndpointGroupAssociation.
+           * Gets a specific association. See https://google.aip.dev/131.
            *
            * Create a request for the method "mirroringEndpointGroupAssociations.get".
            *
@@ -20326,7 +21241,8 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the resource
+           * @param name Required. Full resource name of the association to get, e.g.
+         *        projects/123456789/locations/global/mirroringEndpointGroupAssociations/my-eg-association.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -20404,17 +21320,26 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Name of the resource */
+          /**
+           * Required. Full resource name of the association to get, e.g.
+           * projects/123456789/locations/global/mirroringEndpointGroupAssociations/my-eg-
+           * association.
+           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the resource
+          /** Required. Full resource name of the association to get, e.g.
+         projects/123456789/locations/global/mirroringEndpointGroupAssociations/my-eg-association.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. Name of the resource */
+          /**
+           * Required. Full resource name of the association to get, e.g.
+           * projects/123456789/locations/global/mirroringEndpointGroupAssociations/my-eg-
+           * association.
+           */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -20431,14 +21356,15 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Lists MirroringEndpointGroupAssociations in a given project and location.
+         * Lists associations in a given project and location. See https://google.aip.dev/132.
          *
          * Create a request for the method "mirroringEndpointGroupAssociations.list".
          *
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Parent value for ListMirroringEndpointGroupAssociationsRequest
+         * @param parent Required. Parent container (project and location) of the associations to list, e.g.
+         *        `projects/123456789/locations/global`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -20455,7 +21381,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists MirroringEndpointGroupAssociations in a given project and location.
+           * Lists associations in a given project and location. See https://google.aip.dev/132.
            *
            * Create a request for the method "mirroringEndpointGroupAssociations.list".
            *
@@ -20464,7 +21390,8 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Parent value for ListMirroringEndpointGroupAssociationsRequest
+           * @param parent Required. Parent container (project and location) of the associations to list, e.g.
+         *        `projects/123456789/locations/global`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -20542,17 +21469,24 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Parent value for ListMirroringEndpointGroupAssociationsRequest */
+          /**
+           * Required. Parent container (project and location) of the associations to list, e.g.
+           * `projects/123456789/locations/global`.
+           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Parent value for ListMirroringEndpointGroupAssociationsRequest
+          /** Required. Parent container (project and location) of the associations to list, e.g.
+         `projects/123456789/locations/global`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. Parent value for ListMirroringEndpointGroupAssociationsRequest */
+          /**
+           * Required. Parent container (project and location) of the associations to list, e.g.
+           * `projects/123456789/locations/global`.
+           */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -20563,17 +21497,24 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             return this;
           }
 
-          /** Optional. Filtering results */
+          /**
+           * Optional. A filter expression that filters the results listed in the response. See
+           * https://google.aip.dev/160.
+           */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Optional. Filtering results
+          /** Optional. A filter expression that filters the results listed in the response. See
+         https://google.aip.dev/160.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** Optional. Filtering results */
+          /**
+           * Optional. A filter expression that filters the results listed in the response. See
+           * https://google.aip.dev/160.
+           */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
@@ -20597,13 +21538,13 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
 
           /**
            * Optional. Requested page size. Server may return fewer items than requested. If
-           * unspecified, server will pick an appropriate default.
+           * unspecified, server will pick an appropriate default. See https://google.aip.dev/158.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
           /** Optional. Requested page size. Server may return fewer items than requested. If unspecified, server
-         will pick an appropriate default.
+         will pick an appropriate default. See https://google.aip.dev/158.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
@@ -20611,24 +21552,31 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
 
           /**
            * Optional. Requested page size. Server may return fewer items than requested. If
-           * unspecified, server will pick an appropriate default.
+           * unspecified, server will pick an appropriate default. See https://google.aip.dev/158.
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
           }
 
-          /** Optional. A token identifying a page of results the server should return. */
+          /**
+           * Optional. A token identifying a page of results the server should return. See
+           * https://google.aip.dev/158.
+           */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** Optional. A token identifying a page of results the server should return.
+          /** Optional. A token identifying a page of results the server should return. See
+         https://google.aip.dev/158.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
-          /** Optional. A token identifying a page of results the server should return. */
+          /**
+           * Optional. A token identifying a page of results the server should return. See
+           * https://google.aip.dev/158.
+           */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;
@@ -20640,14 +21588,16 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Updates a single MirroringEndpointGroupAssociation.
+         * Updates an association. See https://google.aip.dev/134.
          *
          * Create a request for the method "mirroringEndpointGroupAssociations.patch".
          *
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Immutable. Identifier. The name of the MirroringEndpointGroupAssociation.
+         * @param name Immutable. Identifier. The resource name of this endpoint group association, for example:
+         *        `projects/123456789/locations/global/mirroringEndpointGroupAssociations/my-eg-
+         *        association`. See https://google.aip.dev/122 for more details.
          * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.MirroringEndpointGroupAssociation}
          * @return the request
          */
@@ -20665,7 +21615,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/mirroringEndpointGroupAssociations/[^/]+$");
 
           /**
-           * Updates a single MirroringEndpointGroupAssociation.
+           * Updates an association. See https://google.aip.dev/134.
            *
            * Create a request for the method "mirroringEndpointGroupAssociations.patch".
            *
@@ -20675,7 +21625,9 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Immutable. Identifier. The name of the MirroringEndpointGroupAssociation.
+           * @param name Immutable. Identifier. The resource name of this endpoint group association, for example:
+         *        `projects/123456789/locations/global/mirroringEndpointGroupAssociations/my-eg-
+         *        association`. See https://google.aip.dev/122 for more details.
            * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.MirroringEndpointGroupAssociation}
            * @since 1.13
            */
@@ -20744,17 +21696,27 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             return (Patch) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Immutable. Identifier. The name of the MirroringEndpointGroupAssociation. */
+          /**
+           * Immutable. Identifier. The resource name of this endpoint group association, for
+           * example: `projects/123456789/locations/global/mirroringEndpointGroupAssociations/my-eg-
+           * association`. See https://google.aip.dev/122 for more details.
+           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Immutable. Identifier. The name of the MirroringEndpointGroupAssociation.
+          /** Immutable. Identifier. The resource name of this endpoint group association, for example:
+         `projects/123456789/locations/global/mirroringEndpointGroupAssociations/my-eg-association`. See
+         https://google.aip.dev/122 for more details.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Immutable. Identifier. The name of the MirroringEndpointGroupAssociation. */
+          /**
+           * Immutable. Identifier. The resource name of this endpoint group association, for
+           * example: `projects/123456789/locations/global/mirroringEndpointGroupAssociations/my-eg-
+           * association`. See https://google.aip.dev/122 for more details.
+           */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -20809,30 +21771,22 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. Field mask is used to specify the fields to be overwritten in the
-           * MirroringEndpointGroupAssociation resource by the update. The fields specified in the
-           * update_mask are relative to the resource, not the full request. A field will be
-           * overwritten if it is in the mask. If the user does not provide a mask then all fields
-           * will be overwritten.
+           * Optional. Field mask is used to specify the fields to be overwritten in the association
+           * by the update. See https://google.aip.dev/161.
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** Required. Field mask is used to specify the fields to be overwritten in the
-         MirroringEndpointGroupAssociation resource by the update. The fields specified in the update_mask
-         are relative to the resource, not the full request. A field will be overwritten if it is in the
-         mask. If the user does not provide a mask then all fields will be overwritten.
+          /** Optional. Field mask is used to specify the fields to be overwritten in the association by the
+         update. See https://google.aip.dev/161.
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
           /**
-           * Required. Field mask is used to specify the fields to be overwritten in the
-           * MirroringEndpointGroupAssociation resource by the update. The fields specified in the
-           * update_mask are relative to the resource, not the full request. A field will be
-           * overwritten if it is in the mask. If the user does not provide a mask then all fields
-           * will be overwritten.
+           * Optional. Field mask is used to specify the fields to be overwritten in the association
+           * by the update. See https://google.aip.dev/161.
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
@@ -20867,7 +21821,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
       public class MirroringEndpointGroups {
 
         /**
-         * Creates a new MirroringEndpointGroup in a given project and location.
+         * Creates an endpoint group in a given project and location. See https://google.aip.dev/133.
          *
          * Create a request for the method "mirroringEndpointGroups.create".
          *
@@ -20892,7 +21846,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Creates a new MirroringEndpointGroup in a given project and location.
+           * Creates an endpoint group in a given project and location. See https://google.aip.dev/133.
            *
            * Create a request for the method "mirroringEndpointGroups.create".
            *
@@ -21064,7 +22018,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Deletes a single MirroringEndpointGroup.
+         * Deletes an endpoint group. See https://google.aip.dev/135.
          *
          * Create a request for the method "mirroringEndpointGroups.delete".
          *
@@ -21088,7 +22042,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/mirroringEndpointGroups/[^/]+$");
 
           /**
-           * Deletes a single MirroringEndpointGroup.
+           * Deletes an endpoint group. See https://google.aip.dev/135.
            *
            * Create a request for the method "mirroringEndpointGroups.delete".
            *
@@ -21236,7 +22190,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Gets details of a single MirroringEndpointGroup.
+         * Gets a specific endpoint group. See https://google.aip.dev/131.
          *
          * Create a request for the method "mirroringEndpointGroups.get".
          *
@@ -21260,7 +22214,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/mirroringEndpointGroups/[^/]+$");
 
           /**
-           * Gets details of a single MirroringEndpointGroup.
+           * Gets a specific endpoint group. See https://google.aip.dev/131.
            *
            * Create a request for the method "mirroringEndpointGroups.get".
            *
@@ -21374,7 +22328,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Lists MirroringEndpointGroups in a given project and location.
+         * Lists endpoint groups in a given project and location. See https://google.aip.dev/132.
          *
          * Create a request for the method "mirroringEndpointGroups.list".
          *
@@ -21398,7 +22352,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists MirroringEndpointGroups in a given project and location.
+           * Lists endpoint groups in a given project and location. See https://google.aip.dev/132.
            *
            * Create a request for the method "mirroringEndpointGroups.list".
            *
@@ -21583,14 +22537,16 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Updates a single MirroringEndpointGroup.
+         * Updates an endpoint group. See https://google.aip.dev/134.
          *
          * Create a request for the method "mirroringEndpointGroups.patch".
          *
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Immutable. Identifier. Next ID: 11 The name of the MirroringEndpointGroup.
+         * @param name Immutable. Identifier. The resource name of this endpoint group, for example:
+         *        `projects/123456789/locations/global/mirroringEndpointGroups/my-eg`. See
+         *        https://google.aip.dev/122 for more details.
          * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.MirroringEndpointGroup}
          * @return the request
          */
@@ -21608,7 +22564,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/mirroringEndpointGroups/[^/]+$");
 
           /**
-           * Updates a single MirroringEndpointGroup.
+           * Updates an endpoint group. See https://google.aip.dev/134.
            *
            * Create a request for the method "mirroringEndpointGroups.patch".
            *
@@ -21618,7 +22574,9 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Immutable. Identifier. Next ID: 11 The name of the MirroringEndpointGroup.
+           * @param name Immutable. Identifier. The resource name of this endpoint group, for example:
+         *        `projects/123456789/locations/global/mirroringEndpointGroups/my-eg`. See
+         *        https://google.aip.dev/122 for more details.
            * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.MirroringEndpointGroup}
            * @since 1.13
            */
@@ -21687,17 +22645,27 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             return (Patch) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Immutable. Identifier. Next ID: 11 The name of the MirroringEndpointGroup. */
+          /**
+           * Immutable. Identifier. The resource name of this endpoint group, for example:
+           * `projects/123456789/locations/global/mirroringEndpointGroups/my-eg`. See
+           * https://google.aip.dev/122 for more details.
+           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Immutable. Identifier. Next ID: 11 The name of the MirroringEndpointGroup.
+          /** Immutable. Identifier. The resource name of this endpoint group, for example:
+         `projects/123456789/locations/global/mirroringEndpointGroups/my-eg`. See https://google.aip.dev/122
+         for more details.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Immutable. Identifier. Next ID: 11 The name of the MirroringEndpointGroup. */
+          /**
+           * Immutable. Identifier. The resource name of this endpoint group, for example:
+           * `projects/123456789/locations/global/mirroringEndpointGroups/my-eg`. See
+           * https://google.aip.dev/122 for more details.
+           */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

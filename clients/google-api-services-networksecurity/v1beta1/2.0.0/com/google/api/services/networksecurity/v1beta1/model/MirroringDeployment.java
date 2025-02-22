@@ -17,7 +17,10 @@
 package com.google.api.services.networksecurity.v1beta1.model;
 
 /**
- * Message describing MirroringDeployment object NEXT ID: 10
+ * A deployment represents a zonal mirroring backend ready to accept GENEVE-encapsulated replica
+ * traffic, e.g. a zonal instance group fronted by an internal passthrough load balancer.
+ * Deployments are always part of a global deployment group which represents a global mirroring
+ * service.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Security API. For a detailed explanation see:
@@ -30,7 +33,8 @@ package com.google.api.services.networksecurity.v1beta1.model;
 public final class MirroringDeployment extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. [Output only] Create time stamp
+   * Output only. The timestamp when the resource was created. See
+   * https://google.aip.dev/148#timestamps.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,58 +49,66 @@ public final class MirroringDeployment extends com.google.api.client.json.Generi
   private java.lang.String description;
 
   /**
-   * Required. Immutable. The regional load balancer which the mirrored traffic should be forwarded
-   * to. Format is: projects/{project}/regions/{region}/forwardingRules/{forwardingRule}
+   * Required. Immutable. The regional forwarding rule that fronts the mirroring collectors, for
+   * example: `projects/123456789/regions/us-central1/forwardingRules/my-rule`. See
+   * https://google.aip.dev/124.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String forwardingRule;
 
   /**
-   * Optional. Labels as key value pairs
+   * Optional. Labels are key/value pairs that help to organize and filter resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Required. Immutable. The Mirroring Deployment Group that this resource is part of. Format is:
-   * `projects/{project}/locations/global/mirroringDeploymentGroups/{mirroringDeploymentGroup}`
+   * Required. Immutable. The deployment group that this deployment is a part of, for example:
+   * `projects/123456789/locations/global/mirroringDeploymentGroups/my-dg`. See
+   * https://google.aip.dev/124.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String mirroringDeploymentGroup;
 
   /**
-   * Immutable. Identifier. The name of the MirroringDeployment.
+   * Immutable. Identifier. The resource name of this deployment, for example:
+   * `projects/123456789/locations/us-central1-a/mirroringDeployments/my-dep`. See
+   * https://google.aip.dev/122 for more details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output only. Whether reconciling is in progress, recommended per https://google.aip.dev/128.
+   * Output only. The current state of the resource does not match the user's intended state, and
+   * the system is working to reconcile them. This part of the normal operation (e.g. linking a new
+   * association to the parent group). See https://google.aip.dev/128.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean reconciling;
 
   /**
-   * Output only. Current state of the deployment.
+   * Output only. The current state of the deployment. See https://google.aip.dev/216.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * Output only. [Output only] Update time stamp
+   * Output only. The timestamp when the resource was most recently updated. See
+   * https://google.aip.dev/148#timestamps.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Output only. [Output only] Create time stamp
+   * Output only. The timestamp when the resource was created. See
+   * https://google.aip.dev/148#timestamps.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -104,7 +116,8 @@ public final class MirroringDeployment extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output only. [Output only] Create time stamp
+   * Output only. The timestamp when the resource was created. See
+   * https://google.aip.dev/148#timestamps.
    * @param createTime createTime or {@code null} for none
    */
   public MirroringDeployment setCreateTime(String createTime) {
@@ -132,8 +145,9 @@ public final class MirroringDeployment extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. Immutable. The regional load balancer which the mirrored traffic should be forwarded
-   * to. Format is: projects/{project}/regions/{region}/forwardingRules/{forwardingRule}
+   * Required. Immutable. The regional forwarding rule that fronts the mirroring collectors, for
+   * example: `projects/123456789/regions/us-central1/forwardingRules/my-rule`. See
+   * https://google.aip.dev/124.
    * @return value or {@code null} for none
    */
   public java.lang.String getForwardingRule() {
@@ -141,8 +155,9 @@ public final class MirroringDeployment extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. Immutable. The regional load balancer which the mirrored traffic should be forwarded
-   * to. Format is: projects/{project}/regions/{region}/forwardingRules/{forwardingRule}
+   * Required. Immutable. The regional forwarding rule that fronts the mirroring collectors, for
+   * example: `projects/123456789/regions/us-central1/forwardingRules/my-rule`. See
+   * https://google.aip.dev/124.
    * @param forwardingRule forwardingRule or {@code null} for none
    */
   public MirroringDeployment setForwardingRule(java.lang.String forwardingRule) {
@@ -151,7 +166,7 @@ public final class MirroringDeployment extends com.google.api.client.json.Generi
   }
 
   /**
-   * Optional. Labels as key value pairs
+   * Optional. Labels are key/value pairs that help to organize and filter resources.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -159,7 +174,7 @@ public final class MirroringDeployment extends com.google.api.client.json.Generi
   }
 
   /**
-   * Optional. Labels as key value pairs
+   * Optional. Labels are key/value pairs that help to organize and filter resources.
    * @param labels labels or {@code null} for none
    */
   public MirroringDeployment setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -168,8 +183,9 @@ public final class MirroringDeployment extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. Immutable. The Mirroring Deployment Group that this resource is part of. Format is:
-   * `projects/{project}/locations/global/mirroringDeploymentGroups/{mirroringDeploymentGroup}`
+   * Required. Immutable. The deployment group that this deployment is a part of, for example:
+   * `projects/123456789/locations/global/mirroringDeploymentGroups/my-dg`. See
+   * https://google.aip.dev/124.
    * @return value or {@code null} for none
    */
   public java.lang.String getMirroringDeploymentGroup() {
@@ -177,8 +193,9 @@ public final class MirroringDeployment extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. Immutable. The Mirroring Deployment Group that this resource is part of. Format is:
-   * `projects/{project}/locations/global/mirroringDeploymentGroups/{mirroringDeploymentGroup}`
+   * Required. Immutable. The deployment group that this deployment is a part of, for example:
+   * `projects/123456789/locations/global/mirroringDeploymentGroups/my-dg`. See
+   * https://google.aip.dev/124.
    * @param mirroringDeploymentGroup mirroringDeploymentGroup or {@code null} for none
    */
   public MirroringDeployment setMirroringDeploymentGroup(java.lang.String mirroringDeploymentGroup) {
@@ -187,7 +204,9 @@ public final class MirroringDeployment extends com.google.api.client.json.Generi
   }
 
   /**
-   * Immutable. Identifier. The name of the MirroringDeployment.
+   * Immutable. Identifier. The resource name of this deployment, for example:
+   * `projects/123456789/locations/us-central1-a/mirroringDeployments/my-dep`. See
+   * https://google.aip.dev/122 for more details.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -195,7 +214,9 @@ public final class MirroringDeployment extends com.google.api.client.json.Generi
   }
 
   /**
-   * Immutable. Identifier. The name of the MirroringDeployment.
+   * Immutable. Identifier. The resource name of this deployment, for example:
+   * `projects/123456789/locations/us-central1-a/mirroringDeployments/my-dep`. See
+   * https://google.aip.dev/122 for more details.
    * @param name name or {@code null} for none
    */
   public MirroringDeployment setName(java.lang.String name) {
@@ -204,7 +225,9 @@ public final class MirroringDeployment extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output only. Whether reconciling is in progress, recommended per https://google.aip.dev/128.
+   * Output only. The current state of the resource does not match the user's intended state, and
+   * the system is working to reconcile them. This part of the normal operation (e.g. linking a new
+   * association to the parent group). See https://google.aip.dev/128.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getReconciling() {
@@ -212,7 +235,9 @@ public final class MirroringDeployment extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output only. Whether reconciling is in progress, recommended per https://google.aip.dev/128.
+   * Output only. The current state of the resource does not match the user's intended state, and
+   * the system is working to reconcile them. This part of the normal operation (e.g. linking a new
+   * association to the parent group). See https://google.aip.dev/128.
    * @param reconciling reconciling or {@code null} for none
    */
   public MirroringDeployment setReconciling(java.lang.Boolean reconciling) {
@@ -221,7 +246,7 @@ public final class MirroringDeployment extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output only. Current state of the deployment.
+   * Output only. The current state of the deployment. See https://google.aip.dev/216.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -229,7 +254,7 @@ public final class MirroringDeployment extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output only. Current state of the deployment.
+   * Output only. The current state of the deployment. See https://google.aip.dev/216.
    * @param state state or {@code null} for none
    */
   public MirroringDeployment setState(java.lang.String state) {
@@ -238,7 +263,8 @@ public final class MirroringDeployment extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output only. [Output only] Update time stamp
+   * Output only. The timestamp when the resource was most recently updated. See
+   * https://google.aip.dev/148#timestamps.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -246,7 +272,8 @@ public final class MirroringDeployment extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output only. [Output only] Update time stamp
+   * Output only. The timestamp when the resource was most recently updated. See
+   * https://google.aip.dev/148#timestamps.
    * @param updateTime updateTime or {@code null} for none
    */
   public MirroringDeployment setUpdateTime(String updateTime) {

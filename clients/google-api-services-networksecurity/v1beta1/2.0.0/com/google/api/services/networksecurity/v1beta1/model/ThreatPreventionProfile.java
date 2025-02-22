@@ -30,6 +30,19 @@ package com.google.api.services.networksecurity.v1beta1.model;
 public final class ThreatPreventionProfile extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Configuration for overriding antivirus actions per protocol.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<AntivirusOverride> antivirusOverrides;
+
+  static {
+    // hack to force ProGuard to consider AntivirusOverride used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(AntivirusOverride.class);
+  }
+
+  /**
    * Optional. Configuration for overriding threats actions by severity match.
    * The value may be {@code null}.
    */
@@ -55,6 +68,23 @@ public final class ThreatPreventionProfile extends com.google.api.client.json.Ge
     // hack to force ProGuard to consider ThreatOverride used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(ThreatOverride.class);
+  }
+
+  /**
+   * Optional. Configuration for overriding antivirus actions per protocol.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<AntivirusOverride> getAntivirusOverrides() {
+    return antivirusOverrides;
+  }
+
+  /**
+   * Optional. Configuration for overriding antivirus actions per protocol.
+   * @param antivirusOverrides antivirusOverrides or {@code null} for none
+   */
+  public ThreatPreventionProfile setAntivirusOverrides(java.util.List<AntivirusOverride> antivirusOverrides) {
+    this.antivirusOverrides = antivirusOverrides;
+    return this;
   }
 
   /**

@@ -14989,7 +14989,9 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Immutable. Identifier. Then name of the MirroringDeploymentGroup.
+         * @param name Immutable. Identifier. The resource name of this deployment group, for example:
+         *        `projects/123456789/locations/global/mirroringDeploymentGroups/my-dg`. See
+         *        https://google.aip.dev/122 for more details.
          * @param content the {@link com.google.api.services.networksecurity.v1.model.MirroringDeploymentGroup}
          * @return the request
          */
@@ -15017,7 +15019,9 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Immutable. Identifier. Then name of the MirroringDeploymentGroup.
+           * @param name Immutable. Identifier. The resource name of this deployment group, for example:
+         *        `projects/123456789/locations/global/mirroringDeploymentGroups/my-dg`. See
+         *        https://google.aip.dev/122 for more details.
            * @param content the {@link com.google.api.services.networksecurity.v1.model.MirroringDeploymentGroup}
            * @since 1.13
            */
@@ -15086,17 +15090,27 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             return (Patch) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Immutable. Identifier. Then name of the MirroringDeploymentGroup. */
+          /**
+           * Immutable. Identifier. The resource name of this deployment group, for example:
+           * `projects/123456789/locations/global/mirroringDeploymentGroups/my-dg`. See
+           * https://google.aip.dev/122 for more details.
+           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Immutable. Identifier. Then name of the MirroringDeploymentGroup.
+          /** Immutable. Identifier. The resource name of this deployment group, for example:
+         `projects/123456789/locations/global/mirroringDeploymentGroups/my-dg`. See
+         https://google.aip.dev/122 for more details.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Immutable. Identifier. Then name of the MirroringDeploymentGroup. */
+          /**
+           * Immutable. Identifier. The resource name of this deployment group, for example:
+           * `projects/123456789/locations/global/mirroringDeploymentGroups/my-dg`. See
+           * https://google.aip.dev/122 for more details.
+           */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -15209,7 +15223,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
       public class MirroringDeployments {
 
         /**
-         * Creates a new MirroringDeployment in a given project and location.
+         * Creates a deployment in a given project and location. See https://google.aip.dev/133.
          *
          * Create a request for the method "mirroringDeployments.create".
          *
@@ -15234,7 +15248,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Creates a new MirroringDeployment in a given project and location.
+           * Creates a deployment in a given project and location. See https://google.aip.dev/133.
            *
            * Create a request for the method "mirroringDeployments.create".
            *
@@ -15406,7 +15420,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Deletes a single MirroringDeployment.
+         * Deletes a deployment. See https://google.aip.dev/135.
          *
          * Create a request for the method "mirroringDeployments.delete".
          *
@@ -15430,7 +15444,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/mirroringDeployments/[^/]+$");
 
           /**
-           * Deletes a single MirroringDeployment.
+           * Deletes a deployment. See https://google.aip.dev/135.
            *
            * Create a request for the method "mirroringDeployments.delete".
            *
@@ -15578,7 +15592,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Gets details of a single MirroringDeployment.
+         * Gets a specific deployment. See https://google.aip.dev/131.
          *
          * Create a request for the method "mirroringDeployments.get".
          *
@@ -15602,7 +15616,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/mirroringDeployments/[^/]+$");
 
           /**
-           * Gets details of a single MirroringDeployment.
+           * Gets a specific deployment. See https://google.aip.dev/131.
            *
            * Create a request for the method "mirroringDeployments.get".
            *
@@ -15716,7 +15730,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Lists MirroringDeployments in a given project and location.
+         * Lists deployments in a given project and location. See https://google.aip.dev/132.
          *
          * Create a request for the method "mirroringDeployments.list".
          *
@@ -15740,7 +15754,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists MirroringDeployments in a given project and location.
+           * Lists deployments in a given project and location. See https://google.aip.dev/132.
            *
            * Create a request for the method "mirroringDeployments.list".
            *
@@ -15925,14 +15939,16 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Updates a single MirroringDeployment.
+         * Updates a deployment. See https://google.aip.dev/134.
          *
          * Create a request for the method "mirroringDeployments.patch".
          *
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Immutable. Identifier. The name of the MirroringDeployment.
+         * @param name Immutable. Identifier. The resource name of this deployment, for example:
+         *        `projects/123456789/locations/us-central1-a/mirroringDeployments/my-dep`. See
+         *        https://google.aip.dev/122 for more details.
          * @param content the {@link com.google.api.services.networksecurity.v1.model.MirroringDeployment}
          * @return the request
          */
@@ -15950,7 +15966,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/mirroringDeployments/[^/]+$");
 
           /**
-           * Updates a single MirroringDeployment.
+           * Updates a deployment. See https://google.aip.dev/134.
            *
            * Create a request for the method "mirroringDeployments.patch".
            *
@@ -15960,7 +15976,9 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Immutable. Identifier. The name of the MirroringDeployment.
+           * @param name Immutable. Identifier. The resource name of this deployment, for example:
+         *        `projects/123456789/locations/us-central1-a/mirroringDeployments/my-dep`. See
+         *        https://google.aip.dev/122 for more details.
            * @param content the {@link com.google.api.services.networksecurity.v1.model.MirroringDeployment}
            * @since 1.13
            */
@@ -16029,17 +16047,27 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             return (Patch) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Immutable. Identifier. The name of the MirroringDeployment. */
+          /**
+           * Immutable. Identifier. The resource name of this deployment, for example:
+           * `projects/123456789/locations/us-central1-a/mirroringDeployments/my-dep`. See
+           * https://google.aip.dev/122 for more details.
+           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Immutable. Identifier. The name of the MirroringDeployment.
+          /** Immutable. Identifier. The resource name of this deployment, for example:
+         `projects/123456789/locations/us-central1-a/mirroringDeployments/my-dep`. See
+         https://google.aip.dev/122 for more details.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Immutable. Identifier. The name of the MirroringDeployment. */
+          /**
+           * Immutable. Identifier. The resource name of this deployment, for example:
+           * `projects/123456789/locations/us-central1-a/mirroringDeployments/my-dep`. See
+           * https://google.aip.dev/122 for more details.
+           */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -16150,14 +16178,15 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
       public class MirroringEndpointGroupAssociations {
 
         /**
-         * Creates a new MirroringEndpointGroupAssociation in a given project and location.
+         * Creates an association in a given project and location. See https://google.aip.dev/133.
          *
          * Create a request for the method "mirroringEndpointGroupAssociations.create".
          *
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Value for parent.
+         * @param parent Required. Container (project and location) where the association will be created, e.g.
+         *        `projects/123456789/locations/global`.
          * @param content the {@link com.google.api.services.networksecurity.v1.model.MirroringEndpointGroupAssociation}
          * @return the request
          */
@@ -16175,7 +16204,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Creates a new MirroringEndpointGroupAssociation in a given project and location.
+           * Creates an association in a given project and location. See https://google.aip.dev/133.
            *
            * Create a request for the method "mirroringEndpointGroupAssociations.create".
            *
@@ -16185,7 +16214,8 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Value for parent.
+           * @param parent Required. Container (project and location) where the association will be created, e.g.
+         *        `projects/123456789/locations/global`.
            * @param content the {@link com.google.api.services.networksecurity.v1.model.MirroringEndpointGroupAssociation}
            * @since 1.13
            */
@@ -16254,17 +16284,24 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             return (Create) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Value for parent. */
+          /**
+           * Required. Container (project and location) where the association will be created, e.g.
+           * `projects/123456789/locations/global`.
+           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Value for parent.
+          /** Required. Container (project and location) where the association will be created, e.g.
+         `projects/123456789/locations/global`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. Value for parent. */
+          /**
+           * Required. Container (project and location) where the association will be created, e.g.
+           * `projects/123456789/locations/global`.
+           */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -16276,24 +16313,33 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Optional. Id of the requesting object If auto-generating Id server-side, remove this
-           * field and mirroring_endpoint_group_association_id from the method_signature of Create
-           * RPC
+           * Optional. ID for the new association. If not provided, the server will generate a
+           * unique ID. The ID must be a valid RFC 1035 resource name. The ID must be 1-63
+           * characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`. The
+           * first character must be a lowercase letter, and all following characters (except for
+           * the last character) must be a dash, lowercase letter, or digit. The last character must
+           * be a
            */
           @com.google.api.client.util.Key
           private java.lang.String mirroringEndpointGroupAssociationId;
 
-          /** Optional. Id of the requesting object If auto-generating Id server-side, remove this field and
-         mirroring_endpoint_group_association_id from the method_signature of Create RPC
+          /** Optional. ID for the new association. If not provided, the server will generate a unique ID. The ID
+         must be a valid RFC 1035 resource name. The ID must be 1-63 characters long and match the regular
+         expression `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character must be a lowercase letter, and all
+         following characters (except for the last character) must be a dash, lowercase letter, or digit.
+         The last character must be a
            */
           public java.lang.String getMirroringEndpointGroupAssociationId() {
             return mirroringEndpointGroupAssociationId;
           }
 
           /**
-           * Optional. Id of the requesting object If auto-generating Id server-side, remove this
-           * field and mirroring_endpoint_group_association_id from the method_signature of Create
-           * RPC
+           * Optional. ID for the new association. If not provided, the server will generate a
+           * unique ID. The ID must be a valid RFC 1035 resource name. The ID must be 1-63
+           * characters long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`. The
+           * first character must be a lowercase letter, and all following characters (except for
+           * the last character) must be a dash, lowercase letter, or digit. The last character must
+           * be a
            */
           public Create setMirroringEndpointGroupAssociationId(java.lang.String mirroringEndpointGroupAssociationId) {
             this.mirroringEndpointGroupAssociationId = mirroringEndpointGroupAssociationId;
@@ -16349,14 +16395,15 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Deletes a single MirroringEndpointGroupAssociation.
+         * Deletes a single association. See https://google.aip.dev/135.
          *
          * Create a request for the method "mirroringEndpointGroupAssociations.delete".
          *
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the resource
+         * @param name Required. Full resource name of the association to delete, e.g.
+         *        projects/123456789/locations/global/mirroringEndpointGroupAssociations/my-eg-association.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -16373,7 +16420,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/mirroringEndpointGroupAssociations/[^/]+$");
 
           /**
-           * Deletes a single MirroringEndpointGroupAssociation.
+           * Deletes a single association. See https://google.aip.dev/135.
            *
            * Create a request for the method "mirroringEndpointGroupAssociations.delete".
            *
@@ -16383,7 +16430,8 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the resource
+           * @param name Required. Full resource name of the association to delete, e.g.
+         *        projects/123456789/locations/global/mirroringEndpointGroupAssociations/my-eg-association.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -16451,17 +16499,26 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             return (Delete) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Name of the resource */
+          /**
+           * Required. Full resource name of the association to delete, e.g.
+           * projects/123456789/locations/global/mirroringEndpointGroupAssociations/my-eg-
+           * association.
+           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the resource
+          /** Required. Full resource name of the association to delete, e.g.
+         projects/123456789/locations/global/mirroringEndpointGroupAssociations/my-eg-association.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. Name of the resource */
+          /**
+           * Required. Full resource name of the association to delete, e.g.
+           * projects/123456789/locations/global/mirroringEndpointGroupAssociations/my-eg-
+           * association.
+           */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -16521,14 +16578,15 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Gets details of a single MirroringEndpointGroupAssociation.
+         * Gets a specific association. See https://google.aip.dev/131.
          *
          * Create a request for the method "mirroringEndpointGroupAssociations.get".
          *
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the resource
+         * @param name Required. Full resource name of the association to get, e.g.
+         *        projects/123456789/locations/global/mirroringEndpointGroupAssociations/my-eg-association.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -16545,7 +16603,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/mirroringEndpointGroupAssociations/[^/]+$");
 
           /**
-           * Gets details of a single MirroringEndpointGroupAssociation.
+           * Gets a specific association. See https://google.aip.dev/131.
            *
            * Create a request for the method "mirroringEndpointGroupAssociations.get".
            *
@@ -16554,7 +16612,8 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the resource
+           * @param name Required. Full resource name of the association to get, e.g.
+         *        projects/123456789/locations/global/mirroringEndpointGroupAssociations/my-eg-association.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -16632,17 +16691,26 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Name of the resource */
+          /**
+           * Required. Full resource name of the association to get, e.g.
+           * projects/123456789/locations/global/mirroringEndpointGroupAssociations/my-eg-
+           * association.
+           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the resource
+          /** Required. Full resource name of the association to get, e.g.
+         projects/123456789/locations/global/mirroringEndpointGroupAssociations/my-eg-association.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. Name of the resource */
+          /**
+           * Required. Full resource name of the association to get, e.g.
+           * projects/123456789/locations/global/mirroringEndpointGroupAssociations/my-eg-
+           * association.
+           */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -16659,14 +16727,15 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Lists MirroringEndpointGroupAssociations in a given project and location.
+         * Lists associations in a given project and location. See https://google.aip.dev/132.
          *
          * Create a request for the method "mirroringEndpointGroupAssociations.list".
          *
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Parent value for ListMirroringEndpointGroupAssociationsRequest
+         * @param parent Required. Parent container (project and location) of the associations to list, e.g.
+         *        `projects/123456789/locations/global`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -16683,7 +16752,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists MirroringEndpointGroupAssociations in a given project and location.
+           * Lists associations in a given project and location. See https://google.aip.dev/132.
            *
            * Create a request for the method "mirroringEndpointGroupAssociations.list".
            *
@@ -16692,7 +16761,8 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Parent value for ListMirroringEndpointGroupAssociationsRequest
+           * @param parent Required. Parent container (project and location) of the associations to list, e.g.
+         *        `projects/123456789/locations/global`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -16770,17 +16840,24 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Parent value for ListMirroringEndpointGroupAssociationsRequest */
+          /**
+           * Required. Parent container (project and location) of the associations to list, e.g.
+           * `projects/123456789/locations/global`.
+           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Parent value for ListMirroringEndpointGroupAssociationsRequest
+          /** Required. Parent container (project and location) of the associations to list, e.g.
+         `projects/123456789/locations/global`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. Parent value for ListMirroringEndpointGroupAssociationsRequest */
+          /**
+           * Required. Parent container (project and location) of the associations to list, e.g.
+           * `projects/123456789/locations/global`.
+           */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -16791,17 +16868,24 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             return this;
           }
 
-          /** Optional. Filtering results */
+          /**
+           * Optional. A filter expression that filters the results listed in the response. See
+           * https://google.aip.dev/160.
+           */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Optional. Filtering results
+          /** Optional. A filter expression that filters the results listed in the response. See
+         https://google.aip.dev/160.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** Optional. Filtering results */
+          /**
+           * Optional. A filter expression that filters the results listed in the response. See
+           * https://google.aip.dev/160.
+           */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
@@ -16825,13 +16909,13 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
 
           /**
            * Optional. Requested page size. Server may return fewer items than requested. If
-           * unspecified, server will pick an appropriate default.
+           * unspecified, server will pick an appropriate default. See https://google.aip.dev/158.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
           /** Optional. Requested page size. Server may return fewer items than requested. If unspecified, server
-         will pick an appropriate default.
+         will pick an appropriate default. See https://google.aip.dev/158.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
@@ -16839,24 +16923,31 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
 
           /**
            * Optional. Requested page size. Server may return fewer items than requested. If
-           * unspecified, server will pick an appropriate default.
+           * unspecified, server will pick an appropriate default. See https://google.aip.dev/158.
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
           }
 
-          /** Optional. A token identifying a page of results the server should return. */
+          /**
+           * Optional. A token identifying a page of results the server should return. See
+           * https://google.aip.dev/158.
+           */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** Optional. A token identifying a page of results the server should return.
+          /** Optional. A token identifying a page of results the server should return. See
+         https://google.aip.dev/158.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
-          /** Optional. A token identifying a page of results the server should return. */
+          /**
+           * Optional. A token identifying a page of results the server should return. See
+           * https://google.aip.dev/158.
+           */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;
@@ -16868,14 +16959,16 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Updates a single MirroringEndpointGroupAssociation.
+         * Updates an association. See https://google.aip.dev/134.
          *
          * Create a request for the method "mirroringEndpointGroupAssociations.patch".
          *
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Immutable. Identifier. The name of the MirroringEndpointGroupAssociation.
+         * @param name Immutable. Identifier. The resource name of this endpoint group association, for example:
+         *        `projects/123456789/locations/global/mirroringEndpointGroupAssociations/my-eg-
+         *        association`. See https://google.aip.dev/122 for more details.
          * @param content the {@link com.google.api.services.networksecurity.v1.model.MirroringEndpointGroupAssociation}
          * @return the request
          */
@@ -16893,7 +16986,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/mirroringEndpointGroupAssociations/[^/]+$");
 
           /**
-           * Updates a single MirroringEndpointGroupAssociation.
+           * Updates an association. See https://google.aip.dev/134.
            *
            * Create a request for the method "mirroringEndpointGroupAssociations.patch".
            *
@@ -16903,7 +16996,9 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Immutable. Identifier. The name of the MirroringEndpointGroupAssociation.
+           * @param name Immutable. Identifier. The resource name of this endpoint group association, for example:
+         *        `projects/123456789/locations/global/mirroringEndpointGroupAssociations/my-eg-
+         *        association`. See https://google.aip.dev/122 for more details.
            * @param content the {@link com.google.api.services.networksecurity.v1.model.MirroringEndpointGroupAssociation}
            * @since 1.13
            */
@@ -16972,17 +17067,27 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             return (Patch) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Immutable. Identifier. The name of the MirroringEndpointGroupAssociation. */
+          /**
+           * Immutable. Identifier. The resource name of this endpoint group association, for
+           * example: `projects/123456789/locations/global/mirroringEndpointGroupAssociations/my-eg-
+           * association`. See https://google.aip.dev/122 for more details.
+           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Immutable. Identifier. The name of the MirroringEndpointGroupAssociation.
+          /** Immutable. Identifier. The resource name of this endpoint group association, for example:
+         `projects/123456789/locations/global/mirroringEndpointGroupAssociations/my-eg-association`. See
+         https://google.aip.dev/122 for more details.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Immutable. Identifier. The name of the MirroringEndpointGroupAssociation. */
+          /**
+           * Immutable. Identifier. The resource name of this endpoint group association, for
+           * example: `projects/123456789/locations/global/mirroringEndpointGroupAssociations/my-eg-
+           * association`. See https://google.aip.dev/122 for more details.
+           */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -17037,30 +17142,22 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. Field mask is used to specify the fields to be overwritten in the
-           * MirroringEndpointGroupAssociation resource by the update. The fields specified in the
-           * update_mask are relative to the resource, not the full request. A field will be
-           * overwritten if it is in the mask. If the user does not provide a mask then all fields
-           * will be overwritten.
+           * Optional. Field mask is used to specify the fields to be overwritten in the association
+           * by the update. See https://google.aip.dev/161.
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** Required. Field mask is used to specify the fields to be overwritten in the
-         MirroringEndpointGroupAssociation resource by the update. The fields specified in the update_mask
-         are relative to the resource, not the full request. A field will be overwritten if it is in the
-         mask. If the user does not provide a mask then all fields will be overwritten.
+          /** Optional. Field mask is used to specify the fields to be overwritten in the association by the
+         update. See https://google.aip.dev/161.
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
           /**
-           * Required. Field mask is used to specify the fields to be overwritten in the
-           * MirroringEndpointGroupAssociation resource by the update. The fields specified in the
-           * update_mask are relative to the resource, not the full request. A field will be
-           * overwritten if it is in the mask. If the user does not provide a mask then all fields
-           * will be overwritten.
+           * Optional. Field mask is used to specify the fields to be overwritten in the association
+           * by the update. See https://google.aip.dev/161.
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
@@ -17095,7 +17192,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
       public class MirroringEndpointGroups {
 
         /**
-         * Creates a new MirroringEndpointGroup in a given project and location.
+         * Creates an endpoint group in a given project and location. See https://google.aip.dev/133.
          *
          * Create a request for the method "mirroringEndpointGroups.create".
          *
@@ -17120,7 +17217,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Creates a new MirroringEndpointGroup in a given project and location.
+           * Creates an endpoint group in a given project and location. See https://google.aip.dev/133.
            *
            * Create a request for the method "mirroringEndpointGroups.create".
            *
@@ -17292,7 +17389,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Deletes a single MirroringEndpointGroup.
+         * Deletes an endpoint group. See https://google.aip.dev/135.
          *
          * Create a request for the method "mirroringEndpointGroups.delete".
          *
@@ -17316,7 +17413,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/mirroringEndpointGroups/[^/]+$");
 
           /**
-           * Deletes a single MirroringEndpointGroup.
+           * Deletes an endpoint group. See https://google.aip.dev/135.
            *
            * Create a request for the method "mirroringEndpointGroups.delete".
            *
@@ -17464,7 +17561,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Gets details of a single MirroringEndpointGroup.
+         * Gets a specific endpoint group. See https://google.aip.dev/131.
          *
          * Create a request for the method "mirroringEndpointGroups.get".
          *
@@ -17488,7 +17585,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/mirroringEndpointGroups/[^/]+$");
 
           /**
-           * Gets details of a single MirroringEndpointGroup.
+           * Gets a specific endpoint group. See https://google.aip.dev/131.
            *
            * Create a request for the method "mirroringEndpointGroups.get".
            *
@@ -17602,7 +17699,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Lists MirroringEndpointGroups in a given project and location.
+         * Lists endpoint groups in a given project and location. See https://google.aip.dev/132.
          *
          * Create a request for the method "mirroringEndpointGroups.list".
          *
@@ -17626,7 +17723,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists MirroringEndpointGroups in a given project and location.
+           * Lists endpoint groups in a given project and location. See https://google.aip.dev/132.
            *
            * Create a request for the method "mirroringEndpointGroups.list".
            *
@@ -17811,14 +17908,16 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Updates a single MirroringEndpointGroup.
+         * Updates an endpoint group. See https://google.aip.dev/134.
          *
          * Create a request for the method "mirroringEndpointGroups.patch".
          *
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Immutable. Identifier. Next ID: 11 The name of the MirroringEndpointGroup.
+         * @param name Immutable. Identifier. The resource name of this endpoint group, for example:
+         *        `projects/123456789/locations/global/mirroringEndpointGroups/my-eg`. See
+         *        https://google.aip.dev/122 for more details.
          * @param content the {@link com.google.api.services.networksecurity.v1.model.MirroringEndpointGroup}
          * @return the request
          */
@@ -17836,7 +17935,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/mirroringEndpointGroups/[^/]+$");
 
           /**
-           * Updates a single MirroringEndpointGroup.
+           * Updates an endpoint group. See https://google.aip.dev/134.
            *
            * Create a request for the method "mirroringEndpointGroups.patch".
            *
@@ -17846,7 +17945,9 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Immutable. Identifier. Next ID: 11 The name of the MirroringEndpointGroup.
+           * @param name Immutable. Identifier. The resource name of this endpoint group, for example:
+         *        `projects/123456789/locations/global/mirroringEndpointGroups/my-eg`. See
+         *        https://google.aip.dev/122 for more details.
            * @param content the {@link com.google.api.services.networksecurity.v1.model.MirroringEndpointGroup}
            * @since 1.13
            */
@@ -17915,17 +18016,27 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             return (Patch) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Immutable. Identifier. Next ID: 11 The name of the MirroringEndpointGroup. */
+          /**
+           * Immutable. Identifier. The resource name of this endpoint group, for example:
+           * `projects/123456789/locations/global/mirroringEndpointGroups/my-eg`. See
+           * https://google.aip.dev/122 for more details.
+           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Immutable. Identifier. Next ID: 11 The name of the MirroringEndpointGroup.
+          /** Immutable. Identifier. The resource name of this endpoint group, for example:
+         `projects/123456789/locations/global/mirroringEndpointGroups/my-eg`. See https://google.aip.dev/122
+         for more details.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Immutable. Identifier. Next ID: 11 The name of the MirroringEndpointGroup. */
+          /**
+           * Immutable. Identifier. The resource name of this endpoint group, for example:
+           * `projects/123456789/locations/global/mirroringEndpointGroups/my-eg`. See
+           * https://google.aip.dev/122 for more details.
+           */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

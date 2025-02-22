@@ -41,7 +41,7 @@ public final class RouteDestinations extends com.google.api.client.json.GenericJ
   /**
    * Optional. Whether to propagate the Kubernetes Service to the route destination clusters. The
    * Service will always be deployed to the Target cluster even if the HTTPRoute is not. This option
-   * may be used to facilitiate successful DNS lookup in the route destination clusters. Can only be
+   * may be used to facilitate successful DNS lookup in the route destination clusters. Can only be
    * set to true if destinations are specified.
    * The value may be {@code null}.
    */
@@ -72,7 +72,7 @@ public final class RouteDestinations extends com.google.api.client.json.GenericJ
   /**
    * Optional. Whether to propagate the Kubernetes Service to the route destination clusters. The
    * Service will always be deployed to the Target cluster even if the HTTPRoute is not. This option
-   * may be used to facilitiate successful DNS lookup in the route destination clusters. Can only be
+   * may be used to facilitate successful DNS lookup in the route destination clusters. Can only be
    * set to true if destinations are specified.
    * @return value or {@code null} for none
    */
@@ -83,7 +83,7 @@ public final class RouteDestinations extends com.google.api.client.json.GenericJ
   /**
    * Optional. Whether to propagate the Kubernetes Service to the route destination clusters. The
    * Service will always be deployed to the Target cluster even if the HTTPRoute is not. This option
-   * may be used to facilitiate successful DNS lookup in the route destination clusters. Can only be
+   * may be used to facilitate successful DNS lookup in the route destination clusters. Can only be
    * set to true if destinations are specified.
    * @param propagateService propagateService or {@code null} for none
    */

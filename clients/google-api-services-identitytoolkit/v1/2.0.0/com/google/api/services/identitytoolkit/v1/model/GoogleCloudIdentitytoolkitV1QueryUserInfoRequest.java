@@ -30,8 +30,6 @@ package com.google.api.services.identitytoolkit.v1.model;
 public final class GoogleCloudIdentitytoolkitV1QueryUserInfoRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Query conditions used to filter results. If more than one is passed, only the first
-   * SqlExpression is evaluated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,8 +52,6 @@ public final class GoogleCloudIdentitytoolkitV1QueryUserInfoRequest extends com.
   private java.lang.Long offset;
 
   /**
-   * The order for sorting query result. Defaults to __ascending__ order. Only valid when
-   * `return_user_info` is set to `true`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,9 +66,6 @@ public final class GoogleCloudIdentitytoolkitV1QueryUserInfoRequest extends com.
   private java.lang.Boolean returnUserInfo;
 
   /**
-   * The field to use for sorting user accounts. Defaults to `USER_ID`. Note: when `phone_number` is
-   * specified in `expression`, the result ignores the sorting. Only valid when `return_user_info`
-   * is set to `true`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,8 +79,6 @@ public final class GoogleCloudIdentitytoolkitV1QueryUserInfoRequest extends com.
   private java.lang.String tenantId;
 
   /**
-   * Query conditions used to filter results. If more than one is passed, only the first
-   * SqlExpression is evaluated.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudIdentitytoolkitV1SqlExpression> getExpression() {
@@ -95,8 +86,6 @@ public final class GoogleCloudIdentitytoolkitV1QueryUserInfoRequest extends com.
   }
 
   /**
-   * Query conditions used to filter results. If more than one is passed, only the first
-   * SqlExpression is evaluated.
    * @param expression expression or {@code null} for none
    */
   public GoogleCloudIdentitytoolkitV1QueryUserInfoRequest setExpression(java.util.List<GoogleCloudIdentitytoolkitV1SqlExpression> expression) {
@@ -143,8 +132,6 @@ public final class GoogleCloudIdentitytoolkitV1QueryUserInfoRequest extends com.
   }
 
   /**
-   * The order for sorting query result. Defaults to __ascending__ order. Only valid when
-   * `return_user_info` is set to `true`.
    * @return value or {@code null} for none
    */
   public java.lang.String getOrder() {
@@ -152,8 +139,6 @@ public final class GoogleCloudIdentitytoolkitV1QueryUserInfoRequest extends com.
   }
 
   /**
-   * The order for sorting query result. Defaults to __ascending__ order. Only valid when
-   * `return_user_info` is set to `true`.
    * @param order order or {@code null} for none
    */
   public GoogleCloudIdentitytoolkitV1QueryUserInfoRequest setOrder(java.lang.String order) {
@@ -181,9 +166,6 @@ public final class GoogleCloudIdentitytoolkitV1QueryUserInfoRequest extends com.
   }
 
   /**
-   * The field to use for sorting user accounts. Defaults to `USER_ID`. Note: when `phone_number` is
-   * specified in `expression`, the result ignores the sorting. Only valid when `return_user_info`
-   * is set to `true`.
    * @return value or {@code null} for none
    */
   public java.lang.String getSortBy() {
@@ -191,9 +173,6 @@ public final class GoogleCloudIdentitytoolkitV1QueryUserInfoRequest extends com.
   }
 
   /**
-   * The field to use for sorting user accounts. Defaults to `USER_ID`. Note: when `phone_number` is
-   * specified in `expression`, the result ignores the sorting. Only valid when `return_user_info`
-   * is set to `true`.
    * @param sortBy sortBy or {@code null} for none
    */
   public GoogleCloudIdentitytoolkitV1QueryUserInfoRequest setSortBy(java.lang.String sortBy) {

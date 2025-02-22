@@ -17,7 +17,7 @@
 package com.google.api.services.clouddeploy.v1.model;
 
 /**
- * ListRolloutsResponse is the response object reutrned by `ListRollouts`.
+ * ListRolloutsResponse is the response object returned by `ListRollouts`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Deploy API. For a detailed explanation see:

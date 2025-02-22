@@ -260,6 +260,14 @@ public final class File extends com.google.api.client.json.GenericJson {
   private IndexableText indexableText;
 
   /**
+   * Whether this file has inherited permissions disabled. Inherited permissions are enabled by
+   * default.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean inheritedPermissionsDisabled;
+
+  /**
    * Output only. Whether the file was created or opened by the requesting app.
    * The value may be {@code null}.
    */
@@ -1146,6 +1154,25 @@ public final class File extends com.google.api.client.json.GenericJson {
    */
   public File setIndexableText(IndexableText indexableText) {
     this.indexableText = indexableText;
+    return this;
+  }
+
+  /**
+   * Whether this file has inherited permissions disabled. Inherited permissions are enabled by
+   * default.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getInheritedPermissionsDisabled() {
+    return inheritedPermissionsDisabled;
+  }
+
+  /**
+   * Whether this file has inherited permissions disabled. Inherited permissions are enabled by
+   * default.
+   * @param inheritedPermissionsDisabled inheritedPermissionsDisabled or {@code null} for none
+   */
+  public File setInheritedPermissionsDisabled(java.lang.Boolean inheritedPermissionsDisabled) {
+    this.inheritedPermissionsDisabled = inheritedPermissionsDisabled;
     return this;
   }
 
@@ -2105,6 +2132,13 @@ public final class File extends com.google.api.client.json.GenericJson {
     private java.lang.Boolean canDeleteChildren;
 
     /**
+     * Output only. Whether a user can disable inherited permissions.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.Boolean canDisableInheritedPermissions;
+
+    /**
      * Output only. Whether the current user can download this file.
      * The value may be {@code null}.
      */
@@ -2119,6 +2153,13 @@ public final class File extends com.google.api.client.json.GenericJson {
      */
     @com.google.api.client.util.Key
     private java.lang.Boolean canEdit;
+
+    /**
+     * Output only. Whether a user can re-enable inherited permissions.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.Boolean canEnableInheritedPermissions;
 
     /**
      * Output only. Whether the current user can list the children of this folder. This is always
@@ -2543,6 +2584,23 @@ public final class File extends com.google.api.client.json.GenericJson {
     }
 
     /**
+     * Output only. Whether a user can disable inherited permissions.
+     * @return value or {@code null} for none
+     */
+    public java.lang.Boolean getCanDisableInheritedPermissions() {
+      return canDisableInheritedPermissions;
+    }
+
+    /**
+     * Output only. Whether a user can disable inherited permissions.
+     * @param canDisableInheritedPermissions canDisableInheritedPermissions or {@code null} for none
+     */
+    public Capabilities setCanDisableInheritedPermissions(java.lang.Boolean canDisableInheritedPermissions) {
+      this.canDisableInheritedPermissions = canDisableInheritedPermissions;
+      return this;
+    }
+
+    /**
      * Output only. Whether the current user can download this file.
      * @return value or {@code null} for none
      */
@@ -2577,6 +2635,23 @@ public final class File extends com.google.api.client.json.GenericJson {
      */
     public Capabilities setCanEdit(java.lang.Boolean canEdit) {
       this.canEdit = canEdit;
+      return this;
+    }
+
+    /**
+     * Output only. Whether a user can re-enable inherited permissions.
+     * @return value or {@code null} for none
+     */
+    public java.lang.Boolean getCanEnableInheritedPermissions() {
+      return canEnableInheritedPermissions;
+    }
+
+    /**
+     * Output only. Whether a user can re-enable inherited permissions.
+     * @param canEnableInheritedPermissions canEnableInheritedPermissions or {@code null} for none
+     */
+    public Capabilities setCanEnableInheritedPermissions(java.lang.Boolean canEnableInheritedPermissions) {
+      this.canEnableInheritedPermissions = canEnableInheritedPermissions;
       return this;
     }
 

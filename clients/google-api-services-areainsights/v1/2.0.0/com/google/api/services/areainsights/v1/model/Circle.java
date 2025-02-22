@@ -37,7 +37,8 @@ public final class Circle extends com.google.api.client.json.GenericJson {
   private LatLng latLng;
 
   /**
-   * The Place resource name of the center of the circle. Only point places are supported.
+   * **Format:** Must be in the format `places/PLACE_ID`, where `PLACE_ID` is the unique identifier
+   * of a place. For example: `places/ChIJgUbEo8cfqokR5lP9_Wh_DaM`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +69,8 @@ public final class Circle extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Place resource name of the center of the circle. Only point places are supported.
+   * **Format:** Must be in the format `places/PLACE_ID`, where `PLACE_ID` is the unique identifier
+   * of a place. For example: `places/ChIJgUbEo8cfqokR5lP9_Wh_DaM`.
    * @return value or {@code null} for none
    */
   public java.lang.String getPlace() {
@@ -76,7 +78,8 @@ public final class Circle extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Place resource name of the center of the circle. Only point places are supported.
+   * **Format:** Must be in the format `places/PLACE_ID`, where `PLACE_ID` is the unique identifier
+   * of a place. For example: `places/ChIJgUbEo8cfqokR5lP9_Wh_DaM`.
    * @param place place or {@code null} for none
    */
   public Circle setPlace(java.lang.String place) {

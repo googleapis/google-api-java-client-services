@@ -51,6 +51,13 @@ public final class ListBackupsResponse extends com.google.api.client.json.Generi
   private java.lang.String nextPageToken;
 
   /**
+   * Locations that could not be reached.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> unreachable;
+
+  /**
    * The list of Backups matching the given criteria.
    * @return value or {@code null} for none
    */
@@ -83,6 +90,23 @@ public final class ListBackupsResponse extends com.google.api.client.json.Generi
    */
   public ListBackupsResponse setNextPageToken(java.lang.String nextPageToken) {
     this.nextPageToken = nextPageToken;
+    return this;
+  }
+
+  /**
+   * Locations that could not be reached.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getUnreachable() {
+    return unreachable;
+  }
+
+  /**
+   * Locations that could not be reached.
+   * @param unreachable unreachable or {@code null} for none
+   */
+  public ListBackupsResponse setUnreachable(java.util.List<java.lang.String> unreachable) {
+    this.unreachable = unreachable;
     return this;
   }
 

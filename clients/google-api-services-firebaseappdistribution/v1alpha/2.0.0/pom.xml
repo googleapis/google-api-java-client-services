@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-firebaseappdistribution</artifactId>
-  <version>v1alpha-rev20250207-2.0.0</version>
-  <name>Firebase App Distribution API v1alpha-rev20250207-2.0.0</name>
+  <version>v1alpha-rev20250219-2.0.0</version>
+  <name>Firebase App Distribution API v1alpha-rev20250219-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
@@ -91,7 +91,7 @@
           <links>
             <link>http://docs.oracle.com/javase/7/docs/api</link>
             <link>https://googleapis.dev/java/google-http-client/1.46.1/</link>
-            <link>https://googleapis.dev/java/google-oauth-client/1.37.0/</link>
+            <link>https://googleapis.dev/java/google-oauth-client/1.38.0/</link>
             <link>https://googleapis.dev/java/google-api-client/2.7.2/</link>
           </links>
         </configuration>

@@ -1483,6 +1483,156 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
   public class Projects {
 
     /**
+     * Get information about the quota for `ReleaseTests`.
+     *
+     * Create a request for the method "projects.getTestQuota".
+     *
+     * This request holds the parameters needed by the firebaseappdistribution server.  After setting
+     * any optional parameters, call the {@link GetTestQuota#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param name Required. The name of the `TestQuota` resource to retrieve. Format:
+     *        `projects/{project_number}/testQuota`
+     * @return the request
+     */
+    public GetTestQuota getTestQuota(java.lang.String name) throws java.io.IOException {
+      GetTestQuota result = new GetTestQuota(name);
+      initialize(result);
+      return result;
+    }
+
+    public class GetTestQuota extends FirebaseAppDistributionRequest<com.google.api.services.firebaseappdistribution.v1alpha.model.GoogleFirebaseAppdistroV1alphaTestQuota> {
+
+      private static final String REST_PATH = "v1alpha/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+/testQuota$");
+
+      /**
+       * Get information about the quota for `ReleaseTests`.
+       *
+       * Create a request for the method "projects.getTestQuota".
+       *
+       * This request holds the parameters needed by the the firebaseappdistribution server.  After
+       * setting any optional parameters, call the {@link GetTestQuota#execute()} method to invoke the
+       * remote operation. <p> {@link
+       * GetTestQuota#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. The name of the `TestQuota` resource to retrieve. Format:
+     *        `projects/{project_number}/testQuota`
+       * @since 1.13
+       */
+      protected GetTestQuota(java.lang.String name) {
+        super(FirebaseAppDistribution.this, "GET", REST_PATH, null, com.google.api.services.firebaseappdistribution.v1alpha.model.GoogleFirebaseAppdistroV1alphaTestQuota.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/testQuota$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetTestQuota set$Xgafv(java.lang.String $Xgafv) {
+        return (GetTestQuota) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetTestQuota setAccessToken(java.lang.String accessToken) {
+        return (GetTestQuota) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetTestQuota setAlt(java.lang.String alt) {
+        return (GetTestQuota) super.setAlt(alt);
+      }
+
+      @Override
+      public GetTestQuota setCallback(java.lang.String callback) {
+        return (GetTestQuota) super.setCallback(callback);
+      }
+
+      @Override
+      public GetTestQuota setFields(java.lang.String fields) {
+        return (GetTestQuota) super.setFields(fields);
+      }
+
+      @Override
+      public GetTestQuota setKey(java.lang.String key) {
+        return (GetTestQuota) super.setKey(key);
+      }
+
+      @Override
+      public GetTestQuota setOauthToken(java.lang.String oauthToken) {
+        return (GetTestQuota) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetTestQuota setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetTestQuota) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetTestQuota setQuotaUser(java.lang.String quotaUser) {
+        return (GetTestQuota) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetTestQuota setUploadType(java.lang.String uploadType) {
+        return (GetTestQuota) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetTestQuota setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetTestQuota) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The name of the `TestQuota` resource to retrieve. Format:
+       * `projects/{project_number}/testQuota`
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The name of the `TestQuota` resource to retrieve. Format:
+     `projects/{project_number}/testQuota`
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The name of the `TestQuota` resource to retrieve. Format:
+       * `projects/{project_number}/testQuota`
+       */
+      public GetTestQuota setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/testQuota$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public GetTestQuota set(String parameterName, Object value) {
+        return (GetTestQuota) super.set(parameterName, value);
+      }
+    }
+
+    /**
      * An accessor for creating requests from the Apps collection.
      *
      * <p>The typical use is:</p>

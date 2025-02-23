@@ -74,8 +74,6 @@ public final class EnterpriseCrmEventbusProtoFunctionType extends com.google.api
   private EnterpriseCrmEventbusProtoIntFunction intFunction;
 
   /**
-   * LINT.ThenChange(//depot/google3/alkali/apps/integrationplatform/client/workflow_editor/utils/tr
-   * ansform_function.ts)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -213,8 +211,6 @@ public final class EnterpriseCrmEventbusProtoFunctionType extends com.google.api
   }
 
   /**
-   * LINT.ThenChange(//depot/google3/alkali/apps/integrationplatform/client/workflow_editor/utils/tr
-   * ansform_function.ts)
    * @return value or {@code null} for none
    */
   public EnterpriseCrmEventbusProtoJsonFunction getJsonFunction() {
@@ -222,8 +218,6 @@ public final class EnterpriseCrmEventbusProtoFunctionType extends com.google.api
   }
 
   /**
-   * LINT.ThenChange(//depot/google3/alkali/apps/integrationplatform/client/workflow_editor/utils/tr
-   * ansform_function.ts)
    * @param jsonFunction jsonFunction or {@code null} for none
    */
   public EnterpriseCrmEventbusProtoFunctionType setJsonFunction(EnterpriseCrmEventbusProtoJsonFunction jsonFunction) {

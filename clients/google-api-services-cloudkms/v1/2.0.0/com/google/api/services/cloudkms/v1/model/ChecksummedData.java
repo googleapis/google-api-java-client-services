@@ -37,8 +37,8 @@ public final class ChecksummedData extends com.google.api.client.json.GenericJso
    * non-matching checksum values, and perform a limited number of retries. A persistent mismatch
    * may indicate an issue in your computation of the CRC32C checksum. Note: This field is defined
    * as int64 for reasons of compatibility across different languages. However, it is a non-negative
-   * integer, which will never exceed 2^32-1, and can be safely downconverted to uint32 in languages
-   * that support this type.
+   * integer, which will never exceed `2^32-1`, and can be safely downconverted to uint32 in
+   * languages that support this type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -58,8 +58,8 @@ public final class ChecksummedData extends com.google.api.client.json.GenericJso
    * non-matching checksum values, and perform a limited number of retries. A persistent mismatch
    * may indicate an issue in your computation of the CRC32C checksum. Note: This field is defined
    * as int64 for reasons of compatibility across different languages. However, it is a non-negative
-   * integer, which will never exceed 2^32-1, and can be safely downconverted to uint32 in languages
-   * that support this type.
+   * integer, which will never exceed `2^32-1`, and can be safely downconverted to uint32 in
+   * languages that support this type.
    * @return value or {@code null} for none
    */
   public java.lang.Long getCrc32cChecksum() {
@@ -73,8 +73,8 @@ public final class ChecksummedData extends com.google.api.client.json.GenericJso
    * non-matching checksum values, and perform a limited number of retries. A persistent mismatch
    * may indicate an issue in your computation of the CRC32C checksum. Note: This field is defined
    * as int64 for reasons of compatibility across different languages. However, it is a non-negative
-   * integer, which will never exceed 2^32-1, and can be safely downconverted to uint32 in languages
-   * that support this type.
+   * integer, which will never exceed `2^32-1`, and can be safely downconverted to uint32 in
+   * languages that support this type.
    * @param crc32cChecksum crc32cChecksum or {@code null} for none
    */
   public ChecksummedData setCrc32cChecksum(java.lang.Long crc32cChecksum) {

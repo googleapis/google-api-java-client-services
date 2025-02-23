@@ -57,6 +57,13 @@ public final class ProductStatusChangeMessage extends com.google.api.client.json
   }
 
   /**
+   * The time at which the event was generated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String eventTime;
+
+  /**
    * The product expiration time. This field will not bet set if the notification is sent for a
    * product deletion event.
    * The value may be {@code null}.
@@ -141,6 +148,23 @@ public final class ProductStatusChangeMessage extends com.google.api.client.json
    */
   public ProductStatusChangeMessage setChanges(java.util.List<ProductChange> changes) {
     this.changes = changes;
+    return this;
+  }
+
+  /**
+   * The time at which the event was generated.
+   * @return value or {@code null} for none
+   */
+  public String getEventTime() {
+    return eventTime;
+  }
+
+  /**
+   * The time at which the event was generated.
+   * @param eventTime eventTime or {@code null} for none
+   */
+  public ProductStatusChangeMessage setEventTime(String eventTime) {
+    this.eventTime = eventTime;
     return this;
   }
 

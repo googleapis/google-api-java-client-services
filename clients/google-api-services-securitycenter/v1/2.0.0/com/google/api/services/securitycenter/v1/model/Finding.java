@@ -308,6 +308,20 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   private Indicator indicator;
 
   /**
+   * IP rules associated with the finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private IpRules ipRules;
+
+  /**
+   * Job associated with the finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Job job;
+
+  /**
    * Signature of the kernel rootkit.
    * The value may be {@code null}.
    */
@@ -391,6 +405,13 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Represents the VPC networks that the resource is attached to.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Network> networks;
 
   /**
    * Steps to address the finding.
@@ -1045,6 +1066,40 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * IP rules associated with the finding.
+   * @return value or {@code null} for none
+   */
+  public IpRules getIpRules() {
+    return ipRules;
+  }
+
+  /**
+   * IP rules associated with the finding.
+   * @param ipRules ipRules or {@code null} for none
+   */
+  public Finding setIpRules(IpRules ipRules) {
+    this.ipRules = ipRules;
+    return this;
+  }
+
+  /**
+   * Job associated with the finding.
+   * @return value or {@code null} for none
+   */
+  public Job getJob() {
+    return job;
+  }
+
+  /**
+   * Job associated with the finding.
+   * @param job job or {@code null} for none
+   */
+  public Finding setJob(Job job) {
+    this.job = job;
+    return this;
+  }
+
+  /**
    * Signature of the kernel rootkit.
    * @return value or {@code null} for none
    */
@@ -1244,6 +1299,23 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    */
   public Finding setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Represents the VPC networks that the resource is attached to.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Network> getNetworks() {
+    return networks;
+  }
+
+  /**
+   * Represents the VPC networks that the resource is attached to.
+   * @param networks networks or {@code null} for none
+   */
+  public Finding setNetworks(java.util.List<Network> networks) {
+    this.networks = networks;
     return this;
   }
 

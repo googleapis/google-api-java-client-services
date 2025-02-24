@@ -683,6 +683,466 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
       }
 
       /**
+       * An accessor for creating requests from the Announcements collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code VMwareEngine vmwareengine = new VMwareEngine(...);}
+       *   {@code VMwareEngine.Announcements.List request = vmwareengine.announcements().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Announcements announcements() {
+        return new Announcements();
+      }
+
+      /**
+       * The "announcements" collection of methods.
+       */
+      public class Announcements {
+
+        /**
+         * Retrieves a `Announcement` by its resource name.
+         *
+         * Create a request for the method "announcements.get".
+         *
+         * This request holds the parameters needed by the vmwareengine server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the announcement to retrieve. Resource names are schemeless URIs that
+         *        follow the conventions in https://cloud.google.com/apis/design/resource_names. For
+         *        example: `projects/my-project/locations/us-west1-a/announcements/announcement-uuid`
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends VMwareEngineRequest<com.google.api.services.vmwareengine.v1.model.Announcement> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/announcements/[^/]+$");
+
+          /**
+           * Retrieves a `Announcement` by its resource name.
+           *
+           * Create a request for the method "announcements.get".
+           *
+           * This request holds the parameters needed by the the vmwareengine server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the announcement to retrieve. Resource names are schemeless URIs that
+         *        follow the conventions in https://cloud.google.com/apis/design/resource_names. For
+         *        example: `projects/my-project/locations/us-west1-a/announcements/announcement-uuid`
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(VMwareEngine.this, "GET", REST_PATH, null, com.google.api.services.vmwareengine.v1.model.Announcement.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/announcements/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the announcement to retrieve. Resource names are
+           * schemeless URIs that follow the conventions in
+           * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+           * project/locations/us-west1-a/announcements/announcement-uuid`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the announcement to retrieve. Resource names are schemeless URIs
+         that follow the conventions in https://cloud.google.com/apis/design/resource_names. For example:
+         `projects/my-project/locations/us-west1-a/announcements/announcement-uuid`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the announcement to retrieve. Resource names are
+           * schemeless URIs that follow the conventions in
+           * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+           * project/locations/us-west1-a/announcements/announcement-uuid`
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/announcements/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists `Announcements` for a given region and project
+         *
+         * Create a request for the method "announcements.list".
+         *
+         * This request holds the parameters needed by the vmwareengine server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The resource name of the location to be queried for announcements. Resource names are
+         *        schemeless URIs that follow the conventions in
+         *        https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+         *        project/locations/us-west1-a`
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends VMwareEngineRequest<com.google.api.services.vmwareengine.v1.model.ListAnnouncementsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/announcements";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists `Announcements` for a given region and project
+           *
+           * Create a request for the method "announcements.list".
+           *
+           * This request holds the parameters needed by the the vmwareengine server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The resource name of the location to be queried for announcements. Resource names are
+         *        schemeless URIs that follow the conventions in
+         *        https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+         *        project/locations/us-west1-a`
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(VMwareEngine.this, "GET", REST_PATH, null, com.google.api.services.vmwareengine.v1.model.ListAnnouncementsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the location to be queried for announcements. Resource
+           * names are schemeless URIs that follow the conventions in
+           * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+           * project/locations/us-west1-a`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The resource name of the location to be queried for announcements. Resource names are
+         schemeless URIs that follow the conventions in https://cloud.google.com/apis/design/resource_names.
+         For example: `projects/my-project/locations/us-west1-a`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The resource name of the location to be queried for announcements. Resource
+           * names are schemeless URIs that follow the conventions in
+           * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+           * project/locations/us-west1-a`
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * A filter expression that matches resources returned in the response. The expression
+           * must specify the field name, a comparison operator, and the value that you want to use
+           * for filtering. The value must be a string, a number, or a boolean. The comparison
+           * operator must be `=`, `!=`, `>`, or `<`. For example, if you are filtering a list of
+           * announcement runs, you can exclude the ones named `example-announcement` by specifying
+           * `name != "example-announcement"`. You can also filter nested fields. To filter on
+           * multiple expressions, provide each separate expression within parentheses. For example:
+           * ``` (name = "example-announcement") (createTime > "2021-04-12T08:15:10.40Z") ``` By
+           * default, each expression is an `AND` expression. However, you can include `AND` and
+           * `OR` expressions explicitly. For example: ``` (name = "announcement-1") AND (createTime
+           * > "2021-04-12T08:15:10.40Z") OR (name = "announcement-2") ```
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** A filter expression that matches resources returned in the response. The expression must specify
+         the field name, a comparison operator, and the value that you want to use for filtering. The value
+         must be a string, a number, or a boolean. The comparison operator must be `=`, `!=`, `>`, or `<`.
+         For example, if you are filtering a list of announcement runs, you can exclude the ones named
+         `example-announcement` by specifying `name != "example-announcement"`. You can also filter nested
+         fields. To filter on multiple expressions, provide each separate expression within parentheses. For
+         example: ``` (name = "example-announcement") (createTime > "2021-04-12T08:15:10.40Z") ``` By
+         default, each expression is an `AND` expression. However, you can include `AND` and `OR`
+         expressions explicitly. For example: ``` (name = "announcement-1") AND (createTime >
+         "2021-04-12T08:15:10.40Z") OR (name = "announcement-2") ```
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * A filter expression that matches resources returned in the response. The expression
+           * must specify the field name, a comparison operator, and the value that you want to use
+           * for filtering. The value must be a string, a number, or a boolean. The comparison
+           * operator must be `=`, `!=`, `>`, or `<`. For example, if you are filtering a list of
+           * announcement runs, you can exclude the ones named `example-announcement` by specifying
+           * `name != "example-announcement"`. You can also filter nested fields. To filter on
+           * multiple expressions, provide each separate expression within parentheses. For example:
+           * ``` (name = "example-announcement") (createTime > "2021-04-12T08:15:10.40Z") ``` By
+           * default, each expression is an `AND` expression. However, you can include `AND` and
+           * `OR` expressions explicitly. For example: ``` (name = "announcement-1") AND (createTime
+           * > "2021-04-12T08:15:10.40Z") OR (name = "announcement-2") ```
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Sorts list results by a certain order. By default, returned results are ordered by
+           * `name` in ascending order. You can also sort results in descending order based on the
+           * `name` value using `orderBy="name desc"`. Currently, only ordering by `name` is
+           * supported.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Sorts list results by a certain order. By default, returned results are ordered by `name` in
+         ascending order. You can also sort results in descending order based on the `name` value using
+         `orderBy="name desc"`. Currently, only ordering by `name` is supported.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /**
+           * Sorts list results by a certain order. By default, returned results are ordered by
+           * `name` in ascending order. You can also sort results in descending order based on the
+           * `name` value using `orderBy="name desc"`. Currently, only ordering by `name` is
+           * supported.
+           */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * The maximum number of announcements to return in one page. The service may return fewer
+           * than this value. The maximum value is coerced to 1000. The default value of this field
+           * is 500.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The maximum number of announcements to return in one page. The service may return fewer than this
+         value. The maximum value is coerced to 1000. The default value of this field is 500.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * The maximum number of announcements to return in one page. The service may return fewer
+           * than this value. The maximum value is coerced to 1000. The default value of this field
+           * is 500.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * A page token, received from a previous `ListAnnouncements` call. Provide this to
+           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListAnnouncements` must match the call that provided the page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** A page token, received from a previous `ListAnnouncements` call. Provide this to retrieve the
+         subsequent page. When paginating, all other parameters provided to `ListAnnouncements` must match
+         the call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * A page token, received from a previous `ListAnnouncements` call. Provide this to
+           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListAnnouncements` must match the call that provided the page token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the DnsBindPermission collection.
        *
        * <p>The typical use is:</p>
@@ -15768,6 +16228,695 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
 
             /**
              * Required. Field mask is used to specify the fields to be overwritten in the `Subnet`
+             * resource by the update. The fields specified in the `update_mask` are relative to the
+             * resource, not the full request. A field will be overwritten if it is in the mask. If
+             * the user does not provide a mask then all fields will be overwritten.
+             */
+            public Patch setUpdateMask(String updateMask) {
+              this.updateMask = updateMask;
+              return this;
+            }
+
+            @Override
+            public Patch set(String parameterName, Object value) {
+              return (Patch) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
+         * An accessor for creating requests from the Upgrades collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code VMwareEngine vmwareengine = new VMwareEngine(...);}
+         *   {@code VMwareEngine.Upgrades.List request = vmwareengine.upgrades().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Upgrades upgrades() {
+          return new Upgrades();
+        }
+
+        /**
+         * The "upgrades" collection of methods.
+         */
+        public class Upgrades {
+
+          /**
+           * Retrieves a private cloud `Upgrade` resource by its resource name.
+           *
+           * Create a request for the method "upgrades.get".
+           *
+           * This request holds the parameters needed by the vmwareengine server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the `Upgrade` resource to be retrieved. Resource names are schemeless URIs
+           *        that follow the conventions in https://cloud.google.com/apis/design/resource_names. For
+           *        example: `projects/my-project/locations/us-west1-a/privateClouds/my-cloud/upgrades/my-
+           *        upgrade`
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends VMwareEngineRequest<com.google.api.services.vmwareengine.v1.model.Upgrade> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/privateClouds/[^/]+/upgrades/[^/]+$");
+
+            /**
+             * Retrieves a private cloud `Upgrade` resource by its resource name.
+             *
+             * Create a request for the method "upgrades.get".
+             *
+             * This request holds the parameters needed by the the vmwareengine server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the `Upgrade` resource to be retrieved. Resource names are schemeless URIs
+           *        that follow the conventions in https://cloud.google.com/apis/design/resource_names. For
+           *        example: `projects/my-project/locations/us-west1-a/privateClouds/my-cloud/upgrades/my-
+           *        upgrade`
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(VMwareEngine.this, "GET", REST_PATH, null, com.google.api.services.vmwareengine.v1.model.Upgrade.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/privateClouds/[^/]+/upgrades/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the `Upgrade` resource to be retrieved. Resource names are
+             * schemeless URIs that follow the conventions in
+             * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+             * project/locations/us-west1-a/privateClouds/my-cloud/upgrades/my-upgrade`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the `Upgrade` resource to be retrieved. Resource names are schemeless URIs
+           that follow the conventions in https://cloud.google.com/apis/design/resource_names. For example:
+           `projects/my-project/locations/us-west1-a/privateClouds/my-cloud/upgrades/my-upgrade`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the `Upgrade` resource to be retrieved. Resource names are
+             * schemeless URIs that follow the conventions in
+             * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+             * project/locations/us-west1-a/privateClouds/my-cloud/upgrades/my-upgrade`
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/privateClouds/[^/]+/upgrades/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists past, ongoing and upcoming `Upgrades` for the given private cloud.
+           *
+           * Create a request for the method "upgrades.list".
+           *
+           * This request holds the parameters needed by the vmwareengine server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. Query a list of `Upgrades` for the given private cloud resource name. Resource names are
+           *        schemeless URIs that follow the conventions in
+           *        https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+           *        project/locations/us-west1-a/privateClouds/my-cloud`
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends VMwareEngineRequest<com.google.api.services.vmwareengine.v1.model.ListUpgradesResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/upgrades";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/privateClouds/[^/]+$");
+
+            /**
+             * Lists past, ongoing and upcoming `Upgrades` for the given private cloud.
+             *
+             * Create a request for the method "upgrades.list".
+             *
+             * This request holds the parameters needed by the the vmwareengine server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. Query a list of `Upgrades` for the given private cloud resource name. Resource names are
+           *        schemeless URIs that follow the conventions in
+           *        https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+           *        project/locations/us-west1-a/privateClouds/my-cloud`
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(VMwareEngine.this, "GET", REST_PATH, null, com.google.api.services.vmwareengine.v1.model.ListUpgradesResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/privateClouds/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Query a list of `Upgrades` for the given private cloud resource name.
+             * Resource names are schemeless URIs that follow the conventions in
+             * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+             * project/locations/us-west1-a/privateClouds/my-cloud`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Query a list of `Upgrades` for the given private cloud resource name. Resource names are
+           schemeless URIs that follow the conventions in https://cloud.google.com/apis/design/resource_names.
+           For example: `projects/my-project/locations/us-west1-a/privateClouds/my-cloud`
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. Query a list of `Upgrades` for the given private cloud resource name.
+             * Resource names are schemeless URIs that follow the conventions in
+             * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+             * project/locations/us-west1-a/privateClouds/my-cloud`
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/privateClouds/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * A filter expression that matches resources returned in the response. The expression
+             * must specify the field name, a comparison operator, and the value that you want to
+             * use for filtering. The value must be a string, a number, or a boolean. The comparison
+             * operator must be `=`, `!=`, `>`, or `<`. For example, if you are filtering a list of
+             * upgrades, you can exclude the ones named `example-upgrade1` by specifying `name !=
+             * "example-upgrade1"`. You can also filter nested fields. To filter on multiple
+             * expressions, provide each separate expression within parentheses. For example: ```
+             * (name = "example-upgrade") (createTime > "2021-04-12T08:15:10.40Z") ``` By default,
+             * each expression is an `AND` expression. However, you can include `AND` and `OR`
+             * expressions explicitly. For example: ``` (name = "upgrade-1") AND (createTime >
+             * "2021-04-12T08:15:10.40Z") OR (name = "upgrade-2") ```
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** A filter expression that matches resources returned in the response. The expression must specify
+           the field name, a comparison operator, and the value that you want to use for filtering. The value
+           must be a string, a number, or a boolean. The comparison operator must be `=`, `!=`, `>`, or `<`.
+           For example, if you are filtering a list of upgrades, you can exclude the ones named `example-
+           upgrade1` by specifying `name != "example-upgrade1"`. You can also filter nested fields. To filter
+           on multiple expressions, provide each separate expression within parentheses. For example: ```
+           (name = "example-upgrade") (createTime > "2021-04-12T08:15:10.40Z") ``` By default, each expression
+           is an `AND` expression. However, you can include `AND` and `OR` expressions explicitly. For
+           example: ``` (name = "upgrade-1") AND (createTime > "2021-04-12T08:15:10.40Z") OR (name =
+           "upgrade-2") ```
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /**
+             * A filter expression that matches resources returned in the response. The expression
+             * must specify the field name, a comparison operator, and the value that you want to
+             * use for filtering. The value must be a string, a number, or a boolean. The comparison
+             * operator must be `=`, `!=`, `>`, or `<`. For example, if you are filtering a list of
+             * upgrades, you can exclude the ones named `example-upgrade1` by specifying `name !=
+             * "example-upgrade1"`. You can also filter nested fields. To filter on multiple
+             * expressions, provide each separate expression within parentheses. For example: ```
+             * (name = "example-upgrade") (createTime > "2021-04-12T08:15:10.40Z") ``` By default,
+             * each expression is an `AND` expression. However, you can include `AND` and `OR`
+             * expressions explicitly. For example: ``` (name = "upgrade-1") AND (createTime >
+             * "2021-04-12T08:15:10.40Z") OR (name = "upgrade-2") ```
+             */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /**
+             * Sorts list results by a certain order. By default, returned results are ordered by
+             * `name` in ascending order. You can also sort results in descending order based on the
+             * `name` value using `orderBy="name desc"`. Currently, only ordering by `name` is
+             * supported.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String orderBy;
+
+            /** Sorts list results by a certain order. By default, returned results are ordered by `name` in
+           ascending order. You can also sort results in descending order based on the `name` value using
+           `orderBy="name desc"`. Currently, only ordering by `name` is supported.
+             */
+            public java.lang.String getOrderBy() {
+              return orderBy;
+            }
+
+            /**
+             * Sorts list results by a certain order. By default, returned results are ordered by
+             * `name` in ascending order. You can also sort results in descending order based on the
+             * `name` value using `orderBy="name desc"`. Currently, only ordering by `name` is
+             * supported.
+             */
+            public List setOrderBy(java.lang.String orderBy) {
+              this.orderBy = orderBy;
+              return this;
+            }
+
+            /**
+             * The maximum number of `Upgrades` to return in one page. The service may return fewer
+             * resources than this value. The maximum value is coerced to 1000. The default value of
+             * this field is 500.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** The maximum number of `Upgrades` to return in one page. The service may return fewer resources than
+           this value. The maximum value is coerced to 1000. The default value of this field is 500.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * The maximum number of `Upgrades` to return in one page. The service may return fewer
+             * resources than this value. The maximum value is coerced to 1000. The default value of
+             * this field is 500.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * A page token, received from a previous `ListUpgrades` call. Provide this to retrieve
+             * the subsequent page. When paginating, all other parameters provided to `ListUpgrades`
+             * must match the call that provided the page token.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** A page token, received from a previous `ListUpgrades` call. Provide this to retrieve the subsequent
+           page. When paginating, all other parameters provided to `ListUpgrades` must match the call that
+           provided the page token.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * A page token, received from a previous `ListUpgrades` call. Provide this to retrieve
+             * the subsequent page. When paginating, all other parameters provided to `ListUpgrades`
+             * must match the call that provided the page token.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Update the private cloud `Upgrade` resource. Only `schedule` field can updated. The schedule can
+           * only be updated when the upgrade has not started and schedule edit window is open. Only fields
+           * specified in `update_mask` are considered.
+           *
+           * Create a request for the method "upgrades.patch".
+           *
+           * This request holds the parameters needed by the vmwareengine server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           *
+           * @param name Output only. Identifier. The resource name of the private cloud `Upgrade`. Resource names are
+           *        schemeless URIs that follow the conventions in
+           *        https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+           *        project/locations/us-west1-a/privateClouds/my-cloud/upgrades/my-upgrade`
+           * @param content the {@link com.google.api.services.vmwareengine.v1.model.Upgrade}
+           * @return the request
+           */
+          public Patch patch(java.lang.String name, com.google.api.services.vmwareengine.v1.model.Upgrade content) throws java.io.IOException {
+            Patch result = new Patch(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Patch extends VMwareEngineRequest<com.google.api.services.vmwareengine.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/privateClouds/[^/]+/upgrades/[^/]+$");
+
+            /**
+             * Update the private cloud `Upgrade` resource. Only `schedule` field can updated. The schedule
+             * can only be updated when the upgrade has not started and schedule edit window is open. Only
+             * fields specified in `update_mask` are considered.
+             *
+             * Create a request for the method "upgrades.patch".
+             *
+             * This request holds the parameters needed by the the vmwareengine server.  After setting any
+             * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Output only. Identifier. The resource name of the private cloud `Upgrade`. Resource names are
+           *        schemeless URIs that follow the conventions in
+           *        https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+           *        project/locations/us-west1-a/privateClouds/my-cloud/upgrades/my-upgrade`
+             * @param content the {@link com.google.api.services.vmwareengine.v1.model.Upgrade}
+             * @since 1.13
+             */
+            protected Patch(java.lang.String name, com.google.api.services.vmwareengine.v1.model.Upgrade content) {
+              super(VMwareEngine.this, "PATCH", REST_PATH, content, com.google.api.services.vmwareengine.v1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/privateClouds/[^/]+/upgrades/[^/]+$");
+              }
+            }
+
+            @Override
+            public Patch set$Xgafv(java.lang.String $Xgafv) {
+              return (Patch) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Patch setAccessToken(java.lang.String accessToken) {
+              return (Patch) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Patch setAlt(java.lang.String alt) {
+              return (Patch) super.setAlt(alt);
+            }
+
+            @Override
+            public Patch setCallback(java.lang.String callback) {
+              return (Patch) super.setCallback(callback);
+            }
+
+            @Override
+            public Patch setFields(java.lang.String fields) {
+              return (Patch) super.setFields(fields);
+            }
+
+            @Override
+            public Patch setKey(java.lang.String key) {
+              return (Patch) super.setKey(key);
+            }
+
+            @Override
+            public Patch setOauthToken(java.lang.String oauthToken) {
+              return (Patch) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Patch) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Patch setQuotaUser(java.lang.String quotaUser) {
+              return (Patch) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Patch setUploadType(java.lang.String uploadType) {
+              return (Patch) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Patch) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Output only. Identifier. The resource name of the private cloud `Upgrade`. Resource
+             * names are schemeless URIs that follow the conventions in
+             * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+             * project/locations/us-west1-a/privateClouds/my-cloud/upgrades/my-upgrade`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Output only. Identifier. The resource name of the private cloud `Upgrade`. Resource names are
+           schemeless URIs that follow the conventions in https://cloud.google.com/apis/design/resource_names.
+           For example: `projects/my-project/locations/us-west1-a/privateClouds/my-cloud/upgrades/my-upgrade`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Output only. Identifier. The resource name of the private cloud `Upgrade`. Resource
+             * names are schemeless URIs that follow the conventions in
+             * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+             * project/locations/us-west1-a/privateClouds/my-cloud/upgrades/my-upgrade`
+             */
+            public Patch setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/privateClouds/[^/]+/upgrades/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Optional. A request ID to identify requests. Specify a unique request ID so that if
+             * you must retry your request, the server will know to ignore the request if it has
+             * already been completed. The server guarantees that a request doesn't result in
+             * creation of duplicate commitments for at least 60 minutes. For example, consider a
+             * situation where you make an initial request and the request times out. If you make
+             * the request again with the same request ID, the server can check if original
+             * operation with the same request ID was received, and if so, will ignore the second
+             * request. This prevents clients from accidentally creating duplicate commitments. The
+             * request ID must be a valid UUID with the exception that zero UUID is not supported
+             * (00000000-0000-0000-0000-000000000000).
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String requestId;
+
+            /** Optional. A request ID to identify requests. Specify a unique request ID so that if you must retry
+           your request, the server will know to ignore the request if it has already been completed. The
+           server guarantees that a request doesn't result in creation of duplicate commitments for at least
+           60 minutes. For example, consider a situation where you make an initial request and the request
+           times out. If you make the request again with the same request ID, the server can check if original
+           operation with the same request ID was received, and if so, will ignore the second request. This
+           prevents clients from accidentally creating duplicate commitments. The request ID must be a valid
+           UUID with the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            public java.lang.String getRequestId() {
+              return requestId;
+            }
+
+            /**
+             * Optional. A request ID to identify requests. Specify a unique request ID so that if
+             * you must retry your request, the server will know to ignore the request if it has
+             * already been completed. The server guarantees that a request doesn't result in
+             * creation of duplicate commitments for at least 60 minutes. For example, consider a
+             * situation where you make an initial request and the request times out. If you make
+             * the request again with the same request ID, the server can check if original
+             * operation with the same request ID was received, and if so, will ignore the second
+             * request. This prevents clients from accidentally creating duplicate commitments. The
+             * request ID must be a valid UUID with the exception that zero UUID is not supported
+             * (00000000-0000-0000-0000-000000000000).
+             */
+            public Patch setRequestId(java.lang.String requestId) {
+              this.requestId = requestId;
+              return this;
+            }
+
+            /**
+             * Required. Field mask is used to specify the fields to be overwritten in the `Upgrade`
+             * resource by the update. The fields specified in the `update_mask` are relative to the
+             * resource, not the full request. A field will be overwritten if it is in the mask. If
+             * the user does not provide a mask then all fields will be overwritten.
+             */
+            @com.google.api.client.util.Key
+            private String updateMask;
+
+            /** Required. Field mask is used to specify the fields to be overwritten in the `Upgrade` resource by
+           the update. The fields specified in the `update_mask` are relative to the resource, not the full
+           request. A field will be overwritten if it is in the mask. If the user does not provide a mask then
+           all fields will be overwritten.
+             */
+            public String getUpdateMask() {
+              return updateMask;
+            }
+
+            /**
+             * Required. Field mask is used to specify the fields to be overwritten in the `Upgrade`
              * resource by the update. The fields specified in the `update_mask` are relative to the
              * resource, not the full request. A field will be overwritten if it is in the mask. If
              * the user does not provide a mask then all fields will be overwritten.

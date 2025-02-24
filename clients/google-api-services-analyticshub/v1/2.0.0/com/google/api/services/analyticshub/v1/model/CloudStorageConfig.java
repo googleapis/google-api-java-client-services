@@ -81,7 +81,7 @@ public final class CloudStorageConfig extends com.google.api.client.json.Generic
 
   /**
    * Optional. The maximum duration that can elapse before a new Cloud Storage file is created. Min
-   * 1 minute, max 10 minutes, default 5 minutes. May not exceed the subscription's acknowledgement
+   * 1 minute, max 10 minutes, default 5 minutes. May not exceed the subscription's acknowledgment
    * deadline.
    * The value may be {@code null}.
    */
@@ -242,7 +242,7 @@ public final class CloudStorageConfig extends com.google.api.client.json.Generic
 
   /**
    * Optional. The maximum duration that can elapse before a new Cloud Storage file is created. Min
-   * 1 minute, max 10 minutes, default 5 minutes. May not exceed the subscription's acknowledgement
+   * 1 minute, max 10 minutes, default 5 minutes. May not exceed the subscription's acknowledgment
    * deadline.
    * @return value or {@code null} for none
    */
@@ -252,7 +252,7 @@ public final class CloudStorageConfig extends com.google.api.client.json.Generic
 
   /**
    * Optional. The maximum duration that can elapse before a new Cloud Storage file is created. Min
-   * 1 minute, max 10 minutes, default 5 minutes. May not exceed the subscription's acknowledgement
+   * 1 minute, max 10 minutes, default 5 minutes. May not exceed the subscription's acknowledgment
    * deadline.
    * @param maxDuration maxDuration or {@code null} for none
    */

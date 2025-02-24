@@ -99,6 +99,14 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
   private java.lang.String listing;
 
   /**
+   * Output only. By default, false. If true, the Subscriber agreed to the email sharing mandate
+   * that is enabled for DataExchange/Listing.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean logLinkedDatasetQueryUserEmail;
+
+  /**
    * Output only. The resource name of the subscription. e.g.
    * `projects/myproject/locations/US/subscriptions/123`.
    * The value may be {@code null}.
@@ -271,6 +279,25 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
    */
   public Subscription setListing(java.lang.String listing) {
     this.listing = listing;
+    return this;
+  }
+
+  /**
+   * Output only. By default, false. If true, the Subscriber agreed to the email sharing mandate
+   * that is enabled for DataExchange/Listing.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getLogLinkedDatasetQueryUserEmail() {
+    return logLinkedDatasetQueryUserEmail;
+  }
+
+  /**
+   * Output only. By default, false. If true, the Subscriber agreed to the email sharing mandate
+   * that is enabled for DataExchange/Listing.
+   * @param logLinkedDatasetQueryUserEmail logLinkedDatasetQueryUserEmail or {@code null} for none
+   */
+  public Subscription setLogLinkedDatasetQueryUserEmail(java.lang.Boolean logLinkedDatasetQueryUserEmail) {
+    this.logLinkedDatasetQueryUserEmail = logLinkedDatasetQueryUserEmail;
     return this;
   }
 

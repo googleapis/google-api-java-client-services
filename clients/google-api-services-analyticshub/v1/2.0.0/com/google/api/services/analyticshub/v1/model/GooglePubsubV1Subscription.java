@@ -97,7 +97,7 @@ public final class GooglePubsubV1Subscription extends com.google.api.client.json
   /**
    * Optional. If true, Pub/Sub provides the following guarantees for the delivery of a message with
    * a given value of `message_id` on this subscription: * The message sent to a subscriber is
-   * guaranteed not to be resent before the message's acknowledgement deadline expires. * An
+   * guaranteed not to be resent before the message's acknowledgment deadline expires. * An
    * acknowledged message will not be resent to a subscriber. Note that subscribers may still
    * receive multiple copies of a message when `enable_exactly_once_delivery` is true if the message
    * was published multiple times by a publisher client. These copies are considered distinct by
@@ -192,7 +192,7 @@ public final class GooglePubsubV1Subscription extends com.google.api.client.json
    * Optional. A policy that specifies how Pub/Sub retries message delivery for this subscription.
    * If not set, the default retry policy is applied. This generally implies that messages will be
    * retried as soon as possible for healthy subscribers. RetryPolicy will be triggered on NACKs or
-   * acknowledgement deadline exceeded events for a given message.
+   * acknowledgment deadline exceeded events for a given message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -364,7 +364,7 @@ public final class GooglePubsubV1Subscription extends com.google.api.client.json
   /**
    * Optional. If true, Pub/Sub provides the following guarantees for the delivery of a message with
    * a given value of `message_id` on this subscription: * The message sent to a subscriber is
-   * guaranteed not to be resent before the message's acknowledgement deadline expires. * An
+   * guaranteed not to be resent before the message's acknowledgment deadline expires. * An
    * acknowledged message will not be resent to a subscriber. Note that subscribers may still
    * receive multiple copies of a message when `enable_exactly_once_delivery` is true if the message
    * was published multiple times by a publisher client. These copies are considered distinct by
@@ -378,7 +378,7 @@ public final class GooglePubsubV1Subscription extends com.google.api.client.json
   /**
    * Optional. If true, Pub/Sub provides the following guarantees for the delivery of a message with
    * a given value of `message_id` on this subscription: * The message sent to a subscriber is
-   * guaranteed not to be resent before the message's acknowledgement deadline expires. * An
+   * guaranteed not to be resent before the message's acknowledgment deadline expires. * An
    * acknowledged message will not be resent to a subscriber. Note that subscribers may still
    * receive multiple copies of a message when `enable_exactly_once_delivery` is true if the message
    * was published multiple times by a publisher client. These copies are considered distinct by
@@ -583,7 +583,7 @@ public final class GooglePubsubV1Subscription extends com.google.api.client.json
    * Optional. A policy that specifies how Pub/Sub retries message delivery for this subscription.
    * If not set, the default retry policy is applied. This generally implies that messages will be
    * retried as soon as possible for healthy subscribers. RetryPolicy will be triggered on NACKs or
-   * acknowledgement deadline exceeded events for a given message.
+   * acknowledgment deadline exceeded events for a given message.
    * @return value or {@code null} for none
    */
   public RetryPolicy getRetryPolicy() {
@@ -594,7 +594,7 @@ public final class GooglePubsubV1Subscription extends com.google.api.client.json
    * Optional. A policy that specifies how Pub/Sub retries message delivery for this subscription.
    * If not set, the default retry policy is applied. This generally implies that messages will be
    * retried as soon as possible for healthy subscribers. RetryPolicy will be triggered on NACKs or
-   * acknowledgement deadline exceeded events for a given message.
+   * acknowledgment deadline exceeded events for a given message.
    * @param retryPolicy retryPolicy or {@code null} for none
    */
   public GooglePubsubV1Subscription setRetryPolicy(RetryPolicy retryPolicy) {

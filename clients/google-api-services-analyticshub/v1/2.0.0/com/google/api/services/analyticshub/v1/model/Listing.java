@@ -103,6 +103,13 @@ public final class Listing extends com.google.api.client.json.GenericJson {
   private java.lang.String icon;
 
   /**
+   * Optional. By default, false. If true, the Listing has an email sharing mandate enabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean logLinkedDatasetQueryUserEmail;
+
+  /**
    * Output only. The resource name of the listing. e.g.
    * `projects/myproject/locations/US/dataExchanges/123/listings/456`
    * The value may be {@code null}.
@@ -361,6 +368,23 @@ public final class Listing extends com.google.api.client.json.GenericJson {
    */
   public Listing encodeIcon(byte[] icon) {
     this.icon = com.google.api.client.util.Base64.encodeBase64URLSafeString(icon);
+    return this;
+  }
+
+  /**
+   * Optional. By default, false. If true, the Listing has an email sharing mandate enabled.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getLogLinkedDatasetQueryUserEmail() {
+    return logLinkedDatasetQueryUserEmail;
+  }
+
+  /**
+   * Optional. By default, false. If true, the Listing has an email sharing mandate enabled.
+   * @param logLinkedDatasetQueryUserEmail logLinkedDatasetQueryUserEmail or {@code null} for none
+   */
+  public Listing setLogLinkedDatasetQueryUserEmail(java.lang.Boolean logLinkedDatasetQueryUserEmail) {
+    this.logLinkedDatasetQueryUserEmail = logLinkedDatasetQueryUserEmail;
     return this;
   }
 

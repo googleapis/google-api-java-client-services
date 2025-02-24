@@ -82,6 +82,13 @@ public final class DataExchange extends com.google.api.client.json.GenericJson {
   private java.lang.Integer listingCount;
 
   /**
+   * Optional. By default, false. If true, the DataExchange has an email sharing mandate enabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean logLinkedDatasetQueryUserEmail;
+
+  /**
    * Output only. The resource name of the data exchange. e.g.
    * `projects/myproject/locations/US/dataExchanges/123`.
    * The value may be {@code null}.
@@ -255,6 +262,23 @@ public final class DataExchange extends com.google.api.client.json.GenericJson {
    */
   public DataExchange setListingCount(java.lang.Integer listingCount) {
     this.listingCount = listingCount;
+    return this;
+  }
+
+  /**
+   * Optional. By default, false. If true, the DataExchange has an email sharing mandate enabled.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getLogLinkedDatasetQueryUserEmail() {
+    return logLinkedDatasetQueryUserEmail;
+  }
+
+  /**
+   * Optional. By default, false. If true, the DataExchange has an email sharing mandate enabled.
+   * @param logLinkedDatasetQueryUserEmail logLinkedDatasetQueryUserEmail or {@code null} for none
+   */
+  public DataExchange setLogLinkedDatasetQueryUserEmail(java.lang.Boolean logLinkedDatasetQueryUserEmail) {
+    this.logLinkedDatasetQueryUserEmail = logLinkedDatasetQueryUserEmail;
     return this;
   }
 

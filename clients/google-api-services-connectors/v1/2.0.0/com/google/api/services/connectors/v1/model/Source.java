@@ -30,7 +30,7 @@ package com.google.api.services.connectors.v1.model;
 public final class Source extends com.google.api.client.json.GenericJson {
 
   /**
-   * Field identifier. For example config vaiable name.
+   * Field identifier. For example config variable name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class Source extends com.google.api.client.json.GenericJson {
   private java.lang.String sourceType;
 
   /**
-   * Field identifier. For example config vaiable name.
+   * Field identifier. For example config variable name.
    * @return value or {@code null} for none
    */
   public java.lang.String getFieldId() {
@@ -52,7 +52,7 @@ public final class Source extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Field identifier. For example config vaiable name.
+   * Field identifier. For example config variable name.
    * @param fieldId fieldId or {@code null} for none
    */
   public Source setFieldId(java.lang.String fieldId) {

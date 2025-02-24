@@ -30,6 +30,14 @@ package com.google.api.services.connectors.v1.model;
 public final class JsonSchema extends com.google.api.client.json.GenericJson {
 
   /**
+   * Additional details apart from standard json schema fields, this gives flexibility to store
+   * metadata about the schema
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Object> additionalDetails;
+
+  /**
    * The default value of the field or object described by this schema.
    * The value may be {@code null}.
    */
@@ -94,6 +102,25 @@ public final class JsonSchema extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> type;
+
+  /**
+   * Additional details apart from standard json schema fields, this gives flexibility to store
+   * metadata about the schema
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Object> getAdditionalDetails() {
+    return additionalDetails;
+  }
+
+  /**
+   * Additional details apart from standard json schema fields, this gives flexibility to store
+   * metadata about the schema
+   * @param additionalDetails additionalDetails or {@code null} for none
+   */
+  public JsonSchema setAdditionalDetails(java.util.Map<String, java.lang.Object> additionalDetails) {
+    this.additionalDetails = additionalDetails;
+    return this;
+  }
 
   /**
    * The default value of the field or object described by this schema.

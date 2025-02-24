@@ -40,7 +40,7 @@ public final class RoleGrant extends com.google.api.client.json.GenericJson {
   private java.lang.String helperTextTemplate;
 
   /**
-   * Optional. Prinicipal/Identity for whom the role need to assigned.
+   * Optional. Principal/Identity for whom the role need to assigned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,7 +78,7 @@ public final class RoleGrant extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Prinicipal/Identity for whom the role need to assigned.
+   * Optional. Principal/Identity for whom the role need to assigned.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrincipal() {
@@ -86,7 +86,7 @@ public final class RoleGrant extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Prinicipal/Identity for whom the role need to assigned.
+   * Optional. Principal/Identity for whom the role need to assigned.
    * @param principal principal or {@code null} for none
    */
   public RoleGrant setPrincipal(java.lang.String principal) {

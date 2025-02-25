@@ -39,24 +39,6 @@ public final class AppAccessRiskVerdict extends com.google.api.client.json.Gener
   private java.util.List<java.lang.String> appsDetected;
 
   /**
-   * Deprecated: this field will be removed, please use apps_detected instead. App access risk
-   * verdict related to apps that are not installed by Google Play, and are not preloaded on the
-   * system image by the device manufacturer.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String otherApps;
-
-  /**
-   * Deprecated: this field will be removed, please use apps_detected instead. App access risk
-   * verdict related to apps that are not installed by the Google Play Store, and are not preloaded
-   * on the system image by the device manufacturer.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String playOrSystemApps;
-
-  /**
    * List of detected app types signalled for App Access Risk.
    * @return value or {@code null} for none
    */
@@ -70,48 +52,6 @@ public final class AppAccessRiskVerdict extends com.google.api.client.json.Gener
    */
   public AppAccessRiskVerdict setAppsDetected(java.util.List<java.lang.String> appsDetected) {
     this.appsDetected = appsDetected;
-    return this;
-  }
-
-  /**
-   * Deprecated: this field will be removed, please use apps_detected instead. App access risk
-   * verdict related to apps that are not installed by Google Play, and are not preloaded on the
-   * system image by the device manufacturer.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getOtherApps() {
-    return otherApps;
-  }
-
-  /**
-   * Deprecated: this field will be removed, please use apps_detected instead. App access risk
-   * verdict related to apps that are not installed by Google Play, and are not preloaded on the
-   * system image by the device manufacturer.
-   * @param otherApps otherApps or {@code null} for none
-   */
-  public AppAccessRiskVerdict setOtherApps(java.lang.String otherApps) {
-    this.otherApps = otherApps;
-    return this;
-  }
-
-  /**
-   * Deprecated: this field will be removed, please use apps_detected instead. App access risk
-   * verdict related to apps that are not installed by the Google Play Store, and are not preloaded
-   * on the system image by the device manufacturer.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getPlayOrSystemApps() {
-    return playOrSystemApps;
-  }
-
-  /**
-   * Deprecated: this field will be removed, please use apps_detected instead. App access risk
-   * verdict related to apps that are not installed by the Google Play Store, and are not preloaded
-   * on the system image by the device manufacturer.
-   * @param playOrSystemApps playOrSystemApps or {@code null} for none
-   */
-  public AppAccessRiskVerdict setPlayOrSystemApps(java.lang.String playOrSystemApps) {
-    this.playOrSystemApps = playOrSystemApps;
     return this;
   }
 

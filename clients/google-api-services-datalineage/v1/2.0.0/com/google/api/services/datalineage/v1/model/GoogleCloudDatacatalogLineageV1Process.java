@@ -38,9 +38,6 @@ public final class GoogleCloudDatacatalogLineageV1Process extends com.google.api
   private java.util.Map<String, java.lang.Object> attributes;
 
   /**
-   * Optional. A human-readable name you can set to display in a user interface. Must be not longer
-   * than 200 characters and only contain UTF-8 letters or numbers, spaces or characters like
-   * `_-:&.`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,9 +80,6 @@ public final class GoogleCloudDatacatalogLineageV1Process extends com.google.api
   }
 
   /**
-   * Optional. A human-readable name you can set to display in a user interface. Must be not longer
-   * than 200 characters and only contain UTF-8 letters or numbers, spaces or characters like
-   * `_-:&.`
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -93,9 +87,6 @@ public final class GoogleCloudDatacatalogLineageV1Process extends com.google.api
   }
 
   /**
-   * Optional. A human-readable name you can set to display in a user interface. Must be not longer
-   * than 200 characters and only contain UTF-8 letters or numbers, spaces or characters like
-   * `_-:&.`
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudDatacatalogLineageV1Process setDisplayName(java.lang.String displayName) {

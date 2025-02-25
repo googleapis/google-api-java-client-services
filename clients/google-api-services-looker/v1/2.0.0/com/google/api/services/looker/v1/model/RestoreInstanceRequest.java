@@ -17,7 +17,7 @@
 package com.google.api.services.looker.v1.model;
 
 /**
- * Response message for `TestIamPermissions` method.
+ * Request options for restoring an instance
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Looker (Google Cloud core) API. For a detailed
@@ -28,40 +28,43 @@ package com.google.api.services.looker.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class TestIamPermissionsResponse extends com.google.api.client.json.GenericJson {
+public final class RestoreInstanceRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * A subset of `TestPermissionsRequest.permissions` that the caller is allowed.
+   * Required. Backup being used to restore the instance Format:
+   * projects/{project}/locations/{location}/instances/{instance}/backups/{backup}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> permissions;
+  private java.lang.String backup;
 
   /**
-   * A subset of `TestPermissionsRequest.permissions` that the caller is allowed.
+   * Required. Backup being used to restore the instance Format:
+   * projects/{project}/locations/{location}/instances/{instance}/backups/{backup}
    * @return value or {@code null} for none
    */
-  public java.util.List<java.lang.String> getPermissions() {
-    return permissions;
+  public java.lang.String getBackup() {
+    return backup;
   }
 
   /**
-   * A subset of `TestPermissionsRequest.permissions` that the caller is allowed.
-   * @param permissions permissions or {@code null} for none
+   * Required. Backup being used to restore the instance Format:
+   * projects/{project}/locations/{location}/instances/{instance}/backups/{backup}
+   * @param backup backup or {@code null} for none
    */
-  public TestIamPermissionsResponse setPermissions(java.util.List<java.lang.String> permissions) {
-    this.permissions = permissions;
+  public RestoreInstanceRequest setBackup(java.lang.String backup) {
+    this.backup = backup;
     return this;
   }
 
   @Override
-  public TestIamPermissionsResponse set(String fieldName, Object value) {
-    return (TestIamPermissionsResponse) super.set(fieldName, value);
+  public RestoreInstanceRequest set(String fieldName, Object value) {
+    return (RestoreInstanceRequest) super.set(fieldName, value);
   }
 
   @Override
-  public TestIamPermissionsResponse clone() {
-    return (TestIamPermissionsResponse) super.clone();
+  public RestoreInstanceRequest clone() {
+    return (RestoreInstanceRequest) super.clone();
   }
 
 }

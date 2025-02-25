@@ -66,7 +66,8 @@ public final class Metadata extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean canOperateHealthData;
 
   /**
-   * Output only. Indicates if the listing can manage local posts.
+   * Output only. Indicates if the listing can manage local posts. Deprecated: This field is no
+   * longer populated and will be removed in a future version.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -221,7 +222,8 @@ public final class Metadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Indicates if the listing can manage local posts.
+   * Output only. Indicates if the listing can manage local posts. Deprecated: This field is no
+   * longer populated and will be removed in a future version.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCanOperateLocalPost() {
@@ -229,7 +231,8 @@ public final class Metadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Indicates if the listing can manage local posts.
+   * Output only. Indicates if the listing can manage local posts. Deprecated: This field is no
+   * longer populated and will be removed in a future version.
    * @param canOperateLocalPost canOperateLocalPost or {@code null} for none
    */
   public Metadata setCanOperateLocalPost(java.lang.Boolean canOperateLocalPost) {

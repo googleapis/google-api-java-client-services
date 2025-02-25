@@ -17,7 +17,7 @@
 package com.google.api.services.integrations.v1.model;
 
 /**
- * Contains the snapshot of the event execution for a given checkpoint. Next available id: 13
+ * Contains the snapshot of the event execution for a given checkpoint. Next available id: 15
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Application Integration API. For a detailed
@@ -36,6 +36,13 @@ public final class EnterpriseCrmEventbusProtoEventExecutionSnapshot extends com.
    */
   @com.google.api.client.util.Key
   private java.lang.String checkpointTaskNumber;
+
+  /**
+   * Client that the execution snapshot is associated to.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String clientId;
 
   /**
    * All of the computed conditions that been calculated.
@@ -113,6 +120,13 @@ public final class EnterpriseCrmEventbusProtoEventExecutionSnapshot extends com.
   private java.lang.String taskName;
 
   /**
+   * Name of the workflow this event execution snapshot belongs to.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String workflowName;
+
+  /**
    * Indicates "right after which checkpoint task's execution" this snapshot is taken.
    * @return value or {@code null} for none
    */
@@ -126,6 +140,23 @@ public final class EnterpriseCrmEventbusProtoEventExecutionSnapshot extends com.
    */
   public EnterpriseCrmEventbusProtoEventExecutionSnapshot setCheckpointTaskNumber(java.lang.String checkpointTaskNumber) {
     this.checkpointTaskNumber = checkpointTaskNumber;
+    return this;
+  }
+
+  /**
+   * Client that the execution snapshot is associated to.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getClientId() {
+    return clientId;
+  }
+
+  /**
+   * Client that the execution snapshot is associated to.
+   * @param clientId clientId or {@code null} for none
+   */
+  public EnterpriseCrmEventbusProtoEventExecutionSnapshot setClientId(java.lang.String clientId) {
+    this.clientId = clientId;
     return this;
   }
 
@@ -294,6 +325,23 @@ public final class EnterpriseCrmEventbusProtoEventExecutionSnapshot extends com.
    */
   public EnterpriseCrmEventbusProtoEventExecutionSnapshot setTaskName(java.lang.String taskName) {
     this.taskName = taskName;
+    return this;
+  }
+
+  /**
+   * Name of the workflow this event execution snapshot belongs to.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWorkflowName() {
+    return workflowName;
+  }
+
+  /**
+   * Name of the workflow this event execution snapshot belongs to.
+   * @param workflowName workflowName or {@code null} for none
+   */
+  public EnterpriseCrmEventbusProtoEventExecutionSnapshot setWorkflowName(java.lang.String workflowName) {
+    this.workflowName = workflowName;
     return this;
   }
 

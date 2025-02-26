@@ -17,7 +17,7 @@
 package com.google.api.services.slides.v1.model;
 
 /**
- * The autofit properties of a Shape.
+ * The autofit properties of a Shape. This property is only set for shapes that allow text.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Slides API. For a detailed explanation see:
@@ -33,7 +33,7 @@ public final class Autofit extends com.google.api.client.json.GenericJson {
    * The autofit type of the shape. If the autofit type is AUTOFIT_TYPE_UNSPECIFIED, the autofit
    * type is inherited from a parent placeholder if it exists. The field is automatically set to
    * NONE if a request is made that might affect text fitting within its bounding text box. In this
-   * case the font_scale is applied to the font_size and the line_spacing_reduction is applied to
+   * case, the font_scale is applied to the font_size and the line_spacing_reduction is applied to
    * the line_spacing. Both properties are also reset to default values.
    * The value may be {@code null}.
    */
@@ -43,7 +43,7 @@ public final class Autofit extends com.google.api.client.json.GenericJson {
   /**
    * The font scale applied to the shape. For shapes with autofit_type NONE or SHAPE_AUTOFIT, this
    * value is the default value of 1. For TEXT_AUTOFIT, this value multiplied by the font_size gives
-   * the font size that is rendered in the editor. This property is read-only.
+   * the font size that's rendered in the editor. This property is read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +52,7 @@ public final class Autofit extends com.google.api.client.json.GenericJson {
   /**
    * The line spacing reduction applied to the shape. For shapes with autofit_type NONE or
    * SHAPE_AUTOFIT, this value is the default value of 0. For TEXT_AUTOFIT, this value subtracted
-   * from the line_spacing gives the line spacing that is rendered in the editor. This property is
+   * from the line_spacing gives the line spacing that's rendered in the editor. This property is
    * read-only.
    * The value may be {@code null}.
    */
@@ -63,7 +63,7 @@ public final class Autofit extends com.google.api.client.json.GenericJson {
    * The autofit type of the shape. If the autofit type is AUTOFIT_TYPE_UNSPECIFIED, the autofit
    * type is inherited from a parent placeholder if it exists. The field is automatically set to
    * NONE if a request is made that might affect text fitting within its bounding text box. In this
-   * case the font_scale is applied to the font_size and the line_spacing_reduction is applied to
+   * case, the font_scale is applied to the font_size and the line_spacing_reduction is applied to
    * the line_spacing. Both properties are also reset to default values.
    * @return value or {@code null} for none
    */
@@ -75,7 +75,7 @@ public final class Autofit extends com.google.api.client.json.GenericJson {
    * The autofit type of the shape. If the autofit type is AUTOFIT_TYPE_UNSPECIFIED, the autofit
    * type is inherited from a parent placeholder if it exists. The field is automatically set to
    * NONE if a request is made that might affect text fitting within its bounding text box. In this
-   * case the font_scale is applied to the font_size and the line_spacing_reduction is applied to
+   * case, the font_scale is applied to the font_size and the line_spacing_reduction is applied to
    * the line_spacing. Both properties are also reset to default values.
    * @param autofitType autofitType or {@code null} for none
    */
@@ -87,7 +87,7 @@ public final class Autofit extends com.google.api.client.json.GenericJson {
   /**
    * The font scale applied to the shape. For shapes with autofit_type NONE or SHAPE_AUTOFIT, this
    * value is the default value of 1. For TEXT_AUTOFIT, this value multiplied by the font_size gives
-   * the font size that is rendered in the editor. This property is read-only.
+   * the font size that's rendered in the editor. This property is read-only.
    * @return value or {@code null} for none
    */
   public java.lang.Float getFontScale() {
@@ -97,7 +97,7 @@ public final class Autofit extends com.google.api.client.json.GenericJson {
   /**
    * The font scale applied to the shape. For shapes with autofit_type NONE or SHAPE_AUTOFIT, this
    * value is the default value of 1. For TEXT_AUTOFIT, this value multiplied by the font_size gives
-   * the font size that is rendered in the editor. This property is read-only.
+   * the font size that's rendered in the editor. This property is read-only.
    * @param fontScale fontScale or {@code null} for none
    */
   public Autofit setFontScale(java.lang.Float fontScale) {
@@ -108,7 +108,7 @@ public final class Autofit extends com.google.api.client.json.GenericJson {
   /**
    * The line spacing reduction applied to the shape. For shapes with autofit_type NONE or
    * SHAPE_AUTOFIT, this value is the default value of 0. For TEXT_AUTOFIT, this value subtracted
-   * from the line_spacing gives the line spacing that is rendered in the editor. This property is
+   * from the line_spacing gives the line spacing that's rendered in the editor. This property is
    * read-only.
    * @return value or {@code null} for none
    */
@@ -119,7 +119,7 @@ public final class Autofit extends com.google.api.client.json.GenericJson {
   /**
    * The line spacing reduction applied to the shape. For shapes with autofit_type NONE or
    * SHAPE_AUTOFIT, this value is the default value of 0. For TEXT_AUTOFIT, this value subtracted
-   * from the line_spacing gives the line spacing that is rendered in the editor. This property is
+   * from the line_spacing gives the line spacing that's rendered in the editor. This property is
    * read-only.
    * @param lineSpacingReduction lineSpacingReduction or {@code null} for none
    */

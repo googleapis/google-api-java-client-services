@@ -33,10 +33,7 @@ package com.google.api.services.adsense.v2.model;
 public final class PolicyTopic extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Indicates if this is a policy violation or not. When the value is true, issues that
-   * are instances of this topic must be addressed to remain in compliance with the partner's
-   * agreements with Google. A false value indicates that it's not mandatory to fix the issues but
-   * advertising demand might be restricted.
+   * Required. Deprecated. Policy topics no longer have a "must-fix" classification.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,10 +47,16 @@ public final class PolicyTopic extends com.google.api.client.json.GenericJson {
   private java.lang.String topic;
 
   /**
-   * Required. Indicates if this is a policy violation or not. When the value is true, issues that
-   * are instances of this topic must be addressed to remain in compliance with the partner's
-   * agreements with Google. A false value indicates that it's not mandatory to fix the issues but
-   * advertising demand might be restricted.
+   * Optional. The type of policy topic. For example, "POLICY" represents all the policy topics that
+   * are related to the Google Publisher Policy (GPP). See
+   * https://support.google.com/adsense/answer/15689616.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String type;
+
+  /**
+   * Required. Deprecated. Policy topics no longer have a "must-fix" classification.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getMustFix() {
@@ -61,10 +64,7 @@ public final class PolicyTopic extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Indicates if this is a policy violation or not. When the value is true, issues that
-   * are instances of this topic must be addressed to remain in compliance with the partner's
-   * agreements with Google. A false value indicates that it's not mandatory to fix the issues but
-   * advertising demand might be restricted.
+   * Required. Deprecated. Policy topics no longer have a "must-fix" classification.
    * @param mustFix mustFix or {@code null} for none
    */
   public PolicyTopic setMustFix(java.lang.Boolean mustFix) {
@@ -86,6 +86,27 @@ public final class PolicyTopic extends com.google.api.client.json.GenericJson {
    */
   public PolicyTopic setTopic(java.lang.String topic) {
     this.topic = topic;
+    return this;
+  }
+
+  /**
+   * Optional. The type of policy topic. For example, "POLICY" represents all the policy topics that
+   * are related to the Google Publisher Policy (GPP). See
+   * https://support.google.com/adsense/answer/15689616.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getType() {
+    return type;
+  }
+
+  /**
+   * Optional. The type of policy topic. For example, "POLICY" represents all the policy topics that
+   * are related to the Google Publisher Policy (GPP). See
+   * https://support.google.com/adsense/answer/15689616.
+   * @param type type or {@code null} for none
+   */
+  public PolicyTopic setType(java.lang.String type) {
+    this.type = type;
     return this;
   }
 

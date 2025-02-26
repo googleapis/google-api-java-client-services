@@ -11626,6 +11626,274 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
         public class Sessions {
 
           /**
+           * Handles a single message from the client and returns the result as a stream. The server will
+           * interpret the message frame and respond with message frames to the client.
+           *
+           * Create a request for the method "sessions.adaptMessage".
+           *
+           * This request holds the parameters needed by the spanner server.  After setting any optional
+           * parameters, call the {@link AdaptMessage#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The database session in which the adapter request is processed.
+           * @param content the {@link com.google.api.services.spanner.v1.model.AdaptMessageRequest}
+           * @return the request
+           */
+          public AdaptMessage adaptMessage(java.lang.String name, com.google.api.services.spanner.v1.model.AdaptMessageRequest content) throws java.io.IOException {
+            AdaptMessage result = new AdaptMessage(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class AdaptMessage extends SpannerRequest<com.google.api.services.spanner.v1.model.AdaptMessageResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:adaptMessage";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+/databases/[^/]+/sessions/[^/]+$");
+
+            /**
+             * Handles a single message from the client and returns the result as a stream. The server will
+             * interpret the message frame and respond with message frames to the client.
+             *
+             * Create a request for the method "sessions.adaptMessage".
+             *
+             * This request holds the parameters needed by the the spanner server.  After setting any optional
+             * parameters, call the {@link AdaptMessage#execute()} method to invoke the remote operation. <p>
+             * {@link
+             * AdaptMessage#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The database session in which the adapter request is processed.
+             * @param content the {@link com.google.api.services.spanner.v1.model.AdaptMessageRequest}
+             * @since 1.13
+             */
+            protected AdaptMessage(java.lang.String name, com.google.api.services.spanner.v1.model.AdaptMessageRequest content) {
+              super(Spanner.this, "POST", REST_PATH, content, com.google.api.services.spanner.v1.model.AdaptMessageResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/instances/[^/]+/databases/[^/]+/sessions/[^/]+$");
+              }
+            }
+
+            @Override
+            public AdaptMessage set$Xgafv(java.lang.String $Xgafv) {
+              return (AdaptMessage) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public AdaptMessage setAccessToken(java.lang.String accessToken) {
+              return (AdaptMessage) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public AdaptMessage setAlt(java.lang.String alt) {
+              return (AdaptMessage) super.setAlt(alt);
+            }
+
+            @Override
+            public AdaptMessage setCallback(java.lang.String callback) {
+              return (AdaptMessage) super.setCallback(callback);
+            }
+
+            @Override
+            public AdaptMessage setFields(java.lang.String fields) {
+              return (AdaptMessage) super.setFields(fields);
+            }
+
+            @Override
+            public AdaptMessage setKey(java.lang.String key) {
+              return (AdaptMessage) super.setKey(key);
+            }
+
+            @Override
+            public AdaptMessage setOauthToken(java.lang.String oauthToken) {
+              return (AdaptMessage) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public AdaptMessage setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (AdaptMessage) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public AdaptMessage setQuotaUser(java.lang.String quotaUser) {
+              return (AdaptMessage) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public AdaptMessage setUploadType(java.lang.String uploadType) {
+              return (AdaptMessage) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public AdaptMessage setUploadProtocol(java.lang.String uploadProtocol) {
+              return (AdaptMessage) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The database session in which the adapter request is processed. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The database session in which the adapter request is processed.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. The database session in which the adapter request is processed. */
+            public AdaptMessage setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/instances/[^/]+/databases/[^/]+/sessions/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public AdaptMessage set(String parameterName, Object value) {
+              return (AdaptMessage) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Creates a new session to be used for requests made by the adapter. A session identifies a
+           * specific incarnation of a database resource and is meant to be reused across many `AdaptMessage`
+           * calls.
+           *
+           * Create a request for the method "sessions.adapter".
+           *
+           * This request holds the parameters needed by the spanner server.  After setting any optional
+           * parameters, call the {@link Adapter#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The database in which the new session is created.
+           * @param content the {@link com.google.api.services.spanner.v1.model.AdapterSession}
+           * @return the request
+           */
+          public Adapter adapter(java.lang.String parent, com.google.api.services.spanner.v1.model.AdapterSession content) throws java.io.IOException {
+            Adapter result = new Adapter(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Adapter extends SpannerRequest<com.google.api.services.spanner.v1.model.AdapterSession> {
+
+            private static final String REST_PATH = "v1/{+parent}/sessions:adapter";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+/databases/[^/]+$");
+
+            /**
+             * Creates a new session to be used for requests made by the adapter. A session identifies a
+             * specific incarnation of a database resource and is meant to be reused across many
+             * `AdaptMessage` calls.
+             *
+             * Create a request for the method "sessions.adapter".
+             *
+             * This request holds the parameters needed by the the spanner server.  After setting any optional
+             * parameters, call the {@link Adapter#execute()} method to invoke the remote operation. <p>
+             * {@link
+             * Adapter#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The database in which the new session is created.
+             * @param content the {@link com.google.api.services.spanner.v1.model.AdapterSession}
+             * @since 1.13
+             */
+            protected Adapter(java.lang.String parent, com.google.api.services.spanner.v1.model.AdapterSession content) {
+              super(Spanner.this, "POST", REST_PATH, content, com.google.api.services.spanner.v1.model.AdapterSession.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/instances/[^/]+/databases/[^/]+$");
+              }
+            }
+
+            @Override
+            public Adapter set$Xgafv(java.lang.String $Xgafv) {
+              return (Adapter) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Adapter setAccessToken(java.lang.String accessToken) {
+              return (Adapter) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Adapter setAlt(java.lang.String alt) {
+              return (Adapter) super.setAlt(alt);
+            }
+
+            @Override
+            public Adapter setCallback(java.lang.String callback) {
+              return (Adapter) super.setCallback(callback);
+            }
+
+            @Override
+            public Adapter setFields(java.lang.String fields) {
+              return (Adapter) super.setFields(fields);
+            }
+
+            @Override
+            public Adapter setKey(java.lang.String key) {
+              return (Adapter) super.setKey(key);
+            }
+
+            @Override
+            public Adapter setOauthToken(java.lang.String oauthToken) {
+              return (Adapter) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Adapter setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Adapter) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Adapter setQuotaUser(java.lang.String quotaUser) {
+              return (Adapter) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Adapter setUploadType(java.lang.String uploadType) {
+              return (Adapter) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Adapter setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Adapter) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The database in which the new session is created. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The database in which the new session is created.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. The database in which the new session is created. */
+            public Adapter setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/instances/[^/]+/databases/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public Adapter set(String parameterName, Object value) {
+              return (Adapter) super.set(parameterName, value);
+            }
+          }
+          /**
            * Creates multiple new sessions. This API can be used to initialize a session cache on the clients.
            * See https://goo.gl/TgSFN2 for best practices on session cache management.
            *

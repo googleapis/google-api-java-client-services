@@ -81,8 +81,13 @@ public final class GoogleIamV2DenyRule extends com.google.api.client.json.Generi
    * kloadIdentityPools/{pool_id}/attribute.{attribute_name}/{attribute_value}`: All identities in a
    * workload identity pool with a certain attribute. * `principalSet://iam.googleapis.com/projects/
    * {project_number}/locations/global/workloadIdentityPools/{pool_id}`: All identities in a
-   * workload identity pool. * `deleted:principal://goog/subject/{email_id}?uid={uid}`: A specific
-   * Google Account that was deleted recently. For example,
+   * workload identity pool. * `principalSet://cloudresourcemanager.googleapis.com/[projects|folders
+   * |organizations]/{project_number|folder_number|org_number}/type/ServiceAccount`: All service
+   * accounts grouped under a resource (project, folder, or organization). * `principalSet://cloudre
+   * sourcemanager.googleapis.com/[projects|folders|organizations]/{project_number|folder_number|org
+   * _number}/type/ServiceAgent`: All service agents grouped under a resource (project, folder, or
+   * organization). * `deleted:principal://goog/subject/{email_id}?uid={uid}`: A specific Google
+   * Account that was deleted recently. For example,
    * `deleted:principal://goog/subject/alice@example.com?uid=1234567890`. If the Google Account is
    * recovered, this identifier reverts to the standard identifier for a Google Account. *
    * `deleted:principalSet://goog/group/{group_id}?uid={uid}`: A Google group that was deleted
@@ -201,8 +206,13 @@ public final class GoogleIamV2DenyRule extends com.google.api.client.json.Generi
    * kloadIdentityPools/{pool_id}/attribute.{attribute_name}/{attribute_value}`: All identities in a
    * workload identity pool with a certain attribute. * `principalSet://iam.googleapis.com/projects/
    * {project_number}/locations/global/workloadIdentityPools/{pool_id}`: All identities in a
-   * workload identity pool. * `deleted:principal://goog/subject/{email_id}?uid={uid}`: A specific
-   * Google Account that was deleted recently. For example,
+   * workload identity pool. * `principalSet://cloudresourcemanager.googleapis.com/[projects|folders
+   * |organizations]/{project_number|folder_number|org_number}/type/ServiceAccount`: All service
+   * accounts grouped under a resource (project, folder, or organization). * `principalSet://cloudre
+   * sourcemanager.googleapis.com/[projects|folders|organizations]/{project_number|folder_number|org
+   * _number}/type/ServiceAgent`: All service agents grouped under a resource (project, folder, or
+   * organization). * `deleted:principal://goog/subject/{email_id}?uid={uid}`: A specific Google
+   * Account that was deleted recently. For example,
    * `deleted:principal://goog/subject/alice@example.com?uid=1234567890`. If the Google Account is
    * recovered, this identifier reverts to the standard identifier for a Google Account. *
    * `deleted:principalSet://goog/group/{group_id}?uid={uid}`: A Google group that was deleted
@@ -253,8 +263,13 @@ public final class GoogleIamV2DenyRule extends com.google.api.client.json.Generi
    * kloadIdentityPools/{pool_id}/attribute.{attribute_name}/{attribute_value}`: All identities in a
    * workload identity pool with a certain attribute. * `principalSet://iam.googleapis.com/projects/
    * {project_number}/locations/global/workloadIdentityPools/{pool_id}`: All identities in a
-   * workload identity pool. * `deleted:principal://goog/subject/{email_id}?uid={uid}`: A specific
-   * Google Account that was deleted recently. For example,
+   * workload identity pool. * `principalSet://cloudresourcemanager.googleapis.com/[projects|folders
+   * |organizations]/{project_number|folder_number|org_number}/type/ServiceAccount`: All service
+   * accounts grouped under a resource (project, folder, or organization). * `principalSet://cloudre
+   * sourcemanager.googleapis.com/[projects|folders|organizations]/{project_number|folder_number|org
+   * _number}/type/ServiceAgent`: All service agents grouped under a resource (project, folder, or
+   * organization). * `deleted:principal://goog/subject/{email_id}?uid={uid}`: A specific Google
+   * Account that was deleted recently. For example,
    * `deleted:principal://goog/subject/alice@example.com?uid=1234567890`. If the Google Account is
    * recovered, this identifier reverts to the standard identifier for a Google Account. *
    * `deleted:principalSet://goog/group/{group_id}?uid={uid}`: A Google group that was deleted

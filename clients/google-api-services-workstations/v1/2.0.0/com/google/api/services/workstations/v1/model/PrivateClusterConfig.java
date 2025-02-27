@@ -57,7 +57,7 @@ public final class PrivateClusterConfig extends com.google.api.client.json.Gener
   private java.lang.Boolean enablePrivateEndpoint;
 
   /**
-   * Output only. Service attachment URI for the workstation cluster. The service attachemnt is
+   * Output only. Service attachment URI for the workstation cluster. The service attachment is
    * created when private endpoint is enabled. To access workstations in the workstation cluster,
    * configure access to the managed service using [Private Service
    * Connect](https://cloud.google.com/vpc/docs/configure-private-service-connect-services).
@@ -128,7 +128,7 @@ public final class PrivateClusterConfig extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. Service attachment URI for the workstation cluster. The service attachemnt is
+   * Output only. Service attachment URI for the workstation cluster. The service attachment is
    * created when private endpoint is enabled. To access workstations in the workstation cluster,
    * configure access to the managed service using [Private Service
    * Connect](https://cloud.google.com/vpc/docs/configure-private-service-connect-services).
@@ -139,7 +139,7 @@ public final class PrivateClusterConfig extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. Service attachment URI for the workstation cluster. The service attachemnt is
+   * Output only. Service attachment URI for the workstation cluster. The service attachment is
    * created when private endpoint is enabled. To access workstations in the workstation cluster,
    * configure access to the managed service using [Private Service
    * Connect](https://cloud.google.com/vpc/docs/configure-private-service-connect-services).

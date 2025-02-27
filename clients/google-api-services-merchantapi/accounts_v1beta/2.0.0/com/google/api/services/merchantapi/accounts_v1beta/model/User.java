@@ -33,7 +33,7 @@ package com.google.api.services.merchantapi.accounts_v1beta.model;
 public final class User extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The [access rights](https://support.google.com/merchants/answer/12160472?sjid=6789834
+   * Required. The [access rights](https://support.google.com/merchants/answer/12160472?sjid=6789834
    * 943175119429-EU#accesstypes) the user has.
    * The value may be {@code null}.
    */
@@ -56,7 +56,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
-   * Optional. The [access rights](https://support.google.com/merchants/answer/12160472?sjid=6789834
+   * Required. The [access rights](https://support.google.com/merchants/answer/12160472?sjid=6789834
    * 943175119429-EU#accesstypes) the user has.
    * @return value or {@code null} for none
    */
@@ -65,7 +65,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The [access rights](https://support.google.com/merchants/answer/12160472?sjid=6789834
+   * Required. The [access rights](https://support.google.com/merchants/answer/12160472?sjid=6789834
    * 943175119429-EU#accesstypes) the user has.
    * @param accessRights accessRights or {@code null} for none
    */

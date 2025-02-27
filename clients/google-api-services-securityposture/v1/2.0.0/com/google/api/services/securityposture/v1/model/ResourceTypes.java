@@ -17,11 +17,11 @@
 package com.google.api.services.securityposture.v1.model;
 
 /**
- * Set multiple resource types for one policy, eg: resourceTypes: included: -
+ * Set multiple resource types for one policy, for example: resourceTypes: included: -
  * compute.googleapis.com/Instance - compute.googleapis.com/Disk Constraint definition contains an
- * empty resource type in order to support multiple resource types in the policy. Only support
- * Google managed constriaint and method type is GOVERN_TAGS Refer go/multi-resource-support-force-
- * tags-gmc to get more details.
+ * empty resource type in order to support multiple resource types in the policy. Only supports
+ * managed constraints. Method type is `GOVERN_TAGS`. Refer go/multi-resource-support-force-tags-gmc
+ * to get more details.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Posture API. For a detailed explanation see:
@@ -34,7 +34,7 @@ package com.google.api.services.securityposture.v1.model;
 public final class ResourceTypes extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The resource type we currently support.
+   * Optional. The resource types we currently support.
    * cloud/orgpolicy/customconstraintconfig/prod/resource_types.prototext
    * The value may be {@code null}.
    */
@@ -42,7 +42,7 @@ public final class ResourceTypes extends com.google.api.client.json.GenericJson 
   private java.util.List<java.lang.String> included;
 
   /**
-   * Optional. The resource type we currently support.
+   * Optional. The resource types we currently support.
    * cloud/orgpolicy/customconstraintconfig/prod/resource_types.prototext
    * @return value or {@code null} for none
    */
@@ -51,7 +51,7 @@ public final class ResourceTypes extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. The resource type we currently support.
+   * Optional. The resource types we currently support.
    * cloud/orgpolicy/customconstraintconfig/prod/resource_types.prototext
    * @param included included or {@code null} for none
    */

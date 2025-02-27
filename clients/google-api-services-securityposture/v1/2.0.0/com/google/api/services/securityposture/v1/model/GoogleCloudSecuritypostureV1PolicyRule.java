@@ -69,18 +69,18 @@ public final class GoogleCloudSecuritypostureV1PolicyRule extends com.google.api
   private java.lang.Boolean enforce;
 
   /**
-   * Optional. Required for GMCs if parameters defined in constraints. Pass parameter values when
-   * policy enforcement is enabled. Ensure that parameter value types match those defined in the
-   * constraint definition. For example: { "allowedLocations" : ["us-east1", "us-west1"], "allowAll"
-   * : true }
+   * Optional. Required for managed constraints if parameters are defined. Passes parameter values
+   * when policy enforcement is enabled. Ensure that parameter value types match those defined in
+   * the constraint definition. For example: { "allowedLocations" : ["us-east1", "us-west1"],
+   * "allowAll" : true }
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> parameters;
 
   /**
-   * Optional. The resource types policy can support, only used for Google managed constraint and
-   * method type is GOVERN_TAGS.
+   * Optional. The resource types policies can support, only used for managed constraints. Method
+   * type is `GOVERN_TAGS`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -184,10 +184,10 @@ public final class GoogleCloudSecuritypostureV1PolicyRule extends com.google.api
   }
 
   /**
-   * Optional. Required for GMCs if parameters defined in constraints. Pass parameter values when
-   * policy enforcement is enabled. Ensure that parameter value types match those defined in the
-   * constraint definition. For example: { "allowedLocations" : ["us-east1", "us-west1"], "allowAll"
-   * : true }
+   * Optional. Required for managed constraints if parameters are defined. Passes parameter values
+   * when policy enforcement is enabled. Ensure that parameter value types match those defined in
+   * the constraint definition. For example: { "allowedLocations" : ["us-east1", "us-west1"],
+   * "allowAll" : true }
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getParameters() {
@@ -195,10 +195,10 @@ public final class GoogleCloudSecuritypostureV1PolicyRule extends com.google.api
   }
 
   /**
-   * Optional. Required for GMCs if parameters defined in constraints. Pass parameter values when
-   * policy enforcement is enabled. Ensure that parameter value types match those defined in the
-   * constraint definition. For example: { "allowedLocations" : ["us-east1", "us-west1"], "allowAll"
-   * : true }
+   * Optional. Required for managed constraints if parameters are defined. Passes parameter values
+   * when policy enforcement is enabled. Ensure that parameter value types match those defined in
+   * the constraint definition. For example: { "allowedLocations" : ["us-east1", "us-west1"],
+   * "allowAll" : true }
    * @param parameters parameters or {@code null} for none
    */
   public GoogleCloudSecuritypostureV1PolicyRule setParameters(java.util.Map<String, java.lang.Object> parameters) {
@@ -207,8 +207,8 @@ public final class GoogleCloudSecuritypostureV1PolicyRule extends com.google.api
   }
 
   /**
-   * Optional. The resource types policy can support, only used for Google managed constraint and
-   * method type is GOVERN_TAGS.
+   * Optional. The resource types policies can support, only used for managed constraints. Method
+   * type is `GOVERN_TAGS`.
    * @return value or {@code null} for none
    */
   public ResourceTypes getResourceTypes() {
@@ -216,8 +216,8 @@ public final class GoogleCloudSecuritypostureV1PolicyRule extends com.google.api
   }
 
   /**
-   * Optional. The resource types policy can support, only used for Google managed constraint and
-   * method type is GOVERN_TAGS.
+   * Optional. The resource types policies can support, only used for managed constraints. Method
+   * type is `GOVERN_TAGS`.
    * @param resourceTypes resourceTypes or {@code null} for none
    */
   public GoogleCloudSecuritypostureV1PolicyRule setResourceTypes(ResourceTypes resourceTypes) {

@@ -32,6 +32,13 @@ package com.google.api.services.integrations.v1.model;
 public final class GoogleCloudIntegrationsV1alphaTaskConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The list of conditional failure policies that will be applied to the task in order.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudIntegrationsV1alphaConditionalFailurePolicies conditionalFailurePolicies;
+
+  /**
    * Optional. User-provided description intended to give additional business context about the
    * task.
    * The value may be {@code null}.
@@ -163,6 +170,23 @@ public final class GoogleCloudIntegrationsV1alphaTaskConfig extends com.google.a
    */
   @com.google.api.client.util.Key
   private java.lang.String taskTemplate;
+
+  /**
+   * Optional. The list of conditional failure policies that will be applied to the task in order.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaConditionalFailurePolicies getConditionalFailurePolicies() {
+    return conditionalFailurePolicies;
+  }
+
+  /**
+   * Optional. The list of conditional failure policies that will be applied to the task in order.
+   * @param conditionalFailurePolicies conditionalFailurePolicies or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaTaskConfig setConditionalFailurePolicies(GoogleCloudIntegrationsV1alphaConditionalFailurePolicies conditionalFailurePolicies) {
+    this.conditionalFailurePolicies = conditionalFailurePolicies;
+    return this;
+  }
 
   /**
    * Optional. User-provided description intended to give additional business context about the

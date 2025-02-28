@@ -88,6 +88,15 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
   private java.lang.String creationTimestamp;
 
   /**
+   * [Output Only] A list of InterconnectLocation.CrossSiteInterconnectInfo objects, that describe
+   * where Cross-Site Interconnect wires may connect to from this location and associated connection
+   * parameters. Cross-Site Interconnect isn't allowed to locations which are not listed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<InterconnectLocationCrossSiteInterconnectInfo> crossSiteInterconnectInfos;
+
+  /**
    * [Output Only] An optional description of the resource.
    * The value may be {@code null}.
    */
@@ -300,6 +309,27 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
    */
   public InterconnectLocation setCreationTimestamp(java.lang.String creationTimestamp) {
     this.creationTimestamp = creationTimestamp;
+    return this;
+  }
+
+  /**
+   * [Output Only] A list of InterconnectLocation.CrossSiteInterconnectInfo objects, that describe
+   * where Cross-Site Interconnect wires may connect to from this location and associated connection
+   * parameters. Cross-Site Interconnect isn't allowed to locations which are not listed.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<InterconnectLocationCrossSiteInterconnectInfo> getCrossSiteInterconnectInfos() {
+    return crossSiteInterconnectInfos;
+  }
+
+  /**
+   * [Output Only] A list of InterconnectLocation.CrossSiteInterconnectInfo objects, that describe
+   * where Cross-Site Interconnect wires may connect to from this location and associated connection
+   * parameters. Cross-Site Interconnect isn't allowed to locations which are not listed.
+   * @param crossSiteInterconnectInfos crossSiteInterconnectInfos or {@code null} for none
+   */
+  public InterconnectLocation setCrossSiteInterconnectInfos(java.util.List<InterconnectLocationCrossSiteInterconnectInfo> crossSiteInterconnectInfos) {
+    this.crossSiteInterconnectInfos = crossSiteInterconnectInfos;
     return this;
   }
 

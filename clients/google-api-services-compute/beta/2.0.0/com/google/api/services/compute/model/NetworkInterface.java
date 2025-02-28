@@ -163,6 +163,13 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   private java.lang.String nicType;
 
   /**
+   * Name of the parent network interface of a dynamic network interface.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String parentNicName;
+
+  /**
    * The networking queue count that's specified by users for the network interface. Both Rx and Tx
    * queues will be set to this number. It'll be empty if not specified by the users.
    * The value may be {@code null}.
@@ -191,6 +198,14 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.lang.String subnetwork;
+
+  /**
+   * VLAN tag of a dynamic network interface, must be an integer in the range from 2 to 255
+   * inclusively.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer vlan;
 
   /**
    * An array of configurations for this interface. Currently, only one access config,
@@ -496,6 +511,23 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   }
 
   /**
+   * Name of the parent network interface of a dynamic network interface.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getParentNicName() {
+    return parentNicName;
+  }
+
+  /**
+   * Name of the parent network interface of a dynamic network interface.
+   * @param parentNicName parentNicName or {@code null} for none
+   */
+  public NetworkInterface setParentNicName(java.lang.String parentNicName) {
+    this.parentNicName = parentNicName;
+    return this;
+  }
+
+  /**
    * The networking queue count that's specified by users for the network interface. Both Rx and Tx
    * queues will be set to this number. It'll be empty if not specified by the users.
    * @return value or {@code null} for none
@@ -561,6 +593,25 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
    */
   public NetworkInterface setSubnetwork(java.lang.String subnetwork) {
     this.subnetwork = subnetwork;
+    return this;
+  }
+
+  /**
+   * VLAN tag of a dynamic network interface, must be an integer in the range from 2 to 255
+   * inclusively.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getVlan() {
+    return vlan;
+  }
+
+  /**
+   * VLAN tag of a dynamic network interface, must be an integer in the range from 2 to 255
+   * inclusively.
+   * @param vlan vlan or {@code null} for none
+   */
+  public NetworkInterface setVlan(java.lang.Integer vlan) {
+    this.vlan = vlan;
     return this;
   }
 

@@ -3510,6 +3510,146 @@ public class CloudAlloyDBAdmin extends com.google.api.client.googleapis.services
           }
         }
         /**
+         * Restores an AlloyDB cluster from a CloudSQL resource.
+         *
+         * Create a request for the method "clusters.restoreFromCloudSQL".
+         *
+         * This request holds the parameters needed by the alloydb server.  After setting any optional
+         * parameters, call the {@link RestoreFromCloudSQL#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The location of the new cluster. For the required format, see the comment on Cluster.name
+         *        field.
+         * @param content the {@link com.google.api.services.alloydb.v1.model.RestoreFromCloudSQLRequest}
+         * @return the request
+         */
+        public RestoreFromCloudSQL restoreFromCloudSQL(java.lang.String parent, com.google.api.services.alloydb.v1.model.RestoreFromCloudSQLRequest content) throws java.io.IOException {
+          RestoreFromCloudSQL result = new RestoreFromCloudSQL(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class RestoreFromCloudSQL extends CloudAlloyDBAdminRequest<com.google.api.services.alloydb.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+parent}/clusters:restoreFromCloudSQL";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Restores an AlloyDB cluster from a CloudSQL resource.
+           *
+           * Create a request for the method "clusters.restoreFromCloudSQL".
+           *
+           * This request holds the parameters needed by the the alloydb server.  After setting any optional
+           * parameters, call the {@link RestoreFromCloudSQL#execute()} method to invoke the remote
+           * operation. <p> {@link RestoreFromCloudSQL#initialize(com.google.api.client.googleapis.services.
+           * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param parent Required. The location of the new cluster. For the required format, see the comment on Cluster.name
+         *        field.
+           * @param content the {@link com.google.api.services.alloydb.v1.model.RestoreFromCloudSQLRequest}
+           * @since 1.13
+           */
+          protected RestoreFromCloudSQL(java.lang.String parent, com.google.api.services.alloydb.v1.model.RestoreFromCloudSQLRequest content) {
+            super(CloudAlloyDBAdmin.this, "POST", REST_PATH, content, com.google.api.services.alloydb.v1.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public RestoreFromCloudSQL set$Xgafv(java.lang.String $Xgafv) {
+            return (RestoreFromCloudSQL) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public RestoreFromCloudSQL setAccessToken(java.lang.String accessToken) {
+            return (RestoreFromCloudSQL) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public RestoreFromCloudSQL setAlt(java.lang.String alt) {
+            return (RestoreFromCloudSQL) super.setAlt(alt);
+          }
+
+          @Override
+          public RestoreFromCloudSQL setCallback(java.lang.String callback) {
+            return (RestoreFromCloudSQL) super.setCallback(callback);
+          }
+
+          @Override
+          public RestoreFromCloudSQL setFields(java.lang.String fields) {
+            return (RestoreFromCloudSQL) super.setFields(fields);
+          }
+
+          @Override
+          public RestoreFromCloudSQL setKey(java.lang.String key) {
+            return (RestoreFromCloudSQL) super.setKey(key);
+          }
+
+          @Override
+          public RestoreFromCloudSQL setOauthToken(java.lang.String oauthToken) {
+            return (RestoreFromCloudSQL) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public RestoreFromCloudSQL setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (RestoreFromCloudSQL) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public RestoreFromCloudSQL setQuotaUser(java.lang.String quotaUser) {
+            return (RestoreFromCloudSQL) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public RestoreFromCloudSQL setUploadType(java.lang.String uploadType) {
+            return (RestoreFromCloudSQL) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public RestoreFromCloudSQL setUploadProtocol(java.lang.String uploadProtocol) {
+            return (RestoreFromCloudSQL) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The location of the new cluster. For the required format, see the comment on
+           * Cluster.name field.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The location of the new cluster. For the required format, see the comment on Cluster.name
+         field.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The location of the new cluster. For the required format, see the comment on
+           * Cluster.name field.
+           */
+          public RestoreFromCloudSQL setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public RestoreFromCloudSQL set(String parameterName, Object value) {
+            return (RestoreFromCloudSQL) super.set(parameterName, value);
+          }
+        }
+        /**
          * Switches the roles of PRIMARY and SECONDARY clusters without any data loss. This promotes the
          * SECONDARY cluster to PRIMARY and sets up the original PRIMARY cluster to replicate from this
          * newly promoted cluster.
@@ -7633,6 +7773,28 @@ public class CloudAlloyDBAdmin extends com.google.api.client.googleapis.services
           /** A token identifying a page of results the server should return. */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
+            return this;
+          }
+
+          /**
+           * Optional. The scope for which supported flags are requested. If not specified, default
+           * is DATABASE.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String scope;
+
+          /** Optional. The scope for which supported flags are requested. If not specified, default is DATABASE.
+           */
+          public java.lang.String getScope() {
+            return scope;
+          }
+
+          /**
+           * Optional. The scope for which supported flags are requested. If not specified, default
+           * is DATABASE.
+           */
+          public List setScope(java.lang.String scope) {
+            this.scope = scope;
             return this;
           }
 

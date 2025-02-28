@@ -17,7 +17,7 @@
 package com.google.api.services.alloydb.v1.model;
 
 /**
- * Common model for database resource instance metadata. Next ID: 24
+ * Common model for database resource instance metadata. Next ID: 25
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AlloyDB API. For a detailed explanation see:
@@ -96,6 +96,13 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   private java.lang.String expectedState;
 
   /**
+   * GCBDR configuration for the resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private StorageDatabasecenterPartnerapiV1mainGCBDRConfiguration gcbdrConfiguration;
+
+  /**
    * Required. Unique identifier for a Database resource
    * The value may be {@code null}.
    */
@@ -167,7 +174,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   private java.lang.String resourceName;
 
   /**
-   * Suspension reason for the resource.
+   * Optional. Suspension reason for the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -354,6 +361,23 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
+   * GCBDR configuration for the resource.
+   * @return value or {@code null} for none
+   */
+  public StorageDatabasecenterPartnerapiV1mainGCBDRConfiguration getGcbdrConfiguration() {
+    return gcbdrConfiguration;
+  }
+
+  /**
+   * GCBDR configuration for the resource.
+   * @param gcbdrConfiguration gcbdrConfiguration or {@code null} for none
+   */
+  public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata setGcbdrConfiguration(StorageDatabasecenterPartnerapiV1mainGCBDRConfiguration gcbdrConfiguration) {
+    this.gcbdrConfiguration = gcbdrConfiguration;
+    return this;
+  }
+
+  /**
    * Required. Unique identifier for a Database resource
    * @return value or {@code null} for none
    */
@@ -523,7 +547,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * Suspension reason for the resource.
+   * Optional. Suspension reason for the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getSuspensionReason() {
@@ -531,7 +555,7 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
   }
 
   /**
-   * Suspension reason for the resource.
+   * Optional. Suspension reason for the resource.
    * @param suspensionReason suspensionReason or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata setSuspensionReason(java.lang.String suspensionReason) {

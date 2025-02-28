@@ -17,7 +17,7 @@
 package com.google.api.services.alloydb.v1.model;
 
 /**
- * Details of a single node in the instance. Nodes in an AlloyDB instance are ephemereal, they can
+ * Details of a single node in the instance. Nodes in an AlloyDB instance are ephemeral, they can
  * change during update, failover, autohealing and resize operations.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

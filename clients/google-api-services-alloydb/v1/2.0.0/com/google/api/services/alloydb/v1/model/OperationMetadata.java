@@ -74,6 +74,13 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
   private java.lang.String target;
 
   /**
+   * Output only. UpgradeClusterStatus related metadata.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private UpgradeClusterStatus upgradeClusterStatus;
+
+  /**
    * Output only. Name of the verb executed by the operation.
    * The value may be {@code null}.
    */
@@ -183,6 +190,23 @@ public final class OperationMetadata extends com.google.api.client.json.GenericJ
    */
   public OperationMetadata setTarget(java.lang.String target) {
     this.target = target;
+    return this;
+  }
+
+  /**
+   * Output only. UpgradeClusterStatus related metadata.
+   * @return value or {@code null} for none
+   */
+  public UpgradeClusterStatus getUpgradeClusterStatus() {
+    return upgradeClusterStatus;
+  }
+
+  /**
+   * Output only. UpgradeClusterStatus related metadata.
+   * @param upgradeClusterStatus upgradeClusterStatus or {@code null} for none
+   */
+  public OperationMetadata setUpgradeClusterStatus(UpgradeClusterStatus upgradeClusterStatus) {
+    this.upgradeClusterStatus = upgradeClusterStatus;
     return this;
   }
 

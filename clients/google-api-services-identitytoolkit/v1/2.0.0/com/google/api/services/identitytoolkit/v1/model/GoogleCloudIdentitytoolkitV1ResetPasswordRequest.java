@@ -30,8 +30,8 @@ package com.google.api.services.identitytoolkit.v1.model;
 public final class GoogleCloudIdentitytoolkitV1ResetPasswordRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The email of the account to be modified. Specify this and the old password in order to change
-   * an account's password without using an out-of-band code.
+   * Optional. The email of the account to be modified. Specify this and the old password in order
+   * to change an account's password without using an out-of-band code.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,15 +65,15 @@ public final class GoogleCloudIdentitytoolkitV1ResetPasswordRequest extends com.
   private java.lang.String oobCode;
 
   /**
-   * The tenant ID of the Identity Platform tenant the account belongs to.
+   * Optional. The tenant ID of the Identity Platform tenant the account belongs to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String tenantId;
 
   /**
-   * The email of the account to be modified. Specify this and the old password in order to change
-   * an account's password without using an out-of-band code.
+   * Optional. The email of the account to be modified. Specify this and the old password in order
+   * to change an account's password without using an out-of-band code.
    * @return value or {@code null} for none
    */
   public java.lang.String getEmail() {
@@ -81,8 +81,8 @@ public final class GoogleCloudIdentitytoolkitV1ResetPasswordRequest extends com.
   }
 
   /**
-   * The email of the account to be modified. Specify this and the old password in order to change
-   * an account's password without using an out-of-band code.
+   * Optional. The email of the account to be modified. Specify this and the old password in order
+   * to change an account's password without using an out-of-band code.
    * @param email email or {@code null} for none
    */
   public GoogleCloudIdentitytoolkitV1ResetPasswordRequest setEmail(java.lang.String email) {
@@ -154,7 +154,7 @@ public final class GoogleCloudIdentitytoolkitV1ResetPasswordRequest extends com.
   }
 
   /**
-   * The tenant ID of the Identity Platform tenant the account belongs to.
+   * Optional. The tenant ID of the Identity Platform tenant the account belongs to.
    * @return value or {@code null} for none
    */
   public java.lang.String getTenantId() {
@@ -162,7 +162,7 @@ public final class GoogleCloudIdentitytoolkitV1ResetPasswordRequest extends com.
   }
 
   /**
-   * The tenant ID of the Identity Platform tenant the account belongs to.
+   * Optional. The tenant ID of the Identity Platform tenant the account belongs to.
    * @param tenantId tenantId or {@code null} for none
    */
   public GoogleCloudIdentitytoolkitV1ResetPasswordRequest setTenantId(java.lang.String tenantId) {

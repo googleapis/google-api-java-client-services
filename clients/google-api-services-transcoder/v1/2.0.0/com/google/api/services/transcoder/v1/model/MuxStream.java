@@ -30,10 +30,10 @@ package com.google.api.services.transcoder.v1.model;
 public final class MuxStream extends com.google.api.client.json.GenericJson {
 
   /**
-   * The container format. The default is `mp4` Supported container formats: - `ts` - `fmp4`- the
-   * corresponding file extension is `.m4s` - `mp4` - `vtt` - `ogg` See also: [Supported input and
-   * output formats](https://cloud.google.com/transcoder/docs/concepts/supported-input-and-output-
-   * formats)
+   * The container format. The default is `mp4` Supported streaming formats: - `ts` - `fmp4`- the
+   * corresponding file extension is `.m4s` Supported standalone file formats: - `mp4` - `mp3` -
+   * `ogg` - `vtt` See also: [Supported input and output
+   * formats](https://cloud.google.com/transcoder/docs/concepts/supported-input-and-output-formats)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,10 +84,10 @@ public final class MuxStream extends com.google.api.client.json.GenericJson {
   private SegmentSettings segmentSettings;
 
   /**
-   * The container format. The default is `mp4` Supported container formats: - `ts` - `fmp4`- the
-   * corresponding file extension is `.m4s` - `mp4` - `vtt` - `ogg` See also: [Supported input and
-   * output formats](https://cloud.google.com/transcoder/docs/concepts/supported-input-and-output-
-   * formats)
+   * The container format. The default is `mp4` Supported streaming formats: - `ts` - `fmp4`- the
+   * corresponding file extension is `.m4s` Supported standalone file formats: - `mp4` - `mp3` -
+   * `ogg` - `vtt` See also: [Supported input and output
+   * formats](https://cloud.google.com/transcoder/docs/concepts/supported-input-and-output-formats)
    * @return value or {@code null} for none
    */
   public java.lang.String getContainer() {
@@ -95,10 +95,10 @@ public final class MuxStream extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The container format. The default is `mp4` Supported container formats: - `ts` - `fmp4`- the
-   * corresponding file extension is `.m4s` - `mp4` - `vtt` - `ogg` See also: [Supported input and
-   * output formats](https://cloud.google.com/transcoder/docs/concepts/supported-input-and-output-
-   * formats)
+   * The container format. The default is `mp4` Supported streaming formats: - `ts` - `fmp4`- the
+   * corresponding file extension is `.m4s` Supported standalone file formats: - `mp4` - `mp3` -
+   * `ogg` - `vtt` See also: [Supported input and output
+   * formats](https://cloud.google.com/transcoder/docs/concepts/supported-input-and-output-formats)
    * @param container container or {@code null} for none
    */
   public MuxStream setContainer(java.lang.String container) {

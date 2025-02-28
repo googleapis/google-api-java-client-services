@@ -46,6 +46,13 @@ public final class ConvertRegionPricesResponse extends com.google.api.client.jso
   private java.util.Map<String, ConvertedRegionPrice> convertedRegionPrices;
 
   /**
+   * The region version at which the prices were generated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RegionsVersion regionVersion;
+
+  /**
    * Converted other regions prices in USD and EUR, to use for countries where Play doesn't support
    * a country's local currency.
    * @return value or {@code null} for none
@@ -78,6 +85,23 @@ public final class ConvertRegionPricesResponse extends com.google.api.client.jso
    */
   public ConvertRegionPricesResponse setConvertedRegionPrices(java.util.Map<String, ConvertedRegionPrice> convertedRegionPrices) {
     this.convertedRegionPrices = convertedRegionPrices;
+    return this;
+  }
+
+  /**
+   * The region version at which the prices were generated.
+   * @return value or {@code null} for none
+   */
+  public RegionsVersion getRegionVersion() {
+    return regionVersion;
+  }
+
+  /**
+   * The region version at which the prices were generated.
+   * @param regionVersion regionVersion or {@code null} for none
+   */
+  public ConvertRegionPricesResponse setRegionVersion(RegionsVersion regionVersion) {
+    this.regionVersion = regionVersion;
     return this;
   }
 

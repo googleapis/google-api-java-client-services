@@ -30,6 +30,13 @@ package com.google.api.services.compute.model;
 public final class FutureReservation extends com.google.api.client.json.GenericJson {
 
   /**
+   * Aggregate reservation details for the future reservation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AllocationAggregateReservation aggregateReservation;
+
+  /**
    * Future timestamp when the FR auto-created reservations will be deleted by Compute Engine.
    * Format of this field must be a valid href="https://www.ietf.org/rfc/rfc3339.txt">RFC3339 value.
    * The value may be {@code null}.
@@ -130,6 +137,13 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
   private java.lang.String planningStatus;
 
   /**
+   * The reservation mode which determines reservation-termination behavior and expected pricing.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String reservationMode;
+
+  /**
    * Name of reservations where the capacity is provisioned at the time of delivery of future
    * reservations. If the reservation with the given name does not exist already, it is created
    * automatically at the time of Approval with INACTIVE state till specified start-time. Either
@@ -203,6 +217,23 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.String zone;
+
+  /**
+   * Aggregate reservation details for the future reservation.
+   * @return value or {@code null} for none
+   */
+  public AllocationAggregateReservation getAggregateReservation() {
+    return aggregateReservation;
+  }
+
+  /**
+   * Aggregate reservation details for the future reservation.
+   * @param aggregateReservation aggregateReservation or {@code null} for none
+   */
+  public FutureReservation setAggregateReservation(AllocationAggregateReservation aggregateReservation) {
+    this.aggregateReservation = aggregateReservation;
+    return this;
+  }
 
   /**
    * Future timestamp when the FR auto-created reservations will be deleted by Compute Engine.
@@ -437,6 +468,23 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
    */
   public FutureReservation setPlanningStatus(java.lang.String planningStatus) {
     this.planningStatus = planningStatus;
+    return this;
+  }
+
+  /**
+   * The reservation mode which determines reservation-termination behavior and expected pricing.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getReservationMode() {
+    return reservationMode;
+  }
+
+  /**
+   * The reservation mode which determines reservation-termination behavior and expected pricing.
+   * @param reservationMode reservationMode or {@code null} for none
+   */
+  public FutureReservation setReservationMode(java.lang.String reservationMode) {
+    this.reservationMode = reservationMode;
     return this;
   }
 

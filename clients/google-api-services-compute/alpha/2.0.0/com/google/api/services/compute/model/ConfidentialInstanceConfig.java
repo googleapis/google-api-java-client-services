@@ -37,6 +37,13 @@ public final class ConfidentialInstanceConfig extends com.google.api.client.json
   private java.lang.String confidentialInstanceType;
 
   /**
+   * Defines a set of Confidential Paravisor (SVSM) options.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ConfidentialParavisorConfig confidentialParavisorConfig;
+
+  /**
    * Defines whether the instance should have confidential compute enabled.
    * The value may be {@code null}.
    */
@@ -57,6 +64,23 @@ public final class ConfidentialInstanceConfig extends com.google.api.client.json
    */
   public ConfidentialInstanceConfig setConfidentialInstanceType(java.lang.String confidentialInstanceType) {
     this.confidentialInstanceType = confidentialInstanceType;
+    return this;
+  }
+
+  /**
+   * Defines a set of Confidential Paravisor (SVSM) options.
+   * @return value or {@code null} for none
+   */
+  public ConfidentialParavisorConfig getConfidentialParavisorConfig() {
+    return confidentialParavisorConfig;
+  }
+
+  /**
+   * Defines a set of Confidential Paravisor (SVSM) options.
+   * @param confidentialParavisorConfig confidentialParavisorConfig or {@code null} for none
+   */
+  public ConfidentialInstanceConfig setConfidentialParavisorConfig(ConfidentialParavisorConfig confidentialParavisorConfig) {
+    this.confidentialParavisorConfig = confidentialParavisorConfig;
     return this;
   }
 

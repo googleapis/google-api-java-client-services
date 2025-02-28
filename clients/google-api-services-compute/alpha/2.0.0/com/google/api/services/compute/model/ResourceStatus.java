@@ -41,6 +41,15 @@ public final class ResourceStatus extends com.google.api.client.json.GenericJson
   private java.util.List<ResourceStatusAcceleratorStatus> acceleratorStatus;
 
   /**
+   * [Output Only] Effective metadata is a field that consolidates project, zonal instance settings,
+   * and instance-level predefined metadata keys to provide the overridden value for those metadata
+   * keys at the instance level.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ResourceStatusEffectiveInstanceMetadata effectiveInstanceMetadata;
+
+  /**
    * [Output Only] Contains last termination details why the instance was terminated.
    * The value may be {@code null}.
    */
@@ -110,6 +119,27 @@ public final class ResourceStatus extends com.google.api.client.json.GenericJson
    */
   public ResourceStatus setAcceleratorStatus(java.util.List<ResourceStatusAcceleratorStatus> acceleratorStatus) {
     this.acceleratorStatus = acceleratorStatus;
+    return this;
+  }
+
+  /**
+   * [Output Only] Effective metadata is a field that consolidates project, zonal instance settings,
+   * and instance-level predefined metadata keys to provide the overridden value for those metadata
+   * keys at the instance level.
+   * @return value or {@code null} for none
+   */
+  public ResourceStatusEffectiveInstanceMetadata getEffectiveInstanceMetadata() {
+    return effectiveInstanceMetadata;
+  }
+
+  /**
+   * [Output Only] Effective metadata is a field that consolidates project, zonal instance settings,
+   * and instance-level predefined metadata keys to provide the overridden value for those metadata
+   * keys at the instance level.
+   * @param effectiveInstanceMetadata effectiveInstanceMetadata or {@code null} for none
+   */
+  public ResourceStatus setEffectiveInstanceMetadata(ResourceStatusEffectiveInstanceMetadata effectiveInstanceMetadata) {
+    this.effectiveInstanceMetadata = effectiveInstanceMetadata;
     return this;
   }
 

@@ -108,6 +108,13 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * [Output only] Indicates the reservation mode of the reservation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String reservationMode;
+
+  /**
    * Specify the reservation sharing policy. If unspecified, the reservation will not be shared with
    * Google Cloud managed services.
    * The value may be {@code null}.
@@ -368,6 +375,23 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
    */
   public Reservation setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * [Output only] Indicates the reservation mode of the reservation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getReservationMode() {
+    return reservationMode;
+  }
+
+  /**
+   * [Output only] Indicates the reservation mode of the reservation.
+   * @param reservationMode reservationMode or {@code null} for none
+   */
+  public Reservation setReservationMode(java.lang.String reservationMode) {
+    this.reservationMode = reservationMode;
     return this;
   }
 

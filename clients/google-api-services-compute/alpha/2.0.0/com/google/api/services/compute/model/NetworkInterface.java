@@ -217,7 +217,8 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   private java.lang.String subnetwork;
 
   /**
-   * VLAN tag of a dynamic network interface, must be in range from 2 to 4094 inclusively.
+   * VLAN tag of a dynamic network interface, must be an integer in the range from 2 to 255
+   * inclusively.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -653,7 +654,8 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * VLAN tag of a dynamic network interface, must be in range from 2 to 4094 inclusively.
+   * VLAN tag of a dynamic network interface, must be an integer in the range from 2 to 255
+   * inclusively.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getVlan() {
@@ -661,7 +663,8 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * VLAN tag of a dynamic network interface, must be in range from 2 to 4094 inclusively.
+   * VLAN tag of a dynamic network interface, must be an integer in the range from 2 to 255
+   * inclusively.
    * @param vlan vlan or {@code null} for none
    */
   public NetworkInterface setVlan(java.lang.Integer vlan) {

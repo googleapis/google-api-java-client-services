@@ -201,8 +201,10 @@ public final class TargetHttpsProxy extends com.google.api.client.json.GenericJs
    * Optional. A URL referring to a networksecurity.ServerTlsPolicy resource that describes how the
    * proxy should authenticate inbound traffic. serverTlsPolicy only applies to a global
    * TargetHttpsProxy attached to globalForwardingRules with the loadBalancingScheme set to
-   * INTERNAL_SELF_MANAGED or EXTERNAL or EXTERNAL_MANAGED. For details which ServerTlsPolicy
-   * resources are accepted with INTERNAL_SELF_MANAGED and which with EXTERNAL, EXTERNAL_MANAGED
+   * INTERNAL_SELF_MANAGED or EXTERNAL or EXTERNAL_MANAGED or INTERNAL_MANAGED. It also applies to a
+   * regional TargetHttpsProxy attached to regional forwardingRules with the loadBalancingScheme set
+   * to EXTERNAL_MANAGED or INTERNAL_MANAGED. For details which ServerTlsPolicy resources are
+   * accepted with INTERNAL_SELF_MANAGED and which with EXTERNAL, INTERNAL_MANAGED, EXTERNAL_MANAGED
    * loadBalancingScheme consult ServerTlsPolicy documentation. If left blank, communications are
    * not encrypted.
    * The value may be {@code null}.
@@ -676,8 +678,10 @@ public final class TargetHttpsProxy extends com.google.api.client.json.GenericJs
    * Optional. A URL referring to a networksecurity.ServerTlsPolicy resource that describes how the
    * proxy should authenticate inbound traffic. serverTlsPolicy only applies to a global
    * TargetHttpsProxy attached to globalForwardingRules with the loadBalancingScheme set to
-   * INTERNAL_SELF_MANAGED or EXTERNAL or EXTERNAL_MANAGED. For details which ServerTlsPolicy
-   * resources are accepted with INTERNAL_SELF_MANAGED and which with EXTERNAL, EXTERNAL_MANAGED
+   * INTERNAL_SELF_MANAGED or EXTERNAL or EXTERNAL_MANAGED or INTERNAL_MANAGED. It also applies to a
+   * regional TargetHttpsProxy attached to regional forwardingRules with the loadBalancingScheme set
+   * to EXTERNAL_MANAGED or INTERNAL_MANAGED. For details which ServerTlsPolicy resources are
+   * accepted with INTERNAL_SELF_MANAGED and which with EXTERNAL, INTERNAL_MANAGED, EXTERNAL_MANAGED
    * loadBalancingScheme consult ServerTlsPolicy documentation. If left blank, communications are
    * not encrypted.
    * @return value or {@code null} for none
@@ -690,8 +694,10 @@ public final class TargetHttpsProxy extends com.google.api.client.json.GenericJs
    * Optional. A URL referring to a networksecurity.ServerTlsPolicy resource that describes how the
    * proxy should authenticate inbound traffic. serverTlsPolicy only applies to a global
    * TargetHttpsProxy attached to globalForwardingRules with the loadBalancingScheme set to
-   * INTERNAL_SELF_MANAGED or EXTERNAL or EXTERNAL_MANAGED. For details which ServerTlsPolicy
-   * resources are accepted with INTERNAL_SELF_MANAGED and which with EXTERNAL, EXTERNAL_MANAGED
+   * INTERNAL_SELF_MANAGED or EXTERNAL or EXTERNAL_MANAGED or INTERNAL_MANAGED. It also applies to a
+   * regional TargetHttpsProxy attached to regional forwardingRules with the loadBalancingScheme set
+   * to EXTERNAL_MANAGED or INTERNAL_MANAGED. For details which ServerTlsPolicy resources are
+   * accepted with INTERNAL_SELF_MANAGED and which with EXTERNAL, INTERNAL_MANAGED, EXTERNAL_MANAGED
    * loadBalancingScheme consult ServerTlsPolicy documentation. If left blank, communications are
    * not encrypted.
    * @param serverTlsPolicy serverTlsPolicy or {@code null} for none

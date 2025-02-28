@@ -152,6 +152,15 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   private java.lang.String description;
 
   /**
+   * Dynamic forwarding configuration. This field is used to configure the backend service with
+   * dynamic forwarding feature which together with Service Extension allows customized and complex
+   * routing logic.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BackendServiceDynamicForwarding dynamicForwarding;
+
+  /**
    * [Output Only] The resource URL for the edge security policy associated with this backend
    * service.
    * The value may be {@code null}.
@@ -365,6 +374,13 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.String network;
+
+  /**
+   * Configures traffic steering properties of internal passthrough Network Load Balancers.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BackendServiceNetworkPassThroughLbTrafficPolicy networkPassThroughLbTrafficPolicy;
 
   /**
    * Settings controlling the ejection of unhealthy backend endpoints from the load balancing pool
@@ -773,6 +789,27 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    */
   public BackendService setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Dynamic forwarding configuration. This field is used to configure the backend service with
+   * dynamic forwarding feature which together with Service Extension allows customized and complex
+   * routing logic.
+   * @return value or {@code null} for none
+   */
+  public BackendServiceDynamicForwarding getDynamicForwarding() {
+    return dynamicForwarding;
+  }
+
+  /**
+   * Dynamic forwarding configuration. This field is used to configure the backend service with
+   * dynamic forwarding feature which together with Service Extension allows customized and complex
+   * routing logic.
+   * @param dynamicForwarding dynamicForwarding or {@code null} for none
+   */
+  public BackendService setDynamicForwarding(BackendServiceDynamicForwarding dynamicForwarding) {
+    this.dynamicForwarding = dynamicForwarding;
     return this;
   }
 
@@ -1296,6 +1333,23 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    */
   public BackendService setNetwork(java.lang.String network) {
     this.network = network;
+    return this;
+  }
+
+  /**
+   * Configures traffic steering properties of internal passthrough Network Load Balancers.
+   * @return value or {@code null} for none
+   */
+  public BackendServiceNetworkPassThroughLbTrafficPolicy getNetworkPassThroughLbTrafficPolicy() {
+    return networkPassThroughLbTrafficPolicy;
+  }
+
+  /**
+   * Configures traffic steering properties of internal passthrough Network Load Balancers.
+   * @param networkPassThroughLbTrafficPolicy networkPassThroughLbTrafficPolicy or {@code null} for none
+   */
+  public BackendService setNetworkPassThroughLbTrafficPolicy(BackendServiceNetworkPassThroughLbTrafficPolicy networkPassThroughLbTrafficPolicy) {
+    this.networkPassThroughLbTrafficPolicy = networkPassThroughLbTrafficPolicy;
     return this;
   }
 

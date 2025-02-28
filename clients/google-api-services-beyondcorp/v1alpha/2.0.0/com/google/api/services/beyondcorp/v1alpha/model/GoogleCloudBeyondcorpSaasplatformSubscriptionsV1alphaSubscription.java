@@ -53,7 +53,17 @@ public final class GoogleCloudBeyondcorpSaasplatformSubscriptionsV1alphaSubscrip
   private String createTime;
 
   /**
-   * Output only. End time of the subscription.
+   * Optional. Whether the subscription is being created as part of the Citrix flow. If this field
+   * is set to true, the subscription should have both the start_time and end_time set in the
+   * request and the billing account used will be the Citrix master billing account regardless of
+   * what its set to in the request. This field can only be set to true in create requests.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean csgCustomer;
+
+  /**
+   * Optional. End time of the subscription.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,7 +92,7 @@ public final class GoogleCloudBeyondcorpSaasplatformSubscriptionsV1alphaSubscrip
   private java.lang.String sku;
 
   /**
-   * Output only. Start time of the subscription.
+   * Optional. Start time of the subscription.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -163,7 +173,30 @@ public final class GoogleCloudBeyondcorpSaasplatformSubscriptionsV1alphaSubscrip
   }
 
   /**
-   * Output only. End time of the subscription.
+   * Optional. Whether the subscription is being created as part of the Citrix flow. If this field
+   * is set to true, the subscription should have both the start_time and end_time set in the
+   * request and the billing account used will be the Citrix master billing account regardless of
+   * what its set to in the request. This field can only be set to true in create requests.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getCsgCustomer() {
+    return csgCustomer;
+  }
+
+  /**
+   * Optional. Whether the subscription is being created as part of the Citrix flow. If this field
+   * is set to true, the subscription should have both the start_time and end_time set in the
+   * request and the billing account used will be the Citrix master billing account regardless of
+   * what its set to in the request. This field can only be set to true in create requests.
+   * @param csgCustomer csgCustomer or {@code null} for none
+   */
+  public GoogleCloudBeyondcorpSaasplatformSubscriptionsV1alphaSubscription setCsgCustomer(java.lang.Boolean csgCustomer) {
+    this.csgCustomer = csgCustomer;
+    return this;
+  }
+
+  /**
+   * Optional. End time of the subscription.
    * @return value or {@code null} for none
    */
   public String getEndTime() {
@@ -171,7 +204,7 @@ public final class GoogleCloudBeyondcorpSaasplatformSubscriptionsV1alphaSubscrip
   }
 
   /**
-   * Output only. End time of the subscription.
+   * Optional. End time of the subscription.
    * @param endTime endTime or {@code null} for none
    */
   public GoogleCloudBeyondcorpSaasplatformSubscriptionsV1alphaSubscription setEndTime(String endTime) {
@@ -233,7 +266,7 @@ public final class GoogleCloudBeyondcorpSaasplatformSubscriptionsV1alphaSubscrip
   }
 
   /**
-   * Output only. Start time of the subscription.
+   * Optional. Start time of the subscription.
    * @return value or {@code null} for none
    */
   public String getStartTime() {
@@ -241,7 +274,7 @@ public final class GoogleCloudBeyondcorpSaasplatformSubscriptionsV1alphaSubscrip
   }
 
   /**
-   * Output only. Start time of the subscription.
+   * Optional. Start time of the subscription.
    * @param startTime startTime or {@code null} for none
    */
   public GoogleCloudBeyondcorpSaasplatformSubscriptionsV1alphaSubscription setStartTime(String startTime) {

@@ -18933,17 +18933,17 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
                 return this;
               }
 
-              /** Required. Mutable fields include: display_name. */
+              /** Optional. Mutable fields include: display_name. */
               @com.google.api.client.util.Key
               private String updateMask;
 
-              /** Required. Mutable fields include: display_name.
+              /** Optional. Mutable fields include: display_name.
                */
               public String getUpdateMask() {
                 return updateMask;
               }
 
-              /** Required. Mutable fields include: display_name. */
+              /** Optional. Mutable fields include: display_name. */
               public Patch setUpdateMask(String updateMask) {
                 this.updateMask = updateMask;
                 return this;
@@ -21829,17 +21829,17 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
             return this;
           }
 
-          /** Required. Mutable fields include: display_name, hubs. */
+          /** Optional. Mutable fields include: display_name, hubs. */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** Required. Mutable fields include: display_name, hubs.
+          /** Optional. Mutable fields include: display_name, hubs.
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
-          /** Required. Mutable fields include: display_name, hubs. */
+          /** Optional. Mutable fields include: display_name, hubs. */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
             return this;

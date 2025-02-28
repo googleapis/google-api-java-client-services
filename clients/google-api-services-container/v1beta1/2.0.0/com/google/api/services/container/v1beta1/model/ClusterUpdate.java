@@ -540,7 +540,8 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private java.lang.String desiredStackType;
 
   /**
-   * The desired Cloud TPU configuration.
+   * The desired Cloud TPU configuration. This field is deprecated due to the deprecation of 2VM
+   * TPU. The end of life date for 2VM TPU is 2025-04-25.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1827,7 +1828,8 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The desired Cloud TPU configuration.
+   * The desired Cloud TPU configuration. This field is deprecated due to the deprecation of 2VM
+   * TPU. The end of life date for 2VM TPU is 2025-04-25.
    * @return value or {@code null} for none
    */
   public TpuConfig getDesiredTpuConfig() {
@@ -1835,7 +1837,8 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The desired Cloud TPU configuration.
+   * The desired Cloud TPU configuration. This field is deprecated due to the deprecation of 2VM
+   * TPU. The end of life date for 2VM TPU is 2025-04-25.
    * @param desiredTpuConfig desiredTpuConfig or {@code null} for none
    */
   public ClusterUpdate setDesiredTpuConfig(TpuConfig desiredTpuConfig) {

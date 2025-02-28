@@ -17,7 +17,8 @@
 package com.google.api.services.container.v1beta1.model;
 
 /**
- * Configuration for Cloud TPU.
+ * Configuration for Cloud TPU. This message is deprecated due to the deprecation of 2VM TPU. The
+ * end of life date for 2VM TPU is 2025-04-25.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Kubernetes Engine API. For a detailed explanation

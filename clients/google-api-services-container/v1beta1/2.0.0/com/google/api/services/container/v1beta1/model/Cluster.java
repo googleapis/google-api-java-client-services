@@ -192,7 +192,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
 
   /**
    * Enable the ability to use Cloud TPUs in this cluster. This field is deprecated, use
-   * tpu_config.enabled instead.
+   * tpu_config.enabled instead. This field is deprecated due to the deprecation of 2VM TPU. The end
+   * of life date for 2VM TPU is 2025-04-25.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -659,7 +660,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.String subnetwork;
 
   /**
-   * Configuration for Cloud TPU support;
+   * Configuration for Cloud TPU support; This field is deprecated due to the deprecation of 2VM
+   * TPU. The end of life date for 2VM TPU is 2025-04-25.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -668,7 +670,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   /**
    * Output only. The IP address range of the Cloud TPUs in this cluster, in
    * [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
-   * `1.2.3.4/29`).
+   * `1.2.3.4/29`). This field is deprecated due to the deprecation of 2VM TPU. The end of life date
+   * for 2VM TPU is 2025-04-25.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1103,7 +1106,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
 
   /**
    * Enable the ability to use Cloud TPUs in this cluster. This field is deprecated, use
-   * tpu_config.enabled instead.
+   * tpu_config.enabled instead. This field is deprecated due to the deprecation of 2VM TPU. The end
+   * of life date for 2VM TPU is 2025-04-25.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableTpu() {
@@ -1112,7 +1116,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
 
   /**
    * Enable the ability to use Cloud TPUs in this cluster. This field is deprecated, use
-   * tpu_config.enabled instead.
+   * tpu_config.enabled instead. This field is deprecated due to the deprecation of 2VM TPU. The end
+   * of life date for 2VM TPU is 2025-04-25.
    * @param enableTpu enableTpu or {@code null} for none
    */
   public Cluster setEnableTpu(java.lang.Boolean enableTpu) {
@@ -2206,7 +2211,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Configuration for Cloud TPU support;
+   * Configuration for Cloud TPU support; This field is deprecated due to the deprecation of 2VM
+   * TPU. The end of life date for 2VM TPU is 2025-04-25.
    * @return value or {@code null} for none
    */
   public TpuConfig getTpuConfig() {
@@ -2214,7 +2220,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Configuration for Cloud TPU support;
+   * Configuration for Cloud TPU support; This field is deprecated due to the deprecation of 2VM
+   * TPU. The end of life date for 2VM TPU is 2025-04-25.
    * @param tpuConfig tpuConfig or {@code null} for none
    */
   public Cluster setTpuConfig(TpuConfig tpuConfig) {
@@ -2225,7 +2232,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   /**
    * Output only. The IP address range of the Cloud TPUs in this cluster, in
    * [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
-   * `1.2.3.4/29`).
+   * `1.2.3.4/29`). This field is deprecated due to the deprecation of 2VM TPU. The end of life date
+   * for 2VM TPU is 2025-04-25.
    * @return value or {@code null} for none
    */
   public java.lang.String getTpuIpv4CidrBlock() {
@@ -2235,7 +2243,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   /**
    * Output only. The IP address range of the Cloud TPUs in this cluster, in
    * [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g.
-   * `1.2.3.4/29`).
+   * `1.2.3.4/29`). This field is deprecated due to the deprecation of 2VM TPU. The end of life date
+   * for 2VM TPU is 2025-04-25.
    * @param tpuIpv4CidrBlock tpuIpv4CidrBlock or {@code null} for none
    */
   public Cluster setTpuIpv4CidrBlock(java.lang.String tpuIpv4CidrBlock) {

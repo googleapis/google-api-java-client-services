@@ -5559,17 +5559,17 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
-      /** If true, any parent folder which doesn’t exist will be created automatically. */
+      /** If true, any parent folder which doesn't exist will be created automatically. */
       @com.google.api.client.util.Key
       private java.lang.Boolean recursive;
 
-      /** If true, any parent folder which doesn’t exist will be created automatically.
+      /** If true, any parent folder which doesn't exist will be created automatically.
        */
       public java.lang.Boolean getRecursive() {
         return recursive;
       }
 
-      /** If true, any parent folder which doesn’t exist will be created automatically. */
+      /** If true, any parent folder which doesn't exist will be created automatically. */
       public Insert setRecursive(java.lang.Boolean recursive) {
         this.recursive = recursive;
         return this;

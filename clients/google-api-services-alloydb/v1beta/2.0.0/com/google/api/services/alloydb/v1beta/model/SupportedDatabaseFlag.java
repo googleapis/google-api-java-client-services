@@ -65,6 +65,20 @@ public final class SupportedDatabaseFlag extends com.google.api.client.json.Gene
   private java.lang.String name;
 
   /**
+   * The recommended value for an INTEGER flag.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long recommendedIntegerValue;
+
+  /**
+   * The recommended value for a STRING flag.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String recommendedStringValue;
+
+  /**
    * Whether setting or updating this flag on an Instance requires a database restart. If a flag
    * that requires database restart is set, the backend will automatically restart the database
    * (making sure to satisfy any availability SLO's).
@@ -72,6 +86,13 @@ public final class SupportedDatabaseFlag extends com.google.api.client.json.Gene
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean requiresDbRestart;
+
+  /**
+   * The scope of the flag.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String scope;
 
   /**
    * Restriction on STRING type value.
@@ -170,6 +191,40 @@ public final class SupportedDatabaseFlag extends com.google.api.client.json.Gene
   }
 
   /**
+   * The recommended value for an INTEGER flag.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getRecommendedIntegerValue() {
+    return recommendedIntegerValue;
+  }
+
+  /**
+   * The recommended value for an INTEGER flag.
+   * @param recommendedIntegerValue recommendedIntegerValue or {@code null} for none
+   */
+  public SupportedDatabaseFlag setRecommendedIntegerValue(java.lang.Long recommendedIntegerValue) {
+    this.recommendedIntegerValue = recommendedIntegerValue;
+    return this;
+  }
+
+  /**
+   * The recommended value for a STRING flag.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRecommendedStringValue() {
+    return recommendedStringValue;
+  }
+
+  /**
+   * The recommended value for a STRING flag.
+   * @param recommendedStringValue recommendedStringValue or {@code null} for none
+   */
+  public SupportedDatabaseFlag setRecommendedStringValue(java.lang.String recommendedStringValue) {
+    this.recommendedStringValue = recommendedStringValue;
+    return this;
+  }
+
+  /**
    * Whether setting or updating this flag on an Instance requires a database restart. If a flag
    * that requires database restart is set, the backend will automatically restart the database
    * (making sure to satisfy any availability SLO's).
@@ -187,6 +242,23 @@ public final class SupportedDatabaseFlag extends com.google.api.client.json.Gene
    */
   public SupportedDatabaseFlag setRequiresDbRestart(java.lang.Boolean requiresDbRestart) {
     this.requiresDbRestart = requiresDbRestart;
+    return this;
+  }
+
+  /**
+   * The scope of the flag.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getScope() {
+    return scope;
+  }
+
+  /**
+   * The scope of the flag.
+   * @param scope scope or {@code null} for none
+   */
+  public SupportedDatabaseFlag setScope(java.lang.String scope) {
+    this.scope = scope;
     return this;
   }
 

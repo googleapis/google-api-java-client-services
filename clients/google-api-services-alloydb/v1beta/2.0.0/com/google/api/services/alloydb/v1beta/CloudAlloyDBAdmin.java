@@ -7774,6 +7774,28 @@ public class CloudAlloyDBAdmin extends com.google.api.client.googleapis.services
             return this;
           }
 
+          /**
+           * Optional. The scope for which supported flags are requested. If not specified, default
+           * is DATABASE.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String scope;
+
+          /** Optional. The scope for which supported flags are requested. If not specified, default is DATABASE.
+           */
+          public java.lang.String getScope() {
+            return scope;
+          }
+
+          /**
+           * Optional. The scope for which supported flags are requested. If not specified, default
+           * is DATABASE.
+           */
+          public List setScope(java.lang.String scope) {
+            this.scope = scope;
+            return this;
+          }
+
           @Override
           public List set(String parameterName, Object value) {
             return (List) super.set(parameterName, value);

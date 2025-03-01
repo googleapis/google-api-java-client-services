@@ -38,6 +38,19 @@ public final class PscInstanceConfig extends com.google.api.client.json.GenericJ
   private java.util.List<java.lang.String> allowedConsumerProjects;
 
   /**
+   * Optional. Configurations for setting up PSC service automation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<PscAutoConnectionConfig> pscAutoConnections;
+
+  static {
+    // hack to force ProGuard to consider PscAutoConnectionConfig used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(PscAutoConnectionConfig.class);
+  }
+
+  /**
    * Output only. The DNS name of the instance for PSC connectivity. Name convention: ...alloydb-
    * psc.goog
    * The value may be {@code null}.
@@ -79,6 +92,23 @@ public final class PscInstanceConfig extends com.google.api.client.json.GenericJ
    */
   public PscInstanceConfig setAllowedConsumerProjects(java.util.List<java.lang.String> allowedConsumerProjects) {
     this.allowedConsumerProjects = allowedConsumerProjects;
+    return this;
+  }
+
+  /**
+   * Optional. Configurations for setting up PSC service automation.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<PscAutoConnectionConfig> getPscAutoConnections() {
+    return pscAutoConnections;
+  }
+
+  /**
+   * Optional. Configurations for setting up PSC service automation.
+   * @param pscAutoConnections pscAutoConnections or {@code null} for none
+   */
+  public PscInstanceConfig setPscAutoConnections(java.util.List<PscAutoConnectionConfig> pscAutoConnections) {
+    this.pscAutoConnections = pscAutoConnections;
     return this;
   }
 

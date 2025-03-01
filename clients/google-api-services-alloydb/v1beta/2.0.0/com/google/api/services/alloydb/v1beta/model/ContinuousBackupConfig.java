@@ -38,8 +38,8 @@ public final class ContinuousBackupConfig extends com.google.api.client.json.Gen
 
   /**
    * The encryption config can be specified to encrypt the backups with a customer-managed
-   * encryption key (CMEK). When this field is not specified, the backup will then use default
-   * encryption scheme to protect the user data.
+   * encryption key (CMEK). When this field is not specified, the backup will use the cluster's
+   * encryption config.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,8 +73,8 @@ public final class ContinuousBackupConfig extends com.google.api.client.json.Gen
 
   /**
    * The encryption config can be specified to encrypt the backups with a customer-managed
-   * encryption key (CMEK). When this field is not specified, the backup will then use default
-   * encryption scheme to protect the user data.
+   * encryption key (CMEK). When this field is not specified, the backup will use the cluster's
+   * encryption config.
    * @return value or {@code null} for none
    */
   public EncryptionConfig getEncryptionConfig() {
@@ -83,8 +83,8 @@ public final class ContinuousBackupConfig extends com.google.api.client.json.Gen
 
   /**
    * The encryption config can be specified to encrypt the backups with a customer-managed
-   * encryption key (CMEK). When this field is not specified, the backup will then use default
-   * encryption scheme to protect the user data.
+   * encryption key (CMEK). When this field is not specified, the backup will use the cluster's
+   * encryption config.
    * @param encryptionConfig encryptionConfig or {@code null} for none
    */
   public ContinuousBackupConfig setEncryptionConfig(EncryptionConfig encryptionConfig) {

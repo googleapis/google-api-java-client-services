@@ -118,7 +118,7 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private java.lang.Long maxChargeableBytes;
 
   /**
-   * Output only. The resource name of the backup. Format: projects/{project}/backups/{backup}
+   * Output only. The resource name of the backup. Format: projects/{project}/backups/{backup}.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -156,7 +156,7 @@ public final class Backup extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. This output contains a backup time zone. If a Cloud SQL for SQL Server instance
-   * has a different time zone from the backup's time zone, then restores to the instance won't
+   * has a different time zone from the backup's time zone, then the restore to the instance doesn't
    * happen.
    * The value may be {@code null}.
    */
@@ -391,7 +391,7 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The resource name of the backup. Format: projects/{project}/backups/{backup}
+   * Output only. The resource name of the backup. Format: projects/{project}/backups/{backup}.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -399,7 +399,7 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The resource name of the backup. Format: projects/{project}/backups/{backup}
+   * Output only. The resource name of the backup. Format: projects/{project}/backups/{backup}.
    * @param name name or {@code null} for none
    */
   public Backup setName(java.lang.String name) {
@@ -481,7 +481,7 @@ public final class Backup extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. This output contains a backup time zone. If a Cloud SQL for SQL Server instance
-   * has a different time zone from the backup's time zone, then restores to the instance won't
+   * has a different time zone from the backup's time zone, then the restore to the instance doesn't
    * happen.
    * @return value or {@code null} for none
    */
@@ -491,7 +491,7 @@ public final class Backup extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. This output contains a backup time zone. If a Cloud SQL for SQL Server instance
-   * has a different time zone from the backup's time zone, then restores to the instance won't
+   * has a different time zone from the backup's time zone, then the restore to the instance doesn't
    * happen.
    * @param timeZone timeZone or {@code null} for none
    */

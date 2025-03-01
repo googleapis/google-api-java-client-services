@@ -47,7 +47,7 @@ public final class Filter extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Restricts results to places whose price level is included on this list. If
-   * price_level is not set, all price levels are included in the results.
+   * `price_levels` is not set, all price levels are included in the results.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,7 +108,7 @@ public final class Filter extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Restricts results to places whose price level is included on this list. If
-   * price_level is not set, all price levels are included in the results.
+   * `price_levels` is not set, all price levels are included in the results.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPriceLevels() {
@@ -117,7 +117,7 @@ public final class Filter extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Restricts results to places whose price level is included on this list. If
-   * price_level is not set, all price levels are included in the results.
+   * `price_levels` is not set, all price levels are included in the results.
    * @param priceLevels priceLevels or {@code null} for none
    */
   public Filter setPriceLevels(java.util.List<java.lang.String> priceLevels) {

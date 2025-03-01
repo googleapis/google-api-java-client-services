@@ -189,6 +189,13 @@ public final class GoogleCloudRunV2Task extends com.google.api.client.json.Gener
   private java.lang.String name;
 
   /**
+   * Output only. The node selector for the task.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRunV2NodeSelector nodeSelector;
+
+  /**
    * Output only. The generation of this Task. See comments in `Job.reconciling` for additional
    * information on reconciliation process in Cloud Run.
    * The value may be {@code null}.
@@ -631,6 +638,23 @@ public final class GoogleCloudRunV2Task extends com.google.api.client.json.Gener
    */
   public GoogleCloudRunV2Task setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. The node selector for the task.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRunV2NodeSelector getNodeSelector() {
+    return nodeSelector;
+  }
+
+  /**
+   * Output only. The node selector for the task.
+   * @param nodeSelector nodeSelector or {@code null} for none
+   */
+  public GoogleCloudRunV2Task setNodeSelector(GoogleCloudRunV2NodeSelector nodeSelector) {
+    this.nodeSelector = nodeSelector;
     return this;
   }
 

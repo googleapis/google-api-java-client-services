@@ -65,6 +65,13 @@ public final class GoogleCloudRunV2TaskTemplate extends com.google.api.client.js
   private java.lang.Integer maxRetries;
 
   /**
+   * Optional. The node selector for the task template.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRunV2NodeSelector nodeSelector;
+
+  /**
    * Optional. Email address of the IAM service account associated with the Task of a Job. The
    * service account represents the identity of the running task, and determines what permissions
    * the task has. If not provided, the task will use the project's default service account.
@@ -164,6 +171,23 @@ public final class GoogleCloudRunV2TaskTemplate extends com.google.api.client.js
    */
   public GoogleCloudRunV2TaskTemplate setMaxRetries(java.lang.Integer maxRetries) {
     this.maxRetries = maxRetries;
+    return this;
+  }
+
+  /**
+   * Optional. The node selector for the task template.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRunV2NodeSelector getNodeSelector() {
+    return nodeSelector;
+  }
+
+  /**
+   * Optional. The node selector for the task template.
+   * @param nodeSelector nodeSelector or {@code null} for none
+   */
+  public GoogleCloudRunV2TaskTemplate setNodeSelector(GoogleCloudRunV2NodeSelector nodeSelector) {
+    this.nodeSelector = nodeSelector;
     return this;
   }
 

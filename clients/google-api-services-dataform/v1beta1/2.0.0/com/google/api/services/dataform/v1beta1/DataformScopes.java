@@ -23,6 +23,9 @@ package com.google.api.services.dataform.v1beta1;
  */
 public class DataformScopes {
 
+  /** View and manage your data in Google BigQuery and see the email address for your Google Account. */
+  public static final String BIGQUERY = "https://www.googleapis.com/auth/bigquery";
+
   /** See, edit, configure, and delete your Google Cloud data and see the email address for your Google Account.. */
   public static final String CLOUD_PLATFORM = "https://www.googleapis.com/auth/cloud-platform";
 
@@ -33,6 +36,7 @@ public class DataformScopes {
    */
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
+    set.add(BIGQUERY);
     set.add(CLOUD_PLATFORM);
     return java.util.Collections.unmodifiableSet(set);
   }

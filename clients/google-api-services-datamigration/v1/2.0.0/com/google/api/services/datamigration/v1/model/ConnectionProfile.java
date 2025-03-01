@@ -119,14 +119,14 @@ public final class ConnectionProfile extends com.google.api.client.json.GenericJ
   private java.lang.String role;
 
   /**
-   * Output only. Zone Isolation compliance state of the resource.
+   * Output only. Reserved for future use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean satisfiesPzi;
 
   /**
-   * Output only. Zone Separation compliance state of the resource.
+   * Output only. Reserved for future use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -367,7 +367,7 @@ public final class ConnectionProfile extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. Zone Isolation compliance state of the resource.
+   * Output only. Reserved for future use.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSatisfiesPzi() {
@@ -375,7 +375,7 @@ public final class ConnectionProfile extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. Zone Isolation compliance state of the resource.
+   * Output only. Reserved for future use.
    * @param satisfiesPzi satisfiesPzi or {@code null} for none
    */
   public ConnectionProfile setSatisfiesPzi(java.lang.Boolean satisfiesPzi) {
@@ -384,7 +384,7 @@ public final class ConnectionProfile extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. Zone Separation compliance state of the resource.
+   * Output only. Reserved for future use.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSatisfiesPzs() {
@@ -392,7 +392,7 @@ public final class ConnectionProfile extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. Zone Separation compliance state of the resource.
+   * Output only. Reserved for future use.
    * @param satisfiesPzs satisfiesPzs or {@code null} for none
    */
   public ConnectionProfile setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {

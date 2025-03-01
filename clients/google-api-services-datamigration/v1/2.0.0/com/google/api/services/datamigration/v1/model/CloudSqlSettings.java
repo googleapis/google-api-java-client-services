@@ -83,6 +83,22 @@ public final class CloudSqlSettings extends com.google.api.client.json.GenericJs
   private DataCacheConfig dataCacheConfig;
 
   /**
+   * Optional. Provisioned number of I/O operations per second for the data disk. This field is only
+   * used for hyperdisk-balanced disk types.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long dataDiskProvisionedIops;
+
+  /**
+   * Optional. Provisioned throughput measured in MiB per second for the data disk. This field is
+   * only used for hyperdisk-balanced disk types.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long dataDiskProvisionedThroughput;
+
+  /**
    * The storage capacity available to the database, in GB. The minimum (and default) size is 10GB.
    * The value may be {@code null}.
    */
@@ -90,7 +106,7 @@ public final class CloudSqlSettings extends com.google.api.client.json.GenericJs
   private java.lang.Long dataDiskSizeGb;
 
   /**
-   * The type of storage: `PD_SSD` (default) or `PD_HDD`.
+   * The type of storage: `PD_SSD` (default) or `PD_HDD` or `HYPERDISK_BALANCED`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -320,6 +336,44 @@ public final class CloudSqlSettings extends com.google.api.client.json.GenericJs
   }
 
   /**
+   * Optional. Provisioned number of I/O operations per second for the data disk. This field is only
+   * used for hyperdisk-balanced disk types.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getDataDiskProvisionedIops() {
+    return dataDiskProvisionedIops;
+  }
+
+  /**
+   * Optional. Provisioned number of I/O operations per second for the data disk. This field is only
+   * used for hyperdisk-balanced disk types.
+   * @param dataDiskProvisionedIops dataDiskProvisionedIops or {@code null} for none
+   */
+  public CloudSqlSettings setDataDiskProvisionedIops(java.lang.Long dataDiskProvisionedIops) {
+    this.dataDiskProvisionedIops = dataDiskProvisionedIops;
+    return this;
+  }
+
+  /**
+   * Optional. Provisioned throughput measured in MiB per second for the data disk. This field is
+   * only used for hyperdisk-balanced disk types.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getDataDiskProvisionedThroughput() {
+    return dataDiskProvisionedThroughput;
+  }
+
+  /**
+   * Optional. Provisioned throughput measured in MiB per second for the data disk. This field is
+   * only used for hyperdisk-balanced disk types.
+   * @param dataDiskProvisionedThroughput dataDiskProvisionedThroughput or {@code null} for none
+   */
+  public CloudSqlSettings setDataDiskProvisionedThroughput(java.lang.Long dataDiskProvisionedThroughput) {
+    this.dataDiskProvisionedThroughput = dataDiskProvisionedThroughput;
+    return this;
+  }
+
+  /**
    * The storage capacity available to the database, in GB. The minimum (and default) size is 10GB.
    * @return value or {@code null} for none
    */
@@ -337,7 +391,7 @@ public final class CloudSqlSettings extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The type of storage: `PD_SSD` (default) or `PD_HDD`.
+   * The type of storage: `PD_SSD` (default) or `PD_HDD` or `HYPERDISK_BALANCED`.
    * @return value or {@code null} for none
    */
   public java.lang.String getDataDiskType() {
@@ -345,7 +399,7 @@ public final class CloudSqlSettings extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The type of storage: `PD_SSD` (default) or `PD_HDD`.
+   * The type of storage: `PD_SSD` (default) or `PD_HDD` or `HYPERDISK_BALANCED`.
    * @param dataDiskType dataDiskType or {@code null} for none
    */
   public CloudSqlSettings setDataDiskType(java.lang.String dataDiskType) {

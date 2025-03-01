@@ -5610,7 +5610,7 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
             return result;
           }
 
-          public class Cancel extends DataformRequest<com.google.api.services.dataform.v1beta1.model.Empty> {
+          public class Cancel extends DataformRequest<com.google.api.services.dataform.v1beta1.model.CancelWorkflowInvocationResponse> {
 
             private static final String REST_PATH = "v1beta1/{+name}:cancel";
 
@@ -5633,7 +5633,7 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
              * @since 1.13
              */
             protected Cancel(java.lang.String name, com.google.api.services.dataform.v1beta1.model.CancelWorkflowInvocationRequest content) {
-              super(Dataform.this, "POST", REST_PATH, content, com.google.api.services.dataform.v1beta1.model.Empty.class);
+              super(Dataform.this, "POST", REST_PATH, content, com.google.api.services.dataform.v1beta1.model.CancelWorkflowInvocationResponse.class);
               this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -6605,7 +6605,7 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
             return result;
           }
 
-          public class Commit extends DataformRequest<com.google.api.services.dataform.v1beta1.model.Empty> {
+          public class Commit extends DataformRequest<com.google.api.services.dataform.v1beta1.model.CommitWorkspaceChangesResponse> {
 
             private static final String REST_PATH = "v1beta1/{+name}:commit";
 
@@ -6628,7 +6628,7 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
              * @since 1.13
              */
             protected Commit(java.lang.String name, com.google.api.services.dataform.v1beta1.model.CommitWorkspaceChangesRequest content) {
-              super(Dataform.this, "POST", REST_PATH, content, com.google.api.services.dataform.v1beta1.model.Empty.class);
+              super(Dataform.this, "POST", REST_PATH, content, com.google.api.services.dataform.v1beta1.model.CommitWorkspaceChangesResponse.class);
               this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -8588,7 +8588,7 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
             return result;
           }
 
-          public class Pull extends DataformRequest<com.google.api.services.dataform.v1beta1.model.Empty> {
+          public class Pull extends DataformRequest<com.google.api.services.dataform.v1beta1.model.PullGitCommitsResponse> {
 
             private static final String REST_PATH = "v1beta1/{+name}:pull";
 
@@ -8610,7 +8610,7 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
              * @since 1.13
              */
             protected Pull(java.lang.String name, com.google.api.services.dataform.v1beta1.model.PullGitCommitsRequest content) {
-              super(Dataform.this, "POST", REST_PATH, content, com.google.api.services.dataform.v1beta1.model.Empty.class);
+              super(Dataform.this, "POST", REST_PATH, content, com.google.api.services.dataform.v1beta1.model.PullGitCommitsResponse.class);
               this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -8718,7 +8718,7 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
             return result;
           }
 
-          public class Push extends DataformRequest<com.google.api.services.dataform.v1beta1.model.Empty> {
+          public class Push extends DataformRequest<com.google.api.services.dataform.v1beta1.model.PushGitCommitsResponse> {
 
             private static final String REST_PATH = "v1beta1/{+name}:push";
 
@@ -8740,7 +8740,7 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
              * @since 1.13
              */
             protected Push(java.lang.String name, com.google.api.services.dataform.v1beta1.model.PushGitCommitsRequest content) {
-              super(Dataform.this, "POST", REST_PATH, content, com.google.api.services.dataform.v1beta1.model.Empty.class);
+              super(Dataform.this, "POST", REST_PATH, content, com.google.api.services.dataform.v1beta1.model.PushGitCommitsResponse.class);
               this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -9245,7 +9245,7 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
             return result;
           }
 
-          public class RemoveDirectory extends DataformRequest<com.google.api.services.dataform.v1beta1.model.Empty> {
+          public class RemoveDirectory extends DataformRequest<com.google.api.services.dataform.v1beta1.model.RemoveDirectoryResponse> {
 
             private static final String REST_PATH = "v1beta1/{+workspace}:removeDirectory";
 
@@ -9268,7 +9268,7 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
              * @since 1.13
              */
             protected RemoveDirectory(java.lang.String workspace, com.google.api.services.dataform.v1beta1.model.RemoveDirectoryRequest content) {
-              super(Dataform.this, "POST", REST_PATH, content, com.google.api.services.dataform.v1beta1.model.Empty.class);
+              super(Dataform.this, "POST", REST_PATH, content, com.google.api.services.dataform.v1beta1.model.RemoveDirectoryResponse.class);
               this.workspace = com.google.api.client.util.Preconditions.checkNotNull(workspace, "Required parameter workspace must be specified.");
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(WORKSPACE_PATTERN.matcher(workspace).matches(),
@@ -9376,7 +9376,7 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
             return result;
           }
 
-          public class RemoveFile extends DataformRequest<com.google.api.services.dataform.v1beta1.model.Empty> {
+          public class RemoveFile extends DataformRequest<com.google.api.services.dataform.v1beta1.model.RemoveFileResponse> {
 
             private static final String REST_PATH = "v1beta1/{+workspace}:removeFile";
 
@@ -9399,7 +9399,7 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
              * @since 1.13
              */
             protected RemoveFile(java.lang.String workspace, com.google.api.services.dataform.v1beta1.model.RemoveFileRequest content) {
-              super(Dataform.this, "POST", REST_PATH, content, com.google.api.services.dataform.v1beta1.model.Empty.class);
+              super(Dataform.this, "POST", REST_PATH, content, com.google.api.services.dataform.v1beta1.model.RemoveFileResponse.class);
               this.workspace = com.google.api.client.util.Preconditions.checkNotNull(workspace, "Required parameter workspace must be specified.");
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(WORKSPACE_PATTERN.matcher(workspace).matches(),
@@ -9507,7 +9507,7 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
             return result;
           }
 
-          public class Reset extends DataformRequest<com.google.api.services.dataform.v1beta1.model.Empty> {
+          public class Reset extends DataformRequest<com.google.api.services.dataform.v1beta1.model.ResetWorkspaceChangesResponse> {
 
             private static final String REST_PATH = "v1beta1/{+name}:reset";
 
@@ -9530,7 +9530,7 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
              * @since 1.13
              */
             protected Reset(java.lang.String name, com.google.api.services.dataform.v1beta1.model.ResetWorkspaceChangesRequest content) {
-              super(Dataform.this, "POST", REST_PATH, content, com.google.api.services.dataform.v1beta1.model.Empty.class);
+              super(Dataform.this, "POST", REST_PATH, content, com.google.api.services.dataform.v1beta1.model.ResetWorkspaceChangesResponse.class);
               this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

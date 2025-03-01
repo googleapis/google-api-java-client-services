@@ -118,7 +118,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean enableRbac;
 
   /**
-   * Optional. Option to enable Stackdriver Logging.
+   * Optional. Option to enable Dataproc Stackdriver Logging.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -159,6 +159,14 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
+
+  /**
+   * Optional. The logging configuration for this instance. This field is supported only in CDF
+   * versions 6.11.0 and above.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LoggingConfig loggingConfig;
 
   /**
    * Output only. The maintenance events for this instance.
@@ -219,6 +227,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean privateInstance;
+
+  /**
+   * Output only. Reserved for future use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzi;
 
   /**
    * Output only. Reserved for future use.
@@ -495,7 +510,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Option to enable Stackdriver Logging.
+   * Optional. Option to enable Dataproc Stackdriver Logging.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableStackdriverLogging() {
@@ -503,7 +518,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Option to enable Stackdriver Logging.
+   * Optional. Option to enable Dataproc Stackdriver Logging.
    * @param enableStackdriverLogging enableStackdriverLogging or {@code null} for none
    */
   public Instance setEnableStackdriverLogging(java.lang.Boolean enableStackdriverLogging) {
@@ -595,6 +610,25 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
+    return this;
+  }
+
+  /**
+   * Optional. The logging configuration for this instance. This field is supported only in CDF
+   * versions 6.11.0 and above.
+   * @return value or {@code null} for none
+   */
+  public LoggingConfig getLoggingConfig() {
+    return loggingConfig;
+  }
+
+  /**
+   * Optional. The logging configuration for this instance. This field is supported only in CDF
+   * versions 6.11.0 and above.
+   * @param loggingConfig loggingConfig or {@code null} for none
+   */
+  public Instance setLoggingConfig(LoggingConfig loggingConfig) {
+    this.loggingConfig = loggingConfig;
     return this;
   }
 
@@ -739,6 +773,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setPrivateInstance(java.lang.Boolean privateInstance) {
     this.privateInstance = privateInstance;
+    return this;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzi() {
+    return satisfiesPzi;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @param satisfiesPzi satisfiesPzi or {@code null} for none
+   */
+  public Instance setSatisfiesPzi(java.lang.Boolean satisfiesPzi) {
+    this.satisfiesPzi = satisfiesPzi;
     return this;
   }
 

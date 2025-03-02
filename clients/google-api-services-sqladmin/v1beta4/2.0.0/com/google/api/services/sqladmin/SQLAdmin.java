@@ -1459,7 +1459,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the sqladmin server.  After setting any optional
      * parameters, call the {@link UpdateBackup#execute()} method to invoke the remote operation.
      *
-     * @param name Output only. The resource name of the backup. Format: projects/{project}/backups/{backup}
+     * @param name Output only. The resource name of the backup. Format: projects/{project}/backups/{backup}.
      * @param content the {@link com.google.api.services.sqladmin.model.Backup}
      * @return the request
      */
@@ -1488,7 +1488,7 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
        * UpdateBackup#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Output only. The resource name of the backup. Format: projects/{project}/backups/{backup}
+       * @param name Output only. The resource name of the backup. Format: projects/{project}/backups/{backup}.
        * @param content the {@link com.google.api.services.sqladmin.model.Backup}
        * @since 1.13
        */
@@ -1558,19 +1558,19 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Output only. The resource name of the backup. Format: projects/{project}/backups/{backup}
+       * Output only. The resource name of the backup. Format: projects/{project}/backups/{backup}.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Output only. The resource name of the backup. Format: projects/{project}/backups/{backup}
+      /** Output only. The resource name of the backup. Format: projects/{project}/backups/{backup}.
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * Output only. The resource name of the backup. Format: projects/{project}/backups/{backup}
+       * Output only. The resource name of the backup. Format: projects/{project}/backups/{backup}.
        */
       public UpdateBackup setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {

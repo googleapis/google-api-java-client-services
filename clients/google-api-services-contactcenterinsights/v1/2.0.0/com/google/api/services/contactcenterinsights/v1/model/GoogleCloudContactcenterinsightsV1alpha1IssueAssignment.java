@@ -31,7 +31,7 @@ package com.google.api.services.contactcenterinsights.v1.model;
 public final class GoogleCloudContactcenterinsightsV1alpha1IssueAssignment extends com.google.api.client.json.GenericJson {
 
   /**
-   * Immutable. Display name of the assigned issue. This field is set at time of analyis and
+   * Immutable. Display name of the assigned issue. This field is set at time of analysis and
    * immutable since then.
    * The value may be {@code null}.
    */
@@ -53,7 +53,7 @@ public final class GoogleCloudContactcenterinsightsV1alpha1IssueAssignment exten
   private java.lang.Double score;
 
   /**
-   * Immutable. Display name of the assigned issue. This field is set at time of analyis and
+   * Immutable. Display name of the assigned issue. This field is set at time of analysis and
    * immutable since then.
    * @return value or {@code null} for none
    */
@@ -62,7 +62,7 @@ public final class GoogleCloudContactcenterinsightsV1alpha1IssueAssignment exten
   }
 
   /**
-   * Immutable. Display name of the assigned issue. This field is set at time of analyis and
+   * Immutable. Display name of the assigned issue. This field is set at time of analysis and
    * immutable since then.
    * @param displayName displayName or {@code null} for none
    */

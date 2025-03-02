@@ -17,7 +17,7 @@
 package com.google.api.services.tpu.v2alpha1.model;
 
 /**
- * A node-attached disk resource. Next ID: 8;
+ * A node-attached disk resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud TPU API. For a detailed explanation see:
@@ -44,6 +44,13 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String sourceDisk;
+
+  /**
+   * Optional. The list of worker IDs this disk is attached to.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> workerIds;
 
   /**
    * The mode in which to attach this disk. If not specified, the default is READ_WRITE mode. Only
@@ -80,6 +87,23 @@ public final class AttachedDisk extends com.google.api.client.json.GenericJson {
    */
   public AttachedDisk setSourceDisk(java.lang.String sourceDisk) {
     this.sourceDisk = sourceDisk;
+    return this;
+  }
+
+  /**
+   * Optional. The list of worker IDs this disk is attached to.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getWorkerIds() {
+    return workerIds;
+  }
+
+  /**
+   * Optional. The list of worker IDs this disk is attached to.
+   * @param workerIds workerIds or {@code null} for none
+   */
+  public AttachedDisk setWorkerIds(java.util.List<java.lang.String> workerIds) {
+    this.workerIds = workerIds;
     return this;
   }
 

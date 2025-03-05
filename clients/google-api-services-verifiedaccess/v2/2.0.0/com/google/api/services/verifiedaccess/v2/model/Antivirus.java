@@ -17,7 +17,7 @@
 package com.google.api.services.verifiedaccess.v2.model;
 
 /**
- * Properties of the CrowdStrike agent installed on a device.
+ * Antivirus information on a device.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Chrome Verified Access API. For a detailed
@@ -28,64 +28,40 @@ package com.google.api.services.verifiedaccess.v2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class CrowdStrikeAgent extends com.google.api.client.json.GenericJson {
+public final class Antivirus extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The Agent ID of the Crowdstrike agent.
+   * Output only. The state of the antivirus on the device. Introduced in Chrome M136.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String agentId;
+  private java.lang.String state;
 
   /**
-   * Output only. The Customer ID to which the agent belongs to.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String customerId;
-
-  /**
-   * Output only. The Agent ID of the Crowdstrike agent.
+   * Output only. The state of the antivirus on the device. Introduced in Chrome M136.
    * @return value or {@code null} for none
    */
-  public java.lang.String getAgentId() {
-    return agentId;
+  public java.lang.String getState() {
+    return state;
   }
 
   /**
-   * Output only. The Agent ID of the Crowdstrike agent.
-   * @param agentId agentId or {@code null} for none
+   * Output only. The state of the antivirus on the device. Introduced in Chrome M136.
+   * @param state state or {@code null} for none
    */
-  public CrowdStrikeAgent setAgentId(java.lang.String agentId) {
-    this.agentId = agentId;
-    return this;
-  }
-
-  /**
-   * Output only. The Customer ID to which the agent belongs to.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getCustomerId() {
-    return customerId;
-  }
-
-  /**
-   * Output only. The Customer ID to which the agent belongs to.
-   * @param customerId customerId or {@code null} for none
-   */
-  public CrowdStrikeAgent setCustomerId(java.lang.String customerId) {
-    this.customerId = customerId;
+  public Antivirus setState(java.lang.String state) {
+    this.state = state;
     return this;
   }
 
   @Override
-  public CrowdStrikeAgent set(String fieldName, Object value) {
-    return (CrowdStrikeAgent) super.set(fieldName, value);
+  public Antivirus set(String fieldName, Object value) {
+    return (Antivirus) super.set(fieldName, value);
   }
 
   @Override
-  public CrowdStrikeAgent clone() {
-    return (CrowdStrikeAgent) super.clone();
+  public Antivirus clone() {
+    return (Antivirus) super.clone();
   }
 
 }

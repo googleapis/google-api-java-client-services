@@ -32,7 +32,7 @@ package com.google.api.services.verifiedaccess.v2.model;
 public final class DeviceSignals extends com.google.api.client.json.GenericJson {
 
   /**
-   * Value of the AllowScreenLock policy on the device. See
+   * Output only. Value of the AllowScreenLock policy on the device. See
    * https://chromeenterprise.google/policies/?policy=AllowScreenLock for more details. Available on
    * ChromeOS only.
    * The value may be {@code null}.
@@ -41,16 +41,23 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   private java.lang.Boolean allowScreenLock;
 
   /**
-   * Current version of the Chrome browser which generated this set of signals. Example value:
-   * "107.0.5286.0".
+   * Output only. Information about Antivirus software on the device. Available on Windows only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Antivirus antivirus;
+
+  /**
+   * Output only. Current version of the Chrome browser which generated this set of signals. Example
+   * value: "107.0.5286.0".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String browserVersion;
 
   /**
-   * Whether Chrome's built-in DNS client is used. The OS DNS client is otherwise used. This value
-   * may be controlled by an enterprise policy:
+   * Output only. Whether Chrome's built-in DNS client is used. The OS DNS client is otherwise used.
+   * This value may be controlled by an enterprise policy:
    * https://chromeenterprise.google/policies/#BuiltInDnsClientEnabled.
    * The value may be {@code null}.
    */
@@ -58,60 +65,61 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   private java.lang.Boolean builtInDnsClientEnabled;
 
   /**
-   * Whether access to the Chrome Remote Desktop application is blocked via a policy.
+   * Output only. Whether access to the Chrome Remote Desktop application is blocked via a policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean chromeRemoteDesktopAppBlocked;
 
   /**
-   * Crowdstrike agent properties installed on the device, if any. Available on Windows and MacOS
-   * only.
+   * Output only. Crowdstrike agent properties installed on the device, if any. Available on Windows
+   * and MacOS only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private CrowdStrikeAgent crowdStrikeAgent;
 
   /**
-   * Affiliation IDs of the organizations that are affiliated with the organization that is
-   * currently managing the device. When the sets of device and profile affiliation IDs overlap, it
-   * means that the organizations managing the device and user are affiliated. To learn more about
-   * user affiliation, visit https://support.google.com/chrome/a/answer/12801245?ref_topic=9027936.
+   * Output only. Affiliation IDs of the organizations that are affiliated with the organization
+   * that is currently managing the device. When the sets of device and profile affiliation IDs
+   * overlap, it means that the organizations managing the device and user are affiliated. To learn
+   * more about user affiliation, visit
+   * https://support.google.com/chrome/a/answer/12801245?ref_topic=9027936.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> deviceAffiliationIds;
 
   /**
-   * Enrollment domain of the customer which is currently managing the device.
+   * Output only. Enrollment domain of the customer which is currently managing the device.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String deviceEnrollmentDomain;
 
   /**
-   * The name of the device's manufacturer.
+   * Output only. The name of the device's manufacturer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String deviceManufacturer;
 
   /**
-   * The name of the device's model.
+   * Output only. The name of the device's model.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String deviceModel;
 
   /**
-   * The encryption state of the disk. On ChromeOS, the main disk is always ENCRYPTED.
+   * Output only. The encryption state of the disk. On ChromeOS, the main disk is always ENCRYPTED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String diskEncryption;
 
   /**
-   * The display name of the device, as defined by the user.
+   * Output only. The display name of the device, as defined by the user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,54 +133,55 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   private java.lang.String hostname;
 
   /**
-   * International Mobile Equipment Identity (IMEI) of the device. Available on ChromeOS only.
+   * Output only. International Mobile Equipment Identity (IMEI) of the device. Available on
+   * ChromeOS only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> imei;
 
   /**
-   * MAC addresses of the device.
+   * Output only. MAC addresses of the device.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> macAddresses;
 
   /**
-   * Mobile Equipment Identifier (MEID) of the device. Available on ChromeOS only.
+   * Output only. Mobile Equipment Identifier (MEID) of the device. Available on ChromeOS only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> meid;
 
   /**
-   * The type of the Operating System currently running on the device.
+   * Output only. The type of the Operating System currently running on the device.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String operatingSystem;
 
   /**
-   * The state of the OS level firewall. On ChromeOS, the value will always be ENABLED on regular
-   * devices and UNKNOWN on devices in developer mode. Support for MacOS 15 (Sequoia) and later has
-   * been introduced in Chrome M131.
+   * Output only. The state of the OS level firewall. On ChromeOS, the value will always be ENABLED
+   * on regular devices and UNKNOWN on devices in developer mode. Support for MacOS 15 (Sequoia) and
+   * later has been introduced in Chrome M131.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String osFirewall;
 
   /**
-   * The current version of the Operating System. On Windows and linux, the value will also include
-   * the security patch information.
+   * Output only. The current version of the Operating System. On Windows and linux, the value will
+   * also include the security patch information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String osVersion;
 
   /**
-   * Whether the Password Protection Warning feature is enabled or not. Password protection alerts
-   * users when they reuse their protected password on potentially suspicious sites. This setting is
-   * controlled by an enterprise policy:
+   * Output only. Whether the Password Protection Warning feature is enabled or not. Password
+   * protection alerts users when they reuse their protected password on potentially suspicious
+   * sites. This setting is controlled by an enterprise policy:
    * https://chromeenterprise.google/policies/#PasswordProtectionWarningTrigger. Note that the
    * policy unset does not have the same effects as having the policy explicitly set to
    * `PASSWORD_PROTECTION_OFF`.
@@ -182,23 +191,23 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   private java.lang.String passwordProtectionWarningTrigger;
 
   /**
-   * Affiliation IDs of the organizations that are affiliated with the organization that is
-   * currently managing the Chrome Profile’s user or ChromeOS user.
+   * Output only. Affiliation IDs of the organizations that are affiliated with the organization
+   * that is currently managing the Chrome Profile’s user or ChromeOS user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> profileAffiliationIds;
 
   /**
-   * Enrollment domain of the customer which is currently managing the profile.
+   * Output only. Enrollment domain of the customer which is currently managing the profile.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String profileEnrollmentDomain;
 
   /**
-   * Whether Enterprise-grade (i.e. custom) unsafe URL scanning is enabled or not. This setting may
-   * be controlled by an enterprise policy:
+   * Output only. Whether Enterprise-grade (i.e. custom) unsafe URL scanning is enabled or not. This
+   * setting may be controlled by an enterprise policy:
    * https://chromeenterprise.google/policies/#EnterpriseRealTimeUrlCheckMode
    * The value may be {@code null}.
    */
@@ -206,40 +215,42 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   private java.lang.String realtimeUrlCheckMode;
 
   /**
-   * Safe Browsing Protection Level. That setting may be controlled by an enterprise policy:
-   * https://chromeenterprise.google/policies/#SafeBrowsingProtectionLevel.
+   * Output only. Safe Browsing Protection Level. That setting may be controlled by an enterprise
+   * policy: https://chromeenterprise.google/policies/#SafeBrowsingProtectionLevel.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String safeBrowsingProtectionLevel;
 
   /**
-   * The state of the Screen Lock password protection. On ChromeOS, this value will always be
-   * ENABLED as there is not way to disable requiring a password or pin when unlocking the device.
+   * Output only. The state of the Screen Lock password protection. On ChromeOS, this value will
+   * always be ENABLED as there is not way to disable requiring a password or pin when unlocking the
+   * device.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String screenLockSecured;
 
   /**
-   * Whether the device's startup software has its Secure Boot feature enabled. Available on Windows
-   * only.
+   * Output only. Whether the device's startup software has its Secure Boot feature enabled.
+   * Available on Windows only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String secureBootMode;
 
   /**
-   * The serial number of the device. On Windows, this represents the BIOS's serial number. Not
-   * available on most Linux distributions.
+   * Output only. The serial number of the device. On Windows, this represents the BIOS's serial
+   * number. Not available on most Linux distributions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String serialNumber;
 
   /**
-   * Whether the Site Isolation (a.k.a Site Per Process) setting is enabled. That setting may be
-   * controlled by an enterprise policy: https://chromeenterprise.google/policies/#SitePerProcess
+   * Output only. Whether the Site Isolation (a.k.a Site Per Process) setting is enabled. That
+   * setting may be controlled by an enterprise policy:
+   * https://chromeenterprise.google/policies/#SitePerProcess
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -253,8 +264,8 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   private java.util.List<java.lang.String> systemDnsServers;
 
   /**
-   * Whether Chrome is blocking third-party software injection or not. This setting may be
-   * controlled by an enterprise policy:
+   * Output only. Whether Chrome is blocking third-party software injection or not. This setting may
+   * be controlled by an enterprise policy:
    * https://chromeenterprise.google/policies/?policy=ThirdPartyBlockingEnabled. Available on
    * Windows only.
    * The value may be {@code null}.
@@ -263,28 +274,28 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   private java.lang.Boolean thirdPartyBlockingEnabled;
 
   /**
-   * The trigger which generated this set of signals.
+   * Output only. The trigger which generated this set of signals.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String trigger;
 
   /**
-   * Windows domain that the current machine has joined. Available on Windows only.
+   * Output only. Windows domain that the current machine has joined. Available on Windows only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String windowsMachineDomain;
 
   /**
-   * Windows domain for the current OS user. Available on Windows only.
+   * Output only. Windows domain for the current OS user. Available on Windows only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String windowsUserDomain;
 
   /**
-   * Value of the AllowScreenLock policy on the device. See
+   * Output only. Value of the AllowScreenLock policy on the device. See
    * https://chromeenterprise.google/policies/?policy=AllowScreenLock for more details. Available on
    * ChromeOS only.
    * @return value or {@code null} for none
@@ -294,7 +305,7 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Value of the AllowScreenLock policy on the device. See
+   * Output only. Value of the AllowScreenLock policy on the device. See
    * https://chromeenterprise.google/policies/?policy=AllowScreenLock for more details. Available on
    * ChromeOS only.
    * @param allowScreenLock allowScreenLock or {@code null} for none
@@ -305,8 +316,25 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Current version of the Chrome browser which generated this set of signals. Example value:
-   * "107.0.5286.0".
+   * Output only. Information about Antivirus software on the device. Available on Windows only.
+   * @return value or {@code null} for none
+   */
+  public Antivirus getAntivirus() {
+    return antivirus;
+  }
+
+  /**
+   * Output only. Information about Antivirus software on the device. Available on Windows only.
+   * @param antivirus antivirus or {@code null} for none
+   */
+  public DeviceSignals setAntivirus(Antivirus antivirus) {
+    this.antivirus = antivirus;
+    return this;
+  }
+
+  /**
+   * Output only. Current version of the Chrome browser which generated this set of signals. Example
+   * value: "107.0.5286.0".
    * @return value or {@code null} for none
    */
   public java.lang.String getBrowserVersion() {
@@ -314,8 +342,8 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Current version of the Chrome browser which generated this set of signals. Example value:
-   * "107.0.5286.0".
+   * Output only. Current version of the Chrome browser which generated this set of signals. Example
+   * value: "107.0.5286.0".
    * @param browserVersion browserVersion or {@code null} for none
    */
   public DeviceSignals setBrowserVersion(java.lang.String browserVersion) {
@@ -324,8 +352,8 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Whether Chrome's built-in DNS client is used. The OS DNS client is otherwise used. This value
-   * may be controlled by an enterprise policy:
+   * Output only. Whether Chrome's built-in DNS client is used. The OS DNS client is otherwise used.
+   * This value may be controlled by an enterprise policy:
    * https://chromeenterprise.google/policies/#BuiltInDnsClientEnabled.
    * @return value or {@code null} for none
    */
@@ -334,8 +362,8 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Whether Chrome's built-in DNS client is used. The OS DNS client is otherwise used. This value
-   * may be controlled by an enterprise policy:
+   * Output only. Whether Chrome's built-in DNS client is used. The OS DNS client is otherwise used.
+   * This value may be controlled by an enterprise policy:
    * https://chromeenterprise.google/policies/#BuiltInDnsClientEnabled.
    * @param builtInDnsClientEnabled builtInDnsClientEnabled or {@code null} for none
    */
@@ -345,7 +373,7 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Whether access to the Chrome Remote Desktop application is blocked via a policy.
+   * Output only. Whether access to the Chrome Remote Desktop application is blocked via a policy.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getChromeRemoteDesktopAppBlocked() {
@@ -353,7 +381,7 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Whether access to the Chrome Remote Desktop application is blocked via a policy.
+   * Output only. Whether access to the Chrome Remote Desktop application is blocked via a policy.
    * @param chromeRemoteDesktopAppBlocked chromeRemoteDesktopAppBlocked or {@code null} for none
    */
   public DeviceSignals setChromeRemoteDesktopAppBlocked(java.lang.Boolean chromeRemoteDesktopAppBlocked) {
@@ -362,8 +390,8 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Crowdstrike agent properties installed on the device, if any. Available on Windows and MacOS
-   * only.
+   * Output only. Crowdstrike agent properties installed on the device, if any. Available on Windows
+   * and MacOS only.
    * @return value or {@code null} for none
    */
   public CrowdStrikeAgent getCrowdStrikeAgent() {
@@ -371,8 +399,8 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Crowdstrike agent properties installed on the device, if any. Available on Windows and MacOS
-   * only.
+   * Output only. Crowdstrike agent properties installed on the device, if any. Available on Windows
+   * and MacOS only.
    * @param crowdStrikeAgent crowdStrikeAgent or {@code null} for none
    */
   public DeviceSignals setCrowdStrikeAgent(CrowdStrikeAgent crowdStrikeAgent) {
@@ -381,10 +409,11 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Affiliation IDs of the organizations that are affiliated with the organization that is
-   * currently managing the device. When the sets of device and profile affiliation IDs overlap, it
-   * means that the organizations managing the device and user are affiliated. To learn more about
-   * user affiliation, visit https://support.google.com/chrome/a/answer/12801245?ref_topic=9027936.
+   * Output only. Affiliation IDs of the organizations that are affiliated with the organization
+   * that is currently managing the device. When the sets of device and profile affiliation IDs
+   * overlap, it means that the organizations managing the device and user are affiliated. To learn
+   * more about user affiliation, visit
+   * https://support.google.com/chrome/a/answer/12801245?ref_topic=9027936.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDeviceAffiliationIds() {
@@ -392,10 +421,11 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Affiliation IDs of the organizations that are affiliated with the organization that is
-   * currently managing the device. When the sets of device and profile affiliation IDs overlap, it
-   * means that the organizations managing the device and user are affiliated. To learn more about
-   * user affiliation, visit https://support.google.com/chrome/a/answer/12801245?ref_topic=9027936.
+   * Output only. Affiliation IDs of the organizations that are affiliated with the organization
+   * that is currently managing the device. When the sets of device and profile affiliation IDs
+   * overlap, it means that the organizations managing the device and user are affiliated. To learn
+   * more about user affiliation, visit
+   * https://support.google.com/chrome/a/answer/12801245?ref_topic=9027936.
    * @param deviceAffiliationIds deviceAffiliationIds or {@code null} for none
    */
   public DeviceSignals setDeviceAffiliationIds(java.util.List<java.lang.String> deviceAffiliationIds) {
@@ -404,7 +434,7 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Enrollment domain of the customer which is currently managing the device.
+   * Output only. Enrollment domain of the customer which is currently managing the device.
    * @return value or {@code null} for none
    */
   public java.lang.String getDeviceEnrollmentDomain() {
@@ -412,7 +442,7 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Enrollment domain of the customer which is currently managing the device.
+   * Output only. Enrollment domain of the customer which is currently managing the device.
    * @param deviceEnrollmentDomain deviceEnrollmentDomain or {@code null} for none
    */
   public DeviceSignals setDeviceEnrollmentDomain(java.lang.String deviceEnrollmentDomain) {
@@ -421,7 +451,7 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The name of the device's manufacturer.
+   * Output only. The name of the device's manufacturer.
    * @return value or {@code null} for none
    */
   public java.lang.String getDeviceManufacturer() {
@@ -429,7 +459,7 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The name of the device's manufacturer.
+   * Output only. The name of the device's manufacturer.
    * @param deviceManufacturer deviceManufacturer or {@code null} for none
    */
   public DeviceSignals setDeviceManufacturer(java.lang.String deviceManufacturer) {
@@ -438,7 +468,7 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The name of the device's model.
+   * Output only. The name of the device's model.
    * @return value or {@code null} for none
    */
   public java.lang.String getDeviceModel() {
@@ -446,7 +476,7 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The name of the device's model.
+   * Output only. The name of the device's model.
    * @param deviceModel deviceModel or {@code null} for none
    */
   public DeviceSignals setDeviceModel(java.lang.String deviceModel) {
@@ -455,7 +485,7 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The encryption state of the disk. On ChromeOS, the main disk is always ENCRYPTED.
+   * Output only. The encryption state of the disk. On ChromeOS, the main disk is always ENCRYPTED.
    * @return value or {@code null} for none
    */
   public java.lang.String getDiskEncryption() {
@@ -463,7 +493,7 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The encryption state of the disk. On ChromeOS, the main disk is always ENCRYPTED.
+   * Output only. The encryption state of the disk. On ChromeOS, the main disk is always ENCRYPTED.
    * @param diskEncryption diskEncryption or {@code null} for none
    */
   public DeviceSignals setDiskEncryption(java.lang.String diskEncryption) {
@@ -472,7 +502,7 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The display name of the device, as defined by the user.
+   * Output only. The display name of the device, as defined by the user.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -480,7 +510,7 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The display name of the device, as defined by the user.
+   * Output only. The display name of the device, as defined by the user.
    * @param displayName displayName or {@code null} for none
    */
   public DeviceSignals setDisplayName(java.lang.String displayName) {
@@ -506,7 +536,8 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * International Mobile Equipment Identity (IMEI) of the device. Available on ChromeOS only.
+   * Output only. International Mobile Equipment Identity (IMEI) of the device. Available on
+   * ChromeOS only.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getImei() {
@@ -514,7 +545,8 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * International Mobile Equipment Identity (IMEI) of the device. Available on ChromeOS only.
+   * Output only. International Mobile Equipment Identity (IMEI) of the device. Available on
+   * ChromeOS only.
    * @param imei imei or {@code null} for none
    */
   public DeviceSignals setImei(java.util.List<java.lang.String> imei) {
@@ -523,7 +555,7 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * MAC addresses of the device.
+   * Output only. MAC addresses of the device.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getMacAddresses() {
@@ -531,7 +563,7 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * MAC addresses of the device.
+   * Output only. MAC addresses of the device.
    * @param macAddresses macAddresses or {@code null} for none
    */
   public DeviceSignals setMacAddresses(java.util.List<java.lang.String> macAddresses) {
@@ -540,7 +572,7 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Mobile Equipment Identifier (MEID) of the device. Available on ChromeOS only.
+   * Output only. Mobile Equipment Identifier (MEID) of the device. Available on ChromeOS only.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getMeid() {
@@ -548,7 +580,7 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Mobile Equipment Identifier (MEID) of the device. Available on ChromeOS only.
+   * Output only. Mobile Equipment Identifier (MEID) of the device. Available on ChromeOS only.
    * @param meid meid or {@code null} for none
    */
   public DeviceSignals setMeid(java.util.List<java.lang.String> meid) {
@@ -557,7 +589,7 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The type of the Operating System currently running on the device.
+   * Output only. The type of the Operating System currently running on the device.
    * @return value or {@code null} for none
    */
   public java.lang.String getOperatingSystem() {
@@ -565,7 +597,7 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The type of the Operating System currently running on the device.
+   * Output only. The type of the Operating System currently running on the device.
    * @param operatingSystem operatingSystem or {@code null} for none
    */
   public DeviceSignals setOperatingSystem(java.lang.String operatingSystem) {
@@ -574,9 +606,9 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The state of the OS level firewall. On ChromeOS, the value will always be ENABLED on regular
-   * devices and UNKNOWN on devices in developer mode. Support for MacOS 15 (Sequoia) and later has
-   * been introduced in Chrome M131.
+   * Output only. The state of the OS level firewall. On ChromeOS, the value will always be ENABLED
+   * on regular devices and UNKNOWN on devices in developer mode. Support for MacOS 15 (Sequoia) and
+   * later has been introduced in Chrome M131.
    * @return value or {@code null} for none
    */
   public java.lang.String getOsFirewall() {
@@ -584,9 +616,9 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The state of the OS level firewall. On ChromeOS, the value will always be ENABLED on regular
-   * devices and UNKNOWN on devices in developer mode. Support for MacOS 15 (Sequoia) and later has
-   * been introduced in Chrome M131.
+   * Output only. The state of the OS level firewall. On ChromeOS, the value will always be ENABLED
+   * on regular devices and UNKNOWN on devices in developer mode. Support for MacOS 15 (Sequoia) and
+   * later has been introduced in Chrome M131.
    * @param osFirewall osFirewall or {@code null} for none
    */
   public DeviceSignals setOsFirewall(java.lang.String osFirewall) {
@@ -595,8 +627,8 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The current version of the Operating System. On Windows and linux, the value will also include
-   * the security patch information.
+   * Output only. The current version of the Operating System. On Windows and linux, the value will
+   * also include the security patch information.
    * @return value or {@code null} for none
    */
   public java.lang.String getOsVersion() {
@@ -604,8 +636,8 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The current version of the Operating System. On Windows and linux, the value will also include
-   * the security patch information.
+   * Output only. The current version of the Operating System. On Windows and linux, the value will
+   * also include the security patch information.
    * @param osVersion osVersion or {@code null} for none
    */
   public DeviceSignals setOsVersion(java.lang.String osVersion) {
@@ -614,9 +646,9 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Whether the Password Protection Warning feature is enabled or not. Password protection alerts
-   * users when they reuse their protected password on potentially suspicious sites. This setting is
-   * controlled by an enterprise policy:
+   * Output only. Whether the Password Protection Warning feature is enabled or not. Password
+   * protection alerts users when they reuse their protected password on potentially suspicious
+   * sites. This setting is controlled by an enterprise policy:
    * https://chromeenterprise.google/policies/#PasswordProtectionWarningTrigger. Note that the
    * policy unset does not have the same effects as having the policy explicitly set to
    * `PASSWORD_PROTECTION_OFF`.
@@ -627,9 +659,9 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Whether the Password Protection Warning feature is enabled or not. Password protection alerts
-   * users when they reuse their protected password on potentially suspicious sites. This setting is
-   * controlled by an enterprise policy:
+   * Output only. Whether the Password Protection Warning feature is enabled or not. Password
+   * protection alerts users when they reuse their protected password on potentially suspicious
+   * sites. This setting is controlled by an enterprise policy:
    * https://chromeenterprise.google/policies/#PasswordProtectionWarningTrigger. Note that the
    * policy unset does not have the same effects as having the policy explicitly set to
    * `PASSWORD_PROTECTION_OFF`.
@@ -641,8 +673,8 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Affiliation IDs of the organizations that are affiliated with the organization that is
-   * currently managing the Chrome Profile’s user or ChromeOS user.
+   * Output only. Affiliation IDs of the organizations that are affiliated with the organization
+   * that is currently managing the Chrome Profile’s user or ChromeOS user.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getProfileAffiliationIds() {
@@ -650,8 +682,8 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Affiliation IDs of the organizations that are affiliated with the organization that is
-   * currently managing the Chrome Profile’s user or ChromeOS user.
+   * Output only. Affiliation IDs of the organizations that are affiliated with the organization
+   * that is currently managing the Chrome Profile’s user or ChromeOS user.
    * @param profileAffiliationIds profileAffiliationIds or {@code null} for none
    */
   public DeviceSignals setProfileAffiliationIds(java.util.List<java.lang.String> profileAffiliationIds) {
@@ -660,7 +692,7 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Enrollment domain of the customer which is currently managing the profile.
+   * Output only. Enrollment domain of the customer which is currently managing the profile.
    * @return value or {@code null} for none
    */
   public java.lang.String getProfileEnrollmentDomain() {
@@ -668,7 +700,7 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Enrollment domain of the customer which is currently managing the profile.
+   * Output only. Enrollment domain of the customer which is currently managing the profile.
    * @param profileEnrollmentDomain profileEnrollmentDomain or {@code null} for none
    */
   public DeviceSignals setProfileEnrollmentDomain(java.lang.String profileEnrollmentDomain) {
@@ -677,8 +709,8 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Whether Enterprise-grade (i.e. custom) unsafe URL scanning is enabled or not. This setting may
-   * be controlled by an enterprise policy:
+   * Output only. Whether Enterprise-grade (i.e. custom) unsafe URL scanning is enabled or not. This
+   * setting may be controlled by an enterprise policy:
    * https://chromeenterprise.google/policies/#EnterpriseRealTimeUrlCheckMode
    * @return value or {@code null} for none
    */
@@ -687,8 +719,8 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Whether Enterprise-grade (i.e. custom) unsafe URL scanning is enabled or not. This setting may
-   * be controlled by an enterprise policy:
+   * Output only. Whether Enterprise-grade (i.e. custom) unsafe URL scanning is enabled or not. This
+   * setting may be controlled by an enterprise policy:
    * https://chromeenterprise.google/policies/#EnterpriseRealTimeUrlCheckMode
    * @param realtimeUrlCheckMode realtimeUrlCheckMode or {@code null} for none
    */
@@ -698,8 +730,8 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Safe Browsing Protection Level. That setting may be controlled by an enterprise policy:
-   * https://chromeenterprise.google/policies/#SafeBrowsingProtectionLevel.
+   * Output only. Safe Browsing Protection Level. That setting may be controlled by an enterprise
+   * policy: https://chromeenterprise.google/policies/#SafeBrowsingProtectionLevel.
    * @return value or {@code null} for none
    */
   public java.lang.String getSafeBrowsingProtectionLevel() {
@@ -707,8 +739,8 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Safe Browsing Protection Level. That setting may be controlled by an enterprise policy:
-   * https://chromeenterprise.google/policies/#SafeBrowsingProtectionLevel.
+   * Output only. Safe Browsing Protection Level. That setting may be controlled by an enterprise
+   * policy: https://chromeenterprise.google/policies/#SafeBrowsingProtectionLevel.
    * @param safeBrowsingProtectionLevel safeBrowsingProtectionLevel or {@code null} for none
    */
   public DeviceSignals setSafeBrowsingProtectionLevel(java.lang.String safeBrowsingProtectionLevel) {
@@ -717,8 +749,9 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The state of the Screen Lock password protection. On ChromeOS, this value will always be
-   * ENABLED as there is not way to disable requiring a password or pin when unlocking the device.
+   * Output only. The state of the Screen Lock password protection. On ChromeOS, this value will
+   * always be ENABLED as there is not way to disable requiring a password or pin when unlocking the
+   * device.
    * @return value or {@code null} for none
    */
   public java.lang.String getScreenLockSecured() {
@@ -726,8 +759,9 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The state of the Screen Lock password protection. On ChromeOS, this value will always be
-   * ENABLED as there is not way to disable requiring a password or pin when unlocking the device.
+   * Output only. The state of the Screen Lock password protection. On ChromeOS, this value will
+   * always be ENABLED as there is not way to disable requiring a password or pin when unlocking the
+   * device.
    * @param screenLockSecured screenLockSecured or {@code null} for none
    */
   public DeviceSignals setScreenLockSecured(java.lang.String screenLockSecured) {
@@ -736,8 +770,8 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Whether the device's startup software has its Secure Boot feature enabled. Available on Windows
-   * only.
+   * Output only. Whether the device's startup software has its Secure Boot feature enabled.
+   * Available on Windows only.
    * @return value or {@code null} for none
    */
   public java.lang.String getSecureBootMode() {
@@ -745,8 +779,8 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Whether the device's startup software has its Secure Boot feature enabled. Available on Windows
-   * only.
+   * Output only. Whether the device's startup software has its Secure Boot feature enabled.
+   * Available on Windows only.
    * @param secureBootMode secureBootMode or {@code null} for none
    */
   public DeviceSignals setSecureBootMode(java.lang.String secureBootMode) {
@@ -755,8 +789,8 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The serial number of the device. On Windows, this represents the BIOS's serial number. Not
-   * available on most Linux distributions.
+   * Output only. The serial number of the device. On Windows, this represents the BIOS's serial
+   * number. Not available on most Linux distributions.
    * @return value or {@code null} for none
    */
   public java.lang.String getSerialNumber() {
@@ -764,8 +798,8 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The serial number of the device. On Windows, this represents the BIOS's serial number. Not
-   * available on most Linux distributions.
+   * Output only. The serial number of the device. On Windows, this represents the BIOS's serial
+   * number. Not available on most Linux distributions.
    * @param serialNumber serialNumber or {@code null} for none
    */
   public DeviceSignals setSerialNumber(java.lang.String serialNumber) {
@@ -774,8 +808,9 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Whether the Site Isolation (a.k.a Site Per Process) setting is enabled. That setting may be
-   * controlled by an enterprise policy: https://chromeenterprise.google/policies/#SitePerProcess
+   * Output only. Whether the Site Isolation (a.k.a Site Per Process) setting is enabled. That
+   * setting may be controlled by an enterprise policy:
+   * https://chromeenterprise.google/policies/#SitePerProcess
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSiteIsolationEnabled() {
@@ -783,8 +818,9 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Whether the Site Isolation (a.k.a Site Per Process) setting is enabled. That setting may be
-   * controlled by an enterprise policy: https://chromeenterprise.google/policies/#SitePerProcess
+   * Output only. Whether the Site Isolation (a.k.a Site Per Process) setting is enabled. That
+   * setting may be controlled by an enterprise policy:
+   * https://chromeenterprise.google/policies/#SitePerProcess
    * @param siteIsolationEnabled siteIsolationEnabled or {@code null} for none
    */
   public DeviceSignals setSiteIsolationEnabled(java.lang.Boolean siteIsolationEnabled) {
@@ -810,8 +846,8 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Whether Chrome is blocking third-party software injection or not. This setting may be
-   * controlled by an enterprise policy:
+   * Output only. Whether Chrome is blocking third-party software injection or not. This setting may
+   * be controlled by an enterprise policy:
    * https://chromeenterprise.google/policies/?policy=ThirdPartyBlockingEnabled. Available on
    * Windows only.
    * @return value or {@code null} for none
@@ -821,8 +857,8 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Whether Chrome is blocking third-party software injection or not. This setting may be
-   * controlled by an enterprise policy:
+   * Output only. Whether Chrome is blocking third-party software injection or not. This setting may
+   * be controlled by an enterprise policy:
    * https://chromeenterprise.google/policies/?policy=ThirdPartyBlockingEnabled. Available on
    * Windows only.
    * @param thirdPartyBlockingEnabled thirdPartyBlockingEnabled or {@code null} for none
@@ -833,7 +869,7 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The trigger which generated this set of signals.
+   * Output only. The trigger which generated this set of signals.
    * @return value or {@code null} for none
    */
   public java.lang.String getTrigger() {
@@ -841,7 +877,7 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The trigger which generated this set of signals.
+   * Output only. The trigger which generated this set of signals.
    * @param trigger trigger or {@code null} for none
    */
   public DeviceSignals setTrigger(java.lang.String trigger) {
@@ -850,7 +886,7 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Windows domain that the current machine has joined. Available on Windows only.
+   * Output only. Windows domain that the current machine has joined. Available on Windows only.
    * @return value or {@code null} for none
    */
   public java.lang.String getWindowsMachineDomain() {
@@ -858,7 +894,7 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Windows domain that the current machine has joined. Available on Windows only.
+   * Output only. Windows domain that the current machine has joined. Available on Windows only.
    * @param windowsMachineDomain windowsMachineDomain or {@code null} for none
    */
   public DeviceSignals setWindowsMachineDomain(java.lang.String windowsMachineDomain) {
@@ -867,7 +903,7 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Windows domain for the current OS user. Available on Windows only.
+   * Output only. Windows domain for the current OS user. Available on Windows only.
    * @return value or {@code null} for none
    */
   public java.lang.String getWindowsUserDomain() {
@@ -875,7 +911,7 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Windows domain for the current OS user. Available on Windows only.
+   * Output only. Windows domain for the current OS user. Available on Windows only.
    * @param windowsUserDomain windowsUserDomain or {@code null} for none
    */
   public DeviceSignals setWindowsUserDomain(java.lang.String windowsUserDomain) {

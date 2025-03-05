@@ -31,95 +31,104 @@ package com.google.api.services.verifiedaccess.v2.model;
 public final class VerifyChallengeResponseResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * Attested device ID (ADID).
+   * Output only. Attested device ID (ADID).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String attestedDeviceId;
 
   /**
-   * Unique customer id that this device belongs to, as defined by the Google Admin SDK at
-   * https://developers.google.com/admin-sdk/directory/v1/guides/manage-customers
+   * Output only. Unique customer id that this device belongs to, as defined by the Google Admin SDK
+   * at https://developers.google.com/admin-sdk/directory/v1/guides/manage-customers
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String customerId;
 
   /**
-   * Device enrollment id for ChromeOS devices.
+   * Output only. Device enrollment id for ChromeOS devices.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String deviceEnrollmentId;
 
   /**
-   * Device permanent id is returned in this field (for the machine response only).
+   * Output only. Device permanent id is returned in this field (for the machine response only).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String devicePermanentId;
 
   /**
-   * Deprecated. Device signal in json string representation. Prefer using `device_signals` instead.
+   * Output only. Deprecated. Device signal in json string representation. Prefer using
+   * `device_signals` instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String deviceSignal;
 
   /**
-   * Device signals.
+   * Output only. Device signals.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DeviceSignals deviceSignals;
 
   /**
-   * Device attested key trust level.
+   * Output only. Device attested key trust level.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String keyTrustLevel;
 
   /**
-   * Unique customer id that this profile belongs to, as defined by the Google Admin SDK at
-   * https://developers.google.com/admin-sdk/directory/v1/guides/manage-customers
+   * Output only. Unique customer id that this profile belongs to, as defined by the Google Admin
+   * SDK at https://developers.google.com/admin-sdk/directory/v1/guides/manage-customers
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String profileCustomerId;
 
   /**
-   * Profile attested key trust level.
+   * Output only. Profile attested key trust level.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String profileKeyTrustLevel;
 
   /**
-   * Certificate Signing Request (in the SPKAC format, base64 encoded) is returned in this field.
-   * This field will be set only if device has included CSR in its challenge response. (the option
-   * to include CSR is now available for both user and machine responses)
+   * Output only. The unique server-side ID of a profile on the device.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String profilePermanentId;
+
+  /**
+   * Output only. Certificate Signing Request (in the SPKAC format, base64 encoded) is returned in
+   * this field. This field will be set only if device has included CSR in its challenge response.
+   * (the option to include CSR is now available for both user and machine responses)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String signedPublicKeyAndChallenge;
 
   /**
-   * Virtual device id of the device. The definition of virtual device id is platform-specific.
+   * Output only. Virtual device id of the device. The definition of virtual device id is platform-
+   * specific.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String virtualDeviceId;
 
   /**
-   * The ID of a profile on the device.
+   * Output only. The client-provided ID of a profile on the device.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String virtualProfileId;
 
   /**
-   * Attested device ID (ADID).
+   * Output only. Attested device ID (ADID).
    * @return value or {@code null} for none
    */
   public java.lang.String getAttestedDeviceId() {
@@ -127,7 +136,7 @@ public final class VerifyChallengeResponseResult extends com.google.api.client.j
   }
 
   /**
-   * Attested device ID (ADID).
+   * Output only. Attested device ID (ADID).
    * @param attestedDeviceId attestedDeviceId or {@code null} for none
    */
   public VerifyChallengeResponseResult setAttestedDeviceId(java.lang.String attestedDeviceId) {
@@ -136,8 +145,8 @@ public final class VerifyChallengeResponseResult extends com.google.api.client.j
   }
 
   /**
-   * Unique customer id that this device belongs to, as defined by the Google Admin SDK at
-   * https://developers.google.com/admin-sdk/directory/v1/guides/manage-customers
+   * Output only. Unique customer id that this device belongs to, as defined by the Google Admin SDK
+   * at https://developers.google.com/admin-sdk/directory/v1/guides/manage-customers
    * @return value or {@code null} for none
    */
   public java.lang.String getCustomerId() {
@@ -145,8 +154,8 @@ public final class VerifyChallengeResponseResult extends com.google.api.client.j
   }
 
   /**
-   * Unique customer id that this device belongs to, as defined by the Google Admin SDK at
-   * https://developers.google.com/admin-sdk/directory/v1/guides/manage-customers
+   * Output only. Unique customer id that this device belongs to, as defined by the Google Admin SDK
+   * at https://developers.google.com/admin-sdk/directory/v1/guides/manage-customers
    * @param customerId customerId or {@code null} for none
    */
   public VerifyChallengeResponseResult setCustomerId(java.lang.String customerId) {
@@ -155,7 +164,7 @@ public final class VerifyChallengeResponseResult extends com.google.api.client.j
   }
 
   /**
-   * Device enrollment id for ChromeOS devices.
+   * Output only. Device enrollment id for ChromeOS devices.
    * @return value or {@code null} for none
    */
   public java.lang.String getDeviceEnrollmentId() {
@@ -163,7 +172,7 @@ public final class VerifyChallengeResponseResult extends com.google.api.client.j
   }
 
   /**
-   * Device enrollment id for ChromeOS devices.
+   * Output only. Device enrollment id for ChromeOS devices.
    * @param deviceEnrollmentId deviceEnrollmentId or {@code null} for none
    */
   public VerifyChallengeResponseResult setDeviceEnrollmentId(java.lang.String deviceEnrollmentId) {
@@ -172,7 +181,7 @@ public final class VerifyChallengeResponseResult extends com.google.api.client.j
   }
 
   /**
-   * Device permanent id is returned in this field (for the machine response only).
+   * Output only. Device permanent id is returned in this field (for the machine response only).
    * @return value or {@code null} for none
    */
   public java.lang.String getDevicePermanentId() {
@@ -180,7 +189,7 @@ public final class VerifyChallengeResponseResult extends com.google.api.client.j
   }
 
   /**
-   * Device permanent id is returned in this field (for the machine response only).
+   * Output only. Device permanent id is returned in this field (for the machine response only).
    * @param devicePermanentId devicePermanentId or {@code null} for none
    */
   public VerifyChallengeResponseResult setDevicePermanentId(java.lang.String devicePermanentId) {
@@ -189,7 +198,8 @@ public final class VerifyChallengeResponseResult extends com.google.api.client.j
   }
 
   /**
-   * Deprecated. Device signal in json string representation. Prefer using `device_signals` instead.
+   * Output only. Deprecated. Device signal in json string representation. Prefer using
+   * `device_signals` instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getDeviceSignal() {
@@ -197,7 +207,8 @@ public final class VerifyChallengeResponseResult extends com.google.api.client.j
   }
 
   /**
-   * Deprecated. Device signal in json string representation. Prefer using `device_signals` instead.
+   * Output only. Deprecated. Device signal in json string representation. Prefer using
+   * `device_signals` instead.
    * @param deviceSignal deviceSignal or {@code null} for none
    */
   public VerifyChallengeResponseResult setDeviceSignal(java.lang.String deviceSignal) {
@@ -206,7 +217,7 @@ public final class VerifyChallengeResponseResult extends com.google.api.client.j
   }
 
   /**
-   * Device signals.
+   * Output only. Device signals.
    * @return value or {@code null} for none
    */
   public DeviceSignals getDeviceSignals() {
@@ -214,7 +225,7 @@ public final class VerifyChallengeResponseResult extends com.google.api.client.j
   }
 
   /**
-   * Device signals.
+   * Output only. Device signals.
    * @param deviceSignals deviceSignals or {@code null} for none
    */
   public VerifyChallengeResponseResult setDeviceSignals(DeviceSignals deviceSignals) {
@@ -223,7 +234,7 @@ public final class VerifyChallengeResponseResult extends com.google.api.client.j
   }
 
   /**
-   * Device attested key trust level.
+   * Output only. Device attested key trust level.
    * @return value or {@code null} for none
    */
   public java.lang.String getKeyTrustLevel() {
@@ -231,7 +242,7 @@ public final class VerifyChallengeResponseResult extends com.google.api.client.j
   }
 
   /**
-   * Device attested key trust level.
+   * Output only. Device attested key trust level.
    * @param keyTrustLevel keyTrustLevel or {@code null} for none
    */
   public VerifyChallengeResponseResult setKeyTrustLevel(java.lang.String keyTrustLevel) {
@@ -240,8 +251,8 @@ public final class VerifyChallengeResponseResult extends com.google.api.client.j
   }
 
   /**
-   * Unique customer id that this profile belongs to, as defined by the Google Admin SDK at
-   * https://developers.google.com/admin-sdk/directory/v1/guides/manage-customers
+   * Output only. Unique customer id that this profile belongs to, as defined by the Google Admin
+   * SDK at https://developers.google.com/admin-sdk/directory/v1/guides/manage-customers
    * @return value or {@code null} for none
    */
   public java.lang.String getProfileCustomerId() {
@@ -249,8 +260,8 @@ public final class VerifyChallengeResponseResult extends com.google.api.client.j
   }
 
   /**
-   * Unique customer id that this profile belongs to, as defined by the Google Admin SDK at
-   * https://developers.google.com/admin-sdk/directory/v1/guides/manage-customers
+   * Output only. Unique customer id that this profile belongs to, as defined by the Google Admin
+   * SDK at https://developers.google.com/admin-sdk/directory/v1/guides/manage-customers
    * @param profileCustomerId profileCustomerId or {@code null} for none
    */
   public VerifyChallengeResponseResult setProfileCustomerId(java.lang.String profileCustomerId) {
@@ -259,7 +270,7 @@ public final class VerifyChallengeResponseResult extends com.google.api.client.j
   }
 
   /**
-   * Profile attested key trust level.
+   * Output only. Profile attested key trust level.
    * @return value or {@code null} for none
    */
   public java.lang.String getProfileKeyTrustLevel() {
@@ -267,7 +278,7 @@ public final class VerifyChallengeResponseResult extends com.google.api.client.j
   }
 
   /**
-   * Profile attested key trust level.
+   * Output only. Profile attested key trust level.
    * @param profileKeyTrustLevel profileKeyTrustLevel or {@code null} for none
    */
   public VerifyChallengeResponseResult setProfileKeyTrustLevel(java.lang.String profileKeyTrustLevel) {
@@ -276,9 +287,26 @@ public final class VerifyChallengeResponseResult extends com.google.api.client.j
   }
 
   /**
-   * Certificate Signing Request (in the SPKAC format, base64 encoded) is returned in this field.
-   * This field will be set only if device has included CSR in its challenge response. (the option
-   * to include CSR is now available for both user and machine responses)
+   * Output only. The unique server-side ID of a profile on the device.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProfilePermanentId() {
+    return profilePermanentId;
+  }
+
+  /**
+   * Output only. The unique server-side ID of a profile on the device.
+   * @param profilePermanentId profilePermanentId or {@code null} for none
+   */
+  public VerifyChallengeResponseResult setProfilePermanentId(java.lang.String profilePermanentId) {
+    this.profilePermanentId = profilePermanentId;
+    return this;
+  }
+
+  /**
+   * Output only. Certificate Signing Request (in the SPKAC format, base64 encoded) is returned in
+   * this field. This field will be set only if device has included CSR in its challenge response.
+   * (the option to include CSR is now available for both user and machine responses)
    * @return value or {@code null} for none
    */
   public java.lang.String getSignedPublicKeyAndChallenge() {
@@ -286,9 +314,9 @@ public final class VerifyChallengeResponseResult extends com.google.api.client.j
   }
 
   /**
-   * Certificate Signing Request (in the SPKAC format, base64 encoded) is returned in this field.
-   * This field will be set only if device has included CSR in its challenge response. (the option
-   * to include CSR is now available for both user and machine responses)
+   * Output only. Certificate Signing Request (in the SPKAC format, base64 encoded) is returned in
+   * this field. This field will be set only if device has included CSR in its challenge response.
+   * (the option to include CSR is now available for both user and machine responses)
    * @param signedPublicKeyAndChallenge signedPublicKeyAndChallenge or {@code null} for none
    */
   public VerifyChallengeResponseResult setSignedPublicKeyAndChallenge(java.lang.String signedPublicKeyAndChallenge) {
@@ -297,7 +325,8 @@ public final class VerifyChallengeResponseResult extends com.google.api.client.j
   }
 
   /**
-   * Virtual device id of the device. The definition of virtual device id is platform-specific.
+   * Output only. Virtual device id of the device. The definition of virtual device id is platform-
+   * specific.
    * @return value or {@code null} for none
    */
   public java.lang.String getVirtualDeviceId() {
@@ -305,7 +334,8 @@ public final class VerifyChallengeResponseResult extends com.google.api.client.j
   }
 
   /**
-   * Virtual device id of the device. The definition of virtual device id is platform-specific.
+   * Output only. Virtual device id of the device. The definition of virtual device id is platform-
+   * specific.
    * @param virtualDeviceId virtualDeviceId or {@code null} for none
    */
   public VerifyChallengeResponseResult setVirtualDeviceId(java.lang.String virtualDeviceId) {
@@ -314,7 +344,7 @@ public final class VerifyChallengeResponseResult extends com.google.api.client.j
   }
 
   /**
-   * The ID of a profile on the device.
+   * Output only. The client-provided ID of a profile on the device.
    * @return value or {@code null} for none
    */
   public java.lang.String getVirtualProfileId() {
@@ -322,7 +352,7 @@ public final class VerifyChallengeResponseResult extends com.google.api.client.j
   }
 
   /**
-   * The ID of a profile on the device.
+   * Output only. The client-provided ID of a profile on the device.
    * @param virtualProfileId virtualProfileId or {@code null} for none
    */
   public VerifyChallengeResponseResult setVirtualProfileId(java.lang.String virtualProfileId) {

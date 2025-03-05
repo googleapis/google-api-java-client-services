@@ -101,6 +101,9 @@ public class HangoutsChatScopes {
   /** View last read time for Google Chat conversations. */
   public static final String CHAT_USERS_READSTATE_READONLY = "https://www.googleapis.com/auth/chat.users.readstate.readonly";
 
+  /** Read and update your space settings. */
+  public static final String CHAT_USERS_SPACESETTINGS = "https://www.googleapis.com/auth/chat.users.spacesettings";
+
   /**
    * Returns an unmodifiable set that contains all scopes declared by this class.
    *
@@ -134,6 +137,7 @@ public class HangoutsChatScopes {
     set.add(CHAT_SPACES_READONLY);
     set.add(CHAT_USERS_READSTATE);
     set.add(CHAT_USERS_READSTATE_READONLY);
+    set.add(CHAT_USERS_SPACESETTINGS);
     return java.util.Collections.unmodifiableSet(set);
   }
 

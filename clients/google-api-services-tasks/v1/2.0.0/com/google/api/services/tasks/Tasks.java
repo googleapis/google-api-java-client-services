@@ -599,21 +599,22 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Maximum number of task lists returned on one page. Optional. The default is 20 (max
-       * allowed: 100).
+       * Maximum number of task lists returned on one page. Optional. The default is 1000 (max
+       * allowed: 1000).
        */
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** Maximum number of task lists returned on one page. Optional. The default is 20 (max allowed: 100).
+      /** Maximum number of task lists returned on one page. Optional. The default is 1000 (max allowed:
+     1000).
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
       }
 
       /**
-       * Maximum number of task lists returned on one page. Optional. The default is 20 (max
-       * allowed: 100).
+       * Maximum number of task lists returned on one page. Optional. The default is 1000 (max
+       * allowed: 1000).
        */
       public List setMaxResults(java.lang.Integer maxResults) {
         this.maxResults = maxResults;
@@ -1982,14 +1983,14 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       /**
        * Optional. Destination task list identifier. If set, the task is moved from tasklist to the
        * destinationTasklist list. Otherwise the task is moved within its current list. Recurrent
-       * tasks cannot currently be moved between lists. Optional.
+       * tasks cannot currently be moved between lists.
        */
       @com.google.api.client.util.Key
       private java.lang.String destinationTasklist;
 
       /** Optional. Destination task list identifier. If set, the task is moved from tasklist to the
      destinationTasklist list. Otherwise the task is moved within its current list. Recurrent tasks
-     cannot currently be moved between lists. Optional.
+     cannot currently be moved between lists.
        */
       public java.lang.String getDestinationTasklist() {
         return destinationTasklist;
@@ -1998,7 +1999,7 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       /**
        * Optional. Destination task list identifier. If set, the task is moved from tasklist to the
        * destinationTasklist list. Otherwise the task is moved within its current list. Recurrent
-       * tasks cannot currently be moved between lists. Optional.
+       * tasks cannot currently be moved between lists.
        */
       public Move setDestinationTasklist(java.lang.String destinationTasklist) {
         this.destinationTasklist = destinationTasklist;
@@ -2006,27 +2007,31 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * New parent task identifier. If the task is moved to the top level, this parameter is
-       * omitted. The task set as parent must exist in the task list and can not be hidden. Assigned
-       * tasks can not be set as parent task (have subtasks) or be moved under a parent task (become
-       * subtasks). Optional.
+       * Optional. New parent task identifier. If the task is moved to the top level, this parameter
+       * is omitted. The task set as parent must exist in the task list and can not be hidden.
+       * Exceptions: 1. Assigned tasks can not be set as parent task (have subtasks) or be moved
+       * under a parent task (become subtasks). 2. Tasks that are both completed and hidden cannot
+       * be nested, so the parent field must be empty.
        */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
-      /** New parent task identifier. If the task is moved to the top level, this parameter is omitted. The
-     task set as parent must exist in the task list and can not be hidden. Assigned tasks can not be set
-     as parent task (have subtasks) or be moved under a parent task (become subtasks). Optional.
+      /** Optional. New parent task identifier. If the task is moved to the top level, this parameter is
+     omitted. The task set as parent must exist in the task list and can not be hidden. Exceptions: 1.
+     Assigned tasks can not be set as parent task (have subtasks) or be moved under a parent task
+     (become subtasks). 2. Tasks that are both completed and hidden cannot be nested, so the parent
+     field must be empty.
        */
       public java.lang.String getParent() {
         return parent;
       }
 
       /**
-       * New parent task identifier. If the task is moved to the top level, this parameter is
-       * omitted. The task set as parent must exist in the task list and can not be hidden. Assigned
-       * tasks can not be set as parent task (have subtasks) or be moved under a parent task (become
-       * subtasks). Optional.
+       * Optional. New parent task identifier. If the task is moved to the top level, this parameter
+       * is omitted. The task set as parent must exist in the task list and can not be hidden.
+       * Exceptions: 1. Assigned tasks can not be set as parent task (have subtasks) or be moved
+       * under a parent task (become subtasks). 2. Tasks that are both completed and hidden cannot
+       * be nested, so the parent field must be empty.
        */
       public Move setParent(java.lang.String parent) {
         this.parent = parent;
@@ -2034,25 +2039,28 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * New previous sibling task identifier. If the task is moved to the first position among its
-       * siblings, this parameter is omitted. The task set as previous must exist in the task list
-       * and can not be hidden. Optional.
+       * Optional. New previous sibling task identifier. If the task is moved to the first position
+       * among its siblings, this parameter is omitted. The task set as previous must exist in the
+       * task list and can not be hidden. Exceptions: 1. Tasks that are both completed and hidden
+       * can only be moved to position 0, so the previous field must be empty.
        */
       @com.google.api.client.util.Key
       private java.lang.String previous;
 
-      /** New previous sibling task identifier. If the task is moved to the first position among its
-     siblings, this parameter is omitted. The task set as previous must exist in the task list and can
-     not be hidden. Optional.
+      /** Optional. New previous sibling task identifier. If the task is moved to the first position among
+     its siblings, this parameter is omitted. The task set as previous must exist in the task list and
+     can not be hidden. Exceptions: 1. Tasks that are both completed and hidden can only be moved to
+     position 0, so the previous field must be empty.
        */
       public java.lang.String getPrevious() {
         return previous;
       }
 
       /**
-       * New previous sibling task identifier. If the task is moved to the first position among its
-       * siblings, this parameter is omitted. The task set as previous must exist in the task list
-       * and can not be hidden. Optional.
+       * Optional. New previous sibling task identifier. If the task is moved to the first position
+       * among its siblings, this parameter is omitted. The task set as previous must exist in the
+       * task list and can not be hidden. Exceptions: 1. Tasks that are both completed and hidden
+       * can only be moved to position 0, so the previous field must be empty.
        */
       public Move setPrevious(java.lang.String previous) {
         this.previous = previous;

@@ -51,6 +51,13 @@ public final class Deal extends com.google.api.client.json.GenericJson {
   private java.lang.String buyer;
 
   /**
+   * Output only. The buyer permission type of the deal.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String buyerPermissionType;
+
+  /**
    * Output only. Refers to a Client. Format: `buyers/{buyerAccountId}/clients/{clientAccountid}`
    * The value may be {@code null}.
    */
@@ -255,6 +262,23 @@ public final class Deal extends com.google.api.client.json.GenericJson {
    */
   public Deal setBuyer(java.lang.String buyer) {
     this.buyer = buyer;
+    return this;
+  }
+
+  /**
+   * Output only. The buyer permission type of the deal.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBuyerPermissionType() {
+    return buyerPermissionType;
+  }
+
+  /**
+   * Output only. The buyer permission type of the deal.
+   * @param buyerPermissionType buyerPermissionType or {@code null} for none
+   */
+  public Deal setBuyerPermissionType(java.lang.String buyerPermissionType) {
+    this.buyerPermissionType = buyerPermissionType;
     return this;
   }
 

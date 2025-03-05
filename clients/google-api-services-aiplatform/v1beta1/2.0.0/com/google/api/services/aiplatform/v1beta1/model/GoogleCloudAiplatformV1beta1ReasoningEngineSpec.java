@@ -37,6 +37,13 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngineSpec extends com.g
   private java.util.List<java.util.Map<String, java.lang.Object>> classMethods;
 
   /**
+   * Optional. The specification of a Reasoning Engine deployment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1ReasoningEngineSpecDeploymentSpec deploymentSpec;
+
+  /**
    * Required. User provided package spec of the ReasoningEngine.
    * The value may be {@code null}.
    */
@@ -57,6 +64,23 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngineSpec extends com.g
    */
   public GoogleCloudAiplatformV1beta1ReasoningEngineSpec setClassMethods(java.util.List<java.util.Map<String, java.lang.Object>> classMethods) {
     this.classMethods = classMethods;
+    return this;
+  }
+
+  /**
+   * Optional. The specification of a Reasoning Engine deployment.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ReasoningEngineSpecDeploymentSpec getDeploymentSpec() {
+    return deploymentSpec;
+  }
+
+  /**
+   * Optional. The specification of a Reasoning Engine deployment.
+   * @param deploymentSpec deploymentSpec or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ReasoningEngineSpec setDeploymentSpec(GoogleCloudAiplatformV1beta1ReasoningEngineSpecDeploymentSpec deploymentSpec) {
+    this.deploymentSpec = deploymentSpec;
     return this;
   }
 

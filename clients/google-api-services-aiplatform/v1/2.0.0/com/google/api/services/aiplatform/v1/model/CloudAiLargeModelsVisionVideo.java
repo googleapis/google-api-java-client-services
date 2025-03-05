@@ -44,6 +44,13 @@ public final class CloudAiLargeModelsVisionVideo extends com.google.api.client.j
   private java.lang.String encoding;
 
   /**
+   * Text/Expanded text input for Help Me Write.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String text;
+
+  /**
    * Path to another storage (typically Google Cloud Storage).
    * The value may be {@code null}.
    */
@@ -88,6 +95,23 @@ public final class CloudAiLargeModelsVisionVideo extends com.google.api.client.j
    */
   public CloudAiLargeModelsVisionVideo setEncoding(java.lang.String encoding) {
     this.encoding = encoding;
+    return this;
+  }
+
+  /**
+   * Text/Expanded text input for Help Me Write.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getText() {
+    return text;
+  }
+
+  /**
+   * Text/Expanded text input for Help Me Write.
+   * @param text text or {@code null} for none
+   */
+  public CloudAiLargeModelsVisionVideo setText(java.lang.String text) {
+    this.text = text;
     return this;
   }
 

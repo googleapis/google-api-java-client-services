@@ -73,7 +73,21 @@ public final class GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata e
   private java.util.List<GoogleCloudAiplatformV1ModalityTokenCount> promptTokensDetails;
 
   /**
-   * Total token count for prompt and response candidates.
+   * Output only. Number of tokens present in tool-use prompt(s).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer toolUsePromptTokenCount;
+
+  /**
+   * Output only. List of modalities that were processed for tool-use request inputs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAiplatformV1ModalityTokenCount> toolUsePromptTokensDetails;
+
+  /**
+   * Total token count for prompt, response candidates, and tool-use prompts (if present).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -184,7 +198,41 @@ public final class GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata e
   }
 
   /**
-   * Total token count for prompt and response candidates.
+   * Output only. Number of tokens present in tool-use prompt(s).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getToolUsePromptTokenCount() {
+    return toolUsePromptTokenCount;
+  }
+
+  /**
+   * Output only. Number of tokens present in tool-use prompt(s).
+   * @param toolUsePromptTokenCount toolUsePromptTokenCount or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata setToolUsePromptTokenCount(java.lang.Integer toolUsePromptTokenCount) {
+    this.toolUsePromptTokenCount = toolUsePromptTokenCount;
+    return this;
+  }
+
+  /**
+   * Output only. List of modalities that were processed for tool-use request inputs.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAiplatformV1ModalityTokenCount> getToolUsePromptTokensDetails() {
+    return toolUsePromptTokensDetails;
+  }
+
+  /**
+   * Output only. List of modalities that were processed for tool-use request inputs.
+   * @param toolUsePromptTokensDetails toolUsePromptTokensDetails or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata setToolUsePromptTokensDetails(java.util.List<GoogleCloudAiplatformV1ModalityTokenCount> toolUsePromptTokensDetails) {
+    this.toolUsePromptTokensDetails = toolUsePromptTokensDetails;
+    return this;
+  }
+
+  /**
+   * Total token count for prompt, response candidates, and tool-use prompts (if present).
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTotalTokenCount() {
@@ -192,7 +240,7 @@ public final class GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata e
   }
 
   /**
-   * Total token count for prompt and response candidates.
+   * Total token count for prompt, response candidates, and tool-use prompts (if present).
    * @param totalTokenCount totalTokenCount or {@code null} for none
    */
   public GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata setTotalTokenCount(java.lang.Integer totalTokenCount) {

@@ -1806,6 +1806,188 @@ public class AndroidEnterprise extends com.google.api.client.googleapis.services
       }
     }
     /**
+     * Generates an enterprise upgrade URL to upgrade an existing managed Google Play Accounts
+     * enterprise to a managed Google domain. **Note:** This feature is not generally available.
+     *
+     * Create a request for the method "enterprises.generateEnterpriseUpgradeUrl".
+     *
+     * This request holds the parameters needed by the androidenterprise server.  After setting any
+     * optional parameters, call the {@link GenerateEnterpriseUpgradeUrl#execute()} method to invoke the
+     * remote operation.
+     *
+     * @param enterpriseId Required. The ID of the enterprise.
+     * @return the request
+     */
+    public GenerateEnterpriseUpgradeUrl generateEnterpriseUpgradeUrl(java.lang.String enterpriseId) throws java.io.IOException {
+      GenerateEnterpriseUpgradeUrl result = new GenerateEnterpriseUpgradeUrl(enterpriseId);
+      initialize(result);
+      return result;
+    }
+
+    public class GenerateEnterpriseUpgradeUrl extends AndroidEnterpriseRequest<com.google.api.services.androidenterprise.model.GenerateEnterpriseUpgradeUrlResponse> {
+
+      private static final String REST_PATH = "androidenterprise/v1/enterprises/{enterpriseId}/generateEnterpriseUpgradeUrl";
+
+      /**
+       * Generates an enterprise upgrade URL to upgrade an existing managed Google Play Accounts
+       * enterprise to a managed Google domain. **Note:** This feature is not generally available.
+       *
+       * Create a request for the method "enterprises.generateEnterpriseUpgradeUrl".
+       *
+       * This request holds the parameters needed by the the androidenterprise server.  After setting
+       * any optional parameters, call the {@link GenerateEnterpriseUpgradeUrl#execute()} method to
+       * invoke the remote operation. <p> {@link GenerateEnterpriseUpgradeUrl#initialize(com.google.api.
+       * client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this
+       * instance immediately after invoking the constructor. </p>
+       *
+       * @param enterpriseId Required. The ID of the enterprise.
+       * @since 1.13
+       */
+      protected GenerateEnterpriseUpgradeUrl(java.lang.String enterpriseId) {
+        super(AndroidEnterprise.this, "POST", REST_PATH, null, com.google.api.services.androidenterprise.model.GenerateEnterpriseUpgradeUrlResponse.class);
+        this.enterpriseId = com.google.api.client.util.Preconditions.checkNotNull(enterpriseId, "Required parameter enterpriseId must be specified.");
+      }
+
+      @Override
+      public GenerateEnterpriseUpgradeUrl set$Xgafv(java.lang.String $Xgafv) {
+        return (GenerateEnterpriseUpgradeUrl) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GenerateEnterpriseUpgradeUrl setAccessToken(java.lang.String accessToken) {
+        return (GenerateEnterpriseUpgradeUrl) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GenerateEnterpriseUpgradeUrl setAlt(java.lang.String alt) {
+        return (GenerateEnterpriseUpgradeUrl) super.setAlt(alt);
+      }
+
+      @Override
+      public GenerateEnterpriseUpgradeUrl setCallback(java.lang.String callback) {
+        return (GenerateEnterpriseUpgradeUrl) super.setCallback(callback);
+      }
+
+      @Override
+      public GenerateEnterpriseUpgradeUrl setFields(java.lang.String fields) {
+        return (GenerateEnterpriseUpgradeUrl) super.setFields(fields);
+      }
+
+      @Override
+      public GenerateEnterpriseUpgradeUrl setKey(java.lang.String key) {
+        return (GenerateEnterpriseUpgradeUrl) super.setKey(key);
+      }
+
+      @Override
+      public GenerateEnterpriseUpgradeUrl setOauthToken(java.lang.String oauthToken) {
+        return (GenerateEnterpriseUpgradeUrl) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GenerateEnterpriseUpgradeUrl setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GenerateEnterpriseUpgradeUrl) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GenerateEnterpriseUpgradeUrl setQuotaUser(java.lang.String quotaUser) {
+        return (GenerateEnterpriseUpgradeUrl) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GenerateEnterpriseUpgradeUrl setUploadType(java.lang.String uploadType) {
+        return (GenerateEnterpriseUpgradeUrl) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GenerateEnterpriseUpgradeUrl setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GenerateEnterpriseUpgradeUrl) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The ID of the enterprise. */
+      @com.google.api.client.util.Key
+      private java.lang.String enterpriseId;
+
+      /** Required. The ID of the enterprise.
+       */
+      public java.lang.String getEnterpriseId() {
+        return enterpriseId;
+      }
+
+      /** Required. The ID of the enterprise. */
+      public GenerateEnterpriseUpgradeUrl setEnterpriseId(java.lang.String enterpriseId) {
+        this.enterpriseId = enterpriseId;
+        return this;
+      }
+
+      /**
+       * Optional. Email address used to prefill the admin field of the enterprise signup form as
+       * part of the upgrade process. This value is a hint only and can be altered by the user.
+       * Personal email addresses are not allowed. If `allowedDomains` is non-empty then this must
+       * belong to one of the `allowedDomains`.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String adminEmail;
+
+      /** Optional. Email address used to prefill the admin field of the enterprise signup form as part of
+     the upgrade process. This value is a hint only and can be altered by the user. Personal email
+     addresses are not allowed. If `allowedDomains` is non-empty then this must belong to one of the
+     `allowedDomains`.
+       */
+      public java.lang.String getAdminEmail() {
+        return adminEmail;
+      }
+
+      /**
+       * Optional. Email address used to prefill the admin field of the enterprise signup form as
+       * part of the upgrade process. This value is a hint only and can be altered by the user.
+       * Personal email addresses are not allowed. If `allowedDomains` is non-empty then this must
+       * belong to one of the `allowedDomains`.
+       */
+      public GenerateEnterpriseUpgradeUrl setAdminEmail(java.lang.String adminEmail) {
+        this.adminEmail = adminEmail;
+        return this;
+      }
+
+      /**
+       * Optional. A list of domains that are permitted for the admin email. The IT admin cannot
+       * enter an email address with a domain name that is not in this list. Subdomains of domains
+       * in this list are not allowed but can be allowed by adding a second entry which has `*.`
+       * prefixed to the domain name (e.g. *.example.com). If the field is not present or is an
+       * empty list then the IT admin is free to use any valid domain name. Personal email domains
+       * are not allowed.
+       */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> allowedDomains;
+
+      /** Optional. A list of domains that are permitted for the admin email. The IT admin cannot enter an
+     email address with a domain name that is not in this list. Subdomains of domains in this list are
+     not allowed but can be allowed by adding a second entry which has `*.` prefixed to the domain name
+     (e.g. *.example.com). If the field is not present or is an empty list then the IT admin is free to
+     use any valid domain name. Personal email domains are not allowed.
+       */
+      public java.util.List<java.lang.String> getAllowedDomains() {
+        return allowedDomains;
+      }
+
+      /**
+       * Optional. A list of domains that are permitted for the admin email. The IT admin cannot
+       * enter an email address with a domain name that is not in this list. Subdomains of domains
+       * in this list are not allowed but can be allowed by adding a second entry which has `*.`
+       * prefixed to the domain name (e.g. *.example.com). If the field is not present or is an
+       * empty list then the IT admin is free to use any valid domain name. Personal email domains
+       * are not allowed.
+       */
+      public GenerateEnterpriseUpgradeUrl setAllowedDomains(java.util.List<java.lang.String> allowedDomains) {
+        this.allowedDomains = allowedDomains;
+        return this;
+      }
+
+      @Override
+      public GenerateEnterpriseUpgradeUrl set(String parameterName, Object value) {
+        return (GenerateEnterpriseUpgradeUrl) super.set(parameterName, value);
+      }
+    }
+    /**
      * Generates a sign-up URL.
      *
      * Create a request for the method "enterprises.generateSignupUrl".

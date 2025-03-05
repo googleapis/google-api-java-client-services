@@ -520,6 +520,13 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   private java.lang.Boolean takeout;
 
   /**
+   * IANA Time Zone Database time zone. For example "America/New_York".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleTypeTimeZone timeZone;
+
+  /**
    * A set of type tags for this result. For example, "political" and "locality". For the complete
    * list of possible values, see Table A and Table B at
    * https://developers.google.com/maps/documentation/places/web-service/place-types
@@ -1715,6 +1722,23 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
    */
   public GoogleMapsPlacesV1Place setTakeout(java.lang.Boolean takeout) {
     this.takeout = takeout;
+    return this;
+  }
+
+  /**
+   * IANA Time Zone Database time zone. For example "America/New_York".
+   * @return value or {@code null} for none
+   */
+  public GoogleTypeTimeZone getTimeZone() {
+    return timeZone;
+  }
+
+  /**
+   * IANA Time Zone Database time zone. For example "America/New_York".
+   * @param timeZone timeZone or {@code null} for none
+   */
+  public GoogleMapsPlacesV1Place setTimeZone(GoogleTypeTimeZone timeZone) {
+    this.timeZone = timeZone;
     return this;
   }
 

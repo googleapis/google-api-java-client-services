@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-workstations",
+    "version": "v1-rev20250219-2.0.0"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-addressvalidation",
+    "version": "v1-rev20241120-2.0.0"
+  }
+}

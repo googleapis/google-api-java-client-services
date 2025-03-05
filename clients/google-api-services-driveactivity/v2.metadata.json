@@ -2,6 +2,6 @@
   "maven": {
     "groupId": "com.google.apis",
     "artifactId": "google-api-services-driveactivity",
-    "version": "v2-rev20210319-1.32.1"
+    "version": "v2-rev20230704-2.0.0"
   }
 }

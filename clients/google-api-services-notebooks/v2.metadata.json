@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-notebooks",
+    "version": "v2-rev20250101-2.0.0"
+  }
+}

@@ -2,6 +2,6 @@
   "maven": {
     "groupId": "com.google.apis",
     "artifactId": "google-api-services-mybusinessaccountmanagement",
-    "version": "v1-rev20210504-1.32.1"
+    "version": "v1-rev20241120-2.0.0"
   }
 }

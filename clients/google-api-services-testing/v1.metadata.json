@@ -2,6 +2,6 @@
   "maven": {
     "groupId": "com.google.apis",
     "artifactId": "google-api-services-testing",
-    "version": "v1-rev20211228-1.32.1"
+    "version": "v1-rev20241231-2.0.0"
   }
 }

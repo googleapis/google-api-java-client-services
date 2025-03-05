@@ -2,6 +2,6 @@
   "maven": {
     "groupId": "com.google.apis",
     "artifactId": "google-api-services-safebrowsing",
-    "version": "v4-rev20210604-1.32.1"
+    "version": "v4-rev20230212-2.0.0"
   }
 }

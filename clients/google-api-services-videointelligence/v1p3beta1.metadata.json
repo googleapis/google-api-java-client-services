@@ -2,6 +2,6 @@
   "maven": {
     "groupId": "com.google.apis",
     "artifactId": "google-api-services-videointelligence",
-    "version": "v1p3beta1-rev20210902-1.32.1"
+    "version": "v1p3beta1-rev20231214-2.0.0"
   }
 }

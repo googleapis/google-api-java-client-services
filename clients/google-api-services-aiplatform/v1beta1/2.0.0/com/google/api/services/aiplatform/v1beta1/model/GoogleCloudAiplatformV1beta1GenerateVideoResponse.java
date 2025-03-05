@@ -51,6 +51,13 @@ public final class GoogleCloudAiplatformV1beta1GenerateVideoResponse extends com
   private java.util.List<java.lang.String> raiMediaFilteredReasons;
 
   /**
+   * List of video bytes or Cloud Storage URIs of the generated videos.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAiplatformV1beta1GenerateVideoResponseVideo> videos;
+
+  /**
    * The cloud storage uris of the generated videos.
    * @return value or {@code null} for none
    */
@@ -98,6 +105,23 @@ public final class GoogleCloudAiplatformV1beta1GenerateVideoResponse extends com
    */
   public GoogleCloudAiplatformV1beta1GenerateVideoResponse setRaiMediaFilteredReasons(java.util.List<java.lang.String> raiMediaFilteredReasons) {
     this.raiMediaFilteredReasons = raiMediaFilteredReasons;
+    return this;
+  }
+
+  /**
+   * List of video bytes or Cloud Storage URIs of the generated videos.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAiplatformV1beta1GenerateVideoResponseVideo> getVideos() {
+    return videos;
+  }
+
+  /**
+   * List of video bytes or Cloud Storage URIs of the generated videos.
+   * @param videos videos or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GenerateVideoResponse setVideos(java.util.List<GoogleCloudAiplatformV1beta1GenerateVideoResponseVideo> videos) {
+    this.videos = videos;
     return this;
   }
 

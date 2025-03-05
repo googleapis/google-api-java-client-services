@@ -51,6 +51,13 @@ public final class CloudAiLargeModelsVisionGenerateVideoResponse extends com.goo
   private java.util.List<java.lang.String> raiMediaFilteredReasons;
 
   /**
+   * List of videos, used to align naming with the external response.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<CloudAiLargeModelsVisionGenerateVideoResponseVideo> videos;
+
+  /**
    * The generates samples.
    * @return value or {@code null} for none
    */
@@ -98,6 +105,23 @@ public final class CloudAiLargeModelsVisionGenerateVideoResponse extends com.goo
    */
   public CloudAiLargeModelsVisionGenerateVideoResponse setRaiMediaFilteredReasons(java.util.List<java.lang.String> raiMediaFilteredReasons) {
     this.raiMediaFilteredReasons = raiMediaFilteredReasons;
+    return this;
+  }
+
+  /**
+   * List of videos, used to align naming with the external response.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<CloudAiLargeModelsVisionGenerateVideoResponseVideo> getVideos() {
+    return videos;
+  }
+
+  /**
+   * List of videos, used to align naming with the external response.
+   * @param videos videos or {@code null} for none
+   */
+  public CloudAiLargeModelsVisionGenerateVideoResponse setVideos(java.util.List<CloudAiLargeModelsVisionGenerateVideoResponseVideo> videos) {
+    this.videos = videos;
     return this;
   }
 

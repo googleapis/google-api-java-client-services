@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.aiplatform.v1beta1.model;
+package com.google.api.services.aiplatform.v1.model;
 
 /**
  * Generate video response.
@@ -27,14 +27,14 @@ package com.google.api.services.aiplatform.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class CloudAiLargeModelsVisionGenerateVideoResponse extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1GenerateVideoResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The generates samples.
+   * The cloud storage uris of the generated videos.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<CloudAiLargeModelsVisionMedia> generatedSamples;
+  private java.util.List<java.lang.String> generatedSamples;
 
   /**
    * Returns if any videos were filtered due to RAI policies.
@@ -51,25 +51,25 @@ public final class CloudAiLargeModelsVisionGenerateVideoResponse extends com.goo
   private java.util.List<java.lang.String> raiMediaFilteredReasons;
 
   /**
-   * List of videos, used to align naming with the external response.
+   * List of video bytes or Cloud Storage URIs of the generated videos.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<CloudAiLargeModelsVisionGenerateVideoResponseVideo> videos;
+  private java.util.List<GoogleCloudAiplatformV1GenerateVideoResponseVideo> videos;
 
   /**
-   * The generates samples.
+   * The cloud storage uris of the generated videos.
    * @return value or {@code null} for none
    */
-  public java.util.List<CloudAiLargeModelsVisionMedia> getGeneratedSamples() {
+  public java.util.List<java.lang.String> getGeneratedSamples() {
     return generatedSamples;
   }
 
   /**
-   * The generates samples.
+   * The cloud storage uris of the generated videos.
    * @param generatedSamples generatedSamples or {@code null} for none
    */
-  public CloudAiLargeModelsVisionGenerateVideoResponse setGeneratedSamples(java.util.List<CloudAiLargeModelsVisionMedia> generatedSamples) {
+  public GoogleCloudAiplatformV1GenerateVideoResponse setGeneratedSamples(java.util.List<java.lang.String> generatedSamples) {
     this.generatedSamples = generatedSamples;
     return this;
   }
@@ -86,7 +86,7 @@ public final class CloudAiLargeModelsVisionGenerateVideoResponse extends com.goo
    * Returns if any videos were filtered due to RAI policies.
    * @param raiMediaFilteredCount raiMediaFilteredCount or {@code null} for none
    */
-  public CloudAiLargeModelsVisionGenerateVideoResponse setRaiMediaFilteredCount(java.lang.Integer raiMediaFilteredCount) {
+  public GoogleCloudAiplatformV1GenerateVideoResponse setRaiMediaFilteredCount(java.lang.Integer raiMediaFilteredCount) {
     this.raiMediaFilteredCount = raiMediaFilteredCount;
     return this;
   }
@@ -103,36 +103,36 @@ public final class CloudAiLargeModelsVisionGenerateVideoResponse extends com.goo
    * Returns rai failure reasons if any.
    * @param raiMediaFilteredReasons raiMediaFilteredReasons or {@code null} for none
    */
-  public CloudAiLargeModelsVisionGenerateVideoResponse setRaiMediaFilteredReasons(java.util.List<java.lang.String> raiMediaFilteredReasons) {
+  public GoogleCloudAiplatformV1GenerateVideoResponse setRaiMediaFilteredReasons(java.util.List<java.lang.String> raiMediaFilteredReasons) {
     this.raiMediaFilteredReasons = raiMediaFilteredReasons;
     return this;
   }
 
   /**
-   * List of videos, used to align naming with the external response.
+   * List of video bytes or Cloud Storage URIs of the generated videos.
    * @return value or {@code null} for none
    */
-  public java.util.List<CloudAiLargeModelsVisionGenerateVideoResponseVideo> getVideos() {
+  public java.util.List<GoogleCloudAiplatformV1GenerateVideoResponseVideo> getVideos() {
     return videos;
   }
 
   /**
-   * List of videos, used to align naming with the external response.
+   * List of video bytes or Cloud Storage URIs of the generated videos.
    * @param videos videos or {@code null} for none
    */
-  public CloudAiLargeModelsVisionGenerateVideoResponse setVideos(java.util.List<CloudAiLargeModelsVisionGenerateVideoResponseVideo> videos) {
+  public GoogleCloudAiplatformV1GenerateVideoResponse setVideos(java.util.List<GoogleCloudAiplatformV1GenerateVideoResponseVideo> videos) {
     this.videos = videos;
     return this;
   }
 
   @Override
-  public CloudAiLargeModelsVisionGenerateVideoResponse set(String fieldName, Object value) {
-    return (CloudAiLargeModelsVisionGenerateVideoResponse) super.set(fieldName, value);
+  public GoogleCloudAiplatformV1GenerateVideoResponse set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1GenerateVideoResponse) super.set(fieldName, value);
   }
 
   @Override
-  public CloudAiLargeModelsVisionGenerateVideoResponse clone() {
-    return (CloudAiLargeModelsVisionGenerateVideoResponse) super.clone();
+  public GoogleCloudAiplatformV1GenerateVideoResponse clone() {
+    return (GoogleCloudAiplatformV1GenerateVideoResponse) super.clone();
   }
 
 }

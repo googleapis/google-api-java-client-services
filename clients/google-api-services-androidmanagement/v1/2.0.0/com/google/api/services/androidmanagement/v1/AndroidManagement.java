@@ -500,6 +500,144 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
       }
     }
     /**
+     * Generates an enterprise upgrade URL to upgrade an existing managed Google Play Accounts
+     * enterprise to a managed Google domain.Note: This feature is not generally available.
+     *
+     * Create a request for the method "enterprises.generateEnterpriseUpgradeUrl".
+     *
+     * This request holds the parameters needed by the androidmanagement server.  After setting any
+     * optional parameters, call the {@link GenerateEnterpriseUpgradeUrl#execute()} method to invoke the
+     * remote operation.
+     *
+     * @param name Required. The name of the enterprise to be upgraded in the form enterprises/{enterpriseId}.
+     * @param content the {@link com.google.api.services.androidmanagement.v1.model.GenerateEnterpriseUpgradeUrlRequest}
+     * @return the request
+     */
+    public GenerateEnterpriseUpgradeUrl generateEnterpriseUpgradeUrl(java.lang.String name, com.google.api.services.androidmanagement.v1.model.GenerateEnterpriseUpgradeUrlRequest content) throws java.io.IOException {
+      GenerateEnterpriseUpgradeUrl result = new GenerateEnterpriseUpgradeUrl(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class GenerateEnterpriseUpgradeUrl extends AndroidManagementRequest<com.google.api.services.androidmanagement.v1.model.GenerateEnterpriseUpgradeUrlResponse> {
+
+      private static final String REST_PATH = "v1/{+name}:generateEnterpriseUpgradeUrl";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^enterprises/[^/]+$");
+
+      /**
+       * Generates an enterprise upgrade URL to upgrade an existing managed Google Play Accounts
+       * enterprise to a managed Google domain.Note: This feature is not generally available.
+       *
+       * Create a request for the method "enterprises.generateEnterpriseUpgradeUrl".
+       *
+       * This request holds the parameters needed by the the androidmanagement server.  After setting
+       * any optional parameters, call the {@link GenerateEnterpriseUpgradeUrl#execute()} method to
+       * invoke the remote operation. <p> {@link GenerateEnterpriseUpgradeUrl#initialize(com.google.api.
+       * client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this
+       * instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. The name of the enterprise to be upgraded in the form enterprises/{enterpriseId}.
+       * @param content the {@link com.google.api.services.androidmanagement.v1.model.GenerateEnterpriseUpgradeUrlRequest}
+       * @since 1.13
+       */
+      protected GenerateEnterpriseUpgradeUrl(java.lang.String name, com.google.api.services.androidmanagement.v1.model.GenerateEnterpriseUpgradeUrlRequest content) {
+        super(AndroidManagement.this, "POST", REST_PATH, content, com.google.api.services.androidmanagement.v1.model.GenerateEnterpriseUpgradeUrlResponse.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^enterprises/[^/]+$");
+        }
+      }
+
+      @Override
+      public GenerateEnterpriseUpgradeUrl set$Xgafv(java.lang.String $Xgafv) {
+        return (GenerateEnterpriseUpgradeUrl) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GenerateEnterpriseUpgradeUrl setAccessToken(java.lang.String accessToken) {
+        return (GenerateEnterpriseUpgradeUrl) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GenerateEnterpriseUpgradeUrl setAlt(java.lang.String alt) {
+        return (GenerateEnterpriseUpgradeUrl) super.setAlt(alt);
+      }
+
+      @Override
+      public GenerateEnterpriseUpgradeUrl setCallback(java.lang.String callback) {
+        return (GenerateEnterpriseUpgradeUrl) super.setCallback(callback);
+      }
+
+      @Override
+      public GenerateEnterpriseUpgradeUrl setFields(java.lang.String fields) {
+        return (GenerateEnterpriseUpgradeUrl) super.setFields(fields);
+      }
+
+      @Override
+      public GenerateEnterpriseUpgradeUrl setKey(java.lang.String key) {
+        return (GenerateEnterpriseUpgradeUrl) super.setKey(key);
+      }
+
+      @Override
+      public GenerateEnterpriseUpgradeUrl setOauthToken(java.lang.String oauthToken) {
+        return (GenerateEnterpriseUpgradeUrl) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GenerateEnterpriseUpgradeUrl setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GenerateEnterpriseUpgradeUrl) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GenerateEnterpriseUpgradeUrl setQuotaUser(java.lang.String quotaUser) {
+        return (GenerateEnterpriseUpgradeUrl) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GenerateEnterpriseUpgradeUrl setUploadType(java.lang.String uploadType) {
+        return (GenerateEnterpriseUpgradeUrl) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GenerateEnterpriseUpgradeUrl setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GenerateEnterpriseUpgradeUrl) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The name of the enterprise to be upgraded in the form enterprises/{enterpriseId}.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The name of the enterprise to be upgraded in the form enterprises/{enterpriseId}.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The name of the enterprise to be upgraded in the form enterprises/{enterpriseId}.
+       */
+      public GenerateEnterpriseUpgradeUrl setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^enterprises/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public GenerateEnterpriseUpgradeUrl set(String parameterName, Object value) {
+        return (GenerateEnterpriseUpgradeUrl) super.set(parameterName, value);
+      }
+    }
+    /**
      * Gets an enterprise.
      *
      * Create a request for the method "enterprises.get".

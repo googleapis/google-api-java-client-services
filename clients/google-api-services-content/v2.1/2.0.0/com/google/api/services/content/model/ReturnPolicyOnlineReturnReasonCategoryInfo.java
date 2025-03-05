@@ -31,7 +31,9 @@ package com.google.api.services.content.model;
 public final class ReturnPolicyOnlineReturnReasonCategoryInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * The corresponding return label source.
+   * The corresponding return label source. If the `ReturnMethod` field includes `BY_MAIL`, it is
+   * required to specify `ReturnLabelSource` for both `BUYER_REMORSE` and `ITEM_DEFECT` return
+   * reason categories.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +55,9 @@ public final class ReturnPolicyOnlineReturnReasonCategoryInfo extends com.google
   private ReturnPolicyOnlineReturnShippingFee returnShippingFee;
 
   /**
-   * The corresponding return label source.
+   * The corresponding return label source. If the `ReturnMethod` field includes `BY_MAIL`, it is
+   * required to specify `ReturnLabelSource` for both `BUYER_REMORSE` and `ITEM_DEFECT` return
+   * reason categories.
    * @return value or {@code null} for none
    */
   public java.lang.String getReturnLabelSource() {
@@ -61,7 +65,9 @@ public final class ReturnPolicyOnlineReturnReasonCategoryInfo extends com.google
   }
 
   /**
-   * The corresponding return label source.
+   * The corresponding return label source. If the `ReturnMethod` field includes `BY_MAIL`, it is
+   * required to specify `ReturnLabelSource` for both `BUYER_REMORSE` and `ITEM_DEFECT` return
+   * reason categories.
    * @param returnLabelSource returnLabelSource or {@code null} for none
    */
   public ReturnPolicyOnlineReturnReasonCategoryInfo setReturnLabelSource(java.lang.String returnLabelSource) {

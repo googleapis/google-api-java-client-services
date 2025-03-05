@@ -154,8 +154,8 @@ public class Solar extends com.google.api.client.googleapis.services.json.Abstra
   public class BuildingInsights {
 
     /**
-     * Locates the closest building to a query point. Returns an error with code `NOT_FOUND` if there
-     * are no buildings within approximately 50m of the query point.
+     * Locates the building whose centroid is closest to a query point. Returns an error with code
+     * `NOT_FOUND` if there are no buildings within approximately 50m of the query point.
      *
      * Create a request for the method "buildingInsights.findClosest".
      *
@@ -175,8 +175,8 @@ public class Solar extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "v1/buildingInsights:findClosest";
 
       /**
-       * Locates the closest building to a query point. Returns an error with code `NOT_FOUND` if there
-       * are no buildings within approximately 50m of the query point.
+       * Locates the building whose centroid is closest to a query point. Returns an error with code
+       * `NOT_FOUND` if there are no buildings within approximately 50m of the query point.
        *
        * Create a request for the method "buildingInsights.findClosest".
        *

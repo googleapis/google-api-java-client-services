@@ -137,6 +137,9 @@ def all_services():
     return services
 
 def maven_metadata(pom_file: str):
+    if not path.isfile(pom_file):
+        print(f'skipping {pom_file} because it doesn\'t exist')
+        return None
     tree = etree.parse(pom_file)
     root = tree.getroot()
     version = root.find("{http://maven.apache.org/POM/4.0.0}version").text
@@ -145,7 +148,7 @@ def maven_metadata(pom_file: str):
     return {"groupId": group_id, "artifactId": artifact_id, "version": version}
 
 def write_metadata_file(name: str, version: str, metadata: dict):
-    metadata_file = f"clients/{name}/{version}.metadata.json"
+    metadata_file = path.join(REPO_DIR, "clients", name, f'{version}.metadata.json')
     print(f"Writing json metadata to {metadata_file}")
     metadata = {"maven": metadata}
     with open(metadata_file, "w+") as outfile:
@@ -156,7 +159,8 @@ def generate_metadata_file(service: list[Service]):
     metadata = maven_metadata(
         path.join(REPO_DIR, "clients", library_name, service.version, LATEST_VERSION, "pom.xml")
     )
-    write_metadata_file(library_name, service.version, metadata)
+    if metadata is not None:
+        write_metadata_file(library_name, service.version, metadata)
 
 def main(argv: List[str]) -> None:
     if len(argv) > 1:

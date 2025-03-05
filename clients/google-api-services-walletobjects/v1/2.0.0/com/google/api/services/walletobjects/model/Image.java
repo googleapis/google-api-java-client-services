@@ -17,7 +17,7 @@
 package com.google.api.services.walletobjects.model;
 
 /**
- * Wrapping type for Google hosted images. Next ID: 7
+ * Wrapping type for Google hosted images. Next ID: 8
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Wallet API. For a detailed explanation see:

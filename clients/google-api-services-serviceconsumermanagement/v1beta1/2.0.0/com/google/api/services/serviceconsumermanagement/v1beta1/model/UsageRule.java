@@ -17,14 +17,7 @@
 package com.google.api.services.serviceconsumermanagement.v1beta1.model;
 
 /**
- * Usage configuration rules for the service. NOTE: Under development. Use this rule to configure
- * unregistered calls for the service. Unregistered calls are calls that do not contain consumer
- * project identity. (Example: calls that do not contain an API key). By default, API methods do not
- * allow unregistered calls, and each method call must be identified by a consumer project identity.
- * Use this rule to allow/disallow unregistered calls. Example of an API that wants to allow
- * unregistered calls for entire service. usage: rules: - selector: "*" allow_unregistered_calls:
- * true Example of a method that wants to allow unregistered calls. usage: rules: - selector:
- * "google.example.library.v1.LibraryService.CreateBook" allow_unregistered_calls: true
+ * Usage configuration rules for the service.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Service Consumer Management API. For a detailed
@@ -38,8 +31,10 @@ package com.google.api.services.serviceconsumermanagement.v1beta1.model;
 public final class UsageRule extends com.google.api.client.json.GenericJson {
 
   /**
-   * If true, the selected method allows unregistered calls, e.g. calls that don't identify any user
-   * or application.
+   * Use this rule to configure unregistered calls for the service. Unregistered calls are calls
+   * that do not contain consumer project identity. (Example: calls that do not contain an API key).
+   * WARNING: By default, API methods do not allow unregistered calls, and each method call must be
+   * identified by a consumer project identity.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,8 +58,10 @@ public final class UsageRule extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean skipServiceControl;
 
   /**
-   * If true, the selected method allows unregistered calls, e.g. calls that don't identify any user
-   * or application.
+   * Use this rule to configure unregistered calls for the service. Unregistered calls are calls
+   * that do not contain consumer project identity. (Example: calls that do not contain an API key).
+   * WARNING: By default, API methods do not allow unregistered calls, and each method call must be
+   * identified by a consumer project identity.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAllowUnregisteredCalls() {
@@ -72,8 +69,10 @@ public final class UsageRule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If true, the selected method allows unregistered calls, e.g. calls that don't identify any user
-   * or application.
+   * Use this rule to configure unregistered calls for the service. Unregistered calls are calls
+   * that do not contain consumer project identity. (Example: calls that do not contain an API key).
+   * WARNING: By default, API methods do not allow unregistered calls, and each method call must be
+   * identified by a consumer project identity.
    * @param allowUnregisteredCalls allowUnregisteredCalls or {@code null} for none
    */
   public UsageRule setAllowUnregisteredCalls(java.lang.Boolean allowUnregisteredCalls) {

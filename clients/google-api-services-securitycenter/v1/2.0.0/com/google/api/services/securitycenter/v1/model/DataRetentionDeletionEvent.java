@@ -61,7 +61,7 @@ public final class DataRetentionDeletionEvent extends com.google.api.client.json
 
   /**
    * Maximum duration of retention allowed from the DRD control. This comes from the DRD control
-   * where users set a max TTL for their data. For example, suppose that a user set the max TTL for
+   * where users set a max TTL for their data. For example, suppose that a user sets the max TTL for
    * a Cloud Storage bucket to 90 days. However, an object in that bucket is 100 days old. In this
    * case, a DataRetentionDeletionEvent will be generated for that Cloud Storage bucket, and the
    * max_retention_allowed is 90 days.
@@ -127,7 +127,7 @@ public final class DataRetentionDeletionEvent extends com.google.api.client.json
 
   /**
    * Maximum duration of retention allowed from the DRD control. This comes from the DRD control
-   * where users set a max TTL for their data. For example, suppose that a user set the max TTL for
+   * where users set a max TTL for their data. For example, suppose that a user sets the max TTL for
    * a Cloud Storage bucket to 90 days. However, an object in that bucket is 100 days old. In this
    * case, a DataRetentionDeletionEvent will be generated for that Cloud Storage bucket, and the
    * max_retention_allowed is 90 days.
@@ -139,7 +139,7 @@ public final class DataRetentionDeletionEvent extends com.google.api.client.json
 
   /**
    * Maximum duration of retention allowed from the DRD control. This comes from the DRD control
-   * where users set a max TTL for their data. For example, suppose that a user set the max TTL for
+   * where users set a max TTL for their data. For example, suppose that a user sets the max TTL for
    * a Cloud Storage bucket to 90 days. However, an object in that bucket is 100 days old. In this
    * case, a DataRetentionDeletionEvent will be generated for that Cloud Storage bucket, and the
    * max_retention_allowed is 90 days.

@@ -583,7 +583,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       /**
        * An optional query string used to filter the Organizations to return in the response. Filter
        * rules are case-insensitive. Organizations may be filtered by `owner.directoryCustomerId` or
-       * by `domain`, where the domain is a G Suite domain, for example: * Filter
+       * by `domain`, where the domain is a verified G Suite domain, for example: * Filter
        * `owner.directorycustomerid:123456789` returns Organization resources with
        * `owner.directory_customer_id` equal to `123456789`. * Filter `domain:google.com` returns
        * Organization resources corresponding to the domain `google.com`. This field is optional.
@@ -593,10 +593,10 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
 
       /** An optional query string used to filter the Organizations to return in the response. Filter rules
      are case-insensitive. Organizations may be filtered by `owner.directoryCustomerId` or by `domain`,
-     where the domain is a G Suite domain, for example: * Filter `owner.directorycustomerid:123456789`
-     returns Organization resources with `owner.directory_customer_id` equal to `123456789`. * Filter
-     `domain:google.com` returns Organization resources corresponding to the domain `google.com`. This
-     field is optional.
+     where the domain is a verified G Suite domain, for example: * Filter
+     `owner.directorycustomerid:123456789` returns Organization resources with
+     `owner.directory_customer_id` equal to `123456789`. * Filter `domain:google.com` returns
+     Organization resources corresponding to the domain `google.com`. This field is optional.
        */
       public java.lang.String getFilter() {
         return filter;
@@ -605,7 +605,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       /**
        * An optional query string used to filter the Organizations to return in the response. Filter
        * rules are case-insensitive. Organizations may be filtered by `owner.directoryCustomerId` or
-       * by `domain`, where the domain is a G Suite domain, for example: * Filter
+       * by `domain`, where the domain is a verified G Suite domain, for example: * Filter
        * `owner.directorycustomerid:123456789` returns Organization resources with
        * `owner.directory_customer_id` equal to `123456789`. * Filter `domain:google.com` returns
        * Organization resources corresponding to the domain `google.com`. This field is optional.

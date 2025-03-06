@@ -38,7 +38,7 @@ public final class EntityDdl extends com.google.api.client.json.GenericJson {
   private java.lang.String ddl;
 
   /**
-   * The DDL Kind selected for apply, or SOURCE if getting the source tree.
+   * The DDL Kind selected for apply, or UNSPECIFIED if the entity wasn't converted yet.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,7 +98,7 @@ public final class EntityDdl extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The DDL Kind selected for apply, or SOURCE if getting the source tree.
+   * The DDL Kind selected for apply, or UNSPECIFIED if the entity wasn't converted yet.
    * @return value or {@code null} for none
    */
   public java.lang.String getDdlKind() {
@@ -106,7 +106,7 @@ public final class EntityDdl extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The DDL Kind selected for apply, or SOURCE if getting the source tree.
+   * The DDL Kind selected for apply, or UNSPECIFIED if the entity wasn't converted yet.
    * @param ddlKind ddlKind or {@code null} for none
    */
   public EntityDdl setDdlKind(java.lang.String ddlKind) {

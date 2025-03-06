@@ -37,6 +37,14 @@ public final class LabInfo extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * The Unicode country/region code (CLDR) of the lab where the device is hosted. E.g. "US" for
+   * United States, "CH" for Switzerland.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String regionCode;
+
+  /**
    * Lab name where the device is hosted. If empty, the device is hosted in a Google owned lab.
    * @return value or {@code null} for none
    */
@@ -50,6 +58,25 @@ public final class LabInfo extends com.google.api.client.json.GenericJson {
    */
   public LabInfo setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * The Unicode country/region code (CLDR) of the lab where the device is hosted. E.g. "US" for
+   * United States, "CH" for Switzerland.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRegionCode() {
+    return regionCode;
+  }
+
+  /**
+   * The Unicode country/region code (CLDR) of the lab where the device is hosted. E.g. "US" for
+   * United States, "CH" for Switzerland.
+   * @param regionCode regionCode or {@code null} for none
+   */
+  public LabInfo setRegionCode(java.lang.String regionCode) {
+    this.regionCode = regionCode;
     return this;
   }
 

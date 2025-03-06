@@ -167,6 +167,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.util.List<Node> nodes;
 
   /**
+   * Configuration for observability.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ObservabilityInstanceConfig observabilityConfig;
+
+  /**
    * Output only. All outbound public IP addresses configured for the instance.
    * The value may be {@code null}.
    */
@@ -565,6 +572,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setNodes(java.util.List<Node> nodes) {
     this.nodes = nodes;
+    return this;
+  }
+
+  /**
+   * Configuration for observability.
+   * @return value or {@code null} for none
+   */
+  public ObservabilityInstanceConfig getObservabilityConfig() {
+    return observabilityConfig;
+  }
+
+  /**
+   * Configuration for observability.
+   * @param observabilityConfig observabilityConfig or {@code null} for none
+   */
+  public Instance setObservabilityConfig(ObservabilityInstanceConfig observabilityConfig) {
+    this.observabilityConfig = observabilityConfig;
     return this;
   }
 

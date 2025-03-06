@@ -100,6 +100,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
+   * Output only. Configuration parameters related to Gemini Cloud Assist.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GCAInstanceConfig gcaConfig;
+
+  /**
    * The Compute Engine zone that the instance should serve from, per
    * https://cloud.google.com/compute/docs/regions-zones This can ONLY be specified for ZONAL
    * instances. If present for a REGIONAL instance, an error will be thrown. If this is absent for a
@@ -430,6 +437,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setEtag(java.lang.String etag) {
     this.etag = etag;
+    return this;
+  }
+
+  /**
+   * Output only. Configuration parameters related to Gemini Cloud Assist.
+   * @return value or {@code null} for none
+   */
+  public GCAInstanceConfig getGcaConfig() {
+    return gcaConfig;
+  }
+
+  /**
+   * Output only. Configuration parameters related to Gemini Cloud Assist.
+   * @param gcaConfig gcaConfig or {@code null} for none
+   */
+  public Instance setGcaConfig(GCAInstanceConfig gcaConfig) {
+    this.gcaConfig = gcaConfig;
     return this;
   }
 

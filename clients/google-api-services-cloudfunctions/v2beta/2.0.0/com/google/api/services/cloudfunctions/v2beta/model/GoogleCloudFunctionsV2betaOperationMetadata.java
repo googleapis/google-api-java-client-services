@@ -60,6 +60,13 @@ public final class GoogleCloudFunctionsV2betaOperationMetadata extends com.googl
   private String createTime;
 
   /**
+   * Output only. Whether a custom IAM role binding was detected during the upgrade.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean customIamRoleDetected;
+
+  /**
    * The time the operation finished running.
    * The value may be {@code null}.
    */
@@ -185,6 +192,23 @@ public final class GoogleCloudFunctionsV2betaOperationMetadata extends com.googl
    */
   public GoogleCloudFunctionsV2betaOperationMetadata setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Output only. Whether a custom IAM role binding was detected during the upgrade.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getCustomIamRoleDetected() {
+    return customIamRoleDetected;
+  }
+
+  /**
+   * Output only. Whether a custom IAM role binding was detected during the upgrade.
+   * @param customIamRoleDetected customIamRoleDetected or {@code null} for none
+   */
+  public GoogleCloudFunctionsV2betaOperationMetadata setCustomIamRoleDetected(java.lang.Boolean customIamRoleDetected) {
+    this.customIamRoleDetected = customIamRoleDetected;
     return this;
   }
 

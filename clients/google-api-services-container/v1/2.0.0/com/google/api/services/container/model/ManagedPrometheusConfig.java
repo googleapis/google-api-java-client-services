@@ -32,11 +32,35 @@ package com.google.api.services.container.model;
 public final class ManagedPrometheusConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * GKE Workload Auto-Monitoring Configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AutoMonitoringConfig autoMonitoringConfig;
+
+  /**
    * Enable Managed Collection.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enabled;
+
+  /**
+   * GKE Workload Auto-Monitoring Configuration.
+   * @return value or {@code null} for none
+   */
+  public AutoMonitoringConfig getAutoMonitoringConfig() {
+    return autoMonitoringConfig;
+  }
+
+  /**
+   * GKE Workload Auto-Monitoring Configuration.
+   * @param autoMonitoringConfig autoMonitoringConfig or {@code null} for none
+   */
+  public ManagedPrometheusConfig setAutoMonitoringConfig(AutoMonitoringConfig autoMonitoringConfig) {
+    this.autoMonitoringConfig = autoMonitoringConfig;
+    return this;
+  }
 
   /**
    * Enable Managed Collection.

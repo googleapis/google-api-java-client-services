@@ -178,6 +178,13 @@ public final class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryRe
   private GoogleAnalyticsAdminV1alphaGoogleSignalsSettings googleSignalsSettings;
 
   /**
+   * A snapshot of a KeyEvent resource in change history.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAnalyticsAdminV1alphaKeyEvent keyEvent;
+
+  /**
    * A snapshot of a MeasurementProtocolSecret resource in change history.
    * The value may be {@code null}.
    */
@@ -559,6 +566,23 @@ public final class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryRe
    */
   public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource setGoogleSignalsSettings(GoogleAnalyticsAdminV1alphaGoogleSignalsSettings googleSignalsSettings) {
     this.googleSignalsSettings = googleSignalsSettings;
+    return this;
+  }
+
+  /**
+   * A snapshot of a KeyEvent resource in change history.
+   * @return value or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaKeyEvent getKeyEvent() {
+    return keyEvent;
+  }
+
+  /**
+   * A snapshot of a KeyEvent resource in change history.
+   * @param keyEvent keyEvent or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource setKeyEvent(GoogleAnalyticsAdminV1alphaKeyEvent keyEvent) {
+    this.keyEvent = keyEvent;
     return this;
   }
 

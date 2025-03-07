@@ -66,6 +66,13 @@ public final class ConnectSettings extends com.google.api.client.json.GenericJso
   private java.lang.String dnsName;
 
   /**
+   * Output only. The list of DNS names used by this instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<DnsNameMapping> dnsNames;
+
+  /**
    * The assigned IP addresses for the instance.
    * The value may be {@code null}.
    */
@@ -189,6 +196,23 @@ public final class ConnectSettings extends com.google.api.client.json.GenericJso
    */
   public ConnectSettings setDnsName(java.lang.String dnsName) {
     this.dnsName = dnsName;
+    return this;
+  }
+
+  /**
+   * Output only. The list of DNS names used by this instance.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<DnsNameMapping> getDnsNames() {
+    return dnsNames;
+  }
+
+  /**
+   * Output only. The list of DNS names used by this instance.
+   * @param dnsNames dnsNames or {@code null} for none
+   */
+  public ConnectSettings setDnsNames(java.util.List<DnsNameMapping> dnsNames) {
+    this.dnsNames = dnsNames;
     return this;
   }
 

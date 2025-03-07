@@ -108,6 +108,13 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   private java.lang.String dnsName;
 
   /**
+   * Output only. The list of DNS names used by this instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<DnsNameMapping> dnsNames;
+
+  /**
    * This field is deprecated and will be removed from a future version of the API. Use the
    * `settings.settingsVersion` field instead.
    * The value may be {@code null}.
@@ -585,6 +592,23 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
    */
   public DatabaseInstance setDnsName(java.lang.String dnsName) {
     this.dnsName = dnsName;
+    return this;
+  }
+
+  /**
+   * Output only. The list of DNS names used by this instance.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<DnsNameMapping> getDnsNames() {
+    return dnsNames;
+  }
+
+  /**
+   * Output only. The list of DNS names used by this instance.
+   * @param dnsNames dnsNames or {@code null} for none
+   */
+  public DatabaseInstance setDnsNames(java.util.List<DnsNameMapping> dnsNames) {
+    this.dnsNames = dnsNames;
     return this;
   }
 

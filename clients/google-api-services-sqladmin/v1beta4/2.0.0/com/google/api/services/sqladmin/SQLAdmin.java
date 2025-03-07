@@ -1368,22 +1368,25 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Multiple filter queries are separated by spaces. For example, 'instance:abc type:FINAL. You
-       * can filter by type, instance name, creation time, or location.
+       * Multiple filter queries are separated by spaces. For example, 'instance:abc AND type:FINAL,
+       * 'location:us', 'backupInterval.startTime>=1950-01-01T01:01:25.771Z'. You can filter by
+       * type, instance, backupInterval.startTime (creation time), or location.
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
-      /** Multiple filter queries are separated by spaces. For example, 'instance:abc type:FINAL. You can
-     filter by type, instance name, creation time, or location.
+      /** Multiple filter queries are separated by spaces. For example, 'instance:abc AND type:FINAL,
+     'location:us', 'backupInterval.startTime>=1950-01-01T01:01:25.771Z'. You can filter by type,
+     instance, backupInterval.startTime (creation time), or location.
        */
       public java.lang.String getFilter() {
         return filter;
       }
 
       /**
-       * Multiple filter queries are separated by spaces. For example, 'instance:abc type:FINAL. You
-       * can filter by type, instance name, creation time, or location.
+       * Multiple filter queries are separated by spaces. For example, 'instance:abc AND type:FINAL,
+       * 'location:us', 'backupInterval.startTime>=1950-01-01T01:01:25.771Z'. You can filter by
+       * type, instance, backupInterval.startTime (creation time), or location.
        */
       public ListBackups setFilter(java.lang.String filter) {
         this.filter = filter;

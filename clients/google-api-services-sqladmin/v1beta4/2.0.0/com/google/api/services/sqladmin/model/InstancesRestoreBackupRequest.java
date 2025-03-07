@@ -46,10 +46,10 @@ public final class InstancesRestoreBackupRequest extends com.google.api.client.j
   private RestoreBackupContext restoreBackupContext;
 
   /**
-   * Optional. By using this parameter, Cloud SQL overrides any instance settings that it stored
-   * with the instance settings that you want to restore. You can't change the Instance's major
-   * database version and you can only increase the disk size. You can use this field to restore new
-   * instances only.
+   * Optional. By using this parameter, Cloud SQL overrides any instance settings stored in the
+   * backup you are restoring from. You can't change the instance's major database version and you
+   * can only increase the disk size. You can use this field to restore new instances only. This
+   * field is not applicable for restore to existing instances.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,10 +94,10 @@ public final class InstancesRestoreBackupRequest extends com.google.api.client.j
   }
 
   /**
-   * Optional. By using this parameter, Cloud SQL overrides any instance settings that it stored
-   * with the instance settings that you want to restore. You can't change the Instance's major
-   * database version and you can only increase the disk size. You can use this field to restore new
-   * instances only.
+   * Optional. By using this parameter, Cloud SQL overrides any instance settings stored in the
+   * backup you are restoring from. You can't change the instance's major database version and you
+   * can only increase the disk size. You can use this field to restore new instances only. This
+   * field is not applicable for restore to existing instances.
    * @return value or {@code null} for none
    */
   public DatabaseInstance getRestoreInstanceSettings() {
@@ -105,10 +105,10 @@ public final class InstancesRestoreBackupRequest extends com.google.api.client.j
   }
 
   /**
-   * Optional. By using this parameter, Cloud SQL overrides any instance settings that it stored
-   * with the instance settings that you want to restore. You can't change the Instance's major
-   * database version and you can only increase the disk size. You can use this field to restore new
-   * instances only.
+   * Optional. By using this parameter, Cloud SQL overrides any instance settings stored in the
+   * backup you are restoring from. You can't change the instance's major database version and you
+   * can only increase the disk size. You can use this field to restore new instances only. This
+   * field is not applicable for restore to existing instances.
    * @param restoreInstanceSettings restoreInstanceSettings or {@code null} for none
    */
   public InstancesRestoreBackupRequest setRestoreInstanceSettings(DatabaseInstance restoreInstanceSettings) {

@@ -81,6 +81,22 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private java.lang.String instance;
 
   /**
+   * Optional. Output only. Timestamp in UTC of when the instance associated with this backup is
+   * deleted.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String instanceDeletionTime;
+
+  /**
+   * Optional. Output only. Instance setting of the source instance that's associated with this
+   * backup.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DatabaseInstance instanceSettings;
+
+  /**
    * Output only. This is always `sql#backup`.
    * The value may be {@code null}.
    */
@@ -164,8 +180,9 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private java.lang.String timeZone;
 
   /**
-   * Input only. The time-to-live (TTL) interval for this resource (in days). For example: ttlDays:7
-   * means 7 days.
+   * Input only. The time-to-live (TTL) interval for this resource (in days). For example:
+   * ttlDays:7, means 7 days from the current time. The expiration time can't exceed 365 days from
+   * the time that the backup is created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -298,6 +315,44 @@ public final class Backup extends com.google.api.client.json.GenericJson {
    */
   public Backup setInstance(java.lang.String instance) {
     this.instance = instance;
+    return this;
+  }
+
+  /**
+   * Optional. Output only. Timestamp in UTC of when the instance associated with this backup is
+   * deleted.
+   * @return value or {@code null} for none
+   */
+  public String getInstanceDeletionTime() {
+    return instanceDeletionTime;
+  }
+
+  /**
+   * Optional. Output only. Timestamp in UTC of when the instance associated with this backup is
+   * deleted.
+   * @param instanceDeletionTime instanceDeletionTime or {@code null} for none
+   */
+  public Backup setInstanceDeletionTime(String instanceDeletionTime) {
+    this.instanceDeletionTime = instanceDeletionTime;
+    return this;
+  }
+
+  /**
+   * Optional. Output only. Instance setting of the source instance that's associated with this
+   * backup.
+   * @return value or {@code null} for none
+   */
+  public DatabaseInstance getInstanceSettings() {
+    return instanceSettings;
+  }
+
+  /**
+   * Optional. Output only. Instance setting of the source instance that's associated with this
+   * backup.
+   * @param instanceSettings instanceSettings or {@code null} for none
+   */
+  public Backup setInstanceSettings(DatabaseInstance instanceSettings) {
+    this.instanceSettings = instanceSettings;
     return this;
   }
 
@@ -501,8 +556,9 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Input only. The time-to-live (TTL) interval for this resource (in days). For example: ttlDays:7
-   * means 7 days.
+   * Input only. The time-to-live (TTL) interval for this resource (in days). For example:
+   * ttlDays:7, means 7 days from the current time. The expiration time can't exceed 365 days from
+   * the time that the backup is created.
    * @return value or {@code null} for none
    */
   public java.lang.Long getTtlDays() {
@@ -510,8 +566,9 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Input only. The time-to-live (TTL) interval for this resource (in days). For example: ttlDays:7
-   * means 7 days.
+   * Input only. The time-to-live (TTL) interval for this resource (in days). For example:
+   * ttlDays:7, means 7 days from the current time. The expiration time can't exceed 365 days from
+   * the time that the backup is created.
    * @param ttlDays ttlDays or {@code null} for none
    */
   public Backup setTtlDays(java.lang.Long ttlDays) {

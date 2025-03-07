@@ -46,7 +46,9 @@ public final class ImportContext extends com.google.api.client.json.GenericJson 
   /**
    * The target database for the import. If `fileType` is `SQL`, this field is required only if the
    * import file does not specify a database, and is overridden by any database specification in the
-   * import file. If `fileType` is `CSV`, one database must be specified.
+   * import file. For entire instance parallel import operations, the database is overridden by the
+   * database name stored in subdirectory name. If `fileType` is `CSV`, one database must be
+   * specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -135,7 +137,9 @@ public final class ImportContext extends com.google.api.client.json.GenericJson 
   /**
    * The target database for the import. If `fileType` is `SQL`, this field is required only if the
    * import file does not specify a database, and is overridden by any database specification in the
-   * import file. If `fileType` is `CSV`, one database must be specified.
+   * import file. For entire instance parallel import operations, the database is overridden by the
+   * database name stored in subdirectory name. If `fileType` is `CSV`, one database must be
+   * specified.
    * @return value or {@code null} for none
    */
   public java.lang.String getDatabase() {
@@ -145,7 +149,9 @@ public final class ImportContext extends com.google.api.client.json.GenericJson 
   /**
    * The target database for the import. If `fileType` is `SQL`, this field is required only if the
    * import file does not specify a database, and is overridden by any database specification in the
-   * import file. If `fileType` is `CSV`, one database must be specified.
+   * import file. For entire instance parallel import operations, the database is overridden by the
+   * database name stored in subdirectory name. If `fileType` is `CSV`, one database must be
+   * specified.
    * @param database database or {@code null} for none
    */
   public ImportContext setDatabase(java.lang.String database) {

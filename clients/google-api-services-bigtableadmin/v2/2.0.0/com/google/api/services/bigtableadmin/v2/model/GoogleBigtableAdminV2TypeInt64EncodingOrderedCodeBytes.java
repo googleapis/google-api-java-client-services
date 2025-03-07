@@ -17,7 +17,9 @@
 package com.google.api.services.bigtableadmin.v2.model;
 
 /**
- * Timestamp Values of type `Timestamp` are stored in `Value.timestamp_value`.
+ * Encodes the value in a variable length binary format of up to 10 bytes. Values that are closer to
+ * zero use fewer bytes. Sorted mode: all values are supported. Distinct mode: all values are
+ * supported.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Bigtable Admin API. For a detailed explanation
@@ -28,40 +30,16 @@ package com.google.api.services.bigtableadmin.v2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleBigtableAdminV2TypeTimestamp extends com.google.api.client.json.GenericJson {
+public final class GoogleBigtableAdminV2TypeInt64EncodingOrderedCodeBytes extends com.google.api.client.json.GenericJson {
 
-  /**
-   * The encoding to use when converting to or from lower level types.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleBigtableAdminV2TypeTimestampEncoding encoding;
-
-  /**
-   * The encoding to use when converting to or from lower level types.
-   * @return value or {@code null} for none
-   */
-  public GoogleBigtableAdminV2TypeTimestampEncoding getEncoding() {
-    return encoding;
-  }
-
-  /**
-   * The encoding to use when converting to or from lower level types.
-   * @param encoding encoding or {@code null} for none
-   */
-  public GoogleBigtableAdminV2TypeTimestamp setEncoding(GoogleBigtableAdminV2TypeTimestampEncoding encoding) {
-    this.encoding = encoding;
-    return this;
+  @Override
+  public GoogleBigtableAdminV2TypeInt64EncodingOrderedCodeBytes set(String fieldName, Object value) {
+    return (GoogleBigtableAdminV2TypeInt64EncodingOrderedCodeBytes) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleBigtableAdminV2TypeTimestamp set(String fieldName, Object value) {
-    return (GoogleBigtableAdminV2TypeTimestamp) super.set(fieldName, value);
-  }
-
-  @Override
-  public GoogleBigtableAdminV2TypeTimestamp clone() {
-    return (GoogleBigtableAdminV2TypeTimestamp) super.clone();
+  public GoogleBigtableAdminV2TypeInt64EncodingOrderedCodeBytes clone() {
+    return (GoogleBigtableAdminV2TypeInt64EncodingOrderedCodeBytes) super.clone();
   }
 
 }

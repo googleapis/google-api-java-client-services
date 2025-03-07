@@ -38,6 +38,13 @@ public final class GoogleBigtableAdminV2TypeInt64Encoding extends com.google.api
   private GoogleBigtableAdminV2TypeInt64EncodingBigEndianBytes bigEndianBytes;
 
   /**
+   * Use `OrderedCodeBytes` encoding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleBigtableAdminV2TypeInt64EncodingOrderedCodeBytes orderedCodeBytes;
+
+  /**
    * Use `BigEndianBytes` encoding.
    * @return value or {@code null} for none
    */
@@ -51,6 +58,23 @@ public final class GoogleBigtableAdminV2TypeInt64Encoding extends com.google.api
    */
   public GoogleBigtableAdminV2TypeInt64Encoding setBigEndianBytes(GoogleBigtableAdminV2TypeInt64EncodingBigEndianBytes bigEndianBytes) {
     this.bigEndianBytes = bigEndianBytes;
+    return this;
+  }
+
+  /**
+   * Use `OrderedCodeBytes` encoding.
+   * @return value or {@code null} for none
+   */
+  public GoogleBigtableAdminV2TypeInt64EncodingOrderedCodeBytes getOrderedCodeBytes() {
+    return orderedCodeBytes;
+  }
+
+  /**
+   * Use `OrderedCodeBytes` encoding.
+   * @param orderedCodeBytes orderedCodeBytes or {@code null} for none
+   */
+  public GoogleBigtableAdminV2TypeInt64Encoding setOrderedCodeBytes(GoogleBigtableAdminV2TypeInt64EncodingOrderedCodeBytes orderedCodeBytes) {
+    this.orderedCodeBytes = orderedCodeBytes;
     return this;
   }
 

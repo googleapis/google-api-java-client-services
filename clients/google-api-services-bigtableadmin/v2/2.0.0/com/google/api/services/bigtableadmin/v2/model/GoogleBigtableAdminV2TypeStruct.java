@@ -33,11 +33,35 @@ package com.google.api.services.bigtableadmin.v2.model;
 public final class GoogleBigtableAdminV2TypeStruct extends com.google.api.client.json.GenericJson {
 
   /**
+   * The encoding to use when converting to or from lower level types.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleBigtableAdminV2TypeStructEncoding encoding;
+
+  /**
    * The names and types of the fields in this struct.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleBigtableAdminV2TypeStructField> fields;
+
+  /**
+   * The encoding to use when converting to or from lower level types.
+   * @return value or {@code null} for none
+   */
+  public GoogleBigtableAdminV2TypeStructEncoding getEncoding() {
+    return encoding;
+  }
+
+  /**
+   * The encoding to use when converting to or from lower level types.
+   * @param encoding encoding or {@code null} for none
+   */
+  public GoogleBigtableAdminV2TypeStruct setEncoding(GoogleBigtableAdminV2TypeStructEncoding encoding) {
+    this.encoding = encoding;
+    return this;
+  }
 
   /**
    * The names and types of the fields in this struct.

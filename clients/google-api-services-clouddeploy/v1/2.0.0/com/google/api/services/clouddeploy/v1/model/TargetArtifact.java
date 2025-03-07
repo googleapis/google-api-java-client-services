@@ -38,7 +38,7 @@ public final class TargetArtifact extends com.google.api.client.json.GenericJson
   private java.lang.String artifactUri;
 
   /**
-   * Output only. File path of the rendered manifest relative to the URI.
+   * Output only. File path of the rendered manifest relative to the URI for the stable phase.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +58,8 @@ public final class TargetArtifact extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. File path of the resolved Skaffold configuration relative to the URI.
+   * Output only. File path of the resolved Skaffold configuration for the stable phase, relative to
+   * the URI.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,7 +85,7 @@ public final class TargetArtifact extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. File path of the rendered manifest relative to the URI.
+   * Output only. File path of the rendered manifest relative to the URI for the stable phase.
    * @return value or {@code null} for none
    */
   public java.lang.String getManifestPath() {
@@ -92,7 +93,7 @@ public final class TargetArtifact extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. File path of the rendered manifest relative to the URI.
+   * Output only. File path of the rendered manifest relative to the URI for the stable phase.
    * @param manifestPath manifestPath or {@code null} for none
    */
   public TargetArtifact setManifestPath(java.lang.String manifestPath) {
@@ -118,7 +119,8 @@ public final class TargetArtifact extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. File path of the resolved Skaffold configuration relative to the URI.
+   * Output only. File path of the resolved Skaffold configuration for the stable phase, relative to
+   * the URI.
    * @return value or {@code null} for none
    */
   public java.lang.String getSkaffoldConfigPath() {
@@ -126,7 +128,8 @@ public final class TargetArtifact extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. File path of the resolved Skaffold configuration relative to the URI.
+   * Output only. File path of the resolved Skaffold configuration for the stable phase, relative to
+   * the URI.
    * @param skaffoldConfigPath skaffoldConfigPath or {@code null} for none
    */
   public TargetArtifact setSkaffoldConfigPath(java.lang.String skaffoldConfigPath) {

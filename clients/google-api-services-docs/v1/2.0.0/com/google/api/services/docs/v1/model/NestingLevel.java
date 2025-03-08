@@ -58,7 +58,7 @@ public final class NestingLevel extends com.google.api.client.json.GenericJson {
   private java.lang.String glyphFormat;
 
   /**
-   * A custom glyph symbol used by bullets when paragraphs at this level of nesting are unordered.
+   * A custom glyph symbol used by bullets when paragraphs at this level of nesting is unordered.
    * The glyph symbol replaces placeholders within the glyph_format. For example, if the
    * glyph_symbol is the solid circle corresponding to Unicode U+25cf code point and the
    * glyph_format is `%0`, the rendered glyph would be the solid circle.
@@ -68,11 +68,11 @@ public final class NestingLevel extends com.google.api.client.json.GenericJson {
   private java.lang.String glyphSymbol;
 
   /**
-   * The type of glyph used by bullets when paragraphs at this level of nesting are ordered. The
+   * The type of glyph used by bullets when paragraphs at this level of nesting is ordered. The
    * glyph type determines the type of glyph used to replace placeholders within the glyph_format
    * when paragraphs at this level of nesting are ordered. For example, if the nesting level is 0,
    * the glyph_format is `%0.` and the glyph type is DECIMAL, then the rendered glyph would replace
-   * the placeholder `%0` in the glyph format with a number corresponding to list item's order
+   * the placeholder `%0` in the glyph format with a number corresponding to the list item's order
    * within the list.
    * The value may be {@code null}.
    */
@@ -174,7 +174,7 @@ public final class NestingLevel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A custom glyph symbol used by bullets when paragraphs at this level of nesting are unordered.
+   * A custom glyph symbol used by bullets when paragraphs at this level of nesting is unordered.
    * The glyph symbol replaces placeholders within the glyph_format. For example, if the
    * glyph_symbol is the solid circle corresponding to Unicode U+25cf code point and the
    * glyph_format is `%0`, the rendered glyph would be the solid circle.
@@ -185,7 +185,7 @@ public final class NestingLevel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A custom glyph symbol used by bullets when paragraphs at this level of nesting are unordered.
+   * A custom glyph symbol used by bullets when paragraphs at this level of nesting is unordered.
    * The glyph symbol replaces placeholders within the glyph_format. For example, if the
    * glyph_symbol is the solid circle corresponding to Unicode U+25cf code point and the
    * glyph_format is `%0`, the rendered glyph would be the solid circle.
@@ -197,11 +197,11 @@ public final class NestingLevel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of glyph used by bullets when paragraphs at this level of nesting are ordered. The
+   * The type of glyph used by bullets when paragraphs at this level of nesting is ordered. The
    * glyph type determines the type of glyph used to replace placeholders within the glyph_format
    * when paragraphs at this level of nesting are ordered. For example, if the nesting level is 0,
    * the glyph_format is `%0.` and the glyph type is DECIMAL, then the rendered glyph would replace
-   * the placeholder `%0` in the glyph format with a number corresponding to list item's order
+   * the placeholder `%0` in the glyph format with a number corresponding to the list item's order
    * within the list.
    * @return value or {@code null} for none
    */
@@ -210,11 +210,11 @@ public final class NestingLevel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of glyph used by bullets when paragraphs at this level of nesting are ordered. The
+   * The type of glyph used by bullets when paragraphs at this level of nesting is ordered. The
    * glyph type determines the type of glyph used to replace placeholders within the glyph_format
    * when paragraphs at this level of nesting are ordered. For example, if the nesting level is 0,
    * the glyph_format is `%0.` and the glyph type is DECIMAL, then the rendered glyph would replace
-   * the placeholder `%0` in the glyph format with a number corresponding to list item's order
+   * the placeholder `%0` in the glyph format with a number corresponding to the list item's order
    * within the list.
    * @param glyphType glyphType or {@code null} for none
    */

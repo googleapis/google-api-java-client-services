@@ -161,7 +161,7 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
   /**
    * Indicates whether DocumentStyle margin_header, SectionStyle margin_header and DocumentStyle
    * margin_footer, SectionStyle margin_footer are respected. When false, the default values in the
-   * Docs editor for header and footer margin are used. This property is read-only.
+   * Docs editor for header and footer margin is used. This property is read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -490,7 +490,7 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
   /**
    * Indicates whether DocumentStyle margin_header, SectionStyle margin_header and DocumentStyle
    * margin_footer, SectionStyle margin_footer are respected. When false, the default values in the
-   * Docs editor for header and footer margin are used. This property is read-only.
+   * Docs editor for header and footer margin is used. This property is read-only.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUseCustomHeaderFooterMargins() {
@@ -500,7 +500,7 @@ public final class DocumentStyle extends com.google.api.client.json.GenericJson 
   /**
    * Indicates whether DocumentStyle margin_header, SectionStyle margin_header and DocumentStyle
    * margin_footer, SectionStyle margin_footer are respected. When false, the default values in the
-   * Docs editor for header and footer margin are used. This property is read-only.
+   * Docs editor for header and footer margin is used. This property is read-only.
    * @param useCustomHeaderFooterMargins useCustomHeaderFooterMargins or {@code null} for none
    */
   public DocumentStyle setUseCustomHeaderFooterMargins(java.lang.Boolean useCustomHeaderFooterMargins) {

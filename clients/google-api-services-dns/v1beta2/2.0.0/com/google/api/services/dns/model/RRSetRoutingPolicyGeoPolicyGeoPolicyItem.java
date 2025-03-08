@@ -58,8 +58,9 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItem extends com.google.a
   private java.util.List<java.lang.String> rrdatas;
 
   /**
-   * DNSSEC generated signatures for all the `rrdata` within this item. If health checked targets
-   * are provided for DNSSEC enabled zones, there's a restriction of 1 IP address per item.
+   * DNSSEC generated signatures for all the `rrdata` within this item. When using health-checked
+   * targets for DNSSEC-enabled zones, you can only use at most one health-checked IP address per
+   * item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -134,8 +135,9 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItem extends com.google.a
   }
 
   /**
-   * DNSSEC generated signatures for all the `rrdata` within this item. If health checked targets
-   * are provided for DNSSEC enabled zones, there's a restriction of 1 IP address per item.
+   * DNSSEC generated signatures for all the `rrdata` within this item. When using health-checked
+   * targets for DNSSEC-enabled zones, you can only use at most one health-checked IP address per
+   * item.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSignatureRrdatas() {
@@ -143,8 +145,9 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItem extends com.google.a
   }
 
   /**
-   * DNSSEC generated signatures for all the `rrdata` within this item. If health checked targets
-   * are provided for DNSSEC enabled zones, there's a restriction of 1 IP address per item.
+   * DNSSEC generated signatures for all the `rrdata` within this item. When using health-checked
+   * targets for DNSSEC-enabled zones, you can only use at most one health-checked IP address per
+   * item.
    * @param signatureRrdatas signatureRrdatas or {@code null} for none
    */
   public RRSetRoutingPolicyGeoPolicyGeoPolicyItem setSignatureRrdatas(java.util.List<java.lang.String> signatureRrdatas) {

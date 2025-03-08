@@ -18,7 +18,8 @@ package com.google.api.services.dns.model;
 
 /**
  * HealthCheckTargets describes endpoints to health-check when responding to Routing Policy queries.
- * Only the healthy endpoints will be included in the response.
+ * Only the healthy endpoints will be included in the response. Set either `internal_load_balancer`
+ * or `external_endpoints`. Do not set both.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud DNS API. For a detailed explanation see:

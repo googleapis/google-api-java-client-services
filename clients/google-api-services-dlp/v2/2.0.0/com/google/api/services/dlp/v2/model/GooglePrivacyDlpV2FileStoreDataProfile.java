@@ -206,6 +206,13 @@ public final class GooglePrivacyDlpV2FileStoreDataProfile extends com.google.api
   private java.lang.String resourceVisibility;
 
   /**
+   * The BigQuery table to which the sample findings are written.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GooglePrivacyDlpV2BigQueryTable sampleFindingsTable;
+
+  /**
    * The sensitivity score of this resource.
    * The value may be {@code null}.
    */
@@ -618,6 +625,23 @@ public final class GooglePrivacyDlpV2FileStoreDataProfile extends com.google.api
    */
   public GooglePrivacyDlpV2FileStoreDataProfile setResourceVisibility(java.lang.String resourceVisibility) {
     this.resourceVisibility = resourceVisibility;
+    return this;
+  }
+
+  /**
+   * The BigQuery table to which the sample findings are written.
+   * @return value or {@code null} for none
+   */
+  public GooglePrivacyDlpV2BigQueryTable getSampleFindingsTable() {
+    return sampleFindingsTable;
+  }
+
+  /**
+   * The BigQuery table to which the sample findings are written.
+   * @param sampleFindingsTable sampleFindingsTable or {@code null} for none
+   */
+  public GooglePrivacyDlpV2FileStoreDataProfile setSampleFindingsTable(GooglePrivacyDlpV2BigQueryTable sampleFindingsTable) {
+    this.sampleFindingsTable = sampleFindingsTable;
     return this;
   }
 

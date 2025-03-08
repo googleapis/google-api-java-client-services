@@ -13936,7 +13936,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
        * protection/docs/redacting-sensitive-data-images to learn more. When no InfoTypes or
        * CustomInfoTypes are specified in this request, the system will automatically choose what
        * detectors to run. By default this may be all types, but may change over time as detectors are
-       * updated.
+       * updated. Only the first frame of each multiframe image is redacted. Metadata and other frames are
+       * omitted in the response.
        *
        * Create a request for the method "image.redact".
        *
@@ -13973,7 +13974,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * protection/docs/redacting-sensitive-data-images to learn more. When no InfoTypes or
          * CustomInfoTypes are specified in this request, the system will automatically choose what
          * detectors to run. By default this may be all types, but may change over time as detectors are
-         * updated.
+         * updated. Only the first frame of each multiframe image is redacted. Metadata and other frames
+         * are omitted in the response.
          *
          * Create a request for the method "image.redact".
          *
@@ -21792,7 +21794,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * protection/docs/redacting-sensitive-data-images to learn more. When no InfoTypes or
          * CustomInfoTypes are specified in this request, the system will automatically choose what
          * detectors to run. By default this may be all types, but may change over time as detectors are
-         * updated.
+         * updated. Only the first frame of each multiframe image is redacted. Metadata and other frames are
+         * omitted in the response.
          *
          * Create a request for the method "image.redact".
          *
@@ -21829,7 +21832,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * protection/docs/redacting-sensitive-data-images to learn more. When no InfoTypes or
            * CustomInfoTypes are specified in this request, the system will automatically choose what
            * detectors to run. By default this may be all types, but may change over time as detectors are
-           * updated.
+           * updated. Only the first frame of each multiframe image is redacted. Metadata and other frames
+           * are omitted in the response.
            *
            * Create a request for the method "image.redact".
            *

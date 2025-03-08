@@ -55,6 +55,16 @@ public final class GooglePrivacyDlpV2Export extends com.google.api.client.json.G
   private GooglePrivacyDlpV2BigQueryTable profileTable;
 
   /**
+   * Store sample data profile findings in an existing table or a new table in an existing dataset.
+   * Each regeneration will result in new rows in BigQuery. Data is inserted using [streaming
+   * insert](https://cloud.google.com/blog/products/bigquery/life-of-a-bigquery-streaming-insert)
+   * and so data may be in the buffer for a period of time after the profile has finished.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GooglePrivacyDlpV2BigQueryTable sampleFindingsTable;
+
+  /**
    * Store all profiles to BigQuery. * The system will create a new dataset and table for you if
    * none are are provided. The dataset will be named `sensitive_data_protection_discovery` and
    * table will be named `discovery_profiles`. This table will be placed in the same project as the
@@ -100,6 +110,29 @@ public final class GooglePrivacyDlpV2Export extends com.google.api.client.json.G
    */
   public GooglePrivacyDlpV2Export setProfileTable(GooglePrivacyDlpV2BigQueryTable profileTable) {
     this.profileTable = profileTable;
+    return this;
+  }
+
+  /**
+   * Store sample data profile findings in an existing table or a new table in an existing dataset.
+   * Each regeneration will result in new rows in BigQuery. Data is inserted using [streaming
+   * insert](https://cloud.google.com/blog/products/bigquery/life-of-a-bigquery-streaming-insert)
+   * and so data may be in the buffer for a period of time after the profile has finished.
+   * @return value or {@code null} for none
+   */
+  public GooglePrivacyDlpV2BigQueryTable getSampleFindingsTable() {
+    return sampleFindingsTable;
+  }
+
+  /**
+   * Store sample data profile findings in an existing table or a new table in an existing dataset.
+   * Each regeneration will result in new rows in BigQuery. Data is inserted using [streaming
+   * insert](https://cloud.google.com/blog/products/bigquery/life-of-a-bigquery-streaming-insert)
+   * and so data may be in the buffer for a period of time after the profile has finished.
+   * @param sampleFindingsTable sampleFindingsTable or {@code null} for none
+   */
+  public GooglePrivacyDlpV2Export setSampleFindingsTable(GooglePrivacyDlpV2BigQueryTable sampleFindingsTable) {
+    this.sampleFindingsTable = sampleFindingsTable;
     return this;
   }
 

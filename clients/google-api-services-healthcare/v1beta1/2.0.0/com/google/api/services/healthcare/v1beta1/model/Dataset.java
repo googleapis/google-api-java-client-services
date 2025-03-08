@@ -49,6 +49,20 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Output only. For future use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzi;
+
+  /**
+   * Output only. For future use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzs;
+
+  /**
    * The default timezone used by this dataset. Must be a either a valid IANA time zone name such as
    * "America/New_York" or empty, which defaults to UTC. This is used for parsing times in
    * resources, such as HL7 messages, where no explicit timezone is specified.
@@ -94,6 +108,40 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
    */
   public Dataset setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. For future use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzi() {
+    return satisfiesPzi;
+  }
+
+  /**
+   * Output only. For future use.
+   * @param satisfiesPzi satisfiesPzi or {@code null} for none
+   */
+  public Dataset setSatisfiesPzi(java.lang.Boolean satisfiesPzi) {
+    this.satisfiesPzi = satisfiesPzi;
+    return this;
+  }
+
+  /**
+   * Output only. For future use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzs() {
+    return satisfiesPzs;
+  }
+
+  /**
+   * Output only. For future use.
+   * @param satisfiesPzs satisfiesPzs or {@code null} for none
+   */
+  public Dataset setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
+    this.satisfiesPzs = satisfiesPzs;
     return this;
   }
 

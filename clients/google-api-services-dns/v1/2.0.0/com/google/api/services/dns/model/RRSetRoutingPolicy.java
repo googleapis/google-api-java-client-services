@@ -38,7 +38,9 @@ public final class RRSetRoutingPolicy extends com.google.api.client.json.Generic
   private RRSetRoutingPolicyGeoPolicy geo;
 
   /**
-   * The selfLink attribute of the HealthCheck resource to use for this RRSetRoutingPolicy.
+   * The fully qualified URL of the HealthCheck to use for this RRSetRoutingPolicy. Format this URL
+   * like
+   * `https://www.googleapis.com/compute/v1/projects/{project}/global/healthChecks/{healthCheck}`.
    * https://cloud.google.com/compute/docs/reference/rest/v1/healthChecks
    * The value may be {@code null}.
    */
@@ -79,7 +81,9 @@ public final class RRSetRoutingPolicy extends com.google.api.client.json.Generic
   }
 
   /**
-   * The selfLink attribute of the HealthCheck resource to use for this RRSetRoutingPolicy.
+   * The fully qualified URL of the HealthCheck to use for this RRSetRoutingPolicy. Format this URL
+   * like
+   * `https://www.googleapis.com/compute/v1/projects/{project}/global/healthChecks/{healthCheck}`.
    * https://cloud.google.com/compute/docs/reference/rest/v1/healthChecks
    * @return value or {@code null} for none
    */
@@ -88,7 +92,9 @@ public final class RRSetRoutingPolicy extends com.google.api.client.json.Generic
   }
 
   /**
-   * The selfLink attribute of the HealthCheck resource to use for this RRSetRoutingPolicy.
+   * The fully qualified URL of the HealthCheck to use for this RRSetRoutingPolicy. Format this URL
+   * like
+   * `https://www.googleapis.com/compute/v1/projects/{project}/global/healthChecks/{healthCheck}`.
    * https://cloud.google.com/compute/docs/reference/rest/v1/healthChecks
    * @param healthCheck healthCheck or {@code null} for none
    */

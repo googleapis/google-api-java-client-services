@@ -207,6 +207,13 @@ public final class GooglePrivacyDlpV2TableDataProfile extends com.google.api.cli
   private java.lang.Long rowCount;
 
   /**
+   * The BigQuery table to which the sample findings are written.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GooglePrivacyDlpV2BigQueryTable sampleFindingsTable;
+
+  /**
    * The number of columns profiled in the table.
    * The value may be {@code null}.
    */
@@ -620,6 +627,23 @@ public final class GooglePrivacyDlpV2TableDataProfile extends com.google.api.cli
    */
   public GooglePrivacyDlpV2TableDataProfile setRowCount(java.lang.Long rowCount) {
     this.rowCount = rowCount;
+    return this;
+  }
+
+  /**
+   * The BigQuery table to which the sample findings are written.
+   * @return value or {@code null} for none
+   */
+  public GooglePrivacyDlpV2BigQueryTable getSampleFindingsTable() {
+    return sampleFindingsTable;
+  }
+
+  /**
+   * The BigQuery table to which the sample findings are written.
+   * @param sampleFindingsTable sampleFindingsTable or {@code null} for none
+   */
+  public GooglePrivacyDlpV2TableDataProfile setSampleFindingsTable(GooglePrivacyDlpV2BigQueryTable sampleFindingsTable) {
+    this.sampleFindingsTable = sampleFindingsTable;
     return this;
   }
 

@@ -134,6 +134,128 @@ public class DataPortability extends com.google.api.client.googleapis.services.j
   }
 
   /**
+   * An accessor for creating requests from the AccessType collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code DataPortability dataportability = new DataPortability(...);}
+   *   {@code DataPortability.AccessType.List request = dataportability.accessType().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public AccessType accessType() {
+    return new AccessType();
+  }
+
+  /**
+   * The "accessType" collection of methods.
+   */
+  public class AccessType {
+
+    /**
+     * Gets the access type of the token.
+     *
+     * Create a request for the method "accessType.check".
+     *
+     * This request holds the parameters needed by the dataportability server.  After setting any
+     * optional parameters, call the {@link Check#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.dataportability.v1.model.CheckAccessTypeRequest}
+     * @return the request
+     */
+    public Check check(com.google.api.services.dataportability.v1.model.CheckAccessTypeRequest content) throws java.io.IOException {
+      Check result = new Check(content);
+      initialize(result);
+      return result;
+    }
+
+    public class Check extends DataPortabilityRequest<com.google.api.services.dataportability.v1.model.CheckAccessTypeResponse> {
+
+      private static final String REST_PATH = "v1/accessType:check";
+
+      /**
+       * Gets the access type of the token.
+       *
+       * Create a request for the method "accessType.check".
+       *
+       * This request holds the parameters needed by the the dataportability server.  After setting any
+       * optional parameters, call the {@link Check#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Check#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.dataportability.v1.model.CheckAccessTypeRequest}
+       * @since 1.13
+       */
+      protected Check(com.google.api.services.dataportability.v1.model.CheckAccessTypeRequest content) {
+        super(DataPortability.this, "POST", REST_PATH, content, com.google.api.services.dataportability.v1.model.CheckAccessTypeResponse.class);
+      }
+
+      @Override
+      public Check set$Xgafv(java.lang.String $Xgafv) {
+        return (Check) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Check setAccessToken(java.lang.String accessToken) {
+        return (Check) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Check setAlt(java.lang.String alt) {
+        return (Check) super.setAlt(alt);
+      }
+
+      @Override
+      public Check setCallback(java.lang.String callback) {
+        return (Check) super.setCallback(callback);
+      }
+
+      @Override
+      public Check setFields(java.lang.String fields) {
+        return (Check) super.setFields(fields);
+      }
+
+      @Override
+      public Check setKey(java.lang.String key) {
+        return (Check) super.setKey(key);
+      }
+
+      @Override
+      public Check setOauthToken(java.lang.String oauthToken) {
+        return (Check) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Check setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Check) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Check setQuotaUser(java.lang.String quotaUser) {
+        return (Check) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Check setUploadType(java.lang.String uploadType) {
+        return (Check) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Check setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Check) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public Check set(String parameterName, Object value) {
+        return (Check) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the ArchiveJobs collection.
    *
    * <p>The typical use is:</p>

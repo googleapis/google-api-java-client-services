@@ -38,6 +38,25 @@ public final class GoogleCloudDataplexV1DataDiscoverySpecBigQueryPublishingConfi
   private java.lang.String connection;
 
   /**
+   * Optional. The location of the BigQuery dataset to publish BigLake external or non-BigLake
+   * external tables to. 1. If the Cloud Storage bucket is located in a multi-region bucket, then
+   * BigQuery dataset can be in the same multi-region bucket or any single region that is included
+   * in the same multi-region bucket. The datascan can be created in any single region that is
+   * included in the same multi-region bucket 2. If the Cloud Storage bucket is located in a dual-
+   * region bucket, then BigQuery dataset can be located in regions that are included in the dual-
+   * region bucket, or in a multi-region that includes the dual-region. The datascan can be created
+   * in any single region that is included in the same dual-region bucket. 3. If the Cloud Storage
+   * bucket is located in a single region, then BigQuery dataset can be in the same single region or
+   * any multi-region bucket that includes the same single region. The datascan will be created in
+   * the same single region as the bucket. 4. If the BigQuery dataset is in single region, it must
+   * be in the same single region as the datascan.For supported values, refer to
+   * https://cloud.google.com/bigquery/docs/locations#supported_locations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String location;
+
+  /**
    * Optional. Determines whether to publish discovered tables as BigLake external tables or non-
    * BigLake external tables.
    * The value may be {@code null}.
@@ -61,6 +80,47 @@ public final class GoogleCloudDataplexV1DataDiscoverySpecBigQueryPublishingConfi
    */
   public GoogleCloudDataplexV1DataDiscoverySpecBigQueryPublishingConfig setConnection(java.lang.String connection) {
     this.connection = connection;
+    return this;
+  }
+
+  /**
+   * Optional. The location of the BigQuery dataset to publish BigLake external or non-BigLake
+   * external tables to. 1. If the Cloud Storage bucket is located in a multi-region bucket, then
+   * BigQuery dataset can be in the same multi-region bucket or any single region that is included
+   * in the same multi-region bucket. The datascan can be created in any single region that is
+   * included in the same multi-region bucket 2. If the Cloud Storage bucket is located in a dual-
+   * region bucket, then BigQuery dataset can be located in regions that are included in the dual-
+   * region bucket, or in a multi-region that includes the dual-region. The datascan can be created
+   * in any single region that is included in the same dual-region bucket. 3. If the Cloud Storage
+   * bucket is located in a single region, then BigQuery dataset can be in the same single region or
+   * any multi-region bucket that includes the same single region. The datascan will be created in
+   * the same single region as the bucket. 4. If the BigQuery dataset is in single region, it must
+   * be in the same single region as the datascan.For supported values, refer to
+   * https://cloud.google.com/bigquery/docs/locations#supported_locations.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLocation() {
+    return location;
+  }
+
+  /**
+   * Optional. The location of the BigQuery dataset to publish BigLake external or non-BigLake
+   * external tables to. 1. If the Cloud Storage bucket is located in a multi-region bucket, then
+   * BigQuery dataset can be in the same multi-region bucket or any single region that is included
+   * in the same multi-region bucket. The datascan can be created in any single region that is
+   * included in the same multi-region bucket 2. If the Cloud Storage bucket is located in a dual-
+   * region bucket, then BigQuery dataset can be located in regions that are included in the dual-
+   * region bucket, or in a multi-region that includes the dual-region. The datascan can be created
+   * in any single region that is included in the same dual-region bucket. 3. If the Cloud Storage
+   * bucket is located in a single region, then BigQuery dataset can be in the same single region or
+   * any multi-region bucket that includes the same single region. The datascan will be created in
+   * the same single region as the bucket. 4. If the BigQuery dataset is in single region, it must
+   * be in the same single region as the datascan.For supported values, refer to
+   * https://cloud.google.com/bigquery/docs/locations#supported_locations.
+   * @param location location or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataDiscoverySpecBigQueryPublishingConfig setLocation(java.lang.String location) {
+    this.location = location;
     return this;
   }
 

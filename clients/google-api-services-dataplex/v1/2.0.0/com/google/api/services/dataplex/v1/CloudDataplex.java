@@ -1699,10 +1699,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
         }
       }
       /**
-       * Looks up a single Entry by name using the permission on the source system.Caution: The BigQuery
-       * metadata that is stored in Dataplex Catalog is changing. For more information, see Changes to
-       * BigQuery metadata stored in Dataplex Catalog (https://cloud.google.com/dataplex/docs/biqquery-
-       * metadata-changes).
+       * Looks up an entry by name using the permission on the source system.
        *
        * Create a request for the method "locations.lookupEntry".
        *
@@ -1727,10 +1724,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
         /**
-         * Looks up a single Entry by name using the permission on the source system.Caution: The BigQuery
-         * metadata that is stored in Dataplex Catalog is changing. For more information, see Changes to
-         * BigQuery metadata stored in Dataplex Catalog (https://cloud.google.com/dataplex/docs/biqquery-
-         * metadata-changes).
+         * Looks up an entry by name using the permission on the source system.
          *
          * Create a request for the method "locations.lookupEntry".
          *
@@ -7440,9 +7434,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
          * This request holds the parameters needed by the dataplex server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The resource name of the data taxonomy location, of the form:
-         *        projects/{project_number}/locations/{location_id} where location_id refers to a GCP
-         *        region.
+         * @param parent
          * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1DataTaxonomy}
          * @return the request
          */
@@ -7470,9 +7462,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The resource name of the data taxonomy location, of the form:
-         *        projects/{project_number}/locations/{location_id} where location_id refers to a GCP
-         *        region.
+           * @param parent
            * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1DataTaxonomy}
            * @since 1.13
            */
@@ -7541,26 +7531,16 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             return (Create) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. The resource name of the data taxonomy location, of the form:
-           * projects/{project_number}/locations/{location_id} where location_id refers to a GCP
-           * region.
-           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The resource name of the data taxonomy location, of the form:
-         projects/{project_number}/locations/{location_id} where location_id refers to a GCP region.
+          /**
+
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /**
-           * Required. The resource name of the data taxonomy location, of the form:
-           * projects/{project_number}/locations/{location_id} where location_id refers to a GCP
-           * region.
-           */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -7795,8 +7775,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
          * This request holds the parameters needed by the dataplex server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The resource name of the DataTaxonomy:
-         *        projects/{project_number}/locations/{location_id}/dataTaxonomies/{data_taxonomy_id}
+         * @param name
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -7822,8 +7801,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The resource name of the DataTaxonomy:
-         *        projects/{project_number}/locations/{location_id}/dataTaxonomies/{data_taxonomy_id}
+           * @param name
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -7901,24 +7879,16 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Required. The resource name of the DataTaxonomy:
-           * projects/{project_number}/locations/{location_id}/dataTaxonomies/{data_taxonomy_id}
-           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The resource name of the DataTaxonomy:
-         projects/{project_number}/locations/{location_id}/dataTaxonomies/{data_taxonomy_id}
+          /**
+
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /**
-           * Required. The resource name of the DataTaxonomy:
-           * projects/{project_number}/locations/{location_id}/dataTaxonomies/{data_taxonomy_id}
-           */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -12029,9 +11999,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             }
           }
           /**
-           * Gets an Entry.Caution: The BigQuery metadata that is stored in Dataplex Catalog is changing. For
-           * more information, see Changes to BigQuery metadata stored in Dataplex Catalog
-           * (https://cloud.google.com/dataplex/docs/biqquery-metadata-changes).
+           * Gets an Entry.
            *
            * Create a request for the method "entries.get".
            *
@@ -12056,9 +12024,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+/entries/.*$");
 
             /**
-             * Gets an Entry.Caution: The BigQuery metadata that is stored in Dataplex Catalog is changing.
-             * For more information, see Changes to BigQuery metadata stored in Dataplex Catalog
-             * (https://cloud.google.com/dataplex/docs/biqquery-metadata-changes).
+             * Gets an Entry.
              *
              * Create a request for the method "entries.get".
              *

@@ -17,8 +17,9 @@
 package com.google.api.services.dataplex.v1.model;
 
 /**
- * Evaluates whether the provided expression is true.The SQL expression needs to use BigQuery
- * standard SQL syntax and should produce a scalar boolean result.Example: MIN(col1) >= 0
+ * Evaluates whether the provided expression is true.The SQL expression needs to use GoogleSQL
+ * syntax (https://cloud.google.com/bigquery/docs/reference/standard-sql/query-syntax) and should
+ * produce a scalar boolean result.Example: MIN(col1) >= 0
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataplex API. For a detailed explanation see:

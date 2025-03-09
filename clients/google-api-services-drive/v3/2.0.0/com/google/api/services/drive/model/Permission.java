@@ -537,8 +537,8 @@ public final class Permission extends com.google.api.client.json.GenericJson {
 
     /**
      * Output only. The primary role for this user. While new values may be added in the future, the
-     * following are currently possible: * `organizer` * `fileOrganizer` * `writer` * `commenter` *
-     * `reader`
+     * following are currently possible: * `owner` * `organizer` * `fileOrganizer` * `writer` *
+     * `commenter` * `reader`
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -603,8 +603,8 @@ public final class Permission extends com.google.api.client.json.GenericJson {
 
     /**
      * Output only. The primary role for this user. While new values may be added in the future, the
-     * following are currently possible: * `organizer` * `fileOrganizer` * `writer` * `commenter` *
-     * `reader`
+     * following are currently possible: * `owner` * `organizer` * `fileOrganizer` * `writer` *
+     * `commenter` * `reader`
      * @return value or {@code null} for none
      */
     public java.lang.String getRole() {
@@ -613,8 +613,8 @@ public final class Permission extends com.google.api.client.json.GenericJson {
 
     /**
      * Output only. The primary role for this user. While new values may be added in the future, the
-     * following are currently possible: * `organizer` * `fileOrganizer` * `writer` * `commenter` *
-     * `reader`
+     * following are currently possible: * `owner` * `organizer` * `fileOrganizer` * `writer` *
+     * `commenter` * `reader`
      * @param role role or {@code null} for none
      */
     public PermissionDetails setRole(java.lang.String role) {

@@ -42,15 +42,16 @@ public final class FreezePeriod extends com.google.api.client.json.GenericJson {
   /**
    * The end date (inclusive) of the freeze period. Must be no later than 90 days from the start
    * date. If the end date is earlier than the start date, the freeze period is considered wrapping
-   * year-end. Note: year must not be set. For example, {"month": 1,"date": 30}.
+   * year-end. Note: day and month must be set. year should not be set as it is not used. For
+   * example, {"month": 1,"date": 30}.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Date endDate;
 
   /**
-   * The start date (inclusive) of the freeze period. Note: year must not be set. For example,
-   * {"month": 1,"date": 30}.
+   * The start date (inclusive) of the freeze period. Note: day and month must be set. year should
+   * not be set as it is not used. For example, {"month": 1,"date": 30}.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,7 +60,8 @@ public final class FreezePeriod extends com.google.api.client.json.GenericJson {
   /**
    * The end date (inclusive) of the freeze period. Must be no later than 90 days from the start
    * date. If the end date is earlier than the start date, the freeze period is considered wrapping
-   * year-end. Note: year must not be set. For example, {"month": 1,"date": 30}.
+   * year-end. Note: day and month must be set. year should not be set as it is not used. For
+   * example, {"month": 1,"date": 30}.
    * @return value or {@code null} for none
    */
   public Date getEndDate() {
@@ -69,7 +71,8 @@ public final class FreezePeriod extends com.google.api.client.json.GenericJson {
   /**
    * The end date (inclusive) of the freeze period. Must be no later than 90 days from the start
    * date. If the end date is earlier than the start date, the freeze period is considered wrapping
-   * year-end. Note: year must not be set. For example, {"month": 1,"date": 30}.
+   * year-end. Note: day and month must be set. year should not be set as it is not used. For
+   * example, {"month": 1,"date": 30}.
    * @param endDate endDate or {@code null} for none
    */
   public FreezePeriod setEndDate(Date endDate) {
@@ -78,8 +81,8 @@ public final class FreezePeriod extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The start date (inclusive) of the freeze period. Note: year must not be set. For example,
-   * {"month": 1,"date": 30}.
+   * The start date (inclusive) of the freeze period. Note: day and month must be set. year should
+   * not be set as it is not used. For example, {"month": 1,"date": 30}.
    * @return value or {@code null} for none
    */
   public Date getStartDate() {
@@ -87,8 +90,8 @@ public final class FreezePeriod extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The start date (inclusive) of the freeze period. Note: year must not be set. For example,
-   * {"month": 1,"date": 30}.
+   * The start date (inclusive) of the freeze period. Note: day and month must be set. year should
+   * not be set as it is not used. For example, {"month": 1,"date": 30}.
    * @param startDate startDate or {@code null} for none
    */
   public FreezePeriod setStartDate(Date startDate) {

@@ -56,6 +56,13 @@ public final class LinkedVpcNetwork extends com.google.api.client.json.GenericJs
   private java.util.List<java.lang.String> producerVpcSpokes;
 
   /**
+   * Optional. The proposed include export IP ranges waiting for hub administration's approval.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> proposedIncludeExportRanges;
+
+  /**
    * Required. The URI of the VPC network resource.
    * The value may be {@code null}.
    */
@@ -118,6 +125,23 @@ public final class LinkedVpcNetwork extends com.google.api.client.json.GenericJs
    */
   public LinkedVpcNetwork setProducerVpcSpokes(java.util.List<java.lang.String> producerVpcSpokes) {
     this.producerVpcSpokes = producerVpcSpokes;
+    return this;
+  }
+
+  /**
+   * Optional. The proposed include export IP ranges waiting for hub administration's approval.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getProposedIncludeExportRanges() {
+    return proposedIncludeExportRanges;
+  }
+
+  /**
+   * Optional. The proposed include export IP ranges waiting for hub administration's approval.
+   * @param proposedIncludeExportRanges proposedIncludeExportRanges or {@code null} for none
+   */
+  public LinkedVpcNetwork setProposedIncludeExportRanges(java.util.List<java.lang.String> proposedIncludeExportRanges) {
+    this.proposedIncludeExportRanges = proposedIncludeExportRanges;
     return this;
   }
 

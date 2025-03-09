@@ -2,6 +2,6 @@
   "maven": {
     "groupId": "com.google.apis",
     "artifactId": "google-api-services-eventarc",
-    "version": "v1-rev20220104-1.32.1"
+    "version": "v1-rev20250209-2.0.0"
   }
 }

@@ -2,6 +2,6 @@
   "maven": {
     "groupId": "com.google.apis",
     "artifactId": "google-api-services-chromeuxreport",
-    "version": "v1-rev20210602-1.32.1"
+    "version": "v1-rev20240916-2.0.0"
   }
 }

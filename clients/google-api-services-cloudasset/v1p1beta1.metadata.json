@@ -2,6 +2,6 @@
   "maven": {
     "groupId": "com.google.apis",
     "artifactId": "google-api-services-cloudasset",
-    "version": "v1p1beta1-rev20211125-1.32.1"
+    "version": "v1p1beta1-rev20250215-2.0.0"
   }
 }

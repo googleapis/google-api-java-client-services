@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-secretmanager",
+    "version": "v1beta2-rev20250217-2.0.0"
+  }
+}

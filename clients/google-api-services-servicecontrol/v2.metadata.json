@@ -2,6 +2,6 @@
   "maven": {
     "groupId": "com.google.apis",
     "artifactId": "google-api-services-servicecontrol",
-    "version": "v2-rev20210924-1.32.1"
+    "version": "v2-rev20250124-2.0.0"
   }
 }

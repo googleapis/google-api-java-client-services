@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-trafficdirector",
+    "version": "v3-rev20250206-2.0.0"
+  }
+}

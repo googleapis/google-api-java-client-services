@@ -30,14 +30,16 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1ResponseMessageText extends com.google.api.client.json.GenericJson {
 
   /**
-   * A collection of text responses.
+   * A collection of text response variants. If multiple variants are defined, only one text
+   * response variant is returned at runtime.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> text;
 
   /**
-   * A collection of text responses.
+   * A collection of text response variants. If multiple variants are defined, only one text
+   * response variant is returned at runtime.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getText() {
@@ -45,7 +47,8 @@ public final class GoogleCloudDialogflowV2beta1ResponseMessageText extends com.g
   }
 
   /**
-   * A collection of text responses.
+   * A collection of text response variants. If multiple variants are defined, only one text
+   * response variant is returned at runtime.
    * @param text text or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ResponseMessageText setText(java.util.List<java.lang.String> text) {

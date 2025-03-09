@@ -58,6 +58,13 @@ public final class GoogleCloudDialogflowCxV3Agent extends com.google.api.client.
   private java.lang.String avatarUri;
 
   /**
+   * Optional. Settings for custom client certificates.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3AgentClientCertificateSettings clientCertificateSettings;
+
+  /**
    * Required. Immutable. The default language of the agent as a language tag. See [Language
    * Support](https://cloud.google.com/dialogflow/cx/docs/reference/language) for a list of the
    * currently supported language codes. This field cannot be set by the Agents.UpdateAgent method.
@@ -241,6 +248,23 @@ public final class GoogleCloudDialogflowCxV3Agent extends com.google.api.client.
    */
   public GoogleCloudDialogflowCxV3Agent setAvatarUri(java.lang.String avatarUri) {
     this.avatarUri = avatarUri;
+    return this;
+  }
+
+  /**
+   * Optional. Settings for custom client certificates.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3AgentClientCertificateSettings getClientCertificateSettings() {
+    return clientCertificateSettings;
+  }
+
+  /**
+   * Optional. Settings for custom client certificates.
+   * @param clientCertificateSettings clientCertificateSettings or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3Agent setClientCertificateSettings(GoogleCloudDialogflowCxV3AgentClientCertificateSettings clientCertificateSettings) {
+    this.clientCertificateSettings = clientCertificateSettings;
     return this;
   }
 

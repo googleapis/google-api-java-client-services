@@ -53,7 +53,7 @@ public final class GoogleCloudDialogflowCxV3TestCase extends com.google.api.clie
 
   /**
    * The unique identifier of the test case. TestCases.CreateTestCase will populate the name
-   * automatically. Otherwise use format: `projects//locations//agents/ /testCases/`.
+   * automatically. Otherwise use format: `projects//locations//agents//testCases/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -151,7 +151,7 @@ public final class GoogleCloudDialogflowCxV3TestCase extends com.google.api.clie
 
   /**
    * The unique identifier of the test case. TestCases.CreateTestCase will populate the name
-   * automatically. Otherwise use format: `projects//locations//agents/ /testCases/`.
+   * automatically. Otherwise use format: `projects//locations//agents//testCases/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -160,7 +160,7 @@ public final class GoogleCloudDialogflowCxV3TestCase extends com.google.api.clie
 
   /**
    * The unique identifier of the test case. TestCases.CreateTestCase will populate the name
-   * automatically. Otherwise use format: `projects//locations//agents/ /testCases/`.
+   * automatically. Otherwise use format: `projects//locations//agents//testCases/`.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3TestCase setName(java.lang.String name) {

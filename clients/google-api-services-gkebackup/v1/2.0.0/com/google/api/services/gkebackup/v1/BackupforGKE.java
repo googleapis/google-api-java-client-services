@@ -2990,29 +2990,6 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
               return this;
             }
 
-            /**
-             * Optional. If set to true, the response will return partial results when some regions
-             * are unreachable and the unreachable field will be populated.
-             */
-            @com.google.api.client.util.Key
-            private java.lang.Boolean returnPartialSuccess;
-
-            /** Optional. If set to true, the response will return partial results when some regions are
-           unreachable and the unreachable field will be populated.
-             */
-            public java.lang.Boolean getReturnPartialSuccess() {
-              return returnPartialSuccess;
-            }
-
-            /**
-             * Optional. If set to true, the response will return partial results when some regions
-             * are unreachable and the unreachable field will be populated.
-             */
-            public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
-              this.returnPartialSuccess = returnPartialSuccess;
-              return this;
-            }
-
             @Override
             public List set(String parameterName, Object value) {
               return (List) super.set(parameterName, value);

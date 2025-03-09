@@ -1033,6 +1033,13 @@ public final class TeamDrive extends com.google.api.client.json.GenericJson {
     private java.lang.Boolean domainUsersOnly;
 
     /**
+     * Download restrictions applied by shared drive managers.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private DownloadRestriction downloadRestriction;
+
+    /**
      * If true, only users with the organizer role can share folders. If false, users with either the
      * organizer role or the file organizer role can share folders.
      * The value may be {@code null}.
@@ -1103,6 +1110,23 @@ public final class TeamDrive extends com.google.api.client.json.GenericJson {
      */
     public Restrictions setDomainUsersOnly(java.lang.Boolean domainUsersOnly) {
       this.domainUsersOnly = domainUsersOnly;
+      return this;
+    }
+
+    /**
+     * Download restrictions applied by shared drive managers.
+     * @return value or {@code null} for none
+     */
+    public DownloadRestriction getDownloadRestriction() {
+      return downloadRestriction;
+    }
+
+    /**
+     * Download restrictions applied by shared drive managers.
+     * @param downloadRestriction downloadRestriction or {@code null} for none
+     */
+    public Restrictions setDownloadRestriction(DownloadRestriction downloadRestriction) {
+      this.downloadRestriction = downloadRestriction;
       return this;
     }
 

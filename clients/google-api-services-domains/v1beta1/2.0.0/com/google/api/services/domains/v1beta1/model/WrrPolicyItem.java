@@ -46,8 +46,9 @@ public final class WrrPolicyItem extends com.google.api.client.json.GenericJson 
   private java.util.List<java.lang.String> rrdata;
 
   /**
-   * DNSSEC generated signatures for all the `rrdata` within this item. Note that if health checked
-   * targets are provided for DNSSEC enabled zones, there's a restriction of 1 IP address per item.
+   * DNSSEC generated signatures for all the `rrdata` within this item. When using health-checked
+   * targets for DNSSEC-enabled zones, you can only use at most one health-checked IP address per
+   * item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,8 +103,9 @@ public final class WrrPolicyItem extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * DNSSEC generated signatures for all the `rrdata` within this item. Note that if health checked
-   * targets are provided for DNSSEC enabled zones, there's a restriction of 1 IP address per item.
+   * DNSSEC generated signatures for all the `rrdata` within this item. When using health-checked
+   * targets for DNSSEC-enabled zones, you can only use at most one health-checked IP address per
+   * item.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSignatureRrdata() {
@@ -111,8 +113,9 @@ public final class WrrPolicyItem extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * DNSSEC generated signatures for all the `rrdata` within this item. Note that if health checked
-   * targets are provided for DNSSEC enabled zones, there's a restriction of 1 IP address per item.
+   * DNSSEC generated signatures for all the `rrdata` within this item. When using health-checked
+   * targets for DNSSEC-enabled zones, you can only use at most one health-checked IP address per
+   * item.
    * @param signatureRrdata signatureRrdata or {@code null} for none
    */
   public WrrPolicyItem setSignatureRrdata(java.util.List<java.lang.String> signatureRrdata) {

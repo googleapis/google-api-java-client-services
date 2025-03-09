@@ -41,7 +41,9 @@ public final class GoogleChannelConfig extends com.google.api.client.json.Generi
 
   /**
    * Required. The resource name of the config. Must be in the format of,
-   * `projects/{project}/locations/{location}/googleChannelConfig`.
+   * `projects/{project}/locations/{location}/googleChannelConfig`. In API responses, the config
+   * name always includes the projectID, regardless of whether the projectID or projectNumber was
+   * provided.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,7 +77,9 @@ public final class GoogleChannelConfig extends com.google.api.client.json.Generi
 
   /**
    * Required. The resource name of the config. Must be in the format of,
-   * `projects/{project}/locations/{location}/googleChannelConfig`.
+   * `projects/{project}/locations/{location}/googleChannelConfig`. In API responses, the config
+   * name always includes the projectID, regardless of whether the projectID or projectNumber was
+   * provided.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -84,7 +88,9 @@ public final class GoogleChannelConfig extends com.google.api.client.json.Generi
 
   /**
    * Required. The resource name of the config. Must be in the format of,
-   * `projects/{project}/locations/{location}/googleChannelConfig`.
+   * `projects/{project}/locations/{location}/googleChannelConfig`. In API responses, the config
+   * name always includes the projectID, regardless of whether the projectID or projectNumber was
+   * provided.
    * @param name name or {@code null} for none
    */
   public GoogleChannelConfig setName(java.lang.String name) {

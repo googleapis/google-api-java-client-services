@@ -20,7 +20,7 @@ package com.google.api.services.fcm.v1;
  * Service definition for FirebaseCloudMessaging (v1).
  *
  * <p>
- * FCM send API that provides a cross-platform messaging solution to reliably deliver messages at no cost.
+ * FCM send API that provides a cross-platform messaging solution to reliably deliver messages.
  * </p>
  *
  * <p>

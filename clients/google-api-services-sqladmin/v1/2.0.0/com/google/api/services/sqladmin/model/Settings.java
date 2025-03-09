@@ -264,6 +264,16 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   private java.lang.String replicationType;
 
   /**
+   * Optional. When this parameter is set to true, Cloud SQL retains backups of the instance even
+   * after the instance is deleted. The ON_DEMAND backup will be retained until customer deletes the
+   * backup or the project. The AUTOMATED backup will be retained based on the backups retention
+   * setting.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean retainBackupsOnDelete;
+
+  /**
    * The version of instance settings. This is a required field for update method to make sure
    * concurrent updates are handled properly. During update, use the most recent settingsVersion
    * value for this instance and do not try to update this value.
@@ -841,6 +851,29 @@ public final class Settings extends com.google.api.client.json.GenericJson {
    */
   public Settings setReplicationType(java.lang.String replicationType) {
     this.replicationType = replicationType;
+    return this;
+  }
+
+  /**
+   * Optional. When this parameter is set to true, Cloud SQL retains backups of the instance even
+   * after the instance is deleted. The ON_DEMAND backup will be retained until customer deletes the
+   * backup or the project. The AUTOMATED backup will be retained based on the backups retention
+   * setting.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getRetainBackupsOnDelete() {
+    return retainBackupsOnDelete;
+  }
+
+  /**
+   * Optional. When this parameter is set to true, Cloud SQL retains backups of the instance even
+   * after the instance is deleted. The ON_DEMAND backup will be retained until customer deletes the
+   * backup or the project. The AUTOMATED backup will be retained based on the backups retention
+   * setting.
+   * @param retainBackupsOnDelete retainBackupsOnDelete or {@code null} for none
+   */
+  public Settings setRetainBackupsOnDelete(java.lang.Boolean retainBackupsOnDelete) {
+    this.retainBackupsOnDelete = retainBackupsOnDelete;
     return this;
   }
 

@@ -112,7 +112,8 @@ public final class IpConfiguration extends com.google.api.client.json.GenericJso
 
   /**
    * Optional. The resource name of the server CA pool for an instance with
-   * `CUSTOMER_MANAGED_CAS_CA` as the `server_ca_mode`. Format: projects//locations//caPools/
+   * `CUSTOMER_MANAGED_CAS_CA` as the `server_ca_mode`. Format:
+   * projects/{PROJECT}/locations/{REGION}/caPools/{CA_POOL_ID}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -314,7 +315,8 @@ public final class IpConfiguration extends com.google.api.client.json.GenericJso
 
   /**
    * Optional. The resource name of the server CA pool for an instance with
-   * `CUSTOMER_MANAGED_CAS_CA` as the `server_ca_mode`. Format: projects//locations//caPools/
+   * `CUSTOMER_MANAGED_CAS_CA` as the `server_ca_mode`. Format:
+   * projects/{PROJECT}/locations/{REGION}/caPools/{CA_POOL_ID}
    * @return value or {@code null} for none
    */
   public java.lang.String getServerCaPool() {
@@ -323,7 +325,8 @@ public final class IpConfiguration extends com.google.api.client.json.GenericJso
 
   /**
    * Optional. The resource name of the server CA pool for an instance with
-   * `CUSTOMER_MANAGED_CAS_CA` as the `server_ca_mode`. Format: projects//locations//caPools/
+   * `CUSTOMER_MANAGED_CAS_CA` as the `server_ca_mode`. Format:
+   * projects/{PROJECT}/locations/{REGION}/caPools/{CA_POOL_ID}
    * @param serverCaPool serverCaPool or {@code null} for none
    */
   public IpConfiguration setServerCaPool(java.lang.String serverCaPool) {

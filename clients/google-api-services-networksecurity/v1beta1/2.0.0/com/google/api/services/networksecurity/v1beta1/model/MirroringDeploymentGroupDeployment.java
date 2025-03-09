@@ -17,7 +17,7 @@
 package com.google.api.services.networksecurity.v1beta1.model;
 
 /**
- * Contains details about the state of an association in a specific cloud location.
+ * A deployment belonging to this deployment group.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Security API. For a detailed explanation see:
@@ -27,41 +27,44 @@ package com.google.api.services.networksecurity.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class InterceptEndpointGroupAssociationLocationDetails extends com.google.api.client.json.GenericJson {
+public final class MirroringDeploymentGroupDeployment extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The cloud location, e.g. "us-central1-a" or "asia-south1".
+   * Output only. The name of the Mirroring Deployment, in the format:
+   * `projects/{project}/locations/{location}/mirroringDeployments/{mirroring_deployment}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String location;
+  private java.lang.String name;
 
   /**
-   * Output only. The current state of the association in this location.
+   * Output only. Most recent known state of the deployment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * Output only. The cloud location, e.g. "us-central1-a" or "asia-south1".
+   * Output only. The name of the Mirroring Deployment, in the format:
+   * `projects/{project}/locations/{location}/mirroringDeployments/{mirroring_deployment}`.
    * @return value or {@code null} for none
    */
-  public java.lang.String getLocation() {
-    return location;
+  public java.lang.String getName() {
+    return name;
   }
 
   /**
-   * Output only. The cloud location, e.g. "us-central1-a" or "asia-south1".
-   * @param location location or {@code null} for none
+   * Output only. The name of the Mirroring Deployment, in the format:
+   * `projects/{project}/locations/{location}/mirroringDeployments/{mirroring_deployment}`.
+   * @param name name or {@code null} for none
    */
-  public InterceptEndpointGroupAssociationLocationDetails setLocation(java.lang.String location) {
-    this.location = location;
+  public MirroringDeploymentGroupDeployment setName(java.lang.String name) {
+    this.name = name;
     return this;
   }
 
   /**
-   * Output only. The current state of the association in this location.
+   * Output only. Most recent known state of the deployment.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -69,22 +72,22 @@ public final class InterceptEndpointGroupAssociationLocationDetails extends com.
   }
 
   /**
-   * Output only. The current state of the association in this location.
+   * Output only. Most recent known state of the deployment.
    * @param state state or {@code null} for none
    */
-  public InterceptEndpointGroupAssociationLocationDetails setState(java.lang.String state) {
+  public MirroringDeploymentGroupDeployment setState(java.lang.String state) {
     this.state = state;
     return this;
   }
 
   @Override
-  public InterceptEndpointGroupAssociationLocationDetails set(String fieldName, Object value) {
-    return (InterceptEndpointGroupAssociationLocationDetails) super.set(fieldName, value);
+  public MirroringDeploymentGroupDeployment set(String fieldName, Object value) {
+    return (MirroringDeploymentGroupDeployment) super.set(fieldName, value);
   }
 
   @Override
-  public InterceptEndpointGroupAssociationLocationDetails clone() {
-    return (InterceptEndpointGroupAssociationLocationDetails) super.clone();
+  public MirroringDeploymentGroupDeployment clone() {
+    return (MirroringDeploymentGroupDeployment) super.clone();
   }
 
 }

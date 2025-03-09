@@ -17,7 +17,7 @@
 package com.google.api.services.networksecurity.v1beta1.model;
 
 /**
- * Message for response to listing InterceptEndpointGroups
+ * Response message for ListInterceptEndpointGroups.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Security API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.networksecurity.v1beta1.model;
 public final class ListInterceptEndpointGroupsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of InterceptEndpointGroup
+   * The endpoint groups from the specified parent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,14 +43,15 @@ public final class ListInterceptEndpointGroupsResponse extends com.google.api.cl
   }
 
   /**
-   * A token identifying a page of results the server should return.
+   * A token that can be sent as `page_token` to retrieve the next page. If this field is omitted,
+   * there are no subsequent pages. See https://google.aip.dev/158 for more details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * The list of InterceptEndpointGroup
+   * The endpoint groups from the specified parent.
    * @return value or {@code null} for none
    */
   public java.util.List<InterceptEndpointGroup> getInterceptEndpointGroups() {
@@ -58,7 +59,7 @@ public final class ListInterceptEndpointGroupsResponse extends com.google.api.cl
   }
 
   /**
-   * The list of InterceptEndpointGroup
+   * The endpoint groups from the specified parent.
    * @param interceptEndpointGroups interceptEndpointGroups or {@code null} for none
    */
   public ListInterceptEndpointGroupsResponse setInterceptEndpointGroups(java.util.List<InterceptEndpointGroup> interceptEndpointGroups) {
@@ -67,7 +68,8 @@ public final class ListInterceptEndpointGroupsResponse extends com.google.api.cl
   }
 
   /**
-   * A token identifying a page of results the server should return.
+   * A token that can be sent as `page_token` to retrieve the next page. If this field is omitted,
+   * there are no subsequent pages. See https://google.aip.dev/158 for more details.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -75,7 +77,8 @@ public final class ListInterceptEndpointGroupsResponse extends com.google.api.cl
   }
 
   /**
-   * A token identifying a page of results the server should return.
+   * A token that can be sent as `page_token` to retrieve the next page. If this field is omitted,
+   * there are no subsequent pages. See https://google.aip.dev/158 for more details.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListInterceptEndpointGroupsResponse setNextPageToken(java.lang.String nextPageToken) {

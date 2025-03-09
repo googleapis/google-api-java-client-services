@@ -31,8 +31,6 @@ package com.google.api.services.firebase.v1beta1.model;
 public final class StatusProto extends com.google.api.client.json.GenericJson {
 
   /**
-   * The canonical error code (see codes.proto) that most closely corresponds to this status. This
-   * may be missing, and in the common case of the generic space, it definitely will be.
    * copybara:strip_begin(b/383363683) copybara:strip_end_and_replace optional int32 canonical_code
    * = 6;
    * The value may be {@code null}.
@@ -67,16 +65,14 @@ public final class StatusProto extends com.google.api.client.json.GenericJson {
   private MessageSet messageSet;
 
   /**
-   * The following are usually only present when code != 0 Space to which this status belongs
-   * copybara:strip_begin(b/383363683) copybara:strip_end_and_replace optional string space = 2;
+   * copybara:strip_begin(b/383363683) Space to which this status belongs
+   * copybara:strip_end_and_replace optional string space = 2; // Space to which this status belongs
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String space;
 
   /**
-   * The canonical error code (see codes.proto) that most closely corresponds to this status. This
-   * may be missing, and in the common case of the generic space, it definitely will be.
    * copybara:strip_begin(b/383363683) copybara:strip_end_and_replace optional int32 canonical_code
    * = 6;
    * @return value or {@code null} for none
@@ -86,8 +82,6 @@ public final class StatusProto extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The canonical error code (see codes.proto) that most closely corresponds to this status. This
-   * may be missing, and in the common case of the generic space, it definitely will be.
    * copybara:strip_begin(b/383363683) copybara:strip_end_and_replace optional int32 canonical_code
    * = 6;
    * @param canonicalCode canonicalCode or {@code null} for none
@@ -159,8 +153,8 @@ public final class StatusProto extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The following are usually only present when code != 0 Space to which this status belongs
-   * copybara:strip_begin(b/383363683) copybara:strip_end_and_replace optional string space = 2;
+   * copybara:strip_begin(b/383363683) Space to which this status belongs
+   * copybara:strip_end_and_replace optional string space = 2; // Space to which this status belongs
    * @return value or {@code null} for none
    */
   public java.lang.String getSpace() {
@@ -168,8 +162,8 @@ public final class StatusProto extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The following are usually only present when code != 0 Space to which this status belongs
-   * copybara:strip_begin(b/383363683) copybara:strip_end_and_replace optional string space = 2;
+   * copybara:strip_begin(b/383363683) Space to which this status belongs
+   * copybara:strip_end_and_replace optional string space = 2; // Space to which this status belongs
    * @param space space or {@code null} for none
    */
   public StatusProto setSpace(java.lang.String space) {

@@ -88,6 +88,13 @@ public final class Step extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
+   * Display information of a serverless direct VPC egress connection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DirectVpcEgressConnectionInfo directVpcEgressConnection;
+
+  /**
    * Display information of the final state "drop" and reason.
    * The value may be {@code null}.
    */
@@ -208,6 +215,13 @@ public final class Step extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private RouteInfo route;
+
+  /**
+   * Display information of a serverless public (external) connection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ServerlessExternalConnectionInfo serverlessExternalConnection;
 
   /**
    * Display information of a Serverless network endpoint group backend. Used only for return
@@ -385,6 +399,23 @@ public final class Step extends com.google.api.client.json.GenericJson {
    */
   public Step setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Display information of a serverless direct VPC egress connection.
+   * @return value or {@code null} for none
+   */
+  public DirectVpcEgressConnectionInfo getDirectVpcEgressConnection() {
+    return directVpcEgressConnection;
+  }
+
+  /**
+   * Display information of a serverless direct VPC egress connection.
+   * @param directVpcEgressConnection directVpcEgressConnection or {@code null} for none
+   */
+  public Step setDirectVpcEgressConnection(DirectVpcEgressConnectionInfo directVpcEgressConnection) {
+    this.directVpcEgressConnection = directVpcEgressConnection;
     return this;
   }
 
@@ -680,6 +711,23 @@ public final class Step extends com.google.api.client.json.GenericJson {
    */
   public Step setRoute(RouteInfo route) {
     this.route = route;
+    return this;
+  }
+
+  /**
+   * Display information of a serverless public (external) connection.
+   * @return value or {@code null} for none
+   */
+  public ServerlessExternalConnectionInfo getServerlessExternalConnection() {
+    return serverlessExternalConnection;
+  }
+
+  /**
+   * Display information of a serverless public (external) connection.
+   * @param serverlessExternalConnection serverlessExternalConnection or {@code null} for none
+   */
+  public Step setServerlessExternalConnection(ServerlessExternalConnectionInfo serverlessExternalConnection) {
+    this.serverlessExternalConnection = serverlessExternalConnection;
     return this;
   }
 

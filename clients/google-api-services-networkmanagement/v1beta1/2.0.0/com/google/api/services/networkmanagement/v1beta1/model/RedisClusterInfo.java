@@ -52,7 +52,8 @@ public final class RedisClusterInfo extends com.google.api.client.json.GenericJs
   private java.lang.String location;
 
   /**
-   * URI of a Redis Cluster network in format "projects/{project_id}/global/networks/{network_id}".
+   * URI of the network containing the Redis Cluster endpoints in format
+   * "projects/{project_id}/global/networks/{network_id}".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,7 +126,8 @@ public final class RedisClusterInfo extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * URI of a Redis Cluster network in format "projects/{project_id}/global/networks/{network_id}".
+   * URI of the network containing the Redis Cluster endpoints in format
+   * "projects/{project_id}/global/networks/{network_id}".
    * @return value or {@code null} for none
    */
   public java.lang.String getNetworkUri() {
@@ -133,7 +135,8 @@ public final class RedisClusterInfo extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * URI of a Redis Cluster network in format "projects/{project_id}/global/networks/{network_id}".
+   * URI of the network containing the Redis Cluster endpoints in format
+   * "projects/{project_id}/global/networks/{network_id}".
    * @param networkUri networkUri or {@code null} for none
    */
   public RedisClusterInfo setNetworkUri(java.lang.String networkUri) {

@@ -48,6 +48,22 @@ public final class Spoke extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
+   * Optional. This checksum is computed by the server based on the value of other fields, and may
+   * be sent on update and delete requests to ensure the client has an up-to-date value before
+   * proceeding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String etag;
+
+  /**
+   * Optional. The list of fields waiting for hub administration's approval.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> fieldPathsPendingUpdate;
+
+  /**
    * Optional. The name of the group that this spoke is associated with.
    * The value may be {@code null}.
    */
@@ -181,6 +197,44 @@ public final class Spoke extends com.google.api.client.json.GenericJson {
    */
   public Spoke setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Optional. This checksum is computed by the server based on the value of other fields, and may
+   * be sent on update and delete requests to ensure the client has an up-to-date value before
+   * proceeding.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEtag() {
+    return etag;
+  }
+
+  /**
+   * Optional. This checksum is computed by the server based on the value of other fields, and may
+   * be sent on update and delete requests to ensure the client has an up-to-date value before
+   * proceeding.
+   * @param etag etag or {@code null} for none
+   */
+  public Spoke setEtag(java.lang.String etag) {
+    this.etag = etag;
+    return this;
+  }
+
+  /**
+   * Optional. The list of fields waiting for hub administration's approval.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getFieldPathsPendingUpdate() {
+    return fieldPathsPendingUpdate;
+  }
+
+  /**
+   * Optional. The list of fields waiting for hub administration's approval.
+   * @param fieldPathsPendingUpdate fieldPathsPendingUpdate or {@code null} for none
+   */
+  public Spoke setFieldPathsPendingUpdate(java.util.List<java.lang.String> fieldPathsPendingUpdate) {
+    this.fieldPathsPendingUpdate = fieldPathsPendingUpdate;
     return this;
   }
 

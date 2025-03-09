@@ -17,7 +17,7 @@
 package com.google.api.services.merchantapi.accounts_v1beta.model;
 
 /**
- * Next: 5
+ * Model definition for SeasonalOverride.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:
@@ -53,11 +53,25 @@ public final class SeasonalOverride extends com.google.api.client.json.GenericJs
   private java.lang.String label;
 
   /**
-   * Required. The return policy for the given date range.
+   * The return policy for the given date range.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Policy policy;
+
+  /**
+   * Number of days (from the delivery date) that the product can be returned.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer returnDays;
+
+  /**
+   * Fixed end date until which the product can be returned.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Date returnUntilDate;
 
   /**
    * Required. Defines the date range when this seasonal override applies. Both begin and end are
@@ -115,7 +129,7 @@ public final class SeasonalOverride extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. The return policy for the given date range.
+   * The return policy for the given date range.
    * @return value or {@code null} for none
    */
   public Policy getPolicy() {
@@ -123,11 +137,45 @@ public final class SeasonalOverride extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. The return policy for the given date range.
+   * The return policy for the given date range.
    * @param policy policy or {@code null} for none
    */
   public SeasonalOverride setPolicy(Policy policy) {
     this.policy = policy;
+    return this;
+  }
+
+  /**
+   * Number of days (from the delivery date) that the product can be returned.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getReturnDays() {
+    return returnDays;
+  }
+
+  /**
+   * Number of days (from the delivery date) that the product can be returned.
+   * @param returnDays returnDays or {@code null} for none
+   */
+  public SeasonalOverride setReturnDays(java.lang.Integer returnDays) {
+    this.returnDays = returnDays;
+    return this;
+  }
+
+  /**
+   * Fixed end date until which the product can be returned.
+   * @return value or {@code null} for none
+   */
+  public Date getReturnUntilDate() {
+    return returnUntilDate;
+  }
+
+  /**
+   * Fixed end date until which the product can be returned.
+   * @param returnUntilDate returnUntilDate or {@code null} for none
+   */
+  public SeasonalOverride setReturnUntilDate(Date returnUntilDate) {
+    this.returnUntilDate = returnUntilDate;
     return this;
   }
 

@@ -64,8 +64,8 @@ public final class ProductStatusChangeMessage extends com.google.api.client.json
   private String eventTime;
 
   /**
-   * The product expiration time. This field will not bet set if the notification is sent for a
-   * product deletion event.
+   * Optional. The product expiration time. This field will not bet set if the notification is sent
+   * for a product deletion event.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,7 +80,7 @@ public final class ProductStatusChangeMessage extends com.google.api.client.json
   private java.lang.String managingAccount;
 
   /**
-   * The product name. Format: `{product.name=accounts/{account}/products/{product}}`
+   * The product name. Format: `accounts/{account}/products/{product}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -169,8 +169,8 @@ public final class ProductStatusChangeMessage extends com.google.api.client.json
   }
 
   /**
-   * The product expiration time. This field will not bet set if the notification is sent for a
-   * product deletion event.
+   * Optional. The product expiration time. This field will not bet set if the notification is sent
+   * for a product deletion event.
    * @return value or {@code null} for none
    */
   public String getExpirationTime() {
@@ -178,8 +178,8 @@ public final class ProductStatusChangeMessage extends com.google.api.client.json
   }
 
   /**
-   * The product expiration time. This field will not bet set if the notification is sent for a
-   * product deletion event.
+   * Optional. The product expiration time. This field will not bet set if the notification is sent
+   * for a product deletion event.
    * @param expirationTime expirationTime or {@code null} for none
    */
   public ProductStatusChangeMessage setExpirationTime(String expirationTime) {
@@ -207,7 +207,7 @@ public final class ProductStatusChangeMessage extends com.google.api.client.json
   }
 
   /**
-   * The product name. Format: `{product.name=accounts/{account}/products/{product}}`
+   * The product name. Format: `accounts/{account}/products/{product}`
    * @return value or {@code null} for none
    */
   public java.lang.String getResource() {
@@ -215,7 +215,7 @@ public final class ProductStatusChangeMessage extends com.google.api.client.json
   }
 
   /**
-   * The product name. Format: `{product.name=accounts/{account}/products/{product}}`
+   * The product name. Format: `accounts/{account}/products/{product}`
    * @param resource resource or {@code null} for none
    */
   public ProductStatusChangeMessage setResource(java.lang.String resource) {

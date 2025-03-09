@@ -31,35 +31,41 @@ package com.google.api.services.merchantapi.datasources_v1beta.model;
 public final class ProductChange extends com.google.api.client.json.GenericJson {
 
   /**
-   * The new value of the changed resource or attribute.
+   * The new value of the changed resource or attribute. If empty, it means that the product was
+   * deleted. Will have one of these values : (`approved`, `pending`, `disapproved`, ``)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String newValue;
 
   /**
-   * The old value of the changed resource or attribute.
+   * The old value of the changed resource or attribute. If empty, it means that the product was
+   * created. Will have one of these values : (`approved`, `pending`, `disapproved`, ``)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String oldValue;
 
   /**
-   * Countries that have the change (if applicable)
+   * Countries that have the change (if applicable). Represented in the ISO 3166 format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String regionCode;
 
   /**
-   * Reporting contexts that have the change (if applicable)
+   * Reporting contexts that have the change (if applicable). Currently this field supports only
+   * (`SHOPPING_ADS`, `LOCAL_INVENTORY_ADS`, `YOUTUBE_SHOPPING`, `YOUTUBE_CHECKOUT`,
+   * `YOUTUBE_AFFILIATE`) from the enum value
+   * [ReportingContextEnum](/merchant/api/reference/rest/Shared.Types/ReportingContextEnum)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String reportingContext;
 
   /**
-   * The new value of the changed resource or attribute.
+   * The new value of the changed resource or attribute. If empty, it means that the product was
+   * deleted. Will have one of these values : (`approved`, `pending`, `disapproved`, ``)
    * @return value or {@code null} for none
    */
   public java.lang.String getNewValue() {
@@ -67,7 +73,8 @@ public final class ProductChange extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The new value of the changed resource or attribute.
+   * The new value of the changed resource or attribute. If empty, it means that the product was
+   * deleted. Will have one of these values : (`approved`, `pending`, `disapproved`, ``)
    * @param newValue newValue or {@code null} for none
    */
   public ProductChange setNewValue(java.lang.String newValue) {
@@ -76,7 +83,8 @@ public final class ProductChange extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The old value of the changed resource or attribute.
+   * The old value of the changed resource or attribute. If empty, it means that the product was
+   * created. Will have one of these values : (`approved`, `pending`, `disapproved`, ``)
    * @return value or {@code null} for none
    */
   public java.lang.String getOldValue() {
@@ -84,7 +92,8 @@ public final class ProductChange extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The old value of the changed resource or attribute.
+   * The old value of the changed resource or attribute. If empty, it means that the product was
+   * created. Will have one of these values : (`approved`, `pending`, `disapproved`, ``)
    * @param oldValue oldValue or {@code null} for none
    */
   public ProductChange setOldValue(java.lang.String oldValue) {
@@ -93,7 +102,7 @@ public final class ProductChange extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Countries that have the change (if applicable)
+   * Countries that have the change (if applicable). Represented in the ISO 3166 format.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegionCode() {
@@ -101,7 +110,7 @@ public final class ProductChange extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Countries that have the change (if applicable)
+   * Countries that have the change (if applicable). Represented in the ISO 3166 format.
    * @param regionCode regionCode or {@code null} for none
    */
   public ProductChange setRegionCode(java.lang.String regionCode) {
@@ -110,7 +119,10 @@ public final class ProductChange extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Reporting contexts that have the change (if applicable)
+   * Reporting contexts that have the change (if applicable). Currently this field supports only
+   * (`SHOPPING_ADS`, `LOCAL_INVENTORY_ADS`, `YOUTUBE_SHOPPING`, `YOUTUBE_CHECKOUT`,
+   * `YOUTUBE_AFFILIATE`) from the enum value
+   * [ReportingContextEnum](/merchant/api/reference/rest/Shared.Types/ReportingContextEnum)
    * @return value or {@code null} for none
    */
   public java.lang.String getReportingContext() {
@@ -118,7 +130,10 @@ public final class ProductChange extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Reporting contexts that have the change (if applicable)
+   * Reporting contexts that have the change (if applicable). Currently this field supports only
+   * (`SHOPPING_ADS`, `LOCAL_INVENTORY_ADS`, `YOUTUBE_SHOPPING`, `YOUTUBE_CHECKOUT`,
+   * `YOUTUBE_AFFILIATE`) from the enum value
+   * [ReportingContextEnum](/merchant/api/reference/rest/Shared.Types/ReportingContextEnum)
    * @param reportingContext reportingContext or {@code null} for none
    */
   public ProductChange setReportingContext(java.lang.String reportingContext) {

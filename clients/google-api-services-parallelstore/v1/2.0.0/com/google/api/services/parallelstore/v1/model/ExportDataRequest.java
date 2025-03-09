@@ -37,6 +37,13 @@ public final class ExportDataRequest extends com.google.api.client.json.GenericJ
   private DestinationGcsBucket destinationGcsBucket;
 
   /**
+   * Optional. The metadata options for the export data.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TransferMetadataOptions metadataOptions;
+
+  /**
    * Optional. An optional request ID to identify requests. Specify a unique request ID so that if
    * you must retry your request, the server will know to ignore the request if it has already been
    * completed. The server will guarantee that for at least 60 minutes since the first request. For
@@ -82,6 +89,23 @@ public final class ExportDataRequest extends com.google.api.client.json.GenericJ
    */
   public ExportDataRequest setDestinationGcsBucket(DestinationGcsBucket destinationGcsBucket) {
     this.destinationGcsBucket = destinationGcsBucket;
+    return this;
+  }
+
+  /**
+   * Optional. The metadata options for the export data.
+   * @return value or {@code null} for none
+   */
+  public TransferMetadataOptions getMetadataOptions() {
+    return metadataOptions;
+  }
+
+  /**
+   * Optional. The metadata options for the export data.
+   * @param metadataOptions metadataOptions or {@code null} for none
+   */
+  public ExportDataRequest setMetadataOptions(TransferMetadataOptions metadataOptions) {
+    this.metadataOptions = metadataOptions;
     return this;
   }
 

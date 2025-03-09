@@ -96,6 +96,15 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
+   * Output only. Completion time of the last successful Backup. This is sourced from a successful
+   * Backup's complete_time field. This field is added to maintain consistency with
+   * BackupPlanBinding to display last successful backup time.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String lastSuccessfulBackupTime;
+
+  /**
    * Output only. The full name of the BackupPlan resource. Format: `projects/locations/backupPlans`
    * The value may be {@code null}.
    */
@@ -319,6 +328,27 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
    */
   public BackupPlan setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
+    return this;
+  }
+
+  /**
+   * Output only. Completion time of the last successful Backup. This is sourced from a successful
+   * Backup's complete_time field. This field is added to maintain consistency with
+   * BackupPlanBinding to display last successful backup time.
+   * @return value or {@code null} for none
+   */
+  public String getLastSuccessfulBackupTime() {
+    return lastSuccessfulBackupTime;
+  }
+
+  /**
+   * Output only. Completion time of the last successful Backup. This is sourced from a successful
+   * Backup's complete_time field. This field is added to maintain consistency with
+   * BackupPlanBinding to display last successful backup time.
+   * @param lastSuccessfulBackupTime lastSuccessfulBackupTime or {@code null} for none
+   */
+  public BackupPlan setLastSuccessfulBackupTime(String lastSuccessfulBackupTime) {
+    this.lastSuccessfulBackupTime = lastSuccessfulBackupTime;
     return this;
   }
 

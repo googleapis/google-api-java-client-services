@@ -25,7 +25,7 @@ package com.google.api.services.forms.v1;
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://developers.google.com/forms/api" target="_blank">API Documentation</a>
+ * <a href="https://developers.google.com/workspace/forms/api" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>

@@ -40,6 +40,14 @@ public final class GoogleCloudAiplatformV1beta1Tool extends com.google.api.clien
   private GoogleCloudAiplatformV1beta1ToolCodeExecution codeExecution;
 
   /**
+   * Optional. Tool to support searching public web data, powered by Vertex AI Search and Sec4
+   * compliance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1EnterpriseWebSearch enterpriseWebSearch;
+
+  /**
    * Optional. Function tool type. One or more function declarations to be passed to the model along
    * with the current user query. Model may decide to call a subset of these functions by populating
    * FunctionCall in the response. User should provide a FunctionResponse for each function call in
@@ -94,6 +102,25 @@ public final class GoogleCloudAiplatformV1beta1Tool extends com.google.api.clien
    */
   public GoogleCloudAiplatformV1beta1Tool setCodeExecution(GoogleCloudAiplatformV1beta1ToolCodeExecution codeExecution) {
     this.codeExecution = codeExecution;
+    return this;
+  }
+
+  /**
+   * Optional. Tool to support searching public web data, powered by Vertex AI Search and Sec4
+   * compliance.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EnterpriseWebSearch getEnterpriseWebSearch() {
+    return enterpriseWebSearch;
+  }
+
+  /**
+   * Optional. Tool to support searching public web data, powered by Vertex AI Search and Sec4
+   * compliance.
+   * @param enterpriseWebSearch enterpriseWebSearch or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Tool setEnterpriseWebSearch(GoogleCloudAiplatformV1beta1EnterpriseWebSearch enterpriseWebSearch) {
+    this.enterpriseWebSearch = enterpriseWebSearch;
     return this;
   }
 

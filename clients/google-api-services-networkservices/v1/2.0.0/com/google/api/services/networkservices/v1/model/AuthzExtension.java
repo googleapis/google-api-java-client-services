@@ -139,7 +139,7 @@ public final class AuthzExtension extends com.google.api.client.json.GenericJson
 
   /**
    * Optional. The format of communication supported by the callout extension. If not specified, the
-   * default is `EXT_PROC_GRPC`.
+   * default value `EXT_PROC_GRPC` is used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -397,7 +397,7 @@ public final class AuthzExtension extends com.google.api.client.json.GenericJson
 
   /**
    * Optional. The format of communication supported by the callout extension. If not specified, the
-   * default is `EXT_PROC_GRPC`.
+   * default value `EXT_PROC_GRPC` is used.
    * @return value or {@code null} for none
    */
   public java.lang.String getWireFormat() {
@@ -406,7 +406,7 @@ public final class AuthzExtension extends com.google.api.client.json.GenericJson
 
   /**
    * Optional. The format of communication supported by the callout extension. If not specified, the
-   * default is `EXT_PROC_GRPC`.
+   * default value `EXT_PROC_GRPC` is used.
    * @param wireFormat wireFormat or {@code null} for none
    */
   public AuthzExtension setWireFormat(java.lang.String wireFormat) {

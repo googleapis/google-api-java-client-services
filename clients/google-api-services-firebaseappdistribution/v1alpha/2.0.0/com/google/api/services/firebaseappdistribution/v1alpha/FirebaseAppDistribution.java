@@ -2700,6 +2700,147 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
       public class TestCases {
 
         /**
+         * Delete test cases.
+         *
+         * Create a request for the method "testCases.batchDelete".
+         *
+         * This request holds the parameters needed by the firebaseappdistribution server.  After setting
+         * any optional parameters, call the {@link BatchDelete#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param parent Required. The parent resource where these test cases will be deleted. Format:
+         *        `projects/{project_number}/apps/{app_id}`
+         * @param content the {@link com.google.api.services.firebaseappdistribution.v1alpha.model.GoogleFirebaseAppdistroV1alphaBatchDeleteTestCasesRequest}
+         * @return the request
+         */
+        public BatchDelete batchDelete(java.lang.String parent, com.google.api.services.firebaseappdistribution.v1alpha.model.GoogleFirebaseAppdistroV1alphaBatchDeleteTestCasesRequest content) throws java.io.IOException {
+          BatchDelete result = new BatchDelete(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class BatchDelete extends FirebaseAppDistributionRequest<com.google.api.services.firebaseappdistribution.v1alpha.model.GoogleProtobufEmpty> {
+
+          private static final String REST_PATH = "v1alpha/{+parent}/testCases:batchDelete";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/apps/[^/]+$");
+
+          /**
+           * Delete test cases.
+           *
+           * Create a request for the method "testCases.batchDelete".
+           *
+           * This request holds the parameters needed by the the firebaseappdistribution server.  After
+           * setting any optional parameters, call the {@link BatchDelete#execute()} method to invoke the
+           * remote operation. <p> {@link
+           * BatchDelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource where these test cases will be deleted. Format:
+         *        `projects/{project_number}/apps/{app_id}`
+           * @param content the {@link com.google.api.services.firebaseappdistribution.v1alpha.model.GoogleFirebaseAppdistroV1alphaBatchDeleteTestCasesRequest}
+           * @since 1.13
+           */
+          protected BatchDelete(java.lang.String parent, com.google.api.services.firebaseappdistribution.v1alpha.model.GoogleFirebaseAppdistroV1alphaBatchDeleteTestCasesRequest content) {
+            super(FirebaseAppDistribution.this, "POST", REST_PATH, content, com.google.api.services.firebaseappdistribution.v1alpha.model.GoogleProtobufEmpty.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/apps/[^/]+$");
+            }
+          }
+
+          @Override
+          public BatchDelete set$Xgafv(java.lang.String $Xgafv) {
+            return (BatchDelete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public BatchDelete setAccessToken(java.lang.String accessToken) {
+            return (BatchDelete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public BatchDelete setAlt(java.lang.String alt) {
+            return (BatchDelete) super.setAlt(alt);
+          }
+
+          @Override
+          public BatchDelete setCallback(java.lang.String callback) {
+            return (BatchDelete) super.setCallback(callback);
+          }
+
+          @Override
+          public BatchDelete setFields(java.lang.String fields) {
+            return (BatchDelete) super.setFields(fields);
+          }
+
+          @Override
+          public BatchDelete setKey(java.lang.String key) {
+            return (BatchDelete) super.setKey(key);
+          }
+
+          @Override
+          public BatchDelete setOauthToken(java.lang.String oauthToken) {
+            return (BatchDelete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public BatchDelete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (BatchDelete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public BatchDelete setQuotaUser(java.lang.String quotaUser) {
+            return (BatchDelete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public BatchDelete setUploadType(java.lang.String uploadType) {
+            return (BatchDelete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public BatchDelete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (BatchDelete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent resource where these test cases will be deleted. Format:
+           * `projects/{project_number}/apps/{app_id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource where these test cases will be deleted. Format:
+         `projects/{project_number}/apps/{app_id}`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent resource where these test cases will be deleted. Format:
+           * `projects/{project_number}/apps/{app_id}`
+           */
+          public BatchDelete setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/apps/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public BatchDelete set(String parameterName, Object value) {
+            return (BatchDelete) super.set(parameterName, value);
+          }
+        }
+        /**
          * Create a new test case.
          *
          * Create a request for the method "testCases.create".

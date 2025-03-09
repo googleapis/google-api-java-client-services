@@ -32,6 +32,14 @@ package com.google.api.services.fcm.v1.model;
 public final class AndroidConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. If set to true, messages will be allowed to be delivered to the app while the device
+   * is in bandwidth constrained mode.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean bandwidthConstrainedOk;
+
+  /**
    * An identifier of a group of messages that can be collapsed, so that only the last message gets
    * sent when delivery can be resumed. A maximum of 4 different collapse keys is allowed at any
    * given time.
@@ -99,6 +107,25 @@ public final class AndroidConfig extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private String ttl;
+
+  /**
+   * Optional. If set to true, messages will be allowed to be delivered to the app while the device
+   * is in bandwidth constrained mode.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getBandwidthConstrainedOk() {
+    return bandwidthConstrainedOk;
+  }
+
+  /**
+   * Optional. If set to true, messages will be allowed to be delivered to the app while the device
+   * is in bandwidth constrained mode.
+   * @param bandwidthConstrainedOk bandwidthConstrainedOk or {@code null} for none
+   */
+  public AndroidConfig setBandwidthConstrainedOk(java.lang.Boolean bandwidthConstrainedOk) {
+    this.bandwidthConstrainedOk = bandwidthConstrainedOk;
+    return this;
+  }
 
   /**
    * An identifier of a group of messages that can be collapsed, so that only the last message gets

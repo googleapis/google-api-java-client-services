@@ -1,6 +1,6 @@
 # Firebase Cloud Messaging API Client Library for Java
 
-FCM send API that provides a cross-platform messaging solution to reliably deliver messages at no cost.
+FCM send API that provides a cross-platform messaging solution to reliably deliver messages.
 
 This page contains information about getting started with the Firebase Cloud Messaging API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-fcm</artifactId>
-      <version>v1-rev20241112-2.0.0</version>
+      <version>v1-rev20250228-2.0.0</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  implementation 'com.google.apis:google-api-services-fcm:v1-rev20241112-2.0.0'
+  implementation 'com.google.apis:google-api-services-fcm:v1-rev20250228-2.0.0'
 }
 ```
 

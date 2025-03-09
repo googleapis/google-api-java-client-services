@@ -17,7 +17,7 @@
 package com.google.api.services.networksecurity.v1.model;
 
 /**
- * Message for response to listing MirroringDeploymentGroups
+ * Response message for ListMirroringDeploymentGroups.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Security API. For a detailed explanation see:
@@ -30,21 +30,22 @@ package com.google.api.services.networksecurity.v1.model;
 public final class ListMirroringDeploymentGroupsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of MirroringDeploymentGroup
+   * The deployment groups from the specified parent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<MirroringDeploymentGroup> mirroringDeploymentGroups;
 
   /**
-   * A token identifying a page of results the server should return.
+   * A token that can be sent as `page_token` to retrieve the next page. If this field is omitted,
+   * there are no subsequent pages. See https://google.aip.dev/158 for more details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * The list of MirroringDeploymentGroup
+   * The deployment groups from the specified parent.
    * @return value or {@code null} for none
    */
   public java.util.List<MirroringDeploymentGroup> getMirroringDeploymentGroups() {
@@ -52,7 +53,7 @@ public final class ListMirroringDeploymentGroupsResponse extends com.google.api.
   }
 
   /**
-   * The list of MirroringDeploymentGroup
+   * The deployment groups from the specified parent.
    * @param mirroringDeploymentGroups mirroringDeploymentGroups or {@code null} for none
    */
   public ListMirroringDeploymentGroupsResponse setMirroringDeploymentGroups(java.util.List<MirroringDeploymentGroup> mirroringDeploymentGroups) {
@@ -61,7 +62,8 @@ public final class ListMirroringDeploymentGroupsResponse extends com.google.api.
   }
 
   /**
-   * A token identifying a page of results the server should return.
+   * A token that can be sent as `page_token` to retrieve the next page. If this field is omitted,
+   * there are no subsequent pages. See https://google.aip.dev/158 for more details.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -69,7 +71,8 @@ public final class ListMirroringDeploymentGroupsResponse extends com.google.api.
   }
 
   /**
-   * A token identifying a page of results the server should return.
+   * A token that can be sent as `page_token` to retrieve the next page. If this field is omitted,
+   * there are no subsequent pages. See https://google.aip.dev/158 for more details.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListMirroringDeploymentGroupsResponse setNextPageToken(java.lang.String nextPageToken) {

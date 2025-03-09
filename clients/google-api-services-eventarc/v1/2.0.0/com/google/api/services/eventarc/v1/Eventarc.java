@@ -312,7 +312,8 @@ public class Eventarc extends com.google.api.client.googleapis.services.json.Abs
         }
       }
       /**
-       * Get a GoogleChannelConfig
+       * Get a GoogleChannelConfig. The name of the GoogleChannelConfig in the response is ALWAYS coded
+       * with projectID.
        *
        * Create a request for the method "locations.getGoogleChannelConfig".
        *
@@ -337,7 +338,8 @@ public class Eventarc extends com.google.api.client.googleapis.services.json.Abs
             java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/googleChannelConfig$");
 
         /**
-         * Get a GoogleChannelConfig
+         * Get a GoogleChannelConfig. The name of the GoogleChannelConfig in the response is ALWAYS coded
+         * with projectID.
          *
          * Create a request for the method "locations.getGoogleChannelConfig".
          *
@@ -663,7 +665,9 @@ public class Eventarc extends com.google.api.client.googleapis.services.json.Abs
        * operation.
        *
        * @param name Required. The resource name of the config. Must be in the format of,
-       *        `projects/{project}/locations/{location}/googleChannelConfig`.
+       *        `projects/{project}/locations/{location}/googleChannelConfig`. In API responses, the
+       *        config name always includes the projectID, regardless of whether the projectID or
+       *        projectNumber was provided.
        * @param content the {@link com.google.api.services.eventarc.v1.model.GoogleChannelConfig}
        * @return the request
        */
@@ -692,7 +696,9 @@ public class Eventarc extends com.google.api.client.googleapis.services.json.Abs
          * immediately after invoking the constructor. </p>
          *
          * @param name Required. The resource name of the config. Must be in the format of,
-       *        `projects/{project}/locations/{location}/googleChannelConfig`.
+       *        `projects/{project}/locations/{location}/googleChannelConfig`. In API responses, the
+       *        config name always includes the projectID, regardless of whether the projectID or
+       *        projectNumber was provided.
          * @param content the {@link com.google.api.services.eventarc.v1.model.GoogleChannelConfig}
          * @since 1.13
          */
@@ -763,13 +769,16 @@ public class Eventarc extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Required. The resource name of the config. Must be in the format of,
-         * `projects/{project}/locations/{location}/googleChannelConfig`.
+         * `projects/{project}/locations/{location}/googleChannelConfig`. In API responses, the
+         * config name always includes the projectID, regardless of whether the projectID or
+         * projectNumber was provided.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. The resource name of the config. Must be in the format of,
-       `projects/{project}/locations/{location}/googleChannelConfig`.
+       `projects/{project}/locations/{location}/googleChannelConfig`. In API responses, the config name
+       always includes the projectID, regardless of whether the projectID or projectNumber was provided.
          */
         public java.lang.String getName() {
           return name;
@@ -777,7 +786,9 @@ public class Eventarc extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Required. The resource name of the config. Must be in the format of,
-         * `projects/{project}/locations/{location}/googleChannelConfig`.
+         * `projects/{project}/locations/{location}/googleChannelConfig`. In API responses, the
+         * config name always includes the projectID, regardless of whether the projectID or
+         * projectNumber was provided.
          */
         public UpdateGoogleChannelConfig setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {

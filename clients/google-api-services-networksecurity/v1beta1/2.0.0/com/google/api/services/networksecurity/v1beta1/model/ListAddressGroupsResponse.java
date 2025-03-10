@@ -52,6 +52,13 @@ public final class ListAddressGroupsResponse extends com.google.api.client.json.
   private java.lang.String nextPageToken;
 
   /**
+   * Locations that could not be reached.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> unreachable;
+
+  /**
    * List of AddressGroups resources.
    * @return value or {@code null} for none
    */
@@ -86,6 +93,23 @@ public final class ListAddressGroupsResponse extends com.google.api.client.json.
    */
   public ListAddressGroupsResponse setNextPageToken(java.lang.String nextPageToken) {
     this.nextPageToken = nextPageToken;
+    return this;
+  }
+
+  /**
+   * Locations that could not be reached.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getUnreachable() {
+    return unreachable;
+  }
+
+  /**
+   * Locations that could not be reached.
+   * @param unreachable unreachable or {@code null} for none
+   */
+  public ListAddressGroupsResponse setUnreachable(java.util.List<java.lang.String> unreachable) {
+    this.unreachable = unreachable;
     return this;
   }
 

@@ -70,6 +70,13 @@ public final class MirroringDeploymentGroup extends com.google.api.client.json.G
   private java.lang.String name;
 
   /**
+   * Output only. The list of Mirroring Deployments that belong to this group.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<MirroringDeploymentGroupDeployment> nestedDeployments;
+
+  /**
    * Required. Immutable. The network that will be used for all child deployments, for example:
    * `projects/{project}/global/networks/{network}`. See https://google.aip.dev/124.
    * The value may be {@code null}.
@@ -191,6 +198,23 @@ public final class MirroringDeploymentGroup extends com.google.api.client.json.G
    */
   public MirroringDeploymentGroup setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. The list of Mirroring Deployments that belong to this group.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<MirroringDeploymentGroupDeployment> getNestedDeployments() {
+    return nestedDeployments;
+  }
+
+  /**
+   * Output only. The list of Mirroring Deployments that belong to this group.
+   * @param nestedDeployments nestedDeployments or {@code null} for none
+   */
+  public MirroringDeploymentGroup setNestedDeployments(java.util.List<MirroringDeploymentGroupDeployment> nestedDeployments) {
+    this.nestedDeployments = nestedDeployments;
     return this;
   }
 

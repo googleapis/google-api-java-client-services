@@ -30,7 +30,7 @@ package com.google.api.services.merchantapi.datasources_v1beta.model;
 public final class PrimaryProductDataSource extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Immutable. Specifies the type of data source channel.
+   * Optional. Immutable. Specifies the type of data source channel.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,7 +77,7 @@ public final class PrimaryProductDataSource extends com.google.api.client.json.G
   private java.lang.String feedLabel;
 
   /**
-   * Required. Immutable. Specifies the type of data source channel.
+   * Optional. Immutable. Specifies the type of data source channel.
    * @return value or {@code null} for none
    */
   public java.lang.String getChannel() {
@@ -85,7 +85,7 @@ public final class PrimaryProductDataSource extends com.google.api.client.json.G
   }
 
   /**
-   * Required. Immutable. Specifies the type of data source channel.
+   * Optional. Immutable. Specifies the type of data source channel.
    * @param channel channel or {@code null} for none
    */
   public PrimaryProductDataSource setChannel(java.lang.String channel) {

@@ -39,7 +39,7 @@ public final class AutonomousDatabase extends com.google.api.client.json.Generic
   private java.lang.String adminPassword;
 
   /**
-   * Required. The subnet CIDR range for the Autonmous Database.
+   * Optional. The subnet CIDR range for the Autonmous Database.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,7 +91,7 @@ public final class AutonomousDatabase extends com.google.api.client.json.Generic
   private java.lang.String name;
 
   /**
-   * Required. The name of the VPC network used by the Autonomous Database in the following format:
+   * Optional. The name of the VPC network used by the Autonomous Database in the following format:
    * projects/{project}/global/networks/{network}
    * The value may be {@code null}.
    */
@@ -123,7 +123,7 @@ public final class AutonomousDatabase extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required. The subnet CIDR range for the Autonmous Database.
+   * Optional. The subnet CIDR range for the Autonmous Database.
    * @return value or {@code null} for none
    */
   public java.lang.String getCidr() {
@@ -131,7 +131,7 @@ public final class AutonomousDatabase extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required. The subnet CIDR range for the Autonmous Database.
+   * Optional. The subnet CIDR range for the Autonmous Database.
    * @param cidr cidr or {@code null} for none
    */
   public AutonomousDatabase setCidr(java.lang.String cidr) {
@@ -248,7 +248,7 @@ public final class AutonomousDatabase extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required. The name of the VPC network used by the Autonomous Database in the following format:
+   * Optional. The name of the VPC network used by the Autonomous Database in the following format:
    * projects/{project}/global/networks/{network}
    * @return value or {@code null} for none
    */
@@ -257,7 +257,7 @@ public final class AutonomousDatabase extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required. The name of the VPC network used by the Autonomous Database in the following format:
+   * Optional. The name of the VPC network used by the Autonomous Database in the following format:
    * projects/{project}/global/networks/{network}
    * @param network network or {@code null} for none
    */

@@ -30,6 +30,30 @@ package com.google.api.services.monitoring.v1.model;
 @SuppressWarnings("javadoc")
 public final class SingleViewGroup extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Optional. Determines how the widget selector will be displayed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String displayType;
+
+  /**
+   * Optional. Determines how the widget selector will be displayed.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDisplayType() {
+    return displayType;
+  }
+
+  /**
+   * Optional. Determines how the widget selector will be displayed.
+   * @param displayType displayType or {@code null} for none
+   */
+  public SingleViewGroup setDisplayType(java.lang.String displayType) {
+    this.displayType = displayType;
+    return this;
+  }
+
   @Override
   public SingleViewGroup set(String fieldName, Object value) {
     return (SingleViewGroup) super.set(fieldName, value);

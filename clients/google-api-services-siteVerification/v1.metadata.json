@@ -2,6 +2,6 @@
   "maven": {
     "groupId": "com.google.apis",
     "artifactId": "google-api-services-siteVerification",
-    "version": "v1-rev20191119-1.32.1"
+    "version": "v1-rev20191119-2.0.0"
   }
 }

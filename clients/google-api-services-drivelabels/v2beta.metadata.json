@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-drivelabels",
+    "version": "v2beta-rev20231218-2.0.0"
+  }
+}

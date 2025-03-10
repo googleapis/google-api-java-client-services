@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-blockchainnodeengine",
+    "version": "v1-rev20241204-2.0.0"
+  }
+}

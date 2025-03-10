@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-apigeeregistry",
+    "version": "v1-rev20230928-2.0.0"
+  }
+}

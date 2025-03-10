@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-vmwareengine",
+    "version": "v1-rev20250218-2.0.0"
+  }
+}

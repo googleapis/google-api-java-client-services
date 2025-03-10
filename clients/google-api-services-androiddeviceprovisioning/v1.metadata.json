@@ -2,6 +2,6 @@
   "maven": {
     "groupId": "com.google.apis",
     "artifactId": "google-api-services-androiddeviceprovisioning",
-    "version": "v1-rev20210806-1.32.1"
+    "version": "v1-rev20241202-2.0.0"
   }
 }

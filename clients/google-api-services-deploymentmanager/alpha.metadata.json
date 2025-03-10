@@ -2,6 +2,6 @@
   "maven": {
     "groupId": "com.google.apis",
     "artifactId": "google-api-services-deploymentmanager",
-    "version": "alpha-rev20211014-1.32.1"
+    "version": "alpha-rev20250102-2.0.0"
   }
 }

@@ -2,6 +2,6 @@
   "maven": {
     "groupId": "com.google.apis",
     "artifactId": "google-api-services-monitoring",
-    "version": "v3-rev20211213-1.32.1"
+    "version": "v3-rev20250130-2.0.0"
   }
 }

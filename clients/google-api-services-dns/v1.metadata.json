@@ -2,6 +2,6 @@
   "maven": {
     "groupId": "com.google.apis",
     "artifactId": "google-api-services-dns",
-    "version": "v1-rev20220106-1.32.1"
+    "version": "v1-rev20250102-2.0.0"
   }
 }

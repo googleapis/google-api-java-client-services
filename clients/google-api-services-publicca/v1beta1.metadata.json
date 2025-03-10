@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-publicca",
+    "version": "v1beta1-rev20230227-2.0.0"
+  }
+}

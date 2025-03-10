@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-dataportability",
+    "version": "v1beta-rev20250212-2.0.0"
+  }
+}

@@ -2,6 +2,6 @@
   "maven": {
     "groupId": "com.google.apis",
     "artifactId": "google-api-services-servicenetworking",
-    "version": "v1beta-rev20210810-1.32.1"
+    "version": "v1beta-rev20250218-2.0.0"
   }
 }

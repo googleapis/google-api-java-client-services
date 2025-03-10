@@ -60,7 +60,8 @@ public final class GoogleCloudContactcenterinsightsV1View extends com.google.api
   private String updateTime;
 
   /**
-   * String with specific view properties, must be non-empty.
+   * A filter to reduce conversation results to a specific subset. Refer to
+   * https://cloud.google.com/contact-center/insights/docs/filtering for details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -137,7 +138,8 @@ public final class GoogleCloudContactcenterinsightsV1View extends com.google.api
   }
 
   /**
-   * String with specific view properties, must be non-empty.
+   * A filter to reduce conversation results to a specific subset. Refer to
+   * https://cloud.google.com/contact-center/insights/docs/filtering for details.
    * @return value or {@code null} for none
    */
   public java.lang.String getValue() {
@@ -145,7 +147,8 @@ public final class GoogleCloudContactcenterinsightsV1View extends com.google.api
   }
 
   /**
-   * String with specific view properties, must be non-empty.
+   * A filter to reduce conversation results to a specific subset. Refer to
+   * https://cloud.google.com/contact-center/insights/docs/filtering for details.
    * @param value value or {@code null} for none
    */
   public GoogleCloudContactcenterinsightsV1View setValue(java.lang.String value) {

@@ -689,6 +689,138 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
             }
           }
           /**
+           * Accepts a proposal to update a Network Connectivity Center spoke in a hub.
+           *
+           * Create a request for the method "hubs.acceptSpokeUpdate".
+           *
+           * This request holds the parameters needed by the networkconnectivity server.  After setting any
+           * optional parameters, call the {@link AcceptSpokeUpdate#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param name Required. The name of the hub to accept spoke update.
+           * @param content the {@link com.google.api.services.networkconnectivity.v1.model.AcceptSpokeUpdateRequest}
+           * @return the request
+           */
+          public AcceptSpokeUpdate acceptSpokeUpdate(java.lang.String name, com.google.api.services.networkconnectivity.v1.model.AcceptSpokeUpdateRequest content) throws java.io.IOException {
+            AcceptSpokeUpdate result = new AcceptSpokeUpdate(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class AcceptSpokeUpdate extends NetworkconnectivityRequest<com.google.api.services.networkconnectivity.v1.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v1/{+name}:acceptSpokeUpdate";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/hubs/[^/]+$");
+
+            /**
+             * Accepts a proposal to update a Network Connectivity Center spoke in a hub.
+             *
+             * Create a request for the method "hubs.acceptSpokeUpdate".
+             *
+             * This request holds the parameters needed by the the networkconnectivity server.  After setting
+             * any optional parameters, call the {@link AcceptSpokeUpdate#execute()} method to invoke the
+             * remote operation. <p> {@link AcceptSpokeUpdate#initialize(com.google.api.client.googleapis.serv
+             * ices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param name Required. The name of the hub to accept spoke update.
+             * @param content the {@link com.google.api.services.networkconnectivity.v1.model.AcceptSpokeUpdateRequest}
+             * @since 1.13
+             */
+            protected AcceptSpokeUpdate(java.lang.String name, com.google.api.services.networkconnectivity.v1.model.AcceptSpokeUpdateRequest content) {
+              super(Networkconnectivity.this, "POST", REST_PATH, content, com.google.api.services.networkconnectivity.v1.model.GoogleLongrunningOperation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/global/hubs/[^/]+$");
+              }
+            }
+
+            @Override
+            public AcceptSpokeUpdate set$Xgafv(java.lang.String $Xgafv) {
+              return (AcceptSpokeUpdate) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public AcceptSpokeUpdate setAccessToken(java.lang.String accessToken) {
+              return (AcceptSpokeUpdate) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public AcceptSpokeUpdate setAlt(java.lang.String alt) {
+              return (AcceptSpokeUpdate) super.setAlt(alt);
+            }
+
+            @Override
+            public AcceptSpokeUpdate setCallback(java.lang.String callback) {
+              return (AcceptSpokeUpdate) super.setCallback(callback);
+            }
+
+            @Override
+            public AcceptSpokeUpdate setFields(java.lang.String fields) {
+              return (AcceptSpokeUpdate) super.setFields(fields);
+            }
+
+            @Override
+            public AcceptSpokeUpdate setKey(java.lang.String key) {
+              return (AcceptSpokeUpdate) super.setKey(key);
+            }
+
+            @Override
+            public AcceptSpokeUpdate setOauthToken(java.lang.String oauthToken) {
+              return (AcceptSpokeUpdate) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public AcceptSpokeUpdate setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (AcceptSpokeUpdate) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public AcceptSpokeUpdate setQuotaUser(java.lang.String quotaUser) {
+              return (AcceptSpokeUpdate) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public AcceptSpokeUpdate setUploadType(java.lang.String uploadType) {
+              return (AcceptSpokeUpdate) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public AcceptSpokeUpdate setUploadProtocol(java.lang.String uploadProtocol) {
+              return (AcceptSpokeUpdate) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The name of the hub to accept spoke update. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the hub to accept spoke update.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. The name of the hub to accept spoke update. */
+            public AcceptSpokeUpdate setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/global/hubs/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public AcceptSpokeUpdate set(String parameterName, Object value) {
+              return (AcceptSpokeUpdate) super.set(parameterName, value);
+            }
+          }
+          /**
            * Creates a new Network Connectivity Center hub in the specified project.
            *
            * Create a request for the method "hubs.create".
@@ -2484,6 +2616,138 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
             @Override
             public RejectSpoke set(String parameterName, Object value) {
               return (RejectSpoke) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Rejects a proposal to update a Network Connectivity Center spoke in a hub.
+           *
+           * Create a request for the method "hubs.rejectSpokeUpdate".
+           *
+           * This request holds the parameters needed by the networkconnectivity server.  After setting any
+           * optional parameters, call the {@link RejectSpokeUpdate#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param name Required. The name of the hub to reject spoke update.
+           * @param content the {@link com.google.api.services.networkconnectivity.v1.model.RejectSpokeUpdateRequest}
+           * @return the request
+           */
+          public RejectSpokeUpdate rejectSpokeUpdate(java.lang.String name, com.google.api.services.networkconnectivity.v1.model.RejectSpokeUpdateRequest content) throws java.io.IOException {
+            RejectSpokeUpdate result = new RejectSpokeUpdate(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class RejectSpokeUpdate extends NetworkconnectivityRequest<com.google.api.services.networkconnectivity.v1.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v1/{+name}:rejectSpokeUpdate";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/hubs/[^/]+$");
+
+            /**
+             * Rejects a proposal to update a Network Connectivity Center spoke in a hub.
+             *
+             * Create a request for the method "hubs.rejectSpokeUpdate".
+             *
+             * This request holds the parameters needed by the the networkconnectivity server.  After setting
+             * any optional parameters, call the {@link RejectSpokeUpdate#execute()} method to invoke the
+             * remote operation. <p> {@link RejectSpokeUpdate#initialize(com.google.api.client.googleapis.serv
+             * ices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param name Required. The name of the hub to reject spoke update.
+             * @param content the {@link com.google.api.services.networkconnectivity.v1.model.RejectSpokeUpdateRequest}
+             * @since 1.13
+             */
+            protected RejectSpokeUpdate(java.lang.String name, com.google.api.services.networkconnectivity.v1.model.RejectSpokeUpdateRequest content) {
+              super(Networkconnectivity.this, "POST", REST_PATH, content, com.google.api.services.networkconnectivity.v1.model.GoogleLongrunningOperation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/global/hubs/[^/]+$");
+              }
+            }
+
+            @Override
+            public RejectSpokeUpdate set$Xgafv(java.lang.String $Xgafv) {
+              return (RejectSpokeUpdate) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public RejectSpokeUpdate setAccessToken(java.lang.String accessToken) {
+              return (RejectSpokeUpdate) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public RejectSpokeUpdate setAlt(java.lang.String alt) {
+              return (RejectSpokeUpdate) super.setAlt(alt);
+            }
+
+            @Override
+            public RejectSpokeUpdate setCallback(java.lang.String callback) {
+              return (RejectSpokeUpdate) super.setCallback(callback);
+            }
+
+            @Override
+            public RejectSpokeUpdate setFields(java.lang.String fields) {
+              return (RejectSpokeUpdate) super.setFields(fields);
+            }
+
+            @Override
+            public RejectSpokeUpdate setKey(java.lang.String key) {
+              return (RejectSpokeUpdate) super.setKey(key);
+            }
+
+            @Override
+            public RejectSpokeUpdate setOauthToken(java.lang.String oauthToken) {
+              return (RejectSpokeUpdate) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public RejectSpokeUpdate setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (RejectSpokeUpdate) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public RejectSpokeUpdate setQuotaUser(java.lang.String quotaUser) {
+              return (RejectSpokeUpdate) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public RejectSpokeUpdate setUploadType(java.lang.String uploadType) {
+              return (RejectSpokeUpdate) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public RejectSpokeUpdate setUploadProtocol(java.lang.String uploadProtocol) {
+              return (RejectSpokeUpdate) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The name of the hub to reject spoke update. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the hub to reject spoke update.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. The name of the hub to reject spoke update. */
+            public RejectSpokeUpdate setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/global/hubs/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public RejectSpokeUpdate set(String parameterName, Object value) {
+              return (RejectSpokeUpdate) super.set(parameterName, value);
             }
           }
           /**
@@ -4744,17 +5008,38 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
               return this;
             }
 
-            /** Required. Unique id for the policy-based route to create. */
+            /**
+             * Required. Unique id for the policy-based route to create. Provided by the client when
+             * the resource is created. The name must comply with
+             * https://google.aip.dev/122#resource-id-segments. Specifically, the name must be 1-63
+             * characters long and match the regular expression [a-z]([a-z0-9-]*[a-z0-9])?. The
+             * first character must be a lowercase letter, and all following characters (except for
+             * the last character) must be a dash, lowercase letter, or digit. The last character
+             * must be a lowercase letter or digit.
+             */
             @com.google.api.client.util.Key
             private java.lang.String policyBasedRouteId;
 
-            /** Required. Unique id for the policy-based route to create.
+            /** Required. Unique id for the policy-based route to create. Provided by the client when the resource
+           is created. The name must comply with https://google.aip.dev/122#resource-id-segments.
+           Specifically, the name must be 1-63 characters long and match the regular expression
+           [a-z]([a-z0-9-]*[a-z0-9])?. The first character must be a lowercase letter, and all following
+           characters (except for the last character) must be a dash, lowercase letter, or digit. The last
+           character must be a lowercase letter or digit.
              */
             public java.lang.String getPolicyBasedRouteId() {
               return policyBasedRouteId;
             }
 
-            /** Required. Unique id for the policy-based route to create. */
+            /**
+             * Required. Unique id for the policy-based route to create. Provided by the client when
+             * the resource is created. The name must comply with
+             * https://google.aip.dev/122#resource-id-segments. Specifically, the name must be 1-63
+             * characters long and match the regular expression [a-z]([a-z0-9-]*[a-z0-9])?. The
+             * first character must be a lowercase letter, and all following characters (except for
+             * the last character) must be a dash, lowercase letter, or digit. The last character
+             * must be a lowercase letter or digit.
+             */
             public Create setPolicyBasedRouteId(java.lang.String policyBasedRouteId) {
               this.policyBasedRouteId = policyBasedRouteId;
               return this;

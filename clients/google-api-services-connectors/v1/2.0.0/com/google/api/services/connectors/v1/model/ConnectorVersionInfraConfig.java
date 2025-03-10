@@ -17,7 +17,7 @@
 package com.google.api.services.connectors.v1.model;
 
 /**
- * This cofiguration provides infra configs like rate limit threshold which need to be configurable
+ * This configuration provides infra configs like rate limit threshold which need to be configurable
  * for every connector version
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

@@ -267,6 +267,13 @@ public final class Connection extends com.google.api.client.json.GenericJson {
   private java.lang.String tlsServiceDirectory;
 
   /**
+   * Optional. Traffic shaping configuration for the connection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<TrafficShapingConfig> trafficShapingConfigs;
+
+  /**
    * Output only. Updated time.
    * The value may be {@code null}.
    */
@@ -825,6 +832,23 @@ public final class Connection extends com.google.api.client.json.GenericJson {
    */
   public Connection setTlsServiceDirectory(java.lang.String tlsServiceDirectory) {
     this.tlsServiceDirectory = tlsServiceDirectory;
+    return this;
+  }
+
+  /**
+   * Optional. Traffic shaping configuration for the connection.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<TrafficShapingConfig> getTrafficShapingConfigs() {
+    return trafficShapingConfigs;
+  }
+
+  /**
+   * Optional. Traffic shaping configuration for the connection.
+   * @param trafficShapingConfigs trafficShapingConfigs or {@code null} for none
+   */
+  public Connection setTrafficShapingConfigs(java.util.List<TrafficShapingConfig> trafficShapingConfigs) {
+    this.trafficShapingConfigs = trafficShapingConfigs;
     return this;
   }
 

@@ -159,6 +159,14 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.String nodeType;
 
   /**
+   * Optional. Input only. Ondemand maintenance for the cluster. This field can be used to trigger
+   * ondemand critical update on the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean ondemandMaintenance;
+
+  /**
    * Optional. Persistence config (RDB, AOF) for the cluster.
    * The value may be {@code null}.
    */
@@ -566,6 +574,25 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setNodeType(java.lang.String nodeType) {
     this.nodeType = nodeType;
+    return this;
+  }
+
+  /**
+   * Optional. Input only. Ondemand maintenance for the cluster. This field can be used to trigger
+   * ondemand critical update on the cluster.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getOndemandMaintenance() {
+    return ondemandMaintenance;
+  }
+
+  /**
+   * Optional. Input only. Ondemand maintenance for the cluster. This field can be used to trigger
+   * ondemand critical update on the cluster.
+   * @param ondemandMaintenance ondemandMaintenance or {@code null} for none
+   */
+  public Cluster setOndemandMaintenance(java.lang.Boolean ondemandMaintenance) {
+    this.ondemandMaintenance = ondemandMaintenance;
     return this;
   }
 

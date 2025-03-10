@@ -17,7 +17,7 @@
 package com.google.api.services.networksecurity.v1beta1.model;
 
 /**
- * Message for response to listing InterceptDeployments
+ * Response message for ListInterceptDeployments.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Security API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.networksecurity.v1beta1.model;
 public final class ListInterceptDeploymentsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of InterceptDeployment
+   * The deployments from the specified parent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,7 +43,8 @@ public final class ListInterceptDeploymentsResponse extends com.google.api.clien
   }
 
   /**
-   * A token identifying a page of results the server should return.
+   * A token that can be sent as `page_token` to retrieve the next page. If this field is omitted,
+   * there are no subsequent pages. See https://google.aip.dev/158 for more details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,7 +58,7 @@ public final class ListInterceptDeploymentsResponse extends com.google.api.clien
   private java.util.List<java.lang.String> unreachable;
 
   /**
-   * The list of InterceptDeployment
+   * The deployments from the specified parent.
    * @return value or {@code null} for none
    */
   public java.util.List<InterceptDeployment> getInterceptDeployments() {
@@ -65,7 +66,7 @@ public final class ListInterceptDeploymentsResponse extends com.google.api.clien
   }
 
   /**
-   * The list of InterceptDeployment
+   * The deployments from the specified parent.
    * @param interceptDeployments interceptDeployments or {@code null} for none
    */
   public ListInterceptDeploymentsResponse setInterceptDeployments(java.util.List<InterceptDeployment> interceptDeployments) {
@@ -74,7 +75,8 @@ public final class ListInterceptDeploymentsResponse extends com.google.api.clien
   }
 
   /**
-   * A token identifying a page of results the server should return.
+   * A token that can be sent as `page_token` to retrieve the next page. If this field is omitted,
+   * there are no subsequent pages. See https://google.aip.dev/158 for more details.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -82,7 +84,8 @@ public final class ListInterceptDeploymentsResponse extends com.google.api.clien
   }
 
   /**
-   * A token identifying a page of results the server should return.
+   * A token that can be sent as `page_token` to retrieve the next page. If this field is omitted,
+   * there are no subsequent pages. See https://google.aip.dev/158 for more details.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListInterceptDeploymentsResponse setNextPageToken(java.lang.String nextPageToken) {

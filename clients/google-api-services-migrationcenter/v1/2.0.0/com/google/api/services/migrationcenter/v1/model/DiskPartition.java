@@ -51,7 +51,7 @@ public final class DiskPartition extends com.google.api.client.json.GenericJson 
   private java.lang.Long freeBytes;
 
   /**
-   * Mount pount (Linux/Windows) or drive letter (Windows).
+   * Mount point (Linux/Windows) or drive letter (Windows).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -130,7 +130,7 @@ public final class DiskPartition extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Mount pount (Linux/Windows) or drive letter (Windows).
+   * Mount point (Linux/Windows) or drive letter (Windows).
    * @return value or {@code null} for none
    */
   public java.lang.String getMountPoint() {
@@ -138,7 +138,7 @@ public final class DiskPartition extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Mount pount (Linux/Windows) or drive letter (Windows).
+   * Mount point (Linux/Windows) or drive letter (Windows).
    * @param mountPoint mountPoint or {@code null} for none
    */
   public DiskPartition setMountPoint(java.lang.String mountPoint) {

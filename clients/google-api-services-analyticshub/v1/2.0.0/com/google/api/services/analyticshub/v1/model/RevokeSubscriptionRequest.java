@@ -29,6 +29,36 @@ package com.google.api.services.analyticshub.v1.model;
 @SuppressWarnings("javadoc")
 public final class RevokeSubscriptionRequest extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Optional. If the subscription is commercial then this field must be set to true, otherwise a
+   * failure is thrown. This acts as a safety guard to avoid revoking commercial subscriptions
+   * accidentally.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean revokeCommercial;
+
+  /**
+   * Optional. If the subscription is commercial then this field must be set to true, otherwise a
+   * failure is thrown. This acts as a safety guard to avoid revoking commercial subscriptions
+   * accidentally.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getRevokeCommercial() {
+    return revokeCommercial;
+  }
+
+  /**
+   * Optional. If the subscription is commercial then this field must be set to true, otherwise a
+   * failure is thrown. This acts as a safety guard to avoid revoking commercial subscriptions
+   * accidentally.
+   * @param revokeCommercial revokeCommercial or {@code null} for none
+   */
+  public RevokeSubscriptionRequest setRevokeCommercial(java.lang.Boolean revokeCommercial) {
+    this.revokeCommercial = revokeCommercial;
+    return this;
+  }
+
   @Override
   public RevokeSubscriptionRequest set(String fieldName, Object value) {
     return (RevokeSubscriptionRequest) super.set(fieldName, value);

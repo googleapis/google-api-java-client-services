@@ -37,7 +37,7 @@ public final class SubscribeListingRequest extends com.google.api.client.json.Ge
   private DestinationDataset destinationDataset;
 
   /**
-   * Required. Input only. Destination Pub/Sub subscription to create for the subscriber.
+   * Input only. Destination Pub/Sub subscription to create for the subscriber.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class SubscribeListingRequest extends com.google.api.client.json.Ge
   }
 
   /**
-   * Required. Input only. Destination Pub/Sub subscription to create for the subscriber.
+   * Input only. Destination Pub/Sub subscription to create for the subscriber.
    * @return value or {@code null} for none
    */
   public DestinationPubSubSubscription getDestinationPubsubSubscription() {
@@ -69,7 +69,7 @@ public final class SubscribeListingRequest extends com.google.api.client.json.Ge
   }
 
   /**
-   * Required. Input only. Destination Pub/Sub subscription to create for the subscriber.
+   * Input only. Destination Pub/Sub subscription to create for the subscriber.
    * @param destinationPubsubSubscription destinationPubsubSubscription or {@code null} for none
    */
   public SubscribeListingRequest setDestinationPubsubSubscription(DestinationPubSubSubscription destinationPubsubSubscription) {

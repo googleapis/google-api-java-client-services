@@ -2344,6 +2344,31 @@ public class AnalyticsHub extends com.google.api.client.googleapis.services.json
               return this;
             }
 
+            /**
+             * Optional. If the listing is commercial then this field must be set to true, otherwise
+             * a failure is thrown. This acts as a safety guard to avoid deleting commercial
+             * listings accidentally.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean deleteCommercial;
+
+            /** Optional. If the listing is commercial then this field must be set to true, otherwise a failure is
+           thrown. This acts as a safety guard to avoid deleting commercial listings accidentally.
+             */
+            public java.lang.Boolean getDeleteCommercial() {
+              return deleteCommercial;
+            }
+
+            /**
+             * Optional. If the listing is commercial then this field must be set to true, otherwise
+             * a failure is thrown. This acts as a safety guard to avoid deleting commercial
+             * listings accidentally.
+             */
+            public Delete setDeleteCommercial(java.lang.Boolean deleteCommercial) {
+              this.deleteCommercial = deleteCommercial;
+              return this;
+            }
+
             @Override
             public Delete set(String parameterName, Object value) {
               return (Delete) super.set(parameterName, value);

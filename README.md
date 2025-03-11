@@ -175,8 +175,8 @@ packages on [Maven Central][maven-search].
 | Firebase Realtime Database Management API | [v1beta](clients/google-api-services-firebasedatabase/v1beta) |
 | Firebase Rules API | [v1](clients/google-api-services-firebaserules/v1) |
 | Fitness API | [v1](clients/google-api-services-fitness/v1) |
-| GDC Virtual API | [v1](clients/google-api-services-gkeonprem/v1) |
 | GKE Hub API | [v1](clients/google-api-services-gkehub/v1), [v1alpha](clients/google-api-services-gkehub/v1alpha), [v1beta](clients/google-api-services-gkehub/v1beta), [v1beta1](clients/google-api-services-gkehub/v1beta1), [v2](clients/google-api-services-gkehub/v2), [v2alpha](clients/google-api-services-gkehub/v2alpha), [v2beta](clients/google-api-services-gkehub/v2beta) |
+| GKE On-Prem API | [v1](clients/google-api-services-gkeonprem/v1) |
 | Gmail API | [v1](clients/google-api-services-gmail/v1) |
 | Gmail Postmaster Tools API | [v1](clients/google-api-services-gmailpostmastertools/v1), [v1beta1](clients/google-api-services-gmailpostmastertools/v1beta1) |
 | Google Analytics API | [v3](clients/google-api-services-analytics/v3) |

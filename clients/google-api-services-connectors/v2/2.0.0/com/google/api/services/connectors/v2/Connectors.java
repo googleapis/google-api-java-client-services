@@ -1561,6 +1561,22 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
               return this;
             }
 
+            /** Specifies view for entity type schema. */
+            @com.google.api.client.util.Key
+            private java.lang.String view;
+
+            /** Specifies view for entity type schema.
+             */
+            public java.lang.String getView() {
+              return view;
+            }
+
+            /** Specifies view for entity type schema. */
+            public Get setView(java.lang.String view) {
+              this.view = view;
+              return this;
+            }
+
             @Override
             public Get set(String parameterName, Object value) {
               return (Get) super.set(parameterName, value);

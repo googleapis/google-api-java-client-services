@@ -23,14 +23,12 @@ jobs:
       - run: sudo apt-get install moreutils
       - working-directory: google-api-java-client-services/clients
         run: |
+          set -ex
           find . -name pom.xml -not -path '*/target/*' \
           | cut -d'/' -f2-4 \
           | sed 's/\(.*\)/<module>\1<\/module>/' \
           | (echo "<project><modelVersion>4.0.0</modelVersion><groupId>temp</groupId><artifactId>temp</artifactId><version>1.0</version><packaging>pom</packaging><modules>"; cat -; echo "</modules></project>") > pom.xml
 
           mvn clean compile -Dmaven.testSkip=true -fae --fail-at-end \
-          |& grep -E "^\[ERROR\] Failed to execute goal" \
-          | awk -F'module ' '{print $2}' \
-          | awk -F'\[ERROR\]' '{print $1}' \
-          | sort -u
+          |& grep -E "^\[ERROR\] Failed to execute goal"
 

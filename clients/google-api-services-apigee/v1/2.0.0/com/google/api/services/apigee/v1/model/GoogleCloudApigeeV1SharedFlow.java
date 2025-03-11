@@ -58,6 +58,16 @@ public final class GoogleCloudApigeeV1SharedFlow extends com.google.api.client.j
   private java.util.List<java.lang.String> revision;
 
   /**
+   * Optional. The ID of the space associated with this shared flow. Any IAM policies applied to the
+   * space will control access to this shared flow. To learn how Spaces can be used to manage
+   * resources, read the [Apigee Spaces Overview](https://cloud.google.com/apigee/docs/api-
+   * platform/system-administration/spaces/apigee-spaces-overview).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String space;
+
+  /**
    * The id of the most recently created revision for this shared flow.
    * @return value or {@code null} for none
    */
@@ -122,6 +132,29 @@ public final class GoogleCloudApigeeV1SharedFlow extends com.google.api.client.j
    */
   public GoogleCloudApigeeV1SharedFlow setRevision(java.util.List<java.lang.String> revision) {
     this.revision = revision;
+    return this;
+  }
+
+  /**
+   * Optional. The ID of the space associated with this shared flow. Any IAM policies applied to the
+   * space will control access to this shared flow. To learn how Spaces can be used to manage
+   * resources, read the [Apigee Spaces Overview](https://cloud.google.com/apigee/docs/api-
+   * platform/system-administration/spaces/apigee-spaces-overview).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSpace() {
+    return space;
+  }
+
+  /**
+   * Optional. The ID of the space associated with this shared flow. Any IAM policies applied to the
+   * space will control access to this shared flow. To learn how Spaces can be used to manage
+   * resources, read the [Apigee Spaces Overview](https://cloud.google.com/apigee/docs/api-
+   * platform/system-administration/spaces/apigee-spaces-overview).
+   * @param space space or {@code null} for none
+   */
+  public GoogleCloudApigeeV1SharedFlow setSpace(java.lang.String space) {
+    this.space = space;
     return this;
   }
 

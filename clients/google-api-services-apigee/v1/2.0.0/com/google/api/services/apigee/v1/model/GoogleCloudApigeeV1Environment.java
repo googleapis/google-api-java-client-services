@@ -82,10 +82,10 @@ public final class GoogleCloudApigeeV1Environment extends com.google.api.client.
 
   /**
    * Optional. URI of the forward proxy to be applied to the runtime instances in this environment.
-   * Must be in the format of {scheme}://{hostname}:{port}. Note that the scheme must be one of
-   * "http" or "https", and the port must be supplied. To remove a forward proxy setting, update the
-   * field to an empty value. Note: At this time, PUT operations to add forwardProxyUri to an
-   * existing environment fail if the environment has nodeConfig set up. To successfully add the
+   * Must be in the format of {scheme}://{hostname}:{port}. Note that the only supported scheme is
+   * "http". The port must be supplied. To remove a forward proxy setting, update the field to an
+   * empty value. Note: At this time, PUT operations to add forwardProxyUri to an existing
+   * environment fail if the environment has nodeConfig set up. To successfully add the
    * forwardProxyUri setting in this case, include the NodeConfig details with the request.
    * The value may be {@code null}.
    */
@@ -264,10 +264,10 @@ public final class GoogleCloudApigeeV1Environment extends com.google.api.client.
 
   /**
    * Optional. URI of the forward proxy to be applied to the runtime instances in this environment.
-   * Must be in the format of {scheme}://{hostname}:{port}. Note that the scheme must be one of
-   * "http" or "https", and the port must be supplied. To remove a forward proxy setting, update the
-   * field to an empty value. Note: At this time, PUT operations to add forwardProxyUri to an
-   * existing environment fail if the environment has nodeConfig set up. To successfully add the
+   * Must be in the format of {scheme}://{hostname}:{port}. Note that the only supported scheme is
+   * "http". The port must be supplied. To remove a forward proxy setting, update the field to an
+   * empty value. Note: At this time, PUT operations to add forwardProxyUri to an existing
+   * environment fail if the environment has nodeConfig set up. To successfully add the
    * forwardProxyUri setting in this case, include the NodeConfig details with the request.
    * @return value or {@code null} for none
    */
@@ -277,10 +277,10 @@ public final class GoogleCloudApigeeV1Environment extends com.google.api.client.
 
   /**
    * Optional. URI of the forward proxy to be applied to the runtime instances in this environment.
-   * Must be in the format of {scheme}://{hostname}:{port}. Note that the scheme must be one of
-   * "http" or "https", and the port must be supplied. To remove a forward proxy setting, update the
-   * field to an empty value. Note: At this time, PUT operations to add forwardProxyUri to an
-   * existing environment fail if the environment has nodeConfig set up. To successfully add the
+   * Must be in the format of {scheme}://{hostname}:{port}. Note that the only supported scheme is
+   * "http". The port must be supplied. To remove a forward proxy setting, update the field to an
+   * empty value. Note: At this time, PUT operations to add forwardProxyUri to an existing
+   * environment fail if the environment has nodeConfig set up. To successfully add the
    * forwardProxyUri setting in this case, include the NodeConfig details with the request.
    * @param forwardProxyUri forwardProxyUri or {@code null} for none
    */

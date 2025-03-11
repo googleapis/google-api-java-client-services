@@ -212,6 +212,16 @@ public final class GoogleCloudApigeeV1ApiProduct extends com.google.api.client.j
   private java.util.List<java.lang.String> scopes;
 
   /**
+   * Optional. The resource ID of the parent Space. If not set, the parent resource will be the
+   * Organization. To learn how Spaces can be used to manage resources, read the [Apigee Spaces
+   * Overview](https://cloud.google.com/apigee/docs/api-platform/system-
+   * administration/spaces/apigee-spaces-overview).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String space;
+
+  /**
    * Comma-separated list of API resources to be bundled in the API product. By default, the
    * resource paths are mapped from the `proxy.pathsuffix` variable. The proxy path suffix is
    * defined as the URI fragment following the ProxyEndpoint base path. For example, if the
@@ -626,6 +636,29 @@ public final class GoogleCloudApigeeV1ApiProduct extends com.google.api.client.j
    */
   public GoogleCloudApigeeV1ApiProduct setScopes(java.util.List<java.lang.String> scopes) {
     this.scopes = scopes;
+    return this;
+  }
+
+  /**
+   * Optional. The resource ID of the parent Space. If not set, the parent resource will be the
+   * Organization. To learn how Spaces can be used to manage resources, read the [Apigee Spaces
+   * Overview](https://cloud.google.com/apigee/docs/api-platform/system-
+   * administration/spaces/apigee-spaces-overview).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSpace() {
+    return space;
+  }
+
+  /**
+   * Optional. The resource ID of the parent Space. If not set, the parent resource will be the
+   * Organization. To learn how Spaces can be used to manage resources, read the [Apigee Spaces
+   * Overview](https://cloud.google.com/apigee/docs/api-platform/system-
+   * administration/spaces/apigee-spaces-overview).
+   * @param space space or {@code null} for none
+   */
+  public GoogleCloudApigeeV1ApiProduct setSpace(java.lang.String space) {
+    this.space = space;
     return this;
   }
 

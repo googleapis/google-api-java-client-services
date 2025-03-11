@@ -81,6 +81,16 @@ public final class GoogleCloudApigeeV1ApiProxy extends com.google.api.client.jso
   private java.util.List<java.lang.String> revision;
 
   /**
+   * Optional. The id of the space this proxy is associated with. Any IAM policies applied to the
+   * space will control access to this proxy. To learn how Spaces can be used to manage resources,
+   * read the [Apigee Spaces Overview](https://cloud.google.com/apigee/docs/api-platform/system-
+   * administration/spaces/apigee-spaces-overview).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String space;
+
+  /**
    * Output only. The type of the API proxy.
    * @return value or {@code null} for none
    */
@@ -200,6 +210,29 @@ public final class GoogleCloudApigeeV1ApiProxy extends com.google.api.client.jso
    */
   public GoogleCloudApigeeV1ApiProxy setRevision(java.util.List<java.lang.String> revision) {
     this.revision = revision;
+    return this;
+  }
+
+  /**
+   * Optional. The id of the space this proxy is associated with. Any IAM policies applied to the
+   * space will control access to this proxy. To learn how Spaces can be used to manage resources,
+   * read the [Apigee Spaces Overview](https://cloud.google.com/apigee/docs/api-platform/system-
+   * administration/spaces/apigee-spaces-overview).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSpace() {
+    return space;
+  }
+
+  /**
+   * Optional. The id of the space this proxy is associated with. Any IAM policies applied to the
+   * space will control access to this proxy. To learn how Spaces can be used to manage resources,
+   * read the [Apigee Spaces Overview](https://cloud.google.com/apigee/docs/api-platform/system-
+   * administration/spaces/apigee-spaces-overview).
+   * @param space space or {@code null} for none
+   */
+  public GoogleCloudApigeeV1ApiProxy setSpace(java.lang.String space) {
+    this.space = space;
     return this;
   }
 

@@ -150,10 +150,12 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   private java.lang.String primaryLocation;
 
   /**
-   * Output only. The Disater Recovery(DR) replication status of the reservation. This is only
-   * available for the primary replica of DR/failover reservations and provides information about
+   * Output only. The Disaster Recovery(DR) replication status of the reservation. This is only
+   * available for the primary replicas of DR/failover reservations and provides information about
    * the both the staleness of the secondary and the last error encountered while trying to
-   * replicate changes from the primary to the secondary.
+   * replicate changes from the primary to the secondary. If this field is blank, it means that the
+   * reservation is either not a DR reservation or the reservation is a DR secondary or that any
+   * replication operations on the reservation have succeeded.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -471,10 +473,12 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The Disater Recovery(DR) replication status of the reservation. This is only
-   * available for the primary replica of DR/failover reservations and provides information about
+   * Output only. The Disaster Recovery(DR) replication status of the reservation. This is only
+   * available for the primary replicas of DR/failover reservations and provides information about
    * the both the staleness of the secondary and the last error encountered while trying to
-   * replicate changes from the primary to the secondary.
+   * replicate changes from the primary to the secondary. If this field is blank, it means that the
+   * reservation is either not a DR reservation or the reservation is a DR secondary or that any
+   * replication operations on the reservation have succeeded.
    * @return value or {@code null} for none
    */
   public ReplicationStatus getReplicationStatus() {
@@ -482,10 +486,12 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The Disater Recovery(DR) replication status of the reservation. This is only
-   * available for the primary replica of DR/failover reservations and provides information about
+   * Output only. The Disaster Recovery(DR) replication status of the reservation. This is only
+   * available for the primary replicas of DR/failover reservations and provides information about
    * the both the staleness of the secondary and the last error encountered while trying to
-   * replicate changes from the primary to the secondary.
+   * replicate changes from the primary to the secondary. If this field is blank, it means that the
+   * reservation is either not a DR reservation or the reservation is a DR secondary or that any
+   * replication operations on the reservation have succeeded.
    * @param replicationStatus replicationStatus or {@code null} for none
    */
   public Reservation setReplicationStatus(ReplicationStatus replicationStatus) {

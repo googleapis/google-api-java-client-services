@@ -3,6 +3,8 @@ on:
     # Runs at 04:00 am
     - cron: '0 4 * * *'
   workflow_dispatch:
+  # delete this before merging the PR
+  pull_request:
 # Generates a list of libraries that cannot be
 # compiled (printed to the action stdout)
 name: Verify libraries compilation

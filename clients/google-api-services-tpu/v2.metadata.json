@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-tpu",
+    "version": "v2-rev20250116-2.0.0"
+  }
+}

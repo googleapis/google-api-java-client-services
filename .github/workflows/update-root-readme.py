@@ -24,6 +24,7 @@ from absl import app
 import json
 from git import Repo
 import shutil
+from lxml import etree
 
 
 # global vars
@@ -31,6 +32,7 @@ VERSION_REGEX = r"([^\.]*)\.(.+)\.json$"
 SCRIPT_DIR = Path(path.dirname(path.realpath(__file__)))
 REPO_DIR = Path(str(SCRIPT_DIR / '..' / '..'))
 DISCOVERY_REPO_PATH = Path(path.abspath(path.join(getcwd(), './discovery-artifact-manager')))
+LATEST_VERSION = '2.0.0'
 _discovery_repo = None
 
 
@@ -134,6 +136,31 @@ def all_services():
 
     return services
 
+def maven_metadata(pom_file: str):
+    if not path.isfile(pom_file):
+        print(f'skipping {pom_file} because it doesn\'t exist')
+        return None
+    tree = etree.parse(pom_file)
+    root = tree.getroot()
+    version = root.find("{http://maven.apache.org/POM/4.0.0}version").text
+    group_id = root.find("{http://maven.apache.org/POM/4.0.0}groupId").text
+    artifact_id = root.find("{http://maven.apache.org/POM/4.0.0}artifactId").text
+    return {"groupId": group_id, "artifactId": artifact_id, "version": version}
+
+def write_metadata_file(name: str, version: str, metadata: dict):
+    metadata_file = path.join(REPO_DIR, "clients", name, f'{version}.metadata.json')
+    print(f"Writing json metadata to {metadata_file}")
+    metadata = {"maven": metadata}
+    with open(metadata_file, "w+") as outfile:
+        json.dump(metadata, outfile, indent=2)
+
+def generate_metadata_file(service: list[Service]):
+    library_name = f'google-api-services-{service.id}'
+    metadata = maven_metadata(
+        path.join(REPO_DIR, "clients", library_name, service.version, LATEST_VERSION, "pom.xml")
+    )
+    if metadata is not None:
+        write_metadata_file(library_name, service.version, metadata)
 
 def main(argv: List[str]) -> None:
     if len(argv) > 1:
@@ -142,6 +169,8 @@ def main(argv: List[str]) -> None:
     clone_discovery_repo()
     services = all_services()
     generate_service_list(services)
+    for service in services:
+        generate_metadata_file(service)
     remove_discovery_repo()
 
 

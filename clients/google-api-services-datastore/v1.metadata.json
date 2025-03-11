@@ -2,6 +2,6 @@
   "maven": {
     "groupId": "com.google.apis",
     "artifactId": "google-api-services-datastore",
-    "version": "v1-rev20211029-1.32.1"
+    "version": "v1-rev20250212-2.0.0"
   }
 }

@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-osconfig",
+    "version": "v2beta-rev20241117-2.0.0"
+  }
+}

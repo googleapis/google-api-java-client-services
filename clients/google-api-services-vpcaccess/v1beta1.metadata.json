@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-vpcaccess",
+    "version": "v1beta1-rev20240905-2.0.0"
+  }
+}

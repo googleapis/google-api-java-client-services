@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-merchantapi",
+    "version": "inventories_v1beta-rev20250219-2.0.0"
+  }
+}

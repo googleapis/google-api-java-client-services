@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-certificatemanager",
+    "version": "v1-rev20250211-2.0.0"
+  }
+}

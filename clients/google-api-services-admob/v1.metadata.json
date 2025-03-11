@@ -2,6 +2,6 @@
   "maven": {
     "groupId": "com.google.apis",
     "artifactId": "google-api-services-admob",
-    "version": "v1-rev20210803-1.32.1"
+    "version": "v1-rev20240514-2.0.0"
   }
 }

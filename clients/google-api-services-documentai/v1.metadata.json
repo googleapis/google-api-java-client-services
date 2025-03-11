@@ -2,6 +2,6 @@
   "maven": {
     "groupId": "com.google.apis",
     "artifactId": "google-api-services-documentai",
-    "version": "v1-rev20211230-1.32.1"
+    "version": "v1-rev20250117-2.0.0"
   }
 }

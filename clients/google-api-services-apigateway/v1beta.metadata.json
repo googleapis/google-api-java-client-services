@@ -2,6 +2,6 @@
   "maven": {
     "groupId": "com.google.apis",
     "artifactId": "google-api-services-apigateway",
-    "version": "v1beta-rev20211110-1.32.1"
+    "version": "v1beta-rev20241204-2.0.0"
   }
 }

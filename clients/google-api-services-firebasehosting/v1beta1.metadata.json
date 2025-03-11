@@ -2,6 +2,6 @@
   "maven": {
     "groupId": "com.google.apis",
     "artifactId": "google-api-services-firebasehosting",
-    "version": "v1beta1-rev20210811-1.32.1"
+    "version": "v1beta1-rev20240319-2.0.0"
   }
 }

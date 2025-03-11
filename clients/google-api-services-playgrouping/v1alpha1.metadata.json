@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-playgrouping",
+    "version": "v1alpha1-rev20230824-2.0.0"
+  }
+}

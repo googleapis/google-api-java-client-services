@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-analyticsadmin</artifactId>
-  <version>v1beta-rev20250114-2.0.0</version>
-  <name>Google Analytics Admin API v1beta-rev20250114-2.0.0</name>
+  <version>v1beta-rev20250307-2.0.0</version>
+  <name>Google Analytics Admin API v1beta-rev20250307-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

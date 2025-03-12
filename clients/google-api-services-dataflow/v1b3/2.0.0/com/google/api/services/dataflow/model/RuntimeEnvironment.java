@@ -37,6 +37,13 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
   private java.util.List<java.lang.String> additionalExperiments;
 
   /**
+   * Optional. Additional pipeline option flags for the job.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> additionalPipelineOptions;
+
+  /**
    * Optional. Additional user labels to be specified for the job. Keys and values should follow the
    * restrictions specified in the [labeling
    * restrictions](https://cloud.google.com/compute/docs/labeling-resources#restrictions) page. An
@@ -197,6 +204,23 @@ public final class RuntimeEnvironment extends com.google.api.client.json.Generic
    */
   public RuntimeEnvironment setAdditionalExperiments(java.util.List<java.lang.String> additionalExperiments) {
     this.additionalExperiments = additionalExperiments;
+    return this;
+  }
+
+  /**
+   * Optional. Additional pipeline option flags for the job.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAdditionalPipelineOptions() {
+    return additionalPipelineOptions;
+  }
+
+  /**
+   * Optional. Additional pipeline option flags for the job.
+   * @param additionalPipelineOptions additionalPipelineOptions or {@code null} for none
+   */
+  public RuntimeEnvironment setAdditionalPipelineOptions(java.util.List<java.lang.String> additionalPipelineOptions) {
+    this.additionalPipelineOptions = additionalPipelineOptions;
     return this;
   }
 

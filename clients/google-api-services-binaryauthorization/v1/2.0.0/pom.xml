@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-binaryauthorization</artifactId>
-  <version>v1-rev20250117-2.0.0</version>
-  <name>Binary Authorization API v1-rev20250117-2.0.0</name>
+  <version>v1-rev20250311-2.0.0</version>
+  <name>Binary Authorization API v1-rev20250311-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

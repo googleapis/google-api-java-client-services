@@ -45,8 +45,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   private java.lang.String containerId;
 
   /**
-   * List of domain names associated with the Container. @mutable
-   * tagmanager.accounts.containers.create @mutable tagmanager.accounts.containers.update
+   * List of domain names associated with the Container.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,16 +67,14 @@ public final class Container extends com.google.api.client.json.GenericJson {
   private java.lang.String fingerprint;
 
   /**
-   * Container display name. @mutable tagmanager.accounts.containers.create @mutable
-   * tagmanager.accounts.containers.update
+   * Container display name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Container Notes. @mutable tagmanager.accounts.containers.create @mutable
-   * tagmanager.accounts.containers.update
+   * Container Notes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -113,16 +110,14 @@ public final class Container extends com.google.api.client.json.GenericJson {
 
   /**
    * List of server-side container URLs for the Container. If multiple URLs are provided, all URL
-   * paths must match. @mutable tagmanager.accounts.containers.create @mutable
-   * tagmanager.accounts.containers.update
+   * paths must match.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> taggingServerUrls;
 
   /**
-   * List of Usage Contexts for the Container. Valid values include: web, android, or ios. @mutable
-   * tagmanager.accounts.containers.create @mutable tagmanager.accounts.containers.update
+   * List of Usage Contexts for the Container. Valid values include: web, android, or ios.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -163,8 +158,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of domain names associated with the Container. @mutable
-   * tagmanager.accounts.containers.create @mutable tagmanager.accounts.containers.update
+   * List of domain names associated with the Container.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDomainName() {
@@ -172,8 +166,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of domain names associated with the Container. @mutable
-   * tagmanager.accounts.containers.create @mutable tagmanager.accounts.containers.update
+   * List of domain names associated with the Container.
    * @param domainName domainName or {@code null} for none
    */
   public Container setDomainName(java.util.List<java.lang.String> domainName) {
@@ -218,8 +211,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Container display name. @mutable tagmanager.accounts.containers.create @mutable
-   * tagmanager.accounts.containers.update
+   * Container display name.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -227,8 +219,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Container display name. @mutable tagmanager.accounts.containers.create @mutable
-   * tagmanager.accounts.containers.update
+   * Container display name.
    * @param name name or {@code null} for none
    */
   public Container setName(java.lang.String name) {
@@ -237,8 +228,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Container Notes. @mutable tagmanager.accounts.containers.create @mutable
-   * tagmanager.accounts.containers.update
+   * Container Notes.
    * @return value or {@code null} for none
    */
   public java.lang.String getNotes() {
@@ -246,8 +236,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Container Notes. @mutable tagmanager.accounts.containers.create @mutable
-   * tagmanager.accounts.containers.update
+   * Container Notes.
    * @param notes notes or {@code null} for none
    */
   public Container setNotes(java.lang.String notes) {
@@ -325,8 +314,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
 
   /**
    * List of server-side container URLs for the Container. If multiple URLs are provided, all URL
-   * paths must match. @mutable tagmanager.accounts.containers.create @mutable
-   * tagmanager.accounts.containers.update
+   * paths must match.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTaggingServerUrls() {
@@ -335,8 +323,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
 
   /**
    * List of server-side container URLs for the Container. If multiple URLs are provided, all URL
-   * paths must match. @mutable tagmanager.accounts.containers.create @mutable
-   * tagmanager.accounts.containers.update
+   * paths must match.
    * @param taggingServerUrls taggingServerUrls or {@code null} for none
    */
   public Container setTaggingServerUrls(java.util.List<java.lang.String> taggingServerUrls) {
@@ -345,8 +332,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of Usage Contexts for the Container. Valid values include: web, android, or ios. @mutable
-   * tagmanager.accounts.containers.create @mutable tagmanager.accounts.containers.update
+   * List of Usage Contexts for the Container. Valid values include: web, android, or ios.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUsageContext() {
@@ -354,8 +340,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of Usage Contexts for the Container. Valid values include: web, android, or ios. @mutable
-   * tagmanager.accounts.containers.create @mutable tagmanager.accounts.containers.update
+   * List of Usage Contexts for the Container. Valid values include: web, android, or ios.
    * @param usageContext usageContext or {@code null} for none
    */
   public Container setUsageContext(java.util.List<java.lang.String> usageContext) {

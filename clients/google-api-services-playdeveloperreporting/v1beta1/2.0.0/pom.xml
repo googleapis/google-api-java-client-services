@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-playdeveloperreporting</artifactId>
-  <version>v1beta1-rev20250204-2.0.0</version>
-  <name>Google Play Developer Reporting API v1beta1-rev20250204-2.0.0</name>
+  <version>v1beta1-rev20250311-2.0.0</version>
+  <name>Google Play Developer Reporting API v1beta1-rev20250311-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

@@ -65,7 +65,7 @@ public final class GoogleCloudAiplatformV1beta1DeployPublisherModelRequest exten
    * `publishers/{publisher}/models/{publisher_model}@{version_id}`, or `publishers/hf-{hugging-
    * face-author}/models/{hugging-face-model-name}@001`. 2. Hugging Face model ID like
    * `google/gemma-2-2b-it`. 3. Custom model Google Cloud Storage URI like `gs://bucket`. 4. Custom
-   * model zip file like `https://abc.com/a.zip`.
+   * model zip file like `https://example.com/a.zip`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -158,7 +158,7 @@ public final class GoogleCloudAiplatformV1beta1DeployPublisherModelRequest exten
    * `publishers/{publisher}/models/{publisher_model}@{version_id}`, or `publishers/hf-{hugging-
    * face-author}/models/{hugging-face-model-name}@001`. 2. Hugging Face model ID like
    * `google/gemma-2-2b-it`. 3. Custom model Google Cloud Storage URI like `gs://bucket`. 4. Custom
-   * model zip file like `https://abc.com/a.zip`.
+   * model zip file like `https://example.com/a.zip`.
    * @return value or {@code null} for none
    */
   public java.lang.String getModel() {
@@ -170,7 +170,7 @@ public final class GoogleCloudAiplatformV1beta1DeployPublisherModelRequest exten
    * `publishers/{publisher}/models/{publisher_model}@{version_id}`, or `publishers/hf-{hugging-
    * face-author}/models/{hugging-face-model-name}@001`. 2. Hugging Face model ID like
    * `google/gemma-2-2b-it`. 3. Custom model Google Cloud Storage URI like `gs://bucket`. 4. Custom
-   * model zip file like `https://abc.com/a.zip`.
+   * model zip file like `https://example.com/a.zip`.
    * @param model model or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1DeployPublisherModelRequest setModel(java.lang.String model) {

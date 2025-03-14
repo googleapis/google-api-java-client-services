@@ -37,8 +37,9 @@ public final class GoogleCloudAiplatformV1beta1DiskSpec extends com.google.api.c
   private java.lang.Integer bootDiskSizeGb;
 
   /**
-   * Type of the boot disk (default is "pd-ssd"). Valid values: "pd-ssd" (Persistent Disk Solid
-   * State Drive) or "pd-standard" (Persistent Disk Hard Disk Drive).
+   * Type of the boot disk. For non-A3U machines, the default value is "pd-ssd", for A3U machines,
+   * the default value is "hyperdisk-balanced". Valid values: "pd-ssd" (Persistent Disk Solid State
+   * Drive), "pd-standard" (Persistent Disk Hard Disk Drive) or "hyperdisk-balanced".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,8 +63,9 @@ public final class GoogleCloudAiplatformV1beta1DiskSpec extends com.google.api.c
   }
 
   /**
-   * Type of the boot disk (default is "pd-ssd"). Valid values: "pd-ssd" (Persistent Disk Solid
-   * State Drive) or "pd-standard" (Persistent Disk Hard Disk Drive).
+   * Type of the boot disk. For non-A3U machines, the default value is "pd-ssd", for A3U machines,
+   * the default value is "hyperdisk-balanced". Valid values: "pd-ssd" (Persistent Disk Solid State
+   * Drive), "pd-standard" (Persistent Disk Hard Disk Drive) or "hyperdisk-balanced".
    * @return value or {@code null} for none
    */
   public java.lang.String getBootDiskType() {
@@ -71,8 +73,9 @@ public final class GoogleCloudAiplatformV1beta1DiskSpec extends com.google.api.c
   }
 
   /**
-   * Type of the boot disk (default is "pd-ssd"). Valid values: "pd-ssd" (Persistent Disk Solid
-   * State Drive) or "pd-standard" (Persistent Disk Hard Disk Drive).
+   * Type of the boot disk. For non-A3U machines, the default value is "pd-ssd", for A3U machines,
+   * the default value is "hyperdisk-balanced". Valid values: "pd-ssd" (Persistent Disk Solid State
+   * Drive), "pd-standard" (Persistent Disk Hard Disk Drive) or "hyperdisk-balanced".
    * @param bootDiskType bootDiskType or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1DiskSpec setBootDiskType(java.lang.String bootDiskType) {

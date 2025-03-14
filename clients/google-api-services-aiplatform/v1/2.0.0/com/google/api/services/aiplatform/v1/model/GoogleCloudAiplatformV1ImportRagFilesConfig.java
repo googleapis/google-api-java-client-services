@@ -82,6 +82,14 @@ public final class GoogleCloudAiplatformV1ImportRagFilesConfig extends com.googl
   private GoogleCloudAiplatformV1GcsDestination partialFailureGcsSink;
 
   /**
+   * Optional. Specifies the parsing config for RagFiles. RAG will use the default parser if this
+   * field is not set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1RagFileParsingConfig ragFileParsingConfig;
+
+  /**
    * Specifies the transformation config for RagFiles.
    * The value may be {@code null}.
    */
@@ -221,6 +229,25 @@ public final class GoogleCloudAiplatformV1ImportRagFilesConfig extends com.googl
    */
   public GoogleCloudAiplatformV1ImportRagFilesConfig setPartialFailureGcsSink(GoogleCloudAiplatformV1GcsDestination partialFailureGcsSink) {
     this.partialFailureGcsSink = partialFailureGcsSink;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies the parsing config for RagFiles. RAG will use the default parser if this
+   * field is not set.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1RagFileParsingConfig getRagFileParsingConfig() {
+    return ragFileParsingConfig;
+  }
+
+  /**
+   * Optional. Specifies the parsing config for RagFiles. RAG will use the default parser if this
+   * field is not set.
+   * @param ragFileParsingConfig ragFileParsingConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1ImportRagFilesConfig setRagFileParsingConfig(GoogleCloudAiplatformV1RagFileParsingConfig ragFileParsingConfig) {
+    this.ragFileParsingConfig = ragFileParsingConfig;
     return this;
   }
 

@@ -31,14 +31,6 @@ package com.google.api.services.chromemanagement.v1.model;
 public final class GoogleChromeManagementVersionsV1CertificateProvisioningProcess extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. A JSON string that contains the administrator-provided configuration for the
-   * certification authority service. This field can be missing if no configuration was given.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String caConnectionAdapterConfigReference;
-
-  /**
    * Output only. The client certificate is being provisioned for a ChromeOS device. This contains
    * information about the device.
    * The value may be {@code null}.
@@ -47,16 +39,16 @@ public final class GoogleChromeManagementVersionsV1CertificateProvisioningProces
   private GoogleChromeManagementVersionsV1ChromeOsDevice chromeOsDevice;
 
   /**
-   * Output only. The client certificate is being provisioned for a ChromeOS user session. This
-   * contains information about the user session.
+   * Output only. The client certificate is being provisioned for a ChromeOS user. This contains
+   * information about the current user session.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleChromeManagementVersionsV1ChromeOsUserSession chromeOsUserSession;
 
   /**
-   * Output only. A message describing why this `CertificateProvisioningProcess` failed. Presence of
-   * this field indicates that the `CertificateProvisioningProcess` has failed.
+   * Output only. A message describing why this `CertificateProvisioningProcess` has failed.
+   * Presence of this field indicates that the `CertificateProvisioningProcess` has failed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,14 +86,6 @@ public final class GoogleChromeManagementVersionsV1CertificateProvisioningProces
   private java.lang.String name;
 
   /**
-   * Output only. A JSON string that contains the administrator-provided configuration for the
-   * certificate provisioning profile. This field can be missing if no configuration was given.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String profileAdapterConfigReference;
-
-  /**
    * Output only. The ID of the certificate provisioning profile.
    * The value may be {@code null}.
    */
@@ -118,7 +102,7 @@ public final class GoogleChromeManagementVersionsV1CertificateProvisioningProces
 
   /**
    * Output only. The signature of `signature_algorithm`, generated using the client's private key
-   * using `signature_algorithm`. This field is only present after the`SignData` operation has
+   * using `signature_algorithm`. This field is only present after the `SignData` operation has
    * finished.
    * The value may be {@code null}.
    */
@@ -151,25 +135,6 @@ public final class GoogleChromeManagementVersionsV1CertificateProvisioningProces
   private java.lang.String subjectPublicKeyInfo;
 
   /**
-   * Output only. A JSON string that contains the administrator-provided configuration for the
-   * certification authority service. This field can be missing if no configuration was given.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getCaConnectionAdapterConfigReference() {
-    return caConnectionAdapterConfigReference;
-  }
-
-  /**
-   * Output only. A JSON string that contains the administrator-provided configuration for the
-   * certification authority service. This field can be missing if no configuration was given.
-   * @param caConnectionAdapterConfigReference caConnectionAdapterConfigReference or {@code null} for none
-   */
-  public GoogleChromeManagementVersionsV1CertificateProvisioningProcess setCaConnectionAdapterConfigReference(java.lang.String caConnectionAdapterConfigReference) {
-    this.caConnectionAdapterConfigReference = caConnectionAdapterConfigReference;
-    return this;
-  }
-
-  /**
    * Output only. The client certificate is being provisioned for a ChromeOS device. This contains
    * information about the device.
    * @return value or {@code null} for none
@@ -189,8 +154,8 @@ public final class GoogleChromeManagementVersionsV1CertificateProvisioningProces
   }
 
   /**
-   * Output only. The client certificate is being provisioned for a ChromeOS user session. This
-   * contains information about the user session.
+   * Output only. The client certificate is being provisioned for a ChromeOS user. This contains
+   * information about the current user session.
    * @return value or {@code null} for none
    */
   public GoogleChromeManagementVersionsV1ChromeOsUserSession getChromeOsUserSession() {
@@ -198,8 +163,8 @@ public final class GoogleChromeManagementVersionsV1CertificateProvisioningProces
   }
 
   /**
-   * Output only. The client certificate is being provisioned for a ChromeOS user session. This
-   * contains information about the user session.
+   * Output only. The client certificate is being provisioned for a ChromeOS user. This contains
+   * information about the current user session.
    * @param chromeOsUserSession chromeOsUserSession or {@code null} for none
    */
   public GoogleChromeManagementVersionsV1CertificateProvisioningProcess setChromeOsUserSession(GoogleChromeManagementVersionsV1ChromeOsUserSession chromeOsUserSession) {
@@ -208,8 +173,8 @@ public final class GoogleChromeManagementVersionsV1CertificateProvisioningProces
   }
 
   /**
-   * Output only. A message describing why this `CertificateProvisioningProcess` failed. Presence of
-   * this field indicates that the `CertificateProvisioningProcess` has failed.
+   * Output only. A message describing why this `CertificateProvisioningProcess` has failed.
+   * Presence of this field indicates that the `CertificateProvisioningProcess` has failed.
    * @return value or {@code null} for none
    */
   public java.lang.String getFailureMessage() {
@@ -217,8 +182,8 @@ public final class GoogleChromeManagementVersionsV1CertificateProvisioningProces
   }
 
   /**
-   * Output only. A message describing why this `CertificateProvisioningProcess` failed. Presence of
-   * this field indicates that the `CertificateProvisioningProcess` has failed.
+   * Output only. A message describing why this `CertificateProvisioningProcess` has failed.
+   * Presence of this field indicates that the `CertificateProvisioningProcess` has failed.
    * @param failureMessage failureMessage or {@code null} for none
    */
   public GoogleChromeManagementVersionsV1CertificateProvisioningProcess setFailureMessage(java.lang.String failureMessage) {
@@ -301,25 +266,6 @@ public final class GoogleChromeManagementVersionsV1CertificateProvisioningProces
   }
 
   /**
-   * Output only. A JSON string that contains the administrator-provided configuration for the
-   * certificate provisioning profile. This field can be missing if no configuration was given.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getProfileAdapterConfigReference() {
-    return profileAdapterConfigReference;
-  }
-
-  /**
-   * Output only. A JSON string that contains the administrator-provided configuration for the
-   * certificate provisioning profile. This field can be missing if no configuration was given.
-   * @param profileAdapterConfigReference profileAdapterConfigReference or {@code null} for none
-   */
-  public GoogleChromeManagementVersionsV1CertificateProvisioningProcess setProfileAdapterConfigReference(java.lang.String profileAdapterConfigReference) {
-    this.profileAdapterConfigReference = profileAdapterConfigReference;
-    return this;
-  }
-
-  /**
    * Output only. The ID of the certificate provisioning profile.
    * @return value or {@code null} for none
    */
@@ -387,7 +333,7 @@ public final class GoogleChromeManagementVersionsV1CertificateProvisioningProces
 
   /**
    * Output only. The signature of `signature_algorithm`, generated using the client's private key
-   * using `signature_algorithm`. This field is only present after the`SignData` operation has
+   * using `signature_algorithm`. This field is only present after the `SignData` operation has
    * finished.
    * @see #decodeSignature()
    * @return value or {@code null} for none
@@ -398,7 +344,7 @@ public final class GoogleChromeManagementVersionsV1CertificateProvisioningProces
 
   /**
    * Output only. The signature of `signature_algorithm`, generated using the client's private key
-   * using `signature_algorithm`. This field is only present after the`SignData` operation has
+   * using `signature_algorithm`. This field is only present after the `SignData` operation has
    * finished.
    * @see #getSignature()
    * @return Base64 decoded value or {@code null} for none
@@ -411,7 +357,7 @@ public final class GoogleChromeManagementVersionsV1CertificateProvisioningProces
 
   /**
    * Output only. The signature of `signature_algorithm`, generated using the client's private key
-   * using `signature_algorithm`. This field is only present after the`SignData` operation has
+   * using `signature_algorithm`. This field is only present after the `SignData` operation has
    * finished.
    * @see #encodeSignature()
    * @param signature signature or {@code null} for none
@@ -423,7 +369,7 @@ public final class GoogleChromeManagementVersionsV1CertificateProvisioningProces
 
   /**
    * Output only. The signature of `signature_algorithm`, generated using the client's private key
-   * using `signature_algorithm`. This field is only present after the`SignData` operation has
+   * using `signature_algorithm`. This field is only present after the `SignData` operation has
    * finished.
    * @see #setSignature()
    *

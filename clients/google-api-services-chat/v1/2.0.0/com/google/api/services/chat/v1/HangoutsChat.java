@@ -6860,8 +6860,10 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       public class SpaceNotificationSetting {
 
         /**
-         * Gets the space notification state setting. Requires [user
-         * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+         * Gets the space notification setting. For an example, see [Get the caller's space notification
+         * setting](https://developers.google.com/workspace/chat/get-space-notification-setting). Requires
+         * [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
+         * user).
          *
          * Create a request for the method "spaceNotificationSetting.get".
          *
@@ -6889,8 +6891,10 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
               java.util.regex.Pattern.compile("^users/[^/]+/spaces/[^/]+/spaceNotificationSetting$");
 
           /**
-           * Gets the space notification state setting. Requires [user
-           * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+           * Gets the space notification setting. For an example, see [Get the caller's space notification
+           * setting](https://developers.google.com/workspace/chat/get-space-notification-setting). Requires
+           * [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
+           * user).
            *
            * Create a request for the method "spaceNotificationSetting.get".
            *
@@ -7024,7 +7028,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
           }
         }
         /**
-         * Updates the space notification state setting. Requires [user
+         * Updates the space notification setting. For an example, see [Update the caller's space
+         * notification setting](https://developers.google.com/workspace/chat/update-space-notification-
+         * setting). Requires [user
          * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
          *
          * Create a request for the method "spaceNotificationSetting.patch".
@@ -7051,7 +7057,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
               java.util.regex.Pattern.compile("^users/[^/]+/spaces/[^/]+/spaceNotificationSetting$");
 
           /**
-           * Updates the space notification state setting. Requires [user
+           * Updates the space notification setting. For an example, see [Update the caller's space
+           * notification setting](https://developers.google.com/workspace/chat/update-space-notification-
+           * setting). Requires [user
            * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
            *
            * Create a request for the method "spaceNotificationSetting.patch".

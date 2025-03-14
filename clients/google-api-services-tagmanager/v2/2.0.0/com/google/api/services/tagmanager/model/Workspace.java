@@ -44,8 +44,7 @@ public final class Workspace extends com.google.api.client.json.GenericJson {
   private java.lang.String containerId;
 
   /**
-   * Workspace description. @mutable tagmanager.accounts.containers.workspaces.create @mutable
-   * tagmanager.accounts.containers.workspaces.update
+   * Workspace description.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,8 +59,7 @@ public final class Workspace extends com.google.api.client.json.GenericJson {
   private java.lang.String fingerprint;
 
   /**
-   * Workspace display name. @mutable tagmanager.accounts.containers.workspaces.create @mutable
-   * tagmanager.accounts.containers.workspaces.update
+   * Workspace display name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -123,8 +121,7 @@ public final class Workspace extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Workspace description. @mutable tagmanager.accounts.containers.workspaces.create @mutable
-   * tagmanager.accounts.containers.workspaces.update
+   * Workspace description.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -132,8 +129,7 @@ public final class Workspace extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Workspace description. @mutable tagmanager.accounts.containers.workspaces.create @mutable
-   * tagmanager.accounts.containers.workspaces.update
+   * Workspace description.
    * @param description description or {@code null} for none
    */
   public Workspace setDescription(java.lang.String description) {
@@ -161,8 +157,7 @@ public final class Workspace extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Workspace display name. @mutable tagmanager.accounts.containers.workspaces.create @mutable
-   * tagmanager.accounts.containers.workspaces.update
+   * Workspace display name.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -170,8 +165,7 @@ public final class Workspace extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Workspace display name. @mutable tagmanager.accounts.containers.workspaces.create @mutable
-   * tagmanager.accounts.containers.workspaces.update
+   * Workspace display name.
    * @param name name or {@code null} for none
    */
   public Workspace setName(java.lang.String name) {

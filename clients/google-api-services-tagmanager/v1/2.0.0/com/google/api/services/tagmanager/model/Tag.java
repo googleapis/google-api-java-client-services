@@ -37,8 +37,7 @@ public final class Tag extends com.google.api.client.json.GenericJson {
   private java.lang.String accountId;
 
   /**
-   * Blocking rule IDs. If any of the listed rules evaluate to true, the tag will not fire. @mutable
-   * tagmanager.accounts.containers.tags.create @mutable tagmanager.accounts.containers.tags.update
+   * Blocking rule IDs. If any of the listed rules evaluate to true, the tag will not fire.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,8 +45,6 @@ public final class Tag extends com.google.api.client.json.GenericJson {
 
   /**
    * Blocking trigger IDs. If any of the listed triggers evaluate to true, the tag will not fire.
-   * @mutable tagmanager.accounts.containers.tags.create @mutable
-   * tagmanager.accounts.containers.tags.update
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,8 +67,7 @@ public final class Tag extends com.google.api.client.json.GenericJson {
 
   /**
    * Firing rule IDs. A tag will fire when any of the listed rules are true and all of its
-   * blockingRuleIds (if any specified) are false. @mutable
-   * tagmanager.accounts.containers.tags.create @mutable tagmanager.accounts.containers.tags.update
+   * blockingRuleIds (if any specified) are false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,8 +75,7 @@ public final class Tag extends com.google.api.client.json.GenericJson {
 
   /**
    * Firing trigger IDs. A tag will fire when any of the listed triggers are true and all of its
-   * blockingTriggerIds (if any specified) are false. @mutable
-   * tagmanager.accounts.containers.tags.create @mutable tagmanager.accounts.containers.tags.update
+   * blockingTriggerIds (if any specified) are false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,32 +83,28 @@ public final class Tag extends com.google.api.client.json.GenericJson {
 
   /**
    * If set to true, this tag will only fire in the live environment (e.g. not in preview or debug
-   * mode). @mutable tagmanager.accounts.containers.tags.create @mutable
-   * tagmanager.accounts.containers.tags.update
+   * mode).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean liveOnly;
 
   /**
-   * Tag display name. @mutable tagmanager.accounts.containers.tags.create @mutable
-   * tagmanager.accounts.containers.tags.update
+   * Tag display name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * User notes on how to apply this tag in the container. @mutable
-   * tagmanager.accounts.containers.tags.create @mutable tagmanager.accounts.containers.tags.update
+   * User notes on how to apply this tag in the container.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String notes;
 
   /**
-   * The tag's parameters. @mutable tagmanager.accounts.containers.tags.create @mutable
-   * tagmanager.accounts.containers.tags.update
+   * The tag's parameters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -133,8 +124,7 @@ public final class Tag extends com.google.api.client.json.GenericJson {
   private java.lang.String parentFolderId;
 
   /**
-   * True if the tag is paused. @mutable tagmanager.accounts.containers.tags.create @mutable
-   * tagmanager.accounts.containers.tags.update
+   * True if the tag is paused.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -143,24 +133,21 @@ public final class Tag extends com.google.api.client.json.GenericJson {
   /**
    * User defined numeric priority of the tag. Tags are fired asynchronously in order of priority.
    * Tags with higher numeric value fire first. A tag's priority can be a positive or negative
-   * value. The default value is 0. @mutable tagmanager.accounts.containers.tags.create @mutable
-   * tagmanager.accounts.containers.tags.update
+   * value. The default value is 0.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Parameter priority;
 
   /**
-   * The end timestamp in milliseconds to schedule a tag. @mutable
-   * tagmanager.accounts.containers.tags.create @mutable tagmanager.accounts.containers.tags.update
+   * The end timestamp in milliseconds to schedule a tag.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long scheduleEndMs;
 
   /**
-   * The start timestamp in milliseconds to schedule a tag. @mutable
-   * tagmanager.accounts.containers.tags.create @mutable tagmanager.accounts.containers.tags.update
+   * The start timestamp in milliseconds to schedule a tag.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -201,8 +188,7 @@ public final class Tag extends com.google.api.client.json.GenericJson {
   private java.util.List<TeardownTag> teardownTag;
 
   /**
-   * GTM Tag Type. @mutable tagmanager.accounts.containers.tags.create @mutable
-   * tagmanager.accounts.containers.tags.update
+   * GTM Tag Type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -226,8 +212,7 @@ public final class Tag extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Blocking rule IDs. If any of the listed rules evaluate to true, the tag will not fire. @mutable
-   * tagmanager.accounts.containers.tags.create @mutable tagmanager.accounts.containers.tags.update
+   * Blocking rule IDs. If any of the listed rules evaluate to true, the tag will not fire.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getBlockingRuleId() {
@@ -235,8 +220,7 @@ public final class Tag extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Blocking rule IDs. If any of the listed rules evaluate to true, the tag will not fire. @mutable
-   * tagmanager.accounts.containers.tags.create @mutable tagmanager.accounts.containers.tags.update
+   * Blocking rule IDs. If any of the listed rules evaluate to true, the tag will not fire.
    * @param blockingRuleId blockingRuleId or {@code null} for none
    */
   public Tag setBlockingRuleId(java.util.List<java.lang.String> blockingRuleId) {
@@ -246,8 +230,6 @@ public final class Tag extends com.google.api.client.json.GenericJson {
 
   /**
    * Blocking trigger IDs. If any of the listed triggers evaluate to true, the tag will not fire.
-   * @mutable tagmanager.accounts.containers.tags.create @mutable
-   * tagmanager.accounts.containers.tags.update
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getBlockingTriggerId() {
@@ -256,8 +238,6 @@ public final class Tag extends com.google.api.client.json.GenericJson {
 
   /**
    * Blocking trigger IDs. If any of the listed triggers evaluate to true, the tag will not fire.
-   * @mutable tagmanager.accounts.containers.tags.create @mutable
-   * tagmanager.accounts.containers.tags.update
    * @param blockingTriggerId blockingTriggerId or {@code null} for none
    */
   public Tag setBlockingTriggerId(java.util.List<java.lang.String> blockingTriggerId) {
@@ -303,8 +283,7 @@ public final class Tag extends com.google.api.client.json.GenericJson {
 
   /**
    * Firing rule IDs. A tag will fire when any of the listed rules are true and all of its
-   * blockingRuleIds (if any specified) are false. @mutable
-   * tagmanager.accounts.containers.tags.create @mutable tagmanager.accounts.containers.tags.update
+   * blockingRuleIds (if any specified) are false.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getFiringRuleId() {
@@ -313,8 +292,7 @@ public final class Tag extends com.google.api.client.json.GenericJson {
 
   /**
    * Firing rule IDs. A tag will fire when any of the listed rules are true and all of its
-   * blockingRuleIds (if any specified) are false. @mutable
-   * tagmanager.accounts.containers.tags.create @mutable tagmanager.accounts.containers.tags.update
+   * blockingRuleIds (if any specified) are false.
    * @param firingRuleId firingRuleId or {@code null} for none
    */
   public Tag setFiringRuleId(java.util.List<java.lang.String> firingRuleId) {
@@ -324,8 +302,7 @@ public final class Tag extends com.google.api.client.json.GenericJson {
 
   /**
    * Firing trigger IDs. A tag will fire when any of the listed triggers are true and all of its
-   * blockingTriggerIds (if any specified) are false. @mutable
-   * tagmanager.accounts.containers.tags.create @mutable tagmanager.accounts.containers.tags.update
+   * blockingTriggerIds (if any specified) are false.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getFiringTriggerId() {
@@ -334,8 +311,7 @@ public final class Tag extends com.google.api.client.json.GenericJson {
 
   /**
    * Firing trigger IDs. A tag will fire when any of the listed triggers are true and all of its
-   * blockingTriggerIds (if any specified) are false. @mutable
-   * tagmanager.accounts.containers.tags.create @mutable tagmanager.accounts.containers.tags.update
+   * blockingTriggerIds (if any specified) are false.
    * @param firingTriggerId firingTriggerId or {@code null} for none
    */
   public Tag setFiringTriggerId(java.util.List<java.lang.String> firingTriggerId) {
@@ -345,8 +321,7 @@ public final class Tag extends com.google.api.client.json.GenericJson {
 
   /**
    * If set to true, this tag will only fire in the live environment (e.g. not in preview or debug
-   * mode). @mutable tagmanager.accounts.containers.tags.create @mutable
-   * tagmanager.accounts.containers.tags.update
+   * mode).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getLiveOnly() {
@@ -355,8 +330,7 @@ public final class Tag extends com.google.api.client.json.GenericJson {
 
   /**
    * If set to true, this tag will only fire in the live environment (e.g. not in preview or debug
-   * mode). @mutable tagmanager.accounts.containers.tags.create @mutable
-   * tagmanager.accounts.containers.tags.update
+   * mode).
    * @param liveOnly liveOnly or {@code null} for none
    */
   public Tag setLiveOnly(java.lang.Boolean liveOnly) {
@@ -365,8 +339,7 @@ public final class Tag extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Tag display name. @mutable tagmanager.accounts.containers.tags.create @mutable
-   * tagmanager.accounts.containers.tags.update
+   * Tag display name.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -374,8 +347,7 @@ public final class Tag extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Tag display name. @mutable tagmanager.accounts.containers.tags.create @mutable
-   * tagmanager.accounts.containers.tags.update
+   * Tag display name.
    * @param name name or {@code null} for none
    */
   public Tag setName(java.lang.String name) {
@@ -384,8 +356,7 @@ public final class Tag extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * User notes on how to apply this tag in the container. @mutable
-   * tagmanager.accounts.containers.tags.create @mutable tagmanager.accounts.containers.tags.update
+   * User notes on how to apply this tag in the container.
    * @return value or {@code null} for none
    */
   public java.lang.String getNotes() {
@@ -393,8 +364,7 @@ public final class Tag extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * User notes on how to apply this tag in the container. @mutable
-   * tagmanager.accounts.containers.tags.create @mutable tagmanager.accounts.containers.tags.update
+   * User notes on how to apply this tag in the container.
    * @param notes notes or {@code null} for none
    */
   public Tag setNotes(java.lang.String notes) {
@@ -403,8 +373,7 @@ public final class Tag extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The tag's parameters. @mutable tagmanager.accounts.containers.tags.create @mutable
-   * tagmanager.accounts.containers.tags.update
+   * The tag's parameters.
    * @return value or {@code null} for none
    */
   public java.util.List<Parameter> getParameter() {
@@ -412,8 +381,7 @@ public final class Tag extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The tag's parameters. @mutable tagmanager.accounts.containers.tags.create @mutable
-   * tagmanager.accounts.containers.tags.update
+   * The tag's parameters.
    * @param parameter parameter or {@code null} for none
    */
   public Tag setParameter(java.util.List<Parameter> parameter) {
@@ -439,8 +407,7 @@ public final class Tag extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * True if the tag is paused. @mutable tagmanager.accounts.containers.tags.create @mutable
-   * tagmanager.accounts.containers.tags.update
+   * True if the tag is paused.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPaused() {
@@ -448,8 +415,7 @@ public final class Tag extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * True if the tag is paused. @mutable tagmanager.accounts.containers.tags.create @mutable
-   * tagmanager.accounts.containers.tags.update
+   * True if the tag is paused.
    * @param paused paused or {@code null} for none
    */
   public Tag setPaused(java.lang.Boolean paused) {
@@ -460,8 +426,7 @@ public final class Tag extends com.google.api.client.json.GenericJson {
   /**
    * User defined numeric priority of the tag. Tags are fired asynchronously in order of priority.
    * Tags with higher numeric value fire first. A tag's priority can be a positive or negative
-   * value. The default value is 0. @mutable tagmanager.accounts.containers.tags.create @mutable
-   * tagmanager.accounts.containers.tags.update
+   * value. The default value is 0.
    * @return value or {@code null} for none
    */
   public Parameter getPriority() {
@@ -471,8 +436,7 @@ public final class Tag extends com.google.api.client.json.GenericJson {
   /**
    * User defined numeric priority of the tag. Tags are fired asynchronously in order of priority.
    * Tags with higher numeric value fire first. A tag's priority can be a positive or negative
-   * value. The default value is 0. @mutable tagmanager.accounts.containers.tags.create @mutable
-   * tagmanager.accounts.containers.tags.update
+   * value. The default value is 0.
    * @param priority priority or {@code null} for none
    */
   public Tag setPriority(Parameter priority) {
@@ -481,8 +445,7 @@ public final class Tag extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The end timestamp in milliseconds to schedule a tag. @mutable
-   * tagmanager.accounts.containers.tags.create @mutable tagmanager.accounts.containers.tags.update
+   * The end timestamp in milliseconds to schedule a tag.
    * @return value or {@code null} for none
    */
   public java.lang.Long getScheduleEndMs() {
@@ -490,8 +453,7 @@ public final class Tag extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The end timestamp in milliseconds to schedule a tag. @mutable
-   * tagmanager.accounts.containers.tags.create @mutable tagmanager.accounts.containers.tags.update
+   * The end timestamp in milliseconds to schedule a tag.
    * @param scheduleEndMs scheduleEndMs or {@code null} for none
    */
   public Tag setScheduleEndMs(java.lang.Long scheduleEndMs) {
@@ -500,8 +462,7 @@ public final class Tag extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The start timestamp in milliseconds to schedule a tag. @mutable
-   * tagmanager.accounts.containers.tags.create @mutable tagmanager.accounts.containers.tags.update
+   * The start timestamp in milliseconds to schedule a tag.
    * @return value or {@code null} for none
    */
   public java.lang.Long getScheduleStartMs() {
@@ -509,8 +470,7 @@ public final class Tag extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The start timestamp in milliseconds to schedule a tag. @mutable
-   * tagmanager.accounts.containers.tags.create @mutable tagmanager.accounts.containers.tags.update
+   * The start timestamp in milliseconds to schedule a tag.
    * @param scheduleStartMs scheduleStartMs or {@code null} for none
    */
   public Tag setScheduleStartMs(java.lang.Long scheduleStartMs) {
@@ -587,8 +547,7 @@ public final class Tag extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * GTM Tag Type. @mutable tagmanager.accounts.containers.tags.create @mutable
-   * tagmanager.accounts.containers.tags.update
+   * GTM Tag Type.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -596,8 +555,7 @@ public final class Tag extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * GTM Tag Type. @mutable tagmanager.accounts.containers.tags.create @mutable
-   * tagmanager.accounts.containers.tags.update
+   * GTM Tag Type.
    * @param type type or {@code null} for none
    */
   public Tag setType(java.lang.String type) {

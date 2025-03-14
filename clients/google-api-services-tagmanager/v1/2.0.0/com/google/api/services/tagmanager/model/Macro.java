@@ -46,8 +46,7 @@ public final class Macro extends com.google.api.client.json.GenericJson {
   /**
    * For mobile containers only: A list of rule IDs for disabling conditional macros; the macro is
    * enabled if one of the enabling rules is true while all the disabling rules are false. Treated
-   * as an unordered set. @mutable tagmanager.accounts.containers.macros.create @mutable
-   * tagmanager.accounts.containers.macros.update
+   * as an unordered set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,8 +55,7 @@ public final class Macro extends com.google.api.client.json.GenericJson {
   /**
    * For mobile containers only: A list of rule IDs for enabling conditional macros; the macro is
    * enabled if one of the enabling rules is true while all the disabling rules are false. Treated
-   * as an unordered set. @mutable tagmanager.accounts.containers.macros.create @mutable
-   * tagmanager.accounts.containers.macros.update
+   * as an unordered set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,25 +77,21 @@ public final class Macro extends com.google.api.client.json.GenericJson {
   private java.lang.String macroId;
 
   /**
-   * Macro display name. @mutable tagmanager.accounts.containers.macros.create @mutable
-   * tagmanager.accounts.containers.macros.update
+   * Macro display name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * User notes on how to apply this macro in the container. @mutable
-   * tagmanager.accounts.containers.macros.create @mutable
-   * tagmanager.accounts.containers.macros.update
+   * User notes on how to apply this macro in the container.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String notes;
 
   /**
-   * The macro's parameters. @mutable tagmanager.accounts.containers.macros.create @mutable
-   * tagmanager.accounts.containers.macros.update
+   * The macro's parameters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -111,26 +105,21 @@ public final class Macro extends com.google.api.client.json.GenericJson {
   private java.lang.String parentFolderId;
 
   /**
-   * The end timestamp in milliseconds to schedule a macro. @mutable
-   * tagmanager.accounts.containers.macros.create @mutable
-   * tagmanager.accounts.containers.macros.update
+   * The end timestamp in milliseconds to schedule a macro.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long scheduleEndMs;
 
   /**
-   * The start timestamp in milliseconds to schedule a macro. @mutable
-   * tagmanager.accounts.containers.macros.create @mutable
-   * tagmanager.accounts.containers.macros.update
+   * The start timestamp in milliseconds to schedule a macro.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long scheduleStartMs;
 
   /**
-   * GTM Macro Type. @mutable tagmanager.accounts.containers.macros.create @mutable
-   * tagmanager.accounts.containers.macros.update
+   * GTM Macro Type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -173,8 +162,7 @@ public final class Macro extends com.google.api.client.json.GenericJson {
   /**
    * For mobile containers only: A list of rule IDs for disabling conditional macros; the macro is
    * enabled if one of the enabling rules is true while all the disabling rules are false. Treated
-   * as an unordered set. @mutable tagmanager.accounts.containers.macros.create @mutable
-   * tagmanager.accounts.containers.macros.update
+   * as an unordered set.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDisablingRuleId() {
@@ -184,8 +172,7 @@ public final class Macro extends com.google.api.client.json.GenericJson {
   /**
    * For mobile containers only: A list of rule IDs for disabling conditional macros; the macro is
    * enabled if one of the enabling rules is true while all the disabling rules are false. Treated
-   * as an unordered set. @mutable tagmanager.accounts.containers.macros.create @mutable
-   * tagmanager.accounts.containers.macros.update
+   * as an unordered set.
    * @param disablingRuleId disablingRuleId or {@code null} for none
    */
   public Macro setDisablingRuleId(java.util.List<java.lang.String> disablingRuleId) {
@@ -196,8 +183,7 @@ public final class Macro extends com.google.api.client.json.GenericJson {
   /**
    * For mobile containers only: A list of rule IDs for enabling conditional macros; the macro is
    * enabled if one of the enabling rules is true while all the disabling rules are false. Treated
-   * as an unordered set. @mutable tagmanager.accounts.containers.macros.create @mutable
-   * tagmanager.accounts.containers.macros.update
+   * as an unordered set.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getEnablingRuleId() {
@@ -207,8 +193,7 @@ public final class Macro extends com.google.api.client.json.GenericJson {
   /**
    * For mobile containers only: A list of rule IDs for enabling conditional macros; the macro is
    * enabled if one of the enabling rules is true while all the disabling rules are false. Treated
-   * as an unordered set. @mutable tagmanager.accounts.containers.macros.create @mutable
-   * tagmanager.accounts.containers.macros.update
+   * as an unordered set.
    * @param enablingRuleId enablingRuleId or {@code null} for none
    */
   public Macro setEnablingRuleId(java.util.List<java.lang.String> enablingRuleId) {
@@ -253,8 +238,7 @@ public final class Macro extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Macro display name. @mutable tagmanager.accounts.containers.macros.create @mutable
-   * tagmanager.accounts.containers.macros.update
+   * Macro display name.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -262,8 +246,7 @@ public final class Macro extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Macro display name. @mutable tagmanager.accounts.containers.macros.create @mutable
-   * tagmanager.accounts.containers.macros.update
+   * Macro display name.
    * @param name name or {@code null} for none
    */
   public Macro setName(java.lang.String name) {
@@ -272,9 +255,7 @@ public final class Macro extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * User notes on how to apply this macro in the container. @mutable
-   * tagmanager.accounts.containers.macros.create @mutable
-   * tagmanager.accounts.containers.macros.update
+   * User notes on how to apply this macro in the container.
    * @return value or {@code null} for none
    */
   public java.lang.String getNotes() {
@@ -282,9 +263,7 @@ public final class Macro extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * User notes on how to apply this macro in the container. @mutable
-   * tagmanager.accounts.containers.macros.create @mutable
-   * tagmanager.accounts.containers.macros.update
+   * User notes on how to apply this macro in the container.
    * @param notes notes or {@code null} for none
    */
   public Macro setNotes(java.lang.String notes) {
@@ -293,8 +272,7 @@ public final class Macro extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The macro's parameters. @mutable tagmanager.accounts.containers.macros.create @mutable
-   * tagmanager.accounts.containers.macros.update
+   * The macro's parameters.
    * @return value or {@code null} for none
    */
   public java.util.List<Parameter> getParameter() {
@@ -302,8 +280,7 @@ public final class Macro extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The macro's parameters. @mutable tagmanager.accounts.containers.macros.create @mutable
-   * tagmanager.accounts.containers.macros.update
+   * The macro's parameters.
    * @param parameter parameter or {@code null} for none
    */
   public Macro setParameter(java.util.List<Parameter> parameter) {
@@ -329,9 +306,7 @@ public final class Macro extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The end timestamp in milliseconds to schedule a macro. @mutable
-   * tagmanager.accounts.containers.macros.create @mutable
-   * tagmanager.accounts.containers.macros.update
+   * The end timestamp in milliseconds to schedule a macro.
    * @return value or {@code null} for none
    */
   public java.lang.Long getScheduleEndMs() {
@@ -339,9 +314,7 @@ public final class Macro extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The end timestamp in milliseconds to schedule a macro. @mutable
-   * tagmanager.accounts.containers.macros.create @mutable
-   * tagmanager.accounts.containers.macros.update
+   * The end timestamp in milliseconds to schedule a macro.
    * @param scheduleEndMs scheduleEndMs or {@code null} for none
    */
   public Macro setScheduleEndMs(java.lang.Long scheduleEndMs) {
@@ -350,9 +323,7 @@ public final class Macro extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The start timestamp in milliseconds to schedule a macro. @mutable
-   * tagmanager.accounts.containers.macros.create @mutable
-   * tagmanager.accounts.containers.macros.update
+   * The start timestamp in milliseconds to schedule a macro.
    * @return value or {@code null} for none
    */
   public java.lang.Long getScheduleStartMs() {
@@ -360,9 +331,7 @@ public final class Macro extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The start timestamp in milliseconds to schedule a macro. @mutable
-   * tagmanager.accounts.containers.macros.create @mutable
-   * tagmanager.accounts.containers.macros.update
+   * The start timestamp in milliseconds to schedule a macro.
    * @param scheduleStartMs scheduleStartMs or {@code null} for none
    */
   public Macro setScheduleStartMs(java.lang.Long scheduleStartMs) {
@@ -371,8 +340,7 @@ public final class Macro extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * GTM Macro Type. @mutable tagmanager.accounts.containers.macros.create @mutable
-   * tagmanager.accounts.containers.macros.update
+   * GTM Macro Type.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -380,8 +348,7 @@ public final class Macro extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * GTM Macro Type. @mutable tagmanager.accounts.containers.macros.create @mutable
-   * tagmanager.accounts.containers.macros.update
+   * GTM Macro Type.
    * @param type type or {@code null} for none
    */
   public Macro setType(java.lang.String type) {

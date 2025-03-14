@@ -37,9 +37,7 @@ public final class Rule extends com.google.api.client.json.GenericJson {
   private java.lang.String accountId;
 
   /**
-   * The list of conditions that make up this rule (implicit AND between them). @mutable
-   * tagmanager.accounts.containers.rules.create @mutable
-   * tagmanager.accounts.containers.rules.update
+   * The list of conditions that make up this rule (implicit AND between them).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,17 +65,14 @@ public final class Rule extends com.google.api.client.json.GenericJson {
   private java.lang.String fingerprint;
 
   /**
-   * Rule display name. @mutable tagmanager.accounts.containers.rules.create @mutable
-   * tagmanager.accounts.containers.rules.update
+   * Rule display name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * User notes on how to apply this rule in the container. @mutable
-   * tagmanager.accounts.containers.rules.create @mutable
-   * tagmanager.accounts.containers.rules.update
+   * User notes on how to apply this rule in the container.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,9 +103,7 @@ public final class Rule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The list of conditions that make up this rule (implicit AND between them). @mutable
-   * tagmanager.accounts.containers.rules.create @mutable
-   * tagmanager.accounts.containers.rules.update
+   * The list of conditions that make up this rule (implicit AND between them).
    * @return value or {@code null} for none
    */
   public java.util.List<Condition> getCondition() {
@@ -118,9 +111,7 @@ public final class Rule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The list of conditions that make up this rule (implicit AND between them). @mutable
-   * tagmanager.accounts.containers.rules.create @mutable
-   * tagmanager.accounts.containers.rules.update
+   * The list of conditions that make up this rule (implicit AND between them).
    * @param condition condition or {@code null} for none
    */
   public Rule setCondition(java.util.List<Condition> condition) {
@@ -165,8 +156,7 @@ public final class Rule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Rule display name. @mutable tagmanager.accounts.containers.rules.create @mutable
-   * tagmanager.accounts.containers.rules.update
+   * Rule display name.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -174,8 +164,7 @@ public final class Rule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Rule display name. @mutable tagmanager.accounts.containers.rules.create @mutable
-   * tagmanager.accounts.containers.rules.update
+   * Rule display name.
    * @param name name or {@code null} for none
    */
   public Rule setName(java.lang.String name) {
@@ -184,9 +173,7 @@ public final class Rule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * User notes on how to apply this rule in the container. @mutable
-   * tagmanager.accounts.containers.rules.create @mutable
-   * tagmanager.accounts.containers.rules.update
+   * User notes on how to apply this rule in the container.
    * @return value or {@code null} for none
    */
   public java.lang.String getNotes() {
@@ -194,9 +181,7 @@ public final class Rule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * User notes on how to apply this rule in the container. @mutable
-   * tagmanager.accounts.containers.rules.create @mutable
-   * tagmanager.accounts.containers.rules.update
+   * User notes on how to apply this rule in the container.
    * @param notes notes or {@code null} for none
    */
   public Rule setNotes(java.lang.String notes) {

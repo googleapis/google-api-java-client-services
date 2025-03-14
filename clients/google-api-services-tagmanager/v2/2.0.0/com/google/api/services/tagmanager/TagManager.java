@@ -161,7 +161,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
      * This request holds the parameters needed by the tagmanager server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param path GTM Account's API relative path. Example: accounts/{account_id}
+     * @param path GTM Account's API relative path.
      * @return the request
      */
     public Get get(java.lang.String path) throws java.io.IOException {
@@ -187,7 +187,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
        * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param path GTM Account's API relative path. Example: accounts/{account_id}
+       * @param path GTM Account's API relative path.
        * @since 1.13
        */
       protected Get(java.lang.String path) {
@@ -265,17 +265,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
         return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** GTM Account's API relative path. Example: accounts/{account_id} */
+      /** GTM Account's API relative path. */
       @com.google.api.client.util.Key
       private java.lang.String path;
 
-      /** GTM Account's API relative path. Example: accounts/{account_id}
+      /** GTM Account's API relative path.
        */
       public java.lang.String getPath() {
         return path;
       }
 
-      /** GTM Account's API relative path. Example: accounts/{account_id} */
+      /** GTM Account's API relative path. */
       public Get setPath(java.lang.String path) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -437,7 +437,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
      * This request holds the parameters needed by the tagmanager server.  After setting any optional
      * parameters, call the {@link Update#execute()} method to invoke the remote operation.
      *
-     * @param path GTM Account's API relative path. Example: accounts/{account_id}
+     * @param path GTM Account's API relative path.
      * @param content the {@link com.google.api.services.tagmanager.model.Account}
      * @return the request
      */
@@ -465,7 +465,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
        * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param path GTM Account's API relative path. Example: accounts/{account_id}
+       * @param path GTM Account's API relative path.
        * @param content the {@link com.google.api.services.tagmanager.model.Account}
        * @since 1.13
        */
@@ -534,17 +534,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
         return (Update) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** GTM Account's API relative path. Example: accounts/{account_id} */
+      /** GTM Account's API relative path. */
       @com.google.api.client.util.Key
       private java.lang.String path;
 
-      /** GTM Account's API relative path. Example: accounts/{account_id}
+      /** GTM Account's API relative path.
        */
       public java.lang.String getPath() {
         return path;
       }
 
-      /** GTM Account's API relative path. Example: accounts/{account_id} */
+      /** GTM Account's API relative path. */
       public Update setPath(java.lang.String path) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -605,7 +605,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the tagmanager server.  After setting any optional
        * parameters, call the {@link Combine#execute()} method to invoke the remote operation.
        *
-       * @param path GTM Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+       * @param path GTM Container's API relative path.
        * @return the request
        */
       public Combine combine(java.lang.String path) throws java.io.IOException {
@@ -632,7 +632,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * Combine#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param path GTM Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+         * @param path GTM Container's API relative path.
          * @since 1.13
          */
         protected Combine(java.lang.String path) {
@@ -700,23 +700,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           return (Combine) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * GTM Container's API relative path. Example:
-         * accounts/{account_id}/containers/{container_id}
-         */
+        /** GTM Container's API relative path. */
         @com.google.api.client.util.Key
         private java.lang.String path;
 
-        /** GTM Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+        /** GTM Container's API relative path.
          */
         public java.lang.String getPath() {
           return path;
         }
 
-        /**
-         * GTM Container's API relative path. Example:
-         * accounts/{account_id}/containers/{container_id}
-         */
+        /** GTM Container's API relative path. */
         public Combine setPath(java.lang.String path) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -795,7 +789,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the tagmanager server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent GTM Account's API relative path. Example: accounts/{account_id}.
+       * @param parent GTM Account's API relative path.
        * @param content the {@link com.google.api.services.tagmanager.model.Container}
        * @return the request
        */
@@ -823,7 +817,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent GTM Account's API relative path. Example: accounts/{account_id}.
+         * @param parent GTM Account's API relative path.
          * @param content the {@link com.google.api.services.tagmanager.model.Container}
          * @since 1.13
          */
@@ -835,8 +829,6 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
                 "Parameter parent must conform to the pattern " +
                 "^accounts/[^/]+$");
           }
-          checkRequiredParameter(content, "content");
-          checkRequiredParameter(content.getName(), "Container.getName()");
         }
 
         @Override
@@ -894,17 +886,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           return (Create) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** GTM Account's API relative path. Example: accounts/{account_id}. */
+        /** GTM Account's API relative path. */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** GTM Account's API relative path. Example: accounts/{account_id}.
+        /** GTM Account's API relative path.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /** GTM Account's API relative path. Example: accounts/{account_id}. */
+        /** GTM Account's API relative path. */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -928,7 +920,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the tagmanager server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param path GTM Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+       * @param path GTM Container's API relative path.
        * @return the request
        */
       public Delete delete(java.lang.String path) throws java.io.IOException {
@@ -955,7 +947,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param path GTM Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+         * @param path GTM Container's API relative path.
          * @since 1.13
          */
         protected Delete(java.lang.String path) {
@@ -1023,23 +1015,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           return (Delete) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * GTM Container's API relative path. Example:
-         * accounts/{account_id}/containers/{container_id}
-         */
+        /** GTM Container's API relative path. */
         @com.google.api.client.util.Key
         private java.lang.String path;
 
-        /** GTM Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+        /** GTM Container's API relative path.
          */
         public java.lang.String getPath() {
           return path;
         }
 
-        /**
-         * GTM Container's API relative path. Example:
-         * accounts/{account_id}/containers/{container_id}
-         */
+        /** GTM Container's API relative path. */
         public Delete setPath(java.lang.String path) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -1063,7 +1049,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the tagmanager server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param path GTM Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+       * @param path GTM Container's API relative path.
        * @return the request
        */
       public Get get(java.lang.String path) throws java.io.IOException {
@@ -1089,7 +1075,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param path GTM Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+         * @param path GTM Container's API relative path.
          * @since 1.13
          */
         protected Get(java.lang.String path) {
@@ -1167,23 +1153,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           return (Get) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * GTM Container's API relative path. Example:
-         * accounts/{account_id}/containers/{container_id}
-         */
+        /** GTM Container's API relative path. */
         @com.google.api.client.util.Key
         private java.lang.String path;
 
-        /** GTM Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+        /** GTM Container's API relative path.
          */
         public java.lang.String getPath() {
           return path;
         }
 
-        /**
-         * GTM Container's API relative path. Example:
-         * accounts/{account_id}/containers/{container_id}
-         */
+        /** GTM Container's API relative path. */
         public Get setPath(java.lang.String path) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -1207,7 +1187,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the tagmanager server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent GTM Account's API relative path. Example: accounts/{account_id}.
+       * @param parent GTM Account's API relative path.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -1233,7 +1213,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent GTM Account's API relative path. Example: accounts/{account_id}.
+         * @param parent GTM Account's API relative path.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -1311,17 +1291,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** GTM Account's API relative path. Example: accounts/{account_id}. */
+        /** GTM Account's API relative path. */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** GTM Account's API relative path. Example: accounts/{account_id}.
+        /** GTM Account's API relative path.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /** GTM Account's API relative path. Example: accounts/{account_id}. */
+        /** GTM Account's API relative path. */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -1456,15 +1436,13 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * Destination ID linked to a GTM Container, e.g. AW-123456789. Example:
-         * accounts/containers:lookup?destination_id={destination_id}. Only one of destination_id or
-         * tag_id should be set.
+         * Destination ID linked to a GTM Container, e.g. AW-123456789. Only one of destination_id
+         * or tag_id should be set.
          */
         @com.google.api.client.util.Key
         private java.lang.String destinationId;
 
-        /** Destination ID linked to a GTM Container, e.g. AW-123456789. Example:
-       accounts/containers:lookup?destination_id={destination_id}. Only one of destination_id or tag_id
+        /** Destination ID linked to a GTM Container, e.g. AW-123456789. Only one of destination_id or tag_id
        should be set.
          */
         public java.lang.String getDestinationId() {
@@ -1472,9 +1450,8 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * Destination ID linked to a GTM Container, e.g. AW-123456789. Example:
-         * accounts/containers:lookup?destination_id={destination_id}. Only one of destination_id or
-         * tag_id should be set.
+         * Destination ID linked to a GTM Container, e.g. AW-123456789. Only one of destination_id
+         * or tag_id should be set.
          */
         public Lookup setDestinationId(java.lang.String destinationId) {
           this.destinationId = destinationId;
@@ -1482,24 +1459,21 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * Tag ID for a GTM Container, e.g. GTM-123456789. Example:
-         * accounts/containers:lookup?tag_id={tag_id}. Only one of destination_id or tag_id should
-         * be set.
+         * Tag ID for a GTM Container, e.g. GTM-123456789. Only one of destination_id or tag_id
+         * should be set.
          */
         @com.google.api.client.util.Key
         private java.lang.String tagId;
 
-        /** Tag ID for a GTM Container, e.g. GTM-123456789. Example:
-       accounts/containers:lookup?tag_id={tag_id}. Only one of destination_id or tag_id should be set.
+        /** Tag ID for a GTM Container, e.g. GTM-123456789. Only one of destination_id or tag_id should be set.
          */
         public java.lang.String getTagId() {
           return tagId;
         }
 
         /**
-         * Tag ID for a GTM Container, e.g. GTM-123456789. Example:
-         * accounts/containers:lookup?tag_id={tag_id}. Only one of destination_id or tag_id should
-         * be set.
+         * Tag ID for a GTM Container, e.g. GTM-123456789. Only one of destination_id or tag_id
+         * should be set.
          */
         public Lookup setTagId(java.lang.String tagId) {
           this.tagId = tagId;
@@ -1519,7 +1493,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the tagmanager server.  After setting any optional
        * parameters, call the {@link MoveTagId#execute()} method to invoke the remote operation.
        *
-       * @param path GTM Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+       * @param path GTM Container's API relative path.
        * @return the request
        */
       public MoveTagId moveTagId(java.lang.String path) throws java.io.IOException {
@@ -1546,7 +1520,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * MoveTagId#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param path GTM Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+         * @param path GTM Container's API relative path.
          * @since 1.13
          */
         protected MoveTagId(java.lang.String path) {
@@ -1614,23 +1588,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           return (MoveTagId) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * GTM Container's API relative path. Example:
-         * accounts/{account_id}/containers/{container_id}
-         */
+        /** GTM Container's API relative path. */
         @com.google.api.client.util.Key
         private java.lang.String path;
 
-        /** GTM Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+        /** GTM Container's API relative path.
          */
         public java.lang.String getPath() {
           return path;
         }
 
-        /**
-         * GTM Container's API relative path. Example:
-         * accounts/{account_id}/containers/{container_id}
-         */
+        /** GTM Container's API relative path. */
         public MoveTagId setPath(java.lang.String path) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -1764,8 +1732,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the tagmanager server.  After setting any optional
        * parameters, call the {@link Snippet#execute()} method to invoke the remote operation.
        *
-       * @param path Container snippet's API relative path. Example:
-       *        accounts/{account_id}/containers/{container_id}:snippet
+       * @param path Container snippet's API relative path.
        * @return the request
        */
       public Snippet snippet(java.lang.String path) throws java.io.IOException {
@@ -1792,8 +1759,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * Snippet#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param path Container snippet's API relative path. Example:
-       *        accounts/{account_id}/containers/{container_id}:snippet
+         * @param path Container snippet's API relative path.
          * @since 1.13
          */
         protected Snippet(java.lang.String path) {
@@ -1871,24 +1837,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           return (Snippet) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Container snippet's API relative path. Example:
-         * accounts/{account_id}/containers/{container_id}:snippet
-         */
+        /** Container snippet's API relative path. */
         @com.google.api.client.util.Key
         private java.lang.String path;
 
-        /** Container snippet's API relative path. Example:
-       accounts/{account_id}/containers/{container_id}:snippet
+        /** Container snippet's API relative path.
          */
         public java.lang.String getPath() {
           return path;
         }
 
-        /**
-         * Container snippet's API relative path. Example:
-         * accounts/{account_id}/containers/{container_id}:snippet
-         */
+        /** Container snippet's API relative path. */
         public Snippet setPath(java.lang.String path) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -1912,7 +1871,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the tagmanager server.  After setting any optional
        * parameters, call the {@link Update#execute()} method to invoke the remote operation.
        *
-       * @param path GTM Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+       * @param path GTM Container's API relative path.
        * @param content the {@link com.google.api.services.tagmanager.model.Container}
        * @return the request
        */
@@ -1940,7 +1899,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param path GTM Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+         * @param path GTM Container's API relative path.
          * @param content the {@link com.google.api.services.tagmanager.model.Container}
          * @since 1.13
          */
@@ -1952,8 +1911,6 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
                 "Parameter path must conform to the pattern " +
                 "^accounts/[^/]+/containers/[^/]+$");
           }
-          checkRequiredParameter(content, "content");
-          checkRequiredParameter(content.getName(), "Container.getName()");
         }
 
         @Override
@@ -2011,23 +1968,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           return (Update) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * GTM Container's API relative path. Example:
-         * accounts/{account_id}/containers/{container_id}
-         */
+        /** GTM Container's API relative path. */
         @com.google.api.client.util.Key
         private java.lang.String path;
 
-        /** GTM Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+        /** GTM Container's API relative path.
          */
         public java.lang.String getPath() {
           return path;
         }
 
-        /**
-         * GTM Container's API relative path. Example:
-         * accounts/{account_id}/containers/{container_id}
-         */
+        /** GTM Container's API relative path. */
         public Update setPath(java.lang.String path) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -2092,8 +2043,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the tagmanager server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param path Google Tag Destination's API relative path. Example:
-         *        accounts/{account_id}/containers/{container_id}/destinations/{destination_link_id}
+         * @param path Google Tag Destination's API relative path.
          * @return the request
          */
         public Get get(java.lang.String path) throws java.io.IOException {
@@ -2119,8 +2069,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param path Google Tag Destination's API relative path. Example:
-         *        accounts/{account_id}/containers/{container_id}/destinations/{destination_link_id}
+           * @param path Google Tag Destination's API relative path.
            * @since 1.13
            */
           protected Get(java.lang.String path) {
@@ -2198,24 +2147,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * Google Tag Destination's API relative path. Example:
-           * accounts/{account_id}/containers/{container_id}/destinations/{destination_link_id}
-           */
+          /** Google Tag Destination's API relative path. */
           @com.google.api.client.util.Key
           private java.lang.String path;
 
-          /** Google Tag Destination's API relative path. Example:
-         accounts/{account_id}/containers/{container_id}/destinations/{destination_link_id}
+          /** Google Tag Destination's API relative path.
            */
           public java.lang.String getPath() {
             return path;
           }
 
-          /**
-           * Google Tag Destination's API relative path. Example:
-           * accounts/{account_id}/containers/{container_id}/destinations/{destination_link_id}
-           */
+          /** Google Tag Destination's API relative path. */
           public Get setPath(java.lang.String path) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -2240,7 +2182,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the tagmanager server.  After setting any optional
          * parameters, call the {@link Link#execute()} method to invoke the remote operation.
          *
-         * @param parent GTM parent Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+         * @param parent GTM parent Container's API relative path.
          * @return the request
          */
         public Link link(java.lang.String parent) throws java.io.IOException {
@@ -2267,7 +2209,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * {@link Link#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent GTM parent Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+           * @param parent GTM parent Container's API relative path.
            * @since 1.13
            */
           protected Link(java.lang.String parent) {
@@ -2335,23 +2277,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             return (Link) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * GTM parent Container's API relative path. Example:
-           * accounts/{account_id}/containers/{container_id}
-           */
+          /** GTM parent Container's API relative path. */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** GTM parent Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+          /** GTM parent Container's API relative path.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /**
-           * GTM parent Container's API relative path. Example:
-           * accounts/{account_id}/containers/{container_id}
-           */
+          /** GTM parent Container's API relative path. */
           public Link setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -2414,7 +2350,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the tagmanager server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent GTM parent Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+         * @param parent GTM parent Container's API relative path.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -2440,7 +2376,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent GTM parent Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+           * @param parent GTM parent Container's API relative path.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -2518,23 +2454,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * GTM parent Container's API relative path. Example:
-           * accounts/{account_id}/containers/{container_id}
-           */
+          /** GTM parent Container's API relative path. */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** GTM parent Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+          /** GTM parent Container's API relative path.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /**
-           * GTM parent Container's API relative path. Example:
-           * accounts/{account_id}/containers/{container_id}
-           */
+          /** GTM parent Container's API relative path. */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -2580,7 +2510,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the tagmanager server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent GTM Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+         * @param parent GTM Container's API relative path.
          * @param content the {@link com.google.api.services.tagmanager.model.Environment}
          * @return the request
          */
@@ -2608,7 +2538,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent GTM Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+           * @param parent GTM Container's API relative path.
            * @param content the {@link com.google.api.services.tagmanager.model.Environment}
            * @since 1.13
            */
@@ -2620,8 +2550,6 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
                   "Parameter parent must conform to the pattern " +
                   "^accounts/[^/]+/containers/[^/]+$");
             }
-            checkRequiredParameter(content, "content");
-            checkRequiredParameter(content.getName(), "Environment.getName()");
           }
 
           @Override
@@ -2679,23 +2607,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             return (Create) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * GTM Container's API relative path. Example:
-           * accounts/{account_id}/containers/{container_id}
-           */
+          /** GTM Container's API relative path. */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** GTM Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+          /** GTM Container's API relative path.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /**
-           * GTM Container's API relative path. Example:
-           * accounts/{account_id}/containers/{container_id}
-           */
+          /** GTM Container's API relative path. */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -2719,8 +2641,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the tagmanager server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param path GTM Environment's API relative path. Example:
-         *        accounts/{account_id}/containers/{container_id}/environments/{environment_id}
+         * @param path GTM Environment's API relative path.
          * @return the request
          */
         public Delete delete(java.lang.String path) throws java.io.IOException {
@@ -2747,8 +2668,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param path GTM Environment's API relative path. Example:
-         *        accounts/{account_id}/containers/{container_id}/environments/{environment_id}
+           * @param path GTM Environment's API relative path.
            * @since 1.13
            */
           protected Delete(java.lang.String path) {
@@ -2816,24 +2736,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             return (Delete) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * GTM Environment's API relative path. Example:
-           * accounts/{account_id}/containers/{container_id}/environments/{environment_id}
-           */
+          /** GTM Environment's API relative path. */
           @com.google.api.client.util.Key
           private java.lang.String path;
 
-          /** GTM Environment's API relative path. Example:
-         accounts/{account_id}/containers/{container_id}/environments/{environment_id}
+          /** GTM Environment's API relative path.
            */
           public java.lang.String getPath() {
             return path;
           }
 
-          /**
-           * GTM Environment's API relative path. Example:
-           * accounts/{account_id}/containers/{container_id}/environments/{environment_id}
-           */
+          /** GTM Environment's API relative path. */
           public Delete setPath(java.lang.String path) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -2857,8 +2770,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the tagmanager server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param path GTM Environment's API relative path. Example:
-         *        accounts/{account_id}/containers/{container_id}/environments/{environment_id}
+         * @param path GTM Environment's API relative path.
          * @return the request
          */
         public Get get(java.lang.String path) throws java.io.IOException {
@@ -2884,8 +2796,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param path GTM Environment's API relative path. Example:
-         *        accounts/{account_id}/containers/{container_id}/environments/{environment_id}
+           * @param path GTM Environment's API relative path.
            * @since 1.13
            */
           protected Get(java.lang.String path) {
@@ -2963,24 +2874,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * GTM Environment's API relative path. Example:
-           * accounts/{account_id}/containers/{container_id}/environments/{environment_id}
-           */
+          /** GTM Environment's API relative path. */
           @com.google.api.client.util.Key
           private java.lang.String path;
 
-          /** GTM Environment's API relative path. Example:
-         accounts/{account_id}/containers/{container_id}/environments/{environment_id}
+          /** GTM Environment's API relative path.
            */
           public java.lang.String getPath() {
             return path;
           }
 
-          /**
-           * GTM Environment's API relative path. Example:
-           * accounts/{account_id}/containers/{container_id}/environments/{environment_id}
-           */
+          /** GTM Environment's API relative path. */
           public Get setPath(java.lang.String path) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -3004,7 +2908,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the tagmanager server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent GTM Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+         * @param parent GTM Container's API relative path.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -3030,7 +2934,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent GTM Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+           * @param parent GTM Container's API relative path.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -3108,23 +3012,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * GTM Container's API relative path. Example:
-           * accounts/{account_id}/containers/{container_id}
-           */
+          /** GTM Container's API relative path. */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** GTM Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+          /** GTM Container's API relative path.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /**
-           * GTM Container's API relative path. Example:
-           * accounts/{account_id}/containers/{container_id}
-           */
+          /** GTM Container's API relative path. */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -3164,8 +3062,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the tagmanager server.  After setting any optional
          * parameters, call the {@link Reauthorize#execute()} method to invoke the remote operation.
          *
-         * @param path GTM Environment's API relative path. Example:
-         *        accounts/{account_id}/containers/{container_id}/environments/{environment_id}
+         * @param path GTM Environment's API relative path.
          * @param content the {@link com.google.api.services.tagmanager.model.Environment}
          * @return the request
          */
@@ -3193,8 +3090,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * Reauthorize#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param path GTM Environment's API relative path. Example:
-         *        accounts/{account_id}/containers/{container_id}/environments/{environment_id}
+           * @param path GTM Environment's API relative path.
            * @param content the {@link com.google.api.services.tagmanager.model.Environment}
            * @since 1.13
            */
@@ -3263,24 +3159,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             return (Reauthorize) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * GTM Environment's API relative path. Example:
-           * accounts/{account_id}/containers/{container_id}/environments/{environment_id}
-           */
+          /** GTM Environment's API relative path. */
           @com.google.api.client.util.Key
           private java.lang.String path;
 
-          /** GTM Environment's API relative path. Example:
-         accounts/{account_id}/containers/{container_id}/environments/{environment_id}
+          /** GTM Environment's API relative path.
            */
           public java.lang.String getPath() {
             return path;
           }
 
-          /**
-           * GTM Environment's API relative path. Example:
-           * accounts/{account_id}/containers/{container_id}/environments/{environment_id}
-           */
+          /** GTM Environment's API relative path. */
           public Reauthorize setPath(java.lang.String path) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -3304,8 +3193,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the tagmanager server.  After setting any optional
          * parameters, call the {@link Update#execute()} method to invoke the remote operation.
          *
-         * @param path GTM Environment's API relative path. Example:
-         *        accounts/{account_id}/containers/{container_id}/environments/{environment_id}
+         * @param path GTM Environment's API relative path.
          * @param content the {@link com.google.api.services.tagmanager.model.Environment}
          * @return the request
          */
@@ -3333,8 +3221,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param path GTM Environment's API relative path. Example:
-         *        accounts/{account_id}/containers/{container_id}/environments/{environment_id}
+           * @param path GTM Environment's API relative path.
            * @param content the {@link com.google.api.services.tagmanager.model.Environment}
            * @since 1.13
            */
@@ -3346,8 +3233,6 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
                   "Parameter path must conform to the pattern " +
                   "^accounts/[^/]+/containers/[^/]+/environments/[^/]+$");
             }
-            checkRequiredParameter(content, "content");
-            checkRequiredParameter(content.getName(), "Environment.getName()");
           }
 
           @Override
@@ -3405,24 +3290,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             return (Update) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * GTM Environment's API relative path. Example:
-           * accounts/{account_id}/containers/{container_id}/environments/{environment_id}
-           */
+          /** GTM Environment's API relative path. */
           @com.google.api.client.util.Key
           private java.lang.String path;
 
-          /** GTM Environment's API relative path. Example:
-         accounts/{account_id}/containers/{container_id}/environments/{environment_id}
+          /** GTM Environment's API relative path.
            */
           public java.lang.String getPath() {
             return path;
           }
 
-          /**
-           * GTM Environment's API relative path. Example:
-           * accounts/{account_id}/containers/{container_id}/environments/{environment_id}
-           */
+          /** GTM Environment's API relative path. */
           public Update setPath(java.lang.String path) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -3490,7 +3368,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the tagmanager server.  After setting any optional
          * parameters, call the {@link Latest#execute()} method to invoke the remote operation.
          *
-         * @param parent GTM Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+         * @param parent GTM Container's API relative path.
          * @return the request
          */
         public Latest latest(java.lang.String parent) throws java.io.IOException {
@@ -3517,7 +3395,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * Latest#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent GTM Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+           * @param parent GTM Container's API relative path.
            * @since 1.13
            */
           protected Latest(java.lang.String parent) {
@@ -3595,23 +3473,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             return (Latest) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * GTM Container's API relative path. Example:
-           * accounts/{account_id}/containers/{container_id}
-           */
+          /** GTM Container's API relative path. */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** GTM Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+          /** GTM Container's API relative path.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /**
-           * GTM Container's API relative path. Example:
-           * accounts/{account_id}/containers/{container_id}
-           */
+          /** GTM Container's API relative path. */
           public Latest setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -3635,7 +3507,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the tagmanager server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent GTM Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+         * @param parent GTM Container's API relative path.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -3661,7 +3533,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent GTM Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+           * @param parent GTM Container's API relative path.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -3739,23 +3611,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * GTM Container's API relative path. Example:
-           * accounts/{account_id}/containers/{container_id}
-           */
+          /** GTM Container's API relative path. */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** GTM Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+          /** GTM Container's API relative path.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /**
-           * GTM Container's API relative path. Example:
-           * accounts/{account_id}/containers/{container_id}
-           */
+          /** GTM Container's API relative path. */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -3833,8 +3699,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the tagmanager server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param path GTM ContainerVersion's API relative path. Example:
-         *        accounts/{account_id}/containers/{container_id}/versions/{version_id}
+         * @param path GTM ContainerVersion's API relative path.
          * @return the request
          */
         public Delete delete(java.lang.String path) throws java.io.IOException {
@@ -3861,8 +3726,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param path GTM ContainerVersion's API relative path. Example:
-         *        accounts/{account_id}/containers/{container_id}/versions/{version_id}
+           * @param path GTM ContainerVersion's API relative path.
            * @since 1.13
            */
           protected Delete(java.lang.String path) {
@@ -3930,24 +3794,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             return (Delete) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * GTM ContainerVersion's API relative path. Example:
-           * accounts/{account_id}/containers/{container_id}/versions/{version_id}
-           */
+          /** GTM ContainerVersion's API relative path. */
           @com.google.api.client.util.Key
           private java.lang.String path;
 
-          /** GTM ContainerVersion's API relative path. Example:
-         accounts/{account_id}/containers/{container_id}/versions/{version_id}
+          /** GTM ContainerVersion's API relative path.
            */
           public java.lang.String getPath() {
             return path;
           }
 
-          /**
-           * GTM ContainerVersion's API relative path. Example:
-           * accounts/{account_id}/containers/{container_id}/versions/{version_id}
-           */
+          /** GTM ContainerVersion's API relative path. */
           public Delete setPath(java.lang.String path) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -3971,8 +3828,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the tagmanager server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param path GTM ContainerVersion's API relative path. Example:
-         *        accounts/{account_id}/containers/{container_id}/versions/{version_id}
+         * @param path GTM ContainerVersion's API relative path.
          * @return the request
          */
         public Get get(java.lang.String path) throws java.io.IOException {
@@ -3998,8 +3854,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param path GTM ContainerVersion's API relative path. Example:
-         *        accounts/{account_id}/containers/{container_id}/versions/{version_id}
+           * @param path GTM ContainerVersion's API relative path.
            * @since 1.13
            */
           protected Get(java.lang.String path) {
@@ -4077,24 +3932,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * GTM ContainerVersion's API relative path. Example:
-           * accounts/{account_id}/containers/{container_id}/versions/{version_id}
-           */
+          /** GTM ContainerVersion's API relative path. */
           @com.google.api.client.util.Key
           private java.lang.String path;
 
-          /** GTM ContainerVersion's API relative path. Example:
-         accounts/{account_id}/containers/{container_id}/versions/{version_id}
+          /** GTM ContainerVersion's API relative path.
            */
           public java.lang.String getPath() {
             return path;
           }
 
-          /**
-           * GTM ContainerVersion's API relative path. Example:
-           * accounts/{account_id}/containers/{container_id}/versions/{version_id}
-           */
+          /** GTM ContainerVersion's API relative path. */
           public Get setPath(java.lang.String path) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -4140,7 +3988,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the tagmanager server.  After setting any optional
          * parameters, call the {@link Live#execute()} method to invoke the remote operation.
          *
-         * @param parent GTM Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+         * @param parent GTM Container's API relative path.
          * @return the request
          */
         public Live live(java.lang.String parent) throws java.io.IOException {
@@ -4166,7 +4014,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * {@link Live#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent GTM Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+           * @param parent GTM Container's API relative path.
            * @since 1.13
            */
           protected Live(java.lang.String parent) {
@@ -4244,23 +4092,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             return (Live) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * GTM Container's API relative path. Example:
-           * accounts/{account_id}/containers/{container_id}
-           */
+          /** GTM Container's API relative path. */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** GTM Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+          /** GTM Container's API relative path.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /**
-           * GTM Container's API relative path. Example:
-           * accounts/{account_id}/containers/{container_id}
-           */
+          /** GTM Container's API relative path. */
           public Live setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -4284,8 +4126,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the tagmanager server.  After setting any optional
          * parameters, call the {@link Publish#execute()} method to invoke the remote operation.
          *
-         * @param path GTM ContainerVersion's API relative path. Example:
-         *        accounts/{account_id}/containers/{container_id}/versions/{version_id}
+         * @param path GTM ContainerVersion's API relative path.
          * @return the request
          */
         public Publish publish(java.lang.String path) throws java.io.IOException {
@@ -4312,8 +4153,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * Publish#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param path GTM ContainerVersion's API relative path. Example:
-         *        accounts/{account_id}/containers/{container_id}/versions/{version_id}
+           * @param path GTM ContainerVersion's API relative path.
            * @since 1.13
            */
           protected Publish(java.lang.String path) {
@@ -4381,24 +4221,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             return (Publish) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * GTM ContainerVersion's API relative path. Example:
-           * accounts/{account_id}/containers/{container_id}/versions/{version_id}
-           */
+          /** GTM ContainerVersion's API relative path. */
           @com.google.api.client.util.Key
           private java.lang.String path;
 
-          /** GTM ContainerVersion's API relative path. Example:
-         accounts/{account_id}/containers/{container_id}/versions/{version_id}
+          /** GTM ContainerVersion's API relative path.
            */
           public java.lang.String getPath() {
             return path;
           }
 
-          /**
-           * GTM ContainerVersion's API relative path. Example:
-           * accounts/{account_id}/containers/{container_id}/versions/{version_id}
-           */
+          /** GTM ContainerVersion's API relative path. */
           public Publish setPath(java.lang.String path) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -4445,8 +4278,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the tagmanager server.  After setting any optional
          * parameters, call the {@link SetLatest#execute()} method to invoke the remote operation.
          *
-         * @param path GTM ContainerVersion's API relative path. Example:
-         *        accounts/{account_id}/containers/{container_id}/versions/{version_id}
+         * @param path GTM ContainerVersion's API relative path.
          * @return the request
          */
         public SetLatest setLatest(java.lang.String path) throws java.io.IOException {
@@ -4474,8 +4306,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * SetLatest#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param path GTM ContainerVersion's API relative path. Example:
-         *        accounts/{account_id}/containers/{container_id}/versions/{version_id}
+           * @param path GTM ContainerVersion's API relative path.
            * @since 1.13
            */
           protected SetLatest(java.lang.String path) {
@@ -4543,24 +4374,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             return (SetLatest) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * GTM ContainerVersion's API relative path. Example:
-           * accounts/{account_id}/containers/{container_id}/versions/{version_id}
-           */
+          /** GTM ContainerVersion's API relative path. */
           @com.google.api.client.util.Key
           private java.lang.String path;
 
-          /** GTM ContainerVersion's API relative path. Example:
-         accounts/{account_id}/containers/{container_id}/versions/{version_id}
+          /** GTM ContainerVersion's API relative path.
            */
           public java.lang.String getPath() {
             return path;
           }
 
-          /**
-           * GTM ContainerVersion's API relative path. Example:
-           * accounts/{account_id}/containers/{container_id}/versions/{version_id}
-           */
+          /** GTM ContainerVersion's API relative path. */
           public SetLatest setPath(java.lang.String path) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -4584,8 +4408,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the tagmanager server.  After setting any optional
          * parameters, call the {@link Undelete#execute()} method to invoke the remote operation.
          *
-         * @param path GTM ContainerVersion's API relative path. Example:
-         *        accounts/{account_id}/containers/{container_id}/versions/{version_id}
+         * @param path GTM ContainerVersion's API relative path.
          * @return the request
          */
         public Undelete undelete(java.lang.String path) throws java.io.IOException {
@@ -4612,8 +4435,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * Undelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param path GTM ContainerVersion's API relative path. Example:
-         *        accounts/{account_id}/containers/{container_id}/versions/{version_id}
+           * @param path GTM ContainerVersion's API relative path.
            * @since 1.13
            */
           protected Undelete(java.lang.String path) {
@@ -4681,24 +4503,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             return (Undelete) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * GTM ContainerVersion's API relative path. Example:
-           * accounts/{account_id}/containers/{container_id}/versions/{version_id}
-           */
+          /** GTM ContainerVersion's API relative path. */
           @com.google.api.client.util.Key
           private java.lang.String path;
 
-          /** GTM ContainerVersion's API relative path. Example:
-         accounts/{account_id}/containers/{container_id}/versions/{version_id}
+          /** GTM ContainerVersion's API relative path.
            */
           public java.lang.String getPath() {
             return path;
           }
 
-          /**
-           * GTM ContainerVersion's API relative path. Example:
-           * accounts/{account_id}/containers/{container_id}/versions/{version_id}
-           */
+          /** GTM ContainerVersion's API relative path. */
           public Undelete setPath(java.lang.String path) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -4722,8 +4537,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the tagmanager server.  After setting any optional
          * parameters, call the {@link Update#execute()} method to invoke the remote operation.
          *
-         * @param path GTM ContainerVersion's API relative path. Example:
-         *        accounts/{account_id}/containers/{container_id}/versions/{version_id}
+         * @param path GTM ContainerVersion's API relative path.
          * @param content the {@link com.google.api.services.tagmanager.model.ContainerVersion}
          * @return the request
          */
@@ -4751,8 +4565,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param path GTM ContainerVersion's API relative path. Example:
-         *        accounts/{account_id}/containers/{container_id}/versions/{version_id}
+           * @param path GTM ContainerVersion's API relative path.
            * @param content the {@link com.google.api.services.tagmanager.model.ContainerVersion}
            * @since 1.13
            */
@@ -4821,24 +4634,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             return (Update) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * GTM ContainerVersion's API relative path. Example:
-           * accounts/{account_id}/containers/{container_id}/versions/{version_id}
-           */
+          /** GTM ContainerVersion's API relative path. */
           @com.google.api.client.util.Key
           private java.lang.String path;
 
-          /** GTM ContainerVersion's API relative path. Example:
-         accounts/{account_id}/containers/{container_id}/versions/{version_id}
+          /** GTM ContainerVersion's API relative path.
            */
           public java.lang.String getPath() {
             return path;
           }
 
-          /**
-           * GTM ContainerVersion's API relative path. Example:
-           * accounts/{account_id}/containers/{container_id}/versions/{version_id}
-           */
+          /** GTM ContainerVersion's API relative path. */
           public Update setPath(java.lang.String path) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -4906,7 +4712,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the tagmanager server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent GTM parent Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+         * @param parent GTM parent Container's API relative path.
          * @param content the {@link com.google.api.services.tagmanager.model.Workspace}
          * @return the request
          */
@@ -4934,7 +4740,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent GTM parent Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+           * @param parent GTM parent Container's API relative path.
            * @param content the {@link com.google.api.services.tagmanager.model.Workspace}
            * @since 1.13
            */
@@ -4946,8 +4752,6 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
                   "Parameter parent must conform to the pattern " +
                   "^accounts/[^/]+/containers/[^/]+$");
             }
-            checkRequiredParameter(content, "content");
-            checkRequiredParameter(content.getName(), "Workspace.getName()");
           }
 
           @Override
@@ -5005,23 +4809,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             return (Create) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * GTM parent Container's API relative path. Example:
-           * accounts/{account_id}/containers/{container_id}
-           */
+          /** GTM parent Container's API relative path. */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** GTM parent Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+          /** GTM parent Container's API relative path.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /**
-           * GTM parent Container's API relative path. Example:
-           * accounts/{account_id}/containers/{container_id}
-           */
+          /** GTM parent Container's API relative path. */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -5046,8 +4844,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the tagmanager server.  After setting any optional
          * parameters, call the {@link CreateVersion#execute()} method to invoke the remote operation.
          *
-         * @param path GTM Workspace's API relative path. Example:
-         *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+         * @param path GTM Workspace's API relative path.
          * @param content the {@link com.google.api.services.tagmanager.model.CreateContainerVersionRequestVersionOptions}
          * @return the request
          */
@@ -5076,8 +4873,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
            * the constructor. </p>
            *
-           * @param path GTM Workspace's API relative path. Example:
-         *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+           * @param path GTM Workspace's API relative path.
            * @param content the {@link com.google.api.services.tagmanager.model.CreateContainerVersionRequestVersionOptions}
            * @since 1.13
            */
@@ -5146,24 +4942,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             return (CreateVersion) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * GTM Workspace's API relative path. Example:
-           * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
-           */
+          /** GTM Workspace's API relative path. */
           @com.google.api.client.util.Key
           private java.lang.String path;
 
-          /** GTM Workspace's API relative path. Example:
-         accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+          /** GTM Workspace's API relative path.
            */
           public java.lang.String getPath() {
             return path;
           }
 
-          /**
-           * GTM Workspace's API relative path. Example:
-           * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
-           */
+          /** GTM Workspace's API relative path. */
           public CreateVersion setPath(java.lang.String path) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -5187,8 +4976,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the tagmanager server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param path GTM Workspace's API relative path. Example:
-         *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+         * @param path GTM Workspace's API relative path.
          * @return the request
          */
         public Delete delete(java.lang.String path) throws java.io.IOException {
@@ -5215,8 +5003,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param path GTM Workspace's API relative path. Example:
-         *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+           * @param path GTM Workspace's API relative path.
            * @since 1.13
            */
           protected Delete(java.lang.String path) {
@@ -5284,24 +5071,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             return (Delete) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * GTM Workspace's API relative path. Example:
-           * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
-           */
+          /** GTM Workspace's API relative path. */
           @com.google.api.client.util.Key
           private java.lang.String path;
 
-          /** GTM Workspace's API relative path. Example:
-         accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+          /** GTM Workspace's API relative path.
            */
           public java.lang.String getPath() {
             return path;
           }
 
-          /**
-           * GTM Workspace's API relative path. Example:
-           * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
-           */
+          /** GTM Workspace's API relative path. */
           public Delete setPath(java.lang.String path) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -5325,8 +5105,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the tagmanager server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param path GTM Workspace's API relative path. Example:
-         *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+         * @param path GTM Workspace's API relative path.
          * @return the request
          */
         public Get get(java.lang.String path) throws java.io.IOException {
@@ -5352,8 +5131,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param path GTM Workspace's API relative path. Example:
-         *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+           * @param path GTM Workspace's API relative path.
            * @since 1.13
            */
           protected Get(java.lang.String path) {
@@ -5431,24 +5209,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * GTM Workspace's API relative path. Example:
-           * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
-           */
+          /** GTM Workspace's API relative path. */
           @com.google.api.client.util.Key
           private java.lang.String path;
 
-          /** GTM Workspace's API relative path. Example:
-         accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+          /** GTM Workspace's API relative path.
            */
           public java.lang.String getPath() {
             return path;
           }
 
-          /**
-           * GTM Workspace's API relative path. Example:
-           * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
-           */
+          /** GTM Workspace's API relative path. */
           public Get setPath(java.lang.String path) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -5472,8 +5243,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the tagmanager server.  After setting any optional
          * parameters, call the {@link GetStatus#execute()} method to invoke the remote operation.
          *
-         * @param path GTM Workspace's API relative path. Example:
-         *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+         * @param path GTM Workspace's API relative path.
          * @return the request
          */
         public GetStatus getStatus(java.lang.String path) throws java.io.IOException {
@@ -5500,8 +5270,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * GetStatus#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param path GTM Workspace's API relative path. Example:
-         *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+           * @param path GTM Workspace's API relative path.
            * @since 1.13
            */
           protected GetStatus(java.lang.String path) {
@@ -5579,24 +5348,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             return (GetStatus) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * GTM Workspace's API relative path. Example:
-           * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
-           */
+          /** GTM Workspace's API relative path. */
           @com.google.api.client.util.Key
           private java.lang.String path;
 
-          /** GTM Workspace's API relative path. Example:
-         accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+          /** GTM Workspace's API relative path.
            */
           public java.lang.String getPath() {
             return path;
           }
 
-          /**
-           * GTM Workspace's API relative path. Example:
-           * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
-           */
+          /** GTM Workspace's API relative path. */
           public GetStatus setPath(java.lang.String path) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -5620,7 +5382,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the tagmanager server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent GTM parent Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+         * @param parent GTM parent Container's API relative path.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -5646,7 +5408,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent GTM parent Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+           * @param parent GTM parent Container's API relative path.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -5724,23 +5486,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * GTM parent Container's API relative path. Example:
-           * accounts/{account_id}/containers/{container_id}
-           */
+          /** GTM parent Container's API relative path. */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** GTM parent Container's API relative path. Example: accounts/{account_id}/containers/{container_id}
+          /** GTM parent Container's API relative path.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /**
-           * GTM parent Container's API relative path. Example:
-           * accounts/{account_id}/containers/{container_id}
-           */
+          /** GTM parent Container's API relative path. */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -5781,8 +5537,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the tagmanager server.  After setting any optional
          * parameters, call the {@link QuickPreview#execute()} method to invoke the remote operation.
          *
-         * @param path GTM Workspace's API relative path. Example:
-         *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+         * @param path GTM Workspace's API relative path.
          * @return the request
          */
         public QuickPreview quickPreview(java.lang.String path) throws java.io.IOException {
@@ -5810,8 +5565,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * QuickPreview#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param path GTM Workspace's API relative path. Example:
-         *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+           * @param path GTM Workspace's API relative path.
            * @since 1.13
            */
           protected QuickPreview(java.lang.String path) {
@@ -5879,24 +5633,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             return (QuickPreview) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * GTM Workspace's API relative path. Example:
-           * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
-           */
+          /** GTM Workspace's API relative path. */
           @com.google.api.client.util.Key
           private java.lang.String path;
 
-          /** GTM Workspace's API relative path. Example:
-         accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+          /** GTM Workspace's API relative path.
            */
           public java.lang.String getPath() {
             return path;
           }
 
-          /**
-           * GTM Workspace's API relative path. Example:
-           * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
-           */
+          /** GTM Workspace's API relative path. */
           public QuickPreview setPath(java.lang.String path) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -5921,8 +5668,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the tagmanager server.  After setting any optional
          * parameters, call the {@link ResolveConflict#execute()} method to invoke the remote operation.
          *
-         * @param path GTM Workspace's API relative path. Example:
-         *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+         * @param path GTM Workspace's API relative path.
          * @param content the {@link com.google.api.services.tagmanager.model.Entity}
          * @return the request
          */
@@ -5951,8 +5697,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
            * the constructor. </p>
            *
-           * @param path GTM Workspace's API relative path. Example:
-         *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+           * @param path GTM Workspace's API relative path.
            * @param content the {@link com.google.api.services.tagmanager.model.Entity}
            * @since 1.13
            */
@@ -6021,24 +5766,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             return (ResolveConflict) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * GTM Workspace's API relative path. Example:
-           * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
-           */
+          /** GTM Workspace's API relative path. */
           @com.google.api.client.util.Key
           private java.lang.String path;
 
-          /** GTM Workspace's API relative path. Example:
-         accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+          /** GTM Workspace's API relative path.
            */
           public java.lang.String getPath() {
             return path;
           }
 
-          /**
-           * GTM Workspace's API relative path. Example:
-           * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
-           */
+          /** GTM Workspace's API relative path. */
           public ResolveConflict setPath(java.lang.String path) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -6086,8 +5824,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the tagmanager server.  After setting any optional
          * parameters, call the {@link Sync#execute()} method to invoke the remote operation.
          *
-         * @param path GTM Workspace's API relative path. Example:
-         *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+         * @param path GTM Workspace's API relative path.
          * @return the request
          */
         public Sync sync(java.lang.String path) throws java.io.IOException {
@@ -6114,8 +5851,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * {@link Sync#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param path GTM Workspace's API relative path. Example:
-         *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+           * @param path GTM Workspace's API relative path.
            * @since 1.13
            */
           protected Sync(java.lang.String path) {
@@ -6183,24 +5919,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             return (Sync) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * GTM Workspace's API relative path. Example:
-           * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
-           */
+          /** GTM Workspace's API relative path. */
           @com.google.api.client.util.Key
           private java.lang.String path;
 
-          /** GTM Workspace's API relative path. Example:
-         accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+          /** GTM Workspace's API relative path.
            */
           public java.lang.String getPath() {
             return path;
           }
 
-          /**
-           * GTM Workspace's API relative path. Example:
-           * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
-           */
+          /** GTM Workspace's API relative path. */
           public Sync setPath(java.lang.String path) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -6224,8 +5953,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the tagmanager server.  After setting any optional
          * parameters, call the {@link Update#execute()} method to invoke the remote operation.
          *
-         * @param path GTM Workspace's API relative path. Example:
-         *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+         * @param path GTM Workspace's API relative path.
          * @param content the {@link com.google.api.services.tagmanager.model.Workspace}
          * @return the request
          */
@@ -6253,8 +5981,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param path GTM Workspace's API relative path. Example:
-         *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+           * @param path GTM Workspace's API relative path.
            * @param content the {@link com.google.api.services.tagmanager.model.Workspace}
            * @since 1.13
            */
@@ -6266,8 +5993,6 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
                   "Parameter path must conform to the pattern " +
                   "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
             }
-            checkRequiredParameter(content, "content");
-            checkRequiredParameter(content.getName(), "Workspace.getName()");
           }
 
           @Override
@@ -6325,24 +6050,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             return (Update) super.setUploadProtocol(uploadProtocol);
           }
 
-          /**
-           * GTM Workspace's API relative path. Example:
-           * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
-           */
+          /** GTM Workspace's API relative path. */
           @com.google.api.client.util.Key
           private java.lang.String path;
 
-          /** GTM Workspace's API relative path. Example:
-         accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+          /** GTM Workspace's API relative path.
            */
           public java.lang.String getPath() {
             return path;
           }
 
-          /**
-           * GTM Workspace's API relative path. Example:
-           * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
-           */
+          /** GTM Workspace's API relative path. */
           public Update setPath(java.lang.String path) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -6407,8 +6125,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent GTM Workspace's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+           * @param parent GTM Workspace's API relative path.
            * @return the request
            */
           public Create create(java.lang.String parent) throws java.io.IOException {
@@ -6435,8 +6152,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent GTM Workspace's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+             * @param parent GTM Workspace's API relative path.
              * @since 1.13
              */
             protected Create(java.lang.String parent) {
@@ -6504,24 +6220,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
               return (Create) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * GTM Workspace's API relative path. Example:
-             * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
-             */
+            /** GTM Workspace's API relative path. */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** GTM Workspace's API relative path. Example:
-           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+            /** GTM Workspace's API relative path.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /**
-             * GTM Workspace's API relative path. Example:
-             * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
-             */
+            /** GTM Workspace's API relative path. */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -6561,9 +6270,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param path GTM BuiltInVariable's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/built_in_variabl
-           *        es
+           * @param path GTM BuiltInVariable's API relative path.
            * @return the request
            */
           public Delete delete(java.lang.String path) throws java.io.IOException {
@@ -6590,9 +6297,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path GTM BuiltInVariable's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/built_in_variabl
-           *        es
+             * @param path GTM BuiltInVariable's API relative path.
              * @since 1.13
              */
             protected Delete(java.lang.String path) {
@@ -6660,24 +6365,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
               return (Delete) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * GTM BuiltInVariable's API relative path. Example: accounts/{account_id}/containers/{c
-             * ontainer_id}/workspaces/{workspace_id}/built_in_variables
-             */
+            /** GTM BuiltInVariable's API relative path. */
             @com.google.api.client.util.Key
             private java.lang.String path;
 
-            /** GTM BuiltInVariable's API relative path. Example:
-           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/built_in_variables
+            /** GTM BuiltInVariable's API relative path.
              */
             public java.lang.String getPath() {
               return path;
             }
 
-            /**
-             * GTM BuiltInVariable's API relative path. Example: accounts/{account_id}/containers/{c
-             * ontainer_id}/workspaces/{workspace_id}/built_in_variables
-             */
+            /** GTM BuiltInVariable's API relative path. */
             public Delete setPath(java.lang.String path) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -6717,8 +6415,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent GTM Workspace's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+           * @param parent GTM Workspace's API relative path.
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -6744,8 +6441,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent GTM Workspace's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+             * @param parent GTM Workspace's API relative path.
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -6823,24 +6519,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
               return (List) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * GTM Workspace's API relative path. Example:
-             * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
-             */
+            /** GTM Workspace's API relative path. */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** GTM Workspace's API relative path. Example:
-           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+            /** GTM Workspace's API relative path.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /**
-             * GTM Workspace's API relative path. Example:
-             * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
-             */
+            /** GTM Workspace's API relative path. */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -6880,9 +6569,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Revert#execute()} method to invoke the remote operation.
            *
-           * @param path GTM BuiltInVariable's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/built_in_variabl
-           *        es
+           * @param path GTM BuiltInVariable's API relative path.
            * @return the request
            */
           public Revert revert(java.lang.String path) throws java.io.IOException {
@@ -6909,9 +6596,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Revert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path GTM BuiltInVariable's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/built_in_variabl
-           *        es
+             * @param path GTM BuiltInVariable's API relative path.
              * @since 1.13
              */
             protected Revert(java.lang.String path) {
@@ -6979,24 +6664,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
               return (Revert) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * GTM BuiltInVariable's API relative path. Example: accounts/{account_id}/containers/{c
-             * ontainer_id}/workspaces/{workspace_id}/built_in_variables
-             */
+            /** GTM BuiltInVariable's API relative path. */
             @com.google.api.client.util.Key
             private java.lang.String path;
 
-            /** GTM BuiltInVariable's API relative path. Example:
-           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/built_in_variables
+            /** GTM BuiltInVariable's API relative path.
              */
             public java.lang.String getPath() {
               return path;
             }
 
-            /**
-             * GTM BuiltInVariable's API relative path. Example: accounts/{account_id}/containers/{c
-             * ontainer_id}/workspaces/{workspace_id}/built_in_variables
-             */
+            /** GTM BuiltInVariable's API relative path. */
             public Revert setPath(java.lang.String path) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -7058,8 +6736,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent GTM Workspace's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+           * @param parent GTM Workspace's API relative path.
            * @param content the {@link com.google.api.services.tagmanager.model.Client}
            * @return the request
            */
@@ -7087,8 +6764,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent GTM Workspace's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+             * @param parent GTM Workspace's API relative path.
              * @param content the {@link com.google.api.services.tagmanager.model.Client}
              * @since 1.13
              */
@@ -7100,10 +6776,6 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
                     "Parameter parent must conform to the pattern " +
                     "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
               }
-              checkRequiredParameter(content, "content");
-              checkRequiredParameter(content.getName(), "Client.getName()");
-              checkRequiredParameter(content, "content");
-              checkRequiredParameter(content.getType(), "Client.getType()");
             }
 
             @Override
@@ -7161,24 +6833,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
               return (Create) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * GTM Workspace's API relative path. Example:
-             * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
-             */
+            /** GTM Workspace's API relative path. */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** GTM Workspace's API relative path. Example:
-           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+            /** GTM Workspace's API relative path.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /**
-             * GTM Workspace's API relative path. Example:
-             * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
-             */
+            /** GTM Workspace's API relative path. */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -7202,9 +6867,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param path GTM Client's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/clients/{client_
-           *        id}
+           * @param path GTM Client's API relative path.
            * @return the request
            */
           public Delete delete(java.lang.String path) throws java.io.IOException {
@@ -7231,9 +6894,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path GTM Client's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/clients/{client_
-           *        id}
+             * @param path GTM Client's API relative path.
              * @since 1.13
              */
             protected Delete(java.lang.String path) {
@@ -7301,24 +6962,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
               return (Delete) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * GTM Client's API relative path. Example: accounts/{account_id}/containers/{container_
-             * id}/workspaces/{workspace_id}/clients/{client_id}
-             */
+            /** GTM Client's API relative path. */
             @com.google.api.client.util.Key
             private java.lang.String path;
 
-            /** GTM Client's API relative path. Example:
-           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/clients/{client_id}
+            /** GTM Client's API relative path.
              */
             public java.lang.String getPath() {
               return path;
             }
 
-            /**
-             * GTM Client's API relative path. Example: accounts/{account_id}/containers/{container_
-             * id}/workspaces/{workspace_id}/clients/{client_id}
-             */
+            /** GTM Client's API relative path. */
             public Delete setPath(java.lang.String path) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -7342,9 +6996,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param path GTM Client's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/clients/{client_
-           *        id}
+           * @param path GTM Client's API relative path.
            * @return the request
            */
           public Get get(java.lang.String path) throws java.io.IOException {
@@ -7370,9 +7022,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path GTM Client's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/clients/{client_
-           *        id}
+             * @param path GTM Client's API relative path.
              * @since 1.13
              */
             protected Get(java.lang.String path) {
@@ -7450,24 +7100,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
               return (Get) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * GTM Client's API relative path. Example: accounts/{account_id}/containers/{container_
-             * id}/workspaces/{workspace_id}/clients/{client_id}
-             */
+            /** GTM Client's API relative path. */
             @com.google.api.client.util.Key
             private java.lang.String path;
 
-            /** GTM Client's API relative path. Example:
-           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/clients/{client_id}
+            /** GTM Client's API relative path.
              */
             public java.lang.String getPath() {
               return path;
             }
 
-            /**
-             * GTM Client's API relative path. Example: accounts/{account_id}/containers/{container_
-             * id}/workspaces/{workspace_id}/clients/{client_id}
-             */
+            /** GTM Client's API relative path. */
             public Get setPath(java.lang.String path) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -7491,8 +7134,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent GTM Workspace's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+           * @param parent GTM Workspace's API relative path.
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -7518,8 +7160,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent GTM Workspace's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+             * @param parent GTM Workspace's API relative path.
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -7597,24 +7238,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
               return (List) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * GTM Workspace's API relative path. Example:
-             * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
-             */
+            /** GTM Workspace's API relative path. */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** GTM Workspace's API relative path. Example:
-           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+            /** GTM Workspace's API relative path.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /**
-             * GTM Workspace's API relative path. Example:
-             * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
-             */
+            /** GTM Workspace's API relative path. */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -7654,9 +7288,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Revert#execute()} method to invoke the remote operation.
            *
-           * @param path GTM Client's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/clients/{client_
-           *        id}
+           * @param path GTM Client's API relative path.
            * @return the request
            */
           public Revert revert(java.lang.String path) throws java.io.IOException {
@@ -7683,9 +7315,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Revert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path GTM Client's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/clients/{client_
-           *        id}
+             * @param path GTM Client's API relative path.
              * @since 1.13
              */
             protected Revert(java.lang.String path) {
@@ -7753,24 +7383,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
               return (Revert) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * GTM Client's API relative path. Example: accounts/{account_id}/containers/{container_
-             * id}/workspaces/{workspace_id}/clients/{client_id}
-             */
+            /** GTM Client's API relative path. */
             @com.google.api.client.util.Key
             private java.lang.String path;
 
-            /** GTM Client's API relative path. Example:
-           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/clients/{client_id}
+            /** GTM Client's API relative path.
              */
             public java.lang.String getPath() {
               return path;
             }
 
-            /**
-             * GTM Client's API relative path. Example: accounts/{account_id}/containers/{container_
-             * id}/workspaces/{workspace_id}/clients/{client_id}
-             */
+            /** GTM Client's API relative path. */
             public Revert setPath(java.lang.String path) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -7814,9 +7437,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Update#execute()} method to invoke the remote operation.
            *
-           * @param path GTM Client's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/clients/{client_
-           *        id}
+           * @param path GTM Client's API relative path.
            * @param content the {@link com.google.api.services.tagmanager.model.Client}
            * @return the request
            */
@@ -7844,9 +7465,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path GTM Client's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/clients/{client_
-           *        id}
+             * @param path GTM Client's API relative path.
              * @param content the {@link com.google.api.services.tagmanager.model.Client}
              * @since 1.13
              */
@@ -7858,10 +7477,6 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
                     "Parameter path must conform to the pattern " +
                     "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/clients/[^/]+$");
               }
-              checkRequiredParameter(content, "content");
-              checkRequiredParameter(content.getName(), "Client.getName()");
-              checkRequiredParameter(content, "content");
-              checkRequiredParameter(content.getType(), "Client.getType()");
             }
 
             @Override
@@ -7919,24 +7534,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
               return (Update) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * GTM Client's API relative path. Example: accounts/{account_id}/containers/{container_
-             * id}/workspaces/{workspace_id}/clients/{client_id}
-             */
+            /** GTM Client's API relative path. */
             @com.google.api.client.util.Key
             private java.lang.String path;
 
-            /** GTM Client's API relative path. Example:
-           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/clients/{client_id}
+            /** GTM Client's API relative path.
              */
             public java.lang.String getPath() {
               return path;
             }
 
-            /**
-             * GTM Client's API relative path. Example: accounts/{account_id}/containers/{container_
-             * id}/workspaces/{workspace_id}/clients/{client_id}
-             */
+            /** GTM Client's API relative path. */
             public Update setPath(java.lang.String path) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -8002,8 +7610,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent GTM Workspace's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+           * @param parent GTM Workspace's API relative path.
            * @param content the {@link com.google.api.services.tagmanager.model.Folder}
            * @return the request
            */
@@ -8031,8 +7638,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent GTM Workspace's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+             * @param parent GTM Workspace's API relative path.
              * @param content the {@link com.google.api.services.tagmanager.model.Folder}
              * @since 1.13
              */
@@ -8044,8 +7650,6 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
                     "Parameter parent must conform to the pattern " +
                     "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
               }
-              checkRequiredParameter(content, "content");
-              checkRequiredParameter(content.getName(), "Folder.getName()");
             }
 
             @Override
@@ -8103,24 +7707,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
               return (Create) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * GTM Workspace's API relative path. Example:
-             * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
-             */
+            /** GTM Workspace's API relative path. */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** GTM Workspace's API relative path. Example:
-           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+            /** GTM Workspace's API relative path.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /**
-             * GTM Workspace's API relative path. Example:
-             * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
-             */
+            /** GTM Workspace's API relative path. */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -8144,9 +7741,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param path GTM Folder's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/folders/{folder_
-           *        id}
+           * @param path GTM Folder's API relative path.
            * @return the request
            */
           public Delete delete(java.lang.String path) throws java.io.IOException {
@@ -8173,9 +7768,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path GTM Folder's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/folders/{folder_
-           *        id}
+             * @param path GTM Folder's API relative path.
              * @since 1.13
              */
             protected Delete(java.lang.String path) {
@@ -8243,24 +7836,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
               return (Delete) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * GTM Folder's API relative path. Example: accounts/{account_id}/containers/{container_
-             * id}/workspaces/{workspace_id}/folders/{folder_id}
-             */
+            /** GTM Folder's API relative path. */
             @com.google.api.client.util.Key
             private java.lang.String path;
 
-            /** GTM Folder's API relative path. Example:
-           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/folders/{folder_id}
+            /** GTM Folder's API relative path.
              */
             public java.lang.String getPath() {
               return path;
             }
 
-            /**
-             * GTM Folder's API relative path. Example: accounts/{account_id}/containers/{container_
-             * id}/workspaces/{workspace_id}/folders/{folder_id}
-             */
+            /** GTM Folder's API relative path. */
             public Delete setPath(java.lang.String path) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -8284,9 +7870,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Entities#execute()} method to invoke the remote operation.
            *
-           * @param path GTM Folder's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/folders/{folder_
-           *        id}
+           * @param path GTM Folder's API relative path.
            * @return the request
            */
           public Entities entities(java.lang.String path) throws java.io.IOException {
@@ -8313,9 +7897,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Entities#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path GTM Folder's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/folders/{folder_
-           *        id}
+             * @param path GTM Folder's API relative path.
              * @since 1.13
              */
             protected Entities(java.lang.String path) {
@@ -8383,24 +7965,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
               return (Entities) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * GTM Folder's API relative path. Example: accounts/{account_id}/containers/{container_
-             * id}/workspaces/{workspace_id}/folders/{folder_id}
-             */
+            /** GTM Folder's API relative path. */
             @com.google.api.client.util.Key
             private java.lang.String path;
 
-            /** GTM Folder's API relative path. Example:
-           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/folders/{folder_id}
+            /** GTM Folder's API relative path.
              */
             public java.lang.String getPath() {
               return path;
             }
 
-            /**
-             * GTM Folder's API relative path. Example: accounts/{account_id}/containers/{container_
-             * id}/workspaces/{workspace_id}/folders/{folder_id}
-             */
+            /** GTM Folder's API relative path. */
             public Entities setPath(java.lang.String path) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -8440,9 +8015,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param path GTM Folder's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/folders/{folder_
-           *        id}
+           * @param path GTM Folder's API relative path.
            * @return the request
            */
           public Get get(java.lang.String path) throws java.io.IOException {
@@ -8468,9 +8041,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path GTM Folder's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/folders/{folder_
-           *        id}
+             * @param path GTM Folder's API relative path.
              * @since 1.13
              */
             protected Get(java.lang.String path) {
@@ -8548,24 +8119,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
               return (Get) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * GTM Folder's API relative path. Example: accounts/{account_id}/containers/{container_
-             * id}/workspaces/{workspace_id}/folders/{folder_id}
-             */
+            /** GTM Folder's API relative path. */
             @com.google.api.client.util.Key
             private java.lang.String path;
 
-            /** GTM Folder's API relative path. Example:
-           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/folders/{folder_id}
+            /** GTM Folder's API relative path.
              */
             public java.lang.String getPath() {
               return path;
             }
 
-            /**
-             * GTM Folder's API relative path. Example: accounts/{account_id}/containers/{container_
-             * id}/workspaces/{workspace_id}/folders/{folder_id}
-             */
+            /** GTM Folder's API relative path. */
             public Get setPath(java.lang.String path) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -8589,8 +8153,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent GTM Workspace's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+           * @param parent GTM Workspace's API relative path.
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -8616,8 +8179,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent GTM Workspace's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+             * @param parent GTM Workspace's API relative path.
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -8695,24 +8257,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
               return (List) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * GTM Workspace's API relative path. Example:
-             * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
-             */
+            /** GTM Workspace's API relative path. */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** GTM Workspace's API relative path. Example:
-           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+            /** GTM Workspace's API relative path.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /**
-             * GTM Workspace's API relative path. Example:
-             * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
-             */
+            /** GTM Workspace's API relative path. */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -8754,9 +8309,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * parameters, call the {@link MoveEntitiesToFolder#execute()} method to invoke the remote
            * operation.
            *
-           * @param path GTM Folder's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/folders/{folder_
-           *        id}
+           * @param path GTM Folder's API relative path.
            * @param content the {@link com.google.api.services.tagmanager.model.Folder}
            * @return the request
            */
@@ -8785,9 +8338,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
              * after invoking the constructor. </p>
              *
-             * @param path GTM Folder's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/folders/{folder_
-           *        id}
+             * @param path GTM Folder's API relative path.
              * @param content the {@link com.google.api.services.tagmanager.model.Folder}
              * @since 1.13
              */
@@ -8856,24 +8407,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
               return (MoveEntitiesToFolder) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * GTM Folder's API relative path. Example: accounts/{account_id}/containers/{container_
-             * id}/workspaces/{workspace_id}/folders/{folder_id}
-             */
+            /** GTM Folder's API relative path. */
             @com.google.api.client.util.Key
             private java.lang.String path;
 
-            /** GTM Folder's API relative path. Example:
-           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/folders/{folder_id}
+            /** GTM Folder's API relative path.
              */
             public java.lang.String getPath() {
               return path;
             }
 
-            /**
-             * GTM Folder's API relative path. Example: accounts/{account_id}/containers/{container_
-             * id}/workspaces/{workspace_id}/folders/{folder_id}
-             */
+            /** GTM Folder's API relative path. */
             public MoveEntitiesToFolder setPath(java.lang.String path) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -8945,9 +8489,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Revert#execute()} method to invoke the remote operation.
            *
-           * @param path GTM Folder's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/folders/{folder_
-           *        id}
+           * @param path GTM Folder's API relative path.
            * @return the request
            */
           public Revert revert(java.lang.String path) throws java.io.IOException {
@@ -8974,9 +8516,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Revert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path GTM Folder's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/folders/{folder_
-           *        id}
+             * @param path GTM Folder's API relative path.
              * @since 1.13
              */
             protected Revert(java.lang.String path) {
@@ -9044,24 +8584,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
               return (Revert) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * GTM Folder's API relative path. Example: accounts/{account_id}/containers/{container_
-             * id}/workspaces/{workspace_id}/folders/{folder_id}
-             */
+            /** GTM Folder's API relative path. */
             @com.google.api.client.util.Key
             private java.lang.String path;
 
-            /** GTM Folder's API relative path. Example:
-           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/folders/{folder_id}
+            /** GTM Folder's API relative path.
              */
             public java.lang.String getPath() {
               return path;
             }
 
-            /**
-             * GTM Folder's API relative path. Example: accounts/{account_id}/containers/{container_
-             * id}/workspaces/{workspace_id}/folders/{folder_id}
-             */
+            /** GTM Folder's API relative path. */
             public Revert setPath(java.lang.String path) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -9105,9 +8638,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Update#execute()} method to invoke the remote operation.
            *
-           * @param path GTM Folder's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/folders/{folder_
-           *        id}
+           * @param path GTM Folder's API relative path.
            * @param content the {@link com.google.api.services.tagmanager.model.Folder}
            * @return the request
            */
@@ -9135,9 +8666,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path GTM Folder's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/folders/{folder_
-           *        id}
+             * @param path GTM Folder's API relative path.
              * @param content the {@link com.google.api.services.tagmanager.model.Folder}
              * @since 1.13
              */
@@ -9149,8 +8678,6 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
                     "Parameter path must conform to the pattern " +
                     "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/folders/[^/]+$");
               }
-              checkRequiredParameter(content, "content");
-              checkRequiredParameter(content.getName(), "Folder.getName()");
             }
 
             @Override
@@ -9208,24 +8735,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
               return (Update) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * GTM Folder's API relative path. Example: accounts/{account_id}/containers/{container_
-             * id}/workspaces/{workspace_id}/folders/{folder_id}
-             */
+            /** GTM Folder's API relative path. */
             @com.google.api.client.util.Key
             private java.lang.String path;
 
-            /** GTM Folder's API relative path. Example:
-           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/folders/{folder_id}
+            /** GTM Folder's API relative path.
              */
             public java.lang.String getPath() {
               return path;
             }
 
-            /**
-             * GTM Folder's API relative path. Example: accounts/{account_id}/containers/{container_
-             * id}/workspaces/{workspace_id}/folders/{folder_id}
-             */
+            /** GTM Folder's API relative path. */
             public Update setPath(java.lang.String path) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -9291,8 +8811,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent Workspace's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+           * @param parent Workspace's API relative path.
            * @param content the {@link com.google.api.services.tagmanager.model.GtagConfig}
            * @return the request
            */
@@ -9320,8 +8839,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Workspace's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+             * @param parent Workspace's API relative path.
              * @param content the {@link com.google.api.services.tagmanager.model.GtagConfig}
              * @since 1.13
              */
@@ -9390,24 +8908,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
               return (Create) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Workspace's API relative path. Example:
-             * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
-             */
+            /** Workspace's API relative path. */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Workspace's API relative path. Example:
-           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+            /** Workspace's API relative path.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /**
-             * Workspace's API relative path. Example:
-             * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
-             */
+            /** Workspace's API relative path. */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -9431,8 +8942,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param path Google tag config's API relative path. Example: accounts/{account_id}/containers/{container_id}/work
-           *        spaces/{workspace_id}/gtag_config/{gtag_config_id}
+           * @param path Google tag config's API relative path.
            * @return the request
            */
           public Delete delete(java.lang.String path) throws java.io.IOException {
@@ -9459,8 +8969,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path Google tag config's API relative path. Example: accounts/{account_id}/containers/{container_id}/work
-           *        spaces/{workspace_id}/gtag_config/{gtag_config_id}
+             * @param path Google tag config's API relative path.
              * @since 1.13
              */
             protected Delete(java.lang.String path) {
@@ -9528,24 +9037,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
               return (Delete) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Google tag config's API relative path. Example: accounts/{account_id}/containers/{con
-             * tainer_id}/workspaces/{workspace_id}/gtag_config/{gtag_config_id}
-             */
+            /** Google tag config's API relative path. */
             @com.google.api.client.util.Key
             private java.lang.String path;
 
-            /** Google tag config's API relative path. Example: accounts/{account_id}/containers/{container_id}/wor
-           kspaces/{workspace_id}/gtag_config/{gtag_config_id}
+            /** Google tag config's API relative path.
              */
             public java.lang.String getPath() {
               return path;
             }
 
-            /**
-             * Google tag config's API relative path. Example: accounts/{account_id}/containers/{con
-             * tainer_id}/workspaces/{workspace_id}/gtag_config/{gtag_config_id}
-             */
+            /** Google tag config's API relative path. */
             public Delete setPath(java.lang.String path) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -9569,8 +9071,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param path Google tag config's API relative path. Example: accounts/{account_id}/containers/{container_id}/work
-           *        spaces/{workspace_id}/gtag_config/{gtag_config_id}
+           * @param path Google tag config's API relative path.
            * @return the request
            */
           public Get get(java.lang.String path) throws java.io.IOException {
@@ -9596,8 +9097,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path Google tag config's API relative path. Example: accounts/{account_id}/containers/{container_id}/work
-           *        spaces/{workspace_id}/gtag_config/{gtag_config_id}
+             * @param path Google tag config's API relative path.
              * @since 1.13
              */
             protected Get(java.lang.String path) {
@@ -9675,24 +9175,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
               return (Get) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Google tag config's API relative path. Example: accounts/{account_id}/containers/{con
-             * tainer_id}/workspaces/{workspace_id}/gtag_config/{gtag_config_id}
-             */
+            /** Google tag config's API relative path. */
             @com.google.api.client.util.Key
             private java.lang.String path;
 
-            /** Google tag config's API relative path. Example: accounts/{account_id}/containers/{container_id}/wor
-           kspaces/{workspace_id}/gtag_config/{gtag_config_id}
+            /** Google tag config's API relative path.
              */
             public java.lang.String getPath() {
               return path;
             }
 
-            /**
-             * Google tag config's API relative path. Example: accounts/{account_id}/containers/{con
-             * tainer_id}/workspaces/{workspace_id}/gtag_config/{gtag_config_id}
-             */
+            /** Google tag config's API relative path. */
             public Get setPath(java.lang.String path) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -9716,8 +9209,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Workspace's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+           * @param parent Workspace's API relative path.
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -9743,8 +9235,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Workspace's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+             * @param parent Workspace's API relative path.
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -9822,24 +9313,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
               return (List) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Workspace's API relative path. Example:
-             * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
-             */
+            /** Workspace's API relative path. */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Workspace's API relative path. Example:
-           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+            /** Workspace's API relative path.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /**
-             * Workspace's API relative path. Example:
-             * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
-             */
+            /** Workspace's API relative path. */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -9879,8 +9363,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Update#execute()} method to invoke the remote operation.
            *
-           * @param path Google tag config's API relative path. Example: accounts/{account_id}/containers/{container_id}/work
-           *        spaces/{workspace_id}/gtag_config/{gtag_config_id}
+           * @param path Google tag config's API relative path.
            * @param content the {@link com.google.api.services.tagmanager.model.GtagConfig}
            * @return the request
            */
@@ -9908,8 +9391,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path Google tag config's API relative path. Example: accounts/{account_id}/containers/{container_id}/work
-           *        spaces/{workspace_id}/gtag_config/{gtag_config_id}
+             * @param path Google tag config's API relative path.
              * @param content the {@link com.google.api.services.tagmanager.model.GtagConfig}
              * @since 1.13
              */
@@ -9978,24 +9460,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
               return (Update) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * Google tag config's API relative path. Example: accounts/{account_id}/containers/{con
-             * tainer_id}/workspaces/{workspace_id}/gtag_config/{gtag_config_id}
-             */
+            /** Google tag config's API relative path. */
             @com.google.api.client.util.Key
             private java.lang.String path;
 
-            /** Google tag config's API relative path. Example: accounts/{account_id}/containers/{container_id}/wor
-           kspaces/{workspace_id}/gtag_config/{gtag_config_id}
+            /** Google tag config's API relative path.
              */
             public java.lang.String getPath() {
               return path;
             }
 
-            /**
-             * Google tag config's API relative path. Example: accounts/{account_id}/containers/{con
-             * tainer_id}/workspaces/{workspace_id}/gtag_config/{gtag_config_id}
-             */
+            /** Google tag config's API relative path. */
             public Update setPath(java.lang.String path) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -10061,8 +9536,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent GTM Workspace's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+           * @param parent GTM Workspace's API relative path.
            * @param content the {@link com.google.api.services.tagmanager.model.Tag}
            * @return the request
            */
@@ -10090,8 +9564,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent GTM Workspace's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+             * @param parent GTM Workspace's API relative path.
              * @param content the {@link com.google.api.services.tagmanager.model.Tag}
              * @since 1.13
              */
@@ -10103,10 +9576,6 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
                     "Parameter parent must conform to the pattern " +
                     "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
               }
-              checkRequiredParameter(content, "content");
-              checkRequiredParameter(content.getName(), "Tag.getName()");
-              checkRequiredParameter(content, "content");
-              checkRequiredParameter(content.getType(), "Tag.getType()");
             }
 
             @Override
@@ -10164,24 +9633,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
               return (Create) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * GTM Workspace's API relative path. Example:
-             * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
-             */
+            /** GTM Workspace's API relative path. */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** GTM Workspace's API relative path. Example:
-           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+            /** GTM Workspace's API relative path.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /**
-             * GTM Workspace's API relative path. Example:
-             * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
-             */
+            /** GTM Workspace's API relative path. */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -10205,8 +9667,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param path GTM Tag's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/tags/{tag_id}
+           * @param path GTM Tag's API relative path.
            * @return the request
            */
           public Delete delete(java.lang.String path) throws java.io.IOException {
@@ -10233,8 +9694,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path GTM Tag's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/tags/{tag_id}
+             * @param path GTM Tag's API relative path.
              * @since 1.13
              */
             protected Delete(java.lang.String path) {
@@ -10302,24 +9762,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
               return (Delete) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * GTM Tag's API relative path. Example: accounts/{account_id}/containers/{container_id}
-             * /workspaces/{workspace_id}/tags/{tag_id}
-             */
+            /** GTM Tag's API relative path. */
             @com.google.api.client.util.Key
             private java.lang.String path;
 
-            /** GTM Tag's API relative path. Example:
-           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/tags/{tag_id}
+            /** GTM Tag's API relative path.
              */
             public java.lang.String getPath() {
               return path;
             }
 
-            /**
-             * GTM Tag's API relative path. Example: accounts/{account_id}/containers/{container_id}
-             * /workspaces/{workspace_id}/tags/{tag_id}
-             */
+            /** GTM Tag's API relative path. */
             public Delete setPath(java.lang.String path) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -10343,8 +9796,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param path GTM Tag's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/tags/{tag_id}
+           * @param path GTM Tag's API relative path.
            * @return the request
            */
           public Get get(java.lang.String path) throws java.io.IOException {
@@ -10370,8 +9822,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path GTM Tag's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/tags/{tag_id}
+             * @param path GTM Tag's API relative path.
              * @since 1.13
              */
             protected Get(java.lang.String path) {
@@ -10449,24 +9900,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
               return (Get) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * GTM Tag's API relative path. Example: accounts/{account_id}/containers/{container_id}
-             * /workspaces/{workspace_id}/tags/{tag_id}
-             */
+            /** GTM Tag's API relative path. */
             @com.google.api.client.util.Key
             private java.lang.String path;
 
-            /** GTM Tag's API relative path. Example:
-           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/tags/{tag_id}
+            /** GTM Tag's API relative path.
              */
             public java.lang.String getPath() {
               return path;
             }
 
-            /**
-             * GTM Tag's API relative path. Example: accounts/{account_id}/containers/{container_id}
-             * /workspaces/{workspace_id}/tags/{tag_id}
-             */
+            /** GTM Tag's API relative path. */
             public Get setPath(java.lang.String path) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -10490,8 +9934,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent GTM Workspace's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+           * @param parent GTM Workspace's API relative path.
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -10517,8 +9960,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent GTM Workspace's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+             * @param parent GTM Workspace's API relative path.
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -10596,24 +10038,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
               return (List) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * GTM Workspace's API relative path. Example:
-             * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
-             */
+            /** GTM Workspace's API relative path. */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** GTM Workspace's API relative path. Example:
-           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+            /** GTM Workspace's API relative path.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /**
-             * GTM Workspace's API relative path. Example:
-             * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
-             */
+            /** GTM Workspace's API relative path. */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -10653,8 +10088,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Revert#execute()} method to invoke the remote operation.
            *
-           * @param path GTM Tag's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/tags/{tag_id}
+           * @param path GTM Tag's API relative path.
            * @return the request
            */
           public Revert revert(java.lang.String path) throws java.io.IOException {
@@ -10681,8 +10115,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Revert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path GTM Tag's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/tags/{tag_id}
+             * @param path GTM Tag's API relative path.
              * @since 1.13
              */
             protected Revert(java.lang.String path) {
@@ -10750,24 +10183,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
               return (Revert) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * GTM Tag's API relative path. Example: accounts/{account_id}/containers/{container_id}
-             * /workspaces/{workspace_id}/tags/{tag_id}
-             */
+            /** GTM Tag's API relative path. */
             @com.google.api.client.util.Key
             private java.lang.String path;
 
-            /** GTM Tag's API relative path. Example:
-           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/tags/{tag_id}
+            /** GTM Tag's API relative path.
              */
             public java.lang.String getPath() {
               return path;
             }
 
-            /**
-             * GTM Tag's API relative path. Example: accounts/{account_id}/containers/{container_id}
-             * /workspaces/{workspace_id}/tags/{tag_id}
-             */
+            /** GTM Tag's API relative path. */
             public Revert setPath(java.lang.String path) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -10807,8 +10233,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Update#execute()} method to invoke the remote operation.
            *
-           * @param path GTM Tag's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/tags/{tag_id}
+           * @param path GTM Tag's API relative path.
            * @param content the {@link com.google.api.services.tagmanager.model.Tag}
            * @return the request
            */
@@ -10836,8 +10261,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path GTM Tag's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/tags/{tag_id}
+             * @param path GTM Tag's API relative path.
              * @param content the {@link com.google.api.services.tagmanager.model.Tag}
              * @since 1.13
              */
@@ -10849,10 +10273,6 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
                     "Parameter path must conform to the pattern " +
                     "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/tags/[^/]+$");
               }
-              checkRequiredParameter(content, "content");
-              checkRequiredParameter(content.getName(), "Tag.getName()");
-              checkRequiredParameter(content, "content");
-              checkRequiredParameter(content.getType(), "Tag.getType()");
             }
 
             @Override
@@ -10910,24 +10330,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
               return (Update) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * GTM Tag's API relative path. Example: accounts/{account_id}/containers/{container_id}
-             * /workspaces/{workspace_id}/tags/{tag_id}
-             */
+            /** GTM Tag's API relative path. */
             @com.google.api.client.util.Key
             private java.lang.String path;
 
-            /** GTM Tag's API relative path. Example:
-           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/tags/{tag_id}
+            /** GTM Tag's API relative path.
              */
             public java.lang.String getPath() {
               return path;
             }
 
-            /**
-             * GTM Tag's API relative path. Example: accounts/{account_id}/containers/{container_id}
-             * /workspaces/{workspace_id}/tags/{tag_id}
-             */
+            /** GTM Tag's API relative path. */
             public Update setPath(java.lang.String path) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -10993,8 +10406,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent GTM Workspace's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+           * @param parent GTM Workspace's API relative path.
            * @param content the {@link com.google.api.services.tagmanager.model.CustomTemplate}
            * @return the request
            */
@@ -11022,8 +10434,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent GTM Workspace's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+             * @param parent GTM Workspace's API relative path.
              * @param content the {@link com.google.api.services.tagmanager.model.CustomTemplate}
              * @since 1.13
              */
@@ -11092,24 +10503,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
               return (Create) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * GTM Workspace's API relative path. Example:
-             * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
-             */
+            /** GTM Workspace's API relative path. */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** GTM Workspace's API relative path. Example:
-           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+            /** GTM Workspace's API relative path.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /**
-             * GTM Workspace's API relative path. Example:
-             * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
-             */
+            /** GTM Workspace's API relative path. */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -11133,9 +10537,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param path GTM Custom Template's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/templates/{templ
-           *        ate_id}
+           * @param path GTM Custom Template's API relative path.
            * @return the request
            */
           public Delete delete(java.lang.String path) throws java.io.IOException {
@@ -11162,9 +10564,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path GTM Custom Template's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/templates/{templ
-           *        ate_id}
+             * @param path GTM Custom Template's API relative path.
              * @since 1.13
              */
             protected Delete(java.lang.String path) {
@@ -11232,24 +10632,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
               return (Delete) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * GTM Custom Template's API relative path. Example: accounts/{account_id}/containers/{c
-             * ontainer_id}/workspaces/{workspace_id}/templates/{template_id}
-             */
+            /** GTM Custom Template's API relative path. */
             @com.google.api.client.util.Key
             private java.lang.String path;
 
-            /** GTM Custom Template's API relative path. Example:
-           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/templates/{template_id}
+            /** GTM Custom Template's API relative path.
              */
             public java.lang.String getPath() {
               return path;
             }
 
-            /**
-             * GTM Custom Template's API relative path. Example: accounts/{account_id}/containers/{c
-             * ontainer_id}/workspaces/{workspace_id}/templates/{template_id}
-             */
+            /** GTM Custom Template's API relative path. */
             public Delete setPath(java.lang.String path) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -11273,9 +10666,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param path GTM Custom Template's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/templates/{templ
-           *        ate_id}
+           * @param path GTM Custom Template's API relative path.
            * @return the request
            */
           public Get get(java.lang.String path) throws java.io.IOException {
@@ -11301,9 +10692,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path GTM Custom Template's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/templates/{templ
-           *        ate_id}
+             * @param path GTM Custom Template's API relative path.
              * @since 1.13
              */
             protected Get(java.lang.String path) {
@@ -11381,24 +10770,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
               return (Get) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * GTM Custom Template's API relative path. Example: accounts/{account_id}/containers/{c
-             * ontainer_id}/workspaces/{workspace_id}/templates/{template_id}
-             */
+            /** GTM Custom Template's API relative path. */
             @com.google.api.client.util.Key
             private java.lang.String path;
 
-            /** GTM Custom Template's API relative path. Example:
-           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/templates/{template_id}
+            /** GTM Custom Template's API relative path.
              */
             public java.lang.String getPath() {
               return path;
             }
 
-            /**
-             * GTM Custom Template's API relative path. Example: accounts/{account_id}/containers/{c
-             * ontainer_id}/workspaces/{workspace_id}/templates/{template_id}
-             */
+            /** GTM Custom Template's API relative path. */
             public Get setPath(java.lang.String path) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -11415,6 +10797,212 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
+           * Imports a GTM Custom Template from Gallery.
+           *
+           * Create a request for the method "templates.import_from_gallery".
+           *
+           * This request holds the parameters needed by the tagmanager server.  After setting any optional
+           * parameters, call the {@link ImportFromGallery#execute()} method to invoke the remote operation.
+           *
+           * @param parent GTM Workspace's API relative path.
+           * @return the request
+           */
+          public ImportFromGallery importFromGallery(java.lang.String parent) throws java.io.IOException {
+            ImportFromGallery result = new ImportFromGallery(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class ImportFromGallery extends TagManagerRequest<com.google.api.services.tagmanager.model.CustomTemplate> {
+
+            private static final String REST_PATH = "tagmanager/v2/{+parent}/templates:import_from_gallery";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
+
+            /**
+             * Imports a GTM Custom Template from Gallery.
+             *
+             * Create a request for the method "templates.import_from_gallery".
+             *
+             * This request holds the parameters needed by the the tagmanager server.  After setting any
+             * optional parameters, call the {@link ImportFromGallery#execute()} method to invoke the remote
+             * operation. <p> {@link ImportFromGallery#initialize(com.google.api.client.googleapis.services.Ab
+             * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param parent GTM Workspace's API relative path.
+             * @since 1.13
+             */
+            protected ImportFromGallery(java.lang.String parent) {
+              super(TagManager.this, "POST", REST_PATH, null, com.google.api.services.tagmanager.model.CustomTemplate.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
+              }
+            }
+
+            @Override
+            public ImportFromGallery set$Xgafv(java.lang.String $Xgafv) {
+              return (ImportFromGallery) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public ImportFromGallery setAccessToken(java.lang.String accessToken) {
+              return (ImportFromGallery) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public ImportFromGallery setAlt(java.lang.String alt) {
+              return (ImportFromGallery) super.setAlt(alt);
+            }
+
+            @Override
+            public ImportFromGallery setCallback(java.lang.String callback) {
+              return (ImportFromGallery) super.setCallback(callback);
+            }
+
+            @Override
+            public ImportFromGallery setFields(java.lang.String fields) {
+              return (ImportFromGallery) super.setFields(fields);
+            }
+
+            @Override
+            public ImportFromGallery setKey(java.lang.String key) {
+              return (ImportFromGallery) super.setKey(key);
+            }
+
+            @Override
+            public ImportFromGallery setOauthToken(java.lang.String oauthToken) {
+              return (ImportFromGallery) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public ImportFromGallery setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (ImportFromGallery) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public ImportFromGallery setQuotaUser(java.lang.String quotaUser) {
+              return (ImportFromGallery) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public ImportFromGallery setUploadType(java.lang.String uploadType) {
+              return (ImportFromGallery) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public ImportFromGallery setUploadProtocol(java.lang.String uploadProtocol) {
+              return (ImportFromGallery) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** GTM Workspace's API relative path. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** GTM Workspace's API relative path.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** GTM Workspace's API relative path. */
+            public ImportFromGallery setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Must be set to true to allow Gallery template to be imported into the workspace. If
+             * this bit is false, the import operation will fail.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean acknowledgePermissions;
+
+            /** Must be set to true to allow Gallery template to be imported into the workspace. If this bit is
+           false, the import operation will fail.
+             */
+            public java.lang.Boolean getAcknowledgePermissions() {
+              return acknowledgePermissions;
+            }
+
+            /**
+             * Must be set to true to allow Gallery template to be imported into the workspace. If
+             * this bit is false, the import operation will fail.
+             */
+            public ImportFromGallery setAcknowledgePermissions(java.lang.Boolean acknowledgePermissions) {
+              this.acknowledgePermissions = acknowledgePermissions;
+              return this;
+            }
+
+            /** Owner of the Gallery template to import */
+            @com.google.api.client.util.Key
+            private java.lang.String galleryOwner;
+
+            /** Owner of the Gallery template to import
+             */
+            public java.lang.String getGalleryOwner() {
+              return galleryOwner;
+            }
+
+            /** Owner of the Gallery template to import */
+            public ImportFromGallery setGalleryOwner(java.lang.String galleryOwner) {
+              this.galleryOwner = galleryOwner;
+              return this;
+            }
+
+            /** Repository of the Gallery template to import */
+            @com.google.api.client.util.Key
+            private java.lang.String galleryRepository;
+
+            /** Repository of the Gallery template to import
+             */
+            public java.lang.String getGalleryRepository() {
+              return galleryRepository;
+            }
+
+            /** Repository of the Gallery template to import */
+            public ImportFromGallery setGalleryRepository(java.lang.String galleryRepository) {
+              this.galleryRepository = galleryRepository;
+              return this;
+            }
+
+            /**
+             * SHA version of the Gallery template to import. Defaulted to the latest SHA version if
+             * not provided.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String gallerySha;
+
+            /** SHA version of the Gallery template to import. Defaulted to the latest SHA version if not provided.
+             */
+            public java.lang.String getGallerySha() {
+              return gallerySha;
+            }
+
+            /**
+             * SHA version of the Gallery template to import. Defaulted to the latest SHA version if
+             * not provided.
+             */
+            public ImportFromGallery setGallerySha(java.lang.String gallerySha) {
+              this.gallerySha = gallerySha;
+              return this;
+            }
+
+            @Override
+            public ImportFromGallery set(String parameterName, Object value) {
+              return (ImportFromGallery) super.set(parameterName, value);
+            }
+          }
+          /**
            * Lists all GTM Templates of a GTM container workspace.
            *
            * Create a request for the method "templates.list".
@@ -11422,8 +11010,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent GTM Workspace's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+           * @param parent GTM Workspace's API relative path.
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -11449,8 +11036,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent GTM Workspace's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+             * @param parent GTM Workspace's API relative path.
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -11528,24 +11114,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
               return (List) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * GTM Workspace's API relative path. Example:
-             * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
-             */
+            /** GTM Workspace's API relative path. */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** GTM Workspace's API relative path. Example:
-           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+            /** GTM Workspace's API relative path.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /**
-             * GTM Workspace's API relative path. Example:
-             * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
-             */
+            /** GTM Workspace's API relative path. */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -11585,9 +11164,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Revert#execute()} method to invoke the remote operation.
            *
-           * @param path GTM Custom Template's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/templates/{templ
-           *        ate_id}
+           * @param path GTM Custom Template's API relative path.
            * @return the request
            */
           public Revert revert(java.lang.String path) throws java.io.IOException {
@@ -11614,9 +11191,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Revert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path GTM Custom Template's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/templates/{templ
-           *        ate_id}
+             * @param path GTM Custom Template's API relative path.
              * @since 1.13
              */
             protected Revert(java.lang.String path) {
@@ -11684,24 +11259,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
               return (Revert) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * GTM Custom Template's API relative path. Example: accounts/{account_id}/containers/{c
-             * ontainer_id}/workspaces/{workspace_id}/templates/{template_id}
-             */
+            /** GTM Custom Template's API relative path. */
             @com.google.api.client.util.Key
             private java.lang.String path;
 
-            /** GTM Custom Template's API relative path. Example:
-           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/templates/{template_id}
+            /** GTM Custom Template's API relative path.
              */
             public java.lang.String getPath() {
               return path;
             }
 
-            /**
-             * GTM Custom Template's API relative path. Example: accounts/{account_id}/containers/{c
-             * ontainer_id}/workspaces/{workspace_id}/templates/{template_id}
-             */
+            /** GTM Custom Template's API relative path. */
             public Revert setPath(java.lang.String path) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -11747,9 +11315,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Update#execute()} method to invoke the remote operation.
            *
-           * @param path GTM Custom Template's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/templates/{templ
-           *        ate_id}
+           * @param path GTM Custom Template's API relative path.
            * @param content the {@link com.google.api.services.tagmanager.model.CustomTemplate}
            * @return the request
            */
@@ -11777,9 +11343,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path GTM Custom Template's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/templates/{templ
-           *        ate_id}
+             * @param path GTM Custom Template's API relative path.
              * @param content the {@link com.google.api.services.tagmanager.model.CustomTemplate}
              * @since 1.13
              */
@@ -11848,24 +11412,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
               return (Update) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * GTM Custom Template's API relative path. Example: accounts/{account_id}/containers/{c
-             * ontainer_id}/workspaces/{workspace_id}/templates/{template_id}
-             */
+            /** GTM Custom Template's API relative path. */
             @com.google.api.client.util.Key
             private java.lang.String path;
 
-            /** GTM Custom Template's API relative path. Example:
-           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/templates/{template_id}
+            /** GTM Custom Template's API relative path.
              */
             public java.lang.String getPath() {
               return path;
             }
 
-            /**
-             * GTM Custom Template's API relative path. Example: accounts/{account_id}/containers/{c
-             * ontainer_id}/workspaces/{workspace_id}/templates/{template_id}
-             */
+            /** GTM Custom Template's API relative path. */
             public Update setPath(java.lang.String path) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -11933,8 +11490,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent GTM Workspace's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+           * @param parent GTM Workspace's API relative path.
            * @param content the {@link com.google.api.services.tagmanager.model.Transformation}
            * @return the request
            */
@@ -11962,8 +11518,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent GTM Workspace's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+             * @param parent GTM Workspace's API relative path.
              * @param content the {@link com.google.api.services.tagmanager.model.Transformation}
              * @since 1.13
              */
@@ -11975,10 +11530,6 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
                     "Parameter parent must conform to the pattern " +
                     "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
               }
-              checkRequiredParameter(content, "content");
-              checkRequiredParameter(content.getName(), "Transformation.getName()");
-              checkRequiredParameter(content, "content");
-              checkRequiredParameter(content.getType(), "Transformation.getType()");
             }
 
             @Override
@@ -12036,24 +11587,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
               return (Create) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * GTM Workspace's API relative path. Example:
-             * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
-             */
+            /** GTM Workspace's API relative path. */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** GTM Workspace's API relative path. Example:
-           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+            /** GTM Workspace's API relative path.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /**
-             * GTM Workspace's API relative path. Example:
-             * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
-             */
+            /** GTM Workspace's API relative path. */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -12077,8 +11621,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param path GTM Transformation's API relative path. Example: accounts/{account_id}/containers/{container_id}/wor
-           *        kspaces/{workspace_id}/transformations/{transformation_id}
+           * @param path GTM Transformation's API relative path.
            * @return the request
            */
           public Delete delete(java.lang.String path) throws java.io.IOException {
@@ -12105,8 +11648,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path GTM Transformation's API relative path. Example: accounts/{account_id}/containers/{container_id}/wor
-           *        kspaces/{workspace_id}/transformations/{transformation_id}
+             * @param path GTM Transformation's API relative path.
              * @since 1.13
              */
             protected Delete(java.lang.String path) {
@@ -12174,24 +11716,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
               return (Delete) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * GTM Transformation's API relative path. Example: accounts/{account_id}/containers/{co
-             * ntainer_id}/workspaces/{workspace_id}/transformations/{transformation_id}
-             */
+            /** GTM Transformation's API relative path. */
             @com.google.api.client.util.Key
             private java.lang.String path;
 
-            /** GTM Transformation's API relative path. Example: accounts/{account_id}/containers/{container_id}/wo
-           rkspaces/{workspace_id}/transformations/{transformation_id}
+            /** GTM Transformation's API relative path.
              */
             public java.lang.String getPath() {
               return path;
             }
 
-            /**
-             * GTM Transformation's API relative path. Example: accounts/{account_id}/containers/{co
-             * ntainer_id}/workspaces/{workspace_id}/transformations/{transformation_id}
-             */
+            /** GTM Transformation's API relative path. */
             public Delete setPath(java.lang.String path) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -12215,8 +11750,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param path GTM Transformation's API relative path. Example: accounts/{account_id}/containers/{container_id}/wor
-           *        kspaces/{workspace_id}/transformations/{transformation_id}
+           * @param path GTM Transformation's API relative path.
            * @return the request
            */
           public Get get(java.lang.String path) throws java.io.IOException {
@@ -12242,8 +11776,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path GTM Transformation's API relative path. Example: accounts/{account_id}/containers/{container_id}/wor
-           *        kspaces/{workspace_id}/transformations/{transformation_id}
+             * @param path GTM Transformation's API relative path.
              * @since 1.13
              */
             protected Get(java.lang.String path) {
@@ -12321,24 +11854,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
               return (Get) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * GTM Transformation's API relative path. Example: accounts/{account_id}/containers/{co
-             * ntainer_id}/workspaces/{workspace_id}/transformations/{transformation_id}
-             */
+            /** GTM Transformation's API relative path. */
             @com.google.api.client.util.Key
             private java.lang.String path;
 
-            /** GTM Transformation's API relative path. Example: accounts/{account_id}/containers/{container_id}/wo
-           rkspaces/{workspace_id}/transformations/{transformation_id}
+            /** GTM Transformation's API relative path.
              */
             public java.lang.String getPath() {
               return path;
             }
 
-            /**
-             * GTM Transformation's API relative path. Example: accounts/{account_id}/containers/{co
-             * ntainer_id}/workspaces/{workspace_id}/transformations/{transformation_id}
-             */
+            /** GTM Transformation's API relative path. */
             public Get setPath(java.lang.String path) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -12362,8 +11888,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent GTM Workspace's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+           * @param parent GTM Workspace's API relative path.
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -12389,8 +11914,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent GTM Workspace's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+             * @param parent GTM Workspace's API relative path.
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -12468,24 +11992,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
               return (List) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * GTM Workspace's API relative path. Example:
-             * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
-             */
+            /** GTM Workspace's API relative path. */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** GTM Workspace's API relative path. Example:
-           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+            /** GTM Workspace's API relative path.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /**
-             * GTM Workspace's API relative path. Example:
-             * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
-             */
+            /** GTM Workspace's API relative path. */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -12525,8 +12042,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Revert#execute()} method to invoke the remote operation.
            *
-           * @param path GTM Transformation's API relative path. Example: accounts/{account_id}/containers/{container_id}/wor
-           *        kspaces/{workspace_id}/transformations/{transformation_id}
+           * @param path GTM Transformation's API relative path.
            * @return the request
            */
           public Revert revert(java.lang.String path) throws java.io.IOException {
@@ -12553,8 +12069,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Revert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path GTM Transformation's API relative path. Example: accounts/{account_id}/containers/{container_id}/wor
-           *        kspaces/{workspace_id}/transformations/{transformation_id}
+             * @param path GTM Transformation's API relative path.
              * @since 1.13
              */
             protected Revert(java.lang.String path) {
@@ -12622,24 +12137,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
               return (Revert) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * GTM Transformation's API relative path. Example: accounts/{account_id}/containers/{co
-             * ntainer_id}/workspaces/{workspace_id}/transformations/{transformation_id}
-             */
+            /** GTM Transformation's API relative path. */
             @com.google.api.client.util.Key
             private java.lang.String path;
 
-            /** GTM Transformation's API relative path. Example: accounts/{account_id}/containers/{container_id}/wo
-           rkspaces/{workspace_id}/transformations/{transformation_id}
+            /** GTM Transformation's API relative path.
              */
             public java.lang.String getPath() {
               return path;
             }
 
-            /**
-             * GTM Transformation's API relative path. Example: accounts/{account_id}/containers/{co
-             * ntainer_id}/workspaces/{workspace_id}/transformations/{transformation_id}
-             */
+            /** GTM Transformation's API relative path. */
             public Revert setPath(java.lang.String path) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -12685,8 +12193,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Update#execute()} method to invoke the remote operation.
            *
-           * @param path GTM Transformation's API relative path. Example: accounts/{account_id}/containers/{container_id}/wor
-           *        kspaces/{workspace_id}/transformations/{transformation_id}
+           * @param path GTM Transformation's API relative path.
            * @param content the {@link com.google.api.services.tagmanager.model.Transformation}
            * @return the request
            */
@@ -12714,8 +12221,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path GTM Transformation's API relative path. Example: accounts/{account_id}/containers/{container_id}/wor
-           *        kspaces/{workspace_id}/transformations/{transformation_id}
+             * @param path GTM Transformation's API relative path.
              * @param content the {@link com.google.api.services.tagmanager.model.Transformation}
              * @since 1.13
              */
@@ -12727,10 +12233,6 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
                     "Parameter path must conform to the pattern " +
                     "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/transformations/[^/]+$");
               }
-              checkRequiredParameter(content, "content");
-              checkRequiredParameter(content.getName(), "Transformation.getName()");
-              checkRequiredParameter(content, "content");
-              checkRequiredParameter(content.getType(), "Transformation.getType()");
             }
 
             @Override
@@ -12788,24 +12290,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
               return (Update) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * GTM Transformation's API relative path. Example: accounts/{account_id}/containers/{co
-             * ntainer_id}/workspaces/{workspace_id}/transformations/{transformation_id}
-             */
+            /** GTM Transformation's API relative path. */
             @com.google.api.client.util.Key
             private java.lang.String path;
 
-            /** GTM Transformation's API relative path. Example: accounts/{account_id}/containers/{container_id}/wo
-           rkspaces/{workspace_id}/transformations/{transformation_id}
+            /** GTM Transformation's API relative path.
              */
             public java.lang.String getPath() {
               return path;
             }
 
-            /**
-             * GTM Transformation's API relative path. Example: accounts/{account_id}/containers/{co
-             * ntainer_id}/workspaces/{workspace_id}/transformations/{transformation_id}
-             */
+            /** GTM Transformation's API relative path. */
             public Update setPath(java.lang.String path) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -12873,8 +12368,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent GTM Workspace's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+           * @param parent GTM Workspace's API relative path.
            * @param content the {@link com.google.api.services.tagmanager.model.Trigger}
            * @return the request
            */
@@ -12902,8 +12396,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent GTM Workspace's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+             * @param parent GTM Workspace's API relative path.
              * @param content the {@link com.google.api.services.tagmanager.model.Trigger}
              * @since 1.13
              */
@@ -12915,10 +12408,6 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
                     "Parameter parent must conform to the pattern " +
                     "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
               }
-              checkRequiredParameter(content, "content");
-              checkRequiredParameter(content.getName(), "Trigger.getName()");
-              checkRequiredParameter(content, "content");
-              checkRequiredParameter(content.getType(), "Trigger.getType()");
             }
 
             @Override
@@ -12976,24 +12465,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
               return (Create) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * GTM Workspace's API relative path. Example:
-             * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
-             */
+            /** GTM Workspace's API relative path. */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** GTM Workspace's API relative path. Example:
-           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+            /** GTM Workspace's API relative path.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /**
-             * GTM Workspace's API relative path. Example:
-             * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
-             */
+            /** GTM Workspace's API relative path. */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -13017,9 +12499,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param path GTM Trigger's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/triggers/{trigge
-           *        r_id}
+           * @param path GTM Trigger's API relative path.
            * @return the request
            */
           public Delete delete(java.lang.String path) throws java.io.IOException {
@@ -13046,9 +12526,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path GTM Trigger's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/triggers/{trigge
-           *        r_id}
+             * @param path GTM Trigger's API relative path.
              * @since 1.13
              */
             protected Delete(java.lang.String path) {
@@ -13116,24 +12594,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
               return (Delete) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * GTM Trigger's API relative path. Example: accounts/{account_id}/containers/{container
-             * _id}/workspaces/{workspace_id}/triggers/{trigger_id}
-             */
+            /** GTM Trigger's API relative path. */
             @com.google.api.client.util.Key
             private java.lang.String path;
 
-            /** GTM Trigger's API relative path. Example:
-           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/triggers/{trigger_id}
+            /** GTM Trigger's API relative path.
              */
             public java.lang.String getPath() {
               return path;
             }
 
-            /**
-             * GTM Trigger's API relative path. Example: accounts/{account_id}/containers/{container
-             * _id}/workspaces/{workspace_id}/triggers/{trigger_id}
-             */
+            /** GTM Trigger's API relative path. */
             public Delete setPath(java.lang.String path) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -13157,9 +12628,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param path GTM Trigger's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/triggers/{trigge
-           *        r_id}
+           * @param path GTM Trigger's API relative path.
            * @return the request
            */
           public Get get(java.lang.String path) throws java.io.IOException {
@@ -13185,9 +12654,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path GTM Trigger's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/triggers/{trigge
-           *        r_id}
+             * @param path GTM Trigger's API relative path.
              * @since 1.13
              */
             protected Get(java.lang.String path) {
@@ -13265,24 +12732,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
               return (Get) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * GTM Trigger's API relative path. Example: accounts/{account_id}/containers/{container
-             * _id}/workspaces/{workspace_id}/triggers/{trigger_id}
-             */
+            /** GTM Trigger's API relative path. */
             @com.google.api.client.util.Key
             private java.lang.String path;
 
-            /** GTM Trigger's API relative path. Example:
-           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/triggers/{trigger_id}
+            /** GTM Trigger's API relative path.
              */
             public java.lang.String getPath() {
               return path;
             }
 
-            /**
-             * GTM Trigger's API relative path. Example: accounts/{account_id}/containers/{container
-             * _id}/workspaces/{workspace_id}/triggers/{trigger_id}
-             */
+            /** GTM Trigger's API relative path. */
             public Get setPath(java.lang.String path) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -13306,8 +12766,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent GTM Workspace's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+           * @param parent GTM Workspace's API relative path.
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -13333,8 +12792,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent GTM Workspace's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+             * @param parent GTM Workspace's API relative path.
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -13412,24 +12870,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
               return (List) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * GTM Workspace's API relative path. Example:
-             * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
-             */
+            /** GTM Workspace's API relative path. */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** GTM Workspace's API relative path. Example:
-           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+            /** GTM Workspace's API relative path.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /**
-             * GTM Workspace's API relative path. Example:
-             * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
-             */
+            /** GTM Workspace's API relative path. */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -13469,9 +12920,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Revert#execute()} method to invoke the remote operation.
            *
-           * @param path GTM Trigger's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/triggers/{trigge
-           *        r_id}
+           * @param path GTM Trigger's API relative path.
            * @return the request
            */
           public Revert revert(java.lang.String path) throws java.io.IOException {
@@ -13498,9 +12947,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Revert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path GTM Trigger's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/triggers/{trigge
-           *        r_id}
+             * @param path GTM Trigger's API relative path.
              * @since 1.13
              */
             protected Revert(java.lang.String path) {
@@ -13568,24 +13015,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
               return (Revert) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * GTM Trigger's API relative path. Example: accounts/{account_id}/containers/{container
-             * _id}/workspaces/{workspace_id}/triggers/{trigger_id}
-             */
+            /** GTM Trigger's API relative path. */
             @com.google.api.client.util.Key
             private java.lang.String path;
 
-            /** GTM Trigger's API relative path. Example:
-           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/triggers/{trigger_id}
+            /** GTM Trigger's API relative path.
              */
             public java.lang.String getPath() {
               return path;
             }
 
-            /**
-             * GTM Trigger's API relative path. Example: accounts/{account_id}/containers/{container
-             * _id}/workspaces/{workspace_id}/triggers/{trigger_id}
-             */
+            /** GTM Trigger's API relative path. */
             public Revert setPath(java.lang.String path) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -13629,9 +13069,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Update#execute()} method to invoke the remote operation.
            *
-           * @param path GTM Trigger's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/triggers/{trigge
-           *        r_id}
+           * @param path GTM Trigger's API relative path.
            * @param content the {@link com.google.api.services.tagmanager.model.Trigger}
            * @return the request
            */
@@ -13659,9 +13097,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path GTM Trigger's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/triggers/{trigge
-           *        r_id}
+             * @param path GTM Trigger's API relative path.
              * @param content the {@link com.google.api.services.tagmanager.model.Trigger}
              * @since 1.13
              */
@@ -13673,8 +13109,6 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
                     "Parameter path must conform to the pattern " +
                     "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/triggers/[^/]+$");
               }
-              checkRequiredParameter(content, "content");
-              checkRequiredParameter(content.getName(), "Trigger.getName()");
             }
 
             @Override
@@ -13732,24 +13166,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
               return (Update) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * GTM Trigger's API relative path. Example: accounts/{account_id}/containers/{container
-             * _id}/workspaces/{workspace_id}/triggers/{trigger_id}
-             */
+            /** GTM Trigger's API relative path. */
             @com.google.api.client.util.Key
             private java.lang.String path;
 
-            /** GTM Trigger's API relative path. Example:
-           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/triggers/{trigger_id}
+            /** GTM Trigger's API relative path.
              */
             public java.lang.String getPath() {
               return path;
             }
 
-            /**
-             * GTM Trigger's API relative path. Example: accounts/{account_id}/containers/{container
-             * _id}/workspaces/{workspace_id}/triggers/{trigger_id}
-             */
+            /** GTM Trigger's API relative path. */
             public Update setPath(java.lang.String path) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -13815,8 +13242,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent GTM Workspace's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+           * @param parent GTM Workspace's API relative path.
            * @param content the {@link com.google.api.services.tagmanager.model.Variable}
            * @return the request
            */
@@ -13844,8 +13270,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent GTM Workspace's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+             * @param parent GTM Workspace's API relative path.
              * @param content the {@link com.google.api.services.tagmanager.model.Variable}
              * @since 1.13
              */
@@ -13857,10 +13282,6 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
                     "Parameter parent must conform to the pattern " +
                     "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+$");
               }
-              checkRequiredParameter(content, "content");
-              checkRequiredParameter(content.getName(), "Variable.getName()");
-              checkRequiredParameter(content, "content");
-              checkRequiredParameter(content.getType(), "Variable.getType()");
             }
 
             @Override
@@ -13918,24 +13339,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
               return (Create) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * GTM Workspace's API relative path. Example:
-             * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
-             */
+            /** GTM Workspace's API relative path. */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** GTM Workspace's API relative path. Example:
-           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+            /** GTM Workspace's API relative path.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /**
-             * GTM Workspace's API relative path. Example:
-             * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
-             */
+            /** GTM Workspace's API relative path. */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -13959,9 +13373,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param path GTM Variable's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/variables/{varia
-           *        ble_id}
+           * @param path GTM Variable's API relative path.
            * @return the request
            */
           public Delete delete(java.lang.String path) throws java.io.IOException {
@@ -13988,9 +13400,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path GTM Variable's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/variables/{varia
-           *        ble_id}
+             * @param path GTM Variable's API relative path.
              * @since 1.13
              */
             protected Delete(java.lang.String path) {
@@ -14058,24 +13468,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
               return (Delete) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * GTM Variable's API relative path. Example: accounts/{account_id}/containers/{containe
-             * r_id}/workspaces/{workspace_id}/variables/{variable_id}
-             */
+            /** GTM Variable's API relative path. */
             @com.google.api.client.util.Key
             private java.lang.String path;
 
-            /** GTM Variable's API relative path. Example:
-           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/variables/{variable_id}
+            /** GTM Variable's API relative path.
              */
             public java.lang.String getPath() {
               return path;
             }
 
-            /**
-             * GTM Variable's API relative path. Example: accounts/{account_id}/containers/{containe
-             * r_id}/workspaces/{workspace_id}/variables/{variable_id}
-             */
+            /** GTM Variable's API relative path. */
             public Delete setPath(java.lang.String path) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -14099,9 +13502,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param path GTM Variable's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/variables/{varia
-           *        ble_id}
+           * @param path GTM Variable's API relative path.
            * @return the request
            */
           public Get get(java.lang.String path) throws java.io.IOException {
@@ -14127,9 +13528,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path GTM Variable's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/variables/{varia
-           *        ble_id}
+             * @param path GTM Variable's API relative path.
              * @since 1.13
              */
             protected Get(java.lang.String path) {
@@ -14207,24 +13606,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
               return (Get) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * GTM Variable's API relative path. Example: accounts/{account_id}/containers/{containe
-             * r_id}/workspaces/{workspace_id}/variables/{variable_id}
-             */
+            /** GTM Variable's API relative path. */
             @com.google.api.client.util.Key
             private java.lang.String path;
 
-            /** GTM Variable's API relative path. Example:
-           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/variables/{variable_id}
+            /** GTM Variable's API relative path.
              */
             public java.lang.String getPath() {
               return path;
             }
 
-            /**
-             * GTM Variable's API relative path. Example: accounts/{account_id}/containers/{containe
-             * r_id}/workspaces/{workspace_id}/variables/{variable_id}
-             */
+            /** GTM Variable's API relative path. */
             public Get setPath(java.lang.String path) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -14248,8 +13640,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent GTM Workspace's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+           * @param parent GTM Workspace's API relative path.
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -14275,8 +13666,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent GTM Workspace's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+             * @param parent GTM Workspace's API relative path.
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -14354,24 +13744,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
               return (List) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * GTM Workspace's API relative path. Example:
-             * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
-             */
+            /** GTM Workspace's API relative path. */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** GTM Workspace's API relative path. Example:
-           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+            /** GTM Workspace's API relative path.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /**
-             * GTM Workspace's API relative path. Example:
-             * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
-             */
+            /** GTM Workspace's API relative path. */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -14411,9 +13794,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Revert#execute()} method to invoke the remote operation.
            *
-           * @param path GTM Variable's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/variables/{varia
-           *        ble_id}
+           * @param path GTM Variable's API relative path.
            * @return the request
            */
           public Revert revert(java.lang.String path) throws java.io.IOException {
@@ -14440,9 +13821,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Revert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path GTM Variable's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/variables/{varia
-           *        ble_id}
+             * @param path GTM Variable's API relative path.
              * @since 1.13
              */
             protected Revert(java.lang.String path) {
@@ -14510,24 +13889,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
               return (Revert) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * GTM Variable's API relative path. Example: accounts/{account_id}/containers/{containe
-             * r_id}/workspaces/{workspace_id}/variables/{variable_id}
-             */
+            /** GTM Variable's API relative path. */
             @com.google.api.client.util.Key
             private java.lang.String path;
 
-            /** GTM Variable's API relative path. Example:
-           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/variables/{variable_id}
+            /** GTM Variable's API relative path.
              */
             public java.lang.String getPath() {
               return path;
             }
 
-            /**
-             * GTM Variable's API relative path. Example: accounts/{account_id}/containers/{containe
-             * r_id}/workspaces/{workspace_id}/variables/{variable_id}
-             */
+            /** GTM Variable's API relative path. */
             public Revert setPath(java.lang.String path) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -14573,9 +13945,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Update#execute()} method to invoke the remote operation.
            *
-           * @param path GTM Variable's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/variables/{varia
-           *        ble_id}
+           * @param path GTM Variable's API relative path.
            * @param content the {@link com.google.api.services.tagmanager.model.Variable}
            * @return the request
            */
@@ -14603,9 +13973,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path GTM Variable's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/variables/{varia
-           *        ble_id}
+             * @param path GTM Variable's API relative path.
              * @param content the {@link com.google.api.services.tagmanager.model.Variable}
              * @since 1.13
              */
@@ -14617,10 +13985,6 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
                     "Parameter path must conform to the pattern " +
                     "^accounts/[^/]+/containers/[^/]+/workspaces/[^/]+/variables/[^/]+$");
               }
-              checkRequiredParameter(content, "content");
-              checkRequiredParameter(content.getName(), "Variable.getName()");
-              checkRequiredParameter(content, "content");
-              checkRequiredParameter(content.getType(), "Variable.getType()");
             }
 
             @Override
@@ -14678,24 +14042,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
               return (Update) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * GTM Variable's API relative path. Example: accounts/{account_id}/containers/{containe
-             * r_id}/workspaces/{workspace_id}/variables/{variable_id}
-             */
+            /** GTM Variable's API relative path. */
             @com.google.api.client.util.Key
             private java.lang.String path;
 
-            /** GTM Variable's API relative path. Example:
-           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/variables/{variable_id}
+            /** GTM Variable's API relative path.
              */
             public java.lang.String getPath() {
               return path;
             }
 
-            /**
-             * GTM Variable's API relative path. Example: accounts/{account_id}/containers/{containe
-             * r_id}/workspaces/{workspace_id}/variables/{variable_id}
-             */
+            /** GTM Variable's API relative path. */
             public Update setPath(java.lang.String path) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -14763,8 +14120,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent GTM Workspace's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+           * @param parent GTM Workspace's API relative path.
            * @param content the {@link com.google.api.services.tagmanager.model.Zone}
            * @return the request
            */
@@ -14792,8 +14148,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent GTM Workspace's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+             * @param parent GTM Workspace's API relative path.
              * @param content the {@link com.google.api.services.tagmanager.model.Zone}
              * @since 1.13
              */
@@ -14862,24 +14217,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
               return (Create) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * GTM Workspace's API relative path. Example:
-             * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
-             */
+            /** GTM Workspace's API relative path. */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** GTM Workspace's API relative path. Example:
-           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+            /** GTM Workspace's API relative path.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /**
-             * GTM Workspace's API relative path. Example:
-             * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
-             */
+            /** GTM Workspace's API relative path. */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -14903,8 +14251,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param path GTM Zone's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/zones/{zone_id}
+           * @param path GTM Zone's API relative path.
            * @return the request
            */
           public Delete delete(java.lang.String path) throws java.io.IOException {
@@ -14931,8 +14278,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path GTM Zone's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/zones/{zone_id}
+             * @param path GTM Zone's API relative path.
              * @since 1.13
              */
             protected Delete(java.lang.String path) {
@@ -15000,24 +14346,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
               return (Delete) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * GTM Zone's API relative path. Example: accounts/{account_id}/containers/{container_id
-             * }/workspaces/{workspace_id}/zones/{zone_id}
-             */
+            /** GTM Zone's API relative path. */
             @com.google.api.client.util.Key
             private java.lang.String path;
 
-            /** GTM Zone's API relative path. Example:
-           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/zones/{zone_id}
+            /** GTM Zone's API relative path.
              */
             public java.lang.String getPath() {
               return path;
             }
 
-            /**
-             * GTM Zone's API relative path. Example: accounts/{account_id}/containers/{container_id
-             * }/workspaces/{workspace_id}/zones/{zone_id}
-             */
+            /** GTM Zone's API relative path. */
             public Delete setPath(java.lang.String path) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -15041,8 +14380,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param path GTM Zone's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/zones/{zone_id}
+           * @param path GTM Zone's API relative path.
            * @return the request
            */
           public Get get(java.lang.String path) throws java.io.IOException {
@@ -15068,8 +14406,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path GTM Zone's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/zones/{zone_id}
+             * @param path GTM Zone's API relative path.
              * @since 1.13
              */
             protected Get(java.lang.String path) {
@@ -15147,24 +14484,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
               return (Get) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * GTM Zone's API relative path. Example: accounts/{account_id}/containers/{container_id
-             * }/workspaces/{workspace_id}/zones/{zone_id}
-             */
+            /** GTM Zone's API relative path. */
             @com.google.api.client.util.Key
             private java.lang.String path;
 
-            /** GTM Zone's API relative path. Example:
-           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/zones/{zone_id}
+            /** GTM Zone's API relative path.
              */
             public java.lang.String getPath() {
               return path;
             }
 
-            /**
-             * GTM Zone's API relative path. Example: accounts/{account_id}/containers/{container_id
-             * }/workspaces/{workspace_id}/zones/{zone_id}
-             */
+            /** GTM Zone's API relative path. */
             public Get setPath(java.lang.String path) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -15188,8 +14518,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent GTM Workspace's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+           * @param parent GTM Workspace's API relative path.
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -15215,8 +14544,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent GTM Workspace's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+             * @param parent GTM Workspace's API relative path.
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -15294,24 +14622,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
               return (List) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * GTM Workspace's API relative path. Example:
-             * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
-             */
+            /** GTM Workspace's API relative path. */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** GTM Workspace's API relative path. Example:
-           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
+            /** GTM Workspace's API relative path.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /**
-             * GTM Workspace's API relative path. Example:
-             * accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}
-             */
+            /** GTM Workspace's API relative path. */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -15351,8 +14672,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Revert#execute()} method to invoke the remote operation.
            *
-           * @param path GTM Zone's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/zones/{zone_id}
+           * @param path GTM Zone's API relative path.
            * @return the request
            */
           public Revert revert(java.lang.String path) throws java.io.IOException {
@@ -15379,8 +14699,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Revert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path GTM Zone's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/zones/{zone_id}
+             * @param path GTM Zone's API relative path.
              * @since 1.13
              */
             protected Revert(java.lang.String path) {
@@ -15448,24 +14767,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
               return (Revert) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * GTM Zone's API relative path. Example: accounts/{account_id}/containers/{container_id
-             * }/workspaces/{workspace_id}/zones/{zone_id}
-             */
+            /** GTM Zone's API relative path. */
             @com.google.api.client.util.Key
             private java.lang.String path;
 
-            /** GTM Zone's API relative path. Example:
-           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/zones/{zone_id}
+            /** GTM Zone's API relative path.
              */
             public java.lang.String getPath() {
               return path;
             }
 
-            /**
-             * GTM Zone's API relative path. Example: accounts/{account_id}/containers/{container_id
-             * }/workspaces/{workspace_id}/zones/{zone_id}
-             */
+            /** GTM Zone's API relative path. */
             public Revert setPath(java.lang.String path) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -15509,8 +14821,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the tagmanager server.  After setting any optional
            * parameters, call the {@link Update#execute()} method to invoke the remote operation.
            *
-           * @param path GTM Zone's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/zones/{zone_id}
+           * @param path GTM Zone's API relative path.
            * @param content the {@link com.google.api.services.tagmanager.model.Zone}
            * @return the request
            */
@@ -15538,8 +14849,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
              * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param path GTM Zone's API relative path. Example:
-           *        accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/zones/{zone_id}
+             * @param path GTM Zone's API relative path.
              * @param content the {@link com.google.api.services.tagmanager.model.Zone}
              * @since 1.13
              */
@@ -15608,24 +14918,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
               return (Update) super.setUploadProtocol(uploadProtocol);
             }
 
-            /**
-             * GTM Zone's API relative path. Example: accounts/{account_id}/containers/{container_id
-             * }/workspaces/{workspace_id}/zones/{zone_id}
-             */
+            /** GTM Zone's API relative path. */
             @com.google.api.client.util.Key
             private java.lang.String path;
 
-            /** GTM Zone's API relative path. Example:
-           accounts/{account_id}/containers/{container_id}/workspaces/{workspace_id}/zones/{zone_id}
+            /** GTM Zone's API relative path.
              */
             public java.lang.String getPath() {
               return path;
             }
 
-            /**
-             * GTM Zone's API relative path. Example: accounts/{account_id}/containers/{container_id
-             * }/workspaces/{workspace_id}/zones/{zone_id}
-             */
+            /** GTM Zone's API relative path. */
             public Update setPath(java.lang.String path) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -15693,7 +14996,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the tagmanager server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent GTM Account's API relative path. Example: accounts/{account_id}
+       * @param parent GTM Account's API relative path.
        * @param content the {@link com.google.api.services.tagmanager.model.UserPermission}
        * @return the request
        */
@@ -15721,7 +15024,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent GTM Account's API relative path. Example: accounts/{account_id}
+         * @param parent GTM Account's API relative path.
          * @param content the {@link com.google.api.services.tagmanager.model.UserPermission}
          * @since 1.13
          */
@@ -15790,17 +15093,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           return (Create) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** GTM Account's API relative path. Example: accounts/{account_id} */
+        /** GTM Account's API relative path. */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** GTM Account's API relative path. Example: accounts/{account_id}
+        /** GTM Account's API relative path.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /** GTM Account's API relative path. Example: accounts/{account_id} */
+        /** GTM Account's API relative path. */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -15824,8 +15127,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the tagmanager server.  After setting any optional
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
-       * @param path GTM UserPermission's API relative path. Example:
-       *        accounts/{account_id}/user_permissions/{user_permission_id}
+       * @param path GTM UserPermission's API relative path.
        * @return the request
        */
       public Delete delete(java.lang.String path) throws java.io.IOException {
@@ -15852,8 +15154,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param path GTM UserPermission's API relative path. Example:
-       *        accounts/{account_id}/user_permissions/{user_permission_id}
+         * @param path GTM UserPermission's API relative path.
          * @since 1.13
          */
         protected Delete(java.lang.String path) {
@@ -15921,24 +15222,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           return (Delete) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * GTM UserPermission's API relative path. Example:
-         * accounts/{account_id}/user_permissions/{user_permission_id}
-         */
+        /** GTM UserPermission's API relative path. */
         @com.google.api.client.util.Key
         private java.lang.String path;
 
-        /** GTM UserPermission's API relative path. Example:
-       accounts/{account_id}/user_permissions/{user_permission_id}
+        /** GTM UserPermission's API relative path.
          */
         public java.lang.String getPath() {
           return path;
         }
 
-        /**
-         * GTM UserPermission's API relative path. Example:
-         * accounts/{account_id}/user_permissions/{user_permission_id}
-         */
+        /** GTM UserPermission's API relative path. */
         public Delete setPath(java.lang.String path) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -15962,8 +15256,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the tagmanager server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param path GTM UserPermission's API relative path. Example:
-       *        accounts/{account_id}/user_permissions/{user_permission_id}
+       * @param path GTM UserPermission's API relative path.
        * @return the request
        */
       public Get get(java.lang.String path) throws java.io.IOException {
@@ -15989,8 +15282,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param path GTM UserPermission's API relative path. Example:
-       *        accounts/{account_id}/user_permissions/{user_permission_id}
+         * @param path GTM UserPermission's API relative path.
          * @since 1.13
          */
         protected Get(java.lang.String path) {
@@ -16068,24 +15360,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           return (Get) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * GTM UserPermission's API relative path. Example:
-         * accounts/{account_id}/user_permissions/{user_permission_id}
-         */
+        /** GTM UserPermission's API relative path. */
         @com.google.api.client.util.Key
         private java.lang.String path;
 
-        /** GTM UserPermission's API relative path. Example:
-       accounts/{account_id}/user_permissions/{user_permission_id}
+        /** GTM UserPermission's API relative path.
          */
         public java.lang.String getPath() {
           return path;
         }
 
-        /**
-         * GTM UserPermission's API relative path. Example:
-         * accounts/{account_id}/user_permissions/{user_permission_id}
-         */
+        /** GTM UserPermission's API relative path. */
         public Get setPath(java.lang.String path) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),
@@ -16110,7 +15395,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the tagmanager server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent GTM Account's API relative path. Example: accounts/{account_id}
+       * @param parent GTM Account's API relative path.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -16137,7 +15422,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent GTM Account's API relative path. Example: accounts/{account_id}
+         * @param parent GTM Account's API relative path.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -16215,17 +15500,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** GTM Account's API relative path. Example: accounts/{account_id} */
+        /** GTM Account's API relative path. */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** GTM Account's API relative path. Example: accounts/{account_id}
+        /** GTM Account's API relative path.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /** GTM Account's API relative path. Example: accounts/{account_id} */
+        /** GTM Account's API relative path. */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -16265,8 +15550,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the tagmanager server.  After setting any optional
        * parameters, call the {@link Update#execute()} method to invoke the remote operation.
        *
-       * @param path GTM UserPermission's API relative path. Example:
-       *        accounts/{account_id}/user_permissions/{user_permission_id}
+       * @param path GTM UserPermission's API relative path.
        * @param content the {@link com.google.api.services.tagmanager.model.UserPermission}
        * @return the request
        */
@@ -16294,8 +15578,7 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
          * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param path GTM UserPermission's API relative path. Example:
-       *        accounts/{account_id}/user_permissions/{user_permission_id}
+         * @param path GTM UserPermission's API relative path.
          * @param content the {@link com.google.api.services.tagmanager.model.UserPermission}
          * @since 1.13
          */
@@ -16364,24 +15647,17 @@ public class TagManager extends com.google.api.client.googleapis.services.json.A
           return (Update) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * GTM UserPermission's API relative path. Example:
-         * accounts/{account_id}/user_permissions/{user_permission_id}
-         */
+        /** GTM UserPermission's API relative path. */
         @com.google.api.client.util.Key
         private java.lang.String path;
 
-        /** GTM UserPermission's API relative path. Example:
-       accounts/{account_id}/user_permissions/{user_permission_id}
+        /** GTM UserPermission's API relative path.
          */
         public java.lang.String getPath() {
           return path;
         }
 
-        /**
-         * GTM UserPermission's API relative path. Example:
-         * accounts/{account_id}/user_permissions/{user_permission_id}
-         */
+        /** GTM UserPermission's API relative path. */
         public Update setPath(java.lang.String path) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PATH_PATTERN.matcher(path).matches(),

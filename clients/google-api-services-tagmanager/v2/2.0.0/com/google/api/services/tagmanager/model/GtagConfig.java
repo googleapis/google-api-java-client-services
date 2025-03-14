@@ -59,9 +59,7 @@ public final class GtagConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String gtagConfigId;
 
   /**
-   * The Google tag config's parameters. @mutable
-   * tagmanager.accounts.containers.workspaces.gtag_config.create @mutable
-   * tagmanager.accounts.containers.workspaces.gtag_config.update
+   * The Google tag config's parameters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,10 +80,7 @@ public final class GtagConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String tagManagerUrl;
 
   /**
-   * Google tag config type. @required tagmanager.accounts.containers.workspaces.gtag_config.create
-   * @required tagmanager.accounts.containers.workspaces.gtag_config.update @mutable
-   * tagmanager.accounts.containers.workspaces.gtag_config.create @mutable
-   * tagmanager.accounts.containers.workspaces.gtag_config.update
+   * Google tag config type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -169,9 +164,7 @@ public final class GtagConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Google tag config's parameters. @mutable
-   * tagmanager.accounts.containers.workspaces.gtag_config.create @mutable
-   * tagmanager.accounts.containers.workspaces.gtag_config.update
+   * The Google tag config's parameters.
    * @return value or {@code null} for none
    */
   public java.util.List<Parameter> getParameter() {
@@ -179,9 +172,7 @@ public final class GtagConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Google tag config's parameters. @mutable
-   * tagmanager.accounts.containers.workspaces.gtag_config.create @mutable
-   * tagmanager.accounts.containers.workspaces.gtag_config.update
+   * The Google tag config's parameters.
    * @param parameter parameter or {@code null} for none
    */
   public GtagConfig setParameter(java.util.List<Parameter> parameter) {
@@ -224,10 +215,7 @@ public final class GtagConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Google tag config type. @required tagmanager.accounts.containers.workspaces.gtag_config.create
-   * @required tagmanager.accounts.containers.workspaces.gtag_config.update @mutable
-   * tagmanager.accounts.containers.workspaces.gtag_config.create @mutable
-   * tagmanager.accounts.containers.workspaces.gtag_config.update
+   * Google tag config type.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -235,10 +223,7 @@ public final class GtagConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Google tag config type. @required tagmanager.accounts.containers.workspaces.gtag_config.create
-   * @required tagmanager.accounts.containers.workspaces.gtag_config.update @mutable
-   * tagmanager.accounts.containers.workspaces.gtag_config.create @mutable
-   * tagmanager.accounts.containers.workspaces.gtag_config.update
+   * Google tag config type.
    * @param type type or {@code null} for none
    */
   public GtagConfig setType(java.lang.String type) {

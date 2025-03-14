@@ -52,27 +52,21 @@ public final class Transformation extends com.google.api.client.json.GenericJson
   private java.lang.String fingerprint;
 
   /**
-   * Transformation display name. @mutable
-   * tagmanager.accounts.containers.workspaces.transformations.create @mutable
-   * tagmanager.accounts.containers.workspaces.transformations.update
+   * Transformation display name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * User notes on how to apply this transformation in the container. @mutable
-   * tagmanager.accounts.containers.workspaces.transformations.create @mutable
-   * tagmanager.accounts.containers.workspaces.transformations.update
+   * User notes on how to apply this transformation in the container.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String notes;
 
   /**
-   * The transformation's parameters. @mutable
-   * tagmanager.accounts.containers.workspaces.transformations.create @mutable
-   * tagmanager.accounts.containers.workspaces.transformations.update
+   * The transformation's parameters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -113,8 +107,7 @@ public final class Transformation extends com.google.api.client.json.GenericJson
   private java.lang.String transformationId;
 
   /**
-   * Transformation type. @mutable tagmanager.accounts.containers.workspaces.transformations.create
-   * @mutable tagmanager.accounts.containers.workspaces.transformations.update
+   * Transformation type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -181,9 +174,7 @@ public final class Transformation extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Transformation display name. @mutable
-   * tagmanager.accounts.containers.workspaces.transformations.create @mutable
-   * tagmanager.accounts.containers.workspaces.transformations.update
+   * Transformation display name.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -191,9 +182,7 @@ public final class Transformation extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Transformation display name. @mutable
-   * tagmanager.accounts.containers.workspaces.transformations.create @mutable
-   * tagmanager.accounts.containers.workspaces.transformations.update
+   * Transformation display name.
    * @param name name or {@code null} for none
    */
   public Transformation setName(java.lang.String name) {
@@ -202,9 +191,7 @@ public final class Transformation extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * User notes on how to apply this transformation in the container. @mutable
-   * tagmanager.accounts.containers.workspaces.transformations.create @mutable
-   * tagmanager.accounts.containers.workspaces.transformations.update
+   * User notes on how to apply this transformation in the container.
    * @return value or {@code null} for none
    */
   public java.lang.String getNotes() {
@@ -212,9 +199,7 @@ public final class Transformation extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * User notes on how to apply this transformation in the container. @mutable
-   * tagmanager.accounts.containers.workspaces.transformations.create @mutable
-   * tagmanager.accounts.containers.workspaces.transformations.update
+   * User notes on how to apply this transformation in the container.
    * @param notes notes or {@code null} for none
    */
   public Transformation setNotes(java.lang.String notes) {
@@ -223,9 +208,7 @@ public final class Transformation extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The transformation's parameters. @mutable
-   * tagmanager.accounts.containers.workspaces.transformations.create @mutable
-   * tagmanager.accounts.containers.workspaces.transformations.update
+   * The transformation's parameters.
    * @return value or {@code null} for none
    */
   public java.util.List<Parameter> getParameter() {
@@ -233,9 +216,7 @@ public final class Transformation extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The transformation's parameters. @mutable
-   * tagmanager.accounts.containers.workspaces.transformations.create @mutable
-   * tagmanager.accounts.containers.workspaces.transformations.update
+   * The transformation's parameters.
    * @param parameter parameter or {@code null} for none
    */
   public Transformation setParameter(java.util.List<Parameter> parameter) {
@@ -312,8 +293,7 @@ public final class Transformation extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Transformation type. @mutable tagmanager.accounts.containers.workspaces.transformations.create
-   * @mutable tagmanager.accounts.containers.workspaces.transformations.update
+   * Transformation type.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -321,8 +301,7 @@ public final class Transformation extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Transformation type. @mutable tagmanager.accounts.containers.workspaces.transformations.create
-   * @mutable tagmanager.accounts.containers.workspaces.transformations.update
+   * Transformation type.
    * @param type type or {@code null} for none
    */
   public Transformation setType(java.lang.String type) {

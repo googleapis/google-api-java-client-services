@@ -49,14 +49,14 @@ public final class GoogleCloudAiplatformV1beta1AuthConfigApiKeyConfig extends co
   private java.lang.String apiKeyString;
 
   /**
-   * Required. The location of the API key.
+   * Optional. The location of the API key.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String httpElementLocation;
 
   /**
-   * Required. The parameter name of the API key. E.g. If the API request is
+   * Optional. The parameter name of the API key. E.g. If the API request is
    * "https://example.com/act?api_key=", "api_key" would be the parameter name.
    * The value may be {@code null}.
    */
@@ -108,7 +108,7 @@ public final class GoogleCloudAiplatformV1beta1AuthConfigApiKeyConfig extends co
   }
 
   /**
-   * Required. The location of the API key.
+   * Optional. The location of the API key.
    * @return value or {@code null} for none
    */
   public java.lang.String getHttpElementLocation() {
@@ -116,7 +116,7 @@ public final class GoogleCloudAiplatformV1beta1AuthConfigApiKeyConfig extends co
   }
 
   /**
-   * Required. The location of the API key.
+   * Optional. The location of the API key.
    * @param httpElementLocation httpElementLocation or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1AuthConfigApiKeyConfig setHttpElementLocation(java.lang.String httpElementLocation) {
@@ -125,7 +125,7 @@ public final class GoogleCloudAiplatformV1beta1AuthConfigApiKeyConfig extends co
   }
 
   /**
-   * Required. The parameter name of the API key. E.g. If the API request is
+   * Optional. The parameter name of the API key. E.g. If the API request is
    * "https://example.com/act?api_key=", "api_key" would be the parameter name.
    * @return value or {@code null} for none
    */
@@ -134,7 +134,7 @@ public final class GoogleCloudAiplatformV1beta1AuthConfigApiKeyConfig extends co
   }
 
   /**
-   * Required. The parameter name of the API key. E.g. If the API request is
+   * Optional. The parameter name of the API key. E.g. If the API request is
    * "https://example.com/act?api_key=", "api_key" would be the parameter name.
    * @param name name or {@code null} for none
    */

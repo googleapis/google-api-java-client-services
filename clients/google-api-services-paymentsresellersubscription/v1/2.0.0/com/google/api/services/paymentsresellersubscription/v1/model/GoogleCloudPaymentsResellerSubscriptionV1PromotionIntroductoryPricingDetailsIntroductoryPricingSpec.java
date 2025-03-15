@@ -45,7 +45,7 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductor
   private java.lang.Long discountRatioMicros;
 
   /**
-   * Output only. Output Only. The duration of an introductory offer in billing cycles.
+   * Output only. The duration of an introductory offer in billing cycles.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,7 +93,7 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductor
   }
 
   /**
-   * Output only. Output Only. The duration of an introductory offer in billing cycles.
+   * Output only. The duration of an introductory offer in billing cycles.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getRecurrenceCount() {
@@ -101,7 +101,7 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductor
   }
 
   /**
-   * Output only. Output Only. The duration of an introductory offer in billing cycles.
+   * Output only. The duration of an introductory offer in billing cycles.
    * @param recurrenceCount recurrenceCount or {@code null} for none
    */
   public GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetailsIntroductoryPricingSpec setRecurrenceCount(java.lang.Integer recurrenceCount) {

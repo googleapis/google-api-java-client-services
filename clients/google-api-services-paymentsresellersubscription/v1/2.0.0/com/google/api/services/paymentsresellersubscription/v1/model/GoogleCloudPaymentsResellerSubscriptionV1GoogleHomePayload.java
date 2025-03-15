@@ -31,8 +31,7 @@ package com.google.api.services.paymentsresellersubscription.v1.model;
 public final class GoogleCloudPaymentsResellerSubscriptionV1GoogleHomePayload extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Output only. This identifies whether the subscription is attached to a Google Home
-   * structure.
+   * Output only. This identifies whether the subscription is attached to a Google Home structure.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,8 +46,7 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1GoogleHomePayload ex
   private java.lang.String partnerStructureId;
 
   /**
-   * Output only. Output only. This identifies whether the subscription is attached to a Google Home
-   * structure.
+   * Output only. This identifies whether the subscription is attached to a Google Home structure.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAttachedToGoogleStructure() {
@@ -56,8 +54,7 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1GoogleHomePayload ex
   }
 
   /**
-   * Output only. Output only. This identifies whether the subscription is attached to a Google Home
-   * structure.
+   * Output only. This identifies whether the subscription is attached to a Google Home structure.
    * @param attachedToGoogleStructure attachedToGoogleStructure or {@code null} for none
    */
   public GoogleCloudPaymentsResellerSubscriptionV1GoogleHomePayload setAttachedToGoogleStructure(java.lang.Boolean attachedToGoogleStructure) {

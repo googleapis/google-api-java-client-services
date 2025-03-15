@@ -31,7 +31,7 @@ package com.google.api.services.paymentsresellersubscription.v1.model;
 public final class GoogleCloudPaymentsResellerSubscriptionV1Product extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Output Only. Specifies the details for a bundle product.
+   * Output only. Specifies the details for a bundle product.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Product extends com.
   private java.util.List<GoogleCloudPaymentsResellerSubscriptionV1ProductPriceConfig> priceConfigs;
 
   /**
-   * Output only. Output Only. Specifies the type of the product.
+   * Output only. Specifies the type of the product.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,7 +90,7 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Product extends com.
   private java.util.List<GoogleTypeLocalizedText> titles;
 
   /**
-   * Output only. Output Only. Specifies the details for a bundle product.
+   * Output only. Specifies the details for a bundle product.
    * @return value or {@code null} for none
    */
   public ProductBundleDetails getBundleDetails() {
@@ -98,7 +98,7 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Product extends com.
   }
 
   /**
-   * Output only. Output Only. Specifies the details for a bundle product.
+   * Output only. Specifies the details for a bundle product.
    * @param bundleDetails bundleDetails or {@code null} for none
    */
   public GoogleCloudPaymentsResellerSubscriptionV1Product setBundleDetails(ProductBundleDetails bundleDetails) {
@@ -162,7 +162,7 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Product extends com.
   }
 
   /**
-   * Output only. Output Only. Specifies the type of the product.
+   * Output only. Specifies the type of the product.
    * @return value or {@code null} for none
    */
   public java.lang.String getProductType() {
@@ -170,7 +170,7 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Product extends com.
   }
 
   /**
-   * Output only. Output Only. Specifies the type of the product.
+   * Output only. Specifies the type of the product.
    * @param productType productType or {@code null} for none
    */
   public GoogleCloudPaymentsResellerSubscriptionV1Product setProductType(java.lang.String productType) {

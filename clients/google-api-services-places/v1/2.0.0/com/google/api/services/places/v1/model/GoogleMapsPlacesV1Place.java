@@ -337,6 +337,13 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   private GoogleMapsPlacesV1PlacePlusCode plusCode;
 
   /**
+   * The address in postal address format.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleTypePostalAddress postalAddress;
+
+  /**
    * Price level of the place.
    * The value may be {@code null}.
    */
@@ -1284,6 +1291,23 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
    */
   public GoogleMapsPlacesV1Place setPlusCode(GoogleMapsPlacesV1PlacePlusCode plusCode) {
     this.plusCode = plusCode;
+    return this;
+  }
+
+  /**
+   * The address in postal address format.
+   * @return value or {@code null} for none
+   */
+  public GoogleTypePostalAddress getPostalAddress() {
+    return postalAddress;
+  }
+
+  /**
+   * The address in postal address format.
+   * @param postalAddress postalAddress or {@code null} for none
+   */
+  public GoogleMapsPlacesV1Place setPostalAddress(GoogleTypePostalAddress postalAddress) {
+    this.postalAddress = postalAddress;
     return this;
   }
 

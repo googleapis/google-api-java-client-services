@@ -17,12 +17,12 @@
 package com.google.api.services.places.v1.model;
 
 /**
- * Sub destinations are specific places associated with a main place. These provide more specific
- * destinations for users who are searching for a large or complex place, like an airport, national
- * park, university, or stadium. For example, sub destinations at an airport might include
- * associated terminals and parking lots. Sub destinations return the place id and place resource
- * name, which can be used in subsequent Place Details (New) requests to fetch richer details,
- * including the sub destination's displayName and location.
+ * Sub-destinations are specific places associated with a main place. These provide more specific
+ * destinations for users who are searching inside a large or complex place, like an airport,
+ * national park, university, or stadium. For example, sub-destinations at an airport might include
+ * associated terminals and parking lots. Sub-destinations return the place ID and place resource
+ * name, which can be used in subsequent Place Details (new) requests to fetch richer details,
+ * including the sub-destination's display name and location.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Places API (New). For a detailed explanation see:

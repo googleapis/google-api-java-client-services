@@ -70,7 +70,7 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Promotion extends co
   private java.lang.String name;
 
   /**
-   * Output only. Output Only. Specifies the type of the promotion.
+   * Output only. Specifies the type of the promotion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -193,7 +193,7 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Promotion extends co
   }
 
   /**
-   * Output only. Output Only. Specifies the type of the promotion.
+   * Output only. Specifies the type of the promotion.
    * @return value or {@code null} for none
    */
   public java.lang.String getPromotionType() {
@@ -201,7 +201,7 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1Promotion extends co
   }
 
   /**
-   * Output only. Output Only. Specifies the type of the promotion.
+   * Output only. Specifies the type of the promotion.
    * @param promotionType promotionType or {@code null} for none
    */
   public GoogleCloudPaymentsResellerSubscriptionV1Promotion setPromotionType(java.lang.String promotionType) {

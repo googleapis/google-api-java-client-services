@@ -51,6 +51,13 @@ public final class SchedulingConfig extends com.google.api.client.json.GenericJs
   private java.lang.Boolean spot;
 
   /**
+   * Output only. The time at which the node will be terminated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String terminationTimestamp;
+
+  /**
    * Defines whether the node is preemptible.
    * @return value or {@code null} for none
    */
@@ -98,6 +105,23 @@ public final class SchedulingConfig extends com.google.api.client.json.GenericJs
    */
   public SchedulingConfig setSpot(java.lang.Boolean spot) {
     this.spot = spot;
+    return this;
+  }
+
+  /**
+   * Output only. The time at which the node will be terminated.
+   * @return value or {@code null} for none
+   */
+  public String getTerminationTimestamp() {
+    return terminationTimestamp;
+  }
+
+  /**
+   * Output only. The time at which the node will be terminated.
+   * @param terminationTimestamp terminationTimestamp or {@code null} for none
+   */
+  public SchedulingConfig setTerminationTimestamp(String terminationTimestamp) {
+    this.terminationTimestamp = terminationTimestamp;
     return this;
   }
 

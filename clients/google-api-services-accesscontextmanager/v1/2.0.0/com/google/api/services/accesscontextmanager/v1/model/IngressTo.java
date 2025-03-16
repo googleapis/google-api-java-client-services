@@ -58,6 +58,14 @@ public final class IngressTo extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> resources;
 
   /**
+   * IAM roles that represent the set of operations that the sources specified in the corresponding
+   * IngressFrom are allowed to perform in this ServicePerimeter.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> roles;
+
+  /**
    * A list of ApiOperations allowed to be performed by the sources specified in corresponding
    * IngressFrom in this ServicePerimeter.
    * @return value or {@code null} for none
@@ -96,6 +104,25 @@ public final class IngressTo extends com.google.api.client.json.GenericJson {
    */
   public IngressTo setResources(java.util.List<java.lang.String> resources) {
     this.resources = resources;
+    return this;
+  }
+
+  /**
+   * IAM roles that represent the set of operations that the sources specified in the corresponding
+   * IngressFrom are allowed to perform in this ServicePerimeter.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getRoles() {
+    return roles;
+  }
+
+  /**
+   * IAM roles that represent the set of operations that the sources specified in the corresponding
+   * IngressFrom are allowed to perform in this ServicePerimeter.
+   * @param roles roles or {@code null} for none
+   */
+  public IngressTo setRoles(java.util.List<java.lang.String> roles) {
+    this.roles = roles;
     return this;
   }
 

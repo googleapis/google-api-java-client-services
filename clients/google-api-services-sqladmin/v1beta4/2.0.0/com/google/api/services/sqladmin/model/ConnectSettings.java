@@ -87,6 +87,26 @@ public final class ConnectSettings extends com.google.api.client.json.GenericJso
   private java.lang.String kind;
 
   /**
+   * The number of nodes in a read pool.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer nodeCount;
+
+  /**
+   * Output only. Entries containing information about each node of the read pool.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ConnectPoolNodeConfig> nodes;
+
+  static {
+    // hack to force ProGuard to consider ConnectPoolNodeConfig used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ConnectPoolNodeConfig.class);
+  }
+
+  /**
    * Whether PSC connectivity is enabled for this instance.
    * The value may be {@code null}.
    */
@@ -247,6 +267,40 @@ public final class ConnectSettings extends com.google.api.client.json.GenericJso
    */
   public ConnectSettings setKind(java.lang.String kind) {
     this.kind = kind;
+    return this;
+  }
+
+  /**
+   * The number of nodes in a read pool.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getNodeCount() {
+    return nodeCount;
+  }
+
+  /**
+   * The number of nodes in a read pool.
+   * @param nodeCount nodeCount or {@code null} for none
+   */
+  public ConnectSettings setNodeCount(java.lang.Integer nodeCount) {
+    this.nodeCount = nodeCount;
+    return this;
+  }
+
+  /**
+   * Output only. Entries containing information about each node of the read pool.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ConnectPoolNodeConfig> getNodes() {
+    return nodes;
+  }
+
+  /**
+   * Output only. Entries containing information about each node of the read pool.
+   * @param nodes nodes or {@code null} for none
+   */
+  public ConnectSettings setNodes(java.util.List<ConnectPoolNodeConfig> nodes) {
+    this.nodes = nodes;
     return this;
   }
 

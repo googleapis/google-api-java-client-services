@@ -58,6 +58,13 @@ public final class Flag extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> appliesTo;
 
   /**
+   * Scope of flag.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String flagScope;
+
+  /**
    * Whether or not the flag is considered in beta.
    * The value may be {@code null}.
    */
@@ -92,6 +99,20 @@ public final class Flag extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Recommended int value in integer format for UI display.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long recommendedIntValue;
+
+  /**
+   * Recommended string value in string format for UI display.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String recommendedStringValue;
 
   /**
    * Indicates whether changing this flag will trigger a database restart. Only applicable to Second
@@ -171,6 +192,23 @@ public final class Flag extends com.google.api.client.json.GenericJson {
    */
   public Flag setAppliesTo(java.util.List<java.lang.String> appliesTo) {
     this.appliesTo = appliesTo;
+    return this;
+  }
+
+  /**
+   * Scope of flag.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFlagScope() {
+    return flagScope;
+  }
+
+  /**
+   * Scope of flag.
+   * @param flagScope flagScope or {@code null} for none
+   */
+  public Flag setFlagScope(java.lang.String flagScope) {
+    this.flagScope = flagScope;
     return this;
   }
 
@@ -258,6 +296,40 @@ public final class Flag extends com.google.api.client.json.GenericJson {
    */
   public Flag setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Recommended int value in integer format for UI display.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getRecommendedIntValue() {
+    return recommendedIntValue;
+  }
+
+  /**
+   * Recommended int value in integer format for UI display.
+   * @param recommendedIntValue recommendedIntValue or {@code null} for none
+   */
+  public Flag setRecommendedIntValue(java.lang.Long recommendedIntValue) {
+    this.recommendedIntValue = recommendedIntValue;
+    return this;
+  }
+
+  /**
+   * Recommended string value in string format for UI display.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRecommendedStringValue() {
+    return recommendedStringValue;
+  }
+
+  /**
+   * Recommended string value in string format for UI display.
+   * @param recommendedStringValue recommendedStringValue or {@code null} for none
+   */
+  public Flag setRecommendedStringValue(java.lang.String recommendedStringValue) {
+    this.recommendedStringValue = recommendedStringValue;
     return this;
   }
 

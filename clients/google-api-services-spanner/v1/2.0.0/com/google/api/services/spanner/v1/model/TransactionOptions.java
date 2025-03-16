@@ -199,6 +199,13 @@ public final class TransactionOptions extends com.google.api.client.json.Generic
   private java.lang.Boolean excludeTxnFromChangeStreams;
 
   /**
+   * Isolation level for the transaction.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String isolationLevel;
+
+  /**
    * Partitioned DML transaction. Authorization to begin a Partitioned DML transaction requires
    * `spanner.databases.beginPartitionedDmlTransaction` permission on the `session` resource.
    * The value may be {@code null}.
@@ -252,6 +259,23 @@ public final class TransactionOptions extends com.google.api.client.json.Generic
    */
   public TransactionOptions setExcludeTxnFromChangeStreams(java.lang.Boolean excludeTxnFromChangeStreams) {
     this.excludeTxnFromChangeStreams = excludeTxnFromChangeStreams;
+    return this;
+  }
+
+  /**
+   * Isolation level for the transaction.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIsolationLevel() {
+    return isolationLevel;
+  }
+
+  /**
+   * Isolation level for the transaction.
+   * @param isolationLevel isolationLevel or {@code null} for none
+   */
+  public TransactionOptions setIsolationLevel(java.lang.String isolationLevel) {
+    this.isolationLevel = isolationLevel;
     return this;
   }
 

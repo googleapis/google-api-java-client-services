@@ -39,6 +39,14 @@ public final class PartialResultSet extends com.google.api.client.json.GenericJs
   private java.lang.Boolean chunkedValue;
 
   /**
+   * Optional. Indicates whether this is the last `PartialResultSet` in the stream. The server might
+   * optionally set this field. Clients shouldn't rely on this field being set in all cases.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean last;
+
+  /**
    * Metadata about the result set, such as row type information. Only present in the first
    * response.
    * The value may be {@code null}.
@@ -47,9 +55,9 @@ public final class PartialResultSet extends com.google.api.client.json.GenericJs
   private ResultSetMetadata metadata;
 
   /**
-   * Optional. A precommit token will be included if the read-write transaction is on a multiplexed
-   * session. The precommit token with the highest sequence number from this transaction attempt
-   * should be passed to the Commit request for this transaction.
+   * Optional. A precommit token is included if the read-write transaction has multiplexed sessions
+   * enabled. Pass the precommit token with the highest sequence number from this transaction
+   * attempt to the Commit request for this transaction.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +76,7 @@ public final class PartialResultSet extends com.google.api.client.json.GenericJs
   /**
    * Query plan and execution statistics for the statement that produced this streaming result set.
    * These can be requested by setting ExecuteSqlRequest.query_mode and are sent only once with the
-   * last response in the stream. This field will also be present in the last response for DML
+   * last response in the stream. This field is also present in the last response for DML
    * statements.
    * The value may be {@code null}.
    */
@@ -79,32 +87,32 @@ public final class PartialResultSet extends com.google.api.client.json.GenericJs
    * A streamed result set consists of a stream of values, which might be split into many
    * `PartialResultSet` messages to accommodate large rows and/or large values. Every N complete
    * values defines a row, where N is equal to the number of entries in metadata.row_type.fields.
-   * Most values are encoded based on type as described here. It is possible that the last value in
+   * Most values are encoded based on type as described here. It's possible that the last value in
    * values is "chunked", meaning that the rest of the value is sent in subsequent
    * `PartialResultSet`(s). This is denoted by the chunked_value field. Two or more chunked values
-   * can be merged to form a complete value as follows: * `bool/number/null`: cannot be chunked *
+   * can be merged to form a complete value as follows: * `bool/number/null`: can't be chunked *
    * `string`: concatenate the strings * `list`: concatenate the lists. If the last element in a
    * list is a `string`, `list`, or `object`, merge it with the first element in the next list by
    * applying these rules recursively. * `object`: concatenate the (field name, field value) pairs.
    * If a field name is duplicated, then apply these rules recursively to merge the field values.
-   * Some examples of merging: # Strings are concatenated. "foo", "bar" => "foobar" # Lists of non-
-   * strings are concatenated. [2, 3], [4] => [2, 3, 4] # Lists are concatenated, but the last and
-   * first elements are merged # because they are strings. ["a", "b"], ["c", "d"] => ["a", "bc",
-   * "d"] # Lists are concatenated, but the last and first elements are merged # because they are
-   * lists. Recursively, the last and first elements # of the inner lists are merged because they
-   * are strings. ["a", ["b", "c"]], [["d"], "e"] => ["a", ["b", "cd"], "e"] # Non-overlapping
-   * object fields are combined. {"a": "1"}, {"b": "2"} => {"a": "1", "b": 2"} # Overlapping object
-   * fields are merged. {"a": "1"}, {"a": "2"} => {"a": "12"} # Examples of merging objects
-   * containing lists of strings. {"a": ["1"]}, {"a": ["2"]} => {"a": ["12"]} For a more complete
-   * example, suppose a streaming SQL query is yielding a result set whose rows contain a single
-   * string field. The following `PartialResultSet`s might be yielded: { "metadata": { ... }
-   * "values": ["Hello", "W"] "chunked_value": true "resume_token": "Af65..." } { "values": ["orl"]
-   * "chunked_value": true } { "values": ["d"] "resume_token": "Zx1B..." } This sequence of
-   * `PartialResultSet`s encodes two rows, one containing the field value `"Hello"`, and a second
-   * containing the field value `"World" = "W" + "orl" + "d"`. Not all `PartialResultSet`s contain a
-   * `resume_token`. Execution can only be resumed from a previously yielded `resume_token`. For the
-   * above sequence of `PartialResultSet`s, resuming the query with `"resume_token": "Af65..."` will
-   * yield results from the `PartialResultSet` with value `["orl"]`.
+   * Some examples of merging: Strings are concatenated. "foo", "bar" => "foobar" Lists of non-
+   * strings are concatenated. [2, 3], [4] => [2, 3, 4] Lists are concatenated, but the last and
+   * first elements are merged because they are strings. ["a", "b"], ["c", "d"] => ["a", "bc", "d"]
+   * Lists are concatenated, but the last and first elements are merged because they are lists.
+   * Recursively, the last and first elements of the inner lists are merged because they are
+   * strings. ["a", ["b", "c"]], [["d"], "e"] => ["a", ["b", "cd"], "e"] Non-overlapping object
+   * fields are combined. {"a": "1"}, {"b": "2"} => {"a": "1", "b": 2"} Overlapping object fields
+   * are merged. {"a": "1"}, {"a": "2"} => {"a": "12"} Examples of merging objects containing lists
+   * of strings. {"a": ["1"]}, {"a": ["2"]} => {"a": ["12"]} For a more complete example, suppose a
+   * streaming SQL query is yielding a result set whose rows contain a single string field. The
+   * following `PartialResultSet`s might be yielded: { "metadata": { ... } "values": ["Hello", "W"]
+   * "chunked_value": true "resume_token": "Af65..." } { "values": ["orl"] "chunked_value": true } {
+   * "values": ["d"] "resume_token": "Zx1B..." } This sequence of `PartialResultSet`s encodes two
+   * rows, one containing the field value `"Hello"`, and a second containing the field value
+   * `"World" = "W" + "orl" + "d"`. Not all `PartialResultSet`s contain a `resume_token`. Execution
+   * can only be resumed from a previously yielded `resume_token`. For the above sequence of
+   * `PartialResultSet`s, resuming the query with `"resume_token": "Af65..."` yields results from
+   * the `PartialResultSet` with value "orl".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -130,6 +138,25 @@ public final class PartialResultSet extends com.google.api.client.json.GenericJs
   }
 
   /**
+   * Optional. Indicates whether this is the last `PartialResultSet` in the stream. The server might
+   * optionally set this field. Clients shouldn't rely on this field being set in all cases.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getLast() {
+    return last;
+  }
+
+  /**
+   * Optional. Indicates whether this is the last `PartialResultSet` in the stream. The server might
+   * optionally set this field. Clients shouldn't rely on this field being set in all cases.
+   * @param last last or {@code null} for none
+   */
+  public PartialResultSet setLast(java.lang.Boolean last) {
+    this.last = last;
+    return this;
+  }
+
+  /**
    * Metadata about the result set, such as row type information. Only present in the first
    * response.
    * @return value or {@code null} for none
@@ -149,9 +176,9 @@ public final class PartialResultSet extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. A precommit token will be included if the read-write transaction is on a multiplexed
-   * session. The precommit token with the highest sequence number from this transaction attempt
-   * should be passed to the Commit request for this transaction.
+   * Optional. A precommit token is included if the read-write transaction has multiplexed sessions
+   * enabled. Pass the precommit token with the highest sequence number from this transaction
+   * attempt to the Commit request for this transaction.
    * @return value or {@code null} for none
    */
   public MultiplexedSessionPrecommitToken getPrecommitToken() {
@@ -159,9 +186,9 @@ public final class PartialResultSet extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. A precommit token will be included if the read-write transaction is on a multiplexed
-   * session. The precommit token with the highest sequence number from this transaction attempt
-   * should be passed to the Commit request for this transaction.
+   * Optional. A precommit token is included if the read-write transaction has multiplexed sessions
+   * enabled. Pass the precommit token with the highest sequence number from this transaction
+   * attempt to the Commit request for this transaction.
    * @param precommitToken precommitToken or {@code null} for none
    */
   public PartialResultSet setPrecommitToken(MultiplexedSessionPrecommitToken precommitToken) {
@@ -229,7 +256,7 @@ public final class PartialResultSet extends com.google.api.client.json.GenericJs
   /**
    * Query plan and execution statistics for the statement that produced this streaming result set.
    * These can be requested by setting ExecuteSqlRequest.query_mode and are sent only once with the
-   * last response in the stream. This field will also be present in the last response for DML
+   * last response in the stream. This field is also present in the last response for DML
    * statements.
    * @return value or {@code null} for none
    */
@@ -240,7 +267,7 @@ public final class PartialResultSet extends com.google.api.client.json.GenericJs
   /**
    * Query plan and execution statistics for the statement that produced this streaming result set.
    * These can be requested by setting ExecuteSqlRequest.query_mode and are sent only once with the
-   * last response in the stream. This field will also be present in the last response for DML
+   * last response in the stream. This field is also present in the last response for DML
    * statements.
    * @param stats stats or {@code null} for none
    */
@@ -253,32 +280,32 @@ public final class PartialResultSet extends com.google.api.client.json.GenericJs
    * A streamed result set consists of a stream of values, which might be split into many
    * `PartialResultSet` messages to accommodate large rows and/or large values. Every N complete
    * values defines a row, where N is equal to the number of entries in metadata.row_type.fields.
-   * Most values are encoded based on type as described here. It is possible that the last value in
+   * Most values are encoded based on type as described here. It's possible that the last value in
    * values is "chunked", meaning that the rest of the value is sent in subsequent
    * `PartialResultSet`(s). This is denoted by the chunked_value field. Two or more chunked values
-   * can be merged to form a complete value as follows: * `bool/number/null`: cannot be chunked *
+   * can be merged to form a complete value as follows: * `bool/number/null`: can't be chunked *
    * `string`: concatenate the strings * `list`: concatenate the lists. If the last element in a
    * list is a `string`, `list`, or `object`, merge it with the first element in the next list by
    * applying these rules recursively. * `object`: concatenate the (field name, field value) pairs.
    * If a field name is duplicated, then apply these rules recursively to merge the field values.
-   * Some examples of merging: # Strings are concatenated. "foo", "bar" => "foobar" # Lists of non-
-   * strings are concatenated. [2, 3], [4] => [2, 3, 4] # Lists are concatenated, but the last and
-   * first elements are merged # because they are strings. ["a", "b"], ["c", "d"] => ["a", "bc",
-   * "d"] # Lists are concatenated, but the last and first elements are merged # because they are
-   * lists. Recursively, the last and first elements # of the inner lists are merged because they
-   * are strings. ["a", ["b", "c"]], [["d"], "e"] => ["a", ["b", "cd"], "e"] # Non-overlapping
-   * object fields are combined. {"a": "1"}, {"b": "2"} => {"a": "1", "b": 2"} # Overlapping object
-   * fields are merged. {"a": "1"}, {"a": "2"} => {"a": "12"} # Examples of merging objects
-   * containing lists of strings. {"a": ["1"]}, {"a": ["2"]} => {"a": ["12"]} For a more complete
-   * example, suppose a streaming SQL query is yielding a result set whose rows contain a single
-   * string field. The following `PartialResultSet`s might be yielded: { "metadata": { ... }
-   * "values": ["Hello", "W"] "chunked_value": true "resume_token": "Af65..." } { "values": ["orl"]
-   * "chunked_value": true } { "values": ["d"] "resume_token": "Zx1B..." } This sequence of
-   * `PartialResultSet`s encodes two rows, one containing the field value `"Hello"`, and a second
-   * containing the field value `"World" = "W" + "orl" + "d"`. Not all `PartialResultSet`s contain a
-   * `resume_token`. Execution can only be resumed from a previously yielded `resume_token`. For the
-   * above sequence of `PartialResultSet`s, resuming the query with `"resume_token": "Af65..."` will
-   * yield results from the `PartialResultSet` with value `["orl"]`.
+   * Some examples of merging: Strings are concatenated. "foo", "bar" => "foobar" Lists of non-
+   * strings are concatenated. [2, 3], [4] => [2, 3, 4] Lists are concatenated, but the last and
+   * first elements are merged because they are strings. ["a", "b"], ["c", "d"] => ["a", "bc", "d"]
+   * Lists are concatenated, but the last and first elements are merged because they are lists.
+   * Recursively, the last and first elements of the inner lists are merged because they are
+   * strings. ["a", ["b", "c"]], [["d"], "e"] => ["a", ["b", "cd"], "e"] Non-overlapping object
+   * fields are combined. {"a": "1"}, {"b": "2"} => {"a": "1", "b": 2"} Overlapping object fields
+   * are merged. {"a": "1"}, {"a": "2"} => {"a": "12"} Examples of merging objects containing lists
+   * of strings. {"a": ["1"]}, {"a": ["2"]} => {"a": ["12"]} For a more complete example, suppose a
+   * streaming SQL query is yielding a result set whose rows contain a single string field. The
+   * following `PartialResultSet`s might be yielded: { "metadata": { ... } "values": ["Hello", "W"]
+   * "chunked_value": true "resume_token": "Af65..." } { "values": ["orl"] "chunked_value": true } {
+   * "values": ["d"] "resume_token": "Zx1B..." } This sequence of `PartialResultSet`s encodes two
+   * rows, one containing the field value `"Hello"`, and a second containing the field value
+   * `"World" = "W" + "orl" + "d"`. Not all `PartialResultSet`s contain a `resume_token`. Execution
+   * can only be resumed from a previously yielded `resume_token`. For the above sequence of
+   * `PartialResultSet`s, resuming the query with `"resume_token": "Af65..."` yields results from
+   * the `PartialResultSet` with value "orl".
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.Object> getValues() {
@@ -289,32 +316,32 @@ public final class PartialResultSet extends com.google.api.client.json.GenericJs
    * A streamed result set consists of a stream of values, which might be split into many
    * `PartialResultSet` messages to accommodate large rows and/or large values. Every N complete
    * values defines a row, where N is equal to the number of entries in metadata.row_type.fields.
-   * Most values are encoded based on type as described here. It is possible that the last value in
+   * Most values are encoded based on type as described here. It's possible that the last value in
    * values is "chunked", meaning that the rest of the value is sent in subsequent
    * `PartialResultSet`(s). This is denoted by the chunked_value field. Two or more chunked values
-   * can be merged to form a complete value as follows: * `bool/number/null`: cannot be chunked *
+   * can be merged to form a complete value as follows: * `bool/number/null`: can't be chunked *
    * `string`: concatenate the strings * `list`: concatenate the lists. If the last element in a
    * list is a `string`, `list`, or `object`, merge it with the first element in the next list by
    * applying these rules recursively. * `object`: concatenate the (field name, field value) pairs.
    * If a field name is duplicated, then apply these rules recursively to merge the field values.
-   * Some examples of merging: # Strings are concatenated. "foo", "bar" => "foobar" # Lists of non-
-   * strings are concatenated. [2, 3], [4] => [2, 3, 4] # Lists are concatenated, but the last and
-   * first elements are merged # because they are strings. ["a", "b"], ["c", "d"] => ["a", "bc",
-   * "d"] # Lists are concatenated, but the last and first elements are merged # because they are
-   * lists. Recursively, the last and first elements # of the inner lists are merged because they
-   * are strings. ["a", ["b", "c"]], [["d"], "e"] => ["a", ["b", "cd"], "e"] # Non-overlapping
-   * object fields are combined. {"a": "1"}, {"b": "2"} => {"a": "1", "b": 2"} # Overlapping object
-   * fields are merged. {"a": "1"}, {"a": "2"} => {"a": "12"} # Examples of merging objects
-   * containing lists of strings. {"a": ["1"]}, {"a": ["2"]} => {"a": ["12"]} For a more complete
-   * example, suppose a streaming SQL query is yielding a result set whose rows contain a single
-   * string field. The following `PartialResultSet`s might be yielded: { "metadata": { ... }
-   * "values": ["Hello", "W"] "chunked_value": true "resume_token": "Af65..." } { "values": ["orl"]
-   * "chunked_value": true } { "values": ["d"] "resume_token": "Zx1B..." } This sequence of
-   * `PartialResultSet`s encodes two rows, one containing the field value `"Hello"`, and a second
-   * containing the field value `"World" = "W" + "orl" + "d"`. Not all `PartialResultSet`s contain a
-   * `resume_token`. Execution can only be resumed from a previously yielded `resume_token`. For the
-   * above sequence of `PartialResultSet`s, resuming the query with `"resume_token": "Af65..."` will
-   * yield results from the `PartialResultSet` with value `["orl"]`.
+   * Some examples of merging: Strings are concatenated. "foo", "bar" => "foobar" Lists of non-
+   * strings are concatenated. [2, 3], [4] => [2, 3, 4] Lists are concatenated, but the last and
+   * first elements are merged because they are strings. ["a", "b"], ["c", "d"] => ["a", "bc", "d"]
+   * Lists are concatenated, but the last and first elements are merged because they are lists.
+   * Recursively, the last and first elements of the inner lists are merged because they are
+   * strings. ["a", ["b", "c"]], [["d"], "e"] => ["a", ["b", "cd"], "e"] Non-overlapping object
+   * fields are combined. {"a": "1"}, {"b": "2"} => {"a": "1", "b": 2"} Overlapping object fields
+   * are merged. {"a": "1"}, {"a": "2"} => {"a": "12"} Examples of merging objects containing lists
+   * of strings. {"a": ["1"]}, {"a": ["2"]} => {"a": ["12"]} For a more complete example, suppose a
+   * streaming SQL query is yielding a result set whose rows contain a single string field. The
+   * following `PartialResultSet`s might be yielded: { "metadata": { ... } "values": ["Hello", "W"]
+   * "chunked_value": true "resume_token": "Af65..." } { "values": ["orl"] "chunked_value": true } {
+   * "values": ["d"] "resume_token": "Zx1B..." } This sequence of `PartialResultSet`s encodes two
+   * rows, one containing the field value `"Hello"`, and a second containing the field value
+   * `"World" = "W" + "orl" + "d"`. Not all `PartialResultSet`s contain a `resume_token`. Execution
+   * can only be resumed from a previously yielded `resume_token`. For the above sequence of
+   * `PartialResultSet`s, resuming the query with `"resume_token": "Af65..."` yields results from
+   * the `PartialResultSet` with value "orl".
    * @param values values or {@code null} for none
    */
   public PartialResultSet setValues(java.util.List<java.lang.Object> values) {

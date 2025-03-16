@@ -53,7 +53,7 @@ public final class ResultSetStats extends com.google.api.client.json.GenericJson
   private java.lang.Long rowCountExact;
 
   /**
-   * Partitioned DML does not offer exactly-once semantics, so it returns a lower bound of the rows
+   * Partitioned DML doesn't offer exactly-once semantics, so it returns a lower bound of the rows
    * modified.
    * The value may be {@code null}.
    */
@@ -116,7 +116,7 @@ public final class ResultSetStats extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Partitioned DML does not offer exactly-once semantics, so it returns a lower bound of the rows
+   * Partitioned DML doesn't offer exactly-once semantics, so it returns a lower bound of the rows
    * modified.
    * @return value or {@code null} for none
    */
@@ -125,7 +125,7 @@ public final class ResultSetStats extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Partitioned DML does not offer exactly-once semantics, so it returns a lower bound of the rows
+   * Partitioned DML doesn't offer exactly-once semantics, so it returns a lower bound of the rows
    * modified.
    * @param rowCountLowerBound rowCountLowerBound or {@code null} for none
    */

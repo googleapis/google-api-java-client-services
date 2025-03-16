@@ -30,16 +30,16 @@ package com.google.api.services.spanner.v1.model;
 public final class Partition extends com.google.api.client.json.GenericJson {
 
   /**
-   * This token can be passed to Read, StreamingRead, ExecuteSql, or ExecuteStreamingSql requests to
-   * restrict the results to those identified by this partition token.
+   * This token can be passed to `Read`, `StreamingRead`, `ExecuteSql`, or `ExecuteStreamingSql`
+   * requests to restrict the results to those identified by this partition token.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String partitionToken;
 
   /**
-   * This token can be passed to Read, StreamingRead, ExecuteSql, or ExecuteStreamingSql requests to
-   * restrict the results to those identified by this partition token.
+   * This token can be passed to `Read`, `StreamingRead`, `ExecuteSql`, or `ExecuteStreamingSql`
+   * requests to restrict the results to those identified by this partition token.
    * @see #decodePartitionToken()
    * @return value or {@code null} for none
    */
@@ -48,8 +48,8 @@ public final class Partition extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This token can be passed to Read, StreamingRead, ExecuteSql, or ExecuteStreamingSql requests to
-   * restrict the results to those identified by this partition token.
+   * This token can be passed to `Read`, `StreamingRead`, `ExecuteSql`, or `ExecuteStreamingSql`
+   * requests to restrict the results to those identified by this partition token.
    * @see #getPartitionToken()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -60,8 +60,8 @@ public final class Partition extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This token can be passed to Read, StreamingRead, ExecuteSql, or ExecuteStreamingSql requests to
-   * restrict the results to those identified by this partition token.
+   * This token can be passed to `Read`, `StreamingRead`, `ExecuteSql`, or `ExecuteStreamingSql`
+   * requests to restrict the results to those identified by this partition token.
    * @see #encodePartitionToken()
    * @param partitionToken partitionToken or {@code null} for none
    */
@@ -71,8 +71,8 @@ public final class Partition extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This token can be passed to Read, StreamingRead, ExecuteSql, or ExecuteStreamingSql requests to
-   * restrict the results to those identified by this partition token.
+   * This token can be passed to `Read`, `StreamingRead`, `ExecuteSql`, or `ExecuteStreamingSql`
+   * requests to restrict the results to those identified by this partition token.
    * @see #setPartitionToken()
    *
    * <p>

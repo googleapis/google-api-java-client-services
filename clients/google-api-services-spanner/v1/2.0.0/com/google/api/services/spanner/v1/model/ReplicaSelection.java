@@ -21,10 +21,9 @@ package com.google.api.services.spanner.v1.model;
  * replica selection: * `location` - The location must be one of the regions within the multi-region
  * configuration of your database. * `type` - The type of the replica. Some examples of using
  * replica_selectors are: * `location:us-east1` --> The "us-east1" replica(s) of any available type
- * will be used to process the request. * `type:READ_ONLY` --> The "READ_ONLY" type replica(s) in
- * nearest available location will be used to process the request. * `location:us-east1
- * type:READ_ONLY` --> The "READ_ONLY" type replica(s) in location "us-east1" will be used to
- * process the request.
+ * is used to process the request. * `type:READ_ONLY` --> The "READ_ONLY" type replica(s) in the
+ * nearest available location are used to process the request. * `location:us-east1 type:READ_ONLY`
+ * --> The "READ_ONLY" type replica(s) in location "us-east1" is used to process the request.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Spanner API. For a detailed explanation see:
@@ -37,7 +36,7 @@ package com.google.api.services.spanner.v1.model;
 public final class ReplicaSelection extends com.google.api.client.json.GenericJson {
 
   /**
-   * The location or region of the serving requests, e.g. "us-east1".
+   * The location or region of the serving requests, for example, "us-east1".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +50,7 @@ public final class ReplicaSelection extends com.google.api.client.json.GenericJs
   private java.lang.String type;
 
   /**
-   * The location or region of the serving requests, e.g. "us-east1".
+   * The location or region of the serving requests, for example, "us-east1".
    * @return value or {@code null} for none
    */
   public java.lang.String getLocation() {
@@ -59,7 +58,7 @@ public final class ReplicaSelection extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The location or region of the serving requests, e.g. "us-east1".
+   * The location or region of the serving requests, for example, "us-east1".
    * @param location location or {@code null} for none
    */
   public ReplicaSelection setLocation(java.lang.String location) {

@@ -52,6 +52,13 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private java.lang.String backupRun;
 
   /**
+   * Output only. The database version of the instance of when this backup was made.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String databaseVersion;
+
+  /**
    * The description of this backup.
    * The value may be {@code null}.
    */
@@ -245,6 +252,23 @@ public final class Backup extends com.google.api.client.json.GenericJson {
    */
   public Backup setBackupRun(java.lang.String backupRun) {
     this.backupRun = backupRun;
+    return this;
+  }
+
+  /**
+   * Output only. The database version of the instance of when this backup was made.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDatabaseVersion() {
+    return databaseVersion;
+  }
+
+  /**
+   * Output only. The database version of the instance of when this backup was made.
+   * @param databaseVersion databaseVersion or {@code null} for none
+   */
+  public Backup setDatabaseVersion(java.lang.String databaseVersion) {
+    this.databaseVersion = databaseVersion;
     return this;
   }
 

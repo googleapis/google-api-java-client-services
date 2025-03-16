@@ -211,6 +211,20 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   private java.lang.String name;
 
   /**
+   * The number of nodes in a read pool.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer nodeCount;
+
+  /**
+   * Output only. Entries containing information about each node of the read pool.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<PoolNodeConfig> nodes;
+
+  /**
    * Configuration specific to on-premises instances.
    * The value may be {@code null}.
    */
@@ -840,6 +854,40 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
    */
   public DatabaseInstance setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * The number of nodes in a read pool.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getNodeCount() {
+    return nodeCount;
+  }
+
+  /**
+   * The number of nodes in a read pool.
+   * @param nodeCount nodeCount or {@code null} for none
+   */
+  public DatabaseInstance setNodeCount(java.lang.Integer nodeCount) {
+    this.nodeCount = nodeCount;
+    return this;
+  }
+
+  /**
+   * Output only. Entries containing information about each node of the read pool.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<PoolNodeConfig> getNodes() {
+    return nodes;
+  }
+
+  /**
+   * Output only. Entries containing information about each node of the read pool.
+   * @param nodes nodes or {@code null} for none
+   */
+  public DatabaseInstance setNodes(java.util.List<PoolNodeConfig> nodes) {
+    this.nodes = nodes;
     return this;
   }
 

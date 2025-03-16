@@ -30,6 +30,13 @@ package com.google.api.services.alloydb.v1alpha.model;
 public final class ObservabilityInstanceConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Whether assistive experiences are enabled for this AlloyDB instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean assistiveExperiencesEnabled;
+
+  /**
    * Observability feature status for an instance. This flag is turned "off" by default.
    * The value may be {@code null}.
    */
@@ -88,6 +95,23 @@ public final class ObservabilityInstanceConfig extends com.google.api.client.jso
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean trackWaitEvents;
+
+  /**
+   * Whether assistive experiences are enabled for this AlloyDB instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAssistiveExperiencesEnabled() {
+    return assistiveExperiencesEnabled;
+  }
+
+  /**
+   * Whether assistive experiences are enabled for this AlloyDB instance.
+   * @param assistiveExperiencesEnabled assistiveExperiencesEnabled or {@code null} for none
+   */
+  public ObservabilityInstanceConfig setAssistiveExperiencesEnabled(java.lang.Boolean assistiveExperiencesEnabled) {
+    this.assistiveExperiencesEnabled = assistiveExperiencesEnabled;
+    return this;
+  }
 
   /**
    * Observability feature status for an instance. This flag is turned "off" by default.

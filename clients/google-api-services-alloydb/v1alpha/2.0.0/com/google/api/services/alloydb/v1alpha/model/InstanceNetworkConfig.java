@@ -58,6 +58,16 @@ public final class InstanceNetworkConfig extends com.google.api.client.json.Gene
   private java.lang.Boolean enablePublicIp;
 
   /**
+   * Output only. The resource link for the VPC network in which instance resources are created and
+   * from which they are accessible via Private IP. This will be the same value as the parent
+   * cluster's network. It is specified in the form: //
+   * `projects/{project_number}/global/networks/{network_id}`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String network;
+
+  /**
    * Optional. A list of external network authorized to access this instance.
    * @return value or {@code null} for none
    */
@@ -107,6 +117,29 @@ public final class InstanceNetworkConfig extends com.google.api.client.json.Gene
    */
   public InstanceNetworkConfig setEnablePublicIp(java.lang.Boolean enablePublicIp) {
     this.enablePublicIp = enablePublicIp;
+    return this;
+  }
+
+  /**
+   * Output only. The resource link for the VPC network in which instance resources are created and
+   * from which they are accessible via Private IP. This will be the same value as the parent
+   * cluster's network. It is specified in the form: //
+   * `projects/{project_number}/global/networks/{network_id}`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNetwork() {
+    return network;
+  }
+
+  /**
+   * Output only. The resource link for the VPC network in which instance resources are created and
+   * from which they are accessible via Private IP. This will be the same value as the parent
+   * cluster's network. It is specified in the form: //
+   * `projects/{project_number}/global/networks/{network_id}`.
+   * @param network network or {@code null} for none
+   */
+  public InstanceNetworkConfig setNetwork(java.lang.String network) {
+    this.network = network;
     return this;
   }
 

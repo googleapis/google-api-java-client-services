@@ -159,7 +159,8 @@ public final class GoogleChromeManagementVersionsV1ChromeBrowserProfile extends 
   private java.lang.String osPlatformType;
 
   /**
-   * Output only. Major OS version of the device on which the profile exists. (i.e. Windows 10)
+   * Output only. Major OS platform version of the device on which the profile exists, from profile
+   * reporting.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -526,7 +527,8 @@ public final class GoogleChromeManagementVersionsV1ChromeBrowserProfile extends 
   }
 
   /**
-   * Output only. Major OS version of the device on which the profile exists. (i.e. Windows 10)
+   * Output only. Major OS platform version of the device on which the profile exists, from profile
+   * reporting.
    * @return value or {@code null} for none
    */
   public java.lang.String getOsPlatformVersion() {
@@ -534,7 +536,8 @@ public final class GoogleChromeManagementVersionsV1ChromeBrowserProfile extends 
   }
 
   /**
-   * Output only. Major OS version of the device on which the profile exists. (i.e. Windows 10)
+   * Output only. Major OS platform version of the device on which the profile exists, from profile
+   * reporting.
    * @param osPlatformVersion osPlatformVersion or {@code null} for none
    */
   public GoogleChromeManagementVersionsV1ChromeBrowserProfile setOsPlatformVersion(java.lang.String osPlatformVersion) {

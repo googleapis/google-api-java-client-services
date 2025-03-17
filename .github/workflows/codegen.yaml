@@ -1,7 +1,8 @@
 on:
   schedule:
-  # Runs at 12:30, 1:30 and 2:30.
-  - cron: '30 0-2 * * *'
+  # Runs at 12:18, 1:18 and 2:18.
+  # See https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows#schedule
+  - cron: '18 0-2 * * *'
   workflow_dispatch:
 
 name: codegen
@@ -18,7 +19,7 @@ jobs:
         with:
           script: |
             console.log('checking size of services')
-            const MAX_SERVICE_SIZE = 300 // 00:30 to 02:30 implies 3 batches of size 100
+            const MAX_SERVICE_SIZE = 300 // 00:18 to 02:18 implies 3 batches of size 100
             const services = ${{ needs.discovery.outputs.services }}
             if (services.length > MAX_SERVICE_SIZE) {
               throw new Error(`Total services (${services.length}) exceed limit of ${MAX_SERVICE_SIZE}`)

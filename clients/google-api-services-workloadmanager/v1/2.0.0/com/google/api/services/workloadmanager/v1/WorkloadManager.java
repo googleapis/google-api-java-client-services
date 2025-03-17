@@ -4086,6 +4086,29 @@ public class WorkloadManager extends com.google.api.client.googleapis.services.j
             return this;
           }
 
+          /**
+           * Optional. The evaluation type of the rules will be applied to. The Cloud Storage bucket
+           * name for custom rules.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String evaluationType;
+
+          /** Optional. The evaluation type of the rules will be applied to. The Cloud Storage bucket name for
+         custom rules.
+           */
+          public java.lang.String getEvaluationType() {
+            return evaluationType;
+          }
+
+          /**
+           * Optional. The evaluation type of the rules will be applied to. The Cloud Storage bucket
+           * name for custom rules.
+           */
+          public List setEvaluationType(java.lang.String evaluationType) {
+            this.evaluationType = evaluationType;
+            return this;
+          }
+
           /** Filter based on primary_category, secondary_category */
           @com.google.api.client.util.Key
           private java.lang.String filter;

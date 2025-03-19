@@ -44,7 +44,7 @@ public final class GoogleCloudAiplatformV1beta1PostStartupScriptConfig extends c
   private java.lang.String postStartupScriptBehavior;
 
   /**
-   * Optional. Post startup script url to download. Example: https://bucket/script.sh
+   * Optional. Post startup script url to download. Example: `gs://bucket/script.sh`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,7 +85,7 @@ public final class GoogleCloudAiplatformV1beta1PostStartupScriptConfig extends c
   }
 
   /**
-   * Optional. Post startup script url to download. Example: https://bucket/script.sh
+   * Optional. Post startup script url to download. Example: `gs://bucket/script.sh`
    * @return value or {@code null} for none
    */
   public java.lang.String getPostStartupScriptUrl() {
@@ -93,7 +93,7 @@ public final class GoogleCloudAiplatformV1beta1PostStartupScriptConfig extends c
   }
 
   /**
-   * Optional. Post startup script url to download. Example: https://bucket/script.sh
+   * Optional. Post startup script url to download. Example: `gs://bucket/script.sh`
    * @param postStartupScriptUrl postStartupScriptUrl or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1PostStartupScriptConfig setPostStartupScriptUrl(java.lang.String postStartupScriptUrl) {

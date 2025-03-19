@@ -95,6 +95,16 @@ public final class JobConfiguration extends com.google.api.client.json.GenericJs
   private JobConfigurationQuery query;
 
   /**
+   * Optional. The reservation that job would use. User can specify a reservation to execute the
+   * job. If reservation is not set, reservation is determined based on the rules defined by the
+   * reservation assignments. The expected format is
+   * `projects/{project}/locations/{location}/reservations/{reservation}`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String reservation;
+
+  /**
    * [Pick one] Copies a table.
    * @return value or {@code null} for none
    */
@@ -245,6 +255,29 @@ public final class JobConfiguration extends com.google.api.client.json.GenericJs
    */
   public JobConfiguration setQuery(JobConfigurationQuery query) {
     this.query = query;
+    return this;
+  }
+
+  /**
+   * Optional. The reservation that job would use. User can specify a reservation to execute the
+   * job. If reservation is not set, reservation is determined based on the rules defined by the
+   * reservation assignments. The expected format is
+   * `projects/{project}/locations/{location}/reservations/{reservation}`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getReservation() {
+    return reservation;
+  }
+
+  /**
+   * Optional. The reservation that job would use. User can specify a reservation to execute the
+   * job. If reservation is not set, reservation is determined based on the rules defined by the
+   * reservation assignments. The expected format is
+   * `projects/{project}/locations/{location}/reservations/{reservation}`.
+   * @param reservation reservation or {@code null} for none
+   */
+  public JobConfiguration setReservation(java.lang.String reservation) {
+    this.reservation = reservation;
     return this;
   }
 

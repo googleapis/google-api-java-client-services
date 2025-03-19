@@ -31,6 +31,16 @@ package com.google.api.services.bigqueryreservation.v1.model;
 public final class MergeCapacityCommitmentsRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The optional resulting capacity commitment ID. Capacity commitment name will be
+   * generated automatically if this field is empty. This field must only contain lower case
+   * alphanumeric characters or dashes. The first and last character cannot be a dash. Max length is
+   * 64 characters.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String capacityCommitmentId;
+
+  /**
    * Ids of capacity commitments to merge. These capacity commitments must exist under admin project
    * and location specified in the parent. ID is the last portion of capacity commitment name e.g.,
    * 'abc' for projects/myproject/locations/US/capacityCommitments/abc
@@ -38,6 +48,29 @@ public final class MergeCapacityCommitmentsRequest extends com.google.api.client
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> capacityCommitmentIds;
+
+  /**
+   * Optional. The optional resulting capacity commitment ID. Capacity commitment name will be
+   * generated automatically if this field is empty. This field must only contain lower case
+   * alphanumeric characters or dashes. The first and last character cannot be a dash. Max length is
+   * 64 characters.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCapacityCommitmentId() {
+    return capacityCommitmentId;
+  }
+
+  /**
+   * Optional. The optional resulting capacity commitment ID. Capacity commitment name will be
+   * generated automatically if this field is empty. This field must only contain lower case
+   * alphanumeric characters or dashes. The first and last character cannot be a dash. Max length is
+   * 64 characters.
+   * @param capacityCommitmentId capacityCommitmentId or {@code null} for none
+   */
+  public MergeCapacityCommitmentsRequest setCapacityCommitmentId(java.lang.String capacityCommitmentId) {
+    this.capacityCommitmentId = capacityCommitmentId;
+    return this;
+  }
 
   /**
    * Ids of capacity commitments to merge. These capacity commitments must exist under admin project

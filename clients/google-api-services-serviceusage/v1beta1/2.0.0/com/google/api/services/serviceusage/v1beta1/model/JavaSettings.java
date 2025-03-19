@@ -40,7 +40,7 @@ public final class JavaSettings extends com.google.api.client.json.GenericJson {
    * The package name to use in Java. Clobbers the java_package option set in the protobuf. This
    * should be used **only** by APIs who have already set the language_settings.java.package_name"
    * field in gapic.yaml. API teams should use the protobuf java_package option where possible.
-   * Example of a YAML configuration:: publishing: java_settings: library_package:
+   * Example of a YAML configuration:: publishing: library_settings: java_settings: library_package:
    * com.google.cloud.pubsub.v1
    * The value may be {@code null}.
    */
@@ -80,7 +80,7 @@ public final class JavaSettings extends com.google.api.client.json.GenericJson {
    * The package name to use in Java. Clobbers the java_package option set in the protobuf. This
    * should be used **only** by APIs who have already set the language_settings.java.package_name"
    * field in gapic.yaml. API teams should use the protobuf java_package option where possible.
-   * Example of a YAML configuration:: publishing: java_settings: library_package:
+   * Example of a YAML configuration:: publishing: library_settings: java_settings: library_package:
    * com.google.cloud.pubsub.v1
    * @return value or {@code null} for none
    */
@@ -92,7 +92,7 @@ public final class JavaSettings extends com.google.api.client.json.GenericJson {
    * The package name to use in Java. Clobbers the java_package option set in the protobuf. This
    * should be used **only** by APIs who have already set the language_settings.java.package_name"
    * field in gapic.yaml. API teams should use the protobuf java_package option where possible.
-   * Example of a YAML configuration:: publishing: java_settings: library_package:
+   * Example of a YAML configuration:: publishing: library_settings: java_settings: library_package:
    * com.google.cloud.pubsub.v1
    * @param libraryPackage libraryPackage or {@code null} for none
    */

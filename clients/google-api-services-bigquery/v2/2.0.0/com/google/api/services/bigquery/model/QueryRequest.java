@@ -213,6 +213,15 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   private java.lang.String requestId;
 
   /**
+   * Optional. The reservation that jobs.query request would use. User can specify a reservation to
+   * execute the job.query. The expected format is
+   * `projects/{project}/locations/{location}/reservations/{reservation}`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String reservation;
+
+  /**
    * Optional. Optional: Specifies the maximum amount of time, in milliseconds, that the client is
    * willing to wait for the query to complete. By default, this limit is 10 seconds (10,000
    * milliseconds). If the query is complete, the jobComplete field in the response is true. If the
@@ -651,6 +660,27 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
    */
   public QueryRequest setRequestId(java.lang.String requestId) {
     this.requestId = requestId;
+    return this;
+  }
+
+  /**
+   * Optional. The reservation that jobs.query request would use. User can specify a reservation to
+   * execute the job.query. The expected format is
+   * `projects/{project}/locations/{location}/reservations/{reservation}`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getReservation() {
+    return reservation;
+  }
+
+  /**
+   * Optional. The reservation that jobs.query request would use. User can specify a reservation to
+   * execute the job.query. The expected format is
+   * `projects/{project}/locations/{location}/reservations/{reservation}`.
+   * @param reservation reservation or {@code null} for none
+   */
+  public QueryRequest setReservation(java.lang.String reservation) {
+    this.reservation = reservation;
     return this;
   }
 

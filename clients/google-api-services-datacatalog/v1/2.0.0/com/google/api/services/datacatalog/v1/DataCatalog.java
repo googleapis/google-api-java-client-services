@@ -521,7 +521,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
        * `bigquery.table.{PROJECT_ID}.{DATASET_ID}.{TABLE_ID}` *
        * `bigquery.dataset.{PROJECT_ID}.{DATASET_ID}` *
        * `datacatalog.entry.{PROJECT_ID}.{LOCATION_ID}.{ENTRY_GROUP_ID}.{ENTRY_ID}` Identifiers
-       * (`*_ID`) should comply with the [Lexical structure in Standard SQL]
+       * (`*_ID`) should comply with the [Lexical structure in GoogleSQL]
        * (https://cloud.google.com/bigquery/docs/reference/standard-sql/lexical).
        */
       @com.google.api.client.util.Key
@@ -533,7 +533,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
      `bigquery.table.{PROJECT_ID}.{DATASET_ID}.{TABLE_ID}` *
      `bigquery.dataset.{PROJECT_ID}.{DATASET_ID}` *
      `datacatalog.entry.{PROJECT_ID}.{LOCATION_ID}.{ENTRY_GROUP_ID}.{ENTRY_ID}` Identifiers (`*_ID`)
-     should comply with the [Lexical structure in Standard SQL]
+     should comply with the [Lexical structure in GoogleSQL]
      (https://cloud.google.com/bigquery/docs/reference/standard-sql/lexical).
        */
       public java.lang.String getSqlResource() {
@@ -547,7 +547,7 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
        * `bigquery.table.{PROJECT_ID}.{DATASET_ID}.{TABLE_ID}` *
        * `bigquery.dataset.{PROJECT_ID}.{DATASET_ID}` *
        * `datacatalog.entry.{PROJECT_ID}.{LOCATION_ID}.{ENTRY_GROUP_ID}.{ENTRY_ID}` Identifiers
-       * (`*_ID`) should comply with the [Lexical structure in Standard SQL]
+       * (`*_ID`) should comply with the [Lexical structure in GoogleSQL]
        * (https://cloud.google.com/bigquery/docs/reference/standard-sql/lexical).
        */
       public Lookup setSqlResource(java.lang.String sqlResource) {

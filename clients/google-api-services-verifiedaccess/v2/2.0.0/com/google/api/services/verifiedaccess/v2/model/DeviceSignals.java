@@ -264,8 +264,8 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   private java.util.List<java.lang.String> systemDnsServers;
 
   /**
-   * Output only. Whether Chrome is blocking third-party software injection or not. This setting may
-   * be controlled by an enterprise policy:
+   * Output only. Deprecated. The corresponding policy is now deprecated. Whether Chrome is blocking
+   * third-party software injection or not. This setting may be controlled by an enterprise policy:
    * https://chromeenterprise.google/policies/?policy=ThirdPartyBlockingEnabled. Available on
    * Windows only.
    * The value may be {@code null}.
@@ -846,8 +846,8 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. Whether Chrome is blocking third-party software injection or not. This setting may
-   * be controlled by an enterprise policy:
+   * Output only. Deprecated. The corresponding policy is now deprecated. Whether Chrome is blocking
+   * third-party software injection or not. This setting may be controlled by an enterprise policy:
    * https://chromeenterprise.google/policies/?policy=ThirdPartyBlockingEnabled. Available on
    * Windows only.
    * @return value or {@code null} for none
@@ -857,8 +857,8 @@ public final class DeviceSignals extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. Whether Chrome is blocking third-party software injection or not. This setting may
-   * be controlled by an enterprise policy:
+   * Output only. Deprecated. The corresponding policy is now deprecated. Whether Chrome is blocking
+   * third-party software injection or not. This setting may be controlled by an enterprise policy:
    * https://chromeenterprise.google/policies/?policy=ThirdPartyBlockingEnabled. Available on
    * Windows only.
    * @param thirdPartyBlockingEnabled thirdPartyBlockingEnabled or {@code null} for none

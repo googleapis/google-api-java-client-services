@@ -396,8 +396,14 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   /**
    * The regular hours of operation. Note that if a place is always open (24 hours), the `close`
    * field will not be set. Clients can rely on always open (24 hours) being represented as an
-   * `open` period containing `day` with value `0`, `hour` with value `0`, and `minute` with value
-   * `0`.
+   * [`open`](https://developers.google.com/maps/documentation/places/web-
+   * service/reference/rest/v1/places#Period) period containing
+   * [`day`](https://developers.google.com/maps/documentation/places/web-
+   * service/reference/rest/v1/places#Point) with value `0`,
+   * [`hour`](https://developers.google.com/maps/documentation/places/web-
+   * service/reference/rest/v1/places#Point) with value `0`, and
+   * [`minute`](https://developers.google.com/maps/documentation/places/web-
+   * service/reference/rest/v1/places#Point) with value `0`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -513,7 +519,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   private java.lang.String shortFormattedAddress;
 
   /**
-   * A list of sub destinations related to the place.
+   * A list of sub-destinations related to the place.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1432,8 +1438,14 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   /**
    * The regular hours of operation. Note that if a place is always open (24 hours), the `close`
    * field will not be set. Clients can rely on always open (24 hours) being represented as an
-   * `open` period containing `day` with value `0`, `hour` with value `0`, and `minute` with value
-   * `0`.
+   * [`open`](https://developers.google.com/maps/documentation/places/web-
+   * service/reference/rest/v1/places#Period) period containing
+   * [`day`](https://developers.google.com/maps/documentation/places/web-
+   * service/reference/rest/v1/places#Point) with value `0`,
+   * [`hour`](https://developers.google.com/maps/documentation/places/web-
+   * service/reference/rest/v1/places#Point) with value `0`, and
+   * [`minute`](https://developers.google.com/maps/documentation/places/web-
+   * service/reference/rest/v1/places#Point) with value `0`.
    * @return value or {@code null} for none
    */
   public GoogleMapsPlacesV1PlaceOpeningHours getRegularOpeningHours() {
@@ -1443,8 +1455,14 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   /**
    * The regular hours of operation. Note that if a place is always open (24 hours), the `close`
    * field will not be set. Clients can rely on always open (24 hours) being represented as an
-   * `open` period containing `day` with value `0`, `hour` with value `0`, and `minute` with value
-   * `0`.
+   * [`open`](https://developers.google.com/maps/documentation/places/web-
+   * service/reference/rest/v1/places#Period) period containing
+   * [`day`](https://developers.google.com/maps/documentation/places/web-
+   * service/reference/rest/v1/places#Point) with value `0`,
+   * [`hour`](https://developers.google.com/maps/documentation/places/web-
+   * service/reference/rest/v1/places#Point) with value `0`, and
+   * [`minute`](https://developers.google.com/maps/documentation/places/web-
+   * service/reference/rest/v1/places#Point) with value `0`.
    * @param regularOpeningHours regularOpeningHours or {@code null} for none
    */
   public GoogleMapsPlacesV1Place setRegularOpeningHours(GoogleMapsPlacesV1PlaceOpeningHours regularOpeningHours) {
@@ -1716,7 +1734,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * A list of sub destinations related to the place.
+   * A list of sub-destinations related to the place.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleMapsPlacesV1PlaceSubDestination> getSubDestinations() {
@@ -1724,7 +1742,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * A list of sub destinations related to the place.
+   * A list of sub-destinations related to the place.
    * @param subDestinations subDestinations or {@code null} for none
    */
   public GoogleMapsPlacesV1Place setSubDestinations(java.util.List<GoogleMapsPlacesV1PlaceSubDestination> subDestinations) {

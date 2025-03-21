@@ -142,6 +142,13 @@ public final class GoogleCloudRunV2Revision extends com.google.api.client.json.G
   private java.lang.Long generation;
 
   /**
+   * Optional. Output only. True if GPU zonal redundancy is disabled on this revision.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean gpuZonalRedundancyDisabled;
+
+  /**
    * Output only. Unstructured key value map that can be used to organize and categorize objects.
    * User-provided labels are shared with Google's billing system, so they can be used to filter, or
    * break down billing charges by team, component, environment, state, etc. For more information,
@@ -529,6 +536,23 @@ public final class GoogleCloudRunV2Revision extends com.google.api.client.json.G
    */
   public GoogleCloudRunV2Revision setGeneration(java.lang.Long generation) {
     this.generation = generation;
+    return this;
+  }
+
+  /**
+   * Optional. Output only. True if GPU zonal redundancy is disabled on this revision.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getGpuZonalRedundancyDisabled() {
+    return gpuZonalRedundancyDisabled;
+  }
+
+  /**
+   * Optional. Output only. True if GPU zonal redundancy is disabled on this revision.
+   * @param gpuZonalRedundancyDisabled gpuZonalRedundancyDisabled or {@code null} for none
+   */
+  public GoogleCloudRunV2Revision setGpuZonalRedundancyDisabled(java.lang.Boolean gpuZonalRedundancyDisabled) {
+    this.gpuZonalRedundancyDisabled = gpuZonalRedundancyDisabled;
     return this;
   }
 

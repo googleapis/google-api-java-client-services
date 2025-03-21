@@ -38,7 +38,7 @@ public final class GoogleCloudApigeeV1DnsZonePeeringConfig extends com.google.ap
   private java.lang.String targetNetworkId;
 
   /**
-   * Required. The ID of the project containing the private DNS zone.
+   * Required. The ID of the project that contains the producer VPC network.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +64,7 @@ public final class GoogleCloudApigeeV1DnsZonePeeringConfig extends com.google.ap
   }
 
   /**
-   * Required. The ID of the project containing the private DNS zone.
+   * Required. The ID of the project that contains the producer VPC network.
    * @return value or {@code null} for none
    */
   public java.lang.String getTargetProjectId() {
@@ -72,7 +72,7 @@ public final class GoogleCloudApigeeV1DnsZonePeeringConfig extends com.google.ap
   }
 
   /**
-   * Required. The ID of the project containing the private DNS zone.
+   * Required. The ID of the project that contains the producer VPC network.
    * @param targetProjectId targetProjectId or {@code null} for none
    */
   public GoogleCloudApigeeV1DnsZonePeeringConfig setTargetProjectId(java.lang.String targetProjectId) {

@@ -69,7 +69,8 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
 
   /**
    * Output only. Whether this workstation cluster is in degraded mode, in which case it may require
-   * user action to restore full functionality. Details can be found in conditions.
+   * user action to restore full functionality. The conditions field contains detailed information
+   * about the status of the cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -153,8 +154,8 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
   private java.lang.String subnetwork;
 
   /**
-   * Optional. Tag keys/values directly bound to this resource. For example: "123/environment":
-   * "production", "123/costCenter": "marketing"
+   * Optional. Input only. Immutable. Tag keys/values directly bound to this resource. For example:
+   * "123/environment": "production", "123/costCenter": "marketing"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -248,7 +249,8 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
 
   /**
    * Output only. Whether this workstation cluster is in degraded mode, in which case it may require
-   * user action to restore full functionality. Details can be found in conditions.
+   * user action to restore full functionality. The conditions field contains detailed information
+   * about the status of the cluster.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDegraded() {
@@ -257,7 +259,8 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
 
   /**
    * Output only. Whether this workstation cluster is in degraded mode, in which case it may require
-   * user action to restore full functionality. Details can be found in conditions.
+   * user action to restore full functionality. The conditions field contains detailed information
+   * about the status of the cluster.
    * @param degraded degraded or {@code null} for none
    */
   public WorkstationCluster setDegraded(java.lang.Boolean degraded) {
@@ -450,8 +453,8 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. Tag keys/values directly bound to this resource. For example: "123/environment":
-   * "production", "123/costCenter": "marketing"
+   * Optional. Input only. Immutable. Tag keys/values directly bound to this resource. For example:
+   * "123/environment": "production", "123/costCenter": "marketing"
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getTags() {
@@ -459,8 +462,8 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. Tag keys/values directly bound to this resource. For example: "123/environment":
-   * "production", "123/costCenter": "marketing"
+   * Optional. Input only. Immutable. Tag keys/values directly bound to this resource. For example:
+   * "123/environment": "production", "123/costCenter": "marketing"
    * @param tags tags or {@code null} for none
    */
   public WorkstationCluster setTags(java.util.Map<String, java.lang.String> tags) {

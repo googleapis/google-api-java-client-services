@@ -66,7 +66,7 @@ public final class AutoprovisioningNodePoolDefaults extends com.google.api.clien
   private java.lang.String imageType;
 
   /**
-   * Enable or disable Kubelet read only port.
+   * DEPRECATED. Use NodePoolAutoConfig.NodeKubeletConfig instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -213,7 +213,7 @@ public final class AutoprovisioningNodePoolDefaults extends com.google.api.clien
   }
 
   /**
-   * Enable or disable Kubelet read only port.
+   * DEPRECATED. Use NodePoolAutoConfig.NodeKubeletConfig instead.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getInsecureKubeletReadonlyPortEnabled() {
@@ -221,7 +221,7 @@ public final class AutoprovisioningNodePoolDefaults extends com.google.api.clien
   }
 
   /**
-   * Enable or disable Kubelet read only port.
+   * DEPRECATED. Use NodePoolAutoConfig.NodeKubeletConfig instead.
    * @param insecureKubeletReadonlyPortEnabled insecureKubeletReadonlyPortEnabled or {@code null} for none
    */
   public AutoprovisioningNodePoolDefaults setInsecureKubeletReadonlyPortEnabled(java.lang.Boolean insecureKubeletReadonlyPortEnabled) {

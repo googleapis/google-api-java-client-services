@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-bigquerydatapolicy</artifactId>
-  <version>v1-rev20240806-2.0.0</version>
-  <name>BigQuery Data Policy API v1-rev20240806-2.0.0</name>
+  <version>v1-rev20250317-2.0.0</version>
+  <name>BigQuery Data Policy API v1-rev20250317-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

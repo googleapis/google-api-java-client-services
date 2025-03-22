@@ -31,6 +31,13 @@ package com.google.api.services.contactcenterinsights.v1.model;
 public final class GoogleCloudContactcenterinsightsV1alpha1ExportInsightsDataMetadata extends com.google.api.client.json.GenericJson {
 
   /**
+   * The number of conversations that were exported successfully.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer completedExportCount;
+
+  /**
    * Output only. The time the operation was created.
    * The value may be {@code null}.
    */
@@ -45,6 +52,13 @@ public final class GoogleCloudContactcenterinsightsV1alpha1ExportInsightsDataMet
   private String endTime;
 
   /**
+   * The number of conversations that failed to be exported.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer failedExportCount;
+
+  /**
    * Partial errors during export operation that might cause the operation output to be incomplete.
    * The value may be {@code null}.
    */
@@ -57,6 +71,23 @@ public final class GoogleCloudContactcenterinsightsV1alpha1ExportInsightsDataMet
    */
   @com.google.api.client.util.Key
   private GoogleCloudContactcenterinsightsV1alpha1ExportInsightsDataRequest request;
+
+  /**
+   * The number of conversations that were exported successfully.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getCompletedExportCount() {
+    return completedExportCount;
+  }
+
+  /**
+   * The number of conversations that were exported successfully.
+   * @param completedExportCount completedExportCount or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1ExportInsightsDataMetadata setCompletedExportCount(java.lang.Integer completedExportCount) {
+    this.completedExportCount = completedExportCount;
+    return this;
+  }
 
   /**
    * Output only. The time the operation was created.
@@ -89,6 +120,23 @@ public final class GoogleCloudContactcenterinsightsV1alpha1ExportInsightsDataMet
    */
   public GoogleCloudContactcenterinsightsV1alpha1ExportInsightsDataMetadata setEndTime(String endTime) {
     this.endTime = endTime;
+    return this;
+  }
+
+  /**
+   * The number of conversations that failed to be exported.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getFailedExportCount() {
+    return failedExportCount;
+  }
+
+  /**
+   * The number of conversations that failed to be exported.
+   * @param failedExportCount failedExportCount or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1ExportInsightsDataMetadata setFailedExportCount(java.lang.Integer failedExportCount) {
+    this.failedExportCount = failedExportCount;
     return this;
   }
 

@@ -28,7 +28,7 @@ package com.google.api.services.civicinfo.v2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class SimpleAddressType extends com.google.api.client.json.GenericJson {
+public final class CivicinfoSchemaV2SimpleAddressType extends com.google.api.client.json.GenericJson {
 
   /**
    * The city or town for the address.
@@ -91,7 +91,7 @@ public final class SimpleAddressType extends com.google.api.client.json.GenericJ
    * The city or town for the address.
    * @param city city or {@code null} for none
    */
-  public SimpleAddressType setCity(java.lang.String city) {
+  public CivicinfoSchemaV2SimpleAddressType setCity(java.lang.String city) {
     this.city = city;
     return this;
   }
@@ -108,7 +108,7 @@ public final class SimpleAddressType extends com.google.api.client.json.GenericJ
    * The street name and number of this address.
    * @param line1 line1 or {@code null} for none
    */
-  public SimpleAddressType setLine1(java.lang.String line1) {
+  public CivicinfoSchemaV2SimpleAddressType setLine1(java.lang.String line1) {
     this.line1 = line1;
     return this;
   }
@@ -125,7 +125,7 @@ public final class SimpleAddressType extends com.google.api.client.json.GenericJ
    * The second line the address, if needed.
    * @param line2 line2 or {@code null} for none
    */
-  public SimpleAddressType setLine2(java.lang.String line2) {
+  public CivicinfoSchemaV2SimpleAddressType setLine2(java.lang.String line2) {
     this.line2 = line2;
     return this;
   }
@@ -142,7 +142,7 @@ public final class SimpleAddressType extends com.google.api.client.json.GenericJ
    * The third line of the address, if needed.
    * @param line3 line3 or {@code null} for none
    */
-  public SimpleAddressType setLine3(java.lang.String line3) {
+  public CivicinfoSchemaV2SimpleAddressType setLine3(java.lang.String line3) {
     this.line3 = line3;
     return this;
   }
@@ -159,7 +159,7 @@ public final class SimpleAddressType extends com.google.api.client.json.GenericJ
    * The name of the location.
    * @param locationName locationName or {@code null} for none
    */
-  public SimpleAddressType setLocationName(java.lang.String locationName) {
+  public CivicinfoSchemaV2SimpleAddressType setLocationName(java.lang.String locationName) {
     this.locationName = locationName;
     return this;
   }
@@ -176,7 +176,7 @@ public final class SimpleAddressType extends com.google.api.client.json.GenericJ
    * The US two letter state abbreviation of the address.
    * @param state state or {@code null} for none
    */
-  public SimpleAddressType setState(java.lang.String state) {
+  public CivicinfoSchemaV2SimpleAddressType setState(java.lang.String state) {
     this.state = state;
     return this;
   }
@@ -193,19 +193,19 @@ public final class SimpleAddressType extends com.google.api.client.json.GenericJ
    * The US Postal Zip Code of the address.
    * @param zip zip or {@code null} for none
    */
-  public SimpleAddressType setZip(java.lang.String zip) {
+  public CivicinfoSchemaV2SimpleAddressType setZip(java.lang.String zip) {
     this.zip = zip;
     return this;
   }
 
   @Override
-  public SimpleAddressType set(String fieldName, Object value) {
-    return (SimpleAddressType) super.set(fieldName, value);
+  public CivicinfoSchemaV2SimpleAddressType set(String fieldName, Object value) {
+    return (CivicinfoSchemaV2SimpleAddressType) super.set(fieldName, value);
   }
 
   @Override
-  public SimpleAddressType clone() {
-    return (SimpleAddressType) super.clone();
+  public CivicinfoSchemaV2SimpleAddressType clone() {
+    return (CivicinfoSchemaV2SimpleAddressType) super.clone();
   }
 
 }

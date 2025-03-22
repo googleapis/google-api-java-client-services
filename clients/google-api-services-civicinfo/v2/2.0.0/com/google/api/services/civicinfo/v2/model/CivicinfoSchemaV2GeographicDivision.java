@@ -28,7 +28,7 @@ package com.google.api.services.civicinfo.v2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GeographicDivision extends com.google.api.client.json.GenericJson {
+public final class CivicinfoSchemaV2GeographicDivision extends com.google.api.client.json.GenericJson {
 
   /**
    * Any other valid OCD IDs that refer to the same division.\n\nBecause OCD IDs are meant to be
@@ -82,7 +82,7 @@ public final class GeographicDivision extends com.google.api.client.json.Generic
    * ocd-division/country:us/state:dc.
    * @param alsoKnownAs alsoKnownAs or {@code null} for none
    */
-  public GeographicDivision setAlsoKnownAs(java.util.List<java.lang.String> alsoKnownAs) {
+  public CivicinfoSchemaV2GeographicDivision setAlsoKnownAs(java.util.List<java.lang.String> alsoKnownAs) {
     this.alsoKnownAs = alsoKnownAs;
     return this;
   }
@@ -99,7 +99,7 @@ public final class GeographicDivision extends com.google.api.client.json.Generic
    * The name of the division.
    * @param name name or {@code null} for none
    */
-  public GeographicDivision setName(java.lang.String name) {
+  public CivicinfoSchemaV2GeographicDivision setName(java.lang.String name) {
     this.name = name;
     return this;
   }
@@ -118,19 +118,19 @@ public final class GeographicDivision extends com.google.api.client.json.Generic
    * be present if includeOffices was true (or absent) in the request.
    * @param officeIndices officeIndices or {@code null} for none
    */
-  public GeographicDivision setOfficeIndices(java.util.List<java.lang.Long> officeIndices) {
+  public CivicinfoSchemaV2GeographicDivision setOfficeIndices(java.util.List<java.lang.Long> officeIndices) {
     this.officeIndices = officeIndices;
     return this;
   }
 
   @Override
-  public GeographicDivision set(String fieldName, Object value) {
-    return (GeographicDivision) super.set(fieldName, value);
+  public CivicinfoSchemaV2GeographicDivision set(String fieldName, Object value) {
+    return (CivicinfoSchemaV2GeographicDivision) super.set(fieldName, value);
   }
 
   @Override
-  public GeographicDivision clone() {
-    return (GeographicDivision) super.clone();
+  public CivicinfoSchemaV2GeographicDivision clone() {
+    return (CivicinfoSchemaV2GeographicDivision) super.clone();
   }
 
 }

@@ -28,7 +28,7 @@ package com.google.api.services.civicinfo.v2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Candidate extends com.google.api.client.json.GenericJson {
+public final class CivicinfoSchemaV2Candidate extends com.google.api.client.json.GenericJson {
 
   /**
    * The URL for the candidate's campaign web site.
@@ -42,7 +42,7 @@ public final class Candidate extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<Channel> channels;
+  private java.util.List<CivicinfoSchemaV2Channel> channels;
 
   /**
    * The email address for the candidate's campaign.
@@ -100,7 +100,7 @@ public final class Candidate extends com.google.api.client.json.GenericJson {
    * The URL for the candidate's campaign web site.
    * @param candidateUrl candidateUrl or {@code null} for none
    */
-  public Candidate setCandidateUrl(java.lang.String candidateUrl) {
+  public CivicinfoSchemaV2Candidate setCandidateUrl(java.lang.String candidateUrl) {
     this.candidateUrl = candidateUrl;
     return this;
   }
@@ -109,7 +109,7 @@ public final class Candidate extends com.google.api.client.json.GenericJson {
    * A list of known (social) media channels for this candidate.
    * @return value or {@code null} for none
    */
-  public java.util.List<Channel> getChannels() {
+  public java.util.List<CivicinfoSchemaV2Channel> getChannels() {
     return channels;
   }
 
@@ -117,7 +117,7 @@ public final class Candidate extends com.google.api.client.json.GenericJson {
    * A list of known (social) media channels for this candidate.
    * @param channels channels or {@code null} for none
    */
-  public Candidate setChannels(java.util.List<Channel> channels) {
+  public CivicinfoSchemaV2Candidate setChannels(java.util.List<CivicinfoSchemaV2Channel> channels) {
     this.channels = channels;
     return this;
   }
@@ -134,7 +134,7 @@ public final class Candidate extends com.google.api.client.json.GenericJson {
    * The email address for the candidate's campaign.
    * @param email email or {@code null} for none
    */
-  public Candidate setEmail(java.lang.String email) {
+  public CivicinfoSchemaV2Candidate setEmail(java.lang.String email) {
     this.email = email;
     return this;
   }
@@ -155,7 +155,7 @@ public final class Candidate extends com.google.api.client.json.GenericJson {
    * e.g. "Mitt Romney / Paul Ryan"
    * @param name name or {@code null} for none
    */
-  public Candidate setName(java.lang.String name) {
+  public CivicinfoSchemaV2Candidate setName(java.lang.String name) {
     this.name = name;
     return this;
   }
@@ -172,7 +172,7 @@ public final class Candidate extends com.google.api.client.json.GenericJson {
    * The order the candidate appears on the ballot for this contest.
    * @param orderOnBallot orderOnBallot or {@code null} for none
    */
-  public Candidate setOrderOnBallot(java.lang.Long orderOnBallot) {
+  public CivicinfoSchemaV2Candidate setOrderOnBallot(java.lang.Long orderOnBallot) {
     this.orderOnBallot = orderOnBallot;
     return this;
   }
@@ -189,7 +189,7 @@ public final class Candidate extends com.google.api.client.json.GenericJson {
    * The full name of the party the candidate is a member of.
    * @param party party or {@code null} for none
    */
-  public Candidate setParty(java.lang.String party) {
+  public CivicinfoSchemaV2Candidate setParty(java.lang.String party) {
     this.party = party;
     return this;
   }
@@ -206,7 +206,7 @@ public final class Candidate extends com.google.api.client.json.GenericJson {
    * The voice phone number for the candidate's campaign office.
    * @param phone phone or {@code null} for none
    */
-  public Candidate setPhone(java.lang.String phone) {
+  public CivicinfoSchemaV2Candidate setPhone(java.lang.String phone) {
     this.phone = phone;
     return this;
   }
@@ -223,19 +223,19 @@ public final class Candidate extends com.google.api.client.json.GenericJson {
    * A URL for a photo of the candidate.
    * @param photoUrl photoUrl or {@code null} for none
    */
-  public Candidate setPhotoUrl(java.lang.String photoUrl) {
+  public CivicinfoSchemaV2Candidate setPhotoUrl(java.lang.String photoUrl) {
     this.photoUrl = photoUrl;
     return this;
   }
 
   @Override
-  public Candidate set(String fieldName, Object value) {
-    return (Candidate) super.set(fieldName, value);
+  public CivicinfoSchemaV2Candidate set(String fieldName, Object value) {
+    return (CivicinfoSchemaV2Candidate) super.set(fieldName, value);
   }
 
   @Override
-  public Candidate clone() {
-    return (Candidate) super.clone();
+  public CivicinfoSchemaV2Candidate clone() {
+    return (CivicinfoSchemaV2Candidate) super.clone();
   }
 
 }

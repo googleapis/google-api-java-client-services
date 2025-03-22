@@ -28,20 +28,14 @@ package com.google.api.services.civicinfo.v2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class VoterInfoResponse extends com.google.api.client.json.GenericJson {
+public final class CivicinfoApiprotosV2VoterInfoResponse extends com.google.api.client.json.GenericJson {
 
   /**
    * Contests that will appear on the voter's ballot.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<Contest> contests;
-
-  static {
-    // hack to force ProGuard to consider Contest used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Contest.class);
-  }
+  private java.util.List<CivicinfoSchemaV2Contest> contests;
 
   /**
    * Locations where a voter is eligible to drop off a completed ballot. The voter must have
@@ -51,33 +45,21 @@ public final class VoterInfoResponse extends com.google.api.client.json.GenericJ
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<PollingLocation> dropOffLocations;
-
-  static {
-    // hack to force ProGuard to consider PollingLocation used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(PollingLocation.class);
-  }
+  private java.util.List<CivicinfoSchemaV2PollingLocation> dropOffLocations;
 
   /**
    * Locations where the voter is eligible to vote early, prior to election day.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<PollingLocation> earlyVoteSites;
-
-  static {
-    // hack to force ProGuard to consider PollingLocation used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(PollingLocation.class);
-  }
+  private java.util.List<CivicinfoSchemaV2PollingLocation> earlyVoteSites;
 
   /**
    * The election that was queried.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private Election election;
+  private CivicinfoSchemaV2Election election;
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
@@ -100,7 +82,7 @@ public final class VoterInfoResponse extends com.google.api.client.json.GenericJ
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private SimpleAddressType normalizedInput;
+  private CivicinfoSchemaV2SimpleAddressType normalizedInput;
 
   /**
    * When there are multiple elections for a voter address, the otherElections field is populated in
@@ -114,26 +96,14 @@ public final class VoterInfoResponse extends com.google.api.client.json.GenericJ
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<Election> otherElections;
-
-  static {
-    // hack to force ProGuard to consider Election used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Election.class);
-  }
+  private java.util.List<CivicinfoSchemaV2Election> otherElections;
 
   /**
    * Locations where the voter is eligible to vote on election day.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<PollingLocation> pollingLocations;
-
-  static {
-    // hack to force ProGuard to consider PollingLocation used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(PollingLocation.class);
-  }
+  private java.util.List<CivicinfoSchemaV2PollingLocation> pollingLocations;
 
   /**
    * The value may be {@code null}.
@@ -147,13 +117,7 @@ public final class VoterInfoResponse extends com.google.api.client.json.GenericJ
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<Precinct> precincts;
-
-  static {
-    // hack to force ProGuard to consider Precinct used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Precinct.class);
-  }
+  private java.util.List<CivicinfoSchemaV2Precinct> precincts;
 
   /**
    * Local Election Information for the state that the voter votes in. For the US, there will only
@@ -161,19 +125,13 @@ public final class VoterInfoResponse extends com.google.api.client.json.GenericJ
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<AdministrationRegion> state;
-
-  static {
-    // hack to force ProGuard to consider AdministrationRegion used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(AdministrationRegion.class);
-  }
+  private java.util.List<CivicinfoSchemaV2AdministrationRegion> state;
 
   /**
    * Contests that will appear on the voter's ballot.
    * @return value or {@code null} for none
    */
-  public java.util.List<Contest> getContests() {
+  public java.util.List<CivicinfoSchemaV2Contest> getContests() {
     return contests;
   }
 
@@ -181,7 +139,7 @@ public final class VoterInfoResponse extends com.google.api.client.json.GenericJ
    * Contests that will appear on the voter's ballot.
    * @param contests contests or {@code null} for none
    */
-  public VoterInfoResponse setContests(java.util.List<Contest> contests) {
+  public CivicinfoApiprotosV2VoterInfoResponse setContests(java.util.List<CivicinfoSchemaV2Contest> contests) {
     this.contests = contests;
     return this;
   }
@@ -193,7 +151,7 @@ public final class VoterInfoResponse extends com.google.api.client.json.GenericJ
    * indicated in the pollingHours field.
    * @return value or {@code null} for none
    */
-  public java.util.List<PollingLocation> getDropOffLocations() {
+  public java.util.List<CivicinfoSchemaV2PollingLocation> getDropOffLocations() {
     return dropOffLocations;
   }
 
@@ -204,7 +162,7 @@ public final class VoterInfoResponse extends com.google.api.client.json.GenericJ
    * indicated in the pollingHours field.
    * @param dropOffLocations dropOffLocations or {@code null} for none
    */
-  public VoterInfoResponse setDropOffLocations(java.util.List<PollingLocation> dropOffLocations) {
+  public CivicinfoApiprotosV2VoterInfoResponse setDropOffLocations(java.util.List<CivicinfoSchemaV2PollingLocation> dropOffLocations) {
     this.dropOffLocations = dropOffLocations;
     return this;
   }
@@ -213,7 +171,7 @@ public final class VoterInfoResponse extends com.google.api.client.json.GenericJ
    * Locations where the voter is eligible to vote early, prior to election day.
    * @return value or {@code null} for none
    */
-  public java.util.List<PollingLocation> getEarlyVoteSites() {
+  public java.util.List<CivicinfoSchemaV2PollingLocation> getEarlyVoteSites() {
     return earlyVoteSites;
   }
 
@@ -221,7 +179,7 @@ public final class VoterInfoResponse extends com.google.api.client.json.GenericJ
    * Locations where the voter is eligible to vote early, prior to election day.
    * @param earlyVoteSites earlyVoteSites or {@code null} for none
    */
-  public VoterInfoResponse setEarlyVoteSites(java.util.List<PollingLocation> earlyVoteSites) {
+  public CivicinfoApiprotosV2VoterInfoResponse setEarlyVoteSites(java.util.List<CivicinfoSchemaV2PollingLocation> earlyVoteSites) {
     this.earlyVoteSites = earlyVoteSites;
     return this;
   }
@@ -230,7 +188,7 @@ public final class VoterInfoResponse extends com.google.api.client.json.GenericJ
    * The election that was queried.
    * @return value or {@code null} for none
    */
-  public Election getElection() {
+  public CivicinfoSchemaV2Election getElection() {
     return election;
   }
 
@@ -238,7 +196,7 @@ public final class VoterInfoResponse extends com.google.api.client.json.GenericJ
    * The election that was queried.
    * @param election election or {@code null} for none
    */
-  public VoterInfoResponse setElection(Election election) {
+  public CivicinfoApiprotosV2VoterInfoResponse setElection(CivicinfoSchemaV2Election election) {
     this.election = election;
     return this;
   }
@@ -257,7 +215,7 @@ public final class VoterInfoResponse extends com.google.api.client.json.GenericJ
    * "civicinfo#voterInfoResponse".
    * @param kind kind or {@code null} for none
    */
-  public VoterInfoResponse setKind(java.lang.String kind) {
+  public CivicinfoApiprotosV2VoterInfoResponse setKind(java.lang.String kind) {
     this.kind = kind;
     return this;
   }
@@ -276,7 +234,7 @@ public final class VoterInfoResponse extends com.google.api.client.json.GenericJ
    * option of dropping off their ballots as well).
    * @param mailOnly mailOnly or {@code null} for none
    */
-  public VoterInfoResponse setMailOnly(java.lang.Boolean mailOnly) {
+  public CivicinfoApiprotosV2VoterInfoResponse setMailOnly(java.lang.Boolean mailOnly) {
     this.mailOnly = mailOnly;
     return this;
   }
@@ -285,7 +243,7 @@ public final class VoterInfoResponse extends com.google.api.client.json.GenericJ
    * The normalized version of the requested address
    * @return value or {@code null} for none
    */
-  public SimpleAddressType getNormalizedInput() {
+  public CivicinfoSchemaV2SimpleAddressType getNormalizedInput() {
     return normalizedInput;
   }
 
@@ -293,7 +251,7 @@ public final class VoterInfoResponse extends com.google.api.client.json.GenericJ
    * The normalized version of the requested address
    * @param normalizedInput normalizedInput or {@code null} for none
    */
-  public VoterInfoResponse setNormalizedInput(SimpleAddressType normalizedInput) {
+  public CivicinfoApiprotosV2VoterInfoResponse setNormalizedInput(CivicinfoSchemaV2SimpleAddressType normalizedInput) {
     this.normalizedInput = normalizedInput;
     return this;
   }
@@ -309,7 +267,7 @@ public final class VoterInfoResponse extends com.google.api.client.json.GenericJ
    * election that is relevant to the user.
    * @return value or {@code null} for none
    */
-  public java.util.List<Election> getOtherElections() {
+  public java.util.List<CivicinfoSchemaV2Election> getOtherElections() {
     return otherElections;
   }
 
@@ -324,7 +282,7 @@ public final class VoterInfoResponse extends com.google.api.client.json.GenericJ
    * election that is relevant to the user.
    * @param otherElections otherElections or {@code null} for none
    */
-  public VoterInfoResponse setOtherElections(java.util.List<Election> otherElections) {
+  public CivicinfoApiprotosV2VoterInfoResponse setOtherElections(java.util.List<CivicinfoSchemaV2Election> otherElections) {
     this.otherElections = otherElections;
     return this;
   }
@@ -333,7 +291,7 @@ public final class VoterInfoResponse extends com.google.api.client.json.GenericJ
    * Locations where the voter is eligible to vote on election day.
    * @return value or {@code null} for none
    */
-  public java.util.List<PollingLocation> getPollingLocations() {
+  public java.util.List<CivicinfoSchemaV2PollingLocation> getPollingLocations() {
     return pollingLocations;
   }
 
@@ -341,7 +299,7 @@ public final class VoterInfoResponse extends com.google.api.client.json.GenericJ
    * Locations where the voter is eligible to vote on election day.
    * @param pollingLocations pollingLocations or {@code null} for none
    */
-  public VoterInfoResponse setPollingLocations(java.util.List<PollingLocation> pollingLocations) {
+  public CivicinfoApiprotosV2VoterInfoResponse setPollingLocations(java.util.List<CivicinfoSchemaV2PollingLocation> pollingLocations) {
     this.pollingLocations = pollingLocations;
     return this;
   }
@@ -356,7 +314,7 @@ public final class VoterInfoResponse extends com.google.api.client.json.GenericJ
   /**
    * @param precinctId precinctId or {@code null} for none
    */
-  public VoterInfoResponse setPrecinctId(java.lang.String precinctId) {
+  public CivicinfoApiprotosV2VoterInfoResponse setPrecinctId(java.lang.String precinctId) {
     this.precinctId = precinctId;
     return this;
   }
@@ -366,7 +324,7 @@ public final class VoterInfoResponse extends com.google.api.client.json.GenericJ
    * been allowlisted as "partner projects".
    * @return value or {@code null} for none
    */
-  public java.util.List<Precinct> getPrecincts() {
+  public java.util.List<CivicinfoSchemaV2Precinct> getPrecincts() {
     return precincts;
   }
 
@@ -375,7 +333,7 @@ public final class VoterInfoResponse extends com.google.api.client.json.GenericJ
    * been allowlisted as "partner projects".
    * @param precincts precincts or {@code null} for none
    */
-  public VoterInfoResponse setPrecincts(java.util.List<Precinct> precincts) {
+  public CivicinfoApiprotosV2VoterInfoResponse setPrecincts(java.util.List<CivicinfoSchemaV2Precinct> precincts) {
     this.precincts = precincts;
     return this;
   }
@@ -385,7 +343,7 @@ public final class VoterInfoResponse extends com.google.api.client.json.GenericJ
    * be one element in this array.
    * @return value or {@code null} for none
    */
-  public java.util.List<AdministrationRegion> getState() {
+  public java.util.List<CivicinfoSchemaV2AdministrationRegion> getState() {
     return state;
   }
 
@@ -394,19 +352,19 @@ public final class VoterInfoResponse extends com.google.api.client.json.GenericJ
    * be one element in this array.
    * @param state state or {@code null} for none
    */
-  public VoterInfoResponse setState(java.util.List<AdministrationRegion> state) {
+  public CivicinfoApiprotosV2VoterInfoResponse setState(java.util.List<CivicinfoSchemaV2AdministrationRegion> state) {
     this.state = state;
     return this;
   }
 
   @Override
-  public VoterInfoResponse set(String fieldName, Object value) {
-    return (VoterInfoResponse) super.set(fieldName, value);
+  public CivicinfoApiprotosV2VoterInfoResponse set(String fieldName, Object value) {
+    return (CivicinfoApiprotosV2VoterInfoResponse) super.set(fieldName, value);
   }
 
   @Override
-  public VoterInfoResponse clone() {
-    return (VoterInfoResponse) super.clone();
+  public CivicinfoApiprotosV2VoterInfoResponse clone() {
+    return (CivicinfoApiprotosV2VoterInfoResponse) super.clone();
   }
 
 }

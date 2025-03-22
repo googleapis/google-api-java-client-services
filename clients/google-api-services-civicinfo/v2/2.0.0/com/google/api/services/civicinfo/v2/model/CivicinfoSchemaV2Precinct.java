@@ -17,7 +17,7 @@
 package com.google.api.services.civicinfo.v2.model;
 
 /**
- * Model definition for Precinct.
+ * Model definition for CivicinfoSchemaV2Precinct.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Civic Information API. For a detailed
@@ -28,7 +28,7 @@ package com.google.api.services.civicinfo.v2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Precinct extends com.google.api.client.json.GenericJson {
+public final class CivicinfoSchemaV2Precinct extends com.google.api.client.json.GenericJson {
 
   /**
    * ID of the AdministrationRegion message for this precinct. Corresponds to LocalityId xml tag.
@@ -143,7 +143,7 @@ public final class Precinct extends com.google.api.client.json.GenericJson {
    * ID of the AdministrationRegion message for this precinct. Corresponds to LocalityId xml tag.
    * @param administrationRegionId administrationRegionId or {@code null} for none
    */
-  public Precinct setAdministrationRegionId(java.lang.String administrationRegionId) {
+  public CivicinfoSchemaV2Precinct setAdministrationRegionId(java.lang.String administrationRegionId) {
     this.administrationRegionId = administrationRegionId;
     return this;
   }
@@ -160,7 +160,7 @@ public final class Precinct extends com.google.api.client.json.GenericJson {
    * ID(s) of the Contest message(s) for this precinct.
    * @param contestId contestId or {@code null} for none
    */
-  public Precinct setContestId(java.util.List<java.lang.String> contestId) {
+  public CivicinfoSchemaV2Precinct setContestId(java.util.List<java.lang.String> contestId) {
     this.contestId = contestId;
     return this;
   }
@@ -177,7 +177,7 @@ public final class Precinct extends com.google.api.client.json.GenericJson {
    * Required. Dataset ID. What datasets our Precincts come from.
    * @param datasetId datasetId or {@code null} for none
    */
-  public Precinct setDatasetId(java.lang.Long datasetId) {
+  public CivicinfoSchemaV2Precinct setDatasetId(java.lang.Long datasetId) {
     this.datasetId = datasetId;
     return this;
   }
@@ -194,7 +194,7 @@ public final class Precinct extends com.google.api.client.json.GenericJson {
    * ID(s) of the PollingLocation message(s) for this precinct.
    * @param earlyVoteSiteId earlyVoteSiteId or {@code null} for none
    */
-  public Precinct setEarlyVoteSiteId(java.util.List<java.lang.String> earlyVoteSiteId) {
+  public CivicinfoSchemaV2Precinct setEarlyVoteSiteId(java.util.List<java.lang.String> earlyVoteSiteId) {
     this.earlyVoteSiteId = earlyVoteSiteId;
     return this;
   }
@@ -211,7 +211,7 @@ public final class Precinct extends com.google.api.client.json.GenericJson {
    * ID(s) of the ElectoralDistrict message(s) for this precinct.
    * @param electoralDistrictId electoralDistrictId or {@code null} for none
    */
-  public Precinct setElectoralDistrictId(java.util.List<java.lang.String> electoralDistrictId) {
+  public CivicinfoSchemaV2Precinct setElectoralDistrictId(java.util.List<java.lang.String> electoralDistrictId) {
     this.electoralDistrictId = electoralDistrictId;
     return this;
   }
@@ -228,7 +228,7 @@ public final class Precinct extends com.google.api.client.json.GenericJson {
    * Required. A unique identifier for this precinct.
    * @param id id or {@code null} for none
    */
-  public Precinct setId(java.lang.String id) {
+  public CivicinfoSchemaV2Precinct setId(java.lang.String id) {
     this.id = id;
     return this;
   }
@@ -245,7 +245,7 @@ public final class Precinct extends com.google.api.client.json.GenericJson {
    * Specifies if the precinct runs mail-only elections.
    * @param mailOnly mailOnly or {@code null} for none
    */
-  public Precinct setMailOnly(java.lang.Boolean mailOnly) {
+  public CivicinfoSchemaV2Precinct setMailOnly(java.lang.Boolean mailOnly) {
     this.mailOnly = mailOnly;
     return this;
   }
@@ -262,7 +262,7 @@ public final class Precinct extends com.google.api.client.json.GenericJson {
    * Required. The name of the precinct.
    * @param name name or {@code null} for none
    */
-  public Precinct setName(java.lang.String name) {
+  public CivicinfoSchemaV2Precinct setName(java.lang.String name) {
     this.name = name;
     return this;
   }
@@ -279,7 +279,7 @@ public final class Precinct extends com.google.api.client.json.GenericJson {
    * The number of the precinct.
    * @param number number or {@code null} for none
    */
-  public Precinct setNumber(java.lang.String number) {
+  public CivicinfoSchemaV2Precinct setNumber(java.lang.String number) {
     this.number = number;
     return this;
   }
@@ -296,7 +296,7 @@ public final class Precinct extends com.google.api.client.json.GenericJson {
    * Encouraged. The OCD ID of the precinct
    * @param ocdId ocdId or {@code null} for none
    */
-  public Precinct setOcdId(java.util.List<java.lang.String> ocdId) {
+  public CivicinfoSchemaV2Precinct setOcdId(java.util.List<java.lang.String> ocdId) {
     this.ocdId = ocdId;
     return this;
   }
@@ -313,7 +313,7 @@ public final class Precinct extends com.google.api.client.json.GenericJson {
    * ID(s) of the PollingLocation message(s) for this precinct.
    * @param pollingLocationId pollingLocationId or {@code null} for none
    */
-  public Precinct setPollingLocationId(java.util.List<java.lang.String> pollingLocationId) {
+  public CivicinfoSchemaV2Precinct setPollingLocationId(java.util.List<java.lang.String> pollingLocationId) {
     this.pollingLocationId = pollingLocationId;
     return this;
   }
@@ -332,7 +332,7 @@ public final class Precinct extends com.google.api.client.json.GenericJson {
    * boundary of the precinct.
    * @param spatialBoundaryId spatialBoundaryId or {@code null} for none
    */
-  public Precinct setSpatialBoundaryId(java.util.List<java.lang.String> spatialBoundaryId) {
+  public CivicinfoSchemaV2Precinct setSpatialBoundaryId(java.util.List<java.lang.String> spatialBoundaryId) {
     this.spatialBoundaryId = spatialBoundaryId;
     return this;
   }
@@ -353,7 +353,7 @@ public final class Precinct extends com.google.api.client.json.GenericJson {
    * precicnt.
    * @param splitName splitName or {@code null} for none
    */
-  public Precinct setSplitName(java.lang.String splitName) {
+  public CivicinfoSchemaV2Precinct setSplitName(java.lang.String splitName) {
     this.splitName = splitName;
     return this;
   }
@@ -370,19 +370,19 @@ public final class Precinct extends com.google.api.client.json.GenericJson {
    * Specifies the ward the precinct is contained within.
    * @param ward ward or {@code null} for none
    */
-  public Precinct setWard(java.lang.String ward) {
+  public CivicinfoSchemaV2Precinct setWard(java.lang.String ward) {
     this.ward = ward;
     return this;
   }
 
   @Override
-  public Precinct set(String fieldName, Object value) {
-    return (Precinct) super.set(fieldName, value);
+  public CivicinfoSchemaV2Precinct set(String fieldName, Object value) {
+    return (CivicinfoSchemaV2Precinct) super.set(fieldName, value);
   }
 
   @Override
-  public Precinct clone() {
-    return (Precinct) super.clone();
+  public CivicinfoSchemaV2Precinct clone() {
+    return (CivicinfoSchemaV2Precinct) super.clone();
   }
 
 }

@@ -17,7 +17,7 @@
 package com.google.api.services.civicinfo.v2.model;
 
 /**
- * A social media or web channel for a candidate.
+ * Model definition for CivicinfoApiprotosV2DivisionByAddressResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Civic Information API. For a detailed
@@ -28,67 +28,61 @@ package com.google.api.services.civicinfo.v2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Channel extends com.google.api.client.json.GenericJson {
+public final class CivicinfoApiprotosV2DivisionByAddressResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The unique public identifier for the candidate's channel.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String id;
+  private java.util.Map<String, CivicinfoSchemaV2GeographicDivision> divisions;
 
   /**
-   * The type of channel. The following is a list of types of channels, but is not exhaustive. More
-   * channel types may be added at a later time. One of: GooglePlus, YouTube, Facebook, Twitter
+   * The normalized version of the requested address.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String type;
+  private CivicinfoSchemaV2SimpleAddressType normalizedInput;
 
   /**
-   * The unique public identifier for the candidate's channel.
    * @return value or {@code null} for none
    */
-  public java.lang.String getId() {
-    return id;
+  public java.util.Map<String, CivicinfoSchemaV2GeographicDivision> getDivisions() {
+    return divisions;
   }
 
   /**
-   * The unique public identifier for the candidate's channel.
-   * @param id id or {@code null} for none
+   * @param divisions divisions or {@code null} for none
    */
-  public Channel setId(java.lang.String id) {
-    this.id = id;
+  public CivicinfoApiprotosV2DivisionByAddressResponse setDivisions(java.util.Map<String, CivicinfoSchemaV2GeographicDivision> divisions) {
+    this.divisions = divisions;
     return this;
   }
 
   /**
-   * The type of channel. The following is a list of types of channels, but is not exhaustive. More
-   * channel types may be added at a later time. One of: GooglePlus, YouTube, Facebook, Twitter
+   * The normalized version of the requested address.
    * @return value or {@code null} for none
    */
-  public java.lang.String getType() {
-    return type;
+  public CivicinfoSchemaV2SimpleAddressType getNormalizedInput() {
+    return normalizedInput;
   }
 
   /**
-   * The type of channel. The following is a list of types of channels, but is not exhaustive. More
-   * channel types may be added at a later time. One of: GooglePlus, YouTube, Facebook, Twitter
-   * @param type type or {@code null} for none
+   * The normalized version of the requested address.
+   * @param normalizedInput normalizedInput or {@code null} for none
    */
-  public Channel setType(java.lang.String type) {
-    this.type = type;
+  public CivicinfoApiprotosV2DivisionByAddressResponse setNormalizedInput(CivicinfoSchemaV2SimpleAddressType normalizedInput) {
+    this.normalizedInput = normalizedInput;
     return this;
   }
 
   @Override
-  public Channel set(String fieldName, Object value) {
-    return (Channel) super.set(fieldName, value);
+  public CivicinfoApiprotosV2DivisionByAddressResponse set(String fieldName, Object value) {
+    return (CivicinfoApiprotosV2DivisionByAddressResponse) super.set(fieldName, value);
   }
 
   @Override
-  public Channel clone() {
-    return (Channel) super.clone();
+  public CivicinfoApiprotosV2DivisionByAddressResponse clone() {
+    return (CivicinfoApiprotosV2DivisionByAddressResponse) super.clone();
   }
 
 }

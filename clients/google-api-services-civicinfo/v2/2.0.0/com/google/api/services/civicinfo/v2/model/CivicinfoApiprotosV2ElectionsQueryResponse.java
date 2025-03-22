@@ -17,7 +17,7 @@
 package com.google.api.services.civicinfo.v2.model;
 
 /**
- * Model definition for DivisionByAddressResponse.
+ * The list of elections available for this version of the API.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Civic Information API. For a detailed
@@ -28,61 +28,67 @@ package com.google.api.services.civicinfo.v2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class DivisionByAddressResponse extends com.google.api.client.json.GenericJson {
+public final class CivicinfoApiprotosV2ElectionsQueryResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * A list of available elections
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.Map<String, GeographicDivision> divisions;
+  private java.util.List<CivicinfoSchemaV2Election> elections;
 
   /**
-   * The normalized version of the requested address.
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "civicinfo#electionsQueryResponse".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private SimpleAddressType normalizedInput;
+  private java.lang.String kind;
 
   /**
+   * A list of available elections
    * @return value or {@code null} for none
    */
-  public java.util.Map<String, GeographicDivision> getDivisions() {
-    return divisions;
+  public java.util.List<CivicinfoSchemaV2Election> getElections() {
+    return elections;
   }
 
   /**
-   * @param divisions divisions or {@code null} for none
+   * A list of available elections
+   * @param elections elections or {@code null} for none
    */
-  public DivisionByAddressResponse setDivisions(java.util.Map<String, GeographicDivision> divisions) {
-    this.divisions = divisions;
+  public CivicinfoApiprotosV2ElectionsQueryResponse setElections(java.util.List<CivicinfoSchemaV2Election> elections) {
+    this.elections = elections;
     return this;
   }
 
   /**
-   * The normalized version of the requested address.
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "civicinfo#electionsQueryResponse".
    * @return value or {@code null} for none
    */
-  public SimpleAddressType getNormalizedInput() {
-    return normalizedInput;
+  public java.lang.String getKind() {
+    return kind;
   }
 
   /**
-   * The normalized version of the requested address.
-   * @param normalizedInput normalizedInput or {@code null} for none
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "civicinfo#electionsQueryResponse".
+   * @param kind kind or {@code null} for none
    */
-  public DivisionByAddressResponse setNormalizedInput(SimpleAddressType normalizedInput) {
-    this.normalizedInput = normalizedInput;
+  public CivicinfoApiprotosV2ElectionsQueryResponse setKind(java.lang.String kind) {
+    this.kind = kind;
     return this;
   }
 
   @Override
-  public DivisionByAddressResponse set(String fieldName, Object value) {
-    return (DivisionByAddressResponse) super.set(fieldName, value);
+  public CivicinfoApiprotosV2ElectionsQueryResponse set(String fieldName, Object value) {
+    return (CivicinfoApiprotosV2ElectionsQueryResponse) super.set(fieldName, value);
   }
 
   @Override
-  public DivisionByAddressResponse clone() {
-    return (DivisionByAddressResponse) super.clone();
+  public CivicinfoApiprotosV2ElectionsQueryResponse clone() {
+    return (CivicinfoApiprotosV2ElectionsQueryResponse) super.clone();
   }
 
 }

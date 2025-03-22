@@ -30,8 +30,15 @@ package com.google.api.services.pubsub.model;
 public final class MessageTransform extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. If set to true, the transform is enabled. If false, the transform is disabled and
-   * will not be applied to messages. Defaults to `true`.
+   * Optional. If true, the transform is disabled and will not be applied to messages. Defaults to
+   * `false`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean disabled;
+
+  /**
+   * Optional. This field is deprecated, use the `disabled` field to disable transforms.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,8 +53,26 @@ public final class MessageTransform extends com.google.api.client.json.GenericJs
   private JavaScriptUDF javascriptUdf;
 
   /**
-   * Optional. If set to true, the transform is enabled. If false, the transform is disabled and
-   * will not be applied to messages. Defaults to `true`.
+   * Optional. If true, the transform is disabled and will not be applied to messages. Defaults to
+   * `false`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDisabled() {
+    return disabled;
+  }
+
+  /**
+   * Optional. If true, the transform is disabled and will not be applied to messages. Defaults to
+   * `false`.
+   * @param disabled disabled or {@code null} for none
+   */
+  public MessageTransform setDisabled(java.lang.Boolean disabled) {
+    this.disabled = disabled;
+    return this;
+  }
+
+  /**
+   * Optional. This field is deprecated, use the `disabled` field to disable transforms.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnabled() {
@@ -55,8 +80,7 @@ public final class MessageTransform extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. If set to true, the transform is enabled. If false, the transform is disabled and
-   * will not be applied to messages. Defaults to `true`.
+   * Optional. This field is deprecated, use the `disabled` field to disable transforms.
    * @param enabled enabled or {@code null} for none
    */
   public MessageTransform setEnabled(java.lang.Boolean enabled) {

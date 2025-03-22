@@ -17,7 +17,7 @@
 package com.google.api.services.civicinfo.v2.model;
 
 /**
- * The result of a division search query.
+ * A social media or web channel for a candidate.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Civic Information API. For a detailed
@@ -28,64 +28,67 @@ package com.google.api.services.civicinfo.v2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class DivisionSearchResponse extends com.google.api.client.json.GenericJson {
+public final class CivicinfoSchemaV2Channel extends com.google.api.client.json.GenericJson {
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "civicinfo#divisionSearchResponse".
+   * The unique public identifier for the candidate's channel.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String kind;
+  private java.lang.String id;
 
   /**
+   * The type of channel. The following is a list of types of channels, but is not exhaustive. More
+   * channel types may be added at a later time. One of: GooglePlus, YouTube, Facebook, Twitter
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<DivisionSearchResult> results;
+  private java.lang.String type;
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "civicinfo#divisionSearchResponse".
+   * The unique public identifier for the candidate's channel.
    * @return value or {@code null} for none
    */
-  public java.lang.String getKind() {
-    return kind;
+  public java.lang.String getId() {
+    return id;
   }
 
   /**
-   * Identifies what kind of resource this is. Value: the fixed string
-   * "civicinfo#divisionSearchResponse".
-   * @param kind kind or {@code null} for none
+   * The unique public identifier for the candidate's channel.
+   * @param id id or {@code null} for none
    */
-  public DivisionSearchResponse setKind(java.lang.String kind) {
-    this.kind = kind;
+  public CivicinfoSchemaV2Channel setId(java.lang.String id) {
+    this.id = id;
     return this;
   }
 
   /**
+   * The type of channel. The following is a list of types of channels, but is not exhaustive. More
+   * channel types may be added at a later time. One of: GooglePlus, YouTube, Facebook, Twitter
    * @return value or {@code null} for none
    */
-  public java.util.List<DivisionSearchResult> getResults() {
-    return results;
+  public java.lang.String getType() {
+    return type;
   }
 
   /**
-   * @param results results or {@code null} for none
+   * The type of channel. The following is a list of types of channels, but is not exhaustive. More
+   * channel types may be added at a later time. One of: GooglePlus, YouTube, Facebook, Twitter
+   * @param type type or {@code null} for none
    */
-  public DivisionSearchResponse setResults(java.util.List<DivisionSearchResult> results) {
-    this.results = results;
+  public CivicinfoSchemaV2Channel setType(java.lang.String type) {
+    this.type = type;
     return this;
   }
 
   @Override
-  public DivisionSearchResponse set(String fieldName, Object value) {
-    return (DivisionSearchResponse) super.set(fieldName, value);
+  public CivicinfoSchemaV2Channel set(String fieldName, Object value) {
+    return (CivicinfoSchemaV2Channel) super.set(fieldName, value);
   }
 
   @Override
-  public DivisionSearchResponse clone() {
-    return (DivisionSearchResponse) super.clone();
+  public CivicinfoSchemaV2Channel clone() {
+    return (CivicinfoSchemaV2Channel) super.clone();
   }
 
 }

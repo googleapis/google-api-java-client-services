@@ -28,7 +28,7 @@ package com.google.api.services.civicinfo.v2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class DivisionSearchResult extends com.google.api.client.json.GenericJson {
+public final class CivicinfoApiprotosV2DivisionSearchResult extends com.google.api.client.json.GenericJson {
 
   /**
    * Other Open Civic Data identifiers that refer to the same division -- for example, those that
@@ -72,7 +72,7 @@ public final class DivisionSearchResult extends com.google.api.client.json.Gener
    * division/country:us/state:wy/cd:1, since Wyoming has only one Congressional district.
    * @param aliases aliases or {@code null} for none
    */
-  public DivisionSearchResult setAliases(java.util.List<java.lang.String> aliases) {
+  public CivicinfoApiprotosV2DivisionSearchResult setAliases(java.util.List<java.lang.String> aliases) {
     this.aliases = aliases;
     return this;
   }
@@ -89,7 +89,7 @@ public final class DivisionSearchResult extends com.google.api.client.json.Gener
    * The name of the division.
    * @param name name or {@code null} for none
    */
-  public DivisionSearchResult setName(java.lang.String name) {
+  public CivicinfoApiprotosV2DivisionSearchResult setName(java.lang.String name) {
     this.name = name;
     return this;
   }
@@ -106,19 +106,19 @@ public final class DivisionSearchResult extends com.google.api.client.json.Gener
    * The unique Open Civic Data identifier for this division
    * @param ocdId ocdId or {@code null} for none
    */
-  public DivisionSearchResult setOcdId(java.lang.String ocdId) {
+  public CivicinfoApiprotosV2DivisionSearchResult setOcdId(java.lang.String ocdId) {
     this.ocdId = ocdId;
     return this;
   }
 
   @Override
-  public DivisionSearchResult set(String fieldName, Object value) {
-    return (DivisionSearchResult) super.set(fieldName, value);
+  public CivicinfoApiprotosV2DivisionSearchResult set(String fieldName, Object value) {
+    return (CivicinfoApiprotosV2DivisionSearchResult) super.set(fieldName, value);
   }
 
   @Override
-  public DivisionSearchResult clone() {
-    return (DivisionSearchResult) super.clone();
+  public CivicinfoApiprotosV2DivisionSearchResult clone() {
+    return (CivicinfoApiprotosV2DivisionSearchResult) super.clone();
   }
 
 }

@@ -28,7 +28,7 @@ package com.google.api.services.civicinfo.v2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ElectoralDistrict extends com.google.api.client.json.GenericJson {
+public final class CivicinfoSchemaV2ElectoralDistrict extends com.google.api.client.json.GenericJson {
 
   /**
    * An identifier for this district, relative to its scope. For example, the 34th State Senate
@@ -68,7 +68,7 @@ public final class ElectoralDistrict extends com.google.api.client.json.GenericJ
    * district would have id "34" and a scope of stateUpper.
    * @param id id or {@code null} for none
    */
-  public ElectoralDistrict setId(java.lang.String id) {
+  public CivicinfoSchemaV2ElectoralDistrict setId(java.lang.String id) {
     this.id = id;
     return this;
   }
@@ -85,7 +85,7 @@ public final class ElectoralDistrict extends com.google.api.client.json.GenericJ
    * The name of the district.
    * @param name name or {@code null} for none
    */
-  public ElectoralDistrict setName(java.lang.String name) {
+  public CivicinfoSchemaV2ElectoralDistrict setName(java.lang.String name) {
     this.name = name;
     return this;
   }
@@ -106,19 +106,19 @@ public final class ElectoralDistrict extends com.google.api.client.json.GenericJ
    * schoolBoard, cityWide, township, countyCouncil, cityCouncil, ward, special
    * @param scope scope or {@code null} for none
    */
-  public ElectoralDistrict setScope(java.lang.String scope) {
+  public CivicinfoSchemaV2ElectoralDistrict setScope(java.lang.String scope) {
     this.scope = scope;
     return this;
   }
 
   @Override
-  public ElectoralDistrict set(String fieldName, Object value) {
-    return (ElectoralDistrict) super.set(fieldName, value);
+  public CivicinfoSchemaV2ElectoralDistrict set(String fieldName, Object value) {
+    return (CivicinfoSchemaV2ElectoralDistrict) super.set(fieldName, value);
   }
 
   @Override
-  public ElectoralDistrict clone() {
-    return (ElectoralDistrict) super.clone();
+  public CivicinfoSchemaV2ElectoralDistrict clone() {
+    return (CivicinfoSchemaV2ElectoralDistrict) super.clone();
   }
 
 }

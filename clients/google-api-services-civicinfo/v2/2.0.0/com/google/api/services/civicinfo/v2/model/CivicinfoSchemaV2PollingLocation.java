@@ -29,14 +29,14 @@ package com.google.api.services.civicinfo.v2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class PollingLocation extends com.google.api.client.json.GenericJson {
+public final class CivicinfoSchemaV2PollingLocation extends com.google.api.client.json.GenericJson {
 
   /**
    * The address of the location.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private SimpleAddressType address;
+  private CivicinfoSchemaV2SimpleAddressType address;
 
   /**
    * The last date that this early vote site or drop off location may be used. This field is not
@@ -90,7 +90,7 @@ public final class PollingLocation extends com.google.api.client.json.GenericJso
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<Source> sources;
+  private java.util.List<CivicinfoSchemaV2Source> sources;
 
   /**
    * The first date that this early vote site or drop off location may be used. This field is not
@@ -112,7 +112,7 @@ public final class PollingLocation extends com.google.api.client.json.GenericJso
    * The address of the location.
    * @return value or {@code null} for none
    */
-  public SimpleAddressType getAddress() {
+  public CivicinfoSchemaV2SimpleAddressType getAddress() {
     return address;
   }
 
@@ -120,7 +120,7 @@ public final class PollingLocation extends com.google.api.client.json.GenericJso
    * The address of the location.
    * @param address address or {@code null} for none
    */
-  public PollingLocation setAddress(SimpleAddressType address) {
+  public CivicinfoSchemaV2PollingLocation setAddress(CivicinfoSchemaV2SimpleAddressType address) {
     this.address = address;
     return this;
   }
@@ -139,7 +139,7 @@ public final class PollingLocation extends com.google.api.client.json.GenericJso
    * populated for polling locations.
    * @param endDate endDate or {@code null} for none
    */
-  public PollingLocation setEndDate(java.lang.String endDate) {
+  public CivicinfoSchemaV2PollingLocation setEndDate(java.lang.String endDate) {
     this.endDate = endDate;
     return this;
   }
@@ -158,7 +158,7 @@ public final class PollingLocation extends com.google.api.client.json.GenericJso
    * for some locations.
    * @param latitude latitude or {@code null} for none
    */
-  public PollingLocation setLatitude(java.lang.Double latitude) {
+  public CivicinfoSchemaV2PollingLocation setLatitude(java.lang.Double latitude) {
     this.latitude = latitude;
     return this;
   }
@@ -177,7 +177,7 @@ public final class PollingLocation extends com.google.api.client.json.GenericJso
    * available for some locations.
    * @param longitude longitude or {@code null} for none
    */
-  public PollingLocation setLongitude(java.lang.Double longitude) {
+  public CivicinfoSchemaV2PollingLocation setLongitude(java.lang.Double longitude) {
     this.longitude = longitude;
     return this;
   }
@@ -196,7 +196,7 @@ public final class PollingLocation extends com.google.api.client.json.GenericJso
    * locations.
    * @param name name or {@code null} for none
    */
-  public PollingLocation setName(java.lang.String name) {
+  public CivicinfoSchemaV2PollingLocation setName(java.lang.String name) {
     this.name = name;
     return this;
   }
@@ -213,7 +213,7 @@ public final class PollingLocation extends com.google.api.client.json.GenericJso
    * Notes about this location (e.g. accessibility ramp or entrance to use).
    * @param notes notes or {@code null} for none
    */
-  public PollingLocation setNotes(java.lang.String notes) {
+  public CivicinfoSchemaV2PollingLocation setNotes(java.lang.String notes) {
     this.notes = notes;
     return this;
   }
@@ -230,7 +230,7 @@ public final class PollingLocation extends com.google.api.client.json.GenericJso
    * A description of when this location is open.
    * @param pollingHours pollingHours or {@code null} for none
    */
-  public PollingLocation setPollingHours(java.lang.String pollingHours) {
+  public CivicinfoSchemaV2PollingLocation setPollingHours(java.lang.String pollingHours) {
     this.pollingHours = pollingHours;
     return this;
   }
@@ -240,7 +240,7 @@ public final class PollingLocation extends com.google.api.client.json.GenericJso
    * aggregated from those sources.
    * @return value or {@code null} for none
    */
-  public java.util.List<Source> getSources() {
+  public java.util.List<CivicinfoSchemaV2Source> getSources() {
     return sources;
   }
 
@@ -249,7 +249,7 @@ public final class PollingLocation extends com.google.api.client.json.GenericJso
    * aggregated from those sources.
    * @param sources sources or {@code null} for none
    */
-  public PollingLocation setSources(java.util.List<Source> sources) {
+  public CivicinfoSchemaV2PollingLocation setSources(java.util.List<CivicinfoSchemaV2Source> sources) {
     this.sources = sources;
     return this;
   }
@@ -268,7 +268,7 @@ public final class PollingLocation extends com.google.api.client.json.GenericJso
    * populated for polling locations.
    * @param startDate startDate or {@code null} for none
    */
-  public PollingLocation setStartDate(java.lang.String startDate) {
+  public CivicinfoSchemaV2PollingLocation setStartDate(java.lang.String startDate) {
     this.startDate = startDate;
     return this;
   }
@@ -287,19 +287,19 @@ public final class PollingLocation extends com.google.api.client.json.GenericJso
    * for polling locations.
    * @param voterServices voterServices or {@code null} for none
    */
-  public PollingLocation setVoterServices(java.lang.String voterServices) {
+  public CivicinfoSchemaV2PollingLocation setVoterServices(java.lang.String voterServices) {
     this.voterServices = voterServices;
     return this;
   }
 
   @Override
-  public PollingLocation set(String fieldName, Object value) {
-    return (PollingLocation) super.set(fieldName, value);
+  public CivicinfoSchemaV2PollingLocation set(String fieldName, Object value) {
+    return (CivicinfoSchemaV2PollingLocation) super.set(fieldName, value);
   }
 
   @Override
-  public PollingLocation clone() {
-    return (PollingLocation) super.clone();
+  public CivicinfoSchemaV2PollingLocation clone() {
+    return (CivicinfoSchemaV2PollingLocation) super.clone();
   }
 
 }

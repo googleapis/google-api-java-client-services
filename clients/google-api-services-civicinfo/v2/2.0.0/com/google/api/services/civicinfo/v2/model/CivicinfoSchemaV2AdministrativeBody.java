@@ -28,7 +28,7 @@ package com.google.api.services.civicinfo.v2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class AdministrativeBody extends com.google.api.client.json.GenericJson {
+public final class CivicinfoSchemaV2AdministrativeBody extends com.google.api.client.json.GenericJson {
 
   /**
    * A URL provided by this administrative body for information on absentee voting.
@@ -49,7 +49,7 @@ public final class AdministrativeBody extends com.google.api.client.json.Generic
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private SimpleAddressType correspondenceAddress;
+  private CivicinfoSchemaV2SimpleAddressType correspondenceAddress;
 
   /**
    * A URL provided by this administrative body for looking up general election information.
@@ -78,7 +78,7 @@ public final class AdministrativeBody extends com.google.api.client.json.Generic
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<ElectionOfficial> electionOfficials;
+  private java.util.List<CivicinfoSchemaV2ElectionOfficial> electionOfficials;
 
   /**
    * A URL provided by this administrative body for confirming that the voter is registered to vote.
@@ -120,7 +120,7 @@ public final class AdministrativeBody extends com.google.api.client.json.Generic
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private SimpleAddressType physicalAddress;
+  private CivicinfoSchemaV2SimpleAddressType physicalAddress;
 
   /**
    * A description of the services this administrative body may provide.
@@ -148,7 +148,7 @@ public final class AdministrativeBody extends com.google.api.client.json.Generic
    * A URL provided by this administrative body for information on absentee voting.
    * @param absenteeVotingInfoUrl absenteeVotingInfoUrl or {@code null} for none
    */
-  public AdministrativeBody setAbsenteeVotingInfoUrl(java.lang.String absenteeVotingInfoUrl) {
+  public CivicinfoSchemaV2AdministrativeBody setAbsenteeVotingInfoUrl(java.lang.String absenteeVotingInfoUrl) {
     this.absenteeVotingInfoUrl = absenteeVotingInfoUrl;
     return this;
   }
@@ -165,7 +165,7 @@ public final class AdministrativeBody extends com.google.api.client.json.Generic
    * A URL provided by this administrative body to give contest information to the voter.
    * @param ballotInfoUrl ballotInfoUrl or {@code null} for none
    */
-  public AdministrativeBody setBallotInfoUrl(java.lang.String ballotInfoUrl) {
+  public CivicinfoSchemaV2AdministrativeBody setBallotInfoUrl(java.lang.String ballotInfoUrl) {
     this.ballotInfoUrl = ballotInfoUrl;
     return this;
   }
@@ -174,7 +174,7 @@ public final class AdministrativeBody extends com.google.api.client.json.Generic
    * The mailing address of this administrative body.
    * @return value or {@code null} for none
    */
-  public SimpleAddressType getCorrespondenceAddress() {
+  public CivicinfoSchemaV2SimpleAddressType getCorrespondenceAddress() {
     return correspondenceAddress;
   }
 
@@ -182,7 +182,7 @@ public final class AdministrativeBody extends com.google.api.client.json.Generic
    * The mailing address of this administrative body.
    * @param correspondenceAddress correspondenceAddress or {@code null} for none
    */
-  public AdministrativeBody setCorrespondenceAddress(SimpleAddressType correspondenceAddress) {
+  public CivicinfoSchemaV2AdministrativeBody setCorrespondenceAddress(CivicinfoSchemaV2SimpleAddressType correspondenceAddress) {
     this.correspondenceAddress = correspondenceAddress;
     return this;
   }
@@ -199,7 +199,7 @@ public final class AdministrativeBody extends com.google.api.client.json.Generic
    * A URL provided by this administrative body for looking up general election information.
    * @param electionInfoUrl electionInfoUrl or {@code null} for none
    */
-  public AdministrativeBody setElectionInfoUrl(java.lang.String electionInfoUrl) {
+  public CivicinfoSchemaV2AdministrativeBody setElectionInfoUrl(java.lang.String electionInfoUrl) {
     this.electionInfoUrl = electionInfoUrl;
     return this;
   }
@@ -216,7 +216,7 @@ public final class AdministrativeBody extends com.google.api.client.json.Generic
    * A last minute or emergency notification text provided by this administrative body.
    * @param electionNoticeText electionNoticeText or {@code null} for none
    */
-  public AdministrativeBody setElectionNoticeText(java.lang.String electionNoticeText) {
+  public CivicinfoSchemaV2AdministrativeBody setElectionNoticeText(java.lang.String electionNoticeText) {
     this.electionNoticeText = electionNoticeText;
     return this;
   }
@@ -235,7 +235,7 @@ public final class AdministrativeBody extends com.google.api.client.json.Generic
    * minute or emergency notification.
    * @param electionNoticeUrl electionNoticeUrl or {@code null} for none
    */
-  public AdministrativeBody setElectionNoticeUrl(java.lang.String electionNoticeUrl) {
+  public CivicinfoSchemaV2AdministrativeBody setElectionNoticeUrl(java.lang.String electionNoticeUrl) {
     this.electionNoticeUrl = electionNoticeUrl;
     return this;
   }
@@ -244,7 +244,7 @@ public final class AdministrativeBody extends com.google.api.client.json.Generic
    * The election officials for this election administrative body.
    * @return value or {@code null} for none
    */
-  public java.util.List<ElectionOfficial> getElectionOfficials() {
+  public java.util.List<CivicinfoSchemaV2ElectionOfficial> getElectionOfficials() {
     return electionOfficials;
   }
 
@@ -252,7 +252,7 @@ public final class AdministrativeBody extends com.google.api.client.json.Generic
    * The election officials for this election administrative body.
    * @param electionOfficials electionOfficials or {@code null} for none
    */
-  public AdministrativeBody setElectionOfficials(java.util.List<ElectionOfficial> electionOfficials) {
+  public CivicinfoSchemaV2AdministrativeBody setElectionOfficials(java.util.List<CivicinfoSchemaV2ElectionOfficial> electionOfficials) {
     this.electionOfficials = electionOfficials;
     return this;
   }
@@ -269,7 +269,7 @@ public final class AdministrativeBody extends com.google.api.client.json.Generic
    * A URL provided by this administrative body for confirming that the voter is registered to vote.
    * @param electionRegistrationConfirmationUrl electionRegistrationConfirmationUrl or {@code null} for none
    */
-  public AdministrativeBody setElectionRegistrationConfirmationUrl(java.lang.String electionRegistrationConfirmationUrl) {
+  public CivicinfoSchemaV2AdministrativeBody setElectionRegistrationConfirmationUrl(java.lang.String electionRegistrationConfirmationUrl) {
     this.electionRegistrationConfirmationUrl = electionRegistrationConfirmationUrl;
     return this;
   }
@@ -286,7 +286,7 @@ public final class AdministrativeBody extends com.google.api.client.json.Generic
    * A URL provided by this administrative body for looking up how to register to vote.
    * @param electionRegistrationUrl electionRegistrationUrl or {@code null} for none
    */
-  public AdministrativeBody setElectionRegistrationUrl(java.lang.String electionRegistrationUrl) {
+  public CivicinfoSchemaV2AdministrativeBody setElectionRegistrationUrl(java.lang.String electionRegistrationUrl) {
     this.electionRegistrationUrl = electionRegistrationUrl;
     return this;
   }
@@ -303,7 +303,7 @@ public final class AdministrativeBody extends com.google.api.client.json.Generic
    * A URL provided by this administrative body describing election rules to the voter.
    * @param electionRulesUrl electionRulesUrl or {@code null} for none
    */
-  public AdministrativeBody setElectionRulesUrl(java.lang.String electionRulesUrl) {
+  public CivicinfoSchemaV2AdministrativeBody setElectionRulesUrl(java.lang.String electionRulesUrl) {
     this.electionRulesUrl = electionRulesUrl;
     return this;
   }
@@ -320,7 +320,7 @@ public final class AdministrativeBody extends com.google.api.client.json.Generic
    * A description of the hours of operation for this administrative body.
    * @param hoursOfOperation hoursOfOperation or {@code null} for none
    */
-  public AdministrativeBody setHoursOfOperation(java.lang.String hoursOfOperation) {
+  public CivicinfoSchemaV2AdministrativeBody setHoursOfOperation(java.lang.String hoursOfOperation) {
     this.hoursOfOperation = hoursOfOperation;
     return this;
   }
@@ -337,7 +337,7 @@ public final class AdministrativeBody extends com.google.api.client.json.Generic
    * The name of this election administrative body.
    * @param name name or {@code null} for none
    */
-  public AdministrativeBody setName(java.lang.String name) {
+  public CivicinfoSchemaV2AdministrativeBody setName(java.lang.String name) {
     this.name = name;
     return this;
   }
@@ -346,7 +346,7 @@ public final class AdministrativeBody extends com.google.api.client.json.Generic
    * The physical address of this administrative body.
    * @return value or {@code null} for none
    */
-  public SimpleAddressType getPhysicalAddress() {
+  public CivicinfoSchemaV2SimpleAddressType getPhysicalAddress() {
     return physicalAddress;
   }
 
@@ -354,7 +354,7 @@ public final class AdministrativeBody extends com.google.api.client.json.Generic
    * The physical address of this administrative body.
    * @param physicalAddress physicalAddress or {@code null} for none
    */
-  public AdministrativeBody setPhysicalAddress(SimpleAddressType physicalAddress) {
+  public CivicinfoSchemaV2AdministrativeBody setPhysicalAddress(CivicinfoSchemaV2SimpleAddressType physicalAddress) {
     this.physicalAddress = physicalAddress;
     return this;
   }
@@ -371,7 +371,7 @@ public final class AdministrativeBody extends com.google.api.client.json.Generic
    * A description of the services this administrative body may provide.
    * @param voterServices voterServices or {@code null} for none
    */
-  public AdministrativeBody setVoterServices(java.util.List<java.lang.String> voterServices) {
+  public CivicinfoSchemaV2AdministrativeBody setVoterServices(java.util.List<java.lang.String> voterServices) {
     this.voterServices = voterServices;
     return this;
   }
@@ -388,19 +388,19 @@ public final class AdministrativeBody extends com.google.api.client.json.Generic
    * A URL provided by this administrative body for looking up where to vote.
    * @param votingLocationFinderUrl votingLocationFinderUrl or {@code null} for none
    */
-  public AdministrativeBody setVotingLocationFinderUrl(java.lang.String votingLocationFinderUrl) {
+  public CivicinfoSchemaV2AdministrativeBody setVotingLocationFinderUrl(java.lang.String votingLocationFinderUrl) {
     this.votingLocationFinderUrl = votingLocationFinderUrl;
     return this;
   }
 
   @Override
-  public AdministrativeBody set(String fieldName, Object value) {
-    return (AdministrativeBody) super.set(fieldName, value);
+  public CivicinfoSchemaV2AdministrativeBody set(String fieldName, Object value) {
+    return (CivicinfoSchemaV2AdministrativeBody) super.set(fieldName, value);
   }
 
   @Override
-  public AdministrativeBody clone() {
-    return (AdministrativeBody) super.clone();
+  public CivicinfoSchemaV2AdministrativeBody clone() {
+    return (CivicinfoSchemaV2AdministrativeBody) super.clone();
   }
 
 }

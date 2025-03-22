@@ -28,7 +28,7 @@ package com.google.api.services.civicinfo.v2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Election extends com.google.api.client.json.GenericJson {
+public final class CivicinfoSchemaV2Election extends com.google.api.client.json.GenericJson {
 
   /**
    * Day of the election in YYYY-MM-DD format.
@@ -79,7 +79,7 @@ public final class Election extends com.google.api.client.json.GenericJson {
    * Day of the election in YYYY-MM-DD format.
    * @param electionDay electionDay or {@code null} for none
    */
-  public Election setElectionDay(java.lang.String electionDay) {
+  public CivicinfoSchemaV2Election setElectionDay(java.lang.String electionDay) {
     this.electionDay = electionDay;
     return this;
   }
@@ -96,7 +96,7 @@ public final class Election extends com.google.api.client.json.GenericJson {
    * The unique ID of this election.
    * @param id id or {@code null} for none
    */
-  public Election setId(java.lang.Long id) {
+  public CivicinfoSchemaV2Election setId(java.lang.Long id) {
     this.id = id;
     return this;
   }
@@ -113,7 +113,7 @@ public final class Election extends com.google.api.client.json.GenericJson {
    * A displayable name for the election.
    * @param name name or {@code null} for none
    */
-  public Election setName(java.lang.String name) {
+  public CivicinfoSchemaV2Election setName(java.lang.String name) {
     this.name = name;
     return this;
   }
@@ -136,7 +136,7 @@ public final class Election extends com.google.api.client.json.GenericJson {
    * division/country:us).
    * @param ocdDivisionId ocdDivisionId or {@code null} for none
    */
-  public Election setOcdDivisionId(java.lang.String ocdDivisionId) {
+  public CivicinfoSchemaV2Election setOcdDivisionId(java.lang.String ocdDivisionId) {
     this.ocdDivisionId = ocdDivisionId;
     return this;
   }
@@ -151,19 +151,19 @@ public final class Election extends com.google.api.client.json.GenericJson {
   /**
    * @param shapeLookupBehavior shapeLookupBehavior or {@code null} for none
    */
-  public Election setShapeLookupBehavior(java.lang.String shapeLookupBehavior) {
+  public CivicinfoSchemaV2Election setShapeLookupBehavior(java.lang.String shapeLookupBehavior) {
     this.shapeLookupBehavior = shapeLookupBehavior;
     return this;
   }
 
   @Override
-  public Election set(String fieldName, Object value) {
-    return (Election) super.set(fieldName, value);
+  public CivicinfoSchemaV2Election set(String fieldName, Object value) {
+    return (CivicinfoSchemaV2Election) super.set(fieldName, value);
   }
 
   @Override
-  public Election clone() {
-    return (Election) super.clone();
+  public CivicinfoSchemaV2Election clone() {
+    return (CivicinfoSchemaV2Election) super.clone();
   }
 
 }

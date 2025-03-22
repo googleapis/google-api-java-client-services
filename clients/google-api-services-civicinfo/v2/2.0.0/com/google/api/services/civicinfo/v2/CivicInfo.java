@@ -170,7 +170,7 @@ public class CivicInfo extends com.google.api.client.googleapis.services.json.Ab
       return result;
     }
 
-    public class QueryDivisionByAddress extends CivicInfoRequest<com.google.api.services.civicinfo.v2.model.DivisionByAddressResponse> {
+    public class QueryDivisionByAddress extends CivicInfoRequest<com.google.api.services.civicinfo.v2.model.CivicinfoApiprotosV2DivisionByAddressResponse> {
 
       private static final String REST_PATH = "civicinfo/v2/divisionsByAddress";
 
@@ -188,7 +188,7 @@ public class CivicInfo extends com.google.api.client.googleapis.services.json.Ab
        * @since 1.13
        */
       protected QueryDivisionByAddress() {
-        super(CivicInfo.this, "GET", REST_PATH, null, com.google.api.services.civicinfo.v2.model.DivisionByAddressResponse.class);
+        super(CivicInfo.this, "GET", REST_PATH, null, com.google.api.services.civicinfo.v2.model.CivicinfoApiprotosV2DivisionByAddressResponse.class);
       }
 
       @Override
@@ -292,7 +292,7 @@ public class CivicInfo extends com.google.api.client.googleapis.services.json.Ab
       return result;
     }
 
-    public class Search extends CivicInfoRequest<com.google.api.services.civicinfo.v2.model.DivisionSearchResponse> {
+    public class Search extends CivicInfoRequest<com.google.api.services.civicinfo.v2.model.CivicinfoApiprotosV2DivisionSearchResponse> {
 
       private static final String REST_PATH = "civicinfo/v2/divisions";
 
@@ -310,7 +310,7 @@ public class CivicInfo extends com.google.api.client.googleapis.services.json.Ab
        * @since 1.13
        */
       protected Search() {
-        super(CivicInfo.this, "GET", REST_PATH, null, com.google.api.services.civicinfo.v2.model.DivisionSearchResponse.class);
+        super(CivicInfo.this, "GET", REST_PATH, null, com.google.api.services.civicinfo.v2.model.CivicinfoApiprotosV2DivisionSearchResponse.class);
       }
 
       @Override
@@ -451,7 +451,7 @@ public class CivicInfo extends com.google.api.client.googleapis.services.json.Ab
       return result;
     }
 
-    public class ElectionQuery extends CivicInfoRequest<com.google.api.services.civicinfo.v2.model.ElectionsQueryResponse> {
+    public class ElectionQuery extends CivicInfoRequest<com.google.api.services.civicinfo.v2.model.CivicinfoApiprotosV2ElectionsQueryResponse> {
 
       private static final String REST_PATH = "civicinfo/v2/elections";
 
@@ -469,7 +469,7 @@ public class CivicInfo extends com.google.api.client.googleapis.services.json.Ab
        * @since 1.13
        */
       protected ElectionQuery() {
-        super(CivicInfo.this, "GET", REST_PATH, null, com.google.api.services.civicinfo.v2.model.ElectionsQueryResponse.class);
+        super(CivicInfo.this, "GET", REST_PATH, null, com.google.api.services.civicinfo.v2.model.CivicinfoApiprotosV2ElectionsQueryResponse.class);
       }
 
       @Override
@@ -601,7 +601,7 @@ public class CivicInfo extends com.google.api.client.googleapis.services.json.Ab
       return result;
     }
 
-    public class VoterInfoQuery extends CivicInfoRequest<com.google.api.services.civicinfo.v2.model.VoterInfoResponse> {
+    public class VoterInfoQuery extends CivicInfoRequest<com.google.api.services.civicinfo.v2.model.CivicinfoApiprotosV2VoterInfoResponse> {
 
       private static final String REST_PATH = "civicinfo/v2/voterinfo";
 
@@ -619,7 +619,7 @@ public class CivicInfo extends com.google.api.client.googleapis.services.json.Ab
        * @since 1.13
        */
       protected VoterInfoQuery() {
-        super(CivicInfo.this, "GET", REST_PATH, null, com.google.api.services.civicinfo.v2.model.VoterInfoResponse.class);
+        super(CivicInfo.this, "GET", REST_PATH, null, com.google.api.services.civicinfo.v2.model.CivicinfoApiprotosV2VoterInfoResponse.class);
       }
 
       @Override
@@ -929,7 +929,7 @@ public class CivicInfo extends com.google.api.client.googleapis.services.json.Ab
       return result;
     }
 
-    public class RepresentativeInfoByAddress extends CivicInfoRequest<com.google.api.services.civicinfo.v2.model.RepresentativeInfoResponse> {
+    public class RepresentativeInfoByAddress extends CivicInfoRequest<com.google.api.services.civicinfo.v2.model.CivicinfoApiprotosV2RepresentativeInfoResponse> {
 
       private static final String REST_PATH = "civicinfo/v2/representatives";
 
@@ -947,7 +947,7 @@ public class CivicInfo extends com.google.api.client.googleapis.services.json.Ab
        * @since 1.13
        */
       protected RepresentativeInfoByAddress() {
-        super(CivicInfo.this, "GET", REST_PATH, null, com.google.api.services.civicinfo.v2.model.RepresentativeInfoResponse.class);
+        super(CivicInfo.this, "GET", REST_PATH, null, com.google.api.services.civicinfo.v2.model.CivicinfoApiprotosV2RepresentativeInfoResponse.class);
       }
 
       @Override
@@ -1155,7 +1155,7 @@ public class CivicInfo extends com.google.api.client.googleapis.services.json.Ab
       return result;
     }
 
-    public class RepresentativeInfoByDivision extends CivicInfoRequest<com.google.api.services.civicinfo.v2.model.RepresentativeInfoData> {
+    public class RepresentativeInfoByDivision extends CivicInfoRequest<com.google.api.services.civicinfo.v2.model.CivicinfoApiprotosV2RepresentativeInfoData> {
 
       private static final String REST_PATH = "civicinfo/v2/representatives/{ocdId}";
 
@@ -1174,7 +1174,7 @@ public class CivicInfo extends com.google.api.client.googleapis.services.json.Ab
        * @since 1.13
        */
       protected RepresentativeInfoByDivision(java.lang.String ocdId) {
-        super(CivicInfo.this, "GET", REST_PATH, null, com.google.api.services.civicinfo.v2.model.RepresentativeInfoData.class);
+        super(CivicInfo.this, "GET", REST_PATH, null, com.google.api.services.civicinfo.v2.model.CivicinfoApiprotosV2RepresentativeInfoData.class);
         this.ocdId = com.google.api.client.util.Preconditions.checkNotNull(ocdId, "Required parameter ocdId must be specified.");
       }
 

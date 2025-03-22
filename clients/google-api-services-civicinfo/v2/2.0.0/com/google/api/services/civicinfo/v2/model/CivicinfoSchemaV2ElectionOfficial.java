@@ -28,7 +28,7 @@ package com.google.api.services.civicinfo.v2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ElectionOfficial extends com.google.api.client.json.GenericJson {
+public final class CivicinfoSchemaV2ElectionOfficial extends com.google.api.client.json.GenericJson {
 
   /**
    * The email address of the election official.
@@ -77,7 +77,7 @@ public final class ElectionOfficial extends com.google.api.client.json.GenericJs
    * The email address of the election official.
    * @param emailAddress emailAddress or {@code null} for none
    */
-  public ElectionOfficial setEmailAddress(java.lang.String emailAddress) {
+  public CivicinfoSchemaV2ElectionOfficial setEmailAddress(java.lang.String emailAddress) {
     this.emailAddress = emailAddress;
     return this;
   }
@@ -94,7 +94,7 @@ public final class ElectionOfficial extends com.google.api.client.json.GenericJs
    * The fax number of the election official.
    * @param faxNumber faxNumber or {@code null} for none
    */
-  public ElectionOfficial setFaxNumber(java.lang.String faxNumber) {
+  public CivicinfoSchemaV2ElectionOfficial setFaxNumber(java.lang.String faxNumber) {
     this.faxNumber = faxNumber;
     return this;
   }
@@ -111,7 +111,7 @@ public final class ElectionOfficial extends com.google.api.client.json.GenericJs
    * The full name of the election official.
    * @param name name or {@code null} for none
    */
-  public ElectionOfficial setName(java.lang.String name) {
+  public CivicinfoSchemaV2ElectionOfficial setName(java.lang.String name) {
     this.name = name;
     return this;
   }
@@ -128,7 +128,7 @@ public final class ElectionOfficial extends com.google.api.client.json.GenericJs
    * The office phone number of the election official.
    * @param officePhoneNumber officePhoneNumber or {@code null} for none
    */
-  public ElectionOfficial setOfficePhoneNumber(java.lang.String officePhoneNumber) {
+  public CivicinfoSchemaV2ElectionOfficial setOfficePhoneNumber(java.lang.String officePhoneNumber) {
     this.officePhoneNumber = officePhoneNumber;
     return this;
   }
@@ -145,19 +145,19 @@ public final class ElectionOfficial extends com.google.api.client.json.GenericJs
    * The title of the election official.
    * @param title title or {@code null} for none
    */
-  public ElectionOfficial setTitle(java.lang.String title) {
+  public CivicinfoSchemaV2ElectionOfficial setTitle(java.lang.String title) {
     this.title = title;
     return this;
   }
 
   @Override
-  public ElectionOfficial set(String fieldName, Object value) {
-    return (ElectionOfficial) super.set(fieldName, value);
+  public CivicinfoSchemaV2ElectionOfficial set(String fieldName, Object value) {
+    return (CivicinfoSchemaV2ElectionOfficial) super.set(fieldName, value);
   }
 
   @Override
-  public ElectionOfficial clone() {
-    return (ElectionOfficial) super.clone();
+  public CivicinfoSchemaV2ElectionOfficial clone() {
+    return (CivicinfoSchemaV2ElectionOfficial) super.clone();
   }
 
 }

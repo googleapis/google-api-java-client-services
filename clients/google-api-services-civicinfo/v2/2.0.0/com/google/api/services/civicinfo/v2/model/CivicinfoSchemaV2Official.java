@@ -28,26 +28,26 @@ package com.google.api.services.civicinfo.v2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Official extends com.google.api.client.json.GenericJson {
+public final class CivicinfoSchemaV2Official extends com.google.api.client.json.GenericJson {
 
   /**
    * Addresses at which to contact the official.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<SimpleAddressType> address;
+  private java.util.List<CivicinfoSchemaV2SimpleAddressType> address;
 
   /**
    * A list of known (social) media channels for this official.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<Channel> channels;
+  private java.util.List<CivicinfoSchemaV2Channel> channels;
 
   static {
-    // hack to force ProGuard to consider Channel used, since otherwise it would be stripped out
+    // hack to force ProGuard to consider CivicinfoSchemaV2Channel used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Channel.class);
+    com.google.api.client.util.Data.nullOf(CivicinfoSchemaV2Channel.class);
   }
 
   /**
@@ -96,7 +96,7 @@ public final class Official extends com.google.api.client.json.GenericJson {
    * Addresses at which to contact the official.
    * @return value or {@code null} for none
    */
-  public java.util.List<SimpleAddressType> getAddress() {
+  public java.util.List<CivicinfoSchemaV2SimpleAddressType> getAddress() {
     return address;
   }
 
@@ -104,7 +104,7 @@ public final class Official extends com.google.api.client.json.GenericJson {
    * Addresses at which to contact the official.
    * @param address address or {@code null} for none
    */
-  public Official setAddress(java.util.List<SimpleAddressType> address) {
+  public CivicinfoSchemaV2Official setAddress(java.util.List<CivicinfoSchemaV2SimpleAddressType> address) {
     this.address = address;
     return this;
   }
@@ -113,7 +113,7 @@ public final class Official extends com.google.api.client.json.GenericJson {
    * A list of known (social) media channels for this official.
    * @return value or {@code null} for none
    */
-  public java.util.List<Channel> getChannels() {
+  public java.util.List<CivicinfoSchemaV2Channel> getChannels() {
     return channels;
   }
 
@@ -121,7 +121,7 @@ public final class Official extends com.google.api.client.json.GenericJson {
    * A list of known (social) media channels for this official.
    * @param channels channels or {@code null} for none
    */
-  public Official setChannels(java.util.List<Channel> channels) {
+  public CivicinfoSchemaV2Official setChannels(java.util.List<CivicinfoSchemaV2Channel> channels) {
     this.channels = channels;
     return this;
   }
@@ -138,7 +138,7 @@ public final class Official extends com.google.api.client.json.GenericJson {
    * The direct email addresses for the official.
    * @param emails emails or {@code null} for none
    */
-  public Official setEmails(java.util.List<java.lang.String> emails) {
+  public CivicinfoSchemaV2Official setEmails(java.util.List<java.lang.String> emails) {
     this.emails = emails;
     return this;
   }
@@ -155,7 +155,7 @@ public final class Official extends com.google.api.client.json.GenericJson {
    * The official's name.
    * @param name name or {@code null} for none
    */
-  public Official setName(java.lang.String name) {
+  public CivicinfoSchemaV2Official setName(java.lang.String name) {
     this.name = name;
     return this;
   }
@@ -172,7 +172,7 @@ public final class Official extends com.google.api.client.json.GenericJson {
    * The full name of the party the official belongs to.
    * @param party party or {@code null} for none
    */
-  public Official setParty(java.lang.String party) {
+  public CivicinfoSchemaV2Official setParty(java.lang.String party) {
     this.party = party;
     return this;
   }
@@ -189,7 +189,7 @@ public final class Official extends com.google.api.client.json.GenericJson {
    * The official's public contact phone numbers.
    * @param phones phones or {@code null} for none
    */
-  public Official setPhones(java.util.List<java.lang.String> phones) {
+  public CivicinfoSchemaV2Official setPhones(java.util.List<java.lang.String> phones) {
     this.phones = phones;
     return this;
   }
@@ -206,7 +206,7 @@ public final class Official extends com.google.api.client.json.GenericJson {
    * A URL for a photo of the official.
    * @param photoUrl photoUrl or {@code null} for none
    */
-  public Official setPhotoUrl(java.lang.String photoUrl) {
+  public CivicinfoSchemaV2Official setPhotoUrl(java.lang.String photoUrl) {
     this.photoUrl = photoUrl;
     return this;
   }
@@ -223,19 +223,19 @@ public final class Official extends com.google.api.client.json.GenericJson {
    * The official's public website URLs.
    * @param urls urls or {@code null} for none
    */
-  public Official setUrls(java.util.List<java.lang.String> urls) {
+  public CivicinfoSchemaV2Official setUrls(java.util.List<java.lang.String> urls) {
     this.urls = urls;
     return this;
   }
 
   @Override
-  public Official set(String fieldName, Object value) {
-    return (Official) super.set(fieldName, value);
+  public CivicinfoSchemaV2Official set(String fieldName, Object value) {
+    return (CivicinfoSchemaV2Official) super.set(fieldName, value);
   }
 
   @Override
-  public Official clone() {
-    return (Official) super.clone();
+  public CivicinfoSchemaV2Official clone() {
+    return (CivicinfoSchemaV2Official) super.clone();
   }
 
 }

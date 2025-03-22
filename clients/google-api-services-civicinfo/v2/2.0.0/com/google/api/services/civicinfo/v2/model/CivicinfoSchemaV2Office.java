@@ -28,7 +28,7 @@ package com.google.api.services.civicinfo.v2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Office extends com.google.api.client.json.GenericJson {
+public final class CivicinfoSchemaV2Office extends com.google.api.client.json.GenericJson {
 
   /**
    * The OCD ID of the division with which this office is associated.
@@ -76,7 +76,7 @@ public final class Office extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<Source> sources;
+  private java.util.List<CivicinfoSchemaV2Source> sources;
 
   /**
    * The OCD ID of the division with which this office is associated.
@@ -90,7 +90,7 @@ public final class Office extends com.google.api.client.json.GenericJson {
    * The OCD ID of the division with which this office is associated.
    * @param divisionId divisionId or {@code null} for none
    */
-  public Office setDivisionId(java.lang.String divisionId) {
+  public CivicinfoSchemaV2Office setDivisionId(java.lang.String divisionId) {
     this.divisionId = divisionId;
     return this;
   }
@@ -113,7 +113,7 @@ public final class Office extends com.google.api.client.json.GenericJson {
    * "administrative-area-2" and "administrative-area-1".
    * @param levels levels or {@code null} for none
    */
-  public Office setLevels(java.util.List<java.lang.String> levels) {
+  public CivicinfoSchemaV2Office setLevels(java.util.List<java.lang.String> levels) {
     this.levels = levels;
     return this;
   }
@@ -130,7 +130,7 @@ public final class Office extends com.google.api.client.json.GenericJson {
    * The human-readable name of the office.
    * @param name name or {@code null} for none
    */
-  public Office setName(java.lang.String name) {
+  public CivicinfoSchemaV2Office setName(java.lang.String name) {
     this.name = name;
     return this;
   }
@@ -147,7 +147,7 @@ public final class Office extends com.google.api.client.json.GenericJson {
    * List of indices in the officials array of people who presently hold this office.
    * @param officialIndices officialIndices or {@code null} for none
    */
-  public Office setOfficialIndices(java.util.List<java.lang.Long> officialIndices) {
+  public CivicinfoSchemaV2Office setOfficialIndices(java.util.List<java.lang.Long> officialIndices) {
     this.officialIndices = officialIndices;
     return this;
   }
@@ -168,7 +168,7 @@ public final class Office extends com.google.api.client.json.GenericJson {
    * categories that are useful for general selection from or sorting of a list of offices.
    * @param roles roles or {@code null} for none
    */
-  public Office setRoles(java.util.List<java.lang.String> roles) {
+  public CivicinfoSchemaV2Office setRoles(java.util.List<java.lang.String> roles) {
     this.roles = roles;
     return this;
   }
@@ -178,7 +178,7 @@ public final class Office extends com.google.api.client.json.GenericJson {
    * from those sources.
    * @return value or {@code null} for none
    */
-  public java.util.List<Source> getSources() {
+  public java.util.List<CivicinfoSchemaV2Source> getSources() {
     return sources;
   }
 
@@ -187,19 +187,19 @@ public final class Office extends com.google.api.client.json.GenericJson {
    * from those sources.
    * @param sources sources or {@code null} for none
    */
-  public Office setSources(java.util.List<Source> sources) {
+  public CivicinfoSchemaV2Office setSources(java.util.List<CivicinfoSchemaV2Source> sources) {
     this.sources = sources;
     return this;
   }
 
   @Override
-  public Office set(String fieldName, Object value) {
-    return (Office) super.set(fieldName, value);
+  public CivicinfoSchemaV2Office set(String fieldName, Object value) {
+    return (CivicinfoSchemaV2Office) super.set(fieldName, value);
   }
 
   @Override
-  public Office clone() {
-    return (Office) super.clone();
+  public CivicinfoSchemaV2Office clone() {
+    return (CivicinfoSchemaV2Office) super.clone();
   }
 
 }

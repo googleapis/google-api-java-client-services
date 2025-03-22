@@ -28,14 +28,14 @@ package com.google.api.services.civicinfo.v2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class AdministrationRegion extends com.google.api.client.json.GenericJson {
+public final class CivicinfoSchemaV2AdministrationRegion extends com.google.api.client.json.GenericJson {
 
   /**
    * The election administration body for this area.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private AdministrativeBody electionAdministrationBody;
+  private CivicinfoSchemaV2AdministrativeBody electionAdministrationBody;
 
   /**
    * The city or county that provides election information for this voter. This object can have the
@@ -43,7 +43,7 @@ public final class AdministrationRegion extends com.google.api.client.json.Gener
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key("local_jurisdiction")
-  private AdministrationRegion localJurisdiction;
+  private CivicinfoSchemaV2AdministrationRegion localJurisdiction;
 
   /**
    * The name of the jurisdiction.
@@ -58,13 +58,13 @@ public final class AdministrationRegion extends com.google.api.client.json.Gener
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<Source> sources;
+  private java.util.List<CivicinfoSchemaV2Source> sources;
 
   /**
    * The election administration body for this area.
    * @return value or {@code null} for none
    */
-  public AdministrativeBody getElectionAdministrationBody() {
+  public CivicinfoSchemaV2AdministrativeBody getElectionAdministrationBody() {
     return electionAdministrationBody;
   }
 
@@ -72,7 +72,7 @@ public final class AdministrationRegion extends com.google.api.client.json.Gener
    * The election administration body for this area.
    * @param electionAdministrationBody electionAdministrationBody or {@code null} for none
    */
-  public AdministrationRegion setElectionAdministrationBody(AdministrativeBody electionAdministrationBody) {
+  public CivicinfoSchemaV2AdministrationRegion setElectionAdministrationBody(CivicinfoSchemaV2AdministrativeBody electionAdministrationBody) {
     this.electionAdministrationBody = electionAdministrationBody;
     return this;
   }
@@ -82,7 +82,7 @@ public final class AdministrationRegion extends com.google.api.client.json.Gener
    * same elements as state.
    * @return value or {@code null} for none
    */
-  public AdministrationRegion getLocalJurisdiction() {
+  public CivicinfoSchemaV2AdministrationRegion getLocalJurisdiction() {
     return localJurisdiction;
   }
 
@@ -91,7 +91,7 @@ public final class AdministrationRegion extends com.google.api.client.json.Gener
    * same elements as state.
    * @param localJurisdiction localJurisdiction or {@code null} for none
    */
-  public AdministrationRegion setLocalJurisdiction(AdministrationRegion localJurisdiction) {
+  public CivicinfoSchemaV2AdministrationRegion setLocalJurisdiction(CivicinfoSchemaV2AdministrationRegion localJurisdiction) {
     this.localJurisdiction = localJurisdiction;
     return this;
   }
@@ -108,7 +108,7 @@ public final class AdministrationRegion extends com.google.api.client.json.Gener
    * The name of the jurisdiction.
    * @param name name or {@code null} for none
    */
-  public AdministrationRegion setName(java.lang.String name) {
+  public CivicinfoSchemaV2AdministrationRegion setName(java.lang.String name) {
     this.name = name;
     return this;
   }
@@ -118,7 +118,7 @@ public final class AdministrationRegion extends com.google.api.client.json.Gener
    * from those sources.
    * @return value or {@code null} for none
    */
-  public java.util.List<Source> getSources() {
+  public java.util.List<CivicinfoSchemaV2Source> getSources() {
     return sources;
   }
 
@@ -127,19 +127,19 @@ public final class AdministrationRegion extends com.google.api.client.json.Gener
    * from those sources.
    * @param sources sources or {@code null} for none
    */
-  public AdministrationRegion setSources(java.util.List<Source> sources) {
+  public CivicinfoSchemaV2AdministrationRegion setSources(java.util.List<CivicinfoSchemaV2Source> sources) {
     this.sources = sources;
     return this;
   }
 
   @Override
-  public AdministrationRegion set(String fieldName, Object value) {
-    return (AdministrationRegion) super.set(fieldName, value);
+  public CivicinfoSchemaV2AdministrationRegion set(String fieldName, Object value) {
+    return (CivicinfoSchemaV2AdministrationRegion) super.set(fieldName, value);
   }
 
   @Override
-  public AdministrationRegion clone() {
-    return (AdministrationRegion) super.clone();
+  public CivicinfoSchemaV2AdministrationRegion clone() {
+    return (CivicinfoSchemaV2AdministrationRegion) super.clone();
   }
 
 }

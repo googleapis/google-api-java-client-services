@@ -28,7 +28,7 @@ package com.google.api.services.civicinfo.v2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Contest extends com.google.api.client.json.GenericJson {
+public final class CivicinfoSchemaV2Contest extends com.google.api.client.json.GenericJson {
 
   /**
    * A number specifying the position of this contest on the voter's ballot.
@@ -49,12 +49,12 @@ public final class Contest extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<Candidate> candidates;
+  private java.util.List<CivicinfoSchemaV2Candidate> candidates;
 
   static {
-    // hack to force ProGuard to consider Candidate used, since otherwise it would be stripped out
+    // hack to force ProGuard to consider CivicinfoSchemaV2Candidate used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Candidate.class);
+    com.google.api.client.util.Data.nullOf(CivicinfoSchemaV2Candidate.class);
   }
 
   /**
@@ -62,7 +62,7 @@ public final class Contest extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private ElectoralDistrict district;
+  private CivicinfoSchemaV2ElectoralDistrict district;
 
   /**
    * A description of any additional eligibility requirements for voting in this contest.
@@ -203,7 +203,7 @@ public final class Contest extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<Source> sources;
+  private java.util.List<CivicinfoSchemaV2Source> sources;
 
   /**
    * "Yes" or "No" depending on whether this a contest being held outside the normal election cycle.
@@ -233,7 +233,7 @@ public final class Contest extends com.google.api.client.json.GenericJson {
    * A number specifying the position of this contest on the voter's ballot.
    * @param ballotPlacement ballotPlacement or {@code null} for none
    */
-  public Contest setBallotPlacement(java.lang.Long ballotPlacement) {
+  public CivicinfoSchemaV2Contest setBallotPlacement(java.lang.Long ballotPlacement) {
     this.ballotPlacement = ballotPlacement;
     return this;
   }
@@ -250,7 +250,7 @@ public final class Contest extends com.google.api.client.json.GenericJson {
    * The official title on the ballot for this contest, only where available.
    * @param ballotTitle ballotTitle or {@code null} for none
    */
-  public Contest setBallotTitle(java.lang.String ballotTitle) {
+  public CivicinfoSchemaV2Contest setBallotTitle(java.lang.String ballotTitle) {
     this.ballotTitle = ballotTitle;
     return this;
   }
@@ -259,7 +259,7 @@ public final class Contest extends com.google.api.client.json.GenericJson {
    * The candidate choices for this contest.
    * @return value or {@code null} for none
    */
-  public java.util.List<Candidate> getCandidates() {
+  public java.util.List<CivicinfoSchemaV2Candidate> getCandidates() {
     return candidates;
   }
 
@@ -267,7 +267,7 @@ public final class Contest extends com.google.api.client.json.GenericJson {
    * The candidate choices for this contest.
    * @param candidates candidates or {@code null} for none
    */
-  public Contest setCandidates(java.util.List<Candidate> candidates) {
+  public CivicinfoSchemaV2Contest setCandidates(java.util.List<CivicinfoSchemaV2Candidate> candidates) {
     this.candidates = candidates;
     return this;
   }
@@ -276,7 +276,7 @@ public final class Contest extends com.google.api.client.json.GenericJson {
    * Information about the electoral district that this contest is in.
    * @return value or {@code null} for none
    */
-  public ElectoralDistrict getDistrict() {
+  public CivicinfoSchemaV2ElectoralDistrict getDistrict() {
     return district;
   }
 
@@ -284,7 +284,7 @@ public final class Contest extends com.google.api.client.json.GenericJson {
    * Information about the electoral district that this contest is in.
    * @param district district or {@code null} for none
    */
-  public Contest setDistrict(ElectoralDistrict district) {
+  public CivicinfoSchemaV2Contest setDistrict(CivicinfoSchemaV2ElectoralDistrict district) {
     this.district = district;
     return this;
   }
@@ -301,7 +301,7 @@ public final class Contest extends com.google.api.client.json.GenericJson {
    * A description of any additional eligibility requirements for voting in this contest.
    * @param electorateSpecifications electorateSpecifications or {@code null} for none
    */
-  public Contest setElectorateSpecifications(java.lang.String electorateSpecifications) {
+  public CivicinfoSchemaV2Contest setElectorateSpecifications(java.lang.String electorateSpecifications) {
     this.electorateSpecifications = electorateSpecifications;
     return this;
   }
@@ -324,7 +324,7 @@ public final class Contest extends com.google.api.client.json.GenericJson {
    * "administrative-area-2" and "administrative-area-1".
    * @param level level or {@code null} for none
    */
-  public Contest setLevel(java.util.List<java.lang.String> level) {
+  public CivicinfoSchemaV2Contest setLevel(java.util.List<java.lang.String> level) {
     this.level = level;
     return this;
   }
@@ -341,7 +341,7 @@ public final class Contest extends com.google.api.client.json.GenericJson {
    * The number of candidates that will be elected to office in this contest.
    * @param numberElected numberElected or {@code null} for none
    */
-  public Contest setNumberElected(java.lang.Long numberElected) {
+  public CivicinfoSchemaV2Contest setNumberElected(java.lang.Long numberElected) {
     this.numberElected = numberElected;
     return this;
   }
@@ -358,7 +358,7 @@ public final class Contest extends com.google.api.client.json.GenericJson {
    * The number of candidates that a voter may vote for in this contest.
    * @param numberVotingFor numberVotingFor or {@code null} for none
    */
-  public Contest setNumberVotingFor(java.lang.Long numberVotingFor) {
+  public CivicinfoSchemaV2Contest setNumberVotingFor(java.lang.Long numberVotingFor) {
     this.numberVotingFor = numberVotingFor;
     return this;
   }
@@ -375,7 +375,7 @@ public final class Contest extends com.google.api.client.json.GenericJson {
    * The name of the office for this contest.
    * @param office office or {@code null} for none
    */
-  public Contest setOffice(java.lang.String office) {
+  public CivicinfoSchemaV2Contest setOffice(java.lang.String office) {
     this.office = office;
     return this;
   }
@@ -392,7 +392,7 @@ public final class Contest extends com.google.api.client.json.GenericJson {
    * If this is a partisan election, the name of the party/parties it is for.
    * @param primaryParties primaryParties or {@code null} for none
    */
-  public Contest setPrimaryParties(java.util.List<java.lang.String> primaryParties) {
+  public CivicinfoSchemaV2Contest setPrimaryParties(java.util.List<java.lang.String> primaryParties) {
     this.primaryParties = primaryParties;
     return this;
   }
@@ -413,7 +413,7 @@ public final class Contest extends com.google.api.client.json.GenericJson {
    * for contests of type 'Referendum'.
    * @param referendumBallotResponses referendumBallotResponses or {@code null} for none
    */
-  public Contest setReferendumBallotResponses(java.util.List<java.lang.String> referendumBallotResponses) {
+  public CivicinfoSchemaV2Contest setReferendumBallotResponses(java.util.List<java.lang.String> referendumBallotResponses) {
     this.referendumBallotResponses = referendumBallotResponses;
     return this;
   }
@@ -432,7 +432,7 @@ public final class Contest extends com.google.api.client.json.GenericJson {
    * above the text. This field is only populated for contests of type 'Referendum'.
    * @param referendumBrief referendumBrief or {@code null} for none
    */
-  public Contest setReferendumBrief(java.lang.String referendumBrief) {
+  public CivicinfoSchemaV2Contest setReferendumBrief(java.lang.String referendumBrief) {
     this.referendumBrief = referendumBrief;
     return this;
   }
@@ -451,7 +451,7 @@ public final class Contest extends com.google.api.client.json.GenericJson {
    * field is only populated for contests of type 'Referendum'.
    * @param referendumConStatement referendumConStatement or {@code null} for none
    */
-  public Contest setReferendumConStatement(java.lang.String referendumConStatement) {
+  public CivicinfoSchemaV2Contest setReferendumConStatement(java.lang.String referendumConStatement) {
     this.referendumConStatement = referendumConStatement;
     return this;
   }
@@ -472,7 +472,7 @@ public final class Contest extends com.google.api.client.json.GenericJson {
    * 'Referendum'.
    * @param referendumEffectOfAbstain referendumEffectOfAbstain or {@code null} for none
    */
-  public Contest setReferendumEffectOfAbstain(java.lang.String referendumEffectOfAbstain) {
+  public CivicinfoSchemaV2Contest setReferendumEffectOfAbstain(java.lang.String referendumEffectOfAbstain) {
     this.referendumEffectOfAbstain = referendumEffectOfAbstain;
     return this;
   }
@@ -491,7 +491,7 @@ public final class Contest extends com.google.api.client.json.GenericJson {
    * field is only populated for contests of type 'Referendum'.
    * @param referendumPassageThreshold referendumPassageThreshold or {@code null} for none
    */
-  public Contest setReferendumPassageThreshold(java.lang.String referendumPassageThreshold) {
+  public CivicinfoSchemaV2Contest setReferendumPassageThreshold(java.lang.String referendumPassageThreshold) {
     this.referendumPassageThreshold = referendumPassageThreshold;
     return this;
   }
@@ -510,7 +510,7 @@ public final class Contest extends com.google.api.client.json.GenericJson {
    * field is only populated for contests of type 'Referendum'.
    * @param referendumProStatement referendumProStatement or {@code null} for none
    */
-  public Contest setReferendumProStatement(java.lang.String referendumProStatement) {
+  public CivicinfoSchemaV2Contest setReferendumProStatement(java.lang.String referendumProStatement) {
     this.referendumProStatement = referendumProStatement;
     return this;
   }
@@ -529,7 +529,7 @@ public final class Contest extends com.google.api.client.json.GenericJson {
    * 'Referendum'.
    * @param referendumSubtitle referendumSubtitle or {@code null} for none
    */
-  public Contest setReferendumSubtitle(java.lang.String referendumSubtitle) {
+  public CivicinfoSchemaV2Contest setReferendumSubtitle(java.lang.String referendumSubtitle) {
     this.referendumSubtitle = referendumSubtitle;
     return this;
   }
@@ -548,7 +548,7 @@ public final class Contest extends com.google.api.client.json.GenericJson {
    * 'Referendum'.
    * @param referendumText referendumText or {@code null} for none
    */
-  public Contest setReferendumText(java.lang.String referendumText) {
+  public CivicinfoSchemaV2Contest setReferendumText(java.lang.String referendumText) {
     this.referendumText = referendumText;
     return this;
   }
@@ -567,7 +567,7 @@ public final class Contest extends com.google.api.client.json.GenericJson {
    * of type 'Referendum'.
    * @param referendumTitle referendumTitle or {@code null} for none
    */
-  public Contest setReferendumTitle(java.lang.String referendumTitle) {
+  public CivicinfoSchemaV2Contest setReferendumTitle(java.lang.String referendumTitle) {
     this.referendumTitle = referendumTitle;
     return this;
   }
@@ -584,7 +584,7 @@ public final class Contest extends com.google.api.client.json.GenericJson {
    * A link to the referendum. This field is only populated for contests of type 'Referendum'.
    * @param referendumUrl referendumUrl or {@code null} for none
    */
-  public Contest setReferendumUrl(java.lang.String referendumUrl) {
+  public CivicinfoSchemaV2Contest setReferendumUrl(java.lang.String referendumUrl) {
     this.referendumUrl = referendumUrl;
     return this;
   }
@@ -601,7 +601,7 @@ public final class Contest extends com.google.api.client.json.GenericJson {
    * The roles which this office fulfills.
    * @param roles roles or {@code null} for none
    */
-  public Contest setRoles(java.util.List<java.lang.String> roles) {
+  public CivicinfoSchemaV2Contest setRoles(java.util.List<java.lang.String> roles) {
     this.roles = roles;
     return this;
   }
@@ -611,7 +611,7 @@ public final class Contest extends com.google.api.client.json.GenericJson {
    * aggregated from those sources.
    * @return value or {@code null} for none
    */
-  public java.util.List<Source> getSources() {
+  public java.util.List<CivicinfoSchemaV2Source> getSources() {
     return sources;
   }
 
@@ -620,7 +620,7 @@ public final class Contest extends com.google.api.client.json.GenericJson {
    * aggregated from those sources.
    * @param sources sources or {@code null} for none
    */
-  public Contest setSources(java.util.List<Source> sources) {
+  public CivicinfoSchemaV2Contest setSources(java.util.List<CivicinfoSchemaV2Source> sources) {
     this.sources = sources;
     return this;
   }
@@ -637,7 +637,7 @@ public final class Contest extends com.google.api.client.json.GenericJson {
    * "Yes" or "No" depending on whether this a contest being held outside the normal election cycle.
    * @param special special or {@code null} for none
    */
-  public Contest setSpecial(java.lang.String special) {
+  public CivicinfoSchemaV2Contest setSpecial(java.lang.String special) {
     this.special = special;
     return this;
   }
@@ -658,19 +658,19 @@ public final class Contest extends com.google.api.client.json.GenericJson {
    * be 'Retention'.
    * @param type type or {@code null} for none
    */
-  public Contest setType(java.lang.String type) {
+  public CivicinfoSchemaV2Contest setType(java.lang.String type) {
     this.type = type;
     return this;
   }
 
   @Override
-  public Contest set(String fieldName, Object value) {
-    return (Contest) super.set(fieldName, value);
+  public CivicinfoSchemaV2Contest set(String fieldName, Object value) {
+    return (CivicinfoSchemaV2Contest) super.set(fieldName, value);
   }
 
   @Override
-  public Contest clone() {
-    return (Contest) super.clone();
+  public CivicinfoSchemaV2Contest clone() {
+    return (CivicinfoSchemaV2Contest) super.clone();
   }
 
 }

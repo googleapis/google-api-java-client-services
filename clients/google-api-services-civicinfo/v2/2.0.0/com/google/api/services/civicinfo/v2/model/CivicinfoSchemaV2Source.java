@@ -28,7 +28,7 @@ package com.google.api.services.civicinfo.v2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Source extends com.google.api.client.json.GenericJson {
+public final class CivicinfoSchemaV2Source extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of the data source.
@@ -56,7 +56,7 @@ public final class Source extends com.google.api.client.json.GenericJson {
    * The name of the data source.
    * @param name name or {@code null} for none
    */
-  public Source setName(java.lang.String name) {
+  public CivicinfoSchemaV2Source setName(java.lang.String name) {
     this.name = name;
     return this;
   }
@@ -73,19 +73,19 @@ public final class Source extends com.google.api.client.json.GenericJson {
    * Whether this data comes from an official government source.
    * @param official official or {@code null} for none
    */
-  public Source setOfficial(java.lang.Boolean official) {
+  public CivicinfoSchemaV2Source setOfficial(java.lang.Boolean official) {
     this.official = official;
     return this;
   }
 
   @Override
-  public Source set(String fieldName, Object value) {
-    return (Source) super.set(fieldName, value);
+  public CivicinfoSchemaV2Source set(String fieldName, Object value) {
+    return (CivicinfoSchemaV2Source) super.set(fieldName, value);
   }
 
   @Override
-  public Source clone() {
-    return (Source) super.clone();
+  public CivicinfoSchemaV2Source clone() {
+    return (CivicinfoSchemaV2Source) super.clone();
   }
 
 }

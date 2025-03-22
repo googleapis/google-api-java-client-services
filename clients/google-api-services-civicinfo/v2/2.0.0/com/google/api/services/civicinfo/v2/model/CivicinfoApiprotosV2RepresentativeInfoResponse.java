@@ -28,7 +28,7 @@ package com.google.api.services.civicinfo.v2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class RepresentativeInfoResponse extends com.google.api.client.json.GenericJson {
+public final class CivicinfoApiprotosV2RepresentativeInfoResponse extends com.google.api.client.json.GenericJson {
 
   /**
    * A map of political geographic divisions that contain the requested address, keyed by the unique
@@ -36,13 +36,7 @@ public final class RepresentativeInfoResponse extends com.google.api.client.json
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.Map<String, GeographicDivision> divisions;
-
-  static {
-    // hack to force ProGuard to consider GeographicDivision used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GeographicDivision.class);
-  }
+  private java.util.Map<String, CivicinfoSchemaV2GeographicDivision> divisions;
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
@@ -57,7 +51,7 @@ public final class RepresentativeInfoResponse extends com.google.api.client.json
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private SimpleAddressType normalizedInput;
+  private CivicinfoSchemaV2SimpleAddressType normalizedInput;
 
   /**
    * Elected offices referenced by the divisions listed above. Will only be present if
@@ -65,13 +59,7 @@ public final class RepresentativeInfoResponse extends com.google.api.client.json
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<Office> offices;
-
-  static {
-    // hack to force ProGuard to consider Office used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Office.class);
-  }
+  private java.util.List<CivicinfoSchemaV2Office> offices;
 
   /**
    * Officials holding the offices listed above. Will only be present if includeOffices was true in
@@ -79,20 +67,14 @@ public final class RepresentativeInfoResponse extends com.google.api.client.json
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<Official> officials;
-
-  static {
-    // hack to force ProGuard to consider Official used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Official.class);
-  }
+  private java.util.List<CivicinfoSchemaV2Official> officials;
 
   /**
    * A map of political geographic divisions that contain the requested address, keyed by the unique
    * Open Civic Data identifier for this division.
    * @return value or {@code null} for none
    */
-  public java.util.Map<String, GeographicDivision> getDivisions() {
+  public java.util.Map<String, CivicinfoSchemaV2GeographicDivision> getDivisions() {
     return divisions;
   }
 
@@ -101,7 +83,7 @@ public final class RepresentativeInfoResponse extends com.google.api.client.json
    * Open Civic Data identifier for this division.
    * @param divisions divisions or {@code null} for none
    */
-  public RepresentativeInfoResponse setDivisions(java.util.Map<String, GeographicDivision> divisions) {
+  public CivicinfoApiprotosV2RepresentativeInfoResponse setDivisions(java.util.Map<String, CivicinfoSchemaV2GeographicDivision> divisions) {
     this.divisions = divisions;
     return this;
   }
@@ -120,7 +102,7 @@ public final class RepresentativeInfoResponse extends com.google.api.client.json
    * "civicinfo#representativeInfoResponse".
    * @param kind kind or {@code null} for none
    */
-  public RepresentativeInfoResponse setKind(java.lang.String kind) {
+  public CivicinfoApiprotosV2RepresentativeInfoResponse setKind(java.lang.String kind) {
     this.kind = kind;
     return this;
   }
@@ -129,7 +111,7 @@ public final class RepresentativeInfoResponse extends com.google.api.client.json
    * The normalized version of the requested address
    * @return value or {@code null} for none
    */
-  public SimpleAddressType getNormalizedInput() {
+  public CivicinfoSchemaV2SimpleAddressType getNormalizedInput() {
     return normalizedInput;
   }
 
@@ -137,7 +119,7 @@ public final class RepresentativeInfoResponse extends com.google.api.client.json
    * The normalized version of the requested address
    * @param normalizedInput normalizedInput or {@code null} for none
    */
-  public RepresentativeInfoResponse setNormalizedInput(SimpleAddressType normalizedInput) {
+  public CivicinfoApiprotosV2RepresentativeInfoResponse setNormalizedInput(CivicinfoSchemaV2SimpleAddressType normalizedInput) {
     this.normalizedInput = normalizedInput;
     return this;
   }
@@ -147,7 +129,7 @@ public final class RepresentativeInfoResponse extends com.google.api.client.json
    * includeOffices was true in the request.
    * @return value or {@code null} for none
    */
-  public java.util.List<Office> getOffices() {
+  public java.util.List<CivicinfoSchemaV2Office> getOffices() {
     return offices;
   }
 
@@ -156,7 +138,7 @@ public final class RepresentativeInfoResponse extends com.google.api.client.json
    * includeOffices was true in the request.
    * @param offices offices or {@code null} for none
    */
-  public RepresentativeInfoResponse setOffices(java.util.List<Office> offices) {
+  public CivicinfoApiprotosV2RepresentativeInfoResponse setOffices(java.util.List<CivicinfoSchemaV2Office> offices) {
     this.offices = offices;
     return this;
   }
@@ -166,7 +148,7 @@ public final class RepresentativeInfoResponse extends com.google.api.client.json
    * the request.
    * @return value or {@code null} for none
    */
-  public java.util.List<Official> getOfficials() {
+  public java.util.List<CivicinfoSchemaV2Official> getOfficials() {
     return officials;
   }
 
@@ -175,19 +157,19 @@ public final class RepresentativeInfoResponse extends com.google.api.client.json
    * the request.
    * @param officials officials or {@code null} for none
    */
-  public RepresentativeInfoResponse setOfficials(java.util.List<Official> officials) {
+  public CivicinfoApiprotosV2RepresentativeInfoResponse setOfficials(java.util.List<CivicinfoSchemaV2Official> officials) {
     this.officials = officials;
     return this;
   }
 
   @Override
-  public RepresentativeInfoResponse set(String fieldName, Object value) {
-    return (RepresentativeInfoResponse) super.set(fieldName, value);
+  public CivicinfoApiprotosV2RepresentativeInfoResponse set(String fieldName, Object value) {
+    return (CivicinfoApiprotosV2RepresentativeInfoResponse) super.set(fieldName, value);
   }
 
   @Override
-  public RepresentativeInfoResponse clone() {
-    return (RepresentativeInfoResponse) super.clone();
+  public CivicinfoApiprotosV2RepresentativeInfoResponse clone() {
+    return (CivicinfoApiprotosV2RepresentativeInfoResponse) super.clone();
   }
 
 }

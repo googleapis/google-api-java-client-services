@@ -46,7 +46,7 @@ public final class DataPolicy extends com.google.api.client.json.GenericJson {
   private java.lang.String dataPolicyId;
 
   /**
-   * Type of data policy.
+   * Required. Data policy type. Type of data policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -105,7 +105,7 @@ public final class DataPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Type of data policy.
+   * Required. Data policy type. Type of data policy.
    * @return value or {@code null} for none
    */
   public java.lang.String getDataPolicyType() {
@@ -113,7 +113,7 @@ public final class DataPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Type of data policy.
+   * Required. Data policy type. Type of data policy.
    * @param dataPolicyType dataPolicyType or {@code null} for none
    */
   public DataPolicy setDataPolicyType(java.lang.String dataPolicyType) {

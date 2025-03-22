@@ -30,14 +30,20 @@ package com.google.api.services.compute.model;
 public final class BackendServiceHAPolicyLeaderNetworkEndpoint extends com.google.api.client.json.GenericJson {
 
   /**
-   * Specifying the instance name of a leader is not supported.
+   * The name of the VM instance of the leader network endpoint. The instance must already be
+   * attached to the NEG specified in the haPolicy.leader.backendGroup. The name must be 1-63
+   * characters long, and comply with RFC1035. Authorization requires the following IAM permission
+   * on the specified resource instance: compute.instances.use
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String instance;
 
   /**
-   * Specifying the instance name of a leader is not supported.
+   * The name of the VM instance of the leader network endpoint. The instance must already be
+   * attached to the NEG specified in the haPolicy.leader.backendGroup. The name must be 1-63
+   * characters long, and comply with RFC1035. Authorization requires the following IAM permission
+   * on the specified resource instance: compute.instances.use
    * @return value or {@code null} for none
    */
   public java.lang.String getInstance() {
@@ -45,7 +51,10 @@ public final class BackendServiceHAPolicyLeaderNetworkEndpoint extends com.googl
   }
 
   /**
-   * Specifying the instance name of a leader is not supported.
+   * The name of the VM instance of the leader network endpoint. The instance must already be
+   * attached to the NEG specified in the haPolicy.leader.backendGroup. The name must be 1-63
+   * characters long, and comply with RFC1035. Authorization requires the following IAM permission
+   * on the specified resource instance: compute.instances.use
    * @param instance instance or {@code null} for none
    */
   public BackendServiceHAPolicyLeaderNetworkEndpoint setInstance(java.lang.String instance) {

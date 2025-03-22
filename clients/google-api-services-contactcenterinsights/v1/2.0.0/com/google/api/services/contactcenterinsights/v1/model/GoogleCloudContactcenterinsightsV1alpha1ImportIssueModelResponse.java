@@ -30,6 +30,30 @@ package com.google.api.services.contactcenterinsights.v1.model;
 @SuppressWarnings("javadoc")
 public final class GoogleCloudContactcenterinsightsV1alpha1ImportIssueModelResponse extends com.google.api.client.json.GenericJson {
 
+  /**
+   * The issue model that was imported.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudContactcenterinsightsV1alpha1IssueModel issueModel;
+
+  /**
+   * The issue model that was imported.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1IssueModel getIssueModel() {
+    return issueModel;
+  }
+
+  /**
+   * The issue model that was imported.
+   * @param issueModel issueModel or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1ImportIssueModelResponse setIssueModel(GoogleCloudContactcenterinsightsV1alpha1IssueModel issueModel) {
+    this.issueModel = issueModel;
+    return this;
+  }
+
   @Override
   public GoogleCloudContactcenterinsightsV1alpha1ImportIssueModelResponse set(String fieldName, Object value) {
     return (GoogleCloudContactcenterinsightsV1alpha1ImportIssueModelResponse) super.set(fieldName, value);

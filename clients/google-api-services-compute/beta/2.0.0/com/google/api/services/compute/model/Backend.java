@@ -83,7 +83,8 @@ public final class Backend extends com.google.api.client.json.GenericJson {
    * determine what types of backends a load balancer supports, see the [Backend services
    * overview](https://cloud.google.com/load-balancing/docs/backend-service#backends). You must use
    * the *fully-qualified* URL (starting with https://www.googleapis.com/) to specify the instance
-   * group or NEG. Partial URLs are not supported.
+   * group or NEG. Partial URLs are not supported. If haPolicy is specified, backends must refer to
+   * NEG resources of type GCE_VM_IP.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -280,7 +281,8 @@ public final class Backend extends com.google.api.client.json.GenericJson {
    * determine what types of backends a load balancer supports, see the [Backend services
    * overview](https://cloud.google.com/load-balancing/docs/backend-service#backends). You must use
    * the *fully-qualified* URL (starting with https://www.googleapis.com/) to specify the instance
-   * group or NEG. Partial URLs are not supported.
+   * group or NEG. Partial URLs are not supported. If haPolicy is specified, backends must refer to
+   * NEG resources of type GCE_VM_IP.
    * @return value or {@code null} for none
    */
   public java.lang.String getGroup() {
@@ -292,7 +294,8 @@ public final class Backend extends com.google.api.client.json.GenericJson {
    * determine what types of backends a load balancer supports, see the [Backend services
    * overview](https://cloud.google.com/load-balancing/docs/backend-service#backends). You must use
    * the *fully-qualified* URL (starting with https://www.googleapis.com/) to specify the instance
-   * group or NEG. Partial URLs are not supported.
+   * group or NEG. Partial URLs are not supported. If haPolicy is specified, backends must refer to
+   * NEG resources of type GCE_VM_IP.
    * @param group group or {@code null} for none
    */
   public Backend setGroup(java.lang.String group) {

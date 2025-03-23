@@ -17,8 +17,7 @@
 package com.google.api.services.container.model;
 
 /**
- * Parameters that can be configured on Windows nodes. Windows Node Config that define the
- * parameters that will be used to configure the Windows node pool settings.
+ * PodAutoscaling is used for configuration of parameters for workload autoscaling.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Kubernetes Engine API. For a detailed explanation
@@ -29,40 +28,40 @@ package com.google.api.services.container.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class WindowsNodeConfig extends com.google.api.client.json.GenericJson {
+public final class PodAutoscaling extends com.google.api.client.json.GenericJson {
 
   /**
-   * OSVersion specifies the Windows node config to be used on the node.
+   * Selected Horizontal Pod Autoscaling profile.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String osVersion;
+  private java.lang.String hpaProfile;
 
   /**
-   * OSVersion specifies the Windows node config to be used on the node.
+   * Selected Horizontal Pod Autoscaling profile.
    * @return value or {@code null} for none
    */
-  public java.lang.String getOsVersion() {
-    return osVersion;
+  public java.lang.String getHpaProfile() {
+    return hpaProfile;
   }
 
   /**
-   * OSVersion specifies the Windows node config to be used on the node.
-   * @param osVersion osVersion or {@code null} for none
+   * Selected Horizontal Pod Autoscaling profile.
+   * @param hpaProfile hpaProfile or {@code null} for none
    */
-  public WindowsNodeConfig setOsVersion(java.lang.String osVersion) {
-    this.osVersion = osVersion;
+  public PodAutoscaling setHpaProfile(java.lang.String hpaProfile) {
+    this.hpaProfile = hpaProfile;
     return this;
   }
 
   @Override
-  public WindowsNodeConfig set(String fieldName, Object value) {
-    return (WindowsNodeConfig) super.set(fieldName, value);
+  public PodAutoscaling set(String fieldName, Object value) {
+    return (PodAutoscaling) super.set(fieldName, value);
   }
 
   @Override
-  public WindowsNodeConfig clone() {
-    return (WindowsNodeConfig) super.clone();
+  public PodAutoscaling clone() {
+    return (PodAutoscaling) super.clone();
   }
 
 }

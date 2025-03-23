@@ -311,7 +311,7 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
 
   /**
    * The monitoring service the cluster should use to write metrics. Currently available options: *
-   * "monitoring.googleapis.com/kubernetes" - The Cloud Monitoring service with a Kubernetes-native
+   * `monitoring.googleapis.com/kubernetes` - The Cloud Monitoring service with a Kubernetes-native
    * resource model * `monitoring.googleapis.com` - The legacy Cloud Monitoring service (no longer
    * available as of GKE 1.15). * `none` - No metrics will be exported from the cluster. If left as
    * an empty string,`monitoring.googleapis.com/kubernetes` will be used for GKE 1.14+ or
@@ -417,6 +417,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private ParentProductConfig desiredParentProductConfig;
+
+  /**
+   * The desired config for pod autoscaling.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PodAutoscaling desiredPodAutoscaling;
 
   /**
    * The desired private cluster configuration. master_global_access_config is the only field that
@@ -1207,7 +1214,7 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
 
   /**
    * The monitoring service the cluster should use to write metrics. Currently available options: *
-   * "monitoring.googleapis.com/kubernetes" - The Cloud Monitoring service with a Kubernetes-native
+   * `monitoring.googleapis.com/kubernetes` - The Cloud Monitoring service with a Kubernetes-native
    * resource model * `monitoring.googleapis.com` - The legacy Cloud Monitoring service (no longer
    * available as of GKE 1.15). * `none` - No metrics will be exported from the cluster. If left as
    * an empty string,`monitoring.googleapis.com/kubernetes` will be used for GKE 1.14+ or
@@ -1220,7 +1227,7 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
 
   /**
    * The monitoring service the cluster should use to write metrics. Currently available options: *
-   * "monitoring.googleapis.com/kubernetes" - The Cloud Monitoring service with a Kubernetes-native
+   * `monitoring.googleapis.com/kubernetes` - The Cloud Monitoring service with a Kubernetes-native
    * resource model * `monitoring.googleapis.com` - The legacy Cloud Monitoring service (no longer
    * available as of GKE 1.15). * `none` - No metrics will be exported from the cluster. If left as
    * an empty string,`monitoring.googleapis.com/kubernetes` will be used for GKE 1.14+ or
@@ -1459,6 +1466,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredParentProductConfig(ParentProductConfig desiredParentProductConfig) {
     this.desiredParentProductConfig = desiredParentProductConfig;
+    return this;
+  }
+
+  /**
+   * The desired config for pod autoscaling.
+   * @return value or {@code null} for none
+   */
+  public PodAutoscaling getDesiredPodAutoscaling() {
+    return desiredPodAutoscaling;
+  }
+
+  /**
+   * The desired config for pod autoscaling.
+   * @param desiredPodAutoscaling desiredPodAutoscaling or {@code null} for none
+   */
+  public ClusterUpdate setDesiredPodAutoscaling(PodAutoscaling desiredPodAutoscaling) {
+    this.desiredPodAutoscaling = desiredPodAutoscaling;
     return this;
   }
 

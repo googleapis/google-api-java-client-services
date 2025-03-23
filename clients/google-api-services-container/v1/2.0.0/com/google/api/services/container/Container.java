@@ -1317,6 +1317,171 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           }
         }
         /**
+         * Fetch upgrade information of a specific cluster.
+         *
+         * Create a request for the method "clusters.fetchClusterUpgradeInfo".
+         *
+         * This request holds the parameters needed by the container server.  After setting any optional
+         * parameters, call the {@link FetchClusterUpgradeInfo#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param name Required. The name (project, location, cluster) of the cluster to get. Specified in the format
+         *        `projects/locations/clusters` or `projects/zones/clusters`.
+         * @return the request
+         */
+        public FetchClusterUpgradeInfo fetchClusterUpgradeInfo(java.lang.String name) throws java.io.IOException {
+          FetchClusterUpgradeInfo result = new FetchClusterUpgradeInfo(name);
+          initialize(result);
+          return result;
+        }
+
+        public class FetchClusterUpgradeInfo extends ContainerRequest<com.google.api.services.container.model.ClusterUpgradeInfo> {
+
+          private static final String REST_PATH = "v1/{+name}:fetchClusterUpgradeInfo";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/clusters/[^/]+$");
+
+          /**
+           * Fetch upgrade information of a specific cluster.
+           *
+           * Create a request for the method "clusters.fetchClusterUpgradeInfo".
+           *
+           * This request holds the parameters needed by the the container server.  After setting any
+           * optional parameters, call the {@link FetchClusterUpgradeInfo#execute()} method to invoke the
+           * remote operation. <p> {@link FetchClusterUpgradeInfo#initialize(com.google.api.client.googleapi
+           * s.services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+           * after invoking the constructor. </p>
+           *
+           * @param name Required. The name (project, location, cluster) of the cluster to get. Specified in the format
+         *        `projects/locations/clusters` or `projects/zones/clusters`.
+           * @since 1.13
+           */
+          protected FetchClusterUpgradeInfo(java.lang.String name) {
+            super(Container.this, "GET", REST_PATH, null, com.google.api.services.container.model.ClusterUpgradeInfo.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/clusters/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public FetchClusterUpgradeInfo set$Xgafv(java.lang.String $Xgafv) {
+            return (FetchClusterUpgradeInfo) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public FetchClusterUpgradeInfo setAccessToken(java.lang.String accessToken) {
+            return (FetchClusterUpgradeInfo) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public FetchClusterUpgradeInfo setAlt(java.lang.String alt) {
+            return (FetchClusterUpgradeInfo) super.setAlt(alt);
+          }
+
+          @Override
+          public FetchClusterUpgradeInfo setCallback(java.lang.String callback) {
+            return (FetchClusterUpgradeInfo) super.setCallback(callback);
+          }
+
+          @Override
+          public FetchClusterUpgradeInfo setFields(java.lang.String fields) {
+            return (FetchClusterUpgradeInfo) super.setFields(fields);
+          }
+
+          @Override
+          public FetchClusterUpgradeInfo setKey(java.lang.String key) {
+            return (FetchClusterUpgradeInfo) super.setKey(key);
+          }
+
+          @Override
+          public FetchClusterUpgradeInfo setOauthToken(java.lang.String oauthToken) {
+            return (FetchClusterUpgradeInfo) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public FetchClusterUpgradeInfo setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (FetchClusterUpgradeInfo) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public FetchClusterUpgradeInfo setQuotaUser(java.lang.String quotaUser) {
+            return (FetchClusterUpgradeInfo) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public FetchClusterUpgradeInfo setUploadType(java.lang.String uploadType) {
+            return (FetchClusterUpgradeInfo) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public FetchClusterUpgradeInfo setUploadProtocol(java.lang.String uploadProtocol) {
+            return (FetchClusterUpgradeInfo) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name (project, location, cluster) of the cluster to get. Specified in the
+           * format `projects/locations/clusters` or `projects/zones/clusters`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name (project, location, cluster) of the cluster to get. Specified in the format
+         `projects/locations/clusters` or `projects/zones/clusters`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name (project, location, cluster) of the cluster to get. Specified in the
+           * format `projects/locations/clusters` or `projects/zones/clusters`.
+           */
+          public FetchClusterUpgradeInfo setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/clusters/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** API request version that initiates this operation. */
+          @com.google.api.client.util.Key
+          private java.lang.String version;
+
+          /** API request version that initiates this operation.
+           */
+          public java.lang.String getVersion() {
+            return version;
+          }
+
+          /** API request version that initiates this operation. */
+          public FetchClusterUpgradeInfo setVersion(java.lang.String version) {
+            this.version = version;
+            return this;
+          }
+
+          @Override
+          public FetchClusterUpgradeInfo set(String parameterName, Object value) {
+            return (FetchClusterUpgradeInfo) super.set(parameterName, value);
+          }
+        }
+        /**
          * Gets the details of a specific cluster.
          *
          * Create a request for the method "clusters.get".
@@ -4108,6 +4273,173 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             @Override
             public Delete set(String parameterName, Object value) {
               return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Fetch upgrade information of a specific nodepool.
+           *
+           * Create a request for the method "nodePools.fetchNodePoolUpgradeInfo".
+           *
+           * This request holds the parameters needed by the container server.  After setting any optional
+           * parameters, call the {@link FetchNodePoolUpgradeInfo#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param name Required. The name (project, location, cluster, nodepool) of the nodepool to get. Specified in the
+           *        format `projects/locations/clusters/nodePools` or `projects/zones/clusters/nodePools`.
+           * @return the request
+           */
+          public FetchNodePoolUpgradeInfo fetchNodePoolUpgradeInfo(java.lang.String name) throws java.io.IOException {
+            FetchNodePoolUpgradeInfo result = new FetchNodePoolUpgradeInfo(name);
+            initialize(result);
+            return result;
+          }
+
+          public class FetchNodePoolUpgradeInfo extends ContainerRequest<com.google.api.services.container.model.NodePoolUpgradeInfo> {
+
+            private static final String REST_PATH = "v1/{+name}:fetchNodePoolUpgradeInfo";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/clusters/[^/]+/nodePools/[^/]+$");
+
+            /**
+             * Fetch upgrade information of a specific nodepool.
+             *
+             * Create a request for the method "nodePools.fetchNodePoolUpgradeInfo".
+             *
+             * This request holds the parameters needed by the the container server.  After setting any
+             * optional parameters, call the {@link FetchNodePoolUpgradeInfo#execute()} method to invoke the
+             * remote operation. <p> {@link FetchNodePoolUpgradeInfo#initialize(com.google.api.client.googleap
+             * is.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+             * immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name (project, location, cluster, nodepool) of the nodepool to get. Specified in the
+           *        format `projects/locations/clusters/nodePools` or `projects/zones/clusters/nodePools`.
+             * @since 1.13
+             */
+            protected FetchNodePoolUpgradeInfo(java.lang.String name) {
+              super(Container.this, "GET", REST_PATH, null, com.google.api.services.container.model.NodePoolUpgradeInfo.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/clusters/[^/]+/nodePools/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public FetchNodePoolUpgradeInfo set$Xgafv(java.lang.String $Xgafv) {
+              return (FetchNodePoolUpgradeInfo) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public FetchNodePoolUpgradeInfo setAccessToken(java.lang.String accessToken) {
+              return (FetchNodePoolUpgradeInfo) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public FetchNodePoolUpgradeInfo setAlt(java.lang.String alt) {
+              return (FetchNodePoolUpgradeInfo) super.setAlt(alt);
+            }
+
+            @Override
+            public FetchNodePoolUpgradeInfo setCallback(java.lang.String callback) {
+              return (FetchNodePoolUpgradeInfo) super.setCallback(callback);
+            }
+
+            @Override
+            public FetchNodePoolUpgradeInfo setFields(java.lang.String fields) {
+              return (FetchNodePoolUpgradeInfo) super.setFields(fields);
+            }
+
+            @Override
+            public FetchNodePoolUpgradeInfo setKey(java.lang.String key) {
+              return (FetchNodePoolUpgradeInfo) super.setKey(key);
+            }
+
+            @Override
+            public FetchNodePoolUpgradeInfo setOauthToken(java.lang.String oauthToken) {
+              return (FetchNodePoolUpgradeInfo) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public FetchNodePoolUpgradeInfo setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (FetchNodePoolUpgradeInfo) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public FetchNodePoolUpgradeInfo setQuotaUser(java.lang.String quotaUser) {
+              return (FetchNodePoolUpgradeInfo) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public FetchNodePoolUpgradeInfo setUploadType(java.lang.String uploadType) {
+              return (FetchNodePoolUpgradeInfo) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public FetchNodePoolUpgradeInfo setUploadProtocol(java.lang.String uploadProtocol) {
+              return (FetchNodePoolUpgradeInfo) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name (project, location, cluster, nodepool) of the nodepool to get.
+             * Specified in the format `projects/locations/clusters/nodePools` or
+             * `projects/zones/clusters/nodePools`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name (project, location, cluster, nodepool) of the nodepool to get. Specified in the
+           format `projects/locations/clusters/nodePools` or `projects/zones/clusters/nodePools`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name (project, location, cluster, nodepool) of the nodepool to get.
+             * Specified in the format `projects/locations/clusters/nodePools` or
+             * `projects/zones/clusters/nodePools`.
+             */
+            public FetchNodePoolUpgradeInfo setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/clusters/[^/]+/nodePools/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /** API request version that initiates this operation. */
+            @com.google.api.client.util.Key
+            private java.lang.String version;
+
+            /** API request version that initiates this operation.
+             */
+            public java.lang.String getVersion() {
+              return version;
+            }
+
+            /** API request version that initiates this operation. */
+            public FetchNodePoolUpgradeInfo setVersion(java.lang.String version) {
+              this.version = version;
+              return this;
+            }
+
+            @Override
+            public FetchNodePoolUpgradeInfo set(String parameterName, Object value) {
+              return (FetchNodePoolUpgradeInfo) super.set(parameterName, value);
             }
           }
           /**
@@ -7056,6 +7388,171 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
           @Override
           public Delete set(String parameterName, Object value) {
             return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Fetch upgrade information of a specific cluster.
+         *
+         * Create a request for the method "clusters.fetchClusterUpgradeInfo".
+         *
+         * This request holds the parameters needed by the container server.  After setting any optional
+         * parameters, call the {@link FetchClusterUpgradeInfo#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param name Required. The name (project, location, cluster) of the cluster to get. Specified in the format
+         *        `projects/locations/clusters` or `projects/zones/clusters`.
+         * @return the request
+         */
+        public FetchClusterUpgradeInfo fetchClusterUpgradeInfo(java.lang.String name) throws java.io.IOException {
+          FetchClusterUpgradeInfo result = new FetchClusterUpgradeInfo(name);
+          initialize(result);
+          return result;
+        }
+
+        public class FetchClusterUpgradeInfo extends ContainerRequest<com.google.api.services.container.model.ClusterUpgradeInfo> {
+
+          private static final String REST_PATH = "v1/{+name}:fetchClusterUpgradeInfo";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/zones/[^/]+/clusters/[^/]+$");
+
+          /**
+           * Fetch upgrade information of a specific cluster.
+           *
+           * Create a request for the method "clusters.fetchClusterUpgradeInfo".
+           *
+           * This request holds the parameters needed by the the container server.  After setting any
+           * optional parameters, call the {@link FetchClusterUpgradeInfo#execute()} method to invoke the
+           * remote operation. <p> {@link FetchClusterUpgradeInfo#initialize(com.google.api.client.googleapi
+           * s.services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+           * after invoking the constructor. </p>
+           *
+           * @param name Required. The name (project, location, cluster) of the cluster to get. Specified in the format
+         *        `projects/locations/clusters` or `projects/zones/clusters`.
+           * @since 1.13
+           */
+          protected FetchClusterUpgradeInfo(java.lang.String name) {
+            super(Container.this, "GET", REST_PATH, null, com.google.api.services.container.model.ClusterUpgradeInfo.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/zones/[^/]+/clusters/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public FetchClusterUpgradeInfo set$Xgafv(java.lang.String $Xgafv) {
+            return (FetchClusterUpgradeInfo) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public FetchClusterUpgradeInfo setAccessToken(java.lang.String accessToken) {
+            return (FetchClusterUpgradeInfo) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public FetchClusterUpgradeInfo setAlt(java.lang.String alt) {
+            return (FetchClusterUpgradeInfo) super.setAlt(alt);
+          }
+
+          @Override
+          public FetchClusterUpgradeInfo setCallback(java.lang.String callback) {
+            return (FetchClusterUpgradeInfo) super.setCallback(callback);
+          }
+
+          @Override
+          public FetchClusterUpgradeInfo setFields(java.lang.String fields) {
+            return (FetchClusterUpgradeInfo) super.setFields(fields);
+          }
+
+          @Override
+          public FetchClusterUpgradeInfo setKey(java.lang.String key) {
+            return (FetchClusterUpgradeInfo) super.setKey(key);
+          }
+
+          @Override
+          public FetchClusterUpgradeInfo setOauthToken(java.lang.String oauthToken) {
+            return (FetchClusterUpgradeInfo) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public FetchClusterUpgradeInfo setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (FetchClusterUpgradeInfo) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public FetchClusterUpgradeInfo setQuotaUser(java.lang.String quotaUser) {
+            return (FetchClusterUpgradeInfo) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public FetchClusterUpgradeInfo setUploadType(java.lang.String uploadType) {
+            return (FetchClusterUpgradeInfo) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public FetchClusterUpgradeInfo setUploadProtocol(java.lang.String uploadProtocol) {
+            return (FetchClusterUpgradeInfo) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name (project, location, cluster) of the cluster to get. Specified in the
+           * format `projects/locations/clusters` or `projects/zones/clusters`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name (project, location, cluster) of the cluster to get. Specified in the format
+         `projects/locations/clusters` or `projects/zones/clusters`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name (project, location, cluster) of the cluster to get. Specified in the
+           * format `projects/locations/clusters` or `projects/zones/clusters`.
+           */
+          public FetchClusterUpgradeInfo setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/zones/[^/]+/clusters/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** API request version that initiates this operation. */
+          @com.google.api.client.util.Key
+          private java.lang.String version;
+
+          /** API request version that initiates this operation.
+           */
+          public java.lang.String getVersion() {
+            return version;
+          }
+
+          /** API request version that initiates this operation. */
+          public FetchClusterUpgradeInfo setVersion(java.lang.String version) {
+            this.version = version;
+            return this;
+          }
+
+          @Override
+          public FetchClusterUpgradeInfo set(String parameterName, Object value) {
+            return (FetchClusterUpgradeInfo) super.set(parameterName, value);
           }
         }
         /**
@@ -10258,6 +10755,173 @@ public class Container extends com.google.api.client.googleapis.services.json.Ab
             @Override
             public Delete set(String parameterName, Object value) {
               return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Fetch upgrade information of a specific nodepool.
+           *
+           * Create a request for the method "nodePools.fetchNodePoolUpgradeInfo".
+           *
+           * This request holds the parameters needed by the container server.  After setting any optional
+           * parameters, call the {@link FetchNodePoolUpgradeInfo#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param name Required. The name (project, location, cluster, nodepool) of the nodepool to get. Specified in the
+           *        format `projects/locations/clusters/nodePools` or `projects/zones/clusters/nodePools`.
+           * @return the request
+           */
+          public FetchNodePoolUpgradeInfo fetchNodePoolUpgradeInfo(java.lang.String name) throws java.io.IOException {
+            FetchNodePoolUpgradeInfo result = new FetchNodePoolUpgradeInfo(name);
+            initialize(result);
+            return result;
+          }
+
+          public class FetchNodePoolUpgradeInfo extends ContainerRequest<com.google.api.services.container.model.NodePoolUpgradeInfo> {
+
+            private static final String REST_PATH = "v1/{+name}:fetchNodePoolUpgradeInfo";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/zones/[^/]+/clusters/[^/]+/nodePools/[^/]+$");
+
+            /**
+             * Fetch upgrade information of a specific nodepool.
+             *
+             * Create a request for the method "nodePools.fetchNodePoolUpgradeInfo".
+             *
+             * This request holds the parameters needed by the the container server.  After setting any
+             * optional parameters, call the {@link FetchNodePoolUpgradeInfo#execute()} method to invoke the
+             * remote operation. <p> {@link FetchNodePoolUpgradeInfo#initialize(com.google.api.client.googleap
+             * is.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+             * immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name (project, location, cluster, nodepool) of the nodepool to get. Specified in the
+           *        format `projects/locations/clusters/nodePools` or `projects/zones/clusters/nodePools`.
+             * @since 1.13
+             */
+            protected FetchNodePoolUpgradeInfo(java.lang.String name) {
+              super(Container.this, "GET", REST_PATH, null, com.google.api.services.container.model.NodePoolUpgradeInfo.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/zones/[^/]+/clusters/[^/]+/nodePools/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public FetchNodePoolUpgradeInfo set$Xgafv(java.lang.String $Xgafv) {
+              return (FetchNodePoolUpgradeInfo) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public FetchNodePoolUpgradeInfo setAccessToken(java.lang.String accessToken) {
+              return (FetchNodePoolUpgradeInfo) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public FetchNodePoolUpgradeInfo setAlt(java.lang.String alt) {
+              return (FetchNodePoolUpgradeInfo) super.setAlt(alt);
+            }
+
+            @Override
+            public FetchNodePoolUpgradeInfo setCallback(java.lang.String callback) {
+              return (FetchNodePoolUpgradeInfo) super.setCallback(callback);
+            }
+
+            @Override
+            public FetchNodePoolUpgradeInfo setFields(java.lang.String fields) {
+              return (FetchNodePoolUpgradeInfo) super.setFields(fields);
+            }
+
+            @Override
+            public FetchNodePoolUpgradeInfo setKey(java.lang.String key) {
+              return (FetchNodePoolUpgradeInfo) super.setKey(key);
+            }
+
+            @Override
+            public FetchNodePoolUpgradeInfo setOauthToken(java.lang.String oauthToken) {
+              return (FetchNodePoolUpgradeInfo) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public FetchNodePoolUpgradeInfo setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (FetchNodePoolUpgradeInfo) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public FetchNodePoolUpgradeInfo setQuotaUser(java.lang.String quotaUser) {
+              return (FetchNodePoolUpgradeInfo) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public FetchNodePoolUpgradeInfo setUploadType(java.lang.String uploadType) {
+              return (FetchNodePoolUpgradeInfo) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public FetchNodePoolUpgradeInfo setUploadProtocol(java.lang.String uploadProtocol) {
+              return (FetchNodePoolUpgradeInfo) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name (project, location, cluster, nodepool) of the nodepool to get.
+             * Specified in the format `projects/locations/clusters/nodePools` or
+             * `projects/zones/clusters/nodePools`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name (project, location, cluster, nodepool) of the nodepool to get. Specified in the
+           format `projects/locations/clusters/nodePools` or `projects/zones/clusters/nodePools`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name (project, location, cluster, nodepool) of the nodepool to get.
+             * Specified in the format `projects/locations/clusters/nodePools` or
+             * `projects/zones/clusters/nodePools`.
+             */
+            public FetchNodePoolUpgradeInfo setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/zones/[^/]+/clusters/[^/]+/nodePools/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /** API request version that initiates this operation. */
+            @com.google.api.client.util.Key
+            private java.lang.String version;
+
+            /** API request version that initiates this operation.
+             */
+            public java.lang.String getVersion() {
+              return version;
+            }
+
+            /** API request version that initiates this operation. */
+            public FetchNodePoolUpgradeInfo setVersion(java.lang.String version) {
+              this.version = version;
+              return this;
+            }
+
+            @Override
+            public FetchNodePoolUpgradeInfo set(String parameterName, Object value) {
+              return (FetchNodePoolUpgradeInfo) super.set(parameterName, value);
             }
           }
           /**

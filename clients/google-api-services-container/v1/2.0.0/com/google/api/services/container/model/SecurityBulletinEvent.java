@@ -76,6 +76,13 @@ public final class SecurityBulletinEvent extends com.google.api.client.json.Gene
   private java.lang.Boolean manualStepsRequired;
 
   /**
+   * The GKE versions where this vulnerability is mitigated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> mitigatedVersions;
+
+  /**
    * The GKE versions where this vulnerability is patched.
    * The value may be {@code null}.
    */
@@ -211,6 +218,23 @@ public final class SecurityBulletinEvent extends com.google.api.client.json.Gene
    */
   public SecurityBulletinEvent setManualStepsRequired(java.lang.Boolean manualStepsRequired) {
     this.manualStepsRequired = manualStepsRequired;
+    return this;
+  }
+
+  /**
+   * The GKE versions where this vulnerability is mitigated.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getMitigatedVersions() {
+    return mitigatedVersions;
+  }
+
+  /**
+   * The GKE versions where this vulnerability is mitigated.
+   * @param mitigatedVersions mitigatedVersions or {@code null} for none
+   */
+  public SecurityBulletinEvent setMitigatedVersions(java.util.List<java.lang.String> mitigatedVersions) {
+    this.mitigatedVersions = mitigatedVersions;
     return this;
   }
 

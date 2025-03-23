@@ -300,6 +300,10 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private LegacyAbac legacyAbac;
 
   /**
+   * Output only. The name of the Google Compute Engine
+   * [zone](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) or
+   * [region](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) in which
+   * the cluster resides.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -379,7 +383,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
 
   /**
    * The monitoring service the cluster should use to write metrics. Currently available options: *
-   * "monitoring.googleapis.com/kubernetes" - The Cloud Monitoring service with a Kubernetes-native
+   * `monitoring.googleapis.com/kubernetes` - The Cloud Monitoring service with a Kubernetes-native
    * resource model * `monitoring.googleapis.com` - The legacy Cloud Monitoring service (no longer
    * available as of GKE 1.15). * `none` - No metrics will be exported from the cluster. If left as
    * an empty string,`monitoring.googleapis.com/kubernetes` will be used for GKE 1.14+ or
@@ -482,6 +486,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private ParentProductConfig parentProductConfig;
+
+  /**
+   * The config for pod autoscaling.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PodAutoscaling podAutoscaling;
 
   /**
    * Configuration for private cluster.
@@ -1281,6 +1292,10 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. The name of the Google Compute Engine
+   * [zone](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) or
+   * [region](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) in which
+   * the cluster resides.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocation() {
@@ -1288,6 +1303,10 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. The name of the Google Compute Engine
+   * [zone](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) or
+   * [region](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) in which
+   * the cluster resides.
    * @param location location or {@code null} for none
    */
   public Cluster setLocation(java.lang.String location) {
@@ -1465,7 +1484,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
 
   /**
    * The monitoring service the cluster should use to write metrics. Currently available options: *
-   * "monitoring.googleapis.com/kubernetes" - The Cloud Monitoring service with a Kubernetes-native
+   * `monitoring.googleapis.com/kubernetes` - The Cloud Monitoring service with a Kubernetes-native
    * resource model * `monitoring.googleapis.com` - The legacy Cloud Monitoring service (no longer
    * available as of GKE 1.15). * `none` - No metrics will be exported from the cluster. If left as
    * an empty string,`monitoring.googleapis.com/kubernetes` will be used for GKE 1.14+ or
@@ -1478,7 +1497,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
 
   /**
    * The monitoring service the cluster should use to write metrics. Currently available options: *
-   * "monitoring.googleapis.com/kubernetes" - The Cloud Monitoring service with a Kubernetes-native
+   * `monitoring.googleapis.com/kubernetes` - The Cloud Monitoring service with a Kubernetes-native
    * resource model * `monitoring.googleapis.com` - The legacy Cloud Monitoring service (no longer
    * available as of GKE 1.15). * `none` - No metrics will be exported from the cluster. If left as
    * an empty string,`monitoring.googleapis.com/kubernetes` will be used for GKE 1.14+ or
@@ -1708,6 +1727,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setParentProductConfig(ParentProductConfig parentProductConfig) {
     this.parentProductConfig = parentProductConfig;
+    return this;
+  }
+
+  /**
+   * The config for pod autoscaling.
+   * @return value or {@code null} for none
+   */
+  public PodAutoscaling getPodAutoscaling() {
+    return podAutoscaling;
+  }
+
+  /**
+   * The config for pod autoscaling.
+   * @param podAutoscaling podAutoscaling or {@code null} for none
+   */
+  public Cluster setPodAutoscaling(PodAutoscaling podAutoscaling) {
+    this.podAutoscaling = podAutoscaling;
     return this;
   }
 

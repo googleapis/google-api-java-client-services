@@ -67,7 +67,8 @@ public final class Workstation extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Whether this workstation is in degraded mode, in which case it may require user
-   * action to restore full functionality. Details can be found in conditions.
+   * action to restore full functionality. The conditions field contains detailed information about
+   * the status of the workstation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -274,7 +275,8 @@ public final class Workstation extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Whether this workstation is in degraded mode, in which case it may require user
-   * action to restore full functionality. Details can be found in conditions.
+   * action to restore full functionality. The conditions field contains detailed information about
+   * the status of the workstation.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDegraded() {
@@ -283,7 +285,8 @@ public final class Workstation extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Whether this workstation is in degraded mode, in which case it may require user
-   * action to restore full functionality. Details can be found in conditions.
+   * action to restore full functionality. The conditions field contains detailed information about
+   * the status of the workstation.
    * @param degraded degraded or {@code null} for none
    */
   public Workstation setDegraded(java.lang.Boolean degraded) {

@@ -72,7 +72,7 @@ public final class GceRegionalPersistentDisk extends com.google.api.client.json.
 
   /**
    * Optional. Name of the snapshot to use as the source for the disk. If set, size_gb and fs_type
-   * must be empty.
+   * must be empty. Must be formatted as ext4 file system with no partitions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -162,7 +162,7 @@ public final class GceRegionalPersistentDisk extends com.google.api.client.json.
 
   /**
    * Optional. Name of the snapshot to use as the source for the disk. If set, size_gb and fs_type
-   * must be empty.
+   * must be empty. Must be formatted as ext4 file system with no partitions.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceSnapshot() {
@@ -171,7 +171,7 @@ public final class GceRegionalPersistentDisk extends com.google.api.client.json.
 
   /**
    * Optional. Name of the snapshot to use as the source for the disk. If set, size_gb and fs_type
-   * must be empty.
+   * must be empty. Must be formatted as ext4 file system with no partitions.
    * @param sourceSnapshot sourceSnapshot or {@code null} for none
    */
   public GceRegionalPersistentDisk setSourceSnapshot(java.lang.String sourceSnapshot) {

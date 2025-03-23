@@ -58,7 +58,7 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   private java.util.Map<String, java.lang.String> annotations;
 
   /**
-   * Output only. Status conditions describing the current resource state.
+   * Output only. Status conditions describing the workstation configuration's current state.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,8 +86,9 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   private String createTime;
 
   /**
-   * Output only. Whether this resource is degraded, in which case it may require user action to
-   * restore full functionality. See also the conditions field.
+   * Output only. Whether this workstation configuration is in degraded mode, in which case it may
+   * require user action to restore full functionality. The conditions field contains detailed
+   * information about the status of the configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -363,7 +364,7 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. Status conditions describing the current resource state.
+   * Output only. Status conditions describing the workstation configuration's current state.
    * @return value or {@code null} for none
    */
   public java.util.List<Status> getConditions() {
@@ -371,7 +372,7 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. Status conditions describing the current resource state.
+   * Output only. Status conditions describing the workstation configuration's current state.
    * @param conditions conditions or {@code null} for none
    */
   public WorkstationConfig setConditions(java.util.List<Status> conditions) {
@@ -416,8 +417,9 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. Whether this resource is degraded, in which case it may require user action to
-   * restore full functionality. See also the conditions field.
+   * Output only. Whether this workstation configuration is in degraded mode, in which case it may
+   * require user action to restore full functionality. The conditions field contains detailed
+   * information about the status of the configuration.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDegraded() {
@@ -425,8 +427,9 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. Whether this resource is degraded, in which case it may require user action to
-   * restore full functionality. See also the conditions field.
+   * Output only. Whether this workstation configuration is in degraded mode, in which case it may
+   * require user action to restore full functionality. The conditions field contains detailed
+   * information about the status of the configuration.
    * @param degraded degraded or {@code null} for none
    */
   public WorkstationConfig setDegraded(java.lang.Boolean degraded) {

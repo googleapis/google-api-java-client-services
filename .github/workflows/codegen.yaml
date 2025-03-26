@@ -10,7 +10,7 @@ jobs:
     # As of November 2023, it returns 269 service names.
     uses: googleapis/discovery-artifact-manager/.github/workflows/list-services.yml@master
   total_service_size_check:
-    runs-on: ubuntu-20.04
+    runs-on: 'ubuntu-24.04'
     needs: discovery
     steps:
       - uses: actions/github-script@v5
@@ -24,7 +24,7 @@ jobs:
               throw new Error(`Total services (${services.length}) exceed limit of ${MAX_SERVICE_SIZE}`)
             }
   batch:
-    runs-on: ubuntu-20.04
+    runs-on: 'ubuntu-24.04'
     needs: discovery
     outputs:
       # As of November 2023, the output of batch job is a 3-element array, which contains a chunk of 100 service names

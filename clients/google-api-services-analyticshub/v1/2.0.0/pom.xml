@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-analyticshub</artifactId>
-  <version>v1-rev20250310-2.0.0</version>
-  <name>Analytics Hub API v1-rev20250310-2.0.0</name>
+  <version>v1-rev20250315-2.0.0</version>
+  <name>Analytics Hub API v1-rev20250315-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

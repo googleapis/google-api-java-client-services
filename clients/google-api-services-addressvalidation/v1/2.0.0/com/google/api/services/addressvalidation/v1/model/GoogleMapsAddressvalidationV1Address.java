@@ -55,11 +55,15 @@ public final class GoogleMapsAddressvalidationV1Address extends com.google.api.c
 
   /**
    * The types of components that were expected to be present in a correctly formatted mailing
-   * address but were not found in the input AND could not be inferred. Components of this type are
-   * not present in `formatted_address`, `postal_address`, or `address_components`. An example might
-   * be `['street_number', 'route']` for an input like "Boulder, Colorado, 80301, USA". The list of
+   * address but were not found in the input AND could not be inferred. An example might be
+   * `['street_number', 'route']` for an input like "Boulder, Colorado, 80301, USA". The list of
    * possible types can be found
    * [here](https://developers.google.com/maps/documentation/geocoding/requests-geocoding#Types).
+   * **Note: you might see a missing component type when you think you've already supplied the
+   * missing component.** For example, this can happen when the input address contains the building
+   * name, but not the premise number. In the address "渋谷区渋谷３丁目　Shibuya Stream", the building name
+   * "Shibuya Stream" has the component type `premise`, but the premise number is missing, so
+   * `missing_component_types` will contain `premise`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -146,11 +150,15 @@ public final class GoogleMapsAddressvalidationV1Address extends com.google.api.c
 
   /**
    * The types of components that were expected to be present in a correctly formatted mailing
-   * address but were not found in the input AND could not be inferred. Components of this type are
-   * not present in `formatted_address`, `postal_address`, or `address_components`. An example might
-   * be `['street_number', 'route']` for an input like "Boulder, Colorado, 80301, USA". The list of
+   * address but were not found in the input AND could not be inferred. An example might be
+   * `['street_number', 'route']` for an input like "Boulder, Colorado, 80301, USA". The list of
    * possible types can be found
    * [here](https://developers.google.com/maps/documentation/geocoding/requests-geocoding#Types).
+   * **Note: you might see a missing component type when you think you've already supplied the
+   * missing component.** For example, this can happen when the input address contains the building
+   * name, but not the premise number. In the address "渋谷区渋谷３丁目　Shibuya Stream", the building name
+   * "Shibuya Stream" has the component type `premise`, but the premise number is missing, so
+   * `missing_component_types` will contain `premise`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getMissingComponentTypes() {
@@ -159,11 +167,15 @@ public final class GoogleMapsAddressvalidationV1Address extends com.google.api.c
 
   /**
    * The types of components that were expected to be present in a correctly formatted mailing
-   * address but were not found in the input AND could not be inferred. Components of this type are
-   * not present in `formatted_address`, `postal_address`, or `address_components`. An example might
-   * be `['street_number', 'route']` for an input like "Boulder, Colorado, 80301, USA". The list of
+   * address but were not found in the input AND could not be inferred. An example might be
+   * `['street_number', 'route']` for an input like "Boulder, Colorado, 80301, USA". The list of
    * possible types can be found
    * [here](https://developers.google.com/maps/documentation/geocoding/requests-geocoding#Types).
+   * **Note: you might see a missing component type when you think you've already supplied the
+   * missing component.** For example, this can happen when the input address contains the building
+   * name, but not the premise number. In the address "渋谷区渋谷３丁目　Shibuya Stream", the building name
+   * "Shibuya Stream" has the component type `premise`, but the premise number is missing, so
+   * `missing_component_types` will contain `premise`.
    * @param missingComponentTypes missingComponentTypes or {@code null} for none
    */
   public GoogleMapsAddressvalidationV1Address setMissingComponentTypes(java.util.List<java.lang.String> missingComponentTypes) {

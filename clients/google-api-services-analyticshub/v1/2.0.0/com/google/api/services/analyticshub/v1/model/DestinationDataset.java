@@ -68,6 +68,14 @@ public final class DestinationDataset extends com.google.api.client.json.Generic
   private java.lang.String location;
 
   /**
+   * Optional. The geographic locations where the dataset should be replicated. See
+   * https://cloud.google.com/bigquery/docs/locations for supported locations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> replicaLocations;
+
+  /**
    * Required. A reference that identifies the destination dataset.
    * @return value or {@code null} for none
    */
@@ -155,6 +163,25 @@ public final class DestinationDataset extends com.google.api.client.json.Generic
    */
   public DestinationDataset setLocation(java.lang.String location) {
     this.location = location;
+    return this;
+  }
+
+  /**
+   * Optional. The geographic locations where the dataset should be replicated. See
+   * https://cloud.google.com/bigquery/docs/locations for supported locations.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getReplicaLocations() {
+    return replicaLocations;
+  }
+
+  /**
+   * Optional. The geographic locations where the dataset should be replicated. See
+   * https://cloud.google.com/bigquery/docs/locations for supported locations.
+   * @param replicaLocations replicaLocations or {@code null} for none
+   */
+  public DestinationDataset setReplicaLocations(java.util.List<java.lang.String> replicaLocations) {
+    this.replicaLocations = replicaLocations;
     return this;
   }
 

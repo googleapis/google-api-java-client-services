@@ -34,7 +34,7 @@ Introduction
 
 Installation
 
-Python 3.6 is required.  Python3 is not supported.
+Python 3.6 is required.  Python 2 is not supported.
 
 Everything can be installed quickly with easy_install or pip. E.g.:
 

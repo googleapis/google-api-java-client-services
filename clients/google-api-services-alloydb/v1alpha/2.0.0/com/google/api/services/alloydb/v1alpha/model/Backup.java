@@ -207,7 +207,8 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private java.lang.String uid;
 
   /**
-   * Output only. Update time stamp
+   * Output only. Update time stamp Users should not infer any meaning from this field. Its value is
+   * generally unrelated to the timing of the backup creation operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -637,7 +638,8 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Update time stamp
+   * Output only. Update time stamp Users should not infer any meaning from this field. Its value is
+   * generally unrelated to the timing of the backup creation operation.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -645,7 +647,8 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Update time stamp
+   * Output only. Update time stamp Users should not infer any meaning from this field. Its value is
+   * generally unrelated to the timing of the backup creation operation.
    * @param updateTime updateTime or {@code null} for none
    */
   public Backup setUpdateTime(String updateTime) {

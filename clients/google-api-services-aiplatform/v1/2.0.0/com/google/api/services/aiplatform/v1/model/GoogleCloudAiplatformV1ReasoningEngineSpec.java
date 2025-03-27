@@ -52,7 +52,7 @@ public final class GoogleCloudAiplatformV1ReasoningEngineSpec extends com.google
   private GoogleCloudAiplatformV1ReasoningEngineSpecDeploymentSpec deploymentSpec;
 
   /**
-   * Required. User provided package spec of the ReasoningEngine. Ignored when users directly
+   * Optional. User provided package spec of the ReasoningEngine. Ignored when users directly
    * specify a deployment image through `deployment_spec.first_party_image_override`, but keeping
    * the field_behavior to avoid introducing breaking changes.
    * The value may be {@code null}.
@@ -114,7 +114,7 @@ public final class GoogleCloudAiplatformV1ReasoningEngineSpec extends com.google
   }
 
   /**
-   * Required. User provided package spec of the ReasoningEngine. Ignored when users directly
+   * Optional. User provided package spec of the ReasoningEngine. Ignored when users directly
    * specify a deployment image through `deployment_spec.first_party_image_override`, but keeping
    * the field_behavior to avoid introducing breaking changes.
    * @return value or {@code null} for none
@@ -124,7 +124,7 @@ public final class GoogleCloudAiplatformV1ReasoningEngineSpec extends com.google
   }
 
   /**
-   * Required. User provided package spec of the ReasoningEngine. Ignored when users directly
+   * Optional. User provided package spec of the ReasoningEngine. Ignored when users directly
    * specify a deployment image through `deployment_spec.first_party_image_override`, but keeping
    * the field_behavior to avoid introducing breaking changes.
    * @param packageSpec packageSpec or {@code null} for none

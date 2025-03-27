@@ -67,7 +67,7 @@ public final class GoogleCloudAiplatformV1ReasoningEngine extends com.google.api
   private java.lang.String name;
 
   /**
-   * Required. Configurations of the ReasoningEngine
+   * Optional. Configurations of the ReasoningEngine
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -168,7 +168,7 @@ public final class GoogleCloudAiplatformV1ReasoningEngine extends com.google.api
   }
 
   /**
-   * Required. Configurations of the ReasoningEngine
+   * Optional. Configurations of the ReasoningEngine
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1ReasoningEngineSpec getSpec() {
@@ -176,7 +176,7 @@ public final class GoogleCloudAiplatformV1ReasoningEngine extends com.google.api
   }
 
   /**
-   * Required. Configurations of the ReasoningEngine
+   * Optional. Configurations of the ReasoningEngine
    * @param spec spec or {@code null} for none
    */
   public GoogleCloudAiplatformV1ReasoningEngine setSpec(GoogleCloudAiplatformV1ReasoningEngineSpec spec) {

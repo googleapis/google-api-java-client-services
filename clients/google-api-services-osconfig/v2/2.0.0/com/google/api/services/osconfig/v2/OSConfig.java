@@ -174,6 +174,1021 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
     public class Locations {
 
       /**
+       * An accessor for creating requests from the Global collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code OSConfig osconfig = new OSConfig(...);}
+       *   {@code OSConfig.Global.List request = osconfig.global().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Global global() {
+        return new Global();
+      }
+
+      /**
+       * The "global" collection of methods.
+       */
+      public class Global {
+
+        /**
+         * An accessor for creating requests from the PolicyOrchestrators collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code OSConfig osconfig = new OSConfig(...);}
+         *   {@code OSConfig.PolicyOrchestrators.List request = osconfig.policyOrchestrators().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public PolicyOrchestrators policyOrchestrators() {
+          return new PolicyOrchestrators();
+        }
+
+        /**
+         * The "policyOrchestrators" collection of methods.
+         */
+        public class PolicyOrchestrators {
+
+          /**
+           * Creates a new policy orchestrator under the given folder resource. `name` field of the given
+           * orchestrator are ignored and instead replaced by a product of `parent` and
+           * `policy_orchestrator_id`. Orchestrator state field might be only set to `ACTIVE`, `STOPPED` or
+           * omitted (in which case, the created resource will be in `ACTIVE` state anyway).
+           *
+           * Create a request for the method "policyOrchestrators.create".
+           *
+           * This request holds the parameters needed by the osconfig server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent resource name in the form of: *
+           *        `organizations/{organization_id}/locations/global` *
+           *        `folders/{folder_id}/locations/global` *
+           *        `projects/{project_id_or_number}/locations/global`
+           * @param content the {@link com.google.api.services.osconfig.v2.model.GoogleCloudOsconfigV2PolicyOrchestrator}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.osconfig.v2.model.GoogleCloudOsconfigV2PolicyOrchestrator content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends OSConfigRequest<com.google.api.services.osconfig.v2.model.Operation> {
+
+            private static final String REST_PATH = "v2/{+parent}/policyOrchestrators";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^folders/[^/]+/locations/global$");
+
+            /**
+             * Creates a new policy orchestrator under the given folder resource. `name` field of the given
+             * orchestrator are ignored and instead replaced by a product of `parent` and
+             * `policy_orchestrator_id`. Orchestrator state field might be only set to `ACTIVE`, `STOPPED` or
+             * omitted (in which case, the created resource will be in `ACTIVE` state anyway).
+             *
+             * Create a request for the method "policyOrchestrators.create".
+             *
+             * This request holds the parameters needed by the the osconfig server.  After setting any
+             * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent resource name in the form of: *
+           *        `organizations/{organization_id}/locations/global` *
+           *        `folders/{folder_id}/locations/global` *
+           *        `projects/{project_id_or_number}/locations/global`
+             * @param content the {@link com.google.api.services.osconfig.v2.model.GoogleCloudOsconfigV2PolicyOrchestrator}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.osconfig.v2.model.GoogleCloudOsconfigV2PolicyOrchestrator content) {
+              super(OSConfig.this, "POST", REST_PATH, content, com.google.api.services.osconfig.v2.model.Operation.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^folders/[^/]+/locations/global$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent resource name in the form of: *
+             * `organizations/{organization_id}/locations/global` *
+             * `folders/{folder_id}/locations/global` *
+             * `projects/{project_id_or_number}/locations/global`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent resource name in the form of: *
+           `organizations/{organization_id}/locations/global` * `folders/{folder_id}/locations/global` *
+           `projects/{project_id_or_number}/locations/global`
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The parent resource name in the form of: *
+             * `organizations/{organization_id}/locations/global` *
+             * `folders/{folder_id}/locations/global` *
+             * `projects/{project_id_or_number}/locations/global`
+             */
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^folders/[^/]+/locations/global$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Required. The logical identifier of the policy orchestrator, with the following
+             * restrictions: * Must contain only lowercase letters, numbers, and hyphens. * Must
+             * start with a letter. * Must be between 1-63 characters. * Must end with a number or a
+             * letter. * Must be unique within the parent.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String policyOrchestratorId;
+
+            /** Required. The logical identifier of the policy orchestrator, with the following restrictions: *
+           Must contain only lowercase letters, numbers, and hyphens. * Must start with a letter. * Must be
+           between 1-63 characters. * Must end with a number or a letter. * Must be unique within the parent.
+             */
+            public java.lang.String getPolicyOrchestratorId() {
+              return policyOrchestratorId;
+            }
+
+            /**
+             * Required. The logical identifier of the policy orchestrator, with the following
+             * restrictions: * Must contain only lowercase letters, numbers, and hyphens. * Must
+             * start with a letter. * Must be between 1-63 characters. * Must end with a number or a
+             * letter. * Must be unique within the parent.
+             */
+            public Create setPolicyOrchestratorId(java.lang.String policyOrchestratorId) {
+              this.policyOrchestratorId = policyOrchestratorId;
+              return this;
+            }
+
+            /**
+             * Optional. An optional request ID to identify requests. Specify a unique request ID so
+             * that if you must retry your request, the server will know to ignore the request if it
+             * has already been completed. The server will guarantee that for at least 60 minutes
+             * since the first request. For example, consider a situation where you make an initial
+             * request and the request times out. If you make the request again with the same
+             * request ID, the server can check if original operation with the same request ID was
+             * received, and if so, will ignore the second request. This prevents clients from
+             * accidentally creating duplicate commitments. The request ID must be a valid UUID with
+             * the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String requestId;
+
+            /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+           must retry your request, the server will know to ignore the request if it has already been
+           completed. The server will guarantee that for at least 60 minutes since the first request. For
+           example, consider a situation where you make an initial request and the request times out. If you
+           make the request again with the same request ID, the server can check if original operation with
+           the same request ID was received, and if so, will ignore the second request. This prevents clients
+           from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
+           exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            public java.lang.String getRequestId() {
+              return requestId;
+            }
+
+            /**
+             * Optional. An optional request ID to identify requests. Specify a unique request ID so
+             * that if you must retry your request, the server will know to ignore the request if it
+             * has already been completed. The server will guarantee that for at least 60 minutes
+             * since the first request. For example, consider a situation where you make an initial
+             * request and the request times out. If you make the request again with the same
+             * request ID, the server can check if original operation with the same request ID was
+             * received, and if so, will ignore the second request. This prevents clients from
+             * accidentally creating duplicate commitments. The request ID must be a valid UUID with
+             * the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            public Create setRequestId(java.lang.String requestId) {
+              this.requestId = requestId;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes an existing policy orchestrator resource, parented by a folder.
+           *
+           * Create a request for the method "policyOrchestrators.delete".
+           *
+           * This request holds the parameters needed by the osconfig server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. Name of the resource to be deleted.
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends OSConfigRequest<com.google.api.services.osconfig.v2.model.Operation> {
+
+            private static final String REST_PATH = "v2/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^folders/[^/]+/locations/global/policyOrchestrators/[^/]+$");
+
+            /**
+             * Deletes an existing policy orchestrator resource, parented by a folder.
+             *
+             * Create a request for the method "policyOrchestrators.delete".
+             *
+             * This request holds the parameters needed by the the osconfig server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. Name of the resource to be deleted.
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(OSConfig.this, "DELETE", REST_PATH, null, com.google.api.services.osconfig.v2.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^folders/[^/]+/locations/global/policyOrchestrators/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. Name of the resource to be deleted. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Name of the resource to be deleted.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. Name of the resource to be deleted. */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^folders/[^/]+/locations/global/policyOrchestrators/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Optional. The current etag of the policy orchestrator. If an etag is provided and
+             * does not match the current etag of the policy orchestrator, deletion will be blocked
+             * and an ABORTED error will be returned.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String etag;
+
+            /** Optional. The current etag of the policy orchestrator. If an etag is provided and does not match
+           the current etag of the policy orchestrator, deletion will be blocked and an ABORTED error will be
+           returned.
+             */
+            public java.lang.String getEtag() {
+              return etag;
+            }
+
+            /**
+             * Optional. The current etag of the policy orchestrator. If an etag is provided and
+             * does not match the current etag of the policy orchestrator, deletion will be blocked
+             * and an ABORTED error will be returned.
+             */
+            public Delete setEtag(java.lang.String etag) {
+              this.etag = etag;
+              return this;
+            }
+
+            /**
+             * Optional. An optional request ID to identify requests. Specify a unique request ID so
+             * that if you must retry your request, the server will know to ignore the request if it
+             * has already been completed. The server will guarantee that for at least 60 minutes
+             * after the first request. For example, consider a situation where you make an initial
+             * request and the request times out. If you make the request again with the same
+             * request ID, the server can check if original operation with the same request ID was
+             * received, and if so, will ignore the second request. This prevents clients from
+             * accidentally creating duplicate commitments. The request ID must be a valid UUID with
+             * the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String requestId;
+
+            /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+           must retry your request, the server will know to ignore the request if it has already been
+           completed. The server will guarantee that for at least 60 minutes after the first request. For
+           example, consider a situation where you make an initial request and the request times out. If you
+           make the request again with the same request ID, the server can check if original operation with
+           the same request ID was received, and if so, will ignore the second request. This prevents clients
+           from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
+           exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            public java.lang.String getRequestId() {
+              return requestId;
+            }
+
+            /**
+             * Optional. An optional request ID to identify requests. Specify a unique request ID so
+             * that if you must retry your request, the server will know to ignore the request if it
+             * has already been completed. The server will guarantee that for at least 60 minutes
+             * after the first request. For example, consider a situation where you make an initial
+             * request and the request times out. If you make the request again with the same
+             * request ID, the server can check if original operation with the same request ID was
+             * received, and if so, will ignore the second request. This prevents clients from
+             * accidentally creating duplicate commitments. The request ID must be a valid UUID with
+             * the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            public Delete setRequestId(java.lang.String requestId) {
+              this.requestId = requestId;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Retrieves an existing policy orchestrator, parented by a folder.
+           *
+           * Create a request for the method "policyOrchestrators.get".
+           *
+           * This request holds the parameters needed by the osconfig server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends OSConfigRequest<com.google.api.services.osconfig.v2.model.GoogleCloudOsconfigV2PolicyOrchestrator> {
+
+            private static final String REST_PATH = "v2/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^folders/[^/]+/locations/global/policyOrchestrators/[^/]+$");
+
+            /**
+             * Retrieves an existing policy orchestrator, parented by a folder.
+             *
+             * Create a request for the method "policyOrchestrators.get".
+             *
+             * This request holds the parameters needed by the the osconfig server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(OSConfig.this, "GET", REST_PATH, null, com.google.api.services.osconfig.v2.model.GoogleCloudOsconfigV2PolicyOrchestrator.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^folders/[^/]+/locations/global/policyOrchestrators/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The resource name. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. The resource name. */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^folders/[^/]+/locations/global/policyOrchestrators/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists the policy orchestrators under the given parent folder resource.
+           *
+           * Create a request for the method "policyOrchestrators.list".
+           *
+           * This request holds the parameters needed by the osconfig server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent resource name.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends OSConfigRequest<com.google.api.services.osconfig.v2.model.GoogleCloudOsconfigV2ListPolicyOrchestratorsResponse> {
+
+            private static final String REST_PATH = "v2/{+parent}/policyOrchestrators";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^folders/[^/]+/locations/global$");
+
+            /**
+             * Lists the policy orchestrators under the given parent folder resource.
+             *
+             * Create a request for the method "policyOrchestrators.list".
+             *
+             * This request holds the parameters needed by the the osconfig server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent resource name.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(OSConfig.this, "GET", REST_PATH, null, com.google.api.services.osconfig.v2.model.GoogleCloudOsconfigV2ListPolicyOrchestratorsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^folders/[^/]+/locations/global$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The parent resource name. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent resource name.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. The parent resource name. */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^folders/[^/]+/locations/global$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /** Optional. Filtering results */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Optional. Filtering results
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /** Optional. Filtering results */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /** Optional. Hint for how to order the results */
+            @com.google.api.client.util.Key
+            private java.lang.String orderBy;
+
+            /** Optional. Hint for how to order the results
+             */
+            public java.lang.String getOrderBy() {
+              return orderBy;
+            }
+
+            /** Optional. Hint for how to order the results */
+            public List setOrderBy(java.lang.String orderBy) {
+              this.orderBy = orderBy;
+              return this;
+            }
+
+            /**
+             * Optional. Requested page size. Server may return fewer items than requested. If
+             * unspecified, server will pick an appropriate default.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. Requested page size. Server may return fewer items than requested. If unspecified, server
+           will pick an appropriate default.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. Requested page size. Server may return fewer items than requested. If
+             * unspecified, server will pick an appropriate default.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /** Optional. A token identifying a page of results the server should return. */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. A token identifying a page of results the server should return.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /** Optional. A token identifying a page of results the server should return. */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Updates an existing policy orchestrator, parented by a folder.
+           *
+           * Create a request for the method "policyOrchestrators.patch".
+           *
+           * This request holds the parameters needed by the osconfig server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           *
+           * @param name Immutable. Identifier. In form of *
+           *        `organizations/{organization_id}/locations/global/policyOrchestrators/{orchestrator_id}` *
+           *        `folders/{folder_id}/locations/global/policyOrchestrators/{orchestrator_id}` *
+           *        `projects/{project_id_or_number}/locations/global/policyOrchestrators/{orchestrator_id}`
+           * @param content the {@link com.google.api.services.osconfig.v2.model.GoogleCloudOsconfigV2PolicyOrchestrator}
+           * @return the request
+           */
+          public Patch patch(java.lang.String name, com.google.api.services.osconfig.v2.model.GoogleCloudOsconfigV2PolicyOrchestrator content) throws java.io.IOException {
+            Patch result = new Patch(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Patch extends OSConfigRequest<com.google.api.services.osconfig.v2.model.Operation> {
+
+            private static final String REST_PATH = "v2/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^folders/[^/]+/locations/global/policyOrchestrators/[^/]+$");
+
+            /**
+             * Updates an existing policy orchestrator, parented by a folder.
+             *
+             * Create a request for the method "policyOrchestrators.patch".
+             *
+             * This request holds the parameters needed by the the osconfig server.  After setting any
+             * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Immutable. Identifier. In form of *
+           *        `organizations/{organization_id}/locations/global/policyOrchestrators/{orchestrator_id}` *
+           *        `folders/{folder_id}/locations/global/policyOrchestrators/{orchestrator_id}` *
+           *        `projects/{project_id_or_number}/locations/global/policyOrchestrators/{orchestrator_id}`
+             * @param content the {@link com.google.api.services.osconfig.v2.model.GoogleCloudOsconfigV2PolicyOrchestrator}
+             * @since 1.13
+             */
+            protected Patch(java.lang.String name, com.google.api.services.osconfig.v2.model.GoogleCloudOsconfigV2PolicyOrchestrator content) {
+              super(OSConfig.this, "PATCH", REST_PATH, content, com.google.api.services.osconfig.v2.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^folders/[^/]+/locations/global/policyOrchestrators/[^/]+$");
+              }
+            }
+
+            @Override
+            public Patch set$Xgafv(java.lang.String $Xgafv) {
+              return (Patch) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Patch setAccessToken(java.lang.String accessToken) {
+              return (Patch) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Patch setAlt(java.lang.String alt) {
+              return (Patch) super.setAlt(alt);
+            }
+
+            @Override
+            public Patch setCallback(java.lang.String callback) {
+              return (Patch) super.setCallback(callback);
+            }
+
+            @Override
+            public Patch setFields(java.lang.String fields) {
+              return (Patch) super.setFields(fields);
+            }
+
+            @Override
+            public Patch setKey(java.lang.String key) {
+              return (Patch) super.setKey(key);
+            }
+
+            @Override
+            public Patch setOauthToken(java.lang.String oauthToken) {
+              return (Patch) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Patch) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Patch setQuotaUser(java.lang.String quotaUser) {
+              return (Patch) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Patch setUploadType(java.lang.String uploadType) {
+              return (Patch) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Patch) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Immutable. Identifier. In form of * `organizations/{organization_id}/locations/global
+             * /policyOrchestrators/{orchestrator_id}` *
+             * `folders/{folder_id}/locations/global/policyOrchestrators/{orchestrator_id}` * `proje
+             * cts/{project_id_or_number}/locations/global/policyOrchestrators/{orchestrator_id}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Immutable. Identifier. In form of *
+           `organizations/{organization_id}/locations/global/policyOrchestrators/{orchestrator_id}` *
+           `folders/{folder_id}/locations/global/policyOrchestrators/{orchestrator_id}` *
+           `projects/{project_id_or_number}/locations/global/policyOrchestrators/{orchestrator_id}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Immutable. Identifier. In form of * `organizations/{organization_id}/locations/global
+             * /policyOrchestrators/{orchestrator_id}` *
+             * `folders/{folder_id}/locations/global/policyOrchestrators/{orchestrator_id}` * `proje
+             * cts/{project_id_or_number}/locations/global/policyOrchestrators/{orchestrator_id}`
+             */
+            public Patch setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^folders/[^/]+/locations/global/policyOrchestrators/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Optional. The list of fields to merge into the existing policy orchestrator. A
+             * special ["*"] field mask can be used to simply replace the entire resource.
+             * Otherwise, for all paths referenced in the mask, following merge rules are used: *
+             * output only fields are ignored, * primitive fields are replaced, * repeated fields
+             * are replaced, * map fields are merged key by key, * message fields are cleared if not
+             * set in the request, otherwise they are merged recursively (in particular - message
+             * fields set to an empty message has no side effects) If field mask is not specified,
+             * it is automatically inferred from the request using following rules: * primitive
+             * fields are listed, if set to a non-default value (as there is no way to distinguish
+             * between default and unset value), * map and repeated fields are listed, *
+             * `google.protobuf.Any` fields are listed, * other message fields are traversed
+             * recursively. Note: implicit mask does not allow clearing fields.
+             */
+            @com.google.api.client.util.Key
+            private String updateMask;
+
+            /** Optional. The list of fields to merge into the existing policy orchestrator. A special ["*"] field
+           mask can be used to simply replace the entire resource. Otherwise, for all paths referenced in the
+           mask, following merge rules are used: * output only fields are ignored, * primitive fields are
+           replaced, * repeated fields are replaced, * map fields are merged key by key, * message fields are
+           cleared if not set in the request, otherwise they are merged recursively (in particular - message
+           fields set to an empty message has no side effects) If field mask is not specified, it is
+           automatically inferred from the request using following rules: * primitive fields are listed, if
+           set to a non-default value (as there is no way to distinguish between default and unset value), *
+           map and repeated fields are listed, * `google.protobuf.Any` fields are listed, * other message
+           fields are traversed recursively. Note: implicit mask does not allow clearing fields.
+             */
+            public String getUpdateMask() {
+              return updateMask;
+            }
+
+            /**
+             * Optional. The list of fields to merge into the existing policy orchestrator. A
+             * special ["*"] field mask can be used to simply replace the entire resource.
+             * Otherwise, for all paths referenced in the mask, following merge rules are used: *
+             * output only fields are ignored, * primitive fields are replaced, * repeated fields
+             * are replaced, * map fields are merged key by key, * message fields are cleared if not
+             * set in the request, otherwise they are merged recursively (in particular - message
+             * fields set to an empty message has no side effects) If field mask is not specified,
+             * it is automatically inferred from the request using following rules: * primitive
+             * fields are listed, if set to a non-default value (as there is no way to distinguish
+             * between default and unset value), * map and repeated fields are listed, *
+             * `google.protobuf.Any` fields are listed, * other message fields are traversed
+             * recursively. Note: implicit mask does not allow clearing fields.
+             */
+            public Patch setUpdateMask(String updateMask) {
+              this.updateMask = updateMask;
+              return this;
+            }
+
+            @Override
+            public Patch set(String parameterName, Object value) {
+              return (Patch) super.set(parameterName, value);
+            }
+          }
+
+        }
+      }
+      /**
        * An accessor for creating requests from the Operations collection.
        *
        * <p>The typical use is:</p>
@@ -843,6 +1858,1021 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
     public class Locations {
 
       /**
+       * An accessor for creating requests from the Global collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code OSConfig osconfig = new OSConfig(...);}
+       *   {@code OSConfig.Global.List request = osconfig.global().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Global global() {
+        return new Global();
+      }
+
+      /**
+       * The "global" collection of methods.
+       */
+      public class Global {
+
+        /**
+         * An accessor for creating requests from the PolicyOrchestrators collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code OSConfig osconfig = new OSConfig(...);}
+         *   {@code OSConfig.PolicyOrchestrators.List request = osconfig.policyOrchestrators().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public PolicyOrchestrators policyOrchestrators() {
+          return new PolicyOrchestrators();
+        }
+
+        /**
+         * The "policyOrchestrators" collection of methods.
+         */
+        public class PolicyOrchestrators {
+
+          /**
+           * Creates a new policy orchestrator under the given organizations resource. `name` field of the
+           * given orchestrator are ignored and instead replaced by a product of `parent` and
+           * `policy_orchestrator_id`. Orchestrator state field might be only set to `ACTIVE`, `STOPPED` or
+           * omitted (in which case, the created resource will be in `ACTIVE` state anyway).
+           *
+           * Create a request for the method "policyOrchestrators.create".
+           *
+           * This request holds the parameters needed by the osconfig server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent resource name in the form of: *
+           *        `organizations/{organization_id}/locations/global` *
+           *        `folders/{folder_id}/locations/global` *
+           *        `projects/{project_id_or_number}/locations/global`
+           * @param content the {@link com.google.api.services.osconfig.v2.model.GoogleCloudOsconfigV2PolicyOrchestrator}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.osconfig.v2.model.GoogleCloudOsconfigV2PolicyOrchestrator content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends OSConfigRequest<com.google.api.services.osconfig.v2.model.Operation> {
+
+            private static final String REST_PATH = "v2/{+parent}/policyOrchestrators";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^organizations/[^/]+/locations/global$");
+
+            /**
+             * Creates a new policy orchestrator under the given organizations resource. `name` field of the
+             * given orchestrator are ignored and instead replaced by a product of `parent` and
+             * `policy_orchestrator_id`. Orchestrator state field might be only set to `ACTIVE`, `STOPPED` or
+             * omitted (in which case, the created resource will be in `ACTIVE` state anyway).
+             *
+             * Create a request for the method "policyOrchestrators.create".
+             *
+             * This request holds the parameters needed by the the osconfig server.  After setting any
+             * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent resource name in the form of: *
+           *        `organizations/{organization_id}/locations/global` *
+           *        `folders/{folder_id}/locations/global` *
+           *        `projects/{project_id_or_number}/locations/global`
+             * @param content the {@link com.google.api.services.osconfig.v2.model.GoogleCloudOsconfigV2PolicyOrchestrator}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.osconfig.v2.model.GoogleCloudOsconfigV2PolicyOrchestrator content) {
+              super(OSConfig.this, "POST", REST_PATH, content, com.google.api.services.osconfig.v2.model.Operation.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^organizations/[^/]+/locations/global$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent resource name in the form of: *
+             * `organizations/{organization_id}/locations/global` *
+             * `folders/{folder_id}/locations/global` *
+             * `projects/{project_id_or_number}/locations/global`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent resource name in the form of: *
+           `organizations/{organization_id}/locations/global` * `folders/{folder_id}/locations/global` *
+           `projects/{project_id_or_number}/locations/global`
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The parent resource name in the form of: *
+             * `organizations/{organization_id}/locations/global` *
+             * `folders/{folder_id}/locations/global` *
+             * `projects/{project_id_or_number}/locations/global`
+             */
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^organizations/[^/]+/locations/global$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Required. The logical identifier of the policy orchestrator, with the following
+             * restrictions: * Must contain only lowercase letters, numbers, and hyphens. * Must
+             * start with a letter. * Must be between 1-63 characters. * Must end with a number or a
+             * letter. * Must be unique within the parent.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String policyOrchestratorId;
+
+            /** Required. The logical identifier of the policy orchestrator, with the following restrictions: *
+           Must contain only lowercase letters, numbers, and hyphens. * Must start with a letter. * Must be
+           between 1-63 characters. * Must end with a number or a letter. * Must be unique within the parent.
+             */
+            public java.lang.String getPolicyOrchestratorId() {
+              return policyOrchestratorId;
+            }
+
+            /**
+             * Required. The logical identifier of the policy orchestrator, with the following
+             * restrictions: * Must contain only lowercase letters, numbers, and hyphens. * Must
+             * start with a letter. * Must be between 1-63 characters. * Must end with a number or a
+             * letter. * Must be unique within the parent.
+             */
+            public Create setPolicyOrchestratorId(java.lang.String policyOrchestratorId) {
+              this.policyOrchestratorId = policyOrchestratorId;
+              return this;
+            }
+
+            /**
+             * Optional. An optional request ID to identify requests. Specify a unique request ID so
+             * that if you must retry your request, the server will know to ignore the request if it
+             * has already been completed. The server will guarantee that for at least 60 minutes
+             * since the first request. For example, consider a situation where you make an initial
+             * request and the request times out. If you make the request again with the same
+             * request ID, the server can check if original operation with the same request ID was
+             * received, and if so, will ignore the second request. This prevents clients from
+             * accidentally creating duplicate commitments. The request ID must be a valid UUID with
+             * the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String requestId;
+
+            /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+           must retry your request, the server will know to ignore the request if it has already been
+           completed. The server will guarantee that for at least 60 minutes since the first request. For
+           example, consider a situation where you make an initial request and the request times out. If you
+           make the request again with the same request ID, the server can check if original operation with
+           the same request ID was received, and if so, will ignore the second request. This prevents clients
+           from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
+           exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            public java.lang.String getRequestId() {
+              return requestId;
+            }
+
+            /**
+             * Optional. An optional request ID to identify requests. Specify a unique request ID so
+             * that if you must retry your request, the server will know to ignore the request if it
+             * has already been completed. The server will guarantee that for at least 60 minutes
+             * since the first request. For example, consider a situation where you make an initial
+             * request and the request times out. If you make the request again with the same
+             * request ID, the server can check if original operation with the same request ID was
+             * received, and if so, will ignore the second request. This prevents clients from
+             * accidentally creating duplicate commitments. The request ID must be a valid UUID with
+             * the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            public Create setRequestId(java.lang.String requestId) {
+              this.requestId = requestId;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes an existing policy orchestrator resource, parented by an organization.
+           *
+           * Create a request for the method "policyOrchestrators.delete".
+           *
+           * This request holds the parameters needed by the osconfig server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. Name of the resource to be deleted.
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends OSConfigRequest<com.google.api.services.osconfig.v2.model.Operation> {
+
+            private static final String REST_PATH = "v2/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^organizations/[^/]+/locations/global/policyOrchestrators/[^/]+$");
+
+            /**
+             * Deletes an existing policy orchestrator resource, parented by an organization.
+             *
+             * Create a request for the method "policyOrchestrators.delete".
+             *
+             * This request holds the parameters needed by the the osconfig server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. Name of the resource to be deleted.
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(OSConfig.this, "DELETE", REST_PATH, null, com.google.api.services.osconfig.v2.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^organizations/[^/]+/locations/global/policyOrchestrators/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. Name of the resource to be deleted. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Name of the resource to be deleted.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. Name of the resource to be deleted. */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^organizations/[^/]+/locations/global/policyOrchestrators/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Optional. The current etag of the policy orchestrator. If an etag is provided and
+             * does not match the current etag of the policy orchestrator, deletion will be blocked
+             * and an ABORTED error will be returned.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String etag;
+
+            /** Optional. The current etag of the policy orchestrator. If an etag is provided and does not match
+           the current etag of the policy orchestrator, deletion will be blocked and an ABORTED error will be
+           returned.
+             */
+            public java.lang.String getEtag() {
+              return etag;
+            }
+
+            /**
+             * Optional. The current etag of the policy orchestrator. If an etag is provided and
+             * does not match the current etag of the policy orchestrator, deletion will be blocked
+             * and an ABORTED error will be returned.
+             */
+            public Delete setEtag(java.lang.String etag) {
+              this.etag = etag;
+              return this;
+            }
+
+            /**
+             * Optional. An optional request ID to identify requests. Specify a unique request ID so
+             * that if you must retry your request, the server will know to ignore the request if it
+             * has already been completed. The server will guarantee that for at least 60 minutes
+             * after the first request. For example, consider a situation where you make an initial
+             * request and the request times out. If you make the request again with the same
+             * request ID, the server can check if original operation with the same request ID was
+             * received, and if so, will ignore the second request. This prevents clients from
+             * accidentally creating duplicate commitments. The request ID must be a valid UUID with
+             * the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String requestId;
+
+            /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+           must retry your request, the server will know to ignore the request if it has already been
+           completed. The server will guarantee that for at least 60 minutes after the first request. For
+           example, consider a situation where you make an initial request and the request times out. If you
+           make the request again with the same request ID, the server can check if original operation with
+           the same request ID was received, and if so, will ignore the second request. This prevents clients
+           from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
+           exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            public java.lang.String getRequestId() {
+              return requestId;
+            }
+
+            /**
+             * Optional. An optional request ID to identify requests. Specify a unique request ID so
+             * that if you must retry your request, the server will know to ignore the request if it
+             * has already been completed. The server will guarantee that for at least 60 minutes
+             * after the first request. For example, consider a situation where you make an initial
+             * request and the request times out. If you make the request again with the same
+             * request ID, the server can check if original operation with the same request ID was
+             * received, and if so, will ignore the second request. This prevents clients from
+             * accidentally creating duplicate commitments. The request ID must be a valid UUID with
+             * the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            public Delete setRequestId(java.lang.String requestId) {
+              this.requestId = requestId;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Retrieves an existing policy orchestrator, parented by an organization.
+           *
+           * Create a request for the method "policyOrchestrators.get".
+           *
+           * This request holds the parameters needed by the osconfig server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends OSConfigRequest<com.google.api.services.osconfig.v2.model.GoogleCloudOsconfigV2PolicyOrchestrator> {
+
+            private static final String REST_PATH = "v2/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^organizations/[^/]+/locations/global/policyOrchestrators/[^/]+$");
+
+            /**
+             * Retrieves an existing policy orchestrator, parented by an organization.
+             *
+             * Create a request for the method "policyOrchestrators.get".
+             *
+             * This request holds the parameters needed by the the osconfig server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(OSConfig.this, "GET", REST_PATH, null, com.google.api.services.osconfig.v2.model.GoogleCloudOsconfigV2PolicyOrchestrator.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^organizations/[^/]+/locations/global/policyOrchestrators/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The resource name. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. The resource name. */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^organizations/[^/]+/locations/global/policyOrchestrators/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists the policy orchestrators under the given parent organization resource.
+           *
+           * Create a request for the method "policyOrchestrators.list".
+           *
+           * This request holds the parameters needed by the osconfig server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent resource name.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends OSConfigRequest<com.google.api.services.osconfig.v2.model.GoogleCloudOsconfigV2ListPolicyOrchestratorsResponse> {
+
+            private static final String REST_PATH = "v2/{+parent}/policyOrchestrators";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^organizations/[^/]+/locations/global$");
+
+            /**
+             * Lists the policy orchestrators under the given parent organization resource.
+             *
+             * Create a request for the method "policyOrchestrators.list".
+             *
+             * This request holds the parameters needed by the the osconfig server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent resource name.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(OSConfig.this, "GET", REST_PATH, null, com.google.api.services.osconfig.v2.model.GoogleCloudOsconfigV2ListPolicyOrchestratorsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^organizations/[^/]+/locations/global$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The parent resource name. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent resource name.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. The parent resource name. */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^organizations/[^/]+/locations/global$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /** Optional. Filtering results */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Optional. Filtering results
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /** Optional. Filtering results */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /** Optional. Hint for how to order the results */
+            @com.google.api.client.util.Key
+            private java.lang.String orderBy;
+
+            /** Optional. Hint for how to order the results
+             */
+            public java.lang.String getOrderBy() {
+              return orderBy;
+            }
+
+            /** Optional. Hint for how to order the results */
+            public List setOrderBy(java.lang.String orderBy) {
+              this.orderBy = orderBy;
+              return this;
+            }
+
+            /**
+             * Optional. Requested page size. Server may return fewer items than requested. If
+             * unspecified, server will pick an appropriate default.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. Requested page size. Server may return fewer items than requested. If unspecified, server
+           will pick an appropriate default.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. Requested page size. Server may return fewer items than requested. If
+             * unspecified, server will pick an appropriate default.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /** Optional. A token identifying a page of results the server should return. */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. A token identifying a page of results the server should return.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /** Optional. A token identifying a page of results the server should return. */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Updates an existing policy orchestrator, parented by an organization.
+           *
+           * Create a request for the method "policyOrchestrators.patch".
+           *
+           * This request holds the parameters needed by the osconfig server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           *
+           * @param name Immutable. Identifier. In form of *
+           *        `organizations/{organization_id}/locations/global/policyOrchestrators/{orchestrator_id}` *
+           *        `folders/{folder_id}/locations/global/policyOrchestrators/{orchestrator_id}` *
+           *        `projects/{project_id_or_number}/locations/global/policyOrchestrators/{orchestrator_id}`
+           * @param content the {@link com.google.api.services.osconfig.v2.model.GoogleCloudOsconfigV2PolicyOrchestrator}
+           * @return the request
+           */
+          public Patch patch(java.lang.String name, com.google.api.services.osconfig.v2.model.GoogleCloudOsconfigV2PolicyOrchestrator content) throws java.io.IOException {
+            Patch result = new Patch(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Patch extends OSConfigRequest<com.google.api.services.osconfig.v2.model.Operation> {
+
+            private static final String REST_PATH = "v2/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^organizations/[^/]+/locations/global/policyOrchestrators/[^/]+$");
+
+            /**
+             * Updates an existing policy orchestrator, parented by an organization.
+             *
+             * Create a request for the method "policyOrchestrators.patch".
+             *
+             * This request holds the parameters needed by the the osconfig server.  After setting any
+             * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Immutable. Identifier. In form of *
+           *        `organizations/{organization_id}/locations/global/policyOrchestrators/{orchestrator_id}` *
+           *        `folders/{folder_id}/locations/global/policyOrchestrators/{orchestrator_id}` *
+           *        `projects/{project_id_or_number}/locations/global/policyOrchestrators/{orchestrator_id}`
+             * @param content the {@link com.google.api.services.osconfig.v2.model.GoogleCloudOsconfigV2PolicyOrchestrator}
+             * @since 1.13
+             */
+            protected Patch(java.lang.String name, com.google.api.services.osconfig.v2.model.GoogleCloudOsconfigV2PolicyOrchestrator content) {
+              super(OSConfig.this, "PATCH", REST_PATH, content, com.google.api.services.osconfig.v2.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^organizations/[^/]+/locations/global/policyOrchestrators/[^/]+$");
+              }
+            }
+
+            @Override
+            public Patch set$Xgafv(java.lang.String $Xgafv) {
+              return (Patch) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Patch setAccessToken(java.lang.String accessToken) {
+              return (Patch) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Patch setAlt(java.lang.String alt) {
+              return (Patch) super.setAlt(alt);
+            }
+
+            @Override
+            public Patch setCallback(java.lang.String callback) {
+              return (Patch) super.setCallback(callback);
+            }
+
+            @Override
+            public Patch setFields(java.lang.String fields) {
+              return (Patch) super.setFields(fields);
+            }
+
+            @Override
+            public Patch setKey(java.lang.String key) {
+              return (Patch) super.setKey(key);
+            }
+
+            @Override
+            public Patch setOauthToken(java.lang.String oauthToken) {
+              return (Patch) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Patch) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Patch setQuotaUser(java.lang.String quotaUser) {
+              return (Patch) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Patch setUploadType(java.lang.String uploadType) {
+              return (Patch) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Patch) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Immutable. Identifier. In form of * `organizations/{organization_id}/locations/global
+             * /policyOrchestrators/{orchestrator_id}` *
+             * `folders/{folder_id}/locations/global/policyOrchestrators/{orchestrator_id}` * `proje
+             * cts/{project_id_or_number}/locations/global/policyOrchestrators/{orchestrator_id}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Immutable. Identifier. In form of *
+           `organizations/{organization_id}/locations/global/policyOrchestrators/{orchestrator_id}` *
+           `folders/{folder_id}/locations/global/policyOrchestrators/{orchestrator_id}` *
+           `projects/{project_id_or_number}/locations/global/policyOrchestrators/{orchestrator_id}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Immutable. Identifier. In form of * `organizations/{organization_id}/locations/global
+             * /policyOrchestrators/{orchestrator_id}` *
+             * `folders/{folder_id}/locations/global/policyOrchestrators/{orchestrator_id}` * `proje
+             * cts/{project_id_or_number}/locations/global/policyOrchestrators/{orchestrator_id}`
+             */
+            public Patch setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^organizations/[^/]+/locations/global/policyOrchestrators/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Optional. The list of fields to merge into the existing policy orchestrator. A
+             * special ["*"] field mask can be used to simply replace the entire resource.
+             * Otherwise, for all paths referenced in the mask, following merge rules are used: *
+             * output only fields are ignored, * primitive fields are replaced, * repeated fields
+             * are replaced, * map fields are merged key by key, * message fields are cleared if not
+             * set in the request, otherwise they are merged recursively (in particular - message
+             * fields set to an empty message has no side effects) If field mask is not specified,
+             * it is automatically inferred from the request using following rules: * primitive
+             * fields are listed, if set to a non-default value (as there is no way to distinguish
+             * between default and unset value), * map and repeated fields are listed, *
+             * `google.protobuf.Any` fields are listed, * other message fields are traversed
+             * recursively. Note: implicit mask does not allow clearing fields.
+             */
+            @com.google.api.client.util.Key
+            private String updateMask;
+
+            /** Optional. The list of fields to merge into the existing policy orchestrator. A special ["*"] field
+           mask can be used to simply replace the entire resource. Otherwise, for all paths referenced in the
+           mask, following merge rules are used: * output only fields are ignored, * primitive fields are
+           replaced, * repeated fields are replaced, * map fields are merged key by key, * message fields are
+           cleared if not set in the request, otherwise they are merged recursively (in particular - message
+           fields set to an empty message has no side effects) If field mask is not specified, it is
+           automatically inferred from the request using following rules: * primitive fields are listed, if
+           set to a non-default value (as there is no way to distinguish between default and unset value), *
+           map and repeated fields are listed, * `google.protobuf.Any` fields are listed, * other message
+           fields are traversed recursively. Note: implicit mask does not allow clearing fields.
+             */
+            public String getUpdateMask() {
+              return updateMask;
+            }
+
+            /**
+             * Optional. The list of fields to merge into the existing policy orchestrator. A
+             * special ["*"] field mask can be used to simply replace the entire resource.
+             * Otherwise, for all paths referenced in the mask, following merge rules are used: *
+             * output only fields are ignored, * primitive fields are replaced, * repeated fields
+             * are replaced, * map fields are merged key by key, * message fields are cleared if not
+             * set in the request, otherwise they are merged recursively (in particular - message
+             * fields set to an empty message has no side effects) If field mask is not specified,
+             * it is automatically inferred from the request using following rules: * primitive
+             * fields are listed, if set to a non-default value (as there is no way to distinguish
+             * between default and unset value), * map and repeated fields are listed, *
+             * `google.protobuf.Any` fields are listed, * other message fields are traversed
+             * recursively. Note: implicit mask does not allow clearing fields.
+             */
+            public Patch setUpdateMask(String updateMask) {
+              this.updateMask = updateMask;
+              return this;
+            }
+
+            @Override
+            public Patch set(String parameterName, Object value) {
+              return (Patch) super.set(parameterName, value);
+            }
+          }
+
+        }
+      }
+      /**
        * An accessor for creating requests from the Operations collection.
        *
        * <p>The typical use is:</p>
@@ -1511,6 +3541,1021 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
      */
     public class Locations {
 
+      /**
+       * An accessor for creating requests from the Global collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code OSConfig osconfig = new OSConfig(...);}
+       *   {@code OSConfig.Global.List request = osconfig.global().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Global global() {
+        return new Global();
+      }
+
+      /**
+       * The "global" collection of methods.
+       */
+      public class Global {
+
+        /**
+         * An accessor for creating requests from the PolicyOrchestrators collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code OSConfig osconfig = new OSConfig(...);}
+         *   {@code OSConfig.PolicyOrchestrators.List request = osconfig.policyOrchestrators().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public PolicyOrchestrators policyOrchestrators() {
+          return new PolicyOrchestrators();
+        }
+
+        /**
+         * The "policyOrchestrators" collection of methods.
+         */
+        public class PolicyOrchestrators {
+
+          /**
+           * Creates a new policy orchestrator under the given project resource. `name` field of the given
+           * orchestrator are ignored and instead replaced by a product of `parent` and
+           * `policy_orchestrator_id`. Orchestrator state field might be only set to `ACTIVE`, `STOPPED` or
+           * omitted (in which case, the created resource will be in `ACTIVE` state anyway).
+           *
+           * Create a request for the method "policyOrchestrators.create".
+           *
+           * This request holds the parameters needed by the osconfig server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent resource name in the form of: *
+           *        `organizations/{organization_id}/locations/global` *
+           *        `folders/{folder_id}/locations/global` *
+           *        `projects/{project_id_or_number}/locations/global`
+           * @param content the {@link com.google.api.services.osconfig.v2.model.GoogleCloudOsconfigV2PolicyOrchestrator}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.osconfig.v2.model.GoogleCloudOsconfigV2PolicyOrchestrator content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends OSConfigRequest<com.google.api.services.osconfig.v2.model.Operation> {
+
+            private static final String REST_PATH = "v2/{+parent}/policyOrchestrators";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/global$");
+
+            /**
+             * Creates a new policy orchestrator under the given project resource. `name` field of the given
+             * orchestrator are ignored and instead replaced by a product of `parent` and
+             * `policy_orchestrator_id`. Orchestrator state field might be only set to `ACTIVE`, `STOPPED` or
+             * omitted (in which case, the created resource will be in `ACTIVE` state anyway).
+             *
+             * Create a request for the method "policyOrchestrators.create".
+             *
+             * This request holds the parameters needed by the the osconfig server.  After setting any
+             * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent resource name in the form of: *
+           *        `organizations/{organization_id}/locations/global` *
+           *        `folders/{folder_id}/locations/global` *
+           *        `projects/{project_id_or_number}/locations/global`
+             * @param content the {@link com.google.api.services.osconfig.v2.model.GoogleCloudOsconfigV2PolicyOrchestrator}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.osconfig.v2.model.GoogleCloudOsconfigV2PolicyOrchestrator content) {
+              super(OSConfig.this, "POST", REST_PATH, content, com.google.api.services.osconfig.v2.model.Operation.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/global$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent resource name in the form of: *
+             * `organizations/{organization_id}/locations/global` *
+             * `folders/{folder_id}/locations/global` *
+             * `projects/{project_id_or_number}/locations/global`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent resource name in the form of: *
+           `organizations/{organization_id}/locations/global` * `folders/{folder_id}/locations/global` *
+           `projects/{project_id_or_number}/locations/global`
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The parent resource name in the form of: *
+             * `organizations/{organization_id}/locations/global` *
+             * `folders/{folder_id}/locations/global` *
+             * `projects/{project_id_or_number}/locations/global`
+             */
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/global$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Required. The logical identifier of the policy orchestrator, with the following
+             * restrictions: * Must contain only lowercase letters, numbers, and hyphens. * Must
+             * start with a letter. * Must be between 1-63 characters. * Must end with a number or a
+             * letter. * Must be unique within the parent.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String policyOrchestratorId;
+
+            /** Required. The logical identifier of the policy orchestrator, with the following restrictions: *
+           Must contain only lowercase letters, numbers, and hyphens. * Must start with a letter. * Must be
+           between 1-63 characters. * Must end with a number or a letter. * Must be unique within the parent.
+             */
+            public java.lang.String getPolicyOrchestratorId() {
+              return policyOrchestratorId;
+            }
+
+            /**
+             * Required. The logical identifier of the policy orchestrator, with the following
+             * restrictions: * Must contain only lowercase letters, numbers, and hyphens. * Must
+             * start with a letter. * Must be between 1-63 characters. * Must end with a number or a
+             * letter. * Must be unique within the parent.
+             */
+            public Create setPolicyOrchestratorId(java.lang.String policyOrchestratorId) {
+              this.policyOrchestratorId = policyOrchestratorId;
+              return this;
+            }
+
+            /**
+             * Optional. An optional request ID to identify requests. Specify a unique request ID so
+             * that if you must retry your request, the server will know to ignore the request if it
+             * has already been completed. The server will guarantee that for at least 60 minutes
+             * since the first request. For example, consider a situation where you make an initial
+             * request and the request times out. If you make the request again with the same
+             * request ID, the server can check if original operation with the same request ID was
+             * received, and if so, will ignore the second request. This prevents clients from
+             * accidentally creating duplicate commitments. The request ID must be a valid UUID with
+             * the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String requestId;
+
+            /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+           must retry your request, the server will know to ignore the request if it has already been
+           completed. The server will guarantee that for at least 60 minutes since the first request. For
+           example, consider a situation where you make an initial request and the request times out. If you
+           make the request again with the same request ID, the server can check if original operation with
+           the same request ID was received, and if so, will ignore the second request. This prevents clients
+           from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
+           exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            public java.lang.String getRequestId() {
+              return requestId;
+            }
+
+            /**
+             * Optional. An optional request ID to identify requests. Specify a unique request ID so
+             * that if you must retry your request, the server will know to ignore the request if it
+             * has already been completed. The server will guarantee that for at least 60 minutes
+             * since the first request. For example, consider a situation where you make an initial
+             * request and the request times out. If you make the request again with the same
+             * request ID, the server can check if original operation with the same request ID was
+             * received, and if so, will ignore the second request. This prevents clients from
+             * accidentally creating duplicate commitments. The request ID must be a valid UUID with
+             * the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            public Create setRequestId(java.lang.String requestId) {
+              this.requestId = requestId;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes an existing policy orchestrator resource, parented by a project.
+           *
+           * Create a request for the method "policyOrchestrators.delete".
+           *
+           * This request holds the parameters needed by the osconfig server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. Name of the resource to be deleted.
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends OSConfigRequest<com.google.api.services.osconfig.v2.model.Operation> {
+
+            private static final String REST_PATH = "v2/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/policyOrchestrators/[^/]+$");
+
+            /**
+             * Deletes an existing policy orchestrator resource, parented by a project.
+             *
+             * Create a request for the method "policyOrchestrators.delete".
+             *
+             * This request holds the parameters needed by the the osconfig server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. Name of the resource to be deleted.
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(OSConfig.this, "DELETE", REST_PATH, null, com.google.api.services.osconfig.v2.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/global/policyOrchestrators/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. Name of the resource to be deleted. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Name of the resource to be deleted.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. Name of the resource to be deleted. */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/global/policyOrchestrators/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Optional. The current etag of the policy orchestrator. If an etag is provided and
+             * does not match the current etag of the policy orchestrator, deletion will be blocked
+             * and an ABORTED error will be returned.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String etag;
+
+            /** Optional. The current etag of the policy orchestrator. If an etag is provided and does not match
+           the current etag of the policy orchestrator, deletion will be blocked and an ABORTED error will be
+           returned.
+             */
+            public java.lang.String getEtag() {
+              return etag;
+            }
+
+            /**
+             * Optional. The current etag of the policy orchestrator. If an etag is provided and
+             * does not match the current etag of the policy orchestrator, deletion will be blocked
+             * and an ABORTED error will be returned.
+             */
+            public Delete setEtag(java.lang.String etag) {
+              this.etag = etag;
+              return this;
+            }
+
+            /**
+             * Optional. An optional request ID to identify requests. Specify a unique request ID so
+             * that if you must retry your request, the server will know to ignore the request if it
+             * has already been completed. The server will guarantee that for at least 60 minutes
+             * after the first request. For example, consider a situation where you make an initial
+             * request and the request times out. If you make the request again with the same
+             * request ID, the server can check if original operation with the same request ID was
+             * received, and if so, will ignore the second request. This prevents clients from
+             * accidentally creating duplicate commitments. The request ID must be a valid UUID with
+             * the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String requestId;
+
+            /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+           must retry your request, the server will know to ignore the request if it has already been
+           completed. The server will guarantee that for at least 60 minutes after the first request. For
+           example, consider a situation where you make an initial request and the request times out. If you
+           make the request again with the same request ID, the server can check if original operation with
+           the same request ID was received, and if so, will ignore the second request. This prevents clients
+           from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
+           exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            public java.lang.String getRequestId() {
+              return requestId;
+            }
+
+            /**
+             * Optional. An optional request ID to identify requests. Specify a unique request ID so
+             * that if you must retry your request, the server will know to ignore the request if it
+             * has already been completed. The server will guarantee that for at least 60 minutes
+             * after the first request. For example, consider a situation where you make an initial
+             * request and the request times out. If you make the request again with the same
+             * request ID, the server can check if original operation with the same request ID was
+             * received, and if so, will ignore the second request. This prevents clients from
+             * accidentally creating duplicate commitments. The request ID must be a valid UUID with
+             * the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            public Delete setRequestId(java.lang.String requestId) {
+              this.requestId = requestId;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Retrieves an existing policy orchestrator, parented by a project.
+           *
+           * Create a request for the method "policyOrchestrators.get".
+           *
+           * This request holds the parameters needed by the osconfig server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends OSConfigRequest<com.google.api.services.osconfig.v2.model.GoogleCloudOsconfigV2PolicyOrchestrator> {
+
+            private static final String REST_PATH = "v2/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/policyOrchestrators/[^/]+$");
+
+            /**
+             * Retrieves an existing policy orchestrator, parented by a project.
+             *
+             * Create a request for the method "policyOrchestrators.get".
+             *
+             * This request holds the parameters needed by the the osconfig server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(OSConfig.this, "GET", REST_PATH, null, com.google.api.services.osconfig.v2.model.GoogleCloudOsconfigV2PolicyOrchestrator.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/global/policyOrchestrators/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The resource name. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. The resource name. */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/global/policyOrchestrators/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists the policy orchestrators under the given parent project resource.
+           *
+           * Create a request for the method "policyOrchestrators.list".
+           *
+           * This request holds the parameters needed by the osconfig server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent resource name.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends OSConfigRequest<com.google.api.services.osconfig.v2.model.GoogleCloudOsconfigV2ListPolicyOrchestratorsResponse> {
+
+            private static final String REST_PATH = "v2/{+parent}/policyOrchestrators";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/global$");
+
+            /**
+             * Lists the policy orchestrators under the given parent project resource.
+             *
+             * Create a request for the method "policyOrchestrators.list".
+             *
+             * This request holds the parameters needed by the the osconfig server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent resource name.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(OSConfig.this, "GET", REST_PATH, null, com.google.api.services.osconfig.v2.model.GoogleCloudOsconfigV2ListPolicyOrchestratorsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/global$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The parent resource name. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent resource name.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. The parent resource name. */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/global$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /** Optional. Filtering results */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Optional. Filtering results
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /** Optional. Filtering results */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /** Optional. Hint for how to order the results */
+            @com.google.api.client.util.Key
+            private java.lang.String orderBy;
+
+            /** Optional. Hint for how to order the results
+             */
+            public java.lang.String getOrderBy() {
+              return orderBy;
+            }
+
+            /** Optional. Hint for how to order the results */
+            public List setOrderBy(java.lang.String orderBy) {
+              this.orderBy = orderBy;
+              return this;
+            }
+
+            /**
+             * Optional. Requested page size. Server may return fewer items than requested. If
+             * unspecified, server will pick an appropriate default.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. Requested page size. Server may return fewer items than requested. If unspecified, server
+           will pick an appropriate default.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. Requested page size. Server may return fewer items than requested. If
+             * unspecified, server will pick an appropriate default.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /** Optional. A token identifying a page of results the server should return. */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. A token identifying a page of results the server should return.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /** Optional. A token identifying a page of results the server should return. */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Updates an existing policy orchestrator, parented by a project.
+           *
+           * Create a request for the method "policyOrchestrators.patch".
+           *
+           * This request holds the parameters needed by the osconfig server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           *
+           * @param name Immutable. Identifier. In form of *
+           *        `organizations/{organization_id}/locations/global/policyOrchestrators/{orchestrator_id}` *
+           *        `folders/{folder_id}/locations/global/policyOrchestrators/{orchestrator_id}` *
+           *        `projects/{project_id_or_number}/locations/global/policyOrchestrators/{orchestrator_id}`
+           * @param content the {@link com.google.api.services.osconfig.v2.model.GoogleCloudOsconfigV2PolicyOrchestrator}
+           * @return the request
+           */
+          public Patch patch(java.lang.String name, com.google.api.services.osconfig.v2.model.GoogleCloudOsconfigV2PolicyOrchestrator content) throws java.io.IOException {
+            Patch result = new Patch(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Patch extends OSConfigRequest<com.google.api.services.osconfig.v2.model.Operation> {
+
+            private static final String REST_PATH = "v2/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/global/policyOrchestrators/[^/]+$");
+
+            /**
+             * Updates an existing policy orchestrator, parented by a project.
+             *
+             * Create a request for the method "policyOrchestrators.patch".
+             *
+             * This request holds the parameters needed by the the osconfig server.  After setting any
+             * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Immutable. Identifier. In form of *
+           *        `organizations/{organization_id}/locations/global/policyOrchestrators/{orchestrator_id}` *
+           *        `folders/{folder_id}/locations/global/policyOrchestrators/{orchestrator_id}` *
+           *        `projects/{project_id_or_number}/locations/global/policyOrchestrators/{orchestrator_id}`
+             * @param content the {@link com.google.api.services.osconfig.v2.model.GoogleCloudOsconfigV2PolicyOrchestrator}
+             * @since 1.13
+             */
+            protected Patch(java.lang.String name, com.google.api.services.osconfig.v2.model.GoogleCloudOsconfigV2PolicyOrchestrator content) {
+              super(OSConfig.this, "PATCH", REST_PATH, content, com.google.api.services.osconfig.v2.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/global/policyOrchestrators/[^/]+$");
+              }
+            }
+
+            @Override
+            public Patch set$Xgafv(java.lang.String $Xgafv) {
+              return (Patch) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Patch setAccessToken(java.lang.String accessToken) {
+              return (Patch) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Patch setAlt(java.lang.String alt) {
+              return (Patch) super.setAlt(alt);
+            }
+
+            @Override
+            public Patch setCallback(java.lang.String callback) {
+              return (Patch) super.setCallback(callback);
+            }
+
+            @Override
+            public Patch setFields(java.lang.String fields) {
+              return (Patch) super.setFields(fields);
+            }
+
+            @Override
+            public Patch setKey(java.lang.String key) {
+              return (Patch) super.setKey(key);
+            }
+
+            @Override
+            public Patch setOauthToken(java.lang.String oauthToken) {
+              return (Patch) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Patch) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Patch setQuotaUser(java.lang.String quotaUser) {
+              return (Patch) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Patch setUploadType(java.lang.String uploadType) {
+              return (Patch) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Patch) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Immutable. Identifier. In form of * `organizations/{organization_id}/locations/global
+             * /policyOrchestrators/{orchestrator_id}` *
+             * `folders/{folder_id}/locations/global/policyOrchestrators/{orchestrator_id}` * `proje
+             * cts/{project_id_or_number}/locations/global/policyOrchestrators/{orchestrator_id}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Immutable. Identifier. In form of *
+           `organizations/{organization_id}/locations/global/policyOrchestrators/{orchestrator_id}` *
+           `folders/{folder_id}/locations/global/policyOrchestrators/{orchestrator_id}` *
+           `projects/{project_id_or_number}/locations/global/policyOrchestrators/{orchestrator_id}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Immutable. Identifier. In form of * `organizations/{organization_id}/locations/global
+             * /policyOrchestrators/{orchestrator_id}` *
+             * `folders/{folder_id}/locations/global/policyOrchestrators/{orchestrator_id}` * `proje
+             * cts/{project_id_or_number}/locations/global/policyOrchestrators/{orchestrator_id}`
+             */
+            public Patch setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/global/policyOrchestrators/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Optional. The list of fields to merge into the existing policy orchestrator. A
+             * special ["*"] field mask can be used to simply replace the entire resource.
+             * Otherwise, for all paths referenced in the mask, following merge rules are used: *
+             * output only fields are ignored, * primitive fields are replaced, * repeated fields
+             * are replaced, * map fields are merged key by key, * message fields are cleared if not
+             * set in the request, otherwise they are merged recursively (in particular - message
+             * fields set to an empty message has no side effects) If field mask is not specified,
+             * it is automatically inferred from the request using following rules: * primitive
+             * fields are listed, if set to a non-default value (as there is no way to distinguish
+             * between default and unset value), * map and repeated fields are listed, *
+             * `google.protobuf.Any` fields are listed, * other message fields are traversed
+             * recursively. Note: implicit mask does not allow clearing fields.
+             */
+            @com.google.api.client.util.Key
+            private String updateMask;
+
+            /** Optional. The list of fields to merge into the existing policy orchestrator. A special ["*"] field
+           mask can be used to simply replace the entire resource. Otherwise, for all paths referenced in the
+           mask, following merge rules are used: * output only fields are ignored, * primitive fields are
+           replaced, * repeated fields are replaced, * map fields are merged key by key, * message fields are
+           cleared if not set in the request, otherwise they are merged recursively (in particular - message
+           fields set to an empty message has no side effects) If field mask is not specified, it is
+           automatically inferred from the request using following rules: * primitive fields are listed, if
+           set to a non-default value (as there is no way to distinguish between default and unset value), *
+           map and repeated fields are listed, * `google.protobuf.Any` fields are listed, * other message
+           fields are traversed recursively. Note: implicit mask does not allow clearing fields.
+             */
+            public String getUpdateMask() {
+              return updateMask;
+            }
+
+            /**
+             * Optional. The list of fields to merge into the existing policy orchestrator. A
+             * special ["*"] field mask can be used to simply replace the entire resource.
+             * Otherwise, for all paths referenced in the mask, following merge rules are used: *
+             * output only fields are ignored, * primitive fields are replaced, * repeated fields
+             * are replaced, * map fields are merged key by key, * message fields are cleared if not
+             * set in the request, otherwise they are merged recursively (in particular - message
+             * fields set to an empty message has no side effects) If field mask is not specified,
+             * it is automatically inferred from the request using following rules: * primitive
+             * fields are listed, if set to a non-default value (as there is no way to distinguish
+             * between default and unset value), * map and repeated fields are listed, *
+             * `google.protobuf.Any` fields are listed, * other message fields are traversed
+             * recursively. Note: implicit mask does not allow clearing fields.
+             */
+            public Patch setUpdateMask(String updateMask) {
+              this.updateMask = updateMask;
+              return this;
+            }
+
+            @Override
+            public Patch set(String parameterName, Object value) {
+              return (Patch) super.set(parameterName, value);
+            }
+          }
+
+        }
+      }
       /**
        * An accessor for creating requests from the Operations collection.
        *

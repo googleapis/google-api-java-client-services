@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.osconfig.v2beta.model;
+package com.google.api.services.osconfig.v2.model;
 
 /**
  * Describes the state of a single iteration of the orchestrator.
@@ -27,7 +27,7 @@ package com.google.api.services.osconfig.v2beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudOsconfigV2betaPolicyOrchestratorIterationState extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudOsconfigV2PolicyOrchestratorIterationState extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Error thrown in the wave iteration.
@@ -98,7 +98,7 @@ public final class GoogleCloudOsconfigV2betaPolicyOrchestratorIterationState ext
    * Output only. Error thrown in the wave iteration.
    * @param error error or {@code null} for none
    */
-  public GoogleCloudOsconfigV2betaPolicyOrchestratorIterationState setError(Status error) {
+  public GoogleCloudOsconfigV2PolicyOrchestratorIterationState setError(Status error) {
     this.error = error;
     return this;
   }
@@ -117,7 +117,7 @@ public final class GoogleCloudOsconfigV2betaPolicyOrchestratorIterationState ext
    * Cloud Logs.
    * @param failedActions failedActions or {@code null} for none
    */
-  public GoogleCloudOsconfigV2betaPolicyOrchestratorIterationState setFailedActions(java.lang.Long failedActions) {
+  public GoogleCloudOsconfigV2PolicyOrchestratorIterationState setFailedActions(java.lang.Long failedActions) {
     this.failedActions = failedActions;
     return this;
   }
@@ -134,7 +134,7 @@ public final class GoogleCloudOsconfigV2betaPolicyOrchestratorIterationState ext
    * Output only. Finish time of the wave iteration.
    * @param finishTime finishTime or {@code null} for none
    */
-  public GoogleCloudOsconfigV2betaPolicyOrchestratorIterationState setFinishTime(String finishTime) {
+  public GoogleCloudOsconfigV2PolicyOrchestratorIterationState setFinishTime(String finishTime) {
     this.finishTime = finishTime;
     return this;
   }
@@ -151,7 +151,7 @@ public final class GoogleCloudOsconfigV2betaPolicyOrchestratorIterationState ext
    * Output only. Unique identifier of the iteration.
    * @param iterationId iterationId or {@code null} for none
    */
-  public GoogleCloudOsconfigV2betaPolicyOrchestratorIterationState setIterationId(java.lang.String iterationId) {
+  public GoogleCloudOsconfigV2PolicyOrchestratorIterationState setIterationId(java.lang.String iterationId) {
     this.iterationId = iterationId;
     return this;
   }
@@ -168,7 +168,7 @@ public final class GoogleCloudOsconfigV2betaPolicyOrchestratorIterationState ext
    * Output only. Overall number of actions done by the orchestrator so far.
    * @param performedActions performedActions or {@code null} for none
    */
-  public GoogleCloudOsconfigV2betaPolicyOrchestratorIterationState setPerformedActions(java.lang.Long performedActions) {
+  public GoogleCloudOsconfigV2PolicyOrchestratorIterationState setPerformedActions(java.lang.Long performedActions) {
     this.performedActions = performedActions;
     return this;
   }
@@ -185,7 +185,7 @@ public final class GoogleCloudOsconfigV2betaPolicyOrchestratorIterationState ext
    * Output only. An estimated percentage of the progress. Number between 0 and 100.
    * @param progress progress or {@code null} for none
    */
-  public GoogleCloudOsconfigV2betaPolicyOrchestratorIterationState setProgress(java.lang.Float progress) {
+  public GoogleCloudOsconfigV2PolicyOrchestratorIterationState setProgress(java.lang.Float progress) {
     this.progress = progress;
     return this;
   }
@@ -202,7 +202,7 @@ public final class GoogleCloudOsconfigV2betaPolicyOrchestratorIterationState ext
    * Output only. Start time of the wave iteration.
    * @param startTime startTime or {@code null} for none
    */
-  public GoogleCloudOsconfigV2betaPolicyOrchestratorIterationState setStartTime(String startTime) {
+  public GoogleCloudOsconfigV2PolicyOrchestratorIterationState setStartTime(String startTime) {
     this.startTime = startTime;
     return this;
   }
@@ -219,19 +219,19 @@ public final class GoogleCloudOsconfigV2betaPolicyOrchestratorIterationState ext
    * Output only. State of the iteration.
    * @param state state or {@code null} for none
    */
-  public GoogleCloudOsconfigV2betaPolicyOrchestratorIterationState setState(java.lang.String state) {
+  public GoogleCloudOsconfigV2PolicyOrchestratorIterationState setState(java.lang.String state) {
     this.state = state;
     return this;
   }
 
   @Override
-  public GoogleCloudOsconfigV2betaPolicyOrchestratorIterationState set(String fieldName, Object value) {
-    return (GoogleCloudOsconfigV2betaPolicyOrchestratorIterationState) super.set(fieldName, value);
+  public GoogleCloudOsconfigV2PolicyOrchestratorIterationState set(String fieldName, Object value) {
+    return (GoogleCloudOsconfigV2PolicyOrchestratorIterationState) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudOsconfigV2betaPolicyOrchestratorIterationState clone() {
-    return (GoogleCloudOsconfigV2betaPolicyOrchestratorIterationState) super.clone();
+  public GoogleCloudOsconfigV2PolicyOrchestratorIterationState clone() {
+    return (GoogleCloudOsconfigV2PolicyOrchestratorIterationState) super.clone();
   }
 
 }

@@ -3832,7 +3832,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the admin server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Immutable. Resource name of the print server. Leave empty when creating. Format:
+         * @param name Identifier. Resource name of the print server. Leave empty when creating. Format:
          *        `customers/{customer.id}/printServers/{print_server.id}`
          * @param content the {@link com.google.api.services.directory.model.PrintServer}
          * @return the request
@@ -3860,7 +3860,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Immutable. Resource name of the print server. Leave empty when creating. Format:
+           * @param name Identifier. Resource name of the print server. Leave empty when creating. Format:
          *        `customers/{customer.id}/printServers/{print_server.id}`
            * @param content the {@link com.google.api.services.directory.model.PrintServer}
            * @since 1.13
@@ -3931,13 +3931,13 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Immutable. Resource name of the print server. Leave empty when creating. Format:
+           * Identifier. Resource name of the print server. Leave empty when creating. Format:
            * `customers/{customer.id}/printServers/{print_server.id}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Immutable. Resource name of the print server. Leave empty when creating. Format:
+          /** Identifier. Resource name of the print server. Leave empty when creating. Format:
          `customers/{customer.id}/printServers/{print_server.id}`
            */
           public java.lang.String getName() {
@@ -3945,7 +3945,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Immutable. Resource name of the print server. Leave empty when creating. Format:
+           * Identifier. Resource name of the print server. Leave empty when creating. Format:
            * `customers/{customer.id}/printServers/{print_server.id}`
            */
           public Patch setName(java.lang.String name) {
@@ -5164,8 +5164,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the admin server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name The resource name of the Printer object, in the format customers/{customer-id}/printers/{printer-id}
-         *        (During printer creation leave empty)
+         * @param name Identifier. The resource name of the Printer object, in the format customers/{customer-
+         *        id}/printers/{printer-id} (During printer creation leave empty)
          * @param content the {@link com.google.api.services.directory.model.Printer}
          * @return the request
          */
@@ -5192,8 +5192,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The resource name of the Printer object, in the format customers/{customer-id}/printers/{printer-id}
-         *        (During printer creation leave empty)
+           * @param name Identifier. The resource name of the Printer object, in the format customers/{customer-
+         *        id}/printers/{printer-id} (During printer creation leave empty)
            * @param content the {@link com.google.api.services.directory.model.Printer}
            * @since 1.13
            */
@@ -5263,21 +5263,21 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * The resource name of the Printer object, in the format customers/{customer-
+           * Identifier. The resource name of the Printer object, in the format customers/{customer-
            * id}/printers/{printer-id} (During printer creation leave empty)
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The resource name of the Printer object, in the format customers/{customer-id}/printers/{printer-
-         id} (During printer creation leave empty)
+          /** Identifier. The resource name of the Printer object, in the format customers/{customer-
+         id}/printers/{printer-id} (During printer creation leave empty)
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * The resource name of the Printer object, in the format customers/{customer-
+           * Identifier. The resource name of the Printer object, in the format customers/{customer-
            * id}/printers/{printer-id} (During printer creation leave empty)
            */
           public Patch setName(java.lang.String name) {

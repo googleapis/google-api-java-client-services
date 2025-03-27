@@ -79,7 +79,7 @@ public final class Printer extends com.google.api.client.json.GenericJson {
   private java.lang.String makeAndModel;
 
   /**
-   * The resource name of the Printer object, in the format customers/{customer-
+   * Identifier. The resource name of the Printer object, in the format customers/{customer-
    * id}/printers/{printer-id} (During printer creation leave empty)
    * The value may be {@code null}.
    */
@@ -213,7 +213,7 @@ public final class Printer extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The resource name of the Printer object, in the format customers/{customer-
+   * Identifier. The resource name of the Printer object, in the format customers/{customer-
    * id}/printers/{printer-id} (During printer creation leave empty)
    * @return value or {@code null} for none
    */
@@ -222,7 +222,7 @@ public final class Printer extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The resource name of the Printer object, in the format customers/{customer-
+   * Identifier. The resource name of the Printer object, in the format customers/{customer-
    * id}/printers/{printer-id} (During printer creation leave empty)
    * @param name name or {@code null} for none
    */

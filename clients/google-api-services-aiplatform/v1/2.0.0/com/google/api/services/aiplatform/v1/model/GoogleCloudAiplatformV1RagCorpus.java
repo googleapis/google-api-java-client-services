@@ -80,6 +80,13 @@ public final class GoogleCloudAiplatformV1RagCorpus extends com.google.api.clien
   private GoogleCloudAiplatformV1RagVectorDbConfig vectorDbConfig;
 
   /**
+   * Optional. Immutable. The config for the Vertex AI Search.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1VertexAiSearchConfig vertexAiSearchConfig;
+
+  /**
    * Output only. RagCorpus state.
    * @return value or {@code null} for none
    */
@@ -197,6 +204,23 @@ public final class GoogleCloudAiplatformV1RagCorpus extends com.google.api.clien
    */
   public GoogleCloudAiplatformV1RagCorpus setVectorDbConfig(GoogleCloudAiplatformV1RagVectorDbConfig vectorDbConfig) {
     this.vectorDbConfig = vectorDbConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Immutable. The config for the Vertex AI Search.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1VertexAiSearchConfig getVertexAiSearchConfig() {
+    return vertexAiSearchConfig;
+  }
+
+  /**
+   * Optional. Immutable. The config for the Vertex AI Search.
+   * @param vertexAiSearchConfig vertexAiSearchConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1RagCorpus setVertexAiSearchConfig(GoogleCloudAiplatformV1VertexAiSearchConfig vertexAiSearchConfig) {
+    this.vertexAiSearchConfig = vertexAiSearchConfig;
     return this;
   }
 

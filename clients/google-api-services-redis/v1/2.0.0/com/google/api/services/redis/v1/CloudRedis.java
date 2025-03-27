@@ -445,6 +445,29 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
+         * Optional. A list of extra location types that should be used as conditions for
+         * controlling the visibility of the locations.
+         */
+        @com.google.api.client.util.Key
+        private java.util.List<java.lang.String> extraLocationTypes;
+
+        /** Optional. A list of extra location types that should be used as conditions for controlling the
+       visibility of the locations.
+         */
+        public java.util.List<java.lang.String> getExtraLocationTypes() {
+          return extraLocationTypes;
+        }
+
+        /**
+         * Optional. A list of extra location types that should be used as conditions for
+         * controlling the visibility of the locations.
+         */
+        public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
+          this.extraLocationTypes = extraLocationTypes;
+          return this;
+        }
+
+        /**
          * A filter to narrow down results to a preferred subset. The filtering language accepts
          * strings like `"displayName=tokyo"`, and is documented in more detail in
          * [AIP-160](https://google.aip.dev/160).
@@ -544,7 +567,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
          *
          * @param name Required. Redis backupCollection resource name using the form:
          *        `projects/{project_id}/locations/{location_id}/backupCollections/{backup_collection_id}`
-         *        where `location_id` refers to a GCP region.
+         *        where `location_id` refers to a Google Cloud region.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -572,7 +595,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
            *
            * @param name Required. Redis backupCollection resource name using the form:
          *        `projects/{project_id}/locations/{location_id}/backupCollections/{backup_collection_id}`
-         *        where `location_id` refers to a GCP region.
+         *        where `location_id` refers to a Google Cloud region.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -653,14 +676,14 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           /**
            * Required. Redis backupCollection resource name using the form: `projects/{project_id}/l
            * ocations/{location_id}/backupCollections/{backup_collection_id}` where `location_id`
-           * refers to a GCP region.
+           * refers to a Google Cloud region.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. Redis backupCollection resource name using the form:
          `projects/{project_id}/locations/{location_id}/backupCollections/{backup_collection_id}` where
-         `location_id` refers to a GCP region.
+         `location_id` refers to a Google Cloud region.
            */
           public java.lang.String getName() {
             return name;
@@ -669,7 +692,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           /**
            * Required. Redis backupCollection resource name using the form: `projects/{project_id}/l
            * ocations/{location_id}/backupCollections/{backup_collection_id}` where `location_id`
-           * refers to a GCP region.
+           * refers to a Google Cloud region.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -697,8 +720,8 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The resource name of the backupCollection location using the form:
-         *        `projects/{project_id}/locations/{location_id}` where `location_id` refers to a GCP
-         *        region.
+         *        `projects/{project_id}/locations/{location_id}` where `location_id` refers to a Google
+         *        Cloud region.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -727,8 +750,8 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The resource name of the backupCollection location using the form:
-         *        `projects/{project_id}/locations/{location_id}` where `location_id` refers to a GCP
-         *        region.
+         *        `projects/{project_id}/locations/{location_id}` where `location_id` refers to a Google
+         *        Cloud region.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -808,14 +831,15 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Required. The resource name of the backupCollection location using the form:
-           * `projects/{project_id}/locations/{location_id}` where `location_id` refers to a GCP
-           * region.
+           * `projects/{project_id}/locations/{location_id}` where `location_id` refers to a Google
+           * Cloud region.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The resource name of the backupCollection location using the form:
-         `projects/{project_id}/locations/{location_id}` where `location_id` refers to a GCP region.
+         `projects/{project_id}/locations/{location_id}` where `location_id` refers to a Google Cloud
+         region.
            */
           public java.lang.String getParent() {
             return parent;
@@ -823,8 +847,8 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Required. The resource name of the backupCollection location using the form:
-           * `projects/{project_id}/locations/{location_id}` where `location_id` refers to a GCP
-           * region.
+           * `projects/{project_id}/locations/{location_id}` where `location_id` refers to a Google
+           * Cloud region.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -1593,7 +1617,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
          *
          * @param name Required. Redis cluster resource name using the form:
          *        `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}` where `location_id`
-         *        refers to a GCP region.
+         *        refers to a Google Cloud region.
          * @param content the {@link com.google.api.services.redis.v1.model.BackupClusterRequest}
          * @return the request
          */
@@ -1630,7 +1654,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
            *
            * @param name Required. Redis cluster resource name using the form:
          *        `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}` where `location_id`
-         *        refers to a GCP region.
+         *        refers to a Google Cloud region.
            * @param content the {@link com.google.api.services.redis.v1.model.BackupClusterRequest}
            * @since 1.13
            */
@@ -1702,14 +1726,14 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           /**
            * Required. Redis cluster resource name using the form:
            * `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}` where
-           * `location_id` refers to a GCP region.
+           * `location_id` refers to a Google Cloud region.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. Redis cluster resource name using the form:
          `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}` where `location_id` refers to
-         a GCP region.
+         a Google Cloud region.
            */
           public java.lang.String getName() {
             return name;
@@ -1718,7 +1742,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           /**
            * Required. Redis cluster resource name using the form:
            * `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}` where
-           * `location_id` refers to a GCP region.
+           * `location_id` refers to a Google Cloud region.
            */
           public Backup setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -1749,8 +1773,8 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The resource name of the cluster location using the form:
-         *        `projects/{project_id}/locations/{location_id}` where `location_id` refers to a GCP
-         *        region.
+         *        `projects/{project_id}/locations/{location_id}` where `location_id` refers to a Google
+         *        Cloud region.
          * @param content the {@link com.google.api.services.redis.v1.model.Cluster}
          * @return the request
          */
@@ -1783,8 +1807,8 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The resource name of the cluster location using the form:
-         *        `projects/{project_id}/locations/{location_id}` where `location_id` refers to a GCP
-         *        region.
+         *        `projects/{project_id}/locations/{location_id}` where `location_id` refers to a Google
+         *        Cloud region.
            * @param content the {@link com.google.api.services.redis.v1.model.Cluster}
            * @since 1.13
            */
@@ -1855,14 +1879,15 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Required. The resource name of the cluster location using the form:
-           * `projects/{project_id}/locations/{location_id}` where `location_id` refers to a GCP
-           * region.
+           * `projects/{project_id}/locations/{location_id}` where `location_id` refers to a Google
+           * Cloud region.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The resource name of the cluster location using the form:
-         `projects/{project_id}/locations/{location_id}` where `location_id` refers to a GCP region.
+         `projects/{project_id}/locations/{location_id}` where `location_id` refers to a Google Cloud
+         region.
            */
           public java.lang.String getParent() {
             return parent;
@@ -1870,8 +1895,8 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Required. The resource name of the cluster location using the form:
-           * `projects/{project_id}/locations/{location_id}` where `location_id` refers to a GCP
-           * region.
+           * `projects/{project_id}/locations/{location_id}` where `location_id` refers to a Google
+           * Cloud region.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -1943,7 +1968,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
          *
          * @param name Required. Redis cluster resource name using the form:
          *        `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}` where `location_id`
-         *        refers to a GCP region.
+         *        refers to a Google Cloud region.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -1971,7 +1996,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
            *
            * @param name Required. Redis cluster resource name using the form:
          *        `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}` where `location_id`
-         *        refers to a GCP region.
+         *        refers to a Google Cloud region.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -2042,14 +2067,14 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           /**
            * Required. Redis cluster resource name using the form:
            * `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}` where
-           * `location_id` refers to a GCP region.
+           * `location_id` refers to a Google Cloud region.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. Redis cluster resource name using the form:
          `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}` where `location_id` refers to
-         a GCP region.
+         a Google Cloud region.
            */
           public java.lang.String getName() {
             return name;
@@ -2058,7 +2083,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           /**
            * Required. Redis cluster resource name using the form:
            * `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}` where
-           * `location_id` refers to a GCP region.
+           * `location_id` refers to a Google Cloud region.
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -2101,7 +2126,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
          *
          * @param name Required. Redis cluster resource name using the form:
          *        `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}` where `location_id`
-         *        refers to a GCP region.
+         *        refers to a Google Cloud region.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -2129,7 +2154,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
            *
            * @param name Required. Redis cluster resource name using the form:
          *        `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}` where `location_id`
-         *        refers to a GCP region.
+         *        refers to a Google Cloud region.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -2210,14 +2235,14 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           /**
            * Required. Redis cluster resource name using the form:
            * `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}` where
-           * `location_id` refers to a GCP region.
+           * `location_id` refers to a Google Cloud region.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. Redis cluster resource name using the form:
          `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}` where `location_id` refers to
-         a GCP region.
+         a Google Cloud region.
            */
           public java.lang.String getName() {
             return name;
@@ -2226,7 +2251,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           /**
            * Required. Redis cluster resource name using the form:
            * `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}` where
-           * `location_id` refers to a GCP region.
+           * `location_id` refers to a Google Cloud region.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -2254,7 +2279,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
          *
          * @param name Required. Redis cluster certificate authority resource name using the form:
          *        `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}/certificateAuthority`
-         *        where `location_id` refers to a GCP region.
+         *        where `location_id` refers to a Google Cloud region.
          * @return the request
          */
         public GetCertificateAuthority getCertificateAuthority(java.lang.String name) throws java.io.IOException {
@@ -2283,7 +2308,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
            *
            * @param name Required. Redis cluster certificate authority resource name using the form:
          *        `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}/certificateAuthority`
-         *        where `location_id` refers to a GCP region.
+         *        where `location_id` refers to a Google Cloud region.
            * @since 1.13
            */
           protected GetCertificateAuthority(java.lang.String name) {
@@ -2364,14 +2389,14 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           /**
            * Required. Redis cluster certificate authority resource name using the form: `projects/{
            * project_id}/locations/{location_id}/clusters/{cluster_id}/certificateAuthority` where
-           * `location_id` refers to a GCP region.
+           * `location_id` refers to a Google Cloud region.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. Redis cluster certificate authority resource name using the form:
          `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}/certificateAuthority` where
-         `location_id` refers to a GCP region.
+         `location_id` refers to a Google Cloud region.
            */
           public java.lang.String getName() {
             return name;
@@ -2380,7 +2405,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           /**
            * Required. Redis cluster certificate authority resource name using the form: `projects/{
            * project_id}/locations/{location_id}/clusters/{cluster_id}/certificateAuthority` where
-           * `location_id` refers to a GCP region.
+           * `location_id` refers to a Google Cloud region.
            */
           public GetCertificateAuthority setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -2409,8 +2434,8 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The resource name of the cluster location using the form:
-         *        `projects/{project_id}/locations/{location_id}` where `location_id` refers to a GCP
-         *        region.
+         *        `projects/{project_id}/locations/{location_id}` where `location_id` refers to a Google
+         *        Cloud region.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -2441,8 +2466,8 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The resource name of the cluster location using the form:
-         *        `projects/{project_id}/locations/{location_id}` where `location_id` refers to a GCP
-         *        region.
+         *        `projects/{project_id}/locations/{location_id}` where `location_id` refers to a Google
+         *        Cloud region.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -2522,14 +2547,15 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Required. The resource name of the cluster location using the form:
-           * `projects/{project_id}/locations/{location_id}` where `location_id` refers to a GCP
-           * region.
+           * `projects/{project_id}/locations/{location_id}` where `location_id` refers to a Google
+           * Cloud region.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The resource name of the cluster location using the form:
-         `projects/{project_id}/locations/{location_id}` where `location_id` refers to a GCP region.
+         `projects/{project_id}/locations/{location_id}` where `location_id` refers to a Google Cloud
+         region.
            */
           public java.lang.String getParent() {
             return parent;
@@ -2537,8 +2563,8 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Required. The resource name of the cluster location using the form:
-           * `projects/{project_id}/locations/{location_id}` where `location_id` refers to a GCP
-           * region.
+           * `projects/{project_id}/locations/{location_id}` where `location_id` refers to a Google
+           * Cloud region.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -2800,7 +2826,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
          *
          * @param name Required. Redis Cluster instance resource name using the form:
          *        `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}` where `location_id`
-         *        refers to a GCP region.
+         *        refers to a Google Cloud region.
          * @param content the {@link com.google.api.services.redis.v1.model.RescheduleClusterMaintenanceRequest}
          * @return the request
          */
@@ -2830,7 +2856,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
            *
            * @param name Required. Redis Cluster instance resource name using the form:
          *        `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}` where `location_id`
-         *        refers to a GCP region.
+         *        refers to a Google Cloud region.
            * @param content the {@link com.google.api.services.redis.v1.model.RescheduleClusterMaintenanceRequest}
            * @since 1.13
            */
@@ -2902,14 +2928,14 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           /**
            * Required. Redis Cluster instance resource name using the form:
            * `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}` where
-           * `location_id` refers to a GCP region.
+           * `location_id` refers to a Google Cloud region.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. Redis Cluster instance resource name using the form:
          `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}` where `location_id` refers to
-         a GCP region.
+         a Google Cloud region.
            */
           public java.lang.String getName() {
             return name;
@@ -2918,7 +2944,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           /**
            * Required. Redis Cluster instance resource name using the form:
            * `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}` where
-           * `location_id` refers to a GCP region.
+           * `location_id` refers to a Google Cloud region.
            */
           public RescheduleClusterMaintenance setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

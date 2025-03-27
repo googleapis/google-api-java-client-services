@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-dataform</artifactId>
-  <version>v1beta1-rev20250316-2.0.0</version>
-  <name>Dataform API v1beta1-rev20250316-2.0.0</name>
+  <version>v1beta1-rev20250323-2.0.0</version>
+  <name>Dataform API v1beta1-rev20250323-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

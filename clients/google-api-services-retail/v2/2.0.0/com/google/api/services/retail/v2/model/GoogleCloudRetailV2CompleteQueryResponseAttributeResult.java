@@ -17,10 +17,10 @@
 package com.google.api.services.retail.v2.model;
 
 /**
- * Resource that represents attribute results. The list of suggestions for the attribute.
+ * Resource that represents attribute results.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Vertex AI Search for Retail API. For a detailed
+ * transmitted over HTTP when working with the Vertex AI Search for commerce API. For a detailed
  * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
@@ -31,12 +31,14 @@ package com.google.api.services.retail.v2.model;
 public final class GoogleCloudRetailV2CompleteQueryResponseAttributeResult extends com.google.api.client.json.GenericJson {
 
   /**
+   * The list of suggestions for the attribute.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> suggestions;
 
   /**
+   * The list of suggestions for the attribute.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSuggestions() {
@@ -44,6 +46,7 @@ public final class GoogleCloudRetailV2CompleteQueryResponseAttributeResult exten
   }
 
   /**
+   * The list of suggestions for the attribute.
    * @param suggestions suggestions or {@code null} for none
    */
   public GoogleCloudRetailV2CompleteQueryResponseAttributeResult setSuggestions(java.util.List<java.lang.String> suggestions) {

@@ -20,7 +20,7 @@ package com.google.api.services.retail.v2.model;
  * Boost specification to boost certain items.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Vertex AI Search for Retail API. For a detailed
+ * transmitted over HTTP when working with the Vertex AI Search for commerce API. For a detailed
  * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
@@ -31,7 +31,7 @@ package com.google.api.services.retail.v2.model;
 public final class GoogleCloudRetailV2SearchRequestBoostSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * Condition boost specifications. If a product matches multiple conditions in the specifictions,
+   * Condition boost specifications. If a product matches multiple conditions in the specifications,
    * boost scores from these specifications are all applied and combined in a non-linear way.
    * Maximum number of specifications is 20.
    * The value may be {@code null}.
@@ -49,7 +49,7 @@ public final class GoogleCloudRetailV2SearchRequestBoostSpec extends com.google.
   private java.lang.Boolean skipBoostSpecValidation;
 
   /**
-   * Condition boost specifications. If a product matches multiple conditions in the specifictions,
+   * Condition boost specifications. If a product matches multiple conditions in the specifications,
    * boost scores from these specifications are all applied and combined in a non-linear way.
    * Maximum number of specifications is 20.
    * @return value or {@code null} for none
@@ -59,7 +59,7 @@ public final class GoogleCloudRetailV2SearchRequestBoostSpec extends com.google.
   }
 
   /**
-   * Condition boost specifications. If a product matches multiple conditions in the specifictions,
+   * Condition boost specifications. If a product matches multiple conditions in the specifications,
    * boost scores from these specifications are all applied and combined in a non-linear way.
    * Maximum number of specifications is 20.
    * @param conditionBoostSpecs conditionBoostSpecs or {@code null} for none

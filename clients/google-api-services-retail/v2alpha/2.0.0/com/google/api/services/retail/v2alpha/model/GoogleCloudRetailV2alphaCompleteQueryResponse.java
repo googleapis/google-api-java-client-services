@@ -20,7 +20,7 @@ package com.google.api.services.retail.v2alpha.model;
  * Response of the autocomplete query.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Vertex AI Search for Retail API. For a detailed
+ * transmitted over HTTP when working with the Vertex AI Search for commerce API. For a detailed
  * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
@@ -31,7 +31,7 @@ package com.google.api.services.retail.v2alpha.model;
 public final class GoogleCloudRetailV2alphaCompleteQueryResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * A map of matched attribute suggestions. This field is only available for "cloud-retail"
+   * A map of matched attribute suggestions. This field is only available for `cloud-retail`
    * dataset. Current supported keys: * `brands` * `categories`
    * The value may be {@code null}.
    */
@@ -69,7 +69,7 @@ public final class GoogleCloudRetailV2alphaCompleteQueryResponse extends com.goo
   private java.util.List<GoogleCloudRetailV2alphaCompleteQueryResponseRecentSearchResult> recentSearchResults;
 
   /**
-   * A map of matched attribute suggestions. This field is only available for "cloud-retail"
+   * A map of matched attribute suggestions. This field is only available for `cloud-retail`
    * dataset. Current supported keys: * `brands` * `categories`
    * @return value or {@code null} for none
    */
@@ -78,7 +78,7 @@ public final class GoogleCloudRetailV2alphaCompleteQueryResponse extends com.goo
   }
 
   /**
-   * A map of matched attribute suggestions. This field is only available for "cloud-retail"
+   * A map of matched attribute suggestions. This field is only available for `cloud-retail`
    * dataset. Current supported keys: * `brands` * `categories`
    * @param attributeResults attributeResults or {@code null} for none
    */

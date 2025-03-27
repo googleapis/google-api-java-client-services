@@ -20,7 +20,7 @@ package com.google.api.services.retail.v2beta.model;
  * Request message for SearchService.Search method.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Vertex AI Search for Retail API. For a detailed
+ * transmitted over HTTP when working with the Vertex AI Search for commerce API. For a detailed
  * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
@@ -125,6 +125,17 @@ public final class GoogleCloudRetailV2betaSearchRequest extends com.google.api.c
   private java.util.Map<String, java.lang.String> labels;
 
   /**
+   * Optional. The BCP-47 language code, such as "en-US" or "sr-Latn"
+   * [list](https://www.unicode.org/cldr/charts/46/summary/root.html). For more information, see
+   * [Standardized codes](https://google.aip.dev/143). This field helps to better interpret the
+   * query. If a value isn't specified, the query language code is automatically detected, which may
+   * not be accurate.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String languageCode;
+
+  /**
    * A 0-indexed integer that specifies the current offset (that is, starting result location,
    * amongst the Products deemed by the API as relevant) in search results. This field is only
    * considered if page_token is unset. If this field is negative, an INVALID_ARGUMENT is returned.
@@ -184,6 +195,15 @@ public final class GoogleCloudRetailV2betaSearchRequest extends com.google.api.c
   private GoogleCloudRetailV2betaSearchRequestPersonalizationSpec personalizationSpec;
 
   /**
+   * Optional. An id corresponding to a place, such as a store id or region id. When specified, we
+   * use the price from the local inventory with the matching product's LocalInventory.place_id for
+   * revenue optimization.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String placeId;
+
+  /**
    * Raw search query. If this field is empty, the request is considered a category browsing request
    * and returned results are based on filter and page_categories.
    * The value may be {@code null}.
@@ -199,6 +219,16 @@ public final class GoogleCloudRetailV2betaSearchRequest extends com.google.api.c
    */
   @com.google.api.client.util.Key
   private GoogleCloudRetailV2betaSearchRequestQueryExpansionSpec queryExpansionSpec;
+
+  /**
+   * Optional. The Unicode country/region code (CLDR) of a location, such as "US" and "419"
+   * [list](https://www.unicode.org/cldr/charts/46/supplemental/territory_information.html). For
+   * more information, see [Standardized codes](https://google.aip.dev/143). If set, then results
+   * will be boosted based on the region_code provided.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String regionCode;
 
   /**
    * The search mode of the search request. If not specified, a single search request triggers both
@@ -486,6 +516,31 @@ public final class GoogleCloudRetailV2betaSearchRequest extends com.google.api.c
   }
 
   /**
+   * Optional. The BCP-47 language code, such as "en-US" or "sr-Latn"
+   * [list](https://www.unicode.org/cldr/charts/46/summary/root.html). For more information, see
+   * [Standardized codes](https://google.aip.dev/143). This field helps to better interpret the
+   * query. If a value isn't specified, the query language code is automatically detected, which may
+   * not be accurate.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLanguageCode() {
+    return languageCode;
+  }
+
+  /**
+   * Optional. The BCP-47 language code, such as "en-US" or "sr-Latn"
+   * [list](https://www.unicode.org/cldr/charts/46/summary/root.html). For more information, see
+   * [Standardized codes](https://google.aip.dev/143). This field helps to better interpret the
+   * query. If a value isn't specified, the query language code is automatically detected, which may
+   * not be accurate.
+   * @param languageCode languageCode or {@code null} for none
+   */
+  public GoogleCloudRetailV2betaSearchRequest setLanguageCode(java.lang.String languageCode) {
+    this.languageCode = languageCode;
+    return this;
+  }
+
+  /**
    * A 0-indexed integer that specifies the current offset (that is, starting result location,
    * amongst the Products deemed by the API as relevant) in search results. This field is only
    * considered if page_token is unset. If this field is negative, an INVALID_ARGUMENT is returned.
@@ -622,6 +677,27 @@ public final class GoogleCloudRetailV2betaSearchRequest extends com.google.api.c
   }
 
   /**
+   * Optional. An id corresponding to a place, such as a store id or region id. When specified, we
+   * use the price from the local inventory with the matching product's LocalInventory.place_id for
+   * revenue optimization.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPlaceId() {
+    return placeId;
+  }
+
+  /**
+   * Optional. An id corresponding to a place, such as a store id or region id. When specified, we
+   * use the price from the local inventory with the matching product's LocalInventory.place_id for
+   * revenue optimization.
+   * @param placeId placeId or {@code null} for none
+   */
+  public GoogleCloudRetailV2betaSearchRequest setPlaceId(java.lang.String placeId) {
+    this.placeId = placeId;
+    return this;
+  }
+
+  /**
    * Raw search query. If this field is empty, the request is considered a category browsing request
    * and returned results are based on filter and page_categories.
    * @return value or {@code null} for none
@@ -658,6 +734,29 @@ public final class GoogleCloudRetailV2betaSearchRequest extends com.google.api.c
    */
   public GoogleCloudRetailV2betaSearchRequest setQueryExpansionSpec(GoogleCloudRetailV2betaSearchRequestQueryExpansionSpec queryExpansionSpec) {
     this.queryExpansionSpec = queryExpansionSpec;
+    return this;
+  }
+
+  /**
+   * Optional. The Unicode country/region code (CLDR) of a location, such as "US" and "419"
+   * [list](https://www.unicode.org/cldr/charts/46/supplemental/territory_information.html). For
+   * more information, see [Standardized codes](https://google.aip.dev/143). If set, then results
+   * will be boosted based on the region_code provided.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRegionCode() {
+    return regionCode;
+  }
+
+  /**
+   * Optional. The Unicode country/region code (CLDR) of a location, such as "US" and "419"
+   * [list](https://www.unicode.org/cldr/charts/46/supplemental/territory_information.html). For
+   * more information, see [Standardized codes](https://google.aip.dev/143). If set, then results
+   * will be boosted based on the region_code provided.
+   * @param regionCode regionCode or {@code null} for none
+   */
+  public GoogleCloudRetailV2betaSearchRequest setRegionCode(java.lang.String regionCode) {
+    this.regionCode = regionCode;
     return this;
   }
 

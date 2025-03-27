@@ -30,16 +30,18 @@ package com.google.api.services.vault.v1.model;
 public final class HangoutsChatInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of Chat spaces IDs, as provided by the [Chat API](https://developers.google.com/chat).
-   * There is a limit of exporting from 500 Chat spaces per request.
+   * A list of Chat spaces IDs, as provided by the [Chat
+   * API](https://developers.google.com/workspace/chat). There is a limit of exporting from 500 Chat
+   * spaces per request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> roomId;
 
   /**
-   * A list of Chat spaces IDs, as provided by the [Chat API](https://developers.google.com/chat).
-   * There is a limit of exporting from 500 Chat spaces per request.
+   * A list of Chat spaces IDs, as provided by the [Chat
+   * API](https://developers.google.com/workspace/chat). There is a limit of exporting from 500 Chat
+   * spaces per request.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getRoomId() {
@@ -47,8 +49,9 @@ public final class HangoutsChatInfo extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * A list of Chat spaces IDs, as provided by the [Chat API](https://developers.google.com/chat).
-   * There is a limit of exporting from 500 Chat spaces per request.
+   * A list of Chat spaces IDs, as provided by the [Chat
+   * API](https://developers.google.com/workspace/chat). There is a limit of exporting from 500 Chat
+   * spaces per request.
    * @param roomId roomId or {@code null} for none
    */
   public HangoutsChatInfo setRoomId(java.util.List<java.lang.String> roomId) {

@@ -33,11 +33,10 @@ public final class SynthesisInput extends com.google.api.client.json.GenericJson
 
   /**
    * Optional. The pronunciation customizations are applied to the input. If this is set, the input
-   * is synthesized using the given pronunciation customizations. The initial support is for
-   * English, French, Italian, German, and Spanish (EFIGS) languages, as provided in
-   * VoiceSelectionParams. Journey and Instant Clone voices aren't supported. In order to customize
-   * the pronunciation of a phrase, there must be an exact match of the phrase in the input types.
-   * If using SSML, the phrase must not be inside a phoneme tag.
+   * is synthesized using the given pronunciation customizations. The initial support is for en-us,
+   * with plans to expand to other locales in the future. Instant Clone voices aren't supported. In
+   * order to customize the pronunciation of a phrase, there must be an exact match of the phrase in
+   * the input types. If using SSML, the phrase must not be inside a phoneme tag.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,11 +67,10 @@ public final class SynthesisInput extends com.google.api.client.json.GenericJson
 
   /**
    * Optional. The pronunciation customizations are applied to the input. If this is set, the input
-   * is synthesized using the given pronunciation customizations. The initial support is for
-   * English, French, Italian, German, and Spanish (EFIGS) languages, as provided in
-   * VoiceSelectionParams. Journey and Instant Clone voices aren't supported. In order to customize
-   * the pronunciation of a phrase, there must be an exact match of the phrase in the input types.
-   * If using SSML, the phrase must not be inside a phoneme tag.
+   * is synthesized using the given pronunciation customizations. The initial support is for en-us,
+   * with plans to expand to other locales in the future. Instant Clone voices aren't supported. In
+   * order to customize the pronunciation of a phrase, there must be an exact match of the phrase in
+   * the input types. If using SSML, the phrase must not be inside a phoneme tag.
    * @return value or {@code null} for none
    */
   public CustomPronunciations getCustomPronunciations() {
@@ -81,11 +79,10 @@ public final class SynthesisInput extends com.google.api.client.json.GenericJson
 
   /**
    * Optional. The pronunciation customizations are applied to the input. If this is set, the input
-   * is synthesized using the given pronunciation customizations. The initial support is for
-   * English, French, Italian, German, and Spanish (EFIGS) languages, as provided in
-   * VoiceSelectionParams. Journey and Instant Clone voices aren't supported. In order to customize
-   * the pronunciation of a phrase, there must be an exact match of the phrase in the input types.
-   * If using SSML, the phrase must not be inside a phoneme tag.
+   * is synthesized using the given pronunciation customizations. The initial support is for en-us,
+   * with plans to expand to other locales in the future. Instant Clone voices aren't supported. In
+   * order to customize the pronunciation of a phrase, there must be an exact match of the phrase in
+   * the input types. If using SSML, the phrase must not be inside a phoneme tag.
    * @param customPronunciations customPronunciations or {@code null} for none
    */
   public SynthesisInput setCustomPronunciations(CustomPronunciations customPronunciations) {

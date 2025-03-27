@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-areainsights</artifactId>
-  <version>v1-rev20250226-2.0.0</version>
-  <name>Places Insights API v1-rev20250226-2.0.0</name>
+  <version>v1-rev20250325-2.0.0</version>
+  <name>Places Aggregate API v1-rev20250325-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
@@ -86,8 +86,8 @@
         </executions>
         <configuration>
           <doclint>none</doclint>
-          <doctitle>Places Insights API ${project.version}</doctitle>
-          <windowtitle>Places Insights API ${project.version}</windowtitle>
+          <doctitle>Places Aggregate API ${project.version}</doctitle>
+          <windowtitle>Places Aggregate API ${project.version}</windowtitle>
           <links>
             <link>http://docs.oracle.com/javase/7/docs/api</link>
             <link>https://googleapis.dev/java/google-http-client/1.46.3/</link>

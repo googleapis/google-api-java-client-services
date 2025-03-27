@@ -21,7 +21,7 @@ package com.google.api.services.retail.v2beta.model;
  * with customers' website.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Vertex AI Search for Retail API. For a detailed
+ * transmitted over HTTP when working with the Vertex AI Search for commerce API. For a detailed
  * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
@@ -108,10 +108,8 @@ public final class GoogleCloudRetailV2betaUserEvent extends com.google.api.clien
    * Required. User event type. Allowed values are: * `add-to-cart`: Products being added to cart. *
    * `remove-from-cart`: Products being removed from cart. * `category-page-view`: Special pages
    * such as sale or promotion pages viewed. * `detail-page-view`: Products detail page viewed. *
-   * `home-page-view`: Homepage viewed. * `promotion-offered`: Promotion is offered to a user. *
-   * `promotion-not-offered`: Promotion is not offered to a user. * `purchase-complete`: User
-   * finishing a purchase. * `search`: Product search. * `shopping-cart-page-view`: User viewing a
-   * shopping cart.
+   * `home-page-view`: Homepage viewed. * `purchase-complete`: User finishing a purchase. *
+   * `search`: Product search. * `shopping-cart-page-view`: User viewing a shopping cart.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -424,10 +422,8 @@ public final class GoogleCloudRetailV2betaUserEvent extends com.google.api.clien
    * Required. User event type. Allowed values are: * `add-to-cart`: Products being added to cart. *
    * `remove-from-cart`: Products being removed from cart. * `category-page-view`: Special pages
    * such as sale or promotion pages viewed. * `detail-page-view`: Products detail page viewed. *
-   * `home-page-view`: Homepage viewed. * `promotion-offered`: Promotion is offered to a user. *
-   * `promotion-not-offered`: Promotion is not offered to a user. * `purchase-complete`: User
-   * finishing a purchase. * `search`: Product search. * `shopping-cart-page-view`: User viewing a
-   * shopping cart.
+   * `home-page-view`: Homepage viewed. * `purchase-complete`: User finishing a purchase. *
+   * `search`: Product search. * `shopping-cart-page-view`: User viewing a shopping cart.
    * @return value or {@code null} for none
    */
   public java.lang.String getEventType() {
@@ -438,10 +434,8 @@ public final class GoogleCloudRetailV2betaUserEvent extends com.google.api.clien
    * Required. User event type. Allowed values are: * `add-to-cart`: Products being added to cart. *
    * `remove-from-cart`: Products being removed from cart. * `category-page-view`: Special pages
    * such as sale or promotion pages viewed. * `detail-page-view`: Products detail page viewed. *
-   * `home-page-view`: Homepage viewed. * `promotion-offered`: Promotion is offered to a user. *
-   * `promotion-not-offered`: Promotion is not offered to a user. * `purchase-complete`: User
-   * finishing a purchase. * `search`: Product search. * `shopping-cart-page-view`: User viewing a
-   * shopping cart.
+   * `home-page-view`: Homepage viewed. * `purchase-complete`: User finishing a purchase. *
+   * `search`: Product search. * `shopping-cart-page-view`: User viewing a shopping cart.
    * @param eventType eventType or {@code null} for none
    */
   public GoogleCloudRetailV2betaUserEvent setEventType(java.lang.String eventType) {

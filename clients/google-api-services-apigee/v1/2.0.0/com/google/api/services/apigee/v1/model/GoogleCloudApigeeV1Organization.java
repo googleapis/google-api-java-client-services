@@ -30,7 +30,7 @@ package com.google.api.services.apigee.v1.model;
 public final class GoogleCloudApigeeV1Organization extends com.google.api.client.json.GenericJson {
 
   /**
-   * Addon configurations of the Apigee organization.
+   * Optional. Addon configurations of the Apigee organization.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,7 +47,7 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
   private java.lang.String analyticsRegion;
 
   /**
-   * Cloud KMS key name used for encrypting API consumer data. If not specified or
+   * Optional. Cloud KMS key name used for encrypting API consumer data. If not specified or
    * [BillingType](#BillingType) is `EVALUATION`, a Google-Managed encryption key will be used.
    * Format: `projects/locations/keyRings/cryptoKeys`
    * The value may be {@code null}.
@@ -56,10 +56,10 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
   private java.lang.String apiConsumerDataEncryptionKeyName;
 
   /**
-   * This field is needed only for customers using non-default data residency regions. Apigee stores
-   * some control plane data only in single region. This field determines which single region Apigee
-   * should use. For example: "us-west1" when control plane is in US or "europe-west2" when control
-   * plane is in EU.
+   * Optional. This field is needed only for customers using non-default data residency regions.
+   * Apigee stores some control plane data only in single region. This field determines which single
+   * region Apigee should use. For example: "us-west1" when control plane is in US or "europe-west2"
+   * when control plane is in EU.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,13 +81,13 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
   private java.util.List<java.lang.String> attributes;
 
   /**
-   * Compute Engine network used for Service Networking to be peered with Apigee runtime instances.
-   * See [Getting started with the Service Networking API](https://cloud.google.com/service-
-   * infrastructure/docs/service-networking/getting-started). Valid only when
-   * [RuntimeType](#RuntimeType) is set to `CLOUD`. The value must be set before the creation of a
-   * runtime instance and can be updated only when there are no runtime instances. For example:
-   * `default`. When changing authorizedNetwork, you must reconfigure VPC peering. After VPC peering
-   * with previous network is deleted, [run the following
+   * Optional. Compute Engine network used for Service Networking to be peered with Apigee runtime
+   * instances. See [Getting started with the Service Networking
+   * API](https://cloud.google.com/service-infrastructure/docs/service-networking/getting-started).
+   * Valid only when [RuntimeType](#RuntimeType) is set to `CLOUD`. The value must be set before the
+   * creation of a runtime instance and can be updated only when there are no runtime instances. For
+   * example: `default`. When changing authorizedNetwork, you must reconfigure VPC peering. After
+   * VPC peering with previous network is deleted, [run the following
    * command](https://cloud.google.com/sdk/gcloud/reference/services/vpc-peerings/delete): `gcloud
    * services vpc-peerings delete --network=NETWORK`, where `NETWORK` is the name of the previous
    * network. This will delete the previous Service Networking. Otherwise, you will get the
@@ -104,7 +104,7 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
   private java.lang.String authorizedNetwork;
 
   /**
-   * Billing type of the Apigee organization. See [Apigee
+   * Optional. Billing type of the Apigee organization. See [Apigee
    * pricing](https://cloud.google.com/apigee/pricing).
    * The value may be {@code null}.
    */
@@ -120,8 +120,8 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
   private java.lang.String caCertificate;
 
   /**
-   * Cloud KMS key name used for encrypting control plane data that is stored in a multi region.
-   * Only used for the data residency region "US" or "EU". If not specified or
+   * Optional. Cloud KMS key name used for encrypting control plane data that is stored in a multi
+   * region. Only used for the data residency region "US" or "EU". If not specified or
    * [BillingType](#BillingType) is `EVALUATION`, a Google-Managed encryption key will be used.
    * Format: `projects/locations/keyRings/cryptoKeys`
    * The value may be {@code null}.
@@ -144,7 +144,7 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
   private java.lang.String customerName;
 
   /**
-   * Description of the Apigee organization.
+   * Optional. Description of the Apigee organization.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -165,7 +165,7 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
   private java.lang.Boolean disableVpcPeering;
 
   /**
-   * Display name for the Apigee organization. Unused, but reserved for future use.
+   * Optional. Display name for the Apigee organization. Unused, but reserved for future use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -200,7 +200,7 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
   private java.lang.String name;
 
   /**
-   * Configuration for the Portals settings.
+   * Optional. Configuration for the Portals settings.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -214,15 +214,15 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
   private java.lang.String projectId;
 
   /**
-   * Properties defined in the Apigee organization profile.
+   * Optional. Properties defined in the Apigee organization profile.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudApigeeV1Properties properties;
 
   /**
-   * Cloud KMS key name used for encrypting the data that is stored and replicated across runtime
-   * instances. Update is not allowed after the organization is created. If not specified or
+   * Optional. Cloud KMS key name used for encrypting the data that is stored and replicated across
+   * runtime instances. Update is not allowed after the organization is created. If not specified or
    * [RuntimeType](#RuntimeType) is `TRIAL`, a Google-Managed encryption key will be used. For
    * example: "projects/foo/locations/us/keyRings/bar/cryptoKeys/baz". **Note:** Not supported for
    * Apigee hybrid.
@@ -271,7 +271,7 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
   private java.lang.String type;
 
   /**
-   * Addon configurations of the Apigee organization.
+   * Optional. Addon configurations of the Apigee organization.
    * @return value or {@code null} for none
    */
   public GoogleCloudApigeeV1AddonsConfig getAddonsConfig() {
@@ -279,7 +279,7 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
   }
 
   /**
-   * Addon configurations of the Apigee organization.
+   * Optional. Addon configurations of the Apigee organization.
    * @param addonsConfig addonsConfig or {@code null} for none
    */
   public GoogleCloudApigeeV1Organization setAddonsConfig(GoogleCloudApigeeV1AddonsConfig addonsConfig) {
@@ -311,7 +311,7 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
   }
 
   /**
-   * Cloud KMS key name used for encrypting API consumer data. If not specified or
+   * Optional. Cloud KMS key name used for encrypting API consumer data. If not specified or
    * [BillingType](#BillingType) is `EVALUATION`, a Google-Managed encryption key will be used.
    * Format: `projects/locations/keyRings/cryptoKeys`
    * @return value or {@code null} for none
@@ -321,7 +321,7 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
   }
 
   /**
-   * Cloud KMS key name used for encrypting API consumer data. If not specified or
+   * Optional. Cloud KMS key name used for encrypting API consumer data. If not specified or
    * [BillingType](#BillingType) is `EVALUATION`, a Google-Managed encryption key will be used.
    * Format: `projects/locations/keyRings/cryptoKeys`
    * @param apiConsumerDataEncryptionKeyName apiConsumerDataEncryptionKeyName or {@code null} for none
@@ -332,10 +332,10 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
   }
 
   /**
-   * This field is needed only for customers using non-default data residency regions. Apigee stores
-   * some control plane data only in single region. This field determines which single region Apigee
-   * should use. For example: "us-west1" when control plane is in US or "europe-west2" when control
-   * plane is in EU.
+   * Optional. This field is needed only for customers using non-default data residency regions.
+   * Apigee stores some control plane data only in single region. This field determines which single
+   * region Apigee should use. For example: "us-west1" when control plane is in US or "europe-west2"
+   * when control plane is in EU.
    * @return value or {@code null} for none
    */
   public java.lang.String getApiConsumerDataLocation() {
@@ -343,10 +343,10 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
   }
 
   /**
-   * This field is needed only for customers using non-default data residency regions. Apigee stores
-   * some control plane data only in single region. This field determines which single region Apigee
-   * should use. For example: "us-west1" when control plane is in US or "europe-west2" when control
-   * plane is in EU.
+   * Optional. This field is needed only for customers using non-default data residency regions.
+   * Apigee stores some control plane data only in single region. This field determines which single
+   * region Apigee should use. For example: "us-west1" when control plane is in US or "europe-west2"
+   * when control plane is in EU.
    * @param apiConsumerDataLocation apiConsumerDataLocation or {@code null} for none
    */
   public GoogleCloudApigeeV1Organization setApiConsumerDataLocation(java.lang.String apiConsumerDataLocation) {
@@ -391,13 +391,13 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
   }
 
   /**
-   * Compute Engine network used for Service Networking to be peered with Apigee runtime instances.
-   * See [Getting started with the Service Networking API](https://cloud.google.com/service-
-   * infrastructure/docs/service-networking/getting-started). Valid only when
-   * [RuntimeType](#RuntimeType) is set to `CLOUD`. The value must be set before the creation of a
-   * runtime instance and can be updated only when there are no runtime instances. For example:
-   * `default`. When changing authorizedNetwork, you must reconfigure VPC peering. After VPC peering
-   * with previous network is deleted, [run the following
+   * Optional. Compute Engine network used for Service Networking to be peered with Apigee runtime
+   * instances. See [Getting started with the Service Networking
+   * API](https://cloud.google.com/service-infrastructure/docs/service-networking/getting-started).
+   * Valid only when [RuntimeType](#RuntimeType) is set to `CLOUD`. The value must be set before the
+   * creation of a runtime instance and can be updated only when there are no runtime instances. For
+   * example: `default`. When changing authorizedNetwork, you must reconfigure VPC peering. After
+   * VPC peering with previous network is deleted, [run the following
    * command](https://cloud.google.com/sdk/gcloud/reference/services/vpc-peerings/delete): `gcloud
    * services vpc-peerings delete --network=NETWORK`, where `NETWORK` is the name of the previous
    * network. This will delete the previous Service Networking. Otherwise, you will get the
@@ -415,13 +415,13 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
   }
 
   /**
-   * Compute Engine network used for Service Networking to be peered with Apigee runtime instances.
-   * See [Getting started with the Service Networking API](https://cloud.google.com/service-
-   * infrastructure/docs/service-networking/getting-started). Valid only when
-   * [RuntimeType](#RuntimeType) is set to `CLOUD`. The value must be set before the creation of a
-   * runtime instance and can be updated only when there are no runtime instances. For example:
-   * `default`. When changing authorizedNetwork, you must reconfigure VPC peering. After VPC peering
-   * with previous network is deleted, [run the following
+   * Optional. Compute Engine network used for Service Networking to be peered with Apigee runtime
+   * instances. See [Getting started with the Service Networking
+   * API](https://cloud.google.com/service-infrastructure/docs/service-networking/getting-started).
+   * Valid only when [RuntimeType](#RuntimeType) is set to `CLOUD`. The value must be set before the
+   * creation of a runtime instance and can be updated only when there are no runtime instances. For
+   * example: `default`. When changing authorizedNetwork, you must reconfigure VPC peering. After
+   * VPC peering with previous network is deleted, [run the following
    * command](https://cloud.google.com/sdk/gcloud/reference/services/vpc-peerings/delete): `gcloud
    * services vpc-peerings delete --network=NETWORK`, where `NETWORK` is the name of the previous
    * network. This will delete the previous Service Networking. Otherwise, you will get the
@@ -440,7 +440,7 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
   }
 
   /**
-   * Billing type of the Apigee organization. See [Apigee
+   * Optional. Billing type of the Apigee organization. See [Apigee
    * pricing](https://cloud.google.com/apigee/pricing).
    * @return value or {@code null} for none
    */
@@ -449,7 +449,7 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
   }
 
   /**
-   * Billing type of the Apigee organization. See [Apigee
+   * Optional. Billing type of the Apigee organization. See [Apigee
    * pricing](https://cloud.google.com/apigee/pricing).
    * @param billingType billingType or {@code null} for none
    */
@@ -508,8 +508,8 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
   }
 
   /**
-   * Cloud KMS key name used for encrypting control plane data that is stored in a multi region.
-   * Only used for the data residency region "US" or "EU". If not specified or
+   * Optional. Cloud KMS key name used for encrypting control plane data that is stored in a multi
+   * region. Only used for the data residency region "US" or "EU". If not specified or
    * [BillingType](#BillingType) is `EVALUATION`, a Google-Managed encryption key will be used.
    * Format: `projects/locations/keyRings/cryptoKeys`
    * @return value or {@code null} for none
@@ -519,8 +519,8 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
   }
 
   /**
-   * Cloud KMS key name used for encrypting control plane data that is stored in a multi region.
-   * Only used for the data residency region "US" or "EU". If not specified or
+   * Optional. Cloud KMS key name used for encrypting control plane data that is stored in a multi
+   * region. Only used for the data residency region "US" or "EU". If not specified or
    * [BillingType](#BillingType) is `EVALUATION`, a Google-Managed encryption key will be used.
    * Format: `projects/locations/keyRings/cryptoKeys`
    * @param controlPlaneEncryptionKeyName controlPlaneEncryptionKeyName or {@code null} for none
@@ -565,7 +565,7 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
   }
 
   /**
-   * Description of the Apigee organization.
+   * Optional. Description of the Apigee organization.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -573,7 +573,7 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
   }
 
   /**
-   * Description of the Apigee organization.
+   * Optional. Description of the Apigee organization.
    * @param description description or {@code null} for none
    */
   public GoogleCloudApigeeV1Organization setDescription(java.lang.String description) {
@@ -613,7 +613,7 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
   }
 
   /**
-   * Display name for the Apigee organization. Unused, but reserved for future use.
+   * Optional. Display name for the Apigee organization. Unused, but reserved for future use.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -621,7 +621,7 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
   }
 
   /**
-   * Display name for the Apigee organization. Unused, but reserved for future use.
+   * Optional. Display name for the Apigee organization. Unused, but reserved for future use.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudApigeeV1Organization setDisplayName(java.lang.String displayName) {
@@ -698,7 +698,7 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
   }
 
   /**
-   * Configuration for the Portals settings.
+   * Optional. Configuration for the Portals settings.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPortalDisabled() {
@@ -706,7 +706,7 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
   }
 
   /**
-   * Configuration for the Portals settings.
+   * Optional. Configuration for the Portals settings.
    * @param portalDisabled portalDisabled or {@code null} for none
    */
   public GoogleCloudApigeeV1Organization setPortalDisabled(java.lang.Boolean portalDisabled) {
@@ -732,7 +732,7 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
   }
 
   /**
-   * Properties defined in the Apigee organization profile.
+   * Optional. Properties defined in the Apigee organization profile.
    * @return value or {@code null} for none
    */
   public GoogleCloudApigeeV1Properties getProperties() {
@@ -740,7 +740,7 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
   }
 
   /**
-   * Properties defined in the Apigee organization profile.
+   * Optional. Properties defined in the Apigee organization profile.
    * @param properties properties or {@code null} for none
    */
   public GoogleCloudApigeeV1Organization setProperties(GoogleCloudApigeeV1Properties properties) {
@@ -749,8 +749,8 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
   }
 
   /**
-   * Cloud KMS key name used for encrypting the data that is stored and replicated across runtime
-   * instances. Update is not allowed after the organization is created. If not specified or
+   * Optional. Cloud KMS key name used for encrypting the data that is stored and replicated across
+   * runtime instances. Update is not allowed after the organization is created. If not specified or
    * [RuntimeType](#RuntimeType) is `TRIAL`, a Google-Managed encryption key will be used. For
    * example: "projects/foo/locations/us/keyRings/bar/cryptoKeys/baz". **Note:** Not supported for
    * Apigee hybrid.
@@ -761,8 +761,8 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
   }
 
   /**
-   * Cloud KMS key name used for encrypting the data that is stored and replicated across runtime
-   * instances. Update is not allowed after the organization is created. If not specified or
+   * Optional. Cloud KMS key name used for encrypting the data that is stored and replicated across
+   * runtime instances. Update is not allowed after the organization is created. If not specified or
    * [RuntimeType](#RuntimeType) is `TRIAL`, a Google-Managed encryption key will be used. For
    * example: "projects/foo/locations/us/keyRings/bar/cryptoKeys/baz". **Note:** Not supported for
    * Apigee hybrid.

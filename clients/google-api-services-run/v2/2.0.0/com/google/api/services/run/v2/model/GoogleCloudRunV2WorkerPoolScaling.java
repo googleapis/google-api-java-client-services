@@ -45,29 +45,6 @@ public final class GoogleCloudRunV2WorkerPoolScaling extends com.google.api.clie
   private java.lang.Integer maxInstanceCount;
 
   /**
-   * Optional. A maximum percentage of instances that will be moved in each step of traffic split
-   * changes. When set to a positive value, the server will bring up, at most, that percentage of
-   * new instances at a time before moving traffic to them. After moving traffic, the server will
-   * bring down instances of the old revision. This can reduce a spike of total active instances
-   * during changes from one revision to another but specifying how many extra instances can be
-   * brought up at a time.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Integer maxSurge;
-
-  /**
-   * Optional. A maximum percentage of instances that may be unavailable during changes from one
-   * revision to another. When set to a positive value, the server may bring down instances before
-   * bringing up new instances. This can prevent a spike of total active instances during changes
-   * from one revision by reducing the pool of instances before bringing up new ones. Some requests
-   * may be slow or fail to serve during the transition.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Integer maxUnavailable;
-
-  /**
    * Optional. The minimum count of instances distributed among revisions based on the specified
    * instance split percentages.
    * The value may be {@code null}.
@@ -115,58 +92,6 @@ public final class GoogleCloudRunV2WorkerPoolScaling extends com.google.api.clie
    */
   public GoogleCloudRunV2WorkerPoolScaling setMaxInstanceCount(java.lang.Integer maxInstanceCount) {
     this.maxInstanceCount = maxInstanceCount;
-    return this;
-  }
-
-  /**
-   * Optional. A maximum percentage of instances that will be moved in each step of traffic split
-   * changes. When set to a positive value, the server will bring up, at most, that percentage of
-   * new instances at a time before moving traffic to them. After moving traffic, the server will
-   * bring down instances of the old revision. This can reduce a spike of total active instances
-   * during changes from one revision to another but specifying how many extra instances can be
-   * brought up at a time.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Integer getMaxSurge() {
-    return maxSurge;
-  }
-
-  /**
-   * Optional. A maximum percentage of instances that will be moved in each step of traffic split
-   * changes. When set to a positive value, the server will bring up, at most, that percentage of
-   * new instances at a time before moving traffic to them. After moving traffic, the server will
-   * bring down instances of the old revision. This can reduce a spike of total active instances
-   * during changes from one revision to another but specifying how many extra instances can be
-   * brought up at a time.
-   * @param maxSurge maxSurge or {@code null} for none
-   */
-  public GoogleCloudRunV2WorkerPoolScaling setMaxSurge(java.lang.Integer maxSurge) {
-    this.maxSurge = maxSurge;
-    return this;
-  }
-
-  /**
-   * Optional. A maximum percentage of instances that may be unavailable during changes from one
-   * revision to another. When set to a positive value, the server may bring down instances before
-   * bringing up new instances. This can prevent a spike of total active instances during changes
-   * from one revision by reducing the pool of instances before bringing up new ones. Some requests
-   * may be slow or fail to serve during the transition.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Integer getMaxUnavailable() {
-    return maxUnavailable;
-  }
-
-  /**
-   * Optional. A maximum percentage of instances that may be unavailable during changes from one
-   * revision to another. When set to a positive value, the server may bring down instances before
-   * bringing up new instances. This can prevent a spike of total active instances during changes
-   * from one revision by reducing the pool of instances before bringing up new ones. Some requests
-   * may be slow or fail to serve during the transition.
-   * @param maxUnavailable maxUnavailable or {@code null} for none
-   */
-  public GoogleCloudRunV2WorkerPoolScaling setMaxUnavailable(java.lang.Integer maxUnavailable) {
-    this.maxUnavailable = maxUnavailable;
     return this;
   }
 

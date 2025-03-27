@@ -1129,17 +1129,52 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
               return this;
             }
 
-            /** Optional. The list of fields to update. */
+            /**
+             * Optional. The list of fields to merge into the existing policy orchestrator. A
+             * special ["*"] field mask can be used to simply replace the entire resource.
+             * Otherwise, for all paths referenced in the mask, following merge rules are used: *
+             * output only fields are ignored, * primitive fields are replaced, * repeated fields
+             * are replaced, * map fields are merged key by key, * message fields are cleared if not
+             * set in the request, otherwise they are merged recursively (in particular - message
+             * fields set to an empty message has no side effects) If field mask is not specified,
+             * it is automatically inferred from the request using following rules: * primitive
+             * fields are listed, if set to a non-default value (as there is no way to distinguish
+             * between default and unset value), * map and repeated fields are listed, *
+             * `google.protobuf.Any` fields are listed, * other message fields are traversed
+             * recursively. Note: implicit mask does not allow clearing fields.
+             */
             @com.google.api.client.util.Key
             private String updateMask;
 
-            /** Optional. The list of fields to update.
+            /** Optional. The list of fields to merge into the existing policy orchestrator. A special ["*"] field
+           mask can be used to simply replace the entire resource. Otherwise, for all paths referenced in the
+           mask, following merge rules are used: * output only fields are ignored, * primitive fields are
+           replaced, * repeated fields are replaced, * map fields are merged key by key, * message fields are
+           cleared if not set in the request, otherwise they are merged recursively (in particular - message
+           fields set to an empty message has no side effects) If field mask is not specified, it is
+           automatically inferred from the request using following rules: * primitive fields are listed, if
+           set to a non-default value (as there is no way to distinguish between default and unset value), *
+           map and repeated fields are listed, * `google.protobuf.Any` fields are listed, * other message
+           fields are traversed recursively. Note: implicit mask does not allow clearing fields.
              */
             public String getUpdateMask() {
               return updateMask;
             }
 
-            /** Optional. The list of fields to update. */
+            /**
+             * Optional. The list of fields to merge into the existing policy orchestrator. A
+             * special ["*"] field mask can be used to simply replace the entire resource.
+             * Otherwise, for all paths referenced in the mask, following merge rules are used: *
+             * output only fields are ignored, * primitive fields are replaced, * repeated fields
+             * are replaced, * map fields are merged key by key, * message fields are cleared if not
+             * set in the request, otherwise they are merged recursively (in particular - message
+             * fields set to an empty message has no side effects) If field mask is not specified,
+             * it is automatically inferred from the request using following rules: * primitive
+             * fields are listed, if set to a non-default value (as there is no way to distinguish
+             * between default and unset value), * map and repeated fields are listed, *
+             * `google.protobuf.Any` fields are listed, * other message fields are traversed
+             * recursively. Note: implicit mask does not allow clearing fields.
+             */
             public Patch setUpdateMask(String updateMask) {
               this.updateMask = updateMask;
               return this;
@@ -2778,17 +2813,52 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
               return this;
             }
 
-            /** Optional. The list of fields to update. */
+            /**
+             * Optional. The list of fields to merge into the existing policy orchestrator. A
+             * special ["*"] field mask can be used to simply replace the entire resource.
+             * Otherwise, for all paths referenced in the mask, following merge rules are used: *
+             * output only fields are ignored, * primitive fields are replaced, * repeated fields
+             * are replaced, * map fields are merged key by key, * message fields are cleared if not
+             * set in the request, otherwise they are merged recursively (in particular - message
+             * fields set to an empty message has no side effects) If field mask is not specified,
+             * it is automatically inferred from the request using following rules: * primitive
+             * fields are listed, if set to a non-default value (as there is no way to distinguish
+             * between default and unset value), * map and repeated fields are listed, *
+             * `google.protobuf.Any` fields are listed, * other message fields are traversed
+             * recursively. Note: implicit mask does not allow clearing fields.
+             */
             @com.google.api.client.util.Key
             private String updateMask;
 
-            /** Optional. The list of fields to update.
+            /** Optional. The list of fields to merge into the existing policy orchestrator. A special ["*"] field
+           mask can be used to simply replace the entire resource. Otherwise, for all paths referenced in the
+           mask, following merge rules are used: * output only fields are ignored, * primitive fields are
+           replaced, * repeated fields are replaced, * map fields are merged key by key, * message fields are
+           cleared if not set in the request, otherwise they are merged recursively (in particular - message
+           fields set to an empty message has no side effects) If field mask is not specified, it is
+           automatically inferred from the request using following rules: * primitive fields are listed, if
+           set to a non-default value (as there is no way to distinguish between default and unset value), *
+           map and repeated fields are listed, * `google.protobuf.Any` fields are listed, * other message
+           fields are traversed recursively. Note: implicit mask does not allow clearing fields.
              */
             public String getUpdateMask() {
               return updateMask;
             }
 
-            /** Optional. The list of fields to update. */
+            /**
+             * Optional. The list of fields to merge into the existing policy orchestrator. A
+             * special ["*"] field mask can be used to simply replace the entire resource.
+             * Otherwise, for all paths referenced in the mask, following merge rules are used: *
+             * output only fields are ignored, * primitive fields are replaced, * repeated fields
+             * are replaced, * map fields are merged key by key, * message fields are cleared if not
+             * set in the request, otherwise they are merged recursively (in particular - message
+             * fields set to an empty message has no side effects) If field mask is not specified,
+             * it is automatically inferred from the request using following rules: * primitive
+             * fields are listed, if set to a non-default value (as there is no way to distinguish
+             * between default and unset value), * map and repeated fields are listed, *
+             * `google.protobuf.Any` fields are listed, * other message fields are traversed
+             * recursively. Note: implicit mask does not allow clearing fields.
+             */
             public Patch setUpdateMask(String updateMask) {
               this.updateMask = updateMask;
               return this;
@@ -4427,17 +4497,52 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
               return this;
             }
 
-            /** Optional. The list of fields to update. */
+            /**
+             * Optional. The list of fields to merge into the existing policy orchestrator. A
+             * special ["*"] field mask can be used to simply replace the entire resource.
+             * Otherwise, for all paths referenced in the mask, following merge rules are used: *
+             * output only fields are ignored, * primitive fields are replaced, * repeated fields
+             * are replaced, * map fields are merged key by key, * message fields are cleared if not
+             * set in the request, otherwise they are merged recursively (in particular - message
+             * fields set to an empty message has no side effects) If field mask is not specified,
+             * it is automatically inferred from the request using following rules: * primitive
+             * fields are listed, if set to a non-default value (as there is no way to distinguish
+             * between default and unset value), * map and repeated fields are listed, *
+             * `google.protobuf.Any` fields are listed, * other message fields are traversed
+             * recursively. Note: implicit mask does not allow clearing fields.
+             */
             @com.google.api.client.util.Key
             private String updateMask;
 
-            /** Optional. The list of fields to update.
+            /** Optional. The list of fields to merge into the existing policy orchestrator. A special ["*"] field
+           mask can be used to simply replace the entire resource. Otherwise, for all paths referenced in the
+           mask, following merge rules are used: * output only fields are ignored, * primitive fields are
+           replaced, * repeated fields are replaced, * map fields are merged key by key, * message fields are
+           cleared if not set in the request, otherwise they are merged recursively (in particular - message
+           fields set to an empty message has no side effects) If field mask is not specified, it is
+           automatically inferred from the request using following rules: * primitive fields are listed, if
+           set to a non-default value (as there is no way to distinguish between default and unset value), *
+           map and repeated fields are listed, * `google.protobuf.Any` fields are listed, * other message
+           fields are traversed recursively. Note: implicit mask does not allow clearing fields.
              */
             public String getUpdateMask() {
               return updateMask;
             }
 
-            /** Optional. The list of fields to update. */
+            /**
+             * Optional. The list of fields to merge into the existing policy orchestrator. A
+             * special ["*"] field mask can be used to simply replace the entire resource.
+             * Otherwise, for all paths referenced in the mask, following merge rules are used: *
+             * output only fields are ignored, * primitive fields are replaced, * repeated fields
+             * are replaced, * map fields are merged key by key, * message fields are cleared if not
+             * set in the request, otherwise they are merged recursively (in particular - message
+             * fields set to an empty message has no side effects) If field mask is not specified,
+             * it is automatically inferred from the request using following rules: * primitive
+             * fields are listed, if set to a non-default value (as there is no way to distinguish
+             * between default and unset value), * map and repeated fields are listed, *
+             * `google.protobuf.Any` fields are listed, * other message fields are traversed
+             * recursively. Note: implicit mask does not allow clearing fields.
+             */
             public Patch setUpdateMask(String updateMask) {
               this.updateMask = updateMask;
               return this;

@@ -30,6 +30,13 @@ package com.google.api.services.workloadmanager.v1.model;
 public final class SapDiscoveryResourceInstancePropertiesDiskMount extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Names of the disks providing this mount point.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> diskNames;
+
+  /**
    * Optional. Filesystem mount point.
    * The value may be {@code null}.
    */
@@ -42,6 +49,23 @@ public final class SapDiscoveryResourceInstancePropertiesDiskMount extends com.g
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Optional. Names of the disks providing this mount point.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getDiskNames() {
+    return diskNames;
+  }
+
+  /**
+   * Optional. Names of the disks providing this mount point.
+   * @param diskNames diskNames or {@code null} for none
+   */
+  public SapDiscoveryResourceInstancePropertiesDiskMount setDiskNames(java.util.List<java.lang.String> diskNames) {
+    this.diskNames = diskNames;
+    return this;
+  }
 
   /**
    * Optional. Filesystem mount point.

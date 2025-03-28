@@ -222,6 +222,13 @@ public final class MigrationJob extends com.google.api.client.json.GenericJson {
   private SqlServerHomogeneousMigrationJobConfig sqlserverHomogeneousMigrationJobConfig;
 
   /**
+   * Configuration for heterogeneous **SQL Server to Cloud SQL for PostgreSQL** migrations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SqlServerToPostgresConfig sqlserverToPostgresConfig;
+
+  /**
    * The current migration job state.
    * The value may be {@code null}.
    */
@@ -711,6 +718,23 @@ public final class MigrationJob extends com.google.api.client.json.GenericJson {
    */
   public MigrationJob setSqlserverHomogeneousMigrationJobConfig(SqlServerHomogeneousMigrationJobConfig sqlserverHomogeneousMigrationJobConfig) {
     this.sqlserverHomogeneousMigrationJobConfig = sqlserverHomogeneousMigrationJobConfig;
+    return this;
+  }
+
+  /**
+   * Configuration for heterogeneous **SQL Server to Cloud SQL for PostgreSQL** migrations.
+   * @return value or {@code null} for none
+   */
+  public SqlServerToPostgresConfig getSqlserverToPostgresConfig() {
+    return sqlserverToPostgresConfig;
+  }
+
+  /**
+   * Configuration for heterogeneous **SQL Server to Cloud SQL for PostgreSQL** migrations.
+   * @param sqlserverToPostgresConfig sqlserverToPostgresConfig or {@code null} for none
+   */
+  public MigrationJob setSqlserverToPostgresConfig(SqlServerToPostgresConfig sqlserverToPostgresConfig) {
+    this.sqlserverToPostgresConfig = sqlserverToPostgresConfig;
     return this;
   }
 

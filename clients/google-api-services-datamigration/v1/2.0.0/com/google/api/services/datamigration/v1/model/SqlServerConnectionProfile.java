@@ -46,6 +46,13 @@ public final class SqlServerConnectionProfile extends com.google.api.client.json
   private java.lang.String cloudSqlId;
 
   /**
+   * Required. The name of the specific database within the host.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String database;
+
+  /**
    * Forward SSH tunnel connectivity.
    * The value may be {@code null}.
    */
@@ -151,6 +158,23 @@ public final class SqlServerConnectionProfile extends com.google.api.client.json
    */
   public SqlServerConnectionProfile setCloudSqlId(java.lang.String cloudSqlId) {
     this.cloudSqlId = cloudSqlId;
+    return this;
+  }
+
+  /**
+   * Required. The name of the specific database within the host.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDatabase() {
+    return database;
+  }
+
+  /**
+   * Required. The name of the specific database within the host.
+   * @param database database or {@code null} for none
+   */
+  public SqlServerConnectionProfile setDatabase(java.lang.String database) {
+    this.database = database;
     return this;
   }
 

@@ -17,7 +17,7 @@
 package com.google.api.services.datamigration.v1.model;
 
 /**
- * MachineConfig describes the configuration of a machine.
+ * Configuration for heterogeneous **SQL Server to Cloud SQL for PostgreSQL** migrations.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Database Migration API. For a detailed explanation
@@ -28,67 +28,64 @@ package com.google.api.services.datamigration.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class MachineConfig extends com.google.api.client.json.GenericJson {
+public final class SqlServerToPostgresConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * The number of CPU's in the VM instance.
+   * Optional. Configuration for Postgres destination.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Integer cpuCount;
+  private PostgresDestinationConfig postgresDestinationConfig;
 
   /**
-   * Optional. Machine type of the VM instance. E.g. "n2-highmem-4", "n2-highmem-8",
-   * "c4a-highmem-4-lssd". cpu_count must match the number of vCPUs in the machine type.
+   * Optional. Configuration for SQL Server source.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String machineType;
+  private SqlServerSourceConfig sqlserverSourceConfig;
 
   /**
-   * The number of CPU's in the VM instance.
+   * Optional. Configuration for Postgres destination.
    * @return value or {@code null} for none
    */
-  public java.lang.Integer getCpuCount() {
-    return cpuCount;
+  public PostgresDestinationConfig getPostgresDestinationConfig() {
+    return postgresDestinationConfig;
   }
 
   /**
-   * The number of CPU's in the VM instance.
-   * @param cpuCount cpuCount or {@code null} for none
+   * Optional. Configuration for Postgres destination.
+   * @param postgresDestinationConfig postgresDestinationConfig or {@code null} for none
    */
-  public MachineConfig setCpuCount(java.lang.Integer cpuCount) {
-    this.cpuCount = cpuCount;
+  public SqlServerToPostgresConfig setPostgresDestinationConfig(PostgresDestinationConfig postgresDestinationConfig) {
+    this.postgresDestinationConfig = postgresDestinationConfig;
     return this;
   }
 
   /**
-   * Optional. Machine type of the VM instance. E.g. "n2-highmem-4", "n2-highmem-8",
-   * "c4a-highmem-4-lssd". cpu_count must match the number of vCPUs in the machine type.
+   * Optional. Configuration for SQL Server source.
    * @return value or {@code null} for none
    */
-  public java.lang.String getMachineType() {
-    return machineType;
+  public SqlServerSourceConfig getSqlserverSourceConfig() {
+    return sqlserverSourceConfig;
   }
 
   /**
-   * Optional. Machine type of the VM instance. E.g. "n2-highmem-4", "n2-highmem-8",
-   * "c4a-highmem-4-lssd". cpu_count must match the number of vCPUs in the machine type.
-   * @param machineType machineType or {@code null} for none
+   * Optional. Configuration for SQL Server source.
+   * @param sqlserverSourceConfig sqlserverSourceConfig or {@code null} for none
    */
-  public MachineConfig setMachineType(java.lang.String machineType) {
-    this.machineType = machineType;
+  public SqlServerToPostgresConfig setSqlserverSourceConfig(SqlServerSourceConfig sqlserverSourceConfig) {
+    this.sqlserverSourceConfig = sqlserverSourceConfig;
     return this;
   }
 
   @Override
-  public MachineConfig set(String fieldName, Object value) {
-    return (MachineConfig) super.set(fieldName, value);
+  public SqlServerToPostgresConfig set(String fieldName, Object value) {
+    return (SqlServerToPostgresConfig) super.set(fieldName, value);
   }
 
   @Override
-  public MachineConfig clone() {
-    return (MachineConfig) super.clone();
+  public SqlServerToPostgresConfig clone() {
+    return (SqlServerToPostgresConfig) super.clone();
   }
 
 }

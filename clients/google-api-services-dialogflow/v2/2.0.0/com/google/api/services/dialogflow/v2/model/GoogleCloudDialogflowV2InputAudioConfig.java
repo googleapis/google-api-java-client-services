@@ -108,6 +108,13 @@ public final class GoogleCloudDialogflowV2InputAudioConfig extends com.google.ap
   private java.util.List<java.lang.String> phraseHints;
 
   /**
+   * A collection of phrase set resources to use for speech adaptation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> phraseSets;
+
+  /**
    * Required. Sample rate (in Hertz) of the audio content sent in the query. Refer to [Cloud Speech
    * API documentation](https://cloud.google.com/speech-to-text/docs/basics) for more details.
    * The value may be {@code null}.
@@ -317,6 +324,23 @@ public final class GoogleCloudDialogflowV2InputAudioConfig extends com.google.ap
    */
   public GoogleCloudDialogflowV2InputAudioConfig setPhraseHints(java.util.List<java.lang.String> phraseHints) {
     this.phraseHints = phraseHints;
+    return this;
+  }
+
+  /**
+   * A collection of phrase set resources to use for speech adaptation.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getPhraseSets() {
+    return phraseSets;
+  }
+
+  /**
+   * A collection of phrase set resources to use for speech adaptation.
+   * @param phraseSets phraseSets or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2InputAudioConfig setPhraseSets(java.util.List<java.lang.String> phraseSets) {
+    this.phraseSets = phraseSets;
     return this;
   }
 

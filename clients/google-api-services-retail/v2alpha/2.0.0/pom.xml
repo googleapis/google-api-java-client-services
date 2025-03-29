@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-retail</artifactId>
-  <version>v2alpha-rev20250320-2.0.0</version>
-  <name>Vertex AI Search for commerce API v2alpha-rev20250320-2.0.0</name>
+  <version>v2alpha-rev20250327-2.0.0</version>
+  <name>Vertex AI Search for commerce API v2alpha-rev20250327-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

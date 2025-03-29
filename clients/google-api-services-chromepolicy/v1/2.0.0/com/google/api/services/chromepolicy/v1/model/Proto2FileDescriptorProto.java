@@ -70,6 +70,14 @@ public final class Proto2FileDescriptorProto extends com.google.api.client.json.
   private java.lang.String name;
 
   /**
+   * Names of files imported by this file purely for the purpose of providing option extensions.
+   * These are excluded from the dependency list above.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> optionDependency;
+
+  /**
    * e.g. "foo", "foo.bar", etc.
    * The value may be {@code null}.
    */
@@ -151,6 +159,25 @@ public final class Proto2FileDescriptorProto extends com.google.api.client.json.
    */
   public Proto2FileDescriptorProto setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Names of files imported by this file purely for the purpose of providing option extensions.
+   * These are excluded from the dependency list above.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getOptionDependency() {
+    return optionDependency;
+  }
+
+  /**
+   * Names of files imported by this file purely for the purpose of providing option extensions.
+   * These are excluded from the dependency list above.
+   * @param optionDependency optionDependency or {@code null} for none
+   */
+  public Proto2FileDescriptorProto setOptionDependency(java.util.List<java.lang.String> optionDependency) {
+    this.optionDependency = optionDependency;
     return this;
   }
 

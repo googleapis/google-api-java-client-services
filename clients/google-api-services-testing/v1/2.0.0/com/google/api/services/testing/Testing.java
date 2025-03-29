@@ -1716,6 +1716,29 @@ public class Testing extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
+      /**
+       * Optional. Whether to include viewable only models in the response. This is only applicable
+       * for Android models.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean includeViewableModels;
+
+      /** Optional. Whether to include viewable only models in the response. This is only applicable for
+     Android models.
+       */
+      public java.lang.Boolean getIncludeViewableModels() {
+        return includeViewableModels;
+      }
+
+      /**
+       * Optional. Whether to include viewable only models in the response. This is only applicable
+       * for Android models.
+       */
+      public Get setIncludeViewableModels(java.lang.Boolean includeViewableModels) {
+        this.includeViewableModels = includeViewableModels;
+        return this;
+      }
+
       /** For authorization, the cloud project requesting the TestEnvironmentCatalog. */
       @com.google.api.client.util.Key
       private java.lang.String projectId;

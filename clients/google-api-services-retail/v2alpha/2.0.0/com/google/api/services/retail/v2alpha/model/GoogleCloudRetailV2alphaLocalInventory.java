@@ -79,7 +79,7 @@ public final class GoogleCloudRetailV2alphaLocalInventory extends com.google.api
   private java.util.List<java.lang.String> fulfillmentTypes;
 
   /**
-   * Required. The place ID for the current set of inventory information.
+   * Optional. The place ID for the current set of inventory information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -187,7 +187,7 @@ public final class GoogleCloudRetailV2alphaLocalInventory extends com.google.api
   }
 
   /**
-   * Required. The place ID for the current set of inventory information.
+   * Optional. The place ID for the current set of inventory information.
    * @return value or {@code null} for none
    */
   public java.lang.String getPlaceId() {
@@ -195,7 +195,7 @@ public final class GoogleCloudRetailV2alphaLocalInventory extends com.google.api
   }
 
   /**
-   * Required. The place ID for the current set of inventory information.
+   * Optional. The place ID for the current set of inventory information.
    * @param placeId placeId or {@code null} for none
    */
   public GoogleCloudRetailV2alphaLocalInventory setPlaceId(java.lang.String placeId) {

@@ -132,6 +132,20 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private java.lang.Long resourceSizeBytes;
 
   /**
+   * Optional. Output only. Reserved for future use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzi;
+
+  /**
+   * Optional. Output only. Reserved for future use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzs;
+
+  /**
    * Output only. The list of BackupLocks taken by the service to prevent the deletion of the
    * backup.
    * The value may be {@code null}.
@@ -394,6 +408,40 @@ public final class Backup extends com.google.api.client.json.GenericJson {
    */
   public Backup setResourceSizeBytes(java.lang.Long resourceSizeBytes) {
     this.resourceSizeBytes = resourceSizeBytes;
+    return this;
+  }
+
+  /**
+   * Optional. Output only. Reserved for future use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzi() {
+    return satisfiesPzi;
+  }
+
+  /**
+   * Optional. Output only. Reserved for future use.
+   * @param satisfiesPzi satisfiesPzi or {@code null} for none
+   */
+  public Backup setSatisfiesPzi(java.lang.Boolean satisfiesPzi) {
+    this.satisfiesPzi = satisfiesPzi;
+    return this;
+  }
+
+  /**
+   * Optional. Output only. Reserved for future use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzs() {
+    return satisfiesPzs;
+  }
+
+  /**
+   * Optional. Output only. Reserved for future use.
+   * @param satisfiesPzs satisfiesPzs or {@code null} for none
+   */
+  public Backup setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
+    this.satisfiesPzs = satisfiesPzs;
     return this;
   }
 

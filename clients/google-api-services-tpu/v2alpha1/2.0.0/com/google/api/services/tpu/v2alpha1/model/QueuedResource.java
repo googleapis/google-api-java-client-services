@@ -59,6 +59,13 @@ public final class QueuedResource extends com.google.api.client.json.GenericJson
   private java.lang.String name;
 
   /**
+   * Optional. The provisioning model for the resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String provisioningModel;
+
+  /**
    * The queueing policy of the QueuedRequest.
    * The value may be {@code null}.
    */
@@ -72,6 +79,13 @@ public final class QueuedResource extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.String reservationName;
+
+  /**
+   * Optional. The duration of the requested resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RunDuration runDuration;
 
   /**
    * Optional. The Spot tier.
@@ -163,6 +177,23 @@ public final class QueuedResource extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * Optional. The provisioning model for the resource.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProvisioningModel() {
+    return provisioningModel;
+  }
+
+  /**
+   * Optional. The provisioning model for the resource.
+   * @param provisioningModel provisioningModel or {@code null} for none
+   */
+  public QueuedResource setProvisioningModel(java.lang.String provisioningModel) {
+    this.provisioningModel = provisioningModel;
+    return this;
+  }
+
+  /**
    * The queueing policy of the QueuedRequest.
    * @return value or {@code null} for none
    */
@@ -195,6 +226,23 @@ public final class QueuedResource extends com.google.api.client.json.GenericJson
    */
   public QueuedResource setReservationName(java.lang.String reservationName) {
     this.reservationName = reservationName;
+    return this;
+  }
+
+  /**
+   * Optional. The duration of the requested resource.
+   * @return value or {@code null} for none
+   */
+  public RunDuration getRunDuration() {
+    return runDuration;
+  }
+
+  /**
+   * Optional. The duration of the requested resource.
+   * @param runDuration runDuration or {@code null} for none
+   */
+  public QueuedResource setRunDuration(RunDuration runDuration) {
+    this.runDuration = runDuration;
     return this;
   }
 

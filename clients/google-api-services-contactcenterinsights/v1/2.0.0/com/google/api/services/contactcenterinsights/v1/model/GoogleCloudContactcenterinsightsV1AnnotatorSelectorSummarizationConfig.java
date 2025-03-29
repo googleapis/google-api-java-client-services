@@ -39,6 +39,13 @@ public final class GoogleCloudContactcenterinsightsV1AnnotatorSelectorSummarizat
   private java.lang.String conversationProfile;
 
   /**
+   * The resource name of the existing created generator. Format: projects//locations//generators/
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String generator;
+
+  /**
    * Default summarization model to be used.
    * The value may be {@code null}.
    */
@@ -61,6 +68,23 @@ public final class GoogleCloudContactcenterinsightsV1AnnotatorSelectorSummarizat
    */
   public GoogleCloudContactcenterinsightsV1AnnotatorSelectorSummarizationConfig setConversationProfile(java.lang.String conversationProfile) {
     this.conversationProfile = conversationProfile;
+    return this;
+  }
+
+  /**
+   * The resource name of the existing created generator. Format: projects//locations//generators/
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGenerator() {
+    return generator;
+  }
+
+  /**
+   * The resource name of the existing created generator. Format: projects//locations//generators/
+   * @param generator generator or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1AnnotatorSelectorSummarizationConfig setGenerator(java.lang.String generator) {
+    this.generator = generator;
     return this;
   }
 

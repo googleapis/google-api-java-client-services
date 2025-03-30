@@ -42,6 +42,13 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   private GoogleCloudSecuritycenterV2Access access;
 
   /**
+   * AffectedResources associated with the finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudSecuritycenterV2AffectedResources affectedResources;
+
+  /**
    * Represents an application associated with the finding.
    * The value may be {@code null}.
    */
@@ -568,6 +575,23 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
    */
   public GoogleCloudSecuritycenterV2Finding setAccess(GoogleCloudSecuritycenterV2Access access) {
     this.access = access;
+    return this;
+  }
+
+  /**
+   * AffectedResources associated with the finding.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2AffectedResources getAffectedResources() {
+    return affectedResources;
+  }
+
+  /**
+   * AffectedResources associated with the finding.
+   * @param affectedResources affectedResources or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2Finding setAffectedResources(GoogleCloudSecuritycenterV2AffectedResources affectedResources) {
+    this.affectedResources = affectedResources;
     return this;
   }
 

@@ -42,6 +42,13 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   private Access access;
 
   /**
+   * AffectedResources associated with the finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AffectedResources affectedResources;
+
+  /**
    * Represents an application associated with the finding.
    * The value may be {@code null}.
    */
@@ -552,6 +559,23 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    */
   public Finding setAccess(Access access) {
     this.access = access;
+    return this;
+  }
+
+  /**
+   * AffectedResources associated with the finding.
+   * @return value or {@code null} for none
+   */
+  public AffectedResources getAffectedResources() {
+    return affectedResources;
+  }
+
+  /**
+   * AffectedResources associated with the finding.
+   * @param affectedResources affectedResources or {@code null} for none
+   */
+  public Finding setAffectedResources(AffectedResources affectedResources) {
+    this.affectedResources = affectedResources;
     return this;
   }
 

@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-securitycenter</artifactId>
-  <version>v1beta1-rev20250315-2.0.0</version>
-  <name>Security Command Center API v1beta1-rev20250315-2.0.0</name>
+  <version>v1beta1-rev20250326-2.0.0</version>
+  <name>Security Command Center API v1beta1-rev20250326-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

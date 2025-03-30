@@ -1751,6 +1751,292 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
         }
       }
       /**
+       * Resumes a suspended subscription. The new billing cycle will start at the time of the request. It
+       * should be called directly by the partner using service accounts.
+       *
+       * Create a request for the method "subscriptions.resume".
+       *
+       * This request holds the parameters needed by the paymentsresellersubscription server.  After
+       * setting any optional parameters, call the {@link Resume#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Required. The name of the subscription resource to be resumed. It will have the format of
+       *        "partners/{partner_id}/subscriptions/{subscription_id}"
+       * @param content the {@link com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1ResumeSubscriptionRequest}
+       * @return the request
+       */
+      public Resume resume(java.lang.String name, com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1ResumeSubscriptionRequest content) throws java.io.IOException {
+        Resume result = new Resume(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Resume extends PaymentsResellerSubscriptionRequest<com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1ResumeSubscriptionResponse> {
+
+        private static final String REST_PATH = "v1/{+name}:resume";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^partners/[^/]+/subscriptions/[^/]+$");
+
+        /**
+         * Resumes a suspended subscription. The new billing cycle will start at the time of the request.
+         * It should be called directly by the partner using service accounts.
+         *
+         * Create a request for the method "subscriptions.resume".
+         *
+         * This request holds the parameters needed by the the paymentsresellersubscription server.  After
+         * setting any optional parameters, call the {@link Resume#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Resume#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the subscription resource to be resumed. It will have the format of
+       *        "partners/{partner_id}/subscriptions/{subscription_id}"
+         * @param content the {@link com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1ResumeSubscriptionRequest}
+         * @since 1.13
+         */
+        protected Resume(java.lang.String name, com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1ResumeSubscriptionRequest content) {
+          super(PaymentsResellerSubscription.this, "POST", REST_PATH, content, com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1ResumeSubscriptionResponse.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^partners/[^/]+/subscriptions/[^/]+$");
+          }
+        }
+
+        @Override
+        public Resume set$Xgafv(java.lang.String $Xgafv) {
+          return (Resume) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Resume setAccessToken(java.lang.String accessToken) {
+          return (Resume) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Resume setAlt(java.lang.String alt) {
+          return (Resume) super.setAlt(alt);
+        }
+
+        @Override
+        public Resume setCallback(java.lang.String callback) {
+          return (Resume) super.setCallback(callback);
+        }
+
+        @Override
+        public Resume setFields(java.lang.String fields) {
+          return (Resume) super.setFields(fields);
+        }
+
+        @Override
+        public Resume setKey(java.lang.String key) {
+          return (Resume) super.setKey(key);
+        }
+
+        @Override
+        public Resume setOauthToken(java.lang.String oauthToken) {
+          return (Resume) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Resume setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Resume) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Resume setQuotaUser(java.lang.String quotaUser) {
+          return (Resume) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Resume setUploadType(java.lang.String uploadType) {
+          return (Resume) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Resume setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Resume) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the subscription resource to be resumed. It will have the format of
+         * "partners/{partner_id}/subscriptions/{subscription_id}"
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the subscription resource to be resumed. It will have the format of
+       "partners/{partner_id}/subscriptions/{subscription_id}"
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the subscription resource to be resumed. It will have the format of
+         * "partners/{partner_id}/subscriptions/{subscription_id}"
+         */
+        public Resume setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^partners/[^/]+/subscriptions/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Resume set(String parameterName, Object value) {
+          return (Resume) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Suspends a subscription. Contract terms may dictate if a prorated refund will be issued upon
+       * suspension. It should be called directly by the partner using service accounts.
+       *
+       * Create a request for the method "subscriptions.suspend".
+       *
+       * This request holds the parameters needed by the paymentsresellersubscription server.  After
+       * setting any optional parameters, call the {@link Suspend#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Required. The name of the subscription resource to be suspended. It will have the format of
+       *        "partners/{partner_id}/subscriptions/{subscription_id}"
+       * @param content the {@link com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1SuspendSubscriptionRequest}
+       * @return the request
+       */
+      public Suspend suspend(java.lang.String name, com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1SuspendSubscriptionRequest content) throws java.io.IOException {
+        Suspend result = new Suspend(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Suspend extends PaymentsResellerSubscriptionRequest<com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1SuspendSubscriptionResponse> {
+
+        private static final String REST_PATH = "v1/{+name}:suspend";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^partners/[^/]+/subscriptions/[^/]+$");
+
+        /**
+         * Suspends a subscription. Contract terms may dictate if a prorated refund will be issued upon
+         * suspension. It should be called directly by the partner using service accounts.
+         *
+         * Create a request for the method "subscriptions.suspend".
+         *
+         * This request holds the parameters needed by the the paymentsresellersubscription server.  After
+         * setting any optional parameters, call the {@link Suspend#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Suspend#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the subscription resource to be suspended. It will have the format of
+       *        "partners/{partner_id}/subscriptions/{subscription_id}"
+         * @param content the {@link com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1SuspendSubscriptionRequest}
+         * @since 1.13
+         */
+        protected Suspend(java.lang.String name, com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1SuspendSubscriptionRequest content) {
+          super(PaymentsResellerSubscription.this, "POST", REST_PATH, content, com.google.api.services.paymentsresellersubscription.v1.model.GoogleCloudPaymentsResellerSubscriptionV1SuspendSubscriptionResponse.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^partners/[^/]+/subscriptions/[^/]+$");
+          }
+        }
+
+        @Override
+        public Suspend set$Xgafv(java.lang.String $Xgafv) {
+          return (Suspend) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Suspend setAccessToken(java.lang.String accessToken) {
+          return (Suspend) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Suspend setAlt(java.lang.String alt) {
+          return (Suspend) super.setAlt(alt);
+        }
+
+        @Override
+        public Suspend setCallback(java.lang.String callback) {
+          return (Suspend) super.setCallback(callback);
+        }
+
+        @Override
+        public Suspend setFields(java.lang.String fields) {
+          return (Suspend) super.setFields(fields);
+        }
+
+        @Override
+        public Suspend setKey(java.lang.String key) {
+          return (Suspend) super.setKey(key);
+        }
+
+        @Override
+        public Suspend setOauthToken(java.lang.String oauthToken) {
+          return (Suspend) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Suspend setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Suspend) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Suspend setQuotaUser(java.lang.String quotaUser) {
+          return (Suspend) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Suspend setUploadType(java.lang.String uploadType) {
+          return (Suspend) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Suspend setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Suspend) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the subscription resource to be suspended. It will have the format
+         * of "partners/{partner_id}/subscriptions/{subscription_id}"
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the subscription resource to be suspended. It will have the format of
+       "partners/{partner_id}/subscriptions/{subscription_id}"
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the subscription resource to be suspended. It will have the format
+         * of "partners/{partner_id}/subscriptions/{subscription_id}"
+         */
+        public Suspend setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^partners/[^/]+/subscriptions/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Suspend set(String parameterName, Object value) {
+          return (Suspend) super.set(parameterName, value);
+        }
+      }
+      /**
        * Currently, it is used by **Google One, Play Pass** partners. Revokes the pending cancellation of
        * a subscription, which is currently in `STATE_CANCEL_AT_END_OF_CYCLE` state. If the subscription
        * is already cancelled, the request will fail. It should be called directly by the partner using

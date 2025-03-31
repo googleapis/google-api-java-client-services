@@ -32,6 +32,13 @@ package com.google.api.services.container.v1beta1.model;
 public final class EphemeralStorageLocalSsdConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Number of local SSDs to use for GKE Data Cache.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer dataCacheCount;
+
+  /**
    * Number of local SSDs to use to back ephemeral storage. Uses NVMe interfaces. A zero (or unset)
    * value has different meanings depending on machine type being used: 1. For pre-Gen3 machines,
    * which support flexible numbers of local ssds, zero (or unset) means to disable using local SSDs
@@ -46,6 +53,23 @@ public final class EphemeralStorageLocalSsdConfig extends com.google.api.client.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer localSsdCount;
+
+  /**
+   * Number of local SSDs to use for GKE Data Cache.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getDataCacheCount() {
+    return dataCacheCount;
+  }
+
+  /**
+   * Number of local SSDs to use for GKE Data Cache.
+   * @param dataCacheCount dataCacheCount or {@code null} for none
+   */
+  public EphemeralStorageLocalSsdConfig setDataCacheCount(java.lang.Integer dataCacheCount) {
+    this.dataCacheCount = dataCacheCount;
+    return this;
+  }
 
   /**
    * Number of local SSDs to use to back ephemeral storage. Uses NVMe interfaces. A zero (or unset)

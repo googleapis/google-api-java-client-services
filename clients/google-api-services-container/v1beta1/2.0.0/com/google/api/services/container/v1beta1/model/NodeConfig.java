@@ -135,6 +135,13 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   private FastSocket fastSocket;
 
   /**
+   * Flex Start flag for enabling Flex Start VM.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean flexStart;
+
+  /**
    * GCFS (Google Container File System) configs.
    * The value may be {@code null}.
    */
@@ -637,6 +644,23 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    */
   public NodeConfig setFastSocket(FastSocket fastSocket) {
     this.fastSocket = fastSocket;
+    return this;
+  }
+
+  /**
+   * Flex Start flag for enabling Flex Start VM.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getFlexStart() {
+    return flexStart;
+  }
+
+  /**
+   * Flex Start flag for enabling Flex Start VM.
+   * @param flexStart flexStart or {@code null} for none
+   */
+  public NodeConfig setFlexStart(java.lang.Boolean flexStart) {
+    this.flexStart = flexStart;
     return this;
   }
 

@@ -17,7 +17,7 @@
 package com.google.api.services.container.v1beta1.model;
 
 /**
- * SecretManagerConfig is config for secret manager enablement.
+ * RotationConfig is config for secret manager auto rotation.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Kubernetes Engine API. For a detailed explanation
@@ -28,24 +28,24 @@ package com.google.api.services.container.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class SecretManagerConfig extends com.google.api.client.json.GenericJson {
+public final class RotationConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Enable/Disable Secret Manager Config.
+   * Whether the rotation is enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enabled;
 
   /**
-   * Rotation config for secret manager.
+   * The interval between two consecutive rotations. Default rotation interval is 2 minutes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private RotationConfig rotationConfig;
+  private String rotationInterval;
 
   /**
-   * Enable/Disable Secret Manager Config.
+   * Whether the rotation is enabled.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnabled() {
@@ -53,39 +53,39 @@ public final class SecretManagerConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * Enable/Disable Secret Manager Config.
+   * Whether the rotation is enabled.
    * @param enabled enabled or {@code null} for none
    */
-  public SecretManagerConfig setEnabled(java.lang.Boolean enabled) {
+  public RotationConfig setEnabled(java.lang.Boolean enabled) {
     this.enabled = enabled;
     return this;
   }
 
   /**
-   * Rotation config for secret manager.
+   * The interval between two consecutive rotations. Default rotation interval is 2 minutes.
    * @return value or {@code null} for none
    */
-  public RotationConfig getRotationConfig() {
-    return rotationConfig;
+  public String getRotationInterval() {
+    return rotationInterval;
   }
 
   /**
-   * Rotation config for secret manager.
-   * @param rotationConfig rotationConfig or {@code null} for none
+   * The interval between two consecutive rotations. Default rotation interval is 2 minutes.
+   * @param rotationInterval rotationInterval or {@code null} for none
    */
-  public SecretManagerConfig setRotationConfig(RotationConfig rotationConfig) {
-    this.rotationConfig = rotationConfig;
+  public RotationConfig setRotationInterval(String rotationInterval) {
+    this.rotationInterval = rotationInterval;
     return this;
   }
 
   @Override
-  public SecretManagerConfig set(String fieldName, Object value) {
-    return (SecretManagerConfig) super.set(fieldName, value);
+  public RotationConfig set(String fieldName, Object value) {
+    return (RotationConfig) super.set(fieldName, value);
   }
 
   @Override
-  public SecretManagerConfig clone() {
-    return (SecretManagerConfig) super.clone();
+  public RotationConfig clone() {
+    return (RotationConfig) super.clone();
   }
 
 }

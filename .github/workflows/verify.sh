@@ -26,13 +26,15 @@ cat module_list
 (echo "<project><modelVersion>4.0.0</modelVersion><groupId>temp</groupId><artifactId>temp</artifactId><version>1.0</version><packaging>pom</packaging><modules>"; cat module_list; echo "</modules></project>") > pom.xml
 cat pom.xml
 
-# test compilation
+# use generated pom to test compilation
 mvn clean compile -T 1.5C -Dmaven.testSkip=true -Denforcer.skip -fae --fail-at-end 2>&1 | tee out
 cat out | grep 'rev20' | grep 's]' | { grep 'FAILURE' || true; } > errors
 if [[ $(cat errors | wc -l) -gt 0 ]]; then
 	echo "Compilation errors found in the following libraries:"
 	cat errors
 	# send to GH output
-	echo "failed_libraries=$(cat errors | tr '\n' ',')" > "${GITHUB_OUTPUT}"
+	if [[ -f "${GITHUB_OUTPUT}" ]]; then
+	  echo "failed_libraries_${starting_letter}=$(cat errors | tr '\n' ',')" > "${GITHUB_OUTPUT}"
+	fi
 fi
 echo "No compilation errors found"

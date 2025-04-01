@@ -19,6 +19,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           path: google-api-java-client-services
+      - working-directory: google-api-java-client-services
       - run: |
           bash .github/workflows/verify.sh
 

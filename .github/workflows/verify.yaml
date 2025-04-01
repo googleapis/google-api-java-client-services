@@ -33,6 +33,7 @@ jobs:
           set -ex
           bash .github/workflows/verify.sh "${{matrix.letter}}"
   print_results:
+    runs-on: 'ubuntu-24.04'
     needs: [verify]
     steps:
       - run: |

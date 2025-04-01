@@ -39,6 +39,14 @@ public final class FileLocation extends com.google.api.client.json.GenericJson {
   private java.lang.String filePath;
 
   /**
+   * Each package found in a file should have its own layer metadata (that is, information from the
+   * origin layer of the package).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LayerDetails layerDetails;
+
+  /**
    * For jars that are contained inside .war files, this filepath can indicate the path to war file
    * combined with the path to jar file.
    * @return value or {@code null} for none
@@ -54,6 +62,25 @@ public final class FileLocation extends com.google.api.client.json.GenericJson {
    */
   public FileLocation setFilePath(java.lang.String filePath) {
     this.filePath = filePath;
+    return this;
+  }
+
+  /**
+   * Each package found in a file should have its own layer metadata (that is, information from the
+   * origin layer of the package).
+   * @return value or {@code null} for none
+   */
+  public LayerDetails getLayerDetails() {
+    return layerDetails;
+  }
+
+  /**
+   * Each package found in a file should have its own layer metadata (that is, information from the
+   * origin layer of the package).
+   * @param layerDetails layerDetails or {@code null} for none
+   */
+  public FileLocation setLayerDetails(LayerDetails layerDetails) {
+    this.layerDetails = layerDetails;
     return this;
   }
 

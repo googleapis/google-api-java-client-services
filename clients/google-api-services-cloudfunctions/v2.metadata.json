@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-cloudfunctions",
+    "version": "v2-rev20250130-2.0.0"
+  }
+}

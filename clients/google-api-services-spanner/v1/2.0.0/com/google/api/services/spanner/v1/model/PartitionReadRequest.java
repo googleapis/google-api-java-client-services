@@ -47,8 +47,8 @@ public final class PartitionReadRequest extends com.google.api.client.json.Gener
   /**
    * Required. `key_set` identifies the rows to be yielded. `key_set` names the primary keys of the
    * rows in table to be yielded, unless index is present. If index is present, then key_set instead
-   * names index keys in index. It is not an error for the `key_set` to name rows that do not exist
-   * in the database. Read yields nothing for nonexistent rows.
+   * names index keys in index. It isn't an error for the `key_set` to name rows that don't exist in
+   * the database. Read yields nothing for nonexistent rows.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -114,8 +114,8 @@ public final class PartitionReadRequest extends com.google.api.client.json.Gener
   /**
    * Required. `key_set` identifies the rows to be yielded. `key_set` names the primary keys of the
    * rows in table to be yielded, unless index is present. If index is present, then key_set instead
-   * names index keys in index. It is not an error for the `key_set` to name rows that do not exist
-   * in the database. Read yields nothing for nonexistent rows.
+   * names index keys in index. It isn't an error for the `key_set` to name rows that don't exist in
+   * the database. Read yields nothing for nonexistent rows.
    * @return value or {@code null} for none
    */
   public KeySet getKeySet() {
@@ -125,8 +125,8 @@ public final class PartitionReadRequest extends com.google.api.client.json.Gener
   /**
    * Required. `key_set` identifies the rows to be yielded. `key_set` names the primary keys of the
    * rows in table to be yielded, unless index is present. If index is present, then key_set instead
-   * names index keys in index. It is not an error for the `key_set` to name rows that do not exist
-   * in the database. Read yields nothing for nonexistent rows.
+   * names index keys in index. It isn't an error for the `key_set` to name rows that don't exist in
+   * the database. Read yields nothing for nonexistent rows.
    * @param keySet keySet or {@code null} for none
    */
   public PartitionReadRequest setKeySet(KeySet keySet) {

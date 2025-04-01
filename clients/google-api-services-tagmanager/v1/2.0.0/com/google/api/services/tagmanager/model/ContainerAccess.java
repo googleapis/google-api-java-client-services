@@ -30,8 +30,7 @@ package com.google.api.services.tagmanager.model;
 public final class ContainerAccess extends com.google.api.client.json.GenericJson {
 
   /**
-   * GTM Container ID. @mutable tagmanager.accounts.permissions.create @mutable
-   * tagmanager.accounts.permissions.update
+   * GTM Container ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -39,15 +38,13 @@ public final class ContainerAccess extends com.google.api.client.json.GenericJso
 
   /**
    * List of Container permissions. Valid container permissions are: read, edit, delete, publish.
-   * @mutable tagmanager.accounts.permissions.create @mutable tagmanager.accounts.permissions.update
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> permission;
 
   /**
-   * GTM Container ID. @mutable tagmanager.accounts.permissions.create @mutable
-   * tagmanager.accounts.permissions.update
+   * GTM Container ID.
    * @return value or {@code null} for none
    */
   public java.lang.String getContainerId() {
@@ -55,8 +52,7 @@ public final class ContainerAccess extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * GTM Container ID. @mutable tagmanager.accounts.permissions.create @mutable
-   * tagmanager.accounts.permissions.update
+   * GTM Container ID.
    * @param containerId containerId or {@code null} for none
    */
   public ContainerAccess setContainerId(java.lang.String containerId) {
@@ -66,7 +62,6 @@ public final class ContainerAccess extends com.google.api.client.json.GenericJso
 
   /**
    * List of Container permissions. Valid container permissions are: read, edit, delete, publish.
-   * @mutable tagmanager.accounts.permissions.create @mutable tagmanager.accounts.permissions.update
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPermission() {
@@ -75,7 +70,6 @@ public final class ContainerAccess extends com.google.api.client.json.GenericJso
 
   /**
    * List of Container permissions. Valid container permissions are: read, edit, delete, publish.
-   * @mutable tagmanager.accounts.permissions.create @mutable tagmanager.accounts.permissions.update
    * @param permission permission or {@code null} for none
    */
   public ContainerAccess setPermission(java.util.List<java.lang.String> permission) {

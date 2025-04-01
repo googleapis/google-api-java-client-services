@@ -2,6 +2,6 @@
   "maven": {
     "groupId": "com.google.apis",
     "artifactId": "google-api-services-dataflow",
-    "version": "v1b3-rev20210825-1.32.1"
+    "version": "v1b3-rev20250131-2.0.0"
   }
 }

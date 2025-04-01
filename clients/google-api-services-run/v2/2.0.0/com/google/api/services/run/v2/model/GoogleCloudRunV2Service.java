@@ -157,6 +157,13 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
   private java.lang.Long generation;
 
   /**
+   * Optional. IAP settings on the Service.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean iapEnabled;
+
+  /**
    * Optional. Provides the ingress settings for this Service. On output, returns the currently
    * observed ingress settings, or INGRESS_TRAFFIC_UNSPECIFIED if no revision is active.
    * The value may be {@code null}.
@@ -165,9 +172,9 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
   private java.lang.String ingress;
 
   /**
-   * Optional. Disables IAM permission check for run.routes.invoke for callers of this service. This
-   * feature is available by invitation only. For more information, visit
-   * https://cloud.google.com/run/docs/securing/managing-access#invoker_check.
+   * Optional. Disables IAM permission check for run.routes.invoke for callers of this service. For
+   * more information, visit https://cloud.google.com/run/docs/securing/managing-
+   * access#invoker_check.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -290,6 +297,14 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
    */
   @com.google.api.client.util.Key
   private GoogleCloudRunV2Condition terminalCondition;
+
+  /**
+   * Output only. True if Cloud Run Threat Detection monitoring is enabled for the parent project of
+   * this Service.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean threatDetectionEnabled;
 
   /**
    * Optional. Specifies how to distribute traffic over a collection of Revisions belonging to the
@@ -619,6 +634,23 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
   }
 
   /**
+   * Optional. IAP settings on the Service.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIapEnabled() {
+    return iapEnabled;
+  }
+
+  /**
+   * Optional. IAP settings on the Service.
+   * @param iapEnabled iapEnabled or {@code null} for none
+   */
+  public GoogleCloudRunV2Service setIapEnabled(java.lang.Boolean iapEnabled) {
+    this.iapEnabled = iapEnabled;
+    return this;
+  }
+
+  /**
    * Optional. Provides the ingress settings for this Service. On output, returns the currently
    * observed ingress settings, or INGRESS_TRAFFIC_UNSPECIFIED if no revision is active.
    * @return value or {@code null} for none
@@ -638,9 +670,9 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
   }
 
   /**
-   * Optional. Disables IAM permission check for run.routes.invoke for callers of this service. This
-   * feature is available by invitation only. For more information, visit
-   * https://cloud.google.com/run/docs/securing/managing-access#invoker_check.
+   * Optional. Disables IAM permission check for run.routes.invoke for callers of this service. For
+   * more information, visit https://cloud.google.com/run/docs/securing/managing-
+   * access#invoker_check.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getInvokerIamDisabled() {
@@ -648,9 +680,9 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
   }
 
   /**
-   * Optional. Disables IAM permission check for run.routes.invoke for callers of this service. This
-   * feature is available by invitation only. For more information, visit
-   * https://cloud.google.com/run/docs/securing/managing-access#invoker_check.
+   * Optional. Disables IAM permission check for run.routes.invoke for callers of this service. For
+   * more information, visit https://cloud.google.com/run/docs/securing/managing-
+   * access#invoker_check.
    * @param invokerIamDisabled invokerIamDisabled or {@code null} for none
    */
   public GoogleCloudRunV2Service setInvokerIamDisabled(java.lang.Boolean invokerIamDisabled) {
@@ -927,6 +959,25 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
    */
   public GoogleCloudRunV2Service setTerminalCondition(GoogleCloudRunV2Condition terminalCondition) {
     this.terminalCondition = terminalCondition;
+    return this;
+  }
+
+  /**
+   * Output only. True if Cloud Run Threat Detection monitoring is enabled for the parent project of
+   * this Service.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getThreatDetectionEnabled() {
+    return threatDetectionEnabled;
+  }
+
+  /**
+   * Output only. True if Cloud Run Threat Detection monitoring is enabled for the parent project of
+   * this Service.
+   * @param threatDetectionEnabled threatDetectionEnabled or {@code null} for none
+   */
+  public GoogleCloudRunV2Service setThreatDetectionEnabled(java.lang.Boolean threatDetectionEnabled) {
+    this.threatDetectionEnabled = threatDetectionEnabled;
     return this;
   }
 

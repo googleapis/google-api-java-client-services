@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-analyticsadmin",
+    "version": "v1beta-rev20250114-2.0.0"
+  }
+}

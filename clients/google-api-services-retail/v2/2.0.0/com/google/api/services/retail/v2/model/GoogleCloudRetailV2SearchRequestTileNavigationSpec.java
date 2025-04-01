@@ -20,7 +20,7 @@ package com.google.api.services.retail.v2.model;
  * This field specifies tile navigation related parameters.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Vertex AI Search for Retail API. For a detailed
+ * transmitted over HTTP when working with the Vertex AI Search for commerce API. For a detailed
  * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
@@ -31,9 +31,11 @@ package com.google.api.services.retail.v2.model;
 public final class GoogleCloudRetailV2SearchRequestTileNavigationSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * This field specifies the tiles which are already clicked in client side. NOTE: This field is
-   * not being used for filtering search products. Client side should also put all the applied tiles
-   * in SearchRequest.filter.
+   * This optional field specifies the tiles which are already clicked in client side. While the
+   * feature works without this field set, particularly for an initial query, it is highly
+   * recommended to set this field because it can improve the quality of the search response and
+   * removes possible duplicate tiles. NOTE: This field is not being used for filtering search
+   * products. Client side should also put all the applied tiles in SearchRequest.filter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,9 +49,11 @@ public final class GoogleCloudRetailV2SearchRequestTileNavigationSpec extends co
   private java.lang.Boolean tileNavigationRequested;
 
   /**
-   * This field specifies the tiles which are already clicked in client side. NOTE: This field is
-   * not being used for filtering search products. Client side should also put all the applied tiles
-   * in SearchRequest.filter.
+   * This optional field specifies the tiles which are already clicked in client side. While the
+   * feature works without this field set, particularly for an initial query, it is highly
+   * recommended to set this field because it can improve the quality of the search response and
+   * removes possible duplicate tiles. NOTE: This field is not being used for filtering search
+   * products. Client side should also put all the applied tiles in SearchRequest.filter.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudRetailV2Tile> getAppliedTiles() {
@@ -57,9 +61,11 @@ public final class GoogleCloudRetailV2SearchRequestTileNavigationSpec extends co
   }
 
   /**
-   * This field specifies the tiles which are already clicked in client side. NOTE: This field is
-   * not being used for filtering search products. Client side should also put all the applied tiles
-   * in SearchRequest.filter.
+   * This optional field specifies the tiles which are already clicked in client side. While the
+   * feature works without this field set, particularly for an initial query, it is highly
+   * recommended to set this field because it can improve the quality of the search response and
+   * removes possible duplicate tiles. NOTE: This field is not being used for filtering search
+   * products. Client side should also put all the applied tiles in SearchRequest.filter.
    * @param appliedTiles appliedTiles or {@code null} for none
    */
   public GoogleCloudRetailV2SearchRequestTileNavigationSpec setAppliedTiles(java.util.List<GoogleCloudRetailV2Tile> appliedTiles) {

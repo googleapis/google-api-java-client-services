@@ -46,6 +46,23 @@ public final class GoogleCloudAiplatformV1beta1ImportRagFilesConfig extends com.
   private GoogleCloudAiplatformV1beta1GoogleDriveSource googleDriveSource;
 
   /**
+   * The BigQuery destination to write import result to. It should be a bigquery table resource name
+   * (e.g. "bq://projectId.bqDatasetId.bqTableId"). The dataset must exist. If the table does not
+   * exist, it will be created with the expected schema. If the table exists, the schema will be
+   * validated and data will be added to this existing table.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1BigQueryDestination importResultBigquerySink;
+
+  /**
+   * The Cloud Storage path to write import result to.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1GcsDestination importResultGcsSink;
+
+  /**
    * Jira queries with their corresponding authentication.
    * The value may be {@code null}.
    */
@@ -152,6 +169,46 @@ public final class GoogleCloudAiplatformV1beta1ImportRagFilesConfig extends com.
    */
   public GoogleCloudAiplatformV1beta1ImportRagFilesConfig setGoogleDriveSource(GoogleCloudAiplatformV1beta1GoogleDriveSource googleDriveSource) {
     this.googleDriveSource = googleDriveSource;
+    return this;
+  }
+
+  /**
+   * The BigQuery destination to write import result to. It should be a bigquery table resource name
+   * (e.g. "bq://projectId.bqDatasetId.bqTableId"). The dataset must exist. If the table does not
+   * exist, it will be created with the expected schema. If the table exists, the schema will be
+   * validated and data will be added to this existing table.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1BigQueryDestination getImportResultBigquerySink() {
+    return importResultBigquerySink;
+  }
+
+  /**
+   * The BigQuery destination to write import result to. It should be a bigquery table resource name
+   * (e.g. "bq://projectId.bqDatasetId.bqTableId"). The dataset must exist. If the table does not
+   * exist, it will be created with the expected schema. If the table exists, the schema will be
+   * validated and data will be added to this existing table.
+   * @param importResultBigquerySink importResultBigquerySink or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ImportRagFilesConfig setImportResultBigquerySink(GoogleCloudAiplatformV1beta1BigQueryDestination importResultBigquerySink) {
+    this.importResultBigquerySink = importResultBigquerySink;
+    return this;
+  }
+
+  /**
+   * The Cloud Storage path to write import result to.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GcsDestination getImportResultGcsSink() {
+    return importResultGcsSink;
+  }
+
+  /**
+   * The Cloud Storage path to write import result to.
+   * @param importResultGcsSink importResultGcsSink or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ImportRagFilesConfig setImportResultGcsSink(GoogleCloudAiplatformV1beta1GcsDestination importResultGcsSink) {
+    this.importResultGcsSink = importResultGcsSink;
     return this;
   }
 

@@ -71,6 +71,14 @@ public final class EgressTo extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> resources;
 
   /**
+   * IAM roles that represent the set of operations that the sources specified in the corresponding
+   * EgressFrom. are allowed to perform in this ServicePerimeter.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> roles;
+
+  /**
    * A list of external resources that are allowed to be accessed. Only AWS and Azure resources are
    * supported. For Amazon S3, the supported formats are s3://BUCKET_NAME, s3a://BUCKET_NAME, and
    * s3n://BUCKET_NAME. For Azure Storage, the supported format is
@@ -134,6 +142,25 @@ public final class EgressTo extends com.google.api.client.json.GenericJson {
    */
   public EgressTo setResources(java.util.List<java.lang.String> resources) {
     this.resources = resources;
+    return this;
+  }
+
+  /**
+   * IAM roles that represent the set of operations that the sources specified in the corresponding
+   * EgressFrom. are allowed to perform in this ServicePerimeter.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getRoles() {
+    return roles;
+  }
+
+  /**
+   * IAM roles that represent the set of operations that the sources specified in the corresponding
+   * EgressFrom. are allowed to perform in this ServicePerimeter.
+   * @param roles roles or {@code null} for none
+   */
+  public EgressTo setRoles(java.util.List<java.lang.String> roles) {
+    this.roles = roles;
     return this;
   }
 

@@ -30,7 +30,7 @@ package com.google.api.services.spanner.v1.model;
 public final class CommitResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The statistics about this Commit. Not returned by default. For more information, see
+   * The statistics about this `Commit`. Not returned by default. For more information, see
    * CommitRequest.return_commit_stats.
    * The value may be {@code null}.
    */
@@ -45,7 +45,7 @@ public final class CommitResponse extends com.google.api.client.json.GenericJson
   private String commitTimestamp;
 
   /**
-   * If specified, transaction has not committed yet. Clients must retry the commit with the new
+   * If specified, transaction has not committed yet. You must retry the commit with the new
    * precommit token.
    * The value may be {@code null}.
    */
@@ -53,7 +53,7 @@ public final class CommitResponse extends com.google.api.client.json.GenericJson
   private MultiplexedSessionPrecommitToken precommitToken;
 
   /**
-   * The statistics about this Commit. Not returned by default. For more information, see
+   * The statistics about this `Commit`. Not returned by default. For more information, see
    * CommitRequest.return_commit_stats.
    * @return value or {@code null} for none
    */
@@ -62,7 +62,7 @@ public final class CommitResponse extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The statistics about this Commit. Not returned by default. For more information, see
+   * The statistics about this `Commit`. Not returned by default. For more information, see
    * CommitRequest.return_commit_stats.
    * @param commitStats commitStats or {@code null} for none
    */
@@ -89,7 +89,7 @@ public final class CommitResponse extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * If specified, transaction has not committed yet. Clients must retry the commit with the new
+   * If specified, transaction has not committed yet. You must retry the commit with the new
    * precommit token.
    * @return value or {@code null} for none
    */
@@ -98,7 +98,7 @@ public final class CommitResponse extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * If specified, transaction has not committed yet. Clients must retry the commit with the new
+   * If specified, transaction has not committed yet. You must retry the commit with the new
    * precommit token.
    * @param precommitToken precommitToken or {@code null} for none
    */

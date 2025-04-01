@@ -38,6 +38,14 @@ public final class MachineConfig extends com.google.api.client.json.GenericJson 
   private java.lang.Integer cpuCount;
 
   /**
+   * Optional. Machine type of the VM instance. E.g. "n2-highmem-4", "n2-highmem-8",
+   * "c4a-highmem-4-lssd". cpu_count must match the number of vCPUs in the machine type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String machineType;
+
+  /**
    * The number of CPU's in the VM instance.
    * @return value or {@code null} for none
    */
@@ -51,6 +59,25 @@ public final class MachineConfig extends com.google.api.client.json.GenericJson 
    */
   public MachineConfig setCpuCount(java.lang.Integer cpuCount) {
     this.cpuCount = cpuCount;
+    return this;
+  }
+
+  /**
+   * Optional. Machine type of the VM instance. E.g. "n2-highmem-4", "n2-highmem-8",
+   * "c4a-highmem-4-lssd". cpu_count must match the number of vCPUs in the machine type.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMachineType() {
+    return machineType;
+  }
+
+  /**
+   * Optional. Machine type of the VM instance. E.g. "n2-highmem-4", "n2-highmem-8",
+   * "c4a-highmem-4-lssd". cpu_count must match the number of vCPUs in the machine type.
+   * @param machineType machineType or {@code null} for none
+   */
+  public MachineConfig setMachineType(java.lang.String machineType) {
+    this.machineType = machineType;
     return this;
   }
 

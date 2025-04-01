@@ -85,6 +85,13 @@ public final class GoogleCloudRunV2RevisionTemplate extends com.google.api.clien
   private java.lang.String executionEnvironment;
 
   /**
+   * Optional. True if GPU zonal redundancy is disabled on this revision.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean gpuZonalRedundancyDisabled;
+
+  /**
    * Optional. Disables health checking containers during deployment.
    * The value may be {@code null}.
    */
@@ -295,6 +302,23 @@ public final class GoogleCloudRunV2RevisionTemplate extends com.google.api.clien
    */
   public GoogleCloudRunV2RevisionTemplate setExecutionEnvironment(java.lang.String executionEnvironment) {
     this.executionEnvironment = executionEnvironment;
+    return this;
+  }
+
+  /**
+   * Optional. True if GPU zonal redundancy is disabled on this revision.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getGpuZonalRedundancyDisabled() {
+    return gpuZonalRedundancyDisabled;
+  }
+
+  /**
+   * Optional. True if GPU zonal redundancy is disabled on this revision.
+   * @param gpuZonalRedundancyDisabled gpuZonalRedundancyDisabled or {@code null} for none
+   */
+  public GoogleCloudRunV2RevisionTemplate setGpuZonalRedundancyDisabled(java.lang.Boolean gpuZonalRedundancyDisabled) {
+    this.gpuZonalRedundancyDisabled = gpuZonalRedundancyDisabled;
     return this;
   }
 

@@ -2,6 +2,6 @@
   "maven": {
     "groupId": "com.google.apis",
     "artifactId": "google-api-services-analyticsreporting",
-    "version": "v4-rev20211020-1.32.1"
+    "version": "v4-rev20211020-2.0.0"
   }
 }

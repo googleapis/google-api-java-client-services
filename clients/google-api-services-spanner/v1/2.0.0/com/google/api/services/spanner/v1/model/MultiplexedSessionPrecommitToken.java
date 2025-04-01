@@ -18,8 +18,8 @@ package com.google.api.services.spanner.v1.model;
 
 /**
  * When a read-write transaction is executed on a multiplexed session, this precommit token is sent
- * back to the client as a part of the [Transaction] message in the BeginTransaction response and
- * also as a part of the [ResultSet] and [PartialResultSet] responses.
+ * back to the client as a part of the Transaction message in the BeginTransaction response and also
+ * as a part of the ResultSet and PartialResultSet responses.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Spanner API. For a detailed explanation see:

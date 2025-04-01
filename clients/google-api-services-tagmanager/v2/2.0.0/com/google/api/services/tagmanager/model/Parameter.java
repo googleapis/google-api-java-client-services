@@ -31,8 +31,7 @@ public final class Parameter extends com.google.api.client.json.GenericJson {
 
   /**
    * Whether or not a reference type parameter is strongly or weakly referenced. Only used by
-   * Transformations. @mutable tagmanager.accounts.containers.workspaces.transformations.create
-   * @mutable tagmanager.accounts.containers.workspaces.transformations.update
+   * Transformations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,39 +39,21 @@ public final class Parameter extends com.google.api.client.json.GenericJson {
 
   /**
    * The named key that uniquely identifies a parameter. Required for top-level parameters, as well
-   * as map values. Ignored for list values. @mutable
-   * tagmanager.accounts.containers.workspaces.variables.create @mutable
-   * tagmanager.accounts.containers.workspaces.variables.update @mutable
-   * tagmanager.accounts.containers.workspaces.triggers.create @mutable
-   * tagmanager.accounts.containers.workspaces.triggers.update @mutable
-   * tagmanager.accounts.containers.workspaces.tags.create @mutable
-   * tagmanager.accounts.containers.workspaces.tags.update
+   * as map values. Ignored for list values.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String key;
 
   /**
-   * This list parameter's parameters (keys will be ignored). @mutable
-   * tagmanager.accounts.containers.workspaces.variables.create @mutable
-   * tagmanager.accounts.containers.workspaces.variables.update @mutable
-   * tagmanager.accounts.containers.workspaces.triggers.create @mutable
-   * tagmanager.accounts.containers.workspaces.triggers.update @mutable
-   * tagmanager.accounts.containers.workspaces.tags.create @mutable
-   * tagmanager.accounts.containers.workspaces.tags.update
+   * This list parameter's parameters (keys will be ignored).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<Parameter> list;
 
   /**
-   * This map parameter's parameters (must have keys; keys must be unique). @mutable
-   * tagmanager.accounts.containers.workspaces.variables.create @mutable
-   * tagmanager.accounts.containers.workspaces.variables.update @mutable
-   * tagmanager.accounts.containers.workspaces.triggers.create @mutable
-   * tagmanager.accounts.containers.workspaces.triggers.update @mutable
-   * tagmanager.accounts.containers.workspaces.tags.create @mutable
-   * tagmanager.accounts.containers.workspaces.tags.update
+   * This map parameter's parameters (must have keys; keys must be unique).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,25 +66,14 @@ public final class Parameter extends com.google.api.client.json.GenericJson {
    * template: The value represents any text; this can include variable references (even variable
    * references that might return non-string types) - trigger_reference: The value represents a
    * trigger, represented as the trigger id - tag_reference: The value represents a tag, represented
-   * as the tag name @mutable tagmanager.accounts.containers.workspaces.variables.create @mutable
-   * tagmanager.accounts.containers.workspaces.variables.update @mutable
-   * tagmanager.accounts.containers.workspaces.triggers.create @mutable
-   * tagmanager.accounts.containers.workspaces.triggers.update @mutable
-   * tagmanager.accounts.containers.workspaces.tags.create @mutable
-   * tagmanager.accounts.containers.workspaces.tags.update
+   * as the tag name
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * A parameter's value (may contain variable references such as "{{myVariable}}") as appropriate
-   * to the specified type. @mutable tagmanager.accounts.containers.workspaces.variables.create
-   * @mutable tagmanager.accounts.containers.workspaces.variables.update @mutable
-   * tagmanager.accounts.containers.workspaces.triggers.create @mutable
-   * tagmanager.accounts.containers.workspaces.triggers.update @mutable
-   * tagmanager.accounts.containers.workspaces.tags.create @mutable
-   * tagmanager.accounts.containers.workspaces.tags.update
+   * A parameter's value (may contain variable references). as appropriate to the specified type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -111,8 +81,7 @@ public final class Parameter extends com.google.api.client.json.GenericJson {
 
   /**
    * Whether or not a reference type parameter is strongly or weakly referenced. Only used by
-   * Transformations. @mutable tagmanager.accounts.containers.workspaces.transformations.create
-   * @mutable tagmanager.accounts.containers.workspaces.transformations.update
+   * Transformations.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsWeakReference() {
@@ -121,8 +90,7 @@ public final class Parameter extends com.google.api.client.json.GenericJson {
 
   /**
    * Whether or not a reference type parameter is strongly or weakly referenced. Only used by
-   * Transformations. @mutable tagmanager.accounts.containers.workspaces.transformations.create
-   * @mutable tagmanager.accounts.containers.workspaces.transformations.update
+   * Transformations.
    * @param isWeakReference isWeakReference or {@code null} for none
    */
   public Parameter setIsWeakReference(java.lang.Boolean isWeakReference) {
@@ -132,13 +100,7 @@ public final class Parameter extends com.google.api.client.json.GenericJson {
 
   /**
    * The named key that uniquely identifies a parameter. Required for top-level parameters, as well
-   * as map values. Ignored for list values. @mutable
-   * tagmanager.accounts.containers.workspaces.variables.create @mutable
-   * tagmanager.accounts.containers.workspaces.variables.update @mutable
-   * tagmanager.accounts.containers.workspaces.triggers.create @mutable
-   * tagmanager.accounts.containers.workspaces.triggers.update @mutable
-   * tagmanager.accounts.containers.workspaces.tags.create @mutable
-   * tagmanager.accounts.containers.workspaces.tags.update
+   * as map values. Ignored for list values.
    * @return value or {@code null} for none
    */
   public java.lang.String getKey() {
@@ -147,13 +109,7 @@ public final class Parameter extends com.google.api.client.json.GenericJson {
 
   /**
    * The named key that uniquely identifies a parameter. Required for top-level parameters, as well
-   * as map values. Ignored for list values. @mutable
-   * tagmanager.accounts.containers.workspaces.variables.create @mutable
-   * tagmanager.accounts.containers.workspaces.variables.update @mutable
-   * tagmanager.accounts.containers.workspaces.triggers.create @mutable
-   * tagmanager.accounts.containers.workspaces.triggers.update @mutable
-   * tagmanager.accounts.containers.workspaces.tags.create @mutable
-   * tagmanager.accounts.containers.workspaces.tags.update
+   * as map values. Ignored for list values.
    * @param key key or {@code null} for none
    */
   public Parameter setKey(java.lang.String key) {
@@ -162,13 +118,7 @@ public final class Parameter extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This list parameter's parameters (keys will be ignored). @mutable
-   * tagmanager.accounts.containers.workspaces.variables.create @mutable
-   * tagmanager.accounts.containers.workspaces.variables.update @mutable
-   * tagmanager.accounts.containers.workspaces.triggers.create @mutable
-   * tagmanager.accounts.containers.workspaces.triggers.update @mutable
-   * tagmanager.accounts.containers.workspaces.tags.create @mutable
-   * tagmanager.accounts.containers.workspaces.tags.update
+   * This list parameter's parameters (keys will be ignored).
    * @return value or {@code null} for none
    */
   public java.util.List<Parameter> getList() {
@@ -176,13 +126,7 @@ public final class Parameter extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This list parameter's parameters (keys will be ignored). @mutable
-   * tagmanager.accounts.containers.workspaces.variables.create @mutable
-   * tagmanager.accounts.containers.workspaces.variables.update @mutable
-   * tagmanager.accounts.containers.workspaces.triggers.create @mutable
-   * tagmanager.accounts.containers.workspaces.triggers.update @mutable
-   * tagmanager.accounts.containers.workspaces.tags.create @mutable
-   * tagmanager.accounts.containers.workspaces.tags.update
+   * This list parameter's parameters (keys will be ignored).
    * @param list list or {@code null} for none
    */
   public Parameter setList(java.util.List<Parameter> list) {
@@ -191,13 +135,7 @@ public final class Parameter extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This map parameter's parameters (must have keys; keys must be unique). @mutable
-   * tagmanager.accounts.containers.workspaces.variables.create @mutable
-   * tagmanager.accounts.containers.workspaces.variables.update @mutable
-   * tagmanager.accounts.containers.workspaces.triggers.create @mutable
-   * tagmanager.accounts.containers.workspaces.triggers.update @mutable
-   * tagmanager.accounts.containers.workspaces.tags.create @mutable
-   * tagmanager.accounts.containers.workspaces.tags.update
+   * This map parameter's parameters (must have keys; keys must be unique).
    * @return value or {@code null} for none
    */
   public java.util.List<Parameter> getMap() {
@@ -205,13 +143,7 @@ public final class Parameter extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * This map parameter's parameters (must have keys; keys must be unique). @mutable
-   * tagmanager.accounts.containers.workspaces.variables.create @mutable
-   * tagmanager.accounts.containers.workspaces.variables.update @mutable
-   * tagmanager.accounts.containers.workspaces.triggers.create @mutable
-   * tagmanager.accounts.containers.workspaces.triggers.update @mutable
-   * tagmanager.accounts.containers.workspaces.tags.create @mutable
-   * tagmanager.accounts.containers.workspaces.tags.update
+   * This map parameter's parameters (must have keys; keys must be unique).
    * @param map map or {@code null} for none
    */
   public Parameter setMap(java.util.List<Parameter> map) {
@@ -226,12 +158,7 @@ public final class Parameter extends com.google.api.client.json.GenericJson {
    * template: The value represents any text; this can include variable references (even variable
    * references that might return non-string types) - trigger_reference: The value represents a
    * trigger, represented as the trigger id - tag_reference: The value represents a tag, represented
-   * as the tag name @mutable tagmanager.accounts.containers.workspaces.variables.create @mutable
-   * tagmanager.accounts.containers.workspaces.variables.update @mutable
-   * tagmanager.accounts.containers.workspaces.triggers.create @mutable
-   * tagmanager.accounts.containers.workspaces.triggers.update @mutable
-   * tagmanager.accounts.containers.workspaces.tags.create @mutable
-   * tagmanager.accounts.containers.workspaces.tags.update
+   * as the tag name
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -245,12 +172,7 @@ public final class Parameter extends com.google.api.client.json.GenericJson {
    * template: The value represents any text; this can include variable references (even variable
    * references that might return non-string types) - trigger_reference: The value represents a
    * trigger, represented as the trigger id - tag_reference: The value represents a tag, represented
-   * as the tag name @mutable tagmanager.accounts.containers.workspaces.variables.create @mutable
-   * tagmanager.accounts.containers.workspaces.variables.update @mutable
-   * tagmanager.accounts.containers.workspaces.triggers.create @mutable
-   * tagmanager.accounts.containers.workspaces.triggers.update @mutable
-   * tagmanager.accounts.containers.workspaces.tags.create @mutable
-   * tagmanager.accounts.containers.workspaces.tags.update
+   * as the tag name
    * @param type type or {@code null} for none
    */
   public Parameter setType(java.lang.String type) {
@@ -259,13 +181,7 @@ public final class Parameter extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A parameter's value (may contain variable references such as "{{myVariable}}") as appropriate
-   * to the specified type. @mutable tagmanager.accounts.containers.workspaces.variables.create
-   * @mutable tagmanager.accounts.containers.workspaces.variables.update @mutable
-   * tagmanager.accounts.containers.workspaces.triggers.create @mutable
-   * tagmanager.accounts.containers.workspaces.triggers.update @mutable
-   * tagmanager.accounts.containers.workspaces.tags.create @mutable
-   * tagmanager.accounts.containers.workspaces.tags.update
+   * A parameter's value (may contain variable references). as appropriate to the specified type.
    * @return value or {@code null} for none
    */
   public java.lang.String getValue() {
@@ -273,13 +189,7 @@ public final class Parameter extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A parameter's value (may contain variable references such as "{{myVariable}}") as appropriate
-   * to the specified type. @mutable tagmanager.accounts.containers.workspaces.variables.create
-   * @mutable tagmanager.accounts.containers.workspaces.variables.update @mutable
-   * tagmanager.accounts.containers.workspaces.triggers.create @mutable
-   * tagmanager.accounts.containers.workspaces.triggers.update @mutable
-   * tagmanager.accounts.containers.workspaces.tags.create @mutable
-   * tagmanager.accounts.containers.workspaces.tags.update
+   * A parameter's value (may contain variable references). as appropriate to the specified type.
    * @param value value or {@code null} for none
    */
   public Parameter setValue(java.lang.String value) {

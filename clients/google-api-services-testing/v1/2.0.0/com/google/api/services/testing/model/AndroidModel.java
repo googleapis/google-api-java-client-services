@@ -30,6 +30,14 @@ package com.google.api.services.testing.model;
 public final class AndroidModel extends com.google.api.client.json.GenericJson {
 
   /**
+   * Reasons for access denial. This model is accessible if this list is empty, otherwise the model
+   * is viewable only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> accessDeniedReasons;
+
+  /**
    * The company that this device is branded with. Example: "Google", "Samsung".
    * The value may be {@code null}.
    */
@@ -152,6 +160,25 @@ public final class AndroidModel extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String thumbnailUrl;
+
+  /**
+   * Reasons for access denial. This model is accessible if this list is empty, otherwise the model
+   * is viewable only.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAccessDeniedReasons() {
+    return accessDeniedReasons;
+  }
+
+  /**
+   * Reasons for access denial. This model is accessible if this list is empty, otherwise the model
+   * is viewable only.
+   * @param accessDeniedReasons accessDeniedReasons or {@code null} for none
+   */
+  public AndroidModel setAccessDeniedReasons(java.util.List<java.lang.String> accessDeniedReasons) {
+    this.accessDeniedReasons = accessDeniedReasons;
+    return this;
+  }
 
   /**
    * The company that this device is branded with. Example: "Google", "Samsung".

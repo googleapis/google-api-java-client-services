@@ -2,6 +2,6 @@
   "maven": {
     "groupId": "com.google.apis",
     "artifactId": "google-api-services-alertcenter",
-    "version": "v1beta1-rev20211214-1.32.1"
+    "version": "v1beta1-rev20241028-2.0.0"
   }
 }

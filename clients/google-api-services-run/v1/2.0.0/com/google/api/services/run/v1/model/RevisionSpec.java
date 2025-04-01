@@ -98,8 +98,9 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
   private java.lang.String serviceAccountName;
 
   /**
-   * TimeoutSeconds holds the max duration the instance is allowed for responding to a request.
-   * Cloud Run: defaults to 300 seconds (5 minutes). Maximum allowed value is 3600 seconds (1 hour).
+   * Optional. TimeoutSeconds holds the max duration the instance is allowed for responding to a
+   * request. Cloud Run: defaults to 300 seconds (5 minutes). Maximum allowed value is 3600 seconds
+   * (1 hour).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -245,8 +246,9 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * TimeoutSeconds holds the max duration the instance is allowed for responding to a request.
-   * Cloud Run: defaults to 300 seconds (5 minutes). Maximum allowed value is 3600 seconds (1 hour).
+   * Optional. TimeoutSeconds holds the max duration the instance is allowed for responding to a
+   * request. Cloud Run: defaults to 300 seconds (5 minutes). Maximum allowed value is 3600 seconds
+   * (1 hour).
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTimeoutSeconds() {
@@ -254,8 +256,9 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * TimeoutSeconds holds the max duration the instance is allowed for responding to a request.
-   * Cloud Run: defaults to 300 seconds (5 minutes). Maximum allowed value is 3600 seconds (1 hour).
+   * Optional. TimeoutSeconds holds the max duration the instance is allowed for responding to a
+   * request. Cloud Run: defaults to 300 seconds (5 minutes). Maximum allowed value is 3600 seconds
+   * (1 hour).
    * @param timeoutSeconds timeoutSeconds or {@code null} for none
    */
   public RevisionSpec setTimeoutSeconds(java.lang.Integer timeoutSeconds) {

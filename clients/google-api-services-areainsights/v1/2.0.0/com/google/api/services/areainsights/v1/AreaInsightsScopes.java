@@ -17,7 +17,7 @@
 package com.google.api.services.areainsights.v1;
 
 /**
- * Available OAuth 2.0 scopes for use with the Places Insights API.
+ * Available OAuth 2.0 scopes for use with the Places Aggregate API.
  *
  * @since 1.4
  */

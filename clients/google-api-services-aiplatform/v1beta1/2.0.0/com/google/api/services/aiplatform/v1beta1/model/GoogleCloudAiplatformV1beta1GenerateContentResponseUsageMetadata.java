@@ -73,6 +73,13 @@ public final class GoogleCloudAiplatformV1beta1GenerateContentResponseUsageMetad
   private java.util.List<GoogleCloudAiplatformV1beta1ModalityTokenCount> promptTokensDetails;
 
   /**
+   * Output only. Number of tokens present in thoughts output.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer thoughtsTokenCount;
+
+  /**
    * Output only. Number of tokens present in tool-use prompt(s).
    * The value may be {@code null}.
    */
@@ -194,6 +201,23 @@ public final class GoogleCloudAiplatformV1beta1GenerateContentResponseUsageMetad
    */
   public GoogleCloudAiplatformV1beta1GenerateContentResponseUsageMetadata setPromptTokensDetails(java.util.List<GoogleCloudAiplatformV1beta1ModalityTokenCount> promptTokensDetails) {
     this.promptTokensDetails = promptTokensDetails;
+    return this;
+  }
+
+  /**
+   * Output only. Number of tokens present in thoughts output.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getThoughtsTokenCount() {
+    return thoughtsTokenCount;
+  }
+
+  /**
+   * Output only. Number of tokens present in thoughts output.
+   * @param thoughtsTokenCount thoughtsTokenCount or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GenerateContentResponseUsageMetadata setThoughtsTokenCount(java.lang.Integer thoughtsTokenCount) {
+    this.thoughtsTokenCount = thoughtsTokenCount;
     return this;
   }
 

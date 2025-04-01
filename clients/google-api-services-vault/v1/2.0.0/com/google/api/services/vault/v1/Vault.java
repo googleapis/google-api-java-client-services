@@ -25,7 +25,7 @@ package com.google.api.services.vault.v1;
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://developers.google.com/vault" target="_blank">API Documentation</a>
+ * <a href="https://developers.google.com/workspace/vault" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>

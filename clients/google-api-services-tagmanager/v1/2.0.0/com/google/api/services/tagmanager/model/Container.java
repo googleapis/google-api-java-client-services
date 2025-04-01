@@ -44,8 +44,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   private java.lang.String containerId;
 
   /**
-   * Optional list of domain names associated with the Container. @mutable
-   * tagmanager.accounts.containers.create @mutable tagmanager.accounts.containers.update
+   * Optional list of domain names associated with the Container.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,8 +55,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
    * referrer, event, clickElement, clickClasses, clickId, clickTarget, clickUrl, clickText,
    * formElement, formClasses, formId, formTarget, formUrl, formText, errorMessage, errorUrl,
    * errorLine, newHistoryFragment, oldHistoryFragment, newHistoryState, oldHistoryState,
-   * historySource, containerVersion, debugMode, randomNumber, containerId. @mutable
-   * tagmanager.accounts.containers.create @mutable tagmanager.accounts.containers.update
+   * historySource, containerVersion, debugMode, randomNumber, containerId.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,16 +70,14 @@ public final class Container extends com.google.api.client.json.GenericJson {
   private java.lang.String fingerprint;
 
   /**
-   * Container display name. @mutable tagmanager.accounts.containers.create @mutable
-   * tagmanager.accounts.containers.update
+   * Container display name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Container Notes. @mutable tagmanager.accounts.containers.create @mutable
-   * tagmanager.accounts.containers.update
+   * Container Notes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,24 +91,21 @@ public final class Container extends com.google.api.client.json.GenericJson {
   private java.lang.String publicId;
 
   /**
-   * Container Country ID. @mutable tagmanager.accounts.containers.create @mutable
-   * tagmanager.accounts.containers.update
+   * Container Country ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String timeZoneCountryId;
 
   /**
-   * Container Time Zone ID. @mutable tagmanager.accounts.containers.create @mutable
-   * tagmanager.accounts.containers.update
+   * Container Time Zone ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String timeZoneId;
 
   /**
-   * List of Usage Contexts for the Container. Valid values include: web, android, ios. @mutable
-   * tagmanager.accounts.containers.create @mutable tagmanager.accounts.containers.update
+   * List of Usage Contexts for the Container. Valid values include: web, android, ios.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -153,8 +146,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional list of domain names associated with the Container. @mutable
-   * tagmanager.accounts.containers.create @mutable tagmanager.accounts.containers.update
+   * Optional list of domain names associated with the Container.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDomainName() {
@@ -162,8 +154,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional list of domain names associated with the Container. @mutable
-   * tagmanager.accounts.containers.create @mutable tagmanager.accounts.containers.update
+   * Optional list of domain names associated with the Container.
    * @param domainName domainName or {@code null} for none
    */
   public Container setDomainName(java.util.List<java.lang.String> domainName) {
@@ -176,8 +167,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
    * referrer, event, clickElement, clickClasses, clickId, clickTarget, clickUrl, clickText,
    * formElement, formClasses, formId, formTarget, formUrl, formText, errorMessage, errorUrl,
    * errorLine, newHistoryFragment, oldHistoryFragment, newHistoryState, oldHistoryState,
-   * historySource, containerVersion, debugMode, randomNumber, containerId. @mutable
-   * tagmanager.accounts.containers.create @mutable tagmanager.accounts.containers.update
+   * historySource, containerVersion, debugMode, randomNumber, containerId.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getEnabledBuiltInVariable() {
@@ -189,8 +179,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
    * referrer, event, clickElement, clickClasses, clickId, clickTarget, clickUrl, clickText,
    * formElement, formClasses, formId, formTarget, formUrl, formText, errorMessage, errorUrl,
    * errorLine, newHistoryFragment, oldHistoryFragment, newHistoryState, oldHistoryState,
-   * historySource, containerVersion, debugMode, randomNumber, containerId. @mutable
-   * tagmanager.accounts.containers.create @mutable tagmanager.accounts.containers.update
+   * historySource, containerVersion, debugMode, randomNumber, containerId.
    * @param enabledBuiltInVariable enabledBuiltInVariable or {@code null} for none
    */
   public Container setEnabledBuiltInVariable(java.util.List<java.lang.String> enabledBuiltInVariable) {
@@ -218,8 +207,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Container display name. @mutable tagmanager.accounts.containers.create @mutable
-   * tagmanager.accounts.containers.update
+   * Container display name.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -227,8 +215,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Container display name. @mutable tagmanager.accounts.containers.create @mutable
-   * tagmanager.accounts.containers.update
+   * Container display name.
    * @param name name or {@code null} for none
    */
   public Container setName(java.lang.String name) {
@@ -237,8 +224,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Container Notes. @mutable tagmanager.accounts.containers.create @mutable
-   * tagmanager.accounts.containers.update
+   * Container Notes.
    * @return value or {@code null} for none
    */
   public java.lang.String getNotes() {
@@ -246,8 +232,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Container Notes. @mutable tagmanager.accounts.containers.create @mutable
-   * tagmanager.accounts.containers.update
+   * Container Notes.
    * @param notes notes or {@code null} for none
    */
   public Container setNotes(java.lang.String notes) {
@@ -273,8 +258,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Container Country ID. @mutable tagmanager.accounts.containers.create @mutable
-   * tagmanager.accounts.containers.update
+   * Container Country ID.
    * @return value or {@code null} for none
    */
   public java.lang.String getTimeZoneCountryId() {
@@ -282,8 +266,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Container Country ID. @mutable tagmanager.accounts.containers.create @mutable
-   * tagmanager.accounts.containers.update
+   * Container Country ID.
    * @param timeZoneCountryId timeZoneCountryId or {@code null} for none
    */
   public Container setTimeZoneCountryId(java.lang.String timeZoneCountryId) {
@@ -292,8 +275,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Container Time Zone ID. @mutable tagmanager.accounts.containers.create @mutable
-   * tagmanager.accounts.containers.update
+   * Container Time Zone ID.
    * @return value or {@code null} for none
    */
   public java.lang.String getTimeZoneId() {
@@ -301,8 +283,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Container Time Zone ID. @mutable tagmanager.accounts.containers.create @mutable
-   * tagmanager.accounts.containers.update
+   * Container Time Zone ID.
    * @param timeZoneId timeZoneId or {@code null} for none
    */
   public Container setTimeZoneId(java.lang.String timeZoneId) {
@@ -311,8 +292,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of Usage Contexts for the Container. Valid values include: web, android, ios. @mutable
-   * tagmanager.accounts.containers.create @mutable tagmanager.accounts.containers.update
+   * List of Usage Contexts for the Container. Valid values include: web, android, ios.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUsageContext() {
@@ -320,8 +300,7 @@ public final class Container extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of Usage Contexts for the Container. Valid values include: web, android, ios. @mutable
-   * tagmanager.accounts.containers.create @mutable tagmanager.accounts.containers.update
+   * List of Usage Contexts for the Container. Valid values include: web, android, ios.
    * @param usageContext usageContext or {@code null} for none
    */
   public Container setUsageContext(java.util.List<java.lang.String> usageContext) {

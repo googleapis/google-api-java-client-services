@@ -81,6 +81,26 @@ public final class GoogleCloudAiplatformV1FeatureGroup extends com.google.api.cl
   private java.lang.String name;
 
   /**
+   * Output only. A Service Account unique to this FeatureGroup. The role bigquery.dataViewer should
+   * be granted to this service account to allow Vertex AI Feature Store to access source data while
+   * running jobs under this FeatureGroup.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceAccountEmail;
+
+  /**
+   * Optional. Service agent type used during jobs under a FeatureGroup. By default, the Vertex AI
+   * Service Agent is used. When using an IAM Policy to isolate this FeatureGroup within a project,
+   * a separate service account should be provisioned by setting this field to
+   * `SERVICE_AGENT_TYPE_FEATURE_GROUP`. This will generate a separate service account to access the
+   * BigQuery source table.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceAgentType;
+
+  /**
    * Output only. Timestamp when this FeatureGroup was last updated.
    * The value may be {@code null}.
    */
@@ -204,6 +224,52 @@ public final class GoogleCloudAiplatformV1FeatureGroup extends com.google.api.cl
    */
   public GoogleCloudAiplatformV1FeatureGroup setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. A Service Account unique to this FeatureGroup. The role bigquery.dataViewer should
+   * be granted to this service account to allow Vertex AI Feature Store to access source data while
+   * running jobs under this FeatureGroup.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceAccountEmail() {
+    return serviceAccountEmail;
+  }
+
+  /**
+   * Output only. A Service Account unique to this FeatureGroup. The role bigquery.dataViewer should
+   * be granted to this service account to allow Vertex AI Feature Store to access source data while
+   * running jobs under this FeatureGroup.
+   * @param serviceAccountEmail serviceAccountEmail or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1FeatureGroup setServiceAccountEmail(java.lang.String serviceAccountEmail) {
+    this.serviceAccountEmail = serviceAccountEmail;
+    return this;
+  }
+
+  /**
+   * Optional. Service agent type used during jobs under a FeatureGroup. By default, the Vertex AI
+   * Service Agent is used. When using an IAM Policy to isolate this FeatureGroup within a project,
+   * a separate service account should be provisioned by setting this field to
+   * `SERVICE_AGENT_TYPE_FEATURE_GROUP`. This will generate a separate service account to access the
+   * BigQuery source table.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceAgentType() {
+    return serviceAgentType;
+  }
+
+  /**
+   * Optional. Service agent type used during jobs under a FeatureGroup. By default, the Vertex AI
+   * Service Agent is used. When using an IAM Policy to isolate this FeatureGroup within a project,
+   * a separate service account should be provisioned by setting this field to
+   * `SERVICE_AGENT_TYPE_FEATURE_GROUP`. This will generate a separate service account to access the
+   * BigQuery source table.
+   * @param serviceAgentType serviceAgentType or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1FeatureGroup setServiceAgentType(java.lang.String serviceAgentType) {
+    this.serviceAgentType = serviceAgentType;
     return this;
   }
 

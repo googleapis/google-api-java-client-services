@@ -42,6 +42,13 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   private Access access;
 
   /**
+   * AffectedResources associated with the finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AffectedResources affectedResources;
+
+  /**
    * Represents an application associated with the finding.
    * The value may be {@code null}.
    */
@@ -80,6 +87,16 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String category;
+
+  /**
+   * Contains details about a chokepoint, which is a resource or resource group where high-risk
+   * attack paths converge, based on [attack path simulations] (https://cloud.google.com/security-
+   * command-center/docs/attack-exposure-learn#attack_path_simulations). This field cannot be
+   * updated. Its value is ignored in all update requests.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Chokepoint chokepoint;
 
   /**
    * Fields related to Cloud Armor findings.
@@ -546,6 +563,23 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * AffectedResources associated with the finding.
+   * @return value or {@code null} for none
+   */
+  public AffectedResources getAffectedResources() {
+    return affectedResources;
+  }
+
+  /**
+   * AffectedResources associated with the finding.
+   * @param affectedResources affectedResources or {@code null} for none
+   */
+  public Finding setAffectedResources(AffectedResources affectedResources) {
+    this.affectedResources = affectedResources;
+    return this;
+  }
+
+  /**
    * Represents an application associated with the finding.
    * @return value or {@code null} for none
    */
@@ -637,6 +671,29 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    */
   public Finding setCategory(java.lang.String category) {
     this.category = category;
+    return this;
+  }
+
+  /**
+   * Contains details about a chokepoint, which is a resource or resource group where high-risk
+   * attack paths converge, based on [attack path simulations] (https://cloud.google.com/security-
+   * command-center/docs/attack-exposure-learn#attack_path_simulations). This field cannot be
+   * updated. Its value is ignored in all update requests.
+   * @return value or {@code null} for none
+   */
+  public Chokepoint getChokepoint() {
+    return chokepoint;
+  }
+
+  /**
+   * Contains details about a chokepoint, which is a resource or resource group where high-risk
+   * attack paths converge, based on [attack path simulations] (https://cloud.google.com/security-
+   * command-center/docs/attack-exposure-learn#attack_path_simulations). This field cannot be
+   * updated. Its value is ignored in all update requests.
+   * @param chokepoint chokepoint or {@code null} for none
+   */
+  public Finding setChokepoint(Chokepoint chokepoint) {
+    this.chokepoint = chokepoint;
     return this;
   }
 

@@ -30,6 +30,15 @@ package com.google.api.services.vmmigration.v1.model;
 public final class ImageImportOsAdaptationParameters extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. By default the image will keep its existing boot option. Setting this property will
+   * trigger an internal process which will convert the image from using the existing boot option to
+   * another. The size of the boot disk might be increased to allow the conversion
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String bootConversion;
+
+  /**
    * Optional. Set to true in order to generalize the imported image. The generalization process
    * enables co-existence of multiple VMs created from the same image. For Windows, generalizing the
    * image removes computer-specific information such as installed drivers and the computer security
@@ -45,6 +54,27 @@ public final class ImageImportOsAdaptationParameters extends com.google.api.clie
    */
   @com.google.api.client.util.Key
   private java.lang.String licenseType;
+
+  /**
+   * Optional. By default the image will keep its existing boot option. Setting this property will
+   * trigger an internal process which will convert the image from using the existing boot option to
+   * another. The size of the boot disk might be increased to allow the conversion
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBootConversion() {
+    return bootConversion;
+  }
+
+  /**
+   * Optional. By default the image will keep its existing boot option. Setting this property will
+   * trigger an internal process which will convert the image from using the existing boot option to
+   * another. The size of the boot disk might be increased to allow the conversion
+   * @param bootConversion bootConversion or {@code null} for none
+   */
+  public ImageImportOsAdaptationParameters setBootConversion(java.lang.String bootConversion) {
+    this.bootConversion = bootConversion;
+    return this;
+  }
 
   /**
    * Optional. Set to true in order to generalize the imported image. The generalization process

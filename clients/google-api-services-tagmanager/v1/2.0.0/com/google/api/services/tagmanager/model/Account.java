@@ -45,15 +45,14 @@ public final class Account extends com.google.api.client.json.GenericJson {
   private java.lang.String fingerprint;
 
   /**
-   * Account display name. @mutable tagmanager.accounts.create @mutable tagmanager.accounts.update
+   * Account display name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Whether the account shares data anonymously with Google and others. @mutable
-   * tagmanager.accounts.create @mutable tagmanager.accounts.update
+   * Whether the account shares data anonymously with Google and others.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,7 +95,7 @@ public final class Account extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Account display name. @mutable tagmanager.accounts.create @mutable tagmanager.accounts.update
+   * Account display name.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -104,7 +103,7 @@ public final class Account extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Account display name. @mutable tagmanager.accounts.create @mutable tagmanager.accounts.update
+   * Account display name.
    * @param name name or {@code null} for none
    */
   public Account setName(java.lang.String name) {
@@ -113,8 +112,7 @@ public final class Account extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether the account shares data anonymously with Google and others. @mutable
-   * tagmanager.accounts.create @mutable tagmanager.accounts.update
+   * Whether the account shares data anonymously with Google and others.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getShareData() {
@@ -122,8 +120,7 @@ public final class Account extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether the account shares data anonymously with Google and others. @mutable
-   * tagmanager.accounts.create @mutable tagmanager.accounts.update
+   * Whether the account shares data anonymously with Google and others.
    * @param shareData shareData or {@code null} for none
    */
   public Account setShareData(java.lang.Boolean shareData) {

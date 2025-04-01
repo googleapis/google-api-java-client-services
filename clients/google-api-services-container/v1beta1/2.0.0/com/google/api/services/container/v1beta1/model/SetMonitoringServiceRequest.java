@@ -40,7 +40,7 @@ public final class SetMonitoringServiceRequest extends com.google.api.client.jso
 
   /**
    * Required. The monitoring service the cluster should use to write metrics. Currently available
-   * options: * "monitoring.googleapis.com/kubernetes" - The Cloud Monitoring service with a
+   * options: * `monitoring.googleapis.com/kubernetes` - The Cloud Monitoring service with a
    * Kubernetes-native resource model * `monitoring.googleapis.com` - The legacy Cloud Monitoring
    * service (no longer available as of GKE 1.15). * `none` - No metrics will be exported from the
    * cluster. If left as an empty string,`monitoring.googleapis.com/kubernetes` will be used for GKE
@@ -97,7 +97,7 @@ public final class SetMonitoringServiceRequest extends com.google.api.client.jso
 
   /**
    * Required. The monitoring service the cluster should use to write metrics. Currently available
-   * options: * "monitoring.googleapis.com/kubernetes" - The Cloud Monitoring service with a
+   * options: * `monitoring.googleapis.com/kubernetes` - The Cloud Monitoring service with a
    * Kubernetes-native resource model * `monitoring.googleapis.com` - The legacy Cloud Monitoring
    * service (no longer available as of GKE 1.15). * `none` - No metrics will be exported from the
    * cluster. If left as an empty string,`monitoring.googleapis.com/kubernetes` will be used for GKE
@@ -110,7 +110,7 @@ public final class SetMonitoringServiceRequest extends com.google.api.client.jso
 
   /**
    * Required. The monitoring service the cluster should use to write metrics. Currently available
-   * options: * "monitoring.googleapis.com/kubernetes" - The Cloud Monitoring service with a
+   * options: * `monitoring.googleapis.com/kubernetes` - The Cloud Monitoring service with a
    * Kubernetes-native resource model * `monitoring.googleapis.com` - The legacy Cloud Monitoring
    * service (no longer available as of GKE 1.15). * `none` - No metrics will be exported from the
    * cluster. If left as an empty string,`monitoring.googleapis.com/kubernetes` will be used for GKE

@@ -45,7 +45,7 @@ public final class MasterAuthorizedNetworksConfig extends com.google.api.client.
   }
 
   /**
-   * Whether or not master authorized networks feature is enabled.
+   * Optional. Whether or not master authorized networks feature is enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,7 +69,7 @@ public final class MasterAuthorizedNetworksConfig extends com.google.api.client.
   }
 
   /**
-   * Whether or not master authorized networks feature is enabled.
+   * Optional. Whether or not master authorized networks feature is enabled.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnabled() {
@@ -77,7 +77,7 @@ public final class MasterAuthorizedNetworksConfig extends com.google.api.client.
   }
 
   /**
-   * Whether or not master authorized networks feature is enabled.
+   * Optional. Whether or not master authorized networks feature is enabled.
    * @param enabled enabled or {@code null} for none
    */
   public MasterAuthorizedNetworksConfig setEnabled(java.lang.Boolean enabled) {

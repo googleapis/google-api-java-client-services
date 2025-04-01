@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-places",
+    "version": "v1-rev20250223-2.0.0"
+  }
+}

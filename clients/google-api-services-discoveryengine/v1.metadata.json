@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-discoveryengine",
+    "version": "v1-rev20241031-2.0.0"
+  }
+}

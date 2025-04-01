@@ -33,6 +33,14 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1FunctionResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The id of the function call this response is for. Populated by the client to match
+   * the corresponding function call `id`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String id;
+
+  /**
    * Required. The name of the function to call. Matches [FunctionDeclaration.name] and
    * [FunctionCall.name].
    * The value may be {@code null}.
@@ -48,6 +56,25 @@ public final class GoogleCloudAiplatformV1beta1FunctionResponse extends com.goog
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> response;
+
+  /**
+   * Optional. The id of the function call this response is for. Populated by the client to match
+   * the corresponding function call `id`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getId() {
+    return id;
+  }
+
+  /**
+   * Optional. The id of the function call this response is for. Populated by the client to match
+   * the corresponding function call `id`.
+   * @param id id or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1FunctionResponse setId(java.lang.String id) {
+    this.id = id;
+    return this;
+  }
 
   /**
    * Required. The name of the function to call. Matches [FunctionDeclaration.name] and

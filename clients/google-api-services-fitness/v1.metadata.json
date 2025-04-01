@@ -2,6 +2,6 @@
   "maven": {
     "groupId": "com.google.apis",
     "artifactId": "google-api-services-fitness",
-    "version": "v1-rev20210920-1.32.1"
+    "version": "v1-rev20231107-2.0.0"
   }
 }

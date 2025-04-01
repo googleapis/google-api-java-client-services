@@ -17,9 +17,9 @@
 package com.google.api.services.spanner.v1.model;
 
 /**
- * The DirectedReadOptions can be used to indicate which replicas or regions should be used for non-
- * transactional reads or queries. DirectedReadOptions may only be specified for a read-only
- * transaction, otherwise the API will return an `INVALID_ARGUMENT` error.
+ * The `DirectedReadOptions` can be used to indicate which replicas or regions should be used for
+ * non-transactional reads or queries. `DirectedReadOptions` can only be specified for a read-only
+ * transaction, otherwise the API returns an `INVALID_ARGUMENT` error.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Spanner API. For a detailed explanation see:
@@ -32,26 +32,26 @@ package com.google.api.services.spanner.v1.model;
 public final class DirectedReadOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Exclude_replicas indicates that specified replicas should be excluded from serving requests.
-   * Spanner will not route requests to the replicas in this list.
+   * `Exclude_replicas` indicates that specified replicas should be excluded from serving requests.
+   * Spanner doesn't route requests to the replicas in this list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ExcludeReplicas excludeReplicas;
 
   /**
-   * Include_replicas indicates the order of replicas (as they appear in this list) to process the
-   * request. If auto_failover_disabled is set to true and all replicas are exhausted without
-   * finding a healthy replica, Spanner will wait for a replica in the list to become available,
-   * requests may fail due to `DEADLINE_EXCEEDED` errors.
+   * `Include_replicas` indicates the order of replicas (as they appear in this list) to process the
+   * request. If `auto_failover_disabled` is set to `true` and all replicas are exhausted without
+   * finding a healthy replica, Spanner waits for a replica in the list to become available,
+   * requests might fail due to `DEADLINE_EXCEEDED` errors.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private IncludeReplicas includeReplicas;
 
   /**
-   * Exclude_replicas indicates that specified replicas should be excluded from serving requests.
-   * Spanner will not route requests to the replicas in this list.
+   * `Exclude_replicas` indicates that specified replicas should be excluded from serving requests.
+   * Spanner doesn't route requests to the replicas in this list.
    * @return value or {@code null} for none
    */
   public ExcludeReplicas getExcludeReplicas() {
@@ -59,8 +59,8 @@ public final class DirectedReadOptions extends com.google.api.client.json.Generi
   }
 
   /**
-   * Exclude_replicas indicates that specified replicas should be excluded from serving requests.
-   * Spanner will not route requests to the replicas in this list.
+   * `Exclude_replicas` indicates that specified replicas should be excluded from serving requests.
+   * Spanner doesn't route requests to the replicas in this list.
    * @param excludeReplicas excludeReplicas or {@code null} for none
    */
   public DirectedReadOptions setExcludeReplicas(ExcludeReplicas excludeReplicas) {
@@ -69,10 +69,10 @@ public final class DirectedReadOptions extends com.google.api.client.json.Generi
   }
 
   /**
-   * Include_replicas indicates the order of replicas (as they appear in this list) to process the
-   * request. If auto_failover_disabled is set to true and all replicas are exhausted without
-   * finding a healthy replica, Spanner will wait for a replica in the list to become available,
-   * requests may fail due to `DEADLINE_EXCEEDED` errors.
+   * `Include_replicas` indicates the order of replicas (as they appear in this list) to process the
+   * request. If `auto_failover_disabled` is set to `true` and all replicas are exhausted without
+   * finding a healthy replica, Spanner waits for a replica in the list to become available,
+   * requests might fail due to `DEADLINE_EXCEEDED` errors.
    * @return value or {@code null} for none
    */
   public IncludeReplicas getIncludeReplicas() {
@@ -80,10 +80,10 @@ public final class DirectedReadOptions extends com.google.api.client.json.Generi
   }
 
   /**
-   * Include_replicas indicates the order of replicas (as they appear in this list) to process the
-   * request. If auto_failover_disabled is set to true and all replicas are exhausted without
-   * finding a healthy replica, Spanner will wait for a replica in the list to become available,
-   * requests may fail due to `DEADLINE_EXCEEDED` errors.
+   * `Include_replicas` indicates the order of replicas (as they appear in this list) to process the
+   * request. If `auto_failover_disabled` is set to `true` and all replicas are exhausted without
+   * finding a healthy replica, Spanner waits for a replica in the list to become available,
+   * requests might fail due to `DEADLINE_EXCEEDED` errors.
    * @param includeReplicas includeReplicas or {@code null} for none
    */
   public DirectedReadOptions setIncludeReplicas(IncludeReplicas includeReplicas) {

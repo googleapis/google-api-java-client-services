@@ -191,6 +191,14 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * [Output Only] URL of the region where the snapshot resides. Only applicable for regional
+   * snapshots.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String region;
+
+  /**
    * Output only. Reserved for future use.
    * The value may be {@code null}.
    */
@@ -747,6 +755,25 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
    */
   public Snapshot setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * [Output Only] URL of the region where the snapshot resides. Only applicable for regional
+   * snapshots.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRegion() {
+    return region;
+  }
+
+  /**
+   * [Output Only] URL of the region where the snapshot resides. Only applicable for regional
+   * snapshots.
+   * @param region region or {@code null} for none
+   */
+  public Snapshot setRegion(java.lang.String region) {
+    this.region = region;
     return this;
   }
 

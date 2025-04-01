@@ -31,7 +31,7 @@ public final class CommitRequest extends com.google.api.client.json.GenericJson 
 
   /**
    * Optional. The amount of latency this request is configured to incur in order to improve
-   * throughput. If this field is not set, Spanner assumes requests are relatively latency sensitive
+   * throughput. If this field isn't set, Spanner assumes requests are relatively latency sensitive
    * and automatically determines an appropriate delay time. You can specify a commit delay value
    * between 0 and 500 ms.
    * The value may be {@code null}.
@@ -48,9 +48,9 @@ public final class CommitRequest extends com.google.api.client.json.GenericJson 
   private java.util.List<Mutation> mutations;
 
   /**
-   * Optional. If the read-write transaction was executed on a multiplexed session, the precommit
-   * token with the highest sequence number received in this transaction attempt, should be included
-   * here. Failing to do so will result in a FailedPrecondition error.
+   * Optional. If the read-write transaction was executed on a multiplexed session, then you must
+   * include the precommit token with the highest sequence number received in this transaction
+   * attempt. Failing to do so results in a `FailedPrecondition` error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +64,7 @@ public final class CommitRequest extends com.google.api.client.json.GenericJson 
   private RequestOptions requestOptions;
 
   /**
-   * If `true`, then statistics related to the transaction will be included in the CommitResponse.
+   * If `true`, then statistics related to the transaction is included in the CommitResponse.
    * Default value is `false`.
    * The value may be {@code null}.
    */
@@ -75,7 +75,7 @@ public final class CommitRequest extends com.google.api.client.json.GenericJson 
    * Execute mutations in a temporary transaction. Note that unlike commit of a previously-started
    * transaction, commit with a temporary transaction is non-idempotent. That is, if the
    * `CommitRequest` is sent to Cloud Spanner more than once (for instance, due to retries in the
-   * application, or in the transport library), it is possible that the mutations are executed more
+   * application, or in the transport library), it's possible that the mutations are executed more
    * than once. If this is undesirable, use BeginTransaction and Commit instead.
    * The value may be {@code null}.
    */
@@ -91,7 +91,7 @@ public final class CommitRequest extends com.google.api.client.json.GenericJson 
 
   /**
    * Optional. The amount of latency this request is configured to incur in order to improve
-   * throughput. If this field is not set, Spanner assumes requests are relatively latency sensitive
+   * throughput. If this field isn't set, Spanner assumes requests are relatively latency sensitive
    * and automatically determines an appropriate delay time. You can specify a commit delay value
    * between 0 and 500 ms.
    * @return value or {@code null} for none
@@ -102,7 +102,7 @@ public final class CommitRequest extends com.google.api.client.json.GenericJson 
 
   /**
    * Optional. The amount of latency this request is configured to incur in order to improve
-   * throughput. If this field is not set, Spanner assumes requests are relatively latency sensitive
+   * throughput. If this field isn't set, Spanner assumes requests are relatively latency sensitive
    * and automatically determines an appropriate delay time. You can specify a commit delay value
    * between 0 and 500 ms.
    * @param maxCommitDelay maxCommitDelay or {@code null} for none
@@ -132,9 +132,9 @@ public final class CommitRequest extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. If the read-write transaction was executed on a multiplexed session, the precommit
-   * token with the highest sequence number received in this transaction attempt, should be included
-   * here. Failing to do so will result in a FailedPrecondition error.
+   * Optional. If the read-write transaction was executed on a multiplexed session, then you must
+   * include the precommit token with the highest sequence number received in this transaction
+   * attempt. Failing to do so results in a `FailedPrecondition` error.
    * @return value or {@code null} for none
    */
   public MultiplexedSessionPrecommitToken getPrecommitToken() {
@@ -142,9 +142,9 @@ public final class CommitRequest extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. If the read-write transaction was executed on a multiplexed session, the precommit
-   * token with the highest sequence number received in this transaction attempt, should be included
-   * here. Failing to do so will result in a FailedPrecondition error.
+   * Optional. If the read-write transaction was executed on a multiplexed session, then you must
+   * include the precommit token with the highest sequence number received in this transaction
+   * attempt. Failing to do so results in a `FailedPrecondition` error.
    * @param precommitToken precommitToken or {@code null} for none
    */
   public CommitRequest setPrecommitToken(MultiplexedSessionPrecommitToken precommitToken) {
@@ -170,7 +170,7 @@ public final class CommitRequest extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * If `true`, then statistics related to the transaction will be included in the CommitResponse.
+   * If `true`, then statistics related to the transaction is included in the CommitResponse.
    * Default value is `false`.
    * @return value or {@code null} for none
    */
@@ -179,7 +179,7 @@ public final class CommitRequest extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * If `true`, then statistics related to the transaction will be included in the CommitResponse.
+   * If `true`, then statistics related to the transaction is included in the CommitResponse.
    * Default value is `false`.
    * @param returnCommitStats returnCommitStats or {@code null} for none
    */
@@ -192,7 +192,7 @@ public final class CommitRequest extends com.google.api.client.json.GenericJson 
    * Execute mutations in a temporary transaction. Note that unlike commit of a previously-started
    * transaction, commit with a temporary transaction is non-idempotent. That is, if the
    * `CommitRequest` is sent to Cloud Spanner more than once (for instance, due to retries in the
-   * application, or in the transport library), it is possible that the mutations are executed more
+   * application, or in the transport library), it's possible that the mutations are executed more
    * than once. If this is undesirable, use BeginTransaction and Commit instead.
    * @return value or {@code null} for none
    */
@@ -204,7 +204,7 @@ public final class CommitRequest extends com.google.api.client.json.GenericJson 
    * Execute mutations in a temporary transaction. Note that unlike commit of a previously-started
    * transaction, commit with a temporary transaction is non-idempotent. That is, if the
    * `CommitRequest` is sent to Cloud Spanner more than once (for instance, due to retries in the
-   * application, or in the transport library), it is possible that the mutations are executed more
+   * application, or in the transport library), it's possible that the mutations are executed more
    * than once. If this is undesirable, use BeginTransaction and Commit instead.
    * @param singleUseTransaction singleUseTransaction or {@code null} for none
    */

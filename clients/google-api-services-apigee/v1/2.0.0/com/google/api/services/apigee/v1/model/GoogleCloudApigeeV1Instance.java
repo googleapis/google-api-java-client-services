@@ -63,8 +63,8 @@ public final class GoogleCloudApigeeV1Instance extends com.google.api.client.jso
   private java.lang.String description;
 
   /**
-   * Customer Managed Encryption Key (CMEK) used for disk and volume encryption. If not specified, a
-   * Google-Managed encryption key will be used. Use the following format:
+   * Optional. Customer Managed Encryption Key (CMEK) used for disk and volume encryption. If not
+   * specified, a Google-Managed encryption key will be used. Use the following format:
    * `projects/([^/]+)/locations/([^/]+)/keyRings/([^/]+)/cryptoKeys/([^/]+)`
    * The value may be {@code null}.
    */
@@ -241,8 +241,8 @@ public final class GoogleCloudApigeeV1Instance extends com.google.api.client.jso
   }
 
   /**
-   * Customer Managed Encryption Key (CMEK) used for disk and volume encryption. If not specified, a
-   * Google-Managed encryption key will be used. Use the following format:
+   * Optional. Customer Managed Encryption Key (CMEK) used for disk and volume encryption. If not
+   * specified, a Google-Managed encryption key will be used. Use the following format:
    * `projects/([^/]+)/locations/([^/]+)/keyRings/([^/]+)/cryptoKeys/([^/]+)`
    * @return value or {@code null} for none
    */
@@ -251,8 +251,8 @@ public final class GoogleCloudApigeeV1Instance extends com.google.api.client.jso
   }
 
   /**
-   * Customer Managed Encryption Key (CMEK) used for disk and volume encryption. If not specified, a
-   * Google-Managed encryption key will be used. Use the following format:
+   * Optional. Customer Managed Encryption Key (CMEK) used for disk and volume encryption. If not
+   * specified, a Google-Managed encryption key will be used. Use the following format:
    * `projects/([^/]+)/locations/([^/]+)/keyRings/([^/]+)/cryptoKeys/([^/]+)`
    * @param diskEncryptionKeyName diskEncryptionKeyName or {@code null} for none
    */

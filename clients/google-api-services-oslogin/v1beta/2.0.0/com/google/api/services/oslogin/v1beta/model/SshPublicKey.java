@@ -44,7 +44,8 @@ public final class SshPublicKey extends com.google.api.client.json.GenericJson {
   private java.lang.String fingerprint;
 
   /**
-   * Public key text in SSH format, defined by RFC4253 section 6.6.
+   * Required. Public key text in SSH format, defined by
+   * [RFC4253](https://www.ietf.org/rfc/rfc4253.txt) section 6.6.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,7 +93,8 @@ public final class SshPublicKey extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Public key text in SSH format, defined by RFC4253 section 6.6.
+   * Required. Public key text in SSH format, defined by
+   * [RFC4253](https://www.ietf.org/rfc/rfc4253.txt) section 6.6.
    * @return value or {@code null} for none
    */
   public java.lang.String getKey() {
@@ -100,7 +102,8 @@ public final class SshPublicKey extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Public key text in SSH format, defined by RFC4253 section 6.6.
+   * Required. Public key text in SSH format, defined by
+   * [RFC4253](https://www.ietf.org/rfc/rfc4253.txt) section 6.6.
    * @param key key or {@code null} for none
    */
   public SshPublicKey setKey(java.lang.String key) {

@@ -30,7 +30,7 @@ package com.google.api.services.spanner.v1.model;
 public final class Session extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The approximate timestamp when the session is last used. It is typically earlier
+   * Output only. The approximate timestamp when the session is last used. It's typically earlier
    * than the actual last use time.
    * The value may be {@code null}.
    */
@@ -63,7 +63,7 @@ public final class Session extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Optional. If true, specifies a multiplexed session. Use a multiplexed session for multiple,
+   * Optional. If `true`, specifies a multiplexed session. Use a multiplexed session for multiple,
    * concurrent read-only operations. Don't use them for read-write transactions, partitioned reads,
    * or partitioned queries. Use `sessions.create` to create multiplexed sessions. Don't use
    * BatchCreateSessions to create a multiplexed session. You can't delete or list multiplexed
@@ -81,7 +81,7 @@ public final class Session extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Output only. The approximate timestamp when the session is last used. It is typically earlier
+   * Output only. The approximate timestamp when the session is last used. It's typically earlier
    * than the actual last use time.
    * @return value or {@code null} for none
    */
@@ -90,7 +90,7 @@ public final class Session extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The approximate timestamp when the session is last used. It is typically earlier
+   * Output only. The approximate timestamp when the session is last used. It's typically earlier
    * than the actual last use time.
    * @param approximateLastUseTime approximateLastUseTime or {@code null} for none
    */
@@ -159,7 +159,7 @@ public final class Session extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. If true, specifies a multiplexed session. Use a multiplexed session for multiple,
+   * Optional. If `true`, specifies a multiplexed session. Use a multiplexed session for multiple,
    * concurrent read-only operations. Don't use them for read-write transactions, partitioned reads,
    * or partitioned queries. Use `sessions.create` to create multiplexed sessions. Don't use
    * BatchCreateSessions to create a multiplexed session. You can't delete or list multiplexed
@@ -171,7 +171,7 @@ public final class Session extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. If true, specifies a multiplexed session. Use a multiplexed session for multiple,
+   * Optional. If `true`, specifies a multiplexed session. Use a multiplexed session for multiple,
    * concurrent read-only operations. Don't use them for read-write transactions, partitioned reads,
    * or partitioned queries. Use `sessions.create` to create multiplexed sessions. Don't use
    * BatchCreateSessions to create a multiplexed session. You can't delete or list multiplexed

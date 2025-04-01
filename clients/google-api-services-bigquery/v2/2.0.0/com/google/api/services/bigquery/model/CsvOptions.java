@@ -82,6 +82,18 @@ public final class CsvOptions extends com.google.api.client.json.GenericJson {
   private java.lang.String nullMarker;
 
   /**
+   * Optional. A list of strings represented as SQL NULL value in a CSV file. null_marker and
+   * null_markers can't be set at the same time. If null_marker is set, null_markers has to be not
+   * set. If null_markers is set, null_marker has to be not set. If both null_marker and
+   * null_markers are set at the same time, a user error would be thrown. Any strings listed in
+   * null_markers, including empty string would be interpreted as SQL NULL. This applies to all
+   * column types.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> nullMarkers;
+
+  /**
    * Optional. Indicates if the embedded ASCII control characters (the first 32 characters in the
    * ASCII-table, from '\x00' to '\x1F') are preserved.
    * The value may be {@code null}.
@@ -117,6 +129,19 @@ public final class CsvOptions extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long skipLeadingRows;
+
+  /**
+   * Optional. Controls the strategy used to match loaded columns to the schema. If not set, a
+   * sensible default is chosen based on how the schema is provided. If autodetect is used, then
+   * columns are matched by name. Otherwise, columns are matched by position. This is done to keep
+   * the behavior backward-compatible. Acceptable values are: POSITION - matches by position. This
+   * assumes that the columns are ordered the same way as the schema. NAME - matches by name. This
+   * reads the header row as column names and reorders columns to match the field names in the
+   * schema.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceColumnMatch;
 
   /**
    * Optional. Indicates if BigQuery should accept rows that are missing trailing optional columns.
@@ -238,6 +263,33 @@ public final class CsvOptions extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. A list of strings represented as SQL NULL value in a CSV file. null_marker and
+   * null_markers can't be set at the same time. If null_marker is set, null_markers has to be not
+   * set. If null_markers is set, null_marker has to be not set. If both null_marker and
+   * null_markers are set at the same time, a user error would be thrown. Any strings listed in
+   * null_markers, including empty string would be interpreted as SQL NULL. This applies to all
+   * column types.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getNullMarkers() {
+    return nullMarkers;
+  }
+
+  /**
+   * Optional. A list of strings represented as SQL NULL value in a CSV file. null_marker and
+   * null_markers can't be set at the same time. If null_marker is set, null_markers has to be not
+   * set. If null_markers is set, null_marker has to be not set. If both null_marker and
+   * null_markers are set at the same time, a user error would be thrown. Any strings listed in
+   * null_markers, including empty string would be interpreted as SQL NULL. This applies to all
+   * column types.
+   * @param nullMarkers nullMarkers or {@code null} for none
+   */
+  public CsvOptions setNullMarkers(java.util.List<java.lang.String> nullMarkers) {
+    this.nullMarkers = nullMarkers;
+    return this;
+  }
+
+  /**
    * Optional. Indicates if the embedded ASCII control characters (the first 32 characters in the
    * ASCII-table, from '\x00' to '\x1F') are preserved.
    * @return value or {@code null} for none
@@ -317,6 +369,35 @@ public final class CsvOptions extends com.google.api.client.json.GenericJson {
    */
   public CsvOptions setSkipLeadingRows(java.lang.Long skipLeadingRows) {
     this.skipLeadingRows = skipLeadingRows;
+    return this;
+  }
+
+  /**
+   * Optional. Controls the strategy used to match loaded columns to the schema. If not set, a
+   * sensible default is chosen based on how the schema is provided. If autodetect is used, then
+   * columns are matched by name. Otherwise, columns are matched by position. This is done to keep
+   * the behavior backward-compatible. Acceptable values are: POSITION - matches by position. This
+   * assumes that the columns are ordered the same way as the schema. NAME - matches by name. This
+   * reads the header row as column names and reorders columns to match the field names in the
+   * schema.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceColumnMatch() {
+    return sourceColumnMatch;
+  }
+
+  /**
+   * Optional. Controls the strategy used to match loaded columns to the schema. If not set, a
+   * sensible default is chosen based on how the schema is provided. If autodetect is used, then
+   * columns are matched by name. Otherwise, columns are matched by position. This is done to keep
+   * the behavior backward-compatible. Acceptable values are: POSITION - matches by position. This
+   * assumes that the columns are ordered the same way as the schema. NAME - matches by name. This
+   * reads the header row as column names and reorders columns to match the field names in the
+   * schema.
+   * @param sourceColumnMatch sourceColumnMatch or {@code null} for none
+   */
+  public CsvOptions setSourceColumnMatch(java.lang.String sourceColumnMatch) {
+    this.sourceColumnMatch = sourceColumnMatch;
     return this;
   }
 

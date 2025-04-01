@@ -18,7 +18,7 @@ package com.google.api.services.container.model;
 
 /**
  * Parameters that can be configured on Windows nodes. Windows Node Config that define the
- * parameters that will be used to configure the Windows node pool settings
+ * parameters that will be used to configure the Windows node pool settings.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Kubernetes Engine API. For a detailed explanation
@@ -32,14 +32,14 @@ package com.google.api.services.container.model;
 public final class WindowsNodeConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * OSVersion specifies the Windows node config to be used on the node
+   * OSVersion specifies the Windows node config to be used on the node.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String osVersion;
 
   /**
-   * OSVersion specifies the Windows node config to be used on the node
+   * OSVersion specifies the Windows node config to be used on the node.
    * @return value or {@code null} for none
    */
   public java.lang.String getOsVersion() {
@@ -47,7 +47,7 @@ public final class WindowsNodeConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * OSVersion specifies the Windows node config to be used on the node
+   * OSVersion specifies the Windows node config to be used on the node.
    * @param osVersion osVersion or {@code null} for none
    */
   public WindowsNodeConfig setOsVersion(java.lang.String osVersion) {

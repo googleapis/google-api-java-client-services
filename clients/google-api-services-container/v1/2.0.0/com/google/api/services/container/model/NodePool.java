@@ -36,7 +36,7 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
 
   /**
    * Specifies the autopilot configuration for this node pool. This field is exclusively reserved
-   * for Cluster Autoscaler to implement go/gke-managed-nodes-ccc-api
+   * for Cluster Autoscaler.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -209,7 +209,7 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
 
   /**
    * Specifies the autopilot configuration for this node pool. This field is exclusively reserved
-   * for Cluster Autoscaler to implement go/gke-managed-nodes-ccc-api
+   * for Cluster Autoscaler.
    * @return value or {@code null} for none
    */
   public AutopilotConfig getAutopilotConfig() {
@@ -218,7 +218,7 @@ public final class NodePool extends com.google.api.client.json.GenericJson {
 
   /**
    * Specifies the autopilot configuration for this node pool. This field is exclusively reserved
-   * for Cluster Autoscaler to implement go/gke-managed-nodes-ccc-api
+   * for Cluster Autoscaler.
    * @param autopilotConfig autopilotConfig or {@code null} for none
    */
   public NodePool setAutopilotConfig(AutopilotConfig autopilotConfig) {

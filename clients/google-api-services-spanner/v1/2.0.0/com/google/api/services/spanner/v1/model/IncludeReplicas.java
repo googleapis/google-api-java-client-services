@@ -17,8 +17,8 @@
 package com.google.api.services.spanner.v1.model;
 
 /**
- * An IncludeReplicas contains a repeated set of ReplicaSelection which indicates the order in which
- * replicas should be considered.
+ * An `IncludeReplicas` contains a repeated set of `ReplicaSelection` which indicates the order in
+ * which replicas should be considered.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Spanner API. For a detailed explanation see:
@@ -31,8 +31,8 @@ package com.google.api.services.spanner.v1.model;
 public final class IncludeReplicas extends com.google.api.client.json.GenericJson {
 
   /**
-   * If true, Spanner will not route requests to a replica outside the include_replicas list when
-   * all of the specified replicas are unavailable or unhealthy. Default value is `false`.
+   * If `true`, Spanner doesn't route requests to a replica outside the <`include_replicas` list
+   * when all of the specified replicas are unavailable or unhealthy. Default value is `false`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,8 +46,8 @@ public final class IncludeReplicas extends com.google.api.client.json.GenericJso
   private java.util.List<ReplicaSelection> replicaSelections;
 
   /**
-   * If true, Spanner will not route requests to a replica outside the include_replicas list when
-   * all of the specified replicas are unavailable or unhealthy. Default value is `false`.
+   * If `true`, Spanner doesn't route requests to a replica outside the <`include_replicas` list
+   * when all of the specified replicas are unavailable or unhealthy. Default value is `false`.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAutoFailoverDisabled() {
@@ -55,8 +55,8 @@ public final class IncludeReplicas extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * If true, Spanner will not route requests to a replica outside the include_replicas list when
-   * all of the specified replicas are unavailable or unhealthy. Default value is `false`.
+   * If `true`, Spanner doesn't route requests to a replica outside the <`include_replicas` list
+   * when all of the specified replicas are unavailable or unhealthy. Default value is `false`.
    * @param autoFailoverDisabled autoFailoverDisabled or {@code null} for none
    */
   public IncludeReplicas setAutoFailoverDisabled(java.lang.Boolean autoFailoverDisabled) {

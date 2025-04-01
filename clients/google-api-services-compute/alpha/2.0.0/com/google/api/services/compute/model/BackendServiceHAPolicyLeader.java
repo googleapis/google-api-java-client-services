@@ -30,21 +30,30 @@ package com.google.api.services.compute.model;
 public final class BackendServiceHAPolicyLeader extends com.google.api.client.json.GenericJson {
 
   /**
-   * Setting backendGroup is not supported.
+   * A fully-qualified URL (starting with https://www.googleapis.com/) of the zonal Network Endpoint
+   * Group (NEG) with `GCE_VM_IP` endpoints that the leader is attached to. The leader's
+   * backendGroup must already be specified as a backend of this backend service. Removing a backend
+   * that is designated as the leader's backendGroup is not permitted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String backendGroup;
 
   /**
-   * Setting a network endpoint as leader is not supported.
+   * The network endpoint within the leader.backendGroup that is designated as the leader. This
+   * network endpoint cannot be detached from the NEG specified in the haPolicy.leader.backendGroup
+   * until the leader is updated with another network endpoint, or the leader is removed from the
+   * haPolicy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private BackendServiceHAPolicyLeaderNetworkEndpoint networkEndpoint;
 
   /**
-   * Setting backendGroup is not supported.
+   * A fully-qualified URL (starting with https://www.googleapis.com/) of the zonal Network Endpoint
+   * Group (NEG) with `GCE_VM_IP` endpoints that the leader is attached to. The leader's
+   * backendGroup must already be specified as a backend of this backend service. Removing a backend
+   * that is designated as the leader's backendGroup is not permitted.
    * @return value or {@code null} for none
    */
   public java.lang.String getBackendGroup() {
@@ -52,7 +61,10 @@ public final class BackendServiceHAPolicyLeader extends com.google.api.client.js
   }
 
   /**
-   * Setting backendGroup is not supported.
+   * A fully-qualified URL (starting with https://www.googleapis.com/) of the zonal Network Endpoint
+   * Group (NEG) with `GCE_VM_IP` endpoints that the leader is attached to. The leader's
+   * backendGroup must already be specified as a backend of this backend service. Removing a backend
+   * that is designated as the leader's backendGroup is not permitted.
    * @param backendGroup backendGroup or {@code null} for none
    */
   public BackendServiceHAPolicyLeader setBackendGroup(java.lang.String backendGroup) {
@@ -61,7 +73,10 @@ public final class BackendServiceHAPolicyLeader extends com.google.api.client.js
   }
 
   /**
-   * Setting a network endpoint as leader is not supported.
+   * The network endpoint within the leader.backendGroup that is designated as the leader. This
+   * network endpoint cannot be detached from the NEG specified in the haPolicy.leader.backendGroup
+   * until the leader is updated with another network endpoint, or the leader is removed from the
+   * haPolicy.
    * @return value or {@code null} for none
    */
   public BackendServiceHAPolicyLeaderNetworkEndpoint getNetworkEndpoint() {
@@ -69,7 +84,10 @@ public final class BackendServiceHAPolicyLeader extends com.google.api.client.js
   }
 
   /**
-   * Setting a network endpoint as leader is not supported.
+   * The network endpoint within the leader.backendGroup that is designated as the leader. This
+   * network endpoint cannot be detached from the NEG specified in the haPolicy.leader.backendGroup
+   * until the leader is updated with another network endpoint, or the leader is removed from the
+   * haPolicy.
    * @param networkEndpoint networkEndpoint or {@code null} for none
    */
   public BackendServiceHAPolicyLeader setNetworkEndpoint(BackendServiceHAPolicyLeaderNetworkEndpoint networkEndpoint) {

@@ -30,8 +30,7 @@ package com.google.api.services.tagmanager.model;
 public final class UserPermission extends com.google.api.client.json.GenericJson {
 
   /**
-   * GTM Account access permissions. @mutable tagmanager.accounts.permissions.create @mutable
-   * tagmanager.accounts.permissions.update
+   * GTM Account access permissions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,8 +44,7 @@ public final class UserPermission extends com.google.api.client.json.GenericJson
   private java.lang.String accountId;
 
   /**
-   * GTM Container access permissions. @mutable tagmanager.accounts.permissions.create @mutable
-   * tagmanager.accounts.permissions.update
+   * GTM Container access permissions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,7 +57,7 @@ public final class UserPermission extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * User's email address. @mutable tagmanager.accounts.permissions.create
+   * User's email address.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,8 +71,7 @@ public final class UserPermission extends com.google.api.client.json.GenericJson
   private java.lang.String path;
 
   /**
-   * GTM Account access permissions. @mutable tagmanager.accounts.permissions.create @mutable
-   * tagmanager.accounts.permissions.update
+   * GTM Account access permissions.
    * @return value or {@code null} for none
    */
   public AccountAccess getAccountAccess() {
@@ -82,8 +79,7 @@ public final class UserPermission extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * GTM Account access permissions. @mutable tagmanager.accounts.permissions.create @mutable
-   * tagmanager.accounts.permissions.update
+   * GTM Account access permissions.
    * @param accountAccess accountAccess or {@code null} for none
    */
   public UserPermission setAccountAccess(AccountAccess accountAccess) {
@@ -109,8 +105,7 @@ public final class UserPermission extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * GTM Container access permissions. @mutable tagmanager.accounts.permissions.create @mutable
-   * tagmanager.accounts.permissions.update
+   * GTM Container access permissions.
    * @return value or {@code null} for none
    */
   public java.util.List<ContainerAccess> getContainerAccess() {
@@ -118,8 +113,7 @@ public final class UserPermission extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * GTM Container access permissions. @mutable tagmanager.accounts.permissions.create @mutable
-   * tagmanager.accounts.permissions.update
+   * GTM Container access permissions.
    * @param containerAccess containerAccess or {@code null} for none
    */
   public UserPermission setContainerAccess(java.util.List<ContainerAccess> containerAccess) {
@@ -128,7 +122,7 @@ public final class UserPermission extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * User's email address. @mutable tagmanager.accounts.permissions.create
+   * User's email address.
    * @return value or {@code null} for none
    */
   public java.lang.String getEmailAddress() {
@@ -136,7 +130,7 @@ public final class UserPermission extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * User's email address. @mutable tagmanager.accounts.permissions.create
+   * User's email address.
    * @param emailAddress emailAddress or {@code null} for none
    */
   public UserPermission setEmailAddress(java.lang.String emailAddress) {

@@ -38,6 +38,13 @@ public final class SecretManagerConfig extends com.google.api.client.json.Generi
   private java.lang.Boolean enabled;
 
   /**
+   * Rotation config for secret manager.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RotationConfig rotationConfig;
+
+  /**
    * Enable/Disable Secret Manager Config.
    * @return value or {@code null} for none
    */
@@ -51,6 +58,23 @@ public final class SecretManagerConfig extends com.google.api.client.json.Generi
    */
   public SecretManagerConfig setEnabled(java.lang.Boolean enabled) {
     this.enabled = enabled;
+    return this;
+  }
+
+  /**
+   * Rotation config for secret manager.
+   * @return value or {@code null} for none
+   */
+  public RotationConfig getRotationConfig() {
+    return rotationConfig;
+  }
+
+  /**
+   * Rotation config for secret manager.
+   * @param rotationConfig rotationConfig or {@code null} for none
+   */
+  public SecretManagerConfig setRotationConfig(RotationConfig rotationConfig) {
+    this.rotationConfig = rotationConfig;
     return this;
   }
 

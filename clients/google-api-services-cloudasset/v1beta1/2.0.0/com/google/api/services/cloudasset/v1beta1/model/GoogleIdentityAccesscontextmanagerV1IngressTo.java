@@ -57,6 +57,14 @@ public final class GoogleIdentityAccesscontextmanagerV1IngressTo extends com.goo
   private java.util.List<java.lang.String> resources;
 
   /**
+   * IAM roles that represent the set of operations that the sources specified in the corresponding
+   * IngressFrom are allowed to perform in this ServicePerimeter.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> roles;
+
+  /**
    * A list of ApiOperations allowed to be performed by the sources specified in corresponding
    * IngressFrom in this ServicePerimeter.
    * @return value or {@code null} for none
@@ -95,6 +103,25 @@ public final class GoogleIdentityAccesscontextmanagerV1IngressTo extends com.goo
    */
   public GoogleIdentityAccesscontextmanagerV1IngressTo setResources(java.util.List<java.lang.String> resources) {
     this.resources = resources;
+    return this;
+  }
+
+  /**
+   * IAM roles that represent the set of operations that the sources specified in the corresponding
+   * IngressFrom are allowed to perform in this ServicePerimeter.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getRoles() {
+    return roles;
+  }
+
+  /**
+   * IAM roles that represent the set of operations that the sources specified in the corresponding
+   * IngressFrom are allowed to perform in this ServicePerimeter.
+   * @param roles roles or {@code null} for none
+   */
+  public GoogleIdentityAccesscontextmanagerV1IngressTo setRoles(java.util.List<java.lang.String> roles) {
+    this.roles = roles;
     return this;
   }
 

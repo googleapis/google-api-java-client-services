@@ -157,8 +157,9 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   /**
    * Type of link requested, which can take one of the following values: -
    * LINK_TYPE_ETHERNET_10G_LR: A 10G Ethernet with LR optics - LINK_TYPE_ETHERNET_100G_LR: A 100G
-   * Ethernet with LR optics. Note that this field indicates the speed of each of the links in the
-   * bundle, not the speed of the entire bundle.
+   * Ethernet with LR optics. - LINK_TYPE_ETHERNET_400G_LR4: A 400G Ethernet with LR4 optics. Note
+   * that this field indicates the speed of each of the links in the bundle, not the speed of the
+   * entire bundle.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -622,8 +623,9 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   /**
    * Type of link requested, which can take one of the following values: -
    * LINK_TYPE_ETHERNET_10G_LR: A 10G Ethernet with LR optics - LINK_TYPE_ETHERNET_100G_LR: A 100G
-   * Ethernet with LR optics. Note that this field indicates the speed of each of the links in the
-   * bundle, not the speed of the entire bundle.
+   * Ethernet with LR optics. - LINK_TYPE_ETHERNET_400G_LR4: A 400G Ethernet with LR4 optics. Note
+   * that this field indicates the speed of each of the links in the bundle, not the speed of the
+   * entire bundle.
    * @return value or {@code null} for none
    */
   public java.lang.String getLinkType() {
@@ -633,8 +635,9 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   /**
    * Type of link requested, which can take one of the following values: -
    * LINK_TYPE_ETHERNET_10G_LR: A 10G Ethernet with LR optics - LINK_TYPE_ETHERNET_100G_LR: A 100G
-   * Ethernet with LR optics. Note that this field indicates the speed of each of the links in the
-   * bundle, not the speed of the entire bundle.
+   * Ethernet with LR optics. - LINK_TYPE_ETHERNET_400G_LR4: A 400G Ethernet with LR4 optics. Note
+   * that this field indicates the speed of each of the links in the bundle, not the speed of the
+   * entire bundle.
    * @param linkType linkType or {@code null} for none
    */
   public Interconnect setLinkType(java.lang.String linkType) {

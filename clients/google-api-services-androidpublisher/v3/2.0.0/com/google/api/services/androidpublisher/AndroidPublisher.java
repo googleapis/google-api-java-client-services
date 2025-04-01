@@ -1609,25 +1609,25 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
       }
 
       /**
-       * Indicates that the changes in this edit will not be reviewed until they are explicitly sent
-       * for review from the Google Play Console UI. These changes will be added to any other
-       * changes that are not yet sent for review.
+       * When a rejection happens, the parameter will make sure that the changes in this edit won't
+       * be reviewed until they are explicitly sent for review from within the Google Play Console
+       * UI. These changes will be added to any other changes that are not yet sent for review.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean changesNotSentForReview;
 
-      /** Indicates that the changes in this edit will not be reviewed until they are explicitly sent for
-     review from the Google Play Console UI. These changes will be added to any other changes that are
-     not yet sent for review.
+      /** When a rejection happens, the parameter will make sure that the changes in this edit won't be
+     reviewed until they are explicitly sent for review from within the Google Play Console UI. These
+     changes will be added to any other changes that are not yet sent for review.
        */
       public java.lang.Boolean getChangesNotSentForReview() {
         return changesNotSentForReview;
       }
 
       /**
-       * Indicates that the changes in this edit will not be reviewed until they are explicitly sent
-       * for review from the Google Play Console UI. These changes will be added to any other
-       * changes that are not yet sent for review.
+       * When a rejection happens, the parameter will make sure that the changes in this edit won't
+       * be reviewed until they are explicitly sent for review from within the Google Play Console
+       * UI. These changes will be added to any other changes that are not yet sent for review.
        */
       public Commit setChangesNotSentForReview(java.lang.Boolean changesNotSentForReview) {
         this.changesNotSentForReview = changesNotSentForReview;

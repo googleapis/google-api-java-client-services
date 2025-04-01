@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-beyondcorp",
+    "version": "v1alpha-rev20250219-2.0.0"
+  }
+}

@@ -37,6 +37,13 @@ public final class GoogleCloudAiplatformV1RagRetrievalConfig extends com.google.
   private GoogleCloudAiplatformV1RagRetrievalConfigFilter filter;
 
   /**
+   * Optional. Config for ranking and reranking.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1RagRetrievalConfigRanking ranking;
+
+  /**
    * Optional. The number of contexts to retrieve.
    * The value may be {@code null}.
    */
@@ -57,6 +64,23 @@ public final class GoogleCloudAiplatformV1RagRetrievalConfig extends com.google.
    */
   public GoogleCloudAiplatformV1RagRetrievalConfig setFilter(GoogleCloudAiplatformV1RagRetrievalConfigFilter filter) {
     this.filter = filter;
+    return this;
+  }
+
+  /**
+   * Optional. Config for ranking and reranking.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1RagRetrievalConfigRanking getRanking() {
+    return ranking;
+  }
+
+  /**
+   * Optional. Config for ranking and reranking.
+   * @param ranking ranking or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1RagRetrievalConfig setRanking(GoogleCloudAiplatformV1RagRetrievalConfigRanking ranking) {
+    this.ranking = ranking;
     return this;
   }
 

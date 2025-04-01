@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-checks",
+    "version": "v1alpha-rev20241203-2.0.0"
+  }
+}

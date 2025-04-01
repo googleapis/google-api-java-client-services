@@ -2,6 +2,6 @@
   "maven": {
     "groupId": "com.google.apis",
     "artifactId": "google-api-services-gamesManagement",
-    "version": "v1management-rev20200811-1.32.1"
+    "version": "v1management-rev20241209-2.0.0"
   }
 }

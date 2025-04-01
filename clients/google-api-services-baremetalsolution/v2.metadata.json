@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-baremetalsolution",
+    "version": "v2-rev20240830-2.0.0"
+  }
+}

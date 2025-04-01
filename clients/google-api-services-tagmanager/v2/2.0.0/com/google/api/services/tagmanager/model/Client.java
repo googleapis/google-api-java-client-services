@@ -59,25 +59,21 @@ public final class Client extends com.google.api.client.json.GenericJson {
   private java.lang.String fingerprint;
 
   /**
-   * Client display name. @mutable tagmanager.accounts.containers.workspaces.clients.create @mutable
-   * tagmanager.accounts.containers.workspaces.clients.update
+   * Client display name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * User notes on how to apply this tag in the container. @mutable
-   * tagmanager.accounts.containers.workspaces.tags.create @mutable
-   * tagmanager.accounts.containers.workspaces.tags.update
+   * User notes on how to apply this tag in the container.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String notes;
 
   /**
-   * The client's parameters. @mutable tagmanager.accounts.containers.workspaces.clients.create
-   * @mutable tagmanager.accounts.containers.workspaces.clients.update
+   * The client's parameters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,9 +94,7 @@ public final class Client extends com.google.api.client.json.GenericJson {
   private java.lang.String path;
 
   /**
-   * Priority determines relative firing order. @mutable
-   * tagmanager.accounts.containers.workspaces.clients.create @mutable
-   * tagmanager.accounts.containers.workspaces.clients.update
+   * Priority determines relative firing order.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -114,8 +108,7 @@ public final class Client extends com.google.api.client.json.GenericJson {
   private java.lang.String tagManagerUrl;
 
   /**
-   * Client type. @mutable tagmanager.accounts.containers.workspaces.clients.create @mutable
-   * tagmanager.accounts.containers.workspaces.clients.update
+   * Client type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -199,8 +192,7 @@ public final class Client extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Client display name. @mutable tagmanager.accounts.containers.workspaces.clients.create @mutable
-   * tagmanager.accounts.containers.workspaces.clients.update
+   * Client display name.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -208,8 +200,7 @@ public final class Client extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Client display name. @mutable tagmanager.accounts.containers.workspaces.clients.create @mutable
-   * tagmanager.accounts.containers.workspaces.clients.update
+   * Client display name.
    * @param name name or {@code null} for none
    */
   public Client setName(java.lang.String name) {
@@ -218,9 +209,7 @@ public final class Client extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * User notes on how to apply this tag in the container. @mutable
-   * tagmanager.accounts.containers.workspaces.tags.create @mutable
-   * tagmanager.accounts.containers.workspaces.tags.update
+   * User notes on how to apply this tag in the container.
    * @return value or {@code null} for none
    */
   public java.lang.String getNotes() {
@@ -228,9 +217,7 @@ public final class Client extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * User notes on how to apply this tag in the container. @mutable
-   * tagmanager.accounts.containers.workspaces.tags.create @mutable
-   * tagmanager.accounts.containers.workspaces.tags.update
+   * User notes on how to apply this tag in the container.
    * @param notes notes or {@code null} for none
    */
   public Client setNotes(java.lang.String notes) {
@@ -239,8 +226,7 @@ public final class Client extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The client's parameters. @mutable tagmanager.accounts.containers.workspaces.clients.create
-   * @mutable tagmanager.accounts.containers.workspaces.clients.update
+   * The client's parameters.
    * @return value or {@code null} for none
    */
   public java.util.List<Parameter> getParameter() {
@@ -248,8 +234,7 @@ public final class Client extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The client's parameters. @mutable tagmanager.accounts.containers.workspaces.clients.create
-   * @mutable tagmanager.accounts.containers.workspaces.clients.update
+   * The client's parameters.
    * @param parameter parameter or {@code null} for none
    */
   public Client setParameter(java.util.List<Parameter> parameter) {
@@ -292,9 +277,7 @@ public final class Client extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Priority determines relative firing order. @mutable
-   * tagmanager.accounts.containers.workspaces.clients.create @mutable
-   * tagmanager.accounts.containers.workspaces.clients.update
+   * Priority determines relative firing order.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPriority() {
@@ -302,9 +285,7 @@ public final class Client extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Priority determines relative firing order. @mutable
-   * tagmanager.accounts.containers.workspaces.clients.create @mutable
-   * tagmanager.accounts.containers.workspaces.clients.update
+   * Priority determines relative firing order.
    * @param priority priority or {@code null} for none
    */
   public Client setPriority(java.lang.Integer priority) {
@@ -330,8 +311,7 @@ public final class Client extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Client type. @mutable tagmanager.accounts.containers.workspaces.clients.create @mutable
-   * tagmanager.accounts.containers.workspaces.clients.update
+   * Client type.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -339,8 +319,7 @@ public final class Client extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Client type. @mutable tagmanager.accounts.containers.workspaces.clients.create @mutable
-   * tagmanager.accounts.containers.workspaces.clients.update
+   * Client type.
    * @param type type or {@code null} for none
    */
   public Client setType(java.lang.String type) {

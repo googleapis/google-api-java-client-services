@@ -31,8 +31,8 @@ public final class BeginTransactionRequest extends com.google.api.client.json.Ge
 
   /**
    * Optional. Required for read-write transactions on a multiplexed session that commit mutations
-   * but do not perform any reads or queries. Clients should randomly select one of the mutations
-   * from the mutation set and send it as a part of this request.
+   * but don't perform any reads or queries. You must randomly select one of the mutations from the
+   * mutation set and send it as a part of this request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,8 +47,8 @@ public final class BeginTransactionRequest extends com.google.api.client.json.Ge
 
   /**
    * Common options for this request. Priority is ignored for this request. Setting the priority in
-   * this request_options struct will not do anything. To set the priority for a transaction, set it
-   * on the reads and writes that are part of this transaction instead.
+   * this `request_options` struct doesn't do anything. To set the priority for a transaction, set
+   * it on the reads and writes that are part of this transaction instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,8 +56,8 @@ public final class BeginTransactionRequest extends com.google.api.client.json.Ge
 
   /**
    * Optional. Required for read-write transactions on a multiplexed session that commit mutations
-   * but do not perform any reads or queries. Clients should randomly select one of the mutations
-   * from the mutation set and send it as a part of this request.
+   * but don't perform any reads or queries. You must randomly select one of the mutations from the
+   * mutation set and send it as a part of this request.
    * @return value or {@code null} for none
    */
   public Mutation getMutationKey() {
@@ -66,8 +66,8 @@ public final class BeginTransactionRequest extends com.google.api.client.json.Ge
 
   /**
    * Optional. Required for read-write transactions on a multiplexed session that commit mutations
-   * but do not perform any reads or queries. Clients should randomly select one of the mutations
-   * from the mutation set and send it as a part of this request.
+   * but don't perform any reads or queries. You must randomly select one of the mutations from the
+   * mutation set and send it as a part of this request.
    * @param mutationKey mutationKey or {@code null} for none
    */
   public BeginTransactionRequest setMutationKey(Mutation mutationKey) {
@@ -94,8 +94,8 @@ public final class BeginTransactionRequest extends com.google.api.client.json.Ge
 
   /**
    * Common options for this request. Priority is ignored for this request. Setting the priority in
-   * this request_options struct will not do anything. To set the priority for a transaction, set it
-   * on the reads and writes that are part of this transaction instead.
+   * this `request_options` struct doesn't do anything. To set the priority for a transaction, set
+   * it on the reads and writes that are part of this transaction instead.
    * @return value or {@code null} for none
    */
   public RequestOptions getRequestOptions() {
@@ -104,8 +104,8 @@ public final class BeginTransactionRequest extends com.google.api.client.json.Ge
 
   /**
    * Common options for this request. Priority is ignored for this request. Setting the priority in
-   * this request_options struct will not do anything. To set the priority for a transaction, set it
-   * on the reads and writes that are part of this transaction instead.
+   * this `request_options` struct doesn't do anything. To set the priority for a transaction, set
+   * it on the reads and writes that are part of this transaction instead.
    * @param requestOptions requestOptions or {@code null} for none
    */
   public BeginTransactionRequest setRequestOptions(RequestOptions requestOptions) {

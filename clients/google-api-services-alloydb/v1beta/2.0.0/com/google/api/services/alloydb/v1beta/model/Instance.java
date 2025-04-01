@@ -56,6 +56,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private ClientConnectionConfig clientConnectionConfig;
 
   /**
+   * Optional. The configuration for Managed Connection Pool (MCP).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ConnectionPoolConfig connectionPoolConfig;
+
+  /**
    * Output only. Create time stamp
    * The value may be {@code null}.
    */
@@ -334,6 +341,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setClientConnectionConfig(ClientConnectionConfig clientConnectionConfig) {
     this.clientConnectionConfig = clientConnectionConfig;
+    return this;
+  }
+
+  /**
+   * Optional. The configuration for Managed Connection Pool (MCP).
+   * @return value or {@code null} for none
+   */
+  public ConnectionPoolConfig getConnectionPoolConfig() {
+    return connectionPoolConfig;
+  }
+
+  /**
+   * Optional. The configuration for Managed Connection Pool (MCP).
+   * @param connectionPoolConfig connectionPoolConfig or {@code null} for none
+   */
+  public Instance setConnectionPoolConfig(ConnectionPoolConfig connectionPoolConfig) {
+    this.connectionPoolConfig = connectionPoolConfig;
     return this;
   }
 

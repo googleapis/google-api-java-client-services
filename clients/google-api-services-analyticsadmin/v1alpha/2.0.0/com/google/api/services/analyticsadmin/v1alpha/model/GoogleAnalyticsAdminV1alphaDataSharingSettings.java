@@ -39,38 +39,47 @@ public final class GoogleAnalyticsAdminV1alphaDataSharingSettings extends com.go
   private java.lang.String name;
 
   /**
-   * Allows any of Google sales to access the data in order to suggest configuration changes to
-   * improve results.
+   * Deprecated. This field is no longer used and always returns false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean sharingWithGoogleAnySalesEnabled;
 
   /**
-   * Allows Google sales teams that are assigned to the customer to access the data in order to
-   * suggest configuration changes to improve results. Sales team restrictions still apply when
-   * enabled.
+   * Allows Google access to your Google Analytics account data, including account usage and
+   * configuration data, product spending, and users associated with your Google Analytics account,
+   * so that Google can help you make the most of Google products, providing you with insights,
+   * offers, recommendations, and optimization tips across Google Analytics and other Google
+   * products for business. This field maps to the "Recommendations for your business" field in the
+   * Google Analytics Admin UI.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean sharingWithGoogleAssignedSalesEnabled;
 
   /**
-   * Allows Google to use the data to improve other Google products or services.
+   * Allows Google to use the data to improve other Google products or services. This fields maps to
+   * the "Google products & services" field in the Google Analytics Admin UI.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean sharingWithGoogleProductsEnabled;
 
   /**
-   * Allows Google support to access the data in order to help troubleshoot issues.
+   * Allows Google technical support representatives access to your Google Analytics data and
+   * account when necessary to provide service and find solutions to technical issues. This field
+   * maps to the "Technical support" field in the Google Analytics Admin UI.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean sharingWithGoogleSupportEnabled;
 
   /**
-   * Allows Google to share the data anonymously in aggregate form with others.
+   * Enable features like predictions, modeled data, and benchmarking that can provide you with
+   * richer business insights when you contribute aggregated measurement data. The data you share
+   * (including information about the property from which it is shared) is aggregated and de-
+   * identified before being used to generate business insights. This field maps to the "Modeling
+   * contributions & business insights" field in the Google Analytics Admin UI.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,8 +105,7 @@ public final class GoogleAnalyticsAdminV1alphaDataSharingSettings extends com.go
   }
 
   /**
-   * Allows any of Google sales to access the data in order to suggest configuration changes to
-   * improve results.
+   * Deprecated. This field is no longer used and always returns false.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSharingWithGoogleAnySalesEnabled() {
@@ -105,8 +113,7 @@ public final class GoogleAnalyticsAdminV1alphaDataSharingSettings extends com.go
   }
 
   /**
-   * Allows any of Google sales to access the data in order to suggest configuration changes to
-   * improve results.
+   * Deprecated. This field is no longer used and always returns false.
    * @param sharingWithGoogleAnySalesEnabled sharingWithGoogleAnySalesEnabled or {@code null} for none
    */
   public GoogleAnalyticsAdminV1alphaDataSharingSettings setSharingWithGoogleAnySalesEnabled(java.lang.Boolean sharingWithGoogleAnySalesEnabled) {
@@ -115,9 +122,12 @@ public final class GoogleAnalyticsAdminV1alphaDataSharingSettings extends com.go
   }
 
   /**
-   * Allows Google sales teams that are assigned to the customer to access the data in order to
-   * suggest configuration changes to improve results. Sales team restrictions still apply when
-   * enabled.
+   * Allows Google access to your Google Analytics account data, including account usage and
+   * configuration data, product spending, and users associated with your Google Analytics account,
+   * so that Google can help you make the most of Google products, providing you with insights,
+   * offers, recommendations, and optimization tips across Google Analytics and other Google
+   * products for business. This field maps to the "Recommendations for your business" field in the
+   * Google Analytics Admin UI.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSharingWithGoogleAssignedSalesEnabled() {
@@ -125,9 +135,12 @@ public final class GoogleAnalyticsAdminV1alphaDataSharingSettings extends com.go
   }
 
   /**
-   * Allows Google sales teams that are assigned to the customer to access the data in order to
-   * suggest configuration changes to improve results. Sales team restrictions still apply when
-   * enabled.
+   * Allows Google access to your Google Analytics account data, including account usage and
+   * configuration data, product spending, and users associated with your Google Analytics account,
+   * so that Google can help you make the most of Google products, providing you with insights,
+   * offers, recommendations, and optimization tips across Google Analytics and other Google
+   * products for business. This field maps to the "Recommendations for your business" field in the
+   * Google Analytics Admin UI.
    * @param sharingWithGoogleAssignedSalesEnabled sharingWithGoogleAssignedSalesEnabled or {@code null} for none
    */
   public GoogleAnalyticsAdminV1alphaDataSharingSettings setSharingWithGoogleAssignedSalesEnabled(java.lang.Boolean sharingWithGoogleAssignedSalesEnabled) {
@@ -136,7 +149,8 @@ public final class GoogleAnalyticsAdminV1alphaDataSharingSettings extends com.go
   }
 
   /**
-   * Allows Google to use the data to improve other Google products or services.
+   * Allows Google to use the data to improve other Google products or services. This fields maps to
+   * the "Google products & services" field in the Google Analytics Admin UI.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSharingWithGoogleProductsEnabled() {
@@ -144,7 +158,8 @@ public final class GoogleAnalyticsAdminV1alphaDataSharingSettings extends com.go
   }
 
   /**
-   * Allows Google to use the data to improve other Google products or services.
+   * Allows Google to use the data to improve other Google products or services. This fields maps to
+   * the "Google products & services" field in the Google Analytics Admin UI.
    * @param sharingWithGoogleProductsEnabled sharingWithGoogleProductsEnabled or {@code null} for none
    */
   public GoogleAnalyticsAdminV1alphaDataSharingSettings setSharingWithGoogleProductsEnabled(java.lang.Boolean sharingWithGoogleProductsEnabled) {
@@ -153,7 +168,9 @@ public final class GoogleAnalyticsAdminV1alphaDataSharingSettings extends com.go
   }
 
   /**
-   * Allows Google support to access the data in order to help troubleshoot issues.
+   * Allows Google technical support representatives access to your Google Analytics data and
+   * account when necessary to provide service and find solutions to technical issues. This field
+   * maps to the "Technical support" field in the Google Analytics Admin UI.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSharingWithGoogleSupportEnabled() {
@@ -161,7 +178,9 @@ public final class GoogleAnalyticsAdminV1alphaDataSharingSettings extends com.go
   }
 
   /**
-   * Allows Google support to access the data in order to help troubleshoot issues.
+   * Allows Google technical support representatives access to your Google Analytics data and
+   * account when necessary to provide service and find solutions to technical issues. This field
+   * maps to the "Technical support" field in the Google Analytics Admin UI.
    * @param sharingWithGoogleSupportEnabled sharingWithGoogleSupportEnabled or {@code null} for none
    */
   public GoogleAnalyticsAdminV1alphaDataSharingSettings setSharingWithGoogleSupportEnabled(java.lang.Boolean sharingWithGoogleSupportEnabled) {
@@ -170,7 +189,11 @@ public final class GoogleAnalyticsAdminV1alphaDataSharingSettings extends com.go
   }
 
   /**
-   * Allows Google to share the data anonymously in aggregate form with others.
+   * Enable features like predictions, modeled data, and benchmarking that can provide you with
+   * richer business insights when you contribute aggregated measurement data. The data you share
+   * (including information about the property from which it is shared) is aggregated and de-
+   * identified before being used to generate business insights. This field maps to the "Modeling
+   * contributions & business insights" field in the Google Analytics Admin UI.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSharingWithOthersEnabled() {
@@ -178,7 +201,11 @@ public final class GoogleAnalyticsAdminV1alphaDataSharingSettings extends com.go
   }
 
   /**
-   * Allows Google to share the data anonymously in aggregate form with others.
+   * Enable features like predictions, modeled data, and benchmarking that can provide you with
+   * richer business insights when you contribute aggregated measurement data. The data you share
+   * (including information about the property from which it is shared) is aggregated and de-
+   * identified before being used to generate business insights. This field maps to the "Modeling
+   * contributions & business insights" field in the Google Analytics Admin UI.
    * @param sharingWithOthersEnabled sharingWithOthersEnabled or {@code null} for none
    */
   public GoogleAnalyticsAdminV1alphaDataSharingSettings setSharingWithOthersEnabled(java.lang.Boolean sharingWithOthersEnabled) {

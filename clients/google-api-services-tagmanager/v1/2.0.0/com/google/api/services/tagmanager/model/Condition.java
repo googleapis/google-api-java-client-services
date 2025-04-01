@@ -36,17 +36,14 @@ public final class Condition extends com.google.api.client.json.GenericJson {
    * case-insensitive Regex matching, include a boolean parameter named ignore_case that is set to
    * true. If not specified or set to any other value, the matching will be case sensitive. - To
    * negate an operator, include a boolean parameter named negate boolean parameter that is set to
-   * true. @mutable tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
+   * true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<Parameter> parameter;
 
   /**
-   * The type of operator for this condition. @mutable
-   * tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
+   * The type of operator for this condition.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,8 +56,7 @@ public final class Condition extends com.google.api.client.json.GenericJson {
    * case-insensitive Regex matching, include a boolean parameter named ignore_case that is set to
    * true. If not specified or set to any other value, the matching will be case sensitive. - To
    * negate an operator, include a boolean parameter named negate boolean parameter that is set to
-   * true. @mutable tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
+   * true.
    * @return value or {@code null} for none
    */
   public java.util.List<Parameter> getParameter() {
@@ -74,8 +70,7 @@ public final class Condition extends com.google.api.client.json.GenericJson {
    * case-insensitive Regex matching, include a boolean parameter named ignore_case that is set to
    * true. If not specified or set to any other value, the matching will be case sensitive. - To
    * negate an operator, include a boolean parameter named negate boolean parameter that is set to
-   * true. @mutable tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
+   * true.
    * @param parameter parameter or {@code null} for none
    */
   public Condition setParameter(java.util.List<Parameter> parameter) {
@@ -84,9 +79,7 @@ public final class Condition extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of operator for this condition. @mutable
-   * tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
+   * The type of operator for this condition.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -94,9 +87,7 @@ public final class Condition extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The type of operator for this condition. @mutable
-   * tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
+   * The type of operator for this condition.
    * @param type type or {@code null} for none
    */
   public Condition setType(java.lang.String type) {

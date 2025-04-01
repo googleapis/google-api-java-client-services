@@ -2,6 +2,6 @@
   "maven": {
     "groupId": "com.google.apis",
     "artifactId": "google-api-services-localservices",
-    "version": "v1-rev20211011-1.32.1"
+    "version": "v1-rev20241202-2.0.0"
   }
 }

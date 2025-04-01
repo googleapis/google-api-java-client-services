@@ -89,6 +89,13 @@ public final class Activity extends com.google.api.client.json.GenericJson {
   private java.lang.String ownerDomain;
 
   /**
+   * Details of the resource on which the action was performed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ResourceDetails> resourceDetails;
+
+  /**
    * User doing the action.
    * @return value or {@code null} for none
    */
@@ -215,6 +222,23 @@ public final class Activity extends com.google.api.client.json.GenericJson {
     return this;
   }
 
+  /**
+   * Details of the resource on which the action was performed.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ResourceDetails> getResourceDetails() {
+    return resourceDetails;
+  }
+
+  /**
+   * Details of the resource on which the action was performed.
+   * @param resourceDetails resourceDetails or {@code null} for none
+   */
+  public Activity setResourceDetails(java.util.List<ResourceDetails> resourceDetails) {
+    this.resourceDetails = resourceDetails;
+    return this;
+  }
+
   @Override
   public Activity set(String fieldName, Object value) {
     return (Activity) super.set(fieldName, value);
@@ -229,6 +253,13 @@ public final class Activity extends com.google.api.client.json.GenericJson {
    * User doing the action.
    */
   public static final class Actor extends com.google.api.client.json.GenericJson {
+
+    /**
+     * Details of the application that was the actor for the activity.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private ApplicationInfo applicationInfo;
 
     /**
      * The type of actor.
@@ -261,6 +292,23 @@ public final class Activity extends com.google.api.client.json.GenericJson {
      */
     @com.google.api.client.util.Key
     private java.lang.String profileId;
+
+    /**
+     * Details of the application that was the actor for the activity.
+     * @return value or {@code null} for none
+     */
+    public ApplicationInfo getApplicationInfo() {
+      return applicationInfo;
+    }
+
+    /**
+     * Details of the application that was the actor for the activity.
+     * @param applicationInfo applicationInfo or {@code null} for none
+     */
+    public Actor setApplicationInfo(ApplicationInfo applicationInfo) {
+      this.applicationInfo = applicationInfo;
+      return this;
+    }
 
     /**
      * The type of actor.
@@ -348,6 +396,94 @@ public final class Activity extends com.google.api.client.json.GenericJson {
       return (Actor) super.clone();
     }
 
+    /**
+     * Details of the application that was the actor for the activity.
+     */
+    public static final class ApplicationInfo extends com.google.api.client.json.GenericJson {
+
+      /**
+       * Name of the application used to perform the action.
+       * The value may be {@code null}.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String applicationName;
+
+      /**
+       * Whether the application was impersonating a user.
+       * The value may be {@code null}.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean impersonation;
+
+      /**
+       * OAuth client id of the third party application used to perform the action.
+       * The value may be {@code null}.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String oauthClientId;
+
+      /**
+       * Name of the application used to perform the action.
+       * @return value or {@code null} for none
+       */
+      public java.lang.String getApplicationName() {
+        return applicationName;
+      }
+
+      /**
+       * Name of the application used to perform the action.
+       * @param applicationName applicationName or {@code null} for none
+       */
+      public ApplicationInfo setApplicationName(java.lang.String applicationName) {
+        this.applicationName = applicationName;
+        return this;
+      }
+
+      /**
+       * Whether the application was impersonating a user.
+       * @return value or {@code null} for none
+       */
+      public java.lang.Boolean getImpersonation() {
+        return impersonation;
+      }
+
+      /**
+       * Whether the application was impersonating a user.
+       * @param impersonation impersonation or {@code null} for none
+       */
+      public ApplicationInfo setImpersonation(java.lang.Boolean impersonation) {
+        this.impersonation = impersonation;
+        return this;
+      }
+
+      /**
+       * OAuth client id of the third party application used to perform the action.
+       * @return value or {@code null} for none
+       */
+      public java.lang.String getOauthClientId() {
+        return oauthClientId;
+      }
+
+      /**
+       * OAuth client id of the third party application used to perform the action.
+       * @param oauthClientId oauthClientId or {@code null} for none
+       */
+      public ApplicationInfo setOauthClientId(java.lang.String oauthClientId) {
+        this.oauthClientId = oauthClientId;
+        return this;
+      }
+
+      @Override
+      public ApplicationInfo set(String fieldName, Object value) {
+        return (ApplicationInfo) super.set(fieldName, value);
+      }
+
+      @Override
+      public ApplicationInfo clone() {
+        return (ApplicationInfo) super.clone();
+      }
+
+    }
   }
 
   /**
@@ -381,6 +517,13 @@ public final class Activity extends com.google.api.client.json.GenericJson {
       // see https://github.com/google/google-api-java-client/issues/543
       com.google.api.client.util.Data.nullOf(Parameters.class);
     }
+
+    /**
+     * Resource ids associated with the event.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.util.List<java.lang.String> resourceIds;
 
     /**
      * Type of event. The Google Workspace service or feature that an administrator changes is
@@ -437,6 +580,23 @@ public final class Activity extends com.google.api.client.json.GenericJson {
      */
     public Events setParameters(java.util.List<Parameters> parameters) {
       this.parameters = parameters;
+      return this;
+    }
+
+    /**
+     * Resource ids associated with the event.
+     * @return value or {@code null} for none
+     */
+    public java.util.List<java.lang.String> getResourceIds() {
+      return resourceIds;
+    }
+
+    /**
+     * Resource ids associated with the event.
+     * @param resourceIds resourceIds or {@code null} for none
+     */
+    public Events setResourceIds(java.util.List<java.lang.String> resourceIds) {
+      this.resourceIds = resourceIds;
       return this;
     }
 

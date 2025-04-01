@@ -39,7 +39,7 @@ public final class ReadRequest extends com.google.api.client.json.GenericJson {
   /**
    * If this is for a partitioned read and this field is set to `true`, the request is executed with
    * Spanner Data Boost independent compute resources. If the field is set to `true` but the request
-   * does not set `partition_token`, the API returns an `INVALID_ARGUMENT` error.
+   * doesn't set `partition_token`, the API returns an `INVALID_ARGUMENT` error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,8 +65,8 @@ public final class ReadRequest extends com.google.api.client.json.GenericJson {
    * rows in table to be yielded, unless index is present. If index is present, then key_set instead
    * names index keys in index. If the partition_token field is empty, rows are yielded in table
    * primary key order (if index is empty) or index key order (if index is non-empty). If the
-   * partition_token field is not empty, rows will be yielded in an unspecified order. It is not an
-   * error for the `key_set` to name rows that do not exist in the database. Read yields nothing for
+   * partition_token field isn't empty, rows are yielded in an unspecified order. It isn't an error
+   * for the `key_set` to name rows that don't exist in the database. Read yields nothing for
    * nonexistent rows.
    * The value may be {@code null}.
    */
@@ -75,7 +75,7 @@ public final class ReadRequest extends com.google.api.client.json.GenericJson {
 
   /**
    * If greater than zero, only the first `limit` rows are yielded. If `limit` is zero, the default
-   * is no limit. A limit cannot be specified if `partition_token` is set.
+   * is no limit. A limit can't be specified if `partition_token` is set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -89,19 +89,19 @@ public final class ReadRequest extends com.google.api.client.json.GenericJson {
   private java.lang.String lockHint;
 
   /**
-   * Optional. Order for the returned rows. By default, Spanner will return result rows in primary
-   * key order except for PartitionRead requests. For applications that do not require rows to be
+   * Optional. Order for the returned rows. By default, Spanner returns result rows in primary key
+   * order except for PartitionRead requests. For applications that don't require rows to be
    * returned in primary key (`ORDER_BY_PRIMARY_KEY`) order, setting `ORDER_BY_NO_ORDER` option
-   * allows Spanner to optimize row retrieval, resulting in lower latencies in certain cases (e.g.
-   * bulk point lookups).
+   * allows Spanner to optimize row retrieval, resulting in lower latencies in certain cases (for
+   * example, bulk point lookups).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String orderBy;
 
   /**
-   * If present, results will be restricted to the specified partition previously created using
-   * PartitionRead(). There must be an exact match for the values of fields common to this message
+   * If present, results are restricted to the specified partition previously created using
+   * `PartitionRead`. There must be an exact match for the values of fields common to this message
    * and the PartitionReadRequest message used to create this partition_token.
    * The value may be {@code null}.
    */
@@ -160,7 +160,7 @@ public final class ReadRequest extends com.google.api.client.json.GenericJson {
   /**
    * If this is for a partitioned read and this field is set to `true`, the request is executed with
    * Spanner Data Boost independent compute resources. If the field is set to `true` but the request
-   * does not set `partition_token`, the API returns an `INVALID_ARGUMENT` error.
+   * doesn't set `partition_token`, the API returns an `INVALID_ARGUMENT` error.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDataBoostEnabled() {
@@ -170,7 +170,7 @@ public final class ReadRequest extends com.google.api.client.json.GenericJson {
   /**
    * If this is for a partitioned read and this field is set to `true`, the request is executed with
    * Spanner Data Boost independent compute resources. If the field is set to `true` but the request
-   * does not set `partition_token`, the API returns an `INVALID_ARGUMENT` error.
+   * doesn't set `partition_token`, the API returns an `INVALID_ARGUMENT` error.
    * @param dataBoostEnabled dataBoostEnabled or {@code null} for none
    */
   public ReadRequest setDataBoostEnabled(java.lang.Boolean dataBoostEnabled) {
@@ -219,8 +219,8 @@ public final class ReadRequest extends com.google.api.client.json.GenericJson {
    * rows in table to be yielded, unless index is present. If index is present, then key_set instead
    * names index keys in index. If the partition_token field is empty, rows are yielded in table
    * primary key order (if index is empty) or index key order (if index is non-empty). If the
-   * partition_token field is not empty, rows will be yielded in an unspecified order. It is not an
-   * error for the `key_set` to name rows that do not exist in the database. Read yields nothing for
+   * partition_token field isn't empty, rows are yielded in an unspecified order. It isn't an error
+   * for the `key_set` to name rows that don't exist in the database. Read yields nothing for
    * nonexistent rows.
    * @return value or {@code null} for none
    */
@@ -233,8 +233,8 @@ public final class ReadRequest extends com.google.api.client.json.GenericJson {
    * rows in table to be yielded, unless index is present. If index is present, then key_set instead
    * names index keys in index. If the partition_token field is empty, rows are yielded in table
    * primary key order (if index is empty) or index key order (if index is non-empty). If the
-   * partition_token field is not empty, rows will be yielded in an unspecified order. It is not an
-   * error for the `key_set` to name rows that do not exist in the database. Read yields nothing for
+   * partition_token field isn't empty, rows are yielded in an unspecified order. It isn't an error
+   * for the `key_set` to name rows that don't exist in the database. Read yields nothing for
    * nonexistent rows.
    * @param keySet keySet or {@code null} for none
    */
@@ -245,7 +245,7 @@ public final class ReadRequest extends com.google.api.client.json.GenericJson {
 
   /**
    * If greater than zero, only the first `limit` rows are yielded. If `limit` is zero, the default
-   * is no limit. A limit cannot be specified if `partition_token` is set.
+   * is no limit. A limit can't be specified if `partition_token` is set.
    * @return value or {@code null} for none
    */
   public java.lang.Long getLimit() {
@@ -254,7 +254,7 @@ public final class ReadRequest extends com.google.api.client.json.GenericJson {
 
   /**
    * If greater than zero, only the first `limit` rows are yielded. If `limit` is zero, the default
-   * is no limit. A limit cannot be specified if `partition_token` is set.
+   * is no limit. A limit can't be specified if `partition_token` is set.
    * @param limit limit or {@code null} for none
    */
   public ReadRequest setLimit(java.lang.Long limit) {
@@ -280,11 +280,11 @@ public final class ReadRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Order for the returned rows. By default, Spanner will return result rows in primary
-   * key order except for PartitionRead requests. For applications that do not require rows to be
+   * Optional. Order for the returned rows. By default, Spanner returns result rows in primary key
+   * order except for PartitionRead requests. For applications that don't require rows to be
    * returned in primary key (`ORDER_BY_PRIMARY_KEY`) order, setting `ORDER_BY_NO_ORDER` option
-   * allows Spanner to optimize row retrieval, resulting in lower latencies in certain cases (e.g.
-   * bulk point lookups).
+   * allows Spanner to optimize row retrieval, resulting in lower latencies in certain cases (for
+   * example, bulk point lookups).
    * @return value or {@code null} for none
    */
   public java.lang.String getOrderBy() {
@@ -292,11 +292,11 @@ public final class ReadRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Order for the returned rows. By default, Spanner will return result rows in primary
-   * key order except for PartitionRead requests. For applications that do not require rows to be
+   * Optional. Order for the returned rows. By default, Spanner returns result rows in primary key
+   * order except for PartitionRead requests. For applications that don't require rows to be
    * returned in primary key (`ORDER_BY_PRIMARY_KEY`) order, setting `ORDER_BY_NO_ORDER` option
-   * allows Spanner to optimize row retrieval, resulting in lower latencies in certain cases (e.g.
-   * bulk point lookups).
+   * allows Spanner to optimize row retrieval, resulting in lower latencies in certain cases (for
+   * example, bulk point lookups).
    * @param orderBy orderBy or {@code null} for none
    */
   public ReadRequest setOrderBy(java.lang.String orderBy) {
@@ -305,8 +305,8 @@ public final class ReadRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If present, results will be restricted to the specified partition previously created using
-   * PartitionRead(). There must be an exact match for the values of fields common to this message
+   * If present, results are restricted to the specified partition previously created using
+   * `PartitionRead`. There must be an exact match for the values of fields common to this message
    * and the PartitionReadRequest message used to create this partition_token.
    * @see #decodePartitionToken()
    * @return value or {@code null} for none
@@ -316,8 +316,8 @@ public final class ReadRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If present, results will be restricted to the specified partition previously created using
-   * PartitionRead(). There must be an exact match for the values of fields common to this message
+   * If present, results are restricted to the specified partition previously created using
+   * `PartitionRead`. There must be an exact match for the values of fields common to this message
    * and the PartitionReadRequest message used to create this partition_token.
    * @see #getPartitionToken()
    * @return Base64 decoded value or {@code null} for none
@@ -329,8 +329,8 @@ public final class ReadRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If present, results will be restricted to the specified partition previously created using
-   * PartitionRead(). There must be an exact match for the values of fields common to this message
+   * If present, results are restricted to the specified partition previously created using
+   * `PartitionRead`. There must be an exact match for the values of fields common to this message
    * and the PartitionReadRequest message used to create this partition_token.
    * @see #encodePartitionToken()
    * @param partitionToken partitionToken or {@code null} for none
@@ -341,8 +341,8 @@ public final class ReadRequest extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If present, results will be restricted to the specified partition previously created using
-   * PartitionRead(). There must be an exact match for the values of fields common to this message
+   * If present, results are restricted to the specified partition previously created using
+   * `PartitionRead`. There must be an exact match for the values of fields common to this message
    * and the PartitionReadRequest message used to create this partition_token.
    * @see #setPartitionToken()
    *

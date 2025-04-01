@@ -510,7 +510,7 @@ public final class Task extends com.google.api.client.json.GenericJson {
   public static final class Links extends com.google.api.client.json.GenericJson {
 
     /**
-     * The description. In HTML speak: Everything between  and .
+     * The description (might be empty).
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -524,14 +524,14 @@ public final class Task extends com.google.api.client.json.GenericJson {
     private java.lang.String link;
 
     /**
-     * Type of the link, e.g. "email".
+     * Type of the link, e.g. "email", "generic", "chat_message", "keep_note".
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.String type;
 
     /**
-     * The description. In HTML speak: Everything between  and .
+     * The description (might be empty).
      * @return value or {@code null} for none
      */
     public java.lang.String getDescription() {
@@ -539,7 +539,7 @@ public final class Task extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The description. In HTML speak: Everything between  and .
+     * The description (might be empty).
      * @param description description or {@code null} for none
      */
     public Links setDescription(java.lang.String description) {
@@ -565,7 +565,7 @@ public final class Task extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Type of the link, e.g. "email".
+     * Type of the link, e.g. "email", "generic", "chat_message", "keep_note".
      * @return value or {@code null} for none
      */
     public java.lang.String getType() {
@@ -573,7 +573,7 @@ public final class Task extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Type of the link, e.g. "email".
+     * Type of the link, e.g. "email", "generic", "chat_message", "keep_note".
      * @param type type or {@code null} for none
      */
     public Links setType(java.lang.String type) {

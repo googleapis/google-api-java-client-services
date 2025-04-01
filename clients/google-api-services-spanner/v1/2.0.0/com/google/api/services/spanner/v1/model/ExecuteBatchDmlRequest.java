@@ -30,12 +30,12 @@ package com.google.api.services.spanner.v1.model;
 public final class ExecuteBatchDmlRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. If set to true, this request marks the end of the transaction. The transaction should
-   * be committed or aborted after these statements execute, and attempts to execute any other
-   * requests against this transaction (including reads and queries) will be rejected. Setting this
-   * option may cause some error reporting to be deferred until commit time (e.g. validation of
-   * unique constraints). Given this, successful execution of statements should not be assumed until
-   * a subsequent Commit call completes successfully.
+   * Optional. If set to `true`, this request marks the end of the transaction. After these
+   * statements execute, you must commit or abort the transaction. Attempts to execute any other
+   * requests against this transaction (including reads and queries) are rejected. Setting this
+   * option might cause some error reporting to be deferred until commit time (for example,
+   * validation of unique constraints). Given this, successful execution of statements shouldn't be
+   * assumed until a subsequent `Commit` call completes successfully.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,10 +50,10 @@ public final class ExecuteBatchDmlRequest extends com.google.api.client.json.Gen
 
   /**
    * Required. A per-transaction sequence number used to identify this request. This field makes
-   * each request idempotent such that if the request is received multiple times, at most one will
-   * succeed. The sequence number must be monotonically increasing within the transaction. If a
-   * request arrives for the first time with an out-of-order sequence number, the transaction may be
-   * aborted. Replays of previously handled requests will yield the same response as the first
+   * each request idempotent such that if the request is received multiple times, at most one
+   * succeeds. The sequence number must be monotonically increasing within the transaction. If a
+   * request arrives for the first time with an out-of-order sequence number, the transaction might
+   * be aborted. Replays of previously handled requests yield the same response as the first
    * execution.
    * The value may be {@code null}.
    */
@@ -80,12 +80,12 @@ public final class ExecuteBatchDmlRequest extends com.google.api.client.json.Gen
   private TransactionSelector transaction;
 
   /**
-   * Optional. If set to true, this request marks the end of the transaction. The transaction should
-   * be committed or aborted after these statements execute, and attempts to execute any other
-   * requests against this transaction (including reads and queries) will be rejected. Setting this
-   * option may cause some error reporting to be deferred until commit time (e.g. validation of
-   * unique constraints). Given this, successful execution of statements should not be assumed until
-   * a subsequent Commit call completes successfully.
+   * Optional. If set to `true`, this request marks the end of the transaction. After these
+   * statements execute, you must commit or abort the transaction. Attempts to execute any other
+   * requests against this transaction (including reads and queries) are rejected. Setting this
+   * option might cause some error reporting to be deferred until commit time (for example,
+   * validation of unique constraints). Given this, successful execution of statements shouldn't be
+   * assumed until a subsequent `Commit` call completes successfully.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getLastStatements() {
@@ -93,12 +93,12 @@ public final class ExecuteBatchDmlRequest extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. If set to true, this request marks the end of the transaction. The transaction should
-   * be committed or aborted after these statements execute, and attempts to execute any other
-   * requests against this transaction (including reads and queries) will be rejected. Setting this
-   * option may cause some error reporting to be deferred until commit time (e.g. validation of
-   * unique constraints). Given this, successful execution of statements should not be assumed until
-   * a subsequent Commit call completes successfully.
+   * Optional. If set to `true`, this request marks the end of the transaction. After these
+   * statements execute, you must commit or abort the transaction. Attempts to execute any other
+   * requests against this transaction (including reads and queries) are rejected. Setting this
+   * option might cause some error reporting to be deferred until commit time (for example,
+   * validation of unique constraints). Given this, successful execution of statements shouldn't be
+   * assumed until a subsequent `Commit` call completes successfully.
    * @param lastStatements lastStatements or {@code null} for none
    */
   public ExecuteBatchDmlRequest setLastStatements(java.lang.Boolean lastStatements) {
@@ -125,10 +125,10 @@ public final class ExecuteBatchDmlRequest extends com.google.api.client.json.Gen
 
   /**
    * Required. A per-transaction sequence number used to identify this request. This field makes
-   * each request idempotent such that if the request is received multiple times, at most one will
-   * succeed. The sequence number must be monotonically increasing within the transaction. If a
-   * request arrives for the first time with an out-of-order sequence number, the transaction may be
-   * aborted. Replays of previously handled requests will yield the same response as the first
+   * each request idempotent such that if the request is received multiple times, at most one
+   * succeeds. The sequence number must be monotonically increasing within the transaction. If a
+   * request arrives for the first time with an out-of-order sequence number, the transaction might
+   * be aborted. Replays of previously handled requests yield the same response as the first
    * execution.
    * @return value or {@code null} for none
    */
@@ -138,10 +138,10 @@ public final class ExecuteBatchDmlRequest extends com.google.api.client.json.Gen
 
   /**
    * Required. A per-transaction sequence number used to identify this request. This field makes
-   * each request idempotent such that if the request is received multiple times, at most one will
-   * succeed. The sequence number must be monotonically increasing within the transaction. If a
-   * request arrives for the first time with an out-of-order sequence number, the transaction may be
-   * aborted. Replays of previously handled requests will yield the same response as the first
+   * each request idempotent such that if the request is received multiple times, at most one
+   * succeeds. The sequence number must be monotonically increasing within the transaction. If a
+   * request arrives for the first time with an out-of-order sequence number, the transaction might
+   * be aborted. Replays of previously handled requests yield the same response as the first
    * execution.
    * @param seqno seqno or {@code null} for none
    */

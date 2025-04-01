@@ -42,6 +42,13 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   private GoogleCloudSecuritycenterV2Access access;
 
   /**
+   * AffectedResources associated with the finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudSecuritycenterV2AffectedResources affectedResources;
+
+  /**
    * Represents an application associated with the finding.
    * The value may be {@code null}.
    */
@@ -83,6 +90,16 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
    */
   @com.google.api.client.util.Key
   private java.lang.String category;
+
+  /**
+   * Contains details about a chokepoint, which is a resource or resource group where high-risk
+   * attack paths converge, based on [attack path simulations] (https://cloud.google.com/security-
+   * command-center/docs/attack-exposure-learn#attack_path_simulations). This field cannot be
+   * updated. Its value is ignored in all update requests.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudSecuritycenterV2Chokepoint chokepoint;
 
   /**
    * Fields related to Cloud Armor findings.
@@ -562,6 +579,23 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
+   * AffectedResources associated with the finding.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2AffectedResources getAffectedResources() {
+    return affectedResources;
+  }
+
+  /**
+   * AffectedResources associated with the finding.
+   * @param affectedResources affectedResources or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2Finding setAffectedResources(GoogleCloudSecuritycenterV2AffectedResources affectedResources) {
+    this.affectedResources = affectedResources;
+    return this;
+  }
+
+  /**
    * Represents an application associated with the finding.
    * @return value or {@code null} for none
    */
@@ -659,6 +693,29 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
    */
   public GoogleCloudSecuritycenterV2Finding setCategory(java.lang.String category) {
     this.category = category;
+    return this;
+  }
+
+  /**
+   * Contains details about a chokepoint, which is a resource or resource group where high-risk
+   * attack paths converge, based on [attack path simulations] (https://cloud.google.com/security-
+   * command-center/docs/attack-exposure-learn#attack_path_simulations). This field cannot be
+   * updated. Its value is ignored in all update requests.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2Chokepoint getChokepoint() {
+    return chokepoint;
+  }
+
+  /**
+   * Contains details about a chokepoint, which is a resource or resource group where high-risk
+   * attack paths converge, based on [attack path simulations] (https://cloud.google.com/security-
+   * command-center/docs/attack-exposure-learn#attack_path_simulations). This field cannot be
+   * updated. Its value is ignored in all update requests.
+   * @param chokepoint chokepoint or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2Finding setChokepoint(GoogleCloudSecuritycenterV2Chokepoint chokepoint) {
+    this.chokepoint = chokepoint;
     return this;
   }
 

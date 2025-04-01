@@ -59,8 +59,7 @@ public final class Folder extends com.google.api.client.json.GenericJson {
   private java.lang.String folderId;
 
   /**
-   * Folder display name. @mutable tagmanager.accounts.containers.folders.create @mutable
-   * tagmanager.accounts.containers.folders.update
+   * Folder display name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -137,8 +136,7 @@ public final class Folder extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Folder display name. @mutable tagmanager.accounts.containers.folders.create @mutable
-   * tagmanager.accounts.containers.folders.update
+   * Folder display name.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -146,8 +144,7 @@ public final class Folder extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Folder display name. @mutable tagmanager.accounts.containers.folders.create @mutable
-   * tagmanager.accounts.containers.folders.update
+   * Folder display name.
    * @param name name or {@code null} for none
    */
   public Folder setName(java.lang.String name) {

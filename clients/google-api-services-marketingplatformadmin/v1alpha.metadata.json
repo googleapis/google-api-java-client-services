@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-marketingplatformadmin",
+    "version": "v1alpha-rev20240529-2.0.0"
+  }
+}

@@ -51,14 +51,14 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
    * `run.googleapis.com/description`: Service. * `run.googleapis.com/encryption-key-shutdown-
    * hours`: Revision * `run.googleapis.com/encryption-key`: Revision, Execution. *
    * `run.googleapis.com/execution-environment`: Revision, Execution. * `run.googleapis.com/gc-
-   * traffic-tags`: Service. * `run.googleapis.com/health-check-disabled`: Revision. *
-   * `run.googleapis.com/ingress`: Service. * `run.googleapis.com/launch-stage`: Service, Job. *
-   * `run.googleapis.com/minScale`: Service * `run.googleapis.com/network-interfaces`: Revision,
-   * Execution. * `run.googleapis.com/post-key-revocation-action-type`: Revision. *
-   * `run.googleapis.com/secrets`: Revision, Execution. * `run.googleapis.com/secure-session-agent`:
-   * Revision. * `run.googleapis.com/sessionAffinity`: Revision. * `run.googleapis.com/startup-cpu-
-   * boost`: Revision. * `run.googleapis.com/vpc-access-connector`: Revision, Execution. *
-   * `run.googleapis.com/vpc-access-egress`: Revision, Execution.
+   * traffic-tags`: Service. * `run.googleapis.com/gpu-zonal-redundancy-disabled`: Revision. *
+   * `run.googleapis.com/health-check-disabled`: Revision. * `run.googleapis.com/ingress`: Service.
+   * * `run.googleapis.com/launch-stage`: Service, Job. * `run.googleapis.com/minScale`: Service *
+   * `run.googleapis.com/network-interfaces`: Revision, Execution. * `run.googleapis.com/post-key-
+   * revocation-action-type`: Revision. * `run.googleapis.com/secrets`: Revision, Execution. *
+   * `run.googleapis.com/secure-session-agent`: Revision. * `run.googleapis.com/sessionAffinity`:
+   * Revision. * `run.googleapis.com/startup-cpu-boost`: Revision. * `run.googleapis.com/vpc-access-
+   * connector`: Revision, Execution. * `run.googleapis.com/vpc-access-egress`: Revision, Execution.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -192,14 +192,14 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
    * `run.googleapis.com/description`: Service. * `run.googleapis.com/encryption-key-shutdown-
    * hours`: Revision * `run.googleapis.com/encryption-key`: Revision, Execution. *
    * `run.googleapis.com/execution-environment`: Revision, Execution. * `run.googleapis.com/gc-
-   * traffic-tags`: Service. * `run.googleapis.com/health-check-disabled`: Revision. *
-   * `run.googleapis.com/ingress`: Service. * `run.googleapis.com/launch-stage`: Service, Job. *
-   * `run.googleapis.com/minScale`: Service * `run.googleapis.com/network-interfaces`: Revision,
-   * Execution. * `run.googleapis.com/post-key-revocation-action-type`: Revision. *
-   * `run.googleapis.com/secrets`: Revision, Execution. * `run.googleapis.com/secure-session-agent`:
-   * Revision. * `run.googleapis.com/sessionAffinity`: Revision. * `run.googleapis.com/startup-cpu-
-   * boost`: Revision. * `run.googleapis.com/vpc-access-connector`: Revision, Execution. *
-   * `run.googleapis.com/vpc-access-egress`: Revision, Execution.
+   * traffic-tags`: Service. * `run.googleapis.com/gpu-zonal-redundancy-disabled`: Revision. *
+   * `run.googleapis.com/health-check-disabled`: Revision. * `run.googleapis.com/ingress`: Service.
+   * * `run.googleapis.com/launch-stage`: Service, Job. * `run.googleapis.com/minScale`: Service *
+   * `run.googleapis.com/network-interfaces`: Revision, Execution. * `run.googleapis.com/post-key-
+   * revocation-action-type`: Revision. * `run.googleapis.com/secrets`: Revision, Execution. *
+   * `run.googleapis.com/secure-session-agent`: Revision. * `run.googleapis.com/sessionAffinity`:
+   * Revision. * `run.googleapis.com/startup-cpu-boost`: Revision. * `run.googleapis.com/vpc-access-
+   * connector`: Revision, Execution. * `run.googleapis.com/vpc-access-egress`: Revision, Execution.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getAnnotations() {
@@ -227,14 +227,14 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
    * `run.googleapis.com/description`: Service. * `run.googleapis.com/encryption-key-shutdown-
    * hours`: Revision * `run.googleapis.com/encryption-key`: Revision, Execution. *
    * `run.googleapis.com/execution-environment`: Revision, Execution. * `run.googleapis.com/gc-
-   * traffic-tags`: Service. * `run.googleapis.com/health-check-disabled`: Revision. *
-   * `run.googleapis.com/ingress`: Service. * `run.googleapis.com/launch-stage`: Service, Job. *
-   * `run.googleapis.com/minScale`: Service * `run.googleapis.com/network-interfaces`: Revision,
-   * Execution. * `run.googleapis.com/post-key-revocation-action-type`: Revision. *
-   * `run.googleapis.com/secrets`: Revision, Execution. * `run.googleapis.com/secure-session-agent`:
-   * Revision. * `run.googleapis.com/sessionAffinity`: Revision. * `run.googleapis.com/startup-cpu-
-   * boost`: Revision. * `run.googleapis.com/vpc-access-connector`: Revision, Execution. *
-   * `run.googleapis.com/vpc-access-egress`: Revision, Execution.
+   * traffic-tags`: Service. * `run.googleapis.com/gpu-zonal-redundancy-disabled`: Revision. *
+   * `run.googleapis.com/health-check-disabled`: Revision. * `run.googleapis.com/ingress`: Service.
+   * * `run.googleapis.com/launch-stage`: Service, Job. * `run.googleapis.com/minScale`: Service *
+   * `run.googleapis.com/network-interfaces`: Revision, Execution. * `run.googleapis.com/post-key-
+   * revocation-action-type`: Revision. * `run.googleapis.com/secrets`: Revision, Execution. *
+   * `run.googleapis.com/secure-session-agent`: Revision. * `run.googleapis.com/sessionAffinity`:
+   * Revision. * `run.googleapis.com/startup-cpu-boost`: Revision. * `run.googleapis.com/vpc-access-
+   * connector`: Revision, Execution. * `run.googleapis.com/vpc-access-egress`: Revision, Execution.
    * @param annotations annotations or {@code null} for none
    */
   public ObjectMeta setAnnotations(java.util.Map<String, java.lang.String> annotations) {

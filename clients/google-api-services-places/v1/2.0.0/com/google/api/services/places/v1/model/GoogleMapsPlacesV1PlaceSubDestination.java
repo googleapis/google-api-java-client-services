@@ -17,8 +17,12 @@
 package com.google.api.services.places.v1.model;
 
 /**
- * Place resource name and id of sub destinations that relate to the place. For example, different
- * terminals are different destinations of an airport.
+ * Sub-destinations are specific places associated with a main place. These provide more specific
+ * destinations for users who are searching within a large or complex place, like an airport,
+ * national park, university, or stadium. For example, sub-destinations at an airport might include
+ * associated terminals and parking lots. Sub-destinations return the place ID and place resource
+ * name, which can be used in subsequent Place Details (New) requests to fetch richer details,
+ * including the sub-destination's display name and location.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Places API (New). For a detailed explanation see:
@@ -31,21 +35,21 @@ package com.google.api.services.places.v1.model;
 public final class GoogleMapsPlacesV1PlaceSubDestination extends com.google.api.client.json.GenericJson {
 
   /**
-   * The place id of the sub destination.
+   * The place id of the sub-destination.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
 
   /**
-   * The resource name of the sub destination.
+   * The resource name of the sub-destination.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The place id of the sub destination.
+   * The place id of the sub-destination.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -53,7 +57,7 @@ public final class GoogleMapsPlacesV1PlaceSubDestination extends com.google.api.
   }
 
   /**
-   * The place id of the sub destination.
+   * The place id of the sub-destination.
    * @param id id or {@code null} for none
    */
   public GoogleMapsPlacesV1PlaceSubDestination setId(java.lang.String id) {
@@ -62,7 +66,7 @@ public final class GoogleMapsPlacesV1PlaceSubDestination extends com.google.api.
   }
 
   /**
-   * The resource name of the sub destination.
+   * The resource name of the sub-destination.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -70,7 +74,7 @@ public final class GoogleMapsPlacesV1PlaceSubDestination extends com.google.api.
   }
 
   /**
-   * The resource name of the sub destination.
+   * The resource name of the sub-destination.
    * @param name name or {@code null} for none
    */
   public GoogleMapsPlacesV1PlaceSubDestination setName(java.lang.String name) {

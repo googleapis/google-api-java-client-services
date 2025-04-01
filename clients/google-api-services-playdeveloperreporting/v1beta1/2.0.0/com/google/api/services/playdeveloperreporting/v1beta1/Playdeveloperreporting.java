@@ -3460,6 +3460,298 @@ public class Playdeveloperreporting extends com.google.api.client.googleapis.ser
 
     }
     /**
+     * An accessor for creating requests from the Lmkrate collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Playdeveloperreporting playdeveloperreporting = new Playdeveloperreporting(...);}
+     *   {@code Playdeveloperreporting.Lmkrate.List request = playdeveloperreporting.lmkrate().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Lmkrate lmkrate() {
+      return new Lmkrate();
+    }
+
+    /**
+     * The "lmkrate" collection of methods.
+     */
+    public class Lmkrate {
+
+      /**
+       * Describes the properties of the metric set.
+       *
+       * Create a request for the method "lmkrate.get".
+       *
+       * This request holds the parameters needed by the playdeveloperreporting server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The resource name. Format: apps/{app}/lmkRateMetricSet
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends PlaydeveloperreportingRequest<com.google.api.services.playdeveloperreporting.v1beta1.model.GooglePlayDeveloperReportingV1beta1LmkRateMetricSet> {
+
+        private static final String REST_PATH = "v1beta1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^apps/[^/]+/lmkRateMetricSet$");
+
+        /**
+         * Describes the properties of the metric set.
+         *
+         * Create a request for the method "lmkrate.get".
+         *
+         * This request holds the parameters needed by the the playdeveloperreporting server.  After
+         * setting any optional parameters, call the {@link Get#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The resource name. Format: apps/{app}/lmkRateMetricSet
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(Playdeveloperreporting.this, "GET", REST_PATH, null, com.google.api.services.playdeveloperreporting.v1beta1.model.GooglePlayDeveloperReportingV1beta1LmkRateMetricSet.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^apps/[^/]+/lmkRateMetricSet$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The resource name. Format: apps/{app}/lmkRateMetricSet */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The resource name. Format: apps/{app}/lmkRateMetricSet
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Required. The resource name. Format: apps/{app}/lmkRateMetricSet */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^apps/[^/]+/lmkRateMetricSet$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Queries the metrics in the metric set.
+       *
+       * Create a request for the method "lmkrate.query".
+       *
+       * This request holds the parameters needed by the playdeveloperreporting server.  After setting any
+       * optional parameters, call the {@link Query#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The resource name. Format: apps/{app}/lmkRateMetricSet
+       * @param content the {@link com.google.api.services.playdeveloperreporting.v1beta1.model.GooglePlayDeveloperReportingV1beta1QueryLmkRateMetricSetRequest}
+       * @return the request
+       */
+      public Query query(java.lang.String name, com.google.api.services.playdeveloperreporting.v1beta1.model.GooglePlayDeveloperReportingV1beta1QueryLmkRateMetricSetRequest content) throws java.io.IOException {
+        Query result = new Query(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Query extends PlaydeveloperreportingRequest<com.google.api.services.playdeveloperreporting.v1beta1.model.GooglePlayDeveloperReportingV1beta1QueryLmkRateMetricSetResponse> {
+
+        private static final String REST_PATH = "v1beta1/{+name}:query";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^apps/[^/]+/lmkRateMetricSet$");
+
+        /**
+         * Queries the metrics in the metric set.
+         *
+         * Create a request for the method "lmkrate.query".
+         *
+         * This request holds the parameters needed by the the playdeveloperreporting server.  After
+         * setting any optional parameters, call the {@link Query#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Query#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The resource name. Format: apps/{app}/lmkRateMetricSet
+         * @param content the {@link com.google.api.services.playdeveloperreporting.v1beta1.model.GooglePlayDeveloperReportingV1beta1QueryLmkRateMetricSetRequest}
+         * @since 1.13
+         */
+        protected Query(java.lang.String name, com.google.api.services.playdeveloperreporting.v1beta1.model.GooglePlayDeveloperReportingV1beta1QueryLmkRateMetricSetRequest content) {
+          super(Playdeveloperreporting.this, "POST", REST_PATH, content, com.google.api.services.playdeveloperreporting.v1beta1.model.GooglePlayDeveloperReportingV1beta1QueryLmkRateMetricSetResponse.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^apps/[^/]+/lmkRateMetricSet$");
+          }
+        }
+
+        @Override
+        public Query set$Xgafv(java.lang.String $Xgafv) {
+          return (Query) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Query setAccessToken(java.lang.String accessToken) {
+          return (Query) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Query setAlt(java.lang.String alt) {
+          return (Query) super.setAlt(alt);
+        }
+
+        @Override
+        public Query setCallback(java.lang.String callback) {
+          return (Query) super.setCallback(callback);
+        }
+
+        @Override
+        public Query setFields(java.lang.String fields) {
+          return (Query) super.setFields(fields);
+        }
+
+        @Override
+        public Query setKey(java.lang.String key) {
+          return (Query) super.setKey(key);
+        }
+
+        @Override
+        public Query setOauthToken(java.lang.String oauthToken) {
+          return (Query) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Query setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Query) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Query setQuotaUser(java.lang.String quotaUser) {
+          return (Query) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Query setUploadType(java.lang.String uploadType) {
+          return (Query) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Query setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Query) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The resource name. Format: apps/{app}/lmkRateMetricSet */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The resource name. Format: apps/{app}/lmkRateMetricSet
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Required. The resource name. Format: apps/{app}/lmkRateMetricSet */
+        public Query setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^apps/[^/]+/lmkRateMetricSet$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Query set(String parameterName, Object value) {
+          return (Query) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
      * An accessor for creating requests from the Slowrenderingrate collection.
      *
      * <p>The typical use is:</p>

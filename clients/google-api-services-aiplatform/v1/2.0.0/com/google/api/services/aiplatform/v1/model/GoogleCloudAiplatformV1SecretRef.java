@@ -31,9 +31,7 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1SecretRef extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The name of the secret in Cloud Secret Manager. Format: {secret_name} if the secret
-   * is in the same project. projects/{project}/secrets/{secret_name} if the secret is in a
-   * different project.
+   * Required. The name of the secret in Cloud Secret Manager. Format: {secret_name}.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,9 +46,7 @@ public final class GoogleCloudAiplatformV1SecretRef extends com.google.api.clien
   private java.lang.String version;
 
   /**
-   * Required. The name of the secret in Cloud Secret Manager. Format: {secret_name} if the secret
-   * is in the same project. projects/{project}/secrets/{secret_name} if the secret is in a
-   * different project.
+   * Required. The name of the secret in Cloud Secret Manager. Format: {secret_name}.
    * @return value or {@code null} for none
    */
   public java.lang.String getSecret() {
@@ -58,9 +54,7 @@ public final class GoogleCloudAiplatformV1SecretRef extends com.google.api.clien
   }
 
   /**
-   * Required. The name of the secret in Cloud Secret Manager. Format: {secret_name} if the secret
-   * is in the same project. projects/{project}/secrets/{secret_name} if the secret is in a
-   * different project.
+   * Required. The name of the secret in Cloud Secret Manager. Format: {secret_name}.
    * @param secret secret or {@code null} for none
    */
   public GoogleCloudAiplatformV1SecretRef setSecret(java.lang.String secret) {

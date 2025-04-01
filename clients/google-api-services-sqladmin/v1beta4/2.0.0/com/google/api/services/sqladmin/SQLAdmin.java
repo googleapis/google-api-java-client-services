@@ -3022,6 +3022,29 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
+      /**
+       * Optional. Specify the scope of flags to be returned by SqlFlagsListService. Return list of
+       * database flags if unspecified.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String flagScope;
+
+      /** Optional. Specify the scope of flags to be returned by SqlFlagsListService. Return list of database
+     flags if unspecified.
+       */
+      public java.lang.String getFlagScope() {
+        return flagScope;
+      }
+
+      /**
+       * Optional. Specify the scope of flags to be returned by SqlFlagsListService. Return list of
+       * database flags if unspecified.
+       */
+      public List setFlagScope(java.lang.String flagScope) {
+        this.flagScope = flagScope;
+        return this;
+      }
+
       @Override
       public List set(String parameterName, Object value) {
         return (List) super.set(parameterName, value);

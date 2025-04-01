@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-apim",
+    "version": "v1alpha-rev20240717-2.0.0"
+  }
+}

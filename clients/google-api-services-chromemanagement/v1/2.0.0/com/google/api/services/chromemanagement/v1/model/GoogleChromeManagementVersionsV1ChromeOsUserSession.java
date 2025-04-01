@@ -32,8 +32,8 @@ public final class GoogleChromeManagementVersionsV1ChromeOsUserSession extends c
 
   /**
    * Output only. This field contains information about the ChromeOS device that the user session is
-   * running on. It is only set if the user session is affiliated, i.e. if the user is managed by
-   * the same organization that managed the ChromeOS device.
+   * running on. It is only set if the user is affiliated, i.e., if the user is managed by the same
+   * organization that manages the ChromeOS device.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,8 +55,8 @@ public final class GoogleChromeManagementVersionsV1ChromeOsUserSession extends c
 
   /**
    * Output only. This field contains information about the ChromeOS device that the user session is
-   * running on. It is only set if the user session is affiliated, i.e. if the user is managed by
-   * the same organization that managed the ChromeOS device.
+   * running on. It is only set if the user is affiliated, i.e., if the user is managed by the same
+   * organization that manages the ChromeOS device.
    * @return value or {@code null} for none
    */
   public GoogleChromeManagementVersionsV1ChromeOsDevice getChromeOsDevice() {
@@ -65,8 +65,8 @@ public final class GoogleChromeManagementVersionsV1ChromeOsUserSession extends c
 
   /**
    * Output only. This field contains information about the ChromeOS device that the user session is
-   * running on. It is only set if the user session is affiliated, i.e. if the user is managed by
-   * the same organization that managed the ChromeOS device.
+   * running on. It is only set if the user is affiliated, i.e., if the user is managed by the same
+   * organization that manages the ChromeOS device.
    * @param chromeOsDevice chromeOsDevice or {@code null} for none
    */
   public GoogleChromeManagementVersionsV1ChromeOsUserSession setChromeOsDevice(GoogleChromeManagementVersionsV1ChromeOsDevice chromeOsDevice) {

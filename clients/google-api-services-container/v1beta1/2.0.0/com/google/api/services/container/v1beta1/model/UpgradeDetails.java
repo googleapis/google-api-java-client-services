@@ -52,6 +52,13 @@ public final class UpgradeDetails extends com.google.api.client.json.GenericJson
   private String startTime;
 
   /**
+   * The start type of the upgrade.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String startType;
+
+  /**
    * Output only. The state of the upgrade.
    * The value may be {@code null}.
    */
@@ -113,6 +120,23 @@ public final class UpgradeDetails extends com.google.api.client.json.GenericJson
    */
   public UpgradeDetails setStartTime(String startTime) {
     this.startTime = startTime;
+    return this;
+  }
+
+  /**
+   * The start type of the upgrade.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStartType() {
+    return startType;
+  }
+
+  /**
+   * The start type of the upgrade.
+   * @param startType startType or {@code null} for none
+   */
+  public UpgradeDetails setStartType(java.lang.String startType) {
+    this.startType = startType;
     return this;
   }
 

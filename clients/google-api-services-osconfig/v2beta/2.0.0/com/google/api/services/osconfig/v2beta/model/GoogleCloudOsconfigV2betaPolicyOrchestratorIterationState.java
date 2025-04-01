@@ -52,6 +52,13 @@ public final class GoogleCloudOsconfigV2betaPolicyOrchestratorIterationState ext
   private String finishTime;
 
   /**
+   * Output only. Unique identifier of the iteration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String iterationId;
+
+  /**
    * Output only. Overall number of actions done by the orchestrator so far.
    * The value may be {@code null}.
    */
@@ -64,14 +71,6 @@ public final class GoogleCloudOsconfigV2betaPolicyOrchestratorIterationState ext
    */
   @com.google.api.client.util.Key
   private java.lang.Float progress;
-
-  /**
-   * Output only. Handle to the Progressive Rollouts API rollout resource, which contains detailed
-   * information about a particular orchestration iteration.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String rolloutResource;
 
   /**
    * Output only. Start time of the wave iteration.
@@ -141,6 +140,23 @@ public final class GoogleCloudOsconfigV2betaPolicyOrchestratorIterationState ext
   }
 
   /**
+   * Output only. Unique identifier of the iteration.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIterationId() {
+    return iterationId;
+  }
+
+  /**
+   * Output only. Unique identifier of the iteration.
+   * @param iterationId iterationId or {@code null} for none
+   */
+  public GoogleCloudOsconfigV2betaPolicyOrchestratorIterationState setIterationId(java.lang.String iterationId) {
+    this.iterationId = iterationId;
+    return this;
+  }
+
+  /**
    * Output only. Overall number of actions done by the orchestrator so far.
    * @return value or {@code null} for none
    */
@@ -171,25 +187,6 @@ public final class GoogleCloudOsconfigV2betaPolicyOrchestratorIterationState ext
    */
   public GoogleCloudOsconfigV2betaPolicyOrchestratorIterationState setProgress(java.lang.Float progress) {
     this.progress = progress;
-    return this;
-  }
-
-  /**
-   * Output only. Handle to the Progressive Rollouts API rollout resource, which contains detailed
-   * information about a particular orchestration iteration.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getRolloutResource() {
-    return rolloutResource;
-  }
-
-  /**
-   * Output only. Handle to the Progressive Rollouts API rollout resource, which contains detailed
-   * information about a particular orchestration iteration.
-   * @param rolloutResource rolloutResource or {@code null} for none
-   */
-  public GoogleCloudOsconfigV2betaPolicyOrchestratorIterationState setRolloutResource(java.lang.String rolloutResource) {
-    this.rolloutResource = rolloutResource;
     return this;
   }
 

@@ -37,9 +37,7 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   private java.lang.String accountId;
 
   /**
-   * Used in the case of auto event tracking. @mutable
-   * tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
+   * Used in the case of auto event tracking.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,8 +52,7 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   /**
    * Whether or not we should only fire tags if the form submit or link click event is not cancelled
    * by some other event handler (e.g. because of validation). Only valid for Form Submission and
-   * Link Click triggers. @mutable tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
+   * Link Click triggers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,17 +67,14 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
 
   /**
    * A visibility trigger minimum continuous visible time (in milliseconds). Only valid for AMP
-   * Visibility trigger. @mutable tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
+   * Visibility trigger.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Parameter continuousTimeMinMilliseconds;
 
   /**
-   * Used in the case of custom event, which is fired iff all Conditions are true. @mutable
-   * tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
+   * Used in the case of custom event, which is fired iff all Conditions are true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,18 +87,14 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the GTM event that is fired. Only valid for Timer triggers. @mutable
-   * tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
+   * Name of the GTM event that is fired. Only valid for Timer triggers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Parameter eventName;
 
   /**
-   * The trigger will only fire iff all Conditions are true. @mutable
-   * tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
+   * The trigger will only fire iff all Conditions are true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -127,8 +117,7 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   /**
    * List of integer percentage values for scroll triggers. The trigger will fire when each
    * percentage is reached when the view is scrolled horizontally. Only valid for AMP scroll
-   * triggers. @mutable tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
+   * triggers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -136,17 +125,14 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
 
   /**
    * Time between triggering recurring Timer Events (in milliseconds). Only valid for Timer
-   * triggers. @mutable tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
+   * triggers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Parameter interval;
 
   /**
-   * Time between Timer Events to fire (in seconds). Only valid for AMP Timer trigger. @mutable
-   * tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
+   * Time between Timer Events to fire (in seconds). Only valid for AMP Timer trigger.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -155,33 +141,27 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   /**
    * Limit of the number of GTM events this Timer Trigger will fire. If no limit is set, we will
    * continue to fire GTM events until the user leaves the page. Only valid for Timer triggers.
-   * @mutable tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Parameter limit;
 
   /**
-   * Max time to fire Timer Events (in seconds). Only valid for AMP Timer trigger. @mutable
-   * tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
+   * Max time to fire Timer Events (in seconds). Only valid for AMP Timer trigger.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Parameter maxTimerLengthSeconds;
 
   /**
-   * Trigger display name. @mutable tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
+   * Trigger display name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Additional parameters. @mutable tagmanager.accounts.containers.workspaces.triggers.create
-   * @mutable tagmanager.accounts.containers.workspaces.triggers.update
+   * Additional parameters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -202,8 +182,6 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
 
   /**
    * A click trigger CSS selector (i.e. "a", "button" etc.). Only valid for AMP Click trigger.
-   * @mutable tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -211,8 +189,7 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
 
   /**
    * A visibility trigger minimum total visible time (in milliseconds). Only valid for AMP
-   * Visibility trigger. @mutable tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
+   * Visibility trigger.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -226,9 +203,7 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   private java.lang.String triggerId;
 
   /**
-   * Defines the data layer event that causes this trigger. @mutable
-   * tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
+   * Defines the data layer event that causes this trigger.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -239,8 +214,6 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
    * listener) if any. Used to make incompatible auto-events work together with trigger filtering
    * based on trigger ids. This value is populated during output generation since the tags implied
    * by triggers don't exist until then. Only valid for Form Submit, Link Click and Timer triggers.
-   * @mutable tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -249,17 +222,13 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   /**
    * List of integer percentage values for scroll triggers. The trigger will fire when each
    * percentage is reached when the view is scrolled vertically. Only valid for AMP scroll triggers.
-   * @mutable tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Parameter verticalScrollPercentageList;
 
   /**
-   * A visibility trigger CSS selector (i.e. "#id"). Only valid for AMP Visibility trigger. @mutable
-   * tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
+   * A visibility trigger CSS selector (i.e. "#id"). Only valid for AMP Visibility trigger.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -267,8 +236,6 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
 
   /**
    * A visibility trigger maximum percent visibility. Only valid for AMP Visibility trigger.
-   * @mutable tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -276,8 +243,6 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
 
   /**
    * A visibility trigger minimum percent visibility. Only valid for AMP Visibility trigger.
-   * @mutable tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -286,9 +251,7 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   /**
    * Whether or not we should delay the form submissions or link opening until all of the tags have
    * fired (by preventing the default action and later simulating the default action). Only valid
-   * for Form Submission and Link Click triggers. @mutable
-   * tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
+   * for Form Submission and Link Click triggers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -296,9 +259,7 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
 
   /**
    * How long to wait (in milliseconds) for tags to fire when 'waits_for_tags' above evaluates to
-   * true. Only valid for Form Submission and Link Click triggers. @mutable
-   * tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
+   * true. Only valid for Form Submission and Link Click triggers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -322,9 +283,7 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Used in the case of auto event tracking. @mutable
-   * tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
+   * Used in the case of auto event tracking.
    * @return value or {@code null} for none
    */
   public java.util.List<Condition> getAutoEventFilter() {
@@ -332,9 +291,7 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Used in the case of auto event tracking. @mutable
-   * tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
+   * Used in the case of auto event tracking.
    * @param autoEventFilter autoEventFilter or {@code null} for none
    */
   public Trigger setAutoEventFilter(java.util.List<Condition> autoEventFilter) {
@@ -345,8 +302,7 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   /**
    * Whether or not we should only fire tags if the form submit or link click event is not cancelled
    * by some other event handler (e.g. because of validation). Only valid for Form Submission and
-   * Link Click triggers. @mutable tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
+   * Link Click triggers.
    * @return value or {@code null} for none
    */
   public Parameter getCheckValidation() {
@@ -356,8 +312,7 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   /**
    * Whether or not we should only fire tags if the form submit or link click event is not cancelled
    * by some other event handler (e.g. because of validation). Only valid for Form Submission and
-   * Link Click triggers. @mutable tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
+   * Link Click triggers.
    * @param checkValidation checkValidation or {@code null} for none
    */
   public Trigger setCheckValidation(Parameter checkValidation) {
@@ -384,8 +339,7 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
 
   /**
    * A visibility trigger minimum continuous visible time (in milliseconds). Only valid for AMP
-   * Visibility trigger. @mutable tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
+   * Visibility trigger.
    * @return value or {@code null} for none
    */
   public Parameter getContinuousTimeMinMilliseconds() {
@@ -394,8 +348,7 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
 
   /**
    * A visibility trigger minimum continuous visible time (in milliseconds). Only valid for AMP
-   * Visibility trigger. @mutable tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
+   * Visibility trigger.
    * @param continuousTimeMinMilliseconds continuousTimeMinMilliseconds or {@code null} for none
    */
   public Trigger setContinuousTimeMinMilliseconds(Parameter continuousTimeMinMilliseconds) {
@@ -404,9 +357,7 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Used in the case of custom event, which is fired iff all Conditions are true. @mutable
-   * tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
+   * Used in the case of custom event, which is fired iff all Conditions are true.
    * @return value or {@code null} for none
    */
   public java.util.List<Condition> getCustomEventFilter() {
@@ -414,9 +365,7 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Used in the case of custom event, which is fired iff all Conditions are true. @mutable
-   * tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
+   * Used in the case of custom event, which is fired iff all Conditions are true.
    * @param customEventFilter customEventFilter or {@code null} for none
    */
   public Trigger setCustomEventFilter(java.util.List<Condition> customEventFilter) {
@@ -425,9 +374,7 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the GTM event that is fired. Only valid for Timer triggers. @mutable
-   * tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
+   * Name of the GTM event that is fired. Only valid for Timer triggers.
    * @return value or {@code null} for none
    */
   public Parameter getEventName() {
@@ -435,9 +382,7 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of the GTM event that is fired. Only valid for Timer triggers. @mutable
-   * tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
+   * Name of the GTM event that is fired. Only valid for Timer triggers.
    * @param eventName eventName or {@code null} for none
    */
   public Trigger setEventName(Parameter eventName) {
@@ -446,9 +391,7 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The trigger will only fire iff all Conditions are true. @mutable
-   * tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
+   * The trigger will only fire iff all Conditions are true.
    * @return value or {@code null} for none
    */
   public java.util.List<Condition> getFilter() {
@@ -456,9 +399,7 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The trigger will only fire iff all Conditions are true. @mutable
-   * tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
+   * The trigger will only fire iff all Conditions are true.
    * @param filter filter or {@code null} for none
    */
   public Trigger setFilter(java.util.List<Condition> filter) {
@@ -488,8 +429,7 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   /**
    * List of integer percentage values for scroll triggers. The trigger will fire when each
    * percentage is reached when the view is scrolled horizontally. Only valid for AMP scroll
-   * triggers. @mutable tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
+   * triggers.
    * @return value or {@code null} for none
    */
   public Parameter getHorizontalScrollPercentageList() {
@@ -499,8 +439,7 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   /**
    * List of integer percentage values for scroll triggers. The trigger will fire when each
    * percentage is reached when the view is scrolled horizontally. Only valid for AMP scroll
-   * triggers. @mutable tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
+   * triggers.
    * @param horizontalScrollPercentageList horizontalScrollPercentageList or {@code null} for none
    */
   public Trigger setHorizontalScrollPercentageList(Parameter horizontalScrollPercentageList) {
@@ -510,8 +449,7 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
 
   /**
    * Time between triggering recurring Timer Events (in milliseconds). Only valid for Timer
-   * triggers. @mutable tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
+   * triggers.
    * @return value or {@code null} for none
    */
   public Parameter getInterval() {
@@ -520,8 +458,7 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
 
   /**
    * Time between triggering recurring Timer Events (in milliseconds). Only valid for Timer
-   * triggers. @mutable tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
+   * triggers.
    * @param interval interval or {@code null} for none
    */
   public Trigger setInterval(Parameter interval) {
@@ -530,9 +467,7 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Time between Timer Events to fire (in seconds). Only valid for AMP Timer trigger. @mutable
-   * tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
+   * Time between Timer Events to fire (in seconds). Only valid for AMP Timer trigger.
    * @return value or {@code null} for none
    */
   public Parameter getIntervalSeconds() {
@@ -540,9 +475,7 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Time between Timer Events to fire (in seconds). Only valid for AMP Timer trigger. @mutable
-   * tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
+   * Time between Timer Events to fire (in seconds). Only valid for AMP Timer trigger.
    * @param intervalSeconds intervalSeconds or {@code null} for none
    */
   public Trigger setIntervalSeconds(Parameter intervalSeconds) {
@@ -553,8 +486,6 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   /**
    * Limit of the number of GTM events this Timer Trigger will fire. If no limit is set, we will
    * continue to fire GTM events until the user leaves the page. Only valid for Timer triggers.
-   * @mutable tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
    * @return value or {@code null} for none
    */
   public Parameter getLimit() {
@@ -564,8 +495,6 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   /**
    * Limit of the number of GTM events this Timer Trigger will fire. If no limit is set, we will
    * continue to fire GTM events until the user leaves the page. Only valid for Timer triggers.
-   * @mutable tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
    * @param limit limit or {@code null} for none
    */
   public Trigger setLimit(Parameter limit) {
@@ -574,9 +503,7 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Max time to fire Timer Events (in seconds). Only valid for AMP Timer trigger. @mutable
-   * tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
+   * Max time to fire Timer Events (in seconds). Only valid for AMP Timer trigger.
    * @return value or {@code null} for none
    */
   public Parameter getMaxTimerLengthSeconds() {
@@ -584,9 +511,7 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Max time to fire Timer Events (in seconds). Only valid for AMP Timer trigger. @mutable
-   * tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
+   * Max time to fire Timer Events (in seconds). Only valid for AMP Timer trigger.
    * @param maxTimerLengthSeconds maxTimerLengthSeconds or {@code null} for none
    */
   public Trigger setMaxTimerLengthSeconds(Parameter maxTimerLengthSeconds) {
@@ -595,8 +520,7 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Trigger display name. @mutable tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
+   * Trigger display name.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -604,8 +528,7 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Trigger display name. @mutable tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
+   * Trigger display name.
    * @param name name or {@code null} for none
    */
   public Trigger setName(java.lang.String name) {
@@ -614,8 +537,7 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Additional parameters. @mutable tagmanager.accounts.containers.workspaces.triggers.create
-   * @mutable tagmanager.accounts.containers.workspaces.triggers.update
+   * Additional parameters.
    * @return value or {@code null} for none
    */
   public java.util.List<Parameter> getParameter() {
@@ -623,8 +545,7 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Additional parameters. @mutable tagmanager.accounts.containers.workspaces.triggers.create
-   * @mutable tagmanager.accounts.containers.workspaces.triggers.update
+   * Additional parameters.
    * @param parameter parameter or {@code null} for none
    */
   public Trigger setParameter(java.util.List<Parameter> parameter) {
@@ -651,8 +572,6 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
 
   /**
    * A click trigger CSS selector (i.e. "a", "button" etc.). Only valid for AMP Click trigger.
-   * @mutable tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
    * @return value or {@code null} for none
    */
   public Parameter getSelector() {
@@ -661,8 +580,6 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
 
   /**
    * A click trigger CSS selector (i.e. "a", "button" etc.). Only valid for AMP Click trigger.
-   * @mutable tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
    * @param selector selector or {@code null} for none
    */
   public Trigger setSelector(Parameter selector) {
@@ -672,8 +589,7 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
 
   /**
    * A visibility trigger minimum total visible time (in milliseconds). Only valid for AMP
-   * Visibility trigger. @mutable tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
+   * Visibility trigger.
    * @return value or {@code null} for none
    */
   public Parameter getTotalTimeMinMilliseconds() {
@@ -682,8 +598,7 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
 
   /**
    * A visibility trigger minimum total visible time (in milliseconds). Only valid for AMP
-   * Visibility trigger. @mutable tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
+   * Visibility trigger.
    * @param totalTimeMinMilliseconds totalTimeMinMilliseconds or {@code null} for none
    */
   public Trigger setTotalTimeMinMilliseconds(Parameter totalTimeMinMilliseconds) {
@@ -709,9 +624,7 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Defines the data layer event that causes this trigger. @mutable
-   * tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
+   * Defines the data layer event that causes this trigger.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -719,9 +632,7 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Defines the data layer event that causes this trigger. @mutable
-   * tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
+   * Defines the data layer event that causes this trigger.
    * @param type type or {@code null} for none
    */
   public Trigger setType(java.lang.String type) {
@@ -734,8 +645,6 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
    * listener) if any. Used to make incompatible auto-events work together with trigger filtering
    * based on trigger ids. This value is populated during output generation since the tags implied
    * by triggers don't exist until then. Only valid for Form Submit, Link Click and Timer triggers.
-   * @mutable tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
    * @return value or {@code null} for none
    */
   public Parameter getUniqueTriggerId() {
@@ -747,8 +656,6 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
    * listener) if any. Used to make incompatible auto-events work together with trigger filtering
    * based on trigger ids. This value is populated during output generation since the tags implied
    * by triggers don't exist until then. Only valid for Form Submit, Link Click and Timer triggers.
-   * @mutable tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
    * @param uniqueTriggerId uniqueTriggerId or {@code null} for none
    */
   public Trigger setUniqueTriggerId(Parameter uniqueTriggerId) {
@@ -759,8 +666,6 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   /**
    * List of integer percentage values for scroll triggers. The trigger will fire when each
    * percentage is reached when the view is scrolled vertically. Only valid for AMP scroll triggers.
-   * @mutable tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
    * @return value or {@code null} for none
    */
   public Parameter getVerticalScrollPercentageList() {
@@ -770,8 +675,6 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   /**
    * List of integer percentage values for scroll triggers. The trigger will fire when each
    * percentage is reached when the view is scrolled vertically. Only valid for AMP scroll triggers.
-   * @mutable tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
    * @param verticalScrollPercentageList verticalScrollPercentageList or {@code null} for none
    */
   public Trigger setVerticalScrollPercentageList(Parameter verticalScrollPercentageList) {
@@ -780,9 +683,7 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A visibility trigger CSS selector (i.e. "#id"). Only valid for AMP Visibility trigger. @mutable
-   * tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
+   * A visibility trigger CSS selector (i.e. "#id"). Only valid for AMP Visibility trigger.
    * @return value or {@code null} for none
    */
   public Parameter getVisibilitySelector() {
@@ -790,9 +691,7 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A visibility trigger CSS selector (i.e. "#id"). Only valid for AMP Visibility trigger. @mutable
-   * tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
+   * A visibility trigger CSS selector (i.e. "#id"). Only valid for AMP Visibility trigger.
    * @param visibilitySelector visibilitySelector or {@code null} for none
    */
   public Trigger setVisibilitySelector(Parameter visibilitySelector) {
@@ -802,8 +701,6 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
 
   /**
    * A visibility trigger maximum percent visibility. Only valid for AMP Visibility trigger.
-   * @mutable tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
    * @return value or {@code null} for none
    */
   public Parameter getVisiblePercentageMax() {
@@ -812,8 +709,6 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
 
   /**
    * A visibility trigger maximum percent visibility. Only valid for AMP Visibility trigger.
-   * @mutable tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
    * @param visiblePercentageMax visiblePercentageMax or {@code null} for none
    */
   public Trigger setVisiblePercentageMax(Parameter visiblePercentageMax) {
@@ -823,8 +718,6 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
 
   /**
    * A visibility trigger minimum percent visibility. Only valid for AMP Visibility trigger.
-   * @mutable tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
    * @return value or {@code null} for none
    */
   public Parameter getVisiblePercentageMin() {
@@ -833,8 +726,6 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
 
   /**
    * A visibility trigger minimum percent visibility. Only valid for AMP Visibility trigger.
-   * @mutable tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
    * @param visiblePercentageMin visiblePercentageMin or {@code null} for none
    */
   public Trigger setVisiblePercentageMin(Parameter visiblePercentageMin) {
@@ -845,9 +736,7 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   /**
    * Whether or not we should delay the form submissions or link opening until all of the tags have
    * fired (by preventing the default action and later simulating the default action). Only valid
-   * for Form Submission and Link Click triggers. @mutable
-   * tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
+   * for Form Submission and Link Click triggers.
    * @return value or {@code null} for none
    */
   public Parameter getWaitForTags() {
@@ -857,9 +746,7 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
   /**
    * Whether or not we should delay the form submissions or link opening until all of the tags have
    * fired (by preventing the default action and later simulating the default action). Only valid
-   * for Form Submission and Link Click triggers. @mutable
-   * tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
+   * for Form Submission and Link Click triggers.
    * @param waitForTags waitForTags or {@code null} for none
    */
   public Trigger setWaitForTags(Parameter waitForTags) {
@@ -869,9 +756,7 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
 
   /**
    * How long to wait (in milliseconds) for tags to fire when 'waits_for_tags' above evaluates to
-   * true. Only valid for Form Submission and Link Click triggers. @mutable
-   * tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
+   * true. Only valid for Form Submission and Link Click triggers.
    * @return value or {@code null} for none
    */
   public Parameter getWaitForTagsTimeout() {
@@ -880,9 +765,7 @@ public final class Trigger extends com.google.api.client.json.GenericJson {
 
   /**
    * How long to wait (in milliseconds) for tags to fire when 'waits_for_tags' above evaluates to
-   * true. Only valid for Form Submission and Link Click triggers. @mutable
-   * tagmanager.accounts.containers.triggers.create @mutable
-   * tagmanager.accounts.containers.triggers.update
+   * true. Only valid for Form Submission and Link Click triggers.
    * @param waitForTagsTimeout waitForTagsTimeout or {@code null} for none
    */
   public Trigger setWaitForTagsTimeout(Parameter waitForTagsTimeout) {

@@ -20566,6 +20566,661 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
       }
     }
     /**
+     * An accessor for creating requests from the DnsZones collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Apigee apigee = new Apigee(...);}
+     *   {@code Apigee.DnsZones.List request = apigee.dnsZones().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public DnsZones dnsZones() {
+      return new DnsZones();
+    }
+
+    /**
+     * The "dnsZones" collection of methods.
+     */
+    public class DnsZones {
+
+      /**
+       * Creates a new DNS zone.
+       *
+       * Create a request for the method "dnsZones.create".
+       *
+       * This request holds the parameters needed by the apigee server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. Organization where the DNS zone will be created.
+       * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1DnsZone}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1DnsZone content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleLongrunningOperation> {
+
+        private static final String REST_PATH = "v1/{+parent}/dnsZones";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+$");
+
+        /**
+         * Creates a new DNS zone.
+         *
+         * Create a request for the method "dnsZones.create".
+         *
+         * This request holds the parameters needed by the the apigee server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. Organization where the DNS zone will be created.
+         * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1DnsZone}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1DnsZone content) {
+          super(Apigee.this, "POST", REST_PATH, content, com.google.api.services.apigee.v1.model.GoogleLongrunningOperation.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. Organization where the DNS zone will be created. */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. Organization where the DNS zone will be created.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /** Required. Organization where the DNS zone will be created. */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Required. User assigned ID for this resource. Must be unique within the organization. The
+         * name must be 1-63 characters long, must begin with a letter, end with a letter or digit,
+         * and only contain lowercase letters, digits or dashes.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String dnsZoneId;
+
+        /** Required. User assigned ID for this resource. Must be unique within the organization. The name must
+       be 1-63 characters long, must begin with a letter, end with a letter or digit, and only contain
+       lowercase letters, digits or dashes.
+         */
+        public java.lang.String getDnsZoneId() {
+          return dnsZoneId;
+        }
+
+        /**
+         * Required. User assigned ID for this resource. Must be unique within the organization. The
+         * name must be 1-63 characters long, must begin with a letter, end with a letter or digit,
+         * and only contain lowercase letters, digits or dashes.
+         */
+        public Create setDnsZoneId(java.lang.String dnsZoneId) {
+          this.dnsZoneId = dnsZoneId;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Deletes a previously created DNS zone.
+       *
+       * Create a request for the method "dnsZones.delete".
+       *
+       * This request holds the parameters needed by the apigee server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Name of the DNS zone to delete. Use the following structure in your request:
+       *        `organizations/{org}/dnsZones/{dns_zone}`.
+       * @return the request
+       */
+      public Delete delete(java.lang.String name) throws java.io.IOException {
+        Delete result = new Delete(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleLongrunningOperation> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/dnsZones/[^/]+$");
+
+        /**
+         * Deletes a previously created DNS zone.
+         *
+         * Create a request for the method "dnsZones.delete".
+         *
+         * This request holds the parameters needed by the the apigee server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. Name of the DNS zone to delete. Use the following structure in your request:
+       *        `organizations/{org}/dnsZones/{dns_zone}`.
+         * @since 1.13
+         */
+        protected Delete(java.lang.String name) {
+          super(Apigee.this, "DELETE", REST_PATH, null, com.google.api.services.apigee.v1.model.GoogleLongrunningOperation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/dnsZones/[^/]+$");
+          }
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Name of the DNS zone to delete. Use the following structure in your request:
+         * `organizations/{org}/dnsZones/{dns_zone}`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Name of the DNS zone to delete. Use the following structure in your request:
+       `organizations/{org}/dnsZones/{dns_zone}`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. Name of the DNS zone to delete. Use the following structure in your request:
+         * `organizations/{org}/dnsZones/{dns_zone}`.
+         */
+        public Delete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/dnsZones/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Fetches the representation of an existing DNS zone.
+       *
+       * Create a request for the method "dnsZones.get".
+       *
+       * This request holds the parameters needed by the apigee server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Name of the DNS zone to fetch. Use the following structure in your request:
+       *        `organizations/{org}/dnsZones/{dns_zone}`.
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1DnsZone> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/dnsZones/[^/]+$");
+
+        /**
+         * Fetches the representation of an existing DNS zone.
+         *
+         * Create a request for the method "dnsZones.get".
+         *
+         * This request holds the parameters needed by the the apigee server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+         * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. Name of the DNS zone to fetch. Use the following structure in your request:
+       *        `organizations/{org}/dnsZones/{dns_zone}`.
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(Apigee.this, "GET", REST_PATH, null, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1DnsZone.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/dnsZones/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Name of the DNS zone to fetch. Use the following structure in your request:
+         * `organizations/{org}/dnsZones/{dns_zone}`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Name of the DNS zone to fetch. Use the following structure in your request:
+       `organizations/{org}/dnsZones/{dns_zone}`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. Name of the DNS zone to fetch. Use the following structure in your request:
+         * `organizations/{org}/dnsZones/{dns_zone}`.
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/dnsZones/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Enumerates DNS zones that have been created but not yet deleted.
+       *
+       * Create a request for the method "dnsZones.list".
+       *
+       * This request holds the parameters needed by the apigee server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. Name of the organization for which to list the DNS zones. Use the following structure in
+       *        your request: `organizations/{org}`
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ListDnsZonesResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/dnsZones";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+$");
+
+        /**
+         * Enumerates DNS zones that have been created but not yet deleted.
+         *
+         * Create a request for the method "dnsZones.list".
+         *
+         * This request holds the parameters needed by the the apigee server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+         * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. Name of the organization for which to list the DNS zones. Use the following structure in
+       *        your request: `organizations/{org}`
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(Apigee.this, "GET", REST_PATH, null, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ListDnsZonesResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Name of the organization for which to list the DNS zones. Use the following
+         * structure in your request: `organizations/{org}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. Name of the organization for which to list the DNS zones. Use the following structure in
+       your request: `organizations/{org}`
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. Name of the organization for which to list the DNS zones. Use the following
+         * structure in your request: `organizations/{org}`
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Optional. Maximum number of DNS zones to return. If unspecified, at most 25 DNS zones
+         * will be returned.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. Maximum number of DNS zones to return. If unspecified, at most 25 DNS zones will be
+       returned.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Optional. Maximum number of DNS zones to return. If unspecified, at most 25 DNS zones
+         * will be returned.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional. Page token, returned from a previous `ListDnsZones` call, that you can use to
+         * retrieve the next page.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. Page token, returned from a previous `ListDnsZones` call, that you can use to retrieve
+       the next page.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional. Page token, returned from a previous `ListDnsZones` call, that you can use to
+         * retrieve the next page.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
      * An accessor for creating requests from the EndpointAttachments collection.
      *
      * <p>The typical use is:</p>
@@ -50663,6 +51318,838 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         @Override
         public BatchCompute set(String parameterName, Object value) {
           return (BatchCompute) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
+     * An accessor for creating requests from the SecurityMonitoringConditions collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Apigee apigee = new Apigee(...);}
+     *   {@code Apigee.SecurityMonitoringConditions.List request = apigee.securityMonitoringConditions().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public SecurityMonitoringConditions securityMonitoringConditions() {
+      return new SecurityMonitoringConditions();
+    }
+
+    /**
+     * The "securityMonitoringConditions" collection of methods.
+     */
+    public class SecurityMonitoringConditions {
+
+      /**
+       * Create a security monitoring condition.
+       *
+       * Create a request for the method "securityMonitoringConditions.create".
+       *
+       * This request holds the parameters needed by the apigee server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The parent resource name. Format: `organizations/{org}`
+       * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityMonitoringCondition}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityMonitoringCondition content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityMonitoringCondition> {
+
+        private static final String REST_PATH = "v1/{+parent}/securityMonitoringConditions";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+$");
+
+        /**
+         * Create a security monitoring condition.
+         *
+         * Create a request for the method "securityMonitoringConditions.create".
+         *
+         * This request holds the parameters needed by the the apigee server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The parent resource name. Format: `organizations/{org}`
+         * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityMonitoringCondition}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityMonitoringCondition content) {
+          super(Apigee.this, "POST", REST_PATH, content, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityMonitoringCondition.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The parent resource name. Format: `organizations/{org}` */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The parent resource name. Format: `organizations/{org}`
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /** Required. The parent resource name. Format: `organizations/{org}` */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Optional. Optional: The security monitoring condition id. If not specified, a monitoring
+         * condition uuid will be generated by the backend. This value should be 4-63 characters,
+         * and valid characters are /a-z-/.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String securityMonitoringConditionId;
+
+        /** Optional. Optional: The security monitoring condition id. If not specified, a monitoring condition
+       uuid will be generated by the backend. This value should be 4-63 characters, and valid characters
+       are /a-z-/.
+         */
+        public java.lang.String getSecurityMonitoringConditionId() {
+          return securityMonitoringConditionId;
+        }
+
+        /**
+         * Optional. Optional: The security monitoring condition id. If not specified, a monitoring
+         * condition uuid will be generated by the backend. This value should be 4-63 characters,
+         * and valid characters are /a-z-/.
+         */
+        public Create setSecurityMonitoringConditionId(java.lang.String securityMonitoringConditionId) {
+          this.securityMonitoringConditionId = securityMonitoringConditionId;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Delete a security monitoring condition.
+       *
+       * Create a request for the method "securityMonitoringConditions.delete".
+       *
+       * This request holds the parameters needed by the apigee server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the security monitoring condition to delete. Format:
+       *        `organizations/{org}/securityMonitoringConditions/{security_monitoring_condition}`
+       * @return the request
+       */
+      public Delete delete(java.lang.String name) throws java.io.IOException {
+        Delete result = new Delete(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleProtobufEmpty> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/securityMonitoringConditions/[^/]+$");
+
+        /**
+         * Delete a security monitoring condition.
+         *
+         * Create a request for the method "securityMonitoringConditions.delete".
+         *
+         * This request holds the parameters needed by the the apigee server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the security monitoring condition to delete. Format:
+       *        `organizations/{org}/securityMonitoringConditions/{security_monitoring_condition}`
+         * @since 1.13
+         */
+        protected Delete(java.lang.String name) {
+          super(Apigee.this, "DELETE", REST_PATH, null, com.google.api.services.apigee.v1.model.GoogleProtobufEmpty.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/securityMonitoringConditions/[^/]+$");
+          }
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the security monitoring condition to delete. Format:
+         * `organizations/{org}/securityMonitoringConditions/{security_monitoring_condition}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the security monitoring condition to delete. Format:
+       `organizations/{org}/securityMonitoringConditions/{security_monitoring_condition}`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the security monitoring condition to delete. Format:
+         * `organizations/{org}/securityMonitoringConditions/{security_monitoring_condition}`
+         */
+        public Delete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/securityMonitoringConditions/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Get a security monitoring condition.
+       *
+       * Create a request for the method "securityMonitoringConditions.get".
+       *
+       * This request holds the parameters needed by the apigee server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the security monitoring condition to get. Format:
+       *        `organizations/{org}/securityMonitoringConditions/{security_monitoring_condition}`
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityMonitoringCondition> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/securityMonitoringConditions/[^/]+$");
+
+        /**
+         * Get a security monitoring condition.
+         *
+         * Create a request for the method "securityMonitoringConditions.get".
+         *
+         * This request holds the parameters needed by the the apigee server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+         * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the security monitoring condition to get. Format:
+       *        `organizations/{org}/securityMonitoringConditions/{security_monitoring_condition}`
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(Apigee.this, "GET", REST_PATH, null, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityMonitoringCondition.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/securityMonitoringConditions/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the security monitoring condition to get. Format:
+         * `organizations/{org}/securityMonitoringConditions/{security_monitoring_condition}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the security monitoring condition to get. Format:
+       `organizations/{org}/securityMonitoringConditions/{security_monitoring_condition}`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the security monitoring condition to get. Format:
+         * `organizations/{org}/securityMonitoringConditions/{security_monitoring_condition}`
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/securityMonitoringConditions/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * List security monitoring conditions.
+       *
+       * Create a request for the method "securityMonitoringConditions.list".
+       *
+       * This request holds the parameters needed by the apigee server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. For a specific organization, list all the security monitoring conditions. Format:
+       *        `organizations/{org}`
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ListSecurityMonitoringConditionsResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/securityMonitoringConditions";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+$");
+
+        /**
+         * List security monitoring conditions.
+         *
+         * Create a request for the method "securityMonitoringConditions.list".
+         *
+         * This request holds the parameters needed by the the apigee server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+         * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. For a specific organization, list all the security monitoring conditions. Format:
+       *        `organizations/{org}`
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(Apigee.this, "GET", REST_PATH, null, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1ListSecurityMonitoringConditionsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. For a specific organization, list all the security monitoring conditions.
+         * Format: `organizations/{org}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. For a specific organization, list all the security monitoring conditions. Format:
+       `organizations/{org}`
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. For a specific organization, list all the security monitoring conditions.
+         * Format: `organizations/{org}`
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Optional. Filter for the monitoring conditions. For example: `profile=profile1 AND
+         * scope=env1`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** Optional. Filter for the monitoring conditions. For example: `profile=profile1 AND scope=env1`
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * Optional. Filter for the monitoring conditions. For example: `profile=profile1 AND
+         * scope=env1`
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /** Optional. The maximum number of monitoring conditions to return. */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. The maximum number of monitoring conditions to return.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /** Optional. The maximum number of monitoring conditions to return. */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional. A page token, received from a previous `ListSecurityMonitoringConditions` call.
+         * Provide this to retrieve the subsequent page.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. A page token, received from a previous `ListSecurityMonitoringConditions` call. Provide
+       this to retrieve the subsequent page.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional. A page token, received from a previous `ListSecurityMonitoringConditions` call.
+         * Provide this to retrieve the subsequent page.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Update a security monitoring condition.
+       *
+       * Create a request for the method "securityMonitoringConditions.patch".
+       *
+       * This request holds the parameters needed by the apigee server.  After setting any optional
+       * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param name Identifier. Name of the security monitoring condition resource. Format:
+       *        organizations/{org}/securityMonitoringConditions/{security_monitoring_condition}
+       * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityMonitoringCondition}
+       * @return the request
+       */
+      public Patch patch(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityMonitoringCondition content) throws java.io.IOException {
+        Patch result = new Patch(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityMonitoringCondition> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/securityMonitoringConditions/[^/]+$");
+
+        /**
+         * Update a security monitoring condition.
+         *
+         * Create a request for the method "securityMonitoringConditions.patch".
+         *
+         * This request holds the parameters needed by the the apigee server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Identifier. Name of the security monitoring condition resource. Format:
+       *        organizations/{org}/securityMonitoringConditions/{security_monitoring_condition}
+         * @param content the {@link com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityMonitoringCondition}
+         * @since 1.13
+         */
+        protected Patch(java.lang.String name, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityMonitoringCondition content) {
+          super(Apigee.this, "PATCH", REST_PATH, content, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1SecurityMonitoringCondition.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/securityMonitoringConditions/[^/]+$");
+          }
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Identifier. Name of the security monitoring condition resource. Format:
+         * organizations/{org}/securityMonitoringConditions/{security_monitoring_condition}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Identifier. Name of the security monitoring condition resource. Format:
+       organizations/{org}/securityMonitoringConditions/{security_monitoring_condition}
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Identifier. Name of the security monitoring condition resource. Format:
+         * organizations/{org}/securityMonitoringConditions/{security_monitoring_condition}
+         */
+        public Patch setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/securityMonitoringConditions/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * Optional. The list of fields to update. Valid fields to update are `profile`, `scope`,
+         * `include_all_resources`, `include`, and `exclude`.
+         */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Optional. The list of fields to update. Valid fields to update are `profile`, `scope`,
+       `include_all_resources`, `include`, and `exclude`.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /**
+         * Optional. The list of fields to update. Valid fields to update are `profile`, `scope`,
+         * `include_all_resources`, `include`, and `exclude`.
+         */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
         }
       }
 

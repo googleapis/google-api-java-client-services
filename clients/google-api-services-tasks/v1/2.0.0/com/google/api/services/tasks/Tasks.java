@@ -25,7 +25,7 @@ package com.google.api.services.tasks;
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://developers.google.com/tasks/" target="_blank">API Documentation</a>
+ * <a href="https://developers.google.com/workspace/tasks/" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>

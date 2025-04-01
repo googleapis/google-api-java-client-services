@@ -2,6 +2,6 @@
   "maven": {
     "groupId": "com.google.apis",
     "artifactId": "google-api-services-networksecurity",
-    "version": "v1-rev20210818-1.32.1"
+    "version": "v1-rev20250211-2.0.0"
   }
 }

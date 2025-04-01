@@ -30,6 +30,13 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1GroundingChunkWeb extends com.google.api.client.json.GenericJson {
 
   /**
+   * Domain of the (original) URI.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String domain;
+
+  /**
    * Title of the chunk.
    * The value may be {@code null}.
    */
@@ -42,6 +49,23 @@ public final class GoogleCloudAiplatformV1GroundingChunkWeb extends com.google.a
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
+
+  /**
+   * Domain of the (original) URI.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDomain() {
+    return domain;
+  }
+
+  /**
+   * Domain of the (original) URI.
+   * @param domain domain or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1GroundingChunkWeb setDomain(java.lang.String domain) {
+    this.domain = domain;
+    return this;
+  }
 
   /**
    * Title of the chunk.

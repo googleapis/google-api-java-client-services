@@ -108,6 +108,19 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   private java.lang.String ipCidrRange;
 
   /**
+   * Reference to the source of IP, like a PublicDelegatedPrefix (PDP) for BYOIP. The PDP must be a
+   * sub-PDP in EXTERNAL_IPV6_SUBNETWORK_CREATION mode. Use one of the following formats to specify
+   * a sub-PDP when creating a dual stack subnetwork with external access using BYOIP: - Full
+   * resource URL, as in https://www.googleapis.com/compute/v1/projects/projectId/regions/region
+   * /publicDelegatedPrefixes/sub-pdp-name - Partial URL, as in -
+   * projects/projectId/regions/region/publicDelegatedPrefixes/ sub-pdp-name -
+   * regions/region/publicDelegatedPrefixes/sub-pdp-name
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ipCollection;
+
+  /**
    * The access type of IPv6 address this subnet holds. It's immutable and can only be specified
    * during creation or the first time the subnet is updated into IPV4_IPV6 dual stack.
    * The value may be {@code null}.
@@ -121,6 +134,18 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String ipv6CidrRange;
+
+  /**
+   * [Output Only] Possible endpoints of this subnetwork. It can be one of the following: - VM_ONLY:
+   * The subnetwork can be used for creating instances and IPv6 addresses with VM endpoint type.
+   * Such a subnetwork gets external IPv6 ranges from a public delegated prefix and cannot be used
+   * to create NetLb. - VM_AND_FR: The subnetwork can be used for creating both VM instances and
+   * Forwarding Rules. It can also be used to reserve IPv6 addresses with both VM and FR endpoint
+   * types. Such a subnetwork gets its IPv6 range from Google IP Pool directly.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ipv6GceEndpoint;
 
   /**
    * [Output Only] Type of the resource. Always compute#subnetwork for Subnetwork resources.
@@ -469,6 +494,35 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Reference to the source of IP, like a PublicDelegatedPrefix (PDP) for BYOIP. The PDP must be a
+   * sub-PDP in EXTERNAL_IPV6_SUBNETWORK_CREATION mode. Use one of the following formats to specify
+   * a sub-PDP when creating a dual stack subnetwork with external access using BYOIP: - Full
+   * resource URL, as in https://www.googleapis.com/compute/v1/projects/projectId/regions/region
+   * /publicDelegatedPrefixes/sub-pdp-name - Partial URL, as in -
+   * projects/projectId/regions/region/publicDelegatedPrefixes/ sub-pdp-name -
+   * regions/region/publicDelegatedPrefixes/sub-pdp-name
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIpCollection() {
+    return ipCollection;
+  }
+
+  /**
+   * Reference to the source of IP, like a PublicDelegatedPrefix (PDP) for BYOIP. The PDP must be a
+   * sub-PDP in EXTERNAL_IPV6_SUBNETWORK_CREATION mode. Use one of the following formats to specify
+   * a sub-PDP when creating a dual stack subnetwork with external access using BYOIP: - Full
+   * resource URL, as in https://www.googleapis.com/compute/v1/projects/projectId/regions/region
+   * /publicDelegatedPrefixes/sub-pdp-name - Partial URL, as in -
+   * projects/projectId/regions/region/publicDelegatedPrefixes/ sub-pdp-name -
+   * regions/region/publicDelegatedPrefixes/sub-pdp-name
+   * @param ipCollection ipCollection or {@code null} for none
+   */
+  public Subnetwork setIpCollection(java.lang.String ipCollection) {
+    this.ipCollection = ipCollection;
+    return this;
+  }
+
+  /**
    * The access type of IPv6 address this subnet holds. It's immutable and can only be specified
    * during creation or the first time the subnet is updated into IPV4_IPV6 dual stack.
    * @return value or {@code null} for none
@@ -501,6 +555,33 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
    */
   public Subnetwork setIpv6CidrRange(java.lang.String ipv6CidrRange) {
     this.ipv6CidrRange = ipv6CidrRange;
+    return this;
+  }
+
+  /**
+   * [Output Only] Possible endpoints of this subnetwork. It can be one of the following: - VM_ONLY:
+   * The subnetwork can be used for creating instances and IPv6 addresses with VM endpoint type.
+   * Such a subnetwork gets external IPv6 ranges from a public delegated prefix and cannot be used
+   * to create NetLb. - VM_AND_FR: The subnetwork can be used for creating both VM instances and
+   * Forwarding Rules. It can also be used to reserve IPv6 addresses with both VM and FR endpoint
+   * types. Such a subnetwork gets its IPv6 range from Google IP Pool directly.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIpv6GceEndpoint() {
+    return ipv6GceEndpoint;
+  }
+
+  /**
+   * [Output Only] Possible endpoints of this subnetwork. It can be one of the following: - VM_ONLY:
+   * The subnetwork can be used for creating instances and IPv6 addresses with VM endpoint type.
+   * Such a subnetwork gets external IPv6 ranges from a public delegated prefix and cannot be used
+   * to create NetLb. - VM_AND_FR: The subnetwork can be used for creating both VM instances and
+   * Forwarding Rules. It can also be used to reserve IPv6 addresses with both VM and FR endpoint
+   * types. Such a subnetwork gets its IPv6 range from Google IP Pool directly.
+   * @param ipv6GceEndpoint ipv6GceEndpoint or {@code null} for none
+   */
+  public Subnetwork setIpv6GceEndpoint(java.lang.String ipv6GceEndpoint) {
+    this.ipv6GceEndpoint = ipv6GceEndpoint;
     return this;
   }
 

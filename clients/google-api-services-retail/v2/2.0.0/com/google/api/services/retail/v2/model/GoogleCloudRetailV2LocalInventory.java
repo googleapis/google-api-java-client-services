@@ -20,7 +20,7 @@ package com.google.api.services.retail.v2.model;
  * The inventory information at a place (e.g. a store) identified by a place ID.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
- * transmitted over HTTP when working with the Vertex AI Search for Retail API. For a detailed
+ * transmitted over HTTP when working with the Vertex AI Search for commerce API. For a detailed
  * explanation see:
  * <a href="https://developers.google.com/api-client-library/java/google-http-java-client/json">https://developers.google.com/api-client-library/java/google-http-java-client/json</a>
  * </p>
@@ -79,7 +79,7 @@ public final class GoogleCloudRetailV2LocalInventory extends com.google.api.clie
   private java.util.List<java.lang.String> fulfillmentTypes;
 
   /**
-   * Required. The place ID for the current set of inventory information.
+   * Optional. The place ID for the current set of inventory information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -187,7 +187,7 @@ public final class GoogleCloudRetailV2LocalInventory extends com.google.api.clie
   }
 
   /**
-   * Required. The place ID for the current set of inventory information.
+   * Optional. The place ID for the current set of inventory information.
    * @return value or {@code null} for none
    */
   public java.lang.String getPlaceId() {
@@ -195,7 +195,7 @@ public final class GoogleCloudRetailV2LocalInventory extends com.google.api.clie
   }
 
   /**
-   * Required. The place ID for the current set of inventory information.
+   * Optional. The place ID for the current set of inventory information.
    * @param placeId placeId or {@code null} for none
    */
   public GoogleCloudRetailV2LocalInventory setPlaceId(java.lang.String placeId) {

@@ -46,6 +46,23 @@ public final class GoogleCloudAiplatformV1ImportRagFilesConfig extends com.googl
   private GoogleCloudAiplatformV1GoogleDriveSource googleDriveSource;
 
   /**
+   * The BigQuery destination to write import result to. It should be a bigquery table resource name
+   * (e.g. "bq://projectId.bqDatasetId.bqTableId"). The dataset must exist. If the table does not
+   * exist, it will be created with the expected schema. If the table exists, the schema will be
+   * validated and data will be added to this existing table.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1BigQueryDestination importResultBigquerySink;
+
+  /**
+   * The Cloud Storage path to write import result to.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1GcsDestination importResultGcsSink;
+
+  /**
    * Jira queries with their corresponding authentication.
    * The value may be {@code null}.
    */
@@ -80,6 +97,14 @@ public final class GoogleCloudAiplatformV1ImportRagFilesConfig extends com.googl
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1GcsDestination partialFailureGcsSink;
+
+  /**
+   * Optional. Specifies the parsing config for RagFiles. RAG will use the default parser if this
+   * field is not set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1RagFileParsingConfig ragFileParsingConfig;
 
   /**
    * Specifies the transformation config for RagFiles.
@@ -137,6 +162,46 @@ public final class GoogleCloudAiplatformV1ImportRagFilesConfig extends com.googl
    */
   public GoogleCloudAiplatformV1ImportRagFilesConfig setGoogleDriveSource(GoogleCloudAiplatformV1GoogleDriveSource googleDriveSource) {
     this.googleDriveSource = googleDriveSource;
+    return this;
+  }
+
+  /**
+   * The BigQuery destination to write import result to. It should be a bigquery table resource name
+   * (e.g. "bq://projectId.bqDatasetId.bqTableId"). The dataset must exist. If the table does not
+   * exist, it will be created with the expected schema. If the table exists, the schema will be
+   * validated and data will be added to this existing table.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1BigQueryDestination getImportResultBigquerySink() {
+    return importResultBigquerySink;
+  }
+
+  /**
+   * The BigQuery destination to write import result to. It should be a bigquery table resource name
+   * (e.g. "bq://projectId.bqDatasetId.bqTableId"). The dataset must exist. If the table does not
+   * exist, it will be created with the expected schema. If the table exists, the schema will be
+   * validated and data will be added to this existing table.
+   * @param importResultBigquerySink importResultBigquerySink or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1ImportRagFilesConfig setImportResultBigquerySink(GoogleCloudAiplatformV1BigQueryDestination importResultBigquerySink) {
+    this.importResultBigquerySink = importResultBigquerySink;
+    return this;
+  }
+
+  /**
+   * The Cloud Storage path to write import result to.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1GcsDestination getImportResultGcsSink() {
+    return importResultGcsSink;
+  }
+
+  /**
+   * The Cloud Storage path to write import result to.
+   * @param importResultGcsSink importResultGcsSink or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1ImportRagFilesConfig setImportResultGcsSink(GoogleCloudAiplatformV1GcsDestination importResultGcsSink) {
+    this.importResultGcsSink = importResultGcsSink;
     return this;
   }
 
@@ -221,6 +286,25 @@ public final class GoogleCloudAiplatformV1ImportRagFilesConfig extends com.googl
    */
   public GoogleCloudAiplatformV1ImportRagFilesConfig setPartialFailureGcsSink(GoogleCloudAiplatformV1GcsDestination partialFailureGcsSink) {
     this.partialFailureGcsSink = partialFailureGcsSink;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies the parsing config for RagFiles. RAG will use the default parser if this
+   * field is not set.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1RagFileParsingConfig getRagFileParsingConfig() {
+    return ragFileParsingConfig;
+  }
+
+  /**
+   * Optional. Specifies the parsing config for RagFiles. RAG will use the default parser if this
+   * field is not set.
+   * @param ragFileParsingConfig ragFileParsingConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1ImportRagFilesConfig setRagFileParsingConfig(GoogleCloudAiplatformV1RagFileParsingConfig ragFileParsingConfig) {
+    this.ragFileParsingConfig = ragFileParsingConfig;
     return this;
   }
 

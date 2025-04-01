@@ -58,7 +58,7 @@ public final class PrintServer extends com.google.api.client.json.GenericJson {
   private java.lang.String id;
 
   /**
-   * Immutable. Resource name of the print server. Leave empty when creating. Format:
+   * Identifier. Resource name of the print server. Leave empty when creating. Format:
    * `customers/{customer.id}/printServers/{print_server.id}`
    * The value may be {@code null}.
    */
@@ -151,7 +151,7 @@ public final class PrintServer extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. Resource name of the print server. Leave empty when creating. Format:
+   * Identifier. Resource name of the print server. Leave empty when creating. Format:
    * `customers/{customer.id}/printServers/{print_server.id}`
    * @return value or {@code null} for none
    */
@@ -160,7 +160,7 @@ public final class PrintServer extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. Resource name of the print server. Leave empty when creating. Format:
+   * Identifier. Resource name of the print server. Leave empty when creating. Format:
    * `customers/{customer.id}/printServers/{print_server.id}`
    * @param name name or {@code null} for none
    */

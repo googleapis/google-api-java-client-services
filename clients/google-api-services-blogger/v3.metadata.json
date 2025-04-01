@@ -2,6 +2,6 @@
   "maven": {
     "groupId": "com.google.apis",
     "artifactId": "google-api-services-blogger",
-    "version": "v3-rev20210227-1.32.1"
+    "version": "v3-rev20221220-2.0.0"
   }
 }

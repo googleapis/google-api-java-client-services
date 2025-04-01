@@ -41,9 +41,9 @@ package com.google.api.services.spanner.v1.model;
 public final class ExecuteBatchDmlResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. A precommit token will be included if the read-write transaction is on a multiplexed
-   * session. The precommit token with the highest sequence number from this transaction attempt
-   * should be passed to the Commit request for this transaction.
+   * Optional. A precommit token is included if the read-write transaction is on a multiplexed
+   * session. Pass the precommit token with the highest sequence number from this transaction
+   * attempt should be passed to the Commit request for this transaction.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,9 +68,9 @@ public final class ExecuteBatchDmlResponse extends com.google.api.client.json.Ge
   private Status status;
 
   /**
-   * Optional. A precommit token will be included if the read-write transaction is on a multiplexed
-   * session. The precommit token with the highest sequence number from this transaction attempt
-   * should be passed to the Commit request for this transaction.
+   * Optional. A precommit token is included if the read-write transaction is on a multiplexed
+   * session. Pass the precommit token with the highest sequence number from this transaction
+   * attempt should be passed to the Commit request for this transaction.
    * @return value or {@code null} for none
    */
   public MultiplexedSessionPrecommitToken getPrecommitToken() {
@@ -78,9 +78,9 @@ public final class ExecuteBatchDmlResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * Optional. A precommit token will be included if the read-write transaction is on a multiplexed
-   * session. The precommit token with the highest sequence number from this transaction attempt
-   * should be passed to the Commit request for this transaction.
+   * Optional. A precommit token is included if the read-write transaction is on a multiplexed
+   * session. Pass the precommit token with the highest sequence number from this transaction
+   * attempt should be passed to the Commit request for this transaction.
    * @param precommitToken precommitToken or {@code null} for none
    */
   public ExecuteBatchDmlResponse setPrecommitToken(MultiplexedSessionPrecommitToken precommitToken) {

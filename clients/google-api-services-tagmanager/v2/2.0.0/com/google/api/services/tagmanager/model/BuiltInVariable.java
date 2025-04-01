@@ -61,8 +61,6 @@ public final class BuiltInVariable extends com.google.api.client.json.GenericJso
 
   /**
    * Type of built-in variable.
-   * @required.tagmanager.accounts.containers.workspaces.built_in_variable.update @mutable
-   * tagmanager.accounts.containers.workspaces.built_in_variable.update
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -145,8 +143,6 @@ public final class BuiltInVariable extends com.google.api.client.json.GenericJso
 
   /**
    * Type of built-in variable.
-   * @required.tagmanager.accounts.containers.workspaces.built_in_variable.update @mutable
-   * tagmanager.accounts.containers.workspaces.built_in_variable.update
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -155,8 +151,6 @@ public final class BuiltInVariable extends com.google.api.client.json.GenericJso
 
   /**
    * Type of built-in variable.
-   * @required.tagmanager.accounts.containers.workspaces.built_in_variable.update @mutable
-   * tagmanager.accounts.containers.workspaces.built_in_variable.update
    * @param type type or {@code null} for none
    */
   public BuiltInVariable setType(java.lang.String type) {

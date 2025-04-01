@@ -1,0 +1,7 @@
+{
+  "maven": {
+    "groupId": "com.google.apis",
+    "artifactId": "google-api-services-biglake",
+    "version": "v1-rev20231016-2.0.0"
+  }
+}

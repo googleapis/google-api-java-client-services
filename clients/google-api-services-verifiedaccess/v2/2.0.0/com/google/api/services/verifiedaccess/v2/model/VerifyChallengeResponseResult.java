@@ -17,7 +17,10 @@
 package com.google.api.services.verifiedaccess.v2.model;
 
 /**
- * Result message for VerifiedAccess.VerifyChallengeResponse.
+ * Result message for VerifiedAccess.VerifyChallengeResponse. The response returned when successful
+ * for Managed profiles on Unmanaged browsers will NOT have devicePermanentId, keyTrustLevel,
+ * virtualDeviceId and customerId fields. Managed profiles will INSTEAD have the profileCustomerId,
+ * virtualProfileId, profilePermanentId and profileKeyTrustLevel fields.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Chrome Verified Access API. For a detailed

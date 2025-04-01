@@ -20,7 +20,7 @@ package com.google.api.services.areainsights.v1;
  * Service definition for AreaInsights (v1).
  *
  * <p>
- * Places Insights API.
+ * Places Aggregate API.
  * </p>
  *
  * <p>
@@ -49,7 +49,7 @@ public class AreaInsights extends com.google.api.client.googleapis.services.json
         com.google.api.client.googleapis.GoogleUtils.MAJOR_VERSION >= 2,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.31.1 of google-api-client to run version " +
-        "2.0.0 of the Places Insights API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "2.0.0 of the Places Aggregate API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -154,13 +154,13 @@ public class AreaInsights extends com.google.api.client.googleapis.services.json
   public class V1 {
 
     /**
-     * Compute Insights RPC This method lets you retrieve insights about areas using a variaty of filter
-     * such as: area, place type, operating status, price level and ratings. Currently "count" and
-     * "places" insights are supported. With "count" insights you can answer questions such as "How many
-     * restaurant are located in California that are operational, are inexpensive and have an average
-     * rating of at least 4 stars" (see `insight` enum for more details). With "places" insights, you
-     * can determine which places match the requested filter. Clients can then use those place resource
-     * names to fetch more details about each individual place using the Places API.
+     * This method lets you retrieve insights about areas using a variety of filter such as: area, place
+     * type, operating status, price level and ratings. Currently "count" and "places" insights are
+     * supported. With "count" insights you can answer questions such as "How many restaurant are
+     * located in California that are operational, are inexpensive and have an average rating of at
+     * least 4 stars" (see `insight` enum for more details). With "places" insights, you can determine
+     * which places match the requested filter. Clients can then use those place resource names to fetch
+     * more details about each individual place using the Places API.
      *
      * Create a request for the method "v1.computeInsights".
      *
@@ -181,13 +181,13 @@ public class AreaInsights extends com.google.api.client.googleapis.services.json
       private static final String REST_PATH = "v1:computeInsights";
 
       /**
-       * Compute Insights RPC This method lets you retrieve insights about areas using a variaty of
-       * filter such as: area, place type, operating status, price level and ratings. Currently "count"
-       * and "places" insights are supported. With "count" insights you can answer questions such as
-       * "How many restaurant are located in California that are operational, are inexpensive and have
-       * an average rating of at least 4 stars" (see `insight` enum for more details). With "places"
-       * insights, you can determine which places match the requested filter. Clients can then use those
-       * place resource names to fetch more details about each individual place using the Places API.
+       * This method lets you retrieve insights about areas using a variety of filter such as: area,
+       * place type, operating status, price level and ratings. Currently "count" and "places" insights
+       * are supported. With "count" insights you can answer questions such as "How many restaurant are
+       * located in California that are operational, are inexpensive and have an average rating of at
+       * least 4 stars" (see `insight` enum for more details). With "places" insights, you can determine
+       * which places match the requested filter. Clients can then use those place resource names to
+       * fetch more details about each individual place using the Places API.
        *
        * Create a request for the method "v1.computeInsights".
        *

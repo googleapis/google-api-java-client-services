@@ -67,7 +67,7 @@ jobs:
           set -ex
           echo '${{ toJSON(needs.verify.outputs) }}' \
           | jq -j 'to_entries[] | select(.key | startswith("failed_libraries_")) | .value' \
-          | sed 's/,/\n/g > failed_libs
+          | sed 's/,/\n/g' > failed_libs
 
           if [[ $(cat failed_libs | wc -l) -gt 0 ]]; then
             echo "The following libraries have failures:"

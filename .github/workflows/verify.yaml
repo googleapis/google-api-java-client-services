@@ -24,6 +24,6 @@ jobs:
           path: google-api-java-client-services
 
       - working-directory: google-api-java-client-services
-      - run: |
+        run: |
           bash .github/workflows/verify.sh ${{ matrix.variant }}
 

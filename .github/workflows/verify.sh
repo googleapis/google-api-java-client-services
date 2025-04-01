@@ -16,7 +16,7 @@ cat module_list
 cat pom.xml
 
 # test compilation
-mvn clean compile -Dmaven.testSkip=true -fae --fail-at-end 2>&1 | tee out
+mvn clean compile -T 1.5C -Dmaven.testSkip=true -Denforcer.skip -fae --fail-at-end 2>&1 | tee out
 cat out | grep -E "^\[ERROR\] Failed to execute goal" > errors
 if [[ $(cat errors | wc -l) -gt 0 ]]; then
 	echo "Compilation errors found"

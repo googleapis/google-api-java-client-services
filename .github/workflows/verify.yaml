@@ -19,17 +19,6 @@ jobs:
       - uses: actions/checkout@v2
         with:
           path: google-api-java-client-services
-      - working-directory: google-api-java-client-services/clients
-        run: |
-          set -ex
-          find . -name pom.xml -not -path '*/target/*' \
-          | cut -d'/' -f2-4 \
-          | sed 's/\(.*\)/<module>\1<\/module>/' \
-          | (echo "<project><modelVersion>4.0.0</modelVersion><groupId>temp</groupId><artifactId>temp</artifactId><version>1.0</version><packaging>pom</packaging><modules>"; cat -; echo "</modules></project>") > pom.xml
-
-          # will remove once confirming what's wrong
-          mvn clean compile -Dmaven.testSkip=true -fae --fail-at-end
-
-          mvn clean compile -Dmaven.testSkip=true -fae --fail-at-end \
-          |& grep -E "^\[ERROR\] Failed to execute goal"
+      - run: |
+          bash .github/workflows/verify.sh
 

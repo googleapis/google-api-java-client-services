@@ -5,7 +5,7 @@ pushd "${repo_dir}/clients"
 # We only test against the latest variant
 readonly CURRENT_VARIANT="2.0.0"
 
-# Variants are based on the generator version
+# An optional argument to only compile libraries starting with this letter
 starting_letter="$1"
 
 # find all generated clients' pom.xml
@@ -13,7 +13,7 @@ find . -wholename "*${CURRENT_VARIANT}/pom.xml" -not -path '*/target/*' > pom_li
 cat pom_list_raw
 
 # trim down to those starting with "${starting_letter}"
-cat pom_list_raw | grep "google-api-services-${starting_letter}" > pom_list
+cat pom_list_raw | { grep "google-api-services-${starting_letter}"  || true; } > pom_list
 cat pom_list
 
 
@@ -28,7 +28,7 @@ cat pom.xml
 
 # test compilation
 mvn clean compile -T 1.5C -Dmaven.testSkip=true -Denforcer.skip -fae --fail-at-end 2>&1 | tee out
-cat out | grep 'rev20' | grep 's]' | grep 'FAILURE' > errors
+cat out | grep 'rev20' | grep 's]' | { grep 'FAILURE' || true; } > errors
 if [[ $(cat errors | wc -l) -gt 0 ]]; then
 	echo "Compilation errors found in the following libraries:"
 	cat errors

@@ -1,5 +1,8 @@
 .gitignore
 
+# Vim files
+*.swp
+
 # Packages
 dist
 build

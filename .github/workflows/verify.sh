@@ -2,11 +2,14 @@ set -ex
 export repo_dir=$(realpath $(dirname "${BASH_SOURCE[0]}")/../../)
 pushd "${repo_dir}/clients"
 
+# We only test against the latest variant
+readonly CURRENT_VARIANT="2.0.0"
+
 # Variants are based on the generator version
 starting_letter="$1"
 
 # find all generated clients' pom.xml
-find . -wholename "*${variant}/pom.xml" -not -path '*/target/*' > pom_list
+find . -wholename "*${CURRENT_VARIANT}/pom.xml" -not -path '*/target/*' > pom_list_raw
 cat pom_list_raw
 
 # trim down to those starting with "${starting_letter}"

@@ -1,4 +1,4 @@
-set -x
+set -ex
 export repo_dir=$(realpath $(dirname "${BASH_SOURCE[0]}")/../../)
 pushd "${repo_dir}/clients"
 

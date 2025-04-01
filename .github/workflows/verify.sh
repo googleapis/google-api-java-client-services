@@ -25,3 +25,4 @@ if [[ $(cat errors | wc -l) -gt 0 ]]; then
 	echo "Compilation errors found"
 	exit 1
 fi
+echo "No compilation errors found"

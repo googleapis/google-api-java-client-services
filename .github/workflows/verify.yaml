@@ -18,7 +18,7 @@ jobs:
         letter: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
       fail-fast: false
     outputs:
-      failed_libraries:
+      failed_libraries: ${{ steps.compile.outputs.failed_libraries }}
     steps:
       - uses: actions/setup-java@v3
         with:
@@ -28,7 +28,8 @@ jobs:
         with:
           path: google-api-java-client-services
 
-      - working-directory: google-api-java-client-services
+      - id: compile
+        working-directory: google-api-java-client-services
         run: |
           set -ex
           bash .github/workflows/verify.sh "${{matrix.letter}}"

@@ -65,6 +65,6 @@ jobs:
     steps:
       - run: |
           set -ex
-          echo '${{ toJSON(needs.verify.failed_libraries) }}'
+          echo '${{ toJSON(needs.verify.outputs) }}'
 
 

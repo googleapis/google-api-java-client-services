@@ -2,8 +2,11 @@ set -ex
 export repo_dir=$(realpath $(dirname "${BASH_SOURCE[0]}")/../../)
 pushd "${repo_dir}/clients"
 
+# Variants are based on the generator version
+variant="$1"
+
 # find all generated clients' pom.xml
-find . -name pom.xml -not -path '*/target/*' > pom_list
+find . -wholename "*${variant}/pom.xml" -not -path '*/target/*' > pom_list
 cat pom_list
 
 # format result to list of Maven modules

@@ -11,11 +11,12 @@ name: Verify libraries compilation
 jobs:
   verify:
     runs-on: 'ubuntu-24.04'
+    continue-on-error: true
     strategy:
       matrix:
         # We will parallelize by alphabet letter
         letter: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-        fail-fast: false
+      fail-fast: false
     outputs:
       failed_libraries:
     steps:

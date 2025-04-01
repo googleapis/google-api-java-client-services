@@ -64,7 +64,7 @@ jobs:
     needs: [verify]
     steps:
       - run: |
-          set -ex
+          set -e
           echo '${{ toJSON(needs.verify.outputs) }}' \
           | jq -j 'to_entries[] | select(.key | startswith("failed_libraries_")) | .value' \
           | sed 's/,/\n/g' > failed_libs

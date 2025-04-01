@@ -14,7 +14,7 @@ jobs:
     strategy:
       matrix:
         # We will parallelize by alphabet letter
-        ascii_code: ${{ range(97, 102) }}
+        letter: ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
         fail-fast: false
     outputs:
       failed_libraries:
@@ -30,7 +30,7 @@ jobs:
       - working-directory: google-api-java-client-services
         run: |
           set -ex
-          bash .github/workflows/verify.sh "$(printf "\x$(printf %x ${{ matrix.ascii_code }})")"
+          bash .github/workflows/verify.sh "${{matrix.letter}}"
   print_results:
     needs: [verify]
     steps:

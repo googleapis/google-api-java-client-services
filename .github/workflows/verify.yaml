@@ -70,7 +70,7 @@ jobs:
           | sed 's/,/\n/g' > failed_libs
 
           if [[ $(cat failed_libs | wc -l) -gt 0 ]]; then
-            echo "The following libraries have failures:"
+            echo "The following libraries cannot be compiled:"
             cat failed_libs
             exit 1
           fi

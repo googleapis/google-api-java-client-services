@@ -13,7 +13,7 @@ find . -wholename "*${CURRENT_VARIANT}/pom.xml" -not -path '*/target/*' > pom_li
 cat pom_list_raw
 
 # trim down to those starting with "${starting_letter}"
-cat pom_list | grep "google-api-services-${starting_letter}" > pom_list
+cat pom_list_raw | grep "google-api-services-${starting_letter}" > pom_list
 cat pom_list
 
 

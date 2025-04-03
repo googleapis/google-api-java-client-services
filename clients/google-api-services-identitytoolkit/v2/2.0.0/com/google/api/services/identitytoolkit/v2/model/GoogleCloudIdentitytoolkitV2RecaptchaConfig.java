@@ -46,6 +46,20 @@ public final class GoogleCloudIdentitytoolkitV2RecaptchaConfig extends com.googl
   private java.lang.String recaptchaKey;
 
   /**
+   * Whether to use the rCE bot score for reCAPTCHA phone provider.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean useSmsBotScore;
+
+  /**
+   * Whether to use the rCE sms toll fraud protection risk score for reCAPTCHA phone provider.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean useSmsTollFraudProtection;
+
+  /**
    * The reCAPTCHA enforcement state for the providers that GCIP supports reCAPTCHA protection.
    * @return value or {@code null} for none
    */
@@ -80,6 +94,40 @@ public final class GoogleCloudIdentitytoolkitV2RecaptchaConfig extends com.googl
    */
   public GoogleCloudIdentitytoolkitV2RecaptchaConfig setRecaptchaKey(java.lang.String recaptchaKey) {
     this.recaptchaKey = recaptchaKey;
+    return this;
+  }
+
+  /**
+   * Whether to use the rCE bot score for reCAPTCHA phone provider.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getUseSmsBotScore() {
+    return useSmsBotScore;
+  }
+
+  /**
+   * Whether to use the rCE bot score for reCAPTCHA phone provider.
+   * @param useSmsBotScore useSmsBotScore or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitV2RecaptchaConfig setUseSmsBotScore(java.lang.Boolean useSmsBotScore) {
+    this.useSmsBotScore = useSmsBotScore;
+    return this;
+  }
+
+  /**
+   * Whether to use the rCE sms toll fraud protection risk score for reCAPTCHA phone provider.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getUseSmsTollFraudProtection() {
+    return useSmsTollFraudProtection;
+  }
+
+  /**
+   * Whether to use the rCE sms toll fraud protection risk score for reCAPTCHA phone provider.
+   * @param useSmsTollFraudProtection useSmsTollFraudProtection or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitV2RecaptchaConfig setUseSmsTollFraudProtection(java.lang.Boolean useSmsTollFraudProtection) {
+    this.useSmsTollFraudProtection = useSmsTollFraudProtection;
     return this;
   }
 

@@ -6,8 +6,18 @@ This repository contains the generated source for individual APIs that utilize
 
 ## Requirements
 
-* [Google APIs Java Client Library for Java][google-api-java-client]
 * Java 7 (or higher)
+* [Google APIs Java Client Library for Java][google-api-java-client]
+  * In order to run your projects in Java 7, you must use version `1.32.1` of google-api-java-client, which only contains
+  dependencies compatible with Java 7, by adding
+  the following entry to your `dependencyManagement` section:
+  ```xml
+    <dependency>
+      <groupId>com.google.api-client</groupId>
+      <artifactId>google-api-client</artifactId>
+      <version>2.7.2</version>
+    </dependency>
+  ```
 * Android 1.6 (or higher)
 
 ## Supported Google APIs

@@ -14,8 +14,8 @@ This repository contains the generated source for individual APIs that utilize
   ```xml
     <dependency>
       <groupId>com.google.api-client</groupId>
-      <artifactId>google-api-client</artifactId>
-      <version>2.7.2</version>
+      <artifactId>google-api-client-bom</artifactId>
+      <version>1.32.1</version>
     </dependency>
   ```
 * Android 1.6 (or higher)

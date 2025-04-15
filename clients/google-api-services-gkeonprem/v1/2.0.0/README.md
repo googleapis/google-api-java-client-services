@@ -1,14 +1,14 @@
-# GDC Virtual API Client Library for Java
+# GKE On-Prem API Client Library for Java
 
 
 
-This page contains information about getting started with the GDC Virtual API
+This page contains information about getting started with the GKE On-Prem API
 using the Google API Client Library for Java. In addition, you may be interested
 in the following documentation:
 
-* Browse the [Javadoc reference for the GDC Virtual API][javadoc]
+* Browse the [Javadoc reference for the GKE On-Prem API][javadoc]
 * Read the [Developer's Guide for the Google API Client Library for Java][google-api-client].
-* Interact with this API in your browser using the [APIs Explorer for the GDC Virtual API][api-explorer]
+* Interact with this API in your browser using the [APIs Explorer for the GKE On-Prem API][api-explorer]
 
 ## Installation
 
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-gkeonprem</artifactId>
-      <version>v1-rev20241204-2.0.0</version>
+      <version>v1-rev20250224-2.0.0</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  implementation 'com.google.apis:google-api-services-gkeonprem:v1-rev20241204-2.0.0'
+  implementation 'com.google.apis:google-api-services-gkeonprem:v1-rev20250224-2.0.0'
 }
 ```
 

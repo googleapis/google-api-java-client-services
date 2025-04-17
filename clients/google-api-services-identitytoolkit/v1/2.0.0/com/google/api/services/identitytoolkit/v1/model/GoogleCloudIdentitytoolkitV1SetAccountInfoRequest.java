@@ -66,7 +66,6 @@ public final class GoogleCloudIdentitytoolkitV1SetAccountInfoRequest extends com
   private java.lang.Long delegatedProjectNumber;
 
   /**
-   * The account's attributes to be deleted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -138,8 +137,8 @@ public final class GoogleCloudIdentitytoolkitV1SetAccountInfoRequest extends com
 
   /**
    * The provider to be linked to the user's account. Specifying this field requires a Google OAuth
-   * 2.0 credential with proper [permissions] (https://cloud.google.com/identity-platform/docs
-   * /access-control).
+   * 2.0 credential with proper [permissions] (https://cloud.google.com/identity-
+   * platform/docs/access-control).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -157,8 +156,8 @@ public final class GoogleCloudIdentitytoolkitV1SetAccountInfoRequest extends com
   /**
    * The multi-factor authentication related information to be set on the user's account. This will
    * overwrite any previous multi-factor related information on the account. Specifying this field
-   * requires a Google OAuth 2.0 credential with proper [permissions] (https://cloud.google.com
-   * /identity-platform/docs/access-control).
+   * requires a Google OAuth 2.0 credential with proper [permissions]
+   * (https://cloud.google.com/identity-platform/docs/access-control).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -331,7 +330,6 @@ public final class GoogleCloudIdentitytoolkitV1SetAccountInfoRequest extends com
   }
 
   /**
-   * The account's attributes to be deleted.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDeleteAttribute() {
@@ -339,7 +337,6 @@ public final class GoogleCloudIdentitytoolkitV1SetAccountInfoRequest extends com
   }
 
   /**
-   * The account's attributes to be deleted.
    * @param deleteAttribute deleteAttribute or {@code null} for none
    */
   public GoogleCloudIdentitytoolkitV1SetAccountInfoRequest setDeleteAttribute(java.util.List<java.lang.String> deleteAttribute) {
@@ -501,8 +498,8 @@ public final class GoogleCloudIdentitytoolkitV1SetAccountInfoRequest extends com
 
   /**
    * The provider to be linked to the user's account. Specifying this field requires a Google OAuth
-   * 2.0 credential with proper [permissions] (https://cloud.google.com/identity-platform/docs
-   * /access-control).
+   * 2.0 credential with proper [permissions] (https://cloud.google.com/identity-
+   * platform/docs/access-control).
    * @return value or {@code null} for none
    */
   public GoogleCloudIdentitytoolkitV1ProviderUserInfo getLinkProviderUserInfo() {
@@ -511,8 +508,8 @@ public final class GoogleCloudIdentitytoolkitV1SetAccountInfoRequest extends com
 
   /**
    * The provider to be linked to the user's account. Specifying this field requires a Google OAuth
-   * 2.0 credential with proper [permissions] (https://cloud.google.com/identity-platform/docs
-   * /access-control).
+   * 2.0 credential with proper [permissions] (https://cloud.google.com/identity-
+   * platform/docs/access-control).
    * @param linkProviderUserInfo linkProviderUserInfo or {@code null} for none
    */
   public GoogleCloudIdentitytoolkitV1SetAccountInfoRequest setLinkProviderUserInfo(GoogleCloudIdentitytoolkitV1ProviderUserInfo linkProviderUserInfo) {
@@ -544,8 +541,8 @@ public final class GoogleCloudIdentitytoolkitV1SetAccountInfoRequest extends com
   /**
    * The multi-factor authentication related information to be set on the user's account. This will
    * overwrite any previous multi-factor related information on the account. Specifying this field
-   * requires a Google OAuth 2.0 credential with proper [permissions] (https://cloud.google.com
-   * /identity-platform/docs/access-control).
+   * requires a Google OAuth 2.0 credential with proper [permissions]
+   * (https://cloud.google.com/identity-platform/docs/access-control).
    * @return value or {@code null} for none
    */
   public GoogleCloudIdentitytoolkitV1MfaInfo getMfa() {
@@ -555,8 +552,8 @@ public final class GoogleCloudIdentitytoolkitV1SetAccountInfoRequest extends com
   /**
    * The multi-factor authentication related information to be set on the user's account. This will
    * overwrite any previous multi-factor related information on the account. Specifying this field
-   * requires a Google OAuth 2.0 credential with proper [permissions] (https://cloud.google.com
-   * /identity-platform/docs/access-control).
+   * requires a Google OAuth 2.0 credential with proper [permissions]
+   * (https://cloud.google.com/identity-platform/docs/access-control).
    * @param mfa mfa or {@code null} for none
    */
   public GoogleCloudIdentitytoolkitV1SetAccountInfoRequest setMfa(GoogleCloudIdentitytoolkitV1MfaInfo mfa) {

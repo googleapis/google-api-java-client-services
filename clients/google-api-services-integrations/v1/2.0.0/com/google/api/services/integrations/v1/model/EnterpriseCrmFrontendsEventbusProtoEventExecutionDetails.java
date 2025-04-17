@@ -18,7 +18,7 @@ package com.google.api.services.integrations.v1.model;
 
 /**
  * Contains the details of the execution info of this event: this includes the tasks execution
- * details plus the event execution statistics. Next available id: 11
+ * details plus the event execution statistics. Next available id: 12
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Application Integration API. For a detailed
@@ -30,6 +30,13 @@ package com.google.api.services.integrations.v1.model;
  */
 @SuppressWarnings("javadoc")
 public final class EnterpriseCrmFrontendsEventbusProtoEventExecutionDetails extends com.google.api.client.json.GenericJson {
+
+  /**
+   * If the execution is manually canceled, this field will contain the reason for cancellation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String cancelReason;
 
   /**
    * The value may be {@code null}.
@@ -100,6 +107,23 @@ public final class EnterpriseCrmFrontendsEventbusProtoEventExecutionDetails exte
    */
   @com.google.api.client.util.Key
   private java.lang.Integer ryeLockUnheldCount;
+
+  /**
+   * If the execution is manually canceled, this field will contain the reason for cancellation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCancelReason() {
+    return cancelReason;
+  }
+
+  /**
+   * If the execution is manually canceled, this field will contain the reason for cancellation.
+   * @param cancelReason cancelReason or {@code null} for none
+   */
+  public EnterpriseCrmFrontendsEventbusProtoEventExecutionDetails setCancelReason(java.lang.String cancelReason) {
+    this.cancelReason = cancelReason;
+    return this;
+  }
 
   /**
    * @return value or {@code null} for none

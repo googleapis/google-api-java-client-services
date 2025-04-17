@@ -30,7 +30,7 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1FlowInvocation extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The unique identifier of the flow. Format: `projects//locations//agents/`.
+   * Required. The unique identifier of the flow. Format: `projects//locations//agents//flows/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +58,7 @@ public final class GoogleCloudDialogflowCxV3beta1FlowInvocation extends com.goog
   private java.util.Map<String, java.lang.Object> outputActionParameters;
 
   /**
-   * Required. The unique identifier of the flow. Format: `projects//locations//agents/`.
+   * Required. The unique identifier of the flow. Format: `projects//locations//agents//flows/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getFlow() {
@@ -66,7 +66,7 @@ public final class GoogleCloudDialogflowCxV3beta1FlowInvocation extends com.goog
   }
 
   /**
-   * Required. The unique identifier of the flow. Format: `projects//locations//agents/`.
+   * Required. The unique identifier of the flow. Format: `projects//locations//agents//flows/`.
    * @param flow flow or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1FlowInvocation setFlow(java.lang.String flow) {

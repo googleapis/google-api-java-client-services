@@ -51,6 +51,13 @@ public final class GoogleCloudDialogflowCxV3beta1ToolAuthenticationOAuthConfig e
   private java.lang.String oauthGrantType;
 
   /**
+   * Optional. The OAuth scopes to grant.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> scopes;
+
+  /**
    * Required. The token endpoint in the OAuth provider to exchange for an access token.
    * The value may be {@code null}.
    */
@@ -105,6 +112,23 @@ public final class GoogleCloudDialogflowCxV3beta1ToolAuthenticationOAuthConfig e
    */
   public GoogleCloudDialogflowCxV3beta1ToolAuthenticationOAuthConfig setOauthGrantType(java.lang.String oauthGrantType) {
     this.oauthGrantType = oauthGrantType;
+    return this;
+  }
+
+  /**
+   * Optional. The OAuth scopes to grant.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getScopes() {
+    return scopes;
+  }
+
+  /**
+   * Optional. The OAuth scopes to grant.
+   * @param scopes scopes or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1ToolAuthenticationOAuthConfig setScopes(java.util.List<java.lang.String> scopes) {
+    this.scopes = scopes;
     return this;
   }
 

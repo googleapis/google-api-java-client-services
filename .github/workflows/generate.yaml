@@ -15,7 +15,7 @@ on:
 name: generate
 jobs:
   generate_one:
-    runs-on: 'ubuntu-20.04'
+    runs-on: 'ubuntu-22.04'
     strategy:
       fail-fast: false
       max-parallel: 4
@@ -34,7 +34,7 @@ jobs:
           path: discovery-artifact-manager
       - uses: actions/setup-python@v5
         with:
-          python-version: 3.8.10
+          python-version: 3.8.18
       - run: |
           sudo apt update
           python3 --version

@@ -36,8 +36,7 @@ jobs:
           sudo apt update
           sudo apt install python3
           echo "using $(python3 --version)"
-          curl https://bootstrap.pypa.io/pip/3.6/get-pip.py -o get-pip.py
-          python3 get-pip.py
+          echo "using $(pip --version)"  
       - run: ./google-api-java-client-services/.github/workflows/generate.sh ${{ matrix.service }}
       - uses: googleapis/code-suggester@v2 # takes the changes from git directory
         env:

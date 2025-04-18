@@ -34,7 +34,7 @@ jobs:
           path: discovery-artifact-manager
       - run: |
           sudo apt update
-          sudo install python3
+          sudo apt install python3
           python3 --version
           pip --version  
       - run: ./google-api-java-client-services/.github/workflows/generate.sh ${{ matrix.service }}

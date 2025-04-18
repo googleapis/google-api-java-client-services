@@ -150,6 +150,13 @@ public final class GoogleCloudAiplatformV1EvaluateInstancesResponse extends com.
   private GoogleCloudAiplatformV1RougeResults rougeResults;
 
   /**
+   * Result for rubric based instruction following metric.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1RubricBasedInstructionFollowingResult rubricBasedInstructionFollowingResult;
+
+  /**
    * Result for safety metric.
    * The value may be {@code null}.
    */
@@ -535,6 +542,23 @@ public final class GoogleCloudAiplatformV1EvaluateInstancesResponse extends com.
    */
   public GoogleCloudAiplatformV1EvaluateInstancesResponse setRougeResults(GoogleCloudAiplatformV1RougeResults rougeResults) {
     this.rougeResults = rougeResults;
+    return this;
+  }
+
+  /**
+   * Result for rubric based instruction following metric.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1RubricBasedInstructionFollowingResult getRubricBasedInstructionFollowingResult() {
+    return rubricBasedInstructionFollowingResult;
+  }
+
+  /**
+   * Result for rubric based instruction following metric.
+   * @param rubricBasedInstructionFollowingResult rubricBasedInstructionFollowingResult or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1EvaluateInstancesResponse setRubricBasedInstructionFollowingResult(GoogleCloudAiplatformV1RubricBasedInstructionFollowingResult rubricBasedInstructionFollowingResult) {
+    this.rubricBasedInstructionFollowingResult = rubricBasedInstructionFollowingResult;
     return this;
   }
 

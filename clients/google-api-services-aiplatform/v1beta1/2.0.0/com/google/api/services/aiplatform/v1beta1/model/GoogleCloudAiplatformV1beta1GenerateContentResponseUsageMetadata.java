@@ -101,6 +101,14 @@ public final class GoogleCloudAiplatformV1beta1GenerateContentResponseUsageMetad
   private java.lang.Integer totalTokenCount;
 
   /**
+   * Output only. Traffic type. This shows whether a request consumes Pay-As-You-Go or Provisioned
+   * Throughput quota.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String trafficType;
+
+  /**
    * Output only. List of modalities of the cached content in the request input.
    * @return value or {@code null} for none
    */
@@ -269,6 +277,25 @@ public final class GoogleCloudAiplatformV1beta1GenerateContentResponseUsageMetad
    */
   public GoogleCloudAiplatformV1beta1GenerateContentResponseUsageMetadata setTotalTokenCount(java.lang.Integer totalTokenCount) {
     this.totalTokenCount = totalTokenCount;
+    return this;
+  }
+
+  /**
+   * Output only. Traffic type. This shows whether a request consumes Pay-As-You-Go or Provisioned
+   * Throughput quota.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTrafficType() {
+    return trafficType;
+  }
+
+  /**
+   * Output only. Traffic type. This shows whether a request consumes Pay-As-You-Go or Provisioned
+   * Throughput quota.
+   * @param trafficType trafficType or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GenerateContentResponseUsageMetadata setTrafficType(java.lang.String trafficType) {
+    this.trafficType = trafficType;
     return this;
   }
 

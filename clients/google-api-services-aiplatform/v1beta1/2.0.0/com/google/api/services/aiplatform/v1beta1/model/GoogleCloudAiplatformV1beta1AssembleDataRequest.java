@@ -37,6 +37,14 @@ public final class GoogleCloudAiplatformV1beta1AssembleDataRequest extends com.g
   private GoogleCloudAiplatformV1beta1GeminiTemplateConfig geminiTemplateConfig;
 
   /**
+   * Optional. The column name in the underlying table that contains already fully assembled
+   * requests. If this field is set, the original request will be copied to the output table.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String requestColumnName;
+
+  /**
    * Optional. Config for assembling templates with a Gemini API structure.
    * @return value or {@code null} for none
    */
@@ -50,6 +58,25 @@ public final class GoogleCloudAiplatformV1beta1AssembleDataRequest extends com.g
    */
   public GoogleCloudAiplatformV1beta1AssembleDataRequest setGeminiTemplateConfig(GoogleCloudAiplatformV1beta1GeminiTemplateConfig geminiTemplateConfig) {
     this.geminiTemplateConfig = geminiTemplateConfig;
+    return this;
+  }
+
+  /**
+   * Optional. The column name in the underlying table that contains already fully assembled
+   * requests. If this field is set, the original request will be copied to the output table.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRequestColumnName() {
+    return requestColumnName;
+  }
+
+  /**
+   * Optional. The column name in the underlying table that contains already fully assembled
+   * requests. If this field is set, the original request will be copied to the output table.
+   * @param requestColumnName requestColumnName or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1AssembleDataRequest setRequestColumnName(java.lang.String requestColumnName) {
+    this.requestColumnName = requestColumnName;
     return this;
   }
 

@@ -30,6 +30,17 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1PointwiseMetricSpec extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. CustomOutputFormatConfig allows customization of metric output. By default, metrics
+   * return a score and explanation. When this config is set, the default output is replaced with
+   * either: - The raw output string. - A parsed output based on a user-defined schema. If a custom
+   * format is chosen, the `score` and `explanation` fields in the corresponding metric result will
+   * be empty.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1CustomOutputFormatConfig customOutputFormatConfig;
+
+  /**
    * Required. Metric prompt template for pointwise metric.
    * The value may be {@code null}.
    */
@@ -42,6 +53,31 @@ public final class GoogleCloudAiplatformV1beta1PointwiseMetricSpec extends com.g
    */
   @com.google.api.client.util.Key
   private java.lang.String systemInstruction;
+
+  /**
+   * Optional. CustomOutputFormatConfig allows customization of metric output. By default, metrics
+   * return a score and explanation. When this config is set, the default output is replaced with
+   * either: - The raw output string. - A parsed output based on a user-defined schema. If a custom
+   * format is chosen, the `score` and `explanation` fields in the corresponding metric result will
+   * be empty.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1CustomOutputFormatConfig getCustomOutputFormatConfig() {
+    return customOutputFormatConfig;
+  }
+
+  /**
+   * Optional. CustomOutputFormatConfig allows customization of metric output. By default, metrics
+   * return a score and explanation. When this config is set, the default output is replaced with
+   * either: - The raw output string. - A parsed output based on a user-defined schema. If a custom
+   * format is chosen, the `score` and `explanation` fields in the corresponding metric result will
+   * be empty.
+   * @param customOutputFormatConfig customOutputFormatConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1PointwiseMetricSpec setCustomOutputFormatConfig(GoogleCloudAiplatformV1beta1CustomOutputFormatConfig customOutputFormatConfig) {
+    this.customOutputFormatConfig = customOutputFormatConfig;
+    return this;
+  }
 
   /**
    * Required. Metric prompt template for pointwise metric.

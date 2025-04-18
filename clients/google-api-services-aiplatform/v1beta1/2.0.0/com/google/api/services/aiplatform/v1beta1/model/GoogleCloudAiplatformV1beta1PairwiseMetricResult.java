@@ -30,6 +30,13 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1PairwiseMetricResult extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Spec for custom output.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1CustomOutput customOutput;
+
+  /**
    * Output only. Explanation for pairwise metric score.
    * The value may be {@code null}.
    */
@@ -42,6 +49,23 @@ public final class GoogleCloudAiplatformV1beta1PairwiseMetricResult extends com.
    */
   @com.google.api.client.util.Key
   private java.lang.String pairwiseChoice;
+
+  /**
+   * Output only. Spec for custom output.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1CustomOutput getCustomOutput() {
+    return customOutput;
+  }
+
+  /**
+   * Output only. Spec for custom output.
+   * @param customOutput customOutput or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1PairwiseMetricResult setCustomOutput(GoogleCloudAiplatformV1beta1CustomOutput customOutput) {
+    this.customOutput = customOutput;
+    return this;
+  }
 
   /**
    * Output only. Explanation for pairwise metric score.

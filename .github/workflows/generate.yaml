@@ -32,9 +32,11 @@ jobs:
           repository: googleapis/discovery-artifact-manager
           fetch-depth: 1
           path: discovery-artifact-manager
+      - uses: actions/setup-python@v5
+        with:
+          python-version: 3.8.10
       - run: |
           sudo apt update
-          sudo apt install python3
           python3 --version
           pip install pip==21.3.1
           pip --version  

@@ -30,7 +30,8 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1EvaluateDatasetRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Autorater config used for evaluation.
+   * Optional. Autorater config used for evaluation. Currently only publisher Gemini models are
+   * supported. Format: `projects/{PROJECT}/locations/{LOCATION}/publishers/google/models/{MODEL}.`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +59,8 @@ public final class GoogleCloudAiplatformV1beta1EvaluateDatasetRequest extends co
   private GoogleCloudAiplatformV1beta1OutputConfig outputConfig;
 
   /**
-   * Optional. Autorater config used for evaluation.
+   * Optional. Autorater config used for evaluation. Currently only publisher Gemini models are
+   * supported. Format: `projects/{PROJECT}/locations/{LOCATION}/publishers/google/models/{MODEL}.`
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1AutoraterConfig getAutoraterConfig() {
@@ -66,7 +68,8 @@ public final class GoogleCloudAiplatformV1beta1EvaluateDatasetRequest extends co
   }
 
   /**
-   * Optional. Autorater config used for evaluation.
+   * Optional. Autorater config used for evaluation. Currently only publisher Gemini models are
+   * supported. Format: `projects/{PROJECT}/locations/{LOCATION}/publishers/google/models/{MODEL}.`
    * @param autoraterConfig autoraterConfig or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1EvaluateDatasetRequest setAutoraterConfig(GoogleCloudAiplatformV1beta1AutoraterConfig autoraterConfig) {

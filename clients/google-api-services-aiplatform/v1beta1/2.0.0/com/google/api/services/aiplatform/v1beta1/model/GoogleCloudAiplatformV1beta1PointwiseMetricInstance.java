@@ -30,12 +30,39 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1PointwiseMetricInstance extends com.google.api.client.json.GenericJson {
 
   /**
+   * Key-value contents for the mutlimodality input, including text, image, video, audio, and pdf,
+   * etc. The key is placeholder in metric prompt template, and the value is the multimodal content.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1ContentMap contentMapInstance;
+
+  /**
    * Instance specified as a json string. String key-value pairs are expected in the json_instance
    * to render PointwiseMetricSpec.instance_prompt_template.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String jsonInstance;
+
+  /**
+   * Key-value contents for the mutlimodality input, including text, image, video, audio, and pdf,
+   * etc. The key is placeholder in metric prompt template, and the value is the multimodal content.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ContentMap getContentMapInstance() {
+    return contentMapInstance;
+  }
+
+  /**
+   * Key-value contents for the mutlimodality input, including text, image, video, audio, and pdf,
+   * etc. The key is placeholder in metric prompt template, and the value is the multimodal content.
+   * @param contentMapInstance contentMapInstance or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1PointwiseMetricInstance setContentMapInstance(GoogleCloudAiplatformV1beta1ContentMap contentMapInstance) {
+    this.contentMapInstance = contentMapInstance;
+    return this;
+  }
 
   /**
    * Instance specified as a json string. String key-value pairs are expected in the json_instance

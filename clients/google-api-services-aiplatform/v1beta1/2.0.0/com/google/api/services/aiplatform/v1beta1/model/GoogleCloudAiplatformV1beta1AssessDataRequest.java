@@ -30,11 +30,33 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1AssessDataRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Configuration for the batch prediction resource usage assessment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1AssessDataRequestBatchPredictionResourceUsageAssessmentConfig batchPredictionResourceUsageAssessmentConfig;
+
+  /**
+   * Optional. Configuration for the batch prediction validation assessment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1AssessDataRequestBatchPredictionValidationAssessmentConfig batchPredictionValidationAssessmentConfig;
+
+  /**
    * Optional. Config for assembling templates with a Gemini API structure to assess assembled data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1GeminiTemplateConfig geminiTemplateConfig;
+
+  /**
+   * Optional. The column name in the underlying table that contains already fully assembled
+   * requests.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String requestColumnName;
 
   /**
    * Optional. Configuration for the tuning resource usage assessment.
@@ -51,6 +73,40 @@ public final class GoogleCloudAiplatformV1beta1AssessDataRequest extends com.goo
   private GoogleCloudAiplatformV1beta1AssessDataRequestTuningValidationAssessmentConfig tuningValidationAssessmentConfig;
 
   /**
+   * Optional. Configuration for the batch prediction resource usage assessment.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1AssessDataRequestBatchPredictionResourceUsageAssessmentConfig getBatchPredictionResourceUsageAssessmentConfig() {
+    return batchPredictionResourceUsageAssessmentConfig;
+  }
+
+  /**
+   * Optional. Configuration for the batch prediction resource usage assessment.
+   * @param batchPredictionResourceUsageAssessmentConfig batchPredictionResourceUsageAssessmentConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1AssessDataRequest setBatchPredictionResourceUsageAssessmentConfig(GoogleCloudAiplatformV1beta1AssessDataRequestBatchPredictionResourceUsageAssessmentConfig batchPredictionResourceUsageAssessmentConfig) {
+    this.batchPredictionResourceUsageAssessmentConfig = batchPredictionResourceUsageAssessmentConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for the batch prediction validation assessment.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1AssessDataRequestBatchPredictionValidationAssessmentConfig getBatchPredictionValidationAssessmentConfig() {
+    return batchPredictionValidationAssessmentConfig;
+  }
+
+  /**
+   * Optional. Configuration for the batch prediction validation assessment.
+   * @param batchPredictionValidationAssessmentConfig batchPredictionValidationAssessmentConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1AssessDataRequest setBatchPredictionValidationAssessmentConfig(GoogleCloudAiplatformV1beta1AssessDataRequestBatchPredictionValidationAssessmentConfig batchPredictionValidationAssessmentConfig) {
+    this.batchPredictionValidationAssessmentConfig = batchPredictionValidationAssessmentConfig;
+    return this;
+  }
+
+  /**
    * Optional. Config for assembling templates with a Gemini API structure to assess assembled data.
    * @return value or {@code null} for none
    */
@@ -64,6 +120,25 @@ public final class GoogleCloudAiplatformV1beta1AssessDataRequest extends com.goo
    */
   public GoogleCloudAiplatformV1beta1AssessDataRequest setGeminiTemplateConfig(GoogleCloudAiplatformV1beta1GeminiTemplateConfig geminiTemplateConfig) {
     this.geminiTemplateConfig = geminiTemplateConfig;
+    return this;
+  }
+
+  /**
+   * Optional. The column name in the underlying table that contains already fully assembled
+   * requests.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRequestColumnName() {
+    return requestColumnName;
+  }
+
+  /**
+   * Optional. The column name in the underlying table that contains already fully assembled
+   * requests.
+   * @param requestColumnName requestColumnName or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1AssessDataRequest setRequestColumnName(java.lang.String requestColumnName) {
+    this.requestColumnName = requestColumnName;
     return this;
   }
 

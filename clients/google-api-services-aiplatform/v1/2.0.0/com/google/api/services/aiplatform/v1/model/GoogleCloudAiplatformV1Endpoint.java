@@ -46,8 +46,9 @@ public final class GoogleCloudAiplatformV1Endpoint extends com.google.api.client
 
   /**
    * Output only. DNS of the dedicated endpoint. Will only be populated if
-   * dedicated_endpoint_enabled is true. Format:
-   * `https://{endpoint_id}.{region}-{project_number}.prediction.vertexai.goog`.
+   * dedicated_endpoint_enabled is true. Depending on the features enabled, uid might be a random
+   * number or a string. For example, if fast_tryout is enabled, uid will be fasttryout. Format:
+   * `https://{endpoint_id}.{region}-{uid}.prediction.vertexai.goog`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -248,8 +249,9 @@ public final class GoogleCloudAiplatformV1Endpoint extends com.google.api.client
 
   /**
    * Output only. DNS of the dedicated endpoint. Will only be populated if
-   * dedicated_endpoint_enabled is true. Format:
-   * `https://{endpoint_id}.{region}-{project_number}.prediction.vertexai.goog`.
+   * dedicated_endpoint_enabled is true. Depending on the features enabled, uid might be a random
+   * number or a string. For example, if fast_tryout is enabled, uid will be fasttryout. Format:
+   * `https://{endpoint_id}.{region}-{uid}.prediction.vertexai.goog`.
    * @return value or {@code null} for none
    */
   public java.lang.String getDedicatedEndpointDns() {
@@ -258,8 +260,9 @@ public final class GoogleCloudAiplatformV1Endpoint extends com.google.api.client
 
   /**
    * Output only. DNS of the dedicated endpoint. Will only be populated if
-   * dedicated_endpoint_enabled is true. Format:
-   * `https://{endpoint_id}.{region}-{project_number}.prediction.vertexai.goog`.
+   * dedicated_endpoint_enabled is true. Depending on the features enabled, uid might be a random
+   * number or a string. For example, if fast_tryout is enabled, uid will be fasttryout. Format:
+   * `https://{endpoint_id}.{region}-{uid}.prediction.vertexai.goog`.
    * @param dedicatedEndpointDns dedicatedEndpointDns or {@code null} for none
    */
   public GoogleCloudAiplatformV1Endpoint setDedicatedEndpointDns(java.lang.String dedicatedEndpointDns) {

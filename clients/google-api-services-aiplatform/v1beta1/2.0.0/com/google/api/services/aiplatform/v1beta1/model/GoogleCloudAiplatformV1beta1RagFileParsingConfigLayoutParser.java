@@ -31,6 +31,16 @@ public final class GoogleCloudAiplatformV1beta1RagFileParsingConfigLayoutParser 
 
   /**
    * The maximum number of requests the job is allowed to make to the Document AI processor per
+   * minute in this project. Consult https://cloud.google.com/document-ai/quotas and the Quota page
+   * for your project to set an appropriate value here. If this value is not specified,
+   * max_parsing_requests_per_min will be used by indexing pipeline as the global limit.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer globalMaxParsingRequestsPerMin;
+
+  /**
+   * The maximum number of requests the job is allowed to make to the Document AI processor per
    * minute. Consult https://cloud.google.com/document-ai/quotas and the Quota page for your project
    * to set an appropriate value here. If unspecified, a default value of 120 QPM would be used.
    * The value may be {@code null}.
@@ -48,6 +58,29 @@ public final class GoogleCloudAiplatformV1beta1RagFileParsingConfigLayoutParser 
    */
   @com.google.api.client.util.Key
   private java.lang.String processorName;
+
+  /**
+   * The maximum number of requests the job is allowed to make to the Document AI processor per
+   * minute in this project. Consult https://cloud.google.com/document-ai/quotas and the Quota page
+   * for your project to set an appropriate value here. If this value is not specified,
+   * max_parsing_requests_per_min will be used by indexing pipeline as the global limit.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getGlobalMaxParsingRequestsPerMin() {
+    return globalMaxParsingRequestsPerMin;
+  }
+
+  /**
+   * The maximum number of requests the job is allowed to make to the Document AI processor per
+   * minute in this project. Consult https://cloud.google.com/document-ai/quotas and the Quota page
+   * for your project to set an appropriate value here. If this value is not specified,
+   * max_parsing_requests_per_min will be used by indexing pipeline as the global limit.
+   * @param globalMaxParsingRequestsPerMin globalMaxParsingRequestsPerMin or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RagFileParsingConfigLayoutParser setGlobalMaxParsingRequestsPerMin(java.lang.Integer globalMaxParsingRequestsPerMin) {
+    this.globalMaxParsingRequestsPerMin = globalMaxParsingRequestsPerMin;
+    return this;
+  }
 
   /**
    * The maximum number of requests the job is allowed to make to the Document AI processor per

@@ -61,8 +61,19 @@ public final class Form extends com.google.api.client.json.GenericJson {
   private java.lang.String linkedSheetId;
 
   /**
+   * Output only. The publishing settings for a form. This field isn't set for legacy forms because
+   * they don't have the `publish_settings` field. All newly created forms support publish settings.
+   * Forms with `publish_settings` value set can call SetPublishSettings API to publish or unpublish
+   * the form.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PublishSettings publishSettings;
+
+  /**
    * Output only. The form URI to share with responders. This opens a page that allows the user to
-   * submit responses but not edit the questions.
+   * submit responses but not edit the questions. For forms that have `publish_settings` value set,
+   * this is the published form URI.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,9 +84,11 @@ public final class Form extends com.google.api.client.json.GenericJson {
    * identify the revision on which the changes are based. The format of the revision ID may change
    * over time, so it should be treated opaquely. A returned revision ID is only guaranteed to be
    * valid for 24 hours after it has been returned and cannot be shared across users. If the
-   * revision ID is unchanged between calls, then the form has not changed. Conversely, a changed ID
-   * (for the same form and user) usually means the form has been updated; however, a changed ID can
-   * also be due to internal factors such as ID format changes.
+   * revision ID is unchanged between calls, then the form *content* has not changed. Conversely, a
+   * changed ID (for the same form and user) usually means the form *content* has been updated;
+   * however, a changed ID can also be due to internal factors such as ID format changes. Form
+   * content excludes form metadata, including: * sharing settings (who has access to the form) *
+   * `publish_settings` (if the form supports publishing and if it is published)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -162,8 +175,32 @@ public final class Form extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. The publishing settings for a form. This field isn't set for legacy forms because
+   * they don't have the `publish_settings` field. All newly created forms support publish settings.
+   * Forms with `publish_settings` value set can call SetPublishSettings API to publish or unpublish
+   * the form.
+   * @return value or {@code null} for none
+   */
+  public PublishSettings getPublishSettings() {
+    return publishSettings;
+  }
+
+  /**
+   * Output only. The publishing settings for a form. This field isn't set for legacy forms because
+   * they don't have the `publish_settings` field. All newly created forms support publish settings.
+   * Forms with `publish_settings` value set can call SetPublishSettings API to publish or unpublish
+   * the form.
+   * @param publishSettings publishSettings or {@code null} for none
+   */
+  public Form setPublishSettings(PublishSettings publishSettings) {
+    this.publishSettings = publishSettings;
+    return this;
+  }
+
+  /**
    * Output only. The form URI to share with responders. This opens a page that allows the user to
-   * submit responses but not edit the questions.
+   * submit responses but not edit the questions. For forms that have `publish_settings` value set,
+   * this is the published form URI.
    * @return value or {@code null} for none
    */
   public java.lang.String getResponderUri() {
@@ -172,7 +209,8 @@ public final class Form extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The form URI to share with responders. This opens a page that allows the user to
-   * submit responses but not edit the questions.
+   * submit responses but not edit the questions. For forms that have `publish_settings` value set,
+   * this is the published form URI.
    * @param responderUri responderUri or {@code null} for none
    */
   public Form setResponderUri(java.lang.String responderUri) {
@@ -185,9 +223,11 @@ public final class Form extends com.google.api.client.json.GenericJson {
    * identify the revision on which the changes are based. The format of the revision ID may change
    * over time, so it should be treated opaquely. A returned revision ID is only guaranteed to be
    * valid for 24 hours after it has been returned and cannot be shared across users. If the
-   * revision ID is unchanged between calls, then the form has not changed. Conversely, a changed ID
-   * (for the same form and user) usually means the form has been updated; however, a changed ID can
-   * also be due to internal factors such as ID format changes.
+   * revision ID is unchanged between calls, then the form *content* has not changed. Conversely, a
+   * changed ID (for the same form and user) usually means the form *content* has been updated;
+   * however, a changed ID can also be due to internal factors such as ID format changes. Form
+   * content excludes form metadata, including: * sharing settings (who has access to the form) *
+   * `publish_settings` (if the form supports publishing and if it is published)
    * @return value or {@code null} for none
    */
   public java.lang.String getRevisionId() {
@@ -199,9 +239,11 @@ public final class Form extends com.google.api.client.json.GenericJson {
    * identify the revision on which the changes are based. The format of the revision ID may change
    * over time, so it should be treated opaquely. A returned revision ID is only guaranteed to be
    * valid for 24 hours after it has been returned and cannot be shared across users. If the
-   * revision ID is unchanged between calls, then the form has not changed. Conversely, a changed ID
-   * (for the same form and user) usually means the form has been updated; however, a changed ID can
-   * also be due to internal factors such as ID format changes.
+   * revision ID is unchanged between calls, then the form *content* has not changed. Conversely, a
+   * changed ID (for the same form and user) usually means the form *content* has been updated;
+   * however, a changed ID can also be due to internal factors such as ID format changes. Form
+   * content excludes form metadata, including: * sharing settings (who has access to the form) *
+   * `publish_settings` (if the form supports publishing and if it is published)
    * @param revisionId revisionId or {@code null} for none
    */
   public Form setRevisionId(java.lang.String revisionId) {

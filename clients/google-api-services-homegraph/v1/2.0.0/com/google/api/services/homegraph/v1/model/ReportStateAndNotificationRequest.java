@@ -22,7 +22,7 @@ package com.google.api.services.homegraph.v1.model;
  * notifications are defined per `device_id` (for example, "123" and "456" in the following
  * example). Example: ```json { "requestId": "ff36a3cc-ec34-11e6-b1a0-64510650abcf", "agentUserId":
  * "1234", "payload": { "devices": { "states": { "123": { "on": true }, "456": { "on": true,
- * "brightness": 10 } }, } } } ```
+ * "brightness": 10 }, }, } } } ```
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the HomeGraph API. For a detailed explanation see:

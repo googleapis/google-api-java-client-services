@@ -7372,6 +7372,1045 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
         }
 
       }
+      /**
+       * An accessor for creating requests from the UserCreds collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Firestore firestore = new Firestore(...);}
+       *   {@code Firestore.UserCreds.List request = firestore.userCreds().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public UserCreds userCreds() {
+        return new UserCreds();
+      }
+
+      /**
+       * The "userCreds" collection of methods.
+       */
+      public class UserCreds {
+
+        /**
+         * Create a user creds.
+         *
+         * Create a request for the method "userCreds.create".
+         *
+         * This request holds the parameters needed by the firestore server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. A parent name of the form `projects/{project_id}/databases/{database_id}`
+         * @param content the {@link com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1UserCreds}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1UserCreds content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends FirestoreRequest<com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1UserCreds> {
+
+          private static final String REST_PATH = "v1/{+parent}/userCreds";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/databases/[^/]+$");
+
+          /**
+           * Create a user creds.
+           *
+           * Create a request for the method "userCreds.create".
+           *
+           * This request holds the parameters needed by the the firestore server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. A parent name of the form `projects/{project_id}/databases/{database_id}`
+           * @param content the {@link com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1UserCreds}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1UserCreds content) {
+            super(Firestore.this, "POST", REST_PATH, content, com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1UserCreds.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. A parent name of the form `projects/{project_id}/databases/{database_id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. A parent name of the form `projects/{project_id}/databases/{database_id}`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. A parent name of the form `projects/{project_id}/databases/{database_id}`
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Required. The ID to use for the user creds, which will become the final component of
+           * the user creds's resource name. This value should be 4-63 characters. Valid characters
+           * are /a-z-/ with first character a letter and the last a letter or a number. Must not be
+           * UUID-like /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String userCredsId;
+
+          /** Required. The ID to use for the user creds, which will become the final component of the user
+         creds's resource name. This value should be 4-63 characters. Valid characters are /a-z-/ with first
+         character a letter and the last a letter or a number. Must not be UUID-like
+         /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/.
+           */
+          public java.lang.String getUserCredsId() {
+            return userCredsId;
+          }
+
+          /**
+           * Required. The ID to use for the user creds, which will become the final component of
+           * the user creds's resource name. This value should be 4-63 characters. Valid characters
+           * are /a-z-/ with first character a letter and the last a letter or a number. Must not be
+           * UUID-like /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/.
+           */
+          public Create setUserCredsId(java.lang.String userCredsId) {
+            this.userCredsId = userCredsId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a user creds.
+         *
+         * Create a request for the method "userCreds.delete".
+         *
+         * This request holds the parameters needed by the firestore server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. A name of the form
+         *        `projects/{project_id}/databases/{database_id}/userCreds/{user_creds_id}`
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends FirestoreRequest<com.google.api.services.firestore.v1.model.Empty> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/databases/[^/]+/userCreds/[^/]+$");
+
+          /**
+           * Deletes a user creds.
+           *
+           * Create a request for the method "userCreds.delete".
+           *
+           * This request holds the parameters needed by the the firestore server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. A name of the form
+         *        `projects/{project_id}/databases/{database_id}/userCreds/{user_creds_id}`
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(Firestore.this, "DELETE", REST_PATH, null, com.google.api.services.firestore.v1.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+/userCreds/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. A name of the form
+           * `projects/{project_id}/databases/{database_id}/userCreds/{user_creds_id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. A name of the form
+         `projects/{project_id}/databases/{database_id}/userCreds/{user_creds_id}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. A name of the form
+           * `projects/{project_id}/databases/{database_id}/userCreds/{user_creds_id}`
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+/userCreds/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Disables a user creds. No-op if the user creds are already disabled.
+         *
+         * Create a request for the method "userCreds.disable".
+         *
+         * This request holds the parameters needed by the firestore server.  After setting any optional
+         * parameters, call the {@link Disable#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. A name of the form
+         *        `projects/{project_id}/databases/{database_id}/userCreds/{user_creds_id}`
+         * @param content the {@link com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1DisableUserCredsRequest}
+         * @return the request
+         */
+        public Disable disable(java.lang.String name, com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1DisableUserCredsRequest content) throws java.io.IOException {
+          Disable result = new Disable(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Disable extends FirestoreRequest<com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1UserCreds> {
+
+          private static final String REST_PATH = "v1/{+name}:disable";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/databases/[^/]+/userCreds/[^/]+$");
+
+          /**
+           * Disables a user creds. No-op if the user creds are already disabled.
+           *
+           * Create a request for the method "userCreds.disable".
+           *
+           * This request holds the parameters needed by the the firestore server.  After setting any
+           * optional parameters, call the {@link Disable#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Disable#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. A name of the form
+         *        `projects/{project_id}/databases/{database_id}/userCreds/{user_creds_id}`
+           * @param content the {@link com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1DisableUserCredsRequest}
+           * @since 1.13
+           */
+          protected Disable(java.lang.String name, com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1DisableUserCredsRequest content) {
+            super(Firestore.this, "POST", REST_PATH, content, com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1UserCreds.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+/userCreds/[^/]+$");
+            }
+          }
+
+          @Override
+          public Disable set$Xgafv(java.lang.String $Xgafv) {
+            return (Disable) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Disable setAccessToken(java.lang.String accessToken) {
+            return (Disable) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Disable setAlt(java.lang.String alt) {
+            return (Disable) super.setAlt(alt);
+          }
+
+          @Override
+          public Disable setCallback(java.lang.String callback) {
+            return (Disable) super.setCallback(callback);
+          }
+
+          @Override
+          public Disable setFields(java.lang.String fields) {
+            return (Disable) super.setFields(fields);
+          }
+
+          @Override
+          public Disable setKey(java.lang.String key) {
+            return (Disable) super.setKey(key);
+          }
+
+          @Override
+          public Disable setOauthToken(java.lang.String oauthToken) {
+            return (Disable) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Disable setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Disable) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Disable setQuotaUser(java.lang.String quotaUser) {
+            return (Disable) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Disable setUploadType(java.lang.String uploadType) {
+            return (Disable) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Disable setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Disable) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. A name of the form
+           * `projects/{project_id}/databases/{database_id}/userCreds/{user_creds_id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. A name of the form
+         `projects/{project_id}/databases/{database_id}/userCreds/{user_creds_id}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. A name of the form
+           * `projects/{project_id}/databases/{database_id}/userCreds/{user_creds_id}`
+           */
+          public Disable setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+/userCreds/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Disable set(String parameterName, Object value) {
+            return (Disable) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Enables a user creds. No-op if the user creds are already enabled.
+         *
+         * Create a request for the method "userCreds.enable".
+         *
+         * This request holds the parameters needed by the firestore server.  After setting any optional
+         * parameters, call the {@link Enable#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. A name of the form
+         *        `projects/{project_id}/databases/{database_id}/userCreds/{user_creds_id}`
+         * @param content the {@link com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1EnableUserCredsRequest}
+         * @return the request
+         */
+        public Enable enable(java.lang.String name, com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1EnableUserCredsRequest content) throws java.io.IOException {
+          Enable result = new Enable(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Enable extends FirestoreRequest<com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1UserCreds> {
+
+          private static final String REST_PATH = "v1/{+name}:enable";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/databases/[^/]+/userCreds/[^/]+$");
+
+          /**
+           * Enables a user creds. No-op if the user creds are already enabled.
+           *
+           * Create a request for the method "userCreds.enable".
+           *
+           * This request holds the parameters needed by the the firestore server.  After setting any
+           * optional parameters, call the {@link Enable#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Enable#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. A name of the form
+         *        `projects/{project_id}/databases/{database_id}/userCreds/{user_creds_id}`
+           * @param content the {@link com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1EnableUserCredsRequest}
+           * @since 1.13
+           */
+          protected Enable(java.lang.String name, com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1EnableUserCredsRequest content) {
+            super(Firestore.this, "POST", REST_PATH, content, com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1UserCreds.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+/userCreds/[^/]+$");
+            }
+          }
+
+          @Override
+          public Enable set$Xgafv(java.lang.String $Xgafv) {
+            return (Enable) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Enable setAccessToken(java.lang.String accessToken) {
+            return (Enable) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Enable setAlt(java.lang.String alt) {
+            return (Enable) super.setAlt(alt);
+          }
+
+          @Override
+          public Enable setCallback(java.lang.String callback) {
+            return (Enable) super.setCallback(callback);
+          }
+
+          @Override
+          public Enable setFields(java.lang.String fields) {
+            return (Enable) super.setFields(fields);
+          }
+
+          @Override
+          public Enable setKey(java.lang.String key) {
+            return (Enable) super.setKey(key);
+          }
+
+          @Override
+          public Enable setOauthToken(java.lang.String oauthToken) {
+            return (Enable) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Enable setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Enable) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Enable setQuotaUser(java.lang.String quotaUser) {
+            return (Enable) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Enable setUploadType(java.lang.String uploadType) {
+            return (Enable) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Enable setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Enable) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. A name of the form
+           * `projects/{project_id}/databases/{database_id}/userCreds/{user_creds_id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. A name of the form
+         `projects/{project_id}/databases/{database_id}/userCreds/{user_creds_id}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. A name of the form
+           * `projects/{project_id}/databases/{database_id}/userCreds/{user_creds_id}`
+           */
+          public Enable setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+/userCreds/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Enable set(String parameterName, Object value) {
+            return (Enable) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets a user creds resource. Note that the returned resource does not contain the secret value
+         * itself.
+         *
+         * Create a request for the method "userCreds.get".
+         *
+         * This request holds the parameters needed by the firestore server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. A name of the form
+         *        `projects/{project_id}/databases/{database_id}/userCreds/{user_creds_id}`
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends FirestoreRequest<com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1UserCreds> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/databases/[^/]+/userCreds/[^/]+$");
+
+          /**
+           * Gets a user creds resource. Note that the returned resource does not contain the secret value
+           * itself.
+           *
+           * Create a request for the method "userCreds.get".
+           *
+           * This request holds the parameters needed by the the firestore server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. A name of the form
+         *        `projects/{project_id}/databases/{database_id}/userCreds/{user_creds_id}`
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Firestore.this, "GET", REST_PATH, null, com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1UserCreds.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+/userCreds/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. A name of the form
+           * `projects/{project_id}/databases/{database_id}/userCreds/{user_creds_id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. A name of the form
+         `projects/{project_id}/databases/{database_id}/userCreds/{user_creds_id}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. A name of the form
+           * `projects/{project_id}/databases/{database_id}/userCreds/{user_creds_id}`
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+/userCreds/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * List all user creds in the database. Note that the returned resource does not contain the secret
+         * value itself.
+         *
+         * Create a request for the method "userCreds.list".
+         *
+         * This request holds the parameters needed by the firestore server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. A parent database name of the form `projects/{project_id}/databases/{database_id}`
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends FirestoreRequest<com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1ListUserCredsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/userCreds";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/databases/[^/]+$");
+
+          /**
+           * List all user creds in the database. Note that the returned resource does not contain the
+           * secret value itself.
+           *
+           * Create a request for the method "userCreds.list".
+           *
+           * This request holds the parameters needed by the the firestore server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. A parent database name of the form `projects/{project_id}/databases/{database_id}`
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Firestore.this, "GET", REST_PATH, null, com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1ListUserCredsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. A parent database name of the form
+           * `projects/{project_id}/databases/{database_id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. A parent database name of the form `projects/{project_id}/databases/{database_id}`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. A parent database name of the form
+           * `projects/{project_id}/databases/{database_id}`
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Resets the password of a user creds.
+         *
+         * Create a request for the method "userCreds.resetPassword".
+         *
+         * This request holds the parameters needed by the firestore server.  After setting any optional
+         * parameters, call the {@link ResetPassword#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. A name of the form
+         *        `projects/{project_id}/databases/{database_id}/userCreds/{user_creds_id}`
+         * @param content the {@link com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1ResetUserPasswordRequest}
+         * @return the request
+         */
+        public ResetPassword resetPassword(java.lang.String name, com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1ResetUserPasswordRequest content) throws java.io.IOException {
+          ResetPassword result = new ResetPassword(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class ResetPassword extends FirestoreRequest<com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1UserCreds> {
+
+          private static final String REST_PATH = "v1/{+name}:resetPassword";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/databases/[^/]+/userCreds/[^/]+$");
+
+          /**
+           * Resets the password of a user creds.
+           *
+           * Create a request for the method "userCreds.resetPassword".
+           *
+           * This request holds the parameters needed by the the firestore server.  After setting any
+           * optional parameters, call the {@link ResetPassword#execute()} method to invoke the remote
+           * operation. <p> {@link ResetPassword#initialize(com.google.api.client.googleapis.services.Abstra
+           * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+           * the constructor. </p>
+           *
+           * @param name Required. A name of the form
+         *        `projects/{project_id}/databases/{database_id}/userCreds/{user_creds_id}`
+           * @param content the {@link com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1ResetUserPasswordRequest}
+           * @since 1.13
+           */
+          protected ResetPassword(java.lang.String name, com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1ResetUserPasswordRequest content) {
+            super(Firestore.this, "POST", REST_PATH, content, com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1UserCreds.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+/userCreds/[^/]+$");
+            }
+          }
+
+          @Override
+          public ResetPassword set$Xgafv(java.lang.String $Xgafv) {
+            return (ResetPassword) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ResetPassword setAccessToken(java.lang.String accessToken) {
+            return (ResetPassword) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ResetPassword setAlt(java.lang.String alt) {
+            return (ResetPassword) super.setAlt(alt);
+          }
+
+          @Override
+          public ResetPassword setCallback(java.lang.String callback) {
+            return (ResetPassword) super.setCallback(callback);
+          }
+
+          @Override
+          public ResetPassword setFields(java.lang.String fields) {
+            return (ResetPassword) super.setFields(fields);
+          }
+
+          @Override
+          public ResetPassword setKey(java.lang.String key) {
+            return (ResetPassword) super.setKey(key);
+          }
+
+          @Override
+          public ResetPassword setOauthToken(java.lang.String oauthToken) {
+            return (ResetPassword) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ResetPassword setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ResetPassword) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ResetPassword setQuotaUser(java.lang.String quotaUser) {
+            return (ResetPassword) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ResetPassword setUploadType(java.lang.String uploadType) {
+            return (ResetPassword) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ResetPassword setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ResetPassword) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. A name of the form
+           * `projects/{project_id}/databases/{database_id}/userCreds/{user_creds_id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. A name of the form
+         `projects/{project_id}/databases/{database_id}/userCreds/{user_creds_id}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. A name of the form
+           * `projects/{project_id}/databases/{database_id}/userCreds/{user_creds_id}`
+           */
+          public ResetPassword setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+/userCreds/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public ResetPassword set(String parameterName, Object value) {
+            return (ResetPassword) super.set(parameterName, value);
+          }
+        }
+
+      }
     }
     /**
      * An accessor for creating requests from the Locations collection.
@@ -7661,6 +8700,29 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
                 "^projects/[^/]+$");
           }
           this.name = name;
+          return this;
+        }
+
+        /**
+         * Optional. A list of extra location types that should be used as conditions for
+         * controlling the visibility of the locations.
+         */
+        @com.google.api.client.util.Key
+        private java.util.List<java.lang.String> extraLocationTypes;
+
+        /** Optional. A list of extra location types that should be used as conditions for controlling the
+       visibility of the locations.
+         */
+        public java.util.List<java.lang.String> getExtraLocationTypes() {
+          return extraLocationTypes;
+        }
+
+        /**
+         * Optional. A list of extra location types that should be used as conditions for
+         * controlling the visibility of the locations.
+         */
+        public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
+          this.extraLocationTypes = extraLocationTypes;
           return this;
         }
 

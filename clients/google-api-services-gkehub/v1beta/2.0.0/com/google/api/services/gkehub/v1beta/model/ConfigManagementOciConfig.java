@@ -30,29 +30,31 @@ package com.google.api.services.gkehub.v1beta.model;
 public final class ConfigManagementOciConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * The Google Cloud Service Account Email used for auth when secret_type is gcpServiceAccount.
+   * Optional. The Google Cloud Service Account Email used for auth when secret_type is
+   * gcpServiceAccount.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String gcpServiceAccountEmail;
 
   /**
-   * The absolute path of the directory that contains the local resources. Default: the root
-   * directory of the image.
+   * Optional. The absolute path of the directory that contains the local resources. Default: the
+   * root directory of the image.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String policyDir;
 
   /**
-   * Type of secret configured for access to the Git repo.
+   * Required. Type of secret configured for access to the OCI repo. Must be one of gcenode,
+   * gcpserviceaccount, k8sserviceaccount or none. The validation of this is case-sensitive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String secretType;
 
   /**
-   * The OCI image repository URL for the package to sync from. e.g. `LOCATION-
+   * Required. The OCI image repository URL for the package to sync from. e.g. `LOCATION-
    * docker.pkg.dev/PROJECT_ID/REPOSITORY_NAME/PACKAGE_NAME`.
    * The value may be {@code null}.
    */
@@ -60,14 +62,15 @@ public final class ConfigManagementOciConfig extends com.google.api.client.json.
   private java.lang.String syncRepo;
 
   /**
-   * Period in seconds between consecutive syncs. Default: 15.
+   * Optional. Period in seconds between consecutive syncs. Default: 15.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long syncWaitSecs;
 
   /**
-   * The Google Cloud Service Account Email used for auth when secret_type is gcpServiceAccount.
+   * Optional. The Google Cloud Service Account Email used for auth when secret_type is
+   * gcpServiceAccount.
    * @return value or {@code null} for none
    */
   public java.lang.String getGcpServiceAccountEmail() {
@@ -75,7 +78,8 @@ public final class ConfigManagementOciConfig extends com.google.api.client.json.
   }
 
   /**
-   * The Google Cloud Service Account Email used for auth when secret_type is gcpServiceAccount.
+   * Optional. The Google Cloud Service Account Email used for auth when secret_type is
+   * gcpServiceAccount.
    * @param gcpServiceAccountEmail gcpServiceAccountEmail or {@code null} for none
    */
   public ConfigManagementOciConfig setGcpServiceAccountEmail(java.lang.String gcpServiceAccountEmail) {
@@ -84,8 +88,8 @@ public final class ConfigManagementOciConfig extends com.google.api.client.json.
   }
 
   /**
-   * The absolute path of the directory that contains the local resources. Default: the root
-   * directory of the image.
+   * Optional. The absolute path of the directory that contains the local resources. Default: the
+   * root directory of the image.
    * @return value or {@code null} for none
    */
   public java.lang.String getPolicyDir() {
@@ -93,8 +97,8 @@ public final class ConfigManagementOciConfig extends com.google.api.client.json.
   }
 
   /**
-   * The absolute path of the directory that contains the local resources. Default: the root
-   * directory of the image.
+   * Optional. The absolute path of the directory that contains the local resources. Default: the
+   * root directory of the image.
    * @param policyDir policyDir or {@code null} for none
    */
   public ConfigManagementOciConfig setPolicyDir(java.lang.String policyDir) {
@@ -103,7 +107,8 @@ public final class ConfigManagementOciConfig extends com.google.api.client.json.
   }
 
   /**
-   * Type of secret configured for access to the Git repo.
+   * Required. Type of secret configured for access to the OCI repo. Must be one of gcenode,
+   * gcpserviceaccount, k8sserviceaccount or none. The validation of this is case-sensitive.
    * @return value or {@code null} for none
    */
   public java.lang.String getSecretType() {
@@ -111,7 +116,8 @@ public final class ConfigManagementOciConfig extends com.google.api.client.json.
   }
 
   /**
-   * Type of secret configured for access to the Git repo.
+   * Required. Type of secret configured for access to the OCI repo. Must be one of gcenode,
+   * gcpserviceaccount, k8sserviceaccount or none. The validation of this is case-sensitive.
    * @param secretType secretType or {@code null} for none
    */
   public ConfigManagementOciConfig setSecretType(java.lang.String secretType) {
@@ -120,7 +126,7 @@ public final class ConfigManagementOciConfig extends com.google.api.client.json.
   }
 
   /**
-   * The OCI image repository URL for the package to sync from. e.g. `LOCATION-
+   * Required. The OCI image repository URL for the package to sync from. e.g. `LOCATION-
    * docker.pkg.dev/PROJECT_ID/REPOSITORY_NAME/PACKAGE_NAME`.
    * @return value or {@code null} for none
    */
@@ -129,7 +135,7 @@ public final class ConfigManagementOciConfig extends com.google.api.client.json.
   }
 
   /**
-   * The OCI image repository URL for the package to sync from. e.g. `LOCATION-
+   * Required. The OCI image repository URL for the package to sync from. e.g. `LOCATION-
    * docker.pkg.dev/PROJECT_ID/REPOSITORY_NAME/PACKAGE_NAME`.
    * @param syncRepo syncRepo or {@code null} for none
    */
@@ -139,7 +145,7 @@ public final class ConfigManagementOciConfig extends com.google.api.client.json.
   }
 
   /**
-   * Period in seconds between consecutive syncs. Default: 15.
+   * Optional. Period in seconds between consecutive syncs. Default: 15.
    * @return value or {@code null} for none
    */
   public java.lang.Long getSyncWaitSecs() {
@@ -147,7 +153,7 @@ public final class ConfigManagementOciConfig extends com.google.api.client.json.
   }
 
   /**
-   * Period in seconds between consecutive syncs. Default: 15.
+   * Optional. Period in seconds between consecutive syncs. Default: 15.
    * @param syncWaitSecs syncWaitSecs or {@code null} for none
    */
   public ConfigManagementOciConfig setSyncWaitSecs(java.lang.Long syncWaitSecs) {

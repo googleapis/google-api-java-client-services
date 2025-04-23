@@ -30,65 +30,67 @@ package com.google.api.services.gkehub.v1.model;
 public final class ConfigManagementGitConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * The Google Cloud Service Account Email used for auth when secret_type is gcpServiceAccount.
+   * Optional. The Google Cloud Service Account Email used for auth when secret_type is
+   * gcpServiceAccount.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String gcpServiceAccountEmail;
 
   /**
-   * URL for the HTTPS proxy to be used when communicating with the Git repo.
+   * Optional. URL for the HTTPS proxy to be used when communicating with the Git repo.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String httpsProxy;
 
   /**
-   * The path within the Git repository that represents the top level of the repo to sync. Default:
-   * the root directory of the repository.
+   * Optional. The path within the Git repository that represents the top level of the repo to sync.
+   * Default: the root directory of the repository.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String policyDir;
 
   /**
-   * Type of secret configured for access to the Git repo. Must be one of ssh, cookiefile, gcenode,
-   * token, gcpserviceaccount or none. The validation of this is case-sensitive. Required.
+   * Required. Type of secret configured for access to the Git repo. Must be one of ssh, cookiefile,
+   * gcenode, token, gcpserviceaccount, githubapp or none. The validation of this is case-sensitive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String secretType;
 
   /**
-   * The branch of the repository to sync from. Default: master.
+   * Optional. The branch of the repository to sync from. Default: master.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String syncBranch;
 
   /**
-   * The URL of the Git repository to use as the source of truth.
+   * Required. The URL of the Git repository to use as the source of truth.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String syncRepo;
 
   /**
-   * Git revision (tag or hash) to check out. Default HEAD.
+   * Optional. Git revision (tag or hash) to check out. Default HEAD.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String syncRev;
 
   /**
-   * Period in seconds between consecutive syncs. Default: 15.
+   * Optional. Period in seconds between consecutive syncs. Default: 15.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long syncWaitSecs;
 
   /**
-   * The Google Cloud Service Account Email used for auth when secret_type is gcpServiceAccount.
+   * Optional. The Google Cloud Service Account Email used for auth when secret_type is
+   * gcpServiceAccount.
    * @return value or {@code null} for none
    */
   public java.lang.String getGcpServiceAccountEmail() {
@@ -96,7 +98,8 @@ public final class ConfigManagementGitConfig extends com.google.api.client.json.
   }
 
   /**
-   * The Google Cloud Service Account Email used for auth when secret_type is gcpServiceAccount.
+   * Optional. The Google Cloud Service Account Email used for auth when secret_type is
+   * gcpServiceAccount.
    * @param gcpServiceAccountEmail gcpServiceAccountEmail or {@code null} for none
    */
   public ConfigManagementGitConfig setGcpServiceAccountEmail(java.lang.String gcpServiceAccountEmail) {
@@ -105,7 +108,7 @@ public final class ConfigManagementGitConfig extends com.google.api.client.json.
   }
 
   /**
-   * URL for the HTTPS proxy to be used when communicating with the Git repo.
+   * Optional. URL for the HTTPS proxy to be used when communicating with the Git repo.
    * @return value or {@code null} for none
    */
   public java.lang.String getHttpsProxy() {
@@ -113,7 +116,7 @@ public final class ConfigManagementGitConfig extends com.google.api.client.json.
   }
 
   /**
-   * URL for the HTTPS proxy to be used when communicating with the Git repo.
+   * Optional. URL for the HTTPS proxy to be used when communicating with the Git repo.
    * @param httpsProxy httpsProxy or {@code null} for none
    */
   public ConfigManagementGitConfig setHttpsProxy(java.lang.String httpsProxy) {
@@ -122,8 +125,8 @@ public final class ConfigManagementGitConfig extends com.google.api.client.json.
   }
 
   /**
-   * The path within the Git repository that represents the top level of the repo to sync. Default:
-   * the root directory of the repository.
+   * Optional. The path within the Git repository that represents the top level of the repo to sync.
+   * Default: the root directory of the repository.
    * @return value or {@code null} for none
    */
   public java.lang.String getPolicyDir() {
@@ -131,8 +134,8 @@ public final class ConfigManagementGitConfig extends com.google.api.client.json.
   }
 
   /**
-   * The path within the Git repository that represents the top level of the repo to sync. Default:
-   * the root directory of the repository.
+   * Optional. The path within the Git repository that represents the top level of the repo to sync.
+   * Default: the root directory of the repository.
    * @param policyDir policyDir or {@code null} for none
    */
   public ConfigManagementGitConfig setPolicyDir(java.lang.String policyDir) {
@@ -141,8 +144,8 @@ public final class ConfigManagementGitConfig extends com.google.api.client.json.
   }
 
   /**
-   * Type of secret configured for access to the Git repo. Must be one of ssh, cookiefile, gcenode,
-   * token, gcpserviceaccount or none. The validation of this is case-sensitive. Required.
+   * Required. Type of secret configured for access to the Git repo. Must be one of ssh, cookiefile,
+   * gcenode, token, gcpserviceaccount, githubapp or none. The validation of this is case-sensitive.
    * @return value or {@code null} for none
    */
   public java.lang.String getSecretType() {
@@ -150,8 +153,8 @@ public final class ConfigManagementGitConfig extends com.google.api.client.json.
   }
 
   /**
-   * Type of secret configured for access to the Git repo. Must be one of ssh, cookiefile, gcenode,
-   * token, gcpserviceaccount or none. The validation of this is case-sensitive. Required.
+   * Required. Type of secret configured for access to the Git repo. Must be one of ssh, cookiefile,
+   * gcenode, token, gcpserviceaccount, githubapp or none. The validation of this is case-sensitive.
    * @param secretType secretType or {@code null} for none
    */
   public ConfigManagementGitConfig setSecretType(java.lang.String secretType) {
@@ -160,7 +163,7 @@ public final class ConfigManagementGitConfig extends com.google.api.client.json.
   }
 
   /**
-   * The branch of the repository to sync from. Default: master.
+   * Optional. The branch of the repository to sync from. Default: master.
    * @return value or {@code null} for none
    */
   public java.lang.String getSyncBranch() {
@@ -168,7 +171,7 @@ public final class ConfigManagementGitConfig extends com.google.api.client.json.
   }
 
   /**
-   * The branch of the repository to sync from. Default: master.
+   * Optional. The branch of the repository to sync from. Default: master.
    * @param syncBranch syncBranch or {@code null} for none
    */
   public ConfigManagementGitConfig setSyncBranch(java.lang.String syncBranch) {
@@ -177,7 +180,7 @@ public final class ConfigManagementGitConfig extends com.google.api.client.json.
   }
 
   /**
-   * The URL of the Git repository to use as the source of truth.
+   * Required. The URL of the Git repository to use as the source of truth.
    * @return value or {@code null} for none
    */
   public java.lang.String getSyncRepo() {
@@ -185,7 +188,7 @@ public final class ConfigManagementGitConfig extends com.google.api.client.json.
   }
 
   /**
-   * The URL of the Git repository to use as the source of truth.
+   * Required. The URL of the Git repository to use as the source of truth.
    * @param syncRepo syncRepo or {@code null} for none
    */
   public ConfigManagementGitConfig setSyncRepo(java.lang.String syncRepo) {
@@ -194,7 +197,7 @@ public final class ConfigManagementGitConfig extends com.google.api.client.json.
   }
 
   /**
-   * Git revision (tag or hash) to check out. Default HEAD.
+   * Optional. Git revision (tag or hash) to check out. Default HEAD.
    * @return value or {@code null} for none
    */
   public java.lang.String getSyncRev() {
@@ -202,7 +205,7 @@ public final class ConfigManagementGitConfig extends com.google.api.client.json.
   }
 
   /**
-   * Git revision (tag or hash) to check out. Default HEAD.
+   * Optional. Git revision (tag or hash) to check out. Default HEAD.
    * @param syncRev syncRev or {@code null} for none
    */
   public ConfigManagementGitConfig setSyncRev(java.lang.String syncRev) {
@@ -211,7 +214,7 @@ public final class ConfigManagementGitConfig extends com.google.api.client.json.
   }
 
   /**
-   * Period in seconds between consecutive syncs. Default: 15.
+   * Optional. Period in seconds between consecutive syncs. Default: 15.
    * @return value or {@code null} for none
    */
   public java.lang.Long getSyncWaitSecs() {
@@ -219,7 +222,7 @@ public final class ConfigManagementGitConfig extends com.google.api.client.json.
   }
 
   /**
-   * Period in seconds between consecutive syncs. Default: 15.
+   * Optional. Period in seconds between consecutive syncs. Default: 15.
    * @param syncWaitSecs syncWaitSecs or {@code null} for none
    */
   public ConfigManagementGitConfig setSyncWaitSecs(java.lang.Long syncWaitSecs) {

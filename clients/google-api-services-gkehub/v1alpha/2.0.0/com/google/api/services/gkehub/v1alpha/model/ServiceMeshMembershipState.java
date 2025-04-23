@@ -43,7 +43,8 @@ public final class ServiceMeshMembershipState extends com.google.api.client.json
   }
 
   /**
-   * Output only. List of conditions reported for this membership.
+   * Output only. List of conditions reported for this membership. TODO b/395151419: Use the common
+   * Condition message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,7 +96,8 @@ public final class ServiceMeshMembershipState extends com.google.api.client.json
   }
 
   /**
-   * Output only. List of conditions reported for this membership.
+   * Output only. List of conditions reported for this membership. TODO b/395151419: Use the common
+   * Condition message.
    * @return value or {@code null} for none
    */
   public java.util.List<ServiceMeshCondition> getConditions() {
@@ -103,7 +105,8 @@ public final class ServiceMeshMembershipState extends com.google.api.client.json
   }
 
   /**
-   * Output only. List of conditions reported for this membership.
+   * Output only. List of conditions reported for this membership. TODO b/395151419: Use the common
+   * Condition message.
    * @param conditions conditions or {@code null} for none
    */
   public ServiceMeshMembershipState setConditions(java.util.List<ServiceMeshCondition> conditions) {

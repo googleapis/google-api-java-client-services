@@ -30,87 +30,94 @@ package com.google.api.services.gkehub.v1beta.model;
 public final class ConfigManagementConfigSync extends com.google.api.client.json.GenericJson {
 
   /**
-   * Set to true to allow the vertical scaling. Defaults to false which disallows vertical scaling.
-   * This field is deprecated.
+   * Optional. Configuration for deployment overrides.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Boolean allowVerticalScale;
+  private java.util.List<ConfigManagementDeploymentOverride> deploymentOverrides;
 
   /**
-   * Enables the installation of ConfigSync. If set to true, ConfigSync resources will be created
-   * and the other ConfigSync fields will be applied if exist. If set to false, all other ConfigSync
-   * fields will be ignored, ConfigSync resources will be deleted. If omitted, ConfigSync resources
-   * will be managed depends on the presence of the git or oci field.
+   * Optional. Enables the installation of ConfigSync. If set to true, ConfigSync resources will be
+   * created and the other ConfigSync fields will be applied if exist. If set to false, all other
+   * ConfigSync fields will be ignored, ConfigSync resources will be deleted. If omitted, ConfigSync
+   * resources will be managed depends on the presence of the git or oci field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enabled;
 
   /**
-   * Git repo configuration for the cluster.
+   * Optional. Git repo configuration for the cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ConfigManagementGitConfig git;
 
   /**
-   * The Email of the Google Cloud Service Account (GSA) used for exporting Config Sync metrics to
-   * Cloud Monitoring and Cloud Monarch when Workload Identity is enabled. The GSA should have the
-   * Monitoring Metric Writer (roles/monitoring.metricWriter) IAM role. The Kubernetes
+   * Optional. The Email of the Google Cloud Service Account (GSA) used for exporting Config Sync
+   * metrics to Cloud Monitoring and Cloud Monarch when Workload Identity is enabled. The GSA should
+   * have the Monitoring Metric Writer (roles/monitoring.metricWriter) IAM role. The Kubernetes
    * ServiceAccount `default` in the namespace `config-management-monitoring` should be bound to the
-   * GSA.
+   * GSA. Deprecated: If Workload Identity Federation for GKE is enabled, Google Cloud Service
+   * Account is no longer needed for exporting Config Sync metrics:
+   * https://cloud.google.com/kubernetes-engine/enterprise/config-sync/docs/how-to/monitor-config-
+   * sync-cloud-monitoring#custom-monitoring.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String metricsGcpServiceAccountEmail;
 
   /**
-   * OCI repo configuration for the cluster
+   * Optional. OCI repo configuration for the cluster
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ConfigManagementOciConfig oci;
 
   /**
-   * Set to true to enable the Config Sync admission webhook to prevent drifts. If set to `false`,
-   * disables the Config Sync admission webhook and does not prevent drifts.
+   * Optional. Set to true to enable the Config Sync admission webhook to prevent drifts. If set to
+   * `false`, disables the Config Sync admission webhook and does not prevent drifts.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean preventDrift;
 
   /**
-   * Specifies whether the Config Sync Repo is in "hierarchical" or "unstructured" mode.
+   * Optional. Specifies whether the Config Sync Repo is in "hierarchical" or "unstructured" mode.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sourceFormat;
 
   /**
-   * Set to true to allow the vertical scaling. Defaults to false which disallows vertical scaling.
-   * This field is deprecated.
+   * Optional. Set to true to stop syncing configs for a single cluster. Default to false.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean stopSyncing;
+
+  /**
+   * Optional. Configuration for deployment overrides.
    * @return value or {@code null} for none
    */
-  public java.lang.Boolean getAllowVerticalScale() {
-    return allowVerticalScale;
+  public java.util.List<ConfigManagementDeploymentOverride> getDeploymentOverrides() {
+    return deploymentOverrides;
   }
 
   /**
-   * Set to true to allow the vertical scaling. Defaults to false which disallows vertical scaling.
-   * This field is deprecated.
-   * @param allowVerticalScale allowVerticalScale or {@code null} for none
+   * Optional. Configuration for deployment overrides.
+   * @param deploymentOverrides deploymentOverrides or {@code null} for none
    */
-  public ConfigManagementConfigSync setAllowVerticalScale(java.lang.Boolean allowVerticalScale) {
-    this.allowVerticalScale = allowVerticalScale;
+  public ConfigManagementConfigSync setDeploymentOverrides(java.util.List<ConfigManagementDeploymentOverride> deploymentOverrides) {
+    this.deploymentOverrides = deploymentOverrides;
     return this;
   }
 
   /**
-   * Enables the installation of ConfigSync. If set to true, ConfigSync resources will be created
-   * and the other ConfigSync fields will be applied if exist. If set to false, all other ConfigSync
-   * fields will be ignored, ConfigSync resources will be deleted. If omitted, ConfigSync resources
-   * will be managed depends on the presence of the git or oci field.
+   * Optional. Enables the installation of ConfigSync. If set to true, ConfigSync resources will be
+   * created and the other ConfigSync fields will be applied if exist. If set to false, all other
+   * ConfigSync fields will be ignored, ConfigSync resources will be deleted. If omitted, ConfigSync
+   * resources will be managed depends on the presence of the git or oci field.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnabled() {
@@ -118,10 +125,10 @@ public final class ConfigManagementConfigSync extends com.google.api.client.json
   }
 
   /**
-   * Enables the installation of ConfigSync. If set to true, ConfigSync resources will be created
-   * and the other ConfigSync fields will be applied if exist. If set to false, all other ConfigSync
-   * fields will be ignored, ConfigSync resources will be deleted. If omitted, ConfigSync resources
-   * will be managed depends on the presence of the git or oci field.
+   * Optional. Enables the installation of ConfigSync. If set to true, ConfigSync resources will be
+   * created and the other ConfigSync fields will be applied if exist. If set to false, all other
+   * ConfigSync fields will be ignored, ConfigSync resources will be deleted. If omitted, ConfigSync
+   * resources will be managed depends on the presence of the git or oci field.
    * @param enabled enabled or {@code null} for none
    */
   public ConfigManagementConfigSync setEnabled(java.lang.Boolean enabled) {
@@ -130,7 +137,7 @@ public final class ConfigManagementConfigSync extends com.google.api.client.json
   }
 
   /**
-   * Git repo configuration for the cluster.
+   * Optional. Git repo configuration for the cluster.
    * @return value or {@code null} for none
    */
   public ConfigManagementGitConfig getGit() {
@@ -138,7 +145,7 @@ public final class ConfigManagementConfigSync extends com.google.api.client.json
   }
 
   /**
-   * Git repo configuration for the cluster.
+   * Optional. Git repo configuration for the cluster.
    * @param git git or {@code null} for none
    */
   public ConfigManagementConfigSync setGit(ConfigManagementGitConfig git) {
@@ -147,11 +154,14 @@ public final class ConfigManagementConfigSync extends com.google.api.client.json
   }
 
   /**
-   * The Email of the Google Cloud Service Account (GSA) used for exporting Config Sync metrics to
-   * Cloud Monitoring and Cloud Monarch when Workload Identity is enabled. The GSA should have the
-   * Monitoring Metric Writer (roles/monitoring.metricWriter) IAM role. The Kubernetes
+   * Optional. The Email of the Google Cloud Service Account (GSA) used for exporting Config Sync
+   * metrics to Cloud Monitoring and Cloud Monarch when Workload Identity is enabled. The GSA should
+   * have the Monitoring Metric Writer (roles/monitoring.metricWriter) IAM role. The Kubernetes
    * ServiceAccount `default` in the namespace `config-management-monitoring` should be bound to the
-   * GSA.
+   * GSA. Deprecated: If Workload Identity Federation for GKE is enabled, Google Cloud Service
+   * Account is no longer needed for exporting Config Sync metrics:
+   * https://cloud.google.com/kubernetes-engine/enterprise/config-sync/docs/how-to/monitor-config-
+   * sync-cloud-monitoring#custom-monitoring.
    * @return value or {@code null} for none
    */
   public java.lang.String getMetricsGcpServiceAccountEmail() {
@@ -159,11 +169,14 @@ public final class ConfigManagementConfigSync extends com.google.api.client.json
   }
 
   /**
-   * The Email of the Google Cloud Service Account (GSA) used for exporting Config Sync metrics to
-   * Cloud Monitoring and Cloud Monarch when Workload Identity is enabled. The GSA should have the
-   * Monitoring Metric Writer (roles/monitoring.metricWriter) IAM role. The Kubernetes
+   * Optional. The Email of the Google Cloud Service Account (GSA) used for exporting Config Sync
+   * metrics to Cloud Monitoring and Cloud Monarch when Workload Identity is enabled. The GSA should
+   * have the Monitoring Metric Writer (roles/monitoring.metricWriter) IAM role. The Kubernetes
    * ServiceAccount `default` in the namespace `config-management-monitoring` should be bound to the
-   * GSA.
+   * GSA. Deprecated: If Workload Identity Federation for GKE is enabled, Google Cloud Service
+   * Account is no longer needed for exporting Config Sync metrics:
+   * https://cloud.google.com/kubernetes-engine/enterprise/config-sync/docs/how-to/monitor-config-
+   * sync-cloud-monitoring#custom-monitoring.
    * @param metricsGcpServiceAccountEmail metricsGcpServiceAccountEmail or {@code null} for none
    */
   public ConfigManagementConfigSync setMetricsGcpServiceAccountEmail(java.lang.String metricsGcpServiceAccountEmail) {
@@ -172,7 +185,7 @@ public final class ConfigManagementConfigSync extends com.google.api.client.json
   }
 
   /**
-   * OCI repo configuration for the cluster
+   * Optional. OCI repo configuration for the cluster
    * @return value or {@code null} for none
    */
   public ConfigManagementOciConfig getOci() {
@@ -180,7 +193,7 @@ public final class ConfigManagementConfigSync extends com.google.api.client.json
   }
 
   /**
-   * OCI repo configuration for the cluster
+   * Optional. OCI repo configuration for the cluster
    * @param oci oci or {@code null} for none
    */
   public ConfigManagementConfigSync setOci(ConfigManagementOciConfig oci) {
@@ -189,8 +202,8 @@ public final class ConfigManagementConfigSync extends com.google.api.client.json
   }
 
   /**
-   * Set to true to enable the Config Sync admission webhook to prevent drifts. If set to `false`,
-   * disables the Config Sync admission webhook and does not prevent drifts.
+   * Optional. Set to true to enable the Config Sync admission webhook to prevent drifts. If set to
+   * `false`, disables the Config Sync admission webhook and does not prevent drifts.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPreventDrift() {
@@ -198,8 +211,8 @@ public final class ConfigManagementConfigSync extends com.google.api.client.json
   }
 
   /**
-   * Set to true to enable the Config Sync admission webhook to prevent drifts. If set to `false`,
-   * disables the Config Sync admission webhook and does not prevent drifts.
+   * Optional. Set to true to enable the Config Sync admission webhook to prevent drifts. If set to
+   * `false`, disables the Config Sync admission webhook and does not prevent drifts.
    * @param preventDrift preventDrift or {@code null} for none
    */
   public ConfigManagementConfigSync setPreventDrift(java.lang.Boolean preventDrift) {
@@ -208,7 +221,7 @@ public final class ConfigManagementConfigSync extends com.google.api.client.json
   }
 
   /**
-   * Specifies whether the Config Sync Repo is in "hierarchical" or "unstructured" mode.
+   * Optional. Specifies whether the Config Sync Repo is in "hierarchical" or "unstructured" mode.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceFormat() {
@@ -216,11 +229,28 @@ public final class ConfigManagementConfigSync extends com.google.api.client.json
   }
 
   /**
-   * Specifies whether the Config Sync Repo is in "hierarchical" or "unstructured" mode.
+   * Optional. Specifies whether the Config Sync Repo is in "hierarchical" or "unstructured" mode.
    * @param sourceFormat sourceFormat or {@code null} for none
    */
   public ConfigManagementConfigSync setSourceFormat(java.lang.String sourceFormat) {
     this.sourceFormat = sourceFormat;
+    return this;
+  }
+
+  /**
+   * Optional. Set to true to stop syncing configs for a single cluster. Default to false.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getStopSyncing() {
+    return stopSyncing;
+  }
+
+  /**
+   * Optional. Set to true to stop syncing configs for a single cluster. Default to false.
+   * @param stopSyncing stopSyncing or {@code null} for none
+   */
+  public ConfigManagementConfigSync setStopSyncing(java.lang.Boolean stopSyncing) {
+    this.stopSyncing = stopSyncing;
     return this;
   }
 

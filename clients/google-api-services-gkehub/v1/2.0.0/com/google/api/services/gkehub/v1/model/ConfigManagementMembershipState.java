@@ -30,52 +30,52 @@ package com.google.api.services.gkehub.v1.model;
 public final class ConfigManagementMembershipState extends com.google.api.client.json.GenericJson {
 
   /**
-   * This field is set to the `cluster_name` field of the Membership Spec if it is not empty.
-   * Otherwise, it is set to the cluster's fleet membership name.
+   * Output only. This field is set to the `cluster_name` field of the Membership Spec if it is not
+   * empty. Otherwise, it is set to the cluster's fleet membership name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String clusterName;
 
   /**
-   * Current sync status
+   * Output only. Current sync status
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ConfigManagementConfigSyncState configSyncState;
 
   /**
-   * Hierarchy Controller status
+   * Output only. Hierarchy Controller status
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ConfigManagementHierarchyControllerState hierarchyControllerState;
 
   /**
-   * Membership configuration in the cluster. This represents the actual state in the cluster, while
-   * the MembershipSpec in the FeatureSpec represents the intended state
+   * Output only. Membership configuration in the cluster. This represents the actual state in the
+   * cluster, while the MembershipSpec in the FeatureSpec represents the intended state
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ConfigManagementMembershipSpec membershipSpec;
 
   /**
-   * Current install status of ACM's Operator
+   * Output only. Current install status of ACM's Operator
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ConfigManagementOperatorState operatorState;
 
   /**
-   * PolicyController status
+   * Output only. PolicyController status
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ConfigManagementPolicyControllerState policyControllerState;
 
   /**
-   * This field is set to the `cluster_name` field of the Membership Spec if it is not empty.
-   * Otherwise, it is set to the cluster's fleet membership name.
+   * Output only. This field is set to the `cluster_name` field of the Membership Spec if it is not
+   * empty. Otherwise, it is set to the cluster's fleet membership name.
    * @return value or {@code null} for none
    */
   public java.lang.String getClusterName() {
@@ -83,8 +83,8 @@ public final class ConfigManagementMembershipState extends com.google.api.client
   }
 
   /**
-   * This field is set to the `cluster_name` field of the Membership Spec if it is not empty.
-   * Otherwise, it is set to the cluster's fleet membership name.
+   * Output only. This field is set to the `cluster_name` field of the Membership Spec if it is not
+   * empty. Otherwise, it is set to the cluster's fleet membership name.
    * @param clusterName clusterName or {@code null} for none
    */
   public ConfigManagementMembershipState setClusterName(java.lang.String clusterName) {
@@ -93,7 +93,7 @@ public final class ConfigManagementMembershipState extends com.google.api.client
   }
 
   /**
-   * Current sync status
+   * Output only. Current sync status
    * @return value or {@code null} for none
    */
   public ConfigManagementConfigSyncState getConfigSyncState() {
@@ -101,7 +101,7 @@ public final class ConfigManagementMembershipState extends com.google.api.client
   }
 
   /**
-   * Current sync status
+   * Output only. Current sync status
    * @param configSyncState configSyncState or {@code null} for none
    */
   public ConfigManagementMembershipState setConfigSyncState(ConfigManagementConfigSyncState configSyncState) {
@@ -110,7 +110,7 @@ public final class ConfigManagementMembershipState extends com.google.api.client
   }
 
   /**
-   * Hierarchy Controller status
+   * Output only. Hierarchy Controller status
    * @return value or {@code null} for none
    */
   public ConfigManagementHierarchyControllerState getHierarchyControllerState() {
@@ -118,7 +118,7 @@ public final class ConfigManagementMembershipState extends com.google.api.client
   }
 
   /**
-   * Hierarchy Controller status
+   * Output only. Hierarchy Controller status
    * @param hierarchyControllerState hierarchyControllerState or {@code null} for none
    */
   public ConfigManagementMembershipState setHierarchyControllerState(ConfigManagementHierarchyControllerState hierarchyControllerState) {
@@ -127,8 +127,8 @@ public final class ConfigManagementMembershipState extends com.google.api.client
   }
 
   /**
-   * Membership configuration in the cluster. This represents the actual state in the cluster, while
-   * the MembershipSpec in the FeatureSpec represents the intended state
+   * Output only. Membership configuration in the cluster. This represents the actual state in the
+   * cluster, while the MembershipSpec in the FeatureSpec represents the intended state
    * @return value or {@code null} for none
    */
   public ConfigManagementMembershipSpec getMembershipSpec() {
@@ -136,8 +136,8 @@ public final class ConfigManagementMembershipState extends com.google.api.client
   }
 
   /**
-   * Membership configuration in the cluster. This represents the actual state in the cluster, while
-   * the MembershipSpec in the FeatureSpec represents the intended state
+   * Output only. Membership configuration in the cluster. This represents the actual state in the
+   * cluster, while the MembershipSpec in the FeatureSpec represents the intended state
    * @param membershipSpec membershipSpec or {@code null} for none
    */
   public ConfigManagementMembershipState setMembershipSpec(ConfigManagementMembershipSpec membershipSpec) {
@@ -146,7 +146,7 @@ public final class ConfigManagementMembershipState extends com.google.api.client
   }
 
   /**
-   * Current install status of ACM's Operator
+   * Output only. Current install status of ACM's Operator
    * @return value or {@code null} for none
    */
   public ConfigManagementOperatorState getOperatorState() {
@@ -154,7 +154,7 @@ public final class ConfigManagementMembershipState extends com.google.api.client
   }
 
   /**
-   * Current install status of ACM's Operator
+   * Output only. Current install status of ACM's Operator
    * @param operatorState operatorState or {@code null} for none
    */
   public ConfigManagementMembershipState setOperatorState(ConfigManagementOperatorState operatorState) {
@@ -163,7 +163,7 @@ public final class ConfigManagementMembershipState extends com.google.api.client
   }
 
   /**
-   * PolicyController status
+   * Output only. PolicyController status
    * @return value or {@code null} for none
    */
   public ConfigManagementPolicyControllerState getPolicyControllerState() {
@@ -171,7 +171,7 @@ public final class ConfigManagementMembershipState extends com.google.api.client
   }
 
   /**
-   * PolicyController status
+   * Output only. PolicyController status
    * @param policyControllerState policyControllerState or {@code null} for none
    */
   public ConfigManagementMembershipState setPolicyControllerState(ConfigManagementPolicyControllerState policyControllerState) {

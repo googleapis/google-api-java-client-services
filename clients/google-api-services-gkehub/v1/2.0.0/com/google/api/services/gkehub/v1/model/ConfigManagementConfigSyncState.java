@@ -30,15 +30,29 @@ package com.google.api.services.gkehub.v1.model;
 public final class ConfigManagementConfigSyncState extends com.google.api.client.json.GenericJson {
 
   /**
-   * Information about the deployment of ConfigSync, including the version of the various Pods
-   * deployed
+   * Output only. Whether syncing resources to the cluster is stopped at the cluster level.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String clusterLevelStopSyncingState;
+
+  /**
+   * Output only. The number of RootSync and RepoSync CRs in the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer crCount;
+
+  /**
+   * Output only. Information about the deployment of ConfigSync, including the version of the
+   * various Pods deployed
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ConfigManagementConfigSyncDeploymentState deploymentState;
 
   /**
-   * Errors pertaining to the installation of Config Sync.
+   * Output only. Errors pertaining to the installation of Config Sync.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,43 +65,77 @@ public final class ConfigManagementConfigSyncState extends com.google.api.client
   }
 
   /**
-   * The state of the Reposync CRD
+   * Output only. The state of the Reposync CRD
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String reposyncCrd;
 
   /**
-   * The state of the RootSync CRD
+   * Output only. The state of the RootSync CRD
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String rootsyncCrd;
 
   /**
-   * The state of CS This field summarizes the other fields in this message.
+   * Output only. The state of CS This field summarizes the other fields in this message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * The state of ConfigSync's process to sync configs to a cluster
+   * Output only. The state of ConfigSync's process to sync configs to a cluster
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ConfigManagementSyncState syncState;
 
   /**
-   * The version of ConfigSync deployed
+   * Output only. The version of ConfigSync deployed
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ConfigManagementConfigSyncVersion version;
 
   /**
-   * Information about the deployment of ConfigSync, including the version of the various Pods
-   * deployed
+   * Output only. Whether syncing resources to the cluster is stopped at the cluster level.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getClusterLevelStopSyncingState() {
+    return clusterLevelStopSyncingState;
+  }
+
+  /**
+   * Output only. Whether syncing resources to the cluster is stopped at the cluster level.
+   * @param clusterLevelStopSyncingState clusterLevelStopSyncingState or {@code null} for none
+   */
+  public ConfigManagementConfigSyncState setClusterLevelStopSyncingState(java.lang.String clusterLevelStopSyncingState) {
+    this.clusterLevelStopSyncingState = clusterLevelStopSyncingState;
+    return this;
+  }
+
+  /**
+   * Output only. The number of RootSync and RepoSync CRs in the cluster.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getCrCount() {
+    return crCount;
+  }
+
+  /**
+   * Output only. The number of RootSync and RepoSync CRs in the cluster.
+   * @param crCount crCount or {@code null} for none
+   */
+  public ConfigManagementConfigSyncState setCrCount(java.lang.Integer crCount) {
+    this.crCount = crCount;
+    return this;
+  }
+
+  /**
+   * Output only. Information about the deployment of ConfigSync, including the version of the
+   * various Pods deployed
    * @return value or {@code null} for none
    */
   public ConfigManagementConfigSyncDeploymentState getDeploymentState() {
@@ -95,8 +143,8 @@ public final class ConfigManagementConfigSyncState extends com.google.api.client
   }
 
   /**
-   * Information about the deployment of ConfigSync, including the version of the various Pods
-   * deployed
+   * Output only. Information about the deployment of ConfigSync, including the version of the
+   * various Pods deployed
    * @param deploymentState deploymentState or {@code null} for none
    */
   public ConfigManagementConfigSyncState setDeploymentState(ConfigManagementConfigSyncDeploymentState deploymentState) {
@@ -105,7 +153,7 @@ public final class ConfigManagementConfigSyncState extends com.google.api.client
   }
 
   /**
-   * Errors pertaining to the installation of Config Sync.
+   * Output only. Errors pertaining to the installation of Config Sync.
    * @return value or {@code null} for none
    */
   public java.util.List<ConfigManagementConfigSyncError> getErrors() {
@@ -113,7 +161,7 @@ public final class ConfigManagementConfigSyncState extends com.google.api.client
   }
 
   /**
-   * Errors pertaining to the installation of Config Sync.
+   * Output only. Errors pertaining to the installation of Config Sync.
    * @param errors errors or {@code null} for none
    */
   public ConfigManagementConfigSyncState setErrors(java.util.List<ConfigManagementConfigSyncError> errors) {
@@ -122,7 +170,7 @@ public final class ConfigManagementConfigSyncState extends com.google.api.client
   }
 
   /**
-   * The state of the Reposync CRD
+   * Output only. The state of the Reposync CRD
    * @return value or {@code null} for none
    */
   public java.lang.String getReposyncCrd() {
@@ -130,7 +178,7 @@ public final class ConfigManagementConfigSyncState extends com.google.api.client
   }
 
   /**
-   * The state of the Reposync CRD
+   * Output only. The state of the Reposync CRD
    * @param reposyncCrd reposyncCrd or {@code null} for none
    */
   public ConfigManagementConfigSyncState setReposyncCrd(java.lang.String reposyncCrd) {
@@ -139,7 +187,7 @@ public final class ConfigManagementConfigSyncState extends com.google.api.client
   }
 
   /**
-   * The state of the RootSync CRD
+   * Output only. The state of the RootSync CRD
    * @return value or {@code null} for none
    */
   public java.lang.String getRootsyncCrd() {
@@ -147,7 +195,7 @@ public final class ConfigManagementConfigSyncState extends com.google.api.client
   }
 
   /**
-   * The state of the RootSync CRD
+   * Output only. The state of the RootSync CRD
    * @param rootsyncCrd rootsyncCrd or {@code null} for none
    */
   public ConfigManagementConfigSyncState setRootsyncCrd(java.lang.String rootsyncCrd) {
@@ -156,7 +204,7 @@ public final class ConfigManagementConfigSyncState extends com.google.api.client
   }
 
   /**
-   * The state of CS This field summarizes the other fields in this message.
+   * Output only. The state of CS This field summarizes the other fields in this message.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -164,7 +212,7 @@ public final class ConfigManagementConfigSyncState extends com.google.api.client
   }
 
   /**
-   * The state of CS This field summarizes the other fields in this message.
+   * Output only. The state of CS This field summarizes the other fields in this message.
    * @param state state or {@code null} for none
    */
   public ConfigManagementConfigSyncState setState(java.lang.String state) {
@@ -173,7 +221,7 @@ public final class ConfigManagementConfigSyncState extends com.google.api.client
   }
 
   /**
-   * The state of ConfigSync's process to sync configs to a cluster
+   * Output only. The state of ConfigSync's process to sync configs to a cluster
    * @return value or {@code null} for none
    */
   public ConfigManagementSyncState getSyncState() {
@@ -181,7 +229,7 @@ public final class ConfigManagementConfigSyncState extends com.google.api.client
   }
 
   /**
-   * The state of ConfigSync's process to sync configs to a cluster
+   * Output only. The state of ConfigSync's process to sync configs to a cluster
    * @param syncState syncState or {@code null} for none
    */
   public ConfigManagementConfigSyncState setSyncState(ConfigManagementSyncState syncState) {
@@ -190,7 +238,7 @@ public final class ConfigManagementConfigSyncState extends com.google.api.client
   }
 
   /**
-   * The version of ConfigSync deployed
+   * Output only. The version of ConfigSync deployed
    * @return value or {@code null} for none
    */
   public ConfigManagementConfigSyncVersion getVersion() {
@@ -198,7 +246,7 @@ public final class ConfigManagementConfigSyncState extends com.google.api.client
   }
 
   /**
-   * The version of ConfigSync deployed
+   * Output only. The version of ConfigSync deployed
    * @param version version or {@code null} for none
    */
   public ConfigManagementConfigSyncState setVersion(ConfigManagementConfigSyncVersion version) {

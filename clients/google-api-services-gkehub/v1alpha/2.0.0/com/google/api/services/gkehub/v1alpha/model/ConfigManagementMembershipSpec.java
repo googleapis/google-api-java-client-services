@@ -31,16 +31,16 @@ package com.google.api.services.gkehub.v1alpha.model;
 public final class ConfigManagementMembershipSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * Binauthz conifguration for the cluster. Deprecated: This field will be ignored and should not
-   * be set.
+   * Optional. Binauthz conifguration for the cluster. Deprecated: This field will be ignored and
+   * should not be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ConfigManagementBinauthzConfig binauthz;
 
   /**
-   * The user-specified cluster name used by Config Sync cluster-name-selector annotation or
-   * ClusterSelector, for applying configs to only a subset of clusters. Omit this field if the
+   * Optional. The user-specified cluster name used by Config Sync cluster-name-selector annotation
+   * or ClusterSelector, for applying configs to only a subset of clusters. Omit this field if the
    * cluster's fleet membership name is used by Config Sync cluster-name-selector annotation or
    * ClusterSelector. Set this field if a name different from the cluster's fleet membership name is
    * used by Config Sync cluster-name-selector annotation or ClusterSelector.
@@ -50,14 +50,14 @@ public final class ConfigManagementMembershipSpec extends com.google.api.client.
   private java.lang.String cluster;
 
   /**
-   * Config Sync configuration for the cluster.
+   * Optional. Config Sync configuration for the cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ConfigManagementConfigSync configSync;
 
   /**
-   * Hierarchy Controller configuration for the cluster. Deprecated: Configuring Hierarchy
+   * Optional. Hierarchy Controller configuration for the cluster. Deprecated: Configuring Hierarchy
    * Controller through the configmanagement feature is no longer recommended. Use
    * https://github.com/kubernetes-sigs/hierarchical-namespaces instead.
    * The value may be {@code null}.
@@ -66,31 +66,31 @@ public final class ConfigManagementMembershipSpec extends com.google.api.client.
   private ConfigManagementHierarchyControllerConfig hierarchyController;
 
   /**
-   * Enables automatic Feature management.
+   * Optional. Enables automatic Feature management.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String management;
 
   /**
-   * Policy Controller configuration for the cluster. Deprecated: Configuring Policy Controller
-   * through the configmanagement feature is no longer recommended. Use the policycontroller feature
-   * instead.
+   * Optional. Policy Controller configuration for the cluster. Deprecated: Configuring Policy
+   * Controller through the configmanagement feature is no longer recommended. Use the
+   * policycontroller feature instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ConfigManagementPolicyController policyController;
 
   /**
-   * Version of ACM installed.
+   * Optional. Version of ACM installed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String version;
 
   /**
-   * Binauthz conifguration for the cluster. Deprecated: This field will be ignored and should not
-   * be set.
+   * Optional. Binauthz conifguration for the cluster. Deprecated: This field will be ignored and
+   * should not be set.
    * @return value or {@code null} for none
    */
   public ConfigManagementBinauthzConfig getBinauthz() {
@@ -98,8 +98,8 @@ public final class ConfigManagementMembershipSpec extends com.google.api.client.
   }
 
   /**
-   * Binauthz conifguration for the cluster. Deprecated: This field will be ignored and should not
-   * be set.
+   * Optional. Binauthz conifguration for the cluster. Deprecated: This field will be ignored and
+   * should not be set.
    * @param binauthz binauthz or {@code null} for none
    */
   public ConfigManagementMembershipSpec setBinauthz(ConfigManagementBinauthzConfig binauthz) {
@@ -108,8 +108,8 @@ public final class ConfigManagementMembershipSpec extends com.google.api.client.
   }
 
   /**
-   * The user-specified cluster name used by Config Sync cluster-name-selector annotation or
-   * ClusterSelector, for applying configs to only a subset of clusters. Omit this field if the
+   * Optional. The user-specified cluster name used by Config Sync cluster-name-selector annotation
+   * or ClusterSelector, for applying configs to only a subset of clusters. Omit this field if the
    * cluster's fleet membership name is used by Config Sync cluster-name-selector annotation or
    * ClusterSelector. Set this field if a name different from the cluster's fleet membership name is
    * used by Config Sync cluster-name-selector annotation or ClusterSelector.
@@ -120,8 +120,8 @@ public final class ConfigManagementMembershipSpec extends com.google.api.client.
   }
 
   /**
-   * The user-specified cluster name used by Config Sync cluster-name-selector annotation or
-   * ClusterSelector, for applying configs to only a subset of clusters. Omit this field if the
+   * Optional. The user-specified cluster name used by Config Sync cluster-name-selector annotation
+   * or ClusterSelector, for applying configs to only a subset of clusters. Omit this field if the
    * cluster's fleet membership name is used by Config Sync cluster-name-selector annotation or
    * ClusterSelector. Set this field if a name different from the cluster's fleet membership name is
    * used by Config Sync cluster-name-selector annotation or ClusterSelector.
@@ -133,7 +133,7 @@ public final class ConfigManagementMembershipSpec extends com.google.api.client.
   }
 
   /**
-   * Config Sync configuration for the cluster.
+   * Optional. Config Sync configuration for the cluster.
    * @return value or {@code null} for none
    */
   public ConfigManagementConfigSync getConfigSync() {
@@ -141,7 +141,7 @@ public final class ConfigManagementMembershipSpec extends com.google.api.client.
   }
 
   /**
-   * Config Sync configuration for the cluster.
+   * Optional. Config Sync configuration for the cluster.
    * @param configSync configSync or {@code null} for none
    */
   public ConfigManagementMembershipSpec setConfigSync(ConfigManagementConfigSync configSync) {
@@ -150,7 +150,7 @@ public final class ConfigManagementMembershipSpec extends com.google.api.client.
   }
 
   /**
-   * Hierarchy Controller configuration for the cluster. Deprecated: Configuring Hierarchy
+   * Optional. Hierarchy Controller configuration for the cluster. Deprecated: Configuring Hierarchy
    * Controller through the configmanagement feature is no longer recommended. Use
    * https://github.com/kubernetes-sigs/hierarchical-namespaces instead.
    * @return value or {@code null} for none
@@ -160,7 +160,7 @@ public final class ConfigManagementMembershipSpec extends com.google.api.client.
   }
 
   /**
-   * Hierarchy Controller configuration for the cluster. Deprecated: Configuring Hierarchy
+   * Optional. Hierarchy Controller configuration for the cluster. Deprecated: Configuring Hierarchy
    * Controller through the configmanagement feature is no longer recommended. Use
    * https://github.com/kubernetes-sigs/hierarchical-namespaces instead.
    * @param hierarchyController hierarchyController or {@code null} for none
@@ -171,7 +171,7 @@ public final class ConfigManagementMembershipSpec extends com.google.api.client.
   }
 
   /**
-   * Enables automatic Feature management.
+   * Optional. Enables automatic Feature management.
    * @return value or {@code null} for none
    */
   public java.lang.String getManagement() {
@@ -179,7 +179,7 @@ public final class ConfigManagementMembershipSpec extends com.google.api.client.
   }
 
   /**
-   * Enables automatic Feature management.
+   * Optional. Enables automatic Feature management.
    * @param management management or {@code null} for none
    */
   public ConfigManagementMembershipSpec setManagement(java.lang.String management) {
@@ -188,9 +188,9 @@ public final class ConfigManagementMembershipSpec extends com.google.api.client.
   }
 
   /**
-   * Policy Controller configuration for the cluster. Deprecated: Configuring Policy Controller
-   * through the configmanagement feature is no longer recommended. Use the policycontroller feature
-   * instead.
+   * Optional. Policy Controller configuration for the cluster. Deprecated: Configuring Policy
+   * Controller through the configmanagement feature is no longer recommended. Use the
+   * policycontroller feature instead.
    * @return value or {@code null} for none
    */
   public ConfigManagementPolicyController getPolicyController() {
@@ -198,9 +198,9 @@ public final class ConfigManagementMembershipSpec extends com.google.api.client.
   }
 
   /**
-   * Policy Controller configuration for the cluster. Deprecated: Configuring Policy Controller
-   * through the configmanagement feature is no longer recommended. Use the policycontroller feature
-   * instead.
+   * Optional. Policy Controller configuration for the cluster. Deprecated: Configuring Policy
+   * Controller through the configmanagement feature is no longer recommended. Use the
+   * policycontroller feature instead.
    * @param policyController policyController or {@code null} for none
    */
   public ConfigManagementMembershipSpec setPolicyController(ConfigManagementPolicyController policyController) {
@@ -209,7 +209,7 @@ public final class ConfigManagementMembershipSpec extends com.google.api.client.
   }
 
   /**
-   * Version of ACM installed.
+   * Optional. Version of ACM installed.
    * @return value or {@code null} for none
    */
   public java.lang.String getVersion() {
@@ -217,7 +217,7 @@ public final class ConfigManagementMembershipSpec extends com.google.api.client.
   }
 
   /**
-   * Version of ACM installed.
+   * Optional. Version of ACM installed.
    * @param version version or {@code null} for none
    */
   public ConfigManagementMembershipSpec setVersion(java.lang.String version) {

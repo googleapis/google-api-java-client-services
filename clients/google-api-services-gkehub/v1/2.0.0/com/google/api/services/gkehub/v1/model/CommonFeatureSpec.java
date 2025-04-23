@@ -65,6 +65,13 @@ public final class CommonFeatureSpec extends com.google.api.client.json.GenericJ
   private MultiClusterIngressFeatureSpec multiclusteringress;
 
   /**
+   * RBAC Role Binding Actuation feature spec
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RBACRoleBindingActuationFeatureSpec rbacrolebindingactuation;
+
+  /**
    * Appdevexperience specific spec.
    * @return value or {@code null} for none
    */
@@ -146,6 +153,23 @@ public final class CommonFeatureSpec extends com.google.api.client.json.GenericJ
    */
   public CommonFeatureSpec setMulticlusteringress(MultiClusterIngressFeatureSpec multiclusteringress) {
     this.multiclusteringress = multiclusteringress;
+    return this;
+  }
+
+  /**
+   * RBAC Role Binding Actuation feature spec
+   * @return value or {@code null} for none
+   */
+  public RBACRoleBindingActuationFeatureSpec getRbacrolebindingactuation() {
+    return rbacrolebindingactuation;
+  }
+
+  /**
+   * RBAC Role Binding Actuation feature spec
+   * @param rbacrolebindingactuation rbacrolebindingactuation or {@code null} for none
+   */
+  public CommonFeatureSpec setRbacrolebindingactuation(RBACRoleBindingActuationFeatureSpec rbacrolebindingactuation) {
+    this.rbacrolebindingactuation = rbacrolebindingactuation;
     return this;
   }
 

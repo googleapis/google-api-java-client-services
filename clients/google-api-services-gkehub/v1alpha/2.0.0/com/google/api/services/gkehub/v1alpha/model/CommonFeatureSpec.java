@@ -30,13 +30,6 @@ package com.google.api.services.gkehub.v1alpha.model;
 public final class CommonFeatureSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * Anthos Observability spec
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private AnthosObservabilityFeatureSpec anthosobservability;
-
-  /**
    * Appdevexperience specific spec.
    * The value may be {@code null}.
    */
@@ -86,28 +79,18 @@ public final class CommonFeatureSpec extends com.google.api.client.json.GenericJ
   private NamespaceActuationFeatureSpec namespaceactuation;
 
   /**
+   * RBAC Role Binding Actuation feature spec
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RBACRoleBindingActuationFeatureSpec rbacrolebindingactuation;
+
+  /**
    * Workload Certificate spec.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private FeatureSpec workloadcertificate;
-
-  /**
-   * Anthos Observability spec
-   * @return value or {@code null} for none
-   */
-  public AnthosObservabilityFeatureSpec getAnthosobservability() {
-    return anthosobservability;
-  }
-
-  /**
-   * Anthos Observability spec
-   * @param anthosobservability anthosobservability or {@code null} for none
-   */
-  public CommonFeatureSpec setAnthosobservability(AnthosObservabilityFeatureSpec anthosobservability) {
-    this.anthosobservability = anthosobservability;
-    return this;
-  }
 
   /**
    * Appdevexperience specific spec.
@@ -225,6 +208,23 @@ public final class CommonFeatureSpec extends com.google.api.client.json.GenericJ
    */
   public CommonFeatureSpec setNamespaceactuation(NamespaceActuationFeatureSpec namespaceactuation) {
     this.namespaceactuation = namespaceactuation;
+    return this;
+  }
+
+  /**
+   * RBAC Role Binding Actuation feature spec
+   * @return value or {@code null} for none
+   */
+  public RBACRoleBindingActuationFeatureSpec getRbacrolebindingactuation() {
+    return rbacrolebindingactuation;
+  }
+
+  /**
+   * RBAC Role Binding Actuation feature spec
+   * @param rbacrolebindingactuation rbacrolebindingactuation or {@code null} for none
+   */
+  public CommonFeatureSpec setRbacrolebindingactuation(RBACRoleBindingActuationFeatureSpec rbacrolebindingactuation) {
+    this.rbacrolebindingactuation = rbacrolebindingactuation;
     return this;
   }
 

@@ -31,16 +31,16 @@ package com.google.api.services.displayvideo.v2.model;
 public final class ExitEvent extends com.google.api.client.json.GenericJson {
 
   /**
-   * The name of the click tag of the exit event. The name must be unique within one creative. Leave
-   * it empty or unset for creatives containing image assets only.
+   * Optional. The name of the click tag of the exit event. The name must be unique within one
+   * creative. Leave it empty or unset for creatives containing image assets only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The name used to identify this event in reports. Leave it empty or unset for creatives
-   * containing image assets only.
+   * Optional. The name used to identify this event in reports. Leave it empty or unset for
+   * creatives containing image assets only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,8 +62,8 @@ public final class ExitEvent extends com.google.api.client.json.GenericJson {
   private java.lang.String url;
 
   /**
-   * The name of the click tag of the exit event. The name must be unique within one creative. Leave
-   * it empty or unset for creatives containing image assets only.
+   * Optional. The name of the click tag of the exit event. The name must be unique within one
+   * creative. Leave it empty or unset for creatives containing image assets only.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -71,8 +71,8 @@ public final class ExitEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the click tag of the exit event. The name must be unique within one creative. Leave
-   * it empty or unset for creatives containing image assets only.
+   * Optional. The name of the click tag of the exit event. The name must be unique within one
+   * creative. Leave it empty or unset for creatives containing image assets only.
    * @param name name or {@code null} for none
    */
   public ExitEvent setName(java.lang.String name) {
@@ -81,8 +81,8 @@ public final class ExitEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name used to identify this event in reports. Leave it empty or unset for creatives
-   * containing image assets only.
+   * Optional. The name used to identify this event in reports. Leave it empty or unset for
+   * creatives containing image assets only.
    * @return value or {@code null} for none
    */
   public java.lang.String getReportingName() {
@@ -90,8 +90,8 @@ public final class ExitEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name used to identify this event in reports. Leave it empty or unset for creatives
-   * containing image assets only.
+   * Optional. The name used to identify this event in reports. Leave it empty or unset for
+   * creatives containing image assets only.
    * @param reportingName reportingName or {@code null} for none
    */
   public ExitEvent setReportingName(java.lang.String reportingName) {

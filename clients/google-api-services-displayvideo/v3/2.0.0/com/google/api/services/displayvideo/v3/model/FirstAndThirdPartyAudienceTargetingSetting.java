@@ -39,8 +39,8 @@ public final class FirstAndThirdPartyAudienceTargetingSetting extends com.google
   private java.lang.Long firstAndThirdPartyAudienceId;
 
   /**
-   * The recency of the first and third party audience targeting setting. Only applicable to first
-   * party audiences, otherwise will be ignored. For more info, refer to
+   * Optional. The recency of the first and third party audience targeting setting. Only applicable
+   * to first party audiences, otherwise will be ignored. For more info, refer to
    * https://support.google.com/displayvideo/answer/2949947#recency When unspecified, no recency
    * limit will be used.
    * The value may be {@code null}.
@@ -68,8 +68,8 @@ public final class FirstAndThirdPartyAudienceTargetingSetting extends com.google
   }
 
   /**
-   * The recency of the first and third party audience targeting setting. Only applicable to first
-   * party audiences, otherwise will be ignored. For more info, refer to
+   * Optional. The recency of the first and third party audience targeting setting. Only applicable
+   * to first party audiences, otherwise will be ignored. For more info, refer to
    * https://support.google.com/displayvideo/answer/2949947#recency When unspecified, no recency
    * limit will be used.
    * @return value or {@code null} for none
@@ -79,8 +79,8 @@ public final class FirstAndThirdPartyAudienceTargetingSetting extends com.google
   }
 
   /**
-   * The recency of the first and third party audience targeting setting. Only applicable to first
-   * party audiences, otherwise will be ignored. For more info, refer to
+   * Optional. The recency of the first and third party audience targeting setting. Only applicable
+   * to first party audiences, otherwise will be ignored. For more info, refer to
    * https://support.google.com/displayvideo/answer/2949947#recency When unspecified, no recency
    * limit will be used.
    * @param recency recency or {@code null} for none

@@ -122,6 +122,13 @@ public final class TargetingOption extends com.google.api.client.json.GenericJso
   private ContentStreamTypeTargetingOptionDetails contentStreamTypeDetails;
 
   /**
+   * Content theme details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ContentThemeTargetingOptionDetails contentThemeDetails;
+
+  /**
    * Device make and model resource details.
    * The value may be {@code null}.
    */
@@ -501,6 +508,23 @@ public final class TargetingOption extends com.google.api.client.json.GenericJso
    */
   public TargetingOption setContentStreamTypeDetails(ContentStreamTypeTargetingOptionDetails contentStreamTypeDetails) {
     this.contentStreamTypeDetails = contentStreamTypeDetails;
+    return this;
+  }
+
+  /**
+   * Content theme details.
+   * @return value or {@code null} for none
+   */
+  public ContentThemeTargetingOptionDetails getContentThemeDetails() {
+    return contentThemeDetails;
+  }
+
+  /**
+   * Content theme details.
+   * @param contentThemeDetails contentThemeDetails or {@code null} for none
+   */
+  public TargetingOption setContentThemeDetails(ContentThemeTargetingOptionDetails contentThemeDetails) {
+    this.contentThemeDetails = contentThemeDetails;
     return this;
   }
 

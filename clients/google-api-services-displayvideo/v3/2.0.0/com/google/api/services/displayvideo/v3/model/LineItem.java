@@ -59,7 +59,12 @@ public final class LineItem extends com.google.api.client.json.GenericJson {
   private java.lang.Long campaignId;
 
   /**
-   * The conversion tracking setting of the line item.
+   * The conversion tracking setting of the line item. *Warning*: Starting **April 1, 2025**, the
+   * floodlight_activity_configs field will no longer be writable while a custom bidding algorithm
+   * is assigned to the line item. If you set this field and assign a custom bidding algorithm in
+   * the same request, the floodlight activities must match the ones used by the custom bidding
+   * algorithm. [Read more about this announced change](/display-
+   * video/api/deprecations#features.custom_bidding_floodlight).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -287,7 +292,12 @@ public final class LineItem extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The conversion tracking setting of the line item.
+   * The conversion tracking setting of the line item. *Warning*: Starting **April 1, 2025**, the
+   * floodlight_activity_configs field will no longer be writable while a custom bidding algorithm
+   * is assigned to the line item. If you set this field and assign a custom bidding algorithm in
+   * the same request, the floodlight activities must match the ones used by the custom bidding
+   * algorithm. [Read more about this announced change](/display-
+   * video/api/deprecations#features.custom_bidding_floodlight).
    * @return value or {@code null} for none
    */
   public ConversionCountingConfig getConversionCounting() {
@@ -295,7 +305,12 @@ public final class LineItem extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The conversion tracking setting of the line item.
+   * The conversion tracking setting of the line item. *Warning*: Starting **April 1, 2025**, the
+   * floodlight_activity_configs field will no longer be writable while a custom bidding algorithm
+   * is assigned to the line item. If you set this field and assign a custom bidding algorithm in
+   * the same request, the floodlight activities must match the ones used by the custom bidding
+   * algorithm. [Read more about this announced change](/display-
+   * video/api/deprecations#features.custom_bidding_floodlight).
    * @param conversionCounting conversionCounting or {@code null} for none
    */
   public LineItem setConversionCounting(ConversionCountingConfig conversionCounting) {

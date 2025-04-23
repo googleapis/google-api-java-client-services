@@ -57,9 +57,8 @@ public final class FrequencyCap extends com.google.api.client.json.GenericJson {
 
   /**
    * The number of time_unit the frequency cap will last. Required when unlimited is `false`. The
-   * following restrictions apply based on the value of time_unit: * `TIME_UNIT_LIFETIME` - this
-   * field is output only and will default to 1 * `TIME_UNIT_MONTHS` - must be between 1 and 2 *
-   * `TIME_UNIT_WEEKS` - must be between 1 and 4 * `TIME_UNIT_DAYS` - must be between 1 and 6 *
+   * following restrictions apply based on the value of time_unit: * `TIME_UNIT_MONTHS` - must be 1
+   * * `TIME_UNIT_WEEKS` - must be between 1 and 4 * `TIME_UNIT_DAYS` - must be between 1 and 6 *
    * `TIME_UNIT_HOURS` - must be between 1 and 23 * `TIME_UNIT_MINUTES` - must be between 1 and 59
    * The value may be {@code null}.
    */
@@ -133,9 +132,8 @@ public final class FrequencyCap extends com.google.api.client.json.GenericJson {
 
   /**
    * The number of time_unit the frequency cap will last. Required when unlimited is `false`. The
-   * following restrictions apply based on the value of time_unit: * `TIME_UNIT_LIFETIME` - this
-   * field is output only and will default to 1 * `TIME_UNIT_MONTHS` - must be between 1 and 2 *
-   * `TIME_UNIT_WEEKS` - must be between 1 and 4 * `TIME_UNIT_DAYS` - must be between 1 and 6 *
+   * following restrictions apply based on the value of time_unit: * `TIME_UNIT_MONTHS` - must be 1
+   * * `TIME_UNIT_WEEKS` - must be between 1 and 4 * `TIME_UNIT_DAYS` - must be between 1 and 6 *
    * `TIME_UNIT_HOURS` - must be between 1 and 23 * `TIME_UNIT_MINUTES` - must be between 1 and 59
    * @return value or {@code null} for none
    */
@@ -145,9 +143,8 @@ public final class FrequencyCap extends com.google.api.client.json.GenericJson {
 
   /**
    * The number of time_unit the frequency cap will last. Required when unlimited is `false`. The
-   * following restrictions apply based on the value of time_unit: * `TIME_UNIT_LIFETIME` - this
-   * field is output only and will default to 1 * `TIME_UNIT_MONTHS` - must be between 1 and 2 *
-   * `TIME_UNIT_WEEKS` - must be between 1 and 4 * `TIME_UNIT_DAYS` - must be between 1 and 6 *
+   * following restrictions apply based on the value of time_unit: * `TIME_UNIT_MONTHS` - must be 1
+   * * `TIME_UNIT_WEEKS` - must be between 1 and 4 * `TIME_UNIT_DAYS` - must be between 1 and 6 *
    * `TIME_UNIT_HOURS` - must be between 1 and 23 * `TIME_UNIT_MINUTES` - must be between 1 and 59
    * @param timeUnitCount timeUnitCount or {@code null} for none
    */

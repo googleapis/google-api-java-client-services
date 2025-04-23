@@ -31,73 +31,73 @@ package com.google.api.services.displayvideo.v2.model;
 public final class Transcode extends com.google.api.client.json.GenericJson {
 
   /**
-   * The bit rate for the audio stream of the transcoded video, or the bit rate for the transcoded
-   * audio, in kilobits per second.
+   * Optional. The bit rate for the audio stream of the transcoded video, or the bit rate for the
+   * transcoded audio, in kilobits per second.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long audioBitRateKbps;
 
   /**
-   * The sample rate for the audio stream of the transcoded video, or the sample rate for the
-   * transcoded audio, in hertz.
+   * Optional. The sample rate for the audio stream of the transcoded video, or the sample rate for
+   * the transcoded audio, in hertz.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long audioSampleRateHz;
 
   /**
-   * The transcoding bit rate of the transcoded video, in kilobits per second.
+   * Optional. The transcoding bit rate of the transcoded video, in kilobits per second.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long bitRateKbps;
 
   /**
-   * The dimensions of the transcoded video.
+   * Optional. The dimensions of the transcoded video.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Dimensions dimensions;
 
   /**
-   * The size of the transcoded file, in bytes.
+   * Optional. The size of the transcoded file, in bytes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long fileSizeBytes;
 
   /**
-   * The frame rate of the transcoded video, in frames per second.
+   * Optional. The frame rate of the transcoded video, in frames per second.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float frameRate;
 
   /**
-   * The MIME type of the transcoded file.
+   * Optional. The MIME type of the transcoded file.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String mimeType;
 
   /**
-   * The name of the transcoded file.
+   * Optional. The name of the transcoded file.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Indicates if the transcoding was successful.
+   * Optional. Indicates if the transcoding was successful.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean transcoded;
 
   /**
-   * The bit rate for the audio stream of the transcoded video, or the bit rate for the transcoded
-   * audio, in kilobits per second.
+   * Optional. The bit rate for the audio stream of the transcoded video, or the bit rate for the
+   * transcoded audio, in kilobits per second.
    * @return value or {@code null} for none
    */
   public java.lang.Long getAudioBitRateKbps() {
@@ -105,8 +105,8 @@ public final class Transcode extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The bit rate for the audio stream of the transcoded video, or the bit rate for the transcoded
-   * audio, in kilobits per second.
+   * Optional. The bit rate for the audio stream of the transcoded video, or the bit rate for the
+   * transcoded audio, in kilobits per second.
    * @param audioBitRateKbps audioBitRateKbps or {@code null} for none
    */
   public Transcode setAudioBitRateKbps(java.lang.Long audioBitRateKbps) {
@@ -115,8 +115,8 @@ public final class Transcode extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The sample rate for the audio stream of the transcoded video, or the sample rate for the
-   * transcoded audio, in hertz.
+   * Optional. The sample rate for the audio stream of the transcoded video, or the sample rate for
+   * the transcoded audio, in hertz.
    * @return value or {@code null} for none
    */
   public java.lang.Long getAudioSampleRateHz() {
@@ -124,8 +124,8 @@ public final class Transcode extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The sample rate for the audio stream of the transcoded video, or the sample rate for the
-   * transcoded audio, in hertz.
+   * Optional. The sample rate for the audio stream of the transcoded video, or the sample rate for
+   * the transcoded audio, in hertz.
    * @param audioSampleRateHz audioSampleRateHz or {@code null} for none
    */
   public Transcode setAudioSampleRateHz(java.lang.Long audioSampleRateHz) {
@@ -134,7 +134,7 @@ public final class Transcode extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The transcoding bit rate of the transcoded video, in kilobits per second.
+   * Optional. The transcoding bit rate of the transcoded video, in kilobits per second.
    * @return value or {@code null} for none
    */
   public java.lang.Long getBitRateKbps() {
@@ -142,7 +142,7 @@ public final class Transcode extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The transcoding bit rate of the transcoded video, in kilobits per second.
+   * Optional. The transcoding bit rate of the transcoded video, in kilobits per second.
    * @param bitRateKbps bitRateKbps or {@code null} for none
    */
   public Transcode setBitRateKbps(java.lang.Long bitRateKbps) {
@@ -151,7 +151,7 @@ public final class Transcode extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The dimensions of the transcoded video.
+   * Optional. The dimensions of the transcoded video.
    * @return value or {@code null} for none
    */
   public Dimensions getDimensions() {
@@ -159,7 +159,7 @@ public final class Transcode extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The dimensions of the transcoded video.
+   * Optional. The dimensions of the transcoded video.
    * @param dimensions dimensions or {@code null} for none
    */
   public Transcode setDimensions(Dimensions dimensions) {
@@ -168,7 +168,7 @@ public final class Transcode extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The size of the transcoded file, in bytes.
+   * Optional. The size of the transcoded file, in bytes.
    * @return value or {@code null} for none
    */
   public java.lang.Long getFileSizeBytes() {
@@ -176,7 +176,7 @@ public final class Transcode extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The size of the transcoded file, in bytes.
+   * Optional. The size of the transcoded file, in bytes.
    * @param fileSizeBytes fileSizeBytes or {@code null} for none
    */
   public Transcode setFileSizeBytes(java.lang.Long fileSizeBytes) {
@@ -185,7 +185,7 @@ public final class Transcode extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The frame rate of the transcoded video, in frames per second.
+   * Optional. The frame rate of the transcoded video, in frames per second.
    * @return value or {@code null} for none
    */
   public java.lang.Float getFrameRate() {
@@ -193,7 +193,7 @@ public final class Transcode extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The frame rate of the transcoded video, in frames per second.
+   * Optional. The frame rate of the transcoded video, in frames per second.
    * @param frameRate frameRate or {@code null} for none
    */
   public Transcode setFrameRate(java.lang.Float frameRate) {
@@ -202,7 +202,7 @@ public final class Transcode extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The MIME type of the transcoded file.
+   * Optional. The MIME type of the transcoded file.
    * @return value or {@code null} for none
    */
   public java.lang.String getMimeType() {
@@ -210,7 +210,7 @@ public final class Transcode extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The MIME type of the transcoded file.
+   * Optional. The MIME type of the transcoded file.
    * @param mimeType mimeType or {@code null} for none
    */
   public Transcode setMimeType(java.lang.String mimeType) {
@@ -219,7 +219,7 @@ public final class Transcode extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the transcoded file.
+   * Optional. The name of the transcoded file.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -227,7 +227,7 @@ public final class Transcode extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the transcoded file.
+   * Optional. The name of the transcoded file.
    * @param name name or {@code null} for none
    */
   public Transcode setName(java.lang.String name) {
@@ -236,7 +236,7 @@ public final class Transcode extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates if the transcoding was successful.
+   * Optional. Indicates if the transcoding was successful.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getTranscoded() {
@@ -244,7 +244,7 @@ public final class Transcode extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates if the transcoding was successful.
+   * Optional. Indicates if the transcoding was successful.
    * @param transcoded transcoded or {@code null} for none
    */
   public Transcode setTranscoded(java.lang.Boolean transcoded) {

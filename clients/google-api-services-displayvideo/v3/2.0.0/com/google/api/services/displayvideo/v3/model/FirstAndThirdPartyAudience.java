@@ -154,7 +154,11 @@ public final class FirstAndThirdPartyAudience extends com.google.api.client.json
    * audience has no expiration, set the value of this field to 10000. Otherwise, the set value must
    * be greater than 0 and less than or equal to 540. Only applicable to first party audiences. This
    * field is required if one of the following audience_type is used: *
-   * `CUSTOMER_MATCH_CONTACT_INFO` * `CUSTOMER_MATCH_DEVICE_ID`
+   * `CUSTOMER_MATCH_CONTACT_INFO` * `CUSTOMER_MATCH_DEVICE_ID` *Warning*: Starting on **April 7,
+   * 2025**, audiences will no longer be able to have infinite membership duration. This field will
+   * no longer accept the value 10000 and all audiences with membership durations greater than 540
+   * days will be updated to a membership duration of 540 days. [Read more about this announced
+   * change](/display-video/api/deprecations#features.audience_duration).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -466,7 +470,11 @@ public final class FirstAndThirdPartyAudience extends com.google.api.client.json
    * audience has no expiration, set the value of this field to 10000. Otherwise, the set value must
    * be greater than 0 and less than or equal to 540. Only applicable to first party audiences. This
    * field is required if one of the following audience_type is used: *
-   * `CUSTOMER_MATCH_CONTACT_INFO` * `CUSTOMER_MATCH_DEVICE_ID`
+   * `CUSTOMER_MATCH_CONTACT_INFO` * `CUSTOMER_MATCH_DEVICE_ID` *Warning*: Starting on **April 7,
+   * 2025**, audiences will no longer be able to have infinite membership duration. This field will
+   * no longer accept the value 10000 and all audiences with membership durations greater than 540
+   * days will be updated to a membership duration of 540 days. [Read more about this announced
+   * change](/display-video/api/deprecations#features.audience_duration).
    * @return value or {@code null} for none
    */
   public java.lang.Long getMembershipDurationDays() {
@@ -478,7 +486,11 @@ public final class FirstAndThirdPartyAudience extends com.google.api.client.json
    * audience has no expiration, set the value of this field to 10000. Otherwise, the set value must
    * be greater than 0 and less than or equal to 540. Only applicable to first party audiences. This
    * field is required if one of the following audience_type is used: *
-   * `CUSTOMER_MATCH_CONTACT_INFO` * `CUSTOMER_MATCH_DEVICE_ID`
+   * `CUSTOMER_MATCH_CONTACT_INFO` * `CUSTOMER_MATCH_DEVICE_ID` *Warning*: Starting on **April 7,
+   * 2025**, audiences will no longer be able to have infinite membership duration. This field will
+   * no longer accept the value 10000 and all audiences with membership durations greater than 540
+   * days will be updated to a membership duration of 540 days. [Read more about this announced
+   * change](/display-video/api/deprecations#features.audience_duration).
    * @param membershipDurationDays membershipDurationDays or {@code null} for none
    */
   public FirstAndThirdPartyAudience setMembershipDurationDays(java.lang.Long membershipDurationDays) {

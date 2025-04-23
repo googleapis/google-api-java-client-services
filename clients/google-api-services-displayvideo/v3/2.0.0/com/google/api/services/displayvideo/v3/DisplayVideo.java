@@ -18927,7 +18927,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
     }
     /**
      * Updates an existing custom bidding algorithm. Returns the updated custom bidding algorithm if
-     * successful.
+     * successful. *Warning*: Starting **April 1, 2025**, requests updating custom bidding algorithms
+     * that are assigned to line items will return an error. [Read more about this announced
+     * change](/display-video/api/deprecations#features.custom_bidding_floodlight).
      *
      * Create a request for the method "customBiddingAlgorithms.patch".
      *
@@ -18953,7 +18955,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
       /**
        * Updates an existing custom bidding algorithm. Returns the updated custom bidding algorithm if
-       * successful.
+       * successful. *Warning*: Starting **April 1, 2025**, requests updating custom bidding algorithms
+       * that are assigned to line items will return an error. [Read more about this announced
+       * change](/display-video/api/deprecations#features.custom_bidding_floodlight).
        *
        * Create a request for the method "customBiddingAlgorithms.patch".
        *
@@ -19423,7 +19427,10 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
     public class Rules {
 
       /**
-       * Creates a new rules resource. Returns the newly created rules resource if successful.
+       * Creates a new rules resource. Returns the newly created rules resource if successful. *Warning*:
+       * Starting **April 1, 2025**, requests updating custom bidding algorithms that are assigned to line
+       * items will return an error. [Read more about this announced change](/display-
+       * video/api/deprecations#features.custom_bidding_floodlight).
        *
        * Create a request for the method "rules.create".
        *
@@ -19449,6 +19456,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
         /**
          * Creates a new rules resource. Returns the newly created rules resource if successful.
+         * *Warning*: Starting **April 1, 2025**, requests updating custom bidding algorithms that are
+         * assigned to line items will return an error. [Read more about this announced change](/display-
+         * video/api/deprecations#features.custom_bidding_floodlight).
          *
          * Create a request for the method "rules.create".
          *
@@ -20026,7 +20036,10 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
     public class Scripts {
 
       /**
-       * Creates a new custom bidding script. Returns the newly created script if successful.
+       * Creates a new custom bidding script. Returns the newly created script if successful. *Warning*:
+       * Starting **April 1, 2025**, requests updating custom bidding algorithms that are assigned to line
+       * items will return an error. [Read more about this announced change](/display-
+       * video/api/deprecations#features.custom_bidding_floodlight).
        *
        * Create a request for the method "scripts.create".
        *
@@ -20051,7 +20064,10 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^[^/]+$");
 
         /**
-         * Creates a new custom bidding script. Returns the newly created script if successful.
+         * Creates a new custom bidding script. Returns the newly created script if successful. *Warning*:
+         * Starting **April 1, 2025**, requests updating custom bidding algorithms that are assigned to
+         * line items will return an error. [Read more about this announced change](/display-
+         * video/api/deprecations#features.custom_bidding_floodlight).
          *
          * Create a request for the method "scripts.create".
          *
@@ -21649,12 +21665,12 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
       /**
        * Requested page size. Must be between `1` and `5000`. If unspecified, this value defaults to
-       * `100`. Returns error code `INVALID_ARGUMENT` if an invalid value is specified.
+       * `5000`. Returns error code `INVALID_ARGUMENT` if an invalid value is specified.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** Requested page size. Must be between `1` and `5000`. If unspecified, this value defaults to `100`.
+      /** Requested page size. Must be between `1` and `5000`. If unspecified, this value defaults to `5000`.
      Returns error code `INVALID_ARGUMENT` if an invalid value is specified.
        */
       public java.lang.Integer getPageSize() {
@@ -21663,7 +21679,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
       /**
        * Requested page size. Must be between `1` and `5000`. If unspecified, this value defaults to
-       * `100`. Returns error code `INVALID_ARGUMENT` if an invalid value is specified.
+       * `5000`. Returns error code `INVALID_ARGUMENT` if an invalid value is specified.
        */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
@@ -30380,190 +30396,6 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                 "Parameter name must conform to the pattern " +
                 "^sdfdownloadtasks/operations/[^/]+$");
-          }
-          this.name = name;
-          return this;
-        }
-
-        @Override
-        public Get set(String parameterName, Object value) {
-          return (Get) super.set(parameterName, value);
-        }
-      }
-
-    }
-  }
-
-  /**
-   * An accessor for creating requests from the Sdfuploadtasks collection.
-   *
-   * <p>The typical use is:</p>
-   * <pre>
-   *   {@code DisplayVideo displayvideo = new DisplayVideo(...);}
-   *   {@code DisplayVideo.Sdfuploadtasks.List request = displayvideo.sdfuploadtasks().list(parameters ...)}
-   * </pre>
-   *
-   * @return the resource collection
-   */
-  public Sdfuploadtasks sdfuploadtasks() {
-    return new Sdfuploadtasks();
-  }
-
-  /**
-   * The "sdfuploadtasks" collection of methods.
-   */
-  public class Sdfuploadtasks {
-
-    /**
-     * An accessor for creating requests from the Operations collection.
-     *
-     * <p>The typical use is:</p>
-     * <pre>
-     *   {@code DisplayVideo displayvideo = new DisplayVideo(...);}
-     *   {@code DisplayVideo.Operations.List request = displayvideo.operations().list(parameters ...)}
-     * </pre>
-     *
-     * @return the resource collection
-     */
-    public Operations operations() {
-      return new Operations();
-    }
-
-    /**
-     * The "operations" collection of methods.
-     */
-    public class Operations {
-
-      /**
-       * Gets the latest state of an asynchronous SDF download task operation. Clients should poll this
-       * method at intervals of 30 seconds.
-       *
-       * Create a request for the method "operations.get".
-       *
-       * This request holds the parameters needed by the displayvideo server.  After setting any optional
-       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
-       *
-       * @param name The name of the operation resource.
-       * @return the request
-       */
-      public Get get(java.lang.String name) throws java.io.IOException {
-        Get result = new Get(name);
-        initialize(result);
-        return result;
-      }
-
-      public class Get extends DisplayVideoRequest<com.google.api.services.displayvideo.v3.model.Operation> {
-
-        private static final String REST_PATH = "v3/{+name}";
-
-        private final java.util.regex.Pattern NAME_PATTERN =
-            java.util.regex.Pattern.compile("^sdfuploadtasks/operations/[^/]+$");
-
-        /**
-         * Gets the latest state of an asynchronous SDF download task operation. Clients should poll this
-         * method at intervals of 30 seconds.
-         *
-         * Create a request for the method "operations.get".
-         *
-         * This request holds the parameters needed by the the displayvideo server.  After setting any
-         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
-         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-         * must be called to initialize this instance immediately after invoking the constructor. </p>
-         *
-         * @param name The name of the operation resource.
-         * @since 1.13
-         */
-        protected Get(java.lang.String name) {
-          super(DisplayVideo.this, "GET", REST_PATH, null, com.google.api.services.displayvideo.v3.model.Operation.class);
-          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                "Parameter name must conform to the pattern " +
-                "^sdfuploadtasks/operations/[^/]+$");
-          }
-        }
-
-        @Override
-        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-          return super.executeUsingHead();
-        }
-
-        @Override
-        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-          return super.buildHttpRequestUsingHead();
-        }
-
-        @Override
-        public Get set$Xgafv(java.lang.String $Xgafv) {
-          return (Get) super.set$Xgafv($Xgafv);
-        }
-
-        @Override
-        public Get setAccessToken(java.lang.String accessToken) {
-          return (Get) super.setAccessToken(accessToken);
-        }
-
-        @Override
-        public Get setAlt(java.lang.String alt) {
-          return (Get) super.setAlt(alt);
-        }
-
-        @Override
-        public Get setCallback(java.lang.String callback) {
-          return (Get) super.setCallback(callback);
-        }
-
-        @Override
-        public Get setFields(java.lang.String fields) {
-          return (Get) super.setFields(fields);
-        }
-
-        @Override
-        public Get setKey(java.lang.String key) {
-          return (Get) super.setKey(key);
-        }
-
-        @Override
-        public Get setOauthToken(java.lang.String oauthToken) {
-          return (Get) super.setOauthToken(oauthToken);
-        }
-
-        @Override
-        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
-          return (Get) super.setPrettyPrint(prettyPrint);
-        }
-
-        @Override
-        public Get setQuotaUser(java.lang.String quotaUser) {
-          return (Get) super.setQuotaUser(quotaUser);
-        }
-
-        @Override
-        public Get setUploadType(java.lang.String uploadType) {
-          return (Get) super.setUploadType(uploadType);
-        }
-
-        @Override
-        public Get setUploadProtocol(java.lang.String uploadProtocol) {
-          return (Get) super.setUploadProtocol(uploadProtocol);
-        }
-
-        /** The name of the operation resource. */
-        @com.google.api.client.util.Key
-        private java.lang.String name;
-
-        /** The name of the operation resource.
-         */
-        public java.lang.String getName() {
-          return name;
-        }
-
-        /** The name of the operation resource. */
-        public Get setName(java.lang.String name) {
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                "Parameter name must conform to the pattern " +
-                "^sdfuploadtasks/operations/[^/]+$");
           }
           this.name = name;
           return this;

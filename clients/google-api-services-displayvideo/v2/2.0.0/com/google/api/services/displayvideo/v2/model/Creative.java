@@ -31,10 +31,11 @@ package com.google.api.services.displayvideo.v2.model;
 public final class Creative extends com.google.api.client.json.GenericJson {
 
   /**
-   * Additional dimensions. Applicable when creative_type is one of: * `CREATIVE_TYPE_STANDARD` *
-   * `CREATIVE_TYPE_EXPANDABLE` * `CREATIVE_TYPE_NATIVE` * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` *
-   * `CREATIVE_TYPE_LIGHTBOX` * `CREATIVE_TYPE_PUBLISHER_HOSTED` If this field is specified,
-   * width_pixels and height_pixels are both required and must be greater than or equal to 0.
+   * Optional. Additional dimensions. Applicable when creative_type is one of: *
+   * `CREATIVE_TYPE_STANDARD` * `CREATIVE_TYPE_EXPANDABLE` * `CREATIVE_TYPE_NATIVE` *
+   * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` * `CREATIVE_TYPE_LIGHTBOX` *
+   * `CREATIVE_TYPE_PUBLISHER_HOSTED` If this field is specified, width_pixels and height_pixels are
+   * both required and must be greater than or equal to 0.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,7 +49,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   private java.lang.Long advertiserId;
 
   /**
-   * Third-party HTML tracking tag to be appended to the creative tag.
+   * Optional. Third-party HTML tracking tag to be appended to the creative tag.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,32 +77,33 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   private java.lang.Long cmPlacementId;
 
   /**
-   * The Campaign Manager 360 tracking ad associated with the creative. Optional for the following
-   * creative_type when created by an advertiser that uses both Campaign Manager 360 and third-party
-   * ad serving: * `CREATIVE_TYPE_NATIVE` * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` Output only for other
-   * cases.
+   * Optional. The Campaign Manager 360 tracking ad associated with the creative. Optional for the
+   * following creative_type when created by an advertiser that uses both Campaign Manager 360 and
+   * third-party ad serving: * `CREATIVE_TYPE_NATIVE` * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` Output
+   * only for other cases.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private CmTrackingAd cmTrackingAd;
 
   /**
-   * The IDs of companion creatives for a video creative. You can assign existing display creatives
-   * (with image or HTML5 assets) to serve surrounding the publisher's video player. Companions
-   * display around the video player while the video is playing and remain after the video has
-   * completed. Creatives contain additional dimensions can not be companion creatives. This field
-   * is only supported for following creative_type: * `CREATIVE_TYPE_AUDIO` * `CREATIVE_TYPE_VIDEO`
+   * Optional. The IDs of companion creatives for a video creative. You can assign existing display
+   * creatives (with image or HTML5 assets) to serve surrounding the publisher's video player.
+   * Companions display around the video player while the video is playing and remain after the
+   * video has completed. Creatives contain additional dimensions can not be companion creatives.
+   * This field is only supported for the following creative_type: * `CREATIVE_TYPE_AUDIO` *
+   * `CREATIVE_TYPE_VIDEO`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.util.List<java.lang.Long> companionCreativeIds;
 
   /**
-   * Counter events for a rich media creative. Counters track the number of times that a user
-   * interacts with any part of a rich media creative in a specified way (mouse-overs, mouse-outs,
-   * clicks, taps, data loading, keyboard entries, etc.). Any event that can be captured in the
-   * creative can be recorded as a counter. Leave it empty or unset for creatives containing image
-   * assets only.
+   * Optional. Counter events for a rich media creative. Counters track the number of times that a
+   * user interacts with any part of a rich media creative in a specified way (mouse-overs, mouse-
+   * outs, clicks, taps, data loading, keyboard entries, etc.). Any event that can be captured in
+   * the creative can be recorded as a counter. Leave it empty or unset for creatives containing
+   * image assets only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -222,27 +224,27 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean html5Video;
 
   /**
-   * Indicates whether Integral Ad Science (IAS) campaign monitoring is enabled. To enable this for
-   * the creative, make sure the Advertiser.creative_config.ias_client_id has been set to your IAS
-   * client ID.
+   * Optional. Indicates whether Integral Ad Science (IAS) campaign monitoring is enabled. To enable
+   * this for the creative, make sure the Advertiser.creative_config.ias_client_id has been set to
+   * your IAS client ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean iasCampaignMonitoring;
 
   /**
-   * ID information used to link this creative to an external system. Must be UTF-8 encoded with a
-   * length of no more than 10,000 characters.
+   * Optional. ID information used to link this creative to an external system. Must be UTF-8
+   * encoded with a length of no more than 10,000 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String integrationCode;
 
   /**
-   * JavaScript measurement URL from supported third-party verification providers (ComScore,
-   * DoubleVerify, IAS, Moat). HTML script tags are not supported. This field is only writeable in
-   * following creative_type: * `CREATIVE_TYPE_NATIVE` * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` *
-   * `CREATIVE_TYPE_NATIVE_VIDEO`
+   * Optional. JavaScript measurement URL from supported third-party verification providers
+   * (ComScore, DoubleVerify, IAS, Moat). HTML script tags are not supported. This field is only
+   * writeable in the following creative_type: * `CREATIVE_TYPE_NATIVE` *
+   * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` * `CREATIVE_TYPE_NATIVE_VIDEO`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -283,16 +285,16 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * User notes for this creative. Must be UTF-8 encoded with a length of no more than 20,000
-   * characters.
+   * Optional. User notes for this creative. Must be UTF-8 encoded with a length of no more than
+   * 20,000 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String notes;
 
   /**
-   * Specifies the OBA icon for a video creative. This field is only supported in following
-   * creative_type: * `CREATIVE_TYPE_VIDEO`
+   * Optional. Specifies the OBA icon for a video creative. This field is only supported in the
+   * following creative_type: * `CREATIVE_TYPE_VIDEO`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -309,8 +311,9 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean oggAudio;
 
   /**
-   * Amount of time to play the video before counting a view. This field is required when skippable
-   * is true. This field is only supported for the following creative_type: * `CREATIVE_TYPE_VIDEO`
+   * Optional. Amount of time to play the video before counting a view. This field is required when
+   * skippable is true. This field is only supported for the following creative_type: *
+   * `CREATIVE_TYPE_VIDEO`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -359,17 +362,17 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   private ReviewStatusInfo reviewStatus;
 
   /**
-   * Amount of time to play the video before the skip button appears. This field is required when
-   * skippable is true. This field is only supported for the following creative_type: *
-   * `CREATIVE_TYPE_VIDEO`
+   * Optional. Amount of time to play the video before the skip button appears. This field is
+   * required when skippable is true. This field is only supported for the following creative_type:
+   * * `CREATIVE_TYPE_VIDEO`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AudioVideoOffset skipOffset;
 
   /**
-   * Whether the user can choose to skip a video creative. This field is only supported for the
-   * following creative_type: * `CREATIVE_TYPE_VIDEO`
+   * Optional. Whether the user can choose to skip a video creative. This field is only supported
+   * for the following creative_type: * `CREATIVE_TYPE_VIDEO`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -386,30 +389,30 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   private java.lang.String thirdPartyTag;
 
   /**
-   * Tracking URLs from third parties to track interactions with a video creative. This field is
-   * only supported for the following creative_type: * `CREATIVE_TYPE_AUDIO` * `CREATIVE_TYPE_VIDEO`
-   * * `CREATIVE_TYPE_NATIVE_VIDEO`
+   * Optional. Tracking URLs from third parties to track interactions with a video creative. This
+   * field is only supported for the following creative_type: * `CREATIVE_TYPE_AUDIO` *
+   * `CREATIVE_TYPE_VIDEO` * `CREATIVE_TYPE_NATIVE_VIDEO`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<ThirdPartyUrl> thirdPartyUrls;
 
   /**
-   * Timer custom events for a rich media creative. Timers track the time during which a user views
-   * and interacts with a specified part of a rich media creative. A creative can have multiple
-   * timer events, each timed independently. Leave it empty or unset for creatives containing image
-   * assets only.
+   * Optional. Timer custom events for a rich media creative. Timers track the time during which a
+   * user views and interacts with a specified part of a rich media creative. A creative can have
+   * multiple timer events, each timed independently. Leave it empty or unset for creatives
+   * containing image assets only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<TimerEvent> timerEvents;
 
   /**
-   * Tracking URLs for analytics providers or third-party ad technology vendors. The URLs must start
-   * with https (except on inventory that doesn't require SSL compliance). If using macros in your
-   * URL, use only macros supported by Display & Video 360. Standard URLs only, no IMG or SCRIPT
-   * tags. This field is only writeable in following creative_type: * `CREATIVE_TYPE_NATIVE` *
-   * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` * `CREATIVE_TYPE_NATIVE_VIDEO`
+   * Optional. Tracking URLs for analytics providers or third-party ad technology vendors. The URLs
+   * must start with `https:` (except on inventory that doesn't require SSL compliance). If using
+   * macros in your URL, use only macros supported by Display & Video 360. Standard URLs only, no
+   * IMG or SCRIPT tags. This field is only writeable in the following creative_type: *
+   * `CREATIVE_TYPE_NATIVE` * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` * `CREATIVE_TYPE_NATIVE_VIDEO`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -421,7 +424,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
    * (resolution, audio bit rate, and video bit rate), each designed for specific video players or
    * bandwidths. These transcodes give a publisher's system more options to choose from for each
    * impression on your video and ensures that the appropriate file serves based on the viewer’s
-   * connection and screen size. This field is only supported in following creative_type: *
+   * connection and screen size. This field is only supported in the following creative_type: *
    * `CREATIVE_TYPE_VIDEO` * `CREATIVE_TYPE_NATIVE_VIDEO` * `CREATIVE_TYPE_AUDIO`
    * The value may be {@code null}.
    */
@@ -467,10 +470,11 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean vpaid;
 
   /**
-   * Additional dimensions. Applicable when creative_type is one of: * `CREATIVE_TYPE_STANDARD` *
-   * `CREATIVE_TYPE_EXPANDABLE` * `CREATIVE_TYPE_NATIVE` * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` *
-   * `CREATIVE_TYPE_LIGHTBOX` * `CREATIVE_TYPE_PUBLISHER_HOSTED` If this field is specified,
-   * width_pixels and height_pixels are both required and must be greater than or equal to 0.
+   * Optional. Additional dimensions. Applicable when creative_type is one of: *
+   * `CREATIVE_TYPE_STANDARD` * `CREATIVE_TYPE_EXPANDABLE` * `CREATIVE_TYPE_NATIVE` *
+   * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` * `CREATIVE_TYPE_LIGHTBOX` *
+   * `CREATIVE_TYPE_PUBLISHER_HOSTED` If this field is specified, width_pixels and height_pixels are
+   * both required and must be greater than or equal to 0.
    * @return value or {@code null} for none
    */
   public java.util.List<Dimensions> getAdditionalDimensions() {
@@ -478,10 +482,11 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Additional dimensions. Applicable when creative_type is one of: * `CREATIVE_TYPE_STANDARD` *
-   * `CREATIVE_TYPE_EXPANDABLE` * `CREATIVE_TYPE_NATIVE` * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` *
-   * `CREATIVE_TYPE_LIGHTBOX` * `CREATIVE_TYPE_PUBLISHER_HOSTED` If this field is specified,
-   * width_pixels and height_pixels are both required and must be greater than or equal to 0.
+   * Optional. Additional dimensions. Applicable when creative_type is one of: *
+   * `CREATIVE_TYPE_STANDARD` * `CREATIVE_TYPE_EXPANDABLE` * `CREATIVE_TYPE_NATIVE` *
+   * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` * `CREATIVE_TYPE_LIGHTBOX` *
+   * `CREATIVE_TYPE_PUBLISHER_HOSTED` If this field is specified, width_pixels and height_pixels are
+   * both required and must be greater than or equal to 0.
    * @param additionalDimensions additionalDimensions or {@code null} for none
    */
   public Creative setAdditionalDimensions(java.util.List<Dimensions> additionalDimensions) {
@@ -507,7 +512,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Third-party HTML tracking tag to be appended to the creative tag.
+   * Optional. Third-party HTML tracking tag to be appended to the creative tag.
    * @return value or {@code null} for none
    */
   public java.lang.String getAppendedTag() {
@@ -515,7 +520,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Third-party HTML tracking tag to be appended to the creative tag.
+   * Optional. Third-party HTML tracking tag to be appended to the creative tag.
    * @param appendedTag appendedTag or {@code null} for none
    */
   public Creative setAppendedTag(java.lang.String appendedTag) {
@@ -560,10 +565,10 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Campaign Manager 360 tracking ad associated with the creative. Optional for the following
-   * creative_type when created by an advertiser that uses both Campaign Manager 360 and third-party
-   * ad serving: * `CREATIVE_TYPE_NATIVE` * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` Output only for other
-   * cases.
+   * Optional. The Campaign Manager 360 tracking ad associated with the creative. Optional for the
+   * following creative_type when created by an advertiser that uses both Campaign Manager 360 and
+   * third-party ad serving: * `CREATIVE_TYPE_NATIVE` * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` Output
+   * only for other cases.
    * @return value or {@code null} for none
    */
   public CmTrackingAd getCmTrackingAd() {
@@ -571,10 +576,10 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The Campaign Manager 360 tracking ad associated with the creative. Optional for the following
-   * creative_type when created by an advertiser that uses both Campaign Manager 360 and third-party
-   * ad serving: * `CREATIVE_TYPE_NATIVE` * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` Output only for other
-   * cases.
+   * Optional. The Campaign Manager 360 tracking ad associated with the creative. Optional for the
+   * following creative_type when created by an advertiser that uses both Campaign Manager 360 and
+   * third-party ad serving: * `CREATIVE_TYPE_NATIVE` * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` Output
+   * only for other cases.
    * @param cmTrackingAd cmTrackingAd or {@code null} for none
    */
   public Creative setCmTrackingAd(CmTrackingAd cmTrackingAd) {
@@ -583,11 +588,12 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The IDs of companion creatives for a video creative. You can assign existing display creatives
-   * (with image or HTML5 assets) to serve surrounding the publisher's video player. Companions
-   * display around the video player while the video is playing and remain after the video has
-   * completed. Creatives contain additional dimensions can not be companion creatives. This field
-   * is only supported for following creative_type: * `CREATIVE_TYPE_AUDIO` * `CREATIVE_TYPE_VIDEO`
+   * Optional. The IDs of companion creatives for a video creative. You can assign existing display
+   * creatives (with image or HTML5 assets) to serve surrounding the publisher's video player.
+   * Companions display around the video player while the video is playing and remain after the
+   * video has completed. Creatives contain additional dimensions can not be companion creatives.
+   * This field is only supported for the following creative_type: * `CREATIVE_TYPE_AUDIO` *
+   * `CREATIVE_TYPE_VIDEO`
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.Long> getCompanionCreativeIds() {
@@ -595,11 +601,12 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The IDs of companion creatives for a video creative. You can assign existing display creatives
-   * (with image or HTML5 assets) to serve surrounding the publisher's video player. Companions
-   * display around the video player while the video is playing and remain after the video has
-   * completed. Creatives contain additional dimensions can not be companion creatives. This field
-   * is only supported for following creative_type: * `CREATIVE_TYPE_AUDIO` * `CREATIVE_TYPE_VIDEO`
+   * Optional. The IDs of companion creatives for a video creative. You can assign existing display
+   * creatives (with image or HTML5 assets) to serve surrounding the publisher's video player.
+   * Companions display around the video player while the video is playing and remain after the
+   * video has completed. Creatives contain additional dimensions can not be companion creatives.
+   * This field is only supported for the following creative_type: * `CREATIVE_TYPE_AUDIO` *
+   * `CREATIVE_TYPE_VIDEO`
    * @param companionCreativeIds companionCreativeIds or {@code null} for none
    */
   public Creative setCompanionCreativeIds(java.util.List<java.lang.Long> companionCreativeIds) {
@@ -608,11 +615,11 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Counter events for a rich media creative. Counters track the number of times that a user
-   * interacts with any part of a rich media creative in a specified way (mouse-overs, mouse-outs,
-   * clicks, taps, data loading, keyboard entries, etc.). Any event that can be captured in the
-   * creative can be recorded as a counter. Leave it empty or unset for creatives containing image
-   * assets only.
+   * Optional. Counter events for a rich media creative. Counters track the number of times that a
+   * user interacts with any part of a rich media creative in a specified way (mouse-overs, mouse-
+   * outs, clicks, taps, data loading, keyboard entries, etc.). Any event that can be captured in
+   * the creative can be recorded as a counter. Leave it empty or unset for creatives containing
+   * image assets only.
    * @return value or {@code null} for none
    */
   public java.util.List<CounterEvent> getCounterEvents() {
@@ -620,11 +627,11 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Counter events for a rich media creative. Counters track the number of times that a user
-   * interacts with any part of a rich media creative in a specified way (mouse-overs, mouse-outs,
-   * clicks, taps, data loading, keyboard entries, etc.). Any event that can be captured in the
-   * creative can be recorded as a counter. Leave it empty or unset for creatives containing image
-   * assets only.
+   * Optional. Counter events for a rich media creative. Counters track the number of times that a
+   * user interacts with any part of a rich media creative in a specified way (mouse-overs, mouse-
+   * outs, clicks, taps, data loading, keyboard entries, etc.). Any event that can be captured in
+   * the creative can be recorded as a counter. Leave it empty or unset for creatives containing
+   * image assets only.
    * @param counterEvents counterEvents or {@code null} for none
    */
   public Creative setCounterEvents(java.util.List<CounterEvent> counterEvents) {
@@ -888,9 +895,9 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates whether Integral Ad Science (IAS) campaign monitoring is enabled. To enable this for
-   * the creative, make sure the Advertiser.creative_config.ias_client_id has been set to your IAS
-   * client ID.
+   * Optional. Indicates whether Integral Ad Science (IAS) campaign monitoring is enabled. To enable
+   * this for the creative, make sure the Advertiser.creative_config.ias_client_id has been set to
+   * your IAS client ID.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIasCampaignMonitoring() {
@@ -898,9 +905,9 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates whether Integral Ad Science (IAS) campaign monitoring is enabled. To enable this for
-   * the creative, make sure the Advertiser.creative_config.ias_client_id has been set to your IAS
-   * client ID.
+   * Optional. Indicates whether Integral Ad Science (IAS) campaign monitoring is enabled. To enable
+   * this for the creative, make sure the Advertiser.creative_config.ias_client_id has been set to
+   * your IAS client ID.
    * @param iasCampaignMonitoring iasCampaignMonitoring or {@code null} for none
    */
   public Creative setIasCampaignMonitoring(java.lang.Boolean iasCampaignMonitoring) {
@@ -909,8 +916,8 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * ID information used to link this creative to an external system. Must be UTF-8 encoded with a
-   * length of no more than 10,000 characters.
+   * Optional. ID information used to link this creative to an external system. Must be UTF-8
+   * encoded with a length of no more than 10,000 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getIntegrationCode() {
@@ -918,8 +925,8 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * ID information used to link this creative to an external system. Must be UTF-8 encoded with a
-   * length of no more than 10,000 characters.
+   * Optional. ID information used to link this creative to an external system. Must be UTF-8
+   * encoded with a length of no more than 10,000 characters.
    * @param integrationCode integrationCode or {@code null} for none
    */
   public Creative setIntegrationCode(java.lang.String integrationCode) {
@@ -928,10 +935,10 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * JavaScript measurement URL from supported third-party verification providers (ComScore,
-   * DoubleVerify, IAS, Moat). HTML script tags are not supported. This field is only writeable in
-   * following creative_type: * `CREATIVE_TYPE_NATIVE` * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` *
-   * `CREATIVE_TYPE_NATIVE_VIDEO`
+   * Optional. JavaScript measurement URL from supported third-party verification providers
+   * (ComScore, DoubleVerify, IAS, Moat). HTML script tags are not supported. This field is only
+   * writeable in the following creative_type: * `CREATIVE_TYPE_NATIVE` *
+   * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` * `CREATIVE_TYPE_NATIVE_VIDEO`
    * @return value or {@code null} for none
    */
   public java.lang.String getJsTrackerUrl() {
@@ -939,10 +946,10 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * JavaScript measurement URL from supported third-party verification providers (ComScore,
-   * DoubleVerify, IAS, Moat). HTML script tags are not supported. This field is only writeable in
-   * following creative_type: * `CREATIVE_TYPE_NATIVE` * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` *
-   * `CREATIVE_TYPE_NATIVE_VIDEO`
+   * Optional. JavaScript measurement URL from supported third-party verification providers
+   * (ComScore, DoubleVerify, IAS, Moat). HTML script tags are not supported. This field is only
+   * writeable in the following creative_type: * `CREATIVE_TYPE_NATIVE` *
+   * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` * `CREATIVE_TYPE_NATIVE_VIDEO`
    * @param jsTrackerUrl jsTrackerUrl or {@code null} for none
    */
   public Creative setJsTrackerUrl(java.lang.String jsTrackerUrl) {
@@ -1031,8 +1038,8 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * User notes for this creative. Must be UTF-8 encoded with a length of no more than 20,000
-   * characters.
+   * Optional. User notes for this creative. Must be UTF-8 encoded with a length of no more than
+   * 20,000 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getNotes() {
@@ -1040,8 +1047,8 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * User notes for this creative. Must be UTF-8 encoded with a length of no more than 20,000
-   * characters.
+   * Optional. User notes for this creative. Must be UTF-8 encoded with a length of no more than
+   * 20,000 characters.
    * @param notes notes or {@code null} for none
    */
   public Creative setNotes(java.lang.String notes) {
@@ -1050,8 +1057,8 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies the OBA icon for a video creative. This field is only supported in following
-   * creative_type: * `CREATIVE_TYPE_VIDEO`
+   * Optional. Specifies the OBA icon for a video creative. This field is only supported in the
+   * following creative_type: * `CREATIVE_TYPE_VIDEO`
    * @return value or {@code null} for none
    */
   public ObaIcon getObaIcon() {
@@ -1059,8 +1066,8 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies the OBA icon for a video creative. This field is only supported in following
-   * creative_type: * `CREATIVE_TYPE_VIDEO`
+   * Optional. Specifies the OBA icon for a video creative. This field is only supported in the
+   * following creative_type: * `CREATIVE_TYPE_VIDEO`
    * @param obaIcon obaIcon or {@code null} for none
    */
   public Creative setObaIcon(ObaIcon obaIcon) {
@@ -1092,8 +1099,9 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Amount of time to play the video before counting a view. This field is required when skippable
-   * is true. This field is only supported for the following creative_type: * `CREATIVE_TYPE_VIDEO`
+   * Optional. Amount of time to play the video before counting a view. This field is required when
+   * skippable is true. This field is only supported for the following creative_type: *
+   * `CREATIVE_TYPE_VIDEO`
    * @return value or {@code null} for none
    */
   public AudioVideoOffset getProgressOffset() {
@@ -1101,8 +1109,9 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Amount of time to play the video before counting a view. This field is required when skippable
-   * is true. This field is only supported for the following creative_type: * `CREATIVE_TYPE_VIDEO`
+   * Optional. Amount of time to play the video before counting a view. This field is required when
+   * skippable is true. This field is only supported for the following creative_type: *
+   * `CREATIVE_TYPE_VIDEO`
    * @param progressOffset progressOffset or {@code null} for none
    */
   public Creative setProgressOffset(AudioVideoOffset progressOffset) {
@@ -1207,9 +1216,9 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Amount of time to play the video before the skip button appears. This field is required when
-   * skippable is true. This field is only supported for the following creative_type: *
-   * `CREATIVE_TYPE_VIDEO`
+   * Optional. Amount of time to play the video before the skip button appears. This field is
+   * required when skippable is true. This field is only supported for the following creative_type:
+   * * `CREATIVE_TYPE_VIDEO`
    * @return value or {@code null} for none
    */
   public AudioVideoOffset getSkipOffset() {
@@ -1217,9 +1226,9 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Amount of time to play the video before the skip button appears. This field is required when
-   * skippable is true. This field is only supported for the following creative_type: *
-   * `CREATIVE_TYPE_VIDEO`
+   * Optional. Amount of time to play the video before the skip button appears. This field is
+   * required when skippable is true. This field is only supported for the following creative_type:
+   * * `CREATIVE_TYPE_VIDEO`
    * @param skipOffset skipOffset or {@code null} for none
    */
   public Creative setSkipOffset(AudioVideoOffset skipOffset) {
@@ -1228,8 +1237,8 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether the user can choose to skip a video creative. This field is only supported for the
-   * following creative_type: * `CREATIVE_TYPE_VIDEO`
+   * Optional. Whether the user can choose to skip a video creative. This field is only supported
+   * for the following creative_type: * `CREATIVE_TYPE_VIDEO`
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSkippable() {
@@ -1237,8 +1246,8 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether the user can choose to skip a video creative. This field is only supported for the
-   * following creative_type: * `CREATIVE_TYPE_VIDEO`
+   * Optional. Whether the user can choose to skip a video creative. This field is only supported
+   * for the following creative_type: * `CREATIVE_TYPE_VIDEO`
    * @param skippable skippable or {@code null} for none
    */
   public Creative setSkippable(java.lang.Boolean skippable) {
@@ -1270,9 +1279,9 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Tracking URLs from third parties to track interactions with a video creative. This field is
-   * only supported for the following creative_type: * `CREATIVE_TYPE_AUDIO` * `CREATIVE_TYPE_VIDEO`
-   * * `CREATIVE_TYPE_NATIVE_VIDEO`
+   * Optional. Tracking URLs from third parties to track interactions with a video creative. This
+   * field is only supported for the following creative_type: * `CREATIVE_TYPE_AUDIO` *
+   * `CREATIVE_TYPE_VIDEO` * `CREATIVE_TYPE_NATIVE_VIDEO`
    * @return value or {@code null} for none
    */
   public java.util.List<ThirdPartyUrl> getThirdPartyUrls() {
@@ -1280,9 +1289,9 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Tracking URLs from third parties to track interactions with a video creative. This field is
-   * only supported for the following creative_type: * `CREATIVE_TYPE_AUDIO` * `CREATIVE_TYPE_VIDEO`
-   * * `CREATIVE_TYPE_NATIVE_VIDEO`
+   * Optional. Tracking URLs from third parties to track interactions with a video creative. This
+   * field is only supported for the following creative_type: * `CREATIVE_TYPE_AUDIO` *
+   * `CREATIVE_TYPE_VIDEO` * `CREATIVE_TYPE_NATIVE_VIDEO`
    * @param thirdPartyUrls thirdPartyUrls or {@code null} for none
    */
   public Creative setThirdPartyUrls(java.util.List<ThirdPartyUrl> thirdPartyUrls) {
@@ -1291,10 +1300,10 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Timer custom events for a rich media creative. Timers track the time during which a user views
-   * and interacts with a specified part of a rich media creative. A creative can have multiple
-   * timer events, each timed independently. Leave it empty or unset for creatives containing image
-   * assets only.
+   * Optional. Timer custom events for a rich media creative. Timers track the time during which a
+   * user views and interacts with a specified part of a rich media creative. A creative can have
+   * multiple timer events, each timed independently. Leave it empty or unset for creatives
+   * containing image assets only.
    * @return value or {@code null} for none
    */
   public java.util.List<TimerEvent> getTimerEvents() {
@@ -1302,10 +1311,10 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Timer custom events for a rich media creative. Timers track the time during which a user views
-   * and interacts with a specified part of a rich media creative. A creative can have multiple
-   * timer events, each timed independently. Leave it empty or unset for creatives containing image
-   * assets only.
+   * Optional. Timer custom events for a rich media creative. Timers track the time during which a
+   * user views and interacts with a specified part of a rich media creative. A creative can have
+   * multiple timer events, each timed independently. Leave it empty or unset for creatives
+   * containing image assets only.
    * @param timerEvents timerEvents or {@code null} for none
    */
   public Creative setTimerEvents(java.util.List<TimerEvent> timerEvents) {
@@ -1314,11 +1323,11 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Tracking URLs for analytics providers or third-party ad technology vendors. The URLs must start
-   * with https (except on inventory that doesn't require SSL compliance). If using macros in your
-   * URL, use only macros supported by Display & Video 360. Standard URLs only, no IMG or SCRIPT
-   * tags. This field is only writeable in following creative_type: * `CREATIVE_TYPE_NATIVE` *
-   * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` * `CREATIVE_TYPE_NATIVE_VIDEO`
+   * Optional. Tracking URLs for analytics providers or third-party ad technology vendors. The URLs
+   * must start with `https:` (except on inventory that doesn't require SSL compliance). If using
+   * macros in your URL, use only macros supported by Display & Video 360. Standard URLs only, no
+   * IMG or SCRIPT tags. This field is only writeable in the following creative_type: *
+   * `CREATIVE_TYPE_NATIVE` * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` * `CREATIVE_TYPE_NATIVE_VIDEO`
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTrackerUrls() {
@@ -1326,11 +1335,11 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Tracking URLs for analytics providers or third-party ad technology vendors. The URLs must start
-   * with https (except on inventory that doesn't require SSL compliance). If using macros in your
-   * URL, use only macros supported by Display & Video 360. Standard URLs only, no IMG or SCRIPT
-   * tags. This field is only writeable in following creative_type: * `CREATIVE_TYPE_NATIVE` *
-   * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` * `CREATIVE_TYPE_NATIVE_VIDEO`
+   * Optional. Tracking URLs for analytics providers or third-party ad technology vendors. The URLs
+   * must start with `https:` (except on inventory that doesn't require SSL compliance). If using
+   * macros in your URL, use only macros supported by Display & Video 360. Standard URLs only, no
+   * IMG or SCRIPT tags. This field is only writeable in the following creative_type: *
+   * `CREATIVE_TYPE_NATIVE` * `CREATIVE_TYPE_NATIVE_SITE_SQUARE` * `CREATIVE_TYPE_NATIVE_VIDEO`
    * @param trackerUrls trackerUrls or {@code null} for none
    */
   public Creative setTrackerUrls(java.util.List<java.lang.String> trackerUrls) {
@@ -1344,7 +1353,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
    * (resolution, audio bit rate, and video bit rate), each designed for specific video players or
    * bandwidths. These transcodes give a publisher's system more options to choose from for each
    * impression on your video and ensures that the appropriate file serves based on the viewer’s
-   * connection and screen size. This field is only supported in following creative_type: *
+   * connection and screen size. This field is only supported in the following creative_type: *
    * `CREATIVE_TYPE_VIDEO` * `CREATIVE_TYPE_NATIVE_VIDEO` * `CREATIVE_TYPE_AUDIO`
    * @return value or {@code null} for none
    */
@@ -1358,7 +1367,7 @@ public final class Creative extends com.google.api.client.json.GenericJson {
    * (resolution, audio bit rate, and video bit rate), each designed for specific video players or
    * bandwidths. These transcodes give a publisher's system more options to choose from for each
    * impression on your video and ensures that the appropriate file serves based on the viewer’s
-   * connection and screen size. This field is only supported in following creative_type: *
+   * connection and screen size. This field is only supported in the following creative_type: *
    * `CREATIVE_TYPE_VIDEO` * `CREATIVE_TYPE_NATIVE_VIDEO` * `CREATIVE_TYPE_AUDIO`
    * @param transcodes transcodes or {@code null} for none
    */

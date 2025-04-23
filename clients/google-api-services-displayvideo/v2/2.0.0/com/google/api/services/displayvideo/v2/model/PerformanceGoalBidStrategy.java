@@ -33,6 +33,10 @@ public final class PerformanceGoalBidStrategy extends com.google.api.client.json
   /**
    * The ID of the Custom Bidding Algorithm used by this strategy. Only applicable when
    * performance_goal_type is set to `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CUSTOM_ALGO`.
+   * *Warning*: Starting **April 1, 2025**, assigning a custom bidding algorithm that uses
+   * floodlight activities not identified in floodlightActivityConfigs will return an error. [Read
+   * more about this announced change](/display-
+   * video/api/deprecations#features.custom_bidding_floodlight).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -83,6 +87,10 @@ public final class PerformanceGoalBidStrategy extends com.google.api.client.json
   /**
    * The ID of the Custom Bidding Algorithm used by this strategy. Only applicable when
    * performance_goal_type is set to `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CUSTOM_ALGO`.
+   * *Warning*: Starting **April 1, 2025**, assigning a custom bidding algorithm that uses
+   * floodlight activities not identified in floodlightActivityConfigs will return an error. [Read
+   * more about this announced change](/display-
+   * video/api/deprecations#features.custom_bidding_floodlight).
    * @return value or {@code null} for none
    */
   public java.lang.Long getCustomBiddingAlgorithmId() {
@@ -92,6 +100,10 @@ public final class PerformanceGoalBidStrategy extends com.google.api.client.json
   /**
    * The ID of the Custom Bidding Algorithm used by this strategy. Only applicable when
    * performance_goal_type is set to `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CUSTOM_ALGO`.
+   * *Warning*: Starting **April 1, 2025**, assigning a custom bidding algorithm that uses
+   * floodlight activities not identified in floodlightActivityConfigs will return an error. [Read
+   * more about this announced change](/display-
+   * video/api/deprecations#features.custom_bidding_floodlight).
    * @param customBiddingAlgorithmId customBiddingAlgorithmId or {@code null} for none
    */
   public PerformanceGoalBidStrategy setCustomBiddingAlgorithmId(java.lang.Long customBiddingAlgorithmId) {

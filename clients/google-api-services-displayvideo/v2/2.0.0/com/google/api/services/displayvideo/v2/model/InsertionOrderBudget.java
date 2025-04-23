@@ -31,8 +31,8 @@ package com.google.api.services.displayvideo.v2.model;
 public final class InsertionOrderBudget extends com.google.api.client.json.GenericJson {
 
   /**
-   * The type of automation used to manage bid and budget for the insertion order. If this field is
-   * unspecified in creation, the value defaults to `INSERTION_ORDER_AUTOMATION_TYPE_NONE`.
+   * Optional. The type of automation used to manage bid and budget for the insertion order. If this
+   * field is unspecified in creation, the value defaults to `INSERTION_ORDER_AUTOMATION_TYPE_NONE`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,8 +55,8 @@ public final class InsertionOrderBudget extends com.google.api.client.json.Gener
   private java.lang.String budgetUnit;
 
   /**
-   * The type of automation used to manage bid and budget for the insertion order. If this field is
-   * unspecified in creation, the value defaults to `INSERTION_ORDER_AUTOMATION_TYPE_NONE`.
+   * Optional. The type of automation used to manage bid and budget for the insertion order. If this
+   * field is unspecified in creation, the value defaults to `INSERTION_ORDER_AUTOMATION_TYPE_NONE`.
    * @return value or {@code null} for none
    */
   public java.lang.String getAutomationType() {
@@ -64,8 +64,8 @@ public final class InsertionOrderBudget extends com.google.api.client.json.Gener
   }
 
   /**
-   * The type of automation used to manage bid and budget for the insertion order. If this field is
-   * unspecified in creation, the value defaults to `INSERTION_ORDER_AUTOMATION_TYPE_NONE`.
+   * Optional. The type of automation used to manage bid and budget for the insertion order. If this
+   * field is unspecified in creation, the value defaults to `INSERTION_ORDER_AUTOMATION_TYPE_NONE`.
    * @param automationType automationType or {@code null} for none
    */
   public InsertionOrderBudget setAutomationType(java.lang.String automationType) {

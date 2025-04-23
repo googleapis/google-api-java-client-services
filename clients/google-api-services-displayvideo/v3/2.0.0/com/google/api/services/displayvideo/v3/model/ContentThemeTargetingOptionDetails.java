@@ -17,8 +17,8 @@
 package com.google.api.services.displayvideo.v3.model;
 
 /**
- * Details of first and third party audience group. All first and third party audience targeting
- * settings are logically ‘OR’ of each other.
+ * Represents a targetable content theme. This will be populated in the content_theme_details field
+ * of the TargetingOption when targeting_type is `TARGETING_TYPE_CONTENT_THEME_EXCLUSION`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Display & Video 360 API. For a detailed explanation
@@ -29,43 +29,40 @@ package com.google.api.services.displayvideo.v3.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class FirstAndThirdPartyAudienceGroup extends com.google.api.client.json.GenericJson {
+public final class ContentThemeTargetingOptionDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. All first and third party audience targeting settings in first and third party
-   * audience group. Repeated settings with the same id are not allowed.
+   * Output only. An enum for the DV360 content theme content classifier.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<FirstAndThirdPartyAudienceTargetingSetting> settings;
+  private java.lang.String contentTheme;
 
   /**
-   * Required. All first and third party audience targeting settings in first and third party
-   * audience group. Repeated settings with the same id are not allowed.
+   * Output only. An enum for the DV360 content theme content classifier.
    * @return value or {@code null} for none
    */
-  public java.util.List<FirstAndThirdPartyAudienceTargetingSetting> getSettings() {
-    return settings;
+  public java.lang.String getContentTheme() {
+    return contentTheme;
   }
 
   /**
-   * Required. All first and third party audience targeting settings in first and third party
-   * audience group. Repeated settings with the same id are not allowed.
-   * @param settings settings or {@code null} for none
+   * Output only. An enum for the DV360 content theme content classifier.
+   * @param contentTheme contentTheme or {@code null} for none
    */
-  public FirstAndThirdPartyAudienceGroup setSettings(java.util.List<FirstAndThirdPartyAudienceTargetingSetting> settings) {
-    this.settings = settings;
+  public ContentThemeTargetingOptionDetails setContentTheme(java.lang.String contentTheme) {
+    this.contentTheme = contentTheme;
     return this;
   }
 
   @Override
-  public FirstAndThirdPartyAudienceGroup set(String fieldName, Object value) {
-    return (FirstAndThirdPartyAudienceGroup) super.set(fieldName, value);
+  public ContentThemeTargetingOptionDetails set(String fieldName, Object value) {
+    return (ContentThemeTargetingOptionDetails) super.set(fieldName, value);
   }
 
   @Override
-  public FirstAndThirdPartyAudienceGroup clone() {
-    return (FirstAndThirdPartyAudienceGroup) super.clone();
+  public ContentThemeTargetingOptionDetails clone() {
+    return (ContentThemeTargetingOptionDetails) super.clone();
   }
 
 }

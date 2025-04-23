@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-displayvideo</artifactId>
-  <version>v3-rev20250211-2.0.0</version>
-  <name>Display &amp; Video 360 API v3-rev20250211-2.0.0</name>
+  <version>v3-rev20250410-2.0.0</version>
+  <name>Display &amp; Video 360 API v3-rev20250410-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
@@ -90,8 +90,8 @@
           <windowtitle>Display &amp; Video 360 API ${project.version}</windowtitle>
           <links>
             <link>http://docs.oracle.com/javase/7/docs/api</link>
-            <link>https://googleapis.dev/java/google-http-client/1.46.1/</link>
-            <link>https://googleapis.dev/java/google-oauth-client/1.37.0/</link>
+            <link>https://googleapis.dev/java/google-http-client/1.46.3/</link>
+            <link>https://googleapis.dev/java/google-oauth-client/1.38.0/</link>
             <link>https://googleapis.dev/java/google-api-client/2.7.2/</link>
           </links>
         </configuration>

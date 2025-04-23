@@ -174,7 +174,8 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
     public class Traces {
 
       /**
-       * Batch writes new spans to new or existing traces. You cannot update existing spans.
+       * Batch writes new spans to new or existing traces. You cannot update existing spans. If a span ID
+       * already exists, an additional copy of the span will be stored.
        *
        * Create a request for the method "traces.batchWrite".
        *
@@ -199,7 +200,8 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Batch writes new spans to new or existing traces. You cannot update existing spans.
+         * Batch writes new spans to new or existing traces. You cannot update existing spans. If a span
+         * ID already exists, an additional copy of the span will be stored.
          *
          * Create a request for the method "traces.batchWrite".
          *
@@ -332,7 +334,7 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
       public class Spans {
 
         /**
-         * Creates a new span.
+         * Creates a new span. If a span ID already exists, an additional copy of the span will be stored.
          *
          * Create a request for the method "spans.createSpan".
          *
@@ -362,7 +364,7 @@ public class CloudTrace extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/traces/[^/]+/spans/[^/]+$");
 
           /**
-           * Creates a new span.
+           * Creates a new span. If a span ID already exists, an additional copy of the span will be stored.
            *
            * Create a request for the method "spans.createSpan".
            *

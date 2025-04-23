@@ -97,6 +97,13 @@ public final class VmwareAdminCluster extends com.google.api.client.json.Generic
   private java.lang.String description;
 
   /**
+   * Enable advanced cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableAdvancedCluster;
+
+  /**
    * Output only. The DNS name of VMware admin cluster's API server.
    * The value may be {@code null}.
    */
@@ -389,6 +396,23 @@ public final class VmwareAdminCluster extends com.google.api.client.json.Generic
    */
   public VmwareAdminCluster setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Enable advanced cluster.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableAdvancedCluster() {
+    return enableAdvancedCluster;
+  }
+
+  /**
+   * Enable advanced cluster.
+   * @param enableAdvancedCluster enableAdvancedCluster or {@code null} for none
+   */
+  public VmwareAdminCluster setEnableAdvancedCluster(java.lang.Boolean enableAdvancedCluster) {
+    this.enableAdvancedCluster = enableAdvancedCluster;
     return this;
   }
 

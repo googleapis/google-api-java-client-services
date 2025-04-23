@@ -128,6 +128,13 @@ public final class VmwareCluster extends com.google.api.client.json.GenericJson 
   private java.lang.Boolean disableBundledIngress;
 
   /**
+   * Enable advanced cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableAdvancedCluster;
+
+  /**
    * Enable control plane V2. Default to false.
    * The value may be {@code null}.
    */
@@ -501,6 +508,23 @@ public final class VmwareCluster extends com.google.api.client.json.GenericJson 
    */
   public VmwareCluster setDisableBundledIngress(java.lang.Boolean disableBundledIngress) {
     this.disableBundledIngress = disableBundledIngress;
+    return this;
+  }
+
+  /**
+   * Enable advanced cluster.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableAdvancedCluster() {
+    return enableAdvancedCluster;
+  }
+
+  /**
+   * Enable advanced cluster.
+   * @param enableAdvancedCluster enableAdvancedCluster or {@code null} for none
+   */
+  public VmwareCluster setEnableAdvancedCluster(java.lang.Boolean enableAdvancedCluster) {
+    this.enableAdvancedCluster = enableAdvancedCluster;
     return this;
   }
 

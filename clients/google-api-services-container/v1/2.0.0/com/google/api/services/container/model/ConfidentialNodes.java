@@ -32,11 +32,35 @@ package com.google.api.services.container.model;
 public final class ConfidentialNodes extends com.google.api.client.json.GenericJson {
 
   /**
+   * Defines the type of technology used by the confidential node.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String confidentialInstanceType;
+
+  /**
    * Whether Confidential Nodes feature is enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enabled;
+
+  /**
+   * Defines the type of technology used by the confidential node.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getConfidentialInstanceType() {
+    return confidentialInstanceType;
+  }
+
+  /**
+   * Defines the type of technology used by the confidential node.
+   * @param confidentialInstanceType confidentialInstanceType or {@code null} for none
+   */
+  public ConfidentialNodes setConfidentialInstanceType(java.lang.String confidentialInstanceType) {
+    this.confidentialInstanceType = confidentialInstanceType;
+    return this;
+  }
 
   /**
    * Whether Confidential Nodes feature is enabled.

@@ -1506,8 +1506,8 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
        * This request holds the parameters needed by the serviceusage server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name The resource name of the quota limit. An example name would be: `projects/123/services/serviceusage.
-       *        googleapis.com/quotas/metrics/serviceusage.googleapis.com%2Fmutate_requests`
+       * @param name The resource name of the quota. An example name would be: `projects/123/services/serviceusage.google
+       *        apis.com/consumerQuotaMetrics/serviceusage.googleapis.com%2Fmutate_requests`
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -1533,8 +1533,8 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The resource name of the quota limit. An example name would be: `projects/123/services/serviceusage.
-       *        googleapis.com/quotas/metrics/serviceusage.googleapis.com%2Fmutate_requests`
+         * @param name The resource name of the quota. An example name would be: `projects/123/services/serviceusage.google
+       *        apis.com/consumerQuotaMetrics/serviceusage.googleapis.com%2Fmutate_requests`
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -1613,22 +1613,22 @@ public class ServiceUsage extends com.google.api.client.googleapis.services.json
         }
 
         /**
-         * The resource name of the quota limit. An example name would be: `projects/123/services/se
-         * rviceusage.googleapis.com/quotas/metrics/serviceusage.googleapis.com%2Fmutate_requests`
+         * The resource name of the quota. An example name would be: `projects/123/services/serviceu
+         * sage.googleapis.com/consumerQuotaMetrics/serviceusage.googleapis.com%2Fmutate_requests`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The resource name of the quota limit. An example name would be: `projects/123/services/serviceusage
-       .googleapis.com/quotas/metrics/serviceusage.googleapis.com%2Fmutate_requests`
+        /** The resource name of the quota. An example name would be: `projects/123/services/serviceusage.googl
+       eapis.com/consumerQuotaMetrics/serviceusage.googleapis.com%2Fmutate_requests`
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * The resource name of the quota limit. An example name would be: `projects/123/services/se
-         * rviceusage.googleapis.com/quotas/metrics/serviceusage.googleapis.com%2Fmutate_requests`
+         * The resource name of the quota. An example name would be: `projects/123/services/serviceu
+         * sage.googleapis.com/consumerQuotaMetrics/serviceusage.googleapis.com%2Fmutate_requests`
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {

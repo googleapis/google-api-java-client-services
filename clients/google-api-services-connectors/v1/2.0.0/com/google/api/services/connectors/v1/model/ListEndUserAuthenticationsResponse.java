@@ -17,7 +17,7 @@
 package com.google.api.services.connectors.v1.model;
 
 /**
- * Response message for ConnectorsService.ListManagedZones
+ * Response message for ConnectorsService.ListEndUserAuthentications
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Connectors API. For a detailed explanation see:
@@ -27,14 +27,20 @@ package com.google.api.services.connectors.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ListManagedZonesResponse extends com.google.api.client.json.GenericJson {
+public final class ListEndUserAuthenticationsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * ManagedZones.
+   * Subscriptions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<ManagedZone> managedZones;
+  private java.util.List<EndUserAuthentication> endUserAuthentications;
+
+  static {
+    // hack to force ProGuard to consider EndUserAuthentication used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(EndUserAuthentication.class);
+  }
 
   /**
    * Next page token.
@@ -51,19 +57,19 @@ public final class ListManagedZonesResponse extends com.google.api.client.json.G
   private java.util.List<java.lang.String> unreachable;
 
   /**
-   * ManagedZones.
+   * Subscriptions.
    * @return value or {@code null} for none
    */
-  public java.util.List<ManagedZone> getManagedZones() {
-    return managedZones;
+  public java.util.List<EndUserAuthentication> getEndUserAuthentications() {
+    return endUserAuthentications;
   }
 
   /**
-   * ManagedZones.
-   * @param managedZones managedZones or {@code null} for none
+   * Subscriptions.
+   * @param endUserAuthentications endUserAuthentications or {@code null} for none
    */
-  public ListManagedZonesResponse setManagedZones(java.util.List<ManagedZone> managedZones) {
-    this.managedZones = managedZones;
+  public ListEndUserAuthenticationsResponse setEndUserAuthentications(java.util.List<EndUserAuthentication> endUserAuthentications) {
+    this.endUserAuthentications = endUserAuthentications;
     return this;
   }
 
@@ -79,7 +85,7 @@ public final class ListManagedZonesResponse extends com.google.api.client.json.G
    * Next page token.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
-  public ListManagedZonesResponse setNextPageToken(java.lang.String nextPageToken) {
+  public ListEndUserAuthenticationsResponse setNextPageToken(java.lang.String nextPageToken) {
     this.nextPageToken = nextPageToken;
     return this;
   }
@@ -96,19 +102,19 @@ public final class ListManagedZonesResponse extends com.google.api.client.json.G
    * Locations that could not be reached.
    * @param unreachable unreachable or {@code null} for none
    */
-  public ListManagedZonesResponse setUnreachable(java.util.List<java.lang.String> unreachable) {
+  public ListEndUserAuthenticationsResponse setUnreachable(java.util.List<java.lang.String> unreachable) {
     this.unreachable = unreachable;
     return this;
   }
 
   @Override
-  public ListManagedZonesResponse set(String fieldName, Object value) {
-    return (ListManagedZonesResponse) super.set(fieldName, value);
+  public ListEndUserAuthenticationsResponse set(String fieldName, Object value) {
+    return (ListEndUserAuthenticationsResponse) super.set(fieldName, value);
   }
 
   @Override
-  public ListManagedZonesResponse clone() {
-    return (ListManagedZonesResponse) super.clone();
+  public ListEndUserAuthenticationsResponse clone() {
+    return (ListEndUserAuthenticationsResponse) super.clone();
   }
 
 }

@@ -17,7 +17,7 @@
 package com.google.api.services.connectors.v1.model;
 
 /**
- * Eventing Config details of a connector version.
+ * Eventing Config details of a connector version. next: 14
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Connectors API. For a detailed explanation see:
@@ -123,6 +123,13 @@ public final class EventingConfigTemplate extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private DestinationConfigTemplate registrationDestinationConfig;
+
+  /**
+   * SSL Config template for the connector version.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SslConfigTemplate sslConfigTemplate;
 
   /**
    * Trigger Config fields that needs to be rendered
@@ -321,6 +328,23 @@ public final class EventingConfigTemplate extends com.google.api.client.json.Gen
    */
   public EventingConfigTemplate setRegistrationDestinationConfig(DestinationConfigTemplate registrationDestinationConfig) {
     this.registrationDestinationConfig = registrationDestinationConfig;
+    return this;
+  }
+
+  /**
+   * SSL Config template for the connector version.
+   * @return value or {@code null} for none
+   */
+  public SslConfigTemplate getSslConfigTemplate() {
+    return sslConfigTemplate;
+  }
+
+  /**
+   * SSL Config template for the connector version.
+   * @param sslConfigTemplate sslConfigTemplate or {@code null} for none
+   */
+  public EventingConfigTemplate setSslConfigTemplate(SslConfigTemplate sslConfigTemplate) {
+    this.sslConfigTemplate = sslConfigTemplate;
     return this;
   }
 

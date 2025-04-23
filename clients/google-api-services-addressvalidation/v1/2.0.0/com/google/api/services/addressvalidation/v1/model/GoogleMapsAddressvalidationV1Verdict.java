@@ -81,7 +81,7 @@ public final class GoogleMapsAddressvalidationV1Verdict extends com.google.api.c
    * below. For example, if the input address includes a specific apartment number, then the
    * `input_granularity` here will be `SUB_PREMISE`. If we cannot match the apartment number in the
    * databases or the apartment number is invalid, the `validation_granularity` will likely be
-   * `PREMISE` or below.
+   * `PREMISE` or worse.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -208,7 +208,7 @@ public final class GoogleMapsAddressvalidationV1Verdict extends com.google.api.c
    * below. For example, if the input address includes a specific apartment number, then the
    * `input_granularity` here will be `SUB_PREMISE`. If we cannot match the apartment number in the
    * databases or the apartment number is invalid, the `validation_granularity` will likely be
-   * `PREMISE` or below.
+   * `PREMISE` or worse.
    * @return value or {@code null} for none
    */
   public java.lang.String getInputGranularity() {
@@ -221,7 +221,7 @@ public final class GoogleMapsAddressvalidationV1Verdict extends com.google.api.c
    * below. For example, if the input address includes a specific apartment number, then the
    * `input_granularity` here will be `SUB_PREMISE`. If we cannot match the apartment number in the
    * databases or the apartment number is invalid, the `validation_granularity` will likely be
-   * `PREMISE` or below.
+   * `PREMISE` or worse.
    * @param inputGranularity inputGranularity or {@code null} for none
    */
   public GoogleMapsAddressvalidationV1Verdict setInputGranularity(java.lang.String inputGranularity) {

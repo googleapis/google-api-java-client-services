@@ -25,7 +25,7 @@ package com.google.api.services.drivelabels.v2;
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://developers.google.com/drive/labels" target="_blank">API Documentation</a>
+ * <a href="https://developers.google.com/workspace/drive/labels" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>

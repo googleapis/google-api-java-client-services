@@ -30,6 +30,13 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 public final class GoogleCloudDiscoveryengineV1alphaEngineMediaRecommendationEngineConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Additional engine features config.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1alphaEngineMediaRecommendationEngineConfigEngineFeaturesConfig engineFeaturesConfig;
+
+  /**
    * The optimization objective. e.g., `cvr`. This field together with optimization_objective
    * describe engine metadata to use to control engine training and serving. Currently supported
    * values: `ctr`, `cvr`. If not specified, we choose default based on engine type. Default depends
@@ -70,6 +77,23 @@ public final class GoogleCloudDiscoveryengineV1alphaEngineMediaRecommendationEng
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * Optional. Additional engine features config.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaEngineMediaRecommendationEngineConfigEngineFeaturesConfig getEngineFeaturesConfig() {
+    return engineFeaturesConfig;
+  }
+
+  /**
+   * Optional. Additional engine features config.
+   * @param engineFeaturesConfig engineFeaturesConfig or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaEngineMediaRecommendationEngineConfig setEngineFeaturesConfig(GoogleCloudDiscoveryengineV1alphaEngineMediaRecommendationEngineConfigEngineFeaturesConfig engineFeaturesConfig) {
+    this.engineFeaturesConfig = engineFeaturesConfig;
+    return this;
+  }
 
   /**
    * The optimization objective. e.g., `cvr`. This field together with optimization_objective

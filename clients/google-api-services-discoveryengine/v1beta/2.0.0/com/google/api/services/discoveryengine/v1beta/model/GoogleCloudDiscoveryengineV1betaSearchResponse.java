@@ -119,12 +119,35 @@ public final class GoogleCloudDiscoveryengineV1betaSearchResponse extends com.go
   private java.util.List<GoogleCloudDiscoveryengineV1betaSearchResponseSearchResult> results;
 
   /**
+   * Promotions for site search.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDiscoveryengineV1betaSearchLinkPromotion> searchLinkPromotions;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudDiscoveryengineV1betaSearchLinkPromotion used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudDiscoveryengineV1betaSearchLinkPromotion.class);
+  }
+
+  /**
    * Session information. Only set if SearchRequest.session is provided. See its description for
    * more details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDiscoveryengineV1betaSearchResponseSessionInfo sessionInfo;
+
+  /**
+   * Corrected query with low confidence, AKA did you mean query. Compared with corrected_query,
+   * this field is set when SpellCorrector returned a response, but FPR(full page replacement) is
+   * not triggered because the corrction is of low confidence(eg, reversed because there are matches
+   * of the original query in document corpus).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String suggestedQuery;
 
   /**
    * A summary as part of the search results. This field is only returned if
@@ -357,6 +380,23 @@ public final class GoogleCloudDiscoveryengineV1betaSearchResponse extends com.go
   }
 
   /**
+   * Promotions for site search.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDiscoveryengineV1betaSearchLinkPromotion> getSearchLinkPromotions() {
+    return searchLinkPromotions;
+  }
+
+  /**
+   * Promotions for site search.
+   * @param searchLinkPromotions searchLinkPromotions or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaSearchResponse setSearchLinkPromotions(java.util.List<GoogleCloudDiscoveryengineV1betaSearchLinkPromotion> searchLinkPromotions) {
+    this.searchLinkPromotions = searchLinkPromotions;
+    return this;
+  }
+
+  /**
    * Session information. Only set if SearchRequest.session is provided. See its description for
    * more details.
    * @return value or {@code null} for none
@@ -372,6 +412,29 @@ public final class GoogleCloudDiscoveryengineV1betaSearchResponse extends com.go
    */
   public GoogleCloudDiscoveryengineV1betaSearchResponse setSessionInfo(GoogleCloudDiscoveryengineV1betaSearchResponseSessionInfo sessionInfo) {
     this.sessionInfo = sessionInfo;
+    return this;
+  }
+
+  /**
+   * Corrected query with low confidence, AKA did you mean query. Compared with corrected_query,
+   * this field is set when SpellCorrector returned a response, but FPR(full page replacement) is
+   * not triggered because the corrction is of low confidence(eg, reversed because there are matches
+   * of the original query in document corpus).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSuggestedQuery() {
+    return suggestedQuery;
+  }
+
+  /**
+   * Corrected query with low confidence, AKA did you mean query. Compared with corrected_query,
+   * this field is set when SpellCorrector returned a response, but FPR(full page replacement) is
+   * not triggered because the corrction is of low confidence(eg, reversed because there are matches
+   * of the original query in document corpus).
+   * @param suggestedQuery suggestedQuery or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaSearchResponse setSuggestedQuery(java.lang.String suggestedQuery) {
+    this.suggestedQuery = suggestedQuery;
     return this;
   }
 

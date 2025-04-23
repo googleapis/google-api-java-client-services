@@ -39,7 +39,7 @@ public final class GoogleCloudDiscoveryengineV1RankRequest extends com.google.ap
 
   /**
    * The identifier of the model to use. It is one of: * `semantic-ranker-512@latest`: Semantic
-   * ranking model with maxiumn input token size 512. It is set to `semantic-ranker-512@latest` by
+   * ranking model with maximum input token size 512. It is set to `semantic-ranker-512@latest` by
    * default if unspecified.
    * The value may be {@code null}.
    */
@@ -104,7 +104,7 @@ public final class GoogleCloudDiscoveryengineV1RankRequest extends com.google.ap
 
   /**
    * The identifier of the model to use. It is one of: * `semantic-ranker-512@latest`: Semantic
-   * ranking model with maxiumn input token size 512. It is set to `semantic-ranker-512@latest` by
+   * ranking model with maximum input token size 512. It is set to `semantic-ranker-512@latest` by
    * default if unspecified.
    * @return value or {@code null} for none
    */
@@ -114,7 +114,7 @@ public final class GoogleCloudDiscoveryengineV1RankRequest extends com.google.ap
 
   /**
    * The identifier of the model to use. It is one of: * `semantic-ranker-512@latest`: Semantic
-   * ranking model with maxiumn input token size 512. It is set to `semantic-ranker-512@latest` by
+   * ranking model with maximum input token size 512. It is set to `semantic-ranker-512@latest` by
    * default if unspecified.
    * @param model model or {@code null} for none
    */

@@ -30,7 +30,8 @@ package com.google.api.services.discoveryengine.v1.model;
 public final class GoogleCloudDiscoveryengineV1alphaSearchRequestNaturalLanguageQueryUnderstandingSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * The condition under which filter extraction should occur. Default to Condition.DISABLED.
+   * The condition under which filter extraction should occur. Server behavior defaults to
+   * `DISABLED`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,7 +48,8 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequestNaturalLanguage
   private java.util.List<java.lang.String> geoSearchQueryDetectionFieldNames;
 
   /**
-   * The condition under which filter extraction should occur. Default to Condition.DISABLED.
+   * The condition under which filter extraction should occur. Server behavior defaults to
+   * `DISABLED`.
    * @return value or {@code null} for none
    */
   public java.lang.String getFilterExtractionCondition() {
@@ -55,7 +57,8 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequestNaturalLanguage
   }
 
   /**
-   * The condition under which filter extraction should occur. Default to Condition.DISABLED.
+   * The condition under which filter extraction should occur. Server behavior defaults to
+   * `DISABLED`.
    * @param filterExtractionCondition filterExtractionCondition or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaSearchRequestNaturalLanguageQueryUnderstandingSpec setFilterExtractionCondition(java.lang.String filterExtractionCondition) {

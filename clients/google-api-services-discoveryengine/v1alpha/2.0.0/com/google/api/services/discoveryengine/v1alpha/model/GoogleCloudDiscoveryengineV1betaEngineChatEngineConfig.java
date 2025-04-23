@@ -40,6 +40,17 @@ public final class GoogleCloudDiscoveryengineV1betaEngineChatEngineConfig extend
   private GoogleCloudDiscoveryengineV1betaEngineChatEngineConfigAgentCreationConfig agentCreationConfig;
 
   /**
+   * Optional. If the flag set to true, we allow the agent and engine are in different locations,
+   * otherwise the agent and engine are required to be in the same location. The flag is set to
+   * false by default. Note that the `allow_cross_region` are one-time consumed by and passed to
+   * EngineService.CreateEngine. It means they cannot be retrieved using EngineService.GetEngine or
+   * EngineService.ListEngines API after engine creation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean allowCrossRegion;
+
+  /**
    * The resource name of an exist Dialogflow agent to link to this Chat Engine. Customers can
    * either provide `agent_creation_config` to create agent or provide an agent name that links the
    * agent with the Chat engine. Format: `projects//locations//agents/`. Note that the
@@ -72,6 +83,31 @@ public final class GoogleCloudDiscoveryengineV1betaEngineChatEngineConfig extend
    */
   public GoogleCloudDiscoveryengineV1betaEngineChatEngineConfig setAgentCreationConfig(GoogleCloudDiscoveryengineV1betaEngineChatEngineConfigAgentCreationConfig agentCreationConfig) {
     this.agentCreationConfig = agentCreationConfig;
+    return this;
+  }
+
+  /**
+   * Optional. If the flag set to true, we allow the agent and engine are in different locations,
+   * otherwise the agent and engine are required to be in the same location. The flag is set to
+   * false by default. Note that the `allow_cross_region` are one-time consumed by and passed to
+   * EngineService.CreateEngine. It means they cannot be retrieved using EngineService.GetEngine or
+   * EngineService.ListEngines API after engine creation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAllowCrossRegion() {
+    return allowCrossRegion;
+  }
+
+  /**
+   * Optional. If the flag set to true, we allow the agent and engine are in different locations,
+   * otherwise the agent and engine are required to be in the same location. The flag is set to
+   * false by default. Note that the `allow_cross_region` are one-time consumed by and passed to
+   * EngineService.CreateEngine. It means they cannot be retrieved using EngineService.GetEngine or
+   * EngineService.ListEngines API after engine creation.
+   * @param allowCrossRegion allowCrossRegion or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaEngineChatEngineConfig setAllowCrossRegion(java.lang.Boolean allowCrossRegion) {
+    this.allowCrossRegion = allowCrossRegion;
     return this;
   }
 

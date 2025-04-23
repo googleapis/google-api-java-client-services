@@ -48,7 +48,7 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequestSessionSpec ext
 
   /**
    * The number of top search results to persist. The persisted search results can be used for the
-   * subsequent /answer api call. This field is simliar to the `summary_result_count` field in
+   * subsequent /answer api call. This field is similar to the `summary_result_count` field in
    * SearchRequest.ContentSearchSpec.SummarySpec.summary_result_count. At most 10 results for
    * documents mode, or 50 for chunks mode.
    * The value may be {@code null}.
@@ -91,7 +91,7 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequestSessionSpec ext
 
   /**
    * The number of top search results to persist. The persisted search results can be used for the
-   * subsequent /answer api call. This field is simliar to the `summary_result_count` field in
+   * subsequent /answer api call. This field is similar to the `summary_result_count` field in
    * SearchRequest.ContentSearchSpec.SummarySpec.summary_result_count. At most 10 results for
    * documents mode, or 50 for chunks mode.
    * @return value or {@code null} for none
@@ -102,7 +102,7 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequestSessionSpec ext
 
   /**
    * The number of top search results to persist. The persisted search results can be used for the
-   * subsequent /answer api call. This field is simliar to the `summary_result_count` field in
+   * subsequent /answer api call. This field is similar to the `summary_result_count` field in
    * SearchRequest.ContentSearchSpec.SummarySpec.summary_result_count. At most 10 results for
    * documents mode, or 50 for chunks mode.
    * @param searchResultPersistenceCount searchResultPersistenceCount or {@code null} for none

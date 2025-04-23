@@ -30,6 +30,13 @@ package com.google.api.services.discoveryengine.v1beta.model;
 public final class GoogleCloudDiscoveryengineV1betaAnswerReferenceUnstructuredDocumentInfoChunkContent extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Stores indexes of blobattachments linked to this chunk.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.util.List<java.lang.Long> blobAttachmentIndexes;
+
+  /**
    * Chunk textual content.
    * The value may be {@code null}.
    */
@@ -51,6 +58,23 @@ public final class GoogleCloudDiscoveryengineV1betaAnswerReferenceUnstructuredDo
    */
   @com.google.api.client.util.Key
   private java.lang.Float relevanceScore;
+
+  /**
+   * Output only. Stores indexes of blobattachments linked to this chunk.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.Long> getBlobAttachmentIndexes() {
+    return blobAttachmentIndexes;
+  }
+
+  /**
+   * Output only. Stores indexes of blobattachments linked to this chunk.
+   * @param blobAttachmentIndexes blobAttachmentIndexes or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaAnswerReferenceUnstructuredDocumentInfoChunkContent setBlobAttachmentIndexes(java.util.List<java.lang.Long> blobAttachmentIndexes) {
+    this.blobAttachmentIndexes = blobAttachmentIndexes;
+    return this;
+  }
 
   /**
    * Chunk textual content.

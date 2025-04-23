@@ -77,7 +77,7 @@ public final class GoogleCloudDiscoveryengineV1alphaDataStore extends com.google
   private String createTime;
 
   /**
-   * Output only. The id of the default Schema asscociated to this data store.
+   * Output only. The id of the default Schema associated to this data store.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,6 +99,22 @@ public final class GoogleCloudDiscoveryengineV1alphaDataStore extends com.google
   private GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfig documentProcessingConfig;
 
   /**
+   * Optional. Configuration for `HEALTHCARE_FHIR` vertical.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1alphaHealthcareFhirConfig healthcareFhirConfig;
+
+  /**
+   * Immutable. The fully qualified resource name of the associated IdentityMappingStore. This field
+   * can only be set for acl_enabled DataStores with `THIRD_PARTY` or `GSUITE` IdP. Format:
+   * `projects/{project}/locations/{location}/identityMappingStores/{identity_mapping_store}`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String identityMappingStore;
+
+  /**
    * Output only. Data store level identity provider config.
    * The value may be {@code null}.
    */
@@ -111,6 +127,13 @@ public final class GoogleCloudDiscoveryengineV1alphaDataStore extends com.google
    */
   @com.google.api.client.util.Key
   private java.lang.String industryVertical;
+
+  /**
+   * Optional. If set, this DataStore is an Infobot FAQ DataStore.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isInfobotFaqDataStore;
 
   /**
    * Input only. The KMS key to be used to protect this DataStore at creation time. Must be set for
@@ -294,7 +317,7 @@ public final class GoogleCloudDiscoveryengineV1alphaDataStore extends com.google
   }
 
   /**
-   * Output only. The id of the default Schema asscociated to this data store.
+   * Output only. The id of the default Schema associated to this data store.
    * @return value or {@code null} for none
    */
   public java.lang.String getDefaultSchemaId() {
@@ -302,7 +325,7 @@ public final class GoogleCloudDiscoveryengineV1alphaDataStore extends com.google
   }
 
   /**
-   * Output only. The id of the default Schema asscociated to this data store.
+   * Output only. The id of the default Schema associated to this data store.
    * @param defaultSchemaId defaultSchemaId or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaDataStore setDefaultSchemaId(java.lang.String defaultSchemaId) {
@@ -347,6 +370,44 @@ public final class GoogleCloudDiscoveryengineV1alphaDataStore extends com.google
   }
 
   /**
+   * Optional. Configuration for `HEALTHCARE_FHIR` vertical.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaHealthcareFhirConfig getHealthcareFhirConfig() {
+    return healthcareFhirConfig;
+  }
+
+  /**
+   * Optional. Configuration for `HEALTHCARE_FHIR` vertical.
+   * @param healthcareFhirConfig healthcareFhirConfig or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaDataStore setHealthcareFhirConfig(GoogleCloudDiscoveryengineV1alphaHealthcareFhirConfig healthcareFhirConfig) {
+    this.healthcareFhirConfig = healthcareFhirConfig;
+    return this;
+  }
+
+  /**
+   * Immutable. The fully qualified resource name of the associated IdentityMappingStore. This field
+   * can only be set for acl_enabled DataStores with `THIRD_PARTY` or `GSUITE` IdP. Format:
+   * `projects/{project}/locations/{location}/identityMappingStores/{identity_mapping_store}`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIdentityMappingStore() {
+    return identityMappingStore;
+  }
+
+  /**
+   * Immutable. The fully qualified resource name of the associated IdentityMappingStore. This field
+   * can only be set for acl_enabled DataStores with `THIRD_PARTY` or `GSUITE` IdP. Format:
+   * `projects/{project}/locations/{location}/identityMappingStores/{identity_mapping_store}`.
+   * @param identityMappingStore identityMappingStore or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaDataStore setIdentityMappingStore(java.lang.String identityMappingStore) {
+    this.identityMappingStore = identityMappingStore;
+    return this;
+  }
+
+  /**
    * Output only. Data store level identity provider config.
    * @return value or {@code null} for none
    */
@@ -377,6 +438,23 @@ public final class GoogleCloudDiscoveryengineV1alphaDataStore extends com.google
    */
   public GoogleCloudDiscoveryengineV1alphaDataStore setIndustryVertical(java.lang.String industryVertical) {
     this.industryVertical = industryVertical;
+    return this;
+  }
+
+  /**
+   * Optional. If set, this DataStore is an Infobot FAQ DataStore.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsInfobotFaqDataStore() {
+    return isInfobotFaqDataStore;
+  }
+
+  /**
+   * Optional. If set, this DataStore is an Infobot FAQ DataStore.
+   * @param isInfobotFaqDataStore isInfobotFaqDataStore or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaDataStore setIsInfobotFaqDataStore(java.lang.Boolean isInfobotFaqDataStore) {
+    this.isInfobotFaqDataStore = isInfobotFaqDataStore;
     return this;
   }
 

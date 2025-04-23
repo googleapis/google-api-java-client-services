@@ -30,6 +30,15 @@ package com.google.api.services.discoveryengine.v1.model;
 public final class GoogleCloudDiscoveryengineV1DocumentInfo extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The conversion value associated with this Document. Must be set if
+   * UserEvent.event_type is "conversion". For example, a value of 1000 signifies that 1000 seconds
+   * were spent viewing a Document for the `watch` conversion type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float conversionValue;
+
+  /**
    * The Document resource ID.
    * The value may be {@code null}.
    */
@@ -74,6 +83,27 @@ public final class GoogleCloudDiscoveryengineV1DocumentInfo extends com.google.a
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
+
+  /**
+   * Optional. The conversion value associated with this Document. Must be set if
+   * UserEvent.event_type is "conversion". For example, a value of 1000 signifies that 1000 seconds
+   * were spent viewing a Document for the `watch` conversion type.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getConversionValue() {
+    return conversionValue;
+  }
+
+  /**
+   * Optional. The conversion value associated with this Document. Must be set if
+   * UserEvent.event_type is "conversion". For example, a value of 1000 signifies that 1000 seconds
+   * were spent viewing a Document for the `watch` conversion type.
+   * @param conversionValue conversionValue or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1DocumentInfo setConversionValue(java.lang.Float conversionValue) {
+    this.conversionValue = conversionValue;
+    return this;
+  }
 
   /**
    * The Document resource ID.

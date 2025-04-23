@@ -56,6 +56,17 @@ public final class GoogleCloudDiscoveryengineV1FhirStoreSource extends com.googl
   private java.util.List<java.lang.String> resourceTypes;
 
   /**
+   * Optional. Whether to update the DataStore schema to the latest predefined schema. If true, the
+   * DataStore schema will be updated to include any FHIR fields or resource types that have been
+   * added since the last import and corresponding FHIR resources will be imported from the FHIR
+   * store. Note this field cannot be used in conjunction with `resource_types`. It should be used
+   * after initial import.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean updateFromLatestPredefinedSchema;
+
+  /**
    * Required. The full resource name of the FHIR store to import data from, in the format of
    * `projects/{project}/locations/{location}/datasets/{dataset}/fhirStores/{fhir_store}`.
    * @return value or {@code null} for none
@@ -113,6 +124,31 @@ public final class GoogleCloudDiscoveryengineV1FhirStoreSource extends com.googl
    */
   public GoogleCloudDiscoveryengineV1FhirStoreSource setResourceTypes(java.util.List<java.lang.String> resourceTypes) {
     this.resourceTypes = resourceTypes;
+    return this;
+  }
+
+  /**
+   * Optional. Whether to update the DataStore schema to the latest predefined schema. If true, the
+   * DataStore schema will be updated to include any FHIR fields or resource types that have been
+   * added since the last import and corresponding FHIR resources will be imported from the FHIR
+   * store. Note this field cannot be used in conjunction with `resource_types`. It should be used
+   * after initial import.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getUpdateFromLatestPredefinedSchema() {
+    return updateFromLatestPredefinedSchema;
+  }
+
+  /**
+   * Optional. Whether to update the DataStore schema to the latest predefined schema. If true, the
+   * DataStore schema will be updated to include any FHIR fields or resource types that have been
+   * added since the last import and corresponding FHIR resources will be imported from the FHIR
+   * store. Note this field cannot be used in conjunction with `resource_types`. It should be used
+   * after initial import.
+   * @param updateFromLatestPredefinedSchema updateFromLatestPredefinedSchema or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1FhirStoreSource setUpdateFromLatestPredefinedSchema(java.lang.Boolean updateFromLatestPredefinedSchema) {
+    this.updateFromLatestPredefinedSchema = updateFromLatestPredefinedSchema;
     return this;
   }
 

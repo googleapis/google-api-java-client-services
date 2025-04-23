@@ -30,8 +30,15 @@ package com.google.api.services.discoveryengine.v1beta.model;
 public final class GoogleCloudDiscoveryengineV1betaDocument extends com.google.api.client.json.GenericJson {
 
   /**
-   * The unstructured data linked to this document. Content must be set if this document is under a
-   * `CONTENT_REQUIRED` data store.
+   * Access control information for the document.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1betaDocumentAclInfo aclInfo;
+
+  /**
+   * The unstructured data linked to this document. Content can only be set and must be set if this
+   * document is under a `CONTENT_REQUIRED` data store.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,7 +54,7 @@ public final class GoogleCloudDiscoveryengineV1betaDocument extends com.google.a
 
   /**
    * Immutable. The identifier of the document. Id should conform to
-   * [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length limit of 63 characters.
+   * [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length limit of 128 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,7 +63,8 @@ public final class GoogleCloudDiscoveryengineV1betaDocument extends com.google.a
   /**
    * Output only. The index status of the document. * If document is indexed successfully, the
    * index_time field is populated. * Otherwise, if document is not indexed due to errors, the
-   * error_samples field is populated. * Otherwise, index_status is unset.
+   * error_samples field is populated. * Otherwise, if document's index is in progress, the
+   * pending_message field is populated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -113,8 +121,25 @@ public final class GoogleCloudDiscoveryengineV1betaDocument extends com.google.a
   private java.util.Map<String, java.lang.Object> structData;
 
   /**
-   * The unstructured data linked to this document. Content must be set if this document is under a
-   * `CONTENT_REQUIRED` data store.
+   * Access control information for the document.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaDocumentAclInfo getAclInfo() {
+    return aclInfo;
+  }
+
+  /**
+   * Access control information for the document.
+   * @param aclInfo aclInfo or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaDocument setAclInfo(GoogleCloudDiscoveryengineV1betaDocumentAclInfo aclInfo) {
+    this.aclInfo = aclInfo;
+    return this;
+  }
+
+  /**
+   * The unstructured data linked to this document. Content can only be set and must be set if this
+   * document is under a `CONTENT_REQUIRED` data store.
    * @return value or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaDocumentContent getContent() {
@@ -122,8 +147,8 @@ public final class GoogleCloudDiscoveryengineV1betaDocument extends com.google.a
   }
 
   /**
-   * The unstructured data linked to this document. Content must be set if this document is under a
-   * `CONTENT_REQUIRED` data store.
+   * The unstructured data linked to this document. Content can only be set and must be set if this
+   * document is under a `CONTENT_REQUIRED` data store.
    * @param content content or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaDocument setContent(GoogleCloudDiscoveryengineV1betaDocumentContent content) {
@@ -152,7 +177,7 @@ public final class GoogleCloudDiscoveryengineV1betaDocument extends com.google.a
 
   /**
    * Immutable. The identifier of the document. Id should conform to
-   * [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length limit of 63 characters.
+   * [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length limit of 128 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -161,7 +186,7 @@ public final class GoogleCloudDiscoveryengineV1betaDocument extends com.google.a
 
   /**
    * Immutable. The identifier of the document. Id should conform to
-   * [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length limit of 63 characters.
+   * [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length limit of 128 characters.
    * @param id id or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaDocument setId(java.lang.String id) {
@@ -172,7 +197,8 @@ public final class GoogleCloudDiscoveryengineV1betaDocument extends com.google.a
   /**
    * Output only. The index status of the document. * If document is indexed successfully, the
    * index_time field is populated. * Otherwise, if document is not indexed due to errors, the
-   * error_samples field is populated. * Otherwise, index_status is unset.
+   * error_samples field is populated. * Otherwise, if document's index is in progress, the
+   * pending_message field is populated.
    * @return value or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaDocumentIndexStatus getIndexStatus() {
@@ -182,7 +208,8 @@ public final class GoogleCloudDiscoveryengineV1betaDocument extends com.google.a
   /**
    * Output only. The index status of the document. * If document is indexed successfully, the
    * index_time field is populated. * Otherwise, if document is not indexed due to errors, the
-   * error_samples field is populated. * Otherwise, index_status is unset.
+   * error_samples field is populated. * Otherwise, if document's index is in progress, the
+   * pending_message field is populated.
    * @param indexStatus indexStatus or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaDocument setIndexStatus(GoogleCloudDiscoveryengineV1betaDocumentIndexStatus indexStatus) {

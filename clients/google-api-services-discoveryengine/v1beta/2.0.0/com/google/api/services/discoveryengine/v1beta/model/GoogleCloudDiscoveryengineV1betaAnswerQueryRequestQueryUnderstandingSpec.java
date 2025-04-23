@@ -30,6 +30,13 @@ package com.google.api.services.discoveryengine.v1beta.model;
 public final class GoogleCloudDiscoveryengineV1betaAnswerQueryRequestQueryUnderstandingSpec extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Whether to disable spell correction. The default value is `false`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean disableSpellCorrection;
+
+  /**
    * Query classification specification.
    * The value may be {@code null}.
    */
@@ -42,6 +49,23 @@ public final class GoogleCloudDiscoveryengineV1betaAnswerQueryRequestQueryUnders
    */
   @com.google.api.client.util.Key
   private GoogleCloudDiscoveryengineV1betaAnswerQueryRequestQueryUnderstandingSpecQueryRephraserSpec queryRephraserSpec;
+
+  /**
+   * Optional. Whether to disable spell correction. The default value is `false`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDisableSpellCorrection() {
+    return disableSpellCorrection;
+  }
+
+  /**
+   * Optional. Whether to disable spell correction. The default value is `false`.
+   * @param disableSpellCorrection disableSpellCorrection or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaAnswerQueryRequestQueryUnderstandingSpec setDisableSpellCorrection(java.lang.Boolean disableSpellCorrection) {
+    this.disableSpellCorrection = disableSpellCorrection;
+    return this;
+  }
 
   /**
    * Query classification specification.

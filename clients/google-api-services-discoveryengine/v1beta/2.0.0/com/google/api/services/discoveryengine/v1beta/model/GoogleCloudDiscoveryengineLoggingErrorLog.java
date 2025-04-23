@@ -30,6 +30,13 @@ package com.google.api.services.discoveryengine.v1beta.model;
 public final class GoogleCloudDiscoveryengineLoggingErrorLog extends com.google.api.client.json.GenericJson {
 
   /**
+   * The error payload that is populated on LRO connector sync APIs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineLoggingConnectorRunErrorContext connectorRunPayload;
+
+  /**
    * A description of the context in which the error occurred.
    * The value may be {@code null}.
    */
@@ -85,6 +92,23 @@ public final class GoogleCloudDiscoveryengineLoggingErrorLog extends com.google.
    */
   @com.google.api.client.util.Key
   private GoogleRpcStatus status;
+
+  /**
+   * The error payload that is populated on LRO connector sync APIs.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineLoggingConnectorRunErrorContext getConnectorRunPayload() {
+    return connectorRunPayload;
+  }
+
+  /**
+   * The error payload that is populated on LRO connector sync APIs.
+   * @param connectorRunPayload connectorRunPayload or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineLoggingErrorLog setConnectorRunPayload(GoogleCloudDiscoveryengineLoggingConnectorRunErrorContext connectorRunPayload) {
+    this.connectorRunPayload = connectorRunPayload;
+    return this;
+  }
 
   /**
    * A description of the context in which the error occurred.

@@ -30,7 +30,7 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 public final class GoogleCloudDiscoveryengineV1alphaTargetSite extends com.google.api.client.json.GenericJson {
 
   /**
-   * Input only. If set to false, a uri_pattern is generated to include all pages whose address
+   * Immutable. If set to false, a uri_pattern is generated to include all pages whose address
    * contains the provided_uri_pattern. If set to true, an uri_pattern is generated to try to be an
    * exact match of the provided_uri_pattern or just the specific page if the provided_uri_pattern
    * is a specific one. provided_uri_pattern is always normalized to generate the URI pattern to be
@@ -107,7 +107,7 @@ public final class GoogleCloudDiscoveryengineV1alphaTargetSite extends com.googl
   private String updateTime;
 
   /**
-   * Input only. If set to false, a uri_pattern is generated to include all pages whose address
+   * Immutable. If set to false, a uri_pattern is generated to include all pages whose address
    * contains the provided_uri_pattern. If set to true, an uri_pattern is generated to try to be an
    * exact match of the provided_uri_pattern or just the specific page if the provided_uri_pattern
    * is a specific one. provided_uri_pattern is always normalized to generate the URI pattern to be
@@ -119,7 +119,7 @@ public final class GoogleCloudDiscoveryengineV1alphaTargetSite extends com.googl
   }
 
   /**
-   * Input only. If set to false, a uri_pattern is generated to include all pages whose address
+   * Immutable. If set to false, a uri_pattern is generated to include all pages whose address
    * contains the provided_uri_pattern. If set to true, an uri_pattern is generated to try to be an
    * exact match of the provided_uri_pattern or just the specific page if the provided_uri_pattern
    * is a specific one. provided_uri_pattern is always normalized to generate the URI pattern to be

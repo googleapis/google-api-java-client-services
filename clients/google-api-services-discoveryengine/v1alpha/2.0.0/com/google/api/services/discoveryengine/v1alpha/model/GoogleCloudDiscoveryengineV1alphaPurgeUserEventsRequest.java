@@ -34,11 +34,14 @@ public final class GoogleCloudDiscoveryengineV1alphaPurgeUserEventsRequest exten
    * characters. The eligible fields for filtering are: * `eventType`: Double quoted
    * UserEvent.event_type string. * `eventTime`: in ISO 8601 "zulu" format. * `userPseudoId`: Double
    * quoted string. Specifying this will delete all events associated with a visitor. * `userId`:
-   * Double quoted string. Specifying this will delete all events associated with a user. Examples:
-   * * Deleting all events in a time range: `eventTime > "2012-04-23T18:25:43.511Z" eventTime <
-   * "2012-04-23T18:30:43.511Z"` * Deleting specific eventType: `eventType = "search"` * Deleting
-   * all events for a specific visitor: `userPseudoId = "visitor1024"` * Deleting all events inside
-   * a DataStore: `*` The filtering fields are assumed to have an implicit AND.
+   * Double quoted string. Specifying this will delete all events associated with a user. Note: This
+   * API only supports purging a max range of 30 days. Examples: * Deleting all events in a time
+   * range: `eventTime > "2012-04-23T18:25:43.511Z" eventTime < "2012-04-23T18:30:43.511Z"` *
+   * Deleting specific eventType in a time range: `eventTime > "2012-04-23T18:25:43.511Z" eventTime
+   * < "2012-04-23T18:30:43.511Z" eventType = "search"` * Deleting all events for a specific visitor
+   * in a time range: `eventTime > "2012-04-23T18:25:43.511Z" eventTime < "2012-04-23T18:30:43.511Z"
+   * userPseudoId = "visitor1024"` * Deleting the past 30 days of events inside a DataStore: `*` The
+   * filtering fields are assumed to have an implicit AND.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,11 +62,14 @@ public final class GoogleCloudDiscoveryengineV1alphaPurgeUserEventsRequest exten
    * characters. The eligible fields for filtering are: * `eventType`: Double quoted
    * UserEvent.event_type string. * `eventTime`: in ISO 8601 "zulu" format. * `userPseudoId`: Double
    * quoted string. Specifying this will delete all events associated with a visitor. * `userId`:
-   * Double quoted string. Specifying this will delete all events associated with a user. Examples:
-   * * Deleting all events in a time range: `eventTime > "2012-04-23T18:25:43.511Z" eventTime <
-   * "2012-04-23T18:30:43.511Z"` * Deleting specific eventType: `eventType = "search"` * Deleting
-   * all events for a specific visitor: `userPseudoId = "visitor1024"` * Deleting all events inside
-   * a DataStore: `*` The filtering fields are assumed to have an implicit AND.
+   * Double quoted string. Specifying this will delete all events associated with a user. Note: This
+   * API only supports purging a max range of 30 days. Examples: * Deleting all events in a time
+   * range: `eventTime > "2012-04-23T18:25:43.511Z" eventTime < "2012-04-23T18:30:43.511Z"` *
+   * Deleting specific eventType in a time range: `eventTime > "2012-04-23T18:25:43.511Z" eventTime
+   * < "2012-04-23T18:30:43.511Z" eventType = "search"` * Deleting all events for a specific visitor
+   * in a time range: `eventTime > "2012-04-23T18:25:43.511Z" eventTime < "2012-04-23T18:30:43.511Z"
+   * userPseudoId = "visitor1024"` * Deleting the past 30 days of events inside a DataStore: `*` The
+   * filtering fields are assumed to have an implicit AND.
    * @return value or {@code null} for none
    */
   public java.lang.String getFilter() {
@@ -75,11 +81,14 @@ public final class GoogleCloudDiscoveryengineV1alphaPurgeUserEventsRequest exten
    * characters. The eligible fields for filtering are: * `eventType`: Double quoted
    * UserEvent.event_type string. * `eventTime`: in ISO 8601 "zulu" format. * `userPseudoId`: Double
    * quoted string. Specifying this will delete all events associated with a visitor. * `userId`:
-   * Double quoted string. Specifying this will delete all events associated with a user. Examples:
-   * * Deleting all events in a time range: `eventTime > "2012-04-23T18:25:43.511Z" eventTime <
-   * "2012-04-23T18:30:43.511Z"` * Deleting specific eventType: `eventType = "search"` * Deleting
-   * all events for a specific visitor: `userPseudoId = "visitor1024"` * Deleting all events inside
-   * a DataStore: `*` The filtering fields are assumed to have an implicit AND.
+   * Double quoted string. Specifying this will delete all events associated with a user. Note: This
+   * API only supports purging a max range of 30 days. Examples: * Deleting all events in a time
+   * range: `eventTime > "2012-04-23T18:25:43.511Z" eventTime < "2012-04-23T18:30:43.511Z"` *
+   * Deleting specific eventType in a time range: `eventTime > "2012-04-23T18:25:43.511Z" eventTime
+   * < "2012-04-23T18:30:43.511Z" eventType = "search"` * Deleting all events for a specific visitor
+   * in a time range: `eventTime > "2012-04-23T18:25:43.511Z" eventTime < "2012-04-23T18:30:43.511Z"
+   * userPseudoId = "visitor1024"` * Deleting the past 30 days of events inside a DataStore: `*` The
+   * filtering fields are assumed to have an implicit AND.
    * @param filter filter or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaPurgeUserEventsRequest setFilter(java.lang.String filter) {

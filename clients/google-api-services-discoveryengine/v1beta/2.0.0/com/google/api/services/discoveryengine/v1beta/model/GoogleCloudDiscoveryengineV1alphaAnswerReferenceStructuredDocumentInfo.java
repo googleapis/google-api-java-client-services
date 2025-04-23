@@ -44,6 +44,20 @@ public final class GoogleCloudDiscoveryengineV1alphaAnswerReferenceStructuredDoc
   private java.util.Map<String, java.lang.Object> structData;
 
   /**
+   * Output only. The title of the document.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String title;
+
+  /**
+   * Output only. The URI of the document.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String uri;
+
+  /**
    * Document resource name.
    * @return value or {@code null} for none
    */
@@ -74,6 +88,40 @@ public final class GoogleCloudDiscoveryengineV1alphaAnswerReferenceStructuredDoc
    */
   public GoogleCloudDiscoveryengineV1alphaAnswerReferenceStructuredDocumentInfo setStructData(java.util.Map<String, java.lang.Object> structData) {
     this.structData = structData;
+    return this;
+  }
+
+  /**
+   * Output only. The title of the document.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTitle() {
+    return title;
+  }
+
+  /**
+   * Output only. The title of the document.
+   * @param title title or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaAnswerReferenceStructuredDocumentInfo setTitle(java.lang.String title) {
+    this.title = title;
+    return this;
+  }
+
+  /**
+   * Output only. The URI of the document.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUri() {
+    return uri;
+  }
+
+  /**
+   * Output only. The URI of the document.
+   * @param uri uri or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaAnswerReferenceStructuredDocumentInfo setUri(java.lang.String uri) {
+    this.uri = uri;
     return this;
   }
 

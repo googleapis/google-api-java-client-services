@@ -29,6 +29,54 @@ package com.google.api.services.discoveryengine.v1.model;
 @SuppressWarnings("javadoc")
 public final class GoogleCloudDiscoveryengineV1betaAdvancedSiteSearchConfig extends com.google.api.client.json.GenericJson {
 
+  /**
+   * If set true, automatic refresh is disabled for the DataStore.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean disableAutomaticRefresh;
+
+  /**
+   * If set true, initial indexing is disabled for the DataStore.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean disableInitialIndex;
+
+  /**
+   * If set true, automatic refresh is disabled for the DataStore.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDisableAutomaticRefresh() {
+    return disableAutomaticRefresh;
+  }
+
+  /**
+   * If set true, automatic refresh is disabled for the DataStore.
+   * @param disableAutomaticRefresh disableAutomaticRefresh or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaAdvancedSiteSearchConfig setDisableAutomaticRefresh(java.lang.Boolean disableAutomaticRefresh) {
+    this.disableAutomaticRefresh = disableAutomaticRefresh;
+    return this;
+  }
+
+  /**
+   * If set true, initial indexing is disabled for the DataStore.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDisableInitialIndex() {
+    return disableInitialIndex;
+  }
+
+  /**
+   * If set true, initial indexing is disabled for the DataStore.
+   * @param disableInitialIndex disableInitialIndex or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaAdvancedSiteSearchConfig setDisableInitialIndex(java.lang.Boolean disableInitialIndex) {
+    this.disableInitialIndex = disableInitialIndex;
+    return this;
+  }
+
   @Override
   public GoogleCloudDiscoveryengineV1betaAdvancedSiteSearchConfig set(String fieldName, Object value) {
     return (GoogleCloudDiscoveryengineV1betaAdvancedSiteSearchConfig) super.set(fieldName, value);

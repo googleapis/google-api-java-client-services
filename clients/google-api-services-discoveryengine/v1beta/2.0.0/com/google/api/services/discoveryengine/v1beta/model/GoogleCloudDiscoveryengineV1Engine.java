@@ -86,12 +86,20 @@ public final class GoogleCloudDiscoveryengineV1Engine extends com.google.api.cli
 
   /**
    * The industry vertical that the engine registers. The restriction of the Engine industry
-   * vertical is based on DataStore: If unspecified, default to `GENERIC`. Vertical on Engine has to
-   * match vertical of the DataStore linked to the engine.
+   * vertical is based on DataStore: Vertical on Engine has to match vertical of the DataStore
+   * linked to the engine.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String industryVertical;
+
+  /**
+   * Configurations for the Media Engine. Only applicable on the data stores with solution_type
+   * SOLUTION_TYPE_RECOMMENDATION and IndustryVertical.MEDIA vertical.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1EngineMediaRecommendationEngineConfig mediaRecommendationEngineConfig;
 
   /**
    * Immutable. The fully qualified resource name of the engine. This field must be a UTF-8 encoded
@@ -258,8 +266,8 @@ public final class GoogleCloudDiscoveryengineV1Engine extends com.google.api.cli
 
   /**
    * The industry vertical that the engine registers. The restriction of the Engine industry
-   * vertical is based on DataStore: If unspecified, default to `GENERIC`. Vertical on Engine has to
-   * match vertical of the DataStore linked to the engine.
+   * vertical is based on DataStore: Vertical on Engine has to match vertical of the DataStore
+   * linked to the engine.
    * @return value or {@code null} for none
    */
   public java.lang.String getIndustryVertical() {
@@ -268,12 +276,31 @@ public final class GoogleCloudDiscoveryengineV1Engine extends com.google.api.cli
 
   /**
    * The industry vertical that the engine registers. The restriction of the Engine industry
-   * vertical is based on DataStore: If unspecified, default to `GENERIC`. Vertical on Engine has to
-   * match vertical of the DataStore linked to the engine.
+   * vertical is based on DataStore: Vertical on Engine has to match vertical of the DataStore
+   * linked to the engine.
    * @param industryVertical industryVertical or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1Engine setIndustryVertical(java.lang.String industryVertical) {
     this.industryVertical = industryVertical;
+    return this;
+  }
+
+  /**
+   * Configurations for the Media Engine. Only applicable on the data stores with solution_type
+   * SOLUTION_TYPE_RECOMMENDATION and IndustryVertical.MEDIA vertical.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1EngineMediaRecommendationEngineConfig getMediaRecommendationEngineConfig() {
+    return mediaRecommendationEngineConfig;
+  }
+
+  /**
+   * Configurations for the Media Engine. Only applicable on the data stores with solution_type
+   * SOLUTION_TYPE_RECOMMENDATION and IndustryVertical.MEDIA vertical.
+   * @param mediaRecommendationEngineConfig mediaRecommendationEngineConfig or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1Engine setMediaRecommendationEngineConfig(GoogleCloudDiscoveryengineV1EngineMediaRecommendationEngineConfig mediaRecommendationEngineConfig) {
+    this.mediaRecommendationEngineConfig = mediaRecommendationEngineConfig;
     return this;
   }
 

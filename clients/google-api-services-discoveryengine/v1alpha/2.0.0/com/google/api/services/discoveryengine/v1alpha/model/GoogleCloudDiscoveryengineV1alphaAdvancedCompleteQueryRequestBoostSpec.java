@@ -31,7 +31,7 @@ public final class GoogleCloudDiscoveryengineV1alphaAdvancedCompleteQueryRequest
 
   /**
    * Condition boost specifications. If a suggestion matches multiple conditions in the
-   * specifictions, boost values from these specifications are all applied and combined in a non-
+   * specifications, boost values from these specifications are all applied and combined in a non-
    * linear way. Maximum number of specifications is 20. Note: Currently only support language
    * condition boost.
    * The value may be {@code null}.
@@ -41,7 +41,7 @@ public final class GoogleCloudDiscoveryengineV1alphaAdvancedCompleteQueryRequest
 
   /**
    * Condition boost specifications. If a suggestion matches multiple conditions in the
-   * specifictions, boost values from these specifications are all applied and combined in a non-
+   * specifications, boost values from these specifications are all applied and combined in a non-
    * linear way. Maximum number of specifications is 20. Note: Currently only support language
    * condition boost.
    * @return value or {@code null} for none
@@ -52,7 +52,7 @@ public final class GoogleCloudDiscoveryengineV1alphaAdvancedCompleteQueryRequest
 
   /**
    * Condition boost specifications. If a suggestion matches multiple conditions in the
-   * specifictions, boost values from these specifications are all applied and combined in a non-
+   * specifications, boost values from these specifications are all applied and combined in a non-
    * linear way. Maximum number of specifications is 20. Note: Currently only support language
    * condition boost.
    * @param conditionBoostSpecs conditionBoostSpecs or {@code null} for none

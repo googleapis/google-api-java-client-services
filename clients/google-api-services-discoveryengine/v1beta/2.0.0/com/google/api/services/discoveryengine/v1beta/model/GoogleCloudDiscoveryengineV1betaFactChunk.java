@@ -37,6 +37,13 @@ public final class GoogleCloudDiscoveryengineV1betaFactChunk extends com.google.
   private java.lang.String chunkText;
 
   /**
+   * The domain of the source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String domain;
+
+  /**
    * The index of this chunk. Currently, only used for the streaming mode.
    * The value may be {@code null}.
    */
@@ -60,6 +67,20 @@ public final class GoogleCloudDiscoveryengineV1betaFactChunk extends com.google.
   private java.util.Map<String, java.lang.String> sourceMetadata;
 
   /**
+   * The title of the source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String title;
+
+  /**
+   * The URI of the source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String uri;
+
+  /**
    * Text content of the fact chunk. Can be at most 10K characters long.
    * @return value or {@code null} for none
    */
@@ -73,6 +94,23 @@ public final class GoogleCloudDiscoveryengineV1betaFactChunk extends com.google.
    */
   public GoogleCloudDiscoveryengineV1betaFactChunk setChunkText(java.lang.String chunkText) {
     this.chunkText = chunkText;
+    return this;
+  }
+
+  /**
+   * The domain of the source.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDomain() {
+    return domain;
+  }
+
+  /**
+   * The domain of the source.
+   * @param domain domain or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaFactChunk setDomain(java.lang.String domain) {
+    this.domain = domain;
     return this;
   }
 
@@ -128,6 +166,40 @@ public final class GoogleCloudDiscoveryengineV1betaFactChunk extends com.google.
    */
   public GoogleCloudDiscoveryengineV1betaFactChunk setSourceMetadata(java.util.Map<String, java.lang.String> sourceMetadata) {
     this.sourceMetadata = sourceMetadata;
+    return this;
+  }
+
+  /**
+   * The title of the source.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTitle() {
+    return title;
+  }
+
+  /**
+   * The title of the source.
+   * @param title title or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaFactChunk setTitle(java.lang.String title) {
+    this.title = title;
+    return this;
+  }
+
+  /**
+   * The URI of the source.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUri() {
+    return uri;
+  }
+
+  /**
+   * The URI of the source.
+   * @param uri uri or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaFactChunk setUri(java.lang.String uri) {
+    this.uri = uri;
     return this;
   }
 

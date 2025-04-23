@@ -38,7 +38,7 @@ public final class GoogleCloudDiscoveryengineV1betaCondition extends com.google.
 
   /**
    * Optional. Query regex to match the whole search query. Cannot be set when Condition.query_terms
-   * is set. This is currently supporting promotion use case.
+   * is set. Only supported for Basic Site Search promotion serving controls.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,7 +71,7 @@ public final class GoogleCloudDiscoveryengineV1betaCondition extends com.google.
 
   /**
    * Optional. Query regex to match the whole search query. Cannot be set when Condition.query_terms
-   * is set. This is currently supporting promotion use case.
+   * is set. Only supported for Basic Site Search promotion serving controls.
    * @return value or {@code null} for none
    */
   public java.lang.String getQueryRegex() {
@@ -80,7 +80,7 @@ public final class GoogleCloudDiscoveryengineV1betaCondition extends com.google.
 
   /**
    * Optional. Query regex to match the whole search query. Cannot be set when Condition.query_terms
-   * is set. This is currently supporting promotion use case.
+   * is set. Only supported for Basic Site Search promotion serving controls.
    * @param queryRegex queryRegex or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaCondition setQueryRegex(java.lang.String queryRegex) {

@@ -44,11 +44,32 @@ public final class GoogleCloudDiscoveryengineV1alphaAdvancedCompleteQueryRespons
   private java.lang.String dataStore;
 
   /**
+   * The destination uri of the content suggestion.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String destinationUri;
+
+  /**
    * The document data snippet in the suggestion. Only a subset of fields will be populated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDiscoveryengineV1alphaDocument document;
+
+  /**
+   * The icon uri of the content suggestion.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String iconUri;
+
+  /**
+   * The score of each suggestion. The score is in the range of [0, 1].
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double score;
 
   /**
    * The suggestion for the query.
@@ -92,6 +113,23 @@ public final class GoogleCloudDiscoveryengineV1alphaAdvancedCompleteQueryRespons
   }
 
   /**
+   * The destination uri of the content suggestion.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDestinationUri() {
+    return destinationUri;
+  }
+
+  /**
+   * The destination uri of the content suggestion.
+   * @param destinationUri destinationUri or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaAdvancedCompleteQueryResponseContentSuggestion setDestinationUri(java.lang.String destinationUri) {
+    this.destinationUri = destinationUri;
+    return this;
+  }
+
+  /**
    * The document data snippet in the suggestion. Only a subset of fields will be populated.
    * @return value or {@code null} for none
    */
@@ -105,6 +143,40 @@ public final class GoogleCloudDiscoveryengineV1alphaAdvancedCompleteQueryRespons
    */
   public GoogleCloudDiscoveryengineV1alphaAdvancedCompleteQueryResponseContentSuggestion setDocument(GoogleCloudDiscoveryengineV1alphaDocument document) {
     this.document = document;
+    return this;
+  }
+
+  /**
+   * The icon uri of the content suggestion.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIconUri() {
+    return iconUri;
+  }
+
+  /**
+   * The icon uri of the content suggestion.
+   * @param iconUri iconUri or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaAdvancedCompleteQueryResponseContentSuggestion setIconUri(java.lang.String iconUri) {
+    this.iconUri = iconUri;
+    return this;
+  }
+
+  /**
+   * The score of each suggestion. The score is in the range of [0, 1].
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getScore() {
+    return score;
+  }
+
+  /**
+   * The score of each suggestion. The score is in the range of [0, 1].
+   * @param score score or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaAdvancedCompleteQueryResponseContentSuggestion setScore(java.lang.Double score) {
+    this.score = score;
     return this;
   }
 

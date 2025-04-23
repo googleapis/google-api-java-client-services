@@ -30,9 +30,7 @@ package com.google.api.services.discoveryengine.v1beta.model;
 public final class GoogleCloudDiscoveryengineV1betaRecrawlUrisRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Full resource name of the SiteCredential, such as
-   * `projects/locations/collections/dataStores/siteSearchEngine/siteCredentials`. Only set to crawl
-   * private URIs.
+   * Optional. Credential id to use for crawling.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,9 +45,7 @@ public final class GoogleCloudDiscoveryengineV1betaRecrawlUrisRequest extends co
   private java.util.List<java.lang.String> uris;
 
   /**
-   * Optional. Full resource name of the SiteCredential, such as
-   * `projects/locations/collections/dataStores/siteSearchEngine/siteCredentials`. Only set to crawl
-   * private URIs.
+   * Optional. Credential id to use for crawling.
    * @return value or {@code null} for none
    */
   public java.lang.String getSiteCredential() {
@@ -57,9 +53,7 @@ public final class GoogleCloudDiscoveryengineV1betaRecrawlUrisRequest extends co
   }
 
   /**
-   * Optional. Full resource name of the SiteCredential, such as
-   * `projects/locations/collections/dataStores/siteSearchEngine/siteCredentials`. Only set to crawl
-   * private URIs.
+   * Optional. Credential id to use for crawling.
    * @param siteCredential siteCredential or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaRecrawlUrisRequest setSiteCredential(java.lang.String siteCredential) {

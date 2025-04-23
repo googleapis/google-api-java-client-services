@@ -45,7 +45,9 @@ public final class GoogleCloudDiscoveryengineV1betaRankingRecord extends com.goo
   private java.lang.String id;
 
   /**
-   * The score of this record based on the given query and selected model.
+   * The score of this record based on the given query and selected model. The score will be rounded
+   * to 2 decimal places. If the score is close to 0, it will be rounded to 0.0001 to avoid
+   * returning unset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,7 +98,9 @@ public final class GoogleCloudDiscoveryengineV1betaRankingRecord extends com.goo
   }
 
   /**
-   * The score of this record based on the given query and selected model.
+   * The score of this record based on the given query and selected model. The score will be rounded
+   * to 2 decimal places. If the score is close to 0, it will be rounded to 0.0001 to avoid
+   * returning unset.
    * @return value or {@code null} for none
    */
   public java.lang.Float getScore() {
@@ -104,7 +108,9 @@ public final class GoogleCloudDiscoveryengineV1betaRankingRecord extends com.goo
   }
 
   /**
-   * The score of this record based on the given query and selected model.
+   * The score of this record based on the given query and selected model. The score will be rounded
+   * to 2 decimal places. If the score is close to 0, it will be rounded to 0.0001 to avoid
+   * returning unset.
    * @param score score or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaRankingRecord setScore(java.lang.Float score) {

@@ -30,6 +30,19 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 public final class GoogleCloudDiscoveryengineV1alphaSearchResponseSummarySummaryWithMetadata extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Store multimodal data for answer enhancement.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDiscoveryengineV1alphaSearchResponseSummaryBlobAttachment> blobAttachments;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudDiscoveryengineV1alphaSearchResponseSummaryBlobAttachment used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudDiscoveryengineV1alphaSearchResponseSummaryBlobAttachment.class);
+  }
+
+  /**
    * Citation metadata for given summary.
    * The value may be {@code null}.
    */
@@ -55,6 +68,23 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchResponseSummarySummary
    */
   @com.google.api.client.util.Key
   private java.lang.String summary;
+
+  /**
+   * Output only. Store multimodal data for answer enhancement.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDiscoveryengineV1alphaSearchResponseSummaryBlobAttachment> getBlobAttachments() {
+    return blobAttachments;
+  }
+
+  /**
+   * Output only. Store multimodal data for answer enhancement.
+   * @param blobAttachments blobAttachments or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaSearchResponseSummarySummaryWithMetadata setBlobAttachments(java.util.List<GoogleCloudDiscoveryengineV1alphaSearchResponseSummaryBlobAttachment> blobAttachments) {
+    this.blobAttachments = blobAttachments;
+    return this;
+  }
 
   /**
    * Citation metadata for given summary.

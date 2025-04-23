@@ -35,12 +35,12 @@ public final class GoogleCloudDiscoveryengineV1alphaRecommendRequest extends com
    * `(filter_tags: ANY("Red", "Blue") OR filter_tags: ANY("Hot", "Cold"))` * `(filter_tags:
    * ANY("Red", "Blue")) AND NOT (filter_tags: ANY("Green"))` If `attributeFilteringSyntax` is set
    * to true under the `params` field, then attribute-based expressions are expected instead of the
-   * above described tag-based syntax. Examples: * (launguage: ANY("en", "es")) AND NOT (categories:
-   * ANY("Movie")) * (available: true) AND (launguage: ANY("en", "es")) OR (categories:
-   * ANY("Movie")) If your filter blocks all results, the API returns generic (unfiltered) popular
-   * Documents. If you only want results strictly matching the filters, set `strictFiltering` to
-   * `true` in RecommendRequest.params to receive empty results instead. Note that the API never
-   * returns Documents with `storageStatus` as `EXPIRED` or `DELETED` regardless of filter choices.
+   * above described tag-based syntax. Examples: * (language: ANY("en", "es")) AND NOT (categories:
+   * ANY("Movie")) * (available: true) AND (language: ANY("en", "es")) OR (categories: ANY("Movie"))
+   * If your filter blocks all results, the API returns generic (unfiltered) popular Documents. If
+   * you only want results strictly matching the filters, set `strictFiltering` to `true` in
+   * RecommendRequest.params to receive empty results instead. Note that the API never returns
+   * Documents with `storageStatus` as `EXPIRED` or `DELETED` regardless of filter choices.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -118,12 +118,12 @@ public final class GoogleCloudDiscoveryengineV1alphaRecommendRequest extends com
    * `(filter_tags: ANY("Red", "Blue") OR filter_tags: ANY("Hot", "Cold"))` * `(filter_tags:
    * ANY("Red", "Blue")) AND NOT (filter_tags: ANY("Green"))` If `attributeFilteringSyntax` is set
    * to true under the `params` field, then attribute-based expressions are expected instead of the
-   * above described tag-based syntax. Examples: * (launguage: ANY("en", "es")) AND NOT (categories:
-   * ANY("Movie")) * (available: true) AND (launguage: ANY("en", "es")) OR (categories:
-   * ANY("Movie")) If your filter blocks all results, the API returns generic (unfiltered) popular
-   * Documents. If you only want results strictly matching the filters, set `strictFiltering` to
-   * `true` in RecommendRequest.params to receive empty results instead. Note that the API never
-   * returns Documents with `storageStatus` as `EXPIRED` or `DELETED` regardless of filter choices.
+   * above described tag-based syntax. Examples: * (language: ANY("en", "es")) AND NOT (categories:
+   * ANY("Movie")) * (available: true) AND (language: ANY("en", "es")) OR (categories: ANY("Movie"))
+   * If your filter blocks all results, the API returns generic (unfiltered) popular Documents. If
+   * you only want results strictly matching the filters, set `strictFiltering` to `true` in
+   * RecommendRequest.params to receive empty results instead. Note that the API never returns
+   * Documents with `storageStatus` as `EXPIRED` or `DELETED` regardless of filter choices.
    * @return value or {@code null} for none
    */
   public java.lang.String getFilter() {
@@ -136,12 +136,12 @@ public final class GoogleCloudDiscoveryengineV1alphaRecommendRequest extends com
    * `(filter_tags: ANY("Red", "Blue") OR filter_tags: ANY("Hot", "Cold"))` * `(filter_tags:
    * ANY("Red", "Blue")) AND NOT (filter_tags: ANY("Green"))` If `attributeFilteringSyntax` is set
    * to true under the `params` field, then attribute-based expressions are expected instead of the
-   * above described tag-based syntax. Examples: * (launguage: ANY("en", "es")) AND NOT (categories:
-   * ANY("Movie")) * (available: true) AND (launguage: ANY("en", "es")) OR (categories:
-   * ANY("Movie")) If your filter blocks all results, the API returns generic (unfiltered) popular
-   * Documents. If you only want results strictly matching the filters, set `strictFiltering` to
-   * `true` in RecommendRequest.params to receive empty results instead. Note that the API never
-   * returns Documents with `storageStatus` as `EXPIRED` or `DELETED` regardless of filter choices.
+   * above described tag-based syntax. Examples: * (language: ANY("en", "es")) AND NOT (categories:
+   * ANY("Movie")) * (available: true) AND (language: ANY("en", "es")) OR (categories: ANY("Movie"))
+   * If your filter blocks all results, the API returns generic (unfiltered) popular Documents. If
+   * you only want results strictly matching the filters, set `strictFiltering` to `true` in
+   * RecommendRequest.params to receive empty results instead. Note that the API never returns
+   * Documents with `storageStatus` as `EXPIRED` or `DELETED` regardless of filter choices.
    * @param filter filter or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaRecommendRequest setFilter(java.lang.String filter) {

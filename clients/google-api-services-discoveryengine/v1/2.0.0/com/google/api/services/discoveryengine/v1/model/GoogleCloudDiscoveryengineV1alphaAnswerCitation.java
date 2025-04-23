@@ -30,7 +30,9 @@ package com.google.api.services.discoveryengine.v1.model;
 public final class GoogleCloudDiscoveryengineV1alphaAnswerCitation extends com.google.api.client.json.GenericJson {
 
   /**
-   * End of the attributed segment, exclusive.
+   * End of the attributed segment, exclusive. Measured in bytes (UTF-8 unicode). If there are
+   * multi-byte characters,such as non-ASCII characters, the index measurement is longer than the
+   * string length.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -44,14 +46,18 @@ public final class GoogleCloudDiscoveryengineV1alphaAnswerCitation extends com.g
   private java.util.List<GoogleCloudDiscoveryengineV1alphaAnswerCitationSource> sources;
 
   /**
-   * Index indicates the start of the segment, measured in bytes (UTF-8 unicode).
+   * Index indicates the start of the segment, measured in bytes (UTF-8 unicode). If there are
+   * multi-byte characters,such as non-ASCII characters, the index measurement is longer than the
+   * string length.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long startIndex;
 
   /**
-   * End of the attributed segment, exclusive.
+   * End of the attributed segment, exclusive. Measured in bytes (UTF-8 unicode). If there are
+   * multi-byte characters,such as non-ASCII characters, the index measurement is longer than the
+   * string length.
    * @return value or {@code null} for none
    */
   public java.lang.Long getEndIndex() {
@@ -59,7 +65,9 @@ public final class GoogleCloudDiscoveryengineV1alphaAnswerCitation extends com.g
   }
 
   /**
-   * End of the attributed segment, exclusive.
+   * End of the attributed segment, exclusive. Measured in bytes (UTF-8 unicode). If there are
+   * multi-byte characters,such as non-ASCII characters, the index measurement is longer than the
+   * string length.
    * @param endIndex endIndex or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaAnswerCitation setEndIndex(java.lang.Long endIndex) {
@@ -85,7 +93,9 @@ public final class GoogleCloudDiscoveryengineV1alphaAnswerCitation extends com.g
   }
 
   /**
-   * Index indicates the start of the segment, measured in bytes (UTF-8 unicode).
+   * Index indicates the start of the segment, measured in bytes (UTF-8 unicode). If there are
+   * multi-byte characters,such as non-ASCII characters, the index measurement is longer than the
+   * string length.
    * @return value or {@code null} for none
    */
   public java.lang.Long getStartIndex() {
@@ -93,7 +103,9 @@ public final class GoogleCloudDiscoveryengineV1alphaAnswerCitation extends com.g
   }
 
   /**
-   * Index indicates the start of the segment, measured in bytes (UTF-8 unicode).
+   * Index indicates the start of the segment, measured in bytes (UTF-8 unicode). If there are
+   * multi-byte characters,such as non-ASCII characters, the index measurement is longer than the
+   * string length.
    * @param startIndex startIndex or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaAnswerCitation setStartIndex(java.lang.Long startIndex) {

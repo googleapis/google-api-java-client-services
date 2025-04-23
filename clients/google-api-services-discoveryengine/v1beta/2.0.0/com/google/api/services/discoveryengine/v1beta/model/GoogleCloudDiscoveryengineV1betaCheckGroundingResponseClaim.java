@@ -48,7 +48,11 @@ public final class GoogleCloudDiscoveryengineV1betaCheckGroundingResponseClaim e
   private java.lang.String claimText;
 
   /**
-   * Position indicating the end of the claim in the answer candidate, exclusive.
+   * Position indicating the end of the claim in the answer candidate, exclusive, in bytes. Note
+   * that this is not measured in characters and, therefore, must be rendered as such. For example,
+   * if the claim text contains non-ASCII characters, the start and end positions vary when measured
+   * in characters (programming-language-dependent) and when measured in bytes (programming-
+   * language-independent).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,15 +61,27 @@ public final class GoogleCloudDiscoveryengineV1betaCheckGroundingResponseClaim e
   /**
    * Indicates that this claim required grounding check. When the system decided this claim doesn't
    * require attribution/grounding check, this field will be set to false. In that case, no
-   * grounding check was done for the claim and therefore citation_indices, anti_citation_indices,
-   * and score should not be returned.
+   * grounding check was done for the claim and therefore citation_indices should not be returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean groundingCheckRequired;
 
   /**
-   * Position indicating the start of the claim in the answer candidate, measured in bytes.
+   * Confidence score for the claim in the answer candidate, in the range of [0, 1]. This is set
+   * only when enable_claim_level_score is true.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double score;
+
+  /**
+   * Position indicating the start of the claim in the answer candidate, measured in bytes. Note
+   * that this is not measured in characters and, therefore, must be rendered in the user interface
+   * keeping in mind that some characters may take more than one byte. For example, if the claim
+   * text contains non-ASCII characters, the start and end positions vary when measured in
+   * characters (programming-language-dependent) and when measured in bytes (programming-language-
+   * independent).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -114,7 +130,11 @@ public final class GoogleCloudDiscoveryengineV1betaCheckGroundingResponseClaim e
   }
 
   /**
-   * Position indicating the end of the claim in the answer candidate, exclusive.
+   * Position indicating the end of the claim in the answer candidate, exclusive, in bytes. Note
+   * that this is not measured in characters and, therefore, must be rendered as such. For example,
+   * if the claim text contains non-ASCII characters, the start and end positions vary when measured
+   * in characters (programming-language-dependent) and when measured in bytes (programming-
+   * language-independent).
    * @return value or {@code null} for none
    */
   public java.lang.Integer getEndPos() {
@@ -122,7 +142,11 @@ public final class GoogleCloudDiscoveryengineV1betaCheckGroundingResponseClaim e
   }
 
   /**
-   * Position indicating the end of the claim in the answer candidate, exclusive.
+   * Position indicating the end of the claim in the answer candidate, exclusive, in bytes. Note
+   * that this is not measured in characters and, therefore, must be rendered as such. For example,
+   * if the claim text contains non-ASCII characters, the start and end positions vary when measured
+   * in characters (programming-language-dependent) and when measured in bytes (programming-
+   * language-independent).
    * @param endPos endPos or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaCheckGroundingResponseClaim setEndPos(java.lang.Integer endPos) {
@@ -133,8 +157,7 @@ public final class GoogleCloudDiscoveryengineV1betaCheckGroundingResponseClaim e
   /**
    * Indicates that this claim required grounding check. When the system decided this claim doesn't
    * require attribution/grounding check, this field will be set to false. In that case, no
-   * grounding check was done for the claim and therefore citation_indices, anti_citation_indices,
-   * and score should not be returned.
+   * grounding check was done for the claim and therefore citation_indices should not be returned.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getGroundingCheckRequired() {
@@ -144,8 +167,7 @@ public final class GoogleCloudDiscoveryengineV1betaCheckGroundingResponseClaim e
   /**
    * Indicates that this claim required grounding check. When the system decided this claim doesn't
    * require attribution/grounding check, this field will be set to false. In that case, no
-   * grounding check was done for the claim and therefore citation_indices, anti_citation_indices,
-   * and score should not be returned.
+   * grounding check was done for the claim and therefore citation_indices should not be returned.
    * @param groundingCheckRequired groundingCheckRequired or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaCheckGroundingResponseClaim setGroundingCheckRequired(java.lang.Boolean groundingCheckRequired) {
@@ -154,7 +176,31 @@ public final class GoogleCloudDiscoveryengineV1betaCheckGroundingResponseClaim e
   }
 
   /**
-   * Position indicating the start of the claim in the answer candidate, measured in bytes.
+   * Confidence score for the claim in the answer candidate, in the range of [0, 1]. This is set
+   * only when enable_claim_level_score is true.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getScore() {
+    return score;
+  }
+
+  /**
+   * Confidence score for the claim in the answer candidate, in the range of [0, 1]. This is set
+   * only when enable_claim_level_score is true.
+   * @param score score or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaCheckGroundingResponseClaim setScore(java.lang.Double score) {
+    this.score = score;
+    return this;
+  }
+
+  /**
+   * Position indicating the start of the claim in the answer candidate, measured in bytes. Note
+   * that this is not measured in characters and, therefore, must be rendered in the user interface
+   * keeping in mind that some characters may take more than one byte. For example, if the claim
+   * text contains non-ASCII characters, the start and end positions vary when measured in
+   * characters (programming-language-dependent) and when measured in bytes (programming-language-
+   * independent).
    * @return value or {@code null} for none
    */
   public java.lang.Integer getStartPos() {
@@ -162,7 +208,12 @@ public final class GoogleCloudDiscoveryengineV1betaCheckGroundingResponseClaim e
   }
 
   /**
-   * Position indicating the start of the claim in the answer candidate, measured in bytes.
+   * Position indicating the start of the claim in the answer candidate, measured in bytes. Note
+   * that this is not measured in characters and, therefore, must be rendered in the user interface
+   * keeping in mind that some characters may take more than one byte. For example, if the claim
+   * text contains non-ASCII characters, the start and end positions vary when measured in
+   * characters (programming-language-dependent) and when measured in bytes (programming-language-
+   * independent).
    * @param startPos startPos or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaCheckGroundingResponseClaim setStartPos(java.lang.Integer startPos) {

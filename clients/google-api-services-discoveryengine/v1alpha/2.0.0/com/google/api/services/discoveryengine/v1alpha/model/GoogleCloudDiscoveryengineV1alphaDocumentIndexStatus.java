@@ -46,6 +46,14 @@ public final class GoogleCloudDiscoveryengineV1alphaDocumentIndexStatus extends 
   private String indexTime;
 
   /**
+   * Immutable. The message indicates the document index is in progress. If this field is populated,
+   * the document index is pending.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String pendingMessage;
+
+  /**
    * A sample of errors encountered while indexing the document. If this field is populated, the
    * document is not indexed due to errors.
    * @return value or {@code null} for none
@@ -80,6 +88,25 @@ public final class GoogleCloudDiscoveryengineV1alphaDocumentIndexStatus extends 
    */
   public GoogleCloudDiscoveryengineV1alphaDocumentIndexStatus setIndexTime(String indexTime) {
     this.indexTime = indexTime;
+    return this;
+  }
+
+  /**
+   * Immutable. The message indicates the document index is in progress. If this field is populated,
+   * the document index is pending.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPendingMessage() {
+    return pendingMessage;
+  }
+
+  /**
+   * Immutable. The message indicates the document index is in progress. If this field is populated,
+   * the document index is pending.
+   * @param pendingMessage pendingMessage or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaDocumentIndexStatus setPendingMessage(java.lang.String pendingMessage) {
+    this.pendingMessage = pendingMessage;
     return this;
   }
 

@@ -53,7 +53,7 @@ public final class GoogleCloudDiscoveryengineV1betaSearchResponseSearchResult ex
   private java.lang.String id;
 
   /**
-   * Google provided available scores.
+   * Output only. Google provided available scores.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -121,7 +121,7 @@ public final class GoogleCloudDiscoveryengineV1betaSearchResponseSearchResult ex
   }
 
   /**
-   * Google provided available scores.
+   * Output only. Google provided available scores.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, GoogleCloudDiscoveryengineV1betaDoubleList> getModelScores() {
@@ -129,7 +129,7 @@ public final class GoogleCloudDiscoveryengineV1betaSearchResponseSearchResult ex
   }
 
   /**
-   * Google provided available scores.
+   * Output only. Google provided available scores.
    * @param modelScores modelScores or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaSearchResponseSearchResult setModelScores(java.util.Map<String, GoogleCloudDiscoveryengineV1betaDoubleList> modelScores) {

@@ -37,6 +37,13 @@ public final class GoogleCloudDiscoveryengineV1betaAdvancedCompleteQueryResponse
   private String recentSearchTime;
 
   /**
+   * The score of each suggestion. The score is in the range of [0, 1].
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double score;
+
+  /**
    * The suggestion for the query.
    * The value may be {@code null}.
    */
@@ -57,6 +64,23 @@ public final class GoogleCloudDiscoveryengineV1betaAdvancedCompleteQueryResponse
    */
   public GoogleCloudDiscoveryengineV1betaAdvancedCompleteQueryResponseRecentSearchSuggestion setRecentSearchTime(String recentSearchTime) {
     this.recentSearchTime = recentSearchTime;
+    return this;
+  }
+
+  /**
+   * The score of each suggestion. The score is in the range of [0, 1].
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getScore() {
+    return score;
+  }
+
+  /**
+   * The score of each suggestion. The score is in the range of [0, 1].
+   * @param score score or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaAdvancedCompleteQueryResponseRecentSearchSuggestion setScore(java.lang.Double score) {
+    this.score = score;
     return this;
   }
 

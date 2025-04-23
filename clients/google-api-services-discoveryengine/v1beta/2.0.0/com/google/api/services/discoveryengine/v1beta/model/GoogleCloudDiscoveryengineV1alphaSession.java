@@ -30,11 +30,27 @@ package com.google.api.services.discoveryengine.v1beta.model;
 public final class GoogleCloudDiscoveryengineV1alphaSession extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The display name of the session. This field is used to identify the session in the
+   * UI. By default, the display name is the first turn query text in the session.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String displayName;
+
+  /**
    * Output only. The time the session finished.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String endTime;
+
+  /**
+   * Optional. Whether the session is pinned, pinned session will be displayed on the top of the
+   * session list.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isPinned;
 
   /**
    * Immutable. Fully qualified name
@@ -73,6 +89,25 @@ public final class GoogleCloudDiscoveryengineV1alphaSession extends com.google.a
   private java.lang.String userPseudoId;
 
   /**
+   * Optional. The display name of the session. This field is used to identify the session in the
+   * UI. By default, the display name is the first turn query text in the session.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDisplayName() {
+    return displayName;
+  }
+
+  /**
+   * Optional. The display name of the session. This field is used to identify the session in the
+   * UI. By default, the display name is the first turn query text in the session.
+   * @param displayName displayName or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaSession setDisplayName(java.lang.String displayName) {
+    this.displayName = displayName;
+    return this;
+  }
+
+  /**
    * Output only. The time the session finished.
    * @return value or {@code null} for none
    */
@@ -86,6 +121,25 @@ public final class GoogleCloudDiscoveryengineV1alphaSession extends com.google.a
    */
   public GoogleCloudDiscoveryengineV1alphaSession setEndTime(String endTime) {
     this.endTime = endTime;
+    return this;
+  }
+
+  /**
+   * Optional. Whether the session is pinned, pinned session will be displayed on the top of the
+   * session list.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsPinned() {
+    return isPinned;
+  }
+
+  /**
+   * Optional. Whether the session is pinned, pinned session will be displayed on the top of the
+   * session list.
+   * @param isPinned isPinned or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaSession setIsPinned(java.lang.Boolean isPinned) {
+    this.isPinned = isPinned;
     return this;
   }
 

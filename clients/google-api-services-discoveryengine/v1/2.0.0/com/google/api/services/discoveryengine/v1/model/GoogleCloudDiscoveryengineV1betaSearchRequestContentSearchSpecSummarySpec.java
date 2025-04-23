@@ -114,6 +114,13 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpe
   private GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpecModelSpec modelSpec;
 
   /**
+   * Optional. Multimodal specification.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpecMultiModalSpec multimodalSpec;
+
+  /**
    * The number of top results to generate the summary from. If the number of results returned is
    * less than `summaryResultCount`, the summary is generated from all of the results. At most 10
    * results for documents mode, or 50 for chunks mode, can be used to generate a summary. The
@@ -322,6 +329,23 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpe
    */
   public GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpec setModelSpec(GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpecModelSpec modelSpec) {
     this.modelSpec = modelSpec;
+    return this;
+  }
+
+  /**
+   * Optional. Multimodal specification.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpecMultiModalSpec getMultimodalSpec() {
+    return multimodalSpec;
+  }
+
+  /**
+   * Optional. Multimodal specification.
+   * @param multimodalSpec multimodalSpec or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpec setMultimodalSpec(GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpecMultiModalSpec multimodalSpec) {
+    this.multimodalSpec = multimodalSpec;
     return this;
   }
 

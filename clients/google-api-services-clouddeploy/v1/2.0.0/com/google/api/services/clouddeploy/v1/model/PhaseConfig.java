@@ -71,7 +71,7 @@ public final class PhaseConfig extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> profiles;
 
   /**
-   * Optional. Whether to run verify tests after the deployment.
+   * Optional. Whether to run verify tests after the deployment via `skaffold verify`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -175,7 +175,7 @@ public final class PhaseConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Whether to run verify tests after the deployment.
+   * Optional. Whether to run verify tests after the deployment via `skaffold verify`.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getVerify() {
@@ -183,7 +183,7 @@ public final class PhaseConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Whether to run verify tests after the deployment.
+   * Optional. Whether to run verify tests after the deployment via `skaffold verify`.
    * @param verify verify or {@code null} for none
    */
   public PhaseConfig setVerify(java.lang.Boolean verify) {

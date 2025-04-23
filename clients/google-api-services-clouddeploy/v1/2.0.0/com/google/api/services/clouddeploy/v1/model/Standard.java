@@ -46,7 +46,7 @@ public final class Standard extends com.google.api.client.json.GenericJson {
   private Predeploy predeploy;
 
   /**
-   * Optional. Whether to verify a deployment.
+   * Optional. Whether to verify a deployment via `skaffold verify`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,7 +91,7 @@ public final class Standard extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Whether to verify a deployment.
+   * Optional. Whether to verify a deployment via `skaffold verify`.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getVerify() {
@@ -99,7 +99,7 @@ public final class Standard extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Whether to verify a deployment.
+   * Optional. Whether to verify a deployment via `skaffold verify`.
    * @param verify verify or {@code null} for none
    */
   public Standard setVerify(java.lang.Boolean verify) {

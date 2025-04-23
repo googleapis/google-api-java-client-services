@@ -61,7 +61,7 @@ public final class DeployPolicy extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * The weak etag of the `Automation` resource. This checksum is computed by the server based on
+   * The weak etag of the `DeployPolicy` resource. This checksum is computed by the server based on
    * the value of other fields, and may be sent on update and delete requests to ensure the client
    * has an up-to-date value before proceeding.
    * The value may be {@code null}.
@@ -199,7 +199,7 @@ public final class DeployPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The weak etag of the `Automation` resource. This checksum is computed by the server based on
+   * The weak etag of the `DeployPolicy` resource. This checksum is computed by the server based on
    * the value of other fields, and may be sent on update and delete requests to ensure the client
    * has an up-to-date value before proceeding.
    * @return value or {@code null} for none
@@ -209,7 +209,7 @@ public final class DeployPolicy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The weak etag of the `Automation` resource. This checksum is computed by the server based on
+   * The weak etag of the `DeployPolicy` resource. This checksum is computed by the server based on
    * the value of other fields, and may be sent on update and delete requests to ensure the client
    * has an up-to-date value before proceeding.
    * @param etag etag or {@code null} for none

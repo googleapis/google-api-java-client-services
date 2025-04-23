@@ -44,6 +44,13 @@ public final class GoogleCloudChannelV1alpha1OpportunityEvent extends com.google
   private java.lang.String opportunity;
 
   /**
+   * Resource name of the partner. Format: partners/{partner}
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String partner;
+
+  /**
    * Type of event which happened for the opportunity.
    * @return value or {@code null} for none
    */
@@ -74,6 +81,23 @@ public final class GoogleCloudChannelV1alpha1OpportunityEvent extends com.google
    */
   public GoogleCloudChannelV1alpha1OpportunityEvent setOpportunity(java.lang.String opportunity) {
     this.opportunity = opportunity;
+    return this;
+  }
+
+  /**
+   * Resource name of the partner. Format: partners/{partner}
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPartner() {
+    return partner;
+  }
+
+  /**
+   * Resource name of the partner. Format: partners/{partner}
+   * @param partner partner or {@code null} for none
+   */
+  public GoogleCloudChannelV1alpha1OpportunityEvent setPartner(java.lang.String partner) {
+    this.partner = partner;
     return this;
   }
 

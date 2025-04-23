@@ -85,8 +85,8 @@ public final class Enrollment extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Required. Resource name of the message bus identifying the source of the messages. It matches
-   * the form projects/{project}/locations/{location}/messageBuses/{messageBus}.
+   * Required. Immutable. Resource name of the message bus identifying the source of the messages.
+   * It matches the form projects/{project}/locations/{location}/messageBuses/{messageBus}.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -243,8 +243,8 @@ public final class Enrollment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Resource name of the message bus identifying the source of the messages. It matches
-   * the form projects/{project}/locations/{location}/messageBuses/{messageBus}.
+   * Required. Immutable. Resource name of the message bus identifying the source of the messages.
+   * It matches the form projects/{project}/locations/{location}/messageBuses/{messageBus}.
    * @return value or {@code null} for none
    */
   public java.lang.String getMessageBus() {
@@ -252,8 +252,8 @@ public final class Enrollment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Resource name of the message bus identifying the source of the messages. It matches
-   * the form projects/{project}/locations/{location}/messageBuses/{messageBus}.
+   * Required. Immutable. Resource name of the message bus identifying the source of the messages.
+   * It matches the form projects/{project}/locations/{location}/messageBuses/{messageBus}.
    * @param messageBus messageBus or {@code null} for none
    */
   public Enrollment setMessageBus(java.lang.String messageBus) {

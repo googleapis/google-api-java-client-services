@@ -73,6 +73,13 @@ public final class GoogleCloudAiplatformV1beta1GenerateContentResponseUsageMetad
   private java.util.List<GoogleCloudAiplatformV1beta1ModalityTokenCount> promptTokensDetails;
 
   /**
+   * Output only. Number of tokens present in thoughts output.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer thoughtsTokenCount;
+
+  /**
    * Output only. Number of tokens present in tool-use prompt(s).
    * The value may be {@code null}.
    */
@@ -92,6 +99,14 @@ public final class GoogleCloudAiplatformV1beta1GenerateContentResponseUsageMetad
    */
   @com.google.api.client.util.Key
   private java.lang.Integer totalTokenCount;
+
+  /**
+   * Output only. Traffic type. This shows whether a request consumes Pay-As-You-Go or Provisioned
+   * Throughput quota.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String trafficType;
 
   /**
    * Output only. List of modalities of the cached content in the request input.
@@ -198,6 +213,23 @@ public final class GoogleCloudAiplatformV1beta1GenerateContentResponseUsageMetad
   }
 
   /**
+   * Output only. Number of tokens present in thoughts output.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getThoughtsTokenCount() {
+    return thoughtsTokenCount;
+  }
+
+  /**
+   * Output only. Number of tokens present in thoughts output.
+   * @param thoughtsTokenCount thoughtsTokenCount or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GenerateContentResponseUsageMetadata setThoughtsTokenCount(java.lang.Integer thoughtsTokenCount) {
+    this.thoughtsTokenCount = thoughtsTokenCount;
+    return this;
+  }
+
+  /**
    * Output only. Number of tokens present in tool-use prompt(s).
    * @return value or {@code null} for none
    */
@@ -245,6 +277,25 @@ public final class GoogleCloudAiplatformV1beta1GenerateContentResponseUsageMetad
    */
   public GoogleCloudAiplatformV1beta1GenerateContentResponseUsageMetadata setTotalTokenCount(java.lang.Integer totalTokenCount) {
     this.totalTokenCount = totalTokenCount;
+    return this;
+  }
+
+  /**
+   * Output only. Traffic type. This shows whether a request consumes Pay-As-You-Go or Provisioned
+   * Throughput quota.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTrafficType() {
+    return trafficType;
+  }
+
+  /**
+   * Output only. Traffic type. This shows whether a request consumes Pay-As-You-Go or Provisioned
+   * Throughput quota.
+   * @param trafficType trafficType or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GenerateContentResponseUsageMetadata setTrafficType(java.lang.String trafficType) {
+    this.trafficType = trafficType;
     return this;
   }
 

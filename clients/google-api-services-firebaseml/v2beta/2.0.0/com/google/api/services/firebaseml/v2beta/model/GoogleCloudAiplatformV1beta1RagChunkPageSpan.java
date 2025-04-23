@@ -17,7 +17,7 @@
 package com.google.api.services.firebaseml.v2beta.model;
 
 /**
- * The speech generation config.
+ * Represents where the chunk starts and ends in the document.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase ML API. For a detailed explanation see:
@@ -27,64 +27,64 @@ package com.google.api.services.firebaseml.v2beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudAiplatformV1beta1SpeechConfig extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1beta1RagChunkPageSpan extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Language code (ISO 639. e.g. en-US) for the speech synthesization.
+   * Page where chunk starts in the document. Inclusive. 1-indexed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String languageCode;
+  private java.lang.Integer firstPage;
 
   /**
-   * The configuration for the speaker to use.
+   * Page where chunk ends in the document. Inclusive. 1-indexed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleCloudAiplatformV1beta1VoiceConfig voiceConfig;
+  private java.lang.Integer lastPage;
 
   /**
-   * Optional. Language code (ISO 639. e.g. en-US) for the speech synthesization.
+   * Page where chunk starts in the document. Inclusive. 1-indexed.
    * @return value or {@code null} for none
    */
-  public java.lang.String getLanguageCode() {
-    return languageCode;
+  public java.lang.Integer getFirstPage() {
+    return firstPage;
   }
 
   /**
-   * Optional. Language code (ISO 639. e.g. en-US) for the speech synthesization.
-   * @param languageCode languageCode or {@code null} for none
+   * Page where chunk starts in the document. Inclusive. 1-indexed.
+   * @param firstPage firstPage or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1SpeechConfig setLanguageCode(java.lang.String languageCode) {
-    this.languageCode = languageCode;
+  public GoogleCloudAiplatformV1beta1RagChunkPageSpan setFirstPage(java.lang.Integer firstPage) {
+    this.firstPage = firstPage;
     return this;
   }
 
   /**
-   * The configuration for the speaker to use.
+   * Page where chunk ends in the document. Inclusive. 1-indexed.
    * @return value or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1VoiceConfig getVoiceConfig() {
-    return voiceConfig;
+  public java.lang.Integer getLastPage() {
+    return lastPage;
   }
 
   /**
-   * The configuration for the speaker to use.
-   * @param voiceConfig voiceConfig or {@code null} for none
+   * Page where chunk ends in the document. Inclusive. 1-indexed.
+   * @param lastPage lastPage or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1SpeechConfig setVoiceConfig(GoogleCloudAiplatformV1beta1VoiceConfig voiceConfig) {
-    this.voiceConfig = voiceConfig;
+  public GoogleCloudAiplatformV1beta1RagChunkPageSpan setLastPage(java.lang.Integer lastPage) {
+    this.lastPage = lastPage;
     return this;
   }
 
   @Override
-  public GoogleCloudAiplatformV1beta1SpeechConfig set(String fieldName, Object value) {
-    return (GoogleCloudAiplatformV1beta1SpeechConfig) super.set(fieldName, value);
+  public GoogleCloudAiplatformV1beta1RagChunkPageSpan set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1beta1RagChunkPageSpan) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudAiplatformV1beta1SpeechConfig clone() {
-    return (GoogleCloudAiplatformV1beta1SpeechConfig) super.clone();
+  public GoogleCloudAiplatformV1beta1RagChunkPageSpan clone() {
+    return (GoogleCloudAiplatformV1beta1RagChunkPageSpan) super.clone();
   }
 
 }

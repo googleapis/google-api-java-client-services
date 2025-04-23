@@ -32,12 +32,20 @@ package com.google.api.services.firebaseml.v2beta.model;
 public final class GoogleCloudAiplatformV1beta1FunctionCall extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Required. The function parameters and values in JSON object format. See
+   * Optional. The function parameters and values in JSON object format. See
    * [FunctionDeclaration.parameters] for parameter details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> args;
+
+  /**
+   * Optional. The unique id of the function call. If populated, the client to execute the
+   * `function_call` and return the response with the matching `id`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String id;
 
   /**
    * Required. The name of the function to call. Matches [FunctionDeclaration.name].
@@ -47,7 +55,7 @@ public final class GoogleCloudAiplatformV1beta1FunctionCall extends com.google.a
   private java.lang.String name;
 
   /**
-   * Optional. Required. The function parameters and values in JSON object format. See
+   * Optional. The function parameters and values in JSON object format. See
    * [FunctionDeclaration.parameters] for parameter details.
    * @return value or {@code null} for none
    */
@@ -56,12 +64,31 @@ public final class GoogleCloudAiplatformV1beta1FunctionCall extends com.google.a
   }
 
   /**
-   * Optional. Required. The function parameters and values in JSON object format. See
+   * Optional. The function parameters and values in JSON object format. See
    * [FunctionDeclaration.parameters] for parameter details.
    * @param args args or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1FunctionCall setArgs(java.util.Map<String, java.lang.Object> args) {
     this.args = args;
+    return this;
+  }
+
+  /**
+   * Optional. The unique id of the function call. If populated, the client to execute the
+   * `function_call` and return the response with the matching `id`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getId() {
+    return id;
+  }
+
+  /**
+   * Optional. The unique id of the function call. If populated, the client to execute the
+   * `function_call` and return the response with the matching `id`.
+   * @param id id or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1FunctionCall setId(java.lang.String id) {
+    this.id = id;
     return this;
   }
 

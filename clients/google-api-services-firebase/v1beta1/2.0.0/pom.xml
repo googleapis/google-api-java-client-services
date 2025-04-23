@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-firebase</artifactId>
-  <version>v1beta1-rev20250303-2.0.0</version>
-  <name>Firebase Management API v1beta1-rev20250303-2.0.0</name>
+  <version>v1beta1-rev20250331-2.0.0</version>
+  <name>Firebase Management API v1beta1-rev20250331-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

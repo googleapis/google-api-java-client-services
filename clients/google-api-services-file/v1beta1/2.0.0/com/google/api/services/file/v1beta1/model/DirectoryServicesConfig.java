@@ -17,7 +17,7 @@
 package com.google.api.services.file.v1beta1.model;
 
 /**
- * Directory Services configuration for Kerberos-based authentication.
+ * Directory Services configuration.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Filestore API. For a detailed explanation see:
@@ -30,11 +30,35 @@ package com.google.api.services.file.v1beta1.model;
 public final class DirectoryServicesConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Configuration for LDAP servers.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LdapConfig ldap;
+
+  /**
    * Configuration for Managed Service for Microsoft Active Directory.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ManagedActiveDirectoryConfig managedActiveDirectory;
+
+  /**
+   * Configuration for LDAP servers.
+   * @return value or {@code null} for none
+   */
+  public LdapConfig getLdap() {
+    return ldap;
+  }
+
+  /**
+   * Configuration for LDAP servers.
+   * @param ldap ldap or {@code null} for none
+   */
+  public DirectoryServicesConfig setLdap(LdapConfig ldap) {
+    this.ldap = ldap;
+    return this;
+  }
 
   /**
    * Configuration for Managed Service for Microsoft Active Directory.

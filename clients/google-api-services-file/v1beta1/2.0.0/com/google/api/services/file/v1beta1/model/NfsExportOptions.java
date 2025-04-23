@@ -67,6 +67,15 @@ public final class NfsExportOptions extends com.google.api.client.json.GenericJs
   private java.util.List<java.lang.String> ipRanges;
 
   /**
+   * Optional. The source VPC network for ip_ranges. Required for instances using Private Service
+   * Connect, optional otherwise. If provided, must be the same network specified in the
+   * `NetworkConfig.network` field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String network;
+
+  /**
    * The security flavors allowed for mount operations. The default is AUTH_SYS.
    * The value may be {@code null}.
    */
@@ -164,6 +173,27 @@ public final class NfsExportOptions extends com.google.api.client.json.GenericJs
    */
   public NfsExportOptions setIpRanges(java.util.List<java.lang.String> ipRanges) {
     this.ipRanges = ipRanges;
+    return this;
+  }
+
+  /**
+   * Optional. The source VPC network for ip_ranges. Required for instances using Private Service
+   * Connect, optional otherwise. If provided, must be the same network specified in the
+   * `NetworkConfig.network` field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNetwork() {
+    return network;
+  }
+
+  /**
+   * Optional. The source VPC network for ip_ranges. Required for instances using Private Service
+   * Connect, optional otherwise. If provided, must be the same network specified in the
+   * `NetworkConfig.network` field.
+   * @param network network or {@code null} for none
+   */
+  public NfsExportOptions setNetwork(java.lang.String network) {
+    this.network = network;
     return this;
   }
 

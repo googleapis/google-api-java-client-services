@@ -31,7 +31,7 @@ public final class TieringPolicy extends com.google.api.client.json.GenericJson 
 
   /**
    * Optional. Time in days to mark the volume's data block as cold and make it eligible for
-   * tiering, can be range from 7-183. Default is 31.
+   * tiering, can be range from 2-183. Default is 31.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +46,7 @@ public final class TieringPolicy extends com.google.api.client.json.GenericJson 
 
   /**
    * Optional. Time in days to mark the volume's data block as cold and make it eligible for
-   * tiering, can be range from 7-183. Default is 31.
+   * tiering, can be range from 2-183. Default is 31.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getCoolingThresholdDays() {
@@ -55,7 +55,7 @@ public final class TieringPolicy extends com.google.api.client.json.GenericJson 
 
   /**
    * Optional. Time in days to mark the volume's data block as cold and make it eligible for
-   * tiering, can be range from 7-183. Default is 31.
+   * tiering, can be range from 2-183. Default is 31.
    * @param coolingThresholdDays coolingThresholdDays or {@code null} for none
    */
   public TieringPolicy setCoolingThresholdDays(java.lang.Integer coolingThresholdDays) {

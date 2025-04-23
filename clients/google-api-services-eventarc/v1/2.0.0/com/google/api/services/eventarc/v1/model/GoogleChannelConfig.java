@@ -40,6 +40,13 @@ public final class GoogleChannelConfig extends com.google.api.client.json.Generi
   private java.lang.String cryptoKeyName;
 
   /**
+   * Optional. Resource labels.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> labels;
+
+  /**
    * Required. The resource name of the config. Must be in the format of,
    * `projects/{project}/locations/{location}/googleChannelConfig`. In API responses, the config
    * name always includes the projectID, regardless of whether the projectID or projectNumber was
@@ -72,6 +79,23 @@ public final class GoogleChannelConfig extends com.google.api.client.json.Generi
    */
   public GoogleChannelConfig setCryptoKeyName(java.lang.String cryptoKeyName) {
     this.cryptoKeyName = cryptoKeyName;
+    return this;
+  }
+
+  /**
+   * Optional. Resource labels.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getLabels() {
+    return labels;
+  }
+
+  /**
+   * Optional. Resource labels.
+   * @param labels labels or {@code null} for none
+   */
+  public GoogleChannelConfig setLabels(java.util.Map<String, java.lang.String> labels) {
+    this.labels = labels;
     return this;
   }
 

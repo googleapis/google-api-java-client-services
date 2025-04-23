@@ -38,6 +38,13 @@ public final class GoogleCloudDocumentaiV1beta3ProcessOptionsLayoutConfig extend
   private GoogleCloudDocumentaiV1beta3ProcessOptionsLayoutConfigChunkingConfig chunkingConfig;
 
   /**
+   * Optional. Whether to refine PDF layout using LLM.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableLlmLayoutParsing;
+
+  /**
    * Optional. Whether to include bounding boxes in layout parser processor response.
    * The value may be {@code null}.
    */
@@ -65,6 +72,23 @@ public final class GoogleCloudDocumentaiV1beta3ProcessOptionsLayoutConfig extend
    */
   public GoogleCloudDocumentaiV1beta3ProcessOptionsLayoutConfig setChunkingConfig(GoogleCloudDocumentaiV1beta3ProcessOptionsLayoutConfigChunkingConfig chunkingConfig) {
     this.chunkingConfig = chunkingConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Whether to refine PDF layout using LLM.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableLlmLayoutParsing() {
+    return enableLlmLayoutParsing;
+  }
+
+  /**
+   * Optional. Whether to refine PDF layout using LLM.
+   * @param enableLlmLayoutParsing enableLlmLayoutParsing or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3ProcessOptionsLayoutConfig setEnableLlmLayoutParsing(java.lang.Boolean enableLlmLayoutParsing) {
+    this.enableLlmLayoutParsing = enableLlmLayoutParsing;
     return this;
   }
 

@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-documentai</artifactId>
-  <version>v1beta3-rev20250210-2.0.0</version>
-  <name>Cloud Document AI API v1beta3-rev20250210-2.0.0</name>
+  <version>v1beta3-rev20250416-2.0.0</version>
+  <name>Cloud Document AI API v1beta3-rev20250416-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

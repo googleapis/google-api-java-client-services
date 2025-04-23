@@ -48,6 +48,13 @@ public final class GoogleCloudDocumentaiV1Document extends com.google.api.client
   private java.lang.String content;
 
   /**
+   * Optional. An internal identifier for document. Should be loggable (no PII).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String docid;
+
+  /**
    * Parsed layout of the document.
    * The value may be {@code null}.
    */
@@ -201,6 +208,23 @@ public final class GoogleCloudDocumentaiV1Document extends com.google.api.client
    */
   public GoogleCloudDocumentaiV1Document encodeContent(byte[] content) {
     this.content = com.google.api.client.util.Base64.encodeBase64URLSafeString(content);
+    return this;
+  }
+
+  /**
+   * Optional. An internal identifier for document. Should be loggable (no PII).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDocid() {
+    return docid;
+  }
+
+  /**
+   * Optional. An internal identifier for document. Should be loggable (no PII).
+   * @param docid docid or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1Document setDocid(java.lang.String docid) {
+    this.docid = docid;
     return this;
   }
 

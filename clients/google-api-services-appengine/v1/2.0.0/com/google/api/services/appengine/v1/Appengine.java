@@ -3802,6 +3802,29 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
         }
 
         /**
+         * Optional. A list of extra location types that should be used as conditions for
+         * controlling the visibility of the locations.
+         */
+        @com.google.api.client.util.Key
+        private java.util.List<java.lang.String> extraLocationTypes;
+
+        /** Optional. A list of extra location types that should be used as conditions for controlling the
+       visibility of the locations.
+         */
+        public java.util.List<java.lang.String> getExtraLocationTypes() {
+          return extraLocationTypes;
+        }
+
+        /**
+         * Optional. A list of extra location types that should be used as conditions for
+         * controlling the visibility of the locations.
+         */
+        public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
+          this.extraLocationTypes = extraLocationTypes;
+          return this;
+        }
+
+        /**
          * A filter to narrow down results to a preferred subset. The filtering language accepts
          * strings like "displayName=tokyo", and is documented in more detail in AIP-160
          * (https://google.aip.dev/160).
@@ -7542,6 +7565,302 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
               @Override
               public Delete set(String parameterName, Object value) {
                 return (Delete) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Updates the specified Version resource. You can specify the following fields depending on the App
+             * Engine environment and type of scaling that the version resource uses:Standard environment
+             * instance_class (https://cloud.google.com/appengine/docs/admin-
+             * api/reference/rest/v1/apps.services.versions#Version.FIELDS.instance_class)automatic scaling in
+             * the standard environment: automatic_scaling.min_idle_instances
+             * (https://cloud.google.com/appengine/docs/admin-
+             * api/reference/rest/v1/apps.services.versions#Version.FIELDS.automatic_scaling)
+             * automatic_scaling.max_idle_instances (https://cloud.google.com/appengine/docs/admin-
+             * api/reference/rest/v1/apps.services.versions#Version.FIELDS.automatic_scaling)
+             * automaticScaling.standard_scheduler_settings.max_instances
+             * (https://cloud.google.com/appengine/docs/admin-
+             * api/reference/rest/v1/apps.services.versions#StandardSchedulerSettings)
+             * automaticScaling.standard_scheduler_settings.min_instances
+             * (https://cloud.google.com/appengine/docs/admin-
+             * api/reference/rest/v1/apps.services.versions#StandardSchedulerSettings)
+             * automaticScaling.standard_scheduler_settings.target_cpu_utilization
+             * (https://cloud.google.com/appengine/docs/admin-
+             * api/reference/rest/v1/apps.services.versions#StandardSchedulerSettings)
+             * automaticScaling.standard_scheduler_settings.target_throughput_utilization
+             * (https://cloud.google.com/appengine/docs/admin-
+             * api/reference/rest/v1/apps.services.versions#StandardSchedulerSettings)basic scaling or manual
+             * scaling in the standard environment: serving_status
+             * (https://cloud.google.com/appengine/docs/admin-
+             * api/reference/rest/v1/apps.services.versions#Version.FIELDS.serving_status)
+             * manual_scaling.instances (https://cloud.google.com/appengine/docs/admin-
+             * api/reference/rest/v1/apps.services.versions#manualscaling)Flexible environment serving_status
+             * (https://cloud.google.com/appengine/docs/admin-
+             * api/reference/rest/v1/apps.services.versions#Version.FIELDS.serving_status)automatic scaling in
+             * the flexible environment: automatic_scaling.min_total_instances
+             * (https://cloud.google.com/appengine/docs/admin-
+             * api/reference/rest/v1/apps.services.versions#Version.FIELDS.automatic_scaling)
+             * automatic_scaling.max_total_instances (https://cloud.google.com/appengine/docs/admin-
+             * api/reference/rest/v1/apps.services.versions#Version.FIELDS.automatic_scaling)
+             * automatic_scaling.cool_down_period_sec (https://cloud.google.com/appengine/docs/admin-
+             * api/reference/rest/v1/apps.services.versions#Version.FIELDS.automatic_scaling)
+             * automatic_scaling.cpu_utilization.target_utilization
+             * (https://cloud.google.com/appengine/docs/admin-
+             * api/reference/rest/v1/apps.services.versions#Version.FIELDS.automatic_scaling)manual scaling in
+             * the flexible environment: manual_scaling.instances
+             * (https://cloud.google.com/appengine/docs/admin-
+             * api/reference/rest/v1/apps.services.versions#manualscaling)
+             *
+             * Create a request for the method "versions.patch".
+             *
+             * This request holds the parameters needed by the appengine server.  After setting any optional
+             * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+             *
+             * @param projectsId Part of `name`. Name of the resource to update. Example: apps/myapp/services/default/versions/1.
+             * @param locationsId Part of `name`. See documentation of `projectsId`.
+             * @param applicationsId Part of `name`. See documentation of `projectsId`.
+             * @param servicesId Part of `name`. See documentation of `projectsId`.
+             * @param versionsId Part of `name`. See documentation of `projectsId`.
+             * @param content the {@link com.google.api.services.appengine.v1.model.Version}
+             * @return the request
+             */
+            public Patch patch(java.lang.String projectsId, java.lang.String locationsId, java.lang.String applicationsId, java.lang.String servicesId, java.lang.String versionsId, com.google.api.services.appengine.v1.model.Version content) throws java.io.IOException {
+              Patch result = new Patch(projectsId, locationsId, applicationsId, servicesId, versionsId, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Patch extends AppengineRequest<com.google.api.services.appengine.v1.model.Operation> {
+
+              private static final String REST_PATH = "v1/projects/{projectsId}/locations/{locationsId}/applications/{applicationsId}/services/{servicesId}/versions/{versionsId}";
+
+              /**
+               * Updates the specified Version resource. You can specify the following fields depending on the
+               * App Engine environment and type of scaling that the version resource uses:Standard environment
+               * instance_class (https://cloud.google.com/appengine/docs/admin-
+               * api/reference/rest/v1/apps.services.versions#Version.FIELDS.instance_class)automatic scaling in
+               * the standard environment: automatic_scaling.min_idle_instances
+               * (https://cloud.google.com/appengine/docs/admin-
+               * api/reference/rest/v1/apps.services.versions#Version.FIELDS.automatic_scaling)
+               * automatic_scaling.max_idle_instances (https://cloud.google.com/appengine/docs/admin-
+               * api/reference/rest/v1/apps.services.versions#Version.FIELDS.automatic_scaling)
+               * automaticScaling.standard_scheduler_settings.max_instances
+               * (https://cloud.google.com/appengine/docs/admin-
+               * api/reference/rest/v1/apps.services.versions#StandardSchedulerSettings)
+               * automaticScaling.standard_scheduler_settings.min_instances
+               * (https://cloud.google.com/appengine/docs/admin-
+               * api/reference/rest/v1/apps.services.versions#StandardSchedulerSettings)
+               * automaticScaling.standard_scheduler_settings.target_cpu_utilization
+               * (https://cloud.google.com/appengine/docs/admin-
+               * api/reference/rest/v1/apps.services.versions#StandardSchedulerSettings)
+               * automaticScaling.standard_scheduler_settings.target_throughput_utilization
+               * (https://cloud.google.com/appengine/docs/admin-
+               * api/reference/rest/v1/apps.services.versions#StandardSchedulerSettings)basic scaling or manual
+               * scaling in the standard environment: serving_status
+               * (https://cloud.google.com/appengine/docs/admin-
+               * api/reference/rest/v1/apps.services.versions#Version.FIELDS.serving_status)
+               * manual_scaling.instances (https://cloud.google.com/appengine/docs/admin-
+               * api/reference/rest/v1/apps.services.versions#manualscaling)Flexible environment serving_status
+               * (https://cloud.google.com/appengine/docs/admin-
+               * api/reference/rest/v1/apps.services.versions#Version.FIELDS.serving_status)automatic scaling in
+               * the flexible environment: automatic_scaling.min_total_instances
+               * (https://cloud.google.com/appengine/docs/admin-
+               * api/reference/rest/v1/apps.services.versions#Version.FIELDS.automatic_scaling)
+               * automatic_scaling.max_total_instances (https://cloud.google.com/appengine/docs/admin-
+               * api/reference/rest/v1/apps.services.versions#Version.FIELDS.automatic_scaling)
+               * automatic_scaling.cool_down_period_sec (https://cloud.google.com/appengine/docs/admin-
+               * api/reference/rest/v1/apps.services.versions#Version.FIELDS.automatic_scaling)
+               * automatic_scaling.cpu_utilization.target_utilization
+               * (https://cloud.google.com/appengine/docs/admin-
+               * api/reference/rest/v1/apps.services.versions#Version.FIELDS.automatic_scaling)manual scaling in
+               * the flexible environment: manual_scaling.instances
+               * (https://cloud.google.com/appengine/docs/admin-
+               * api/reference/rest/v1/apps.services.versions#manualscaling)
+               *
+               * Create a request for the method "versions.patch".
+               *
+               * This request holds the parameters needed by the the appengine server.  After setting any
+               * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param projectsId Part of `name`. Name of the resource to update. Example: apps/myapp/services/default/versions/1.
+               * @param locationsId Part of `name`. See documentation of `projectsId`.
+               * @param applicationsId Part of `name`. See documentation of `projectsId`.
+               * @param servicesId Part of `name`. See documentation of `projectsId`.
+               * @param versionsId Part of `name`. See documentation of `projectsId`.
+               * @param content the {@link com.google.api.services.appengine.v1.model.Version}
+               * @since 1.13
+               */
+              protected Patch(java.lang.String projectsId, java.lang.String locationsId, java.lang.String applicationsId, java.lang.String servicesId, java.lang.String versionsId, com.google.api.services.appengine.v1.model.Version content) {
+                super(Appengine.this, "PATCH", REST_PATH, content, com.google.api.services.appengine.v1.model.Operation.class);
+                this.projectsId = com.google.api.client.util.Preconditions.checkNotNull(projectsId, "Required parameter projectsId must be specified.");
+                this.locationsId = com.google.api.client.util.Preconditions.checkNotNull(locationsId, "Required parameter locationsId must be specified.");
+                this.applicationsId = com.google.api.client.util.Preconditions.checkNotNull(applicationsId, "Required parameter applicationsId must be specified.");
+                this.servicesId = com.google.api.client.util.Preconditions.checkNotNull(servicesId, "Required parameter servicesId must be specified.");
+                this.versionsId = com.google.api.client.util.Preconditions.checkNotNull(versionsId, "Required parameter versionsId must be specified.");
+              }
+
+              @Override
+              public Patch set$Xgafv(java.lang.String $Xgafv) {
+                return (Patch) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Patch setAccessToken(java.lang.String accessToken) {
+                return (Patch) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Patch setAlt(java.lang.String alt) {
+                return (Patch) super.setAlt(alt);
+              }
+
+              @Override
+              public Patch setCallback(java.lang.String callback) {
+                return (Patch) super.setCallback(callback);
+              }
+
+              @Override
+              public Patch setFields(java.lang.String fields) {
+                return (Patch) super.setFields(fields);
+              }
+
+              @Override
+              public Patch setKey(java.lang.String key) {
+                return (Patch) super.setKey(key);
+              }
+
+              @Override
+              public Patch setOauthToken(java.lang.String oauthToken) {
+                return (Patch) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Patch) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Patch setQuotaUser(java.lang.String quotaUser) {
+                return (Patch) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Patch setUploadType(java.lang.String uploadType) {
+                return (Patch) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Patch) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Part of `name`. Name of the resource to update. Example:
+               * apps/myapp/services/default/versions/1.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String projectsId;
+
+              /** Part of `name`. Name of the resource to update. Example: apps/myapp/services/default/versions/1.
+               */
+              public java.lang.String getProjectsId() {
+                return projectsId;
+              }
+
+              /**
+               * Part of `name`. Name of the resource to update. Example:
+               * apps/myapp/services/default/versions/1.
+               */
+              public Patch setProjectsId(java.lang.String projectsId) {
+                this.projectsId = projectsId;
+                return this;
+              }
+
+              /** Part of `name`. See documentation of `projectsId`. */
+              @com.google.api.client.util.Key
+              private java.lang.String locationsId;
+
+              /** Part of `name`. See documentation of `projectsId`.
+               */
+              public java.lang.String getLocationsId() {
+                return locationsId;
+              }
+
+              /** Part of `name`. See documentation of `projectsId`. */
+              public Patch setLocationsId(java.lang.String locationsId) {
+                this.locationsId = locationsId;
+                return this;
+              }
+
+              /** Part of `name`. See documentation of `projectsId`. */
+              @com.google.api.client.util.Key
+              private java.lang.String applicationsId;
+
+              /** Part of `name`. See documentation of `projectsId`.
+               */
+              public java.lang.String getApplicationsId() {
+                return applicationsId;
+              }
+
+              /** Part of `name`. See documentation of `projectsId`. */
+              public Patch setApplicationsId(java.lang.String applicationsId) {
+                this.applicationsId = applicationsId;
+                return this;
+              }
+
+              /** Part of `name`. See documentation of `projectsId`. */
+              @com.google.api.client.util.Key
+              private java.lang.String servicesId;
+
+              /** Part of `name`. See documentation of `projectsId`.
+               */
+              public java.lang.String getServicesId() {
+                return servicesId;
+              }
+
+              /** Part of `name`. See documentation of `projectsId`. */
+              public Patch setServicesId(java.lang.String servicesId) {
+                this.servicesId = servicesId;
+                return this;
+              }
+
+              /** Part of `name`. See documentation of `projectsId`. */
+              @com.google.api.client.util.Key
+              private java.lang.String versionsId;
+
+              /** Part of `name`. See documentation of `projectsId`.
+               */
+              public java.lang.String getVersionsId() {
+                return versionsId;
+              }
+
+              /** Part of `name`. See documentation of `projectsId`. */
+              public Patch setVersionsId(java.lang.String versionsId) {
+                this.versionsId = versionsId;
+                return this;
+              }
+
+              /** Standard field mask for the set of fields to be updated. */
+              @com.google.api.client.util.Key
+              private String updateMask;
+
+              /** Standard field mask for the set of fields to be updated.
+               */
+              public String getUpdateMask() {
+                return updateMask;
+              }
+
+              /** Standard field mask for the set of fields to be updated. */
+              public Patch setUpdateMask(String updateMask) {
+                this.updateMask = updateMask;
+                return this;
+              }
+
+              @Override
+              public Patch set(String parameterName, Object value) {
+                return (Patch) super.set(parameterName, value);
               }
             }
 

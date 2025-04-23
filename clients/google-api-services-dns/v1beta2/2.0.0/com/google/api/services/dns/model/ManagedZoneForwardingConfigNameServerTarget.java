@@ -30,6 +30,13 @@ package com.google.api.services.dns.model;
 public final class ManagedZoneForwardingConfigNameServerTarget extends com.google.api.client.json.GenericJson {
 
   /**
+   * Fully qualified domain name for the forwarding target.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String domainName;
+
+  /**
    * Forwarding path for this NameServerTarget. If unset or set to DEFAULT, Cloud DNS makes
    * forwarding decisions based on IP address ranges; that is, RFC1918 addresses go to the VPC
    * network, non-RFC1918 addresses go to the internet. When set to PRIVATE, Cloud DNS always sends
@@ -59,6 +66,23 @@ public final class ManagedZoneForwardingConfigNameServerTarget extends com.googl
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
+
+  /**
+   * Fully qualified domain name for the forwarding target.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDomainName() {
+    return domainName;
+  }
+
+  /**
+   * Fully qualified domain name for the forwarding target.
+   * @param domainName domainName or {@code null} for none
+   */
+  public ManagedZoneForwardingConfigNameServerTarget setDomainName(java.lang.String domainName) {
+    this.domainName = domainName;
+    return this;
+  }
 
   /**
    * Forwarding path for this NameServerTarget. If unset or set to DEFAULT, Cloud DNS makes

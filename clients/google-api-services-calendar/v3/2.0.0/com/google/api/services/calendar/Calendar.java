@@ -25,7 +25,7 @@ package com.google.api.services.calendar;
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://developers.google.com/google-apps/calendar/firstapp" target="_blank">API Documentation</a>
+ * <a href="https://developers.google.com/workspace/calendar/firstapp" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>

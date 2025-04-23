@@ -37,7 +37,7 @@ public final class Distribution extends com.google.api.client.json.GenericJson {
    * must sum to the `count` value. The buckets are defined below in `bucket_option`. There are N
    * buckets. `bucket_counts[0]` is the number of samples in the underflow bucket.
    * `bucket_counts[1]` to `bucket_counts[N-1]` are the numbers of samples in each of the finite
-   * buckets. And `bucket_counts[N] is the number of samples in the overflow bucket. See the
+   * buckets. And `bucket_counts[N]` is the number of samples in the overflow bucket. See the
    * comments of `bucket_option` below for more details. Any suffix of trailing zeros may be
    * omitted.
    * The value may be {@code null}.
@@ -116,7 +116,7 @@ public final class Distribution extends com.google.api.client.json.GenericJson {
    * must sum to the `count` value. The buckets are defined below in `bucket_option`. There are N
    * buckets. `bucket_counts[0]` is the number of samples in the underflow bucket.
    * `bucket_counts[1]` to `bucket_counts[N-1]` are the numbers of samples in each of the finite
-   * buckets. And `bucket_counts[N] is the number of samples in the overflow bucket. See the
+   * buckets. And `bucket_counts[N]` is the number of samples in the overflow bucket. See the
    * comments of `bucket_option` below for more details. Any suffix of trailing zeros may be
    * omitted.
    * @return value or {@code null} for none
@@ -130,7 +130,7 @@ public final class Distribution extends com.google.api.client.json.GenericJson {
    * must sum to the `count` value. The buckets are defined below in `bucket_option`. There are N
    * buckets. `bucket_counts[0]` is the number of samples in the underflow bucket.
    * `bucket_counts[1]` to `bucket_counts[N-1]` are the numbers of samples in each of the finite
-   * buckets. And `bucket_counts[N] is the number of samples in the overflow bucket. See the
+   * buckets. And `bucket_counts[N]` is the number of samples in the overflow bucket. See the
    * comments of `bucket_option` below for more details. Any suffix of trailing zeros may be
    * omitted.
    * @param bucketCounts bucketCounts or {@code null} for none

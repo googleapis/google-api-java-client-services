@@ -45,6 +45,13 @@ public final class UpcomingMaintenance extends com.google.api.client.json.Generi
   private java.lang.String latestWindowStartTime;
 
   /**
+   * Indicates whether the UpcomingMaintenance will be triggered on VM shutdown.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean maintenanceOnShutdown;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -106,6 +113,23 @@ public final class UpcomingMaintenance extends com.google.api.client.json.Generi
    */
   public UpcomingMaintenance setLatestWindowStartTime(java.lang.String latestWindowStartTime) {
     this.latestWindowStartTime = latestWindowStartTime;
+    return this;
+  }
+
+  /**
+   * Indicates whether the UpcomingMaintenance will be triggered on VM shutdown.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getMaintenanceOnShutdown() {
+    return maintenanceOnShutdown;
+  }
+
+  /**
+   * Indicates whether the UpcomingMaintenance will be triggered on VM shutdown.
+   * @param maintenanceOnShutdown maintenanceOnShutdown or {@code null} for none
+   */
+  public UpcomingMaintenance setMaintenanceOnShutdown(java.lang.Boolean maintenanceOnShutdown) {
+    this.maintenanceOnShutdown = maintenanceOnShutdown;
     return this;
   }
 

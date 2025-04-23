@@ -30,11 +30,11 @@ package com.google.api.services.compute.model;
 public final class CacheInvalidationRule extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Preview] A list of cache tags used to identify cached objects. - Cache tags are specified when
-   * the response is first cached, by setting the `Cache-Tag` response header at the origin. -
-   * Multiple cache tags in the same invalidation request are treated as Boolean `OR` - for example,
-   * `tag1 OR tag2 OR tag3`. - If other fields are also specified, these are treated as Boolean
-   * `AND` with any tags. Up to 10 tags can be specified in a single invalidation request.
+   * A list of cache tags used to identify cached objects. - Cache tags are specified when the
+   * response is first cached, by setting the `Cache-Tag` response header at the origin. - Multiple
+   * cache tags in the same invalidation request are treated as Boolean `OR` - for example, `tag1 OR
+   * tag2 OR tag3`. - If other fields are also specified, these are treated as Boolean `AND` with
+   * any tags. Up to 10 tags can be specified in a single invalidation request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,11 +54,11 @@ public final class CacheInvalidationRule extends com.google.api.client.json.Gene
   private java.lang.String path;
 
   /**
-   * [Preview] A list of cache tags used to identify cached objects. - Cache tags are specified when
-   * the response is first cached, by setting the `Cache-Tag` response header at the origin. -
-   * Multiple cache tags in the same invalidation request are treated as Boolean `OR` - for example,
-   * `tag1 OR tag2 OR tag3`. - If other fields are also specified, these are treated as Boolean
-   * `AND` with any tags. Up to 10 tags can be specified in a single invalidation request.
+   * A list of cache tags used to identify cached objects. - Cache tags are specified when the
+   * response is first cached, by setting the `Cache-Tag` response header at the origin. - Multiple
+   * cache tags in the same invalidation request are treated as Boolean `OR` - for example, `tag1 OR
+   * tag2 OR tag3`. - If other fields are also specified, these are treated as Boolean `AND` with
+   * any tags. Up to 10 tags can be specified in a single invalidation request.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getCacheTags() {
@@ -66,11 +66,11 @@ public final class CacheInvalidationRule extends com.google.api.client.json.Gene
   }
 
   /**
-   * [Preview] A list of cache tags used to identify cached objects. - Cache tags are specified when
-   * the response is first cached, by setting the `Cache-Tag` response header at the origin. -
-   * Multiple cache tags in the same invalidation request are treated as Boolean `OR` - for example,
-   * `tag1 OR tag2 OR tag3`. - If other fields are also specified, these are treated as Boolean
-   * `AND` with any tags. Up to 10 tags can be specified in a single invalidation request.
+   * A list of cache tags used to identify cached objects. - Cache tags are specified when the
+   * response is first cached, by setting the `Cache-Tag` response header at the origin. - Multiple
+   * cache tags in the same invalidation request are treated as Boolean `OR` - for example, `tag1 OR
+   * tag2 OR tag3`. - If other fields are also specified, these are treated as Boolean `AND` with
+   * any tags. Up to 10 tags can be specified in a single invalidation request.
    * @param cacheTags cacheTags or {@code null} for none
    */
   public CacheInvalidationRule setCacheTags(java.util.List<java.lang.String> cacheTags) {

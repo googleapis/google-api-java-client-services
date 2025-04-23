@@ -58,7 +58,8 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
 
   /**
    * [Output only] List of link types available at this InterconnectLocation, which can take one of
-   * the following values: - LINK_TYPE_ETHERNET_10G_LR - LINK_TYPE_ETHERNET_100G_LR
+   * the following values: - LINK_TYPE_ETHERNET_10G_LR - LINK_TYPE_ETHERNET_100G_LR -
+   * LINK_TYPE_ETHERNET_400G_LR4
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -240,7 +241,8 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
 
   /**
    * [Output only] List of link types available at this InterconnectLocation, which can take one of
-   * the following values: - LINK_TYPE_ETHERNET_10G_LR - LINK_TYPE_ETHERNET_100G_LR
+   * the following values: - LINK_TYPE_ETHERNET_10G_LR - LINK_TYPE_ETHERNET_100G_LR -
+   * LINK_TYPE_ETHERNET_400G_LR4
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAvailableLinkTypes() {
@@ -249,7 +251,8 @@ public final class InterconnectLocation extends com.google.api.client.json.Gener
 
   /**
    * [Output only] List of link types available at this InterconnectLocation, which can take one of
-   * the following values: - LINK_TYPE_ETHERNET_10G_LR - LINK_TYPE_ETHERNET_100G_LR
+   * the following values: - LINK_TYPE_ETHERNET_10G_LR - LINK_TYPE_ETHERNET_100G_LR -
+   * LINK_TYPE_ETHERNET_400G_LR4
    * @param availableLinkTypes availableLinkTypes or {@code null} for none
    */
   public InterconnectLocation setAvailableLinkTypes(java.util.List<java.lang.String> availableLinkTypes) {

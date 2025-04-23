@@ -44,6 +44,13 @@ public final class ServiceAttachmentConnectedEndpoint extends com.google.api.cli
   private java.lang.String endpoint;
 
   /**
+   * NAT IPs of the connected PSC endpoint and those of other endpoints propagated from it.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> natIps;
+
+  /**
    * The number of consumer Network Connectivity Center spokes that the connected Private Service
    * Connect endpoint has propagated to.
    * The value may be {@code null}.
@@ -96,6 +103,23 @@ public final class ServiceAttachmentConnectedEndpoint extends com.google.api.cli
    */
   public ServiceAttachmentConnectedEndpoint setEndpoint(java.lang.String endpoint) {
     this.endpoint = endpoint;
+    return this;
+  }
+
+  /**
+   * NAT IPs of the connected PSC endpoint and those of other endpoints propagated from it.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getNatIps() {
+    return natIps;
+  }
+
+  /**
+   * NAT IPs of the connected PSC endpoint and those of other endpoints propagated from it.
+   * @param natIps natIps or {@code null} for none
+   */
+  public ServiceAttachmentConnectedEndpoint setNatIps(java.util.List<java.lang.String> natIps) {
+    this.natIps = natIps;
     return this;
   }
 

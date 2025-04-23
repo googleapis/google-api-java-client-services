@@ -151,6 +151,14 @@ public final class Network extends com.google.api.client.json.GenericJson {
   private java.lang.String networkProfile;
 
   /**
+   * Input only. [Input Only] Additional params passed with the request, but not persisted as part
+   * of resource payload.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NetworkParams params;
+
+  /**
    * [Output Only] A list of network peerings for the resource.
    * The value may be {@code null}.
    */
@@ -474,6 +482,25 @@ public final class Network extends com.google.api.client.json.GenericJson {
    */
   public Network setNetworkProfile(java.lang.String networkProfile) {
     this.networkProfile = networkProfile;
+    return this;
+  }
+
+  /**
+   * Input only. [Input Only] Additional params passed with the request, but not persisted as part
+   * of resource payload.
+   * @return value or {@code null} for none
+   */
+  public NetworkParams getParams() {
+    return params;
+  }
+
+  /**
+   * Input only. [Input Only] Additional params passed with the request, but not persisted as part
+   * of resource payload.
+   * @param params params or {@code null} for none
+   */
+  public Network setParams(NetworkParams params) {
+    this.params = params;
     return this;
   }
 

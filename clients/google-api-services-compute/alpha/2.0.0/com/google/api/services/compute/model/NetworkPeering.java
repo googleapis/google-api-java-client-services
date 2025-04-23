@@ -50,6 +50,13 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
   private java.lang.Boolean autoCreateRoutes;
 
   /**
+   * [Output Only] The effective state of the peering connection as a whole.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NetworkPeeringConnectionStatus connectionStatus;
+
+  /**
    * Indicates whether full mesh connectivity is created and managed automatically between peered
    * networks. Currently this field should always be true since Google Compute Engine will
    * automatically create and manage subnetwork routes between two networks when peering state is
@@ -111,7 +118,7 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
   private java.lang.String network;
 
   /**
-   * Maximum Transmission Unit in bytes.
+   * [Output Only] Maximum Transmission Unit in bytes of the peer network.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -139,6 +146,14 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.String stateDetails;
+
+  /**
+   * The update strategy determines the semantics for updates and deletes to the peering connection
+   * configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String updateStrategy;
 
   /**
    * Whether Cloud Routers in this network can automatically advertise subnets from the peer
@@ -179,6 +194,23 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
    */
   public NetworkPeering setAutoCreateRoutes(java.lang.Boolean autoCreateRoutes) {
     this.autoCreateRoutes = autoCreateRoutes;
+    return this;
+  }
+
+  /**
+   * [Output Only] The effective state of the peering connection as a whole.
+   * @return value or {@code null} for none
+   */
+  public NetworkPeeringConnectionStatus getConnectionStatus() {
+    return connectionStatus;
+  }
+
+  /**
+   * [Output Only] The effective state of the peering connection as a whole.
+   * @param connectionStatus connectionStatus or {@code null} for none
+   */
+  public NetworkPeering setConnectionStatus(NetworkPeeringConnectionStatus connectionStatus) {
+    this.connectionStatus = connectionStatus;
     return this;
   }
 
@@ -326,7 +358,7 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Maximum Transmission Unit in bytes.
+   * [Output Only] Maximum Transmission Unit in bytes of the peer network.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPeerMtu() {
@@ -334,7 +366,7 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Maximum Transmission Unit in bytes.
+   * [Output Only] Maximum Transmission Unit in bytes of the peer network.
    * @param peerMtu peerMtu or {@code null} for none
    */
   public NetworkPeering setPeerMtu(java.lang.Integer peerMtu) {
@@ -394,6 +426,25 @@ public final class NetworkPeering extends com.google.api.client.json.GenericJson
    */
   public NetworkPeering setStateDetails(java.lang.String stateDetails) {
     this.stateDetails = stateDetails;
+    return this;
+  }
+
+  /**
+   * The update strategy determines the semantics for updates and deletes to the peering connection
+   * configuration.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUpdateStrategy() {
+    return updateStrategy;
+  }
+
+  /**
+   * The update strategy determines the semantics for updates and deletes to the peering connection
+   * configuration.
+   * @param updateStrategy updateStrategy or {@code null} for none
+   */
+  public NetworkPeering setUpdateStrategy(java.lang.String updateStrategy) {
+    this.updateStrategy = updateStrategy;
     return this;
   }
 

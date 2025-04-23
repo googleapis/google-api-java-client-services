@@ -30,11 +30,59 @@ package com.google.api.services.compute.model;
 public final class AllocationResourceStatus extends com.google.api.client.json.GenericJson {
 
   /**
+   * The number of reservation blocks associated with this reservation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer reservationBlockCount;
+
+  /**
+   * Maintenance information for this reservation
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GroupMaintenanceInfo reservationMaintenance;
+
+  /**
    * Allocation Properties of this reservation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AllocationResourceStatusSpecificSKUAllocation specificSkuAllocation;
+
+  /**
+   * The number of reservation blocks associated with this reservation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getReservationBlockCount() {
+    return reservationBlockCount;
+  }
+
+  /**
+   * The number of reservation blocks associated with this reservation.
+   * @param reservationBlockCount reservationBlockCount or {@code null} for none
+   */
+  public AllocationResourceStatus setReservationBlockCount(java.lang.Integer reservationBlockCount) {
+    this.reservationBlockCount = reservationBlockCount;
+    return this;
+  }
+
+  /**
+   * Maintenance information for this reservation
+   * @return value or {@code null} for none
+   */
+  public GroupMaintenanceInfo getReservationMaintenance() {
+    return reservationMaintenance;
+  }
+
+  /**
+   * Maintenance information for this reservation
+   * @param reservationMaintenance reservationMaintenance or {@code null} for none
+   */
+  public AllocationResourceStatus setReservationMaintenance(GroupMaintenanceInfo reservationMaintenance) {
+    this.reservationMaintenance = reservationMaintenance;
+    return this;
+  }
 
   /**
    * Allocation Properties of this reservation.

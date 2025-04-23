@@ -62,8 +62,9 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
   private java.math.BigInteger id;
 
   /**
-   * The list of specifications of per-instance configs to be created. This field cannot be used
-   * together with 'resize_by'.
+   * The names of instances to be created by this resize request. The number of names specified
+   * determines the number of instances to create. The group's target size will be increased by this
+   * number. This field cannot be used together with 'resize_by'.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -226,8 +227,9 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
   }
 
   /**
-   * The list of specifications of per-instance configs to be created. This field cannot be used
-   * together with 'resize_by'.
+   * The names of instances to be created by this resize request. The number of names specified
+   * determines the number of instances to create. The group's target size will be increased by this
+   * number. This field cannot be used together with 'resize_by'.
    * @return value or {@code null} for none
    */
   public java.util.List<PerInstanceConfig> getInstances() {
@@ -235,8 +237,9 @@ public final class InstanceGroupManagerResizeRequest extends com.google.api.clie
   }
 
   /**
-   * The list of specifications of per-instance configs to be created. This field cannot be used
-   * together with 'resize_by'.
+   * The names of instances to be created by this resize request. The number of names specified
+   * determines the number of instances to create. The group's target size will be increased by this
+   * number. This field cannot be used together with 'resize_by'.
    * @param instances instances or {@code null} for none
    */
   public InstanceGroupManagerResizeRequest setInstances(java.util.List<PerInstanceConfig> instances) {

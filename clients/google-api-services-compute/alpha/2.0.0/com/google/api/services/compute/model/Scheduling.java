@@ -183,10 +183,11 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   private java.lang.String provisioningModel;
 
   /**
-   * Timeout between GCE ACPI G2 Soft Off and ACPI G3 Mechanical Off during shutdown operation of
-   * VM. For Standard VMs values between 0s and 120s are allowed. For Spot and Preemptible VMs
-   * supported values are between 0s and 30s. If no value is specified for shutdownDuration, default
-   * values are 90s for Standard VMs and 30s for Spot/Preemptible VMs.
+   * DEPRECATED: please use skipGuestOsShutdown. Timeout between GCE ACPI G2 Soft Off and ACPI G3
+   * Mechanical Off during shutdown operation of VM. For Standard VMs values between 0s and 120s are
+   * allowed. For Spot and Preemptible VMs supported values are between 0s and 30s. If no value is
+   * specified for shutdownDuration, default values are 90s for Standard VMs and 30s for
+   * Spot/Preemptible VMs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -572,10 +573,11 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Timeout between GCE ACPI G2 Soft Off and ACPI G3 Mechanical Off during shutdown operation of
-   * VM. For Standard VMs values between 0s and 120s are allowed. For Spot and Preemptible VMs
-   * supported values are between 0s and 30s. If no value is specified for shutdownDuration, default
-   * values are 90s for Standard VMs and 30s for Spot/Preemptible VMs.
+   * DEPRECATED: please use skipGuestOsShutdown. Timeout between GCE ACPI G2 Soft Off and ACPI G3
+   * Mechanical Off during shutdown operation of VM. For Standard VMs values between 0s and 120s are
+   * allowed. For Spot and Preemptible VMs supported values are between 0s and 30s. If no value is
+   * specified for shutdownDuration, default values are 90s for Standard VMs and 30s for
+   * Spot/Preemptible VMs.
    * @return value or {@code null} for none
    */
   public Duration getShutdownTimeout() {
@@ -583,10 +585,11 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Timeout between GCE ACPI G2 Soft Off and ACPI G3 Mechanical Off during shutdown operation of
-   * VM. For Standard VMs values between 0s and 120s are allowed. For Spot and Preemptible VMs
-   * supported values are between 0s and 30s. If no value is specified for shutdownDuration, default
-   * values are 90s for Standard VMs and 30s for Spot/Preemptible VMs.
+   * DEPRECATED: please use skipGuestOsShutdown. Timeout between GCE ACPI G2 Soft Off and ACPI G3
+   * Mechanical Off during shutdown operation of VM. For Standard VMs values between 0s and 120s are
+   * allowed. For Spot and Preemptible VMs supported values are between 0s and 30s. If no value is
+   * specified for shutdownDuration, default values are 90s for Standard VMs and 30s for
+   * Spot/Preemptible VMs.
    * @param shutdownTimeout shutdownTimeout or {@code null} for none
    */
   public Scheduling setShutdownTimeout(Duration shutdownTimeout) {

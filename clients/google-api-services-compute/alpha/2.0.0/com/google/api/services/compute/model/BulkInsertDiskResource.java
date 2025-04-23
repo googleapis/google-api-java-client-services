@@ -31,6 +31,20 @@ package com.google.api.services.compute.model;
 public final class BulkInsertDiskResource extends com.google.api.client.json.GenericJson {
 
   /**
+   * The parameters for the instant snapshot group.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InstantSnapshotGroupParameters instantSnapshotGroupParameters;
+
+  /**
+   * The parameters for the snapshot group.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SnapshotGroupParameters snapshotGroupParameters;
+
+  /**
    * The URL of the DiskConsistencyGroupPolicy for the group of disks to clone. This may be a full
    * or partial URL, such as: -
    * https://www.googleapis.com/compute/v1/projects/project/regions/region
@@ -41,6 +55,40 @@ public final class BulkInsertDiskResource extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private java.lang.String sourceConsistencyGroupPolicy;
+
+  /**
+   * The parameters for the instant snapshot group.
+   * @return value or {@code null} for none
+   */
+  public InstantSnapshotGroupParameters getInstantSnapshotGroupParameters() {
+    return instantSnapshotGroupParameters;
+  }
+
+  /**
+   * The parameters for the instant snapshot group.
+   * @param instantSnapshotGroupParameters instantSnapshotGroupParameters or {@code null} for none
+   */
+  public BulkInsertDiskResource setInstantSnapshotGroupParameters(InstantSnapshotGroupParameters instantSnapshotGroupParameters) {
+    this.instantSnapshotGroupParameters = instantSnapshotGroupParameters;
+    return this;
+  }
+
+  /**
+   * The parameters for the snapshot group.
+   * @return value or {@code null} for none
+   */
+  public SnapshotGroupParameters getSnapshotGroupParameters() {
+    return snapshotGroupParameters;
+  }
+
+  /**
+   * The parameters for the snapshot group.
+   * @param snapshotGroupParameters snapshotGroupParameters or {@code null} for none
+   */
+  public BulkInsertDiskResource setSnapshotGroupParameters(SnapshotGroupParameters snapshotGroupParameters) {
+    this.snapshotGroupParameters = snapshotGroupParameters;
+    return this;
+  }
 
   /**
    * The URL of the DiskConsistencyGroupPolicy for the group of disks to clone. This may be a full

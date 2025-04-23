@@ -729,17 +729,24 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
             return this;
           }
 
-          /** Optional. Page size. If a value is not specified, the default value of 10 is used. */
+          /**
+           * Optional. Page size. If a value is not specified, the default value of 10 is used. The
+           * maximum value is 50.
+           */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Optional. Page size. If a value is not specified, the default value of 10 is used.
+          /** Optional. Page size. If a value is not specified, the default value of 10 is used. The maximum
+         value is 50.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /** Optional. Page size. If a value is not specified, the default value of 10 is used. */
+          /**
+           * Optional. Page size. If a value is not specified, the default value of 10 is used. The
+           * maximum value is 50.
+           */
           public AnalyzeWorkloadMove setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;

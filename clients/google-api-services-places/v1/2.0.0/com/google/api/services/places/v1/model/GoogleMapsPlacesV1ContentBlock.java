@@ -37,20 +37,12 @@ public final class GoogleMapsPlacesV1ContentBlock extends com.google.api.client.
   private GoogleTypeLocalizedText content;
 
   /**
-   * Experimental: See https://developers.google.com/maps/documentation/places/web-
-   * service/experimental/places-generative for more details. References that are related to this
-   * block of content.
+   * The list of resource names of the referenced places. This name can be used in other APIs that
+   * accept Place resource names.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleMapsPlacesV1References references;
-
-  /**
-   * The topic of the content, for example "overview" or "restaurant".
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String topic;
+  private java.util.List<java.lang.String> referencedPlaces;
 
   /**
    * Content related to the topic.
@@ -70,40 +62,21 @@ public final class GoogleMapsPlacesV1ContentBlock extends com.google.api.client.
   }
 
   /**
-   * Experimental: See https://developers.google.com/maps/documentation/places/web-
-   * service/experimental/places-generative for more details. References that are related to this
-   * block of content.
+   * The list of resource names of the referenced places. This name can be used in other APIs that
+   * accept Place resource names.
    * @return value or {@code null} for none
    */
-  public GoogleMapsPlacesV1References getReferences() {
-    return references;
+  public java.util.List<java.lang.String> getReferencedPlaces() {
+    return referencedPlaces;
   }
 
   /**
-   * Experimental: See https://developers.google.com/maps/documentation/places/web-
-   * service/experimental/places-generative for more details. References that are related to this
-   * block of content.
-   * @param references references or {@code null} for none
+   * The list of resource names of the referenced places. This name can be used in other APIs that
+   * accept Place resource names.
+   * @param referencedPlaces referencedPlaces or {@code null} for none
    */
-  public GoogleMapsPlacesV1ContentBlock setReferences(GoogleMapsPlacesV1References references) {
-    this.references = references;
-    return this;
-  }
-
-  /**
-   * The topic of the content, for example "overview" or "restaurant".
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getTopic() {
-    return topic;
-  }
-
-  /**
-   * The topic of the content, for example "overview" or "restaurant".
-   * @param topic topic or {@code null} for none
-   */
-  public GoogleMapsPlacesV1ContentBlock setTopic(java.lang.String topic) {
-    this.topic = topic;
+  public GoogleMapsPlacesV1ContentBlock setReferencedPlaces(java.util.List<java.lang.String> referencedPlaces) {
+    this.referencedPlaces = referencedPlaces;
     return this;
   }
 

@@ -17,7 +17,7 @@
 package com.google.api.services.places.v1.model;
 
 /**
- * AI-generated summary of the place.
+ * A summary of points of interest near the place.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Places API (New). For a detailed explanation see:
@@ -27,7 +27,14 @@ package com.google.api.services.places.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleMapsPlacesV1PlaceGenerativeSummary extends com.google.api.client.json.GenericJson {
+public final class GoogleMapsPlacesV1PlaceNeighborhoodSummary extends com.google.api.client.json.GenericJson {
+
+  /**
+   * A detailed description of the neighborhood.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleMapsPlacesV1ContentBlock description;
 
   /**
    * The AI disclosure message "Summarized with Gemini" (and its localized variants). This will be
@@ -38,18 +45,35 @@ public final class GoogleMapsPlacesV1PlaceGenerativeSummary extends com.google.a
   private GoogleTypeLocalizedText disclosureText;
 
   /**
-   * The overview of the place.
+   * A link where users can flag a problem with the summary.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleTypeLocalizedText overview;
+  private java.lang.String flagContentUri;
 
   /**
-   * A link where users can flag a problem with the overview summary.
+   * An overview summary of the neighborhood.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String overviewFlagContentUri;
+  private GoogleMapsPlacesV1ContentBlock overview;
+
+  /**
+   * A detailed description of the neighborhood.
+   * @return value or {@code null} for none
+   */
+  public GoogleMapsPlacesV1ContentBlock getDescription() {
+    return description;
+  }
+
+  /**
+   * A detailed description of the neighborhood.
+   * @param description description or {@code null} for none
+   */
+  public GoogleMapsPlacesV1PlaceNeighborhoodSummary setDescription(GoogleMapsPlacesV1ContentBlock description) {
+    this.description = description;
+    return this;
+  }
 
   /**
    * The AI disclosure message "Summarized with Gemini" (and its localized variants). This will be
@@ -65,53 +89,53 @@ public final class GoogleMapsPlacesV1PlaceGenerativeSummary extends com.google.a
    * in the language specified in the request if available.
    * @param disclosureText disclosureText or {@code null} for none
    */
-  public GoogleMapsPlacesV1PlaceGenerativeSummary setDisclosureText(GoogleTypeLocalizedText disclosureText) {
+  public GoogleMapsPlacesV1PlaceNeighborhoodSummary setDisclosureText(GoogleTypeLocalizedText disclosureText) {
     this.disclosureText = disclosureText;
     return this;
   }
 
   /**
-   * The overview of the place.
+   * A link where users can flag a problem with the summary.
    * @return value or {@code null} for none
    */
-  public GoogleTypeLocalizedText getOverview() {
+  public java.lang.String getFlagContentUri() {
+    return flagContentUri;
+  }
+
+  /**
+   * A link where users can flag a problem with the summary.
+   * @param flagContentUri flagContentUri or {@code null} for none
+   */
+  public GoogleMapsPlacesV1PlaceNeighborhoodSummary setFlagContentUri(java.lang.String flagContentUri) {
+    this.flagContentUri = flagContentUri;
+    return this;
+  }
+
+  /**
+   * An overview summary of the neighborhood.
+   * @return value or {@code null} for none
+   */
+  public GoogleMapsPlacesV1ContentBlock getOverview() {
     return overview;
   }
 
   /**
-   * The overview of the place.
+   * An overview summary of the neighborhood.
    * @param overview overview or {@code null} for none
    */
-  public GoogleMapsPlacesV1PlaceGenerativeSummary setOverview(GoogleTypeLocalizedText overview) {
+  public GoogleMapsPlacesV1PlaceNeighborhoodSummary setOverview(GoogleMapsPlacesV1ContentBlock overview) {
     this.overview = overview;
     return this;
   }
 
-  /**
-   * A link where users can flag a problem with the overview summary.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getOverviewFlagContentUri() {
-    return overviewFlagContentUri;
-  }
-
-  /**
-   * A link where users can flag a problem with the overview summary.
-   * @param overviewFlagContentUri overviewFlagContentUri or {@code null} for none
-   */
-  public GoogleMapsPlacesV1PlaceGenerativeSummary setOverviewFlagContentUri(java.lang.String overviewFlagContentUri) {
-    this.overviewFlagContentUri = overviewFlagContentUri;
-    return this;
+  @Override
+  public GoogleMapsPlacesV1PlaceNeighborhoodSummary set(String fieldName, Object value) {
+    return (GoogleMapsPlacesV1PlaceNeighborhoodSummary) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleMapsPlacesV1PlaceGenerativeSummary set(String fieldName, Object value) {
-    return (GoogleMapsPlacesV1PlaceGenerativeSummary) super.set(fieldName, value);
-  }
-
-  @Override
-  public GoogleMapsPlacesV1PlaceGenerativeSummary clone() {
-    return (GoogleMapsPlacesV1PlaceGenerativeSummary) super.clone();
+  public GoogleMapsPlacesV1PlaceNeighborhoodSummary clone() {
+    return (GoogleMapsPlacesV1PlaceNeighborhoodSummary) super.clone();
   }
 
 }

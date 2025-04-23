@@ -17,9 +17,7 @@
 package com.google.api.services.places.v1.model;
 
 /**
- * Experimental: See https://developers.google.com/maps/documentation/places/web-
- * service/experimental/places-generative for more details. AI-generated summary of the area that
- * the place is in.
+ * AI-generated summary of the place using user reviews.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Places API (New). For a detailed explanation see:
@@ -29,20 +27,15 @@ package com.google.api.services.places.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleMapsPlacesV1PlaceAreaSummary extends com.google.api.client.json.GenericJson {
+public final class GoogleMapsPlacesV1PlaceReviewSummary extends com.google.api.client.json.GenericJson {
 
   /**
-   * Content blocks that compose the area summary. Each block has a separate topic about the area.
+   * The AI disclosure message "Summarized with Gemini" (and its localized variants). This will be
+   * in the language specified in the request if available.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<GoogleMapsPlacesV1ContentBlock> contentBlocks;
-
-  static {
-    // hack to force ProGuard to consider GoogleMapsPlacesV1ContentBlock used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GoogleMapsPlacesV1ContentBlock.class);
-  }
+  private GoogleTypeLocalizedText disclosureText;
 
   /**
    * A link where users can flag a problem with the summary.
@@ -52,19 +45,28 @@ public final class GoogleMapsPlacesV1PlaceAreaSummary extends com.google.api.cli
   private java.lang.String flagContentUri;
 
   /**
-   * Content blocks that compose the area summary. Each block has a separate topic about the area.
+   * The summary of user reviews.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleTypeLocalizedText text;
+
+  /**
+   * The AI disclosure message "Summarized with Gemini" (and its localized variants). This will be
+   * in the language specified in the request if available.
    * @return value or {@code null} for none
    */
-  public java.util.List<GoogleMapsPlacesV1ContentBlock> getContentBlocks() {
-    return contentBlocks;
+  public GoogleTypeLocalizedText getDisclosureText() {
+    return disclosureText;
   }
 
   /**
-   * Content blocks that compose the area summary. Each block has a separate topic about the area.
-   * @param contentBlocks contentBlocks or {@code null} for none
+   * The AI disclosure message "Summarized with Gemini" (and its localized variants). This will be
+   * in the language specified in the request if available.
+   * @param disclosureText disclosureText or {@code null} for none
    */
-  public GoogleMapsPlacesV1PlaceAreaSummary setContentBlocks(java.util.List<GoogleMapsPlacesV1ContentBlock> contentBlocks) {
-    this.contentBlocks = contentBlocks;
+  public GoogleMapsPlacesV1PlaceReviewSummary setDisclosureText(GoogleTypeLocalizedText disclosureText) {
+    this.disclosureText = disclosureText;
     return this;
   }
 
@@ -80,19 +82,36 @@ public final class GoogleMapsPlacesV1PlaceAreaSummary extends com.google.api.cli
    * A link where users can flag a problem with the summary.
    * @param flagContentUri flagContentUri or {@code null} for none
    */
-  public GoogleMapsPlacesV1PlaceAreaSummary setFlagContentUri(java.lang.String flagContentUri) {
+  public GoogleMapsPlacesV1PlaceReviewSummary setFlagContentUri(java.lang.String flagContentUri) {
     this.flagContentUri = flagContentUri;
     return this;
   }
 
-  @Override
-  public GoogleMapsPlacesV1PlaceAreaSummary set(String fieldName, Object value) {
-    return (GoogleMapsPlacesV1PlaceAreaSummary) super.set(fieldName, value);
+  /**
+   * The summary of user reviews.
+   * @return value or {@code null} for none
+   */
+  public GoogleTypeLocalizedText getText() {
+    return text;
+  }
+
+  /**
+   * The summary of user reviews.
+   * @param text text or {@code null} for none
+   */
+  public GoogleMapsPlacesV1PlaceReviewSummary setText(GoogleTypeLocalizedText text) {
+    this.text = text;
+    return this;
   }
 
   @Override
-  public GoogleMapsPlacesV1PlaceAreaSummary clone() {
-    return (GoogleMapsPlacesV1PlaceAreaSummary) super.clone();
+  public GoogleMapsPlacesV1PlaceReviewSummary set(String fieldName, Object value) {
+    return (GoogleMapsPlacesV1PlaceReviewSummary) super.set(fieldName, value);
+  }
+
+  @Override
+  public GoogleMapsPlacesV1PlaceReviewSummary clone() {
+    return (GoogleMapsPlacesV1PlaceReviewSummary) super.clone();
   }
 
 }

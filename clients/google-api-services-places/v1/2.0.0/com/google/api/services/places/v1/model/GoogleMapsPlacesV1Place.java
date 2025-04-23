@@ -76,15 +76,6 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   private java.lang.Boolean allowsDogs;
 
   /**
-   * Experimental: See https://developers.google.com/maps/documentation/places/web-
-   * service/experimental/places-generative for more details. AI-generated summary of the area that
-   * the place is in.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleMapsPlacesV1PlaceAreaSummary areaSummary;
-
-  /**
    * A set of data provider that must be shown with this result.
    * The value may be {@code null}.
    */
@@ -165,6 +156,13 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   private GoogleTypeLocalizedText editorialSummary;
 
   /**
+   * The summary of amenities near the EV charging station.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleMapsPlacesV1PlaceEvChargeAmenitySummary evChargeAmenitySummary;
+
+  /**
    * Information of ev charging options.
    * The value may be {@code null}.
    */
@@ -187,8 +185,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   private GoogleMapsPlacesV1FuelOptions fuelOptions;
 
   /**
-   * Experimental: See https://developers.google.com/maps/documentation/places/web-
-   * service/experimental/places-generative for more details. AI-generated summary of the place.
+   * AI-generated summary of the place.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -292,6 +289,13 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
    */
   @com.google.api.client.util.Key
   private java.lang.String nationalPhoneNumber;
+
+  /**
+   * A summary of points of interest near the place.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleMapsPlacesV1PlaceNeighborhoodSummary neighborhoodSummary;
 
   /**
    * Place provides outdoor seating.
@@ -433,6 +437,13 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean restroom;
+
+  /**
+   * AI-generated summary of the place using user reviews.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleMapsPlacesV1PlaceReviewSummary reviewSummary;
 
   /**
    * List of reviews about this place, sorted by relevance. A maximum of 5 reviews can be returned.
@@ -689,27 +700,6 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Experimental: See https://developers.google.com/maps/documentation/places/web-
-   * service/experimental/places-generative for more details. AI-generated summary of the area that
-   * the place is in.
-   * @return value or {@code null} for none
-   */
-  public GoogleMapsPlacesV1PlaceAreaSummary getAreaSummary() {
-    return areaSummary;
-  }
-
-  /**
-   * Experimental: See https://developers.google.com/maps/documentation/places/web-
-   * service/experimental/places-generative for more details. AI-generated summary of the area that
-   * the place is in.
-   * @param areaSummary areaSummary or {@code null} for none
-   */
-  public GoogleMapsPlacesV1Place setAreaSummary(GoogleMapsPlacesV1PlaceAreaSummary areaSummary) {
-    this.areaSummary = areaSummary;
-    return this;
-  }
-
-  /**
    * A set of data provider that must be shown with this result.
    * @return value or {@code null} for none
    */
@@ -900,6 +890,23 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
+   * The summary of amenities near the EV charging station.
+   * @return value or {@code null} for none
+   */
+  public GoogleMapsPlacesV1PlaceEvChargeAmenitySummary getEvChargeAmenitySummary() {
+    return evChargeAmenitySummary;
+  }
+
+  /**
+   * The summary of amenities near the EV charging station.
+   * @param evChargeAmenitySummary evChargeAmenitySummary or {@code null} for none
+   */
+  public GoogleMapsPlacesV1Place setEvChargeAmenitySummary(GoogleMapsPlacesV1PlaceEvChargeAmenitySummary evChargeAmenitySummary) {
+    this.evChargeAmenitySummary = evChargeAmenitySummary;
+    return this;
+  }
+
+  /**
    * Information of ev charging options.
    * @return value or {@code null} for none
    */
@@ -953,8 +960,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Experimental: See https://developers.google.com/maps/documentation/places/web-
-   * service/experimental/places-generative for more details. AI-generated summary of the place.
+   * AI-generated summary of the place.
    * @return value or {@code null} for none
    */
   public GoogleMapsPlacesV1PlaceGenerativeSummary getGenerativeSummary() {
@@ -962,8 +968,7 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * Experimental: See https://developers.google.com/maps/documentation/places/web-
-   * service/experimental/places-generative for more details. AI-generated summary of the place.
+   * AI-generated summary of the place.
    * @param generativeSummary generativeSummary or {@code null} for none
    */
   public GoogleMapsPlacesV1Place setGenerativeSummary(GoogleMapsPlacesV1PlaceGenerativeSummary generativeSummary) {
@@ -1208,6 +1213,23 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
    */
   public GoogleMapsPlacesV1Place setNationalPhoneNumber(java.lang.String nationalPhoneNumber) {
     this.nationalPhoneNumber = nationalPhoneNumber;
+    return this;
+  }
+
+  /**
+   * A summary of points of interest near the place.
+   * @return value or {@code null} for none
+   */
+  public GoogleMapsPlacesV1PlaceNeighborhoodSummary getNeighborhoodSummary() {
+    return neighborhoodSummary;
+  }
+
+  /**
+   * A summary of points of interest near the place.
+   * @param neighborhoodSummary neighborhoodSummary or {@code null} for none
+   */
+  public GoogleMapsPlacesV1Place setNeighborhoodSummary(GoogleMapsPlacesV1PlaceNeighborhoodSummary neighborhoodSummary) {
+    this.neighborhoodSummary = neighborhoodSummary;
     return this;
   }
 
@@ -1526,6 +1548,23 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
    */
   public GoogleMapsPlacesV1Place setRestroom(java.lang.Boolean restroom) {
     this.restroom = restroom;
+    return this;
+  }
+
+  /**
+   * AI-generated summary of the place using user reviews.
+   * @return value or {@code null} for none
+   */
+  public GoogleMapsPlacesV1PlaceReviewSummary getReviewSummary() {
+    return reviewSummary;
+  }
+
+  /**
+   * AI-generated summary of the place using user reviews.
+   * @param reviewSummary reviewSummary or {@code null} for none
+   */
+  public GoogleMapsPlacesV1Place setReviewSummary(GoogleMapsPlacesV1PlaceReviewSummary reviewSummary) {
+    this.reviewSummary = reviewSummary;
     return this;
   }
 

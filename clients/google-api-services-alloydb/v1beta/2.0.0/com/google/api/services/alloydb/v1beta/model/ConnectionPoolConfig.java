@@ -37,8 +37,7 @@ public final class ConnectionPoolConfig extends com.google.api.client.json.Gener
   private java.lang.String defaultPoolSize;
 
   /**
-   * Optional. Deprecated; Prefer 'enabled' as this will be removed soon. TODO(b/394996708) move to
-   * reserved once the field is removed from the gcloud client.
+   * Optional. Deprecated; Prefer 'enabled' as this will be removed soon.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -140,8 +139,7 @@ public final class ConnectionPoolConfig extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Deprecated; Prefer 'enabled' as this will be removed soon. TODO(b/394996708) move to
-   * reserved once the field is removed from the gcloud client.
+   * Optional. Deprecated; Prefer 'enabled' as this will be removed soon.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnable() {
@@ -149,8 +147,7 @@ public final class ConnectionPoolConfig extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Deprecated; Prefer 'enabled' as this will be removed soon. TODO(b/394996708) move to
-   * reserved once the field is removed from the gcloud client.
+   * Optional. Deprecated; Prefer 'enabled' as this will be removed soon.
    * @param enable enable or {@code null} for none
    */
   public ConnectionPoolConfig setEnable(java.lang.Boolean enable) {

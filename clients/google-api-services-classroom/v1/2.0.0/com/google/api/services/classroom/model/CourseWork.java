@@ -113,6 +113,16 @@ public final class CourseWork extends com.google.api.client.json.GenericJson {
   private GradeCategory gradeCategory;
 
   /**
+   * Identifier of the grading period associated with the coursework. * At creation, if unspecified,
+   * the grading period ID will be set based on the `dueDate` (or `scheduledTime` if no `dueDate` is
+   * set). * To indicate no association to any grading period, set this field to an empty string
+   * (""). * If specified, it must match an existing grading period ID in the course.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String gradingPeriodId;
+
+  /**
    * Classroom-assigned identifier of this course work, unique per course. Read-only.
    * The value may be {@code null}.
    */
@@ -402,6 +412,29 @@ public final class CourseWork extends com.google.api.client.json.GenericJson {
    */
   public CourseWork setGradeCategory(GradeCategory gradeCategory) {
     this.gradeCategory = gradeCategory;
+    return this;
+  }
+
+  /**
+   * Identifier of the grading period associated with the coursework. * At creation, if unspecified,
+   * the grading period ID will be set based on the `dueDate` (or `scheduledTime` if no `dueDate` is
+   * set). * To indicate no association to any grading period, set this field to an empty string
+   * (""). * If specified, it must match an existing grading period ID in the course.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGradingPeriodId() {
+    return gradingPeriodId;
+  }
+
+  /**
+   * Identifier of the grading period associated with the coursework. * At creation, if unspecified,
+   * the grading period ID will be set based on the `dueDate` (or `scheduledTime` if no `dueDate` is
+   * set). * To indicate no association to any grading period, set this field to an empty string
+   * (""). * If specified, it must match an existing grading period ID in the course.
+   * @param gradingPeriodId gradingPeriodId or {@code null} for none
+   */
+  public CourseWork setGradingPeriodId(java.lang.String gradingPeriodId) {
+    this.gradingPeriodId = gradingPeriodId;
     return this;
   }
 

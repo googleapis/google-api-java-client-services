@@ -31,6 +31,14 @@ package com.google.api.services.searchads360.v0.model;
 public final class GoogleAdsSearchads360V0ResourcesCustomer extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The account level of the customer: Manager, Sub-manager, Associate manager,
+   * Service account.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String accountLevel;
+
+  /**
    * Output only. Account status, for example, Enabled, Paused, Removed, etc.
    * The value may be {@code null}.
    */
@@ -44,6 +52,21 @@ public final class GoogleAdsSearchads360V0ResourcesCustomer extends com.google.a
    */
   @com.google.api.client.util.Key
   private java.lang.String accountType;
+
+  /**
+   * Output only. The descriptive name of the associate manager.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String associateManagerDescriptiveName;
+
+  /**
+   * Output only. The customer ID of the associate manager. A 0 value indicates that the customer
+   * has no SA360 associate manager.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long associateManagerId;
 
   /**
    * Whether auto-tagging is enabled for the customer.
@@ -126,6 +149,21 @@ public final class GoogleAdsSearchads360V0ResourcesCustomer extends com.google.a
   private java.lang.Boolean manager;
 
   /**
+   * Output only. The descriptive name of the manager.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String managerDescriptiveName;
+
+  /**
+   * Output only. The customer ID of the manager. A 0 value indicates that the customer has no SA360
+   * manager.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long managerId;
+
+  /**
    * Immutable. The resource name of the customer. Customer resource names have the form:
    * `customers/{customer_id}`
    * The value may be {@code null}.
@@ -141,6 +179,21 @@ public final class GoogleAdsSearchads360V0ResourcesCustomer extends com.google.a
   private java.lang.String status;
 
   /**
+   * Output only. The descriptive name of the sub manager.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String subManagerDescriptiveName;
+
+  /**
+   * Output only. The customer ID of the sub manager. A 0 value indicates that the customer has no
+   * sub SA360 manager.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long subManagerId;
+
+  /**
    * Immutable. The local timezone ID of the customer.
    * The value may be {@code null}.
    */
@@ -153,6 +206,25 @@ public final class GoogleAdsSearchads360V0ResourcesCustomer extends com.google.a
    */
   @com.google.api.client.util.Key
   private java.lang.String trackingUrlTemplate;
+
+  /**
+   * Output only. The account level of the customer: Manager, Sub-manager, Associate manager,
+   * Service account.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAccountLevel() {
+    return accountLevel;
+  }
+
+  /**
+   * Output only. The account level of the customer: Manager, Sub-manager, Associate manager,
+   * Service account.
+   * @param accountLevel accountLevel or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesCustomer setAccountLevel(java.lang.String accountLevel) {
+    this.accountLevel = accountLevel;
+    return this;
+  }
 
   /**
    * Output only. Account status, for example, Enabled, Paused, Removed, etc.
@@ -187,6 +259,42 @@ public final class GoogleAdsSearchads360V0ResourcesCustomer extends com.google.a
    */
   public GoogleAdsSearchads360V0ResourcesCustomer setAccountType(java.lang.String accountType) {
     this.accountType = accountType;
+    return this;
+  }
+
+  /**
+   * Output only. The descriptive name of the associate manager.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAssociateManagerDescriptiveName() {
+    return associateManagerDescriptiveName;
+  }
+
+  /**
+   * Output only. The descriptive name of the associate manager.
+   * @param associateManagerDescriptiveName associateManagerDescriptiveName or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesCustomer setAssociateManagerDescriptiveName(java.lang.String associateManagerDescriptiveName) {
+    this.associateManagerDescriptiveName = associateManagerDescriptiveName;
+    return this;
+  }
+
+  /**
+   * Output only. The customer ID of the associate manager. A 0 value indicates that the customer
+   * has no SA360 associate manager.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getAssociateManagerId() {
+    return associateManagerId;
+  }
+
+  /**
+   * Output only. The customer ID of the associate manager. A 0 value indicates that the customer
+   * has no SA360 associate manager.
+   * @param associateManagerId associateManagerId or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesCustomer setAssociateManagerId(java.lang.Long associateManagerId) {
+    this.associateManagerId = associateManagerId;
     return this;
   }
 
@@ -384,6 +492,42 @@ public final class GoogleAdsSearchads360V0ResourcesCustomer extends com.google.a
   }
 
   /**
+   * Output only. The descriptive name of the manager.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getManagerDescriptiveName() {
+    return managerDescriptiveName;
+  }
+
+  /**
+   * Output only. The descriptive name of the manager.
+   * @param managerDescriptiveName managerDescriptiveName or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesCustomer setManagerDescriptiveName(java.lang.String managerDescriptiveName) {
+    this.managerDescriptiveName = managerDescriptiveName;
+    return this;
+  }
+
+  /**
+   * Output only. The customer ID of the manager. A 0 value indicates that the customer has no SA360
+   * manager.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getManagerId() {
+    return managerId;
+  }
+
+  /**
+   * Output only. The customer ID of the manager. A 0 value indicates that the customer has no SA360
+   * manager.
+   * @param managerId managerId or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesCustomer setManagerId(java.lang.Long managerId) {
+    this.managerId = managerId;
+    return this;
+  }
+
+  /**
    * Immutable. The resource name of the customer. Customer resource names have the form:
    * `customers/{customer_id}`
    * @return value or {@code null} for none
@@ -416,6 +560,42 @@ public final class GoogleAdsSearchads360V0ResourcesCustomer extends com.google.a
    */
   public GoogleAdsSearchads360V0ResourcesCustomer setStatus(java.lang.String status) {
     this.status = status;
+    return this;
+  }
+
+  /**
+   * Output only. The descriptive name of the sub manager.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSubManagerDescriptiveName() {
+    return subManagerDescriptiveName;
+  }
+
+  /**
+   * Output only. The descriptive name of the sub manager.
+   * @param subManagerDescriptiveName subManagerDescriptiveName or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesCustomer setSubManagerDescriptiveName(java.lang.String subManagerDescriptiveName) {
+    this.subManagerDescriptiveName = subManagerDescriptiveName;
+    return this;
+  }
+
+  /**
+   * Output only. The customer ID of the sub manager. A 0 value indicates that the customer has no
+   * sub SA360 manager.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getSubManagerId() {
+    return subManagerId;
+  }
+
+  /**
+   * Output only. The customer ID of the sub manager. A 0 value indicates that the customer has no
+   * sub SA360 manager.
+   * @param subManagerId subManagerId or {@code null} for none
+   */
+  public GoogleAdsSearchads360V0ResourcesCustomer setSubManagerId(java.lang.Long subManagerId) {
+    this.subManagerId = subManagerId;
     return this;
   }
 

@@ -199,6 +199,13 @@ public final class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryRe
   private GoogleAnalyticsAdminV1alphaProperty property;
 
   /**
+   * A snapshot of a ReportingDataAnnotation resource in change history.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAnalyticsAdminV1alphaReportingDataAnnotation reportingDataAnnotation;
+
+  /**
    * A snapshot of a SearchAds360Link resource in change history.
    * The value may be {@code null}.
    */
@@ -617,6 +624,23 @@ public final class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryRe
    */
   public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource setProperty(GoogleAnalyticsAdminV1alphaProperty property) {
     this.property = property;
+    return this;
+  }
+
+  /**
+   * A snapshot of a ReportingDataAnnotation resource in change history.
+   * @return value or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaReportingDataAnnotation getReportingDataAnnotation() {
+    return reportingDataAnnotation;
+  }
+
+  /**
+   * A snapshot of a ReportingDataAnnotation resource in change history.
+   * @param reportingDataAnnotation reportingDataAnnotation or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource setReportingDataAnnotation(GoogleAnalyticsAdminV1alphaReportingDataAnnotation reportingDataAnnotation) {
+    this.reportingDataAnnotation = reportingDataAnnotation;
     return this;
   }
 

@@ -729,17 +729,24 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
             return this;
           }
 
-          /** Optional. Page size. If a value is not specified, the default value of 10 is used. */
+          /**
+           * Optional. Page size. If a value is not specified, the default value of 10 is used. The
+           * maximum value is 50.
+           */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Optional. Page size. If a value is not specified, the default value of 10 is used.
+          /** Optional. Page size. If a value is not specified, the default value of 10 is used. The maximum
+         value is 50.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /** Optional. Page size. If a value is not specified, the default value of 10 is used. */
+          /**
+           * Optional. Page size. If a value is not specified, the default value of 10 is used. The
+           * maximum value is 50.
+           */
           public AnalyzeWorkloadMove setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
@@ -1134,6 +1141,153 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
           @Override
           public Delete set(String parameterName, Object value) {
             return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * This endpoint enables Assured Workloads service to offer compliance updates for the folder based
+         * assured workload. It sets up an Assured Workloads Service Agent, having permissions to read
+         * compliance controls (for example: Org Policies) applied on the workload. The caller must have
+         * `resourcemanager.folders.getIamPolicy` and `resourcemanager.folders.setIamPolicy` permissions on
+         * the assured workload folder.
+         *
+         * Create a request for the method "workloads.enableComplianceUpdates".
+         *
+         * This request holds the parameters needed by the assuredworkloads server.  After setting any
+         * optional parameters, call the {@link EnableComplianceUpdates#execute()} method to invoke the
+         * remote operation.
+         *
+         * @param name Required. The `name` field is used to identify the workload. Format:
+         *        organizations/{org_id}/locations/{location_id}/workloads/{workload_id}
+         * @return the request
+         */
+        public EnableComplianceUpdates enableComplianceUpdates(java.lang.String name) throws java.io.IOException {
+          EnableComplianceUpdates result = new EnableComplianceUpdates(name);
+          initialize(result);
+          return result;
+        }
+
+        public class EnableComplianceUpdates extends AssuredworkloadsRequest<com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1EnableComplianceUpdatesResponse> {
+
+          private static final String REST_PATH = "v1/{+name}:enableComplianceUpdates";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/workloads/[^/]+$");
+
+          /**
+           * This endpoint enables Assured Workloads service to offer compliance updates for the folder
+           * based assured workload. It sets up an Assured Workloads Service Agent, having permissions to
+           * read compliance controls (for example: Org Policies) applied on the workload. The caller must
+           * have `resourcemanager.folders.getIamPolicy` and `resourcemanager.folders.setIamPolicy`
+           * permissions on the assured workload folder.
+           *
+           * Create a request for the method "workloads.enableComplianceUpdates".
+           *
+           * This request holds the parameters needed by the the assuredworkloads server.  After setting any
+           * optional parameters, call the {@link EnableComplianceUpdates#execute()} method to invoke the
+           * remote operation. <p> {@link EnableComplianceUpdates#initialize(com.google.api.client.googleapi
+           * s.services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+           * after invoking the constructor. </p>
+           *
+           * @param name Required. The `name` field is used to identify the workload. Format:
+         *        organizations/{org_id}/locations/{location_id}/workloads/{workload_id}
+           * @since 1.13
+           */
+          protected EnableComplianceUpdates(java.lang.String name) {
+            super(Assuredworkloads.this, "PUT", REST_PATH, null, com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1EnableComplianceUpdatesResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/workloads/[^/]+$");
+            }
+          }
+
+          @Override
+          public EnableComplianceUpdates set$Xgafv(java.lang.String $Xgafv) {
+            return (EnableComplianceUpdates) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public EnableComplianceUpdates setAccessToken(java.lang.String accessToken) {
+            return (EnableComplianceUpdates) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public EnableComplianceUpdates setAlt(java.lang.String alt) {
+            return (EnableComplianceUpdates) super.setAlt(alt);
+          }
+
+          @Override
+          public EnableComplianceUpdates setCallback(java.lang.String callback) {
+            return (EnableComplianceUpdates) super.setCallback(callback);
+          }
+
+          @Override
+          public EnableComplianceUpdates setFields(java.lang.String fields) {
+            return (EnableComplianceUpdates) super.setFields(fields);
+          }
+
+          @Override
+          public EnableComplianceUpdates setKey(java.lang.String key) {
+            return (EnableComplianceUpdates) super.setKey(key);
+          }
+
+          @Override
+          public EnableComplianceUpdates setOauthToken(java.lang.String oauthToken) {
+            return (EnableComplianceUpdates) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public EnableComplianceUpdates setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (EnableComplianceUpdates) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public EnableComplianceUpdates setQuotaUser(java.lang.String quotaUser) {
+            return (EnableComplianceUpdates) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public EnableComplianceUpdates setUploadType(java.lang.String uploadType) {
+            return (EnableComplianceUpdates) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public EnableComplianceUpdates setUploadProtocol(java.lang.String uploadProtocol) {
+            return (EnableComplianceUpdates) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The `name` field is used to identify the workload. Format:
+           * organizations/{org_id}/locations/{location_id}/workloads/{workload_id}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The `name` field is used to identify the workload. Format:
+         organizations/{org_id}/locations/{location_id}/workloads/{workload_id}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The `name` field is used to identify the workload. Format:
+           * organizations/{org_id}/locations/{location_id}/workloads/{workload_id}
+           */
+          public EnableComplianceUpdates setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/workloads/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public EnableComplianceUpdates set(String parameterName, Object value) {
+            return (EnableComplianceUpdates) super.set(parameterName, value);
           }
         }
         /**
@@ -2101,6 +2255,338 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
           }
         }
 
+        /**
+         * An accessor for creating requests from the Updates collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code Assuredworkloads assuredworkloads = new Assuredworkloads(...);}
+         *   {@code Assuredworkloads.Updates.List request = assuredworkloads.updates().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Updates updates() {
+          return new Updates();
+        }
+
+        /**
+         * The "updates" collection of methods.
+         */
+        public class Updates {
+
+          /**
+           * This endpoint creates a new operation to apply the given update.
+           *
+           * Create a request for the method "updates.apply".
+           *
+           * This request holds the parameters needed by the assuredworkloads server.  After setting any
+           * optional parameters, call the {@link Apply#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name of the update. Format:
+           *        organizations/{org_id}/locations/{location_id}/workloads/{workload_id}/updates/{update_id}
+           * @param content the {@link com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1ApplyWorkloadUpdateRequest}
+           * @return the request
+           */
+          public Apply apply(java.lang.String name, com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1ApplyWorkloadUpdateRequest content) throws java.io.IOException {
+            Apply result = new Apply(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Apply extends AssuredworkloadsRequest<com.google.api.services.assuredworkloads.v1.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v1/{+name}:apply";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/workloads/[^/]+/updates/[^/]+$");
+
+            /**
+             * This endpoint creates a new operation to apply the given update.
+             *
+             * Create a request for the method "updates.apply".
+             *
+             * This request holds the parameters needed by the the assuredworkloads server.  After setting any
+             * optional parameters, call the {@link Apply#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Apply#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name of the update. Format:
+           *        organizations/{org_id}/locations/{location_id}/workloads/{workload_id}/updates/{update_id}
+             * @param content the {@link com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1ApplyWorkloadUpdateRequest}
+             * @since 1.13
+             */
+            protected Apply(java.lang.String name, com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1ApplyWorkloadUpdateRequest content) {
+              super(Assuredworkloads.this, "POST", REST_PATH, content, com.google.api.services.assuredworkloads.v1.model.GoogleLongrunningOperation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^organizations/[^/]+/locations/[^/]+/workloads/[^/]+/updates/[^/]+$");
+              }
+            }
+
+            @Override
+            public Apply set$Xgafv(java.lang.String $Xgafv) {
+              return (Apply) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Apply setAccessToken(java.lang.String accessToken) {
+              return (Apply) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Apply setAlt(java.lang.String alt) {
+              return (Apply) super.setAlt(alt);
+            }
+
+            @Override
+            public Apply setCallback(java.lang.String callback) {
+              return (Apply) super.setCallback(callback);
+            }
+
+            @Override
+            public Apply setFields(java.lang.String fields) {
+              return (Apply) super.setFields(fields);
+            }
+
+            @Override
+            public Apply setKey(java.lang.String key) {
+              return (Apply) super.setKey(key);
+            }
+
+            @Override
+            public Apply setOauthToken(java.lang.String oauthToken) {
+              return (Apply) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Apply setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Apply) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Apply setQuotaUser(java.lang.String quotaUser) {
+              return (Apply) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Apply setUploadType(java.lang.String uploadType) {
+              return (Apply) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Apply setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Apply) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the update. Format: organizations/{org_id}/locations/{
+             * location_id}/workloads/{workload_id}/updates/{update_id}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of the update. Format:
+           organizations/{org_id}/locations/{location_id}/workloads/{workload_id}/updates/{update_id}
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name of the update. Format: organizations/{org_id}/locations/{
+             * location_id}/workloads/{workload_id}/updates/{update_id}
+             */
+            public Apply setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^organizations/[^/]+/locations/[^/]+/workloads/[^/]+/updates/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Apply set(String parameterName, Object value) {
+              return (Apply) super.set(parameterName, value);
+            }
+          }
+          /**
+           * This endpoint lists all updates for the given workload.
+           *
+           * Create a request for the method "updates.list".
+           *
+           * This request holds the parameters needed by the assuredworkloads server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. organizations/{org_id}/locations/{location_id}/workloads/{workload_id}
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends AssuredworkloadsRequest<com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1ListWorkloadUpdatesResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/updates";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/workloads/[^/]+$");
+
+            /**
+             * This endpoint lists all updates for the given workload.
+             *
+             * Create a request for the method "updates.list".
+             *
+             * This request holds the parameters needed by the the assuredworkloads server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. organizations/{org_id}/locations/{location_id}/workloads/{workload_id}
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(Assuredworkloads.this, "GET", REST_PATH, null, com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1ListWorkloadUpdatesResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^organizations/[^/]+/locations/[^/]+/workloads/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. organizations/{org_id}/locations/{location_id}/workloads/{workload_id} */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. organizations/{org_id}/locations/{location_id}/workloads/{workload_id}
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. organizations/{org_id}/locations/{location_id}/workloads/{workload_id} */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^organizations/[^/]+/locations/[^/]+/workloads/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /** Page size. The default value is 20 and the max allowed value is 100. */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Page size. The default value is 20 and the max allowed value is 100.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /** Page size. The default value is 20 and the max allowed value is 100. */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /** Page token returned from previous request. */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Page token returned from previous request.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /** Page token returned from previous request. */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
         /**
          * An accessor for creating requests from the Violations collection.
          *

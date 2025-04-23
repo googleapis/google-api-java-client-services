@@ -17,7 +17,7 @@
 package com.google.api.services.gkebackup.v1.model;
 
 /**
- * Response message for ListBackups.
+ * Response message for ListRestoreChannels.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Backup for GKE API. For a detailed explanation see:
@@ -27,28 +27,23 @@ package com.google.api.services.gkebackup.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ListBackupsResponse extends com.google.api.client.json.GenericJson {
+public final class ListRestoreChannelsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of Backups matching the given criteria.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<Backup> backups;
-
-  static {
-    // hack to force ProGuard to consider Backup used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Backup.class);
-  }
-
-  /**
-   * A token which may be sent as page_token in a subsequent `ListBackups` call to retrieve the next
-   * page of results. If this field is omitted or empty, then there are no more results to return.
+   * A token which may be sent as page_token in a subsequent `ListRestoreChannels` call to retrieve
+   * the next page of results. If this field is omitted or empty, then there are no more results to
+   * return.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
+
+  /**
+   * The list of RestoreChannels matching the given criteria.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<RestoreChannel> restoreChannels;
 
   /**
    * Locations that could not be reached.
@@ -58,25 +53,9 @@ public final class ListBackupsResponse extends com.google.api.client.json.Generi
   private java.util.List<java.lang.String> unreachable;
 
   /**
-   * The list of Backups matching the given criteria.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<Backup> getBackups() {
-    return backups;
-  }
-
-  /**
-   * The list of Backups matching the given criteria.
-   * @param backups backups or {@code null} for none
-   */
-  public ListBackupsResponse setBackups(java.util.List<Backup> backups) {
-    this.backups = backups;
-    return this;
-  }
-
-  /**
-   * A token which may be sent as page_token in a subsequent `ListBackups` call to retrieve the next
-   * page of results. If this field is omitted or empty, then there are no more results to return.
+   * A token which may be sent as page_token in a subsequent `ListRestoreChannels` call to retrieve
+   * the next page of results. If this field is omitted or empty, then there are no more results to
+   * return.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -84,12 +63,30 @@ public final class ListBackupsResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * A token which may be sent as page_token in a subsequent `ListBackups` call to retrieve the next
-   * page of results. If this field is omitted or empty, then there are no more results to return.
+   * A token which may be sent as page_token in a subsequent `ListRestoreChannels` call to retrieve
+   * the next page of results. If this field is omitted or empty, then there are no more results to
+   * return.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
-  public ListBackupsResponse setNextPageToken(java.lang.String nextPageToken) {
+  public ListRestoreChannelsResponse setNextPageToken(java.lang.String nextPageToken) {
     this.nextPageToken = nextPageToken;
+    return this;
+  }
+
+  /**
+   * The list of RestoreChannels matching the given criteria.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<RestoreChannel> getRestoreChannels() {
+    return restoreChannels;
+  }
+
+  /**
+   * The list of RestoreChannels matching the given criteria.
+   * @param restoreChannels restoreChannels or {@code null} for none
+   */
+  public ListRestoreChannelsResponse setRestoreChannels(java.util.List<RestoreChannel> restoreChannels) {
+    this.restoreChannels = restoreChannels;
     return this;
   }
 
@@ -105,19 +102,19 @@ public final class ListBackupsResponse extends com.google.api.client.json.Generi
    * Locations that could not be reached.
    * @param unreachable unreachable or {@code null} for none
    */
-  public ListBackupsResponse setUnreachable(java.util.List<java.lang.String> unreachable) {
+  public ListRestoreChannelsResponse setUnreachable(java.util.List<java.lang.String> unreachable) {
     this.unreachable = unreachable;
     return this;
   }
 
   @Override
-  public ListBackupsResponse set(String fieldName, Object value) {
-    return (ListBackupsResponse) super.set(fieldName, value);
+  public ListRestoreChannelsResponse set(String fieldName, Object value) {
+    return (ListRestoreChannelsResponse) super.set(fieldName, value);
   }
 
   @Override
-  public ListBackupsResponse clone() {
-    return (ListBackupsResponse) super.clone();
+  public ListRestoreChannelsResponse clone() {
+    return (ListRestoreChannelsResponse) super.clone();
   }
 
 }

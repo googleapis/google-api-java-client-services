@@ -65,6 +65,16 @@ public final class CheckResponse extends com.google.api.client.json.GenericJson 
   private String maxAge;
 
   /**
+   * Statements may specify relation level extensions/payloads to express more details when
+   * declaring permissions to grant from the source asset to the target asset. When requested, the
+   * API will return relation_extensions specified in any and all statements linking the requested
+   * source and target assets by the relation specified in the request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.util.Map<String, java.lang.Object>> relationExtensions;
+
+  /**
    * Human-readable message containing information intended to help end users understand, reproduce
    * and debug the result. The message will be in English and we are currently not planning to offer
    * any translations. Please note that no guarantees are made about the contents or format of this
@@ -141,6 +151,29 @@ public final class CheckResponse extends com.google.api.client.json.GenericJson 
    */
   public CheckResponse setMaxAge(String maxAge) {
     this.maxAge = maxAge;
+    return this;
+  }
+
+  /**
+   * Statements may specify relation level extensions/payloads to express more details when
+   * declaring permissions to grant from the source asset to the target asset. When requested, the
+   * API will return relation_extensions specified in any and all statements linking the requested
+   * source and target assets by the relation specified in the request.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.util.Map<String, java.lang.Object>> getRelationExtensions() {
+    return relationExtensions;
+  }
+
+  /**
+   * Statements may specify relation level extensions/payloads to express more details when
+   * declaring permissions to grant from the source asset to the target asset. When requested, the
+   * API will return relation_extensions specified in any and all statements linking the requested
+   * source and target assets by the relation specified in the request.
+   * @param relationExtensions relationExtensions or {@code null} for none
+   */
+  public CheckResponse setRelationExtensions(java.util.List<java.util.Map<String, java.lang.Object>> relationExtensions) {
+    this.relationExtensions = relationExtensions;
     return this;
   }
 

@@ -427,6 +427,41 @@ public class Digitalassetlinks extends com.google.api.client.googleapis.services
       }
 
       /**
+       * Whether to return relation_extensions payloads specified in the source Digital Asset Links
+       * statements linking the requested source and target assets by the requested relation type.
+       * If this is set to `false` (default), relation_extensions specified will not be returned,
+       * even if they are specified in the DAL statement file. If set to `true`, the API will
+       * propagate any and all relation_extensions, across statements, linking the source and target
+       * assets by the requested relation type, if specified in the DAL statement file.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean returnRelationExtensions;
+
+      /** Whether to return relation_extensions payloads specified in the source Digital Asset Links
+     statements linking the requested source and target assets by the requested relation type. If this
+     is set to `false` (default), relation_extensions specified will not be returned, even if they are
+     specified in the DAL statement file. If set to `true`, the API will propagate any and all
+     relation_extensions, across statements, linking the source and target assets by the requested
+     relation type, if specified in the DAL statement file.
+       */
+      public java.lang.Boolean getReturnRelationExtensions() {
+        return returnRelationExtensions;
+      }
+
+      /**
+       * Whether to return relation_extensions payloads specified in the source Digital Asset Links
+       * statements linking the requested source and target assets by the requested relation type.
+       * If this is set to `false` (default), relation_extensions specified will not be returned,
+       * even if they are specified in the DAL statement file. If set to `true`, the API will
+       * propagate any and all relation_extensions, across statements, linking the source and target
+       * assets by the requested relation type, if specified in the DAL statement file.
+       */
+      public Check setReturnRelationExtensions(java.lang.Boolean returnRelationExtensions) {
+        this.returnRelationExtensions = returnRelationExtensions;
+        return this;
+      }
+
+      /**
        * The uppercase SHA-265 fingerprint of the certificate. From the PEM certificate, it can be
        * acquired like this: $ keytool -printcert -file $CERTFILE | grep SHA256: SHA256:
        * 14:6D:E9:83:C5:73:06:50:D8:EE:B9:95:2F:34:FC:64:16:A0:83: \
@@ -856,6 +891,38 @@ public class Digitalassetlinks extends com.google.api.client.googleapis.services
        */
       public List setRelation(java.lang.String relation) {
         this.relation = relation;
+        return this;
+      }
+
+      /**
+       * Whether to return any relation_extensions payloads specified in the source digital asset
+       * links statements. If this is set to `false` (default), relation_extensions specified will
+       * not be returned, even if they are specified in the DAL statement file. If set to `true`,
+       * the API will propagate relation_extensions associated with each statement's relation type,
+       * if specified in the DAL statement file.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean returnRelationExtensions;
+
+      /** Whether to return any relation_extensions payloads specified in the source digital asset links
+     statements. If this is set to `false` (default), relation_extensions specified will not be
+     returned, even if they are specified in the DAL statement file. If set to `true`, the API will
+     propagate relation_extensions associated with each statement's relation type, if specified in the
+     DAL statement file.
+       */
+      public java.lang.Boolean getReturnRelationExtensions() {
+        return returnRelationExtensions;
+      }
+
+      /**
+       * Whether to return any relation_extensions payloads specified in the source digital asset
+       * links statements. If this is set to `false` (default), relation_extensions specified will
+       * not be returned, even if they are specified in the DAL statement file. If set to `true`,
+       * the API will propagate relation_extensions associated with each statement's relation type,
+       * if specified in the DAL statement file.
+       */
+      public List setReturnRelationExtensions(java.lang.Boolean returnRelationExtensions) {
+        this.returnRelationExtensions = returnRelationExtensions;
         return this;
       }
 

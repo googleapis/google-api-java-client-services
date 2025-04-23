@@ -578,15 +578,13 @@ public class AnalyticsHub extends com.google.api.client.googleapis.services.json
 
           /**
            * Required. The ID of the data exchange. Must contain only Unicode letters, numbers
-           * (0-9), underscores (_). Should not use characters that require URL-escaping, or
-           * characters outside of ASCII, spaces. Max length: 100 bytes.
+           * (0-9), underscores (_). Max length: 100 bytes.
            */
           @com.google.api.client.util.Key
           private java.lang.String dataExchangeId;
 
           /** Required. The ID of the data exchange. Must contain only Unicode letters, numbers (0-9),
-         underscores (_). Should not use characters that require URL-escaping, or characters outside of
-         ASCII, spaces. Max length: 100 bytes.
+         underscores (_). Max length: 100 bytes.
            */
           public java.lang.String getDataExchangeId() {
             return dataExchangeId;
@@ -594,8 +592,7 @@ public class AnalyticsHub extends com.google.api.client.googleapis.services.json
 
           /**
            * Required. The ID of the data exchange. Must contain only Unicode letters, numbers
-           * (0-9), underscores (_). Should not use characters that require URL-escaping, or
-           * characters outside of ASCII, spaces. Max length: 100 bytes.
+           * (0-9), underscores (_). Max length: 100 bytes.
            */
           public Create setDataExchangeId(java.lang.String dataExchangeId) {
             this.dataExchangeId = dataExchangeId;
@@ -2182,15 +2179,13 @@ public class AnalyticsHub extends com.google.api.client.googleapis.services.json
 
             /**
              * Required. The ID of the listing to create. Must contain only Unicode letters, numbers
-             * (0-9), underscores (_). Should not use characters that require URL-escaping, or
-             * characters outside of ASCII, spaces. Max length: 100 bytes.
+             * (0-9), underscores (_). Max length: 100 bytes.
              */
             @com.google.api.client.util.Key
             private java.lang.String listingId;
 
             /** Required. The ID of the listing to create. Must contain only Unicode letters, numbers (0-9),
-           underscores (_). Should not use characters that require URL-escaping, or characters outside of
-           ASCII, spaces. Max length: 100 bytes.
+           underscores (_). Max length: 100 bytes.
              */
             public java.lang.String getListingId() {
               return listingId;
@@ -2198,8 +2193,7 @@ public class AnalyticsHub extends com.google.api.client.googleapis.services.json
 
             /**
              * Required. The ID of the listing to create. Must contain only Unicode letters, numbers
-             * (0-9), underscores (_). Should not use characters that require URL-escaping, or
-             * characters outside of ASCII, spaces. Max length: 100 bytes.
+             * (0-9), underscores (_). Max length: 100 bytes.
              */
             public Create setListingId(java.lang.String listingId) {
               this.listingId = listingId;

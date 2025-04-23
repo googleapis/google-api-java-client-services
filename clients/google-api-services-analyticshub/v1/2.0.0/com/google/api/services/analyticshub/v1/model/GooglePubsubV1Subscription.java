@@ -17,9 +17,9 @@
 package com.google.api.services.analyticshub.v1.model;
 
 /**
- * A subscription resource. If none of `push_config`, `bigquery_config`, or `cloud_storage_config`
- * is set, then the subscriber will pull and ack messages using API methods. At most one of these
- * fields may be set.
+ * Defines the destination Pub/Sub subscription. If none of `push_config`, `bigquery_config`,
+ * `cloud_storage_config`, `pubsub_export_config`, or `pubsublite_export_config` is set, then the
+ * subscriber will pull and ack messages using API methods. At most one of these fields may be set.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Analytics Hub API. For a detailed explanation see:
@@ -48,14 +48,6 @@ public final class GooglePubsubV1Subscription extends com.google.api.client.json
    */
   @com.google.api.client.util.Key
   private java.lang.Integer ackDeadlineSeconds;
-
-  /**
-   * Output only. Information about the associated Analytics Hub subscription. Only set if the
-   * subscritpion is created by Analytics Hub.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private AnalyticsHubSubscriptionInfo analyticsHubSubscriptionInfo;
 
   /**
    * Optional. If delivery to BigQuery is used with this subscription, this field is used to
@@ -97,7 +89,7 @@ public final class GooglePubsubV1Subscription extends com.google.api.client.json
   /**
    * Optional. If true, Pub/Sub provides the following guarantees for the delivery of a message with
    * a given value of `message_id` on this subscription: * The message sent to a subscriber is
-   * guaranteed not to be resent before the message's acknowledgment deadline expires. * An
+   * guaranteed not to be resent before the message's acknowledgement deadline expires. * An
    * acknowledged message will not be resent to a subscriber. Note that subscribers may still
    * receive multiple copies of a message when `enable_exactly_once_delivery` is true if the message
    * was published multiple times by a publisher client. These copies are considered distinct by
@@ -192,30 +184,11 @@ public final class GooglePubsubV1Subscription extends com.google.api.client.json
    * Optional. A policy that specifies how Pub/Sub retries message delivery for this subscription.
    * If not set, the default retry policy is applied. This generally implies that messages will be
    * retried as soon as possible for healthy subscribers. RetryPolicy will be triggered on NACKs or
-   * acknowledgment deadline exceeded events for a given message.
+   * acknowledgement deadline exceeded events for a given message.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private RetryPolicy retryPolicy;
-
-  /**
-   * Output only. An output-only field indicating whether or not the subscription can receive
-   * messages.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String state;
-
-  /**
-   * Output only. Indicates the minimum duration for which a message is retained after it is
-   * published to the subscription's topic. If this field is set, messages published to the
-   * subscription's topic in the last `topic_message_retention_duration` are always available to
-   * subscribers. See the `message_retention_duration` field in `Topic`. This field is set only in
-   * responses from the server; it is ignored if it is set in any requests.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private String topicMessageRetentionDuration;
 
   /**
    * Optional. The approximate amount of time (on a best-effort basis) Pub/Sub waits for the
@@ -253,25 +226,6 @@ public final class GooglePubsubV1Subscription extends com.google.api.client.json
    */
   public GooglePubsubV1Subscription setAckDeadlineSeconds(java.lang.Integer ackDeadlineSeconds) {
     this.ackDeadlineSeconds = ackDeadlineSeconds;
-    return this;
-  }
-
-  /**
-   * Output only. Information about the associated Analytics Hub subscription. Only set if the
-   * subscritpion is created by Analytics Hub.
-   * @return value or {@code null} for none
-   */
-  public AnalyticsHubSubscriptionInfo getAnalyticsHubSubscriptionInfo() {
-    return analyticsHubSubscriptionInfo;
-  }
-
-  /**
-   * Output only. Information about the associated Analytics Hub subscription. Only set if the
-   * subscritpion is created by Analytics Hub.
-   * @param analyticsHubSubscriptionInfo analyticsHubSubscriptionInfo or {@code null} for none
-   */
-  public GooglePubsubV1Subscription setAnalyticsHubSubscriptionInfo(AnalyticsHubSubscriptionInfo analyticsHubSubscriptionInfo) {
-    this.analyticsHubSubscriptionInfo = analyticsHubSubscriptionInfo;
     return this;
   }
 
@@ -364,7 +318,7 @@ public final class GooglePubsubV1Subscription extends com.google.api.client.json
   /**
    * Optional. If true, Pub/Sub provides the following guarantees for the delivery of a message with
    * a given value of `message_id` on this subscription: * The message sent to a subscriber is
-   * guaranteed not to be resent before the message's acknowledgment deadline expires. * An
+   * guaranteed not to be resent before the message's acknowledgement deadline expires. * An
    * acknowledged message will not be resent to a subscriber. Note that subscribers may still
    * receive multiple copies of a message when `enable_exactly_once_delivery` is true if the message
    * was published multiple times by a publisher client. These copies are considered distinct by
@@ -378,7 +332,7 @@ public final class GooglePubsubV1Subscription extends com.google.api.client.json
   /**
    * Optional. If true, Pub/Sub provides the following guarantees for the delivery of a message with
    * a given value of `message_id` on this subscription: * The message sent to a subscriber is
-   * guaranteed not to be resent before the message's acknowledgment deadline expires. * An
+   * guaranteed not to be resent before the message's acknowledgement deadline expires. * An
    * acknowledged message will not be resent to a subscriber. Note that subscribers may still
    * receive multiple copies of a message when `enable_exactly_once_delivery` is true if the message
    * was published multiple times by a publisher client. These copies are considered distinct by
@@ -583,7 +537,7 @@ public final class GooglePubsubV1Subscription extends com.google.api.client.json
    * Optional. A policy that specifies how Pub/Sub retries message delivery for this subscription.
    * If not set, the default retry policy is applied. This generally implies that messages will be
    * retried as soon as possible for healthy subscribers. RetryPolicy will be triggered on NACKs or
-   * acknowledgment deadline exceeded events for a given message.
+   * acknowledgement deadline exceeded events for a given message.
    * @return value or {@code null} for none
    */
   public RetryPolicy getRetryPolicy() {
@@ -594,55 +548,11 @@ public final class GooglePubsubV1Subscription extends com.google.api.client.json
    * Optional. A policy that specifies how Pub/Sub retries message delivery for this subscription.
    * If not set, the default retry policy is applied. This generally implies that messages will be
    * retried as soon as possible for healthy subscribers. RetryPolicy will be triggered on NACKs or
-   * acknowledgment deadline exceeded events for a given message.
+   * acknowledgement deadline exceeded events for a given message.
    * @param retryPolicy retryPolicy or {@code null} for none
    */
   public GooglePubsubV1Subscription setRetryPolicy(RetryPolicy retryPolicy) {
     this.retryPolicy = retryPolicy;
-    return this;
-  }
-
-  /**
-   * Output only. An output-only field indicating whether or not the subscription can receive
-   * messages.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getState() {
-    return state;
-  }
-
-  /**
-   * Output only. An output-only field indicating whether or not the subscription can receive
-   * messages.
-   * @param state state or {@code null} for none
-   */
-  public GooglePubsubV1Subscription setState(java.lang.String state) {
-    this.state = state;
-    return this;
-  }
-
-  /**
-   * Output only. Indicates the minimum duration for which a message is retained after it is
-   * published to the subscription's topic. If this field is set, messages published to the
-   * subscription's topic in the last `topic_message_retention_duration` are always available to
-   * subscribers. See the `message_retention_duration` field in `Topic`. This field is set only in
-   * responses from the server; it is ignored if it is set in any requests.
-   * @return value or {@code null} for none
-   */
-  public String getTopicMessageRetentionDuration() {
-    return topicMessageRetentionDuration;
-  }
-
-  /**
-   * Output only. Indicates the minimum duration for which a message is retained after it is
-   * published to the subscription's topic. If this field is set, messages published to the
-   * subscription's topic in the last `topic_message_retention_duration` are always available to
-   * subscribers. See the `message_retention_duration` field in `Topic`. This field is set only in
-   * responses from the server; it is ignored if it is set in any requests.
-   * @param topicMessageRetentionDuration topicMessageRetentionDuration or {@code null} for none
-   */
-  public GooglePubsubV1Subscription setTopicMessageRetentionDuration(String topicMessageRetentionDuration) {
-    this.topicMessageRetentionDuration = topicMessageRetentionDuration;
     return this;
   }
 

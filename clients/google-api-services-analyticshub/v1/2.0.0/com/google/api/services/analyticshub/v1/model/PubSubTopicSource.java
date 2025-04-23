@@ -31,7 +31,8 @@ public final class PubSubTopicSource extends com.google.api.client.json.GenericJ
 
   /**
    * Optional. Region hint on where the data might be published. Data affinity regions are
-   * modifiable. See go/regions for full listing of possible Cloud regions.
+   * modifiable. See https://cloud.google.com/about/locations for full listing of possible Cloud
+   * regions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,7 +48,8 @@ public final class PubSubTopicSource extends com.google.api.client.json.GenericJ
 
   /**
    * Optional. Region hint on where the data might be published. Data affinity regions are
-   * modifiable. See go/regions for full listing of possible Cloud regions.
+   * modifiable. See https://cloud.google.com/about/locations for full listing of possible Cloud
+   * regions.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDataAffinityRegions() {
@@ -56,7 +58,8 @@ public final class PubSubTopicSource extends com.google.api.client.json.GenericJ
 
   /**
    * Optional. Region hint on where the data might be published. Data affinity regions are
-   * modifiable. See go/regions for full listing of possible Cloud regions.
+   * modifiable. See https://cloud.google.com/about/locations for full listing of possible Cloud
+   * regions.
    * @param dataAffinityRegions dataAffinityRegions or {@code null} for none
    */
   public PubSubTopicSource setDataAffinityRegions(java.util.List<java.lang.String> dataAffinityRegions) {

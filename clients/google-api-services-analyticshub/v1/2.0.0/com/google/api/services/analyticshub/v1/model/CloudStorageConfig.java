@@ -80,9 +80,11 @@ public final class CloudStorageConfig extends com.google.api.client.json.Generic
   private java.lang.Long maxBytes;
 
   /**
-   * Optional. The maximum duration that can elapse before a new Cloud Storage file is created. Min
-   * 1 minute, max 10 minutes, default 5 minutes. May not exceed the subscription's acknowledgment
-   * deadline.
+   * Optional. File batching settings. If no max_duration setting is specified, a max_duration of 5
+   * minutes will be set by default. max_duration is required regardless of whether other file
+   * batching settings are specified. The maximum duration that can elapse before a new Cloud
+   * Storage file is created. Min 1 minute, max 10 minutes, default 5 minutes. May not exceed the
+   * subscription's acknowledgement deadline.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -106,14 +108,6 @@ public final class CloudStorageConfig extends com.google.api.client.json.Generic
    */
   @com.google.api.client.util.Key
   private java.lang.String serviceAccountEmail;
-
-  /**
-   * Output only. An output-only field that indicates whether or not the subscription can receive
-   * messages.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String state;
 
   /**
    * Optional. If set, message data will be written to Cloud Storage in text format.
@@ -241,9 +235,11 @@ public final class CloudStorageConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. The maximum duration that can elapse before a new Cloud Storage file is created. Min
-   * 1 minute, max 10 minutes, default 5 minutes. May not exceed the subscription's acknowledgment
-   * deadline.
+   * Optional. File batching settings. If no max_duration setting is specified, a max_duration of 5
+   * minutes will be set by default. max_duration is required regardless of whether other file
+   * batching settings are specified. The maximum duration that can elapse before a new Cloud
+   * Storage file is created. Min 1 minute, max 10 minutes, default 5 minutes. May not exceed the
+   * subscription's acknowledgement deadline.
    * @return value or {@code null} for none
    */
   public String getMaxDuration() {
@@ -251,9 +247,11 @@ public final class CloudStorageConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. The maximum duration that can elapse before a new Cloud Storage file is created. Min
-   * 1 minute, max 10 minutes, default 5 minutes. May not exceed the subscription's acknowledgment
-   * deadline.
+   * Optional. File batching settings. If no max_duration setting is specified, a max_duration of 5
+   * minutes will be set by default. max_duration is required regardless of whether other file
+   * batching settings are specified. The maximum duration that can elapse before a new Cloud
+   * Storage file is created. Min 1 minute, max 10 minutes, default 5 minutes. May not exceed the
+   * subscription's acknowledgement deadline.
    * @param maxDuration maxDuration or {@code null} for none
    */
   public CloudStorageConfig setMaxDuration(String maxDuration) {
@@ -302,25 +300,6 @@ public final class CloudStorageConfig extends com.google.api.client.json.Generic
    */
   public CloudStorageConfig setServiceAccountEmail(java.lang.String serviceAccountEmail) {
     this.serviceAccountEmail = serviceAccountEmail;
-    return this;
-  }
-
-  /**
-   * Output only. An output-only field that indicates whether or not the subscription can receive
-   * messages.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getState() {
-    return state;
-  }
-
-  /**
-   * Output only. An output-only field that indicates whether or not the subscription can receive
-   * messages.
-   * @param state state or {@code null} for none
-   */
-  public CloudStorageConfig setState(java.lang.String state) {
-    this.state = state;
     return this;
   }
 

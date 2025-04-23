@@ -51,14 +51,6 @@ public final class BigQueryConfig extends com.google.api.client.json.GenericJson
   private java.lang.String serviceAccountEmail;
 
   /**
-   * Output only. An output-only field that indicates whether or not the subscription can receive
-   * messages.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String state;
-
-  /**
    * Optional. The name of the table to which to write data, of the form
    * {projectId}.{datasetId}.{tableId}
    * The value may be {@code null}.
@@ -137,25 +129,6 @@ public final class BigQueryConfig extends com.google.api.client.json.GenericJson
    */
   public BigQueryConfig setServiceAccountEmail(java.lang.String serviceAccountEmail) {
     this.serviceAccountEmail = serviceAccountEmail;
-    return this;
-  }
-
-  /**
-   * Output only. An output-only field that indicates whether or not the subscription can receive
-   * messages.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getState() {
-    return state;
-  }
-
-  /**
-   * Output only. An output-only field that indicates whether or not the subscription can receive
-   * messages.
-   * @param state state or {@code null} for none
-   */
-  public BigQueryConfig setState(java.lang.String state) {
-    this.state = state;
     return this;
   }
 

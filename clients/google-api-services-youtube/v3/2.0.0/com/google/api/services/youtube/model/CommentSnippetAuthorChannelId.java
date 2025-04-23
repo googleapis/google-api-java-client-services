@@ -17,7 +17,7 @@
 package com.google.api.services.youtube.model;
 
 /**
- * The id of the author's YouTube channel, if any.
+ * Contains the id of the author's YouTube channel, if any.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
@@ -30,12 +30,14 @@ package com.google.api.services.youtube.model;
 public final class CommentSnippetAuthorChannelId extends com.google.api.client.json.GenericJson {
 
   /**
+   * The id of the author's YouTube channel.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String value;
 
   /**
+   * The id of the author's YouTube channel.
    * @return value or {@code null} for none
    */
   public java.lang.String getValue() {
@@ -43,6 +45,7 @@ public final class CommentSnippetAuthorChannelId extends com.google.api.client.j
   }
 
   /**
+   * The id of the author's YouTube channel.
    * @param value value or {@code null} for none
    */
   public CommentSnippetAuthorChannelId setValue(java.lang.String value) {

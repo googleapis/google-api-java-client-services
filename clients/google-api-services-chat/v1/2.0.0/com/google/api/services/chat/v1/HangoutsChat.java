@@ -134,6 +134,660 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
   }
 
   /**
+   * An accessor for creating requests from the CustomEmojis collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code HangoutsChat chat = new HangoutsChat(...);}
+   *   {@code HangoutsChat.CustomEmojis.List request = chat.customEmojis().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public CustomEmojis customEmojis() {
+    return new CustomEmojis();
+  }
+
+  /**
+   * The "customEmojis" collection of methods.
+   */
+  public class CustomEmojis {
+
+    /**
+     * Creates a custom emoji. Custom emojis are only available for Google Workspace accounts, and the
+     * administrator must turn custom emojis on for the organization. For more information, see [Learn
+     * about custom emojis in Google Chat](https://support.google.com/chat/answer/12800149) and [Manage
+     * custom emoji permissions](https://support.google.com/a/answer/12850085). Requires [user
+     * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+     *
+     * Create a request for the method "customEmojis.create".
+     *
+     * This request holds the parameters needed by the chat server.  After setting any optional
+     * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.chat.v1.model.CustomEmoji}
+     * @return the request
+     */
+    public Create create(com.google.api.services.chat.v1.model.CustomEmoji content) throws java.io.IOException {
+      Create result = new Create(content);
+      initialize(result);
+      return result;
+    }
+
+    public class Create extends HangoutsChatRequest<com.google.api.services.chat.v1.model.CustomEmoji> {
+
+      private static final String REST_PATH = "v1/customEmojis";
+
+      /**
+       * Creates a custom emoji. Custom emojis are only available for Google Workspace accounts, and the
+       * administrator must turn custom emojis on for the organization. For more information, see [Learn
+       * about custom emojis in Google Chat](https://support.google.com/chat/answer/12800149) and
+       * [Manage custom emoji permissions](https://support.google.com/a/answer/12850085). Requires [user
+       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+       *
+       * Create a request for the method "customEmojis.create".
+       *
+       * This request holds the parameters needed by the the chat server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+       * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.chat.v1.model.CustomEmoji}
+       * @since 1.13
+       */
+      protected Create(com.google.api.services.chat.v1.model.CustomEmoji content) {
+        super(HangoutsChat.this, "POST", REST_PATH, content, com.google.api.services.chat.v1.model.CustomEmoji.class);
+      }
+
+      @Override
+      public Create set$Xgafv(java.lang.String $Xgafv) {
+        return (Create) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Create setAccessToken(java.lang.String accessToken) {
+        return (Create) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Create setAlt(java.lang.String alt) {
+        return (Create) super.setAlt(alt);
+      }
+
+      @Override
+      public Create setCallback(java.lang.String callback) {
+        return (Create) super.setCallback(callback);
+      }
+
+      @Override
+      public Create setFields(java.lang.String fields) {
+        return (Create) super.setFields(fields);
+      }
+
+      @Override
+      public Create setKey(java.lang.String key) {
+        return (Create) super.setKey(key);
+      }
+
+      @Override
+      public Create setOauthToken(java.lang.String oauthToken) {
+        return (Create) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Create) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Create setQuotaUser(java.lang.String quotaUser) {
+        return (Create) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Create setUploadType(java.lang.String uploadType) {
+        return (Create) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Create setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Create) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public Create set(String parameterName, Object value) {
+        return (Create) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Deletes a custom emoji. By default, users can only delete custom emoji they created. [Emoji
+     * managers](https://support.google.com/a/answer/12850085) assigned by the administrator can delete
+     * any custom emoji in the organization. See [Learn about custom emojis in Google
+     * Chat](https://support.google.com/chat/answer/12800149). Custom emojis are only available for
+     * Google Workspace accounts, and the administrator must turn custom emojis on for the organization.
+     * For more information, see [Learn about custom emojis in Google
+     * Chat](https://support.google.com/chat/answer/12800149) and [Manage custom emoji
+     * permissions](https://support.google.com/a/answer/12850085). Requires [user
+     * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+     *
+     * Create a request for the method "customEmojis.delete".
+     *
+     * This request holds the parameters needed by the chat server.  After setting any optional
+     * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. Resource name of the custom emoji to delete. Format: `customEmojis/{customEmoji}` You can
+     *        use the emoji name as an alias for `{customEmoji}`. For example, `customEmojis/:example-
+     *        emoji:` where `:example-emoji:` is the emoji name for a custom emoji.
+     * @return the request
+     */
+    public Delete delete(java.lang.String name) throws java.io.IOException {
+      Delete result = new Delete(name);
+      initialize(result);
+      return result;
+    }
+
+    public class Delete extends HangoutsChatRequest<com.google.api.services.chat.v1.model.Empty> {
+
+      private static final String REST_PATH = "v1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^customEmojis/[^/]+$");
+
+      /**
+       * Deletes a custom emoji. By default, users can only delete custom emoji they created. [Emoji
+       * managers](https://support.google.com/a/answer/12850085) assigned by the administrator can
+       * delete any custom emoji in the organization. See [Learn about custom emojis in Google
+       * Chat](https://support.google.com/chat/answer/12800149). Custom emojis are only available for
+       * Google Workspace accounts, and the administrator must turn custom emojis on for the
+       * organization. For more information, see [Learn about custom emojis in Google
+       * Chat](https://support.google.com/chat/answer/12800149) and [Manage custom emoji
+       * permissions](https://support.google.com/a/answer/12850085). Requires [user
+       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+       *
+       * Create a request for the method "customEmojis.delete".
+       *
+       * This request holds the parameters needed by the the chat server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+       * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. Resource name of the custom emoji to delete. Format: `customEmojis/{customEmoji}` You can
+     *        use the emoji name as an alias for `{customEmoji}`. For example, `customEmojis/:example-
+     *        emoji:` where `:example-emoji:` is the emoji name for a custom emoji.
+       * @since 1.13
+       */
+      protected Delete(java.lang.String name) {
+        super(HangoutsChat.this, "DELETE", REST_PATH, null, com.google.api.services.chat.v1.model.Empty.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^customEmojis/[^/]+$");
+        }
+      }
+
+      @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Delete setAlt(java.lang.String alt) {
+        return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
+      }
+
+      @Override
+      public Delete setFields(java.lang.String fields) {
+        return (Delete) super.setFields(fields);
+      }
+
+      @Override
+      public Delete setKey(java.lang.String key) {
+        return (Delete) super.setKey(key);
+      }
+
+      @Override
+      public Delete setOauthToken(java.lang.String oauthToken) {
+        return (Delete) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Delete) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Delete setQuotaUser(java.lang.String quotaUser) {
+        return (Delete) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. Resource name of the custom emoji to delete. Format: `customEmojis/{customEmoji}`
+       * You can use the emoji name as an alias for `{customEmoji}`. For example,
+       * `customEmojis/:example-emoji:` where `:example-emoji:` is the emoji name for a custom
+       * emoji.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. Resource name of the custom emoji to delete. Format: `customEmojis/{customEmoji}` You can
+     use the emoji name as an alias for `{customEmoji}`. For example, `customEmojis/:example-emoji:`
+     where `:example-emoji:` is the emoji name for a custom emoji.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. Resource name of the custom emoji to delete. Format: `customEmojis/{customEmoji}`
+       * You can use the emoji name as an alias for `{customEmoji}`. For example,
+       * `customEmojis/:example-emoji:` where `:example-emoji:` is the emoji name for a custom
+       * emoji.
+       */
+      public Delete setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^customEmojis/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public Delete set(String parameterName, Object value) {
+        return (Delete) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Returns details about a custom emoji. Custom emojis are only available for Google Workspace
+     * accounts, and the administrator must turn custom emojis on for the organization. For more
+     * information, see [Learn about custom emojis in Google
+     * Chat](https://support.google.com/chat/answer/12800149) and [Manage custom emoji
+     * permissions](https://support.google.com/a/answer/12850085). Requires [user
+     * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+     *
+     * Create a request for the method "customEmojis.get".
+     *
+     * This request holds the parameters needed by the chat server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. Resource name of the custom emoji. Format: `customEmojis/{customEmoji}` You can use the
+     *        emoji name as an alias for `{customEmoji}`. For example, `customEmojis/:example-emoji:`
+     *        where `:example-emoji:` is the emoji name for a custom emoji.
+     * @return the request
+     */
+    public Get get(java.lang.String name) throws java.io.IOException {
+      Get result = new Get(name);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends HangoutsChatRequest<com.google.api.services.chat.v1.model.CustomEmoji> {
+
+      private static final String REST_PATH = "v1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^customEmojis/[^/]+$");
+
+      /**
+       * Returns details about a custom emoji. Custom emojis are only available for Google Workspace
+       * accounts, and the administrator must turn custom emojis on for the organization. For more
+       * information, see [Learn about custom emojis in Google
+       * Chat](https://support.google.com/chat/answer/12800149) and [Manage custom emoji
+       * permissions](https://support.google.com/a/answer/12850085). Requires [user
+       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+       *
+       * Create a request for the method "customEmojis.get".
+       *
+       * This request holds the parameters needed by the the chat server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+       * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. Resource name of the custom emoji. Format: `customEmojis/{customEmoji}` You can use the
+     *        emoji name as an alias for `{customEmoji}`. For example, `customEmojis/:example-emoji:`
+     *        where `:example-emoji:` is the emoji name for a custom emoji.
+       * @since 1.13
+       */
+      protected Get(java.lang.String name) {
+        super(HangoutsChat.this, "GET", REST_PATH, null, com.google.api.services.chat.v1.model.CustomEmoji.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^customEmojis/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. Resource name of the custom emoji. Format: `customEmojis/{customEmoji}` You can
+       * use the emoji name as an alias for `{customEmoji}`. For example, `customEmojis/:example-
+       * emoji:` where `:example-emoji:` is the emoji name for a custom emoji.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. Resource name of the custom emoji. Format: `customEmojis/{customEmoji}` You can use the
+     emoji name as an alias for `{customEmoji}`. For example, `customEmojis/:example-emoji:` where
+     `:example-emoji:` is the emoji name for a custom emoji.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. Resource name of the custom emoji. Format: `customEmojis/{customEmoji}` You can
+       * use the emoji name as an alias for `{customEmoji}`. For example, `customEmojis/:example-
+       * emoji:` where `:example-emoji:` is the emoji name for a custom emoji.
+       */
+      public Get setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^customEmojis/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Lists custom emojis visible to the authenticated user. Custom emojis are only available for
+     * Google Workspace accounts, and the administrator must turn custom emojis on for the organization.
+     * For more information, see [Learn about custom emojis in Google
+     * Chat](https://support.google.com/chat/answer/12800149) and [Manage custom emoji
+     * permissions](https://support.google.com/a/answer/12850085). Requires [user
+     * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+     *
+     * Create a request for the method "customEmojis.list".
+     *
+     * This request holds the parameters needed by the chat server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @return the request
+     */
+    public List list() throws java.io.IOException {
+      List result = new List();
+      initialize(result);
+      return result;
+    }
+
+    public class List extends HangoutsChatRequest<com.google.api.services.chat.v1.model.ListCustomEmojisResponse> {
+
+      private static final String REST_PATH = "v1/customEmojis";
+
+      /**
+       * Lists custom emojis visible to the authenticated user. Custom emojis are only available for
+       * Google Workspace accounts, and the administrator must turn custom emojis on for the
+       * organization. For more information, see [Learn about custom emojis in Google
+       * Chat](https://support.google.com/chat/answer/12800149) and [Manage custom emoji
+       * permissions](https://support.google.com/a/answer/12850085). Requires [user
+       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+       *
+       * Create a request for the method "customEmojis.list".
+       *
+       * This request holds the parameters needed by the the chat server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+       * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected List() {
+        super(HangoutsChat.this, "GET", REST_PATH, null, com.google.api.services.chat.v1.model.ListCustomEmojisResponse.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Optional. A query filter. Supports filtering by creator. To filter by creator, you must
+       * specify a valid value. Currently only `creator("users/me")` and `NOT creator("users/me")`
+       * are accepted to filter custom emojis by whether they were created by the calling user or
+       * not. For example, the following query returns custom emojis created by the caller: ```
+       * creator("users/me") ``` Invalid queries are rejected with an `INVALID_ARGUMENT` error.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String filter;
+
+      /** Optional. A query filter. Supports filtering by creator. To filter by creator, you must specify a
+     valid value. Currently only `creator("users/me")` and `NOT creator("users/me")` are accepted to
+     filter custom emojis by whether they were created by the calling user or not. For example, the
+     following query returns custom emojis created by the caller: ``` creator("users/me") ``` Invalid
+     queries are rejected with an `INVALID_ARGUMENT` error.
+       */
+      public java.lang.String getFilter() {
+        return filter;
+      }
+
+      /**
+       * Optional. A query filter. Supports filtering by creator. To filter by creator, you must
+       * specify a valid value. Currently only `creator("users/me")` and `NOT creator("users/me")`
+       * are accepted to filter custom emojis by whether they were created by the calling user or
+       * not. For example, the following query returns custom emojis created by the caller: ```
+       * creator("users/me") ``` Invalid queries are rejected with an `INVALID_ARGUMENT` error.
+       */
+      public List setFilter(java.lang.String filter) {
+        this.filter = filter;
+        return this;
+      }
+
+      /**
+       * Optional. The maximum number of custom emojis returned. The service can return fewer custom
+       * emojis than this value. If unspecified, the default value is 25. The maximum value is 200;
+       * values above 200 are changed to 200.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** Optional. The maximum number of custom emojis returned. The service can return fewer custom emojis
+     than this value. If unspecified, the default value is 25. The maximum value is 200; values above
+     200 are changed to 200.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * Optional. The maximum number of custom emojis returned. The service can return fewer custom
+       * emojis than this value. If unspecified, the default value is 25. The maximum value is 200;
+       * values above 200 are changed to 200.
+       */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * Optional. (If resuming from a previous query.) A page token received from a previous list
+       * custom emoji call. Provide this to retrieve the subsequent page. When paginating, the
+       * filter value should match the call that provided the page token. Passing a different value
+       * might lead to unexpected results.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** Optional. (If resuming from a previous query.) A page token received from a previous list custom
+     emoji call. Provide this to retrieve the subsequent page. When paginating, the filter value should
+     match the call that provided the page token. Passing a different value might lead to unexpected
+     results.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * Optional. (If resuming from a previous query.) A page token received from a previous list
+       * custom emoji call. Provide this to retrieve the subsequent page. When paginating, the
+       * filter value should match the call that provided the page token. Passing a different value
+       * might lead to unexpected results.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the Media collection.
    *
    * <p>The typical use is:</p>
@@ -2679,7 +3333,10 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * Preview](https://developers.google.com/workspace/preview) - [User
        * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
        * You can authenticate and authorize this method with administrator privileges by setting the
-       * `use_admin_access` field in the request.
+       * `use_admin_access` field in the request. To delete memberships for space managers, the requester
+       * must be a space manager. If you're using [app
+       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) the
+       * application must be the space creator.
        *
        * Create a request for the method "members.delete".
        *
@@ -2688,12 +3345,15 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        *
        * @param name Required. Resource name of the membership to delete. Chat apps can delete human users' or their own
        *        memberships. Chat apps can't delete other apps' memberships. When deleting a human
-       *        membership, requires the `chat.memberships` scope and `spaces/{space}/members/{member}`
-       *        format. You can use the email as an alias for `{member}`. For example,
-       *        `spaces/{space}/members/example@gmail.com` where `example@gmail.com` is the email of the
-       *        Google Chat user. When deleting an app membership, requires the `chat.memberships.app`
-       *        scope and `spaces/{space}/members/app` format. Format: `spaces/{space}/members/{member}`
-       *        or `spaces/{space}/members/app`.
+       *        membership, requires the `chat.memberships` scope with [user
+       *        authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
+       *        user) or the `chat.memberships.app` scope with [app
+       *        authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
+       *        app) and the `spaces/{space}/members/{member}` format. You can use the email as an alias
+       *        for `{member}`. For example, `spaces/{space}/members/example@gmail.com` where
+       *        `example@gmail.com` is the email of the Google Chat user. When deleting an app membership,
+       *        requires the `chat.memberships.app` scope and `spaces/{space}/members/app` format. Format:
+       *        `spaces/{space}/members/{member}` or `spaces/{space}/members/app`.
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -2718,7 +3378,10 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * [Developer Preview](https://developers.google.com/workspace/preview) - [User
          * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
          * You can authenticate and authorize this method with administrator privileges by setting the
-         * `use_admin_access` field in the request.
+         * `use_admin_access` field in the request. To delete memberships for space managers, the
+         * requester must be a space manager. If you're using [app
+         * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+         * the application must be the space creator.
          *
          * Create a request for the method "members.delete".
          *
@@ -2729,12 +3392,15 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          *
          * @param name Required. Resource name of the membership to delete. Chat apps can delete human users' or their own
        *        memberships. Chat apps can't delete other apps' memberships. When deleting a human
-       *        membership, requires the `chat.memberships` scope and `spaces/{space}/members/{member}`
-       *        format. You can use the email as an alias for `{member}`. For example,
-       *        `spaces/{space}/members/example@gmail.com` where `example@gmail.com` is the email of the
-       *        Google Chat user. When deleting an app membership, requires the `chat.memberships.app`
-       *        scope and `spaces/{space}/members/app` format. Format: `spaces/{space}/members/{member}`
-       *        or `spaces/{space}/members/app`.
+       *        membership, requires the `chat.memberships` scope with [user
+       *        authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
+       *        user) or the `chat.memberships.app` scope with [app
+       *        authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
+       *        app) and the `spaces/{space}/members/{member}` format. You can use the email as an alias
+       *        for `{member}`. For example, `spaces/{space}/members/example@gmail.com` where
+       *        `example@gmail.com` is the email of the Google Chat user. When deleting an app membership,
+       *        requires the `chat.memberships.app` scope and `spaces/{space}/members/app` format. Format:
+       *        `spaces/{space}/members/{member}` or `spaces/{space}/members/app`.
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -2805,9 +3471,12 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         /**
          * Required. Resource name of the membership to delete. Chat apps can delete human users' or
          * their own memberships. Chat apps can't delete other apps' memberships. When deleting a
-         * human membership, requires the `chat.memberships` scope and
-         * `spaces/{space}/members/{member}` format. You can use the email as an alias for
-         * `{member}`. For example, `spaces/{space}/members/example@gmail.com` where
+         * human membership, requires the `chat.memberships` scope with [user
+         * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
+         * user) or the `chat.memberships.app` scope with [app
+         * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
+         * app) and the `spaces/{space}/members/{member}` format. You can use the email as an alias
+         * for `{member}`. For example, `spaces/{space}/members/example@gmail.com` where
          * `example@gmail.com` is the email of the Google Chat user. When deleting an app
          * membership, requires the `chat.memberships.app` scope and `spaces/{space}/members/app`
          * format. Format: `spaces/{space}/members/{member}` or `spaces/{space}/members/app`.
@@ -2817,11 +3486,15 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
         /** Required. Resource name of the membership to delete. Chat apps can delete human users' or their own
        memberships. Chat apps can't delete other apps' memberships. When deleting a human membership,
-       requires the `chat.memberships` scope and `spaces/{space}/members/{member}` format. You can use the
-       email as an alias for `{member}`. For example, `spaces/{space}/members/example@gmail.com` where
-       `example@gmail.com` is the email of the Google Chat user. When deleting an app membership, requires
-       the `chat.memberships.app` scope and `spaces/{space}/members/app` format. Format:
-       `spaces/{space}/members/{member}` or `spaces/{space}/members/app`.
+       requires the `chat.memberships` scope with [user
+       authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user) or
+       the `chat.memberships.app` scope with [app
+       authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) and
+       the `spaces/{space}/members/{member}` format. You can use the email as an alias for `{member}`. For
+       example, `spaces/{space}/members/example@gmail.com` where `example@gmail.com` is the email of the
+       Google Chat user. When deleting an app membership, requires the `chat.memberships.app` scope and
+       `spaces/{space}/members/app` format. Format: `spaces/{space}/members/{member}` or
+       `spaces/{space}/members/app`.
          */
         public java.lang.String getName() {
           return name;
@@ -2830,9 +3503,12 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         /**
          * Required. Resource name of the membership to delete. Chat apps can delete human users' or
          * their own memberships. Chat apps can't delete other apps' memberships. When deleting a
-         * human membership, requires the `chat.memberships` scope and
-         * `spaces/{space}/members/{member}` format. You can use the email as an alias for
-         * `{member}`. For example, `spaces/{space}/members/example@gmail.com` where
+         * human membership, requires the `chat.memberships` scope with [user
+         * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
+         * user) or the `chat.memberships.app` scope with [app
+         * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
+         * app) and the `spaces/{space}/members/{member}` format. You can use the email as an alias
+         * for `{member}`. For example, `spaces/{space}/members/example@gmail.com` where
          * `example@gmail.com` is the email of the Google Chat user. When deleting an app
          * membership, requires the `chat.memberships.app` scope and `spaces/{space}/members/app`
          * format. Format: `spaces/{space}/members/{member}` or `spaces/{space}/members/app`.
@@ -5835,8 +6511,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
            * "🙂" AND emoji.custom_emoji.uid = "{uid}" emoji.unicode = "🙂" OR user.name =
            * "users/{user}" emoji.unicode = "🙂" OR emoji.custom_emoji.uid = "{uid}" OR user.name =
            * "users/{user}" emoji.unicode = "🙂" OR emoji.custom_emoji.uid = "{uid}" AND user.name =
-           * "users/{user}" ``` Invalid queries are rejected by the server with an
-           * `INVALID_ARGUMENT` error.
+           * "users/{user}" ``` Invalid queries are rejected with an `INVALID_ARGUMENT` error.
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
@@ -5857,7 +6532,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          "👍" emoji.unicode = "🙂" AND emoji.custom_emoji.uid = "{uid}" emoji.unicode = "🙂" OR user.name =
          "users/{user}" emoji.unicode = "🙂" OR emoji.custom_emoji.uid = "{uid}" OR user.name =
          "users/{user}" emoji.unicode = "🙂" OR emoji.custom_emoji.uid = "{uid}" AND user.name =
-         "users/{user}" ``` Invalid queries are rejected by the server with an `INVALID_ARGUMENT` error.
+         "users/{user}" ``` Invalid queries are rejected with an `INVALID_ARGUMENT` error.
            */
           public java.lang.String getFilter() {
             return filter;
@@ -5882,8 +6557,7 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
            * "🙂" AND emoji.custom_emoji.uid = "{uid}" emoji.unicode = "🙂" OR user.name =
            * "users/{user}" emoji.unicode = "🙂" OR emoji.custom_emoji.uid = "{uid}" OR user.name =
            * "users/{user}" emoji.unicode = "🙂" OR emoji.custom_emoji.uid = "{uid}" AND user.name =
-           * "users/{user}" ``` Invalid queries are rejected by the server with an
-           * `INVALID_ARGUMENT` error.
+           * "users/{user}" ``` Invalid queries are rejected with an `INVALID_ARGUMENT` error.
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;

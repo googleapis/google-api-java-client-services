@@ -17,7 +17,7 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * Represents a custom emoji.
+ * Represents a [custom emoji](https://support.google.com/chat/answer/12800149).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -30,11 +30,125 @@ package com.google.api.services.chat.v1.model;
 public final class CustomEmoji extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Immutable. User-provided name for the custom emoji, which is unique within the
+   * organization. Required when the custom emoji is created, output only otherwise. Emoji names
+   * must start and end with colons, must be lowercase and can only contain alphanumeric characters,
+   * hyphens, and underscores. Hyphens and underscores should be used to separate words and cannot
+   * be used consecutively. Example: `:valid-emoji-name:`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String emojiName;
+
+  /**
+   * Identifier. The resource name of the custom emoji, assigned by the server. Format:
+   * `customEmojis/{customEmoji}`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String name;
+
+  /**
+   * Optional. Input only. Payload data. Required when the custom emoji is created.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CustomEmojiPayload payload;
+
+  /**
+   * Output only. A temporary image URL for the custom emoji, valid for at least 10 minutes. Note
+   * that this is not populated in the response when the custom emoji is created.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String temporaryImageUri;
+
+  /**
    * Output only. Unique key for the custom emoji resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uid;
+
+  /**
+   * Optional. Immutable. User-provided name for the custom emoji, which is unique within the
+   * organization. Required when the custom emoji is created, output only otherwise. Emoji names
+   * must start and end with colons, must be lowercase and can only contain alphanumeric characters,
+   * hyphens, and underscores. Hyphens and underscores should be used to separate words and cannot
+   * be used consecutively. Example: `:valid-emoji-name:`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEmojiName() {
+    return emojiName;
+  }
+
+  /**
+   * Optional. Immutable. User-provided name for the custom emoji, which is unique within the
+   * organization. Required when the custom emoji is created, output only otherwise. Emoji names
+   * must start and end with colons, must be lowercase and can only contain alphanumeric characters,
+   * hyphens, and underscores. Hyphens and underscores should be used to separate words and cannot
+   * be used consecutively. Example: `:valid-emoji-name:`
+   * @param emojiName emojiName or {@code null} for none
+   */
+  public CustomEmoji setEmojiName(java.lang.String emojiName) {
+    this.emojiName = emojiName;
+    return this;
+  }
+
+  /**
+   * Identifier. The resource name of the custom emoji, assigned by the server. Format:
+   * `customEmojis/{customEmoji}`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getName() {
+    return name;
+  }
+
+  /**
+   * Identifier. The resource name of the custom emoji, assigned by the server. Format:
+   * `customEmojis/{customEmoji}`
+   * @param name name or {@code null} for none
+   */
+  public CustomEmoji setName(java.lang.String name) {
+    this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. Input only. Payload data. Required when the custom emoji is created.
+   * @return value or {@code null} for none
+   */
+  public CustomEmojiPayload getPayload() {
+    return payload;
+  }
+
+  /**
+   * Optional. Input only. Payload data. Required when the custom emoji is created.
+   * @param payload payload or {@code null} for none
+   */
+  public CustomEmoji setPayload(CustomEmojiPayload payload) {
+    this.payload = payload;
+    return this;
+  }
+
+  /**
+   * Output only. A temporary image URL for the custom emoji, valid for at least 10 minutes. Note
+   * that this is not populated in the response when the custom emoji is created.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTemporaryImageUri() {
+    return temporaryImageUri;
+  }
+
+  /**
+   * Output only. A temporary image URL for the custom emoji, valid for at least 10 minutes. Note
+   * that this is not populated in the response when the custom emoji is created.
+   * @param temporaryImageUri temporaryImageUri or {@code null} for none
+   */
+  public CustomEmoji setTemporaryImageUri(java.lang.String temporaryImageUri) {
+    this.temporaryImageUri = temporaryImageUri;
+    return this;
+  }
 
   /**
    * Output only. Unique key for the custom emoji resource.

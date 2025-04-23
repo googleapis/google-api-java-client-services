@@ -140,7 +140,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
-   * Optional. Configuration parameters related to the Gemini in Databases add-on.
+   * Optional. Deprecated and unused. This field will be removed in the near future.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -565,7 +565,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Configuration parameters related to the Gemini in Databases add-on.
+   * Optional. Deprecated and unused. This field will be removed in the near future.
    * @return value or {@code null} for none
    */
   public GeminiClusterConfig getGeminiConfig() {
@@ -573,7 +573,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Configuration parameters related to the Gemini in Databases add-on.
+   * Optional. Deprecated and unused. This field will be removed in the near future.
    * @param geminiConfig geminiConfig or {@code null} for none
    */
   public Cluster setGeminiConfig(GeminiClusterConfig geminiConfig) {

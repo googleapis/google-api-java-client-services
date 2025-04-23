@@ -53,6 +53,13 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private java.lang.String clusterUid;
 
   /**
+   * Output only. Timestamp when the resource finished being created.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String createCompletionTime;
+
+  /**
    * Output only. Create time stamp
    * The value may be {@code null}.
    */
@@ -259,6 +266,23 @@ public final class Backup extends com.google.api.client.json.GenericJson {
    */
   public Backup setClusterUid(java.lang.String clusterUid) {
     this.clusterUid = clusterUid;
+    return this;
+  }
+
+  /**
+   * Output only. Timestamp when the resource finished being created.
+   * @return value or {@code null} for none
+   */
+  public String getCreateCompletionTime() {
+    return createCompletionTime;
+  }
+
+  /**
+   * Output only. Timestamp when the resource finished being created.
+   * @param createCompletionTime createCompletionTime or {@code null} for none
+   */
+  public Backup setCreateCompletionTime(String createCompletionTime) {
+    this.createCompletionTime = createCompletionTime;
     return this;
   }
 

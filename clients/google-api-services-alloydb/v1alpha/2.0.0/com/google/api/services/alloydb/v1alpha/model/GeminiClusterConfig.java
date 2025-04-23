@@ -17,7 +17,7 @@
 package com.google.api.services.alloydb.v1alpha.model;
 
 /**
- * Cluster level configuration parameters related to the Gemini in Databases add-on.
+ * Deprecated and unused. This field will be removed in the near future.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the AlloyDB API. For a detailed explanation see:
@@ -30,20 +30,14 @@ package com.google.api.services.alloydb.v1alpha.model;
 public final class GeminiClusterConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Whether the Gemini in Databases add-on is enabled for the cluster. It will be true
-   * only if the add-on has been enabled for the billing account corresponding to the cluster. Its
-   * status is toggled from the Admin Control Center (ACC) and cannot be toggled using AlloyDB's
-   * APIs.
+   * Output only. Deprecated and unused. This field will be removed in the near future.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean entitled;
 
   /**
-   * Output only. Whether the Gemini in Databases add-on is enabled for the cluster. It will be true
-   * only if the add-on has been enabled for the billing account corresponding to the cluster. Its
-   * status is toggled from the Admin Control Center (ACC) and cannot be toggled using AlloyDB's
-   * APIs.
+   * Output only. Deprecated and unused. This field will be removed in the near future.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEntitled() {
@@ -51,10 +45,7 @@ public final class GeminiClusterConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output only. Whether the Gemini in Databases add-on is enabled for the cluster. It will be true
-   * only if the add-on has been enabled for the billing account corresponding to the cluster. Its
-   * status is toggled from the Admin Control Center (ACC) and cannot be toggled using AlloyDB's
-   * APIs.
+   * Output only. Deprecated and unused. This field will be removed in the near future.
    * @param entitled entitled or {@code null} for none
    */
   public GeminiClusterConfig setEntitled(java.lang.Boolean entitled) {

@@ -585,6 +585,29 @@ public class MigrationCenterAPI extends com.google.api.client.googleapis.service
         }
 
         /**
+         * Optional. A list of extra location types that should be used as conditions for
+         * controlling the visibility of the locations.
+         */
+        @com.google.api.client.util.Key
+        private java.util.List<java.lang.String> extraLocationTypes;
+
+        /** Optional. A list of extra location types that should be used as conditions for controlling the
+       visibility of the locations.
+         */
+        public java.util.List<java.lang.String> getExtraLocationTypes() {
+          return extraLocationTypes;
+        }
+
+        /**
+         * Optional. A list of extra location types that should be used as conditions for
+         * controlling the visibility of the locations.
+         */
+        public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
+          this.extraLocationTypes = extraLocationTypes;
+          return this;
+        }
+
+        /**
          * A filter to narrow down results to a preferred subset. The filtering language accepts
          * strings like `"displayName=tokyo"`, and is documented in more detail in
          * [AIP-160](https://google.aip.dev/160).
@@ -8631,7 +8654,7 @@ public class MigrationCenterAPI extends com.google.api.client.googleapis.service
          * This request holds the parameters needed by the migrationcenter server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Output only. Name of the preference set.
+         * @param name Output only. Name of the PreferenceSet.
          * @param content the {@link com.google.api.services.migrationcenter.v1alpha1.model.PreferenceSet}
          * @return the request
          */
@@ -8659,7 +8682,7 @@ public class MigrationCenterAPI extends com.google.api.client.googleapis.service
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Output only. Name of the preference set.
+           * @param name Output only. Name of the PreferenceSet.
            * @param content the {@link com.google.api.services.migrationcenter.v1alpha1.model.PreferenceSet}
            * @since 1.13
            */
@@ -8728,17 +8751,17 @@ public class MigrationCenterAPI extends com.google.api.client.googleapis.service
             return (Patch) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Output only. Name of the preference set. */
+          /** Output only. Name of the PreferenceSet. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Output only. Name of the preference set.
+          /** Output only. Name of the PreferenceSet.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Output only. Name of the preference set. */
+          /** Output only. Name of the PreferenceSet. */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

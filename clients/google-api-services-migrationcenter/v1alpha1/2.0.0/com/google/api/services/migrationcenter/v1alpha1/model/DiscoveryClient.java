@@ -88,6 +88,13 @@ public final class DiscoveryClient extends com.google.api.client.json.GenericJso
   private java.lang.String name;
 
   /**
+   * Output only. The recommended versions of the discovery client.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<DiscoveryClientDiscoveryClientRecommendedVersion> recommendedVersions;
+
+  /**
    * Required. Service account used by the discovery client for various operation.
    * The value may be {@code null}.
    */
@@ -276,6 +283,23 @@ public final class DiscoveryClient extends com.google.api.client.json.GenericJso
    */
   public DiscoveryClient setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. The recommended versions of the discovery client.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<DiscoveryClientDiscoveryClientRecommendedVersion> getRecommendedVersions() {
+    return recommendedVersions;
+  }
+
+  /**
+   * Output only. The recommended versions of the discovery client.
+   * @param recommendedVersions recommendedVersions or {@code null} for none
+   */
+  public DiscoveryClient setRecommendedVersions(java.util.List<DiscoveryClientDiscoveryClientRecommendedVersion> recommendedVersions) {
+    this.recommendedVersions = recommendedVersions;
     return this;
   }
 

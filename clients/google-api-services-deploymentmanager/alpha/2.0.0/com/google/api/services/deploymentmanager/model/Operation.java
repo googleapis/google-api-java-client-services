@@ -175,6 +175,14 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private java.lang.String selfLinkWithId;
 
   /**
+   * This field is used internally by the Autoscaler team and should not be promoted to
+   * "alpha/beta/v1".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SetAutoscalerLinkOperationMetadata setAutoscalerLinkOperationMetadata;
+
+  /**
    * [Output Only] If the operation is for projects.setCommonInstanceMetadata, this field will
    * contain information on all underlying zonal actions and their state.
    * The value may be {@code null}.
@@ -574,6 +582,25 @@ public final class Operation extends com.google.api.client.json.GenericJson {
    */
   public Operation setSelfLinkWithId(java.lang.String selfLinkWithId) {
     this.selfLinkWithId = selfLinkWithId;
+    return this;
+  }
+
+  /**
+   * This field is used internally by the Autoscaler team and should not be promoted to
+   * "alpha/beta/v1".
+   * @return value or {@code null} for none
+   */
+  public SetAutoscalerLinkOperationMetadata getSetAutoscalerLinkOperationMetadata() {
+    return setAutoscalerLinkOperationMetadata;
+  }
+
+  /**
+   * This field is used internally by the Autoscaler team and should not be promoted to
+   * "alpha/beta/v1".
+   * @param setAutoscalerLinkOperationMetadata setAutoscalerLinkOperationMetadata or {@code null} for none
+   */
+  public Operation setSetAutoscalerLinkOperationMetadata(SetAutoscalerLinkOperationMetadata setAutoscalerLinkOperationMetadata) {
+    this.setAutoscalerLinkOperationMetadata = setAutoscalerLinkOperationMetadata;
     return this;
   }
 

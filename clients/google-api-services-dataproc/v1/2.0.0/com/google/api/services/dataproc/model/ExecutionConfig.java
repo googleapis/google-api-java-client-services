@@ -30,6 +30,15 @@ package com.google.api.services.dataproc.model;
 public final class ExecutionConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Authentication configuration used to set the default identity for the workload
+   * execution. The config specifies the type of identity (service account or user) that will be
+   * used by workloads to access resources on the project(s).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AuthenticationConfig authenticationConfig;
+
+  /**
    * Optional. Applies to sessions only. The duration to keep the session alive while it's idling.
    * Exceeding this threshold causes the session to terminate. This field cannot be set on a batch
    * workload. Minimum value is 10 minutes; maximum value is 14 days (see JSON representation of
@@ -104,6 +113,27 @@ public final class ExecutionConfig extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private String ttl;
+
+  /**
+   * Optional. Authentication configuration used to set the default identity for the workload
+   * execution. The config specifies the type of identity (service account or user) that will be
+   * used by workloads to access resources on the project(s).
+   * @return value or {@code null} for none
+   */
+  public AuthenticationConfig getAuthenticationConfig() {
+    return authenticationConfig;
+  }
+
+  /**
+   * Optional. Authentication configuration used to set the default identity for the workload
+   * execution. The config specifies the type of identity (service account or user) that will be
+   * used by workloads to access resources on the project(s).
+   * @param authenticationConfig authenticationConfig or {@code null} for none
+   */
+  public ExecutionConfig setAuthenticationConfig(AuthenticationConfig authenticationConfig) {
+    this.authenticationConfig = authenticationConfig;
+    return this;
+  }
 
   /**
    * Optional. Applies to sessions only. The duration to keep the session alive while it's idling.

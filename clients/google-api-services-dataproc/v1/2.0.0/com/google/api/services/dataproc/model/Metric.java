@@ -41,7 +41,7 @@ public final class Metric extends com.google.api.client.json.GenericJson {
    * hiveserver2:JVM:Memory:NonHeapMemoryUsage.used Notes: Only the specified overridden metrics are
    * collected for the metric source. For example, if one or more spark:executive metrics are listed
    * as metric overrides, other SPARK metrics are not collected. The collection of the metrics for
-   * other enabled custom metric sources is unaffected. For example, if both SPARK andd YARN metric
+   * other enabled custom metric sources is unaffected. For example, if both SPARK and YARN metric
    * sources are enabled, and overrides are provided for Spark metrics only, all YARN metrics are
    * collected.
    * The value may be {@code null}.
@@ -70,7 +70,7 @@ public final class Metric extends com.google.api.client.json.GenericJson {
    * hiveserver2:JVM:Memory:NonHeapMemoryUsage.used Notes: Only the specified overridden metrics are
    * collected for the metric source. For example, if one or more spark:executive metrics are listed
    * as metric overrides, other SPARK metrics are not collected. The collection of the metrics for
-   * other enabled custom metric sources is unaffected. For example, if both SPARK andd YARN metric
+   * other enabled custom metric sources is unaffected. For example, if both SPARK and YARN metric
    * sources are enabled, and overrides are provided for Spark metrics only, all YARN metrics are
    * collected.
    * @return value or {@code null} for none
@@ -91,7 +91,7 @@ public final class Metric extends com.google.api.client.json.GenericJson {
    * hiveserver2:JVM:Memory:NonHeapMemoryUsage.used Notes: Only the specified overridden metrics are
    * collected for the metric source. For example, if one or more spark:executive metrics are listed
    * as metric overrides, other SPARK metrics are not collected. The collection of the metrics for
-   * other enabled custom metric sources is unaffected. For example, if both SPARK andd YARN metric
+   * other enabled custom metric sources is unaffected. For example, if both SPARK and YARN metric
    * sources are enabled, and overrides are provided for Spark metrics only, all YARN metrics are
    * collected.
    * @param metricOverrides metricOverrides or {@code null} for none

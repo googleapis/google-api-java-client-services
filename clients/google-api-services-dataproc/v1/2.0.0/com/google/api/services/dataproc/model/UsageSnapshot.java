@@ -61,6 +61,13 @@ public final class UsageSnapshot extends com.google.api.client.json.GenericJson 
   private java.lang.Long milliDcuPremium;
 
   /**
+   * Optional. Milli (one-thousandth) Slot usage of the workload.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long milliSlot;
+
+  /**
    * Optional. Shuffle Storage in gigabytes (GB). (see Dataproc Serverless pricing
    * (https://cloud.google.com/dataproc-serverless/pricing))
    * The value may be {@code null}.
@@ -154,6 +161,23 @@ public final class UsageSnapshot extends com.google.api.client.json.GenericJson 
    */
   public UsageSnapshot setMilliDcuPremium(java.lang.Long milliDcuPremium) {
     this.milliDcuPremium = milliDcuPremium;
+    return this;
+  }
+
+  /**
+   * Optional. Milli (one-thousandth) Slot usage of the workload.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMilliSlot() {
+    return milliSlot;
+  }
+
+  /**
+   * Optional. Milli (one-thousandth) Slot usage of the workload.
+   * @param milliSlot milliSlot or {@code null} for none
+   */
+  public UsageSnapshot setMilliSlot(java.lang.Long milliSlot) {
+    this.milliSlot = milliSlot;
     return this;
   }
 

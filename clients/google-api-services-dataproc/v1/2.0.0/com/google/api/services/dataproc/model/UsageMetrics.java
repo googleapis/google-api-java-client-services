@@ -53,12 +53,26 @@ public final class UsageMetrics extends com.google.api.client.json.GenericJson {
   private java.lang.Long milliDcuSeconds;
 
   /**
+   * Optional. Slot usage in (milliSlot x seconds).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long milliSlotSeconds;
+
+  /**
    * Optional. Shuffle storage usage in (GB x seconds) (see Dataproc Serverless pricing
    * (https://cloud.google.com/dataproc-serverless/pricing)).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long shuffleStorageGbSeconds;
+
+  /**
+   * Optional. The timestamp of the usage metrics.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String updateTime;
 
   /**
    * Optional. Accelerator type being used, if any
@@ -116,6 +130,23 @@ public final class UsageMetrics extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Slot usage in (milliSlot x seconds).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMilliSlotSeconds() {
+    return milliSlotSeconds;
+  }
+
+  /**
+   * Optional. Slot usage in (milliSlot x seconds).
+   * @param milliSlotSeconds milliSlotSeconds or {@code null} for none
+   */
+  public UsageMetrics setMilliSlotSeconds(java.lang.Long milliSlotSeconds) {
+    this.milliSlotSeconds = milliSlotSeconds;
+    return this;
+  }
+
+  /**
    * Optional. Shuffle storage usage in (GB x seconds) (see Dataproc Serverless pricing
    * (https://cloud.google.com/dataproc-serverless/pricing)).
    * @return value or {@code null} for none
@@ -131,6 +162,23 @@ public final class UsageMetrics extends com.google.api.client.json.GenericJson {
    */
   public UsageMetrics setShuffleStorageGbSeconds(java.lang.Long shuffleStorageGbSeconds) {
     this.shuffleStorageGbSeconds = shuffleStorageGbSeconds;
+    return this;
+  }
+
+  /**
+   * Optional. The timestamp of the usage metrics.
+   * @return value or {@code null} for none
+   */
+  public String getUpdateTime() {
+    return updateTime;
+  }
+
+  /**
+   * Optional. The timestamp of the usage metrics.
+   * @param updateTime updateTime or {@code null} for none
+   */
+  public UsageMetrics setUpdateTime(String updateTime) {
+    this.updateTime = updateTime;
     return this;
   }
 

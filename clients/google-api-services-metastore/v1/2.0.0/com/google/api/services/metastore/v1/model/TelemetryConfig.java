@@ -31,14 +31,14 @@ package com.google.api.services.metastore.v1.model;
 public final class TelemetryConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * The output format of the Dataproc Metastore service's logs.
+   * Optional. The output format of the Dataproc Metastore service's logs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String logFormat;
 
   /**
-   * The output format of the Dataproc Metastore service's logs.
+   * Optional. The output format of the Dataproc Metastore service's logs.
    * @return value or {@code null} for none
    */
   public java.lang.String getLogFormat() {
@@ -46,7 +46,7 @@ public final class TelemetryConfig extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The output format of the Dataproc Metastore service's logs.
+   * Optional. The output format of the Dataproc Metastore service's logs.
    * @param logFormat logFormat or {@code null} for none
    */
   public TelemetryConfig setLogFormat(java.lang.String logFormat) {

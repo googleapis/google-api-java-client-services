@@ -38,7 +38,7 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * The description of the backup.
+   * Optional. The description of the backup.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,8 +52,8 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private String endTime;
 
   /**
-   * Immutable. The relative resource name of the backup, in the following form:projects/{project_nu
-   * mber}/locations/{location_id}/services/{service_id}/backups/{backup_id}
+   * Immutable. Identifier. The relative resource name of the backup, in the following form:projects
+   * /{project_number}/locations/{location_id}/services/{service_id}/backups/{backup_id}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,7 +98,7 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The description of the backup.
+   * Optional. The description of the backup.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -106,7 +106,7 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The description of the backup.
+   * Optional. The description of the backup.
    * @param description description or {@code null} for none
    */
   public Backup setDescription(java.lang.String description) {
@@ -132,8 +132,8 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. The relative resource name of the backup, in the following form:projects/{project_nu
-   * mber}/locations/{location_id}/services/{service_id}/backups/{backup_id}
+   * Immutable. Identifier. The relative resource name of the backup, in the following form:projects
+   * /{project_number}/locations/{location_id}/services/{service_id}/backups/{backup_id}
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -141,8 +141,8 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. The relative resource name of the backup, in the following form:projects/{project_nu
-   * mber}/locations/{location_id}/services/{service_id}/backups/{backup_id}
+   * Immutable. Identifier. The relative resource name of the backup, in the following form:projects
+   * /{project_number}/locations/{location_id}/services/{service_id}/backups/{backup_id}
    * @param name name or {@code null} for none
    */
   public Backup setName(java.lang.String name) {

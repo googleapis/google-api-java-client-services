@@ -32,21 +32,21 @@ package com.google.api.services.metastore.v1beta.model;
 public final class MaintenanceWindow extends com.google.api.client.json.GenericJson {
 
   /**
-   * The day of week, when the window starts.
+   * Optional. The day of week, when the window starts.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String dayOfWeek;
 
   /**
-   * The hour of day (0-23) when the window starts.
+   * Optional. The hour of day (0-23) when the window starts.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer hourOfDay;
 
   /**
-   * The day of week, when the window starts.
+   * Optional. The day of week, when the window starts.
    * @return value or {@code null} for none
    */
   public java.lang.String getDayOfWeek() {
@@ -54,7 +54,7 @@ public final class MaintenanceWindow extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The day of week, when the window starts.
+   * Optional. The day of week, when the window starts.
    * @param dayOfWeek dayOfWeek or {@code null} for none
    */
   public MaintenanceWindow setDayOfWeek(java.lang.String dayOfWeek) {
@@ -63,7 +63,7 @@ public final class MaintenanceWindow extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The hour of day (0-23) when the window starts.
+   * Optional. The hour of day (0-23) when the window starts.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getHourOfDay() {
@@ -71,7 +71,7 @@ public final class MaintenanceWindow extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The hour of day (0-23) when the window starts.
+   * Optional. The hour of day (0-23) when the window starts.
    * @param hourOfDay hourOfDay or {@code null} for none
    */
   public MaintenanceWindow setHourOfDay(java.lang.Integer hourOfDay) {

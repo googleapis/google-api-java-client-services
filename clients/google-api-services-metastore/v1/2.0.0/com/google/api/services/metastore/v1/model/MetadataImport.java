@@ -45,7 +45,7 @@ public final class MetadataImport extends com.google.api.client.json.GenericJson
   private DatabaseDump databaseDump;
 
   /**
-   * The description of the metadata import.
+   * Optional. The description of the metadata import.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,8 +59,9 @@ public final class MetadataImport extends com.google.api.client.json.GenericJson
   private String endTime;
 
   /**
-   * Immutable. The relative resource name of the metadata import, of the form:projects/{project_num
-   * ber}/locations/{location_id}/services/{service_id}/metadataImports/{metadata_import_id}.
+   * Immutable. Identifier. The relative resource name of the metadata import, of the form:projects/
+   * {project_number}/locations/{location_id}/services/{service_id}/metadataImports/{metadata_import
+   * _id}.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -115,7 +116,7 @@ public final class MetadataImport extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The description of the metadata import.
+   * Optional. The description of the metadata import.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -123,7 +124,7 @@ public final class MetadataImport extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The description of the metadata import.
+   * Optional. The description of the metadata import.
    * @param description description or {@code null} for none
    */
   public MetadataImport setDescription(java.lang.String description) {
@@ -149,8 +150,9 @@ public final class MetadataImport extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Immutable. The relative resource name of the metadata import, of the form:projects/{project_num
-   * ber}/locations/{location_id}/services/{service_id}/metadataImports/{metadata_import_id}.
+   * Immutable. Identifier. The relative resource name of the metadata import, of the form:projects/
+   * {project_number}/locations/{location_id}/services/{service_id}/metadataImports/{metadata_import
+   * _id}.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -158,8 +160,9 @@ public final class MetadataImport extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Immutable. The relative resource name of the metadata import, of the form:projects/{project_num
-   * ber}/locations/{location_id}/services/{service_id}/metadataImports/{metadata_import_id}.
+   * Immutable. Identifier. The relative resource name of the metadata import, of the form:projects/
+   * {project_number}/locations/{location_id}/services/{service_id}/metadataImports/{metadata_import
+   * _id}.
    * @param name name or {@code null} for none
    */
   public MetadataImport setName(java.lang.String name) {

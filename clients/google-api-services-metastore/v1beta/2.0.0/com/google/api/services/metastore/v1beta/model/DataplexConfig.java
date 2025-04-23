@@ -31,16 +31,18 @@ package com.google.api.services.metastore.v1beta.model;
 public final class DataplexConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * A reference to the Lake resources that this metastore service is attached to. The key is the
-   * lake resource name. Example: projects/{project_number}/locations/{location_id}/lakes/{lake_id}.
+   * Optional. A reference to the Lake resources that this metastore service is attached to. The key
+   * is the lake resource name. Example:
+   * projects/{project_number}/locations/{location_id}/lakes/{lake_id}.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, Lake> lakeResources;
 
   /**
-   * A reference to the Lake resources that this metastore service is attached to. The key is the
-   * lake resource name. Example: projects/{project_number}/locations/{location_id}/lakes/{lake_id}.
+   * Optional. A reference to the Lake resources that this metastore service is attached to. The key
+   * is the lake resource name. Example:
+   * projects/{project_number}/locations/{location_id}/lakes/{lake_id}.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, Lake> getLakeResources() {
@@ -48,8 +50,9 @@ public final class DataplexConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * A reference to the Lake resources that this metastore service is attached to. The key is the
-   * lake resource name. Example: projects/{project_number}/locations/{location_id}/lakes/{lake_id}.
+   * Optional. A reference to the Lake resources that this metastore service is attached to. The key
+   * is the lake resource name. Example:
+   * projects/{project_number}/locations/{location_id}/lakes/{lake_id}.
    * @param lakeResources lakeResources or {@code null} for none
    */
   public DataplexConfig setLakeResources(java.util.Map<String, Lake> lakeResources) {

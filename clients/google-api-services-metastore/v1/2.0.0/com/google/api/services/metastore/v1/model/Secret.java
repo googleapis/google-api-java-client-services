@@ -31,7 +31,7 @@ package com.google.api.services.metastore.v1.model;
 public final class Secret extends com.google.api.client.json.GenericJson {
 
   /**
-   * The relative resource name of a Secret Manager secret version, in the following
+   * Optional. The relative resource name of a Secret Manager secret version, in the following
    * form:projects/{project_number}/secrets/{secret_id}/versions/{version_id}.
    * The value may be {@code null}.
    */
@@ -39,7 +39,7 @@ public final class Secret extends com.google.api.client.json.GenericJson {
   private java.lang.String cloudSecret;
 
   /**
-   * The relative resource name of a Secret Manager secret version, in the following
+   * Optional. The relative resource name of a Secret Manager secret version, in the following
    * form:projects/{project_number}/secrets/{secret_id}/versions/{version_id}.
    * @return value or {@code null} for none
    */
@@ -48,7 +48,7 @@ public final class Secret extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The relative resource name of a Secret Manager secret version, in the following
+   * Optional. The relative resource name of a Secret Manager secret version, in the following
    * form:projects/{project_number}/secrets/{secret_id}/versions/{version_id}.
    * @param cloudSecret cloudSecret or {@code null} for none
    */

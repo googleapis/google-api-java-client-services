@@ -36,7 +36,7 @@ public final class JavaScriptUDF extends com.google.api.client.json.GenericJson 
    * 'data' : {string} * - (optional) 'attributes' : {Object} * Returning empty `attributes` will
    * remove all attributes from the * message. * * @param {(Object)>} Pub/Sub * message. Keys: * -
    * (required) 'data' : {string} * - (required) 'attributes' : {Object} * * @param {Object}
-   * metadata - Pub/Sub message metadata. * Keys: * - (required) 'message_id' : {string} * -
+   * metadata - Pub/Sub message metadata. * Keys: * - (optional) 'message_id' : {string} * -
    * (optional) 'publish_time': {string} YYYY-MM-DDTHH:MM:SSZ format * - (optional) 'ordering_key':
    * {string}  function (message, metadata) { } ```
    * The value may be {@code null}.
@@ -58,7 +58,7 @@ public final class JavaScriptUDF extends com.google.api.client.json.GenericJson 
    * 'data' : {string} * - (optional) 'attributes' : {Object} * Returning empty `attributes` will
    * remove all attributes from the * message. * * @param {(Object)>} Pub/Sub * message. Keys: * -
    * (required) 'data' : {string} * - (required) 'attributes' : {Object} * * @param {Object}
-   * metadata - Pub/Sub message metadata. * Keys: * - (required) 'message_id' : {string} * -
+   * metadata - Pub/Sub message metadata. * Keys: * - (optional) 'message_id' : {string} * -
    * (optional) 'publish_time': {string} YYYY-MM-DDTHH:MM:SSZ format * - (optional) 'ordering_key':
    * {string}  function (message, metadata) { } ```
    * @return value or {@code null} for none
@@ -74,7 +74,7 @@ public final class JavaScriptUDF extends com.google.api.client.json.GenericJson 
    * 'data' : {string} * - (optional) 'attributes' : {Object} * Returning empty `attributes` will
    * remove all attributes from the * message. * * @param {(Object)>} Pub/Sub * message. Keys: * -
    * (required) 'data' : {string} * - (required) 'attributes' : {Object} * * @param {Object}
-   * metadata - Pub/Sub message metadata. * Keys: * - (required) 'message_id' : {string} * -
+   * metadata - Pub/Sub message metadata. * Keys: * - (optional) 'message_id' : {string} * -
    * (optional) 'publish_time': {string} YYYY-MM-DDTHH:MM:SSZ format * - (optional) 'ordering_key':
    * {string}  function (message, metadata) { } ```
    * @param code code or {@code null} for none

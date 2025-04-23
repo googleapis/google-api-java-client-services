@@ -48,8 +48,8 @@ public final class InterceptDeployment extends com.google.api.client.json.Generi
   private java.lang.String description;
 
   /**
-   * Required. Immutable. The regional forwarding rule that fronts the intercept collectors, for
-   * example: `projects/123456789/regions/us-central1/forwardingRules/my-rule`. See
+   * Required. Immutable. The regional forwarding rule that fronts the interceptors, for example:
+   * `projects/123456789/regions/us-central1/forwardingRules/my-rule`. See
    * https://google.aip.dev/124.
    * The value may be {@code null}.
    */
@@ -144,8 +144,8 @@ public final class InterceptDeployment extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. Immutable. The regional forwarding rule that fronts the intercept collectors, for
-   * example: `projects/123456789/regions/us-central1/forwardingRules/my-rule`. See
+   * Required. Immutable. The regional forwarding rule that fronts the interceptors, for example:
+   * `projects/123456789/regions/us-central1/forwardingRules/my-rule`. See
    * https://google.aip.dev/124.
    * @return value or {@code null} for none
    */
@@ -154,8 +154,8 @@ public final class InterceptDeployment extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. Immutable. The regional forwarding rule that fronts the intercept collectors, for
-   * example: `projects/123456789/regions/us-central1/forwardingRules/my-rule`. See
+   * Required. Immutable. The regional forwarding rule that fronts the interceptors, for example:
+   * `projects/123456789/regions/us-central1/forwardingRules/my-rule`. See
    * https://google.aip.dev/124.
    * @param forwardingRule forwardingRule or {@code null} for none
    */

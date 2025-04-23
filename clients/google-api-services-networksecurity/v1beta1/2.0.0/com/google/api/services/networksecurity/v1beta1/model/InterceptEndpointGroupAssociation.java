@@ -42,7 +42,7 @@ public final class InterceptEndpointGroupAssociation extends com.google.api.clie
   private String createTime;
 
   /**
-   * Immutable. The endpoint group that this association is connected to, for example:
+   * Required. Immutable. The endpoint group that this association is connected to, for example:
    * `projects/123456789/locations/global/interceptEndpointGroups/my-eg`. See
    * https://google.aip.dev/124.
    * The value may be {@code null}.
@@ -56,6 +56,14 @@ public final class InterceptEndpointGroupAssociation extends com.google.api.clie
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
+
+  /**
+   * Output only. The list of locations where the association is configured. This information is
+   * retrieved from the linked endpoint group.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<InterceptLocation> locations;
 
   /**
    * Output only. The list of locations where the association is present. This information is
@@ -75,7 +83,7 @@ public final class InterceptEndpointGroupAssociation extends com.google.api.clie
   private java.lang.String name;
 
   /**
-   * Immutable. The VPC network that is associated. for example:
+   * Required. Immutable. The VPC network that is associated. for example:
    * `projects/123456789/global/networks/my-network`. See https://google.aip.dev/124.
    * The value may be {@code null}.
    */
@@ -126,7 +134,7 @@ public final class InterceptEndpointGroupAssociation extends com.google.api.clie
   }
 
   /**
-   * Immutable. The endpoint group that this association is connected to, for example:
+   * Required. Immutable. The endpoint group that this association is connected to, for example:
    * `projects/123456789/locations/global/interceptEndpointGroups/my-eg`. See
    * https://google.aip.dev/124.
    * @return value or {@code null} for none
@@ -136,7 +144,7 @@ public final class InterceptEndpointGroupAssociation extends com.google.api.clie
   }
 
   /**
-   * Immutable. The endpoint group that this association is connected to, for example:
+   * Required. Immutable. The endpoint group that this association is connected to, for example:
    * `projects/123456789/locations/global/interceptEndpointGroups/my-eg`. See
    * https://google.aip.dev/124.
    * @param interceptEndpointGroup interceptEndpointGroup or {@code null} for none
@@ -160,6 +168,25 @@ public final class InterceptEndpointGroupAssociation extends com.google.api.clie
    */
   public InterceptEndpointGroupAssociation setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
+    return this;
+  }
+
+  /**
+   * Output only. The list of locations where the association is configured. This information is
+   * retrieved from the linked endpoint group.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<InterceptLocation> getLocations() {
+    return locations;
+  }
+
+  /**
+   * Output only. The list of locations where the association is configured. This information is
+   * retrieved from the linked endpoint group.
+   * @param locations locations or {@code null} for none
+   */
+  public InterceptEndpointGroupAssociation setLocations(java.util.List<InterceptLocation> locations) {
+    this.locations = locations;
     return this;
   }
 
@@ -204,7 +231,7 @@ public final class InterceptEndpointGroupAssociation extends com.google.api.clie
   }
 
   /**
-   * Immutable. The VPC network that is associated. for example:
+   * Required. Immutable. The VPC network that is associated. for example:
    * `projects/123456789/global/networks/my-network`. See https://google.aip.dev/124.
    * @return value or {@code null} for none
    */
@@ -213,7 +240,7 @@ public final class InterceptEndpointGroupAssociation extends com.google.api.clie
   }
 
   /**
-   * Immutable. The VPC network that is associated. for example:
+   * Required. Immutable. The VPC network that is associated. for example:
    * `projects/123456789/global/networks/my-network`. See https://google.aip.dev/124.
    * @param network network or {@code null} for none
    */

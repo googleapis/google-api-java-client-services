@@ -46,6 +46,15 @@ public final class ListServerTlsPoliciesResponse extends com.google.api.client.j
   private java.util.List<ServerTlsPolicy> serverTlsPolicies;
 
   /**
+   * Unreachable resources. Populated when the request opts into `return_partial_success` and
+   * reading across collections e.g. when attempting to list all resources across all supported
+   * locations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> unreachable;
+
+  /**
    * If there might be more results than those appearing in this response, then `next_page_token` is
    * included. To get the next set of results, call this method again using the value of
    * `next_page_token` as `page_token`.
@@ -80,6 +89,27 @@ public final class ListServerTlsPoliciesResponse extends com.google.api.client.j
    */
   public ListServerTlsPoliciesResponse setServerTlsPolicies(java.util.List<ServerTlsPolicy> serverTlsPolicies) {
     this.serverTlsPolicies = serverTlsPolicies;
+    return this;
+  }
+
+  /**
+   * Unreachable resources. Populated when the request opts into `return_partial_success` and
+   * reading across collections e.g. when attempting to list all resources across all supported
+   * locations.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getUnreachable() {
+    return unreachable;
+  }
+
+  /**
+   * Unreachable resources. Populated when the request opts into `return_partial_success` and
+   * reading across collections e.g. when attempting to list all resources across all supported
+   * locations.
+   * @param unreachable unreachable or {@code null} for none
+   */
+  public ListServerTlsPoliciesResponse setUnreachable(java.util.List<java.lang.String> unreachable) {
+    this.unreachable = unreachable;
     return this;
   }
 

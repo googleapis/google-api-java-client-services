@@ -40,8 +40,8 @@ public final class Seats extends com.google.api.client.json.GenericJson {
   /**
    * Read-only field containing the current number of users that are assigned a license for the
    * product defined in `skuId`. This field's value is equivalent to the numerical count of users
-   * returned by the Enterprise License Manager API method: [`listForProductAndSku`](/admin-
-   * sdk/licensing/v1/reference/licenseAssignments/listForProductAndSku).
+   * returned by the Enterprise License Manager API method: [`listForProductAndSku`](https://develop
+   * ers.google.com/workspace/admin/licensing/v1/reference/licenseAssignments/listForProductAndSku).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,8 +90,8 @@ public final class Seats extends com.google.api.client.json.GenericJson {
   /**
    * Read-only field containing the current number of users that are assigned a license for the
    * product defined in `skuId`. This field's value is equivalent to the numerical count of users
-   * returned by the Enterprise License Manager API method: [`listForProductAndSku`](/admin-
-   * sdk/licensing/v1/reference/licenseAssignments/listForProductAndSku).
+   * returned by the Enterprise License Manager API method: [`listForProductAndSku`](https://develop
+   * ers.google.com/workspace/admin/licensing/v1/reference/licenseAssignments/listForProductAndSku).
    * @return value or {@code null} for none
    */
   public java.lang.Integer getLicensedNumberOfSeats() {
@@ -101,8 +101,8 @@ public final class Seats extends com.google.api.client.json.GenericJson {
   /**
    * Read-only field containing the current number of users that are assigned a license for the
    * product defined in `skuId`. This field's value is equivalent to the numerical count of users
-   * returned by the Enterprise License Manager API method: [`listForProductAndSku`](/admin-
-   * sdk/licensing/v1/reference/licenseAssignments/listForProductAndSku).
+   * returned by the Enterprise License Manager API method: [`listForProductAndSku`](https://develop
+   * ers.google.com/workspace/admin/licensing/v1/reference/licenseAssignments/listForProductAndSku).
    * @param licensedNumberOfSeats licensedNumberOfSeats or {@code null} for none
    */
   public Seats setLicensedNumberOfSeats(java.lang.Integer licensedNumberOfSeats) {

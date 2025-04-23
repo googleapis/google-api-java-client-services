@@ -31,6 +31,14 @@ package com.google.api.services.chromeuxreport.v1.model;
 public final class QueryHistoryRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * The number of collection periods to return. If not specified, the default is 25. If present,
+   * must be in the range [1, 40].
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer collectionPeriodCount;
+
+  /**
    * The form factor is a query dimension that specifies the device class that the record's data
    * should belong to. Note: If no form factor is specified, then a special record with aggregated
    * data over all form factors will be returned.
@@ -64,6 +72,25 @@ public final class QueryHistoryRequest extends com.google.api.client.json.Generi
    */
   @com.google.api.client.util.Key
   private java.lang.String url;
+
+  /**
+   * The number of collection periods to return. If not specified, the default is 25. If present,
+   * must be in the range [1, 40].
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getCollectionPeriodCount() {
+    return collectionPeriodCount;
+  }
+
+  /**
+   * The number of collection periods to return. If not specified, the default is 25. If present,
+   * must be in the range [1, 40].
+   * @param collectionPeriodCount collectionPeriodCount or {@code null} for none
+   */
+  public QueryHistoryRequest setCollectionPeriodCount(java.lang.Integer collectionPeriodCount) {
+    this.collectionPeriodCount = collectionPeriodCount;
+    return this;
+  }
 
   /**
    * The form factor is a query dimension that specifies the device class that the record's data

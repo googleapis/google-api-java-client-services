@@ -17,7 +17,7 @@
 package com.google.api.services.alertcenter.v1beta1.model;
 
 /**
- * * Event occurred when primary admin changed in customer's account. The event are being received
+ * Event occurred when primary admin changed in customer's account. The event are being received
  * from insight forwarder
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

@@ -17,8 +17,8 @@
 package com.google.api.services.alertcenter.v1beta1.model;
 
 /**
- * * Event occurred when password was reset for super admin in customer's account. The event are
- * being received from insight forwarder
+ * Event occurred when password was reset for super admin in customer's account. The event are being
+ * received from insight forwarder
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Workspace Alert Center API. For a detailed

@@ -18,7 +18,7 @@ package com.google.api.services.alertcenter.v1beta1.model;
 
 /**
  * Settings for callback notifications. For more details see [Google Workspace Alert
- * Notification](https://developers.google.com/admin-sdk/alertcenter/guides/notifications).
+ * Notification](https://developers.google.com/workspace/admin/alertcenter/guides/notifications).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Workspace Alert Center API. For a detailed

@@ -121,8 +121,8 @@ public final class Alert extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The type of the alert. This is output only after alert is created. For a list of
-   * available alert types see [Google Workspace Alert types](https://developers.google.com/admin-
-   * sdk/alertcenter/reference/alert-types).
+   * available alert types see [Google Workspace Alert
+   * types](https://developers.google.com/workspace/admin/alertcenter/reference/alert-types).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -348,8 +348,8 @@ public final class Alert extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The type of the alert. This is output only after alert is created. For a list of
-   * available alert types see [Google Workspace Alert types](https://developers.google.com/admin-
-   * sdk/alertcenter/reference/alert-types).
+   * available alert types see [Google Workspace Alert
+   * types](https://developers.google.com/workspace/admin/alertcenter/reference/alert-types).
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -358,8 +358,8 @@ public final class Alert extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The type of the alert. This is output only after alert is created. For a list of
-   * available alert types see [Google Workspace Alert types](https://developers.google.com/admin-
-   * sdk/alertcenter/reference/alert-types).
+   * available alert types see [Google Workspace Alert
+   * types](https://developers.google.com/workspace/admin/alertcenter/reference/alert-types).
    * @param type type or {@code null} for none
    */
   public Alert setType(java.lang.String type) {

@@ -38,7 +38,7 @@ public final class MetadataIntegration extends com.google.api.client.json.Generi
   private DataCatalogConfig dataCatalogConfig;
 
   /**
-   * The integration config for the Dataplex service.
+   * Optional. The integration config for the Dataplex service.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class MetadataIntegration extends com.google.api.client.json.Generi
   }
 
   /**
-   * The integration config for the Dataplex service.
+   * Optional. The integration config for the Dataplex service.
    * @return value or {@code null} for none
    */
   public DataplexConfig getDataplexConfig() {
@@ -70,7 +70,7 @@ public final class MetadataIntegration extends com.google.api.client.json.Generi
   }
 
   /**
-   * The integration config for the Dataplex service.
+   * Optional. The integration config for the Dataplex service.
    * @param dataplexConfig dataplexConfig or {@code null} for none
    */
   public MetadataIntegration setDataplexConfig(DataplexConfig dataplexConfig) {

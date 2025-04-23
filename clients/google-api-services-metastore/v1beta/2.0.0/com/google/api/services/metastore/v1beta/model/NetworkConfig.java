@@ -44,8 +44,8 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Enables custom routes to be imported and exported for the Dataproc Metastore service's peered
-   * VPC network.
+   * Optional. Enables custom routes to be imported and exported for the Dataproc Metastore
+   * service's peered VPC network.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,8 +69,8 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Enables custom routes to be imported and exported for the Dataproc Metastore service's peered
-   * VPC network.
+   * Optional. Enables custom routes to be imported and exported for the Dataproc Metastore
+   * service's peered VPC network.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCustomRoutesEnabled() {
@@ -78,8 +78,8 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Enables custom routes to be imported and exported for the Dataproc Metastore service's peered
-   * VPC network.
+   * Optional. Enables custom routes to be imported and exported for the Dataproc Metastore
+   * service's peered VPC network.
    * @param customRoutesEnabled customRoutesEnabled or {@code null} for none
    */
   public NetworkConfig setCustomRoutesEnabled(java.lang.Boolean customRoutesEnabled) {

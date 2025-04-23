@@ -89,9 +89,9 @@ public final class Service extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * The one hour maintenance window of the metastore service. This specifies when the service can
-   * be restarted for maintenance purposes in UTC time. Maintenance window is not needed for
-   * services with the SPANNER database type.
+   * Optional. The one hour maintenance window of the metastore service. This specifies when the
+   * service can be restarted for maintenance purposes in UTC time. Maintenance window is not needed
+   * for services with the SPANNER database type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -113,7 +113,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
   private MetadataManagementActivity metadataManagementActivity;
 
   /**
-   * Immutable. The relative resource name of the metastore service, in the following
+   * Immutable. Identifier. The relative resource name of the metastore service, in the following
    * format:projects/{project_number}/locations/{location_id}/services/{service_id}.
    * The value may be {@code null}.
    */
@@ -129,14 +129,14 @@ public final class Service extends com.google.api.client.json.GenericJson {
   private java.lang.String network;
 
   /**
-   * The configuration specifying the network settings for the Dataproc Metastore service.
+   * Optional. The configuration specifying the network settings for the Dataproc Metastore service.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private NetworkConfig networkConfig;
 
   /**
-   * The TCP port at which the metastore service is reached. Default: 9083.
+   * Optional. The TCP port at which the metastore service is reached. Default: 9083.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -150,7 +150,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
   private java.lang.String releaseChannel;
 
   /**
-   * Scaling configuration of the metastore service.
+   * Optional. Scaling configuration of the metastore service.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -179,15 +179,15 @@ public final class Service extends com.google.api.client.json.GenericJson {
   private java.lang.String stateMessage;
 
   /**
-   * The configuration specifying telemetry settings for the Dataproc Metastore service. If
-   * unspecified defaults to JSON.
+   * Optional. The configuration specifying telemetry settings for the Dataproc Metastore service.
+   * If unspecified defaults to JSON.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TelemetryConfig telemetryConfig;
 
   /**
-   * The tier of the service.
+   * Optional. The tier of the service.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -348,9 +348,9 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The one hour maintenance window of the metastore service. This specifies when the service can
-   * be restarted for maintenance purposes in UTC time. Maintenance window is not needed for
-   * services with the SPANNER database type.
+   * Optional. The one hour maintenance window of the metastore service. This specifies when the
+   * service can be restarted for maintenance purposes in UTC time. Maintenance window is not needed
+   * for services with the SPANNER database type.
    * @return value or {@code null} for none
    */
   public MaintenanceWindow getMaintenanceWindow() {
@@ -358,9 +358,9 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The one hour maintenance window of the metastore service. This specifies when the service can
-   * be restarted for maintenance purposes in UTC time. Maintenance window is not needed for
-   * services with the SPANNER database type.
+   * Optional. The one hour maintenance window of the metastore service. This specifies when the
+   * service can be restarted for maintenance purposes in UTC time. Maintenance window is not needed
+   * for services with the SPANNER database type.
    * @param maintenanceWindow maintenanceWindow or {@code null} for none
    */
   public Service setMaintenanceWindow(MaintenanceWindow maintenanceWindow) {
@@ -405,7 +405,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. The relative resource name of the metastore service, in the following
+   * Immutable. Identifier. The relative resource name of the metastore service, in the following
    * format:projects/{project_number}/locations/{location_id}/services/{service_id}.
    * @return value or {@code null} for none
    */
@@ -414,7 +414,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. The relative resource name of the metastore service, in the following
+   * Immutable. Identifier. The relative resource name of the metastore service, in the following
    * format:projects/{project_number}/locations/{location_id}/services/{service_id}.
    * @param name name or {@code null} for none
    */
@@ -443,7 +443,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The configuration specifying the network settings for the Dataproc Metastore service.
+   * Optional. The configuration specifying the network settings for the Dataproc Metastore service.
    * @return value or {@code null} for none
    */
   public NetworkConfig getNetworkConfig() {
@@ -451,7 +451,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The configuration specifying the network settings for the Dataproc Metastore service.
+   * Optional. The configuration specifying the network settings for the Dataproc Metastore service.
    * @param networkConfig networkConfig or {@code null} for none
    */
   public Service setNetworkConfig(NetworkConfig networkConfig) {
@@ -460,7 +460,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The TCP port at which the metastore service is reached. Default: 9083.
+   * Optional. The TCP port at which the metastore service is reached. Default: 9083.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPort() {
@@ -468,7 +468,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The TCP port at which the metastore service is reached. Default: 9083.
+   * Optional. The TCP port at which the metastore service is reached. Default: 9083.
    * @param port port or {@code null} for none
    */
   public Service setPort(java.lang.Integer port) {
@@ -494,7 +494,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Scaling configuration of the metastore service.
+   * Optional. Scaling configuration of the metastore service.
    * @return value or {@code null} for none
    */
   public ScalingConfig getScalingConfig() {
@@ -502,7 +502,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Scaling configuration of the metastore service.
+   * Optional. Scaling configuration of the metastore service.
    * @param scalingConfig scalingConfig or {@code null} for none
    */
   public Service setScalingConfig(ScalingConfig scalingConfig) {
@@ -564,8 +564,8 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The configuration specifying telemetry settings for the Dataproc Metastore service. If
-   * unspecified defaults to JSON.
+   * Optional. The configuration specifying telemetry settings for the Dataproc Metastore service.
+   * If unspecified defaults to JSON.
    * @return value or {@code null} for none
    */
   public TelemetryConfig getTelemetryConfig() {
@@ -573,8 +573,8 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The configuration specifying telemetry settings for the Dataproc Metastore service. If
-   * unspecified defaults to JSON.
+   * Optional. The configuration specifying telemetry settings for the Dataproc Metastore service.
+   * If unspecified defaults to JSON.
    * @param telemetryConfig telemetryConfig or {@code null} for none
    */
   public Service setTelemetryConfig(TelemetryConfig telemetryConfig) {
@@ -583,7 +583,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The tier of the service.
+   * Optional. The tier of the service.
    * @return value or {@code null} for none
    */
   public java.lang.String getTier() {
@@ -591,7 +591,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The tier of the service.
+   * Optional. The tier of the service.
    * @param tier tier or {@code null} for none
    */
   public Service setTier(java.lang.String tier) {

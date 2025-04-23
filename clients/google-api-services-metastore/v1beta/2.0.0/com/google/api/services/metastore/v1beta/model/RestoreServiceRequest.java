@@ -17,7 +17,7 @@
 package com.google.api.services.metastore.v1beta.model;
 
 /**
- * Request message for DataprocMetastore.Restore.
+ * Request message for DataprocMetastore.RestoreService.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dataproc Metastore API. For a detailed explanation

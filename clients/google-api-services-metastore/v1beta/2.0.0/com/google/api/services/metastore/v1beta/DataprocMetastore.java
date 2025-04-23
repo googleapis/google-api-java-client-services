@@ -445,6 +445,29 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
         }
 
         /**
+         * Optional. A list of extra location types that should be used as conditions for
+         * controlling the visibility of the locations.
+         */
+        @com.google.api.client.util.Key
+        private java.util.List<java.lang.String> extraLocationTypes;
+
+        /** Optional. A list of extra location types that should be used as conditions for controlling the
+       visibility of the locations.
+         */
+        public java.util.List<java.lang.String> getExtraLocationTypes() {
+          return extraLocationTypes;
+        }
+
+        /**
+         * Optional. A list of extra location types that should be used as conditions for
+         * controlling the visibility of the locations.
+         */
+        public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
+          this.extraLocationTypes = extraLocationTypes;
+          return this;
+        }
+
+        /**
          * A filter to narrow down results to a preferred subset. The filtering language accepts
          * strings like "displayName=tokyo", and is documented in more detail in AIP-160
          * (https://google.aip.dev/160).
@@ -4504,7 +4527,7 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
          * This request holds the parameters needed by the metastore server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Immutable. The relative resource name of the metastore service, in the following
+         * @param name Immutable. Identifier. The relative resource name of the metastore service, in the following
          *        format:projects/{project_number}/locations/{location_id}/services/{service_id}.
          * @param content the {@link com.google.api.services.metastore.v1beta.model.Service}
          * @return the request
@@ -4533,7 +4556,7 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Immutable. The relative resource name of the metastore service, in the following
+           * @param name Immutable. Identifier. The relative resource name of the metastore service, in the following
          *        format:projects/{project_number}/locations/{location_id}/services/{service_id}.
            * @param content the {@link com.google.api.services.metastore.v1beta.model.Service}
            * @since 1.13
@@ -4604,13 +4627,14 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
           }
 
           /**
-           * Immutable. The relative resource name of the metastore service, in the following
+           * Immutable. Identifier. The relative resource name of the metastore service, in the
+           * following
            * format:projects/{project_number}/locations/{location_id}/services/{service_id}.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Immutable. The relative resource name of the metastore service, in the following
+          /** Immutable. Identifier. The relative resource name of the metastore service, in the following
          format:projects/{project_number}/locations/{location_id}/services/{service_id}.
            */
           public java.lang.String getName() {
@@ -4618,7 +4642,8 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
           }
 
           /**
-           * Immutable. The relative resource name of the metastore service, in the following
+           * Immutable. Identifier. The relative resource name of the metastore service, in the
+           * following
            * format:projects/{project_number}/locations/{location_id}/services/{service_id}.
            */
           public Patch setName(java.lang.String name) {
@@ -8544,8 +8569,9 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
            * This request holds the parameters needed by the metastore server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name Immutable. The relative resource name of the metadata import, of the form:projects/{project_number}/
-           *        locations/{location_id}/services/{service_id}/metadataImports/{metadata_import_id}.
+           * @param name Immutable. Identifier. The relative resource name of the metadata import, of the form:projects/{proj
+           *        ect_number}/locations/{location_id}/services/{service_id}/metadataImports/{metadata_import
+           *        _id}.
            * @param content the {@link com.google.api.services.metastore.v1beta.model.MetadataImport}
            * @return the request
            */
@@ -8574,8 +8600,9 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Immutable. The relative resource name of the metadata import, of the form:projects/{project_number}/
-           *        locations/{location_id}/services/{service_id}/metadataImports/{metadata_import_id}.
+             * @param name Immutable. Identifier. The relative resource name of the metadata import, of the form:projects/{proj
+           *        ect_number}/locations/{location_id}/services/{service_id}/metadataImports/{metadata_import
+           *        _id}.
              * @param content the {@link com.google.api.services.metastore.v1beta.model.MetadataImport}
              * @since 1.13
              */
@@ -8645,24 +8672,24 @@ public class DataprocMetastore extends com.google.api.client.googleapis.services
             }
 
             /**
-             * Immutable. The relative resource name of the metadata import, of the form:projects/{p
-             * roject_number}/locations/{location_id}/services/{service_id}/metadataImports/{metadat
-             * a_import_id}.
+             * Immutable. Identifier. The relative resource name of the metadata import, of the form
+             * :projects/{project_number}/locations/{location_id}/services/{service_id}/metadataImpo
+             * rts/{metadata_import_id}.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Immutable. The relative resource name of the metadata import, of the form:projects/{project_number}
-           /locations/{location_id}/services/{service_id}/metadataImports/{metadata_import_id}.
+            /** Immutable. Identifier. The relative resource name of the metadata import, of the form:projects/{pro
+           ject_number}/locations/{location_id}/services/{service_id}/metadataImports/{metadata_import_id}.
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Immutable. The relative resource name of the metadata import, of the form:projects/{p
-             * roject_number}/locations/{location_id}/services/{service_id}/metadataImports/{metadat
-             * a_import_id}.
+             * Immutable. Identifier. The relative resource name of the metadata import, of the form
+             * :projects/{project_number}/locations/{location_id}/services/{service_id}/metadataImpo
+             * rts/{metadata_import_id}.
              */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {

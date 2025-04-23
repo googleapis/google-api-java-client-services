@@ -31,10 +31,10 @@ package com.google.api.services.metastore.v1.model;
 public final class AuxiliaryVersionConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * A mapping of Hive metastore configuration key-value pairs to apply to the auxiliary Hive
-   * metastore (configured in hive-site.xml) in addition to the primary version's overrides. If keys
-   * are present in both the auxiliary version's overrides and the primary version's overrides, the
-   * value from the auxiliary version's overrides takes precedence.
+   * Optional. A mapping of Hive metastore configuration key-value pairs to apply to the auxiliary
+   * Hive metastore (configured in hive-site.xml) in addition to the primary version's overrides. If
+   * keys are present in both the auxiliary version's overrides and the primary version's overrides,
+   * the value from the auxiliary version's overrides takes precedence.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,18 +49,18 @@ public final class AuxiliaryVersionConfig extends com.google.api.client.json.Gen
   private NetworkConfig networkConfig;
 
   /**
-   * The Hive metastore version of the auxiliary service. It must be less than the primary Hive
-   * metastore service's version.
+   * Optional. The Hive metastore version of the auxiliary service. It must be less than the primary
+   * Hive metastore service's version.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String version;
 
   /**
-   * A mapping of Hive metastore configuration key-value pairs to apply to the auxiliary Hive
-   * metastore (configured in hive-site.xml) in addition to the primary version's overrides. If keys
-   * are present in both the auxiliary version's overrides and the primary version's overrides, the
-   * value from the auxiliary version's overrides takes precedence.
+   * Optional. A mapping of Hive metastore configuration key-value pairs to apply to the auxiliary
+   * Hive metastore (configured in hive-site.xml) in addition to the primary version's overrides. If
+   * keys are present in both the auxiliary version's overrides and the primary version's overrides,
+   * the value from the auxiliary version's overrides takes precedence.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getConfigOverrides() {
@@ -68,10 +68,10 @@ public final class AuxiliaryVersionConfig extends com.google.api.client.json.Gen
   }
 
   /**
-   * A mapping of Hive metastore configuration key-value pairs to apply to the auxiliary Hive
-   * metastore (configured in hive-site.xml) in addition to the primary version's overrides. If keys
-   * are present in both the auxiliary version's overrides and the primary version's overrides, the
-   * value from the auxiliary version's overrides takes precedence.
+   * Optional. A mapping of Hive metastore configuration key-value pairs to apply to the auxiliary
+   * Hive metastore (configured in hive-site.xml) in addition to the primary version's overrides. If
+   * keys are present in both the auxiliary version's overrides and the primary version's overrides,
+   * the value from the auxiliary version's overrides takes precedence.
    * @param configOverrides configOverrides or {@code null} for none
    */
   public AuxiliaryVersionConfig setConfigOverrides(java.util.Map<String, java.lang.String> configOverrides) {
@@ -99,8 +99,8 @@ public final class AuxiliaryVersionConfig extends com.google.api.client.json.Gen
   }
 
   /**
-   * The Hive metastore version of the auxiliary service. It must be less than the primary Hive
-   * metastore service's version.
+   * Optional. The Hive metastore version of the auxiliary service. It must be less than the primary
+   * Hive metastore service's version.
    * @return value or {@code null} for none
    */
   public java.lang.String getVersion() {
@@ -108,8 +108,8 @@ public final class AuxiliaryVersionConfig extends com.google.api.client.json.Gen
   }
 
   /**
-   * The Hive metastore version of the auxiliary service. It must be less than the primary Hive
-   * metastore service's version.
+   * Optional. The Hive metastore version of the auxiliary service. It must be less than the primary
+   * Hive metastore service's version.
    * @param version version or {@code null} for none
    */
   public AuxiliaryVersionConfig setVersion(java.lang.String version) {

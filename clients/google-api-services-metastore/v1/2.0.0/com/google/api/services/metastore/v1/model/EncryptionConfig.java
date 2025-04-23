@@ -31,18 +31,18 @@ package com.google.api.services.metastore.v1.model;
 public final class EncryptionConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * The fully qualified customer provided Cloud KMS key name to use for customer data encryption,
-   * in the following format:projects/{project_number}/locations/{location_id}/keyRings/{key_ring_id
-   * }/cryptoKeys/{crypto_key_id}.
+   * Optional. The fully qualified customer provided Cloud KMS key name to use for customer data
+   * encryption, in the following format:projects/{project_number}/locations/{location_id}/keyRings/
+   * {key_ring_id}/cryptoKeys/{crypto_key_id}.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kmsKey;
 
   /**
-   * The fully qualified customer provided Cloud KMS key name to use for customer data encryption,
-   * in the following format:projects/{project_number}/locations/{location_id}/keyRings/{key_ring_id
-   * }/cryptoKeys/{crypto_key_id}.
+   * Optional. The fully qualified customer provided Cloud KMS key name to use for customer data
+   * encryption, in the following format:projects/{project_number}/locations/{location_id}/keyRings/
+   * {key_ring_id}/cryptoKeys/{crypto_key_id}.
    * @return value or {@code null} for none
    */
   public java.lang.String getKmsKey() {
@@ -50,9 +50,9 @@ public final class EncryptionConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The fully qualified customer provided Cloud KMS key name to use for customer data encryption,
-   * in the following format:projects/{project_number}/locations/{location_id}/keyRings/{key_ring_id
-   * }/cryptoKeys/{crypto_key_id}.
+   * Optional. The fully qualified customer provided Cloud KMS key name to use for customer data
+   * encryption, in the following format:projects/{project_number}/locations/{location_id}/keyRings/
+   * {key_ring_id}/cryptoKeys/{crypto_key_id}.
    * @param kmsKey kmsKey or {@code null} for none
    */
   public EncryptionConfig setKmsKey(java.lang.String kmsKey) {

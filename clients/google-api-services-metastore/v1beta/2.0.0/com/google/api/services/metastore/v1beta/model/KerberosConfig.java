@@ -31,15 +31,15 @@ package com.google.api.services.metastore.v1beta.model;
 public final class KerberosConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * A Kerberos keytab file that can be used to authenticate a service principal with a Kerberos Key
-   * Distribution Center (KDC).
+   * Optional. A Kerberos keytab file that can be used to authenticate a service principal with a
+   * Kerberos Key Distribution Center (KDC).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Secret keytab;
 
   /**
-   * A Cloud Storage URI that specifies the path to a krb5.conf file. It is of the form
+   * Optional. A Cloud Storage URI that specifies the path to a krb5.conf file. It is of the form
    * gs://{bucket_name}/path/to/krb5.conf, although the file does not need to be named krb5.conf
    * explicitly.
    * The value may be {@code null}.
@@ -48,16 +48,16 @@ public final class KerberosConfig extends com.google.api.client.json.GenericJson
   private java.lang.String krb5ConfigGcsUri;
 
   /**
-   * A Kerberos principal that exists in the both the keytab the KDC to authenticate as. A typical
-   * principal is of the form primary/instance@REALM, but there is no exact format.
+   * Optional. A Kerberos principal that exists in the both the keytab the KDC to authenticate as. A
+   * typical principal is of the form primary/instance@REALM, but there is no exact format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String principal;
 
   /**
-   * A Kerberos keytab file that can be used to authenticate a service principal with a Kerberos Key
-   * Distribution Center (KDC).
+   * Optional. A Kerberos keytab file that can be used to authenticate a service principal with a
+   * Kerberos Key Distribution Center (KDC).
    * @return value or {@code null} for none
    */
   public Secret getKeytab() {
@@ -65,8 +65,8 @@ public final class KerberosConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * A Kerberos keytab file that can be used to authenticate a service principal with a Kerberos Key
-   * Distribution Center (KDC).
+   * Optional. A Kerberos keytab file that can be used to authenticate a service principal with a
+   * Kerberos Key Distribution Center (KDC).
    * @param keytab keytab or {@code null} for none
    */
   public KerberosConfig setKeytab(Secret keytab) {
@@ -75,7 +75,7 @@ public final class KerberosConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * A Cloud Storage URI that specifies the path to a krb5.conf file. It is of the form
+   * Optional. A Cloud Storage URI that specifies the path to a krb5.conf file. It is of the form
    * gs://{bucket_name}/path/to/krb5.conf, although the file does not need to be named krb5.conf
    * explicitly.
    * @return value or {@code null} for none
@@ -85,7 +85,7 @@ public final class KerberosConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * A Cloud Storage URI that specifies the path to a krb5.conf file. It is of the form
+   * Optional. A Cloud Storage URI that specifies the path to a krb5.conf file. It is of the form
    * gs://{bucket_name}/path/to/krb5.conf, although the file does not need to be named krb5.conf
    * explicitly.
    * @param krb5ConfigGcsUri krb5ConfigGcsUri or {@code null} for none
@@ -96,8 +96,8 @@ public final class KerberosConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * A Kerberos principal that exists in the both the keytab the KDC to authenticate as. A typical
-   * principal is of the form primary/instance@REALM, but there is no exact format.
+   * Optional. A Kerberos principal that exists in the both the keytab the KDC to authenticate as. A
+   * typical principal is of the form primary/instance@REALM, but there is no exact format.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrincipal() {
@@ -105,8 +105,8 @@ public final class KerberosConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * A Kerberos principal that exists in the both the keytab the KDC to authenticate as. A typical
-   * principal is of the form primary/instance@REALM, but there is no exact format.
+   * Optional. A Kerberos principal that exists in the both the keytab the KDC to authenticate as. A
+   * typical principal is of the form primary/instance@REALM, but there is no exact format.
    * @param principal principal or {@code null} for none
    */
   public KerberosConfig setPrincipal(java.lang.String principal) {

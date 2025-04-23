@@ -40,6 +40,20 @@ public final class MultiRegionMetadata extends com.google.api.client.json.Generi
   private java.util.List<java.lang.String> constituentRegions;
 
   /**
+   * The continent for this multi-region.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String continent;
+
+  /**
+   * The Spanner witness region for this multi-region.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String witnessRegion;
+
+  /**
    * The regions constituting the multi-region.
    * @return value or {@code null} for none
    */
@@ -53,6 +67,40 @@ public final class MultiRegionMetadata extends com.google.api.client.json.Generi
    */
   public MultiRegionMetadata setConstituentRegions(java.util.List<java.lang.String> constituentRegions) {
     this.constituentRegions = constituentRegions;
+    return this;
+  }
+
+  /**
+   * The continent for this multi-region.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getContinent() {
+    return continent;
+  }
+
+  /**
+   * The continent for this multi-region.
+   * @param continent continent or {@code null} for none
+   */
+  public MultiRegionMetadata setContinent(java.lang.String continent) {
+    this.continent = continent;
+    return this;
+  }
+
+  /**
+   * The Spanner witness region for this multi-region.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWitnessRegion() {
+    return witnessRegion;
+  }
+
+  /**
+   * The Spanner witness region for this multi-region.
+   * @param witnessRegion witnessRegion or {@code null} for none
+   */
+  public MultiRegionMetadata setWitnessRegion(java.lang.String witnessRegion) {
+    this.witnessRegion = witnessRegion;
     return this;
   }
 

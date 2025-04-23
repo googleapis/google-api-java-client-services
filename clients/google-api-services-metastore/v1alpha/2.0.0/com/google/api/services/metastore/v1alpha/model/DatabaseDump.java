@@ -39,15 +39,15 @@ public final class DatabaseDump extends com.google.api.client.json.GenericJson {
   private java.lang.String databaseType;
 
   /**
-   * A Cloud Storage object or folder URI that specifies the source from which to import metadata.
-   * It must begin with gs://.
+   * Optional. A Cloud Storage object or folder URI that specifies the source from which to import
+   * metadata. It must begin with gs://.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String gcsUri;
 
   /**
-   * The name of the source database.
+   * Optional. The name of the source database.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,8 +78,8 @@ public final class DatabaseDump extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A Cloud Storage object or folder URI that specifies the source from which to import metadata.
-   * It must begin with gs://.
+   * Optional. A Cloud Storage object or folder URI that specifies the source from which to import
+   * metadata. It must begin with gs://.
    * @return value or {@code null} for none
    */
   public java.lang.String getGcsUri() {
@@ -87,8 +87,8 @@ public final class DatabaseDump extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A Cloud Storage object or folder URI that specifies the source from which to import metadata.
-   * It must begin with gs://.
+   * Optional. A Cloud Storage object or folder URI that specifies the source from which to import
+   * metadata. It must begin with gs://.
    * @param gcsUri gcsUri or {@code null} for none
    */
   public DatabaseDump setGcsUri(java.lang.String gcsUri) {
@@ -97,7 +97,7 @@ public final class DatabaseDump extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the source database.
+   * Optional. The name of the source database.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceDatabase() {
@@ -105,7 +105,7 @@ public final class DatabaseDump extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the source database.
+   * Optional. The name of the source database.
    * @param sourceDatabase sourceDatabase or {@code null} for none
    */
   public DatabaseDump setSourceDatabase(java.lang.String sourceDatabase) {

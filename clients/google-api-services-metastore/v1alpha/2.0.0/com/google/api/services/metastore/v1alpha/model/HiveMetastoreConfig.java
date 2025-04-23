@@ -32,12 +32,12 @@ package com.google.api.services.metastore.v1alpha.model;
 public final class HiveMetastoreConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * A mapping of Hive metastore version to the auxiliary version configuration. When specified, a
-   * secondary Hive metastore service is created along with the primary service. All auxiliary
-   * versions must be less than the service's primary version. The key is the auxiliary service name
-   * and it must match the regular expression a-z?. This means that the first character must be a
-   * lowercase letter, and all the following characters must be hyphens, lowercase letters, or
-   * digits, except the last character, which cannot be a hyphen.
+   * Optional. A mapping of Hive metastore version to the auxiliary version configuration. When
+   * specified, a secondary Hive metastore service is created along with the primary service. All
+   * auxiliary versions must be less than the service's primary version. The key is the auxiliary
+   * service name and it must match the regular expression a-z?. This means that the first character
+   * must be a lowercase letter, and all the following characters must be hyphens, lowercase
+   * letters, or digits, except the last character, which cannot be a hyphen.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,25 +50,26 @@ public final class HiveMetastoreConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * A mapping of Hive metastore configuration key-value pairs to apply to the Hive metastore
-   * (configured in hive-site.xml). The mappings override system defaults (some keys cannot be
-   * overridden). These overrides are also applied to auxiliary versions and can be further
-   * customized in the auxiliary version's AuxiliaryVersionConfig.
+   * Optional. A mapping of Hive metastore configuration key-value pairs to apply to the Hive
+   * metastore (configured in hive-site.xml). The mappings override system defaults (some keys
+   * cannot be overridden). These overrides are also applied to auxiliary versions and can be
+   * further customized in the auxiliary version's AuxiliaryVersionConfig.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> configOverrides;
 
   /**
-   * The protocol to use for the metastore service endpoint. If unspecified, defaults to THRIFT.
+   * Optional. The protocol to use for the metastore service endpoint. If unspecified, defaults to
+   * THRIFT.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String endpointProtocol;
 
   /**
-   * Information used to configure the Hive metastore service as a service principal in a Kerberos
-   * realm. To disable Kerberos, use the UpdateService method and specify this field's path
+   * Optional. Information used to configure the Hive metastore service as a service principal in a
+   * Kerberos realm. To disable Kerberos, use the UpdateService method and specify this field's path
    * (hive_metastore_config.kerberos_config) in the request's update_mask while omitting this field
    * from the request's service.
    * The value may be {@code null}.
@@ -84,12 +85,12 @@ public final class HiveMetastoreConfig extends com.google.api.client.json.Generi
   private java.lang.String version;
 
   /**
-   * A mapping of Hive metastore version to the auxiliary version configuration. When specified, a
-   * secondary Hive metastore service is created along with the primary service. All auxiliary
-   * versions must be less than the service's primary version. The key is the auxiliary service name
-   * and it must match the regular expression a-z?. This means that the first character must be a
-   * lowercase letter, and all the following characters must be hyphens, lowercase letters, or
-   * digits, except the last character, which cannot be a hyphen.
+   * Optional. A mapping of Hive metastore version to the auxiliary version configuration. When
+   * specified, a secondary Hive metastore service is created along with the primary service. All
+   * auxiliary versions must be less than the service's primary version. The key is the auxiliary
+   * service name and it must match the regular expression a-z?. This means that the first character
+   * must be a lowercase letter, and all the following characters must be hyphens, lowercase
+   * letters, or digits, except the last character, which cannot be a hyphen.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, AuxiliaryVersionConfig> getAuxiliaryVersions() {
@@ -97,12 +98,12 @@ public final class HiveMetastoreConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * A mapping of Hive metastore version to the auxiliary version configuration. When specified, a
-   * secondary Hive metastore service is created along with the primary service. All auxiliary
-   * versions must be less than the service's primary version. The key is the auxiliary service name
-   * and it must match the regular expression a-z?. This means that the first character must be a
-   * lowercase letter, and all the following characters must be hyphens, lowercase letters, or
-   * digits, except the last character, which cannot be a hyphen.
+   * Optional. A mapping of Hive metastore version to the auxiliary version configuration. When
+   * specified, a secondary Hive metastore service is created along with the primary service. All
+   * auxiliary versions must be less than the service's primary version. The key is the auxiliary
+   * service name and it must match the regular expression a-z?. This means that the first character
+   * must be a lowercase letter, and all the following characters must be hyphens, lowercase
+   * letters, or digits, except the last character, which cannot be a hyphen.
    * @param auxiliaryVersions auxiliaryVersions or {@code null} for none
    */
   public HiveMetastoreConfig setAuxiliaryVersions(java.util.Map<String, AuxiliaryVersionConfig> auxiliaryVersions) {
@@ -111,10 +112,10 @@ public final class HiveMetastoreConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * A mapping of Hive metastore configuration key-value pairs to apply to the Hive metastore
-   * (configured in hive-site.xml). The mappings override system defaults (some keys cannot be
-   * overridden). These overrides are also applied to auxiliary versions and can be further
-   * customized in the auxiliary version's AuxiliaryVersionConfig.
+   * Optional. A mapping of Hive metastore configuration key-value pairs to apply to the Hive
+   * metastore (configured in hive-site.xml). The mappings override system defaults (some keys
+   * cannot be overridden). These overrides are also applied to auxiliary versions and can be
+   * further customized in the auxiliary version's AuxiliaryVersionConfig.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getConfigOverrides() {
@@ -122,10 +123,10 @@ public final class HiveMetastoreConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * A mapping of Hive metastore configuration key-value pairs to apply to the Hive metastore
-   * (configured in hive-site.xml). The mappings override system defaults (some keys cannot be
-   * overridden). These overrides are also applied to auxiliary versions and can be further
-   * customized in the auxiliary version's AuxiliaryVersionConfig.
+   * Optional. A mapping of Hive metastore configuration key-value pairs to apply to the Hive
+   * metastore (configured in hive-site.xml). The mappings override system defaults (some keys
+   * cannot be overridden). These overrides are also applied to auxiliary versions and can be
+   * further customized in the auxiliary version's AuxiliaryVersionConfig.
    * @param configOverrides configOverrides or {@code null} for none
    */
   public HiveMetastoreConfig setConfigOverrides(java.util.Map<String, java.lang.String> configOverrides) {
@@ -134,7 +135,8 @@ public final class HiveMetastoreConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * The protocol to use for the metastore service endpoint. If unspecified, defaults to THRIFT.
+   * Optional. The protocol to use for the metastore service endpoint. If unspecified, defaults to
+   * THRIFT.
    * @return value or {@code null} for none
    */
   public java.lang.String getEndpointProtocol() {
@@ -142,7 +144,8 @@ public final class HiveMetastoreConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * The protocol to use for the metastore service endpoint. If unspecified, defaults to THRIFT.
+   * Optional. The protocol to use for the metastore service endpoint. If unspecified, defaults to
+   * THRIFT.
    * @param endpointProtocol endpointProtocol or {@code null} for none
    */
   public HiveMetastoreConfig setEndpointProtocol(java.lang.String endpointProtocol) {
@@ -151,8 +154,8 @@ public final class HiveMetastoreConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * Information used to configure the Hive metastore service as a service principal in a Kerberos
-   * realm. To disable Kerberos, use the UpdateService method and specify this field's path
+   * Optional. Information used to configure the Hive metastore service as a service principal in a
+   * Kerberos realm. To disable Kerberos, use the UpdateService method and specify this field's path
    * (hive_metastore_config.kerberos_config) in the request's update_mask while omitting this field
    * from the request's service.
    * @return value or {@code null} for none
@@ -162,8 +165,8 @@ public final class HiveMetastoreConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * Information used to configure the Hive metastore service as a service principal in a Kerberos
-   * realm. To disable Kerberos, use the UpdateService method and specify this field's path
+   * Optional. Information used to configure the Hive metastore service as a service principal in a
+   * Kerberos realm. To disable Kerberos, use the UpdateService method and specify this field's path
    * (hive_metastore_config.kerberos_config) in the request's update_mask while omitting this field
    * from the request's service.
    * @param kerberosConfig kerberosConfig or {@code null} for none

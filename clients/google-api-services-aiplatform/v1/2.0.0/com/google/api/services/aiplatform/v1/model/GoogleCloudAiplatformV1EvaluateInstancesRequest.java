@@ -157,6 +157,13 @@ public final class GoogleCloudAiplatformV1EvaluateInstancesRequest extends com.g
   private GoogleCloudAiplatformV1RougeInput rougeInput;
 
   /**
+   * Rubric Based Instruction Following metric.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1RubricBasedInstructionFollowingInput rubricBasedInstructionFollowingInput;
+
+  /**
    * Input for safety metric.
    * The value may be {@code null}.
    */
@@ -559,6 +566,23 @@ public final class GoogleCloudAiplatformV1EvaluateInstancesRequest extends com.g
    */
   public GoogleCloudAiplatformV1EvaluateInstancesRequest setRougeInput(GoogleCloudAiplatformV1RougeInput rougeInput) {
     this.rougeInput = rougeInput;
+    return this;
+  }
+
+  /**
+   * Rubric Based Instruction Following metric.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1RubricBasedInstructionFollowingInput getRubricBasedInstructionFollowingInput() {
+    return rubricBasedInstructionFollowingInput;
+  }
+
+  /**
+   * Rubric Based Instruction Following metric.
+   * @param rubricBasedInstructionFollowingInput rubricBasedInstructionFollowingInput or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1EvaluateInstancesRequest setRubricBasedInstructionFollowingInput(GoogleCloudAiplatformV1RubricBasedInstructionFollowingInput rubricBasedInstructionFollowingInput) {
+    this.rubricBasedInstructionFollowingInput = rubricBasedInstructionFollowingInput;
     return this;
   }
 

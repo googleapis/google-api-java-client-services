@@ -37,7 +37,8 @@ public final class GoogleCloudAiplatformV1EvaluationDataset extends com.google.a
   private GoogleCloudAiplatformV1BigQuerySource bigquerySource;
 
   /**
-   * Cloud storage source holds the dataset.
+   * Cloud storage source holds the dataset. Currently only one Cloud Storage file path is
+   * supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +62,8 @@ public final class GoogleCloudAiplatformV1EvaluationDataset extends com.google.a
   }
 
   /**
-   * Cloud storage source holds the dataset.
+   * Cloud storage source holds the dataset. Currently only one Cloud Storage file path is
+   * supported.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1GcsSource getGcsSource() {
@@ -69,7 +71,8 @@ public final class GoogleCloudAiplatformV1EvaluationDataset extends com.google.a
   }
 
   /**
-   * Cloud storage source holds the dataset.
+   * Cloud storage source holds the dataset. Currently only one Cloud Storage file path is
+   * supported.
    * @param gcsSource gcsSource or {@code null} for none
    */
   public GoogleCloudAiplatformV1EvaluationDataset setGcsSource(GoogleCloudAiplatformV1GcsSource gcsSource) {

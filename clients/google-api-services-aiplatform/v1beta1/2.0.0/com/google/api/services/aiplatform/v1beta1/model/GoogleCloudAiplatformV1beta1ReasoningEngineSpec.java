@@ -31,7 +31,7 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngineSpec extends com.g
 
   /**
    * Optional. The OSS agent framework used to develop the agent. Currently supported values:
-   * "langchain", "langgraph", "ag2", "custom".
+   * "google-adk", "langchain", "langgraph", "ag2", "llama-index", "custom".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngineSpec extends com.g
 
   /**
    * Optional. The OSS agent framework used to develop the agent. Currently supported values:
-   * "langchain", "langgraph", "ag2", "custom".
+   * "google-adk", "langchain", "langgraph", "ag2", "llama-index", "custom".
    * @return value or {@code null} for none
    */
   public java.lang.String getAgentFramework() {
@@ -71,7 +71,7 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngineSpec extends com.g
 
   /**
    * Optional. The OSS agent framework used to develop the agent. Currently supported values:
-   * "langchain", "langgraph", "ag2", "custom".
+   * "google-adk", "langchain", "langgraph", "ag2", "llama-index", "custom".
    * @param agentFramework agentFramework or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ReasoningEngineSpec setAgentFramework(java.lang.String agentFramework) {

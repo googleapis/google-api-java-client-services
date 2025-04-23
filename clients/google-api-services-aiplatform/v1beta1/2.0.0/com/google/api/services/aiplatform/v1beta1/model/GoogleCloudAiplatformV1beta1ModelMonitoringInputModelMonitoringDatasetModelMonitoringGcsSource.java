@@ -38,7 +38,7 @@ public final class GoogleCloudAiplatformV1beta1ModelMonitoringInputModelMonitori
 
   /**
    * Google Cloud Storage URI to the input file(s). May contain wildcards. For more information on
-   * wildcards, see https://cloud.google.com/storage/docs/gsutil/addlhelp/WildcardNames.
+   * wildcards, see https://cloud.google.com/storage/docs/wildcards.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,7 +63,7 @@ public final class GoogleCloudAiplatformV1beta1ModelMonitoringInputModelMonitori
 
   /**
    * Google Cloud Storage URI to the input file(s). May contain wildcards. For more information on
-   * wildcards, see https://cloud.google.com/storage/docs/gsutil/addlhelp/WildcardNames.
+   * wildcards, see https://cloud.google.com/storage/docs/wildcards.
    * @return value or {@code null} for none
    */
   public java.lang.String getGcsUri() {
@@ -72,7 +72,7 @@ public final class GoogleCloudAiplatformV1beta1ModelMonitoringInputModelMonitori
 
   /**
    * Google Cloud Storage URI to the input file(s). May contain wildcards. For more information on
-   * wildcards, see https://cloud.google.com/storage/docs/gsutil/addlhelp/WildcardNames.
+   * wildcards, see https://cloud.google.com/storage/docs/wildcards.
    * @param gcsUri gcsUri or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ModelMonitoringInputModelMonitoringDatasetModelMonitoringGcsSource setGcsUri(java.lang.String gcsUri) {

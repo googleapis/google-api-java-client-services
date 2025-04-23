@@ -173,6 +173,13 @@ public final class GoogleCloudAiplatformV1NotebookRuntime extends com.google.api
   private java.lang.String proxyUri;
 
   /**
+   * Output only. Reservation Affinity of the notebook runtime.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1NotebookReservationAffinity reservationAffinity;
+
+  /**
    * Output only. The runtime (instance) state of the NotebookRuntime.
    * The value may be {@code null}.
    */
@@ -574,6 +581,23 @@ public final class GoogleCloudAiplatformV1NotebookRuntime extends com.google.api
    */
   public GoogleCloudAiplatformV1NotebookRuntime setProxyUri(java.lang.String proxyUri) {
     this.proxyUri = proxyUri;
+    return this;
+  }
+
+  /**
+   * Output only. Reservation Affinity of the notebook runtime.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1NotebookReservationAffinity getReservationAffinity() {
+    return reservationAffinity;
+  }
+
+  /**
+   * Output only. Reservation Affinity of the notebook runtime.
+   * @param reservationAffinity reservationAffinity or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1NotebookRuntime setReservationAffinity(GoogleCloudAiplatformV1NotebookReservationAffinity reservationAffinity) {
+    this.reservationAffinity = reservationAffinity;
     return this;
   }
 

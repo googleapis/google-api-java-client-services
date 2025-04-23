@@ -149,6 +149,14 @@ public final class GoogleCloudAiplatformV1GenerationConfig extends com.google.ap
   private java.lang.Float temperature;
 
   /**
+   * Optional. Config for thinking features. An error will be returned if this field is set for
+   * models that don't support thinking.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1GenerationConfigThinkingConfig thinkingConfig;
+
+  /**
    * Optional. If specified, top-k sampling will be used.
    * The value may be {@code null}.
    */
@@ -445,6 +453,25 @@ public final class GoogleCloudAiplatformV1GenerationConfig extends com.google.ap
    */
   public GoogleCloudAiplatformV1GenerationConfig setTemperature(java.lang.Float temperature) {
     this.temperature = temperature;
+    return this;
+  }
+
+  /**
+   * Optional. Config for thinking features. An error will be returned if this field is set for
+   * models that don't support thinking.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1GenerationConfigThinkingConfig getThinkingConfig() {
+    return thinkingConfig;
+  }
+
+  /**
+   * Optional. Config for thinking features. An error will be returned if this field is set for
+   * models that don't support thinking.
+   * @param thinkingConfig thinkingConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1GenerationConfig setThinkingConfig(GoogleCloudAiplatformV1GenerationConfigThinkingConfig thinkingConfig) {
+    this.thinkingConfig = thinkingConfig;
     return this;
   }
 

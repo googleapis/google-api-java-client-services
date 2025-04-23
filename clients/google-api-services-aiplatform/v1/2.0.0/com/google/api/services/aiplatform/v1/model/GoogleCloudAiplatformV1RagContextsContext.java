@@ -30,6 +30,13 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1RagContextsContext extends com.google.api.client.json.GenericJson {
 
   /**
+   * Context of the retrieved chunk.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1RagChunk chunk;
+
+  /**
    * According to the underlying Vector DB and the selected metric type, the score can be either the
    * distance or the similarity between the query and the context and its range depends on the
    * metric type. For example, if the metric type is COSINE_DISTANCE, it represents the distance
@@ -62,6 +69,23 @@ public final class GoogleCloudAiplatformV1RagContextsContext extends com.google.
    */
   @com.google.api.client.util.Key
   private java.lang.String text;
+
+  /**
+   * Context of the retrieved chunk.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1RagChunk getChunk() {
+    return chunk;
+  }
+
+  /**
+   * Context of the retrieved chunk.
+   * @param chunk chunk or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1RagContextsContext setChunk(GoogleCloudAiplatformV1RagChunk chunk) {
+    this.chunk = chunk;
+    return this;
+  }
 
   /**
    * According to the underlying Vector DB and the selected metric type, the score can be either the

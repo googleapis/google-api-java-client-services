@@ -30,14 +30,18 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1RagRetrievalConfigRankingLlmRanker extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The model name used for ranking. Format: `gemini-1.5-pro`
+   * Optional. The model name used for ranking. See [Supported
+   * models](https://cloud.google.com/vertex-ai/generative-ai/docs/model-
+   * reference/inference#supported-models).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String modelName;
 
   /**
-   * Optional. The model name used for ranking. Format: `gemini-1.5-pro`
+   * Optional. The model name used for ranking. See [Supported
+   * models](https://cloud.google.com/vertex-ai/generative-ai/docs/model-
+   * reference/inference#supported-models).
    * @return value or {@code null} for none
    */
   public java.lang.String getModelName() {
@@ -45,7 +49,9 @@ public final class GoogleCloudAiplatformV1RagRetrievalConfigRankingLlmRanker ext
   }
 
   /**
-   * Optional. The model name used for ranking. Format: `gemini-1.5-pro`
+   * Optional. The model name used for ranking. See [Supported
+   * models](https://cloud.google.com/vertex-ai/generative-ai/docs/model-
+   * reference/inference#supported-models).
    * @param modelName modelName or {@code null} for none
    */
   public GoogleCloudAiplatformV1RagRetrievalConfigRankingLlmRanker setModelName(java.lang.String modelName) {

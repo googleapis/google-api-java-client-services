@@ -72,6 +72,13 @@ public final class GoogleCloudAiplatformV1beta1GenerationConfig extends com.goog
   private java.lang.String mediaResolution;
 
   /**
+   * Optional. Config for model selection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1GenerationConfigModelConfig modelConfig;
+
+  /**
    * Optional. Positive penalties.
    * The value may be {@code null}.
    */
@@ -147,6 +154,14 @@ public final class GoogleCloudAiplatformV1beta1GenerationConfig extends com.goog
    */
   @com.google.api.client.util.Key
   private java.lang.Float temperature;
+
+  /**
+   * Optional. Config for thinking features. An error will be returned if this field is set for
+   * models that don't support thinking.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1GenerationConfigThinkingConfig thinkingConfig;
 
   /**
    * Optional. If specified, top-k sampling will be used.
@@ -261,6 +276,23 @@ public final class GoogleCloudAiplatformV1beta1GenerationConfig extends com.goog
    */
   public GoogleCloudAiplatformV1beta1GenerationConfig setMediaResolution(java.lang.String mediaResolution) {
     this.mediaResolution = mediaResolution;
+    return this;
+  }
+
+  /**
+   * Optional. Config for model selection.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GenerationConfigModelConfig getModelConfig() {
+    return modelConfig;
+  }
+
+  /**
+   * Optional. Config for model selection.
+   * @param modelConfig modelConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GenerationConfig setModelConfig(GoogleCloudAiplatformV1beta1GenerationConfigModelConfig modelConfig) {
+    this.modelConfig = modelConfig;
     return this;
   }
 
@@ -445,6 +477,25 @@ public final class GoogleCloudAiplatformV1beta1GenerationConfig extends com.goog
    */
   public GoogleCloudAiplatformV1beta1GenerationConfig setTemperature(java.lang.Float temperature) {
     this.temperature = temperature;
+    return this;
+  }
+
+  /**
+   * Optional. Config for thinking features. An error will be returned if this field is set for
+   * models that don't support thinking.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GenerationConfigThinkingConfig getThinkingConfig() {
+    return thinkingConfig;
+  }
+
+  /**
+   * Optional. Config for thinking features. An error will be returned if this field is set for
+   * models that don't support thinking.
+   * @param thinkingConfig thinkingConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GenerationConfig setThinkingConfig(GoogleCloudAiplatformV1beta1GenerationConfigThinkingConfig thinkingConfig) {
+    this.thinkingConfig = thinkingConfig;
     return this;
   }
 

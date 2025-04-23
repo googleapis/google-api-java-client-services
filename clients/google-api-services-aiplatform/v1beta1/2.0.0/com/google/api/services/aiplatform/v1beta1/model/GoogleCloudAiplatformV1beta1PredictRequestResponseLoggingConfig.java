@@ -40,11 +40,28 @@ public final class GoogleCloudAiplatformV1beta1PredictRequestResponseLoggingConf
   private GoogleCloudAiplatformV1beta1BigQueryDestination bigqueryDestination;
 
   /**
+   * This field is used for large models. If true, in addition to the original large model logs,
+   * logs will be converted in OTel schema format, and saved in otel_log column. Default value is
+   * false.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableOtelLogging;
+
+  /**
    * If logging is enabled or not.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enabled;
+
+  /**
+   * Output only. The schema version used in creating the BigQuery table for the request response
+   * logging. The versions are "v1" and "v2". The current default version is "v1".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String requestResponseLoggingSchemaVersion;
 
   /**
    * Percentage of requests to be logged, expressed as a fraction in range(0,1].
@@ -77,6 +94,27 @@ public final class GoogleCloudAiplatformV1beta1PredictRequestResponseLoggingConf
   }
 
   /**
+   * This field is used for large models. If true, in addition to the original large model logs,
+   * logs will be converted in OTel schema format, and saved in otel_log column. Default value is
+   * false.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableOtelLogging() {
+    return enableOtelLogging;
+  }
+
+  /**
+   * This field is used for large models. If true, in addition to the original large model logs,
+   * logs will be converted in OTel schema format, and saved in otel_log column. Default value is
+   * false.
+   * @param enableOtelLogging enableOtelLogging or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1PredictRequestResponseLoggingConfig setEnableOtelLogging(java.lang.Boolean enableOtelLogging) {
+    this.enableOtelLogging = enableOtelLogging;
+    return this;
+  }
+
+  /**
    * If logging is enabled or not.
    * @return value or {@code null} for none
    */
@@ -90,6 +128,25 @@ public final class GoogleCloudAiplatformV1beta1PredictRequestResponseLoggingConf
    */
   public GoogleCloudAiplatformV1beta1PredictRequestResponseLoggingConfig setEnabled(java.lang.Boolean enabled) {
     this.enabled = enabled;
+    return this;
+  }
+
+  /**
+   * Output only. The schema version used in creating the BigQuery table for the request response
+   * logging. The versions are "v1" and "v2". The current default version is "v1".
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRequestResponseLoggingSchemaVersion() {
+    return requestResponseLoggingSchemaVersion;
+  }
+
+  /**
+   * Output only. The schema version used in creating the BigQuery table for the request response
+   * logging. The versions are "v1" and "v2". The current default version is "v1".
+   * @param requestResponseLoggingSchemaVersion requestResponseLoggingSchemaVersion or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1PredictRequestResponseLoggingConfig setRequestResponseLoggingSchemaVersion(java.lang.String requestResponseLoggingSchemaVersion) {
+    this.requestResponseLoggingSchemaVersion = requestResponseLoggingSchemaVersion;
     return this;
   }
 

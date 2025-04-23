@@ -37,8 +37,8 @@ public final class GoogleCloudAiplatformV1beta1ProbeGrpcAction extends com.googl
   private java.lang.Integer port;
 
   /**
-   * Service is the name of the service to place in the gRPC HealthCheckRequest (see
-   * https://github.com/grpc/grpc/blob/master/doc/health-checking.md). If this is not specified, the
+   * Service is the name of the service to place in the gRPC HealthCheckRequest. See
+   * https://github.com/grpc/grpc/blob/master/doc/health-checking.md. If this is not specified, the
    * default behavior is defined by gRPC.
    * The value may be {@code null}.
    */
@@ -63,8 +63,8 @@ public final class GoogleCloudAiplatformV1beta1ProbeGrpcAction extends com.googl
   }
 
   /**
-   * Service is the name of the service to place in the gRPC HealthCheckRequest (see
-   * https://github.com/grpc/grpc/blob/master/doc/health-checking.md). If this is not specified, the
+   * Service is the name of the service to place in the gRPC HealthCheckRequest. See
+   * https://github.com/grpc/grpc/blob/master/doc/health-checking.md. If this is not specified, the
    * default behavior is defined by gRPC.
    * @return value or {@code null} for none
    */
@@ -73,8 +73,8 @@ public final class GoogleCloudAiplatformV1beta1ProbeGrpcAction extends com.googl
   }
 
   /**
-   * Service is the name of the service to place in the gRPC HealthCheckRequest (see
-   * https://github.com/grpc/grpc/blob/master/doc/health-checking.md). If this is not specified, the
+   * Service is the name of the service to place in the gRPC HealthCheckRequest. See
+   * https://github.com/grpc/grpc/blob/master/doc/health-checking.md. If this is not specified, the
    * default behavior is defined by gRPC.
    * @param service service or {@code null} for none
    */

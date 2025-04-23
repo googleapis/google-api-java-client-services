@@ -144,6 +144,13 @@ public final class GoogleCloudAiplatformV1NotebookRuntimeTemplate extends com.go
   private java.lang.String notebookRuntimeType;
 
   /**
+   * Optional. Reservation Affinity of the notebook runtime template.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1NotebookReservationAffinity reservationAffinity;
+
+  /**
    * Deprecated: This field is ignored and the "Vertex AI Notebook Service Account" (service-
    * PROJECT_NUMBER@gcp-sa-aiplatform-vm.iam.gserviceaccount.com) is used for the runtime workload
    * identity. See https://cloud.google.com/iam/docs/service-agents#vertex-ai-notebook-service-
@@ -447,6 +454,23 @@ public final class GoogleCloudAiplatformV1NotebookRuntimeTemplate extends com.go
    */
   public GoogleCloudAiplatformV1NotebookRuntimeTemplate setNotebookRuntimeType(java.lang.String notebookRuntimeType) {
     this.notebookRuntimeType = notebookRuntimeType;
+    return this;
+  }
+
+  /**
+   * Optional. Reservation Affinity of the notebook runtime template.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1NotebookReservationAffinity getReservationAffinity() {
+    return reservationAffinity;
+  }
+
+  /**
+   * Optional. Reservation Affinity of the notebook runtime template.
+   * @param reservationAffinity reservationAffinity or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1NotebookRuntimeTemplate setReservationAffinity(GoogleCloudAiplatformV1NotebookReservationAffinity reservationAffinity) {
+    this.reservationAffinity = reservationAffinity;
     return this;
   }
 

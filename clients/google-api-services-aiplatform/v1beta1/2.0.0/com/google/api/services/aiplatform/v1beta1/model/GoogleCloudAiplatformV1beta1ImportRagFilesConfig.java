@@ -39,6 +39,16 @@ public final class GoogleCloudAiplatformV1beta1ImportRagFilesConfig extends com.
   private GoogleCloudAiplatformV1beta1GcsSource gcsSource;
 
   /**
+   * Optional. The max number of queries per minute that the indexing pipeline job is allowed to
+   * make to the embedding model specified in the project. Please follow the quota usage guideline
+   * of the embedding model you use to set the value properly.If this value is not specified,
+   * max_embedding_requests_per_min will be used by indexing pipeline job as the global limit.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer globalMaxEmbeddingRequestsPerMin;
+
+  /**
    * Google Drive location. Supports importing individual files as well as Google Drive folders.
    * The value may be {@code null}.
    */
@@ -152,6 +162,29 @@ public final class GoogleCloudAiplatformV1beta1ImportRagFilesConfig extends com.
    */
   public GoogleCloudAiplatformV1beta1ImportRagFilesConfig setGcsSource(GoogleCloudAiplatformV1beta1GcsSource gcsSource) {
     this.gcsSource = gcsSource;
+    return this;
+  }
+
+  /**
+   * Optional. The max number of queries per minute that the indexing pipeline job is allowed to
+   * make to the embedding model specified in the project. Please follow the quota usage guideline
+   * of the embedding model you use to set the value properly.If this value is not specified,
+   * max_embedding_requests_per_min will be used by indexing pipeline job as the global limit.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getGlobalMaxEmbeddingRequestsPerMin() {
+    return globalMaxEmbeddingRequestsPerMin;
+  }
+
+  /**
+   * Optional. The max number of queries per minute that the indexing pipeline job is allowed to
+   * make to the embedding model specified in the project. Please follow the quota usage guideline
+   * of the embedding model you use to set the value properly.If this value is not specified,
+   * max_embedding_requests_per_min will be used by indexing pipeline job as the global limit.
+   * @param globalMaxEmbeddingRequestsPerMin globalMaxEmbeddingRequestsPerMin or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ImportRagFilesConfig setGlobalMaxEmbeddingRequestsPerMin(java.lang.Integer globalMaxEmbeddingRequestsPerMin) {
+    this.globalMaxEmbeddingRequestsPerMin = globalMaxEmbeddingRequestsPerMin;
     return this;
   }
 

@@ -30,11 +30,35 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1SpeechConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Language code (ISO 639. e.g. en-US) for the speech synthesization.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String languageCode;
+
+  /**
    * The configuration for the speaker to use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1VoiceConfig voiceConfig;
+
+  /**
+   * Optional. Language code (ISO 639. e.g. en-US) for the speech synthesization.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLanguageCode() {
+    return languageCode;
+  }
+
+  /**
+   * Optional. Language code (ISO 639. e.g. en-US) for the speech synthesization.
+   * @param languageCode languageCode or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1SpeechConfig setLanguageCode(java.lang.String languageCode) {
+    this.languageCode = languageCode;
+    return this;
+  }
 
   /**
    * The configuration for the speaker to use.

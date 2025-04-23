@@ -5983,23 +5983,23 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         /**
          * Optional. This field controls whether or not certain repeated settings in the update
          * request overwrite or append to existing settings on the binding. If true, then append.
-         * Otherwise overwrite. So far, only scoped_access_settings with reauth_settings supports
+         * Otherwise overwrite. So far, only scoped_access_settings with session_settings supports
          * appending. Global access_levels, access_levels in scoped_access_settings,
-         * dry_run_access_levels, reauth_settings, and session_settings are not compatible with
-         * append functionality, and the request will return an error if append=true when these
-         * settings are in the update_mask. The request will also return an error if append=true
-         * when "scoped_access_settings" is not set in the update_mask.
+         * dry_run_access_levels, and session_settings are not compatible with append functionality,
+         * and the request will return an error if append=true when these settings are in the
+         * update_mask. The request will also return an error if append=true when
+         * "scoped_access_settings" is not set in the update_mask.
          */
         @com.google.api.client.util.Key
         private java.lang.Boolean append;
 
         /** Optional. This field controls whether or not certain repeated settings in the update request
        overwrite or append to existing settings on the binding. If true, then append. Otherwise overwrite.
-       So far, only scoped_access_settings with reauth_settings supports appending. Global access_levels,
-       access_levels in scoped_access_settings, dry_run_access_levels, reauth_settings, and
-       session_settings are not compatible with append functionality, and the request will return an error
-       if append=true when these settings are in the update_mask. The request will also return an error if
-       append=true when "scoped_access_settings" is not set in the update_mask.
+       So far, only scoped_access_settings with session_settings supports appending. Global access_levels,
+       access_levels in scoped_access_settings, dry_run_access_levels, and session_settings are not
+       compatible with append functionality, and the request will return an error if append=true when
+       these settings are in the update_mask. The request will also return an error if append=true when
+       "scoped_access_settings" is not set in the update_mask.
          */
         public java.lang.Boolean getAppend() {
           return append;
@@ -6008,12 +6008,12 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         /**
          * Optional. This field controls whether or not certain repeated settings in the update
          * request overwrite or append to existing settings on the binding. If true, then append.
-         * Otherwise overwrite. So far, only scoped_access_settings with reauth_settings supports
+         * Otherwise overwrite. So far, only scoped_access_settings with session_settings supports
          * appending. Global access_levels, access_levels in scoped_access_settings,
-         * dry_run_access_levels, reauth_settings, and session_settings are not compatible with
-         * append functionality, and the request will return an error if append=true when these
-         * settings are in the update_mask. The request will also return an error if append=true
-         * when "scoped_access_settings" is not set in the update_mask.
+         * dry_run_access_levels, and session_settings are not compatible with append functionality,
+         * and the request will return an error if append=true when these settings are in the
+         * update_mask. The request will also return an error if append=true when
+         * "scoped_access_settings" is not set in the update_mask.
          */
         public Patch setAppend(java.lang.Boolean append) {
           this.append = append;
@@ -6023,16 +6023,16 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         /**
          * Required. Only the fields specified in this mask are updated. Because name and group_key
          * cannot be changed, update_mask is required and may only contain the following fields:
-         * `access_levels`, `dry_run_access_levels`, `reauth_settings` `session_settings`,
-         * `scoped_access_settings`. update_mask { paths: "access_levels" }
+         * `access_levels`, `dry_run_access_levels`, `session_settings`, `scoped_access_settings`.
+         * update_mask { paths: "access_levels" }
          */
         @com.google.api.client.util.Key
         private String updateMask;
 
         /** Required. Only the fields specified in this mask are updated. Because name and group_key cannot be
        changed, update_mask is required and may only contain the following fields: `access_levels`,
-       `dry_run_access_levels`, `reauth_settings` `session_settings`, `scoped_access_settings`.
-       update_mask { paths: "access_levels" }
+       `dry_run_access_levels`, `session_settings`, `scoped_access_settings`. update_mask { paths:
+       "access_levels" }
          */
         public String getUpdateMask() {
           return updateMask;
@@ -6041,8 +6041,8 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         /**
          * Required. Only the fields specified in this mask are updated. Because name and group_key
          * cannot be changed, update_mask is required and may only contain the following fields:
-         * `access_levels`, `dry_run_access_levels`, `reauth_settings` `session_settings`,
-         * `scoped_access_settings`. update_mask { paths: "access_levels" }
+         * `access_levels`, `dry_run_access_levels`, `session_settings`, `scoped_access_settings`.
+         * update_mask { paths: "access_levels" }
          */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;

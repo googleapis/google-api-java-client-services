@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-datamigration</artifactId>
-  <version>v1beta1-rev20241202-2.0.0</version>
-  <name>Database Migration API v1beta1-rev20241202-2.0.0</name>
+  <version>v1beta1-rev20250409-2.0.0</version>
+  <name>Database Migration API v1beta1-rev20250409-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

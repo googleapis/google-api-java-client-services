@@ -372,6 +372,29 @@ public class Forms extends com.google.api.client.googleapis.services.json.Abstra
         return (Create) super.setUploadProtocol(uploadProtocol);
       }
 
+      /**
+       * Optional. Whether the form is unpublished. If set to `true`, the form doesn't accept
+       * responses. If set to `false` or unset, the form is published and accepts responses.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean unpublished;
+
+      /** Optional. Whether the form is unpublished. If set to `true`, the form doesn't accept responses. If
+     set to `false` or unset, the form is published and accepts responses.
+       */
+      public java.lang.Boolean getUnpublished() {
+        return unpublished;
+      }
+
+      /**
+       * Optional. Whether the form is unpublished. If set to `true`, the form doesn't accept
+       * responses. If set to `false` or unset, the form is published and accepts responses.
+       */
+      public Create setUnpublished(java.lang.Boolean unpublished) {
+        this.unpublished = unpublished;
+        return this;
+      }
+
       @Override
       public Create set(String parameterName, Object value) {
         return (Create) super.set(parameterName, value);
@@ -500,6 +523,126 @@ public class Forms extends com.google.api.client.googleapis.services.json.Abstra
       @Override
       public Get set(String parameterName, Object value) {
         return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Updates the publish settings of a form. Legacy forms aren't supported because they don't have the
+     * `publish_settings` field.
+     *
+     * Create a request for the method "forms.setPublishSettings".
+     *
+     * This request holds the parameters needed by the forms server.  After setting any optional
+     * parameters, call the {@link SetPublishSettings#execute()} method to invoke the remote operation.
+     *
+     * @param formId Required. The ID of the form. You can get the id from `Form.form_id` field.
+     * @param content the {@link com.google.api.services.forms.v1.model.SetPublishSettingsRequest}
+     * @return the request
+     */
+    public SetPublishSettings setPublishSettings(java.lang.String formId, com.google.api.services.forms.v1.model.SetPublishSettingsRequest content) throws java.io.IOException {
+      SetPublishSettings result = new SetPublishSettings(formId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class SetPublishSettings extends FormsRequest<com.google.api.services.forms.v1.model.SetPublishSettingsResponse> {
+
+      private static final String REST_PATH = "v1/forms/{formId}:setPublishSettings";
+
+      /**
+       * Updates the publish settings of a form. Legacy forms aren't supported because they don't have
+       * the `publish_settings` field.
+       *
+       * Create a request for the method "forms.setPublishSettings".
+       *
+       * This request holds the parameters needed by the the forms server.  After setting any optional
+       * parameters, call the {@link SetPublishSettings#execute()} method to invoke the remote
+       * operation. <p> {@link SetPublishSettings#initialize(com.google.api.client.googleapis.services.A
+       * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param formId Required. The ID of the form. You can get the id from `Form.form_id` field.
+       * @param content the {@link com.google.api.services.forms.v1.model.SetPublishSettingsRequest}
+       * @since 1.13
+       */
+      protected SetPublishSettings(java.lang.String formId, com.google.api.services.forms.v1.model.SetPublishSettingsRequest content) {
+        super(Forms.this, "POST", REST_PATH, content, com.google.api.services.forms.v1.model.SetPublishSettingsResponse.class);
+        this.formId = com.google.api.client.util.Preconditions.checkNotNull(formId, "Required parameter formId must be specified.");
+      }
+
+      @Override
+      public SetPublishSettings set$Xgafv(java.lang.String $Xgafv) {
+        return (SetPublishSettings) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public SetPublishSettings setAccessToken(java.lang.String accessToken) {
+        return (SetPublishSettings) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public SetPublishSettings setAlt(java.lang.String alt) {
+        return (SetPublishSettings) super.setAlt(alt);
+      }
+
+      @Override
+      public SetPublishSettings setCallback(java.lang.String callback) {
+        return (SetPublishSettings) super.setCallback(callback);
+      }
+
+      @Override
+      public SetPublishSettings setFields(java.lang.String fields) {
+        return (SetPublishSettings) super.setFields(fields);
+      }
+
+      @Override
+      public SetPublishSettings setKey(java.lang.String key) {
+        return (SetPublishSettings) super.setKey(key);
+      }
+
+      @Override
+      public SetPublishSettings setOauthToken(java.lang.String oauthToken) {
+        return (SetPublishSettings) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public SetPublishSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (SetPublishSettings) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public SetPublishSettings setQuotaUser(java.lang.String quotaUser) {
+        return (SetPublishSettings) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public SetPublishSettings setUploadType(java.lang.String uploadType) {
+        return (SetPublishSettings) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public SetPublishSettings setUploadProtocol(java.lang.String uploadProtocol) {
+        return (SetPublishSettings) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The ID of the form. You can get the id from `Form.form_id` field. */
+      @com.google.api.client.util.Key
+      private java.lang.String formId;
+
+      /** Required. The ID of the form. You can get the id from `Form.form_id` field.
+       */
+      public java.lang.String getFormId() {
+        return formId;
+      }
+
+      /** Required. The ID of the form. You can get the id from `Form.form_id` field. */
+      public SetPublishSettings setFormId(java.lang.String formId) {
+        this.formId = formId;
+        return this;
+      }
+
+      @Override
+      public SetPublishSettings set(String parameterName, Object value) {
+        return (SetPublishSettings) super.set(parameterName, value);
       }
     }
 

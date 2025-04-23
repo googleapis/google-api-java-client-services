@@ -38,6 +38,13 @@ public final class GoogleCloudDocumentaiV1DocumentDocumentLayoutDocumentLayoutBl
   private java.lang.String blockId;
 
   /**
+   * Identifies the bounding box for the block.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDocumentaiV1BoundingPoly boundingBox;
+
+  /**
    * Block consisting of list content/structure.
    * The value may be {@code null}.
    */
@@ -79,6 +86,23 @@ public final class GoogleCloudDocumentaiV1DocumentDocumentLayoutDocumentLayoutBl
    */
   public GoogleCloudDocumentaiV1DocumentDocumentLayoutDocumentLayoutBlock setBlockId(java.lang.String blockId) {
     this.blockId = blockId;
+    return this;
+  }
+
+  /**
+   * Identifies the bounding box for the block.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1BoundingPoly getBoundingBox() {
+    return boundingBox;
+  }
+
+  /**
+   * Identifies the bounding box for the block.
+   * @param boundingBox boundingBox or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1DocumentDocumentLayoutDocumentLayoutBlock setBoundingBox(GoogleCloudDocumentaiV1BoundingPoly boundingBox) {
+    this.boundingBox = boundingBox;
     return this;
   }
 

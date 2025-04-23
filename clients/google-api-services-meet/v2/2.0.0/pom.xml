@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-meet</artifactId>
-  <version>v2-rev20250127-2.0.0</version>
-  <name>Google Meet API v2-rev20250127-2.0.0</name>
+  <version>v2-rev20250415-2.0.0</version>
+  <name>Google Meet API v2-rev20250415-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

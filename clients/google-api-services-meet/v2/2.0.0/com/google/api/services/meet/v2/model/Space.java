@@ -65,7 +65,8 @@ public final class Space extends com.google.api.client.json.GenericJson {
    * Immutable. Resource name of the space. Format: `spaces/{space}`. `{space}` is the resource
    * identifier for the space. It's a unique, server-generated ID and is case sensitive. For
    * example, `jQCFfuBOdN5z`. For more information, see [How Meet identifies a meeting
-   * space](https://developers.google.com/meet/api/guides/meeting-spaces#identify-meeting-space).
+   * space](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#identify-meeting-
+   * space).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -149,7 +150,8 @@ public final class Space extends com.google.api.client.json.GenericJson {
    * Immutable. Resource name of the space. Format: `spaces/{space}`. `{space}` is the resource
    * identifier for the space. It's a unique, server-generated ID and is case sensitive. For
    * example, `jQCFfuBOdN5z`. For more information, see [How Meet identifies a meeting
-   * space](https://developers.google.com/meet/api/guides/meeting-spaces#identify-meeting-space).
+   * space](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#identify-meeting-
+   * space).
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -160,7 +162,8 @@ public final class Space extends com.google.api.client.json.GenericJson {
    * Immutable. Resource name of the space. Format: `spaces/{space}`. `{space}` is the resource
    * identifier for the space. It's a unique, server-generated ID and is case sensitive. For
    * example, `jQCFfuBOdN5z`. For more information, see [How Meet identifies a meeting
-   * space](https://developers.google.com/meet/api/guides/meeting-spaces#identify-meeting-space).
+   * space](https://developers.google.com/workspace/meet/api/guides/meeting-spaces#identify-meeting-
+   * space).
    * @param name name or {@code null} for none
    */
   public Space setName(java.lang.String name) {

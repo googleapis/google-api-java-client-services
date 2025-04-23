@@ -1654,6 +1654,29 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
+         * Optional. A list of extra location types that should be used as conditions for
+         * controlling the visibility of the locations.
+         */
+        @com.google.api.client.util.Key
+        private java.util.List<java.lang.String> extraLocationTypes;
+
+        /** Optional. A list of extra location types that should be used as conditions for controlling the
+       visibility of the locations.
+         */
+        public java.util.List<java.lang.String> getExtraLocationTypes() {
+          return extraLocationTypes;
+        }
+
+        /**
+         * Optional. A list of extra location types that should be used as conditions for
+         * controlling the visibility of the locations.
+         */
+        public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
+          this.extraLocationTypes = extraLocationTypes;
+          return this;
+        }
+
+        /**
          * A filter to narrow down results to a preferred subset. The filtering language accepts
          * strings like `"displayName=tokyo"`, and is documented in more detail in
          * [AIP-160](https://google.aip.dev/160).
@@ -6578,177 +6601,6 @@ public class BeyondCorp extends com.google.api.client.googleapis.services.json.A
           @Override
           public SetIamPolicy set(String parameterName, Object value) {
             return (SetIamPolicy) super.set(parameterName, value);
-          }
-        }
-        /**
-         * Calls the Bouncer method ShouldThrottle to check if a request should be throttled.
-         *
-         * Create a request for the method "appGateways.shouldThrottle".
-         *
-         * This request holds the parameters needed by the beyondcorp server.  After setting any optional
-         * parameters, call the {@link ShouldThrottle#execute()} method to invoke the remote operation.
-         *
-         * @param name Required. Name of the resource
-         * @return the request
-         */
-        public ShouldThrottle shouldThrottle(java.lang.String name) throws java.io.IOException {
-          ShouldThrottle result = new ShouldThrottle(name);
-          initialize(result);
-          return result;
-        }
-
-        public class ShouldThrottle extends BeyondCorpRequest<com.google.api.services.beyondcorp.v1.model.ShouldThrottleResponse> {
-
-          private static final String REST_PATH = "v1/{+name}:shouldThrottle";
-
-          private final java.util.regex.Pattern NAME_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/appGateways/[^/]+$");
-
-          /**
-           * Calls the Bouncer method ShouldThrottle to check if a request should be throttled.
-           *
-           * Create a request for the method "appGateways.shouldThrottle".
-           *
-           * This request holds the parameters needed by the the beyondcorp server.  After setting any
-           * optional parameters, call the {@link ShouldThrottle#execute()} method to invoke the remote
-           * operation. <p> {@link ShouldThrottle#initialize(com.google.api.client.googleapis.services.Abstr
-           * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
-           * the constructor. </p>
-           *
-           * @param name Required. Name of the resource
-           * @since 1.13
-           */
-          protected ShouldThrottle(java.lang.String name) {
-            super(BeyondCorp.this, "GET", REST_PATH, null, com.google.api.services.beyondcorp.v1.model.ShouldThrottleResponse.class);
-            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/appGateways/[^/]+$");
-            }
-          }
-
-          @Override
-          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-            return super.executeUsingHead();
-          }
-
-          @Override
-          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-            return super.buildHttpRequestUsingHead();
-          }
-
-          @Override
-          public ShouldThrottle set$Xgafv(java.lang.String $Xgafv) {
-            return (ShouldThrottle) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public ShouldThrottle setAccessToken(java.lang.String accessToken) {
-            return (ShouldThrottle) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public ShouldThrottle setAlt(java.lang.String alt) {
-            return (ShouldThrottle) super.setAlt(alt);
-          }
-
-          @Override
-          public ShouldThrottle setCallback(java.lang.String callback) {
-            return (ShouldThrottle) super.setCallback(callback);
-          }
-
-          @Override
-          public ShouldThrottle setFields(java.lang.String fields) {
-            return (ShouldThrottle) super.setFields(fields);
-          }
-
-          @Override
-          public ShouldThrottle setKey(java.lang.String key) {
-            return (ShouldThrottle) super.setKey(key);
-          }
-
-          @Override
-          public ShouldThrottle setOauthToken(java.lang.String oauthToken) {
-            return (ShouldThrottle) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public ShouldThrottle setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (ShouldThrottle) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public ShouldThrottle setQuotaUser(java.lang.String quotaUser) {
-            return (ShouldThrottle) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public ShouldThrottle setUploadType(java.lang.String uploadType) {
-            return (ShouldThrottle) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public ShouldThrottle setUploadProtocol(java.lang.String uploadProtocol) {
-            return (ShouldThrottle) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /** Required. Name of the resource */
-          @com.google.api.client.util.Key
-          private java.lang.String name;
-
-          /** Required. Name of the resource
-           */
-          public java.lang.String getName() {
-            return name;
-          }
-
-          /** Required. Name of the resource */
-          public ShouldThrottle setName(java.lang.String name) {
-            if (!getSuppressPatternChecks()) {
-              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                  "Parameter name must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/appGateways/[^/]+$");
-            }
-            this.name = name;
-            return this;
-          }
-
-          /** Optional. The port that is being throttled */
-          @com.google.api.client.util.Key
-          private java.lang.Integer port;
-
-          /** Optional. The port that is being throttled
-           */
-          public java.lang.Integer getPort() {
-            return port;
-          }
-
-          /** Optional. The port that is being throttled */
-          public ShouldThrottle setPort(java.lang.Integer port) {
-            this.port = port;
-            return this;
-          }
-
-          /** Optional. The current throughput through the port (mbps) */
-          @com.google.api.client.util.Key
-          private java.lang.Long requestedAmount;
-
-          /** Optional. The current throughput through the port (mbps)
-           */
-          public java.lang.Long getRequestedAmount() {
-            return requestedAmount;
-          }
-
-          /** Optional. The current throughput through the port (mbps) */
-          public ShouldThrottle setRequestedAmount(java.lang.Long requestedAmount) {
-            this.requestedAmount = requestedAmount;
-            return this;
-          }
-
-          @Override
-          public ShouldThrottle set(String parameterName, Object value) {
-            return (ShouldThrottle) super.set(parameterName, value);
           }
         }
         /**

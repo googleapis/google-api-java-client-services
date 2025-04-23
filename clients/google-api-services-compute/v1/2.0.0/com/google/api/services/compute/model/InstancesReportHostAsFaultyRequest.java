@@ -30,7 +30,7 @@ package com.google.api.services.compute.model;
 public final class InstancesReportHostAsFaultyRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The disruption schedule for the VM. Default to IMMEDIATE.
+   * The disruption schedule for the VM. Required field, only allows IMMEDIATE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,7 +43,7 @@ public final class InstancesReportHostAsFaultyRequest extends com.google.api.cli
   private java.util.List<InstancesReportHostAsFaultyRequestFaultReason> faultReasons;
 
   /**
-   * The disruption schedule for the VM. Default to IMMEDIATE.
+   * The disruption schedule for the VM. Required field, only allows IMMEDIATE.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisruptionSchedule() {
@@ -51,7 +51,7 @@ public final class InstancesReportHostAsFaultyRequest extends com.google.api.cli
   }
 
   /**
-   * The disruption schedule for the VM. Default to IMMEDIATE.
+   * The disruption schedule for the VM. Required field, only allows IMMEDIATE.
    * @param disruptionSchedule disruptionSchedule or {@code null} for none
    */
   public InstancesReportHostAsFaultyRequest setDisruptionSchedule(java.lang.String disruptionSchedule) {

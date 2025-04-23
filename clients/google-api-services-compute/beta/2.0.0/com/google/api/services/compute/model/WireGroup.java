@@ -94,12 +94,6 @@ public final class WireGroup extends com.google.api.client.json.GenericJson {
   private java.lang.String selfLink;
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String selfLinkWithId;
-
-  /**
    * Topology details for the wire group configuration.
    * The value may be {@code null}.
    */
@@ -282,21 +276,6 @@ public final class WireGroup extends com.google.api.client.json.GenericJson {
    */
   public WireGroup setSelfLink(java.lang.String selfLink) {
     this.selfLink = selfLink;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getSelfLinkWithId() {
-    return selfLinkWithId;
-  }
-
-  /**
-   * @param selfLinkWithId selfLinkWithId or {@code null} for none
-   */
-  public WireGroup setSelfLinkWithId(java.lang.String selfLinkWithId) {
-    this.selfLinkWithId = selfLinkWithId;
     return this;
   }
 

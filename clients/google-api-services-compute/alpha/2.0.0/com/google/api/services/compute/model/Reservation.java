@@ -83,6 +83,13 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
+   * Indicates if this group of VMs have emergent maintenance enabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableEmergentMaintenance;
+
+  /**
    * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * The value may be {@code null}.
    */
@@ -95,6 +102,14 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
+
+  /**
+   * [Output Only] Full or partial URL to parent commitments. This field displays for reservations
+   * that are tied to multiple commitments.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> linkedCommitments;
 
   /**
    * The name of the resource, provided by the client when initially creating the resource. The
@@ -327,6 +342,23 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Indicates if this group of VMs have emergent maintenance enabled.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableEmergentMaintenance() {
+    return enableEmergentMaintenance;
+  }
+
+  /**
+   * Indicates if this group of VMs have emergent maintenance enabled.
+   * @param enableEmergentMaintenance enableEmergentMaintenance or {@code null} for none
+   */
+  public Reservation setEnableEmergentMaintenance(java.lang.Boolean enableEmergentMaintenance) {
+    this.enableEmergentMaintenance = enableEmergentMaintenance;
+    return this;
+  }
+
+  /**
    * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * @return value or {@code null} for none
    */
@@ -357,6 +389,25 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
    */
   public Reservation setKind(java.lang.String kind) {
     this.kind = kind;
+    return this;
+  }
+
+  /**
+   * [Output Only] Full or partial URL to parent commitments. This field displays for reservations
+   * that are tied to multiple commitments.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getLinkedCommitments() {
+    return linkedCommitments;
+  }
+
+  /**
+   * [Output Only] Full or partial URL to parent commitments. This field displays for reservations
+   * that are tied to multiple commitments.
+   * @param linkedCommitments linkedCommitments or {@code null} for none
+   */
+  public Reservation setLinkedCommitments(java.util.List<java.lang.String> linkedCommitments) {
+    this.linkedCommitments = linkedCommitments;
     return this;
   }
 

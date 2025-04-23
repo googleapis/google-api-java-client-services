@@ -78,13 +78,6 @@ public final class CrossSiteNetwork extends com.google.api.client.json.GenericJs
   private java.lang.String selfLink;
 
   /**
-   * [Output Only] Server-defined URL for this resource with the resource id.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String selfLinkWithId;
-
-  /**
    * [Output Only] Creation timestamp in RFC3339 text format.
    * @return value or {@code null} for none
    */
@@ -193,23 +186,6 @@ public final class CrossSiteNetwork extends com.google.api.client.json.GenericJs
    */
   public CrossSiteNetwork setSelfLink(java.lang.String selfLink) {
     this.selfLink = selfLink;
-    return this;
-  }
-
-  /**
-   * [Output Only] Server-defined URL for this resource with the resource id.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getSelfLinkWithId() {
-    return selfLinkWithId;
-  }
-
-  /**
-   * [Output Only] Server-defined URL for this resource with the resource id.
-   * @param selfLinkWithId selfLinkWithId or {@code null} for none
-   */
-  public CrossSiteNetwork setSelfLinkWithId(java.lang.String selfLinkWithId) {
-    this.selfLinkWithId = selfLinkWithId;
     return this;
   }
 

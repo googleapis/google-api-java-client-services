@@ -115,6 +115,14 @@ public final class RouterNat extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * List of Subnetwork resources whose traffic should be translated by NAT64 Gateway. It is used
+   * only when LIST_OF_IPV6_SUBNETWORKS is selected for the SubnetworkIpRangeToNat64Option above.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<RouterNatSubnetworkToNat64> nat64Subnetworks;
+
+  /**
    * Specify the NatIpAllocateOption, which can take one of the following values: - MANUAL_ONLY:
    * Uses only Nat IP addresses provided by customers. When there are not enough specified Nat IPs,
    * the Nat service fails for new VMs. - AUTO_ONLY: Nat IPs are allocated by Google Cloud Platform;
@@ -151,6 +159,19 @@ public final class RouterNat extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String sourceSubnetworkIpRangesToNat;
+
+  /**
+   * Specify the Nat option for NAT64, which can take one of the following values: -
+   * ALL_IPV6_SUBNETWORKS: All of the IP ranges in every Subnetwork are allowed to Nat. -
+   * LIST_OF_IPV6_SUBNETWORKS: A list of Subnetworks are allowed to Nat (specified in the field
+   * nat64_subnetwork below) The default is NAT64_OPTION_UNSPECIFIED. Note that if this field
+   * contains NAT64_ALL_V6_SUBNETWORKS no other Router.Nat section in this region can also enable
+   * NAT64 for any Subnetworks in this network. Other Router.Nat sections can still be present to
+   * enable NAT44 only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceSubnetworkIpRangesToNat64;
 
   /**
    * A list of Subnetwork resources whose traffic should be translated by NAT Gateway. It is used
@@ -392,6 +413,25 @@ public final class RouterNat extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * List of Subnetwork resources whose traffic should be translated by NAT64 Gateway. It is used
+   * only when LIST_OF_IPV6_SUBNETWORKS is selected for the SubnetworkIpRangeToNat64Option above.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<RouterNatSubnetworkToNat64> getNat64Subnetworks() {
+    return nat64Subnetworks;
+  }
+
+  /**
+   * List of Subnetwork resources whose traffic should be translated by NAT64 Gateway. It is used
+   * only when LIST_OF_IPV6_SUBNETWORKS is selected for the SubnetworkIpRangeToNat64Option above.
+   * @param nat64Subnetworks nat64Subnetworks or {@code null} for none
+   */
+  public RouterNat setNat64Subnetworks(java.util.List<RouterNatSubnetworkToNat64> nat64Subnetworks) {
+    this.nat64Subnetworks = nat64Subnetworks;
+    return this;
+  }
+
+  /**
    * Specify the NatIpAllocateOption, which can take one of the following values: - MANUAL_ONLY:
    * Uses only Nat IP addresses provided by customers. When there are not enough specified Nat IPs,
    * the Nat service fails for new VMs. - AUTO_ONLY: Nat IPs are allocated by Google Cloud Platform;
@@ -476,6 +516,35 @@ public final class RouterNat extends com.google.api.client.json.GenericJson {
    */
   public RouterNat setSourceSubnetworkIpRangesToNat(java.lang.String sourceSubnetworkIpRangesToNat) {
     this.sourceSubnetworkIpRangesToNat = sourceSubnetworkIpRangesToNat;
+    return this;
+  }
+
+  /**
+   * Specify the Nat option for NAT64, which can take one of the following values: -
+   * ALL_IPV6_SUBNETWORKS: All of the IP ranges in every Subnetwork are allowed to Nat. -
+   * LIST_OF_IPV6_SUBNETWORKS: A list of Subnetworks are allowed to Nat (specified in the field
+   * nat64_subnetwork below) The default is NAT64_OPTION_UNSPECIFIED. Note that if this field
+   * contains NAT64_ALL_V6_SUBNETWORKS no other Router.Nat section in this region can also enable
+   * NAT64 for any Subnetworks in this network. Other Router.Nat sections can still be present to
+   * enable NAT44 only.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceSubnetworkIpRangesToNat64() {
+    return sourceSubnetworkIpRangesToNat64;
+  }
+
+  /**
+   * Specify the Nat option for NAT64, which can take one of the following values: -
+   * ALL_IPV6_SUBNETWORKS: All of the IP ranges in every Subnetwork are allowed to Nat. -
+   * LIST_OF_IPV6_SUBNETWORKS: A list of Subnetworks are allowed to Nat (specified in the field
+   * nat64_subnetwork below) The default is NAT64_OPTION_UNSPECIFIED. Note that if this field
+   * contains NAT64_ALL_V6_SUBNETWORKS no other Router.Nat section in this region can also enable
+   * NAT64 for any Subnetworks in this network. Other Router.Nat sections can still be present to
+   * enable NAT44 only.
+   * @param sourceSubnetworkIpRangesToNat64 sourceSubnetworkIpRangesToNat64 or {@code null} for none
+   */
+  public RouterNat setSourceSubnetworkIpRangesToNat64(java.lang.String sourceSubnetworkIpRangesToNat64) {
+    this.sourceSubnetworkIpRangesToNat64 = sourceSubnetworkIpRangesToNat64;
     return this;
   }
 

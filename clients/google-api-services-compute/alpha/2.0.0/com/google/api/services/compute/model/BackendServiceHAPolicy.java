@@ -62,12 +62,12 @@ public final class BackendServiceHAPolicy extends com.google.api.client.json.Gen
    * fastIPMove is 64. - The maximum number of backend services with fastIPMove that can have the
    * same network endpoint attached to one of its backends is 64. - The maximum number of backend
    * services with fastIPMove in a VPC in a region is 64. - The network endpoints that are attached
-   * to a backend of a backend service with fastIPMove cannot resolve to C3 machines. - Traffic
-   * directed to the leader by a static route next hop will not be redirected to a new leader by
-   * fast failover. Such traffic will only be redirected once an haPolicy.leader update has taken
-   * effect. Only traffic to the forwarding rule's virtual IP will be redirected to a new leader by
-   * fast failover. haPolicy.fastIPMove can be set only at backend service creation time. Once set,
-   * it cannot be updated. By default, fastIpMove is set to DISABLED.
+   * to a backend of a backend service with fastIPMove cannot resolve to Gen3+ machines for IPv6. -
+   * Traffic directed to the leader by a static route next hop will not be redirected to a new
+   * leader by fast failover. Such traffic will only be redirected once an haPolicy.leader update
+   * has taken effect. Only traffic to the forwarding rule's virtual IP will be redirected to a new
+   * leader by fast failover. haPolicy.fastIPMove can be set only at backend service creation time.
+   * Once set, it cannot be updated. By default, fastIpMove is set to DISABLED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -118,12 +118,12 @@ public final class BackendServiceHAPolicy extends com.google.api.client.json.Gen
    * fastIPMove is 64. - The maximum number of backend services with fastIPMove that can have the
    * same network endpoint attached to one of its backends is 64. - The maximum number of backend
    * services with fastIPMove in a VPC in a region is 64. - The network endpoints that are attached
-   * to a backend of a backend service with fastIPMove cannot resolve to C3 machines. - Traffic
-   * directed to the leader by a static route next hop will not be redirected to a new leader by
-   * fast failover. Such traffic will only be redirected once an haPolicy.leader update has taken
-   * effect. Only traffic to the forwarding rule's virtual IP will be redirected to a new leader by
-   * fast failover. haPolicy.fastIPMove can be set only at backend service creation time. Once set,
-   * it cannot be updated. By default, fastIpMove is set to DISABLED.
+   * to a backend of a backend service with fastIPMove cannot resolve to Gen3+ machines for IPv6. -
+   * Traffic directed to the leader by a static route next hop will not be redirected to a new
+   * leader by fast failover. Such traffic will only be redirected once an haPolicy.leader update
+   * has taken effect. Only traffic to the forwarding rule's virtual IP will be redirected to a new
+   * leader by fast failover. haPolicy.fastIPMove can be set only at backend service creation time.
+   * Once set, it cannot be updated. By default, fastIpMove is set to DISABLED.
    * @return value or {@code null} for none
    */
   public java.lang.String getFastIPMove() {
@@ -163,12 +163,12 @@ public final class BackendServiceHAPolicy extends com.google.api.client.json.Gen
    * fastIPMove is 64. - The maximum number of backend services with fastIPMove that can have the
    * same network endpoint attached to one of its backends is 64. - The maximum number of backend
    * services with fastIPMove in a VPC in a region is 64. - The network endpoints that are attached
-   * to a backend of a backend service with fastIPMove cannot resolve to C3 machines. - Traffic
-   * directed to the leader by a static route next hop will not be redirected to a new leader by
-   * fast failover. Such traffic will only be redirected once an haPolicy.leader update has taken
-   * effect. Only traffic to the forwarding rule's virtual IP will be redirected to a new leader by
-   * fast failover. haPolicy.fastIPMove can be set only at backend service creation time. Once set,
-   * it cannot be updated. By default, fastIpMove is set to DISABLED.
+   * to a backend of a backend service with fastIPMove cannot resolve to Gen3+ machines for IPv6. -
+   * Traffic directed to the leader by a static route next hop will not be redirected to a new
+   * leader by fast failover. Such traffic will only be redirected once an haPolicy.leader update
+   * has taken effect. Only traffic to the forwarding rule's virtual IP will be redirected to a new
+   * leader by fast failover. haPolicy.fastIPMove can be set only at backend service creation time.
+   * Once set, it cannot be updated. By default, fastIpMove is set to DISABLED.
    * @param fastIPMove fastIPMove or {@code null} for none
    */
   public BackendServiceHAPolicy setFastIPMove(java.lang.String fastIPMove) {

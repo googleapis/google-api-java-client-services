@@ -52,6 +52,13 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotProperties extend
   private java.util.Map<String, java.lang.String> labels;
 
   /**
+   * Region where the snapshot is scoped to.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String region;
+
+  /**
    * Cloud Storage bucket storage location of the auto snapshot (regional or multi-regional).
    * The value may be {@code null}.
    */
@@ -108,6 +115,23 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotProperties extend
    */
   public ResourcePolicySnapshotSchedulePolicySnapshotProperties setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
+    return this;
+  }
+
+  /**
+   * Region where the snapshot is scoped to.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRegion() {
+    return region;
+  }
+
+  /**
+   * Region where the snapshot is scoped to.
+   * @param region region or {@code null} for none
+   */
+  public ResourcePolicySnapshotSchedulePolicySnapshotProperties setRegion(java.lang.String region) {
+    this.region = region;
     return this;
   }
 

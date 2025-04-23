@@ -53,6 +53,13 @@ public final class UptimeCheckConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * Whether the check is disabled or not.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean disabled;
+
+  /**
    * A human-friendly name for the Uptime check configuration. The display name should be unique
    * within a Cloud Monitoring Workspace in order to make it easier to identify; however, uniqueness
    * is not enforced. Required.
@@ -215,6 +222,23 @@ public final class UptimeCheckConfig extends com.google.api.client.json.GenericJ
    */
   public UptimeCheckConfig setContentMatchers(java.util.List<ContentMatcher> contentMatchers) {
     this.contentMatchers = contentMatchers;
+    return this;
+  }
+
+  /**
+   * Whether the check is disabled or not.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDisabled() {
+    return disabled;
+  }
+
+  /**
+   * Whether the check is disabled or not.
+   * @param disabled disabled or {@code null} for none
+   */
+  public UptimeCheckConfig setDisabled(java.lang.Boolean disabled) {
+    this.disabled = disabled;
     return this;
   }
 

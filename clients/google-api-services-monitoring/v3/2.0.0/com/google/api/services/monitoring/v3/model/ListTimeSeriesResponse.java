@@ -62,6 +62,13 @@ public final class ListTimeSeriesResponse extends com.google.api.client.json.Gen
   private java.lang.String unit;
 
   /**
+   * Cloud regions that were unreachable which may have caused incomplete data to be returned.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> unreachable;
+
+  /**
    * Query execution errors that may have caused the time series data returned to be incomplete.
    * @return value or {@code null} for none
    */
@@ -134,6 +141,23 @@ public final class ListTimeSeriesResponse extends com.google.api.client.json.Gen
    */
   public ListTimeSeriesResponse setUnit(java.lang.String unit) {
     this.unit = unit;
+    return this;
+  }
+
+  /**
+   * Cloud regions that were unreachable which may have caused incomplete data to be returned.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getUnreachable() {
+    return unreachable;
+  }
+
+  /**
+   * Cloud regions that were unreachable which may have caused incomplete data to be returned.
+   * @param unreachable unreachable or {@code null} for none
+   */
+  public ListTimeSeriesResponse setUnreachable(java.util.List<java.lang.String> unreachable) {
+    this.unreachable = unreachable;
     return this;
   }
 

@@ -80,13 +80,6 @@ public final class ContainerVersion extends com.google.api.client.json.GenericJs
   private java.util.List<Folder> folder;
 
   /**
-   * The macros in the container that this version was taken from.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<Macro> macro;
-
-  /**
    * Container version display name.
    * The value may be {@code null}.
    */
@@ -99,13 +92,6 @@ public final class ContainerVersion extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.lang.String notes;
-
-  /**
-   * The rules in the container that this version was taken from.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<Rule> rule;
 
   /**
    * The tags in the container that this version was taken from.
@@ -250,23 +236,6 @@ public final class ContainerVersion extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The macros in the container that this version was taken from.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<Macro> getMacro() {
-    return macro;
-  }
-
-  /**
-   * The macros in the container that this version was taken from.
-   * @param macro macro or {@code null} for none
-   */
-  public ContainerVersion setMacro(java.util.List<Macro> macro) {
-    this.macro = macro;
-    return this;
-  }
-
-  /**
    * Container version display name.
    * @return value or {@code null} for none
    */
@@ -297,23 +266,6 @@ public final class ContainerVersion extends com.google.api.client.json.GenericJs
    */
   public ContainerVersion setNotes(java.lang.String notes) {
     this.notes = notes;
-    return this;
-  }
-
-  /**
-   * The rules in the container that this version was taken from.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<Rule> getRule() {
-    return rule;
-  }
-
-  /**
-   * The rules in the container that this version was taken from.
-   * @param rule rule or {@code null} for none
-   */
-  public ContainerVersion setRule(java.util.List<Rule> rule) {
-    this.rule = rule;
     return this;
   }
 

@@ -631,6 +631,29 @@ public class Datastream extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
+         * Optional. A list of extra location types that should be used as conditions for
+         * controlling the visibility of the locations.
+         */
+        @com.google.api.client.util.Key
+        private java.util.List<java.lang.String> extraLocationTypes;
+
+        /** Optional. A list of extra location types that should be used as conditions for controlling the
+       visibility of the locations.
+         */
+        public java.util.List<java.lang.String> getExtraLocationTypes() {
+          return extraLocationTypes;
+        }
+
+        /**
+         * Optional. A list of extra location types that should be used as conditions for
+         * controlling the visibility of the locations.
+         */
+        public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
+          this.extraLocationTypes = extraLocationTypes;
+          return this;
+        }
+
+        /**
          * A filter to narrow down results to a preferred subset. The filtering language accepts
          * strings like `"displayName=tokyo"`, and is documented in more detail in
          * [AIP-160](https://google.aip.dev/160).
@@ -2712,6 +2735,31 @@ public class Datastream extends com.google.api.client.googleapis.services.json.A
            */
           public Create setRequestId(java.lang.String requestId) {
             this.requestId = requestId;
+            return this;
+          }
+
+          /**
+           * Optional. When supplied with PSC Interface config, will get/create the tenant project
+           * required for the customer to allow list and won't actually create the private
+           * connection.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. When supplied with PSC Interface config, will get/create the tenant project required for
+         the customer to allow list and won't actually create the private connection.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /**
+           * Optional. When supplied with PSC Interface config, will get/create the tenant project
+           * required for the customer to allow list and won't actually create the private
+           * connection.
+           */
+          public Create setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
             return this;
           }
 

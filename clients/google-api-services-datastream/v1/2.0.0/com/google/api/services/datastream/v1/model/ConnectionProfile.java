@@ -72,6 +72,13 @@ public final class ConnectionProfile extends com.google.api.client.json.GenericJ
   private java.util.Map<String, java.lang.String> labels;
 
   /**
+   * MongoDB Connection Profile configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MongodbProfile mongodbProfile;
+
+  /**
    * MySQL ConnectionProfile configuration.
    * The value may be {@code null}.
    */
@@ -247,6 +254,23 @@ public final class ConnectionProfile extends com.google.api.client.json.GenericJ
    */
   public ConnectionProfile setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
+    return this;
+  }
+
+  /**
+   * MongoDB Connection Profile configuration.
+   * @return value or {@code null} for none
+   */
+  public MongodbProfile getMongodbProfile() {
+    return mongodbProfile;
+  }
+
+  /**
+   * MongoDB Connection Profile configuration.
+   * @param mongodbProfile mongodbProfile or {@code null} for none
+   */
+  public ConnectionProfile setMongodbProfile(MongodbProfile mongodbProfile) {
+    this.mongodbProfile = mongodbProfile;
     return this;
   }
 

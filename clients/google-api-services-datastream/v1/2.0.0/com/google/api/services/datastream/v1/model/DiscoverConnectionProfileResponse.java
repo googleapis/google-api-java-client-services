@@ -30,6 +30,13 @@ package com.google.api.services.datastream.v1.model;
 public final class DiscoverConnectionProfileResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * Enriched MongoDB cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MongodbCluster mongodbCluster;
+
+  /**
    * Enriched MySQL RDBMS object.
    * The value may be {@code null}.
    */
@@ -51,11 +58,35 @@ public final class DiscoverConnectionProfileResponse extends com.google.api.clie
   private PostgresqlRdbms postgresqlRdbms;
 
   /**
+   * Enriched Salesforce organization.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SalesforceOrg salesforceOrg;
+
+  /**
    * Enriched SQLServer RDBMS object.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SqlServerRdbms sqlServerRdbms;
+
+  /**
+   * Enriched MongoDB cluster.
+   * @return value or {@code null} for none
+   */
+  public MongodbCluster getMongodbCluster() {
+    return mongodbCluster;
+  }
+
+  /**
+   * Enriched MongoDB cluster.
+   * @param mongodbCluster mongodbCluster or {@code null} for none
+   */
+  public DiscoverConnectionProfileResponse setMongodbCluster(MongodbCluster mongodbCluster) {
+    this.mongodbCluster = mongodbCluster;
+    return this;
+  }
 
   /**
    * Enriched MySQL RDBMS object.
@@ -105,6 +136,23 @@ public final class DiscoverConnectionProfileResponse extends com.google.api.clie
    */
   public DiscoverConnectionProfileResponse setPostgresqlRdbms(PostgresqlRdbms postgresqlRdbms) {
     this.postgresqlRdbms = postgresqlRdbms;
+    return this;
+  }
+
+  /**
+   * Enriched Salesforce organization.
+   * @return value or {@code null} for none
+   */
+  public SalesforceOrg getSalesforceOrg() {
+    return salesforceOrg;
+  }
+
+  /**
+   * Enriched Salesforce organization.
+   * @param salesforceOrg salesforceOrg or {@code null} for none
+   */
+  public DiscoverConnectionProfileResponse setSalesforceOrg(SalesforceOrg salesforceOrg) {
+    this.salesforceOrg = salesforceOrg;
     return this;
   }
 

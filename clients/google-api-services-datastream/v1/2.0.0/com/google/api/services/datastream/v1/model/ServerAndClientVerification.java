@@ -51,8 +51,7 @@ public final class ServerAndClientVerification extends com.google.api.client.jso
   /**
    * Optional. Input only. PEM-encoded private key associated with the client certificate. This
    * value will be used during the SSL/TLS handshake, allowing the PostgreSQL server to authenticate
-   * the client's identity, i.e. identity of the Datastream. Mutually exclusive with the
-   * `secret_manager_stored_client_key` field.
+   * the client's identity, i.e. identity of the Datastream.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,8 +100,7 @@ public final class ServerAndClientVerification extends com.google.api.client.jso
   /**
    * Optional. Input only. PEM-encoded private key associated with the client certificate. This
    * value will be used during the SSL/TLS handshake, allowing the PostgreSQL server to authenticate
-   * the client's identity, i.e. identity of the Datastream. Mutually exclusive with the
-   * `secret_manager_stored_client_key` field.
+   * the client's identity, i.e. identity of the Datastream.
    * @return value or {@code null} for none
    */
   public java.lang.String getClientKey() {
@@ -112,8 +110,7 @@ public final class ServerAndClientVerification extends com.google.api.client.jso
   /**
    * Optional. Input only. PEM-encoded private key associated with the client certificate. This
    * value will be used during the SSL/TLS handshake, allowing the PostgreSQL server to authenticate
-   * the client's identity, i.e. identity of the Datastream. Mutually exclusive with the
-   * `secret_manager_stored_client_key` field.
+   * the client's identity, i.e. identity of the Datastream.
    * @param clientKey clientKey or {@code null} for none
    */
   public ServerAndClientVerification setClientKey(java.lang.String clientKey) {

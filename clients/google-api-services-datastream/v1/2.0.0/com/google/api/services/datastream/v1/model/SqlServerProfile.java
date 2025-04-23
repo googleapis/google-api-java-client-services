@@ -59,6 +59,14 @@ public final class SqlServerProfile extends com.google.api.client.json.GenericJs
   private java.lang.Integer port;
 
   /**
+   * Optional. A reference to a Secret Manager resource name storing the SQLServer connection
+   * password. Mutually exclusive with the `password` field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String secretManagerStoredPassword;
+
+  /**
    * Required. Username for the SQLServer connection.
    * The value may be {@code null}.
    */
@@ -132,6 +140,25 @@ public final class SqlServerProfile extends com.google.api.client.json.GenericJs
    */
   public SqlServerProfile setPort(java.lang.Integer port) {
     this.port = port;
+    return this;
+  }
+
+  /**
+   * Optional. A reference to a Secret Manager resource name storing the SQLServer connection
+   * password. Mutually exclusive with the `password` field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSecretManagerStoredPassword() {
+    return secretManagerStoredPassword;
+  }
+
+  /**
+   * Optional. A reference to a Secret Manager resource name storing the SQLServer connection
+   * password. Mutually exclusive with the `password` field.
+   * @param secretManagerStoredPassword secretManagerStoredPassword or {@code null} for none
+   */
+  public SqlServerProfile setSecretManagerStoredPassword(java.lang.String secretManagerStoredPassword) {
+    this.secretManagerStoredPassword = secretManagerStoredPassword;
     return this;
   }
 

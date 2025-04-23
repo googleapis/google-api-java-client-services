@@ -59,6 +59,14 @@ public final class PostgresqlProfile extends com.google.api.client.json.GenericJ
   private java.lang.Integer port;
 
   /**
+   * Optional. A reference to a Secret Manager resource name storing the PostgreSQL connection
+   * password. Mutually exclusive with the `password` field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String secretManagerStoredPassword;
+
+  /**
    * Optional. SSL configuration for the PostgreSQL connection. In case PostgresqlSslConfig is not
    * set, the connection will use the default SSL mode, which is `prefer` (i.e. this mode will only
    * use encryption if enabled from database side, otherwise will use unencrypted communication)
@@ -141,6 +149,25 @@ public final class PostgresqlProfile extends com.google.api.client.json.GenericJ
    */
   public PostgresqlProfile setPort(java.lang.Integer port) {
     this.port = port;
+    return this;
+  }
+
+  /**
+   * Optional. A reference to a Secret Manager resource name storing the PostgreSQL connection
+   * password. Mutually exclusive with the `password` field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSecretManagerStoredPassword() {
+    return secretManagerStoredPassword;
+  }
+
+  /**
+   * Optional. A reference to a Secret Manager resource name storing the PostgreSQL connection
+   * password. Mutually exclusive with the `password` field.
+   * @param secretManagerStoredPassword secretManagerStoredPassword or {@code null} for none
+   */
+  public PostgresqlProfile setSecretManagerStoredPassword(java.lang.String secretManagerStoredPassword) {
+    this.secretManagerStoredPassword = secretManagerStoredPassword;
     return this;
   }
 

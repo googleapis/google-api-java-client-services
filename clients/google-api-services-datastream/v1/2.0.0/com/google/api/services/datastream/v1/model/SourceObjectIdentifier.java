@@ -30,6 +30,13 @@ package com.google.api.services.datastream.v1.model;
 public final class SourceObjectIdentifier extends com.google.api.client.json.GenericJson {
 
   /**
+   * MongoDB data source object identifier.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MongodbObjectIdentifier mongodbIdentifier;
+
+  /**
    * Mysql data source object identifier.
    * The value may be {@code null}.
    */
@@ -63,6 +70,23 @@ public final class SourceObjectIdentifier extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private SqlServerObjectIdentifier sqlServerIdentifier;
+
+  /**
+   * MongoDB data source object identifier.
+   * @return value or {@code null} for none
+   */
+  public MongodbObjectIdentifier getMongodbIdentifier() {
+    return mongodbIdentifier;
+  }
+
+  /**
+   * MongoDB data source object identifier.
+   * @param mongodbIdentifier mongodbIdentifier or {@code null} for none
+   */
+  public SourceObjectIdentifier setMongodbIdentifier(MongodbObjectIdentifier mongodbIdentifier) {
+    this.mongodbIdentifier = mongodbIdentifier;
+    return this;
+  }
 
   /**
    * Mysql data source object identifier.

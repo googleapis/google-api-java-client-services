@@ -53,6 +53,12 @@ public class HangoutsChatScopes {
   /** Private Service: https://www.googleapis.com/auth/chat.bot. */
   public static final String CHAT_BOT = "https://www.googleapis.com/auth/chat.bot";
 
+  /** View, create, and delete custom emoji in Google Chat. */
+  public static final String CHAT_CUSTOMEMOJIS = "https://www.googleapis.com/auth/chat.customemojis";
+
+  /** View custom emoji in Google Chat. */
+  public static final String CHAT_CUSTOMEMOJIS_READONLY = "https://www.googleapis.com/auth/chat.customemojis.readonly";
+
   /** Delete conversations and spaces and remove access to associated files in Google Chat. */
   public static final String CHAT_DELETE = "https://www.googleapis.com/auth/chat.delete";
 
@@ -121,6 +127,8 @@ public class HangoutsChatScopes {
     set.add(CHAT_APP_SPACES);
     set.add(CHAT_APP_SPACES_CREATE);
     set.add(CHAT_BOT);
+    set.add(CHAT_CUSTOMEMOJIS);
+    set.add(CHAT_CUSTOMEMOJIS_READONLY);
     set.add(CHAT_DELETE);
     set.add(CHAT_IMPORT);
     set.add(CHAT_MEMBERSHIPS);

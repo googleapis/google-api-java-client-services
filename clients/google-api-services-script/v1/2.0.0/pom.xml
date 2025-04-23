@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-script</artifactId>
-  <version>v1-rev20250130-2.0.0</version>
-  <name>Apps Script API v1-rev20250130-2.0.0</name>
+  <version>v1-rev20250406-2.0.0</version>
+  <name>Apps Script API v1-rev20250406-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

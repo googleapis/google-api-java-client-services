@@ -52,7 +52,7 @@ public final class Project extends com.google.api.client.json.GenericJson {
 
   /**
    * The parent's Drive ID that the script will be attached to. This is usually the ID of a Google
-   * Document or Google Sheet. This filed is optional, and if not set, a stand-alone script will be
+   * Document or Google Sheet. This field is optional, and if not set, a stand-alone script will be
    * created.
    * The value may be {@code null}.
    */
@@ -133,7 +133,7 @@ public final class Project extends com.google.api.client.json.GenericJson {
 
   /**
    * The parent's Drive ID that the script will be attached to. This is usually the ID of a Google
-   * Document or Google Sheet. This filed is optional, and if not set, a stand-alone script will be
+   * Document or Google Sheet. This field is optional, and if not set, a stand-alone script will be
    * created.
    * @return value or {@code null} for none
    */
@@ -143,7 +143,7 @@ public final class Project extends com.google.api.client.json.GenericJson {
 
   /**
    * The parent's Drive ID that the script will be attached to. This is usually the ID of a Google
-   * Document or Google Sheet. This filed is optional, and if not set, a stand-alone script will be
+   * Document or Google Sheet. This field is optional, and if not set, a stand-alone script will be
    * created.
    * @param parentId parentId or {@code null} for none
    */

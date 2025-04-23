@@ -445,6 +445,29 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
         }
 
         /**
+         * Optional. A list of extra location types that should be used as conditions for
+         * controlling the visibility of the locations.
+         */
+        @com.google.api.client.util.Key
+        private java.util.List<java.lang.String> extraLocationTypes;
+
+        /** Optional. A list of extra location types that should be used as conditions for controlling the
+       visibility of the locations.
+         */
+        public java.util.List<java.lang.String> getExtraLocationTypes() {
+          return extraLocationTypes;
+        }
+
+        /**
+         * Optional. A list of extra location types that should be used as conditions for
+         * controlling the visibility of the locations.
+         */
+        public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
+          this.extraLocationTypes = extraLocationTypes;
+          return this;
+        }
+
+        /**
          * A filter to narrow down results to a preferred subset. The filtering language accepts
          * strings like `"displayName=tokyo"`, and is documented in more detail in
          * [AIP-160](https://google.aip.dev/160).
@@ -514,6 +537,1337 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
         }
       }
 
+      /**
+       * An accessor for creating requests from the BackupChannels collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code BackupforGKE gkebackup = new BackupforGKE(...);}
+       *   {@code BackupforGKE.BackupChannels.List request = gkebackup.backupChannels().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public BackupChannels backupChannels() {
+        return new BackupChannels();
+      }
+
+      /**
+       * The "backupChannels" collection of methods.
+       */
+      public class BackupChannels {
+
+        /**
+         * Creates a new BackupChannel in a given location.
+         *
+         * Create a request for the method "backupChannels.create".
+         *
+         * This request holds the parameters needed by the gkebackup server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The location within which to create the BackupChannel. Format: `projects/locations`
+         * @param content the {@link com.google.api.services.gkebackup.v1.model.BackupChannel}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.gkebackup.v1.model.BackupChannel content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends BackupforGKERequest<com.google.api.services.gkebackup.v1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1/{+parent}/backupChannels";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a new BackupChannel in a given location.
+           *
+           * Create a request for the method "backupChannels.create".
+           *
+           * This request holds the parameters needed by the the gkebackup server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The location within which to create the BackupChannel. Format: `projects/locations`
+           * @param content the {@link com.google.api.services.gkebackup.v1.model.BackupChannel}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.gkebackup.v1.model.BackupChannel content) {
+            super(BackupforGKE.this, "POST", REST_PATH, content, com.google.api.services.gkebackup.v1.model.GoogleLongrunningOperation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The location within which to create the BackupChannel. Format:
+           * `projects/locations`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The location within which to create the BackupChannel. Format: `projects/locations`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The location within which to create the BackupChannel. Format:
+           * `projects/locations`
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. The client-provided short name for the BackupChannel resource. This name
+           * must: - be between 1 and 63 characters long (inclusive) - consist of only lower-case
+           * ASCII letters, numbers, and dashes - start with a lower-case letter - end with a lower-
+           * case letter or number - be unique within the set of BackupChannels in this location If
+           * the user does not provide a name, a uuid will be used as the name.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String backupChannelId;
+
+          /** Optional. The client-provided short name for the BackupChannel resource. This name must: - be
+         between 1 and 63 characters long (inclusive) - consist of only lower-case ASCII letters, numbers,
+         and dashes - start with a lower-case letter - end with a lower-case letter or number - be unique
+         within the set of BackupChannels in this location If the user does not provide a name, a uuid will
+         be used as the name.
+           */
+          public java.lang.String getBackupChannelId() {
+            return backupChannelId;
+          }
+
+          /**
+           * Optional. The client-provided short name for the BackupChannel resource. This name
+           * must: - be between 1 and 63 characters long (inclusive) - consist of only lower-case
+           * ASCII letters, numbers, and dashes - start with a lower-case letter - end with a lower-
+           * case letter or number - be unique within the set of BackupChannels in this location If
+           * the user does not provide a name, a uuid will be used as the name.
+           */
+          public Create setBackupChannelId(java.lang.String backupChannelId) {
+            this.backupChannelId = backupChannelId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes an existing BackupChannel.
+         *
+         * Create a request for the method "backupChannels.delete".
+         *
+         * This request holds the parameters needed by the gkebackup server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Fully qualified BackupChannel name. Format: `projects/locations/backupChannels`
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends BackupforGKERequest<com.google.api.services.gkebackup.v1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/backupChannels/[^/]+$");
+
+          /**
+           * Deletes an existing BackupChannel.
+           *
+           * Create a request for the method "backupChannels.delete".
+           *
+           * This request holds the parameters needed by the the gkebackup server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Fully qualified BackupChannel name. Format: `projects/locations/backupChannels`
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(BackupforGKE.this, "DELETE", REST_PATH, null, com.google.api.services.gkebackup.v1.model.GoogleLongrunningOperation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/backupChannels/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Fully qualified BackupChannel name. Format:
+           * `projects/locations/backupChannels`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Fully qualified BackupChannel name. Format: `projects/locations/backupChannels`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Fully qualified BackupChannel name. Format:
+           * `projects/locations/backupChannels`
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/backupChannels/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. If provided, this value must match the current value of the target
+           * BackupChannel's etag field or the request is rejected.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String etag;
+
+          /** Optional. If provided, this value must match the current value of the target BackupChannel's etag
+         field or the request is rejected.
+           */
+          public java.lang.String getEtag() {
+            return etag;
+          }
+
+          /**
+           * Optional. If provided, this value must match the current value of the target
+           * BackupChannel's etag field or the request is rejected.
+           */
+          public Delete setEtag(java.lang.String etag) {
+            this.etag = etag;
+            return this;
+          }
+
+          /**
+           * Optional. If set to true, any BackupPlanAssociations below this BackupChannel will also
+           * be deleted. Otherwise, the request will only succeed if the BackupChannel has no
+           * BackupPlanAssociations.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean force;
+
+          /** Optional. If set to true, any BackupPlanAssociations below this BackupChannel will also be deleted.
+         Otherwise, the request will only succeed if the BackupChannel has no BackupPlanAssociations.
+           */
+          public java.lang.Boolean getForce() {
+            return force;
+          }
+
+          /**
+           * Optional. If set to true, any BackupPlanAssociations below this BackupChannel will also
+           * be deleted. Otherwise, the request will only succeed if the BackupChannel has no
+           * BackupPlanAssociations.
+           */
+          public Delete setForce(java.lang.Boolean force) {
+            this.force = force;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Retrieve the details of a single BackupChannel.
+         *
+         * Create a request for the method "backupChannels.get".
+         *
+         * This request holds the parameters needed by the gkebackup server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Fully qualified BackupChannel name. Format: `projects/locations/backupChannels`
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends BackupforGKERequest<com.google.api.services.gkebackup.v1.model.BackupChannel> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/backupChannels/[^/]+$");
+
+          /**
+           * Retrieve the details of a single BackupChannel.
+           *
+           * Create a request for the method "backupChannels.get".
+           *
+           * This request holds the parameters needed by the the gkebackup server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Fully qualified BackupChannel name. Format: `projects/locations/backupChannels`
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(BackupforGKE.this, "GET", REST_PATH, null, com.google.api.services.gkebackup.v1.model.BackupChannel.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/backupChannels/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Fully qualified BackupChannel name. Format:
+           * `projects/locations/backupChannels`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Fully qualified BackupChannel name. Format: `projects/locations/backupChannels`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Fully qualified BackupChannel name. Format:
+           * `projects/locations/backupChannels`
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/backupChannels/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists BackupChannels in a given location.
+         *
+         * Create a request for the method "backupChannels.list".
+         *
+         * This request holds the parameters needed by the gkebackup server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The location that contains the BackupChannels to list. Format: `projects/locations`
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends BackupforGKERequest<com.google.api.services.gkebackup.v1.model.ListBackupChannelsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/backupChannels";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists BackupChannels in a given location.
+           *
+           * Create a request for the method "backupChannels.list".
+           *
+           * This request holds the parameters needed by the the gkebackup server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The location that contains the BackupChannels to list. Format: `projects/locations`
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(BackupforGKE.this, "GET", REST_PATH, null, com.google.api.services.gkebackup.v1.model.ListBackupChannelsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The location that contains the BackupChannels to list. Format:
+           * `projects/locations`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The location that contains the BackupChannels to list. Format: `projects/locations`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The location that contains the BackupChannels to list. Format:
+           * `projects/locations`
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Optional. Field match expression used to filter the results. */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Field match expression used to filter the results.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /** Optional. Field match expression used to filter the results. */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /** Optional. Field by which to sort the results. */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. Field by which to sort the results.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /** Optional. Field by which to sort the results. */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Optional. The target number of results to return in a single response. If not
+           * specified, a default value will be chosen by the service. Note that the response may
+           * include a partial list and a caller should only rely on the response's next_page_token
+           * to determine if there are more instances left to be queried.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The target number of results to return in a single response. If not specified, a default
+         value will be chosen by the service. Note that the response may include a partial list and a caller
+         should only rely on the response's next_page_token to determine if there are more instances left to
+         be queried.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The target number of results to return in a single response. If not
+           * specified, a default value will be chosen by the service. Note that the response may
+           * include a partial list and a caller should only rely on the response's next_page_token
+           * to determine if there are more instances left to be queried.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. The value of next_page_token received from a previous `ListBackupChannels`
+           * call. Provide this to retrieve the subsequent page in a multi-page list of results.
+           * When paginating, all other parameters provided to `ListBackupChannels` must match the
+           * call that provided the page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. The value of next_page_token received from a previous `ListBackupChannels` call. Provide
+         this to retrieve the subsequent page in a multi-page list of results. When paginating, all other
+         parameters provided to `ListBackupChannels` must match the call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. The value of next_page_token received from a previous `ListBackupChannels`
+           * call. Provide this to retrieve the subsequent page in a multi-page list of results.
+           * When paginating, all other parameters provided to `ListBackupChannels` must match the
+           * call that provided the page token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Update a BackupChannel.
+         *
+         * Create a request for the method "backupChannels.patch".
+         *
+         * This request holds the parameters needed by the gkebackup server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Identifier. The fully qualified name of the BackupChannel. `projects/locations/backupChannels`
+         * @param content the {@link com.google.api.services.gkebackup.v1.model.BackupChannel}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.gkebackup.v1.model.BackupChannel content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends BackupforGKERequest<com.google.api.services.gkebackup.v1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/backupChannels/[^/]+$");
+
+          /**
+           * Update a BackupChannel.
+           *
+           * Create a request for the method "backupChannels.patch".
+           *
+           * This request holds the parameters needed by the the gkebackup server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Identifier. The fully qualified name of the BackupChannel. `projects/locations/backupChannels`
+           * @param content the {@link com.google.api.services.gkebackup.v1.model.BackupChannel}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.gkebackup.v1.model.BackupChannel content) {
+            super(BackupforGKE.this, "PATCH", REST_PATH, content, com.google.api.services.gkebackup.v1.model.GoogleLongrunningOperation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/backupChannels/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Identifier. The fully qualified name of the BackupChannel.
+           * `projects/locations/backupChannels`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Identifier. The fully qualified name of the BackupChannel. `projects/locations/backupChannels`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Identifier. The fully qualified name of the BackupChannel.
+           * `projects/locations/backupChannels`
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/backupChannels/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. This is used to specify the fields to be overwritten in the BackupChannel
+           * targeted for update. The values for each of these updated fields will be taken from the
+           * `backup_channel` provided with this request. Field names are relative to the root of
+           * the resource (e.g., `description`, `labels`, etc.) If no `update_mask` is provided, all
+           * fields in `backup_channel` will be written to the target BackupChannel resource. Note
+           * that OUTPUT_ONLY and IMMUTABLE fields in `backup_channel` are ignored and are not used
+           * to update the target BackupChannel.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Optional. This is used to specify the fields to be overwritten in the BackupChannel targeted for
+         update. The values for each of these updated fields will be taken from the `backup_channel`
+         provided with this request. Field names are relative to the root of the resource (e.g.,
+         `description`, `labels`, etc.) If no `update_mask` is provided, all fields in `backup_channel` will
+         be written to the target BackupChannel resource. Note that OUTPUT_ONLY and IMMUTABLE fields in
+         `backup_channel` are ignored and are not used to update the target BackupChannel.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Optional. This is used to specify the fields to be overwritten in the BackupChannel
+           * targeted for update. The values for each of these updated fields will be taken from the
+           * `backup_channel` provided with this request. Field names are relative to the root of
+           * the resource (e.g., `description`, `labels`, etc.) If no `update_mask` is provided, all
+           * fields in `backup_channel` will be written to the target BackupChannel resource. Note
+           * that OUTPUT_ONLY and IMMUTABLE fields in `backup_channel` are ignored and are not used
+           * to update the target BackupChannel.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+
+        /**
+         * An accessor for creating requests from the BackupPlanBindings collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code BackupforGKE gkebackup = new BackupforGKE(...);}
+         *   {@code BackupforGKE.BackupPlanBindings.List request = gkebackup.backupPlanBindings().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public BackupPlanBindings backupPlanBindings() {
+          return new BackupPlanBindings();
+        }
+
+        /**
+         * The "backupPlanBindings" collection of methods.
+         */
+        public class BackupPlanBindings {
+
+          /**
+           * Retrieve the details of a single BackupPlanBinding.
+           *
+           * Create a request for the method "backupPlanBindings.get".
+           *
+           * This request holds the parameters needed by the gkebackup server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. Fully qualified BackupPlanBinding name. Format:
+           *        `projects/locations/backupChannels/backupPlanBindings`
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends BackupforGKERequest<com.google.api.services.gkebackup.v1.model.BackupPlanBinding> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/backupChannels/[^/]+/backupPlanBindings/[^/]+$");
+
+            /**
+             * Retrieve the details of a single BackupPlanBinding.
+             *
+             * Create a request for the method "backupPlanBindings.get".
+             *
+             * This request holds the parameters needed by the the gkebackup server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. Fully qualified BackupPlanBinding name. Format:
+           *        `projects/locations/backupChannels/backupPlanBindings`
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(BackupforGKE.this, "GET", REST_PATH, null, com.google.api.services.gkebackup.v1.model.BackupPlanBinding.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/backupChannels/[^/]+/backupPlanBindings/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Fully qualified BackupPlanBinding name. Format:
+             * `projects/locations/backupChannels/backupPlanBindings`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Fully qualified BackupPlanBinding name. Format:
+           `projects/locations/backupChannels/backupPlanBindings`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. Fully qualified BackupPlanBinding name. Format:
+             * `projects/locations/backupChannels/backupPlanBindings`
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/backupChannels/[^/]+/backupPlanBindings/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists BackupPlanBindings in a given location.
+           *
+           * Create a request for the method "backupPlanBindings.list".
+           *
+           * This request holds the parameters needed by the gkebackup server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The BackupChannel that contains the BackupPlanBindings to list. Format:
+           *        `projects/locations/backupChannels`
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends BackupforGKERequest<com.google.api.services.gkebackup.v1.model.ListBackupPlanBindingsResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/backupPlanBindings";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/backupChannels/[^/]+$");
+
+            /**
+             * Lists BackupPlanBindings in a given location.
+             *
+             * Create a request for the method "backupPlanBindings.list".
+             *
+             * This request holds the parameters needed by the the gkebackup server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The BackupChannel that contains the BackupPlanBindings to list. Format:
+           *        `projects/locations/backupChannels`
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(BackupforGKE.this, "GET", REST_PATH, null, com.google.api.services.gkebackup.v1.model.ListBackupPlanBindingsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/backupChannels/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The BackupChannel that contains the BackupPlanBindings to list. Format:
+             * `projects/locations/backupChannels`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The BackupChannel that contains the BackupPlanBindings to list. Format:
+           `projects/locations/backupChannels`
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The BackupChannel that contains the BackupPlanBindings to list. Format:
+             * `projects/locations/backupChannels`
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/backupChannels/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /** Optional. Field match expression used to filter the results. */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Optional. Field match expression used to filter the results.
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /** Optional. Field match expression used to filter the results. */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /** Optional. Field by which to sort the results. */
+            @com.google.api.client.util.Key
+            private java.lang.String orderBy;
+
+            /** Optional. Field by which to sort the results.
+             */
+            public java.lang.String getOrderBy() {
+              return orderBy;
+            }
+
+            /** Optional. Field by which to sort the results. */
+            public List setOrderBy(java.lang.String orderBy) {
+              this.orderBy = orderBy;
+              return this;
+            }
+
+            /**
+             * Optional. The target number of results to return in a single response. If not
+             * specified, a default value will be chosen by the service. Note that the response may
+             * include a partial list and a caller should only rely on the response's
+             * next_page_token to determine if there are more instances left to be queried.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. The target number of results to return in a single response. If not specified, a default
+           value will be chosen by the service. Note that the response may include a partial list and a caller
+           should only rely on the response's next_page_token to determine if there are more instances left to
+           be queried.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. The target number of results to return in a single response. If not
+             * specified, a default value will be chosen by the service. Note that the response may
+             * include a partial list and a caller should only rely on the response's
+             * next_page_token to determine if there are more instances left to be queried.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. The value of next_page_token received from a previous
+             * `ListBackupPlanBindings` call. Provide this to retrieve the subsequent page in a
+             * multi-page list of results. When paginating, all other parameters provided to
+             * `ListBackupPlanBindings` must match the call that provided the page token.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. The value of next_page_token received from a previous `ListBackupPlanBindings` call.
+           Provide this to retrieve the subsequent page in a multi-page list of results. When paginating, all
+           other parameters provided to `ListBackupPlanBindings` must match the call that provided the page
+           token.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. The value of next_page_token received from a previous
+             * `ListBackupPlanBindings` call. Provide this to retrieve the subsequent page in a
+             * multi-page list of results. When paginating, all other parameters provided to
+             * `ListBackupPlanBindings` must match the call that provided the page token.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
+      }
       /**
        * An accessor for creating requests from the BackupPlans collection.
        *
@@ -2990,6 +4344,29 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
               return this;
             }
 
+            /**
+             * Optional. If set to true, the response will return partial results when some regions
+             * are unreachable and the unreachable field will be populated.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean returnPartialSuccess;
+
+            /** Optional. If set to true, the response will return partial results when some regions are
+           unreachable and the unreachable field will be populated.
+             */
+            public java.lang.Boolean getReturnPartialSuccess() {
+              return returnPartialSuccess;
+            }
+
+            /**
+             * Optional. If set to true, the response will return partial results when some regions
+             * are unreachable and the unreachable field will be populated.
+             */
+            public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
+              this.returnPartialSuccess = returnPartialSuccess;
+              return this;
+            }
+
             @Override
             public List set(String parameterName, Object value) {
               return (List) super.set(parameterName, value);
@@ -4995,6 +6372,1313 @@ public class BackupforGKE extends com.google.api.client.googleapis.services.json
           }
         }
 
+      }
+      /**
+       * An accessor for creating requests from the RestoreChannels collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code BackupforGKE gkebackup = new BackupforGKE(...);}
+       *   {@code BackupforGKE.RestoreChannels.List request = gkebackup.restoreChannels().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public RestoreChannels restoreChannels() {
+        return new RestoreChannels();
+      }
+
+      /**
+       * The "restoreChannels" collection of methods.
+       */
+      public class RestoreChannels {
+
+        /**
+         * Creates a new RestoreChannel in a given location.
+         *
+         * Create a request for the method "restoreChannels.create".
+         *
+         * This request holds the parameters needed by the gkebackup server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The location within which to create the RestoreChannel. Format: `projects/locations`
+         * @param content the {@link com.google.api.services.gkebackup.v1.model.RestoreChannel}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.gkebackup.v1.model.RestoreChannel content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends BackupforGKERequest<com.google.api.services.gkebackup.v1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1/{+parent}/restoreChannels";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a new RestoreChannel in a given location.
+           *
+           * Create a request for the method "restoreChannels.create".
+           *
+           * This request holds the parameters needed by the the gkebackup server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The location within which to create the RestoreChannel. Format: `projects/locations`
+           * @param content the {@link com.google.api.services.gkebackup.v1.model.RestoreChannel}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.gkebackup.v1.model.RestoreChannel content) {
+            super(BackupforGKE.this, "POST", REST_PATH, content, com.google.api.services.gkebackup.v1.model.GoogleLongrunningOperation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The location within which to create the RestoreChannel. Format:
+           * `projects/locations`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The location within which to create the RestoreChannel. Format: `projects/locations`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The location within which to create the RestoreChannel. Format:
+           * `projects/locations`
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. The client-provided short name for the RestoreChannel resource. This name
+           * must: - be between 1 and 63 characters long (inclusive) - consist of only lower-case
+           * ASCII letters, numbers, and dashes - start with a lower-case letter - end with a lower-
+           * case letter or number - be unique within the set of RestoreChannels in this location If
+           * the user does not provide a name, a uuid will be used as the name.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String restoreChannelId;
+
+          /** Optional. The client-provided short name for the RestoreChannel resource. This name must: - be
+         between 1 and 63 characters long (inclusive) - consist of only lower-case ASCII letters, numbers,
+         and dashes - start with a lower-case letter - end with a lower-case letter or number - be unique
+         within the set of RestoreChannels in this location If the user does not provide a name, a uuid will
+         be used as the name.
+           */
+          public java.lang.String getRestoreChannelId() {
+            return restoreChannelId;
+          }
+
+          /**
+           * Optional. The client-provided short name for the RestoreChannel resource. This name
+           * must: - be between 1 and 63 characters long (inclusive) - consist of only lower-case
+           * ASCII letters, numbers, and dashes - start with a lower-case letter - end with a lower-
+           * case letter or number - be unique within the set of RestoreChannels in this location If
+           * the user does not provide a name, a uuid will be used as the name.
+           */
+          public Create setRestoreChannelId(java.lang.String restoreChannelId) {
+            this.restoreChannelId = restoreChannelId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes an existing RestoreChannel.
+         *
+         * Create a request for the method "restoreChannels.delete".
+         *
+         * This request holds the parameters needed by the gkebackup server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Fully qualified RestoreChannel name. Format: `projects/locations/restoreChannels`
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends BackupforGKERequest<com.google.api.services.gkebackup.v1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/restoreChannels/[^/]+$");
+
+          /**
+           * Deletes an existing RestoreChannel.
+           *
+           * Create a request for the method "restoreChannels.delete".
+           *
+           * This request holds the parameters needed by the the gkebackup server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Fully qualified RestoreChannel name. Format: `projects/locations/restoreChannels`
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(BackupforGKE.this, "DELETE", REST_PATH, null, com.google.api.services.gkebackup.v1.model.GoogleLongrunningOperation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/restoreChannels/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Fully qualified RestoreChannel name. Format:
+           * `projects/locations/restoreChannels`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Fully qualified RestoreChannel name. Format: `projects/locations/restoreChannels`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Fully qualified RestoreChannel name. Format:
+           * `projects/locations/restoreChannels`
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/restoreChannels/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. If provided, this value must match the current value of the target
+           * RestoreChannel's etag field or the request is rejected.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String etag;
+
+          /** Optional. If provided, this value must match the current value of the target RestoreChannel's etag
+         field or the request is rejected.
+           */
+          public java.lang.String getEtag() {
+            return etag;
+          }
+
+          /**
+           * Optional. If provided, this value must match the current value of the target
+           * RestoreChannel's etag field or the request is rejected.
+           */
+          public Delete setEtag(java.lang.String etag) {
+            this.etag = etag;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Retrieve the details of a single RestoreChannel.
+         *
+         * Create a request for the method "restoreChannels.get".
+         *
+         * This request holds the parameters needed by the gkebackup server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Fully qualified RestoreChannel name. Format: `projects/locations/restoreChannels`
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends BackupforGKERequest<com.google.api.services.gkebackup.v1.model.RestoreChannel> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/restoreChannels/[^/]+$");
+
+          /**
+           * Retrieve the details of a single RestoreChannel.
+           *
+           * Create a request for the method "restoreChannels.get".
+           *
+           * This request holds the parameters needed by the the gkebackup server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Fully qualified RestoreChannel name. Format: `projects/locations/restoreChannels`
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(BackupforGKE.this, "GET", REST_PATH, null, com.google.api.services.gkebackup.v1.model.RestoreChannel.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/restoreChannels/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Fully qualified RestoreChannel name. Format:
+           * `projects/locations/restoreChannels`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Fully qualified RestoreChannel name. Format: `projects/locations/restoreChannels`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Fully qualified RestoreChannel name. Format:
+           * `projects/locations/restoreChannels`
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/restoreChannels/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists RestoreChannels in a given location.
+         *
+         * Create a request for the method "restoreChannels.list".
+         *
+         * This request holds the parameters needed by the gkebackup server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The location that contains the RestoreChannels to list. Format: `projects/locations`
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends BackupforGKERequest<com.google.api.services.gkebackup.v1.model.ListRestoreChannelsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/restoreChannels";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists RestoreChannels in a given location.
+           *
+           * Create a request for the method "restoreChannels.list".
+           *
+           * This request holds the parameters needed by the the gkebackup server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The location that contains the RestoreChannels to list. Format: `projects/locations`
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(BackupforGKE.this, "GET", REST_PATH, null, com.google.api.services.gkebackup.v1.model.ListRestoreChannelsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The location that contains the RestoreChannels to list. Format:
+           * `projects/locations`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The location that contains the RestoreChannels to list. Format: `projects/locations`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The location that contains the RestoreChannels to list. Format:
+           * `projects/locations`
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Optional. Field match expression used to filter the results. */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Field match expression used to filter the results.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /** Optional. Field match expression used to filter the results. */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /** Optional. Field by which to sort the results. */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. Field by which to sort the results.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /** Optional. Field by which to sort the results. */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Optional. The target number of results to return in a single response. If not
+           * specified, a default value will be chosen by the service. Note that the response may
+           * include a partial list and a caller should only rely on the response's next_page_token
+           * to determine if there are more instances left to be queried.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The target number of results to return in a single response. If not specified, a default
+         value will be chosen by the service. Note that the response may include a partial list and a caller
+         should only rely on the response's next_page_token to determine if there are more instances left to
+         be queried.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The target number of results to return in a single response. If not
+           * specified, a default value will be chosen by the service. Note that the response may
+           * include a partial list and a caller should only rely on the response's next_page_token
+           * to determine if there are more instances left to be queried.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. The value of next_page_token received from a previous `ListRestoreChannels`
+           * call. Provide this to retrieve the subsequent page in a multi-page list of results.
+           * When paginating, all other parameters provided to `ListRestoreChannels` must match the
+           * call that provided the page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. The value of next_page_token received from a previous `ListRestoreChannels` call. Provide
+         this to retrieve the subsequent page in a multi-page list of results. When paginating, all other
+         parameters provided to `ListRestoreChannels` must match the call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. The value of next_page_token received from a previous `ListRestoreChannels`
+           * call. Provide this to retrieve the subsequent page in a multi-page list of results.
+           * When paginating, all other parameters provided to `ListRestoreChannels` must match the
+           * call that provided the page token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Update a RestoreChannel.
+         *
+         * Create a request for the method "restoreChannels.patch".
+         *
+         * This request holds the parameters needed by the gkebackup server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Identifier. The fully qualified name of the RestoreChannel. `projects/locations/restoreChannels`
+         * @param content the {@link com.google.api.services.gkebackup.v1.model.RestoreChannel}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.gkebackup.v1.model.RestoreChannel content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends BackupforGKERequest<com.google.api.services.gkebackup.v1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/restoreChannels/[^/]+$");
+
+          /**
+           * Update a RestoreChannel.
+           *
+           * Create a request for the method "restoreChannels.patch".
+           *
+           * This request holds the parameters needed by the the gkebackup server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Identifier. The fully qualified name of the RestoreChannel. `projects/locations/restoreChannels`
+           * @param content the {@link com.google.api.services.gkebackup.v1.model.RestoreChannel}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.gkebackup.v1.model.RestoreChannel content) {
+            super(BackupforGKE.this, "PATCH", REST_PATH, content, com.google.api.services.gkebackup.v1.model.GoogleLongrunningOperation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/restoreChannels/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Identifier. The fully qualified name of the RestoreChannel.
+           * `projects/locations/restoreChannels`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Identifier. The fully qualified name of the RestoreChannel. `projects/locations/restoreChannels`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Identifier. The fully qualified name of the RestoreChannel.
+           * `projects/locations/restoreChannels`
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/restoreChannels/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. This is used to specify the fields to be overwritten in the RestoreChannel
+           * targeted for update. The values for each of these updated fields will be taken from the
+           * `restore_channel` provided with this request. Field names are relative to the root of
+           * the resource (e.g., `description`, `destination_project_id`, etc.) If no `update_mask`
+           * is provided, all fields in `restore_channel` will be written to the target
+           * RestoreChannel resource. Note that OUTPUT_ONLY and IMMUTABLE fields in
+           * `restore_channel` are ignored and are not used to update the target RestoreChannel.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Optional. This is used to specify the fields to be overwritten in the RestoreChannel targeted for
+         update. The values for each of these updated fields will be taken from the `restore_channel`
+         provided with this request. Field names are relative to the root of the resource (e.g.,
+         `description`, `destination_project_id`, etc.) If no `update_mask` is provided, all fields in
+         `restore_channel` will be written to the target RestoreChannel resource. Note that OUTPUT_ONLY and
+         IMMUTABLE fields in `restore_channel` are ignored and are not used to update the target
+         RestoreChannel.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Optional. This is used to specify the fields to be overwritten in the RestoreChannel
+           * targeted for update. The values for each of these updated fields will be taken from the
+           * `restore_channel` provided with this request. Field names are relative to the root of
+           * the resource (e.g., `description`, `destination_project_id`, etc.) If no `update_mask`
+           * is provided, all fields in `restore_channel` will be written to the target
+           * RestoreChannel resource. Note that OUTPUT_ONLY and IMMUTABLE fields in
+           * `restore_channel` are ignored and are not used to update the target RestoreChannel.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+
+        /**
+         * An accessor for creating requests from the RestorePlanBindings collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code BackupforGKE gkebackup = new BackupforGKE(...);}
+         *   {@code BackupforGKE.RestorePlanBindings.List request = gkebackup.restorePlanBindings().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public RestorePlanBindings restorePlanBindings() {
+          return new RestorePlanBindings();
+        }
+
+        /**
+         * The "restorePlanBindings" collection of methods.
+         */
+        public class RestorePlanBindings {
+
+          /**
+           * Retrieve the details of a single RestorePlanBinding.
+           *
+           * Create a request for the method "restorePlanBindings.get".
+           *
+           * This request holds the parameters needed by the gkebackup server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. Fully qualified RestorePlanBinding name. Format:
+           *        `projects/locations/restoreChannels/restorePlanBindings`
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends BackupforGKERequest<com.google.api.services.gkebackup.v1.model.RestorePlanBinding> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/restoreChannels/[^/]+/restorePlanBindings/[^/]+$");
+
+            /**
+             * Retrieve the details of a single RestorePlanBinding.
+             *
+             * Create a request for the method "restorePlanBindings.get".
+             *
+             * This request holds the parameters needed by the the gkebackup server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. Fully qualified RestorePlanBinding name. Format:
+           *        `projects/locations/restoreChannels/restorePlanBindings`
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(BackupforGKE.this, "GET", REST_PATH, null, com.google.api.services.gkebackup.v1.model.RestorePlanBinding.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/restoreChannels/[^/]+/restorePlanBindings/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Fully qualified RestorePlanBinding name. Format:
+             * `projects/locations/restoreChannels/restorePlanBindings`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Fully qualified RestorePlanBinding name. Format:
+           `projects/locations/restoreChannels/restorePlanBindings`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. Fully qualified RestorePlanBinding name. Format:
+             * `projects/locations/restoreChannels/restorePlanBindings`
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/restoreChannels/[^/]+/restorePlanBindings/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists RestorePlanBindings in a given location.
+           *
+           * Create a request for the method "restorePlanBindings.list".
+           *
+           * This request holds the parameters needed by the gkebackup server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The RestoreChannel that contains the ListRestorePlanBindings to list. Format:
+           *        `projects/locations/restoreChannels`
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends BackupforGKERequest<com.google.api.services.gkebackup.v1.model.ListRestorePlanBindingsResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/restorePlanBindings";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/restoreChannels/[^/]+$");
+
+            /**
+             * Lists RestorePlanBindings in a given location.
+             *
+             * Create a request for the method "restorePlanBindings.list".
+             *
+             * This request holds the parameters needed by the the gkebackup server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The RestoreChannel that contains the ListRestorePlanBindings to list. Format:
+           *        `projects/locations/restoreChannels`
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(BackupforGKE.this, "GET", REST_PATH, null, com.google.api.services.gkebackup.v1.model.ListRestorePlanBindingsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/restoreChannels/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The RestoreChannel that contains the ListRestorePlanBindings to list.
+             * Format: `projects/locations/restoreChannels`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The RestoreChannel that contains the ListRestorePlanBindings to list. Format:
+           `projects/locations/restoreChannels`
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The RestoreChannel that contains the ListRestorePlanBindings to list.
+             * Format: `projects/locations/restoreChannels`
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/restoreChannels/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /** Optional. Field match expression used to filter the results. */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Optional. Field match expression used to filter the results.
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /** Optional. Field match expression used to filter the results. */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /** Optional. Field by which to sort the results. */
+            @com.google.api.client.util.Key
+            private java.lang.String orderBy;
+
+            /** Optional. Field by which to sort the results.
+             */
+            public java.lang.String getOrderBy() {
+              return orderBy;
+            }
+
+            /** Optional. Field by which to sort the results. */
+            public List setOrderBy(java.lang.String orderBy) {
+              this.orderBy = orderBy;
+              return this;
+            }
+
+            /**
+             * Optional. The target number of results to return in a single response. If not
+             * specified, a default value will be chosen by the service. Note that the response may
+             * include a partial list and a caller should only rely on the response's
+             * next_page_token to determine if there are more instances left to be queried.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. The target number of results to return in a single response. If not specified, a default
+           value will be chosen by the service. Note that the response may include a partial list and a caller
+           should only rely on the response's next_page_token to determine if there are more instances left to
+           be queried.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. The target number of results to return in a single response. If not
+             * specified, a default value will be chosen by the service. Note that the response may
+             * include a partial list and a caller should only rely on the response's
+             * next_page_token to determine if there are more instances left to be queried.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. The value of next_page_token received from a previous
+             * `ListRestorePlanBindings` call. Provide this to retrieve the subsequent page in a
+             * multi-page list of results. When paginating, all other parameters provided to
+             * `ListRestorePlanBindings` must match the call that provided the page token.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. The value of next_page_token received from a previous `ListRestorePlanBindings` call.
+           Provide this to retrieve the subsequent page in a multi-page list of results. When paginating, all
+           other parameters provided to `ListRestorePlanBindings` must match the call that provided the page
+           token.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. The value of next_page_token received from a previous
+             * `ListRestorePlanBindings` call. Provide this to retrieve the subsequent page in a
+             * multi-page list of results. When paginating, all other parameters provided to
+             * `ListRestorePlanBindings` must match the call that provided the page token.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
       }
       /**
        * An accessor for creating requests from the RestorePlans collection.

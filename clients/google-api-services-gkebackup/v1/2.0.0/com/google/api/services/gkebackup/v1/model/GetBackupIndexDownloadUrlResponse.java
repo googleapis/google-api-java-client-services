@@ -30,12 +30,14 @@ package com.google.api.services.gkebackup.v1.model;
 public final class GetBackupIndexDownloadUrlResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * Required. The signed URL for downloading the backup index.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String signedUrl;
 
   /**
+   * Required. The signed URL for downloading the backup index.
    * @return value or {@code null} for none
    */
   public java.lang.String getSignedUrl() {
@@ -43,6 +45,7 @@ public final class GetBackupIndexDownloadUrlResponse extends com.google.api.clie
   }
 
   /**
+   * Required. The signed URL for downloading the backup index.
    * @param signedUrl signedUrl or {@code null} for none
    */
   public GetBackupIndexDownloadUrlResponse setSignedUrl(java.lang.String signedUrl) {

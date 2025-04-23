@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-gkebackup</artifactId>
-  <version>v1-rev20250226-2.0.0</version>
-  <name>Backup for GKE API v1-rev20250226-2.0.0</name>
+  <version>v1-rev20250326-2.0.0</version>
+  <name>Backup for GKE API v1-rev20250326-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

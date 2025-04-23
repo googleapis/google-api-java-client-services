@@ -17,8 +17,7 @@
 package com.google.api.services.androidenterprise.model;
 
 /**
- * An event generated when an enterprise is upgraded. **Note:** This feature is not generally
- * available.
+ * An event generated when an enterprise is upgraded.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Play EMM API. For a detailed explanation see:

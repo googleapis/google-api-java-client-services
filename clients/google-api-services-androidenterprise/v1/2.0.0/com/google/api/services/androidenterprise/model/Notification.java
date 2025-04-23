@@ -58,7 +58,7 @@ public final class Notification extends com.google.api.client.json.GenericJson {
   private java.lang.String enterpriseId;
 
   /**
-   * Notifications about enterprise upgrade. **Note:** This feature is not generally available.
+   * Notifications about enterprise upgrade.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -183,7 +183,7 @@ public final class Notification extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Notifications about enterprise upgrade. **Note:** This feature is not generally available.
+   * Notifications about enterprise upgrade.
    * @return value or {@code null} for none
    */
   public EnterpriseUpgradeEvent getEnterpriseUpgradeEvent() {
@@ -191,7 +191,7 @@ public final class Notification extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Notifications about enterprise upgrade. **Note:** This feature is not generally available.
+   * Notifications about enterprise upgrade.
    * @param enterpriseUpgradeEvent enterpriseUpgradeEvent or {@code null} for none
    */
   public Notification setEnterpriseUpgradeEvent(EnterpriseUpgradeEvent enterpriseUpgradeEvent) {

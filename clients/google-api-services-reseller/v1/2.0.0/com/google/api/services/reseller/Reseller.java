@@ -157,7 +157,8 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
      * Gets a customer account. Use this operation to see a customer account already in your reseller
      * management, or to see the minimal account information for an existing customer that you do not
      * manage. For more information about the API response for existing customers, see [retrieving a
-     * customer account](/admin-sdk/reseller/v1/how-tos/manage_customers#get_customer).
+     * customer account](https://developers.google.com/workspace/admin/reseller/v1/how-
+     * tos/manage_customers#get_customer).
      *
      * Create a request for the method "customers.get".
      *
@@ -184,7 +185,8 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
        * Gets a customer account. Use this operation to see a customer account already in your reseller
        * management, or to see the minimal account information for an existing customer that you do not
        * manage. For more information about the API response for existing customers, see [retrieving a
-       * customer account](/admin-sdk/reseller/v1/how-tos/manage_customers#get_customer).
+       * customer account](https://developers.google.com/workspace/admin/reseller/v1/how-
+       * tos/manage_customers#get_customer).
        *
        * Create a request for the method "customers.get".
        *
@@ -305,18 +307,20 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
     }
     /**
      * Orders a new customer's account. Before ordering a new customer account, establish whether the
-     * customer account already exists using the [`customers.get`](/admin-
-     * sdk/reseller/v1/reference/customers/get) If the customer account exists as a direct Google
+     * customer account already exists using the [`customers.get`](https://developers.google.com/workspa
+     * ce/admin/reseller/v1/reference/customers/get) If the customer account exists as a direct Google
      * account or as a resold customer account from another reseller, use the `customerAuthToken\` as
-     * described in [order a resold account for an existing customer](/admin-sdk/reseller/v1/how-
+     * described in [order a resold account for an existing
+     * customer](https://developers.google.com/workspace/admin/reseller/v1/how-
      * tos/manage_customers#create_existing_customer). For more information about ordering a new
-     * customer account, see [order a new customer account](/admin-sdk/reseller/v1/how-
+     * customer account, see [order a new customer
+     * account](https://developers.google.com/workspace/admin/reseller/v1/how-
      * tos/manage_customers#create_customer). After creating a new customer account, you must provision
      * a user as an administrator. The customer's administrator is required to sign in to the Admin
      * console and sign the G Suite via Reseller agreement to activate the account. Resellers are
      * prohibited from signing the G Suite via Reseller agreement on the customer's behalf. For more
-     * information, see [order a new customer account](/admin-sdk/reseller/v1/how-
-     * tos/manage_customers#tos).
+     * information, see [order a new customer
+     * account](https://developers.google.com/workspace/admin/reseller/v1/how-tos/manage_customers#tos).
      *
      * Create a request for the method "customers.insert".
      *
@@ -338,17 +342,20 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
 
       /**
        * Orders a new customer's account. Before ordering a new customer account, establish whether the
-       * customer account already exists using the [`customers.get`](/admin-
-       * sdk/reseller/v1/reference/customers/get) If the customer account exists as a direct Google
-       * account or as a resold customer account from another reseller, use the `customerAuthToken\` as
-       * described in [order a resold account for an existing customer](/admin-sdk/reseller/v1/how-
+       * customer account already exists using the [`customers.get`](https://developers.google.com/works
+       * pace/admin/reseller/v1/reference/customers/get) If the customer account exists as a direct
+       * Google account or as a resold customer account from another reseller, use the
+       * `customerAuthToken\` as described in [order a resold account for an existing
+       * customer](https://developers.google.com/workspace/admin/reseller/v1/how-
        * tos/manage_customers#create_existing_customer). For more information about ordering a new
-       * customer account, see [order a new customer account](/admin-sdk/reseller/v1/how-
+       * customer account, see [order a new customer
+       * account](https://developers.google.com/workspace/admin/reseller/v1/how-
        * tos/manage_customers#create_customer). After creating a new customer account, you must
        * provision a user as an administrator. The customer's administrator is required to sign in to
        * the Admin console and sign the G Suite via Reseller agreement to activate the account.
        * Resellers are prohibited from signing the G Suite via Reseller agreement on the customer's
-       * behalf. For more information, see [order a new customer account](/admin-sdk/reseller/v1/how-
+       * behalf. For more information, see [order a new customer
+       * account](https://developers.google.com/workspace/admin/reseller/v1/how-
        * tos/manage_customers#tos).
        *
        * Create a request for the method "customers.insert".
@@ -603,7 +610,8 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
     /**
      * Updates a customer account's settings. You cannot update `customerType` via the Reseller API, but
      * a `"team"` customer can verify their domain and become `customerType = "domain"`. For more
-     * information, see [update a customer's settings](/admin-sdk/reseller/v1/how-
+     * information, see [update a customer's
+     * settings](https://developers.google.com/workspace/admin/reseller/v1/how-
      * tos/manage_customers#update_customer).
      *
      * Create a request for the method "customers.update".
@@ -631,7 +639,8 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       /**
        * Updates a customer account's settings. You cannot update `customerType` via the Reseller API,
        * but a `"team"` customer can verify their domain and become `customerType = "domain"`. For more
-       * information, see [update a customer's settings](/admin-sdk/reseller/v1/how-
+       * information, see [update a customer's
+       * settings](https://developers.google.com/workspace/admin/reseller/v1/how-
        * tos/manage_customers#update_customer).
        *
        * Create a request for the method "customers.update".
@@ -1303,7 +1312,7 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
      * Updates a subscription plan. Use this method to update a plan for a 30-day trial or a flexible
      * plan subscription to an annual commitment plan with monthly or yearly payments. How a plan is
      * updated differs depending on the plan and the products. For more information, see the description
-     * in [manage subscriptions](/admin-sdk/reseller/v1/how-
+     * in [manage subscriptions](https://developers.google.com/workspace/admin/reseller/v1/how-
      * tos/manage_subscriptions#update_subscription_plan).
      *
      * Create a request for the method "subscriptions.changePlan".
@@ -1336,7 +1345,8 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
        * Updates a subscription plan. Use this method to update a plan for a 30-day trial or a flexible
        * plan subscription to an annual commitment plan with monthly or yearly payments. How a plan is
        * updated differs depending on the plan and the products. For more information, see the
-       * description in [manage subscriptions](/admin-sdk/reseller/v1/how-
+       * description in [manage
+       * subscriptions](https://developers.google.com/workspace/admin/reseller/v1/how-
        * tos/manage_subscriptions#update_subscription_plan).
        *
        * Create a request for the method "subscriptions.changePlan".
@@ -1484,8 +1494,9 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
     }
     /**
      * Updates a user license's renewal settings. This is applicable for accounts with annual commitment
-     * plans only. For more information, see the description in [manage subscriptions](/admin-
-     * sdk/reseller/v1/how-tos/manage_subscriptions#update_renewal).
+     * plans only. For more information, see the description in [manage
+     * subscriptions](https://developers.google.com/workspace/admin/reseller/v1/how-
+     * tos/manage_subscriptions#update_renewal).
      *
      * Create a request for the method "subscriptions.changeRenewalSettings".
      *
@@ -1517,7 +1528,8 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       /**
        * Updates a user license's renewal settings. This is applicable for accounts with annual
        * commitment plans only. For more information, see the description in [manage
-       * subscriptions](/admin-sdk/reseller/v1/how-tos/manage_subscriptions#update_renewal).
+       * subscriptions](https://developers.google.com/workspace/admin/reseller/v1/how-
+       * tos/manage_subscriptions#update_renewal).
        *
        * Create a request for the method "subscriptions.changeRenewalSettings".
        *
@@ -1664,8 +1676,9 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
     }
     /**
      * Updates a subscription's user license settings. For more information about updating an annual
-     * commitment plan or a flexible plan subscription’s licenses, see [Manage Subscriptions](/admin-
-     * sdk/reseller/v1/how-tos/manage_subscriptions#update_subscription_seat).
+     * commitment plan or a flexible plan subscription’s licenses, see [Manage
+     * Subscriptions](https://developers.google.com/workspace/admin/reseller/v1/how-
+     * tos/manage_subscriptions#update_subscription_seat).
      *
      * Create a request for the method "subscriptions.changeSeats".
      *
@@ -1695,8 +1708,9 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
 
       /**
        * Updates a subscription's user license settings. For more information about updating an annual
-       * commitment plan or a flexible plan subscription’s licenses, see [Manage Subscriptions](/admin-
-       * sdk/reseller/v1/how-tos/manage_subscriptions#update_subscription_seat).
+       * commitment plan or a flexible plan subscription’s licenses, see [Manage
+       * Subscriptions](https://developers.google.com/workspace/admin/reseller/v1/how-
+       * tos/manage_subscriptions#update_subscription_seat).
        *
        * Create a request for the method "subscriptions.changeSeats".
        *
@@ -2044,9 +2058,11 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
     }
     /**
      * Gets a specific subscription. The `subscriptionId` can be found using the [Retrieve all reseller
-     * subscriptions](/admin-sdk/reseller/v1/how-tos/manage_subscriptions#get_all_subscriptions) method.
-     * For more information about retrieving a specific subscription, see the information descrived in
-     * [manage subscriptions](/admin-sdk/reseller/v1/how-tos/manage_subscriptions#get_subscription).
+     * subscriptions](https://developers.google.com/workspace/admin/reseller/v1/how-
+     * tos/manage_subscriptions#get_all_subscriptions) method. For more information about retrieving a
+     * specific subscription, see the information descrived in [manage
+     * subscriptions](https://developers.google.com/workspace/admin/reseller/v1/how-
+     * tos/manage_subscriptions#get_subscription).
      *
      * Create a request for the method "subscriptions.get".
      *
@@ -2075,10 +2091,11 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
 
       /**
        * Gets a specific subscription. The `subscriptionId` can be found using the [Retrieve all
-       * reseller subscriptions](/admin-sdk/reseller/v1/how-
+       * reseller subscriptions](https://developers.google.com/workspace/admin/reseller/v1/how-
        * tos/manage_subscriptions#get_all_subscriptions) method. For more information about retrieving a
-       * specific subscription, see the information descrived in [manage subscriptions](/admin-
-       * sdk/reseller/v1/how-tos/manage_subscriptions#get_subscription).
+       * specific subscription, see the information descrived in [manage
+       * subscriptions](https://developers.google.com/workspace/admin/reseller/v1/how-
+       * tos/manage_subscriptions#get_subscription).
        *
        * Create a request for the method "subscriptions.get".
        *
@@ -2233,15 +2250,18 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
     }
     /**
      * Creates or transfer a subscription. Create a subscription for a customer's account that you
-     * ordered using the [Order a new customer account](/admin-
-     * sdk/reseller/v1/reference/customers/insert.html) method. For more information about creating a
-     * subscription for different payment plans, see [manage subscriptions](/admin-sdk/reseller/v1/how-
+     * ordered using the [Order a new customer account](https://developers.google.com/workspace/admin/re
+     * seller/v1/reference/customers/insert.html) method. For more information about creating a
+     * subscription for different payment plans, see [manage
+     * subscriptions](https://developers.google.com/workspace/admin/reseller/v1/how-
      * tos/manage_subscriptions#create_subscription).\ If you did not order the customer's account using
      * the customer insert method, use the customer's `customerAuthToken` when creating a subscription
      * for that customer. If transferring a G Suite subscription with an associated Google Drive or
-     * Google Vault subscription, use the [batch operation](/admin-sdk/reseller/v1/how-tos/batch.html)
-     * to transfer all of these subscriptions. For more information, see how to [transfer
-     * subscriptions](/admin-sdk/reseller/v1/how-tos/manage_subscriptions#transfer_a_subscription).
+     * Google Vault subscription, use the [batch
+     * operation](https://developers.google.com/workspace/admin/reseller/v1/how-tos/batch.html) to
+     * transfer all of these subscriptions. For more information, see how to [transfer
+     * subscriptions](https://developers.google.com/workspace/admin/reseller/v1/how-
+     * tos/manage_subscriptions#transfer_a_subscription).
      *
      * Create a request for the method "subscriptions.insert".
      *
@@ -2267,15 +2287,17 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
 
       /**
        * Creates or transfer a subscription. Create a subscription for a customer's account that you
-       * ordered using the [Order a new customer account](/admin-
-       * sdk/reseller/v1/reference/customers/insert.html) method. For more information about creating a
-       * subscription for different payment plans, see [manage subscriptions](/admin-
-       * sdk/reseller/v1/how-tos/manage_subscriptions#create_subscription).\ If you did not order the
-       * customer's account using the customer insert method, use the customer's `customerAuthToken`
-       * when creating a subscription for that customer. If transferring a G Suite subscription with an
-       * associated Google Drive or Google Vault subscription, use the [batch operation](/admin-
-       * sdk/reseller/v1/how-tos/batch.html) to transfer all of these subscriptions. For more
-       * information, see how to [transfer subscriptions](/admin-sdk/reseller/v1/how-
+       * ordered using the [Order a new customer account](https://developers.google.com/workspace/admin/
+       * reseller/v1/reference/customers/insert.html) method. For more information about creating a
+       * subscription for different payment plans, see [manage
+       * subscriptions](https://developers.google.com/workspace/admin/reseller/v1/how-
+       * tos/manage_subscriptions#create_subscription).\ If you did not order the customer's account
+       * using the customer insert method, use the customer's `customerAuthToken` when creating a
+       * subscription for that customer. If transferring a G Suite subscription with an associated
+       * Google Drive or Google Vault subscription, use the [batch
+       * operation](https://developers.google.com/workspace/admin/reseller/v1/how-tos/batch.html) to
+       * transfer all of these subscriptions. For more information, see how to [transfer
+       * subscriptions](https://developers.google.com/workspace/admin/reseller/v1/how-
        * tos/manage_subscriptions#transfer_a_subscription).
        *
        * Create a request for the method "subscriptions.insert".
@@ -2482,7 +2504,8 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
      * Lists of subscriptions managed by the reseller. The list can be all subscriptions, all of a
      * customer's subscriptions, or all of a customer's transferable subscriptions. Optionally, this
      * method can filter the response by a `customerNamePrefix`. For more information, see [manage
-     * subscriptions](/admin-sdk/reseller/v1/how-tos/manage_subscriptions).
+     * subscriptions](https://developers.google.com/workspace/admin/reseller/v1/how-
+     * tos/manage_subscriptions).
      *
      * Create a request for the method "subscriptions.list".
      *
@@ -2505,7 +2528,8 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
        * Lists of subscriptions managed by the reseller. The list can be all subscriptions, all of a
        * customer's subscriptions, or all of a customer's transferable subscriptions. Optionally, this
        * method can filter the response by a `customerNamePrefix`. For more information, see [manage
-       * subscriptions](/admin-sdk/reseller/v1/how-tos/manage_subscriptions).
+       * subscriptions](https://developers.google.com/workspace/admin/reseller/v1/how-
+       * tos/manage_subscriptions).
        *
        * Create a request for the method "subscriptions.list".
        *
@@ -2729,7 +2753,8 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
     /**
      * Immediately move a 30-day free trial subscription to a paid service subscription. This method is
      * only applicable if a payment plan has already been set up for the 30-day trial subscription. For
-     * more information, see [manage subscriptions](/admin-sdk/reseller/v1/how-
+     * more information, see [manage
+     * subscriptions](https://developers.google.com/workspace/admin/reseller/v1/how-
      * tos/manage_subscriptions#paid_service).
      *
      * Create a request for the method "subscriptions.startPaidService".
@@ -2760,7 +2785,8 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       /**
        * Immediately move a 30-day free trial subscription to a paid service subscription. This method
        * is only applicable if a payment plan has already been set up for the 30-day trial subscription.
-       * For more information, see [manage subscriptions](/admin-sdk/reseller/v1/how-
+       * For more information, see [manage
+       * subscriptions](https://developers.google.com/workspace/admin/reseller/v1/how-
        * tos/manage_subscriptions#paid_service).
        *
        * Create a request for the method "subscriptions.startPaidService".

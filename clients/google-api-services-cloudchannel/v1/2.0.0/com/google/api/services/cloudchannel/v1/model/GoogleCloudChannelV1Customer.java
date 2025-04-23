@@ -78,6 +78,14 @@ public final class GoogleCloudChannelV1Customer extends com.google.api.client.js
   private String createTime;
 
   /**
+   * Optional. Indicate if a customer is attesting about the correctness of provided information.
+   * Only required if creating a GCP Entitlement.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String customerAttestationState;
+
+  /**
    * Required. The customer's primary domain. Must match the primary contact email's domain.
    * The value may be {@code null}.
    */
@@ -241,6 +249,25 @@ public final class GoogleCloudChannelV1Customer extends com.google.api.client.js
    */
   public GoogleCloudChannelV1Customer setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Optional. Indicate if a customer is attesting about the correctness of provided information.
+   * Only required if creating a GCP Entitlement.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCustomerAttestationState() {
+    return customerAttestationState;
+  }
+
+  /**
+   * Optional. Indicate if a customer is attesting about the correctness of provided information.
+   * Only required if creating a GCP Entitlement.
+   * @param customerAttestationState customerAttestationState or {@code null} for none
+   */
+  public GoogleCloudChannelV1Customer setCustomerAttestationState(java.lang.String customerAttestationState) {
+    this.customerAttestationState = customerAttestationState;
     return this;
   }
 

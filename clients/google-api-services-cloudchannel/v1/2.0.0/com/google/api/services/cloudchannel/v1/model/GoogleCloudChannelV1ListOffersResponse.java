@@ -37,7 +37,8 @@ public final class GoogleCloudChannelV1ListOffersResponse extends com.google.api
   private java.lang.String nextPageToken;
 
   /**
-   * The list of Offers requested.
+   * The list of Offers requested. The pricing information for each Offer only includes the base
+   * price. Effective prices and discounts aren't populated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +62,8 @@ public final class GoogleCloudChannelV1ListOffersResponse extends com.google.api
   }
 
   /**
-   * The list of Offers requested.
+   * The list of Offers requested. The pricing information for each Offer only includes the base
+   * price. Effective prices and discounts aren't populated.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudChannelV1Offer> getOffers() {
@@ -69,7 +71,8 @@ public final class GoogleCloudChannelV1ListOffersResponse extends com.google.api
   }
 
   /**
-   * The list of Offers requested.
+   * The list of Offers requested. The pricing information for each Offer only includes the base
+   * price. Effective prices and discounts aren't populated.
    * @param offers offers or {@code null} for none
    */
   public GoogleCloudChannelV1ListOffersResponse setOffers(java.util.List<GoogleCloudChannelV1Offer> offers) {

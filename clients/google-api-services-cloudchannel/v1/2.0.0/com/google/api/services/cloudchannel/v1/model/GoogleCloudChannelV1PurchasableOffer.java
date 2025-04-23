@@ -38,9 +38,9 @@ public final class GoogleCloudChannelV1PurchasableOffer extends com.google.api.c
   private GoogleCloudChannelV1Offer offer;
 
   /**
-   * Optional. Price reference ID for the offer. Optional field only for offers that require
-   * additional price information. Used to guarantee that the pricing is consistent between quoting
-   * the offer and placing the order.
+   * Optional. Price reference ID for the offer. Only for offers that require additional price
+   * information. Used to guarantee that the pricing is consistent between quoting the offer and
+   * placing the order.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,9 +64,9 @@ public final class GoogleCloudChannelV1PurchasableOffer extends com.google.api.c
   }
 
   /**
-   * Optional. Price reference ID for the offer. Optional field only for offers that require
-   * additional price information. Used to guarantee that the pricing is consistent between quoting
-   * the offer and placing the order.
+   * Optional. Price reference ID for the offer. Only for offers that require additional price
+   * information. Used to guarantee that the pricing is consistent between quoting the offer and
+   * placing the order.
    * @return value or {@code null} for none
    */
   public java.lang.String getPriceReferenceId() {
@@ -74,9 +74,9 @@ public final class GoogleCloudChannelV1PurchasableOffer extends com.google.api.c
   }
 
   /**
-   * Optional. Price reference ID for the offer. Optional field only for offers that require
-   * additional price information. Used to guarantee that the pricing is consistent between quoting
-   * the offer and placing the order.
+   * Optional. Price reference ID for the offer. Only for offers that require additional price
+   * information. Used to guarantee that the pricing is consistent between quoting the offer and
+   * placing the order.
    * @param priceReferenceId priceReferenceId or {@code null} for none
    */
   public GoogleCloudChannelV1PurchasableOffer setPriceReferenceId(java.lang.String priceReferenceId) {

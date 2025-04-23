@@ -54,8 +54,8 @@ public final class OnlineReturnPolicy extends com.google.api.client.json.Generic
   private java.util.List<java.lang.String> countries;
 
   /**
-   * The item conditions accepted for returns must not be empty unless the type of return policy is
-   * 'noReturns'.
+   * Optional. The item conditions accepted for returns must not be empty unless the type of return
+   * policy is 'noReturns'.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,7 +83,7 @@ public final class OnlineReturnPolicy extends com.google.api.client.json.Generic
   private java.lang.String name;
 
   /**
-   * The return policy.
+   * Optional. The return policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,16 +98,24 @@ public final class OnlineReturnPolicy extends com.google.api.client.json.Generic
   private java.lang.Integer processRefundDays;
 
   /**
-   * The restocking fee that applies to all return reason categories. This would be treated as a
-   * free restocking fee if the value is not set.
+   * Optional. The restocking fee that applies to all return reason categories. This would be
+   * treated as a free restocking fee if the value is not set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private RestockingFee restockingFee;
 
   /**
-   * The return methods of how customers can return an item. This value is required to not be empty
-   * unless the type of return policy is noReturns.
+   * The field specifies the return label source. This field is required when return method is
+   * BY_MAIL.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String returnLabelSource;
+
+  /**
+   * Optional. The return methods of how customers can return an item. This value is required to not
+   * be empty unless the type of return policy is noReturns.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -129,8 +137,8 @@ public final class OnlineReturnPolicy extends com.google.api.client.json.Generic
   private java.lang.String returnPolicyUri;
 
   /**
-   * The return shipping fee. Should be set only when customer need to download and print the return
-   * label.
+   * Optional. The return shipping fee. Should be set only when customer need to download and print
+   * the return label.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -200,8 +208,8 @@ public final class OnlineReturnPolicy extends com.google.api.client.json.Generic
   }
 
   /**
-   * The item conditions accepted for returns must not be empty unless the type of return policy is
-   * 'noReturns'.
+   * Optional. The item conditions accepted for returns must not be empty unless the type of return
+   * policy is 'noReturns'.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getItemConditions() {
@@ -209,8 +217,8 @@ public final class OnlineReturnPolicy extends com.google.api.client.json.Generic
   }
 
   /**
-   * The item conditions accepted for returns must not be empty unless the type of return policy is
-   * 'noReturns'.
+   * Optional. The item conditions accepted for returns must not be empty unless the type of return
+   * policy is 'noReturns'.
    * @param itemConditions itemConditions or {@code null} for none
    */
   public OnlineReturnPolicy setItemConditions(java.util.List<java.lang.String> itemConditions) {
@@ -267,7 +275,7 @@ public final class OnlineReturnPolicy extends com.google.api.client.json.Generic
   }
 
   /**
-   * The return policy.
+   * Optional. The return policy.
    * @return value or {@code null} for none
    */
   public Policy getPolicy() {
@@ -275,7 +283,7 @@ public final class OnlineReturnPolicy extends com.google.api.client.json.Generic
   }
 
   /**
-   * The return policy.
+   * Optional. The return policy.
    * @param policy policy or {@code null} for none
    */
   public OnlineReturnPolicy setPolicy(Policy policy) {
@@ -303,8 +311,8 @@ public final class OnlineReturnPolicy extends com.google.api.client.json.Generic
   }
 
   /**
-   * The restocking fee that applies to all return reason categories. This would be treated as a
-   * free restocking fee if the value is not set.
+   * Optional. The restocking fee that applies to all return reason categories. This would be
+   * treated as a free restocking fee if the value is not set.
    * @return value or {@code null} for none
    */
   public RestockingFee getRestockingFee() {
@@ -312,8 +320,8 @@ public final class OnlineReturnPolicy extends com.google.api.client.json.Generic
   }
 
   /**
-   * The restocking fee that applies to all return reason categories. This would be treated as a
-   * free restocking fee if the value is not set.
+   * Optional. The restocking fee that applies to all return reason categories. This would be
+   * treated as a free restocking fee if the value is not set.
    * @param restockingFee restockingFee or {@code null} for none
    */
   public OnlineReturnPolicy setRestockingFee(RestockingFee restockingFee) {
@@ -322,8 +330,27 @@ public final class OnlineReturnPolicy extends com.google.api.client.json.Generic
   }
 
   /**
-   * The return methods of how customers can return an item. This value is required to not be empty
-   * unless the type of return policy is noReturns.
+   * The field specifies the return label source. This field is required when return method is
+   * BY_MAIL.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getReturnLabelSource() {
+    return returnLabelSource;
+  }
+
+  /**
+   * The field specifies the return label source. This field is required when return method is
+   * BY_MAIL.
+   * @param returnLabelSource returnLabelSource or {@code null} for none
+   */
+  public OnlineReturnPolicy setReturnLabelSource(java.lang.String returnLabelSource) {
+    this.returnLabelSource = returnLabelSource;
+    return this;
+  }
+
+  /**
+   * Optional. The return methods of how customers can return an item. This value is required to not
+   * be empty unless the type of return policy is noReturns.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getReturnMethods() {
@@ -331,8 +358,8 @@ public final class OnlineReturnPolicy extends com.google.api.client.json.Generic
   }
 
   /**
-   * The return methods of how customers can return an item. This value is required to not be empty
-   * unless the type of return policy is noReturns.
+   * Optional. The return methods of how customers can return an item. This value is required to not
+   * be empty unless the type of return policy is noReturns.
    * @param returnMethods returnMethods or {@code null} for none
    */
   public OnlineReturnPolicy setReturnMethods(java.util.List<java.lang.String> returnMethods) {
@@ -377,8 +404,8 @@ public final class OnlineReturnPolicy extends com.google.api.client.json.Generic
   }
 
   /**
-   * The return shipping fee. Should be set only when customer need to download and print the return
-   * label.
+   * Optional. The return shipping fee. Should be set only when customer need to download and print
+   * the return label.
    * @return value or {@code null} for none
    */
   public ReturnShippingFee getReturnShippingFee() {
@@ -386,8 +413,8 @@ public final class OnlineReturnPolicy extends com.google.api.client.json.Generic
   }
 
   /**
-   * The return shipping fee. Should be set only when customer need to download and print the return
-   * label.
+   * Optional. The return shipping fee. Should be set only when customer need to download and print
+   * the return label.
    * @param returnShippingFee returnShippingFee or {@code null} for none
    */
   public OnlineReturnPolicy setReturnShippingFee(ReturnShippingFee returnShippingFee) {

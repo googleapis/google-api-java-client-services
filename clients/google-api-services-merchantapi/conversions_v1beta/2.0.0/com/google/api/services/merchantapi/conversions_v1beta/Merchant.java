@@ -181,7 +181,7 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the merchantapi server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The merchant account that will own the new conversion source. Format: accounts/{account}
+       * @param parent Required. The merchant account that will own the new conversion source. Format: `accounts/{account}`
        * @param content the {@link com.google.api.services.merchantapi.conversions_v1beta.model.ConversionSource}
        * @return the request
        */
@@ -209,7 +209,7 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The merchant account that will own the new conversion source. Format: accounts/{account}
+         * @param parent Required. The merchant account that will own the new conversion source. Format: `accounts/{account}`
          * @param content the {@link com.google.api.services.merchantapi.conversions_v1beta.model.ConversionSource}
          * @since 1.13
          */
@@ -280,12 +280,13 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Required. The merchant account that will own the new conversion source. Format:
-         * accounts/{account}
+         * `accounts/{account}`
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The merchant account that will own the new conversion source. Format: accounts/{account}
+        /** Required. The merchant account that will own the new conversion source. Format:
+       `accounts/{account}`
          */
         public java.lang.String getParent() {
           return parent;
@@ -293,7 +294,7 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Required. The merchant account that will own the new conversion source. Format:
-         * accounts/{account}
+         * `accounts/{account}`
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -321,7 +322,7 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
        * @param name Required. The name of the conversion source to be deleted. Format:
-       *        accounts/{account}/conversionSources/{conversion_source}
+       *        `accounts/{account}/conversionSources/{conversion_source}`
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -351,7 +352,7 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. The name of the conversion source to be deleted. Format:
-       *        accounts/{account}/conversionSources/{conversion_source}
+       *        `accounts/{account}/conversionSources/{conversion_source}`
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -421,13 +422,13 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Required. The name of the conversion source to be deleted. Format:
-         * accounts/{account}/conversionSources/{conversion_source}
+         * `accounts/{account}/conversionSources/{conversion_source}`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. The name of the conversion source to be deleted. Format:
-       accounts/{account}/conversionSources/{conversion_source}
+       `accounts/{account}/conversionSources/{conversion_source}`
          */
         public java.lang.String getName() {
           return name;
@@ -435,7 +436,7 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Required. The name of the conversion source to be deleted. Format:
-         * accounts/{account}/conversionSources/{conversion_source}
+         * `accounts/{account}/conversionSources/{conversion_source}`
          */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -461,7 +462,7 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
        * @param name Required. The name of the conversion source to be fetched. Format:
-       *        accounts/{account}/conversionSources/{conversion_source}
+       *        `accounts/{account}/conversionSources/{conversion_source}`
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -488,7 +489,7 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. The name of the conversion source to be fetched. Format:
-       *        accounts/{account}/conversionSources/{conversion_source}
+       *        `accounts/{account}/conversionSources/{conversion_source}`
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -568,13 +569,13 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Required. The name of the conversion source to be fetched. Format:
-         * accounts/{account}/conversionSources/{conversion_source}
+         * `accounts/{account}/conversionSources/{conversion_source}`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. The name of the conversion source to be fetched. Format:
-       accounts/{account}/conversionSources/{conversion_source}
+       `accounts/{account}/conversionSources/{conversion_source}`
          */
         public java.lang.String getName() {
           return name;
@@ -582,7 +583,7 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Required. The name of the conversion source to be fetched. Format:
-         * accounts/{account}/conversionSources/{conversion_source}
+         * `accounts/{account}/conversionSources/{conversion_source}`
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -608,7 +609,7 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
        * @param parent Required. The merchant account who owns the collection of conversion sources. Format:
-       *        accounts/{account}
+       *        `accounts/{account}`
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -635,7 +636,7 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Required. The merchant account who owns the collection of conversion sources. Format:
-       *        accounts/{account}
+       *        `accounts/{account}`
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -715,13 +716,13 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Required. The merchant account who owns the collection of conversion sources. Format:
-         * accounts/{account}
+         * `accounts/{account}`
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. The merchant account who owns the collection of conversion sources. Format:
-       accounts/{account}
+       `accounts/{account}`
          */
         public java.lang.String getParent() {
           return parent;
@@ -729,7 +730,7 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Required. The merchant account who owns the collection of conversion sources. Format:
-         * accounts/{account}
+         * `accounts/{account}`
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -786,17 +787,24 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
-        /** Optional. Show deleted (archived) option. */
+        /**
+         * Optional. Show deleted (archived) conversion sources. By default, deleted conversion
+         * sources are not returned.
+         */
         @com.google.api.client.util.Key
         private java.lang.Boolean showDeleted;
 
-        /** Optional. Show deleted (archived) option.
+        /** Optional. Show deleted (archived) conversion sources. By default, deleted conversion sources are
+       not returned.
          */
         public java.lang.Boolean getShowDeleted() {
           return showDeleted;
         }
 
-        /** Optional. Show deleted (archived) option. */
+        /**
+         * Optional. Show deleted (archived) conversion sources. By default, deleted conversion
+         * sources are not returned.
+         */
         public List setShowDeleted(java.lang.Boolean showDeleted) {
           this.showDeleted = showDeleted;
           return this;
@@ -817,11 +825,11 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
        * @param name Output only. Identifier. Generated by the Content API upon creation of a new `ConversionSource`.
-       *        Format: [a-z]{4}:.+ The four characters before the colon represent the type of conversio
-       *        source. Content after the colon represents the ID of the conversion source within that
-       *        type. The ID of two different conversion sources might be the same across different types.
-       *        The following type prefixes are supported: - galk: For GoogleAnalyticsLink sources. -
-       *        mcdn: For MerchantCenterDestination sources.
+       *        Format: `[a-z]{4}:.+` The four characters before the colon represent the type of
+       *        conversion source. Content after the colon represents the ID of the conversion source
+       *        within that type. The ID of two different conversion sources might be the same across
+       *        different types. The following type prefixes are supported: * `galk`: For
+       *        GoogleAnalyticsLink sources. * `mcdn`: For MerchantCenterDestination sources.
        * @param content the {@link com.google.api.services.merchantapi.conversions_v1beta.model.ConversionSource}
        * @return the request
        */
@@ -851,11 +859,11 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Output only. Identifier. Generated by the Content API upon creation of a new `ConversionSource`.
-       *        Format: [a-z]{4}:.+ The four characters before the colon represent the type of conversio
-       *        source. Content after the colon represents the ID of the conversion source within that
-       *        type. The ID of two different conversion sources might be the same across different types.
-       *        The following type prefixes are supported: - galk: For GoogleAnalyticsLink sources. -
-       *        mcdn: For MerchantCenterDestination sources.
+       *        Format: `[a-z]{4}:.+` The four characters before the colon represent the type of
+       *        conversion source. Content after the colon represents the ID of the conversion source
+       *        within that type. The ID of two different conversion sources might be the same across
+       *        different types. The following type prefixes are supported: * `galk`: For
+       *        GoogleAnalyticsLink sources. * `mcdn`: For MerchantCenterDestination sources.
          * @param content the {@link com.google.api.services.merchantapi.conversions_v1beta.model.ConversionSource}
          * @since 1.13
          */
@@ -926,20 +934,20 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Output only. Identifier. Generated by the Content API upon creation of a new
-         * `ConversionSource`. Format: [a-z]{4}:.+ The four characters before the colon represent
-         * the type of conversio source. Content after the colon represents the ID of the conversion
-         * source within that type. The ID of two different conversion sources might be the same
-         * across different types. The following type prefixes are supported: - galk: For
-         * GoogleAnalyticsLink sources. - mcdn: For MerchantCenterDestination sources.
+         * `ConversionSource`. Format: `[a-z]{4}:.+` The four characters before the colon represent
+         * the type of conversion source. Content after the colon represents the ID of the
+         * conversion source within that type. The ID of two different conversion sources might be
+         * the same across different types. The following type prefixes are supported: * `galk`: For
+         * GoogleAnalyticsLink sources. * `mcdn`: For MerchantCenterDestination sources.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Output only. Identifier. Generated by the Content API upon creation of a new `ConversionSource`.
-       Format: [a-z]{4}:.+ The four characters before the colon represent the type of conversio source.
+       Format: `[a-z]{4}:.+` The four characters before the colon represent the type of conversion source.
        Content after the colon represents the ID of the conversion source within that type. The ID of two
        different conversion sources might be the same across different types. The following type prefixes
-       are supported: - galk: For GoogleAnalyticsLink sources. - mcdn: For MerchantCenterDestination
+       are supported: * `galk`: For GoogleAnalyticsLink sources. * `mcdn`: For MerchantCenterDestination
        sources.
          */
         public java.lang.String getName() {
@@ -948,11 +956,11 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Output only. Identifier. Generated by the Content API upon creation of a new
-         * `ConversionSource`. Format: [a-z]{4}:.+ The four characters before the colon represent
-         * the type of conversio source. Content after the colon represents the ID of the conversion
-         * source within that type. The ID of two different conversion sources might be the same
-         * across different types. The following type prefixes are supported: - galk: For
-         * GoogleAnalyticsLink sources. - mcdn: For MerchantCenterDestination sources.
+         * `ConversionSource`. Format: `[a-z]{4}:.+` The four characters before the colon represent
+         * the type of conversion source. Content after the colon represents the ID of the
+         * conversion source within that type. The ID of two different conversion sources might be
+         * the same across different types. The following type prefixes are supported: * `galk`: For
+         * GoogleAnalyticsLink sources. * `mcdn`: For MerchantCenterDestination sources.
          */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -995,7 +1003,7 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
        * parameters, call the {@link Undelete#execute()} method to invoke the remote operation.
        *
        * @param name Required. The name of the conversion source to be undeleted. Format:
-       *        accounts/{account}/conversionSources/{conversion_source}
+       *        `accounts/{account}/conversionSources/{conversion_source}`
        * @param content the {@link com.google.api.services.merchantapi.conversions_v1beta.model.UndeleteConversionSourceRequest}
        * @return the request
        */
@@ -1025,7 +1033,7 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. The name of the conversion source to be undeleted. Format:
-       *        accounts/{account}/conversionSources/{conversion_source}
+       *        `accounts/{account}/conversionSources/{conversion_source}`
          * @param content the {@link com.google.api.services.merchantapi.conversions_v1beta.model.UndeleteConversionSourceRequest}
          * @since 1.13
          */
@@ -1096,13 +1104,13 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Required. The name of the conversion source to be undeleted. Format:
-         * accounts/{account}/conversionSources/{conversion_source}
+         * `accounts/{account}/conversionSources/{conversion_source}`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. The name of the conversion source to be undeleted. Format:
-       accounts/{account}/conversionSources/{conversion_source}
+       `accounts/{account}/conversionSources/{conversion_source}`
          */
         public java.lang.String getName() {
           return name;
@@ -1110,7 +1118,7 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Required. The name of the conversion source to be undeleted. Format:
-         * accounts/{account}/conversionSources/{conversion_source}
+         * `accounts/{account}/conversionSources/{conversion_source}`
          */
         public Undelete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {

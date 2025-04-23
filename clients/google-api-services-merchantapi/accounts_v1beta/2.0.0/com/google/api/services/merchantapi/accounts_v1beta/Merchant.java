@@ -154,8 +154,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
   public class Accounts {
 
     /**
-     * Creates a standalone Merchant Center account with additional configuration. Adds the user that
-     * makes the request as an admin for the new account.
+     * Creates a Merchant Center account with additional configuration. Adds the user that makes the
+     * request as an admin for the new account.
      *
      * Create a request for the method "accounts.createAndConfigure".
      *
@@ -176,8 +176,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
       private static final String REST_PATH = "accounts/v1beta/accounts:createAndConfigure";
 
       /**
-       * Creates a standalone Merchant Center account with additional configuration. Adds the user that
-       * makes the request as an admin for the new account.
+       * Creates a Merchant Center account with additional configuration. Adds the user that makes the
+       * request as an admin for the new account.
        *
        * Create a request for the method "accounts.createAndConfigure".
        *
@@ -766,7 +766,7 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the merchantapi server.  After setting any optional
      * parameters, call the {@link ListSubaccounts#execute()} method to invoke the remote operation.
      *
-     * @param provider Required. The aggregation service provider. Format: `providers/{providerId}`
+     * @param provider Required. The aggregation service provider. Format: `accounts/{providerId}`
      * @return the request
      */
     public ListSubaccounts listSubaccounts(java.lang.String provider) throws java.io.IOException {
@@ -796,7 +796,7 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
        * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
        * the constructor. </p>
        *
-       * @param provider Required. The aggregation service provider. Format: `providers/{providerId}`
+       * @param provider Required. The aggregation service provider. Format: `accounts/{providerId}`
        * @since 1.13
        */
       protected ListSubaccounts(java.lang.String provider) {
@@ -874,17 +874,17 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
         return (ListSubaccounts) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Required. The aggregation service provider. Format: `providers/{providerId}` */
+      /** Required. The aggregation service provider. Format: `accounts/{providerId}` */
       @com.google.api.client.util.Key
       private java.lang.String provider;
 
-      /** Required. The aggregation service provider. Format: `providers/{providerId}`
+      /** Required. The aggregation service provider. Format: `accounts/{providerId}`
        */
       public java.lang.String getProvider() {
         return provider;
       }
 
-      /** Required. The aggregation service provider. Format: `providers/{providerId}` */
+      /** Required. The aggregation service provider. Format: `accounts/{providerId}` */
       public ListSubaccounts setProvider(java.lang.String provider) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(PROVIDER_PATTERN.matcher(provider).matches(),
@@ -1431,6 +1431,349 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
         @Override
         public UpdateAutofeedSettings set(String parameterName, Object value) {
           return (UpdateAutofeedSettings) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
+     * An accessor for creating requests from the AutomaticImprovements collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Merchant merchantapi = new Merchant(...);}
+     *   {@code Merchant.AutomaticImprovements.List request = merchantapi.automaticImprovements().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public AutomaticImprovements automaticImprovements() {
+      return new AutomaticImprovements();
+    }
+
+    /**
+     * The "automaticImprovements" collection of methods.
+     */
+    public class AutomaticImprovements {
+
+      /**
+       * Retrieves the automatic improvements of an account.
+       *
+       * Create a request for the method "automaticImprovements.getAutomaticImprovements".
+       *
+       * This request holds the parameters needed by the merchantapi server.  After setting any optional
+       * parameters, call the {@link GetAutomaticImprovements#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Required. The resource name of the automatic improvements. Format:
+       *        `accounts/{account}/automaticImprovements`
+       * @return the request
+       */
+      public GetAutomaticImprovements getAutomaticImprovements(java.lang.String name) throws java.io.IOException {
+        GetAutomaticImprovements result = new GetAutomaticImprovements(name);
+        initialize(result);
+        return result;
+      }
+
+      public class GetAutomaticImprovements extends MerchantRequest<com.google.api.services.merchantapi.accounts_v1beta.model.AutomaticImprovements> {
+
+        private static final String REST_PATH = "accounts/v1beta/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+/automaticImprovements$");
+
+        /**
+         * Retrieves the automatic improvements of an account.
+         *
+         * Create a request for the method "automaticImprovements.getAutomaticImprovements".
+         *
+         * This request holds the parameters needed by the the merchantapi server.  After setting any
+         * optional parameters, call the {@link GetAutomaticImprovements#execute()} method to invoke the
+         * remote operation. <p> {@link GetAutomaticImprovements#initialize(com.google.api.client.googleap
+         * is.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+         * immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The resource name of the automatic improvements. Format:
+       *        `accounts/{account}/automaticImprovements`
+         * @since 1.13
+         */
+        protected GetAutomaticImprovements(java.lang.String name) {
+          super(Merchant.this, "GET", REST_PATH, null, com.google.api.services.merchantapi.accounts_v1beta.model.AutomaticImprovements.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^accounts/[^/]+/automaticImprovements$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public GetAutomaticImprovements set$Xgafv(java.lang.String $Xgafv) {
+          return (GetAutomaticImprovements) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GetAutomaticImprovements setAccessToken(java.lang.String accessToken) {
+          return (GetAutomaticImprovements) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GetAutomaticImprovements setAlt(java.lang.String alt) {
+          return (GetAutomaticImprovements) super.setAlt(alt);
+        }
+
+        @Override
+        public GetAutomaticImprovements setCallback(java.lang.String callback) {
+          return (GetAutomaticImprovements) super.setCallback(callback);
+        }
+
+        @Override
+        public GetAutomaticImprovements setFields(java.lang.String fields) {
+          return (GetAutomaticImprovements) super.setFields(fields);
+        }
+
+        @Override
+        public GetAutomaticImprovements setKey(java.lang.String key) {
+          return (GetAutomaticImprovements) super.setKey(key);
+        }
+
+        @Override
+        public GetAutomaticImprovements setOauthToken(java.lang.String oauthToken) {
+          return (GetAutomaticImprovements) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetAutomaticImprovements setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetAutomaticImprovements) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetAutomaticImprovements setQuotaUser(java.lang.String quotaUser) {
+          return (GetAutomaticImprovements) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetAutomaticImprovements setUploadType(java.lang.String uploadType) {
+          return (GetAutomaticImprovements) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GetAutomaticImprovements setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GetAutomaticImprovements) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The resource name of the automatic improvements. Format:
+         * `accounts/{account}/automaticImprovements`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The resource name of the automatic improvements. Format:
+       `accounts/{account}/automaticImprovements`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The resource name of the automatic improvements. Format:
+         * `accounts/{account}/automaticImprovements`
+         */
+        public GetAutomaticImprovements setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^accounts/[^/]+/automaticImprovements$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public GetAutomaticImprovements set(String parameterName, Object value) {
+          return (GetAutomaticImprovements) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates the automatic improvements of an account.
+       *
+       * Create a request for the method "automaticImprovements.updateAutomaticImprovements".
+       *
+       * This request holds the parameters needed by the merchantapi server.  After setting any optional
+       * parameters, call the {@link UpdateAutomaticImprovements#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Identifier. The resource name of the automatic improvements. Format:
+       *        `accounts/{account}/automaticImprovements`.
+       * @param content the {@link com.google.api.services.merchantapi.accounts_v1beta.model.AutomaticImprovements}
+       * @return the request
+       */
+      public UpdateAutomaticImprovements updateAutomaticImprovements(java.lang.String name, com.google.api.services.merchantapi.accounts_v1beta.model.AutomaticImprovements content) throws java.io.IOException {
+        UpdateAutomaticImprovements result = new UpdateAutomaticImprovements(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class UpdateAutomaticImprovements extends MerchantRequest<com.google.api.services.merchantapi.accounts_v1beta.model.AutomaticImprovements> {
+
+        private static final String REST_PATH = "accounts/v1beta/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+/automaticImprovements$");
+
+        /**
+         * Updates the automatic improvements of an account.
+         *
+         * Create a request for the method "automaticImprovements.updateAutomaticImprovements".
+         *
+         * This request holds the parameters needed by the the merchantapi server.  After setting any
+         * optional parameters, call the {@link UpdateAutomaticImprovements#execute()} method to invoke
+         * the remote operation. <p> {@link UpdateAutomaticImprovements#initialize(com.google.api.client.g
+         * oogleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+         * immediately after invoking the constructor. </p>
+         *
+         * @param name Identifier. The resource name of the automatic improvements. Format:
+       *        `accounts/{account}/automaticImprovements`.
+         * @param content the {@link com.google.api.services.merchantapi.accounts_v1beta.model.AutomaticImprovements}
+         * @since 1.13
+         */
+        protected UpdateAutomaticImprovements(java.lang.String name, com.google.api.services.merchantapi.accounts_v1beta.model.AutomaticImprovements content) {
+          super(Merchant.this, "PATCH", REST_PATH, content, com.google.api.services.merchantapi.accounts_v1beta.model.AutomaticImprovements.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^accounts/[^/]+/automaticImprovements$");
+          }
+        }
+
+        @Override
+        public UpdateAutomaticImprovements set$Xgafv(java.lang.String $Xgafv) {
+          return (UpdateAutomaticImprovements) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public UpdateAutomaticImprovements setAccessToken(java.lang.String accessToken) {
+          return (UpdateAutomaticImprovements) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public UpdateAutomaticImprovements setAlt(java.lang.String alt) {
+          return (UpdateAutomaticImprovements) super.setAlt(alt);
+        }
+
+        @Override
+        public UpdateAutomaticImprovements setCallback(java.lang.String callback) {
+          return (UpdateAutomaticImprovements) super.setCallback(callback);
+        }
+
+        @Override
+        public UpdateAutomaticImprovements setFields(java.lang.String fields) {
+          return (UpdateAutomaticImprovements) super.setFields(fields);
+        }
+
+        @Override
+        public UpdateAutomaticImprovements setKey(java.lang.String key) {
+          return (UpdateAutomaticImprovements) super.setKey(key);
+        }
+
+        @Override
+        public UpdateAutomaticImprovements setOauthToken(java.lang.String oauthToken) {
+          return (UpdateAutomaticImprovements) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public UpdateAutomaticImprovements setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (UpdateAutomaticImprovements) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public UpdateAutomaticImprovements setQuotaUser(java.lang.String quotaUser) {
+          return (UpdateAutomaticImprovements) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public UpdateAutomaticImprovements setUploadType(java.lang.String uploadType) {
+          return (UpdateAutomaticImprovements) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public UpdateAutomaticImprovements setUploadProtocol(java.lang.String uploadProtocol) {
+          return (UpdateAutomaticImprovements) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Identifier. The resource name of the automatic improvements. Format:
+         * `accounts/{account}/automaticImprovements`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Identifier. The resource name of the automatic improvements. Format:
+       `accounts/{account}/automaticImprovements`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Identifier. The resource name of the automatic improvements. Format:
+         * `accounts/{account}/automaticImprovements`.
+         */
+        public UpdateAutomaticImprovements setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^accounts/[^/]+/automaticImprovements$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * Required. List of fields being updated. The following fields are supported (in both
+         * `snake_case` and `lowerCamelCase`): - `item_updates` -
+         * `item_updates.account_level_settings` - `image_improvements` -
+         * `image_improvements.account_level_settings` - `shipping_improvements` -
+         * `shipping_improvements.allow_shipping_improvements`
+         */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Required. List of fields being updated. The following fields are supported (in both `snake_case`
+       and `lowerCamelCase`): - `item_updates` - `item_updates.account_level_settings` -
+       `image_improvements` - `image_improvements.account_level_settings` - `shipping_improvements` -
+       `shipping_improvements.allow_shipping_improvements`
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /**
+         * Required. List of fields being updated. The following fields are supported (in both
+         * `snake_case` and `lowerCamelCase`): - `item_updates` -
+         * `item_updates.account_level_settings` - `image_improvements` -
+         * `image_improvements.account_level_settings` - `shipping_improvements` -
+         * `shipping_improvements.allow_shipping_improvements`
+         */
+        public UpdateAutomaticImprovements setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public UpdateAutomaticImprovements set(String parameterName, Object value) {
+          return (UpdateAutomaticImprovements) super.set(parameterName, value);
         }
       }
 
@@ -3230,14 +3573,14 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Optional. The maximum number of issues to return. The service may return fewer than this
-         * value. If unspecified, at most 50 users will be returned. The maximum value is 100;
+         * value. If unspecified, at most 50 issues will be returned. The maximum value is 100;
          * values above 100 will be coerced to 100
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
         /** Optional. The maximum number of issues to return. The service may return fewer than this value. If
-       unspecified, at most 50 users will be returned. The maximum value is 100; values above 100 will be
+       unspecified, at most 50 issues will be returned. The maximum value is 100; values above 100 will be
        coerced to 100
          */
         public java.lang.Integer getPageSize() {
@@ -3246,7 +3589,7 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Optional. The maximum number of issues to return. The service may return fewer than this
-         * value. If unspecified, at most 50 users will be returned. The maximum value is 100;
+         * value. If unspecified, at most 50 issues will be returned. The maximum value is 100;
          * values above 100 will be coerced to 100
          */
         public List setPageSize(java.lang.Integer pageSize) {
@@ -5161,7 +5504,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the merchantapi server.  After setting any optional
        * parameters, call the {@link GetShippingSettings#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The name of the shipping setting to retrieve. Format: `accounts/{account}/shippingsetting`
+       * @param name Required. The name of the shipping setting to retrieve. Format:
+       *        `accounts/{account}/shippingsettings`
        * @return the request
        */
       public GetShippingSettings getShippingSettings(java.lang.String name) throws java.io.IOException {
@@ -5188,7 +5532,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
          * invoking the constructor. </p>
          *
-         * @param name Required. The name of the shipping setting to retrieve. Format: `accounts/{account}/shippingsetting`
+         * @param name Required. The name of the shipping setting to retrieve. Format:
+       *        `accounts/{account}/shippingsettings`
          * @since 1.13
          */
         protected GetShippingSettings(java.lang.String name) {
@@ -5268,13 +5613,13 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Required. The name of the shipping setting to retrieve. Format:
-         * `accounts/{account}/shippingsetting`
+         * `accounts/{account}/shippingsettings`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. The name of the shipping setting to retrieve. Format:
-       `accounts/{account}/shippingsetting`
+       `accounts/{account}/shippingsettings`
          */
         public java.lang.String getName() {
           return name;
@@ -5282,7 +5627,7 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Required. The name of the shipping setting to retrieve. Format:
-         * `accounts/{account}/shippingsetting`
+         * `accounts/{account}/shippingsettings`
          */
         public GetShippingSettings setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -5308,7 +5653,9 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the merchantapi server.  After setting any optional
        * parameters, call the {@link Insert#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The account where this product will be inserted. Format: accounts/{account}
+       * @param parent Required. The account for which this shipping setting will be inserted. If you are using an advanced
+       *        account, you must specify the unique identifier of the sub-account for which you want to
+       *        insert the shipping setting. Format: `accounts/{ACCOUNT_ID}`
        * @param content the {@link com.google.api.services.merchantapi.accounts_v1beta.model.ShippingSettings}
        * @return the request
        */
@@ -5337,7 +5684,9 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          * Insert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The account where this product will be inserted. Format: accounts/{account}
+         * @param parent Required. The account for which this shipping setting will be inserted. If you are using an advanced
+       *        account, you must specify the unique identifier of the sub-account for which you want to
+       *        insert the shipping setting. Format: `accounts/{ACCOUNT_ID}`
          * @param content the {@link com.google.api.services.merchantapi.accounts_v1beta.model.ShippingSettings}
          * @since 1.13
          */
@@ -5407,19 +5756,25 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * Required. The account where this product will be inserted. Format: accounts/{account}
+         * Required. The account for which this shipping setting will be inserted. If you are using
+         * an advanced account, you must specify the unique identifier of the sub-account for which
+         * you want to insert the shipping setting. Format: `accounts/{ACCOUNT_ID}`
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The account where this product will be inserted. Format: accounts/{account}
+        /** Required. The account for which this shipping setting will be inserted. If you are using an
+       advanced account, you must specify the unique identifier of the sub-account for which you want to
+       insert the shipping setting. Format: `accounts/{ACCOUNT_ID}`
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The account where this product will be inserted. Format: accounts/{account}
+         * Required. The account for which this shipping setting will be inserted. If you are using
+         * an advanced account, you must specify the unique identifier of the sub-account for which
+         * you want to insert the shipping setting. Format: `accounts/{ACCOUNT_ID}`
          */
         public Insert setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -5467,7 +5822,7 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
        * @param name Required. The resource name of the terms of service version. Format:
-       *        `accounts/{account}/termsOfServiceAgreementState/{identifier}` The identifier format is:
+       *        `accounts/{account}/termsOfServiceAgreementStates/{identifier}` The identifier format is:
        *        `{TermsOfServiceKind}-{country}`
        * @return the request
        */
@@ -5495,7 +5850,7 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. The resource name of the terms of service version. Format:
-       *        `accounts/{account}/termsOfServiceAgreementState/{identifier}` The identifier format is:
+       *        `accounts/{account}/termsOfServiceAgreementStates/{identifier}` The identifier format is:
        *        `{TermsOfServiceKind}-{country}`
          * @since 1.13
          */
@@ -5576,14 +5931,14 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Required. The resource name of the terms of service version. Format:
-         * `accounts/{account}/termsOfServiceAgreementState/{identifier}` The identifier format is:
+         * `accounts/{account}/termsOfServiceAgreementStates/{identifier}` The identifier format is:
          * `{TermsOfServiceKind}-{country}`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. The resource name of the terms of service version. Format:
-       `accounts/{account}/termsOfServiceAgreementState/{identifier}` The identifier format is:
+       `accounts/{account}/termsOfServiceAgreementStates/{identifier}` The identifier format is:
        `{TermsOfServiceKind}-{country}`
          */
         public java.lang.String getName() {
@@ -5592,7 +5947,7 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Required. The resource name of the terms of service version. Format:
-         * `accounts/{account}/termsOfServiceAgreementState/{identifier}` The identifier format is:
+         * `accounts/{account}/termsOfServiceAgreementStates/{identifier}` The identifier format is:
          * `{TermsOfServiceKind}-{country}`
          */
         public Get setName(java.lang.String name) {
@@ -6631,7 +6986,7 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
       return result;
     }
 
-    public class Accept extends MerchantRequest<com.google.api.services.merchantapi.accounts_v1beta.model.Empty> {
+    public class Accept extends MerchantRequest<com.google.api.services.merchantapi.accounts_v1beta.model.AcceptTermsOfServiceResponse> {
 
       private static final String REST_PATH = "accounts/v1beta/{+name}:accept";
 
@@ -6653,23 +7008,13 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
        * @since 1.13
        */
       protected Accept(java.lang.String name) {
-        super(Merchant.this, "GET", REST_PATH, null, com.google.api.services.merchantapi.accounts_v1beta.model.Empty.class);
+        super(Merchant.this, "POST", REST_PATH, null, com.google.api.services.merchantapi.accounts_v1beta.model.AcceptTermsOfServiceResponse.class);
         this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
               "Parameter name must conform to the pattern " +
               "^termsOfService/[^/]+$");
         }
-      }
-
-      @Override
-      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-        return super.executeUsingHead();
-      }
-
-      @Override
-      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-        return super.buildHttpRequestUsingHead();
       }
 
       @Override
@@ -6754,17 +7099,17 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
-      /** Required. The account for which to accept the ToS. */
+      /** Required. The account for which to accept the ToS. Format: `accounts/{account}` */
       @com.google.api.client.util.Key
       private java.lang.String account;
 
-      /** Required. The account for which to accept the ToS.
+      /** Required. The account for which to accept the ToS. Format: `accounts/{account}`
        */
       public java.lang.String getAccount() {
         return account;
       }
 
-      /** Required. The account for which to accept the ToS. */
+      /** Required. The account for which to accept the ToS. Format: `accounts/{account}` */
       public Accept setAccount(java.lang.String account) {
         this.account = account;
         return this;

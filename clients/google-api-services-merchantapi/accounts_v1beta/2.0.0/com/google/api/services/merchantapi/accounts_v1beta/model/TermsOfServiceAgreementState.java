@@ -18,19 +18,16 @@ package com.google.api.services.merchantapi.accounts_v1beta.model;
 
 /**
  * This resource represents the agreement state for a given account and terms of service kind. The
- * state is as follows: * If the merchant has accepted a terms of service:
- * [accepted](TermsOfServiceAggrementState.accepted) will be populated, otherwise it will be empty *
- * If the merchant must sign a terms of service: [required](TermsOfServiceAggrementState.required)
- * will be populated, otherwise it will be empty. Note that both
- * [required](TermsOfServiceAggrementState.required) and
- * [accepted](TermsOfServiceAggrementState.accepted) can be present. In this case the `accepted`
- * terms of services will have an expiration date set in the [valid_until](Accepted.valid_until)
- * field. The `required` terms of services need to be accepted before `valid_until` in order for the
- * account to continue having a valid agreement. When accepting new terms of services we expect 3Ps
- * to display the text associated with the given terms of service agreement (the url to the file
- * containing the text is added in the Required message below as
- * [tos_file_uri](Accepted.tos_file_uri). The actual acceptance of the terms of service is done by
- * calling accept on the [TermsOfService](TermsOfService) resource.
+ * state is as follows: * If the merchant has accepted a terms of service, `accepted` will be
+ * populated, otherwise it will be empty * If the merchant must sign a terms of service, `required`
+ * will be populated, otherwise it will be empty. Note that both `required` and `accepted` can be
+ * present. In this case the `accepted` terms of services will have an expiration date set in the
+ * `valid_until` field. The `required` terms of services need to be accepted before `valid_until` in
+ * order for the account to continue having a valid agreement. When accepting new terms of services
+ * we expect 3Ps to display the text associated with the given terms of service agreement (the url
+ * to the file containing the text is added in the Required message below as `tos_file_uri`. The
+ * actual acceptance of the terms of service is done by calling accept on the `TermsOfService`
+ * resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:

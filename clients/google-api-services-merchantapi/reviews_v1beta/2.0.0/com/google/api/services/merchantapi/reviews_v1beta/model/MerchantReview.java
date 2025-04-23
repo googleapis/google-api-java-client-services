@@ -38,7 +38,7 @@ public final class MerchantReview extends com.google.api.client.json.GenericJson
   private MerchantReviewAttributes attributes;
 
   /**
-   * Required. A list of custom (merchant-provided) attributes. It can also be used for submitting
+   * Optional. A list of custom (merchant-provided) attributes. It can also be used for submitting
    * any attribute of the data specification in its generic form (for example, `{ "name": "size
    * type", "value": "regular" }`). This is useful for submitting attributes not explicitly exposed
    * by the API, such as experimental attributes. Maximum allowed number of characters for each
@@ -104,7 +104,7 @@ public final class MerchantReview extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. A list of custom (merchant-provided) attributes. It can also be used for submitting
+   * Optional. A list of custom (merchant-provided) attributes. It can also be used for submitting
    * any attribute of the data specification in its generic form (for example, `{ "name": "size
    * type", "value": "regular" }`). This is useful for submitting attributes not explicitly exposed
    * by the API, such as experimental attributes. Maximum allowed number of characters for each
@@ -118,7 +118,7 @@ public final class MerchantReview extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. A list of custom (merchant-provided) attributes. It can also be used for submitting
+   * Optional. A list of custom (merchant-provided) attributes. It can also be used for submitting
    * any attribute of the data specification in its generic form (for example, `{ "name": "size
    * type", "value": "regular" }`). This is useful for submitting attributes not explicitly exposed
    * by the API, such as experimental attributes. Maximum allowed number of characters for each

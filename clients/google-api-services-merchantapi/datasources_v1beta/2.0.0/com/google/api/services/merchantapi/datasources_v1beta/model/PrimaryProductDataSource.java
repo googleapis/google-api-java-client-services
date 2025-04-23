@@ -64,6 +64,26 @@ public final class PrimaryProductDataSource extends com.google.api.client.json.G
   private DefaultRule defaultRule;
 
   /**
+   * Optional. A list of destinations describing where products of the data source can be shown.
+   * When retrieving the data source, the list contains all the destinations that can be used for
+   * the data source, including the ones that are disabled for the data source but enabled for the
+   * account. Only destinations that are enabled on the account, for example through program
+   * participation, can be enabled on the data source. If unset, during creation, the destinations
+   * will be inherited based on the account level program participation. If set, during creation or
+   * update, the data source will be set only for the specified destinations. Updating this field
+   * requires at least one destination.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Destination> destinations;
+
+  static {
+    // hack to force ProGuard to consider Destination used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Destination.class);
+  }
+
+  /**
    * Optional. Immutable. The feed label that is specified on the data source level. Must be less
    * than or equal to 20 uppercase letters (A-Z), numbers (0-9), and dashes (-). See also [migration
    * to feed labels](https://developers.google.com/shopping-content/guides/products/feed-labels).
@@ -153,6 +173,37 @@ public final class PrimaryProductDataSource extends com.google.api.client.json.G
    */
   public PrimaryProductDataSource setDefaultRule(DefaultRule defaultRule) {
     this.defaultRule = defaultRule;
+    return this;
+  }
+
+  /**
+   * Optional. A list of destinations describing where products of the data source can be shown.
+   * When retrieving the data source, the list contains all the destinations that can be used for
+   * the data source, including the ones that are disabled for the data source but enabled for the
+   * account. Only destinations that are enabled on the account, for example through program
+   * participation, can be enabled on the data source. If unset, during creation, the destinations
+   * will be inherited based on the account level program participation. If set, during creation or
+   * update, the data source will be set only for the specified destinations. Updating this field
+   * requires at least one destination.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Destination> getDestinations() {
+    return destinations;
+  }
+
+  /**
+   * Optional. A list of destinations describing where products of the data source can be shown.
+   * When retrieving the data source, the list contains all the destinations that can be used for
+   * the data source, including the ones that are disabled for the data source but enabled for the
+   * account. Only destinations that are enabled on the account, for example through program
+   * participation, can be enabled on the data source. If unset, during creation, the destinations
+   * will be inherited based on the account level program participation. If set, during creation or
+   * update, the data source will be set only for the specified destinations. Updating this field
+   * requires at least one destination.
+   * @param destinations destinations or {@code null} for none
+   */
+  public PrimaryProductDataSource setDestinations(java.util.List<Destination> destinations) {
+    this.destinations = destinations;
     return this;
   }
 

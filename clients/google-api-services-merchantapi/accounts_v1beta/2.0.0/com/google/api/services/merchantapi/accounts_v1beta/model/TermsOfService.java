@@ -18,11 +18,12 @@ package com.google.api.services.merchantapi.accounts_v1beta.model;
 
 /**
  * The `TermsOfService` message represents a specific version of the terms of service that merchants
- * must accept to access certain features or services (see
- * https://support.google.com/merchants/answer/160173). This message is important for the onboarding
- * process, ensuring that merchants agree to the necessary legal agreements for using the service.
- * Merchants can retrieve the latest terms of service for a given `kind` and `region` through
- * `RetrieveLatestTermsOfService`, and accept them as required through `AcceptTermsOfService`.
+ * must accept to access certain features or services. For more information, see [Terms of
+ * Service](https://support.google.com/merchants/answer/160173). This message is important for the
+ * onboarding process, ensuring that merchants agree to the necessary legal agreements for using the
+ * service. Merchants can retrieve the latest terms of service for a given `kind` and `region`
+ * through `RetrieveLatestTermsOfService`, and accept them as required through
+ * `AcceptTermsOfService`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:

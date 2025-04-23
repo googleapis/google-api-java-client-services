@@ -42,7 +42,7 @@ public final class RegionalInventory extends com.google.api.client.json.GenericJ
 
   /**
    * Availability of the product in this region. For accepted attribute values, see the [regional
-   * product inventory data specification](https://support.google.com/merchants/answer/3061342)
+   * product inventory data specification](https://support.google.com/merchants/answer/6324448).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -121,7 +121,7 @@ public final class RegionalInventory extends com.google.api.client.json.GenericJ
 
   /**
    * Availability of the product in this region. For accepted attribute values, see the [regional
-   * product inventory data specification](https://support.google.com/merchants/answer/3061342)
+   * product inventory data specification](https://support.google.com/merchants/answer/6324448).
    * @return value or {@code null} for none
    */
   public java.lang.String getAvailability() {
@@ -130,7 +130,7 @@ public final class RegionalInventory extends com.google.api.client.json.GenericJ
 
   /**
    * Availability of the product in this region. For accepted attribute values, see the [regional
-   * product inventory data specification](https://support.google.com/merchants/answer/3061342)
+   * product inventory data specification](https://support.google.com/merchants/answer/6324448).
    * @param availability availability or {@code null} for none
    */
   public RegionalInventory setAvailability(java.lang.String availability) {

@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-merchantapi</artifactId>
-      <version>reports_v1beta-rev20250301-2.0.0</version>
+      <version>reports_v1beta-rev20250311-2.0.0</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  implementation 'com.google.apis:google-api-services-merchantapi:reports_v1beta-rev20250301-2.0.0'
+  implementation 'com.google.apis:google-api-services-merchantapi:reports_v1beta-rev20250311-2.0.0'
 }
 ```
 

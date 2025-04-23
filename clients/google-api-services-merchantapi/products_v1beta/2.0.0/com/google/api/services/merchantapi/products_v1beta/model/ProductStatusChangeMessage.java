@@ -57,7 +57,8 @@ public final class ProductStatusChangeMessage extends com.google.api.client.json
   }
 
   /**
-   * The time at which the event was generated.
+   * The time at which the event was generated. If you want to order the notification messages you
+   * receive you should rely on this field not on the order of receiving the notifications.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -152,7 +153,8 @@ public final class ProductStatusChangeMessage extends com.google.api.client.json
   }
 
   /**
-   * The time at which the event was generated.
+   * The time at which the event was generated. If you want to order the notification messages you
+   * receive you should rely on this field not on the order of receiving the notifications.
    * @return value or {@code null} for none
    */
   public String getEventTime() {
@@ -160,7 +162,8 @@ public final class ProductStatusChangeMessage extends com.google.api.client.json
   }
 
   /**
-   * The time at which the event was generated.
+   * The time at which the event was generated. If you want to order the notification messages you
+   * receive you should rely on this field not on the order of receiving the notifications.
    * @param eventTime eventTime or {@code null} for none
    */
   public ProductStatusChangeMessage setEventTime(String eventTime) {

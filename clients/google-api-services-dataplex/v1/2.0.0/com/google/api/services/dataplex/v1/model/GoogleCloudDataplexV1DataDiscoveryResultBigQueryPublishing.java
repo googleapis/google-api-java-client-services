@@ -30,18 +30,21 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1DataDiscoveryResultBigQueryPublishing extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The BigQuery dataset to publish to. It takes the form
-   * projects/{project_id}/datasets/{dataset_id}. If not set, the service creates a default
-   * publishing dataset.
+   * Output only. The BigQuery dataset the discovered tables are published to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String dataset;
 
   /**
-   * Output only. The BigQuery dataset to publish to. It takes the form
-   * projects/{project_id}/datasets/{dataset_id}. If not set, the service creates a default
-   * publishing dataset.
+   * Output only. The location of the BigQuery publishing dataset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String location;
+
+  /**
+   * Output only. The BigQuery dataset the discovered tables are published to.
    * @return value or {@code null} for none
    */
   public java.lang.String getDataset() {
@@ -49,13 +52,28 @@ public final class GoogleCloudDataplexV1DataDiscoveryResultBigQueryPublishing ex
   }
 
   /**
-   * Output only. The BigQuery dataset to publish to. It takes the form
-   * projects/{project_id}/datasets/{dataset_id}. If not set, the service creates a default
-   * publishing dataset.
+   * Output only. The BigQuery dataset the discovered tables are published to.
    * @param dataset dataset or {@code null} for none
    */
   public GoogleCloudDataplexV1DataDiscoveryResultBigQueryPublishing setDataset(java.lang.String dataset) {
     this.dataset = dataset;
+    return this;
+  }
+
+  /**
+   * Output only. The location of the BigQuery publishing dataset.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLocation() {
+    return location;
+  }
+
+  /**
+   * Output only. The location of the BigQuery publishing dataset.
+   * @param location location or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataDiscoveryResultBigQueryPublishing setLocation(java.lang.String location) {
+    this.location = location;
     return this;
   }
 

@@ -37,6 +37,13 @@ public final class GoogleCloudDataplexV1DataDiscoveryResult extends com.google.a
   private GoogleCloudDataplexV1DataDiscoveryResultBigQueryPublishing bigqueryPublishing;
 
   /**
+   * Output only. Statistics of the DataDiscoveryScan.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDataplexV1DataDiscoveryResultScanStatistics scanStatistics;
+
+  /**
    * Output only. Configuration for metadata publishing.
    * @return value or {@code null} for none
    */
@@ -50,6 +57,23 @@ public final class GoogleCloudDataplexV1DataDiscoveryResult extends com.google.a
    */
   public GoogleCloudDataplexV1DataDiscoveryResult setBigqueryPublishing(GoogleCloudDataplexV1DataDiscoveryResultBigQueryPublishing bigqueryPublishing) {
     this.bigqueryPublishing = bigqueryPublishing;
+    return this;
+  }
+
+  /**
+   * Output only. Statistics of the DataDiscoveryScan.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataDiscoveryResultScanStatistics getScanStatistics() {
+    return scanStatistics;
+  }
+
+  /**
+   * Output only. Statistics of the DataDiscoveryScan.
+   * @param scanStatistics scanStatistics or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataDiscoveryResult setScanStatistics(GoogleCloudDataplexV1DataDiscoveryResultScanStatistics scanStatistics) {
+    this.scanStatistics = scanStatistics;
     return this;
   }
 

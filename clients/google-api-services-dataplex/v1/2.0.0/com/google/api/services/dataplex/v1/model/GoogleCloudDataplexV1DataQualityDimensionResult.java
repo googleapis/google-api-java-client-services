@@ -37,7 +37,7 @@ public final class GoogleCloudDataplexV1DataQualityDimensionResult extends com.g
   private GoogleCloudDataplexV1DataQualityDimension dimension;
 
   /**
-   * Whether the dimension passed or failed.
+   * Output only. Whether the dimension passed or failed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,7 +69,7 @@ public final class GoogleCloudDataplexV1DataQualityDimensionResult extends com.g
   }
 
   /**
-   * Whether the dimension passed or failed.
+   * Output only. Whether the dimension passed or failed.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPassed() {
@@ -77,7 +77,7 @@ public final class GoogleCloudDataplexV1DataQualityDimensionResult extends com.g
   }
 
   /**
-   * Whether the dimension passed or failed.
+   * Output only. Whether the dimension passed or failed.
    * @param passed passed or {@code null} for none
    */
   public GoogleCloudDataplexV1DataQualityDimensionResult setPassed(java.lang.Boolean passed) {

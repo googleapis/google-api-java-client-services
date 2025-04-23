@@ -50,6 +50,21 @@ public final class AccessApprovalSettings extends com.google.api.client.json.Gen
   private java.lang.Boolean ancestorHasActiveKeyVersion;
 
   /**
+   * Optional. Policy for approval. This contains all policies.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CustomerApprovalApprovalPolicy approvalPolicy;
+
+  /**
+   * Output only. Policy for approval included inherited settings to understand the exact policy
+   * applied to this resource. This is a read-only field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CustomerApprovalApprovalPolicy effectiveApprovalPolicy;
+
+  /**
    * Output only. This field is read only (not settable via UpdateAccessApprovalSettings method). If
    * the field is true, that indicates that at least one service is enrolled for Access Approval in
    * one or more ancestors of the Project or Folder (this field will always be unset for the
@@ -182,6 +197,42 @@ public final class AccessApprovalSettings extends com.google.api.client.json.Gen
    */
   public AccessApprovalSettings setAncestorHasActiveKeyVersion(java.lang.Boolean ancestorHasActiveKeyVersion) {
     this.ancestorHasActiveKeyVersion = ancestorHasActiveKeyVersion;
+    return this;
+  }
+
+  /**
+   * Optional. Policy for approval. This contains all policies.
+   * @return value or {@code null} for none
+   */
+  public CustomerApprovalApprovalPolicy getApprovalPolicy() {
+    return approvalPolicy;
+  }
+
+  /**
+   * Optional. Policy for approval. This contains all policies.
+   * @param approvalPolicy approvalPolicy or {@code null} for none
+   */
+  public AccessApprovalSettings setApprovalPolicy(CustomerApprovalApprovalPolicy approvalPolicy) {
+    this.approvalPolicy = approvalPolicy;
+    return this;
+  }
+
+  /**
+   * Output only. Policy for approval included inherited settings to understand the exact policy
+   * applied to this resource. This is a read-only field.
+   * @return value or {@code null} for none
+   */
+  public CustomerApprovalApprovalPolicy getEffectiveApprovalPolicy() {
+    return effectiveApprovalPolicy;
+  }
+
+  /**
+   * Output only. Policy for approval included inherited settings to understand the exact policy
+   * applied to this resource. This is a read-only field.
+   * @param effectiveApprovalPolicy effectiveApprovalPolicy or {@code null} for none
+   */
+  public AccessApprovalSettings setEffectiveApprovalPolicy(CustomerApprovalApprovalPolicy effectiveApprovalPolicy) {
+    this.effectiveApprovalPolicy = effectiveApprovalPolicy;
     return this;
   }
 

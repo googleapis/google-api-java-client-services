@@ -17,9 +17,9 @@
 package com.google.api.services.alertcenter.v1beta1.model;
 
 /**
- * * Alerts from UserChanges bucket Rules for predefined rules which contain the below rules.
- * Suspended user made active New user Added User suspended (by admin) User granted admin privileges
- * User admin privileges revoked User deleted Users password changed
+ * Alerts from UserChanges bucket Rules for predefined rules which contain the following rules: -
+ * Suspended user made active - New user added - User suspended (by admin) - User granted admin
+ * privileges - User admin privileges revoked - User deleted - Users password changed
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Workspace Alert Center API. For a detailed

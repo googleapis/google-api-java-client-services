@@ -25,7 +25,7 @@ package com.google.api.services.alertcenter.v1beta1;
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://developers.google.com/admin-sdk/alertcenter/" target="_blank">API Documentation</a>
+ * <a href="https://developers.google.com/workspace/admin/alertcenter/" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>
@@ -945,16 +945,18 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
 
       /**
        * Optional. A query string for filtering alert results. For more details, see [Query
-       * filters](https://developers.google.com/admin-sdk/alertcenter/guides/query-filters) and
-       * [Supported query filter fields](https://developers.google.com/admin-
-       * sdk/alertcenter/reference/filter-fields#alerts.list).
+       * filters](https://developers.google.com/workspace/admin/alertcenter/guides/query-filters)
+       * and [Supported query filter
+       * fields](https://developers.google.com/workspace/admin/alertcenter/reference/filter-
+       * fields#alerts.list).
        */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
       /** Optional. A query string for filtering alert results. For more details, see [Query
-     filters](https://developers.google.com/admin-sdk/alertcenter/guides/query-filters) and [Supported
-     query filter fields](https://developers.google.com/admin-sdk/alertcenter/reference/filter-
+     filters](https://developers.google.com/workspace/admin/alertcenter/guides/query-filters) and
+     [Supported query filter
+     fields](https://developers.google.com/workspace/admin/alertcenter/reference/filter-
      fields#alerts.list).
        */
       public java.lang.String getFilter() {
@@ -963,9 +965,10 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
 
       /**
        * Optional. A query string for filtering alert results. For more details, see [Query
-       * filters](https://developers.google.com/admin-sdk/alertcenter/guides/query-filters) and
-       * [Supported query filter fields](https://developers.google.com/admin-
-       * sdk/alertcenter/reference/filter-fields#alerts.list).
+       * filters](https://developers.google.com/workspace/admin/alertcenter/guides/query-filters)
+       * and [Supported query filter
+       * fields](https://developers.google.com/workspace/admin/alertcenter/reference/filter-
+       * fields#alerts.list).
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
@@ -1508,16 +1511,18 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
 
         /**
          * Optional. A query string for filtering alert feedback results. For more details, see
-         * [Query filters](https://developers.google.com/admin-sdk/alertcenter/guides/query-filters)
-         * and [Supported query filter fields](https://developers.google.com/admin-
-         * sdk/alertcenter/reference/filter-fields#alerts.feedback.list).
+         * [Query filters](https://developers.google.com/workspace/admin/alertcenter/guides/query-
+         * filters) and [Supported query filter
+         * fields](https://developers.google.com/workspace/admin/alertcenter/reference/filter-
+         * fields#alerts.feedback.list).
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
         /** Optional. A query string for filtering alert feedback results. For more details, see [Query
-       filters](https://developers.google.com/admin-sdk/alertcenter/guides/query-filters) and [Supported
-       query filter fields](https://developers.google.com/admin-sdk/alertcenter/reference/filter-
+       filters](https://developers.google.com/workspace/admin/alertcenter/guides/query-filters) and
+       [Supported query filter
+       fields](https://developers.google.com/workspace/admin/alertcenter/reference/filter-
        fields#alerts.feedback.list).
          */
         public java.lang.String getFilter() {
@@ -1526,9 +1531,10 @@ public class AlertCenter extends com.google.api.client.googleapis.services.json.
 
         /**
          * Optional. A query string for filtering alert feedback results. For more details, see
-         * [Query filters](https://developers.google.com/admin-sdk/alertcenter/guides/query-filters)
-         * and [Supported query filter fields](https://developers.google.com/admin-
-         * sdk/alertcenter/reference/filter-fields#alerts.feedback.list).
+         * [Query filters](https://developers.google.com/workspace/admin/alertcenter/guides/query-
+         * filters) and [Supported query filter
+         * fields](https://developers.google.com/workspace/admin/alertcenter/reference/filter-
+         * fields#alerts.feedback.list).
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;

@@ -17,8 +17,9 @@
 package com.google.api.services.alertcenter.v1beta1.model;
 
 /**
- * * Alerts from AppSettingsChanged bucket Rules configured by Admin which contain the below rules.
- * Calendar settings changed Drive settings changed Email settings changed Mobile settings changed
+ * Alerts from AppSettingsChanged bucket Rules configured by Admin which contain the following
+ * rules: - Calendar settings changed - Drive settings changed - Email settings changed - Mobile
+ * settings changed
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Workspace Alert Center API. For a detailed

@@ -39,12 +39,41 @@ public final class SpaceConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String accessType;
 
   /**
+   * Configuration pertaining to the auto-generated artifacts that the meeting supports.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ArtifactConfig artifactConfig;
+
+  /**
+   * Whether attendance report is enabled for the meeting space.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String attendanceReportGenerationType;
+
+  /**
    * Defines the entry points that can be used to join meetings hosted in this meeting space.
    * Default: EntryPointAccess.ALL
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String entryPointAccess;
+
+  /**
+   * The pre-configured moderation mode for the Meeting. Default: Controlled by the user's policies.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String moderation;
+
+  /**
+   * When moderation.ON, these restrictions go into effect for the meeting. When moderation.OFF,
+   * will be reset to default ModerationRestrictions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ModerationRestrictions moderationRestrictions;
 
   /**
    * Access type of the meeting space that determines who can join without knocking. Default: The
@@ -68,6 +97,40 @@ public final class SpaceConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Configuration pertaining to the auto-generated artifacts that the meeting supports.
+   * @return value or {@code null} for none
+   */
+  public ArtifactConfig getArtifactConfig() {
+    return artifactConfig;
+  }
+
+  /**
+   * Configuration pertaining to the auto-generated artifacts that the meeting supports.
+   * @param artifactConfig artifactConfig or {@code null} for none
+   */
+  public SpaceConfig setArtifactConfig(ArtifactConfig artifactConfig) {
+    this.artifactConfig = artifactConfig;
+    return this;
+  }
+
+  /**
+   * Whether attendance report is enabled for the meeting space.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAttendanceReportGenerationType() {
+    return attendanceReportGenerationType;
+  }
+
+  /**
+   * Whether attendance report is enabled for the meeting space.
+   * @param attendanceReportGenerationType attendanceReportGenerationType or {@code null} for none
+   */
+  public SpaceConfig setAttendanceReportGenerationType(java.lang.String attendanceReportGenerationType) {
+    this.attendanceReportGenerationType = attendanceReportGenerationType;
+    return this;
+  }
+
+  /**
    * Defines the entry points that can be used to join meetings hosted in this meeting space.
    * Default: EntryPointAccess.ALL
    * @return value or {@code null} for none
@@ -83,6 +146,42 @@ public final class SpaceConfig extends com.google.api.client.json.GenericJson {
    */
   public SpaceConfig setEntryPointAccess(java.lang.String entryPointAccess) {
     this.entryPointAccess = entryPointAccess;
+    return this;
+  }
+
+  /**
+   * The pre-configured moderation mode for the Meeting. Default: Controlled by the user's policies.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getModeration() {
+    return moderation;
+  }
+
+  /**
+   * The pre-configured moderation mode for the Meeting. Default: Controlled by the user's policies.
+   * @param moderation moderation or {@code null} for none
+   */
+  public SpaceConfig setModeration(java.lang.String moderation) {
+    this.moderation = moderation;
+    return this;
+  }
+
+  /**
+   * When moderation.ON, these restrictions go into effect for the meeting. When moderation.OFF,
+   * will be reset to default ModerationRestrictions.
+   * @return value or {@code null} for none
+   */
+  public ModerationRestrictions getModerationRestrictions() {
+    return moderationRestrictions;
+  }
+
+  /**
+   * When moderation.ON, these restrictions go into effect for the meeting. When moderation.OFF,
+   * will be reset to default ModerationRestrictions.
+   * @param moderationRestrictions moderationRestrictions or {@code null} for none
+   */
+  public SpaceConfig setModerationRestrictions(ModerationRestrictions moderationRestrictions) {
+    this.moderationRestrictions = moderationRestrictions;
     return this;
   }
 

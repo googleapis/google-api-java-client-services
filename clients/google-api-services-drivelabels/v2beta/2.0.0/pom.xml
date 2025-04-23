@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-drivelabels</artifactId>
-  <version>v2beta-rev20231218-2.0.0</version>
-  <name>Drive Labels API v2beta-rev20231218-2.0.0</name>
+  <version>v2beta-rev20250331-2.0.0</version>
+  <name>Drive Labels API v2beta-rev20250331-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

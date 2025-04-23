@@ -31,6 +31,14 @@ package com.google.api.services.cloudresourcemanager.v3.model;
 public final class Folder extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Optional capabilities configured for this folder (via UpdateCapability API).
+   * Example: `folders/123/capabilities/app-management`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> configuredCapabilities;
+
+  /**
    * Output only. Timestamp when the folder was created.
    * The value may be {@code null}.
    */
@@ -63,6 +71,14 @@ public final class Folder extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String etag;
+
+  /**
+   * Output only. Management Project associated with this folder (if app-management capability is
+   * enabled). Example: `projects/google-mp-123` OUTPUT ONLY.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String managementProject;
 
   /**
    * Output only. The resource name of the folder. Its format is `folders/{folder_id}`, for example:
@@ -103,6 +119,25 @@ public final class Folder extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Output only. Optional capabilities configured for this folder (via UpdateCapability API).
+   * Example: `folders/123/capabilities/app-management`.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getConfiguredCapabilities() {
+    return configuredCapabilities;
+  }
+
+  /**
+   * Output only. Optional capabilities configured for this folder (via UpdateCapability API).
+   * Example: `folders/123/capabilities/app-management`.
+   * @param configuredCapabilities configuredCapabilities or {@code null} for none
+   */
+  public Folder setConfiguredCapabilities(java.util.List<java.lang.String> configuredCapabilities) {
+    this.configuredCapabilities = configuredCapabilities;
+    return this;
+  }
 
   /**
    * Output only. Timestamp when the folder was created.
@@ -181,6 +216,25 @@ public final class Folder extends com.google.api.client.json.GenericJson {
    */
   public Folder setEtag(java.lang.String etag) {
     this.etag = etag;
+    return this;
+  }
+
+  /**
+   * Output only. Management Project associated with this folder (if app-management capability is
+   * enabled). Example: `projects/google-mp-123` OUTPUT ONLY.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getManagementProject() {
+    return managementProject;
+  }
+
+  /**
+   * Output only. Management Project associated with this folder (if app-management capability is
+   * enabled). Example: `projects/google-mp-123` OUTPUT ONLY.
+   * @param managementProject managementProject or {@code null} for none
+   */
+  public Folder setManagementProject(java.lang.String managementProject) {
+    this.managementProject = managementProject;
     return this;
   }
 

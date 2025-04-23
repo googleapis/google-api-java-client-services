@@ -445,6 +445,29 @@ public class DeveloperConnect extends com.google.api.client.googleapis.services.
         }
 
         /**
+         * Optional. A list of extra location types that should be used as conditions for
+         * controlling the visibility of the locations.
+         */
+        @com.google.api.client.util.Key
+        private java.util.List<java.lang.String> extraLocationTypes;
+
+        /** Optional. A list of extra location types that should be used as conditions for controlling the
+       visibility of the locations.
+         */
+        public java.util.List<java.lang.String> getExtraLocationTypes() {
+          return extraLocationTypes;
+        }
+
+        /**
+         * Optional. A list of extra location types that should be used as conditions for
+         * controlling the visibility of the locations.
+         */
+        public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
+          this.extraLocationTypes = extraLocationTypes;
+          return this;
+        }
+
+        /**
          * A filter to narrow down results to a preferred subset. The filtering language accepts
          * strings like `"displayName=tokyo"`, and is documented in more detail in
          * [AIP-160](https://google.aip.dev/160).
@@ -514,6 +537,1924 @@ public class DeveloperConnect extends com.google.api.client.googleapis.services.
         }
       }
 
+      /**
+       * An accessor for creating requests from the AccountConnectors collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code DeveloperConnect developerconnect = new DeveloperConnect(...);}
+       *   {@code DeveloperConnect.AccountConnectors.List request = developerconnect.accountConnectors().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public AccountConnectors accountConnectors() {
+        return new AccountConnectors();
+      }
+
+      /**
+       * The "accountConnectors" collection of methods.
+       */
+      public class AccountConnectors {
+
+        /**
+         * Creates a new AccountConnector in a given project and location.
+         *
+         * Create a request for the method "accountConnectors.create".
+         *
+         * This request holds the parameters needed by the developerconnect server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Location resource name as the account_connector’s parent.
+         * @param content the {@link com.google.api.services.developerconnect.v1.model.AccountConnector}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.developerconnect.v1.model.AccountConnector content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends DeveloperConnectRequest<com.google.api.services.developerconnect.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+parent}/accountConnectors";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a new AccountConnector in a given project and location.
+           *
+           * Create a request for the method "accountConnectors.create".
+           *
+           * This request holds the parameters needed by the the developerconnect server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Location resource name as the account_connector’s parent.
+           * @param content the {@link com.google.api.services.developerconnect.v1.model.AccountConnector}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.developerconnect.v1.model.AccountConnector content) {
+            super(DeveloperConnect.this, "POST", REST_PATH, content, com.google.api.services.developerconnect.v1.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Location resource name as the account_connector’s parent. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Location resource name as the account_connector’s parent.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. Location resource name as the account_connector’s parent. */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Required. The ID to use for the AccountConnector, which will become the final component
+           * of the AccountConnector's resource name. Its format should adhere to
+           * https://google.aip.dev/122#resource-id-segments Names must be unique per-project per-
+           * location.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String accountConnectorId;
+
+          /** Required. The ID to use for the AccountConnector, which will become the final component of the
+         AccountConnector's resource name. Its format should adhere to https://google.aip.dev/122#resource-
+         id-segments Names must be unique per-project per-location.
+           */
+          public java.lang.String getAccountConnectorId() {
+            return accountConnectorId;
+          }
+
+          /**
+           * Required. The ID to use for the AccountConnector, which will become the final component
+           * of the AccountConnector's resource name. Its format should adhere to
+           * https://google.aip.dev/122#resource-id-segments Names must be unique per-project per-
+           * location.
+           */
+          public Create setAccountConnectorId(java.lang.String accountConnectorId) {
+            this.accountConnectorId = accountConnectorId;
+            return this;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * since the first request. For example, consider a situation where you make an initial
+           * request and the request times out. If you make the request again with the same request
+           * ID, the server can check if original operation with the same request ID was received,
+           * and if so, will ignore the second request. This prevents clients from accidentally
+           * creating duplicate commitments. The request ID must be a valid UUID with the exception
+           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+         must retry your request, the server will know to ignore the request if it has already been
+         completed. The server will guarantee that for at least 60 minutes since the first request. For
+         example, consider a situation where you make an initial request and the request times out. If you
+         make the request again with the same request ID, the server can check if original operation with
+         the same request ID was received, and if so, will ignore the second request. This prevents clients
+         from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
+         exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * since the first request. For example, consider a situation where you make an initial
+           * request and the request times out. If you make the request again with the same request
+           * ID, the server can check if original operation with the same request ID was received,
+           * and if so, will ignore the second request. This prevents clients from accidentally
+           * creating duplicate commitments. The request ID must be a valid UUID with the exception
+           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public Create setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          /** Optional. If set, validate the request, but do not actually post it. */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. If set, validate the request, but do not actually post it.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /** Optional. If set, validate the request, but do not actually post it. */
+          public Create setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a single AccountConnector.
+         *
+         * Create a request for the method "accountConnectors.delete".
+         *
+         * This request holds the parameters needed by the developerconnect server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the resource
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends DeveloperConnectRequest<com.google.api.services.developerconnect.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/accountConnectors/[^/]+$");
+
+          /**
+           * Deletes a single AccountConnector.
+           *
+           * Create a request for the method "accountConnectors.delete".
+           *
+           * This request holds the parameters needed by the the developerconnect server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the resource
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(DeveloperConnect.this, "DELETE", REST_PATH, null, com.google.api.services.developerconnect.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/accountConnectors/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Name of the resource */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the resource
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. Name of the resource */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/accountConnectors/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. The current etag of the AccountConnectorn. If an etag is provided and does
+           * not match the current etag of the AccountConnector, deletion will be blocked and an
+           * ABORTED error will be returned.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String etag;
+
+          /** Optional. The current etag of the AccountConnectorn. If an etag is provided and does not match the
+         current etag of the AccountConnector, deletion will be blocked and an ABORTED error will be
+         returned.
+           */
+          public java.lang.String getEtag() {
+            return etag;
+          }
+
+          /**
+           * Optional. The current etag of the AccountConnectorn. If an etag is provided and does
+           * not match the current etag of the AccountConnector, deletion will be blocked and an
+           * ABORTED error will be returned.
+           */
+          public Delete setEtag(java.lang.String etag) {
+            this.etag = etag;
+            return this;
+          }
+
+          /**
+           * Optional. If set to true, any Users from this AccountConnector will also be deleted.
+           * (Otherwise, the request will only work if the AccountConnector has no Users.)
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean force;
+
+          /** Optional. If set to true, any Users from this AccountConnector will also be deleted. (Otherwise,
+         the request will only work if the AccountConnector has no Users.)
+           */
+          public java.lang.Boolean getForce() {
+            return force;
+          }
+
+          /**
+           * Optional. If set to true, any Users from this AccountConnector will also be deleted.
+           * (Otherwise, the request will only work if the AccountConnector has no Users.)
+           */
+          public Delete setForce(java.lang.Boolean force) {
+            this.force = force;
+            return this;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * after the first request. For example, consider a situation where you make an initial
+           * request and the request times out. If you make the request again with the same request
+           * ID, the server can check if original operation with the same request ID was received,
+           * and if so, will ignore the second request. This prevents clients from accidentally
+           * creating duplicate commitments. The request ID must be a valid UUID with the exception
+           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+         must retry your request, the server will know to ignore the request if it has already been
+         completed. The server will guarantee that for at least 60 minutes after the first request. For
+         example, consider a situation where you make an initial request and the request times out. If you
+         make the request again with the same request ID, the server can check if original operation with
+         the same request ID was received, and if so, will ignore the second request. This prevents clients
+         from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
+         exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * after the first request. For example, consider a situation where you make an initial
+           * request and the request times out. If you make the request again with the same request
+           * ID, the server can check if original operation with the same request ID was received,
+           * and if so, will ignore the second request. This prevents clients from accidentally
+           * creating duplicate commitments. The request ID must be a valid UUID with the exception
+           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public Delete setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          /** Optional. If set, validate the request, but do not actually post it. */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. If set, validate the request, but do not actually post it.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /** Optional. If set, validate the request, but do not actually post it. */
+          public Delete setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets details of a single AccountConnector.
+         *
+         * Create a request for the method "accountConnectors.get".
+         *
+         * This request holds the parameters needed by the developerconnect server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the resource
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends DeveloperConnectRequest<com.google.api.services.developerconnect.v1.model.AccountConnector> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/accountConnectors/[^/]+$");
+
+          /**
+           * Gets details of a single AccountConnector.
+           *
+           * Create a request for the method "accountConnectors.get".
+           *
+           * This request holds the parameters needed by the the developerconnect server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the resource
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(DeveloperConnect.this, "GET", REST_PATH, null, com.google.api.services.developerconnect.v1.model.AccountConnector.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/accountConnectors/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Name of the resource */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the resource
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. Name of the resource */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/accountConnectors/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists AccountConnectors in a given project and location.
+         *
+         * Create a request for the method "accountConnectors.list".
+         *
+         * This request holds the parameters needed by the developerconnect server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Parent value for ListAccountConnectorsRequest
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends DeveloperConnectRequest<com.google.api.services.developerconnect.v1.model.ListAccountConnectorsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/accountConnectors";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists AccountConnectors in a given project and location.
+           *
+           * Create a request for the method "accountConnectors.list".
+           *
+           * This request holds the parameters needed by the the developerconnect server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Parent value for ListAccountConnectorsRequest
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(DeveloperConnect.this, "GET", REST_PATH, null, com.google.api.services.developerconnect.v1.model.ListAccountConnectorsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Parent value for ListAccountConnectorsRequest */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Parent value for ListAccountConnectorsRequest
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. Parent value for ListAccountConnectorsRequest */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Optional. Filtering results */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Filtering results
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /** Optional. Filtering results */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /** Optional. Hint for how to order the results */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. Hint for how to order the results
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /** Optional. Hint for how to order the results */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Optional. Requested page size. Server may return fewer items than requested. If
+           * unspecified, server will pick an appropriate default.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. Requested page size. Server may return fewer items than requested. If unspecified, server
+         will pick an appropriate default.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. Requested page size. Server may return fewer items than requested. If
+           * unspecified, server will pick an appropriate default.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** Optional. A token identifying a page of results the server should return. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A token identifying a page of results the server should return.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** Optional. A token identifying a page of results the server should return. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates the parameters of a single AccountConnector.
+         *
+         * Create a request for the method "accountConnectors.patch".
+         *
+         * This request holds the parameters needed by the developerconnect server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Identifier. The resource name of the accountConnector, in the format
+         *        `projects/{project}/locations/{location}/accountConnectors/{account_connector_id}`.
+         * @param content the {@link com.google.api.services.developerconnect.v1.model.AccountConnector}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.developerconnect.v1.model.AccountConnector content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends DeveloperConnectRequest<com.google.api.services.developerconnect.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/accountConnectors/[^/]+$");
+
+          /**
+           * Updates the parameters of a single AccountConnector.
+           *
+           * Create a request for the method "accountConnectors.patch".
+           *
+           * This request holds the parameters needed by the the developerconnect server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Identifier. The resource name of the accountConnector, in the format
+         *        `projects/{project}/locations/{location}/accountConnectors/{account_connector_id}`.
+           * @param content the {@link com.google.api.services.developerconnect.v1.model.AccountConnector}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.developerconnect.v1.model.AccountConnector content) {
+            super(DeveloperConnect.this, "PATCH", REST_PATH, content, com.google.api.services.developerconnect.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/accountConnectors/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Identifier. The resource name of the accountConnector, in the format
+           * `projects/{project}/locations/{location}/accountConnectors/{account_connector_id}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Identifier. The resource name of the accountConnector, in the format
+         `projects/{project}/locations/{location}/accountConnectors/{account_connector_id}`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Identifier. The resource name of the accountConnector, in the format
+           * `projects/{project}/locations/{location}/accountConnectors/{account_connector_id}`.
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/accountConnectors/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. If set to true, and the accountConnector is not found a new accountConnector
+           * will be created. In this situation `update_mask` is ignored. The creation will succeed
+           * only if the input accountConnector has all the necessary
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean allowMissing;
+
+          /** Optional. If set to true, and the accountConnector is not found a new accountConnector will be
+         created. In this situation `update_mask` is ignored. The creation will succeed only if the input
+         accountConnector has all the necessary
+           */
+          public java.lang.Boolean getAllowMissing() {
+            return allowMissing;
+          }
+
+          /**
+           * Optional. If set to true, and the accountConnector is not found a new accountConnector
+           * will be created. In this situation `update_mask` is ignored. The creation will succeed
+           * only if the input accountConnector has all the necessary
+           */
+          public Patch setAllowMissing(java.lang.Boolean allowMissing) {
+            this.allowMissing = allowMissing;
+            return this;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * since the first request. For example, consider a situation where you make an initial
+           * request and the request times out. If you make the request again with the same request
+           * ID, the server can check if original operation with the same request ID was received,
+           * and if so, will ignore the second request. This prevents clients from accidentally
+           * creating duplicate commitments. The request ID must be a valid UUID with the exception
+           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+         must retry your request, the server will know to ignore the request if it has already been
+         completed. The server will guarantee that for at least 60 minutes since the first request. For
+         example, consider a situation where you make an initial request and the request times out. If you
+         make the request again with the same request ID, the server can check if original operation with
+         the same request ID was received, and if so, will ignore the second request. This prevents clients
+         from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
+         exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * since the first request. For example, consider a situation where you make an initial
+           * request and the request times out. If you make the request again with the same request
+           * ID, the server can check if original operation with the same request ID was received,
+           * and if so, will ignore the second request. This prevents clients from accidentally
+           * creating duplicate commitments. The request ID must be a valid UUID with the exception
+           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public Patch setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          /** Optional. The list of fields to be updated. */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Optional. The list of fields to be updated.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /** Optional. The list of fields to be updated. */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          /** Optional. If set, validate the request, but do not actually post it. */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. If set, validate the request, but do not actually post it.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /** Optional. If set, validate the request, but do not actually post it. */
+          public Patch setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+
+        /**
+         * An accessor for creating requests from the Users collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code DeveloperConnect developerconnect = new DeveloperConnect(...);}
+         *   {@code DeveloperConnect.Users.List request = developerconnect.users().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Users users() {
+          return new Users();
+        }
+
+        /**
+         * The "users" collection of methods.
+         */
+        public class Users {
+
+          /**
+           * Deletes a single User.
+           *
+           * Create a request for the method "users.delete".
+           *
+           * This request holds the parameters needed by the developerconnect server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. Name of the resource
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends DeveloperConnectRequest<com.google.api.services.developerconnect.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/accountConnectors/[^/]+/users/[^/]+$");
+
+            /**
+             * Deletes a single User.
+             *
+             * Create a request for the method "users.delete".
+             *
+             * This request holds the parameters needed by the the developerconnect server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. Name of the resource
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(DeveloperConnect.this, "DELETE", REST_PATH, null, com.google.api.services.developerconnect.v1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/accountConnectors/[^/]+/users/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. Name of the resource */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Name of the resource
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. Name of the resource */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/accountConnectors/[^/]+/users/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Optional. This checksum is computed by the server based on the value of other fields,
+             * and may be sent on update and delete requests to ensure the client has an up-to-date
+             * value before proceeding.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String etag;
+
+            /** Optional. This checksum is computed by the server based on the value of other fields, and may be
+           sent on update and delete requests to ensure the client has an up-to-date value before proceeding.
+             */
+            public java.lang.String getEtag() {
+              return etag;
+            }
+
+            /**
+             * Optional. This checksum is computed by the server based on the value of other fields,
+             * and may be sent on update and delete requests to ensure the client has an up-to-date
+             * value before proceeding.
+             */
+            public Delete setEtag(java.lang.String etag) {
+              this.etag = etag;
+              return this;
+            }
+
+            /**
+             * Optional. An optional request ID to identify requests. Specify a unique request ID so
+             * that if you must retry your request, the server will know to ignore the request if it
+             * has already been completed. The server will guarantee that for at least 60 minutes
+             * after the first request. For example, consider a situation where you make an initial
+             * request and the request times out. If you make the request again with the same
+             * request ID, the server can check if original operation with the same request ID was
+             * received, and if so, will ignore the second request. This prevents clients from
+             * accidentally creating duplicate commitments. The request ID must be a valid UUID with
+             * the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String requestId;
+
+            /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+           must retry your request, the server will know to ignore the request if it has already been
+           completed. The server will guarantee that for at least 60 minutes after the first request. For
+           example, consider a situation where you make an initial request and the request times out. If you
+           make the request again with the same request ID, the server can check if original operation with
+           the same request ID was received, and if so, will ignore the second request. This prevents clients
+           from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
+           exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            public java.lang.String getRequestId() {
+              return requestId;
+            }
+
+            /**
+             * Optional. An optional request ID to identify requests. Specify a unique request ID so
+             * that if you must retry your request, the server will know to ignore the request if it
+             * has already been completed. The server will guarantee that for at least 60 minutes
+             * after the first request. For example, consider a situation where you make an initial
+             * request and the request times out. If you make the request again with the same
+             * request ID, the server can check if original operation with the same request ID was
+             * received, and if so, will ignore the second request. This prevents clients from
+             * accidentally creating duplicate commitments. The request ID must be a valid UUID with
+             * the exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            public Delete setRequestId(java.lang.String requestId) {
+              this.requestId = requestId;
+              return this;
+            }
+
+            /** Optional. If set, validate the request, but do not actually post it. */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean validateOnly;
+
+            /** Optional. If set, validate the request, but do not actually post it.
+             */
+            public java.lang.Boolean getValidateOnly() {
+              return validateOnly;
+            }
+
+            /** Optional. If set, validate the request, but do not actually post it. */
+            public Delete setValidateOnly(java.lang.Boolean validateOnly) {
+              this.validateOnly = validateOnly;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Delete the User based on the user credentials.
+           *
+           * Create a request for the method "users.deleteSelf".
+           *
+           * This request holds the parameters needed by the developerconnect server.  After setting any
+           * optional parameters, call the {@link DeleteSelf#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. Name of the AccountConnector resource
+           * @return the request
+           */
+          public DeleteSelf deleteSelf(java.lang.String name) throws java.io.IOException {
+            DeleteSelf result = new DeleteSelf(name);
+            initialize(result);
+            return result;
+          }
+
+          public class DeleteSelf extends DeveloperConnectRequest<com.google.api.services.developerconnect.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+name}/users:deleteSelf";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/accountConnectors/[^/]+$");
+
+            /**
+             * Delete the User based on the user credentials.
+             *
+             * Create a request for the method "users.deleteSelf".
+             *
+             * This request holds the parameters needed by the the developerconnect server.  After setting any
+             * optional parameters, call the {@link DeleteSelf#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * DeleteSelf#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. Name of the AccountConnector resource
+             * @since 1.13
+             */
+            protected DeleteSelf(java.lang.String name) {
+              super(DeveloperConnect.this, "DELETE", REST_PATH, null, com.google.api.services.developerconnect.v1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/accountConnectors/[^/]+$");
+              }
+            }
+
+            @Override
+            public DeleteSelf set$Xgafv(java.lang.String $Xgafv) {
+              return (DeleteSelf) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public DeleteSelf setAccessToken(java.lang.String accessToken) {
+              return (DeleteSelf) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public DeleteSelf setAlt(java.lang.String alt) {
+              return (DeleteSelf) super.setAlt(alt);
+            }
+
+            @Override
+            public DeleteSelf setCallback(java.lang.String callback) {
+              return (DeleteSelf) super.setCallback(callback);
+            }
+
+            @Override
+            public DeleteSelf setFields(java.lang.String fields) {
+              return (DeleteSelf) super.setFields(fields);
+            }
+
+            @Override
+            public DeleteSelf setKey(java.lang.String key) {
+              return (DeleteSelf) super.setKey(key);
+            }
+
+            @Override
+            public DeleteSelf setOauthToken(java.lang.String oauthToken) {
+              return (DeleteSelf) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public DeleteSelf setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (DeleteSelf) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public DeleteSelf setQuotaUser(java.lang.String quotaUser) {
+              return (DeleteSelf) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public DeleteSelf setUploadType(java.lang.String uploadType) {
+              return (DeleteSelf) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public DeleteSelf setUploadProtocol(java.lang.String uploadProtocol) {
+              return (DeleteSelf) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. Name of the AccountConnector resource */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Name of the AccountConnector resource
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. Name of the AccountConnector resource */
+            public DeleteSelf setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/accountConnectors/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public DeleteSelf set(String parameterName, Object value) {
+              return (DeleteSelf) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Fetches OAuth access token based on end user credentials.
+           *
+           * Create a request for the method "users.fetchAccessToken".
+           *
+           * This request holds the parameters needed by the developerconnect server.  After setting any
+           * optional parameters, call the {@link FetchAccessToken#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param accountConnector Required. The resource name of the AccountConnector in the format
+           *        `projects/locations/accountConnectors`.
+           * @param content the {@link com.google.api.services.developerconnect.v1.model.FetchAccessTokenRequest}
+           * @return the request
+           */
+          public FetchAccessToken fetchAccessToken(java.lang.String accountConnector, com.google.api.services.developerconnect.v1.model.FetchAccessTokenRequest content) throws java.io.IOException {
+            FetchAccessToken result = new FetchAccessToken(accountConnector, content);
+            initialize(result);
+            return result;
+          }
+
+          public class FetchAccessToken extends DeveloperConnectRequest<com.google.api.services.developerconnect.v1.model.FetchAccessTokenResponse> {
+
+            private static final String REST_PATH = "v1/{+accountConnector}/users:fetchAccessToken";
+
+            private final java.util.regex.Pattern ACCOUNT_CONNECTOR_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/accountConnectors/[^/]+$");
+
+            /**
+             * Fetches OAuth access token based on end user credentials.
+             *
+             * Create a request for the method "users.fetchAccessToken".
+             *
+             * This request holds the parameters needed by the the developerconnect server.  After setting any
+             * optional parameters, call the {@link FetchAccessToken#execute()} method to invoke the remote
+             * operation. <p> {@link FetchAccessToken#initialize(com.google.api.client.googleapis.services.Abs
+             * tractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param accountConnector Required. The resource name of the AccountConnector in the format
+           *        `projects/locations/accountConnectors`.
+             * @param content the {@link com.google.api.services.developerconnect.v1.model.FetchAccessTokenRequest}
+             * @since 1.13
+             */
+            protected FetchAccessToken(java.lang.String accountConnector, com.google.api.services.developerconnect.v1.model.FetchAccessTokenRequest content) {
+              super(DeveloperConnect.this, "POST", REST_PATH, content, com.google.api.services.developerconnect.v1.model.FetchAccessTokenResponse.class);
+              this.accountConnector = com.google.api.client.util.Preconditions.checkNotNull(accountConnector, "Required parameter accountConnector must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(ACCOUNT_CONNECTOR_PATTERN.matcher(accountConnector).matches(),
+                    "Parameter accountConnector must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/accountConnectors/[^/]+$");
+              }
+            }
+
+            @Override
+            public FetchAccessToken set$Xgafv(java.lang.String $Xgafv) {
+              return (FetchAccessToken) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public FetchAccessToken setAccessToken(java.lang.String accessToken) {
+              return (FetchAccessToken) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public FetchAccessToken setAlt(java.lang.String alt) {
+              return (FetchAccessToken) super.setAlt(alt);
+            }
+
+            @Override
+            public FetchAccessToken setCallback(java.lang.String callback) {
+              return (FetchAccessToken) super.setCallback(callback);
+            }
+
+            @Override
+            public FetchAccessToken setFields(java.lang.String fields) {
+              return (FetchAccessToken) super.setFields(fields);
+            }
+
+            @Override
+            public FetchAccessToken setKey(java.lang.String key) {
+              return (FetchAccessToken) super.setKey(key);
+            }
+
+            @Override
+            public FetchAccessToken setOauthToken(java.lang.String oauthToken) {
+              return (FetchAccessToken) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public FetchAccessToken setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (FetchAccessToken) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public FetchAccessToken setQuotaUser(java.lang.String quotaUser) {
+              return (FetchAccessToken) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public FetchAccessToken setUploadType(java.lang.String uploadType) {
+              return (FetchAccessToken) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public FetchAccessToken setUploadProtocol(java.lang.String uploadProtocol) {
+              return (FetchAccessToken) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the AccountConnector in the format
+             * `projects/locations/accountConnectors`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String accountConnector;
+
+            /** Required. The resource name of the AccountConnector in the format
+           `projects/locations/accountConnectors`.
+             */
+            public java.lang.String getAccountConnector() {
+              return accountConnector;
+            }
+
+            /**
+             * Required. The resource name of the AccountConnector in the format
+             * `projects/locations/accountConnectors`.
+             */
+            public FetchAccessToken setAccountConnector(java.lang.String accountConnector) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(ACCOUNT_CONNECTOR_PATTERN.matcher(accountConnector).matches(),
+                    "Parameter accountConnector must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/accountConnectors/[^/]+$");
+              }
+              this.accountConnector = accountConnector;
+              return this;
+            }
+
+            @Override
+            public FetchAccessToken set(String parameterName, Object value) {
+              return (FetchAccessToken) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Fetch the User based on the user credentials.
+           *
+           * Create a request for the method "users.fetchSelf".
+           *
+           * This request holds the parameters needed by the developerconnect server.  After setting any
+           * optional parameters, call the {@link FetchSelf#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. Name of the AccountConnector resource
+           * @return the request
+           */
+          public FetchSelf fetchSelf(java.lang.String name) throws java.io.IOException {
+            FetchSelf result = new FetchSelf(name);
+            initialize(result);
+            return result;
+          }
+
+          public class FetchSelf extends DeveloperConnectRequest<com.google.api.services.developerconnect.v1.model.User> {
+
+            private static final String REST_PATH = "v1/{+name}/users:fetchSelf";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/accountConnectors/[^/]+$");
+
+            /**
+             * Fetch the User based on the user credentials.
+             *
+             * Create a request for the method "users.fetchSelf".
+             *
+             * This request holds the parameters needed by the the developerconnect server.  After setting any
+             * optional parameters, call the {@link FetchSelf#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * FetchSelf#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. Name of the AccountConnector resource
+             * @since 1.13
+             */
+            protected FetchSelf(java.lang.String name) {
+              super(DeveloperConnect.this, "GET", REST_PATH, null, com.google.api.services.developerconnect.v1.model.User.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/accountConnectors/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public FetchSelf set$Xgafv(java.lang.String $Xgafv) {
+              return (FetchSelf) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public FetchSelf setAccessToken(java.lang.String accessToken) {
+              return (FetchSelf) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public FetchSelf setAlt(java.lang.String alt) {
+              return (FetchSelf) super.setAlt(alt);
+            }
+
+            @Override
+            public FetchSelf setCallback(java.lang.String callback) {
+              return (FetchSelf) super.setCallback(callback);
+            }
+
+            @Override
+            public FetchSelf setFields(java.lang.String fields) {
+              return (FetchSelf) super.setFields(fields);
+            }
+
+            @Override
+            public FetchSelf setKey(java.lang.String key) {
+              return (FetchSelf) super.setKey(key);
+            }
+
+            @Override
+            public FetchSelf setOauthToken(java.lang.String oauthToken) {
+              return (FetchSelf) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public FetchSelf setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (FetchSelf) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public FetchSelf setQuotaUser(java.lang.String quotaUser) {
+              return (FetchSelf) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public FetchSelf setUploadType(java.lang.String uploadType) {
+              return (FetchSelf) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public FetchSelf setUploadProtocol(java.lang.String uploadProtocol) {
+              return (FetchSelf) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. Name of the AccountConnector resource */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Name of the AccountConnector resource
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. Name of the AccountConnector resource */
+            public FetchSelf setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/accountConnectors/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public FetchSelf set(String parameterName, Object value) {
+              return (FetchSelf) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists Users in a given project, location, and account_connector.
+           *
+           * Create a request for the method "users.list".
+           *
+           * This request holds the parameters needed by the developerconnect server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. Parent value for ListUsersRequest
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends DeveloperConnectRequest<com.google.api.services.developerconnect.v1.model.ListUsersResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/users";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/accountConnectors/[^/]+$");
+
+            /**
+             * Lists Users in a given project, location, and account_connector.
+             *
+             * Create a request for the method "users.list".
+             *
+             * This request holds the parameters needed by the the developerconnect server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. Parent value for ListUsersRequest
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(DeveloperConnect.this, "GET", REST_PATH, null, com.google.api.services.developerconnect.v1.model.ListUsersResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/accountConnectors/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. Parent value for ListUsersRequest */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. Parent value for ListUsersRequest
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. Parent value for ListUsersRequest */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/accountConnectors/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /** Optional. Filtering results */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Optional. Filtering results
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /** Optional. Filtering results */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /** Optional. Hint for how to order the results */
+            @com.google.api.client.util.Key
+            private java.lang.String orderBy;
+
+            /** Optional. Hint for how to order the results
+             */
+            public java.lang.String getOrderBy() {
+              return orderBy;
+            }
+
+            /** Optional. Hint for how to order the results */
+            public List setOrderBy(java.lang.String orderBy) {
+              this.orderBy = orderBy;
+              return this;
+            }
+
+            /**
+             * Optional. Requested page size. Server may return fewer items than requested. If
+             * unspecified, server will pick an appropriate default.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. Requested page size. Server may return fewer items than requested. If unspecified, server
+           will pick an appropriate default.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. Requested page size. Server may return fewer items than requested. If
+             * unspecified, server will pick an appropriate default.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /** Optional. A token identifying a page of results the server should return. */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. A token identifying a page of results the server should return.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /** Optional. A token identifying a page of results the server should return. */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
+      }
       /**
        * An accessor for creating requests from the Connections collection.
        *

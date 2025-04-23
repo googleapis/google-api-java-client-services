@@ -25,7 +25,7 @@ package com.google.api.services.gmail;
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://developers.google.com/gmail/api/" target="_blank">API Documentation</a>
+ * <a href="https://developers.google.com/workspace/gmail/api/" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>
@@ -4230,16 +4230,16 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         /**
          * Only return messages with labels that match all of the specified label IDs. Messages in a
          * thread might have labels that other messages in the same thread don't have. To learn
-         * more, see [Manage labels on messages and threads](https://developers.google.com/gmail/api
-         * /guides/labels#manage_labels_on_messages_threads).
+         * more, see [Manage labels on messages and threads](https://developers.google.com/workspace
+         * /gmail/api/guides/labels#manage_labels_on_messages_threads).
          */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> labelIds;
 
         /** Only return messages with labels that match all of the specified label IDs. Messages in a thread
        might have labels that other messages in the same thread don't have. To learn more, see [Manage
-       labels on messages and
-       threads](https://developers.google.com/gmail/api/guides/labels#manage_labels_on_messages_threads).
+       labels on messages and threads](https://developers.google.com/workspace/gmail/api/guides/labels#man
+       age_labels_on_messages_threads).
          */
         public java.util.List<java.lang.String> getLabelIds() {
           return labelIds;
@@ -4248,8 +4248,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         /**
          * Only return messages with labels that match all of the specified label IDs. Messages in a
          * thread might have labels that other messages in the same thread don't have. To learn
-         * more, see [Manage labels on messages and threads](https://developers.google.com/gmail/api
-         * /guides/labels#manage_labels_on_messages_threads).
+         * more, see [Manage labels on messages and threads](https://developers.google.com/workspace
+         * /gmail/api/guides/labels#manage_labels_on_messages_threads).
          */
         public List setLabelIds(java.util.List<java.lang.String> labelIds) {
           this.labelIds = labelIds;
@@ -4473,7 +4473,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
       }
       /**
        * Sends the specified message to the recipients in the `To`, `Cc`, and `Bcc` headers. For example
-       * usage, see [Sending email](https://developers.google.com/gmail/api/guides/sending).
+       * usage, see [Sending email](https://developers.google.com/workspace/gmail/api/guides/sending).
        *
        * Create a request for the method "messages.send".
        *
@@ -4493,7 +4493,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Sends the specified message to the recipients in the `To`, `Cc`, and `Bcc` headers. For example
-       * usage, see [Sending email](https://developers.google.com/gmail/api/guides/sending).
+       * usage, see [Sending email](https://developers.google.com/workspace/gmail/api/guides/sending).
        *
        * Create a request for the method "messages.send".
        *
@@ -4523,7 +4523,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
 
         /**
          * Sends the specified message to the recipients in the `To`, `Cc`, and `Bcc` headers. For example
-         * usage, see [Sending email](https://developers.google.com/gmail/api/guides/sending).
+         * usage, see [Sending email](https://developers.google.com/workspace/gmail/api/guides/sending).
          *
          * Create a request for the method "messages.send".
          *
@@ -4546,7 +4546,7 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
 
         /**
          * Sends the specified message to the recipients in the `To`, `Cc`, and `Bcc` headers. For example
-         * usage, see [Sending email](https://developers.google.com/gmail/api/guides/sending).
+         * usage, see [Sending email](https://developers.google.com/workspace/gmail/api/guides/sending).
          *
          * Create a request for the method "messages.send".
          *

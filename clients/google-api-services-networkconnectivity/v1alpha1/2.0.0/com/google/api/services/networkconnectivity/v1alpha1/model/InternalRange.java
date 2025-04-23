@@ -47,6 +47,14 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   private java.lang.String description;
 
   /**
+   * Optional. ExcludeCidrRanges flag. Specifies a set of CIDR blocks that allows exclusion of
+   * particular CIDR ranges from the auto-allocation process, without having to reserve these blocks
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> excludeCidrRanges;
+
+  /**
    * Optional. Immutable ranges cannot have their fields modified, except for labels and
    * description.
    * The value may be {@code null}.
@@ -189,6 +197,25 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
    */
   public InternalRange setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Optional. ExcludeCidrRanges flag. Specifies a set of CIDR blocks that allows exclusion of
+   * particular CIDR ranges from the auto-allocation process, without having to reserve these blocks
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getExcludeCidrRanges() {
+    return excludeCidrRanges;
+  }
+
+  /**
+   * Optional. ExcludeCidrRanges flag. Specifies a set of CIDR blocks that allows exclusion of
+   * particular CIDR ranges from the auto-allocation process, without having to reserve these blocks
+   * @param excludeCidrRanges excludeCidrRanges or {@code null} for none
+   */
+  public InternalRange setExcludeCidrRanges(java.util.List<java.lang.String> excludeCidrRanges) {
+    this.excludeCidrRanges = excludeCidrRanges;
     return this;
   }
 

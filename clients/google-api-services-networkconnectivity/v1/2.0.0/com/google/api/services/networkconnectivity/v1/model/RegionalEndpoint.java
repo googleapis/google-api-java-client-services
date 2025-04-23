@@ -78,8 +78,8 @@ public final class RegionalEndpoint extends com.google.api.client.json.GenericJs
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Output only. The name of a RegionalEndpoint. Format:
-   * `projects/{project}/locations/{location}/regionalEndpoints/{regional_endpoint}`.
+   * Output only. The name of a RegionalEndpoint. Pattern: `projects/{project}/locations/{location}/
+   * regionalEndpoints/^[-a-z0-9](?:[-a-z0-9]{0,44})[a-z0-9]$`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -238,8 +238,8 @@ public final class RegionalEndpoint extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. The name of a RegionalEndpoint. Format:
-   * `projects/{project}/locations/{location}/regionalEndpoints/{regional_endpoint}`.
+   * Output only. The name of a RegionalEndpoint. Pattern: `projects/{project}/locations/{location}/
+   * regionalEndpoints/^[-a-z0-9](?:[-a-z0-9]{0,44})[a-z0-9]$`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -247,8 +247,8 @@ public final class RegionalEndpoint extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. The name of a RegionalEndpoint. Format:
-   * `projects/{project}/locations/{location}/regionalEndpoints/{regional_endpoint}`.
+   * Output only. The name of a RegionalEndpoint. Pattern: `projects/{project}/locations/{location}/
+   * regionalEndpoints/^[-a-z0-9](?:[-a-z0-9]{0,44})[a-z0-9]$`.
    * @param name name or {@code null} for none
    */
   public RegionalEndpoint setName(java.lang.String name) {

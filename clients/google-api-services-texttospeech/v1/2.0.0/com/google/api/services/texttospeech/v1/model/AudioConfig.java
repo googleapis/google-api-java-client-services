@@ -68,9 +68,9 @@ public final class AudioConfig extends com.google.api.client.json.GenericJson {
   private java.lang.Integer sampleRateHertz;
 
   /**
-   * Optional. Input only. Speaking rate/speed, in the range [0.25, 4.0]. 1.0 is the normal native
+   * Optional. Input only. Speaking rate/speed, in the range [0.25, 2.0]. 1.0 is the normal native
    * speed supported by the specific voice. 2.0 is twice as fast, and 0.5 is half as fast. If
-   * unset(0.0), defaults to the native 1.0 speed. Any other values < 0.25 or > 4.0 will return an
+   * unset(0.0), defaults to the native 1.0 speed. Any other values < 0.25 or > 2.0 will return an
    * error.
    * The value may be {@code null}.
    */
@@ -176,9 +176,9 @@ public final class AudioConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Input only. Speaking rate/speed, in the range [0.25, 4.0]. 1.0 is the normal native
+   * Optional. Input only. Speaking rate/speed, in the range [0.25, 2.0]. 1.0 is the normal native
    * speed supported by the specific voice. 2.0 is twice as fast, and 0.5 is half as fast. If
-   * unset(0.0), defaults to the native 1.0 speed. Any other values < 0.25 or > 4.0 will return an
+   * unset(0.0), defaults to the native 1.0 speed. Any other values < 0.25 or > 2.0 will return an
    * error.
    * @return value or {@code null} for none
    */
@@ -187,9 +187,9 @@ public final class AudioConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Input only. Speaking rate/speed, in the range [0.25, 4.0]. 1.0 is the normal native
+   * Optional. Input only. Speaking rate/speed, in the range [0.25, 2.0]. 1.0 is the normal native
    * speed supported by the specific voice. 2.0 is twice as fast, and 0.5 is half as fast. If
-   * unset(0.0), defaults to the native 1.0 speed. Any other values < 0.25 or > 4.0 will return an
+   * unset(0.0), defaults to the native 1.0 speed. Any other values < 0.25 or > 2.0 will return an
    * error.
    * @param speakingRate speakingRate or {@code null} for none
    */

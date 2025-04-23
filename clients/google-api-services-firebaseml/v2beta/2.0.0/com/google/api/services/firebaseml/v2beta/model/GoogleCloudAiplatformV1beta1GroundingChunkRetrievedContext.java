@@ -30,6 +30,14 @@ package com.google.api.services.firebaseml.v2beta.model;
 public final class GoogleCloudAiplatformV1beta1GroundingChunkRetrievedContext extends com.google.api.client.json.GenericJson {
 
   /**
+   * Additional context for the RAG retrieval result. This is only populated when using the RAG
+   * retrieval tool.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1RagChunk ragChunk;
+
+  /**
    * Text of the attribution.
    * The value may be {@code null}.
    */
@@ -49,6 +57,25 @@ public final class GoogleCloudAiplatformV1beta1GroundingChunkRetrievedContext ex
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
+
+  /**
+   * Additional context for the RAG retrieval result. This is only populated when using the RAG
+   * retrieval tool.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RagChunk getRagChunk() {
+    return ragChunk;
+  }
+
+  /**
+   * Additional context for the RAG retrieval result. This is only populated when using the RAG
+   * retrieval tool.
+   * @param ragChunk ragChunk or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GroundingChunkRetrievedContext setRagChunk(GoogleCloudAiplatformV1beta1RagChunk ragChunk) {
+    this.ragChunk = ragChunk;
+    return this;
+  }
 
   /**
    * Text of the attribution.

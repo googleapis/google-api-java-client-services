@@ -17,7 +17,7 @@
 package com.google.api.services.firebaseml.v2beta.model;
 
 /**
- * Config for LlmRanker.
+ * Config for thinking features.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase ML API. For a detailed explanation see:
@@ -27,46 +27,43 @@ package com.google.api.services.firebaseml.v2beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudAiplatformV1beta1RagRetrievalConfigRankingLlmRanker extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1beta1GenerationConfigThinkingConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The model name used for ranking. See [Supported
-   * models](https://cloud.google.com/vertex-ai/generative-ai/docs/model-
-   * reference/inference#supported-models).
+   * Optional. Indicates the thinking budget in tokens. This is only applied when enable_thinking is
+   * true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String modelName;
+  private java.lang.Integer thinkingBudget;
 
   /**
-   * Optional. The model name used for ranking. See [Supported
-   * models](https://cloud.google.com/vertex-ai/generative-ai/docs/model-
-   * reference/inference#supported-models).
+   * Optional. Indicates the thinking budget in tokens. This is only applied when enable_thinking is
+   * true.
    * @return value or {@code null} for none
    */
-  public java.lang.String getModelName() {
-    return modelName;
+  public java.lang.Integer getThinkingBudget() {
+    return thinkingBudget;
   }
 
   /**
-   * Optional. The model name used for ranking. See [Supported
-   * models](https://cloud.google.com/vertex-ai/generative-ai/docs/model-
-   * reference/inference#supported-models).
-   * @param modelName modelName or {@code null} for none
+   * Optional. Indicates the thinking budget in tokens. This is only applied when enable_thinking is
+   * true.
+   * @param thinkingBudget thinkingBudget or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1RagRetrievalConfigRankingLlmRanker setModelName(java.lang.String modelName) {
-    this.modelName = modelName;
+  public GoogleCloudAiplatformV1beta1GenerationConfigThinkingConfig setThinkingBudget(java.lang.Integer thinkingBudget) {
+    this.thinkingBudget = thinkingBudget;
     return this;
   }
 
   @Override
-  public GoogleCloudAiplatformV1beta1RagRetrievalConfigRankingLlmRanker set(String fieldName, Object value) {
-    return (GoogleCloudAiplatformV1beta1RagRetrievalConfigRankingLlmRanker) super.set(fieldName, value);
+  public GoogleCloudAiplatformV1beta1GenerationConfigThinkingConfig set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1beta1GenerationConfigThinkingConfig) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudAiplatformV1beta1RagRetrievalConfigRankingLlmRanker clone() {
-    return (GoogleCloudAiplatformV1beta1RagRetrievalConfigRankingLlmRanker) super.clone();
+  public GoogleCloudAiplatformV1beta1GenerationConfigThinkingConfig clone() {
+    return (GoogleCloudAiplatformV1beta1GenerationConfigThinkingConfig) super.clone();
   }
 
 }

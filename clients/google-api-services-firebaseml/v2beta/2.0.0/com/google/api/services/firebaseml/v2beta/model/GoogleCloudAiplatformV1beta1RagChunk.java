@@ -17,7 +17,7 @@
 package com.google.api.services.firebaseml.v2beta.model;
 
 /**
- * The speech generation config.
+ * A RagChunk includes the content of a chunk of a RagFile, and associated metadata.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase ML API. For a detailed explanation see:
@@ -27,64 +27,64 @@ package com.google.api.services.firebaseml.v2beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudAiplatformV1beta1SpeechConfig extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1beta1RagChunk extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Language code (ISO 639. e.g. en-US) for the speech synthesization.
+   * If populated, represents where the chunk starts and ends in the document.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String languageCode;
+  private GoogleCloudAiplatformV1beta1RagChunkPageSpan pageSpan;
 
   /**
-   * The configuration for the speaker to use.
+   * The content of the chunk.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GoogleCloudAiplatformV1beta1VoiceConfig voiceConfig;
+  private java.lang.String text;
 
   /**
-   * Optional. Language code (ISO 639. e.g. en-US) for the speech synthesization.
+   * If populated, represents where the chunk starts and ends in the document.
    * @return value or {@code null} for none
    */
-  public java.lang.String getLanguageCode() {
-    return languageCode;
+  public GoogleCloudAiplatformV1beta1RagChunkPageSpan getPageSpan() {
+    return pageSpan;
   }
 
   /**
-   * Optional. Language code (ISO 639. e.g. en-US) for the speech synthesization.
-   * @param languageCode languageCode or {@code null} for none
+   * If populated, represents where the chunk starts and ends in the document.
+   * @param pageSpan pageSpan or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1SpeechConfig setLanguageCode(java.lang.String languageCode) {
-    this.languageCode = languageCode;
+  public GoogleCloudAiplatformV1beta1RagChunk setPageSpan(GoogleCloudAiplatformV1beta1RagChunkPageSpan pageSpan) {
+    this.pageSpan = pageSpan;
     return this;
   }
 
   /**
-   * The configuration for the speaker to use.
+   * The content of the chunk.
    * @return value or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1VoiceConfig getVoiceConfig() {
-    return voiceConfig;
+  public java.lang.String getText() {
+    return text;
   }
 
   /**
-   * The configuration for the speaker to use.
-   * @param voiceConfig voiceConfig or {@code null} for none
+   * The content of the chunk.
+   * @param text text or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1SpeechConfig setVoiceConfig(GoogleCloudAiplatformV1beta1VoiceConfig voiceConfig) {
-    this.voiceConfig = voiceConfig;
+  public GoogleCloudAiplatformV1beta1RagChunk setText(java.lang.String text) {
+    this.text = text;
     return this;
   }
 
   @Override
-  public GoogleCloudAiplatformV1beta1SpeechConfig set(String fieldName, Object value) {
-    return (GoogleCloudAiplatformV1beta1SpeechConfig) super.set(fieldName, value);
+  public GoogleCloudAiplatformV1beta1RagChunk set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1beta1RagChunk) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudAiplatformV1beta1SpeechConfig clone() {
-    return (GoogleCloudAiplatformV1beta1SpeechConfig) super.clone();
+  public GoogleCloudAiplatformV1beta1RagChunk clone() {
+    return (GoogleCloudAiplatformV1beta1RagChunk) super.clone();
   }
 
 }

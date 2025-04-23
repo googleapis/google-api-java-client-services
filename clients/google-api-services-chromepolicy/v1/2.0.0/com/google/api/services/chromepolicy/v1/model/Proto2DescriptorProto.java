@@ -60,6 +60,13 @@ public final class Proto2DescriptorProto extends com.google.api.client.json.Gene
   private java.util.List<Proto2OneofDescriptorProto> oneofDecl;
 
   /**
+   * Support for `export` and `local` keywords on enums.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String visibility;
+
+  /**
    * @return value or {@code null} for none
    */
   public java.util.List<Proto2EnumDescriptorProto> getEnumType() {
@@ -131,6 +138,23 @@ public final class Proto2DescriptorProto extends com.google.api.client.json.Gene
    */
   public Proto2DescriptorProto setOneofDecl(java.util.List<Proto2OneofDescriptorProto> oneofDecl) {
     this.oneofDecl = oneofDecl;
+    return this;
+  }
+
+  /**
+   * Support for `export` and `local` keywords on enums.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVisibility() {
+    return visibility;
+  }
+
+  /**
+   * Support for `export` and `local` keywords on enums.
+   * @param visibility visibility or {@code null} for none
+   */
+  public Proto2DescriptorProto setVisibility(java.lang.String visibility) {
+    this.visibility = visibility;
     return this;
   }
 

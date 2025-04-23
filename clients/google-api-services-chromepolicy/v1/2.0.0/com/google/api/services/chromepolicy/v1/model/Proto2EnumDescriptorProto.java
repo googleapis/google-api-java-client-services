@@ -42,6 +42,13 @@ public final class Proto2EnumDescriptorProto extends com.google.api.client.json.
   private java.util.List<Proto2EnumValueDescriptorProto> value;
 
   /**
+   * Support for `export` and `local` keywords on enums.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String visibility;
+
+  /**
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -68,6 +75,23 @@ public final class Proto2EnumDescriptorProto extends com.google.api.client.json.
    */
   public Proto2EnumDescriptorProto setValue(java.util.List<Proto2EnumValueDescriptorProto> value) {
     this.value = value;
+    return this;
+  }
+
+  /**
+   * Support for `export` and `local` keywords on enums.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVisibility() {
+    return visibility;
+  }
+
+  /**
+   * Support for `export` and `local` keywords on enums.
+   * @param visibility visibility or {@code null} for none
+   */
+  public Proto2EnumDescriptorProto setVisibility(java.lang.String visibility) {
+    this.visibility = visibility;
     return this;
   }
 

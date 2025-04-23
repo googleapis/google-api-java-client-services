@@ -235,6 +235,13 @@ public final class Node extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> tags;
 
   /**
+   * Output only. Upcoming maintenance on this TPU node.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private UpcomingMaintenance upcomingMaintenance;
+
+  /**
    * The AccleratorConfig for the TPU Node.
    * @return value or {@code null} for none
    */
@@ -680,6 +687,23 @@ public final class Node extends com.google.api.client.json.GenericJson {
    */
   public Node setTags(java.util.List<java.lang.String> tags) {
     this.tags = tags;
+    return this;
+  }
+
+  /**
+   * Output only. Upcoming maintenance on this TPU node.
+   * @return value or {@code null} for none
+   */
+  public UpcomingMaintenance getUpcomingMaintenance() {
+    return upcomingMaintenance;
+  }
+
+  /**
+   * Output only. Upcoming maintenance on this TPU node.
+   * @param upcomingMaintenance upcomingMaintenance or {@code null} for none
+   */
+  public Node setUpcomingMaintenance(UpcomingMaintenance upcomingMaintenance) {
+    this.upcomingMaintenance = upcomingMaintenance;
     return this;
   }
 

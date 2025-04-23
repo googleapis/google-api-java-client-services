@@ -37,6 +37,13 @@ public final class SchedulingConfig extends com.google.api.client.json.GenericJs
   private java.lang.Boolean preemptible;
 
   /**
+   * Optional. Defines the provisioning model for the node.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String provisioningModel;
+
+  /**
    * Whether the node is created under a reservation.
    * The value may be {@code null}.
    */
@@ -71,6 +78,23 @@ public final class SchedulingConfig extends com.google.api.client.json.GenericJs
    */
   public SchedulingConfig setPreemptible(java.lang.Boolean preemptible) {
     this.preemptible = preemptible;
+    return this;
+  }
+
+  /**
+   * Optional. Defines the provisioning model for the node.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProvisioningModel() {
+    return provisioningModel;
+  }
+
+  /**
+   * Optional. Defines the provisioning model for the node.
+   * @param provisioningModel provisioningModel or {@code null} for none
+   */
+  public SchedulingConfig setProvisioningModel(java.lang.String provisioningModel) {
+    this.provisioningModel = provisioningModel;
     return this;
   }
 

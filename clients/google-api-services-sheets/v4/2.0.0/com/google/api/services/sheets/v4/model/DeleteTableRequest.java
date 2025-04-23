@@ -17,7 +17,7 @@
 package com.google.api.services.sheets.v4.model;
 
 /**
- * The request for clearing more than one range of values in a spreadsheet.
+ * Removes the table with the given ID from the spreadsheet.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Sheets API. For a detailed explanation see:
@@ -27,43 +27,40 @@ package com.google.api.services.sheets.v4.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class BatchClearValuesRequest extends com.google.api.client.json.GenericJson {
+public final class DeleteTableRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The ranges to clear, in [A1 notation or R1C1
-   * notation](https://developers.google.com/workspace/sheets/api/guides/concepts#cell).
+   * The ID of the table to delete.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> ranges;
+  private java.lang.String tableId;
 
   /**
-   * The ranges to clear, in [A1 notation or R1C1
-   * notation](https://developers.google.com/workspace/sheets/api/guides/concepts#cell).
+   * The ID of the table to delete.
    * @return value or {@code null} for none
    */
-  public java.util.List<java.lang.String> getRanges() {
-    return ranges;
+  public java.lang.String getTableId() {
+    return tableId;
   }
 
   /**
-   * The ranges to clear, in [A1 notation or R1C1
-   * notation](https://developers.google.com/workspace/sheets/api/guides/concepts#cell).
-   * @param ranges ranges or {@code null} for none
+   * The ID of the table to delete.
+   * @param tableId tableId or {@code null} for none
    */
-  public BatchClearValuesRequest setRanges(java.util.List<java.lang.String> ranges) {
-    this.ranges = ranges;
+  public DeleteTableRequest setTableId(java.lang.String tableId) {
+    this.tableId = tableId;
     return this;
   }
 
   @Override
-  public BatchClearValuesRequest set(String fieldName, Object value) {
-    return (BatchClearValuesRequest) super.set(fieldName, value);
+  public DeleteTableRequest set(String fieldName, Object value) {
+    return (DeleteTableRequest) super.set(fieldName, value);
   }
 
   @Override
-  public BatchClearValuesRequest clone() {
-    return (BatchClearValuesRequest) super.clone();
+  public DeleteTableRequest clone() {
+    return (DeleteTableRequest) super.clone();
   }
 
 }

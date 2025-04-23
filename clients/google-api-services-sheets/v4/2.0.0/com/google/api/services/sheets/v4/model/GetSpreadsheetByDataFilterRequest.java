@@ -43,6 +43,13 @@ public final class GetSpreadsheetByDataFilterRequest extends com.google.api.clie
   }
 
   /**
+   * True if tables should be excluded in the banded ranges. False if not set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean excludeTablesInBandedRanges;
+
+  /**
    * True if grid data should be returned. This parameter is ignored if a field mask was set in the
    * request.
    * The value may be {@code null}.
@@ -64,6 +71,23 @@ public final class GetSpreadsheetByDataFilterRequest extends com.google.api.clie
    */
   public GetSpreadsheetByDataFilterRequest setDataFilters(java.util.List<DataFilter> dataFilters) {
     this.dataFilters = dataFilters;
+    return this;
+  }
+
+  /**
+   * True if tables should be excluded in the banded ranges. False if not set.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getExcludeTablesInBandedRanges() {
+    return excludeTablesInBandedRanges;
+  }
+
+  /**
+   * True if tables should be excluded in the banded ranges. False if not set.
+   * @param excludeTablesInBandedRanges excludeTablesInBandedRanges or {@code null} for none
+   */
+  public GetSpreadsheetByDataFilterRequest setExcludeTablesInBandedRanges(java.lang.Boolean excludeTablesInBandedRanges) {
+    this.excludeTablesInBandedRanges = excludeTablesInBandedRanges;
     return this;
   }
 

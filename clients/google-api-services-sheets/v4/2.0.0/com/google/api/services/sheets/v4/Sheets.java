@@ -25,7 +25,7 @@ package com.google.api.services.sheets.v4;
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://developers.google.com/sheets/" target="_blank">API Documentation</a>
+ * <a href="https://developers.google.com/workspace/sheets/" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>
@@ -389,16 +389,16 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
     /**
      * Returns the spreadsheet at the given ID. The caller must specify the spreadsheet ID. By default,
      * data within grids is not returned. You can include grid data in one of 2 ways: * Specify a [field
-     * mask](https://developers.google.com/sheets/api/guides/field-masks) listing your desired fields
-     * using the `fields` URL parameter in HTTP * Set the includeGridData URL parameter to true. If a
-     * field mask is set, the `includeGridData` parameter is ignored For large spreadsheets, as a best
-     * practice, retrieve only the specific spreadsheet fields that you want. To retrieve only subsets
-     * of spreadsheet data, use the ranges URL parameter. Ranges are specified using [A1
-     * notation](/sheets/api/guides/concepts#cell). You can define a single cell (for example, `A1`) or
-     * multiple cells (for example, `A1:D5`). You can also get cells from other sheets within the same
-     * spreadsheet (for example, `Sheet2!A1:C4`) or retrieve multiple ranges at once (for example,
-     * `?ranges=A1:D5&ranges=Sheet2!A1:C4`). Limiting the range returns only the portions of the
-     * spreadsheet that intersect the requested ranges.
+     * mask](https://developers.google.com/workspace/sheets/api/guides/field-masks) listing your desired
+     * fields using the `fields` URL parameter in HTTP * Set the includeGridData URL parameter to true.
+     * If a field mask is set, the `includeGridData` parameter is ignored For large spreadsheets, as a
+     * best practice, retrieve only the specific spreadsheet fields that you want. To retrieve only
+     * subsets of spreadsheet data, use the ranges URL parameter. Ranges are specified using [A1
+     * notation](https://developers.google.com/workspace/sheets/api/guides/concepts#cell). You can
+     * define a single cell (for example, `A1`) or multiple cells (for example, `A1:D5`). You can also
+     * get cells from other sheets within the same spreadsheet (for example, `Sheet2!A1:C4`) or retrieve
+     * multiple ranges at once (for example, `?ranges=A1:D5&ranges=Sheet2!A1:C4`). Limiting the range
+     * returns only the portions of the spreadsheet that intersect the requested ranges.
      *
      * Create a request for the method "spreadsheets.get".
      *
@@ -421,16 +421,17 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
       /**
        * Returns the spreadsheet at the given ID. The caller must specify the spreadsheet ID. By
        * default, data within grids is not returned. You can include grid data in one of 2 ways: *
-       * Specify a [field mask](https://developers.google.com/sheets/api/guides/field-masks) listing
-       * your desired fields using the `fields` URL parameter in HTTP * Set the includeGridData URL
-       * parameter to true. If a field mask is set, the `includeGridData` parameter is ignored For large
-       * spreadsheets, as a best practice, retrieve only the specific spreadsheet fields that you want.
-       * To retrieve only subsets of spreadsheet data, use the ranges URL parameter. Ranges are
-       * specified using [A1 notation](/sheets/api/guides/concepts#cell). You can define a single cell
-       * (for example, `A1`) or multiple cells (for example, `A1:D5`). You can also get cells from other
-       * sheets within the same spreadsheet (for example, `Sheet2!A1:C4`) or retrieve multiple ranges at
-       * once (for example, `?ranges=A1:D5&ranges=Sheet2!A1:C4`). Limiting the range returns only the
-       * portions of the spreadsheet that intersect the requested ranges.
+       * Specify a [field mask](https://developers.google.com/workspace/sheets/api/guides/field-masks)
+       * listing your desired fields using the `fields` URL parameter in HTTP * Set the includeGridData
+       * URL parameter to true. If a field mask is set, the `includeGridData` parameter is ignored For
+       * large spreadsheets, as a best practice, retrieve only the specific spreadsheet fields that you
+       * want. To retrieve only subsets of spreadsheet data, use the ranges URL parameter. Ranges are
+       * specified using [A1
+       * notation](https://developers.google.com/workspace/sheets/api/guides/concepts#cell). You can
+       * define a single cell (for example, `A1`) or multiple cells (for example, `A1:D5`). You can also
+       * get cells from other sheets within the same spreadsheet (for example, `Sheet2!A1:C4`) or
+       * retrieve multiple ranges at once (for example, `?ranges=A1:D5&ranges=Sheet2!A1:C4`). Limiting
+       * the range returns only the portions of the spreadsheet that intersect the requested ranges.
        *
        * Create a request for the method "spreadsheets.get".
        *
@@ -528,6 +529,22 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
         return this;
       }
 
+      /** True if tables should be excluded in the banded ranges. False if not set. */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean excludeTablesInBandedRanges;
+
+      /** True if tables should be excluded in the banded ranges. False if not set.
+       */
+      public java.lang.Boolean getExcludeTablesInBandedRanges() {
+        return excludeTablesInBandedRanges;
+      }
+
+      /** True if tables should be excluded in the banded ranges. False if not set. */
+      public Get setExcludeTablesInBandedRanges(java.lang.Boolean excludeTablesInBandedRanges) {
+        this.excludeTablesInBandedRanges = excludeTablesInBandedRanges;
+        return this;
+      }
+
       /**
        * True if grid data should be returned. This parameter is ignored if a field mask was set in
        * the request.
@@ -578,10 +595,11 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
      * return by specifying a dataFilters parameter. Multiple DataFilters can be specified. Specifying
      * one or more data filters returns the portions of the spreadsheet that intersect ranges matched by
      * any of the filters. By default, data within grids is not returned. You can include grid data one
-     * of 2 ways: * Specify a [field mask](https://developers.google.com/sheets/api/guides/field-masks)
-     * listing your desired fields using the `fields` URL parameter in HTTP * Set the includeGridData
-     * parameter to true. If a field mask is set, the `includeGridData` parameter is ignored For large
-     * spreadsheets, as a best practice, retrieve only the specific spreadsheet fields that you want.
+     * of 2 ways: * Specify a [field
+     * mask](https://developers.google.com/workspace/sheets/api/guides/field-masks) listing your desired
+     * fields using the `fields` URL parameter in HTTP * Set the includeGridData parameter to true. If a
+     * field mask is set, the `includeGridData` parameter is ignored For large spreadsheets, as a best
+     * practice, retrieve only the specific spreadsheet fields that you want.
      *
      * Create a request for the method "spreadsheets.getByDataFilter".
      *
@@ -609,10 +627,10 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
        * Specifying one or more data filters returns the portions of the spreadsheet that intersect
        * ranges matched by any of the filters. By default, data within grids is not returned. You can
        * include grid data one of 2 ways: * Specify a [field
-       * mask](https://developers.google.com/sheets/api/guides/field-masks) listing your desired fields
-       * using the `fields` URL parameter in HTTP * Set the includeGridData parameter to true. If a
-       * field mask is set, the `includeGridData` parameter is ignored For large spreadsheets, as a best
-       * practice, retrieve only the specific spreadsheet fields that you want.
+       * mask](https://developers.google.com/workspace/sheets/api/guides/field-masks) listing your
+       * desired fields using the `fields` URL parameter in HTTP * Set the includeGridData parameter to
+       * true. If a field mask is set, the `includeGridData` parameter is ignored For large
+       * spreadsheets, as a best practice, retrieve only the specific spreadsheet fields that you want.
        *
        * Create a request for the method "spreadsheets.getByDataFilter".
        *
@@ -1182,12 +1200,13 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
       /**
        * Appends values to a spreadsheet. The input range is used to search for existing data and find a
        * "table" within that range. Values will be appended to the next row of the table, starting with
-       * the first column of the table. See the [guide](/sheets/api/guides/values#appending_values) and
-       * [sample code](/sheets/api/samples/writing#append_values) for specific details of how tables are
-       * detected and data is appended. The caller must specify the spreadsheet ID, range, and a
-       * valueInputOption. The `valueInputOption` only controls how the input data will be added to the
-       * sheet (column-wise or row-wise), it does not influence what cell the data starts being written
-       * to.
+       * the first column of the table. See the
+       * [guide](https://developers.google.com/workspace/sheets/api/guides/values#appending_values) and
+       * [sample code](https://developers.google.com/workspace/sheets/api/samples/writing#append_values)
+       * for specific details of how tables are detected and data is appended. The caller must specify the
+       * spreadsheet ID, range, and a valueInputOption. The `valueInputOption` only controls how the input
+       * data will be added to the sheet (column-wise or row-wise), it does not influence what cell the
+       * data starts being written to.
        *
        * Create a request for the method "values.append".
        *
@@ -1195,8 +1214,9 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
        * parameters, call the {@link Append#execute()} method to invoke the remote operation.
        *
        * @param spreadsheetId The ID of the spreadsheet to update.
-       * @param range The [A1 notation](/sheets/api/guides/concepts#cell) of a range to search for a logical table of
-       *        data. Values are appended after the last row of the table.
+       * @param range The [A1 notation](https://developers.google.com/workspace/sheets/api/guides/concepts#cell) of a
+       *        range to search for a logical table of data. Values are appended after the last row of the
+       *        table.
        * @param content the {@link com.google.api.services.sheets.v4.model.ValueRange}
        * @return the request
        */
@@ -1213,12 +1233,13 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
         /**
          * Appends values to a spreadsheet. The input range is used to search for existing data and find a
          * "table" within that range. Values will be appended to the next row of the table, starting with
-         * the first column of the table. See the [guide](/sheets/api/guides/values#appending_values) and
-         * [sample code](/sheets/api/samples/writing#append_values) for specific details of how tables are
-         * detected and data is appended. The caller must specify the spreadsheet ID, range, and a
-         * valueInputOption. The `valueInputOption` only controls how the input data will be added to the
-         * sheet (column-wise or row-wise), it does not influence what cell the data starts being written
-         * to.
+         * the first column of the table. See the
+         * [guide](https://developers.google.com/workspace/sheets/api/guides/values#appending_values) and
+         * [sample code](https://developers.google.com/workspace/sheets/api/samples/writing#append_values)
+         * for specific details of how tables are detected and data is appended. The caller must specify
+         * the spreadsheet ID, range, and a valueInputOption. The `valueInputOption` only controls how the
+         * input data will be added to the sheet (column-wise or row-wise), it does not influence what
+         * cell the data starts being written to.
          *
          * Create a request for the method "values.append".
          *
@@ -1228,8 +1249,9 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param spreadsheetId The ID of the spreadsheet to update.
-         * @param range The [A1 notation](/sheets/api/guides/concepts#cell) of a range to search for a logical table of
-       *        data. Values are appended after the last row of the table.
+         * @param range The [A1 notation](https://developers.google.com/workspace/sheets/api/guides/concepts#cell) of a
+       *        range to search for a logical table of data. Values are appended after the last row of the
+       *        table.
          * @param content the {@link com.google.api.services.sheets.v4.model.ValueRange}
          * @since 1.13
          */
@@ -1311,22 +1333,26 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * The [A1 notation](/sheets/api/guides/concepts#cell) of a range to search for a logical
-         * table of data. Values are appended after the last row of the table.
+         * The [A1
+         * notation](https://developers.google.com/workspace/sheets/api/guides/concepts#cell) of a
+         * range to search for a logical table of data. Values are appended after the last row of
+         * the table.
          */
         @com.google.api.client.util.Key
         private java.lang.String range;
 
-        /** The [A1 notation](/sheets/api/guides/concepts#cell) of a range to search for a logical table of
-       data. Values are appended after the last row of the table.
+        /** The [A1 notation](https://developers.google.com/workspace/sheets/api/guides/concepts#cell) of a
+       range to search for a logical table of data. Values are appended after the last row of the table.
          */
         public java.lang.String getRange() {
           return range;
         }
 
         /**
-         * The [A1 notation](/sheets/api/guides/concepts#cell) of a range to search for a logical
-         * table of data. Values are appended after the last row of the table.
+         * The [A1
+         * notation](https://developers.google.com/workspace/sheets/api/guides/concepts#cell) of a
+         * range to search for a logical table of data. Values are appended after the last row of
+         * the table.
          */
         public Append setRange(java.lang.String range) {
           this.range = range;
@@ -1867,22 +1893,25 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * The [A1 notation or R1C1 notation](/sheets/api/guides/concepts#cell) of the range to
-         * retrieve values from.
+         * The [A1 notation or R1C1
+         * notation](https://developers.google.com/workspace/sheets/api/guides/concepts#cell) of the
+         * range to retrieve values from.
          */
         @com.google.api.client.util.Key
         private java.util.List<java.lang.String> ranges;
 
-        /** The [A1 notation or R1C1 notation](/sheets/api/guides/concepts#cell) of the range to retrieve
-       values from.
+        /** The [A1 notation or R1C1
+       notation](https://developers.google.com/workspace/sheets/api/guides/concepts#cell) of the range to
+       retrieve values from.
          */
         public java.util.List<java.lang.String> getRanges() {
           return ranges;
         }
 
         /**
-         * The [A1 notation or R1C1 notation](/sheets/api/guides/concepts#cell) of the range to
-         * retrieve values from.
+         * The [A1 notation or R1C1
+         * notation](https://developers.google.com/workspace/sheets/api/guides/concepts#cell) of the
+         * range to retrieve values from.
          */
         public BatchGet setRanges(java.util.List<java.lang.String> ranges) {
           this.ranges = ranges;
@@ -2292,7 +2321,9 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
        * parameters, call the {@link Clear#execute()} method to invoke the remote operation.
        *
        * @param spreadsheetId The ID of the spreadsheet to update.
-       * @param range The [A1 notation or R1C1 notation](/sheets/api/guides/concepts#cell) of the values to clear.
+       * @param range The [A1 notation or R1C1
+       *        notation](https://developers.google.com/workspace/sheets/api/guides/concepts#cell) of the
+       *        values to clear.
        * @param content the {@link com.google.api.services.sheets.v4.model.ClearValuesRequest}
        * @return the request
        */
@@ -2319,7 +2350,9 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param spreadsheetId The ID of the spreadsheet to update.
-         * @param range The [A1 notation or R1C1 notation](/sheets/api/guides/concepts#cell) of the values to clear.
+         * @param range The [A1 notation or R1C1
+       *        notation](https://developers.google.com/workspace/sheets/api/guides/concepts#cell) of the
+       *        values to clear.
          * @param content the {@link com.google.api.services.sheets.v4.model.ClearValuesRequest}
          * @since 1.13
          */
@@ -2401,21 +2434,25 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * The [A1 notation or R1C1 notation](/sheets/api/guides/concepts#cell) of the values to
-         * clear.
+         * The [A1 notation or R1C1
+         * notation](https://developers.google.com/workspace/sheets/api/guides/concepts#cell) of the
+         * values to clear.
          */
         @com.google.api.client.util.Key
         private java.lang.String range;
 
-        /** The [A1 notation or R1C1 notation](/sheets/api/guides/concepts#cell) of the values to clear.
+        /** The [A1 notation or R1C1
+       notation](https://developers.google.com/workspace/sheets/api/guides/concepts#cell) of the values to
+       clear.
          */
         public java.lang.String getRange() {
           return range;
         }
 
         /**
-         * The [A1 notation or R1C1 notation](/sheets/api/guides/concepts#cell) of the values to
-         * clear.
+         * The [A1 notation or R1C1
+         * notation](https://developers.google.com/workspace/sheets/api/guides/concepts#cell) of the
+         * values to clear.
          */
         public Clear setRange(java.lang.String range) {
           this.range = range;
@@ -2437,8 +2474,9 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
        * @param spreadsheetId The ID of the spreadsheet to retrieve data from.
-       * @param range The [A1 notation or R1C1 notation](/sheets/api/guides/concepts#cell) of the range to retrieve values
-       *        from.
+       * @param range The [A1 notation or R1C1
+       *        notation](https://developers.google.com/workspace/sheets/api/guides/concepts#cell) of the
+       *        range to retrieve values from.
        * @return the request
        */
       public Get get(java.lang.String spreadsheetId, java.lang.String range) throws java.io.IOException {
@@ -2463,8 +2501,9 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param spreadsheetId The ID of the spreadsheet to retrieve data from.
-         * @param range The [A1 notation or R1C1 notation](/sheets/api/guides/concepts#cell) of the range to retrieve values
-       *        from.
+         * @param range The [A1 notation or R1C1
+       *        notation](https://developers.google.com/workspace/sheets/api/guides/concepts#cell) of the
+       *        range to retrieve values from.
          * @since 1.13
          */
         protected Get(java.lang.String spreadsheetId, java.lang.String range) {
@@ -2555,22 +2594,25 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * The [A1 notation or R1C1 notation](/sheets/api/guides/concepts#cell) of the range to
-         * retrieve values from.
+         * The [A1 notation or R1C1
+         * notation](https://developers.google.com/workspace/sheets/api/guides/concepts#cell) of the
+         * range to retrieve values from.
          */
         @com.google.api.client.util.Key
         private java.lang.String range;
 
-        /** The [A1 notation or R1C1 notation](/sheets/api/guides/concepts#cell) of the range to retrieve
-       values from.
+        /** The [A1 notation or R1C1
+       notation](https://developers.google.com/workspace/sheets/api/guides/concepts#cell) of the range to
+       retrieve values from.
          */
         public java.lang.String getRange() {
           return range;
         }
 
         /**
-         * The [A1 notation or R1C1 notation](/sheets/api/guides/concepts#cell) of the range to
-         * retrieve values from.
+         * The [A1 notation or R1C1
+         * notation](https://developers.google.com/workspace/sheets/api/guides/concepts#cell) of the
+         * range to retrieve values from.
          */
         public Get setRange(java.lang.String range) {
           this.range = range;
@@ -2668,7 +2710,8 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
        * parameters, call the {@link Update#execute()} method to invoke the remote operation.
        *
        * @param spreadsheetId The ID of the spreadsheet to update.
-       * @param range The [A1 notation](/sheets/api/guides/concepts#cell) of the values to update.
+       * @param range The [A1 notation](https://developers.google.com/workspace/sheets/api/guides/concepts#cell) of the
+       *        values to update.
        * @param content the {@link com.google.api.services.sheets.v4.model.ValueRange}
        * @return the request
        */
@@ -2694,7 +2737,8 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param spreadsheetId The ID of the spreadsheet to update.
-         * @param range The [A1 notation](/sheets/api/guides/concepts#cell) of the values to update.
+         * @param range The [A1 notation](https://developers.google.com/workspace/sheets/api/guides/concepts#cell) of the
+       *        values to update.
          * @param content the {@link com.google.api.services.sheets.v4.model.ValueRange}
          * @since 1.13
          */
@@ -2775,17 +2819,26 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
           return this;
         }
 
-        /** The [A1 notation](/sheets/api/guides/concepts#cell) of the values to update. */
+        /**
+         * The [A1
+         * notation](https://developers.google.com/workspace/sheets/api/guides/concepts#cell) of the
+         * values to update.
+         */
         @com.google.api.client.util.Key
         private java.lang.String range;
 
-        /** The [A1 notation](/sheets/api/guides/concepts#cell) of the values to update.
+        /** The [A1 notation](https://developers.google.com/workspace/sheets/api/guides/concepts#cell) of the
+       values to update.
          */
         public java.lang.String getRange() {
           return range;
         }
 
-        /** The [A1 notation](/sheets/api/guides/concepts#cell) of the values to update. */
+        /**
+         * The [A1
+         * notation](https://developers.google.com/workspace/sheets/api/guides/concepts#cell) of the
+         * values to update.
+         */
         public Update setRange(java.lang.String range) {
           this.range = range;
           return this;

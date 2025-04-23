@@ -47,7 +47,7 @@ public final class ProtectedRange extends com.google.api.client.json.GenericJson
 
   /**
    * The named range this protected range is backed by, if any. When writing, only one of range or
-   * named_range_id may be set.
+   * named_range_id or table_id may be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,8 @@ public final class ProtectedRange extends com.google.api.client.json.GenericJson
 
   /**
    * The range that is being protected. The range may be fully unbounded, in which case this is
-   * considered a protected sheet. When writing, only one of range or named_range_id may be set.
+   * considered a protected sheet. When writing, only one of range or named_range_id or table_id may
+   * be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,6 +76,14 @@ public final class ProtectedRange extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean requestingUserCanEdit;
+
+  /**
+   * The table this protected range is backed by, if any. When writing, only one of range or
+   * named_range_id or table_id may be set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String tableId;
 
   /**
    * The list of unprotected ranges within a protected sheet. Unprotected ranges are only supported
@@ -142,7 +151,7 @@ public final class ProtectedRange extends com.google.api.client.json.GenericJson
 
   /**
    * The named range this protected range is backed by, if any. When writing, only one of range or
-   * named_range_id may be set.
+   * named_range_id or table_id may be set.
    * @return value or {@code null} for none
    */
   public java.lang.String getNamedRangeId() {
@@ -151,7 +160,7 @@ public final class ProtectedRange extends com.google.api.client.json.GenericJson
 
   /**
    * The named range this protected range is backed by, if any. When writing, only one of range or
-   * named_range_id may be set.
+   * named_range_id or table_id may be set.
    * @param namedRangeId namedRangeId or {@code null} for none
    */
   public ProtectedRange setNamedRangeId(java.lang.String namedRangeId) {
@@ -178,7 +187,8 @@ public final class ProtectedRange extends com.google.api.client.json.GenericJson
 
   /**
    * The range that is being protected. The range may be fully unbounded, in which case this is
-   * considered a protected sheet. When writing, only one of range or named_range_id may be set.
+   * considered a protected sheet. When writing, only one of range or named_range_id or table_id may
+   * be set.
    * @return value or {@code null} for none
    */
   public GridRange getRange() {
@@ -187,7 +197,8 @@ public final class ProtectedRange extends com.google.api.client.json.GenericJson
 
   /**
    * The range that is being protected. The range may be fully unbounded, in which case this is
-   * considered a protected sheet. When writing, only one of range or named_range_id may be set.
+   * considered a protected sheet. When writing, only one of range or named_range_id or table_id may
+   * be set.
    * @param range range or {@code null} for none
    */
   public ProtectedRange setRange(GridRange range) {
@@ -211,6 +222,25 @@ public final class ProtectedRange extends com.google.api.client.json.GenericJson
    */
   public ProtectedRange setRequestingUserCanEdit(java.lang.Boolean requestingUserCanEdit) {
     this.requestingUserCanEdit = requestingUserCanEdit;
+    return this;
+  }
+
+  /**
+   * The table this protected range is backed by, if any. When writing, only one of range or
+   * named_range_id or table_id may be set.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTableId() {
+    return tableId;
+  }
+
+  /**
+   * The table this protected range is backed by, if any. When writing, only one of range or
+   * named_range_id or table_id may be set.
+   * @param tableId tableId or {@code null} for none
+   */
+  public ProtectedRange setTableId(java.lang.String tableId) {
+    this.tableId = tableId;
     return this;
   }
 

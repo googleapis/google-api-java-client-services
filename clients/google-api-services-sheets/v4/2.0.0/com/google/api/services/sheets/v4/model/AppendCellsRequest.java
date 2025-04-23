@@ -54,6 +54,14 @@ public final class AppendCellsRequest extends com.google.api.client.json.Generic
   private java.lang.Integer sheetId;
 
   /**
+   * The ID of the table to append data to. The data will be only appended to the table body. This
+   * field also takes precedence over the `sheet_id` field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String tableId;
+
+  /**
    * The fields of CellData that should be updated. At least one field must be specified. The root
    * is the CellData; 'row.values.' should not be specified. A single `"*"` can be used as short-
    * hand for listing every field.
@@ -105,6 +113,25 @@ public final class AppendCellsRequest extends com.google.api.client.json.Generic
    */
   public AppendCellsRequest setSheetId(java.lang.Integer sheetId) {
     this.sheetId = sheetId;
+    return this;
+  }
+
+  /**
+   * The ID of the table to append data to. The data will be only appended to the table body. This
+   * field also takes precedence over the `sheet_id` field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTableId() {
+    return tableId;
+  }
+
+  /**
+   * The ID of the table to append data to. The data will be only appended to the table body. This
+   * field also takes precedence over the `sheet_id` field.
+   * @param tableId tableId or {@code null} for none
+   */
+  public AppendCellsRequest setTableId(java.lang.String tableId) {
+    this.tableId = tableId;
     return this;
   }
 

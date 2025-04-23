@@ -17,7 +17,7 @@
 package com.google.api.services.sheets.v4.model;
 
 /**
- * The request for clearing more than one range of values in a spreadsheet.
+ * Adds a new table to the spreadsheet.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Sheets API. For a detailed explanation see:
@@ -27,43 +27,40 @@ package com.google.api.services.sheets.v4.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class BatchClearValuesRequest extends com.google.api.client.json.GenericJson {
+public final class AddTableRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The ranges to clear, in [A1 notation or R1C1
-   * notation](https://developers.google.com/workspace/sheets/api/guides/concepts#cell).
+   * Required. The table to add.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> ranges;
+  private Table table;
 
   /**
-   * The ranges to clear, in [A1 notation or R1C1
-   * notation](https://developers.google.com/workspace/sheets/api/guides/concepts#cell).
+   * Required. The table to add.
    * @return value or {@code null} for none
    */
-  public java.util.List<java.lang.String> getRanges() {
-    return ranges;
+  public Table getTable() {
+    return table;
   }
 
   /**
-   * The ranges to clear, in [A1 notation or R1C1
-   * notation](https://developers.google.com/workspace/sheets/api/guides/concepts#cell).
-   * @param ranges ranges or {@code null} for none
+   * Required. The table to add.
+   * @param table table or {@code null} for none
    */
-  public BatchClearValuesRequest setRanges(java.util.List<java.lang.String> ranges) {
-    this.ranges = ranges;
+  public AddTableRequest setTable(Table table) {
+    this.table = table;
     return this;
   }
 
   @Override
-  public BatchClearValuesRequest set(String fieldName, Object value) {
-    return (BatchClearValuesRequest) super.set(fieldName, value);
+  public AddTableRequest set(String fieldName, Object value) {
+    return (AddTableRequest) super.set(fieldName, value);
   }
 
   @Override
-  public BatchClearValuesRequest clone() {
-    return (BatchClearValuesRequest) super.clone();
+  public AddTableRequest clone() {
+    return (AddTableRequest) super.clone();
   }
 
 }

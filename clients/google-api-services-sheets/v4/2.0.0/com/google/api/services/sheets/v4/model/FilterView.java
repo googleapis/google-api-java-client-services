@@ -67,15 +67,15 @@ public final class FilterView extends com.google.api.client.json.GenericJson {
 
   /**
    * The named range this filter view is backed by, if any. When writing, only one of range or
-   * named_range_id may be set.
+   * named_range_id or table_id may be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String namedRangeId;
 
   /**
-   * The range this filter view covers. When writing, only one of range or named_range_id may be
-   * set.
+   * The range this filter view covers. When writing, only one of range or named_range_id or
+   * table_id may be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,6 +88,14 @@ public final class FilterView extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<SortSpec> sortSpecs;
+
+  /**
+   * The table this filter view is backed by, if any. When writing, only one of range or
+   * named_range_id or table_id may be set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String tableId;
 
   /**
    * The name of the filter view.
@@ -155,7 +163,7 @@ public final class FilterView extends com.google.api.client.json.GenericJson {
 
   /**
    * The named range this filter view is backed by, if any. When writing, only one of range or
-   * named_range_id may be set.
+   * named_range_id or table_id may be set.
    * @return value or {@code null} for none
    */
   public java.lang.String getNamedRangeId() {
@@ -164,7 +172,7 @@ public final class FilterView extends com.google.api.client.json.GenericJson {
 
   /**
    * The named range this filter view is backed by, if any. When writing, only one of range or
-   * named_range_id may be set.
+   * named_range_id or table_id may be set.
    * @param namedRangeId namedRangeId or {@code null} for none
    */
   public FilterView setNamedRangeId(java.lang.String namedRangeId) {
@@ -173,8 +181,8 @@ public final class FilterView extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The range this filter view covers. When writing, only one of range or named_range_id may be
-   * set.
+   * The range this filter view covers. When writing, only one of range or named_range_id or
+   * table_id may be set.
    * @return value or {@code null} for none
    */
   public GridRange getRange() {
@@ -182,8 +190,8 @@ public final class FilterView extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The range this filter view covers. When writing, only one of range or named_range_id may be
-   * set.
+   * The range this filter view covers. When writing, only one of range or named_range_id or
+   * table_id may be set.
    * @param range range or {@code null} for none
    */
   public FilterView setRange(GridRange range) {
@@ -207,6 +215,25 @@ public final class FilterView extends com.google.api.client.json.GenericJson {
    */
   public FilterView setSortSpecs(java.util.List<SortSpec> sortSpecs) {
     this.sortSpecs = sortSpecs;
+    return this;
+  }
+
+  /**
+   * The table this filter view is backed by, if any. When writing, only one of range or
+   * named_range_id or table_id may be set.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTableId() {
+    return tableId;
+  }
+
+  /**
+   * The table this filter view is backed by, if any. When writing, only one of range or
+   * named_range_id or table_id may be set.
+   * @param tableId tableId or {@code null} for none
+   */
+  public FilterView setTableId(java.lang.String tableId) {
+    this.tableId = tableId;
     return this;
   }
 

@@ -44,6 +44,14 @@ public final class Config extends com.google.api.client.json.GenericJson {
   private DefaultValues defaultValues;
 
   /**
+   * Output only. Flag to disable the creation of legacy Workbench notebooks (User-managed notebooks
+   * and Google-managed notebooks).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean disableWorkbenchLegacyCreation;
+
+  /**
    * Output only. The supported values for configuration.
    * The value may be {@code null}.
    */
@@ -81,6 +89,25 @@ public final class Config extends com.google.api.client.json.GenericJson {
    */
   public Config setDefaultValues(DefaultValues defaultValues) {
     this.defaultValues = defaultValues;
+    return this;
+  }
+
+  /**
+   * Output only. Flag to disable the creation of legacy Workbench notebooks (User-managed notebooks
+   * and Google-managed notebooks).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDisableWorkbenchLegacyCreation() {
+    return disableWorkbenchLegacyCreation;
+  }
+
+  /**
+   * Output only. Flag to disable the creation of legacy Workbench notebooks (User-managed notebooks
+   * and Google-managed notebooks).
+   * @param disableWorkbenchLegacyCreation disableWorkbenchLegacyCreation or {@code null} for none
+   */
+  public Config setDisableWorkbenchLegacyCreation(java.lang.Boolean disableWorkbenchLegacyCreation) {
+    this.disableWorkbenchLegacyCreation = disableWorkbenchLegacyCreation;
     return this;
   }
 

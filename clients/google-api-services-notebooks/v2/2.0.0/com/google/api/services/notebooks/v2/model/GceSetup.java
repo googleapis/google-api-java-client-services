@@ -53,6 +53,13 @@ public final class GceSetup extends com.google.api.client.json.GenericJson {
   private BootDisk bootDisk;
 
   /**
+   * Optional. Confidential instance configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ConfidentialInstanceConfig confidentialInstanceConfig;
+
+  /**
    * Optional. Use a container image to start the notebook instance.
    * The value may be {@code null}.
    */
@@ -193,6 +200,23 @@ public final class GceSetup extends com.google.api.client.json.GenericJson {
    */
   public GceSetup setBootDisk(BootDisk bootDisk) {
     this.bootDisk = bootDisk;
+    return this;
+  }
+
+  /**
+   * Optional. Confidential instance configuration.
+   * @return value or {@code null} for none
+   */
+  public ConfidentialInstanceConfig getConfidentialInstanceConfig() {
+    return confidentialInstanceConfig;
+  }
+
+  /**
+   * Optional. Confidential instance configuration.
+   * @param confidentialInstanceConfig confidentialInstanceConfig or {@code null} for none
+   */
+  public GceSetup setConfidentialInstanceConfig(ConfidentialInstanceConfig confidentialInstanceConfig) {
+    this.confidentialInstanceConfig = confidentialInstanceConfig;
     return this;
   }
 

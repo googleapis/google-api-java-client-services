@@ -65,8 +65,14 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
    * metadata is available under the namespace `com.google....`. For example:
    * `com.google.lb_traffic_extension.lbtrafficextension1.chain1.ext1`. The following variables are
    * supported in the metadata: `{forwarding_rule_id}` - substituted with the forwarding rule's
-   * fully qualified resource name. This field is not supported for plugin extensions. Setting it
-   * results in a validation error.
+   * fully qualified resource name. This field must not be set for plugin extensions. Setting it
+   * results in a validation error. You can set metadata at either the resource level or the
+   * extension level. The extension level metadata is recommended because you can pass a different
+   * set of metadata through each extension to the backend. This field is subject to following
+   * limitations: * The total size of the metadata must be less than 1KiB. * The total number of
+   * keys in the metadata must be less than 16. * The length of each key must be less than 64
+   * characters. * The length of each value must be less than 1024 characters. * All values must be
+   * strings.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,8 +107,8 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
 
   /**
    * Optional. A set of events during request or response processing for which this extension is
-   * called. This field is required for the `LbTrafficExtension` resource. It must not be set for
-   * the `LbRouteExtension` resource, otherwise a validation error is returned.
+   * called. This field is required for the `LbTrafficExtension` resource. It is optional for the
+   * `LbRouteExtension` resource. If unspecified `REQUEST_HEADERS` event is assumed as supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -192,8 +198,14 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
    * metadata is available under the namespace `com.google....`. For example:
    * `com.google.lb_traffic_extension.lbtrafficextension1.chain1.ext1`. The following variables are
    * supported in the metadata: `{forwarding_rule_id}` - substituted with the forwarding rule's
-   * fully qualified resource name. This field is not supported for plugin extensions. Setting it
-   * results in a validation error.
+   * fully qualified resource name. This field must not be set for plugin extensions. Setting it
+   * results in a validation error. You can set metadata at either the resource level or the
+   * extension level. The extension level metadata is recommended because you can pass a different
+   * set of metadata through each extension to the backend. This field is subject to following
+   * limitations: * The total size of the metadata must be less than 1KiB. * The total number of
+   * keys in the metadata must be less than 16. * The length of each key must be less than 64
+   * characters. * The length of each value must be less than 1024 characters. * All values must be
+   * strings.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getMetadata() {
@@ -206,8 +218,14 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
    * metadata is available under the namespace `com.google....`. For example:
    * `com.google.lb_traffic_extension.lbtrafficextension1.chain1.ext1`. The following variables are
    * supported in the metadata: `{forwarding_rule_id}` - substituted with the forwarding rule's
-   * fully qualified resource name. This field is not supported for plugin extensions. Setting it
-   * results in a validation error.
+   * fully qualified resource name. This field must not be set for plugin extensions. Setting it
+   * results in a validation error. You can set metadata at either the resource level or the
+   * extension level. The extension level metadata is recommended because you can pass a different
+   * set of metadata through each extension to the backend. This field is subject to following
+   * limitations: * The total size of the metadata must be less than 1KiB. * The total number of
+   * keys in the metadata must be less than 16. * The length of each key must be less than 64
+   * characters. * The length of each value must be less than 1024 characters. * All values must be
+   * strings.
    * @param metadata metadata or {@code null} for none
    */
   public ExtensionChainExtension setMetadata(java.util.Map<String, java.lang.Object> metadata) {
@@ -277,8 +295,8 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
 
   /**
    * Optional. A set of events during request or response processing for which this extension is
-   * called. This field is required for the `LbTrafficExtension` resource. It must not be set for
-   * the `LbRouteExtension` resource, otherwise a validation error is returned.
+   * called. This field is required for the `LbTrafficExtension` resource. It is optional for the
+   * `LbRouteExtension` resource. If unspecified `REQUEST_HEADERS` event is assumed as supported.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSupportedEvents() {
@@ -287,8 +305,8 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
 
   /**
    * Optional. A set of events during request or response processing for which this extension is
-   * called. This field is required for the `LbTrafficExtension` resource. It must not be set for
-   * the `LbRouteExtension` resource, otherwise a validation error is returned.
+   * called. This field is required for the `LbTrafficExtension` resource. It is optional for the
+   * `LbRouteExtension` resource. If unspecified `REQUEST_HEADERS` event is assumed as supported.
    * @param supportedEvents supportedEvents or {@code null} for none
    */
   public ExtensionChainExtension setSupportedEvents(java.util.List<java.lang.String> supportedEvents) {

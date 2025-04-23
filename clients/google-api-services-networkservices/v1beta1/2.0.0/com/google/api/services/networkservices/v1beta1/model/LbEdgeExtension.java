@@ -14,11 +14,11 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.networkservices.v1.model;
+package com.google.api.services.networkservices.v1beta1.model;
 
 /**
- * `LbRouteExtension` is a resource that lets you control where traffic is routed to for a given
- * request.
+ * `LbEdgeExtension` is a resource that lets the extension service influence the Backend Service
+ * selection or Cloud CDN cache keys by modifying the request headers.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Services API. For a detailed explanation see:
@@ -28,7 +28,7 @@ package com.google.api.services.networkservices.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class LbRouteExtension extends com.google.api.client.json.GenericJson {
+public final class LbEdgeExtension extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The timestamp when the resource was created.
@@ -62,7 +62,7 @@ public final class LbRouteExtension extends com.google.api.client.json.GenericJs
 
   /**
    * Required. A list of references to the forwarding rules to which this service extension is
-   * attached. At least one forwarding rule is required. Only one `LbRouteExtension` resource can be
+   * attached. At least one forwarding rule is required. Only one `LbEdgeExtension` resource can be
    * associated with a forwarding rule.
    * The value may be {@code null}.
    */
@@ -70,7 +70,7 @@ public final class LbRouteExtension extends com.google.api.client.json.GenericJs
   private java.util.List<java.lang.String> forwardingRules;
 
   /**
-   * Optional. Set of labels associated with the `LbRouteExtension` resource. The format must comply
+   * Optional. Set of labels associated with the `LbEdgeExtension` resource. The format must comply
    * with [the requirements for labels](https://cloud.google.com/compute/docs/labeling-
    * resources#requirements) for Google Cloud resources.
    * The value may be {@code null}.
@@ -80,32 +80,16 @@ public final class LbRouteExtension extends com.google.api.client.json.GenericJs
 
   /**
    * Required. All backend services and forwarding rules referenced by this extension must share the
-   * same load balancing scheme. Supported values: `INTERNAL_MANAGED`, `EXTERNAL_MANAGED`. For more
-   * information, refer to [Backend services overview](https://cloud.google.com/load-
-   * balancing/docs/backend-service).
+   * same load balancing scheme. Supported values: `EXTERNAL_MANAGED`. For more information, refer
+   * to [Backend services overview](https://cloud.google.com/load-balancing/docs/backend-service).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String loadBalancingScheme;
 
   /**
-   * Optional. The metadata provided here is included as part of the `metadata_context` (of type
-   * `google.protobuf.Struct`) in the `ProcessingRequest` message sent to the extension server. The
-   * metadata applies to all extensions in all extensions chains in this resource. The metadata is
-   * available under the key `com.google.lb_route_extension.`. The following variables are supported
-   * in the metadata: `{forwarding_rule_id}` - substituted with the forwarding rule's fully
-   * qualified resource name. This field must not be set if at least one of the extension chains
-   * contains plugin extensions. Setting it results in a validation error. You can set metadata at
-   * either the resource level or the extension level. The extension level metadata is recommended
-   * because you can pass a different set of metadata through each extension to the backend.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.Map<String, java.lang.Object> metadata;
-
-  /**
-   * Required. Identifier. Name of the `LbRouteExtension` resource in the following format:
-   * `projects/{project}/locations/{location}/lbRouteExtensions/{lb_route_extension}`.
+   * Required. Identifier. Name of the `LbEdgeExtension` resource in the following format:
+   * `projects/{project}/locations/{location}/lbEdgeExtensions/{lb_edge_extension}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -130,7 +114,7 @@ public final class LbRouteExtension extends com.google.api.client.json.GenericJs
    * Output only. The timestamp when the resource was created.
    * @param createTime createTime or {@code null} for none
    */
-  public LbRouteExtension setCreateTime(String createTime) {
+  public LbEdgeExtension setCreateTime(String createTime) {
     this.createTime = createTime;
     return this;
   }
@@ -147,7 +131,7 @@ public final class LbRouteExtension extends com.google.api.client.json.GenericJs
    * Optional. A human-readable description of the resource.
    * @param description description or {@code null} for none
    */
-  public LbRouteExtension setDescription(java.lang.String description) {
+  public LbEdgeExtension setDescription(java.lang.String description) {
     this.description = description;
     return this;
   }
@@ -170,14 +154,14 @@ public final class LbRouteExtension extends com.google.api.client.json.GenericJs
    * Any subsequent extension chains do not execute. Limited to 5 extension chains per resource.
    * @param extensionChains extensionChains or {@code null} for none
    */
-  public LbRouteExtension setExtensionChains(java.util.List<ExtensionChain> extensionChains) {
+  public LbEdgeExtension setExtensionChains(java.util.List<ExtensionChain> extensionChains) {
     this.extensionChains = extensionChains;
     return this;
   }
 
   /**
    * Required. A list of references to the forwarding rules to which this service extension is
-   * attached. At least one forwarding rule is required. Only one `LbRouteExtension` resource can be
+   * attached. At least one forwarding rule is required. Only one `LbEdgeExtension` resource can be
    * associated with a forwarding rule.
    * @return value or {@code null} for none
    */
@@ -187,17 +171,17 @@ public final class LbRouteExtension extends com.google.api.client.json.GenericJs
 
   /**
    * Required. A list of references to the forwarding rules to which this service extension is
-   * attached. At least one forwarding rule is required. Only one `LbRouteExtension` resource can be
+   * attached. At least one forwarding rule is required. Only one `LbEdgeExtension` resource can be
    * associated with a forwarding rule.
    * @param forwardingRules forwardingRules or {@code null} for none
    */
-  public LbRouteExtension setForwardingRules(java.util.List<java.lang.String> forwardingRules) {
+  public LbEdgeExtension setForwardingRules(java.util.List<java.lang.String> forwardingRules) {
     this.forwardingRules = forwardingRules;
     return this;
   }
 
   /**
-   * Optional. Set of labels associated with the `LbRouteExtension` resource. The format must comply
+   * Optional. Set of labels associated with the `LbEdgeExtension` resource. The format must comply
    * with [the requirements for labels](https://cloud.google.com/compute/docs/labeling-
    * resources#requirements) for Google Cloud resources.
    * @return value or {@code null} for none
@@ -207,21 +191,20 @@ public final class LbRouteExtension extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. Set of labels associated with the `LbRouteExtension` resource. The format must comply
+   * Optional. Set of labels associated with the `LbEdgeExtension` resource. The format must comply
    * with [the requirements for labels](https://cloud.google.com/compute/docs/labeling-
    * resources#requirements) for Google Cloud resources.
    * @param labels labels or {@code null} for none
    */
-  public LbRouteExtension setLabels(java.util.Map<String, java.lang.String> labels) {
+  public LbEdgeExtension setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
     return this;
   }
 
   /**
    * Required. All backend services and forwarding rules referenced by this extension must share the
-   * same load balancing scheme. Supported values: `INTERNAL_MANAGED`, `EXTERNAL_MANAGED`. For more
-   * information, refer to [Backend services overview](https://cloud.google.com/load-
-   * balancing/docs/backend-service).
+   * same load balancing scheme. Supported values: `EXTERNAL_MANAGED`. For more information, refer
+   * to [Backend services overview](https://cloud.google.com/load-balancing/docs/backend-service).
    * @return value or {@code null} for none
    */
   public java.lang.String getLoadBalancingScheme() {
@@ -230,52 +213,18 @@ public final class LbRouteExtension extends com.google.api.client.json.GenericJs
 
   /**
    * Required. All backend services and forwarding rules referenced by this extension must share the
-   * same load balancing scheme. Supported values: `INTERNAL_MANAGED`, `EXTERNAL_MANAGED`. For more
-   * information, refer to [Backend services overview](https://cloud.google.com/load-
-   * balancing/docs/backend-service).
+   * same load balancing scheme. Supported values: `EXTERNAL_MANAGED`. For more information, refer
+   * to [Backend services overview](https://cloud.google.com/load-balancing/docs/backend-service).
    * @param loadBalancingScheme loadBalancingScheme or {@code null} for none
    */
-  public LbRouteExtension setLoadBalancingScheme(java.lang.String loadBalancingScheme) {
+  public LbEdgeExtension setLoadBalancingScheme(java.lang.String loadBalancingScheme) {
     this.loadBalancingScheme = loadBalancingScheme;
     return this;
   }
 
   /**
-   * Optional. The metadata provided here is included as part of the `metadata_context` (of type
-   * `google.protobuf.Struct`) in the `ProcessingRequest` message sent to the extension server. The
-   * metadata applies to all extensions in all extensions chains in this resource. The metadata is
-   * available under the key `com.google.lb_route_extension.`. The following variables are supported
-   * in the metadata: `{forwarding_rule_id}` - substituted with the forwarding rule's fully
-   * qualified resource name. This field must not be set if at least one of the extension chains
-   * contains plugin extensions. Setting it results in a validation error. You can set metadata at
-   * either the resource level or the extension level. The extension level metadata is recommended
-   * because you can pass a different set of metadata through each extension to the backend.
-   * @return value or {@code null} for none
-   */
-  public java.util.Map<String, java.lang.Object> getMetadata() {
-    return metadata;
-  }
-
-  /**
-   * Optional. The metadata provided here is included as part of the `metadata_context` (of type
-   * `google.protobuf.Struct`) in the `ProcessingRequest` message sent to the extension server. The
-   * metadata applies to all extensions in all extensions chains in this resource. The metadata is
-   * available under the key `com.google.lb_route_extension.`. The following variables are supported
-   * in the metadata: `{forwarding_rule_id}` - substituted with the forwarding rule's fully
-   * qualified resource name. This field must not be set if at least one of the extension chains
-   * contains plugin extensions. Setting it results in a validation error. You can set metadata at
-   * either the resource level or the extension level. The extension level metadata is recommended
-   * because you can pass a different set of metadata through each extension to the backend.
-   * @param metadata metadata or {@code null} for none
-   */
-  public LbRouteExtension setMetadata(java.util.Map<String, java.lang.Object> metadata) {
-    this.metadata = metadata;
-    return this;
-  }
-
-  /**
-   * Required. Identifier. Name of the `LbRouteExtension` resource in the following format:
-   * `projects/{project}/locations/{location}/lbRouteExtensions/{lb_route_extension}`.
+   * Required. Identifier. Name of the `LbEdgeExtension` resource in the following format:
+   * `projects/{project}/locations/{location}/lbEdgeExtensions/{lb_edge_extension}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -283,11 +232,11 @@ public final class LbRouteExtension extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. Identifier. Name of the `LbRouteExtension` resource in the following format:
-   * `projects/{project}/locations/{location}/lbRouteExtensions/{lb_route_extension}`.
+   * Required. Identifier. Name of the `LbEdgeExtension` resource in the following format:
+   * `projects/{project}/locations/{location}/lbEdgeExtensions/{lb_edge_extension}`.
    * @param name name or {@code null} for none
    */
-  public LbRouteExtension setName(java.lang.String name) {
+  public LbEdgeExtension setName(java.lang.String name) {
     this.name = name;
     return this;
   }
@@ -304,19 +253,19 @@ public final class LbRouteExtension extends com.google.api.client.json.GenericJs
    * Output only. The timestamp when the resource was updated.
    * @param updateTime updateTime or {@code null} for none
    */
-  public LbRouteExtension setUpdateTime(String updateTime) {
+  public LbEdgeExtension setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
     return this;
   }
 
   @Override
-  public LbRouteExtension set(String fieldName, Object value) {
-    return (LbRouteExtension) super.set(fieldName, value);
+  public LbEdgeExtension set(String fieldName, Object value) {
+    return (LbEdgeExtension) super.set(fieldName, value);
   }
 
   @Override
-  public LbRouteExtension clone() {
-    return (LbRouteExtension) super.clone();
+  public LbEdgeExtension clone() {
+    return (LbEdgeExtension) super.clone();
   }
 
 }

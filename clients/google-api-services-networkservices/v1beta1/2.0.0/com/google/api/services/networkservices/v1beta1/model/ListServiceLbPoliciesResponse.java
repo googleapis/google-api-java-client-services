@@ -46,6 +46,14 @@ public final class ListServiceLbPoliciesResponse extends com.google.api.client.j
   private java.util.List<ServiceLbPolicy> serviceLbPolicies;
 
   /**
+   * Unreachable resources. Populated when the request attempts to list all resources across all
+   * supported locations, while some locations are temporarily unavailable.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> unreachable;
+
+  /**
    * If there might be more results than those appearing in this response, then `next_page_token` is
    * included. To get the next set of results, call this method again using the value of
    * `next_page_token` as `page_token`.
@@ -80,6 +88,25 @@ public final class ListServiceLbPoliciesResponse extends com.google.api.client.j
    */
   public ListServiceLbPoliciesResponse setServiceLbPolicies(java.util.List<ServiceLbPolicy> serviceLbPolicies) {
     this.serviceLbPolicies = serviceLbPolicies;
+    return this;
+  }
+
+  /**
+   * Unreachable resources. Populated when the request attempts to list all resources across all
+   * supported locations, while some locations are temporarily unavailable.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getUnreachable() {
+    return unreachable;
+  }
+
+  /**
+   * Unreachable resources. Populated when the request attempts to list all resources across all
+   * supported locations, while some locations are temporarily unavailable.
+   * @param unreachable unreachable or {@code null} for none
+   */
+  public ListServiceLbPoliciesResponse setUnreachable(java.util.List<java.lang.String> unreachable) {
+    this.unreachable = unreachable;
     return this;
   }
 

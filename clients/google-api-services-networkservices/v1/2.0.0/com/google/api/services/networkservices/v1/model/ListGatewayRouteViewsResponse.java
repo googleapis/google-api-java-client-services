@@ -51,6 +51,14 @@ public final class ListGatewayRouteViewsResponse extends com.google.api.client.j
   private java.lang.String nextPageToken;
 
   /**
+   * Unreachable resources. Populated when the request attempts to list all resources across all
+   * supported locations, while some locations are temporarily unavailable.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> unreachable;
+
+  /**
    * List of GatewayRouteView resources.
    * @return value or {@code null} for none
    */
@@ -83,6 +91,25 @@ public final class ListGatewayRouteViewsResponse extends com.google.api.client.j
    */
   public ListGatewayRouteViewsResponse setNextPageToken(java.lang.String nextPageToken) {
     this.nextPageToken = nextPageToken;
+    return this;
+  }
+
+  /**
+   * Unreachable resources. Populated when the request attempts to list all resources across all
+   * supported locations, while some locations are temporarily unavailable.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getUnreachable() {
+    return unreachable;
+  }
+
+  /**
+   * Unreachable resources. Populated when the request attempts to list all resources across all
+   * supported locations, while some locations are temporarily unavailable.
+   * @param unreachable unreachable or {@code null} for none
+   */
+  public ListGatewayRouteViewsResponse setUnreachable(java.util.List<java.lang.String> unreachable) {
+    this.unreachable = unreachable;
     return this;
   }
 

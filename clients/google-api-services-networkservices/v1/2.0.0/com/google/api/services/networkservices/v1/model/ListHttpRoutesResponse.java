@@ -52,6 +52,14 @@ public final class ListHttpRoutesResponse extends com.google.api.client.json.Gen
   private java.lang.String nextPageToken;
 
   /**
+   * Unreachable resources. Populated when the request opts into return_partial_success and reading
+   * across collections e.g. when attempting to list all resources across all supported locations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> unreachable;
+
+  /**
    * List of HttpRoute resources.
    * @return value or {@code null} for none
    */
@@ -86,6 +94,25 @@ public final class ListHttpRoutesResponse extends com.google.api.client.json.Gen
    */
   public ListHttpRoutesResponse setNextPageToken(java.lang.String nextPageToken) {
     this.nextPageToken = nextPageToken;
+    return this;
+  }
+
+  /**
+   * Unreachable resources. Populated when the request opts into return_partial_success and reading
+   * across collections e.g. when attempting to list all resources across all supported locations.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getUnreachable() {
+    return unreachable;
+  }
+
+  /**
+   * Unreachable resources. Populated when the request opts into return_partial_success and reading
+   * across collections e.g. when attempting to list all resources across all supported locations.
+   * @param unreachable unreachable or {@code null} for none
+   */
+  public ListHttpRoutesResponse setUnreachable(java.util.List<java.lang.String> unreachable) {
+    this.unreachable = unreachable;
     return this;
   }
 

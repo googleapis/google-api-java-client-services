@@ -450,136 +450,6 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
         return (GetJwt) super.set(parameterName, value);
       }
     }
-    /**
-     * Provision app distribution for an existing Firebase app, enabling it to subsequently be used by
-     * appdistro.
-     *
-     * Create a request for the method "apps.provisionApp".
-     *
-     * This request holds the parameters needed by the firebaseappdistribution server.  After setting
-     * any optional parameters, call the {@link ProvisionApp#execute()} method to invoke the remote
-     * operation.
-     *
-     * @param mobilesdkAppId Unique id for a Firebase app of the format: {version}:{project_number}:{platform}:{hash(bundle_id)}
-     *        Example: 1:581234567376:android:aa0a3c7b135e90289
-     * @return the request
-     */
-    public ProvisionApp provisionApp(java.lang.String mobilesdkAppId) throws java.io.IOException {
-      ProvisionApp result = new ProvisionApp(mobilesdkAppId);
-      initialize(result);
-      return result;
-    }
-
-    public class ProvisionApp extends FirebaseAppDistributionRequest<com.google.api.services.firebaseappdistribution.v1alpha.model.GoogleFirebaseAppdistroV1alphaProvisionAppResponse> {
-
-      private static final String REST_PATH = "v1alpha/apps/{mobilesdkAppId}";
-
-      /**
-       * Provision app distribution for an existing Firebase app, enabling it to subsequently be used by
-       * appdistro.
-       *
-       * Create a request for the method "apps.provisionApp".
-       *
-       * This request holds the parameters needed by the the firebaseappdistribution server.  After
-       * setting any optional parameters, call the {@link ProvisionApp#execute()} method to invoke the
-       * remote operation. <p> {@link
-       * ProvisionApp#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-       * must be called to initialize this instance immediately after invoking the constructor. </p>
-       *
-       * @param mobilesdkAppId Unique id for a Firebase app of the format: {version}:{project_number}:{platform}:{hash(bundle_id)}
-     *        Example: 1:581234567376:android:aa0a3c7b135e90289
-       * @since 1.13
-       */
-      protected ProvisionApp(java.lang.String mobilesdkAppId) {
-        super(FirebaseAppDistribution.this, "POST", REST_PATH, null, com.google.api.services.firebaseappdistribution.v1alpha.model.GoogleFirebaseAppdistroV1alphaProvisionAppResponse.class);
-        this.mobilesdkAppId = com.google.api.client.util.Preconditions.checkNotNull(mobilesdkAppId, "Required parameter mobilesdkAppId must be specified.");
-      }
-
-      @Override
-      public ProvisionApp set$Xgafv(java.lang.String $Xgafv) {
-        return (ProvisionApp) super.set$Xgafv($Xgafv);
-      }
-
-      @Override
-      public ProvisionApp setAccessToken(java.lang.String accessToken) {
-        return (ProvisionApp) super.setAccessToken(accessToken);
-      }
-
-      @Override
-      public ProvisionApp setAlt(java.lang.String alt) {
-        return (ProvisionApp) super.setAlt(alt);
-      }
-
-      @Override
-      public ProvisionApp setCallback(java.lang.String callback) {
-        return (ProvisionApp) super.setCallback(callback);
-      }
-
-      @Override
-      public ProvisionApp setFields(java.lang.String fields) {
-        return (ProvisionApp) super.setFields(fields);
-      }
-
-      @Override
-      public ProvisionApp setKey(java.lang.String key) {
-        return (ProvisionApp) super.setKey(key);
-      }
-
-      @Override
-      public ProvisionApp setOauthToken(java.lang.String oauthToken) {
-        return (ProvisionApp) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public ProvisionApp setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (ProvisionApp) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public ProvisionApp setQuotaUser(java.lang.String quotaUser) {
-        return (ProvisionApp) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public ProvisionApp setUploadType(java.lang.String uploadType) {
-        return (ProvisionApp) super.setUploadType(uploadType);
-      }
-
-      @Override
-      public ProvisionApp setUploadProtocol(java.lang.String uploadProtocol) {
-        return (ProvisionApp) super.setUploadProtocol(uploadProtocol);
-      }
-
-      /**
-       * Unique id for a Firebase app of the format:
-       * {version}:{project_number}:{platform}:{hash(bundle_id)} Example:
-       * 1:581234567376:android:aa0a3c7b135e90289
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String mobilesdkAppId;
-
-      /** Unique id for a Firebase app of the format: {version}:{project_number}:{platform}:{hash(bundle_id)}
-     Example: 1:581234567376:android:aa0a3c7b135e90289
-       */
-      public java.lang.String getMobilesdkAppId() {
-        return mobilesdkAppId;
-      }
-
-      /**
-       * Unique id for a Firebase app of the format:
-       * {version}:{project_number}:{platform}:{hash(bundle_id)} Example:
-       * 1:581234567376:android:aa0a3c7b135e90289
-       */
-      public ProvisionApp setMobilesdkAppId(java.lang.String mobilesdkAppId) {
-        this.mobilesdkAppId = mobilesdkAppId;
-        return this;
-      }
-
-      @Override
-      public ProvisionApp set(String parameterName, Object value) {
-        return (ProvisionApp) super.set(parameterName, value);
-      }
-    }
 
     /**
      * An accessor for creating requests from the ReleaseByHash collection.
@@ -1802,7 +1672,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
         }
       }
       /**
-       * Updates a release.
+       * Updates automated test configuration.
        *
        * Create a request for the method "apps.updateTestConfig".
        *
@@ -1829,7 +1699,7 @@ public class FirebaseAppDistribution extends com.google.api.client.googleapis.se
             java.util.regex.Pattern.compile("^projects/[^/]+/apps/[^/]+/testConfig$");
 
         /**
-         * Updates a release.
+         * Updates automated test configuration.
          *
          * Create a request for the method "apps.updateTestConfig".
          *

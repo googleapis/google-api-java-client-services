@@ -30,20 +30,11 @@ package com.google.api.services.merchantapi.accounts_v1beta.model;
 public final class SeasonalOverride extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Defines the date range when this seasonal override applies. Both begin and end are
-   * inclusive and should be in date decimal format, example 20250115. The dates of the seasonal
-   * overrides should not overlap.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private Date begin;
-
-  /**
    * Required. seasonal override end date (inclusive).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private Date end;
+  private Date endDate;
 
   /**
    * Required. Display name of this seasonal override in Merchant Center.
@@ -51,13 +42,6 @@ public final class SeasonalOverride extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.lang.String label;
-
-  /**
-   * The return policy for the given date range.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private Policy policy;
 
   /**
    * Number of days (from the delivery date) that the product can be returned.
@@ -74,40 +58,27 @@ public final class SeasonalOverride extends com.google.api.client.json.GenericJs
   private Date returnUntilDate;
 
   /**
-   * Required. Defines the date range when this seasonal override applies. Both begin and end are
-   * inclusive and should be in date decimal format, example 20250115. The dates of the seasonal
-   * overrides should not overlap.
-   * @return value or {@code null} for none
+   * Required. Defines the date range when this seasonal override applies. Both start_date and
+   * end_date are inclusive. The dates of the seasonal overrides should not overlap.
+   * The value may be {@code null}.
    */
-  public Date getBegin() {
-    return begin;
-  }
-
-  /**
-   * Required. Defines the date range when this seasonal override applies. Both begin and end are
-   * inclusive and should be in date decimal format, example 20250115. The dates of the seasonal
-   * overrides should not overlap.
-   * @param begin begin or {@code null} for none
-   */
-  public SeasonalOverride setBegin(Date begin) {
-    this.begin = begin;
-    return this;
-  }
+  @com.google.api.client.util.Key
+  private Date startDate;
 
   /**
    * Required. seasonal override end date (inclusive).
    * @return value or {@code null} for none
    */
-  public Date getEnd() {
-    return end;
+  public Date getEndDate() {
+    return endDate;
   }
 
   /**
    * Required. seasonal override end date (inclusive).
-   * @param end end or {@code null} for none
+   * @param endDate endDate or {@code null} for none
    */
-  public SeasonalOverride setEnd(Date end) {
-    this.end = end;
+  public SeasonalOverride setEndDate(Date endDate) {
+    this.endDate = endDate;
     return this;
   }
 
@@ -125,23 +96,6 @@ public final class SeasonalOverride extends com.google.api.client.json.GenericJs
    */
   public SeasonalOverride setLabel(java.lang.String label) {
     this.label = label;
-    return this;
-  }
-
-  /**
-   * The return policy for the given date range.
-   * @return value or {@code null} for none
-   */
-  public Policy getPolicy() {
-    return policy;
-  }
-
-  /**
-   * The return policy for the given date range.
-   * @param policy policy or {@code null} for none
-   */
-  public SeasonalOverride setPolicy(Policy policy) {
-    this.policy = policy;
     return this;
   }
 
@@ -176,6 +130,25 @@ public final class SeasonalOverride extends com.google.api.client.json.GenericJs
    */
   public SeasonalOverride setReturnUntilDate(Date returnUntilDate) {
     this.returnUntilDate = returnUntilDate;
+    return this;
+  }
+
+  /**
+   * Required. Defines the date range when this seasonal override applies. Both start_date and
+   * end_date are inclusive. The dates of the seasonal overrides should not overlap.
+   * @return value or {@code null} for none
+   */
+  public Date getStartDate() {
+    return startDate;
+  }
+
+  /**
+   * Required. Defines the date range when this seasonal override applies. Both start_date and
+   * end_date are inclusive. The dates of the seasonal overrides should not overlap.
+   * @param startDate startDate or {@code null} for none
+   */
+  public SeasonalOverride setStartDate(Date startDate) {
+    this.startDate = startDate;
     return this;
   }
 

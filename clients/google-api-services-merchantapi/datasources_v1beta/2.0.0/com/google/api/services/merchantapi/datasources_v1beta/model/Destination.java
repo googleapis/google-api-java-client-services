@@ -14,10 +14,11 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.merchantapi.conversions_v1beta.model;
+package com.google.api.services.merchantapi.datasources_v1beta.model;
 
 /**
- * Message representing the type of a conversion event.
+ * Destinations also known as [Marketing
+ * methods](https://support.google.com/merchants/answer/15130232) selections.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:
@@ -27,64 +28,67 @@ package com.google.api.services.merchantapi.conversions_v1beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ConversionType extends com.google.api.client.json.GenericJson {
+public final class Destination extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Conversion event name, as it'll be reported by the client.
+   * [Marketing methods](https://support.google.com/merchants/answer/15130232) (also known as
+   * destination) selections.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String name;
+  private java.lang.String destination;
 
   /**
-   * Output only. Option indicating if the type should be included in Merchant Center reporting.
+   * The state of the destination.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Boolean report;
+  private java.lang.String state;
 
   /**
-   * Output only. Conversion event name, as it'll be reported by the client.
+   * [Marketing methods](https://support.google.com/merchants/answer/15130232) (also known as
+   * destination) selections.
    * @return value or {@code null} for none
    */
-  public java.lang.String getName() {
-    return name;
+  public java.lang.String getDestination() {
+    return destination;
   }
 
   /**
-   * Output only. Conversion event name, as it'll be reported by the client.
-   * @param name name or {@code null} for none
+   * [Marketing methods](https://support.google.com/merchants/answer/15130232) (also known as
+   * destination) selections.
+   * @param destination destination or {@code null} for none
    */
-  public ConversionType setName(java.lang.String name) {
-    this.name = name;
+  public Destination setDestination(java.lang.String destination) {
+    this.destination = destination;
     return this;
   }
 
   /**
-   * Output only. Option indicating if the type should be included in Merchant Center reporting.
+   * The state of the destination.
    * @return value or {@code null} for none
    */
-  public java.lang.Boolean getReport() {
-    return report;
+  public java.lang.String getState() {
+    return state;
   }
 
   /**
-   * Output only. Option indicating if the type should be included in Merchant Center reporting.
-   * @param report report or {@code null} for none
+   * The state of the destination.
+   * @param state state or {@code null} for none
    */
-  public ConversionType setReport(java.lang.Boolean report) {
-    this.report = report;
+  public Destination setState(java.lang.String state) {
+    this.state = state;
     return this;
   }
 
   @Override
-  public ConversionType set(String fieldName, Object value) {
-    return (ConversionType) super.set(fieldName, value);
+  public Destination set(String fieldName, Object value) {
+    return (Destination) super.set(fieldName, value);
   }
 
   @Override
-  public ConversionType clone() {
-    return (ConversionType) super.clone();
+  public Destination clone() {
+    return (Destination) super.clone();
   }
 
 }

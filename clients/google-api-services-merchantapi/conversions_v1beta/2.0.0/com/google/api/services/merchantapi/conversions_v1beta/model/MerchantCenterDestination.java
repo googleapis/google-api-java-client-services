@@ -31,7 +31,7 @@ package com.google.api.services.merchantapi.conversions_v1beta.model;
 public final class MerchantCenterDestination extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Attribution settings being used for the Merchant Center Destination.
+   * Required. Attribution settings used for the Merchant Center Destination.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,14 +54,14 @@ public final class MerchantCenterDestination extends com.google.api.client.json.
 
   /**
    * Required. Merchant-specified display name for the destination. This is the name that identifies
-   * the conversion source within the Merchant Center UI. Limited to 64 characters.
+   * the conversion source within the Merchant Center UI. The maximum length is 64 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Required. Attribution settings being used for the Merchant Center Destination.
+   * Required. Attribution settings used for the Merchant Center Destination.
    * @return value or {@code null} for none
    */
   public AttributionSettings getAttributionSettings() {
@@ -69,7 +69,7 @@ public final class MerchantCenterDestination extends com.google.api.client.json.
   }
 
   /**
-   * Required. Attribution settings being used for the Merchant Center Destination.
+   * Required. Attribution settings used for the Merchant Center Destination.
    * @param attributionSettings attributionSettings or {@code null} for none
    */
   public MerchantCenterDestination setAttributionSettings(AttributionSettings attributionSettings) {
@@ -115,7 +115,7 @@ public final class MerchantCenterDestination extends com.google.api.client.json.
 
   /**
    * Required. Merchant-specified display name for the destination. This is the name that identifies
-   * the conversion source within the Merchant Center UI. Limited to 64 characters.
+   * the conversion source within the Merchant Center UI. The maximum length is 64 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -124,7 +124,7 @@ public final class MerchantCenterDestination extends com.google.api.client.json.
 
   /**
    * Required. Merchant-specified display name for the destination. This is the name that identifies
-   * the conversion source within the Merchant Center UI. Limited to 64 characters.
+   * the conversion source within the Merchant Center UI. The maximum length is 64 characters.
    * @param displayName displayName or {@code null} for none
    */
   public MerchantCenterDestination setDisplayName(java.lang.String displayName) {

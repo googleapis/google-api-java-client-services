@@ -37,8 +37,8 @@ public final class Service extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean active;
 
   /**
-   * The CLDR code of the currency to which this service applies. Must match that of the prices in
-   * rate groups.
+   * Required. The CLDR code of the currency to which this service applies. Must match that of the
+   * prices in rate groups.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -143,8 +143,8 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The CLDR code of the currency to which this service applies. Must match that of the prices in
-   * rate groups.
+   * Required. The CLDR code of the currency to which this service applies. Must match that of the
+   * prices in rate groups.
    * @return value or {@code null} for none
    */
   public java.lang.String getCurrencyCode() {
@@ -152,8 +152,8 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The CLDR code of the currency to which this service applies. Must match that of the prices in
-   * rate groups.
+   * Required. The CLDR code of the currency to which this service applies. Must match that of the
+   * prices in rate groups.
    * @param currencyCode currencyCode or {@code null} for none
    */
   public Service setCurrencyCode(java.lang.String currencyCode) {

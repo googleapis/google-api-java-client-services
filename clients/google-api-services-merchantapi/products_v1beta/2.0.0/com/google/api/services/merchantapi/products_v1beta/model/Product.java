@@ -18,12 +18,11 @@ package com.google.api.services.merchantapi.products_v1beta.model;
 
 /**
  * The processed product, built from multiple product inputs after applying rules and supplemental
- * data sources. This processed product matches what is shown in your Merchant Center account and in
- * Shopping ads and other surfaces across Google. Each product is built from exactly one primary
- * data source product input, and multiple supplemental data source inputs. After inserting,
- * updating, or deleting a product input, it may take several minutes before the updated processed
- * product can be retrieved. All fields in the processed product and its sub-messages match the name
- * of their corresponding attribute in the [Product data
+ * data sources. This processed product matches what is shown in your Merchant Center account. Each
+ * product is built from exactly one primary data source product input, and multiple supplemental
+ * data source inputs. After inserting, updating, or deleting a product input, it may take several
+ * minutes before the updated processed product can be retrieved. All fields in the processed
+ * product and its sub-messages match the name of their corresponding attribute in the [Product data
  * specification](https://support.google.com/merchants/answer/7052112) with some exceptions.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -42,6 +41,13 @@ public final class Product extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private Attributes attributes;
+
+  /**
+   * Output only. The automated discounts information for the product.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AutomatedDiscounts automatedDiscounts;
 
   /**
    * Output only. The [channel](https://support.google.com/merchants/answer/7361332) of the product.
@@ -89,9 +95,9 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.lang.String feedLabel;
 
   /**
-   * The name of the product. Format: `"{product.name=accounts/{account}/products/{product}}"` where
-   * the last section `product` consists of 4 parts: channel~content_language~feed_label~offer_id
-   * example for product name is "accounts/123/products/online~en~US~sku123"
+   * The name of the product. Format: `accounts/{account}/products/{product}` where the last section
+   * `product` consists of 4 parts: `channel~content_language~feed_label~offer_id` example for
+   * product name is `accounts/123/products/online~en~US~sku123`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -141,6 +147,23 @@ public final class Product extends com.google.api.client.json.GenericJson {
    */
   public Product setAttributes(Attributes attributes) {
     this.attributes = attributes;
+    return this;
+  }
+
+  /**
+   * Output only. The automated discounts information for the product.
+   * @return value or {@code null} for none
+   */
+  public AutomatedDiscounts getAutomatedDiscounts() {
+    return automatedDiscounts;
+  }
+
+  /**
+   * Output only. The automated discounts information for the product.
+   * @param automatedDiscounts automatedDiscounts or {@code null} for none
+   */
+  public Product setAutomatedDiscounts(AutomatedDiscounts automatedDiscounts) {
+    this.automatedDiscounts = automatedDiscounts;
     return this;
   }
 
@@ -238,9 +261,9 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the product. Format: `"{product.name=accounts/{account}/products/{product}}"` where
-   * the last section `product` consists of 4 parts: channel~content_language~feed_label~offer_id
-   * example for product name is "accounts/123/products/online~en~US~sku123"
+   * The name of the product. Format: `accounts/{account}/products/{product}` where the last section
+   * `product` consists of 4 parts: `channel~content_language~feed_label~offer_id` example for
+   * product name is `accounts/123/products/online~en~US~sku123`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -248,9 +271,9 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the product. Format: `"{product.name=accounts/{account}/products/{product}}"` where
-   * the last section `product` consists of 4 parts: channel~content_language~feed_label~offer_id
-   * example for product name is "accounts/123/products/online~en~US~sku123"
+   * The name of the product. Format: `accounts/{account}/products/{product}` where the last section
+   * `product` consists of 4 parts: `channel~content_language~feed_label~offer_id` example for
+   * product name is `accounts/123/products/online~en~US~sku123`
    * @param name name or {@code null} for none
    */
   public Product setName(java.lang.String name) {

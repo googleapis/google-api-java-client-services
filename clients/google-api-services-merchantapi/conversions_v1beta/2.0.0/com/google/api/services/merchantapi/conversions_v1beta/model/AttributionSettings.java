@@ -30,14 +30,15 @@ package com.google.api.services.merchantapi.conversions_v1beta.model;
 public final class AttributionSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Lookback windows (in days) used for attribution in this source. Supported values are
-   * 7, 30, 40.
+   * Required. Lookback window (in days) used for attribution in this source. Supported values are
+   * `7`, `30` & `40`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer attributionLookbackWindowDays;
 
   /**
+   * Required. Attribution model.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,8 +54,8 @@ public final class AttributionSettings extends com.google.api.client.json.Generi
   private java.util.List<ConversionType> conversionType;
 
   /**
-   * Required. Lookback windows (in days) used for attribution in this source. Supported values are
-   * 7, 30, 40.
+   * Required. Lookback window (in days) used for attribution in this source. Supported values are
+   * `7`, `30` & `40`.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getAttributionLookbackWindowDays() {
@@ -62,8 +63,8 @@ public final class AttributionSettings extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. Lookback windows (in days) used for attribution in this source. Supported values are
-   * 7, 30, 40.
+   * Required. Lookback window (in days) used for attribution in this source. Supported values are
+   * `7`, `30` & `40`.
    * @param attributionLookbackWindowDays attributionLookbackWindowDays or {@code null} for none
    */
   public AttributionSettings setAttributionLookbackWindowDays(java.lang.Integer attributionLookbackWindowDays) {
@@ -72,6 +73,7 @@ public final class AttributionSettings extends com.google.api.client.json.Generi
   }
 
   /**
+   * Required. Attribution model.
    * @return value or {@code null} for none
    */
   public java.lang.String getAttributionModel() {
@@ -79,6 +81,7 @@ public final class AttributionSettings extends com.google.api.client.json.Generi
   }
 
   /**
+   * Required. Attribution model.
    * @param attributionModel attributionModel or {@code null} for none
    */
   public AttributionSettings setAttributionModel(java.lang.String attributionModel) {

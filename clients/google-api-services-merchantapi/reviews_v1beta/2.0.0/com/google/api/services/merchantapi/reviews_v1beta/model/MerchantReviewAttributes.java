@@ -116,7 +116,7 @@ public final class MerchantReviewAttributes extends com.google.api.client.json.G
   private java.lang.String reviewCountry;
 
   /**
-   * Required. The language of the review defined by BCP-47 language code.
+   * Optional. The language of the review defined by BCP-47 language code.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -357,7 +357,7 @@ public final class MerchantReviewAttributes extends com.google.api.client.json.G
   }
 
   /**
-   * Required. The language of the review defined by BCP-47 language code.
+   * Optional. The language of the review defined by BCP-47 language code.
    * @return value or {@code null} for none
    */
   public java.lang.String getReviewLanguage() {
@@ -365,7 +365,7 @@ public final class MerchantReviewAttributes extends com.google.api.client.json.G
   }
 
   /**
-   * Required. The language of the review defined by BCP-47 language code.
+   * Optional. The language of the review defined by BCP-47 language code.
    * @param reviewLanguage reviewLanguage or {@code null} for none
    */
   public MerchantReviewAttributes setReviewLanguage(java.lang.String reviewLanguage) {

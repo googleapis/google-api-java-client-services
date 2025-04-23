@@ -84,7 +84,8 @@ public final class Account extends com.google.api.client.json.GenericJson {
    * Required. The time zone of the account. On writes, `time_zone` sets both the
    * `reporting_time_zone` and the `display_time_zone`. For reads, `time_zone` always returns the
    * `display_time_zone`. If `display_time_zone` doesn't exist for your account, `time_zone` is
-   * empty.
+   * empty. The `version` field is not supported, won't be set in responses and will be silently
+   * ignored if specified in requests.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -202,7 +203,8 @@ public final class Account extends com.google.api.client.json.GenericJson {
    * Required. The time zone of the account. On writes, `time_zone` sets both the
    * `reporting_time_zone` and the `display_time_zone`. For reads, `time_zone` always returns the
    * `display_time_zone`. If `display_time_zone` doesn't exist for your account, `time_zone` is
-   * empty.
+   * empty. The `version` field is not supported, won't be set in responses and will be silently
+   * ignored if specified in requests.
    * @return value or {@code null} for none
    */
   public TimeZone getTimeZone() {
@@ -213,7 +215,8 @@ public final class Account extends com.google.api.client.json.GenericJson {
    * Required. The time zone of the account. On writes, `time_zone` sets both the
    * `reporting_time_zone` and the `display_time_zone`. For reads, `time_zone` always returns the
    * `display_time_zone`. If `display_time_zone` doesn't exist for your account, `time_zone` is
-   * empty.
+   * empty. The `version` field is not supported, won't be set in responses and will be silently
+   * ignored if specified in requests.
    * @param timeZone timeZone or {@code null} for none
    */
   public Account setTimeZone(TimeZone timeZone) {

@@ -31,7 +31,8 @@ package com.google.api.services.androiddeviceprovisioning.v1.model;
 public final class FindDevicesByDeviceIdentifierRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Required. The device identifier to search for.
+   * Required. Required. The device identifier to search for. If serial number is provided then case
+   * insensitive serial number matches are allowed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +54,8 @@ public final class FindDevicesByDeviceIdentifierRequest extends com.google.api.c
   private java.lang.String pageToken;
 
   /**
-   * Required. Required. The device identifier to search for.
+   * Required. Required. The device identifier to search for. If serial number is provided then case
+   * insensitive serial number matches are allowed.
    * @return value or {@code null} for none
    */
   public DeviceIdentifier getDeviceIdentifier() {
@@ -61,7 +63,8 @@ public final class FindDevicesByDeviceIdentifierRequest extends com.google.api.c
   }
 
   /**
-   * Required. Required. The device identifier to search for.
+   * Required. Required. The device identifier to search for. If serial number is provided then case
+   * insensitive serial number matches are allowed.
    * @param deviceIdentifier deviceIdentifier or {@code null} for none
    */
   public FindDevicesByDeviceIdentifierRequest setDeviceIdentifier(DeviceIdentifier deviceIdentifier) {

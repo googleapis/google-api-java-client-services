@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.firebasedataconnect.v1beta;
+package com.google.api.services.firebasedataconnect.v1;
 
 /**
- * Service definition for FirebaseDataConnect (v1beta).
+ * Service definition for FirebaseDataConnect (v1).
  *
  * <p>
  * Firebase Data Connect is a relational database service for mobile and web apps that lets you build and scale using a fully-managed PostgreSQL database powered by Cloud SQL. The REST API lets developers manage the connections to their database, change the schema of their database, and query the database.
@@ -190,9 +190,9 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
         return result;
       }
 
-      public class Get extends FirebaseDataConnectRequest<com.google.api.services.firebasedataconnect.v1beta.model.Location> {
+      public class Get extends FirebaseDataConnectRequest<com.google.api.services.firebasedataconnect.v1.model.Location> {
 
-        private static final String REST_PATH = "v1beta/{+name}";
+        private static final String REST_PATH = "v1/{+name}";
 
         private final java.util.regex.Pattern NAME_PATTERN =
             java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
@@ -212,7 +212,7 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
          * @since 1.13
          */
         protected Get(java.lang.String name) {
-          super(FirebaseDataConnect.this, "GET", REST_PATH, null, com.google.api.services.firebasedataconnect.v1beta.model.Location.class);
+          super(FirebaseDataConnect.this, "GET", REST_PATH, null, com.google.api.services.firebasedataconnect.v1.model.Location.class);
           this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -329,9 +329,9 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
         return result;
       }
 
-      public class List extends FirebaseDataConnectRequest<com.google.api.services.firebasedataconnect.v1beta.model.ListLocationsResponse> {
+      public class List extends FirebaseDataConnectRequest<com.google.api.services.firebasedataconnect.v1.model.ListLocationsResponse> {
 
-        private static final String REST_PATH = "v1beta/{+name}/locations";
+        private static final String REST_PATH = "v1/{+name}/locations";
 
         private final java.util.regex.Pattern NAME_PATTERN =
             java.util.regex.Pattern.compile("^projects/[^/]+$");
@@ -351,7 +351,7 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
          * @since 1.13
          */
         protected List(java.lang.String name) {
-          super(FirebaseDataConnect.this, "GET", REST_PATH, null, com.google.api.services.firebasedataconnect.v1beta.model.ListLocationsResponse.class);
+          super(FirebaseDataConnect.this, "GET", REST_PATH, null, com.google.api.services.firebasedataconnect.v1.model.ListLocationsResponse.class);
           this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -574,18 +574,18 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
          * optional parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
          *
          * @param name The name of the operation resource to be cancelled.
-         * @param content the {@link com.google.api.services.firebasedataconnect.v1beta.model.CancelOperationRequest}
+         * @param content the {@link com.google.api.services.firebasedataconnect.v1.model.CancelOperationRequest}
          * @return the request
          */
-        public Cancel cancel(java.lang.String name, com.google.api.services.firebasedataconnect.v1beta.model.CancelOperationRequest content) throws java.io.IOException {
+        public Cancel cancel(java.lang.String name, com.google.api.services.firebasedataconnect.v1.model.CancelOperationRequest content) throws java.io.IOException {
           Cancel result = new Cancel(name, content);
           initialize(result);
           return result;
         }
 
-        public class Cancel extends FirebaseDataConnectRequest<com.google.api.services.firebasedataconnect.v1beta.model.Empty> {
+        public class Cancel extends FirebaseDataConnectRequest<com.google.api.services.firebasedataconnect.v1.model.Empty> {
 
-          private static final String REST_PATH = "v1beta/{+name}:cancel";
+          private static final String REST_PATH = "v1/{+name}:cancel";
 
           private final java.util.regex.Pattern NAME_PATTERN =
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
@@ -608,11 +608,11 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name The name of the operation resource to be cancelled.
-           * @param content the {@link com.google.api.services.firebasedataconnect.v1beta.model.CancelOperationRequest}
+           * @param content the {@link com.google.api.services.firebasedataconnect.v1.model.CancelOperationRequest}
            * @since 1.13
            */
-          protected Cancel(java.lang.String name, com.google.api.services.firebasedataconnect.v1beta.model.CancelOperationRequest content) {
-            super(FirebaseDataConnect.this, "POST", REST_PATH, content, com.google.api.services.firebasedataconnect.v1beta.model.Empty.class);
+          protected Cancel(java.lang.String name, com.google.api.services.firebasedataconnect.v1.model.CancelOperationRequest content) {
+            super(FirebaseDataConnect.this, "POST", REST_PATH, content, com.google.api.services.firebasedataconnect.v1.model.Empty.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -721,9 +721,9 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
           return result;
         }
 
-        public class Delete extends FirebaseDataConnectRequest<com.google.api.services.firebasedataconnect.v1beta.model.Empty> {
+        public class Delete extends FirebaseDataConnectRequest<com.google.api.services.firebasedataconnect.v1.model.Empty> {
 
-          private static final String REST_PATH = "v1beta/{+name}";
+          private static final String REST_PATH = "v1/{+name}";
 
           private final java.util.regex.Pattern NAME_PATTERN =
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
@@ -745,7 +745,7 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
-            super(FirebaseDataConnect.this, "DELETE", REST_PATH, null, com.google.api.services.firebasedataconnect.v1beta.model.Empty.class);
+            super(FirebaseDataConnect.this, "DELETE", REST_PATH, null, com.google.api.services.firebasedataconnect.v1.model.Empty.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -853,9 +853,9 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
           return result;
         }
 
-        public class Get extends FirebaseDataConnectRequest<com.google.api.services.firebasedataconnect.v1beta.model.Operation> {
+        public class Get extends FirebaseDataConnectRequest<com.google.api.services.firebasedataconnect.v1.model.Operation> {
 
-          private static final String REST_PATH = "v1beta/{+name}";
+          private static final String REST_PATH = "v1/{+name}";
 
           private final java.util.regex.Pattern NAME_PATTERN =
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
@@ -876,7 +876,7 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
            * @since 1.13
            */
           protected Get(java.lang.String name) {
-            super(FirebaseDataConnect.this, "GET", REST_PATH, null, com.google.api.services.firebasedataconnect.v1beta.model.Operation.class);
+            super(FirebaseDataConnect.this, "GET", REST_PATH, null, com.google.api.services.firebasedataconnect.v1.model.Operation.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -994,9 +994,9 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
           return result;
         }
 
-        public class List extends FirebaseDataConnectRequest<com.google.api.services.firebasedataconnect.v1beta.model.ListOperationsResponse> {
+        public class List extends FirebaseDataConnectRequest<com.google.api.services.firebasedataconnect.v1.model.ListOperationsResponse> {
 
-          private static final String REST_PATH = "v1beta/{+name}/operations";
+          private static final String REST_PATH = "v1/{+name}/operations";
 
           private final java.util.regex.Pattern NAME_PATTERN =
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
@@ -1017,7 +1017,7 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
            * @since 1.13
            */
           protected List(java.lang.String name) {
-            super(FirebaseDataConnect.this, "GET", REST_PATH, null, com.google.api.services.firebasedataconnect.v1beta.model.ListOperationsResponse.class);
+            super(FirebaseDataConnect.this, "GET", REST_PATH, null, com.google.api.services.firebasedataconnect.v1.model.ListOperationsResponse.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1196,18 +1196,18 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param parent Required. Value of parent.
-         * @param content the {@link com.google.api.services.firebasedataconnect.v1beta.model.Service}
+         * @param content the {@link com.google.api.services.firebasedataconnect.v1.model.Service}
          * @return the request
          */
-        public Create create(java.lang.String parent, com.google.api.services.firebasedataconnect.v1beta.model.Service content) throws java.io.IOException {
+        public Create create(java.lang.String parent, com.google.api.services.firebasedataconnect.v1.model.Service content) throws java.io.IOException {
           Create result = new Create(parent, content);
           initialize(result);
           return result;
         }
 
-        public class Create extends FirebaseDataConnectRequest<com.google.api.services.firebasedataconnect.v1beta.model.Operation> {
+        public class Create extends FirebaseDataConnectRequest<com.google.api.services.firebasedataconnect.v1.model.Operation> {
 
-          private static final String REST_PATH = "v1beta/{+parent}/services";
+          private static final String REST_PATH = "v1/{+parent}/services";
 
           private final java.util.regex.Pattern PARENT_PATTERN =
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
@@ -1224,11 +1224,11 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. Value of parent.
-           * @param content the {@link com.google.api.services.firebasedataconnect.v1beta.model.Service}
+           * @param content the {@link com.google.api.services.firebasedataconnect.v1.model.Service}
            * @since 1.13
            */
-          protected Create(java.lang.String parent, com.google.api.services.firebasedataconnect.v1beta.model.Service content) {
-            super(FirebaseDataConnect.this, "POST", REST_PATH, content, com.google.api.services.firebasedataconnect.v1beta.model.Operation.class);
+          protected Create(java.lang.String parent, com.google.api.services.firebasedataconnect.v1.model.Service content) {
+            super(FirebaseDataConnect.this, "POST", REST_PATH, content, com.google.api.services.firebasedataconnect.v1.model.Operation.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -1424,9 +1424,9 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
           return result;
         }
 
-        public class Delete extends FirebaseDataConnectRequest<com.google.api.services.firebasedataconnect.v1beta.model.Operation> {
+        public class Delete extends FirebaseDataConnectRequest<com.google.api.services.firebasedataconnect.v1.model.Operation> {
 
-          private static final String REST_PATH = "v1beta/{+name}";
+          private static final String REST_PATH = "v1/{+name}";
 
           private final java.util.regex.Pattern NAME_PATTERN =
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+$");
@@ -1447,7 +1447,7 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
-            super(FirebaseDataConnect.this, "DELETE", REST_PATH, null, com.google.api.services.firebasedataconnect.v1beta.model.Operation.class);
+            super(FirebaseDataConnect.this, "DELETE", REST_PATH, null, com.google.api.services.firebasedataconnect.v1.model.Operation.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1693,18 +1693,18 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
          *
          * @param name Required. The relative resource name of Firebase Data Connect service, in the format: ```
          *        projects/{project}/locations/{location}/services/{service} ```
-         * @param content the {@link com.google.api.services.firebasedataconnect.v1beta.model.GraphqlRequest}
+         * @param content the {@link com.google.api.services.firebasedataconnect.v1.model.GraphqlRequest}
          * @return the request
          */
-        public ExecuteGraphql executeGraphql(java.lang.String name, com.google.api.services.firebasedataconnect.v1beta.model.GraphqlRequest content) throws java.io.IOException {
+        public ExecuteGraphql executeGraphql(java.lang.String name, com.google.api.services.firebasedataconnect.v1.model.GraphqlRequest content) throws java.io.IOException {
           ExecuteGraphql result = new ExecuteGraphql(name, content);
           initialize(result);
           return result;
         }
 
-        public class ExecuteGraphql extends FirebaseDataConnectRequest<com.google.api.services.firebasedataconnect.v1beta.model.GraphqlResponse> {
+        public class ExecuteGraphql extends FirebaseDataConnectRequest<com.google.api.services.firebasedataconnect.v1.model.GraphqlResponse> {
 
-          private static final String REST_PATH = "v1beta/{+name}:executeGraphql";
+          private static final String REST_PATH = "v1/{+name}:executeGraphql";
 
           private final java.util.regex.Pattern NAME_PATTERN =
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+$");
@@ -1724,11 +1724,11 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
            *
            * @param name Required. The relative resource name of Firebase Data Connect service, in the format: ```
          *        projects/{project}/locations/{location}/services/{service} ```
-           * @param content the {@link com.google.api.services.firebasedataconnect.v1beta.model.GraphqlRequest}
+           * @param content the {@link com.google.api.services.firebasedataconnect.v1.model.GraphqlRequest}
            * @since 1.13
            */
-          protected ExecuteGraphql(java.lang.String name, com.google.api.services.firebasedataconnect.v1beta.model.GraphqlRequest content) {
-            super(FirebaseDataConnect.this, "POST", REST_PATH, content, com.google.api.services.firebasedataconnect.v1beta.model.GraphqlResponse.class);
+          protected ExecuteGraphql(java.lang.String name, com.google.api.services.firebasedataconnect.v1.model.GraphqlRequest content) {
+            super(FirebaseDataConnect.this, "POST", REST_PATH, content, com.google.api.services.firebasedataconnect.v1.model.GraphqlResponse.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1838,18 +1838,18 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
          *
          * @param name Required. The relative resource name of Firebase Data Connect service, in the format: ```
          *        projects/{project}/locations/{location}/services/{service} ```
-         * @param content the {@link com.google.api.services.firebasedataconnect.v1beta.model.GraphqlRequest}
+         * @param content the {@link com.google.api.services.firebasedataconnect.v1.model.GraphqlRequest}
          * @return the request
          */
-        public ExecuteGraphqlRead executeGraphqlRead(java.lang.String name, com.google.api.services.firebasedataconnect.v1beta.model.GraphqlRequest content) throws java.io.IOException {
+        public ExecuteGraphqlRead executeGraphqlRead(java.lang.String name, com.google.api.services.firebasedataconnect.v1.model.GraphqlRequest content) throws java.io.IOException {
           ExecuteGraphqlRead result = new ExecuteGraphqlRead(name, content);
           initialize(result);
           return result;
         }
 
-        public class ExecuteGraphqlRead extends FirebaseDataConnectRequest<com.google.api.services.firebasedataconnect.v1beta.model.GraphqlResponse> {
+        public class ExecuteGraphqlRead extends FirebaseDataConnectRequest<com.google.api.services.firebasedataconnect.v1.model.GraphqlResponse> {
 
-          private static final String REST_PATH = "v1beta/{+name}:executeGraphqlRead";
+          private static final String REST_PATH = "v1/{+name}:executeGraphqlRead";
 
           private final java.util.regex.Pattern NAME_PATTERN =
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+$");
@@ -1869,11 +1869,11 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
            *
            * @param name Required. The relative resource name of Firebase Data Connect service, in the format: ```
          *        projects/{project}/locations/{location}/services/{service} ```
-           * @param content the {@link com.google.api.services.firebasedataconnect.v1beta.model.GraphqlRequest}
+           * @param content the {@link com.google.api.services.firebasedataconnect.v1.model.GraphqlRequest}
            * @since 1.13
            */
-          protected ExecuteGraphqlRead(java.lang.String name, com.google.api.services.firebasedataconnect.v1beta.model.GraphqlRequest content) {
-            super(FirebaseDataConnect.this, "POST", REST_PATH, content, com.google.api.services.firebasedataconnect.v1beta.model.GraphqlResponse.class);
+          protected ExecuteGraphqlRead(java.lang.String name, com.google.api.services.firebasedataconnect.v1.model.GraphqlRequest content) {
+            super(FirebaseDataConnect.this, "POST", REST_PATH, content, com.google.api.services.firebasedataconnect.v1.model.GraphqlResponse.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1988,9 +1988,9 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
           return result;
         }
 
-        public class Get extends FirebaseDataConnectRequest<com.google.api.services.firebasedataconnect.v1beta.model.Service> {
+        public class Get extends FirebaseDataConnectRequest<com.google.api.services.firebasedataconnect.v1.model.Service> {
 
-          private static final String REST_PATH = "v1beta/{+name}";
+          private static final String REST_PATH = "v1/{+name}";
 
           private final java.util.regex.Pattern NAME_PATTERN =
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+$");
@@ -2011,7 +2011,7 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
            * @since 1.13
            */
           protected Get(java.lang.String name) {
-            super(FirebaseDataConnect.this, "GET", REST_PATH, null, com.google.api.services.firebasedataconnect.v1beta.model.Service.class);
+            super(FirebaseDataConnect.this, "GET", REST_PATH, null, com.google.api.services.firebasedataconnect.v1.model.Service.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2135,9 +2135,9 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
           return result;
         }
 
-        public class List extends FirebaseDataConnectRequest<com.google.api.services.firebasedataconnect.v1beta.model.ListServicesResponse> {
+        public class List extends FirebaseDataConnectRequest<com.google.api.services.firebasedataconnect.v1.model.ListServicesResponse> {
 
-          private static final String REST_PATH = "v1beta/{+parent}/services";
+          private static final String REST_PATH = "v1/{+parent}/services";
 
           private final java.util.regex.Pattern PARENT_PATTERN =
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
@@ -2157,7 +2157,7 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
            * @since 1.13
            */
           protected List(java.lang.String parent) {
-            super(FirebaseDataConnect.this, "GET", REST_PATH, null, com.google.api.services.firebasedataconnect.v1beta.model.ListServicesResponse.class);
+            super(FirebaseDataConnect.this, "GET", REST_PATH, null, com.google.api.services.firebasedataconnect.v1.model.ListServicesResponse.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -2350,18 +2350,18 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
          *        projects/{project}/locations/{location}/services/{service} ``` Note that the service ID is
          *        specific to Firebase Data Connect and does not correspond to any of the instance IDs of
          *        the underlying data source connections.
-         * @param content the {@link com.google.api.services.firebasedataconnect.v1beta.model.Service}
+         * @param content the {@link com.google.api.services.firebasedataconnect.v1.model.Service}
          * @return the request
          */
-        public Patch patch(java.lang.String name, com.google.api.services.firebasedataconnect.v1beta.model.Service content) throws java.io.IOException {
+        public Patch patch(java.lang.String name, com.google.api.services.firebasedataconnect.v1.model.Service content) throws java.io.IOException {
           Patch result = new Patch(name, content);
           initialize(result);
           return result;
         }
 
-        public class Patch extends FirebaseDataConnectRequest<com.google.api.services.firebasedataconnect.v1beta.model.Operation> {
+        public class Patch extends FirebaseDataConnectRequest<com.google.api.services.firebasedataconnect.v1.model.Operation> {
 
-          private static final String REST_PATH = "v1beta/{+name}";
+          private static final String REST_PATH = "v1/{+name}";
 
           private final java.util.regex.Pattern NAME_PATTERN =
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+$");
@@ -2381,11 +2381,11 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
          *        projects/{project}/locations/{location}/services/{service} ``` Note that the service ID is
          *        specific to Firebase Data Connect and does not correspond to any of the instance IDs of
          *        the underlying data source connections.
-           * @param content the {@link com.google.api.services.firebasedataconnect.v1beta.model.Service}
+           * @param content the {@link com.google.api.services.firebasedataconnect.v1.model.Service}
            * @since 1.13
            */
-          protected Patch(java.lang.String name, com.google.api.services.firebasedataconnect.v1beta.model.Service content) {
-            super(FirebaseDataConnect.this, "PATCH", REST_PATH, content, com.google.api.services.firebasedataconnect.v1beta.model.Operation.class);
+          protected Patch(java.lang.String name, com.google.api.services.firebasedataconnect.v1.model.Service content) {
+            super(FirebaseDataConnect.this, "PATCH", REST_PATH, content, com.google.api.services.firebasedataconnect.v1.model.Operation.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2637,18 +2637,18 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
            * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
            * @param parent Required. Value for parent.
-           * @param content the {@link com.google.api.services.firebasedataconnect.v1beta.model.Connector}
+           * @param content the {@link com.google.api.services.firebasedataconnect.v1.model.Connector}
            * @return the request
            */
-          public Create create(java.lang.String parent, com.google.api.services.firebasedataconnect.v1beta.model.Connector content) throws java.io.IOException {
+          public Create create(java.lang.String parent, com.google.api.services.firebasedataconnect.v1.model.Connector content) throws java.io.IOException {
             Create result = new Create(parent, content);
             initialize(result);
             return result;
           }
 
-          public class Create extends FirebaseDataConnectRequest<com.google.api.services.firebasedataconnect.v1beta.model.Operation> {
+          public class Create extends FirebaseDataConnectRequest<com.google.api.services.firebasedataconnect.v1.model.Operation> {
 
-            private static final String REST_PATH = "v1beta/{+parent}/connectors";
+            private static final String REST_PATH = "v1/{+parent}/connectors";
 
             private final java.util.regex.Pattern PARENT_PATTERN =
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+$");
@@ -2667,11 +2667,11 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param parent Required. Value for parent.
-             * @param content the {@link com.google.api.services.firebasedataconnect.v1beta.model.Connector}
+             * @param content the {@link com.google.api.services.firebasedataconnect.v1.model.Connector}
              * @since 1.13
              */
-            protected Create(java.lang.String parent, com.google.api.services.firebasedataconnect.v1beta.model.Connector content) {
-              super(FirebaseDataConnect.this, "POST", REST_PATH, content, com.google.api.services.firebasedataconnect.v1beta.model.Operation.class);
+            protected Create(java.lang.String parent, com.google.api.services.firebasedataconnect.v1.model.Connector content) {
+              super(FirebaseDataConnect.this, "POST", REST_PATH, content, com.google.api.services.firebasedataconnect.v1.model.Operation.class);
               this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -2867,9 +2867,9 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
             return result;
           }
 
-          public class Delete extends FirebaseDataConnectRequest<com.google.api.services.firebasedataconnect.v1beta.model.Operation> {
+          public class Delete extends FirebaseDataConnectRequest<com.google.api.services.firebasedataconnect.v1.model.Operation> {
 
-            private static final String REST_PATH = "v1beta/{+name}";
+            private static final String REST_PATH = "v1/{+name}";
 
             private final java.util.regex.Pattern NAME_PATTERN =
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+/connectors/[^/]+$");
@@ -2890,7 +2890,7 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
              * @since 1.13
              */
             protected Delete(java.lang.String name) {
-              super(FirebaseDataConnect.this, "DELETE", REST_PATH, null, com.google.api.services.firebasedataconnect.v1beta.model.Operation.class);
+              super(FirebaseDataConnect.this, "DELETE", REST_PATH, null, com.google.api.services.firebasedataconnect.v1.model.Operation.class);
               this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -3133,18 +3133,18 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
            *
            * @param name Required. The resource name of the connector to find the predefined mutation, in the format: ```
            *        projects/{project}/locations/{location}/services/{service}/connectors/{connector} ```
-           * @param content the {@link com.google.api.services.firebasedataconnect.v1beta.model.ExecuteMutationRequest}
+           * @param content the {@link com.google.api.services.firebasedataconnect.v1.model.ExecuteMutationRequest}
            * @return the request
            */
-          public ExecuteMutation executeMutation(java.lang.String name, com.google.api.services.firebasedataconnect.v1beta.model.ExecuteMutationRequest content) throws java.io.IOException {
+          public ExecuteMutation executeMutation(java.lang.String name, com.google.api.services.firebasedataconnect.v1.model.ExecuteMutationRequest content) throws java.io.IOException {
             ExecuteMutation result = new ExecuteMutation(name, content);
             initialize(result);
             return result;
           }
 
-          public class ExecuteMutation extends FirebaseDataConnectRequest<com.google.api.services.firebasedataconnect.v1beta.model.ExecuteMutationResponse> {
+          public class ExecuteMutation extends FirebaseDataConnectRequest<com.google.api.services.firebasedataconnect.v1.model.ExecuteMutationResponse> {
 
-            private static final String REST_PATH = "v1beta/{+name}:executeMutation";
+            private static final String REST_PATH = "v1/{+name}:executeMutation";
 
             private final java.util.regex.Pattern NAME_PATTERN =
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+/connectors/[^/]+$");
@@ -3162,11 +3162,11 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
              *
              * @param name Required. The resource name of the connector to find the predefined mutation, in the format: ```
            *        projects/{project}/locations/{location}/services/{service}/connectors/{connector} ```
-             * @param content the {@link com.google.api.services.firebasedataconnect.v1beta.model.ExecuteMutationRequest}
+             * @param content the {@link com.google.api.services.firebasedataconnect.v1.model.ExecuteMutationRequest}
              * @since 1.13
              */
-            protected ExecuteMutation(java.lang.String name, com.google.api.services.firebasedataconnect.v1beta.model.ExecuteMutationRequest content) {
-              super(FirebaseDataConnect.this, "POST", REST_PATH, content, com.google.api.services.firebasedataconnect.v1beta.model.ExecuteMutationResponse.class);
+            protected ExecuteMutation(java.lang.String name, com.google.api.services.firebasedataconnect.v1.model.ExecuteMutationRequest content) {
+              super(FirebaseDataConnect.this, "POST", REST_PATH, content, com.google.api.services.firebasedataconnect.v1.model.ExecuteMutationResponse.class);
               this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -3276,18 +3276,18 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
            *
            * @param name Required. The resource name of the connector to find the predefined query, in the format: ```
            *        projects/{project}/locations/{location}/services/{service}/connectors/{connector} ```
-           * @param content the {@link com.google.api.services.firebasedataconnect.v1beta.model.ExecuteQueryRequest}
+           * @param content the {@link com.google.api.services.firebasedataconnect.v1.model.ExecuteQueryRequest}
            * @return the request
            */
-          public ExecuteQuery executeQuery(java.lang.String name, com.google.api.services.firebasedataconnect.v1beta.model.ExecuteQueryRequest content) throws java.io.IOException {
+          public ExecuteQuery executeQuery(java.lang.String name, com.google.api.services.firebasedataconnect.v1.model.ExecuteQueryRequest content) throws java.io.IOException {
             ExecuteQuery result = new ExecuteQuery(name, content);
             initialize(result);
             return result;
           }
 
-          public class ExecuteQuery extends FirebaseDataConnectRequest<com.google.api.services.firebasedataconnect.v1beta.model.ExecuteQueryResponse> {
+          public class ExecuteQuery extends FirebaseDataConnectRequest<com.google.api.services.firebasedataconnect.v1.model.ExecuteQueryResponse> {
 
-            private static final String REST_PATH = "v1beta/{+name}:executeQuery";
+            private static final String REST_PATH = "v1/{+name}:executeQuery";
 
             private final java.util.regex.Pattern NAME_PATTERN =
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+/connectors/[^/]+$");
@@ -3305,11 +3305,11 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
              *
              * @param name Required. The resource name of the connector to find the predefined query, in the format: ```
            *        projects/{project}/locations/{location}/services/{service}/connectors/{connector} ```
-             * @param content the {@link com.google.api.services.firebasedataconnect.v1beta.model.ExecuteQueryRequest}
+             * @param content the {@link com.google.api.services.firebasedataconnect.v1.model.ExecuteQueryRequest}
              * @since 1.13
              */
-            protected ExecuteQuery(java.lang.String name, com.google.api.services.firebasedataconnect.v1beta.model.ExecuteQueryRequest content) {
-              super(FirebaseDataConnect.this, "POST", REST_PATH, content, com.google.api.services.firebasedataconnect.v1beta.model.ExecuteQueryResponse.class);
+            protected ExecuteQuery(java.lang.String name, com.google.api.services.firebasedataconnect.v1.model.ExecuteQueryRequest content) {
+              super(FirebaseDataConnect.this, "POST", REST_PATH, content, com.google.api.services.firebasedataconnect.v1.model.ExecuteQueryResponse.class);
               this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -3426,9 +3426,9 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
             return result;
           }
 
-          public class Get extends FirebaseDataConnectRequest<com.google.api.services.firebasedataconnect.v1beta.model.Connector> {
+          public class Get extends FirebaseDataConnectRequest<com.google.api.services.firebasedataconnect.v1.model.Connector> {
 
-            private static final String REST_PATH = "v1beta/{+name}";
+            private static final String REST_PATH = "v1/{+name}";
 
             private final java.util.regex.Pattern NAME_PATTERN =
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+/connectors/[^/]+$");
@@ -3449,7 +3449,7 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
              * @since 1.13
              */
             protected Get(java.lang.String name) {
-              super(FirebaseDataConnect.this, "GET", REST_PATH, null, com.google.api.services.firebasedataconnect.v1beta.model.Connector.class);
+              super(FirebaseDataConnect.this, "GET", REST_PATH, null, com.google.api.services.firebasedataconnect.v1.model.Connector.class);
               this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -3573,9 +3573,9 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
             return result;
           }
 
-          public class List extends FirebaseDataConnectRequest<com.google.api.services.firebasedataconnect.v1beta.model.ListConnectorsResponse> {
+          public class List extends FirebaseDataConnectRequest<com.google.api.services.firebasedataconnect.v1.model.ListConnectorsResponse> {
 
-            private static final String REST_PATH = "v1beta/{+parent}/connectors";
+            private static final String REST_PATH = "v1/{+parent}/connectors";
 
             private final java.util.regex.Pattern PARENT_PATTERN =
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+$");
@@ -3595,7 +3595,7 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
              * @since 1.13
              */
             protected List(java.lang.String parent) {
-              super(FirebaseDataConnect.this, "GET", REST_PATH, null, com.google.api.services.firebasedataconnect.v1beta.model.ListConnectorsResponse.class);
+              super(FirebaseDataConnect.this, "GET", REST_PATH, null, com.google.api.services.firebasedataconnect.v1.model.ListConnectorsResponse.class);
               this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -3789,18 +3789,18 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
            *
            * @param name Identifier. The relative resource name of the connector, in the format: ```
            *        projects/{project}/locations/{location}/services/{service}/connectors/{connector} ```
-           * @param content the {@link com.google.api.services.firebasedataconnect.v1beta.model.Connector}
+           * @param content the {@link com.google.api.services.firebasedataconnect.v1.model.Connector}
            * @return the request
            */
-          public Patch patch(java.lang.String name, com.google.api.services.firebasedataconnect.v1beta.model.Connector content) throws java.io.IOException {
+          public Patch patch(java.lang.String name, com.google.api.services.firebasedataconnect.v1.model.Connector content) throws java.io.IOException {
             Patch result = new Patch(name, content);
             initialize(result);
             return result;
           }
 
-          public class Patch extends FirebaseDataConnectRequest<com.google.api.services.firebasedataconnect.v1beta.model.Operation> {
+          public class Patch extends FirebaseDataConnectRequest<com.google.api.services.firebasedataconnect.v1.model.Operation> {
 
-            private static final String REST_PATH = "v1beta/{+name}";
+            private static final String REST_PATH = "v1/{+name}";
 
             private final java.util.regex.Pattern NAME_PATTERN =
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+/connectors/[^/]+$");
@@ -3821,11 +3821,11 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
              *
              * @param name Identifier. The relative resource name of the connector, in the format: ```
            *        projects/{project}/locations/{location}/services/{service}/connectors/{connector} ```
-             * @param content the {@link com.google.api.services.firebasedataconnect.v1beta.model.Connector}
+             * @param content the {@link com.google.api.services.firebasedataconnect.v1.model.Connector}
              * @since 1.13
              */
-            protected Patch(java.lang.String name, com.google.api.services.firebasedataconnect.v1beta.model.Connector content) {
-              super(FirebaseDataConnect.this, "PATCH", REST_PATH, content, com.google.api.services.firebasedataconnect.v1beta.model.Operation.class);
+            protected Patch(java.lang.String name, com.google.api.services.firebasedataconnect.v1.model.Connector content) {
+              super(FirebaseDataConnect.this, "PATCH", REST_PATH, content, com.google.api.services.firebasedataconnect.v1.model.Operation.class);
               this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -4071,18 +4071,18 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
            * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
            * @param parent Required. Value for parent.
-           * @param content the {@link com.google.api.services.firebasedataconnect.v1beta.model.Schema}
+           * @param content the {@link com.google.api.services.firebasedataconnect.v1.model.Schema}
            * @return the request
            */
-          public Create create(java.lang.String parent, com.google.api.services.firebasedataconnect.v1beta.model.Schema content) throws java.io.IOException {
+          public Create create(java.lang.String parent, com.google.api.services.firebasedataconnect.v1.model.Schema content) throws java.io.IOException {
             Create result = new Create(parent, content);
             initialize(result);
             return result;
           }
 
-          public class Create extends FirebaseDataConnectRequest<com.google.api.services.firebasedataconnect.v1beta.model.Operation> {
+          public class Create extends FirebaseDataConnectRequest<com.google.api.services.firebasedataconnect.v1.model.Operation> {
 
-            private static final String REST_PATH = "v1beta/{+parent}/schemas";
+            private static final String REST_PATH = "v1/{+parent}/schemas";
 
             private final java.util.regex.Pattern PARENT_PATTERN =
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+$");
@@ -4100,11 +4100,11 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param parent Required. Value for parent.
-             * @param content the {@link com.google.api.services.firebasedataconnect.v1beta.model.Schema}
+             * @param content the {@link com.google.api.services.firebasedataconnect.v1.model.Schema}
              * @since 1.13
              */
-            protected Create(java.lang.String parent, com.google.api.services.firebasedataconnect.v1beta.model.Schema content) {
-              super(FirebaseDataConnect.this, "POST", REST_PATH, content, com.google.api.services.firebasedataconnect.v1beta.model.Operation.class);
+            protected Create(java.lang.String parent, com.google.api.services.firebasedataconnect.v1.model.Schema content) {
+              super(FirebaseDataConnect.this, "POST", REST_PATH, content, com.google.api.services.firebasedataconnect.v1.model.Operation.class);
               this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -4303,9 +4303,9 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
             return result;
           }
 
-          public class Delete extends FirebaseDataConnectRequest<com.google.api.services.firebasedataconnect.v1beta.model.Operation> {
+          public class Delete extends FirebaseDataConnectRequest<com.google.api.services.firebasedataconnect.v1.model.Operation> {
 
-            private static final String REST_PATH = "v1beta/{+name}";
+            private static final String REST_PATH = "v1/{+name}";
 
             private final java.util.regex.Pattern NAME_PATTERN =
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+/schemas/[^/]+$");
@@ -4327,7 +4327,7 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
              * @since 1.13
              */
             protected Delete(java.lang.String name) {
-              super(FirebaseDataConnect.this, "DELETE", REST_PATH, null, com.google.api.services.firebasedataconnect.v1beta.model.Operation.class);
+              super(FirebaseDataConnect.this, "DELETE", REST_PATH, null, com.google.api.services.firebasedataconnect.v1.model.Operation.class);
               this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -4574,9 +4574,9 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
             return result;
           }
 
-          public class Get extends FirebaseDataConnectRequest<com.google.api.services.firebasedataconnect.v1beta.model.Schema> {
+          public class Get extends FirebaseDataConnectRequest<com.google.api.services.firebasedataconnect.v1.model.Schema> {
 
-            private static final String REST_PATH = "v1beta/{+name}";
+            private static final String REST_PATH = "v1/{+name}";
 
             private final java.util.regex.Pattern NAME_PATTERN =
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+/schemas/[^/]+$");
@@ -4597,7 +4597,7 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
              * @since 1.13
              */
             protected Get(java.lang.String name) {
-              super(FirebaseDataConnect.this, "GET", REST_PATH, null, com.google.api.services.firebasedataconnect.v1beta.model.Schema.class);
+              super(FirebaseDataConnect.this, "GET", REST_PATH, null, com.google.api.services.firebasedataconnect.v1.model.Schema.class);
               this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -4722,9 +4722,9 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
             return result;
           }
 
-          public class List extends FirebaseDataConnectRequest<com.google.api.services.firebasedataconnect.v1beta.model.ListSchemasResponse> {
+          public class List extends FirebaseDataConnectRequest<com.google.api.services.firebasedataconnect.v1.model.ListSchemasResponse> {
 
-            private static final String REST_PATH = "v1beta/{+parent}/schemas";
+            private static final String REST_PATH = "v1/{+parent}/schemas";
 
             private final java.util.regex.Pattern PARENT_PATTERN =
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+$");
@@ -4745,7 +4745,7 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
              * @since 1.13
              */
             protected List(java.lang.String parent) {
-              super(FirebaseDataConnect.this, "GET", REST_PATH, null, com.google.api.services.firebasedataconnect.v1beta.model.ListSchemasResponse.class);
+              super(FirebaseDataConnect.this, "GET", REST_PATH, null, com.google.api.services.firebasedataconnect.v1.model.ListSchemasResponse.class);
               this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -4938,18 +4938,18 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
            * @param name Identifier. The relative resource name of the schema, in the format: ```
            *        projects/{project}/locations/{location}/services/{service}/schemas/{schema} ``` Right now,
            *        the only supported schema is "main".
-           * @param content the {@link com.google.api.services.firebasedataconnect.v1beta.model.Schema}
+           * @param content the {@link com.google.api.services.firebasedataconnect.v1.model.Schema}
            * @return the request
            */
-          public Patch patch(java.lang.String name, com.google.api.services.firebasedataconnect.v1beta.model.Schema content) throws java.io.IOException {
+          public Patch patch(java.lang.String name, com.google.api.services.firebasedataconnect.v1.model.Schema content) throws java.io.IOException {
             Patch result = new Patch(name, content);
             initialize(result);
             return result;
           }
 
-          public class Patch extends FirebaseDataConnectRequest<com.google.api.services.firebasedataconnect.v1beta.model.Operation> {
+          public class Patch extends FirebaseDataConnectRequest<com.google.api.services.firebasedataconnect.v1.model.Operation> {
 
-            private static final String REST_PATH = "v1beta/{+name}";
+            private static final String REST_PATH = "v1/{+name}";
 
             private final java.util.regex.Pattern NAME_PATTERN =
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+/schemas/[^/]+$");
@@ -4969,11 +4969,11 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
              * @param name Identifier. The relative resource name of the schema, in the format: ```
            *        projects/{project}/locations/{location}/services/{service}/schemas/{schema} ``` Right now,
            *        the only supported schema is "main".
-             * @param content the {@link com.google.api.services.firebasedataconnect.v1beta.model.Schema}
+             * @param content the {@link com.google.api.services.firebasedataconnect.v1.model.Schema}
              * @since 1.13
              */
-            protected Patch(java.lang.String name, com.google.api.services.firebasedataconnect.v1beta.model.Schema content) {
-              super(FirebaseDataConnect.this, "PATCH", REST_PATH, content, com.google.api.services.firebasedataconnect.v1beta.model.Operation.class);
+            protected Patch(java.lang.String name, com.google.api.services.firebasedataconnect.v1.model.Schema content) {
+              super(FirebaseDataConnect.this, "PATCH", REST_PATH, content, com.google.api.services.firebasedataconnect.v1.model.Operation.class);
               this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

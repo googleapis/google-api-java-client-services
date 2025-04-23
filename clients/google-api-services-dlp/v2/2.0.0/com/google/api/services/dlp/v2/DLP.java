@@ -6693,6 +6693,236 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
       }
       /**
+       * An accessor for creating requests from the InfoTypes collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code DLP dlp = new DLP(...);}
+       *   {@code DLP.InfoTypes.List request = dlp.infoTypes().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public InfoTypes infoTypes() {
+        return new InfoTypes();
+      }
+
+      /**
+       * The "infoTypes" collection of methods.
+       */
+      public class InfoTypes {
+
+        /**
+         * Returns a list of the sensitive information types that the DLP API supports. See
+         * https://cloud.google.com/sensitive-data-protection/docs/infotypes-reference to learn more.
+         *
+         * Create a request for the method "infoTypes.list".
+         *
+         * This request holds the parameters needed by the dlp server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent The parent resource name. The format of this value is as follows: `locations/{location_id}`
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListInfoTypesResponse> {
+
+          private static final String REST_PATH = "v2/{+parent}/infoTypes";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
+
+          /**
+           * Returns a list of the sensitive information types that the DLP API supports. See
+           * https://cloud.google.com/sensitive-data-protection/docs/infotypes-reference to learn more.
+           *
+           * Create a request for the method "infoTypes.list".
+           *
+           * This request holds the parameters needed by the the dlp server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent The parent resource name. The format of this value is as follows: `locations/{location_id}`
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(DLP.this, "GET", REST_PATH, null, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListInfoTypesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The parent resource name. The format of this value is as follows:
+           * `locations/{location_id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** The parent resource name. The format of this value is as follows: `locations/{location_id}`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * The parent resource name. The format of this value is as follows:
+           * `locations/{location_id}`
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * filter to only return infoTypes supported by certain parts of the API. Defaults to
+           * supported_by=INSPECT.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** filter to only return infoTypes supported by certain parts of the API. Defaults to
+         supported_by=INSPECT.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * filter to only return infoTypes supported by certain parts of the API. Defaults to
+           * supported_by=INSPECT.
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * BCP-47 language code for localized infoType friendly names. If omitted, or if localized
+           * strings are not available, en-US strings will be returned.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String languageCode;
+
+          /** BCP-47 language code for localized infoType friendly names. If omitted, or if localized strings are
+         not available, en-US strings will be returned.
+           */
+          public java.lang.String getLanguageCode() {
+            return languageCode;
+          }
+
+          /**
+           * BCP-47 language code for localized infoType friendly names. If omitted, or if localized
+           * strings are not available, en-US strings will be returned.
+           */
+          public List setLanguageCode(java.lang.String languageCode) {
+            this.languageCode = languageCode;
+            return this;
+          }
+
+          /** Deprecated. This field has no effect. */
+          @com.google.api.client.util.Key
+          private java.lang.String locationId;
+
+          /** Deprecated. This field has no effect.
+           */
+          public java.lang.String getLocationId() {
+            return locationId;
+          }
+
+          /** Deprecated. This field has no effect. */
+          public List setLocationId(java.lang.String locationId) {
+            this.locationId = locationId;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the InspectTemplates collection.
        *
        * <p>The typical use is:</p>
@@ -21965,6 +22195,236 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           @Override
           public Redact set(String parameterName, Object value) {
             return (Redact) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the InfoTypes collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code DLP dlp = new DLP(...);}
+       *   {@code DLP.InfoTypes.List request = dlp.infoTypes().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public InfoTypes infoTypes() {
+        return new InfoTypes();
+      }
+
+      /**
+       * The "infoTypes" collection of methods.
+       */
+      public class InfoTypes {
+
+        /**
+         * Returns a list of the sensitive information types that the DLP API supports. See
+         * https://cloud.google.com/sensitive-data-protection/docs/infotypes-reference to learn more.
+         *
+         * Create a request for the method "infoTypes.list".
+         *
+         * This request holds the parameters needed by the dlp server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent The parent resource name. The format of this value is as follows: `locations/{location_id}`
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends DLPRequest<com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListInfoTypesResponse> {
+
+          private static final String REST_PATH = "v2/{+parent}/infoTypes";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Returns a list of the sensitive information types that the DLP API supports. See
+           * https://cloud.google.com/sensitive-data-protection/docs/infotypes-reference to learn more.
+           *
+           * Create a request for the method "infoTypes.list".
+           *
+           * This request holds the parameters needed by the the dlp server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent The parent resource name. The format of this value is as follows: `locations/{location_id}`
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(DLP.this, "GET", REST_PATH, null, com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2ListInfoTypesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * The parent resource name. The format of this value is as follows:
+           * `locations/{location_id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** The parent resource name. The format of this value is as follows: `locations/{location_id}`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * The parent resource name. The format of this value is as follows:
+           * `locations/{location_id}`
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * filter to only return infoTypes supported by certain parts of the API. Defaults to
+           * supported_by=INSPECT.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** filter to only return infoTypes supported by certain parts of the API. Defaults to
+         supported_by=INSPECT.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * filter to only return infoTypes supported by certain parts of the API. Defaults to
+           * supported_by=INSPECT.
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * BCP-47 language code for localized infoType friendly names. If omitted, or if localized
+           * strings are not available, en-US strings will be returned.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String languageCode;
+
+          /** BCP-47 language code for localized infoType friendly names. If omitted, or if localized strings are
+         not available, en-US strings will be returned.
+           */
+          public java.lang.String getLanguageCode() {
+            return languageCode;
+          }
+
+          /**
+           * BCP-47 language code for localized infoType friendly names. If omitted, or if localized
+           * strings are not available, en-US strings will be returned.
+           */
+          public List setLanguageCode(java.lang.String languageCode) {
+            this.languageCode = languageCode;
+            return this;
+          }
+
+          /** Deprecated. This field has no effect. */
+          @com.google.api.client.util.Key
+          private java.lang.String locationId;
+
+          /** Deprecated. This field has no effect.
+           */
+          public java.lang.String getLocationId() {
+            return locationId;
+          }
+
+          /** Deprecated. This field has no effect. */
+          public List setLocationId(java.lang.String locationId) {
+            this.locationId = locationId;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
           }
         }
 

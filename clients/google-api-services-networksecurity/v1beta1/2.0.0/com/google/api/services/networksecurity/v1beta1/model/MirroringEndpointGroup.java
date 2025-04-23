@@ -40,6 +40,13 @@ public final class MirroringEndpointGroup extends com.google.api.client.json.Gen
   private java.util.List<MirroringEndpointGroupAssociationDetails> associations;
 
   /**
+   * Output only. List of details about the connected deployment groups to this endpoint group.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<MirroringEndpointGroupConnectedDeploymentGroup> connectedDeploymentGroups;
+
+  /**
    * Output only. The timestamp when the resource was created. See
    * https://google.aip.dev/148#timestamps.
    * The value may be {@code null}.
@@ -118,6 +125,23 @@ public final class MirroringEndpointGroup extends com.google.api.client.json.Gen
    */
   public MirroringEndpointGroup setAssociations(java.util.List<MirroringEndpointGroupAssociationDetails> associations) {
     this.associations = associations;
+    return this;
+  }
+
+  /**
+   * Output only. List of details about the connected deployment groups to this endpoint group.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<MirroringEndpointGroupConnectedDeploymentGroup> getConnectedDeploymentGroups() {
+    return connectedDeploymentGroups;
+  }
+
+  /**
+   * Output only. List of details about the connected deployment groups to this endpoint group.
+   * @param connectedDeploymentGroups connectedDeploymentGroups or {@code null} for none
+   */
+  public MirroringEndpointGroup setConnectedDeploymentGroups(java.util.List<MirroringEndpointGroupConnectedDeploymentGroup> connectedDeploymentGroups) {
+    this.connectedDeploymentGroups = connectedDeploymentGroups;
     return this;
   }
 

@@ -40,6 +40,13 @@ public final class InterceptEndpointGroup extends com.google.api.client.json.Gen
   private java.util.List<InterceptEndpointGroupAssociationDetails> associations;
 
   /**
+   * Output only. Details about the connected deployment group to this endpoint group.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InterceptEndpointGroupConnectedDeploymentGroup connectedDeploymentGroup;
+
+  /**
    * Output only. The timestamp when the resource was created. See
    * https://google.aip.dev/148#timestamps.
    * The value may be {@code null}.
@@ -56,8 +63,8 @@ public final class InterceptEndpointGroup extends com.google.api.client.json.Gen
   private java.lang.String description;
 
   /**
-   * Immutable. The deployment group that this endpoint group is connected to, for example:
-   * `projects/123456789/locations/global/interceptDeploymentGroups/my-dg`. See
+   * Required. Immutable. The deployment group that this endpoint group is connected to, for
+   * example: `projects/123456789/locations/global/interceptDeploymentGroups/my-dg`. See
    * https://google.aip.dev/124.
    * The value may be {@code null}.
    */
@@ -122,6 +129,23 @@ public final class InterceptEndpointGroup extends com.google.api.client.json.Gen
   }
 
   /**
+   * Output only. Details about the connected deployment group to this endpoint group.
+   * @return value or {@code null} for none
+   */
+  public InterceptEndpointGroupConnectedDeploymentGroup getConnectedDeploymentGroup() {
+    return connectedDeploymentGroup;
+  }
+
+  /**
+   * Output only. Details about the connected deployment group to this endpoint group.
+   * @param connectedDeploymentGroup connectedDeploymentGroup or {@code null} for none
+   */
+  public InterceptEndpointGroup setConnectedDeploymentGroup(InterceptEndpointGroupConnectedDeploymentGroup connectedDeploymentGroup) {
+    this.connectedDeploymentGroup = connectedDeploymentGroup;
+    return this;
+  }
+
+  /**
    * Output only. The timestamp when the resource was created. See
    * https://google.aip.dev/148#timestamps.
    * @return value or {@code null} for none
@@ -160,8 +184,8 @@ public final class InterceptEndpointGroup extends com.google.api.client.json.Gen
   }
 
   /**
-   * Immutable. The deployment group that this endpoint group is connected to, for example:
-   * `projects/123456789/locations/global/interceptDeploymentGroups/my-dg`. See
+   * Required. Immutable. The deployment group that this endpoint group is connected to, for
+   * example: `projects/123456789/locations/global/interceptDeploymentGroups/my-dg`. See
    * https://google.aip.dev/124.
    * @return value or {@code null} for none
    */
@@ -170,8 +194,8 @@ public final class InterceptEndpointGroup extends com.google.api.client.json.Gen
   }
 
   /**
-   * Immutable. The deployment group that this endpoint group is connected to, for example:
-   * `projects/123456789/locations/global/interceptDeploymentGroups/my-dg`. See
+   * Required. Immutable. The deployment group that this endpoint group is connected to, for
+   * example: `projects/123456789/locations/global/interceptDeploymentGroups/my-dg`. See
    * https://google.aip.dev/124.
    * @param interceptDeploymentGroup interceptDeploymentGroup or {@code null} for none
    */

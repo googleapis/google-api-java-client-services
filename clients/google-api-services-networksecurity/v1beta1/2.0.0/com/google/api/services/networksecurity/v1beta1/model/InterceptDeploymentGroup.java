@@ -61,6 +61,13 @@ public final class InterceptDeploymentGroup extends com.google.api.client.json.G
   private java.util.Map<String, java.lang.String> labels;
 
   /**
+   * Output only. The list of locations where the deployment group is present.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<InterceptLocation> locations;
+
+  /**
    * Immutable. Identifier. The resource name of this deployment group, for example:
    * `projects/123456789/locations/global/interceptDeploymentGroups/my-dg`. See
    * https://google.aip.dev/122 for more details.
@@ -177,6 +184,23 @@ public final class InterceptDeploymentGroup extends com.google.api.client.json.G
    */
   public InterceptDeploymentGroup setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
+    return this;
+  }
+
+  /**
+   * Output only. The list of locations where the deployment group is present.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<InterceptLocation> getLocations() {
+    return locations;
+  }
+
+  /**
+   * Output only. The list of locations where the deployment group is present.
+   * @param locations locations or {@code null} for none
+   */
+  public InterceptDeploymentGroup setLocations(java.util.List<InterceptLocation> locations) {
+    this.locations = locations;
     return this;
   }
 

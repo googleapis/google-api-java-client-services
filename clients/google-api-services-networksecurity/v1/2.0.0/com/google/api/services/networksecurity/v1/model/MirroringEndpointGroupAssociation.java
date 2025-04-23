@@ -49,6 +49,14 @@ public final class MirroringEndpointGroupAssociation extends com.google.api.clie
   private java.util.Map<String, java.lang.String> labels;
 
   /**
+   * Output only. The list of locations where the association is configured. This information is
+   * retrieved from the linked endpoint group.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<MirroringLocation> locations;
+
+  /**
    * Output only. The list of locations where the association is present. This information is
    * retrieved from the linked endpoint group, and not configured as part of the association itself.
    * The value may be {@code null}.
@@ -139,6 +147,25 @@ public final class MirroringEndpointGroupAssociation extends com.google.api.clie
    */
   public MirroringEndpointGroupAssociation setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
+    return this;
+  }
+
+  /**
+   * Output only. The list of locations where the association is configured. This information is
+   * retrieved from the linked endpoint group.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<MirroringLocation> getLocations() {
+    return locations;
+  }
+
+  /**
+   * Output only. The list of locations where the association is configured. This information is
+   * retrieved from the linked endpoint group.
+   * @param locations locations or {@code null} for none
+   */
+  public MirroringEndpointGroupAssociation setLocations(java.util.List<MirroringLocation> locations) {
+    this.locations = locations;
     return this;
   }
 

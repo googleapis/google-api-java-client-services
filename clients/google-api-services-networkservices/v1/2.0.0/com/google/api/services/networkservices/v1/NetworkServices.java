@@ -445,6 +445,29 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
         }
 
         /**
+         * Optional. A list of extra location types that should be used as conditions for
+         * controlling the visibility of the locations.
+         */
+        @com.google.api.client.util.Key
+        private java.util.List<java.lang.String> extraLocationTypes;
+
+        /** Optional. A list of extra location types that should be used as conditions for controlling the
+       visibility of the locations.
+         */
+        public java.util.List<java.lang.String> getExtraLocationTypes() {
+          return extraLocationTypes;
+        }
+
+        /**
+         * Optional. A list of extra location types that should be used as conditions for
+         * controlling the visibility of the locations.
+         */
+        public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
+          this.extraLocationTypes = extraLocationTypes;
+          return this;
+        }
+
+        /**
          * A filter to narrow down results to a preferred subset. The filtering language accepts
          * strings like `"displayName=tokyo"`, and is documented in more detail in
          * [AIP-160](https://google.aip.dev/160).
@@ -3697,6 +3720,31 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
             return this;
           }
 
+          /**
+           * Optional. If true, allow partial responses for multi-regional Aggregated List requests.
+           * Otherwise if one of the locations is down or unreachable, the Aggregated List request
+           * will fail.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean returnPartialSuccess;
+
+          /** Optional. If true, allow partial responses for multi-regional Aggregated List requests. Otherwise
+         if one of the locations is down or unreachable, the Aggregated List request will fail.
+           */
+          public java.lang.Boolean getReturnPartialSuccess() {
+            return returnPartialSuccess;
+          }
+
+          /**
+           * Optional. If true, allow partial responses for multi-regional Aggregated List requests.
+           * Otherwise if one of the locations is down or unreachable, the Aggregated List request
+           * will fail.
+           */
+          public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
+            this.returnPartialSuccess = returnPartialSuccess;
+            return this;
+          }
+
           @Override
           public List set(String parameterName, Object value) {
             return (List) super.set(parameterName, value);
@@ -5682,6 +5730,31 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
             return this;
           }
 
+          /**
+           * Optional. If true, allow partial responses for multi-regional Aggregated List requests.
+           * Otherwise if one of the locations is down or unreachable, the Aggregated List request
+           * will fail.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean returnPartialSuccess;
+
+          /** Optional. If true, allow partial responses for multi-regional Aggregated List requests. Otherwise
+         if one of the locations is down or unreachable, the Aggregated List request will fail.
+           */
+          public java.lang.Boolean getReturnPartialSuccess() {
+            return returnPartialSuccess;
+          }
+
+          /**
+           * Optional. If true, allow partial responses for multi-regional Aggregated List requests.
+           * Otherwise if one of the locations is down or unreachable, the Aggregated List request
+           * will fail.
+           */
+          public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
+            this.returnPartialSuccess = returnPartialSuccess;
+            return this;
+          }
+
           @Override
           public List set(String parameterName, Object value) {
             return (List) super.set(parameterName, value);
@@ -6496,6 +6569,31 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
+            return this;
+          }
+
+          /**
+           * Optional. If true, allow partial responses for multi-regional Aggregated List requests.
+           * Otherwise if one of the locations is down or unreachable, the Aggregated List request
+           * will fail.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean returnPartialSuccess;
+
+          /** Optional. If true, allow partial responses for multi-regional Aggregated List requests. Otherwise
+         if one of the locations is down or unreachable, the Aggregated List request will fail.
+           */
+          public java.lang.Boolean getReturnPartialSuccess() {
+            return returnPartialSuccess;
+          }
+
+          /**
+           * Optional. If true, allow partial responses for multi-regional Aggregated List requests.
+           * Otherwise if one of the locations is down or unreachable, the Aggregated List request
+           * will fail.
+           */
+          public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
+            this.returnPartialSuccess = returnPartialSuccess;
             return this;
           }
 
@@ -12563,6 +12661,31 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
             return this;
           }
 
+          /**
+           * Optional. If true, allow partial responses for multi-regional Aggregated List requests.
+           * Otherwise if one of the locations is down or unreachable, the Aggregated List request
+           * will fail.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean returnPartialSuccess;
+
+          /** Optional. If true, allow partial responses for multi-regional Aggregated List requests. Otherwise
+         if one of the locations is down or unreachable, the Aggregated List request will fail.
+           */
+          public java.lang.Boolean getReturnPartialSuccess() {
+            return returnPartialSuccess;
+          }
+
+          /**
+           * Optional. If true, allow partial responses for multi-regional Aggregated List requests.
+           * Otherwise if one of the locations is down or unreachable, the Aggregated List request
+           * will fail.
+           */
+          public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
+            this.returnPartialSuccess = returnPartialSuccess;
+            return this;
+          }
+
           @Override
           public List set(String parameterName, Object value) {
             return (List) super.set(parameterName, value);
@@ -13377,6 +13500,31 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
+            return this;
+          }
+
+          /**
+           * Optional. If true, allow partial responses for multi-regional Aggregated List requests.
+           * Otherwise if one of the locations is down or unreachable, the Aggregated List request
+           * will fail.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean returnPartialSuccess;
+
+          /** Optional. If true, allow partial responses for multi-regional Aggregated List requests. Otherwise
+         if one of the locations is down or unreachable, the Aggregated List request will fail.
+           */
+          public java.lang.Boolean getReturnPartialSuccess() {
+            return returnPartialSuccess;
+          }
+
+          /**
+           * Optional. If true, allow partial responses for multi-regional Aggregated List requests.
+           * Otherwise if one of the locations is down or unreachable, the Aggregated List request
+           * will fail.
+           */
+          public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
+            this.returnPartialSuccess = returnPartialSuccess;
             return this;
           }
 

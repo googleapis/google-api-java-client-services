@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.networkservices.v1.model;
+package com.google.api.services.networkservices.v1beta1.model;
 
 /**
- * Response returned by the ListMeshRouteViews method.
+ * Message for response to listing `LbEdgeExtension` resources.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Services API. For a detailed explanation see:
@@ -27,51 +27,54 @@ package com.google.api.services.networkservices.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ListMeshRouteViewsResponse extends com.google.api.client.json.GenericJson {
+public final class ListLbEdgeExtensionsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of MeshRouteView resources.
+   * The list of `LbEdgeExtension` resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<MeshRouteView> meshRouteViews;
+  private java.util.List<LbEdgeExtension> lbEdgeExtensions;
+
+  static {
+    // hack to force ProGuard to consider LbEdgeExtension used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(LbEdgeExtension.class);
+  }
 
   /**
-   * A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted,
-   * there are no subsequent pages.
+   * A token identifying a page of results that the server returns.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * Unreachable resources. Populated when the request attempts to list all resources across all
-   * supported locations, while some locations are temporarily unavailable.
+   * Locations that could not be reached.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> unreachable;
 
   /**
-   * List of MeshRouteView resources.
+   * The list of `LbEdgeExtension` resources.
    * @return value or {@code null} for none
    */
-  public java.util.List<MeshRouteView> getMeshRouteViews() {
-    return meshRouteViews;
+  public java.util.List<LbEdgeExtension> getLbEdgeExtensions() {
+    return lbEdgeExtensions;
   }
 
   /**
-   * List of MeshRouteView resources.
-   * @param meshRouteViews meshRouteViews or {@code null} for none
+   * The list of `LbEdgeExtension` resources.
+   * @param lbEdgeExtensions lbEdgeExtensions or {@code null} for none
    */
-  public ListMeshRouteViewsResponse setMeshRouteViews(java.util.List<MeshRouteView> meshRouteViews) {
-    this.meshRouteViews = meshRouteViews;
+  public ListLbEdgeExtensionsResponse setLbEdgeExtensions(java.util.List<LbEdgeExtension> lbEdgeExtensions) {
+    this.lbEdgeExtensions = lbEdgeExtensions;
     return this;
   }
 
   /**
-   * A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted,
-   * there are no subsequent pages.
+   * A token identifying a page of results that the server returns.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -79,18 +82,16 @@ public final class ListMeshRouteViewsResponse extends com.google.api.client.json
   }
 
   /**
-   * A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted,
-   * there are no subsequent pages.
+   * A token identifying a page of results that the server returns.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
-  public ListMeshRouteViewsResponse setNextPageToken(java.lang.String nextPageToken) {
+  public ListLbEdgeExtensionsResponse setNextPageToken(java.lang.String nextPageToken) {
     this.nextPageToken = nextPageToken;
     return this;
   }
 
   /**
-   * Unreachable resources. Populated when the request attempts to list all resources across all
-   * supported locations, while some locations are temporarily unavailable.
+   * Locations that could not be reached.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUnreachable() {
@@ -98,23 +99,22 @@ public final class ListMeshRouteViewsResponse extends com.google.api.client.json
   }
 
   /**
-   * Unreachable resources. Populated when the request attempts to list all resources across all
-   * supported locations, while some locations are temporarily unavailable.
+   * Locations that could not be reached.
    * @param unreachable unreachable or {@code null} for none
    */
-  public ListMeshRouteViewsResponse setUnreachable(java.util.List<java.lang.String> unreachable) {
+  public ListLbEdgeExtensionsResponse setUnreachable(java.util.List<java.lang.String> unreachable) {
     this.unreachable = unreachable;
     return this;
   }
 
   @Override
-  public ListMeshRouteViewsResponse set(String fieldName, Object value) {
-    return (ListMeshRouteViewsResponse) super.set(fieldName, value);
+  public ListLbEdgeExtensionsResponse set(String fieldName, Object value) {
+    return (ListLbEdgeExtensionsResponse) super.set(fieldName, value);
   }
 
   @Override
-  public ListMeshRouteViewsResponse clone() {
-    return (ListMeshRouteViewsResponse) super.clone();
+  public ListLbEdgeExtensionsResponse clone() {
+    return (ListLbEdgeExtensionsResponse) super.clone();
   }
 
 }

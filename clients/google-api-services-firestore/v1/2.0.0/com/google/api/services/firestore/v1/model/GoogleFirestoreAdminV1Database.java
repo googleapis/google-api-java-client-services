@@ -59,6 +59,13 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
   private String createTime;
 
   /**
+   * Immutable. The edition of the database.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String databaseEdition;
+
+  /**
    * State of delete protection for the database.
    * The value may be {@code null}.
    */
@@ -91,6 +98,18 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
    */
   @com.google.api.client.util.Key
   private java.lang.String etag;
+
+  /**
+   * Output only. Background: Free tier is the ability of a Firestore database to use a small amount
+   * of resources every day without being charged. Once usage exceeds the free tier limit further
+   * usage is charged. Whether this database can make use of the free tier. Only one database per
+   * project can be eligible for the free tier. The first (or next) database that is created in a
+   * project without a free tier database will be marked as eligible for the free tier. Databases
+   * that are created while there is a free tier database will not be eligible for the free tier.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean freeTier;
 
   /**
    * Output only. The key_prefix for this database. This key_prefix is used, in combination with the
@@ -138,6 +157,14 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
    */
   @com.google.api.client.util.Key
   private GoogleFirestoreAdminV1SourceInfo sourceInfo;
+
+  /**
+   * Optional. Input only. Immutable. Tag keys/values directly bound to this resource. For example:
+   * "123/environment": "production", "123/costCenter": "marketing"
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> tags;
 
   /**
    * The type of the database. See https://cloud.google.com/datastore/docs/firestore-or-datastore
@@ -243,6 +270,23 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
   }
 
   /**
+   * Immutable. The edition of the database.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDatabaseEdition() {
+    return databaseEdition;
+  }
+
+  /**
+   * Immutable. The edition of the database.
+   * @param databaseEdition databaseEdition or {@code null} for none
+   */
+  public GoogleFirestoreAdminV1Database setDatabaseEdition(java.lang.String databaseEdition) {
+    this.databaseEdition = databaseEdition;
+    return this;
+  }
+
+  /**
    * State of delete protection for the database.
    * @return value or {@code null} for none
    */
@@ -319,6 +363,33 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
    */
   public GoogleFirestoreAdminV1Database setEtag(java.lang.String etag) {
     this.etag = etag;
+    return this;
+  }
+
+  /**
+   * Output only. Background: Free tier is the ability of a Firestore database to use a small amount
+   * of resources every day without being charged. Once usage exceeds the free tier limit further
+   * usage is charged. Whether this database can make use of the free tier. Only one database per
+   * project can be eligible for the free tier. The first (or next) database that is created in a
+   * project without a free tier database will be marked as eligible for the free tier. Databases
+   * that are created while there is a free tier database will not be eligible for the free tier.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getFreeTier() {
+    return freeTier;
+  }
+
+  /**
+   * Output only. Background: Free tier is the ability of a Firestore database to use a small amount
+   * of resources every day without being charged. Once usage exceeds the free tier limit further
+   * usage is charged. Whether this database can make use of the free tier. Only one database per
+   * project can be eligible for the free tier. The first (or next) database that is created in a
+   * project without a free tier database will be marked as eligible for the free tier. Databases
+   * that are created while there is a free tier database will not be eligible for the free tier.
+   * @param freeTier freeTier or {@code null} for none
+   */
+  public GoogleFirestoreAdminV1Database setFreeTier(java.lang.Boolean freeTier) {
+    this.freeTier = freeTier;
     return this;
   }
 
@@ -431,6 +502,25 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
    */
   public GoogleFirestoreAdminV1Database setSourceInfo(GoogleFirestoreAdminV1SourceInfo sourceInfo) {
     this.sourceInfo = sourceInfo;
+    return this;
+  }
+
+  /**
+   * Optional. Input only. Immutable. Tag keys/values directly bound to this resource. For example:
+   * "123/environment": "production", "123/costCenter": "marketing"
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getTags() {
+    return tags;
+  }
+
+  /**
+   * Optional. Input only. Immutable. Tag keys/values directly bound to this resource. For example:
+   * "123/environment": "production", "123/costCenter": "marketing"
+   * @param tags tags or {@code null} for none
+   */
+  public GoogleFirestoreAdminV1Database setTags(java.util.Map<String, java.lang.String> tags) {
+    this.tags = tags;
     return this;
   }
 

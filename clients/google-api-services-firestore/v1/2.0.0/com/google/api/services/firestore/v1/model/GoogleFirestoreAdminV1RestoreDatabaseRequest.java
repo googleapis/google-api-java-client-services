@@ -59,6 +59,14 @@ public final class GoogleFirestoreAdminV1RestoreDatabaseRequest extends com.goog
   private GoogleFirestoreAdminV1EncryptionConfig encryptionConfig;
 
   /**
+   * Optional. Immutable. Tags to be bound to the restored database. The tags should be provided in
+   * the format of `tagKeys/{tag_key_id} -> tagValues/{tag_value_id}`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> tags;
+
+  /**
    * Required. Backup to restore from. Must be from the same project as the parent. The restored
    * database will be created in the same location as the source backup. Format is:
    * `projects/{project_id}/locations/{location}/backups/{backup}`
@@ -122,6 +130,25 @@ public final class GoogleFirestoreAdminV1RestoreDatabaseRequest extends com.goog
    */
   public GoogleFirestoreAdminV1RestoreDatabaseRequest setEncryptionConfig(GoogleFirestoreAdminV1EncryptionConfig encryptionConfig) {
     this.encryptionConfig = encryptionConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Immutable. Tags to be bound to the restored database. The tags should be provided in
+   * the format of `tagKeys/{tag_key_id} -> tagValues/{tag_value_id}`.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getTags() {
+    return tags;
+  }
+
+  /**
+   * Optional. Immutable. Tags to be bound to the restored database. The tags should be provided in
+   * the format of `tagKeys/{tag_key_id} -> tagValues/{tag_value_id}`.
+   * @param tags tags or {@code null} for none
+   */
+  public GoogleFirestoreAdminV1RestoreDatabaseRequest setTags(java.util.Map<String, java.lang.String> tags) {
+    this.tags = tags;
     return this;
   }
 

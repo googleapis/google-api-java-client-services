@@ -39,7 +39,8 @@ public final class CommentThreadSnippet extends com.google.api.client.json.Gener
 
   /**
    * The YouTube channel the comments in the thread refer to or the channel with the video the
-   * comments refer to. If video_id isn't set the comments refer to the channel itself.
+   * comments refer to. If neither video_id nor post_id is set the comments refer to the channel
+   * itself.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,6 +52,13 @@ public final class CommentThreadSnippet extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isPublic;
+
+  /**
+   * The ID of the post the comments refer to, if any.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String postId;
 
   /**
    * The top level comment of this thread.
@@ -67,8 +75,7 @@ public final class CommentThreadSnippet extends com.google.api.client.json.Gener
   private java.lang.Long totalReplyCount;
 
   /**
-   * The ID of the video the comments refer to, if any. No video_id implies a channel discussion
-   * comment.
+   * The ID of the video the comments refer to, if any.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,7 +102,8 @@ public final class CommentThreadSnippet extends com.google.api.client.json.Gener
 
   /**
    * The YouTube channel the comments in the thread refer to or the channel with the video the
-   * comments refer to. If video_id isn't set the comments refer to the channel itself.
+   * comments refer to. If neither video_id nor post_id is set the comments refer to the channel
+   * itself.
    * @return value or {@code null} for none
    */
   public java.lang.String getChannelId() {
@@ -104,7 +112,8 @@ public final class CommentThreadSnippet extends com.google.api.client.json.Gener
 
   /**
    * The YouTube channel the comments in the thread refer to or the channel with the video the
-   * comments refer to. If video_id isn't set the comments refer to the channel itself.
+   * comments refer to. If neither video_id nor post_id is set the comments refer to the channel
+   * itself.
    * @param channelId channelId or {@code null} for none
    */
   public CommentThreadSnippet setChannelId(java.lang.String channelId) {
@@ -126,6 +135,23 @@ public final class CommentThreadSnippet extends com.google.api.client.json.Gener
    */
   public CommentThreadSnippet setIsPublic(java.lang.Boolean isPublic) {
     this.isPublic = isPublic;
+    return this;
+  }
+
+  /**
+   * The ID of the post the comments refer to, if any.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPostId() {
+    return postId;
+  }
+
+  /**
+   * The ID of the post the comments refer to, if any.
+   * @param postId postId or {@code null} for none
+   */
+  public CommentThreadSnippet setPostId(java.lang.String postId) {
+    this.postId = postId;
     return this;
   }
 
@@ -164,8 +190,7 @@ public final class CommentThreadSnippet extends com.google.api.client.json.Gener
   }
 
   /**
-   * The ID of the video the comments refer to, if any. No video_id implies a channel discussion
-   * comment.
+   * The ID of the video the comments refer to, if any.
    * @return value or {@code null} for none
    */
   public java.lang.String getVideoId() {
@@ -173,8 +198,7 @@ public final class CommentThreadSnippet extends com.google.api.client.json.Gener
   }
 
   /**
-   * The ID of the video the comments refer to, if any. No video_id implies a channel discussion
-   * comment.
+   * The ID of the video the comments refer to, if any.
    * @param videoId videoId or {@code null} for none
    */
   public CommentThreadSnippet setVideoId(java.lang.String videoId) {

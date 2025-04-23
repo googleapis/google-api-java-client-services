@@ -3950,6 +3950,22 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
+      /** Returns the comment threads of the specified post. */
+      @com.google.api.client.util.Key
+      private java.lang.String postId;
+
+      /** Returns the comment threads of the specified post.
+       */
+      public java.lang.String getPostId() {
+        return postId;
+      }
+
+      /** Returns the comment threads of the specified post. */
+      public List setPostId(java.lang.String postId) {
+        this.postId = postId;
+        return this;
+      }
+
       /**
        * Limits the returned comment threads to those matching the specified key words. Not
        * compatible with the 'id' filter.

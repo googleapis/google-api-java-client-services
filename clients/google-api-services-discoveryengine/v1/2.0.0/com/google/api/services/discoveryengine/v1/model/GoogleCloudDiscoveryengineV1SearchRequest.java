@@ -67,13 +67,20 @@ public final class GoogleCloudDiscoveryengineV1SearchRequest extends com.google.
   private GoogleCloudDiscoveryengineV1SearchRequestContentSearchSpec contentSearchSpec;
 
   /**
-   * Specs defining dataStores to filter on in a search call and configurations for those
-   * dataStores. This is only considered for engines with multiple dataStores use case. For single
-   * dataStore within an engine, they should use the specs at the top level.
+   * Specifications that define the specific DataStores to be searched, along with configurations
+   * for those data stores. This is only considered for Engines with multiple data stores. For
+   * engines with a single data store, the specs directly under SearchRequest should be used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDiscoveryengineV1SearchRequestDataStoreSpec> dataStoreSpecs;
+
+  /**
+   * Optional. Config for display feature, like match highlighting on search results.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1SearchRequestDisplaySpec displaySpec;
 
   /**
    * Facet specifications for faceted search. If empty, no facets are returned. A maximum of 100
@@ -196,6 +203,22 @@ public final class GoogleCloudDiscoveryengineV1SearchRequest extends com.google.
   private GoogleCloudDiscoveryengineV1SearchRequestQueryExpansionSpec queryExpansionSpec;
 
   /**
+   * Optional. The specification for returning the relevance score.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1SearchRequestRelevanceScoreSpec relevanceScoreSpec;
+
+  /**
+   * The relevance threshold of the search results. Default to Google defined threshold, leveraging
+   * a balance of precision and recall to deliver both highly accurate results and comprehensive
+   * coverage of relevant information. This feature is not supported for healthcare search.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String relevanceThreshold;
+
+  /**
    * Whether to turn on safe search. This is only supported for website search.
    * The value may be {@code null}.
    */
@@ -245,8 +268,8 @@ public final class GoogleCloudDiscoveryengineV1SearchRequest extends com.google.
   private GoogleCloudDiscoveryengineV1SearchRequestSpellCorrectionSpec spellCorrectionSpec;
 
   /**
-   * Information about the end user. Highly recommended for analytics. UserInfo.user_agent is used
-   * to deduce `device_type` for analytics.
+   * Information about the end user. Highly recommended for analytics and personalization.
+   * UserInfo.user_agent is used to deduce `device_type` for analytics.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -368,9 +391,9 @@ public final class GoogleCloudDiscoveryengineV1SearchRequest extends com.google.
   }
 
   /**
-   * Specs defining dataStores to filter on in a search call and configurations for those
-   * dataStores. This is only considered for engines with multiple dataStores use case. For single
-   * dataStore within an engine, they should use the specs at the top level.
+   * Specifications that define the specific DataStores to be searched, along with configurations
+   * for those data stores. This is only considered for Engines with multiple data stores. For
+   * engines with a single data store, the specs directly under SearchRequest should be used.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDiscoveryengineV1SearchRequestDataStoreSpec> getDataStoreSpecs() {
@@ -378,13 +401,30 @@ public final class GoogleCloudDiscoveryengineV1SearchRequest extends com.google.
   }
 
   /**
-   * Specs defining dataStores to filter on in a search call and configurations for those
-   * dataStores. This is only considered for engines with multiple dataStores use case. For single
-   * dataStore within an engine, they should use the specs at the top level.
+   * Specifications that define the specific DataStores to be searched, along with configurations
+   * for those data stores. This is only considered for Engines with multiple data stores. For
+   * engines with a single data store, the specs directly under SearchRequest should be used.
    * @param dataStoreSpecs dataStoreSpecs or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1SearchRequest setDataStoreSpecs(java.util.List<GoogleCloudDiscoveryengineV1SearchRequestDataStoreSpec> dataStoreSpecs) {
     this.dataStoreSpecs = dataStoreSpecs;
+    return this;
+  }
+
+  /**
+   * Optional. Config for display feature, like match highlighting on search results.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1SearchRequestDisplaySpec getDisplaySpec() {
+    return displaySpec;
+  }
+
+  /**
+   * Optional. Config for display feature, like match highlighting on search results.
+   * @param displaySpec displaySpec or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1SearchRequest setDisplaySpec(GoogleCloudDiscoveryengineV1SearchRequestDisplaySpec displaySpec) {
+    this.displaySpec = displaySpec;
     return this;
   }
 
@@ -665,6 +705,44 @@ public final class GoogleCloudDiscoveryengineV1SearchRequest extends com.google.
   }
 
   /**
+   * Optional. The specification for returning the relevance score.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1SearchRequestRelevanceScoreSpec getRelevanceScoreSpec() {
+    return relevanceScoreSpec;
+  }
+
+  /**
+   * Optional. The specification for returning the relevance score.
+   * @param relevanceScoreSpec relevanceScoreSpec or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1SearchRequest setRelevanceScoreSpec(GoogleCloudDiscoveryengineV1SearchRequestRelevanceScoreSpec relevanceScoreSpec) {
+    this.relevanceScoreSpec = relevanceScoreSpec;
+    return this;
+  }
+
+  /**
+   * The relevance threshold of the search results. Default to Google defined threshold, leveraging
+   * a balance of precision and recall to deliver both highly accurate results and comprehensive
+   * coverage of relevant information. This feature is not supported for healthcare search.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRelevanceThreshold() {
+    return relevanceThreshold;
+  }
+
+  /**
+   * The relevance threshold of the search results. Default to Google defined threshold, leveraging
+   * a balance of precision and recall to deliver both highly accurate results and comprehensive
+   * coverage of relevant information. This feature is not supported for healthcare search.
+   * @param relevanceThreshold relevanceThreshold or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1SearchRequest setRelevanceThreshold(java.lang.String relevanceThreshold) {
+    this.relevanceThreshold = relevanceThreshold;
+    return this;
+  }
+
+  /**
    * Whether to turn on safe search. This is only supported for website search.
    * @return value or {@code null} for none
    */
@@ -778,8 +856,8 @@ public final class GoogleCloudDiscoveryengineV1SearchRequest extends com.google.
   }
 
   /**
-   * Information about the end user. Highly recommended for analytics. UserInfo.user_agent is used
-   * to deduce `device_type` for analytics.
+   * Information about the end user. Highly recommended for analytics and personalization.
+   * UserInfo.user_agent is used to deduce `device_type` for analytics.
    * @return value or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1UserInfo getUserInfo() {
@@ -787,8 +865,8 @@ public final class GoogleCloudDiscoveryengineV1SearchRequest extends com.google.
   }
 
   /**
-   * Information about the end user. Highly recommended for analytics. UserInfo.user_agent is used
-   * to deduce `device_type` for analytics.
+   * Information about the end user. Highly recommended for analytics and personalization.
+   * UserInfo.user_agent is used to deduce `device_type` for analytics.
    * @param userInfo userInfo or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1SearchRequest setUserInfo(GoogleCloudDiscoveryengineV1UserInfo userInfo) {

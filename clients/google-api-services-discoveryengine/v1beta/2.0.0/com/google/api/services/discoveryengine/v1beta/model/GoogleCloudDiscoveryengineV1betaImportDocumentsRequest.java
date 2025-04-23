@@ -94,6 +94,15 @@ public final class GoogleCloudDiscoveryengineV1betaImportDocumentsRequest extend
   private GoogleCloudDiscoveryengineV1betaFirestoreSource firestoreSource;
 
   /**
+   * Optional. Whether to force refresh the unstructured content of the documents. If set to `true`,
+   * the content part of the documents will be refreshed regardless of the update status of the
+   * referencing content.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean forceRefreshContent;
+
+  /**
    * Cloud Storage location for the input content.
    * The value may be {@code null}.
    */
@@ -298,6 +307,27 @@ public final class GoogleCloudDiscoveryengineV1betaImportDocumentsRequest extend
    */
   public GoogleCloudDiscoveryengineV1betaImportDocumentsRequest setFirestoreSource(GoogleCloudDiscoveryengineV1betaFirestoreSource firestoreSource) {
     this.firestoreSource = firestoreSource;
+    return this;
+  }
+
+  /**
+   * Optional. Whether to force refresh the unstructured content of the documents. If set to `true`,
+   * the content part of the documents will be refreshed regardless of the update status of the
+   * referencing content.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getForceRefreshContent() {
+    return forceRefreshContent;
+  }
+
+  /**
+   * Optional. Whether to force refresh the unstructured content of the documents. If set to `true`,
+   * the content part of the documents will be refreshed regardless of the update status of the
+   * referencing content.
+   * @param forceRefreshContent forceRefreshContent or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaImportDocumentsRequest setForceRefreshContent(java.lang.Boolean forceRefreshContent) {
+    this.forceRefreshContent = forceRefreshContent;
     return this;
   }
 

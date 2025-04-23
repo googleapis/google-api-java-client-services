@@ -75,13 +75,20 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
   private GoogleCloudDiscoveryengineV1alphaCustomFineTuningSpec customFineTuningSpec;
 
   /**
-   * Specs defining dataStores to filter on in a search call and configurations for those
-   * dataStores. This is only considered for engines with multiple dataStores use case. For single
-   * dataStore within an engine, they should use the specs at the top level.
+   * Specifications that define the specific DataStores to be searched, along with configurations
+   * for those data stores. This is only considered for Engines with multiple data stores. For
+   * engines with a single data store, the specs directly under SearchRequest should be used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDiscoveryengineV1alphaSearchRequestDataStoreSpec> dataStoreSpecs;
+
+  /**
+   * Optional. Config for display feature, like match highlighting on search results.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1alphaSearchRequestDisplaySpec displaySpec;
 
   /**
    * Uses the provided embedding to do additional semantic document retrieval. The retrieval is
@@ -233,19 +240,39 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
 
   /**
    * The ranking expression controls the customized ranking on retrieval documents. This overrides
-   * ServingConfig.ranking_expression. The ranking expression is a single function or multiple
-   * functions that are joined by "+". * ranking_expression = function, { " + ", function };
-   * Supported functions: * double * relevance_score * double * dotProduct(embedding_field_path)
-   * Function variables: * `relevance_score`: pre-defined keywords, used for measure relevance
-   * between query and document. * `embedding_field_path`: the document embedding field used with
-   * query embedding vector. * `dotProduct`: embedding function between embedding_field_path and
-   * query embedding vector. Example ranking expression: If document has an embedding field
-   * doc_embedding, the ranking expression could be `0.5 * relevance_score + 0.3 *
-   * dotProduct(doc_embedding)`.
+   * ServingConfig.ranking_expression. The syntax and supported features depend on the
+   * ranking_expression_backend value. If ranking_expression_backend is not provided, it defaults to
+   * BYOE. === BYOE === If ranking_expression_backend is not provided or set to `BYOE`, it should be
+   * a single function or multiple functions that are joined by "+". * ranking_expression =
+   * function, { " + ", function }; Supported functions: * double * relevance_score * double *
+   * dotProduct(embedding_field_path) Function variables: * `relevance_score`: pre-defined keywords,
+   * used for measure relevance between query and document. * `embedding_field_path`: the document
+   * embedding field used with query embedding vector. * `dotProduct`: embedding function between
+   * embedding_field_path and query embedding vector. Example ranking expression: If document has an
+   * embedding field doc_embedding, the ranking expression could be `0.5 * relevance_score + 0.3 *
+   * dotProduct(doc_embedding)`. === CLEARBOX === If ranking_expression_backend is set to
+   * `CLEARBOX`, the following expression types (and combinations of those chained using + or *
+   * operators) are supported: * double * signal * log(signal) * exp(signal) * rr(signal, double >
+   * 0) -- reciprocal rank transformation with second argument being a denominator constant. *
+   * is_nan(signal) -- returns 0 if signal is NaN, 1 otherwise. * fill_nan(signal1, signal2 |
+   * double) -- if signal1 is NaN, returns signal2 | double, else returns signal1. Examples: * 0.2 *
+   * gecko_score + 0.8 * log(bm25_score) * 0.2 * exp(fill_nan(gecko_score, 0)) + 0.3 *
+   * is_nan(bm25_score) * 0.2 * rr(gecko_score, 16) + 0.8 * rr(bm25_score, 32) The following signals
+   * are supported: * gecko_score -- semantic similarity adjustment * bm25_score -- keyword match
+   * adjustment * jetstream_score -- semantic relevance adjustment * pctr_rank -- predicted
+   * conversion rate adjustment as a rank * freshness_rank -- freshness adjustment as a rank *
+   * base_rank -- the default rank of the result
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String rankingExpression;
+
+  /**
+   * Optional. The backend to use for the ranking expression evaluation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String rankingExpressionBackend;
 
   /**
    * The Unicode country/region code (CLDR) of a location, such as "US" and "419". For more
@@ -257,9 +284,16 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
   private java.lang.String regionCode;
 
   /**
+   * Optional. The specification for returning the relevance score.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1alphaSearchRequestRelevanceScoreSpec relevanceScoreSpec;
+
+  /**
    * The relevance threshold of the search results. Default to Google defined threshold, leveraging
    * a balance of precision and recall to deliver both highly accurate results and comprehensive
-   * coverage of relevant information.
+   * coverage of relevant information. This feature is not supported for healthcare search.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -326,8 +360,8 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
   private GoogleCloudDiscoveryengineV1alphaSearchRequestSpellCorrectionSpec spellCorrectionSpec;
 
   /**
-   * Information about the end user. Highly recommended for analytics. UserInfo.user_agent is used
-   * to deduce `device_type` for analytics.
+   * Information about the end user. Highly recommended for analytics and personalization.
+   * UserInfo.user_agent is used to deduce `device_type` for analytics.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -468,9 +502,9 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
   }
 
   /**
-   * Specs defining dataStores to filter on in a search call and configurations for those
-   * dataStores. This is only considered for engines with multiple dataStores use case. For single
-   * dataStore within an engine, they should use the specs at the top level.
+   * Specifications that define the specific DataStores to be searched, along with configurations
+   * for those data stores. This is only considered for Engines with multiple data stores. For
+   * engines with a single data store, the specs directly under SearchRequest should be used.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDiscoveryengineV1alphaSearchRequestDataStoreSpec> getDataStoreSpecs() {
@@ -478,13 +512,30 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
   }
 
   /**
-   * Specs defining dataStores to filter on in a search call and configurations for those
-   * dataStores. This is only considered for engines with multiple dataStores use case. For single
-   * dataStore within an engine, they should use the specs at the top level.
+   * Specifications that define the specific DataStores to be searched, along with configurations
+   * for those data stores. This is only considered for Engines with multiple data stores. For
+   * engines with a single data store, the specs directly under SearchRequest should be used.
    * @param dataStoreSpecs dataStoreSpecs or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaSearchRequest setDataStoreSpecs(java.util.List<GoogleCloudDiscoveryengineV1alphaSearchRequestDataStoreSpec> dataStoreSpecs) {
     this.dataStoreSpecs = dataStoreSpecs;
+    return this;
+  }
+
+  /**
+   * Optional. Config for display feature, like match highlighting on search results.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaSearchRequestDisplaySpec getDisplaySpec() {
+    return displaySpec;
+  }
+
+  /**
+   * Optional. Config for display feature, like match highlighting on search results.
+   * @param displaySpec displaySpec or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaSearchRequest setDisplaySpec(GoogleCloudDiscoveryengineV1alphaSearchRequestDisplaySpec displaySpec) {
+    this.displaySpec = displaySpec;
     return this;
   }
 
@@ -831,15 +882,28 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
 
   /**
    * The ranking expression controls the customized ranking on retrieval documents. This overrides
-   * ServingConfig.ranking_expression. The ranking expression is a single function or multiple
-   * functions that are joined by "+". * ranking_expression = function, { " + ", function };
-   * Supported functions: * double * relevance_score * double * dotProduct(embedding_field_path)
-   * Function variables: * `relevance_score`: pre-defined keywords, used for measure relevance
-   * between query and document. * `embedding_field_path`: the document embedding field used with
-   * query embedding vector. * `dotProduct`: embedding function between embedding_field_path and
-   * query embedding vector. Example ranking expression: If document has an embedding field
-   * doc_embedding, the ranking expression could be `0.5 * relevance_score + 0.3 *
-   * dotProduct(doc_embedding)`.
+   * ServingConfig.ranking_expression. The syntax and supported features depend on the
+   * ranking_expression_backend value. If ranking_expression_backend is not provided, it defaults to
+   * BYOE. === BYOE === If ranking_expression_backend is not provided or set to `BYOE`, it should be
+   * a single function or multiple functions that are joined by "+". * ranking_expression =
+   * function, { " + ", function }; Supported functions: * double * relevance_score * double *
+   * dotProduct(embedding_field_path) Function variables: * `relevance_score`: pre-defined keywords,
+   * used for measure relevance between query and document. * `embedding_field_path`: the document
+   * embedding field used with query embedding vector. * `dotProduct`: embedding function between
+   * embedding_field_path and query embedding vector. Example ranking expression: If document has an
+   * embedding field doc_embedding, the ranking expression could be `0.5 * relevance_score + 0.3 *
+   * dotProduct(doc_embedding)`. === CLEARBOX === If ranking_expression_backend is set to
+   * `CLEARBOX`, the following expression types (and combinations of those chained using + or *
+   * operators) are supported: * double * signal * log(signal) * exp(signal) * rr(signal, double >
+   * 0) -- reciprocal rank transformation with second argument being a denominator constant. *
+   * is_nan(signal) -- returns 0 if signal is NaN, 1 otherwise. * fill_nan(signal1, signal2 |
+   * double) -- if signal1 is NaN, returns signal2 | double, else returns signal1. Examples: * 0.2 *
+   * gecko_score + 0.8 * log(bm25_score) * 0.2 * exp(fill_nan(gecko_score, 0)) + 0.3 *
+   * is_nan(bm25_score) * 0.2 * rr(gecko_score, 16) + 0.8 * rr(bm25_score, 32) The following signals
+   * are supported: * gecko_score -- semantic similarity adjustment * bm25_score -- keyword match
+   * adjustment * jetstream_score -- semantic relevance adjustment * pctr_rank -- predicted
+   * conversion rate adjustment as a rank * freshness_rank -- freshness adjustment as a rank *
+   * base_rank -- the default rank of the result
    * @return value or {@code null} for none
    */
   public java.lang.String getRankingExpression() {
@@ -848,19 +912,49 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
 
   /**
    * The ranking expression controls the customized ranking on retrieval documents. This overrides
-   * ServingConfig.ranking_expression. The ranking expression is a single function or multiple
-   * functions that are joined by "+". * ranking_expression = function, { " + ", function };
-   * Supported functions: * double * relevance_score * double * dotProduct(embedding_field_path)
-   * Function variables: * `relevance_score`: pre-defined keywords, used for measure relevance
-   * between query and document. * `embedding_field_path`: the document embedding field used with
-   * query embedding vector. * `dotProduct`: embedding function between embedding_field_path and
-   * query embedding vector. Example ranking expression: If document has an embedding field
-   * doc_embedding, the ranking expression could be `0.5 * relevance_score + 0.3 *
-   * dotProduct(doc_embedding)`.
+   * ServingConfig.ranking_expression. The syntax and supported features depend on the
+   * ranking_expression_backend value. If ranking_expression_backend is not provided, it defaults to
+   * BYOE. === BYOE === If ranking_expression_backend is not provided or set to `BYOE`, it should be
+   * a single function or multiple functions that are joined by "+". * ranking_expression =
+   * function, { " + ", function }; Supported functions: * double * relevance_score * double *
+   * dotProduct(embedding_field_path) Function variables: * `relevance_score`: pre-defined keywords,
+   * used for measure relevance between query and document. * `embedding_field_path`: the document
+   * embedding field used with query embedding vector. * `dotProduct`: embedding function between
+   * embedding_field_path and query embedding vector. Example ranking expression: If document has an
+   * embedding field doc_embedding, the ranking expression could be `0.5 * relevance_score + 0.3 *
+   * dotProduct(doc_embedding)`. === CLEARBOX === If ranking_expression_backend is set to
+   * `CLEARBOX`, the following expression types (and combinations of those chained using + or *
+   * operators) are supported: * double * signal * log(signal) * exp(signal) * rr(signal, double >
+   * 0) -- reciprocal rank transformation with second argument being a denominator constant. *
+   * is_nan(signal) -- returns 0 if signal is NaN, 1 otherwise. * fill_nan(signal1, signal2 |
+   * double) -- if signal1 is NaN, returns signal2 | double, else returns signal1. Examples: * 0.2 *
+   * gecko_score + 0.8 * log(bm25_score) * 0.2 * exp(fill_nan(gecko_score, 0)) + 0.3 *
+   * is_nan(bm25_score) * 0.2 * rr(gecko_score, 16) + 0.8 * rr(bm25_score, 32) The following signals
+   * are supported: * gecko_score -- semantic similarity adjustment * bm25_score -- keyword match
+   * adjustment * jetstream_score -- semantic relevance adjustment * pctr_rank -- predicted
+   * conversion rate adjustment as a rank * freshness_rank -- freshness adjustment as a rank *
+   * base_rank -- the default rank of the result
    * @param rankingExpression rankingExpression or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaSearchRequest setRankingExpression(java.lang.String rankingExpression) {
     this.rankingExpression = rankingExpression;
+    return this;
+  }
+
+  /**
+   * Optional. The backend to use for the ranking expression evaluation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRankingExpressionBackend() {
+    return rankingExpressionBackend;
+  }
+
+  /**
+   * Optional. The backend to use for the ranking expression evaluation.
+   * @param rankingExpressionBackend rankingExpressionBackend or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaSearchRequest setRankingExpressionBackend(java.lang.String rankingExpressionBackend) {
+    this.rankingExpressionBackend = rankingExpressionBackend;
     return this;
   }
 
@@ -886,9 +980,26 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
   }
 
   /**
+   * Optional. The specification for returning the relevance score.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaSearchRequestRelevanceScoreSpec getRelevanceScoreSpec() {
+    return relevanceScoreSpec;
+  }
+
+  /**
+   * Optional. The specification for returning the relevance score.
+   * @param relevanceScoreSpec relevanceScoreSpec or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaSearchRequest setRelevanceScoreSpec(GoogleCloudDiscoveryengineV1alphaSearchRequestRelevanceScoreSpec relevanceScoreSpec) {
+    this.relevanceScoreSpec = relevanceScoreSpec;
+    return this;
+  }
+
+  /**
    * The relevance threshold of the search results. Default to Google defined threshold, leveraging
    * a balance of precision and recall to deliver both highly accurate results and comprehensive
-   * coverage of relevant information.
+   * coverage of relevant information. This feature is not supported for healthcare search.
    * @return value or {@code null} for none
    */
   public java.lang.String getRelevanceThreshold() {
@@ -898,7 +1009,7 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
   /**
    * The relevance threshold of the search results. Default to Google defined threshold, leveraging
    * a balance of precision and recall to deliver both highly accurate results and comprehensive
-   * coverage of relevant information.
+   * coverage of relevant information. This feature is not supported for healthcare search.
    * @param relevanceThreshold relevanceThreshold or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaSearchRequest setRelevanceThreshold(java.lang.String relevanceThreshold) {
@@ -1045,8 +1156,8 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
   }
 
   /**
-   * Information about the end user. Highly recommended for analytics. UserInfo.user_agent is used
-   * to deduce `device_type` for analytics.
+   * Information about the end user. Highly recommended for analytics and personalization.
+   * UserInfo.user_agent is used to deduce `device_type` for analytics.
    * @return value or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaUserInfo getUserInfo() {
@@ -1054,8 +1165,8 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
   }
 
   /**
-   * Information about the end user. Highly recommended for analytics. UserInfo.user_agent is used
-   * to deduce `device_type` for analytics.
+   * Information about the end user. Highly recommended for analytics and personalization.
+   * UserInfo.user_agent is used to deduce `device_type` for analytics.
    * @param userInfo userInfo or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaSearchRequest setUserInfo(GoogleCloudDiscoveryengineV1alphaUserInfo userInfo) {

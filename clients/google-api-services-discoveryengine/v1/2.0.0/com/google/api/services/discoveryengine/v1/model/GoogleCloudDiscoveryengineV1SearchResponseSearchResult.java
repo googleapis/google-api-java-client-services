@@ -53,6 +53,19 @@ public final class GoogleCloudDiscoveryengineV1SearchResponseSearchResult extend
   private java.lang.String id;
 
   /**
+   * Output only. Google provided available scores.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, GoogleCloudDiscoveryengineV1DoubleList> modelScores;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudDiscoveryengineV1DoubleList used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudDiscoveryengineV1DoubleList.class);
+  }
+
+  /**
    * The chunk data in the search response if the SearchRequest.ContentSearchSpec.search_result_mode
    * is set to CHUNKS.
    * @return value or {@code null} for none
@@ -104,6 +117,23 @@ public final class GoogleCloudDiscoveryengineV1SearchResponseSearchResult extend
    */
   public GoogleCloudDiscoveryengineV1SearchResponseSearchResult setId(java.lang.String id) {
     this.id = id;
+    return this;
+  }
+
+  /**
+   * Output only. Google provided available scores.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, GoogleCloudDiscoveryengineV1DoubleList> getModelScores() {
+    return modelScores;
+  }
+
+  /**
+   * Output only. Google provided available scores.
+   * @param modelScores modelScores or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1SearchResponseSearchResult setModelScores(java.util.Map<String, GoogleCloudDiscoveryengineV1DoubleList> modelScores) {
+    this.modelScores = modelScores;
     return this;
   }
 

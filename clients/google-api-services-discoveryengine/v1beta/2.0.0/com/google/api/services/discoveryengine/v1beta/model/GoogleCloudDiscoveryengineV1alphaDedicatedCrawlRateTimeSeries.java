@@ -31,6 +31,13 @@ package com.google.api.services.discoveryengine.v1beta.model;
 public final class GoogleCloudDiscoveryengineV1alphaDedicatedCrawlRateTimeSeries extends com.google.api.client.json.GenericJson {
 
   /**
+   * Vertex AI's error rate time series of auto-refresh dedicated crawl.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1alphaCrawlRateTimeSeries autoRefreshCrawlErrorRate;
+
+  /**
    * Vertex AI's dedicated crawl rate time series of auto-refresh, which is the crawl rate of
    * Google-CloudVertexBot when dedicate crawl is set, and the crawl rate is for best effort use
    * cases like refreshing urls periodically.
@@ -40,6 +47,13 @@ public final class GoogleCloudDiscoveryengineV1alphaDedicatedCrawlRateTimeSeries
   private GoogleCloudDiscoveryengineV1alphaCrawlRateTimeSeries autoRefreshCrawlRate;
 
   /**
+   * Vertex AI's error rate time series of user triggered dedicated crawl.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1alphaCrawlRateTimeSeries userTriggeredCrawlErrorRate;
+
+  /**
    * Vertex AI's dedicated crawl rate time series of user triggered crawl, which is the crawl rate
    * of Google-CloudVertexBot when dedicate crawl is set, and user triggered crawl rate is for
    * deterministic use cases like crawling urls or sitemaps specified by users.
@@ -47,6 +61,23 @@ public final class GoogleCloudDiscoveryengineV1alphaDedicatedCrawlRateTimeSeries
    */
   @com.google.api.client.util.Key
   private GoogleCloudDiscoveryengineV1alphaCrawlRateTimeSeries userTriggeredCrawlRate;
+
+  /**
+   * Vertex AI's error rate time series of auto-refresh dedicated crawl.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaCrawlRateTimeSeries getAutoRefreshCrawlErrorRate() {
+    return autoRefreshCrawlErrorRate;
+  }
+
+  /**
+   * Vertex AI's error rate time series of auto-refresh dedicated crawl.
+   * @param autoRefreshCrawlErrorRate autoRefreshCrawlErrorRate or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaDedicatedCrawlRateTimeSeries setAutoRefreshCrawlErrorRate(GoogleCloudDiscoveryengineV1alphaCrawlRateTimeSeries autoRefreshCrawlErrorRate) {
+    this.autoRefreshCrawlErrorRate = autoRefreshCrawlErrorRate;
+    return this;
+  }
 
   /**
    * Vertex AI's dedicated crawl rate time series of auto-refresh, which is the crawl rate of
@@ -66,6 +97,23 @@ public final class GoogleCloudDiscoveryengineV1alphaDedicatedCrawlRateTimeSeries
    */
   public GoogleCloudDiscoveryengineV1alphaDedicatedCrawlRateTimeSeries setAutoRefreshCrawlRate(GoogleCloudDiscoveryengineV1alphaCrawlRateTimeSeries autoRefreshCrawlRate) {
     this.autoRefreshCrawlRate = autoRefreshCrawlRate;
+    return this;
+  }
+
+  /**
+   * Vertex AI's error rate time series of user triggered dedicated crawl.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaCrawlRateTimeSeries getUserTriggeredCrawlErrorRate() {
+    return userTriggeredCrawlErrorRate;
+  }
+
+  /**
+   * Vertex AI's error rate time series of user triggered dedicated crawl.
+   * @param userTriggeredCrawlErrorRate userTriggeredCrawlErrorRate or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaDedicatedCrawlRateTimeSeries setUserTriggeredCrawlErrorRate(GoogleCloudDiscoveryengineV1alphaCrawlRateTimeSeries userTriggeredCrawlErrorRate) {
+    this.userTriggeredCrawlErrorRate = userTriggeredCrawlErrorRate;
     return this;
   }
 

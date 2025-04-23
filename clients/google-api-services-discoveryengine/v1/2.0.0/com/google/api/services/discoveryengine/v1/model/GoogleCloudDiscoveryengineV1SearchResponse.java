@@ -85,6 +85,19 @@ public final class GoogleCloudDiscoveryengineV1SearchResponse extends com.google
   private java.util.List<GoogleCloudDiscoveryengineV1SearchResponseSearchResult> results;
 
   /**
+   * Promotions for site search.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDiscoveryengineV1SearchLinkPromotion> searchLinkPromotions;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudDiscoveryengineV1SearchLinkPromotion used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudDiscoveryengineV1SearchLinkPromotion.class);
+  }
+
+  /**
    * Session information. Only set if SearchRequest.session is provided. See its description for
    * more details.
    * The value may be {@code null}.
@@ -236,6 +249,23 @@ public final class GoogleCloudDiscoveryengineV1SearchResponse extends com.google
    */
   public GoogleCloudDiscoveryengineV1SearchResponse setResults(java.util.List<GoogleCloudDiscoveryengineV1SearchResponseSearchResult> results) {
     this.results = results;
+    return this;
+  }
+
+  /**
+   * Promotions for site search.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDiscoveryengineV1SearchLinkPromotion> getSearchLinkPromotions() {
+    return searchLinkPromotions;
+  }
+
+  /**
+   * Promotions for site search.
+   * @param searchLinkPromotions searchLinkPromotions or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1SearchResponse setSearchLinkPromotions(java.util.List<GoogleCloudDiscoveryengineV1SearchLinkPromotion> searchLinkPromotions) {
+    this.searchLinkPromotions = searchLinkPromotions;
     return this;
   }
 

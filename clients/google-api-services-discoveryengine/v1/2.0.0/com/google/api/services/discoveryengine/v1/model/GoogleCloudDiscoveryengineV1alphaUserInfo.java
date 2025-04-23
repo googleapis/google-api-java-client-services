@@ -30,6 +30,13 @@ package com.google.api.services.discoveryengine.v1.model;
 public final class GoogleCloudDiscoveryengineV1alphaUserInfo extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. IANA time zone, e.g. Europe/Budapest.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String timeZone;
+
+  /**
    * User agent as included in the HTTP header. The field must be a UTF-8 encoded string with a
    * length limit of 1,000 characters. Otherwise, an `INVALID_ARGUMENT` error is returned. This
    * should not be set when using the client side event reporting with GTM or JavaScript tag in
@@ -49,6 +56,23 @@ public final class GoogleCloudDiscoveryengineV1alphaUserInfo extends com.google.
    */
   @com.google.api.client.util.Key
   private java.lang.String userId;
+
+  /**
+   * Optional. IANA time zone, e.g. Europe/Budapest.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTimeZone() {
+    return timeZone;
+  }
+
+  /**
+   * Optional. IANA time zone, e.g. Europe/Budapest.
+   * @param timeZone timeZone or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaUserInfo setTimeZone(java.lang.String timeZone) {
+    this.timeZone = timeZone;
+    return this;
+  }
 
   /**
    * User agent as included in the HTTP header. The field must be a UTF-8 encoded string with a

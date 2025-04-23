@@ -97,6 +97,13 @@ public final class GoogleCloudDiscoveryengineV1betaAnswerQueryRequestAnswerGener
   private GoogleCloudDiscoveryengineV1betaAnswerQueryRequestAnswerGenerationSpecModelSpec modelSpec;
 
   /**
+   * Optional. Multimodal specification.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1betaAnswerQueryRequestAnswerGenerationSpecMultimodalSpec multimodalSpec;
+
+  /**
    * Answer generation prompt specification.
    * The value may be {@code null}.
    */
@@ -255,6 +262,23 @@ public final class GoogleCloudDiscoveryengineV1betaAnswerQueryRequestAnswerGener
    */
   public GoogleCloudDiscoveryengineV1betaAnswerQueryRequestAnswerGenerationSpec setModelSpec(GoogleCloudDiscoveryengineV1betaAnswerQueryRequestAnswerGenerationSpecModelSpec modelSpec) {
     this.modelSpec = modelSpec;
+    return this;
+  }
+
+  /**
+   * Optional. Multimodal specification.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaAnswerQueryRequestAnswerGenerationSpecMultimodalSpec getMultimodalSpec() {
+    return multimodalSpec;
+  }
+
+  /**
+   * Optional. Multimodal specification.
+   * @param multimodalSpec multimodalSpec or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaAnswerQueryRequestAnswerGenerationSpec setMultimodalSpec(GoogleCloudDiscoveryengineV1betaAnswerQueryRequestAnswerGenerationSpecMultimodalSpec multimodalSpec) {
+    this.multimodalSpec = multimodalSpec;
     return this;
   }
 

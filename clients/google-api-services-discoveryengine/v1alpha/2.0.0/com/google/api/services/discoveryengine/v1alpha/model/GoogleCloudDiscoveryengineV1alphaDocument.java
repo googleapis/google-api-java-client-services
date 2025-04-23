@@ -37,8 +37,8 @@ public final class GoogleCloudDiscoveryengineV1alphaDocument extends com.google.
   private GoogleCloudDiscoveryengineV1alphaDocumentAclInfo aclInfo;
 
   /**
-   * The unstructured data linked to this document. Content must be set if this document is under a
-   * `CONTENT_REQUIRED` data store.
+   * The unstructured data linked to this document. Content can only be set and must be set if this
+   * document is under a `CONTENT_REQUIRED` data store.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,7 +54,7 @@ public final class GoogleCloudDiscoveryengineV1alphaDocument extends com.google.
 
   /**
    * Immutable. The identifier of the document. Id should conform to
-   * [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length limit of 63 characters.
+   * [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length limit of 128 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,7 +63,8 @@ public final class GoogleCloudDiscoveryengineV1alphaDocument extends com.google.
   /**
    * Output only. The index status of the document. * If document is indexed successfully, the
    * index_time field is populated. * Otherwise, if document is not indexed due to errors, the
-   * error_samples field is populated. * Otherwise, index_status is unset.
+   * error_samples field is populated. * Otherwise, if document's index is in progress, the
+   * pending_message field is populated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -137,8 +138,8 @@ public final class GoogleCloudDiscoveryengineV1alphaDocument extends com.google.
   }
 
   /**
-   * The unstructured data linked to this document. Content must be set if this document is under a
-   * `CONTENT_REQUIRED` data store.
+   * The unstructured data linked to this document. Content can only be set and must be set if this
+   * document is under a `CONTENT_REQUIRED` data store.
    * @return value or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaDocumentContent getContent() {
@@ -146,8 +147,8 @@ public final class GoogleCloudDiscoveryengineV1alphaDocument extends com.google.
   }
 
   /**
-   * The unstructured data linked to this document. Content must be set if this document is under a
-   * `CONTENT_REQUIRED` data store.
+   * The unstructured data linked to this document. Content can only be set and must be set if this
+   * document is under a `CONTENT_REQUIRED` data store.
    * @param content content or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaDocument setContent(GoogleCloudDiscoveryengineV1alphaDocumentContent content) {
@@ -176,7 +177,7 @@ public final class GoogleCloudDiscoveryengineV1alphaDocument extends com.google.
 
   /**
    * Immutable. The identifier of the document. Id should conform to
-   * [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length limit of 63 characters.
+   * [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length limit of 128 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -185,7 +186,7 @@ public final class GoogleCloudDiscoveryengineV1alphaDocument extends com.google.
 
   /**
    * Immutable. The identifier of the document. Id should conform to
-   * [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length limit of 63 characters.
+   * [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length limit of 128 characters.
    * @param id id or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaDocument setId(java.lang.String id) {
@@ -196,7 +197,8 @@ public final class GoogleCloudDiscoveryengineV1alphaDocument extends com.google.
   /**
    * Output only. The index status of the document. * If document is indexed successfully, the
    * index_time field is populated. * Otherwise, if document is not indexed due to errors, the
-   * error_samples field is populated. * Otherwise, index_status is unset.
+   * error_samples field is populated. * Otherwise, if document's index is in progress, the
+   * pending_message field is populated.
    * @return value or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaDocumentIndexStatus getIndexStatus() {
@@ -206,7 +208,8 @@ public final class GoogleCloudDiscoveryengineV1alphaDocument extends com.google.
   /**
    * Output only. The index status of the document. * If document is indexed successfully, the
    * index_time field is populated. * Otherwise, if document is not indexed due to errors, the
-   * error_samples field is populated. * Otherwise, index_status is unset.
+   * error_samples field is populated. * Otherwise, if document's index is in progress, the
+   * pending_message field is populated.
    * @param indexStatus indexStatus or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaDocument setIndexStatus(GoogleCloudDiscoveryengineV1alphaDocumentIndexStatus indexStatus) {

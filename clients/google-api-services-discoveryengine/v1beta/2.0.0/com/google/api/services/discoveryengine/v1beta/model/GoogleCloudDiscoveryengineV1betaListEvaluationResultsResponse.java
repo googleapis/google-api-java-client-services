@@ -30,7 +30,7 @@ package com.google.api.services.discoveryengine.v1beta.model;
 public final class GoogleCloudDiscoveryengineV1betaListEvaluationResultsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The EvaluationResults.
+   * The evaluation results for the SampleQuerys.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,7 @@ public final class GoogleCloudDiscoveryengineV1betaListEvaluationResultsResponse
   private java.lang.String nextPageToken;
 
   /**
-   * The EvaluationResults.
+   * The evaluation results for the SampleQuerys.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDiscoveryengineV1betaListEvaluationResultsResponseEvaluationResult> getEvaluationResults() {
@@ -53,7 +53,7 @@ public final class GoogleCloudDiscoveryengineV1betaListEvaluationResultsResponse
   }
 
   /**
-   * The EvaluationResults.
+   * The evaluation results for the SampleQuerys.
    * @param evaluationResults evaluationResults or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaListEvaluationResultsResponse setEvaluationResults(java.util.List<GoogleCloudDiscoveryengineV1betaListEvaluationResultsResponseEvaluationResult> evaluationResults) {

@@ -30,6 +30,13 @@ package com.google.api.services.discoveryengine.v1.model;
 public final class GoogleCloudDiscoveryengineV1AnswerQueryRequestGroundingSpec extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Specifies whether to enable the filtering based on grounding score and at what level.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String filteringLevel;
+
+  /**
    * Optional. Specifies whether to include grounding_supports in the answer. The default value is
    * `false`. When this field is set to `true`, returned answer will have `grounding_score` and will
    * contain GroundingSupports for each claim.
@@ -37,6 +44,23 @@ public final class GoogleCloudDiscoveryengineV1AnswerQueryRequestGroundingSpec e
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean includeGroundingSupports;
+
+  /**
+   * Optional. Specifies whether to enable the filtering based on grounding score and at what level.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFilteringLevel() {
+    return filteringLevel;
+  }
+
+  /**
+   * Optional. Specifies whether to enable the filtering based on grounding score and at what level.
+   * @param filteringLevel filteringLevel or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1AnswerQueryRequestGroundingSpec setFilteringLevel(java.lang.String filteringLevel) {
+    this.filteringLevel = filteringLevel;
+    return this;
+  }
 
   /**
    * Optional. Specifies whether to include grounding_supports in the answer. The default value is

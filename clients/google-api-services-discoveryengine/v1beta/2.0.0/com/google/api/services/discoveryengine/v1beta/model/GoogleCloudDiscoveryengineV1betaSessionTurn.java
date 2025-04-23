@@ -38,6 +38,15 @@ public final class GoogleCloudDiscoveryengineV1betaSessionTurn extends com.googl
   private java.lang.String answer;
 
   /**
+   * Output only. In ConversationalSearchService.GetSession API, if
+   * GetSessionRequest.include_answer_details is set to true, this field will be populated when
+   * getting answer query session.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1betaAnswer detailedAnswer;
+
+  /**
    * The user query.
    * The value may be {@code null}.
    */
@@ -60,6 +69,27 @@ public final class GoogleCloudDiscoveryengineV1betaSessionTurn extends com.googl
    */
   public GoogleCloudDiscoveryengineV1betaSessionTurn setAnswer(java.lang.String answer) {
     this.answer = answer;
+    return this;
+  }
+
+  /**
+   * Output only. In ConversationalSearchService.GetSession API, if
+   * GetSessionRequest.include_answer_details is set to true, this field will be populated when
+   * getting answer query session.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaAnswer getDetailedAnswer() {
+    return detailedAnswer;
+  }
+
+  /**
+   * Output only. In ConversationalSearchService.GetSession API, if
+   * GetSessionRequest.include_answer_details is set to true, this field will be populated when
+   * getting answer query session.
+   * @param detailedAnswer detailedAnswer or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaSessionTurn setDetailedAnswer(GoogleCloudDiscoveryengineV1betaAnswer detailedAnswer) {
+    this.detailedAnswer = detailedAnswer;
     return this;
   }
 

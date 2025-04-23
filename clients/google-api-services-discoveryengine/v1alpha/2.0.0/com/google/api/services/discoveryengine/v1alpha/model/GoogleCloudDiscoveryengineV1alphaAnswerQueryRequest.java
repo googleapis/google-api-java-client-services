@@ -48,6 +48,13 @@ public final class GoogleCloudDiscoveryengineV1alphaAnswerQueryRequest extends c
   private java.lang.Boolean asynchronousMode;
 
   /**
+   * Optional. End user specification.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1alphaAnswerQueryRequestEndUserSpec endUserSpec;
+
+  /**
    * Optional. Grounding specification.
    * The value may be {@code null}.
    */
@@ -164,6 +171,23 @@ public final class GoogleCloudDiscoveryengineV1alphaAnswerQueryRequest extends c
    */
   public GoogleCloudDiscoveryengineV1alphaAnswerQueryRequest setAsynchronousMode(java.lang.Boolean asynchronousMode) {
     this.asynchronousMode = asynchronousMode;
+    return this;
+  }
+
+  /**
+   * Optional. End user specification.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaAnswerQueryRequestEndUserSpec getEndUserSpec() {
+    return endUserSpec;
+  }
+
+  /**
+   * Optional. End user specification.
+   * @param endUserSpec endUserSpec or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaAnswerQueryRequest setEndUserSpec(GoogleCloudDiscoveryengineV1alphaAnswerQueryRequestEndUserSpec endUserSpec) {
+    this.endUserSpec = endUserSpec;
     return this;
   }
 

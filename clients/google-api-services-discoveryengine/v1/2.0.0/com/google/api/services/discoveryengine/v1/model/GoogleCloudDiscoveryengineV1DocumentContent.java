@@ -31,10 +31,14 @@ public final class GoogleCloudDiscoveryengineV1DocumentContent extends com.googl
 
   /**
    * The MIME type of the content. Supported types: * `application/pdf` (PDF, only native PDFs are
-   * supported for now) * `text/html` (HTML) * `application/vnd.openxmlformats-
+   * supported for now) * `text/html` (HTML) * `text/plain` (TXT) * `application/xml` or `text/xml`
+   * (XML) * `application/json` (JSON) * `application/vnd.openxmlformats-
    * officedocument.wordprocessingml.document` (DOCX) * `application/vnd.openxmlformats-
-   * officedocument.presentationml.presentation` (PPTX) * `text/plain` (TXT) See
-   * https://www.iana.org/assignments/media-types/media-types.xhtml.
+   * officedocument.presentationml.presentation` (PPTX) * `application/vnd.openxmlformats-
+   * officedocument.spreadsheetml.sheet` (XLSX) * `application/vnd.ms-excel.sheet.macroenabled.12`
+   * (XLSM) The following types are supported only if layout parser is enabled in the data store: *
+   * `image/bmp` (BMP) * `image/gif` (GIF) * `image/jpeg` (JPEG) * `image/png` (PNG) * `image/tiff`
+   * (TIFF) See https://www.iana.org/assignments/media-types/media-types.xhtml.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,10 +65,14 @@ public final class GoogleCloudDiscoveryengineV1DocumentContent extends com.googl
 
   /**
    * The MIME type of the content. Supported types: * `application/pdf` (PDF, only native PDFs are
-   * supported for now) * `text/html` (HTML) * `application/vnd.openxmlformats-
+   * supported for now) * `text/html` (HTML) * `text/plain` (TXT) * `application/xml` or `text/xml`
+   * (XML) * `application/json` (JSON) * `application/vnd.openxmlformats-
    * officedocument.wordprocessingml.document` (DOCX) * `application/vnd.openxmlformats-
-   * officedocument.presentationml.presentation` (PPTX) * `text/plain` (TXT) See
-   * https://www.iana.org/assignments/media-types/media-types.xhtml.
+   * officedocument.presentationml.presentation` (PPTX) * `application/vnd.openxmlformats-
+   * officedocument.spreadsheetml.sheet` (XLSX) * `application/vnd.ms-excel.sheet.macroenabled.12`
+   * (XLSM) The following types are supported only if layout parser is enabled in the data store: *
+   * `image/bmp` (BMP) * `image/gif` (GIF) * `image/jpeg` (JPEG) * `image/png` (PNG) * `image/tiff`
+   * (TIFF) See https://www.iana.org/assignments/media-types/media-types.xhtml.
    * @return value or {@code null} for none
    */
   public java.lang.String getMimeType() {
@@ -73,10 +81,14 @@ public final class GoogleCloudDiscoveryengineV1DocumentContent extends com.googl
 
   /**
    * The MIME type of the content. Supported types: * `application/pdf` (PDF, only native PDFs are
-   * supported for now) * `text/html` (HTML) * `application/vnd.openxmlformats-
+   * supported for now) * `text/html` (HTML) * `text/plain` (TXT) * `application/xml` or `text/xml`
+   * (XML) * `application/json` (JSON) * `application/vnd.openxmlformats-
    * officedocument.wordprocessingml.document` (DOCX) * `application/vnd.openxmlformats-
-   * officedocument.presentationml.presentation` (PPTX) * `text/plain` (TXT) See
-   * https://www.iana.org/assignments/media-types/media-types.xhtml.
+   * officedocument.presentationml.presentation` (PPTX) * `application/vnd.openxmlformats-
+   * officedocument.spreadsheetml.sheet` (XLSX) * `application/vnd.ms-excel.sheet.macroenabled.12`
+   * (XLSM) The following types are supported only if layout parser is enabled in the data store: *
+   * `image/bmp` (BMP) * `image/gif` (GIF) * `image/jpeg` (JPEG) * `image/png` (PNG) * `image/tiff`
+   * (TIFF) See https://www.iana.org/assignments/media-types/media-types.xhtml.
    * @param mimeType mimeType or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1DocumentContent setMimeType(java.lang.String mimeType) {

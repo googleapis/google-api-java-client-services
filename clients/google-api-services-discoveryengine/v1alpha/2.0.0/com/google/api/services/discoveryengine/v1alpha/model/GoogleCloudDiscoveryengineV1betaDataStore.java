@@ -30,6 +30,17 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 public final class GoogleCloudDiscoveryengineV1betaDataStore extends com.google.api.client.json.GenericJson {
 
   /**
+   * Immutable. Whether data in the DataStore has ACL information. If set to `true`, the source data
+   * must have ACL. ACL will be ingested when data is ingested by DocumentService.ImportDocuments
+   * methods. When ACL is enabled for the DataStore, Document can't be accessed by calling
+   * DocumentService.GetDocument or DocumentService.ListDocuments. Currently ACL is only supported
+   * in `GENERIC` industry vertical with non-`PUBLIC_WEBSITE` content config.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean aclEnabled;
+
+  /**
    * Optional. Configuration for advanced site search.
    * The value may be {@code null}.
    */
@@ -66,7 +77,7 @@ public final class GoogleCloudDiscoveryengineV1betaDataStore extends com.google.
   private String createTime;
 
   /**
-   * Output only. The id of the default Schema asscociated to this data store.
+   * Output only. The id of the default Schema associated to this data store.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,11 +99,34 @@ public final class GoogleCloudDiscoveryengineV1betaDataStore extends com.google.
   private GoogleCloudDiscoveryengineV1betaDocumentProcessingConfig documentProcessingConfig;
 
   /**
+   * Optional. Configuration for `HEALTHCARE_FHIR` vertical.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1betaHealthcareFhirConfig healthcareFhirConfig;
+
+  /**
+   * Immutable. The fully qualified resource name of the associated IdentityMappingStore. This field
+   * can only be set for acl_enabled DataStores with `THIRD_PARTY` or `GSUITE` IdP. Format:
+   * `projects/{project}/locations/{location}/identityMappingStores/{identity_mapping_store}`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String identityMappingStore;
+
+  /**
    * Immutable. The industry vertical that the data store registers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String industryVertical;
+
+  /**
+   * Optional. If set, this DataStore is an Infobot FAQ DataStore.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isInfobotFaqDataStore;
 
   /**
    * Input only. The KMS key to be used to protect this DataStore at creation time. Must be set for
@@ -162,6 +196,31 @@ public final class GoogleCloudDiscoveryengineV1betaDataStore extends com.google.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDiscoveryengineV1betaWorkspaceConfig workspaceConfig;
+
+  /**
+   * Immutable. Whether data in the DataStore has ACL information. If set to `true`, the source data
+   * must have ACL. ACL will be ingested when data is ingested by DocumentService.ImportDocuments
+   * methods. When ACL is enabled for the DataStore, Document can't be accessed by calling
+   * DocumentService.GetDocument or DocumentService.ListDocuments. Currently ACL is only supported
+   * in `GENERIC` industry vertical with non-`PUBLIC_WEBSITE` content config.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAclEnabled() {
+    return aclEnabled;
+  }
+
+  /**
+   * Immutable. Whether data in the DataStore has ACL information. If set to `true`, the source data
+   * must have ACL. ACL will be ingested when data is ingested by DocumentService.ImportDocuments
+   * methods. When ACL is enabled for the DataStore, Document can't be accessed by calling
+   * DocumentService.GetDocument or DocumentService.ListDocuments. Currently ACL is only supported
+   * in `GENERIC` industry vertical with non-`PUBLIC_WEBSITE` content config.
+   * @param aclEnabled aclEnabled or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaDataStore setAclEnabled(java.lang.Boolean aclEnabled) {
+    this.aclEnabled = aclEnabled;
+    return this;
+  }
 
   /**
    * Optional. Configuration for advanced site search.
@@ -251,7 +310,7 @@ public final class GoogleCloudDiscoveryengineV1betaDataStore extends com.google.
   }
 
   /**
-   * Output only. The id of the default Schema asscociated to this data store.
+   * Output only. The id of the default Schema associated to this data store.
    * @return value or {@code null} for none
    */
   public java.lang.String getDefaultSchemaId() {
@@ -259,7 +318,7 @@ public final class GoogleCloudDiscoveryengineV1betaDataStore extends com.google.
   }
 
   /**
-   * Output only. The id of the default Schema asscociated to this data store.
+   * Output only. The id of the default Schema associated to this data store.
    * @param defaultSchemaId defaultSchemaId or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaDataStore setDefaultSchemaId(java.lang.String defaultSchemaId) {
@@ -304,6 +363,44 @@ public final class GoogleCloudDiscoveryengineV1betaDataStore extends com.google.
   }
 
   /**
+   * Optional. Configuration for `HEALTHCARE_FHIR` vertical.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaHealthcareFhirConfig getHealthcareFhirConfig() {
+    return healthcareFhirConfig;
+  }
+
+  /**
+   * Optional. Configuration for `HEALTHCARE_FHIR` vertical.
+   * @param healthcareFhirConfig healthcareFhirConfig or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaDataStore setHealthcareFhirConfig(GoogleCloudDiscoveryengineV1betaHealthcareFhirConfig healthcareFhirConfig) {
+    this.healthcareFhirConfig = healthcareFhirConfig;
+    return this;
+  }
+
+  /**
+   * Immutable. The fully qualified resource name of the associated IdentityMappingStore. This field
+   * can only be set for acl_enabled DataStores with `THIRD_PARTY` or `GSUITE` IdP. Format:
+   * `projects/{project}/locations/{location}/identityMappingStores/{identity_mapping_store}`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIdentityMappingStore() {
+    return identityMappingStore;
+  }
+
+  /**
+   * Immutable. The fully qualified resource name of the associated IdentityMappingStore. This field
+   * can only be set for acl_enabled DataStores with `THIRD_PARTY` or `GSUITE` IdP. Format:
+   * `projects/{project}/locations/{location}/identityMappingStores/{identity_mapping_store}`.
+   * @param identityMappingStore identityMappingStore or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaDataStore setIdentityMappingStore(java.lang.String identityMappingStore) {
+    this.identityMappingStore = identityMappingStore;
+    return this;
+  }
+
+  /**
    * Immutable. The industry vertical that the data store registers.
    * @return value or {@code null} for none
    */
@@ -317,6 +414,23 @@ public final class GoogleCloudDiscoveryengineV1betaDataStore extends com.google.
    */
   public GoogleCloudDiscoveryengineV1betaDataStore setIndustryVertical(java.lang.String industryVertical) {
     this.industryVertical = industryVertical;
+    return this;
+  }
+
+  /**
+   * Optional. If set, this DataStore is an Infobot FAQ DataStore.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsInfobotFaqDataStore() {
+    return isInfobotFaqDataStore;
+  }
+
+  /**
+   * Optional. If set, this DataStore is an Infobot FAQ DataStore.
+   * @param isInfobotFaqDataStore isInfobotFaqDataStore or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaDataStore setIsInfobotFaqDataStore(java.lang.Boolean isInfobotFaqDataStore) {
+    this.isInfobotFaqDataStore = isInfobotFaqDataStore;
     return this;
   }
 

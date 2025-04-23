@@ -37,6 +37,13 @@ public final class GoogleCloudDiscoveryengineV1alphaAdvancedCompleteQueryRequest
   private GoogleCloudDiscoveryengineV1alphaAdvancedCompleteQueryRequestBoostSpec boostSpec;
 
   /**
+   * Optional. Experiment ids for this request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> experimentIds;
+
+  /**
    * Indicates if tail suggestions should be returned if there are no suggestions that match the
    * full query. Even if set to true, if there are suggestions that match the full query, those are
    * returned and no tail suggestions are returned.
@@ -57,18 +64,26 @@ public final class GoogleCloudDiscoveryengineV1alphaAdvancedCompleteQueryRequest
   private java.lang.String query;
 
   /**
-   * Specifies the autocomplete data model. This overrides any model specified in the Configuration
-   * > Autocomplete section of the Cloud console. Currently supported values: * `document` - Using
-   * suggestions generated from user-imported documents. * `search-history` - Using suggestions
-   * generated from the past history of SearchService.Search API calls. Do not use it when there is
-   * no traffic for Search API. * `user-event` - Using suggestions generated from user-imported
-   * search events. * `document-completable` - Using suggestions taken directly from user-imported
-   * document fields marked as completable. Default values: * `document` is the default model for
-   * regular dataStores. * `search-history` is the default model for site search dataStores.
+   * Specifies the autocomplete query model, which only applies to the QUERY SuggestionType. This
+   * overrides any model specified in the Configuration > Autocomplete section of the Cloud console.
+   * Currently supported values: * `document` - Using suggestions generated from user-imported
+   * documents. * `search-history` - Using suggestions generated from the past history of
+   * SearchService.Search API calls. Do not use it when there is no traffic for Search API. * `user-
+   * event` - Using suggestions generated from user-imported search events. * `document-completable`
+   * - Using suggestions taken directly from user-imported document fields marked as completable.
+   * Default values: * `document` is the default model for regular dataStores. * `search-history` is
+   * the default model for site search dataStores.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String queryModel;
+
+  /**
+   * Optional. Specification of each suggestion type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDiscoveryengineV1alphaAdvancedCompleteQueryRequestSuggestionTypeSpec> suggestionTypeSpecs;
 
   /**
    * Optional. Suggestion types to return. If empty or unspecified, query suggestions are returned.
@@ -112,6 +127,23 @@ public final class GoogleCloudDiscoveryengineV1alphaAdvancedCompleteQueryRequest
    */
   public GoogleCloudDiscoveryengineV1alphaAdvancedCompleteQueryRequest setBoostSpec(GoogleCloudDiscoveryengineV1alphaAdvancedCompleteQueryRequestBoostSpec boostSpec) {
     this.boostSpec = boostSpec;
+    return this;
+  }
+
+  /**
+   * Optional. Experiment ids for this request.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getExperimentIds() {
+    return experimentIds;
+  }
+
+  /**
+   * Optional. Experiment ids for this request.
+   * @param experimentIds experimentIds or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaAdvancedCompleteQueryRequest setExperimentIds(java.util.List<java.lang.String> experimentIds) {
+    this.experimentIds = experimentIds;
     return this;
   }
 
@@ -162,14 +194,15 @@ public final class GoogleCloudDiscoveryengineV1alphaAdvancedCompleteQueryRequest
   }
 
   /**
-   * Specifies the autocomplete data model. This overrides any model specified in the Configuration
-   * > Autocomplete section of the Cloud console. Currently supported values: * `document` - Using
-   * suggestions generated from user-imported documents. * `search-history` - Using suggestions
-   * generated from the past history of SearchService.Search API calls. Do not use it when there is
-   * no traffic for Search API. * `user-event` - Using suggestions generated from user-imported
-   * search events. * `document-completable` - Using suggestions taken directly from user-imported
-   * document fields marked as completable. Default values: * `document` is the default model for
-   * regular dataStores. * `search-history` is the default model for site search dataStores.
+   * Specifies the autocomplete query model, which only applies to the QUERY SuggestionType. This
+   * overrides any model specified in the Configuration > Autocomplete section of the Cloud console.
+   * Currently supported values: * `document` - Using suggestions generated from user-imported
+   * documents. * `search-history` - Using suggestions generated from the past history of
+   * SearchService.Search API calls. Do not use it when there is no traffic for Search API. * `user-
+   * event` - Using suggestions generated from user-imported search events. * `document-completable`
+   * - Using suggestions taken directly from user-imported document fields marked as completable.
+   * Default values: * `document` is the default model for regular dataStores. * `search-history` is
+   * the default model for site search dataStores.
    * @return value or {@code null} for none
    */
   public java.lang.String getQueryModel() {
@@ -177,18 +210,36 @@ public final class GoogleCloudDiscoveryengineV1alphaAdvancedCompleteQueryRequest
   }
 
   /**
-   * Specifies the autocomplete data model. This overrides any model specified in the Configuration
-   * > Autocomplete section of the Cloud console. Currently supported values: * `document` - Using
-   * suggestions generated from user-imported documents. * `search-history` - Using suggestions
-   * generated from the past history of SearchService.Search API calls. Do not use it when there is
-   * no traffic for Search API. * `user-event` - Using suggestions generated from user-imported
-   * search events. * `document-completable` - Using suggestions taken directly from user-imported
-   * document fields marked as completable. Default values: * `document` is the default model for
-   * regular dataStores. * `search-history` is the default model for site search dataStores.
+   * Specifies the autocomplete query model, which only applies to the QUERY SuggestionType. This
+   * overrides any model specified in the Configuration > Autocomplete section of the Cloud console.
+   * Currently supported values: * `document` - Using suggestions generated from user-imported
+   * documents. * `search-history` - Using suggestions generated from the past history of
+   * SearchService.Search API calls. Do not use it when there is no traffic for Search API. * `user-
+   * event` - Using suggestions generated from user-imported search events. * `document-completable`
+   * - Using suggestions taken directly from user-imported document fields marked as completable.
+   * Default values: * `document` is the default model for regular dataStores. * `search-history` is
+   * the default model for site search dataStores.
    * @param queryModel queryModel or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaAdvancedCompleteQueryRequest setQueryModel(java.lang.String queryModel) {
     this.queryModel = queryModel;
+    return this;
+  }
+
+  /**
+   * Optional. Specification of each suggestion type.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDiscoveryengineV1alphaAdvancedCompleteQueryRequestSuggestionTypeSpec> getSuggestionTypeSpecs() {
+    return suggestionTypeSpecs;
+  }
+
+  /**
+   * Optional. Specification of each suggestion type.
+   * @param suggestionTypeSpecs suggestionTypeSpecs or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaAdvancedCompleteQueryRequest setSuggestionTypeSpecs(java.util.List<GoogleCloudDiscoveryengineV1alphaAdvancedCompleteQueryRequestSuggestionTypeSpec> suggestionTypeSpecs) {
+    this.suggestionTypeSpecs = suggestionTypeSpecs;
     return this;
   }
 

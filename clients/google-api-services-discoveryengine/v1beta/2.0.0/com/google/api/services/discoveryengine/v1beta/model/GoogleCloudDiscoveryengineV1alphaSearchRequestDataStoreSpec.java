@@ -31,6 +31,14 @@ package com.google.api.services.discoveryengine.v1beta.model;
 public final class GoogleCloudDiscoveryengineV1alphaSearchRequestDataStoreSpec extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Boost specification to boost certain documents. For more information on boosting, see
+   * [Boosting](https://cloud.google.com/generative-ai-app-builder/docs/boost-search-results)
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1alphaSearchRequestBoostSpec boostSpec;
+
+  /**
    * Required. Full resource name of DataStore, such as `projects/{project}/locations/{location}/col
    * lections/{collection_id}/dataStores/{data_store_id}`.
    * The value may be {@code null}.
@@ -46,6 +54,25 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequestDataStoreSpec e
    */
   @com.google.api.client.util.Key
   private java.lang.String filter;
+
+  /**
+   * Optional. Boost specification to boost certain documents. For more information on boosting, see
+   * [Boosting](https://cloud.google.com/generative-ai-app-builder/docs/boost-search-results)
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaSearchRequestBoostSpec getBoostSpec() {
+    return boostSpec;
+  }
+
+  /**
+   * Optional. Boost specification to boost certain documents. For more information on boosting, see
+   * [Boosting](https://cloud.google.com/generative-ai-app-builder/docs/boost-search-results)
+   * @param boostSpec boostSpec or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaSearchRequestDataStoreSpec setBoostSpec(GoogleCloudDiscoveryengineV1alphaSearchRequestBoostSpec boostSpec) {
+    this.boostSpec = boostSpec;
+    return this;
+  }
 
   /**
    * Required. Full resource name of DataStore, such as `projects/{project}/locations/{location}/col

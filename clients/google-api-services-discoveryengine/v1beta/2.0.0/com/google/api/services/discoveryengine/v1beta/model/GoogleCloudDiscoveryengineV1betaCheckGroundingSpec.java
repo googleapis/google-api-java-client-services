@@ -40,6 +40,13 @@ public final class GoogleCloudDiscoveryengineV1betaCheckGroundingSpec extends co
   private java.lang.Double citationThreshold;
 
   /**
+   * The control flag that enables claim-level grounding score in the response.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableClaimLevelScore;
+
+  /**
    * The threshold (in [0,1]) used for determining whether a fact must be cited for a claim in the
    * answer candidate. Choosing a higher threshold will lead to fewer but very strong citations,
    * while choosing a lower threshold may lead to more but somewhat weaker citations. If unset, the
@@ -59,6 +66,23 @@ public final class GoogleCloudDiscoveryengineV1betaCheckGroundingSpec extends co
    */
   public GoogleCloudDiscoveryengineV1betaCheckGroundingSpec setCitationThreshold(java.lang.Double citationThreshold) {
     this.citationThreshold = citationThreshold;
+    return this;
+  }
+
+  /**
+   * The control flag that enables claim-level grounding score in the response.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableClaimLevelScore() {
+    return enableClaimLevelScore;
+  }
+
+  /**
+   * The control flag that enables claim-level grounding score in the response.
+   * @param enableClaimLevelScore enableClaimLevelScore or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaCheckGroundingSpec setEnableClaimLevelScore(java.lang.Boolean enableClaimLevelScore) {
+    this.enableClaimLevelScore = enableClaimLevelScore;
     return this;
   }
 

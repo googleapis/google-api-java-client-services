@@ -38,8 +38,8 @@ public final class GoogleCloudDiscoveryengineV1alphaCheckRequirementResponse ext
 
   /**
    * Timestamp of the oldest calculated metric (i.e. the most stale metric). Indicates that the
-   * `requirement_result` may not accurately reflect any Event and Product Catalog updates performed
-   * after this time.
+   * `result` may not accurately reflect any Event and Product Catalog updates performed after this
+   * time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,11 +60,12 @@ public final class GoogleCloudDiscoveryengineV1alphaCheckRequirementResponse ext
   private GoogleTypeExpr requirementCondition;
 
   /**
-   * Requirement result, e.g. pass or fail.
+   * The result of the requirement. It should be one of the `severity` fields in the requirement
+   * definition. If any error happens during the evaluation, it will be `UNKNOWN`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String requirementResult;
+  private java.lang.String result;
 
   /**
    * Metric results.
@@ -85,8 +86,8 @@ public final class GoogleCloudDiscoveryengineV1alphaCheckRequirementResponse ext
 
   /**
    * Timestamp of the oldest calculated metric (i.e. the most stale metric). Indicates that the
-   * `requirement_result` may not accurately reflect any Event and Product Catalog updates performed
-   * after this time.
+   * `result` may not accurately reflect any Event and Product Catalog updates performed after this
+   * time.
    * @return value or {@code null} for none
    */
   public String getOldestMetricTimestamp() {
@@ -95,8 +96,8 @@ public final class GoogleCloudDiscoveryengineV1alphaCheckRequirementResponse ext
 
   /**
    * Timestamp of the oldest calculated metric (i.e. the most stale metric). Indicates that the
-   * `requirement_result` may not accurately reflect any Event and Product Catalog updates performed
-   * after this time.
+   * `result` may not accurately reflect any Event and Product Catalog updates performed after this
+   * time.
    * @param oldestMetricTimestamp oldestMetricTimestamp or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaCheckRequirementResponse setOldestMetricTimestamp(String oldestMetricTimestamp) {
@@ -139,19 +140,21 @@ public final class GoogleCloudDiscoveryengineV1alphaCheckRequirementResponse ext
   }
 
   /**
-   * Requirement result, e.g. pass or fail.
+   * The result of the requirement. It should be one of the `severity` fields in the requirement
+   * definition. If any error happens during the evaluation, it will be `UNKNOWN`.
    * @return value or {@code null} for none
    */
-  public java.lang.String getRequirementResult() {
-    return requirementResult;
+  public java.lang.String getResult() {
+    return result;
   }
 
   /**
-   * Requirement result, e.g. pass or fail.
-   * @param requirementResult requirementResult or {@code null} for none
+   * The result of the requirement. It should be one of the `severity` fields in the requirement
+   * definition. If any error happens during the evaluation, it will be `UNKNOWN`.
+   * @param result result or {@code null} for none
    */
-  public GoogleCloudDiscoveryengineV1alphaCheckRequirementResponse setRequirementResult(java.lang.String requirementResult) {
-    this.requirementResult = requirementResult;
+  public GoogleCloudDiscoveryengineV1alphaCheckRequirementResponse setResult(java.lang.String result) {
+    this.result = result;
     return this;
   }
 

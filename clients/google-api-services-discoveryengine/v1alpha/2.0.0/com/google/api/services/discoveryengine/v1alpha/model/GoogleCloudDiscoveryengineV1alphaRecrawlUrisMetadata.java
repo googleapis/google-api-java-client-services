@@ -52,6 +52,20 @@ public final class GoogleCloudDiscoveryengineV1alphaRecrawlUrisMetadata extends 
   private java.lang.Integer invalidUrisCount;
 
   /**
+   * URIs that have no index meta tag. Sample limited to 1000.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> noindexUris;
+
+  /**
+   * Total number of URIs that have no index meta tag.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer noindexUrisCount;
+
+  /**
    * Total number of URIs that have yet to be crawled.
    * The value may be {@code null}.
    */
@@ -150,6 +164,40 @@ public final class GoogleCloudDiscoveryengineV1alphaRecrawlUrisMetadata extends 
    */
   public GoogleCloudDiscoveryengineV1alphaRecrawlUrisMetadata setInvalidUrisCount(java.lang.Integer invalidUrisCount) {
     this.invalidUrisCount = invalidUrisCount;
+    return this;
+  }
+
+  /**
+   * URIs that have no index meta tag. Sample limited to 1000.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getNoindexUris() {
+    return noindexUris;
+  }
+
+  /**
+   * URIs that have no index meta tag. Sample limited to 1000.
+   * @param noindexUris noindexUris or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaRecrawlUrisMetadata setNoindexUris(java.util.List<java.lang.String> noindexUris) {
+    this.noindexUris = noindexUris;
+    return this;
+  }
+
+  /**
+   * Total number of URIs that have no index meta tag.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getNoindexUrisCount() {
+    return noindexUrisCount;
+  }
+
+  /**
+   * Total number of URIs that have no index meta tag.
+   * @param noindexUrisCount noindexUrisCount or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaRecrawlUrisMetadata setNoindexUrisCount(java.lang.Integer noindexUrisCount) {
+    this.noindexUrisCount = noindexUrisCount;
     return this;
   }
 

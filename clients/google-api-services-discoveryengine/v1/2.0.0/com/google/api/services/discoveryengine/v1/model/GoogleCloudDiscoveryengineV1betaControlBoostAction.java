@@ -30,8 +30,8 @@ package com.google.api.services.discoveryengine.v1.model;
 public final class GoogleCloudDiscoveryengineV1betaControlBoostAction extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Strength of the boost, which should be in [-1, 1]. Negative boost means demotion.
-   * Default is 0.0 (No-op).
+   * Strength of the boost, which should be in [-1, 1]. Negative boost means demotion. Default is
+   * 0.0 (No-op).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,8 +56,23 @@ public final class GoogleCloudDiscoveryengineV1betaControlBoostAction extends co
   private java.lang.String filter;
 
   /**
-   * Required. Strength of the boost, which should be in [-1, 1]. Negative boost means demotion.
+   * Optional. Strength of the boost, which should be in [-1, 1]. Negative boost means demotion.
    * Default is 0.0 (No-op).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float fixedBoost;
+
+  /**
+   * Optional. Complex specification for custom ranking based on customer defined attribute value.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1betaControlBoostActionInterpolationBoostSpec interpolationBoostSpec;
+
+  /**
+   * Strength of the boost, which should be in [-1, 1]. Negative boost means demotion. Default is
+   * 0.0 (No-op).
    * @return value or {@code null} for none
    */
   public java.lang.Float getBoost() {
@@ -65,8 +80,8 @@ public final class GoogleCloudDiscoveryengineV1betaControlBoostAction extends co
   }
 
   /**
-   * Required. Strength of the boost, which should be in [-1, 1]. Negative boost means demotion.
-   * Default is 0.0 (No-op).
+   * Strength of the boost, which should be in [-1, 1]. Negative boost means demotion. Default is
+   * 0.0 (No-op).
    * @param boost boost or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaControlBoostAction setBoost(java.lang.Float boost) {
@@ -113,6 +128,42 @@ public final class GoogleCloudDiscoveryengineV1betaControlBoostAction extends co
    */
   public GoogleCloudDiscoveryengineV1betaControlBoostAction setFilter(java.lang.String filter) {
     this.filter = filter;
+    return this;
+  }
+
+  /**
+   * Optional. Strength of the boost, which should be in [-1, 1]. Negative boost means demotion.
+   * Default is 0.0 (No-op).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getFixedBoost() {
+    return fixedBoost;
+  }
+
+  /**
+   * Optional. Strength of the boost, which should be in [-1, 1]. Negative boost means demotion.
+   * Default is 0.0 (No-op).
+   * @param fixedBoost fixedBoost or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaControlBoostAction setFixedBoost(java.lang.Float fixedBoost) {
+    this.fixedBoost = fixedBoost;
+    return this;
+  }
+
+  /**
+   * Optional. Complex specification for custom ranking based on customer defined attribute value.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaControlBoostActionInterpolationBoostSpec getInterpolationBoostSpec() {
+    return interpolationBoostSpec;
+  }
+
+  /**
+   * Optional. Complex specification for custom ranking based on customer defined attribute value.
+   * @param interpolationBoostSpec interpolationBoostSpec or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaControlBoostAction setInterpolationBoostSpec(GoogleCloudDiscoveryengineV1betaControlBoostActionInterpolationBoostSpec interpolationBoostSpec) {
+    this.interpolationBoostSpec = interpolationBoostSpec;
     return this;
   }
 

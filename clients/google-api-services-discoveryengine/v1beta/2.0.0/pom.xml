@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-discoveryengine</artifactId>
-  <version>v1beta-rev20241031-2.0.0</version>
-  <name>Discovery Engine API v1beta-rev20241031-2.0.0</name>
+  <version>v1beta-rev20250419-2.0.0</version>
+  <name>Discovery Engine API v1beta-rev20250419-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
@@ -90,9 +90,9 @@
           <windowtitle>Discovery Engine API ${project.version}</windowtitle>
           <links>
             <link>http://docs.oracle.com/javase/7/docs/api</link>
-            <link>https://googleapis.dev/java/google-http-client/1.45.0/</link>
-            <link>https://googleapis.dev/java/google-oauth-client/1.36.0/</link>
-            <link>https://googleapis.dev/java/google-api-client/2.7.0/</link>
+            <link>https://googleapis.dev/java/google-http-client/1.46.3/</link>
+            <link>https://googleapis.dev/java/google-oauth-client/1.38.0/</link>
+            <link>https://googleapis.dev/java/google-api-client/2.7.2/</link>
           </links>
         </configuration>
       </plugin>
@@ -125,7 +125,7 @@
     <dependency>
       <groupId>com.google.api-client</groupId>
       <artifactId>google-api-client</artifactId>
-      <version>2.7.0</version>
+      <version>2.7.2</version>
     </dependency>
   </dependencies>
 

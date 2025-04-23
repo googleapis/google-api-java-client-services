@@ -17,7 +17,9 @@
 package com.google.api.services.discoveryengine.v1.model;
 
 /**
- * Safety specification.
+ * Safety specification. There are two use cases: 1. when only safety_spec.enable is set, the
+ * BLOCK_LOW_AND_ABOVE threshold will be applied for all categories. 2. when safety_spec.enable is
+ * set and some safety_settings are set, only specified safety_settings are applied.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Discovery Engine API. For a detailed explanation see:
@@ -37,6 +39,14 @@ public final class GoogleCloudDiscoveryengineV1AnswerQueryRequestSafetySpec exte
   private java.lang.Boolean enable;
 
   /**
+   * Optional. Safety settings. This settings are effective only when the safety_spec.enable is
+   * true.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDiscoveryengineV1AnswerQueryRequestSafetySpecSafetySetting> safetySettings;
+
+  /**
    * Enable the safety filtering on the answer response. It is false by default.
    * @return value or {@code null} for none
    */
@@ -50,6 +60,25 @@ public final class GoogleCloudDiscoveryengineV1AnswerQueryRequestSafetySpec exte
    */
   public GoogleCloudDiscoveryengineV1AnswerQueryRequestSafetySpec setEnable(java.lang.Boolean enable) {
     this.enable = enable;
+    return this;
+  }
+
+  /**
+   * Optional. Safety settings. This settings are effective only when the safety_spec.enable is
+   * true.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDiscoveryengineV1AnswerQueryRequestSafetySpecSafetySetting> getSafetySettings() {
+    return safetySettings;
+  }
+
+  /**
+   * Optional. Safety settings. This settings are effective only when the safety_spec.enable is
+   * true.
+   * @param safetySettings safetySettings or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1AnswerQueryRequestSafetySpec setSafetySettings(java.util.List<GoogleCloudDiscoveryengineV1AnswerQueryRequestSafetySpecSafetySetting> safetySettings) {
+    this.safetySettings = safetySettings;
     return this;
   }
 

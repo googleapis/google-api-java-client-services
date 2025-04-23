@@ -61,6 +61,15 @@ public final class GoogleCloudDiscoveryengineV1alphaRequirement extends com.goog
   private java.util.List<GoogleCloudDiscoveryengineV1alphaRequirementMetricBinding> metricBindings;
 
   /**
+   * The severity of errors if the requirement is not met. It must be ordered from the most strict
+   * to the least strict. Examples: * `BLOCKING` * `CRITICAL` * `WARNING` All thresholds in the
+   * requirement must have all the severity here.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> severity;
+
+  /**
    * A list of threshold bindings to be used in `condition`.
    * The value may be {@code null}.
    */
@@ -155,6 +164,27 @@ public final class GoogleCloudDiscoveryengineV1alphaRequirement extends com.goog
    */
   public GoogleCloudDiscoveryengineV1alphaRequirement setMetricBindings(java.util.List<GoogleCloudDiscoveryengineV1alphaRequirementMetricBinding> metricBindings) {
     this.metricBindings = metricBindings;
+    return this;
+  }
+
+  /**
+   * The severity of errors if the requirement is not met. It must be ordered from the most strict
+   * to the least strict. Examples: * `BLOCKING` * `CRITICAL` * `WARNING` All thresholds in the
+   * requirement must have all the severity here.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getSeverity() {
+    return severity;
+  }
+
+  /**
+   * The severity of errors if the requirement is not met. It must be ordered from the most strict
+   * to the least strict. Examples: * `BLOCKING` * `CRITICAL` * `WARNING` All thresholds in the
+   * requirement must have all the severity here.
+   * @param severity severity or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaRequirement setSeverity(java.util.List<java.lang.String> severity) {
+    this.severity = severity;
     return this;
   }
 

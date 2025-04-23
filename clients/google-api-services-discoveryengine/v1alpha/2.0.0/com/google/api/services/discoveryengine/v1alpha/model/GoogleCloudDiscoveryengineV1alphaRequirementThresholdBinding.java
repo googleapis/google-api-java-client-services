@@ -31,19 +31,19 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 public final class GoogleCloudDiscoveryengineV1alphaRequirementThresholdBinding extends com.google.api.client.json.GenericJson {
 
   /**
-   * Threshold to trigger a blocking failure. If not met, the requirement will evaluate as a
-   * `FAILURE`.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Double blockingThreshold;
-
-  /**
    * Human readable description of the corresponding threshold and sub-requirement.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
+
+  /**
+   * The values of the threshold. The values should be ordered from the most strict to the least
+   * strict.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDiscoveryengineV1alphaRequirementThresholdBindingThresholdValue> thresholdValues;
 
   /**
    * The variable id to be referenced in `condition`. Must be unique across all `metric_bindings`
@@ -52,32 +52,6 @@ public final class GoogleCloudDiscoveryengineV1alphaRequirementThresholdBinding 
    */
   @com.google.api.client.util.Key
   private java.lang.String variableId;
-
-  /**
-   * Threshold to trigger a warning. If not met, the requirement will evaluate as a `WARNING`.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Double warningThreshold;
-
-  /**
-   * Threshold to trigger a blocking failure. If not met, the requirement will evaluate as a
-   * `FAILURE`.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Double getBlockingThreshold() {
-    return blockingThreshold;
-  }
-
-  /**
-   * Threshold to trigger a blocking failure. If not met, the requirement will evaluate as a
-   * `FAILURE`.
-   * @param blockingThreshold blockingThreshold or {@code null} for none
-   */
-  public GoogleCloudDiscoveryengineV1alphaRequirementThresholdBinding setBlockingThreshold(java.lang.Double blockingThreshold) {
-    this.blockingThreshold = blockingThreshold;
-    return this;
-  }
 
   /**
    * Human readable description of the corresponding threshold and sub-requirement.
@@ -97,6 +71,25 @@ public final class GoogleCloudDiscoveryengineV1alphaRequirementThresholdBinding 
   }
 
   /**
+   * The values of the threshold. The values should be ordered from the most strict to the least
+   * strict.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDiscoveryengineV1alphaRequirementThresholdBindingThresholdValue> getThresholdValues() {
+    return thresholdValues;
+  }
+
+  /**
+   * The values of the threshold. The values should be ordered from the most strict to the least
+   * strict.
+   * @param thresholdValues thresholdValues or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaRequirementThresholdBinding setThresholdValues(java.util.List<GoogleCloudDiscoveryengineV1alphaRequirementThresholdBindingThresholdValue> thresholdValues) {
+    this.thresholdValues = thresholdValues;
+    return this;
+  }
+
+  /**
    * The variable id to be referenced in `condition`. Must be unique across all `metric_bindings`
    * and `threshold_bindings`.
    * @return value or {@code null} for none
@@ -112,23 +105,6 @@ public final class GoogleCloudDiscoveryengineV1alphaRequirementThresholdBinding 
    */
   public GoogleCloudDiscoveryengineV1alphaRequirementThresholdBinding setVariableId(java.lang.String variableId) {
     this.variableId = variableId;
-    return this;
-  }
-
-  /**
-   * Threshold to trigger a warning. If not met, the requirement will evaluate as a `WARNING`.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Double getWarningThreshold() {
-    return warningThreshold;
-  }
-
-  /**
-   * Threshold to trigger a warning. If not met, the requirement will evaluate as a `WARNING`.
-   * @param warningThreshold warningThreshold or {@code null} for none
-   */
-  public GoogleCloudDiscoveryengineV1alphaRequirementThresholdBinding setWarningThreshold(java.lang.Double warningThreshold) {
-    this.warningThreshold = warningThreshold;
     return this;
   }
 

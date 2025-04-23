@@ -82,6 +82,16 @@ public final class GoogleCloudDiscoveryengineV1UserEvent extends com.google.api.
   private GoogleCloudDiscoveryengineV1CompletionInfo completionInfo;
 
   /**
+   * Optional. Conversion type. Required if UserEvent.event_type is `conversion`. This is a
+   * customer-defined conversion name in lowercase letters or numbers separated by "-", such as
+   * "watch", "good-visit" etc. Do not set the field if UserEvent.event_type is not `conversion`.
+   * This mixes the custom conversion event with predefined events like `search`, `view-item` etc.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String conversionType;
+
+  /**
    * The DataStore resource full name, of the form `projects/{project}/locations/{location}/collecti
    * ons/{collection_id}/dataStores/{data_store_id}`. Optional. Only required for user events whose
    * data store can't by determined by UserEvent.engine or UserEvent.documents. If data store is set
@@ -146,18 +156,11 @@ public final class GoogleCloudDiscoveryengineV1UserEvent extends com.google.api.
    * Retail-related values: * `add-to-cart`: Add an item(s) to cart, e.g. in Retail online shopping
    * * `purchase`: Purchase an item(s) Media-related values: * `media-play`: Start/resume watching a
    * video, playing a song, etc. * `media-complete`: Finished or stopped midway through a video,
-   * song, etc.
+   * song, etc. Custom conversion value: * `conversion`: Customer defined conversion event.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String eventType;
-
-  /**
-   * Optional. This field is optional except for the `add-feedback` event types.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudDiscoveryengineV1Feedback feedback;
 
   /**
    * The filter syntax consists of an expression language for constructing a predicate from one or
@@ -370,6 +373,29 @@ public final class GoogleCloudDiscoveryengineV1UserEvent extends com.google.api.
   }
 
   /**
+   * Optional. Conversion type. Required if UserEvent.event_type is `conversion`. This is a
+   * customer-defined conversion name in lowercase letters or numbers separated by "-", such as
+   * "watch", "good-visit" etc. Do not set the field if UserEvent.event_type is not `conversion`.
+   * This mixes the custom conversion event with predefined events like `search`, `view-item` etc.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getConversionType() {
+    return conversionType;
+  }
+
+  /**
+   * Optional. Conversion type. Required if UserEvent.event_type is `conversion`. This is a
+   * customer-defined conversion name in lowercase letters or numbers separated by "-", such as
+   * "watch", "good-visit" etc. Do not set the field if UserEvent.event_type is not `conversion`.
+   * This mixes the custom conversion event with predefined events like `search`, `view-item` etc.
+   * @param conversionType conversionType or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1UserEvent setConversionType(java.lang.String conversionType) {
+    this.conversionType = conversionType;
+    return this;
+  }
+
+  /**
    * The DataStore resource full name, of the form `projects/{project}/locations/{location}/collecti
    * ons/{collection_id}/dataStores/{data_store_id}`. Optional. Only required for user events whose
    * data store can't by determined by UserEvent.engine or UserEvent.documents. If data store is set
@@ -494,7 +520,7 @@ public final class GoogleCloudDiscoveryengineV1UserEvent extends com.google.api.
    * Retail-related values: * `add-to-cart`: Add an item(s) to cart, e.g. in Retail online shopping
    * * `purchase`: Purchase an item(s) Media-related values: * `media-play`: Start/resume watching a
    * video, playing a song, etc. * `media-complete`: Finished or stopped midway through a video,
-   * song, etc.
+   * song, etc. Custom conversion value: * `conversion`: Customer defined conversion event.
    * @return value or {@code null} for none
    */
   public java.lang.String getEventType() {
@@ -509,28 +535,11 @@ public final class GoogleCloudDiscoveryengineV1UserEvent extends com.google.api.
    * Retail-related values: * `add-to-cart`: Add an item(s) to cart, e.g. in Retail online shopping
    * * `purchase`: Purchase an item(s) Media-related values: * `media-play`: Start/resume watching a
    * video, playing a song, etc. * `media-complete`: Finished or stopped midway through a video,
-   * song, etc.
+   * song, etc. Custom conversion value: * `conversion`: Customer defined conversion event.
    * @param eventType eventType or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1UserEvent setEventType(java.lang.String eventType) {
     this.eventType = eventType;
-    return this;
-  }
-
-  /**
-   * Optional. This field is optional except for the `add-feedback` event types.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudDiscoveryengineV1Feedback getFeedback() {
-    return feedback;
-  }
-
-  /**
-   * Optional. This field is optional except for the `add-feedback` event types.
-   * @param feedback feedback or {@code null} for none
-   */
-  public GoogleCloudDiscoveryengineV1UserEvent setFeedback(GoogleCloudDiscoveryengineV1Feedback feedback) {
-    this.feedback = feedback;
     return this;
   }
 

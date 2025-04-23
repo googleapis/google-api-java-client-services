@@ -45,6 +45,13 @@ public final class GoogleCloudDiscoveryengineV1betaAnswer extends com.google.api
   private java.lang.String answerText;
 
   /**
+   * List of blob attachments in the answer.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDiscoveryengineV1betaAnswerBlobAttachment> blobAttachments;
+
+  /**
    * Citations.
    * The value may be {@code null}.
    */
@@ -64,6 +71,20 @@ public final class GoogleCloudDiscoveryengineV1betaAnswer extends com.google.api
    */
   @com.google.api.client.util.Key
   private String createTime;
+
+  /**
+   * A score in the range of [0, 1] describing how grounded the answer is by the reference chunks.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double groundingScore;
+
+  /**
+   * Optional. Grounding supports.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDiscoveryengineV1betaAnswerGroundingSupport> groundingSupports;
 
   /**
    * Immutable. Fully qualified name `projects/{project}/locations/global/collections/{collection}/e
@@ -93,6 +114,13 @@ public final class GoogleCloudDiscoveryengineV1betaAnswer extends com.google.api
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> relatedQuestions;
+
+  /**
+   * Optional. Safety ratings.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDiscoveryengineV1betaSafetyRating> safetyRatings;
 
   /**
    * The state of the answer generation.
@@ -145,6 +173,23 @@ public final class GoogleCloudDiscoveryengineV1betaAnswer extends com.google.api
   }
 
   /**
+   * List of blob attachments in the answer.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDiscoveryengineV1betaAnswerBlobAttachment> getBlobAttachments() {
+    return blobAttachments;
+  }
+
+  /**
+   * List of blob attachments in the answer.
+   * @param blobAttachments blobAttachments or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaAnswer setBlobAttachments(java.util.List<GoogleCloudDiscoveryengineV1betaAnswerBlobAttachment> blobAttachments) {
+    this.blobAttachments = blobAttachments;
+    return this;
+  }
+
+  /**
    * Citations.
    * @return value or {@code null} for none
    */
@@ -192,6 +237,40 @@ public final class GoogleCloudDiscoveryengineV1betaAnswer extends com.google.api
    */
   public GoogleCloudDiscoveryengineV1betaAnswer setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * A score in the range of [0, 1] describing how grounded the answer is by the reference chunks.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getGroundingScore() {
+    return groundingScore;
+  }
+
+  /**
+   * A score in the range of [0, 1] describing how grounded the answer is by the reference chunks.
+   * @param groundingScore groundingScore or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaAnswer setGroundingScore(java.lang.Double groundingScore) {
+    this.groundingScore = groundingScore;
+    return this;
+  }
+
+  /**
+   * Optional. Grounding supports.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDiscoveryengineV1betaAnswerGroundingSupport> getGroundingSupports() {
+    return groundingSupports;
+  }
+
+  /**
+   * Optional. Grounding supports.
+   * @param groundingSupports groundingSupports or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaAnswer setGroundingSupports(java.util.List<GoogleCloudDiscoveryengineV1betaAnswerGroundingSupport> groundingSupports) {
+    this.groundingSupports = groundingSupports;
     return this;
   }
 
@@ -262,6 +341,23 @@ public final class GoogleCloudDiscoveryengineV1betaAnswer extends com.google.api
    */
   public GoogleCloudDiscoveryengineV1betaAnswer setRelatedQuestions(java.util.List<java.lang.String> relatedQuestions) {
     this.relatedQuestions = relatedQuestions;
+    return this;
+  }
+
+  /**
+   * Optional. Safety ratings.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDiscoveryengineV1betaSafetyRating> getSafetyRatings() {
+    return safetyRatings;
+  }
+
+  /**
+   * Optional. Safety ratings.
+   * @param safetyRatings safetyRatings or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaAnswer setSafetyRatings(java.util.List<GoogleCloudDiscoveryengineV1betaSafetyRating> safetyRatings) {
+    this.safetyRatings = safetyRatings;
     return this;
   }
 

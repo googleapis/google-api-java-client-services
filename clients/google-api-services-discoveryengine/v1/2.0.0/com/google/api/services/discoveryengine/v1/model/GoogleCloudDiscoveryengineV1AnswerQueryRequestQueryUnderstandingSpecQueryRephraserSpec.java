@@ -45,6 +45,13 @@ public final class GoogleCloudDiscoveryengineV1AnswerQueryRequestQueryUnderstand
   private java.lang.Integer maxRephraseSteps;
 
   /**
+   * Optional. Query Rephraser Model specification.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1AnswerQueryRequestQueryUnderstandingSpecQueryRephraserSpecModelSpec modelSpec;
+
+  /**
    * Disable query rephraser.
    * @return value or {@code null} for none
    */
@@ -77,6 +84,23 @@ public final class GoogleCloudDiscoveryengineV1AnswerQueryRequestQueryUnderstand
    */
   public GoogleCloudDiscoveryengineV1AnswerQueryRequestQueryUnderstandingSpecQueryRephraserSpec setMaxRephraseSteps(java.lang.Integer maxRephraseSteps) {
     this.maxRephraseSteps = maxRephraseSteps;
+    return this;
+  }
+
+  /**
+   * Optional. Query Rephraser Model specification.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1AnswerQueryRequestQueryUnderstandingSpecQueryRephraserSpecModelSpec getModelSpec() {
+    return modelSpec;
+  }
+
+  /**
+   * Optional. Query Rephraser Model specification.
+   * @param modelSpec modelSpec or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1AnswerQueryRequestQueryUnderstandingSpecQueryRephraserSpec setModelSpec(GoogleCloudDiscoveryengineV1AnswerQueryRequestQueryUnderstandingSpecQueryRephraserSpecModelSpec modelSpec) {
+    this.modelSpec = modelSpec;
     return this;
   }
 

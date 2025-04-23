@@ -30,18 +30,18 @@ package com.google.api.services.discoveryengine.v1.model;
 public final class GoogleCloudDiscoveryengineV1betaSearchRequestBoostSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * Condition boost specifications. If a document matches multiple conditions in the specifictions,
-   * boost scores from these specifications are all applied and combined in a non-linear way.
-   * Maximum number of specifications is 20.
+   * Condition boost specifications. If a document matches multiple conditions in the
+   * specifications, boost scores from these specifications are all applied and combined in a non-
+   * linear way. Maximum number of specifications is 20.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDiscoveryengineV1betaSearchRequestBoostSpecConditionBoostSpec> conditionBoostSpecs;
 
   /**
-   * Condition boost specifications. If a document matches multiple conditions in the specifictions,
-   * boost scores from these specifications are all applied and combined in a non-linear way.
-   * Maximum number of specifications is 20.
+   * Condition boost specifications. If a document matches multiple conditions in the
+   * specifications, boost scores from these specifications are all applied and combined in a non-
+   * linear way. Maximum number of specifications is 20.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDiscoveryengineV1betaSearchRequestBoostSpecConditionBoostSpec> getConditionBoostSpecs() {
@@ -49,9 +49,9 @@ public final class GoogleCloudDiscoveryengineV1betaSearchRequestBoostSpec extend
   }
 
   /**
-   * Condition boost specifications. If a document matches multiple conditions in the specifictions,
-   * boost scores from these specifications are all applied and combined in a non-linear way.
-   * Maximum number of specifications is 20.
+   * Condition boost specifications. If a document matches multiple conditions in the
+   * specifications, boost scores from these specifications are all applied and combined in a non-
+   * linear way. Maximum number of specifications is 20.
    * @param conditionBoostSpecs conditionBoostSpecs or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaSearchRequestBoostSpec setConditionBoostSpecs(java.util.List<GoogleCloudDiscoveryengineV1betaSearchRequestBoostSpecConditionBoostSpec> conditionBoostSpecs) {

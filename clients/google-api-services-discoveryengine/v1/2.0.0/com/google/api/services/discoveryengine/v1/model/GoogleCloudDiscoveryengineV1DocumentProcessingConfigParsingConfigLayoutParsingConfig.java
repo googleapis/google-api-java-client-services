@@ -29,6 +29,126 @@ package com.google.api.services.discoveryengine.v1.model;
 @SuppressWarnings("javadoc")
 public final class GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingConfigLayoutParsingConfig extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Optional. If true, the LLM based annotation is added to the image during parsing.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableImageAnnotation;
+
+  /**
+   * Optional. If true, the LLM based annotation is added to the table during parsing.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableTableAnnotation;
+
+  /**
+   * Optional. List of HTML classes to exclude from the parsed content.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> excludeHtmlClasses;
+
+  /**
+   * Optional. List of HTML elements to exclude from the parsed content.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> excludeHtmlElements;
+
+  /**
+   * Optional. List of HTML ids to exclude from the parsed content.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> excludeHtmlIds;
+
+  /**
+   * Optional. If true, the LLM based annotation is added to the image during parsing.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableImageAnnotation() {
+    return enableImageAnnotation;
+  }
+
+  /**
+   * Optional. If true, the LLM based annotation is added to the image during parsing.
+   * @param enableImageAnnotation enableImageAnnotation or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingConfigLayoutParsingConfig setEnableImageAnnotation(java.lang.Boolean enableImageAnnotation) {
+    this.enableImageAnnotation = enableImageAnnotation;
+    return this;
+  }
+
+  /**
+   * Optional. If true, the LLM based annotation is added to the table during parsing.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableTableAnnotation() {
+    return enableTableAnnotation;
+  }
+
+  /**
+   * Optional. If true, the LLM based annotation is added to the table during parsing.
+   * @param enableTableAnnotation enableTableAnnotation or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingConfigLayoutParsingConfig setEnableTableAnnotation(java.lang.Boolean enableTableAnnotation) {
+    this.enableTableAnnotation = enableTableAnnotation;
+    return this;
+  }
+
+  /**
+   * Optional. List of HTML classes to exclude from the parsed content.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getExcludeHtmlClasses() {
+    return excludeHtmlClasses;
+  }
+
+  /**
+   * Optional. List of HTML classes to exclude from the parsed content.
+   * @param excludeHtmlClasses excludeHtmlClasses or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingConfigLayoutParsingConfig setExcludeHtmlClasses(java.util.List<java.lang.String> excludeHtmlClasses) {
+    this.excludeHtmlClasses = excludeHtmlClasses;
+    return this;
+  }
+
+  /**
+   * Optional. List of HTML elements to exclude from the parsed content.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getExcludeHtmlElements() {
+    return excludeHtmlElements;
+  }
+
+  /**
+   * Optional. List of HTML elements to exclude from the parsed content.
+   * @param excludeHtmlElements excludeHtmlElements or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingConfigLayoutParsingConfig setExcludeHtmlElements(java.util.List<java.lang.String> excludeHtmlElements) {
+    this.excludeHtmlElements = excludeHtmlElements;
+    return this;
+  }
+
+  /**
+   * Optional. List of HTML ids to exclude from the parsed content.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getExcludeHtmlIds() {
+    return excludeHtmlIds;
+  }
+
+  /**
+   * Optional. List of HTML ids to exclude from the parsed content.
+   * @param excludeHtmlIds excludeHtmlIds or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingConfigLayoutParsingConfig setExcludeHtmlIds(java.util.List<java.lang.String> excludeHtmlIds) {
+    this.excludeHtmlIds = excludeHtmlIds;
+    return this;
+  }
+
   @Override
   public GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingConfigLayoutParsingConfig set(String fieldName, Object value) {
     return (GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingConfigLayoutParsingConfig) super.set(fieldName, value);

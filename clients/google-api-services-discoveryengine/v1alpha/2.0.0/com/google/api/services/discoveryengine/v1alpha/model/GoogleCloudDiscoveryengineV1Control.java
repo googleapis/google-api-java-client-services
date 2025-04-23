@@ -82,6 +82,14 @@ public final class GoogleCloudDiscoveryengineV1Control extends com.google.api.cl
   private java.lang.String name;
 
   /**
+   * Promote certain links based on predefined trigger queries. This now only supports basic site
+   * search.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1ControlPromoteAction promoteAction;
+
+  /**
    * Defines a redirect-type control.
    * The value may be {@code null}.
    */
@@ -217,6 +225,25 @@ public final class GoogleCloudDiscoveryengineV1Control extends com.google.api.cl
    */
   public GoogleCloudDiscoveryengineV1Control setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Promote certain links based on predefined trigger queries. This now only supports basic site
+   * search.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1ControlPromoteAction getPromoteAction() {
+    return promoteAction;
+  }
+
+  /**
+   * Promote certain links based on predefined trigger queries. This now only supports basic site
+   * search.
+   * @param promoteAction promoteAction or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1Control setPromoteAction(GoogleCloudDiscoveryengineV1ControlPromoteAction promoteAction) {
+    this.promoteAction = promoteAction;
     return this;
   }
 

@@ -37,7 +37,7 @@ public final class GoogleCloudDiscoveryengineV1CmekConfig extends com.google.api
   private java.lang.Boolean isDefault;
 
   /**
-   * Kms key resource name which will be used to encrypt resources
+   * KMS key resource name which will be used to encrypt resources
    * `projects/{project}/locations/{location}/keyRings/{keyRing}/cryptoKeys/{keyId}`.
    * The value may be {@code null}.
    */
@@ -45,7 +45,7 @@ public final class GoogleCloudDiscoveryengineV1CmekConfig extends com.google.api
   private java.lang.String kmsKey;
 
   /**
-   * Kms key version resource name which will be used to encrypt resources
+   * KMS key version resource name which will be used to encrypt resources
    * `/cryptoKeyVersions/{keyVersion}`.
    * The value may be {@code null}.
    */
@@ -60,7 +60,7 @@ public final class GoogleCloudDiscoveryengineV1CmekConfig extends com.google.api
   private java.lang.Long lastRotationTimestampMicros;
 
   /**
-   * Required. Name of the CmekConfig, of the form
+   * Required. The name of the CmekConfig of the form
    * `projects/{project}/locations/{location}/cmekConfig` or
    * `projects/{project}/locations/{location}/cmekConfigs/{cmekConfig}`.
    * The value may be {@code null}.
@@ -69,7 +69,21 @@ public final class GoogleCloudDiscoveryengineV1CmekConfig extends com.google.api
   private java.lang.String name;
 
   /**
-   * Output only. State of the CmekConfig.
+   * Output only. Whether the NotebookLM Corpus is ready to be used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String notebooklmState;
+
+  /**
+   * Optional. Single-regional CMEKs that are required for some VAIS features.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDiscoveryengineV1SingleRegionKey> singleRegionKeys;
+
+  /**
+   * Output only. The states of the CmekConfig.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,7 +107,7 @@ public final class GoogleCloudDiscoveryengineV1CmekConfig extends com.google.api
   }
 
   /**
-   * Kms key resource name which will be used to encrypt resources
+   * KMS key resource name which will be used to encrypt resources
    * `projects/{project}/locations/{location}/keyRings/{keyRing}/cryptoKeys/{keyId}`.
    * @return value or {@code null} for none
    */
@@ -102,7 +116,7 @@ public final class GoogleCloudDiscoveryengineV1CmekConfig extends com.google.api
   }
 
   /**
-   * Kms key resource name which will be used to encrypt resources
+   * KMS key resource name which will be used to encrypt resources
    * `projects/{project}/locations/{location}/keyRings/{keyRing}/cryptoKeys/{keyId}`.
    * @param kmsKey kmsKey or {@code null} for none
    */
@@ -112,7 +126,7 @@ public final class GoogleCloudDiscoveryengineV1CmekConfig extends com.google.api
   }
 
   /**
-   * Kms key version resource name which will be used to encrypt resources
+   * KMS key version resource name which will be used to encrypt resources
    * `/cryptoKeyVersions/{keyVersion}`.
    * @return value or {@code null} for none
    */
@@ -121,7 +135,7 @@ public final class GoogleCloudDiscoveryengineV1CmekConfig extends com.google.api
   }
 
   /**
-   * Kms key version resource name which will be used to encrypt resources
+   * KMS key version resource name which will be used to encrypt resources
    * `/cryptoKeyVersions/{keyVersion}`.
    * @param kmsKeyVersion kmsKeyVersion or {@code null} for none
    */
@@ -148,7 +162,7 @@ public final class GoogleCloudDiscoveryengineV1CmekConfig extends com.google.api
   }
 
   /**
-   * Required. Name of the CmekConfig, of the form
+   * Required. The name of the CmekConfig of the form
    * `projects/{project}/locations/{location}/cmekConfig` or
    * `projects/{project}/locations/{location}/cmekConfigs/{cmekConfig}`.
    * @return value or {@code null} for none
@@ -158,7 +172,7 @@ public final class GoogleCloudDiscoveryengineV1CmekConfig extends com.google.api
   }
 
   /**
-   * Required. Name of the CmekConfig, of the form
+   * Required. The name of the CmekConfig of the form
    * `projects/{project}/locations/{location}/cmekConfig` or
    * `projects/{project}/locations/{location}/cmekConfigs/{cmekConfig}`.
    * @param name name or {@code null} for none
@@ -169,7 +183,41 @@ public final class GoogleCloudDiscoveryengineV1CmekConfig extends com.google.api
   }
 
   /**
-   * Output only. State of the CmekConfig.
+   * Output only. Whether the NotebookLM Corpus is ready to be used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNotebooklmState() {
+    return notebooklmState;
+  }
+
+  /**
+   * Output only. Whether the NotebookLM Corpus is ready to be used.
+   * @param notebooklmState notebooklmState or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1CmekConfig setNotebooklmState(java.lang.String notebooklmState) {
+    this.notebooklmState = notebooklmState;
+    return this;
+  }
+
+  /**
+   * Optional. Single-regional CMEKs that are required for some VAIS features.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDiscoveryengineV1SingleRegionKey> getSingleRegionKeys() {
+    return singleRegionKeys;
+  }
+
+  /**
+   * Optional. Single-regional CMEKs that are required for some VAIS features.
+   * @param singleRegionKeys singleRegionKeys or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1CmekConfig setSingleRegionKeys(java.util.List<GoogleCloudDiscoveryengineV1SingleRegionKey> singleRegionKeys) {
+    this.singleRegionKeys = singleRegionKeys;
+    return this;
+  }
+
+  /**
+   * Output only. The states of the CmekConfig.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -177,7 +225,7 @@ public final class GoogleCloudDiscoveryengineV1CmekConfig extends com.google.api
   }
 
   /**
-   * Output only. State of the CmekConfig.
+   * Output only. The states of the CmekConfig.
    * @param state state or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1CmekConfig setState(java.lang.String state) {

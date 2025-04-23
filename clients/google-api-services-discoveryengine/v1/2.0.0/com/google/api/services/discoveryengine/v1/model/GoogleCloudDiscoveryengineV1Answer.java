@@ -66,6 +66,20 @@ public final class GoogleCloudDiscoveryengineV1Answer extends com.google.api.cli
   private String createTime;
 
   /**
+   * A score in the range of [0, 1] describing how grounded the answer is by the reference chunks.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double groundingScore;
+
+  /**
+   * Optional. Grounding supports.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDiscoveryengineV1AnswerGroundingSupport> groundingSupports;
+
+  /**
    * Immutable. Fully qualified name `projects/{project}/locations/global/collections/{collection}/e
    * ngines/{engine}/sessions/answers`
    * The value may be {@code null}.
@@ -93,6 +107,13 @@ public final class GoogleCloudDiscoveryengineV1Answer extends com.google.api.cli
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> relatedQuestions;
+
+  /**
+   * Optional. Safety ratings.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDiscoveryengineV1SafetyRating> safetyRatings;
 
   /**
    * The state of the answer generation.
@@ -196,6 +217,40 @@ public final class GoogleCloudDiscoveryengineV1Answer extends com.google.api.cli
   }
 
   /**
+   * A score in the range of [0, 1] describing how grounded the answer is by the reference chunks.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getGroundingScore() {
+    return groundingScore;
+  }
+
+  /**
+   * A score in the range of [0, 1] describing how grounded the answer is by the reference chunks.
+   * @param groundingScore groundingScore or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1Answer setGroundingScore(java.lang.Double groundingScore) {
+    this.groundingScore = groundingScore;
+    return this;
+  }
+
+  /**
+   * Optional. Grounding supports.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDiscoveryengineV1AnswerGroundingSupport> getGroundingSupports() {
+    return groundingSupports;
+  }
+
+  /**
+   * Optional. Grounding supports.
+   * @param groundingSupports groundingSupports or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1Answer setGroundingSupports(java.util.List<GoogleCloudDiscoveryengineV1AnswerGroundingSupport> groundingSupports) {
+    this.groundingSupports = groundingSupports;
+    return this;
+  }
+
+  /**
    * Immutable. Fully qualified name `projects/{project}/locations/global/collections/{collection}/e
    * ngines/{engine}/sessions/answers`
    * @return value or {@code null} for none
@@ -262,6 +317,23 @@ public final class GoogleCloudDiscoveryengineV1Answer extends com.google.api.cli
    */
   public GoogleCloudDiscoveryengineV1Answer setRelatedQuestions(java.util.List<java.lang.String> relatedQuestions) {
     this.relatedQuestions = relatedQuestions;
+    return this;
+  }
+
+  /**
+   * Optional. Safety ratings.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDiscoveryengineV1SafetyRating> getSafetyRatings() {
+    return safetyRatings;
+  }
+
+  /**
+   * Optional. Safety ratings.
+   * @param safetyRatings safetyRatings or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1Answer setSafetyRatings(java.util.List<GoogleCloudDiscoveryengineV1SafetyRating> safetyRatings) {
+    this.safetyRatings = safetyRatings;
     return this;
   }
 

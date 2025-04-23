@@ -37,6 +37,20 @@ public final class GoogleCloudDiscoveryengineV1alphaAdvancedCompleteQueryRespons
   private java.lang.String dataStore;
 
   /**
+   * The destination uri of the person suggestion.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String destinationUri;
+
+  /**
+   * The photo uri of the person suggestion.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String displayPhotoUri;
+
+  /**
    * The document data snippet in the suggestion. Only a subset of fields is populated.
    * The value may be {@code null}.
    */
@@ -49,6 +63,13 @@ public final class GoogleCloudDiscoveryengineV1alphaAdvancedCompleteQueryRespons
    */
   @com.google.api.client.util.Key
   private java.lang.String personType;
+
+  /**
+   * The score of each suggestion. The score is in the range of [0, 1].
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double score;
 
   /**
    * The suggestion for the query.
@@ -71,6 +92,40 @@ public final class GoogleCloudDiscoveryengineV1alphaAdvancedCompleteQueryRespons
    */
   public GoogleCloudDiscoveryengineV1alphaAdvancedCompleteQueryResponsePersonSuggestion setDataStore(java.lang.String dataStore) {
     this.dataStore = dataStore;
+    return this;
+  }
+
+  /**
+   * The destination uri of the person suggestion.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDestinationUri() {
+    return destinationUri;
+  }
+
+  /**
+   * The destination uri of the person suggestion.
+   * @param destinationUri destinationUri or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaAdvancedCompleteQueryResponsePersonSuggestion setDestinationUri(java.lang.String destinationUri) {
+    this.destinationUri = destinationUri;
+    return this;
+  }
+
+  /**
+   * The photo uri of the person suggestion.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDisplayPhotoUri() {
+    return displayPhotoUri;
+  }
+
+  /**
+   * The photo uri of the person suggestion.
+   * @param displayPhotoUri displayPhotoUri or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaAdvancedCompleteQueryResponsePersonSuggestion setDisplayPhotoUri(java.lang.String displayPhotoUri) {
+    this.displayPhotoUri = displayPhotoUri;
     return this;
   }
 
@@ -105,6 +160,23 @@ public final class GoogleCloudDiscoveryengineV1alphaAdvancedCompleteQueryRespons
    */
   public GoogleCloudDiscoveryengineV1alphaAdvancedCompleteQueryResponsePersonSuggestion setPersonType(java.lang.String personType) {
     this.personType = personType;
+    return this;
+  }
+
+  /**
+   * The score of each suggestion. The score is in the range of [0, 1].
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getScore() {
+    return score;
+  }
+
+  /**
+   * The score of each suggestion. The score is in the range of [0, 1].
+   * @param score score or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaAdvancedCompleteQueryResponsePersonSuggestion setScore(java.lang.Double score) {
+    this.score = score;
     return this;
   }
 

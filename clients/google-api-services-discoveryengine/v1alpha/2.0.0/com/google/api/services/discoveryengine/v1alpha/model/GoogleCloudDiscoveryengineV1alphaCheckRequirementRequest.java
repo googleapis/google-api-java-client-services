@@ -45,11 +45,11 @@ public final class GoogleCloudDiscoveryengineV1alphaCheckRequirementRequest exte
   private java.lang.String requirementType;
 
   /**
-   * The type needed for the monitored resources: * `discoveryengine.googleapis.com/Branch`. * The
-   * labels needed for this resource: * `project`_`number` * `location`_`id` * `collection`_`id` *
-   * `datastore`_`id` * `branch`_`id` * `discoveryengine.googleapis.com/DataStore` * The labels
-   * needed for this resource: * `project`_`number` * `location`_`id` * `collection`_`id` *
-   * `datastore`_`id`
+   * The resources to be checked for this requirement. The type needed for the monitored resources:
+   * * `discoveryengine.googleapis.com/Branch`. * The labels needed for this resource: *
+   * `project_number` * `location_id` * `collection_id` * `datastore_id` * `branch_id` *
+   * `discoveryengine.googleapis.com/DataStore` * The labels needed for this resource: *
+   * `project_number` * `location_id` * `collection_id` * `datastore_id`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,11 +95,11 @@ public final class GoogleCloudDiscoveryengineV1alphaCheckRequirementRequest exte
   }
 
   /**
-   * The type needed for the monitored resources: * `discoveryengine.googleapis.com/Branch`. * The
-   * labels needed for this resource: * `project`_`number` * `location`_`id` * `collection`_`id` *
-   * `datastore`_`id` * `branch`_`id` * `discoveryengine.googleapis.com/DataStore` * The labels
-   * needed for this resource: * `project`_`number` * `location`_`id` * `collection`_`id` *
-   * `datastore`_`id`
+   * The resources to be checked for this requirement. The type needed for the monitored resources:
+   * * `discoveryengine.googleapis.com/Branch`. * The labels needed for this resource: *
+   * `project_number` * `location_id` * `collection_id` * `datastore_id` * `branch_id` *
+   * `discoveryengine.googleapis.com/DataStore` * The labels needed for this resource: *
+   * `project_number` * `location_id` * `collection_id` * `datastore_id`
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleApiMonitoredResource> getResources() {
@@ -107,11 +107,11 @@ public final class GoogleCloudDiscoveryengineV1alphaCheckRequirementRequest exte
   }
 
   /**
-   * The type needed for the monitored resources: * `discoveryengine.googleapis.com/Branch`. * The
-   * labels needed for this resource: * `project`_`number` * `location`_`id` * `collection`_`id` *
-   * `datastore`_`id` * `branch`_`id` * `discoveryengine.googleapis.com/DataStore` * The labels
-   * needed for this resource: * `project`_`number` * `location`_`id` * `collection`_`id` *
-   * `datastore`_`id`
+   * The resources to be checked for this requirement. The type needed for the monitored resources:
+   * * `discoveryengine.googleapis.com/Branch`. * The labels needed for this resource: *
+   * `project_number` * `location_id` * `collection_id` * `datastore_id` * `branch_id` *
+   * `discoveryengine.googleapis.com/DataStore` * The labels needed for this resource: *
+   * `project_number` * `location_id` * `collection_id` * `datastore_id`
    * @param resources resources or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaCheckRequirementRequest setResources(java.util.List<GoogleApiMonitoredResource> resources) {

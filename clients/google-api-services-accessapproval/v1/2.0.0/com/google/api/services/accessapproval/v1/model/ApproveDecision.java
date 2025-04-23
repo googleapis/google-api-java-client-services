@@ -58,6 +58,13 @@ public final class ApproveDecision extends com.google.api.client.json.GenericJso
   private String invalidateTime;
 
   /**
+   * True when the request has been approved by the customer's defined policy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean policyApproved;
+
+  /**
    * The signature for the ApprovalRequest and details on how it was signed.
    * The value may be {@code null}.
    */
@@ -129,6 +136,23 @@ public final class ApproveDecision extends com.google.api.client.json.GenericJso
    */
   public ApproveDecision setInvalidateTime(String invalidateTime) {
     this.invalidateTime = invalidateTime;
+    return this;
+  }
+
+  /**
+   * True when the request has been approved by the customer's defined policy.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getPolicyApproved() {
+    return policyApproved;
+  }
+
+  /**
+   * True when the request has been approved by the customer's defined policy.
+   * @param policyApproved policyApproved or {@code null} for none
+   */
+  public ApproveDecision setPolicyApproved(java.lang.Boolean policyApproved) {
+    this.policyApproved = policyApproved;
     return this;
   }
 

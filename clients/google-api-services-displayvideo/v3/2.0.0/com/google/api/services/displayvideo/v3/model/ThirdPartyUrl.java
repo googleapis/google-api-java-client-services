@@ -31,22 +31,22 @@ package com.google.api.services.displayvideo.v3.model;
 public final class ThirdPartyUrl extends com.google.api.client.json.GenericJson {
 
   /**
-   * The type of interaction needs to be tracked by the tracking URL
+   * Optional. The type of interaction needs to be tracked by the tracking URL
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * Tracking URL used to track the interaction. Provide a URL with optional path or query string,
-   * beginning with `https:`. For example, https://www.example.com/path
+   * Optional. Tracking URL used to track the interaction. Provide a URL with optional path or query
+   * string, beginning with `https:`. For example, `https://www.example.com/path`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String url;
 
   /**
-   * The type of interaction needs to be tracked by the tracking URL
+   * Optional. The type of interaction needs to be tracked by the tracking URL
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -54,7 +54,7 @@ public final class ThirdPartyUrl extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The type of interaction needs to be tracked by the tracking URL
+   * Optional. The type of interaction needs to be tracked by the tracking URL
    * @param type type or {@code null} for none
    */
   public ThirdPartyUrl setType(java.lang.String type) {
@@ -63,8 +63,8 @@ public final class ThirdPartyUrl extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Tracking URL used to track the interaction. Provide a URL with optional path or query string,
-   * beginning with `https:`. For example, https://www.example.com/path
+   * Optional. Tracking URL used to track the interaction. Provide a URL with optional path or query
+   * string, beginning with `https:`. For example, `https://www.example.com/path`
    * @return value or {@code null} for none
    */
   public java.lang.String getUrl() {
@@ -72,8 +72,8 @@ public final class ThirdPartyUrl extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Tracking URL used to track the interaction. Provide a URL with optional path or query string,
-   * beginning with `https:`. For example, https://www.example.com/path
+   * Optional. Tracking URL used to track the interaction. Provide a URL with optional path or query
+   * string, beginning with `https:`. For example, `https://www.example.com/path`
    * @param url url or {@code null} for none
    */
   public ThirdPartyUrl setUrl(java.lang.String url) {

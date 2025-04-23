@@ -32,16 +32,16 @@ package com.google.api.services.displayvideo.v2.model;
 public final class CustomListGroup extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. All custom list targeting settings in custom list group. Repeated settings with same
-   * id will be ignored.
+   * Required. All custom list targeting settings in custom list group. Repeated settings with the
+   * same id will be ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<CustomListTargetingSetting> settings;
 
   /**
-   * Required. All custom list targeting settings in custom list group. Repeated settings with same
-   * id will be ignored.
+   * Required. All custom list targeting settings in custom list group. Repeated settings with the
+   * same id will be ignored.
    * @return value or {@code null} for none
    */
   public java.util.List<CustomListTargetingSetting> getSettings() {
@@ -49,8 +49,8 @@ public final class CustomListGroup extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. All custom list targeting settings in custom list group. Repeated settings with same
-   * id will be ignored.
+   * Required. All custom list targeting settings in custom list group. Repeated settings with the
+   * same id will be ignored.
    * @param settings settings or {@code null} for none
    */
   public CustomListGroup setSettings(java.util.List<CustomListTargetingSetting> settings) {

@@ -33,8 +33,8 @@ public final class CombinedAudienceGroup extends com.google.api.client.json.Gene
 
   /**
    * Required. All combined audience targeting settings in combined audience group. Repeated
-   * settings with same id will be ignored. The number of combined audience settings should be no
-   * more than five, error will be thrown otherwise.
+   * settings with the same id will be ignored. The number of combined audience settings should be
+   * no more than five, error will be thrown otherwise.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -42,8 +42,8 @@ public final class CombinedAudienceGroup extends com.google.api.client.json.Gene
 
   /**
    * Required. All combined audience targeting settings in combined audience group. Repeated
-   * settings with same id will be ignored. The number of combined audience settings should be no
-   * more than five, error will be thrown otherwise.
+   * settings with the same id will be ignored. The number of combined audience settings should be
+   * no more than five, error will be thrown otherwise.
    * @return value or {@code null} for none
    */
   public java.util.List<CombinedAudienceTargetingSetting> getSettings() {
@@ -52,8 +52,8 @@ public final class CombinedAudienceGroup extends com.google.api.client.json.Gene
 
   /**
    * Required. All combined audience targeting settings in combined audience group. Repeated
-   * settings with same id will be ignored. The number of combined audience settings should be no
-   * more than five, error will be thrown otherwise.
+   * settings with the same id will be ignored. The number of combined audience settings should be
+   * no more than five, error will be thrown otherwise.
    * @param settings settings or {@code null} for none
    */
   public CombinedAudienceGroup setSettings(java.util.List<CombinedAudienceTargetingSetting> settings) {

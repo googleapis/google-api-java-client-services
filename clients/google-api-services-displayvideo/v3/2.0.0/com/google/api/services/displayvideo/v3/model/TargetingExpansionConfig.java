@@ -50,9 +50,9 @@ public final class TargetingExpansionConfig extends com.google.api.client.json.G
   /**
    * Required. Whether to enable Optimized Targeting for the line item. Optimized targeting is not
    * compatible with all bid strategies. Attempting to set this field to `true` for a line item
-   * using one of the following combinations of BiddingStrategy fields and
-   * BiddingStrategyPerformanceGoalType will result in an error: maximize_auto_spend_bid: *
-   * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CIVA` *
+   * using the BiddingStrategy field fixed_bid or one of the following combinations of
+   * BiddingStrategy fields and BiddingStrategyPerformanceGoalType will result in an error:
+   * maximize_auto_spend_bid: * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CIVA` *
    * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_IVO_TEN` *
    * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_AV_VIEWED` performance_goal_auto_bid: *
    * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_VIEWABLE_CPM`
@@ -102,9 +102,9 @@ public final class TargetingExpansionConfig extends com.google.api.client.json.G
   /**
    * Required. Whether to enable Optimized Targeting for the line item. Optimized targeting is not
    * compatible with all bid strategies. Attempting to set this field to `true` for a line item
-   * using one of the following combinations of BiddingStrategy fields and
-   * BiddingStrategyPerformanceGoalType will result in an error: maximize_auto_spend_bid: *
-   * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CIVA` *
+   * using the BiddingStrategy field fixed_bid or one of the following combinations of
+   * BiddingStrategy fields and BiddingStrategyPerformanceGoalType will result in an error:
+   * maximize_auto_spend_bid: * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CIVA` *
    * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_IVO_TEN` *
    * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_AV_VIEWED` performance_goal_auto_bid: *
    * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_VIEWABLE_CPM`
@@ -117,9 +117,9 @@ public final class TargetingExpansionConfig extends com.google.api.client.json.G
   /**
    * Required. Whether to enable Optimized Targeting for the line item. Optimized targeting is not
    * compatible with all bid strategies. Attempting to set this field to `true` for a line item
-   * using one of the following combinations of BiddingStrategy fields and
-   * BiddingStrategyPerformanceGoalType will result in an error: maximize_auto_spend_bid: *
-   * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CIVA` *
+   * using the BiddingStrategy field fixed_bid or one of the following combinations of
+   * BiddingStrategy fields and BiddingStrategyPerformanceGoalType will result in an error:
+   * maximize_auto_spend_bid: * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CIVA` *
    * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_IVO_TEN` *
    * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_AV_VIEWED` performance_goal_auto_bid: *
    * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_VIEWABLE_CPM`

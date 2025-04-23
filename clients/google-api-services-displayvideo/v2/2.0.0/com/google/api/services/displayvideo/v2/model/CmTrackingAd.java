@@ -31,28 +31,28 @@ package com.google.api.services.displayvideo.v2.model;
 public final class CmTrackingAd extends com.google.api.client.json.GenericJson {
 
   /**
-   * The ad ID of the campaign manager 360 tracking Ad.
+   * Optional. The ad ID of the campaign manager 360 tracking Ad.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long cmAdId;
 
   /**
-   * The creative ID of the campaign manager 360 tracking Ad.
+   * Optional. The creative ID of the campaign manager 360 tracking Ad.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long cmCreativeId;
 
   /**
-   * The placement ID of the campaign manager 360 tracking Ad.
+   * Optional. The placement ID of the campaign manager 360 tracking Ad.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long cmPlacementId;
 
   /**
-   * The ad ID of the campaign manager 360 tracking Ad.
+   * Optional. The ad ID of the campaign manager 360 tracking Ad.
    * @return value or {@code null} for none
    */
   public java.lang.Long getCmAdId() {
@@ -60,7 +60,7 @@ public final class CmTrackingAd extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ad ID of the campaign manager 360 tracking Ad.
+   * Optional. The ad ID of the campaign manager 360 tracking Ad.
    * @param cmAdId cmAdId or {@code null} for none
    */
   public CmTrackingAd setCmAdId(java.lang.Long cmAdId) {
@@ -69,7 +69,7 @@ public final class CmTrackingAd extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The creative ID of the campaign manager 360 tracking Ad.
+   * Optional. The creative ID of the campaign manager 360 tracking Ad.
    * @return value or {@code null} for none
    */
   public java.lang.Long getCmCreativeId() {
@@ -77,7 +77,7 @@ public final class CmTrackingAd extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The creative ID of the campaign manager 360 tracking Ad.
+   * Optional. The creative ID of the campaign manager 360 tracking Ad.
    * @param cmCreativeId cmCreativeId or {@code null} for none
    */
   public CmTrackingAd setCmCreativeId(java.lang.Long cmCreativeId) {
@@ -86,7 +86,7 @@ public final class CmTrackingAd extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The placement ID of the campaign manager 360 tracking Ad.
+   * Optional. The placement ID of the campaign manager 360 tracking Ad.
    * @return value or {@code null} for none
    */
   public java.lang.Long getCmPlacementId() {
@@ -94,7 +94,7 @@ public final class CmTrackingAd extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The placement ID of the campaign manager 360 tracking Ad.
+   * Optional. The placement ID of the campaign manager 360 tracking Ad.
    * @param cmPlacementId cmPlacementId or {@code null} for none
    */
   public CmTrackingAd setCmPlacementId(java.lang.Long cmPlacementId) {

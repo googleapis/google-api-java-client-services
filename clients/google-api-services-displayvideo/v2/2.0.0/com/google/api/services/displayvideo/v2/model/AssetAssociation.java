@@ -31,21 +31,21 @@ package com.google.api.services.displayvideo.v2.model;
 public final class AssetAssociation extends com.google.api.client.json.GenericJson {
 
   /**
-   * The associated asset.
+   * Optional. The associated asset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Asset asset;
 
   /**
-   * The role of this asset for the creative.
+   * Optional. The role of this asset for the creative.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String role;
 
   /**
-   * The associated asset.
+   * Optional. The associated asset.
    * @return value or {@code null} for none
    */
   public Asset getAsset() {
@@ -53,7 +53,7 @@ public final class AssetAssociation extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The associated asset.
+   * Optional. The associated asset.
    * @param asset asset or {@code null} for none
    */
   public AssetAssociation setAsset(Asset asset) {
@@ -62,7 +62,7 @@ public final class AssetAssociation extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The role of this asset for the creative.
+   * Optional. The role of this asset for the creative.
    * @return value or {@code null} for none
    */
   public java.lang.String getRole() {
@@ -70,7 +70,7 @@ public final class AssetAssociation extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The role of this asset for the creative.
+   * Optional. The role of this asset for the creative.
    * @param role role or {@code null} for none
    */
   public AssetAssociation setRole(java.lang.String role) {

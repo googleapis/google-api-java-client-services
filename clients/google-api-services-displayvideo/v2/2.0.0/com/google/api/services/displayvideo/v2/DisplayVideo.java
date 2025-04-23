@@ -17401,7 +17401,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
     }
     /**
      * Updates an existing custom bidding algorithm. Returns the updated custom bidding algorithm if
-     * successful.
+     * successful. *Warning*: Starting **April 1, 2025**, requests updating custom bidding algorithms
+     * that are assigned to line items will return an error. [Read more about this announced
+     * change](/display-video/api/deprecations#features.custom_bidding_floodlight).
      *
      * Create a request for the method "customBiddingAlgorithms.patch".
      *
@@ -17427,7 +17429,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
       /**
        * Updates an existing custom bidding algorithm. Returns the updated custom bidding algorithm if
-       * successful.
+       * successful. *Warning*: Starting **April 1, 2025**, requests updating custom bidding algorithms
+       * that are assigned to line items will return an error. [Read more about this announced
+       * change](/display-video/api/deprecations#features.custom_bidding_floodlight).
        *
        * Create a request for the method "customBiddingAlgorithms.patch".
        *
@@ -17732,7 +17736,10 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
     public class Scripts {
 
       /**
-       * Creates a new custom bidding script. Returns the newly created script if successful.
+       * Creates a new custom bidding script. Returns the newly created script if successful. *Warning*:
+       * Starting **April 1, 2025**, requests updating custom bidding algorithms that are assigned to line
+       * items will return an error. [Read more about this announced change](/display-
+       * video/api/deprecations#features.custom_bidding_floodlight).
        *
        * Create a request for the method "scripts.create".
        *
@@ -17757,7 +17764,10 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^[^/]+$");
 
         /**
-         * Creates a new custom bidding script. Returns the newly created script if successful.
+         * Creates a new custom bidding script. Returns the newly created script if successful. *Warning*:
+         * Starting **April 1, 2025**, requests updating custom bidding algorithms that are assigned to
+         * line items will return an error. [Read more about this announced change](/display-
+         * video/api/deprecations#features.custom_bidding_floodlight).
          *
          * Create a request for the method "scripts.create".
          *

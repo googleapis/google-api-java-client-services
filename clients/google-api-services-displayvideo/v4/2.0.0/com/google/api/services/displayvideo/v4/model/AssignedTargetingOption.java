@@ -188,6 +188,17 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
   private ContentStreamTypeAssignedTargetingOptionDetails contentStreamTypeDetails;
 
   /**
+   * Content theme details. This field will be populated when the targeting_type is
+   * `TARGETING_TYPE_CONTENT_THEME_EXCLUSION`. Content theme are targeting exclusions. Advertiser
+   * level content theme exclusions, if set, are always applied in serving (even though they aren't
+   * visible in resource settings). Resource settings can exclude content theme in addition to
+   * advertiser exclusions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ContentThemeAssignedTargetingOptionDetails contentThemeExclusionDetails;
+
+  /**
    * Day and time details. This field will be populated when the targeting_type is
    * `TARGETING_TYPE_DAY_AND_TIME`.
    * The value may be {@code null}.
@@ -834,6 +845,31 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
    */
   public AssignedTargetingOption setContentStreamTypeDetails(ContentStreamTypeAssignedTargetingOptionDetails contentStreamTypeDetails) {
     this.contentStreamTypeDetails = contentStreamTypeDetails;
+    return this;
+  }
+
+  /**
+   * Content theme details. This field will be populated when the targeting_type is
+   * `TARGETING_TYPE_CONTENT_THEME_EXCLUSION`. Content theme are targeting exclusions. Advertiser
+   * level content theme exclusions, if set, are always applied in serving (even though they aren't
+   * visible in resource settings). Resource settings can exclude content theme in addition to
+   * advertiser exclusions.
+   * @return value or {@code null} for none
+   */
+  public ContentThemeAssignedTargetingOptionDetails getContentThemeExclusionDetails() {
+    return contentThemeExclusionDetails;
+  }
+
+  /**
+   * Content theme details. This field will be populated when the targeting_type is
+   * `TARGETING_TYPE_CONTENT_THEME_EXCLUSION`. Content theme are targeting exclusions. Advertiser
+   * level content theme exclusions, if set, are always applied in serving (even though they aren't
+   * visible in resource settings). Resource settings can exclude content theme in addition to
+   * advertiser exclusions.
+   * @param contentThemeExclusionDetails contentThemeExclusionDetails or {@code null} for none
+   */
+  public AssignedTargetingOption setContentThemeExclusionDetails(ContentThemeAssignedTargetingOptionDetails contentThemeExclusionDetails) {
+    this.contentThemeExclusionDetails = contentThemeExclusionDetails;
     return this;
   }
 

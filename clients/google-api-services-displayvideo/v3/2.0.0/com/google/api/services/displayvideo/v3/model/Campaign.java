@@ -85,7 +85,9 @@ public final class Campaign extends com.google.api.client.json.GenericJson {
   private java.lang.String entityStatus;
 
   /**
-   * Required. The frequency cap setting of the campaign.
+   * Required. The frequency cap setting of the campaign. *Warning*: On **February 28, 2025**,
+   * frequency cap time periods greater than 30 days will no longer be accepted. [Read more about
+   * this announced change](/display-video/api/deprecations#features.lifetime_frequency_cap)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -235,7 +237,9 @@ public final class Campaign extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The frequency cap setting of the campaign.
+   * Required. The frequency cap setting of the campaign. *Warning*: On **February 28, 2025**,
+   * frequency cap time periods greater than 30 days will no longer be accepted. [Read more about
+   * this announced change](/display-video/api/deprecations#features.lifetime_frequency_cap)
    * @return value or {@code null} for none
    */
   public FrequencyCap getFrequencyCap() {
@@ -243,7 +247,9 @@ public final class Campaign extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The frequency cap setting of the campaign.
+   * Required. The frequency cap setting of the campaign. *Warning*: On **February 28, 2025**,
+   * frequency cap time periods greater than 30 days will no longer be accepted. [Read more about
+   * this announced change](/display-video/api/deprecations#features.lifetime_frequency_cap)
    * @param frequencyCap frequencyCap or {@code null} for none
    */
   public Campaign setFrequencyCap(FrequencyCap frequencyCap) {

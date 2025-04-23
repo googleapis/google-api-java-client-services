@@ -38,7 +38,7 @@ public final class InsertionOrder extends com.google.api.client.json.GenericJson
   private java.lang.Long advertiserId;
 
   /**
-   * The bidding strategy of the insertion order. By default, fixed_bid is set.
+   * Optional. The bidding strategy of the insertion order. By default, fixed_bid is set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,15 +101,15 @@ public final class InsertionOrder extends com.google.api.client.json.GenericJson
   private java.lang.Long insertionOrderId;
 
   /**
-   * The type of insertion order. If this field is unspecified in creation, the value defaults to
-   * `RTB`.
+   * Optional. The type of insertion order. If this field is unspecified in creation, the value
+   * defaults to `RTB`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String insertionOrderType;
 
   /**
-   * Additional integration details of the insertion order.
+   * Optional. Additional integration details of the insertion order.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -131,7 +131,7 @@ public final class InsertionOrder extends com.google.api.client.json.GenericJson
   private Pacing pacing;
 
   /**
-   * The partner costs associated with the insertion order. If absent or empty in
+   * Optional. The partner costs associated with the insertion order. If absent or empty in
    * CreateInsertionOrder method, the newly created insertion order will inherit partner costs from
    * the partner settings.
    * The value may be {@code null}.
@@ -178,7 +178,7 @@ public final class InsertionOrder extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The bidding strategy of the insertion order. By default, fixed_bid is set.
+   * Optional. The bidding strategy of the insertion order. By default, fixed_bid is set.
    * @return value or {@code null} for none
    */
   public BiddingStrategy getBidStrategy() {
@@ -186,7 +186,7 @@ public final class InsertionOrder extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The bidding strategy of the insertion order. By default, fixed_bid is set.
+   * Optional. The bidding strategy of the insertion order. By default, fixed_bid is set.
    * @param bidStrategy bidStrategy or {@code null} for none
    */
   public InsertionOrder setBidStrategy(BiddingStrategy bidStrategy) {
@@ -328,8 +328,8 @@ public final class InsertionOrder extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The type of insertion order. If this field is unspecified in creation, the value defaults to
-   * `RTB`.
+   * Optional. The type of insertion order. If this field is unspecified in creation, the value
+   * defaults to `RTB`.
    * @return value or {@code null} for none
    */
   public java.lang.String getInsertionOrderType() {
@@ -337,8 +337,8 @@ public final class InsertionOrder extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The type of insertion order. If this field is unspecified in creation, the value defaults to
-   * `RTB`.
+   * Optional. The type of insertion order. If this field is unspecified in creation, the value
+   * defaults to `RTB`.
    * @param insertionOrderType insertionOrderType or {@code null} for none
    */
   public InsertionOrder setInsertionOrderType(java.lang.String insertionOrderType) {
@@ -347,7 +347,7 @@ public final class InsertionOrder extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Additional integration details of the insertion order.
+   * Optional. Additional integration details of the insertion order.
    * @return value or {@code null} for none
    */
   public IntegrationDetails getIntegrationDetails() {
@@ -355,7 +355,7 @@ public final class InsertionOrder extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Additional integration details of the insertion order.
+   * Optional. Additional integration details of the insertion order.
    * @param integrationDetails integrationDetails or {@code null} for none
    */
   public InsertionOrder setIntegrationDetails(IntegrationDetails integrationDetails) {
@@ -400,7 +400,7 @@ public final class InsertionOrder extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The partner costs associated with the insertion order. If absent or empty in
+   * Optional. The partner costs associated with the insertion order. If absent or empty in
    * CreateInsertionOrder method, the newly created insertion order will inherit partner costs from
    * the partner settings.
    * @return value or {@code null} for none
@@ -410,7 +410,7 @@ public final class InsertionOrder extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The partner costs associated with the insertion order. If absent or empty in
+   * Optional. The partner costs associated with the insertion order. If absent or empty in
    * CreateInsertionOrder method, the newly created insertion order will inherit partner costs from
    * the partner settings.
    * @param partnerCosts partnerCosts or {@code null} for none

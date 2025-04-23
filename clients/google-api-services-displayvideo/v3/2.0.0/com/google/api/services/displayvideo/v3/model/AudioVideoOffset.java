@@ -31,21 +31,21 @@ package com.google.api.services.displayvideo.v3.model;
 public final class AudioVideoOffset extends com.google.api.client.json.GenericJson {
 
   /**
-   * The offset in percentage of the audio or video duration.
+   * Optional. The offset in percentage of the audio or video duration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long percentage;
 
   /**
-   * The offset in seconds from the start of the audio or video.
+   * Optional. The offset in seconds from the start of the audio or video.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long seconds;
 
   /**
-   * The offset in percentage of the audio or video duration.
+   * Optional. The offset in percentage of the audio or video duration.
    * @return value or {@code null} for none
    */
   public java.lang.Long getPercentage() {
@@ -53,7 +53,7 @@ public final class AudioVideoOffset extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The offset in percentage of the audio or video duration.
+   * Optional. The offset in percentage of the audio or video duration.
    * @param percentage percentage or {@code null} for none
    */
   public AudioVideoOffset setPercentage(java.lang.Long percentage) {
@@ -62,7 +62,7 @@ public final class AudioVideoOffset extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The offset in seconds from the start of the audio or video.
+   * Optional. The offset in seconds from the start of the audio or video.
    * @return value or {@code null} for none
    */
   public java.lang.Long getSeconds() {
@@ -70,7 +70,7 @@ public final class AudioVideoOffset extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The offset in seconds from the start of the audio or video.
+   * Optional. The offset in seconds from the start of the audio or video.
    * @param seconds seconds or {@code null} for none
    */
   public AudioVideoOffset setSeconds(java.lang.Long seconds) {

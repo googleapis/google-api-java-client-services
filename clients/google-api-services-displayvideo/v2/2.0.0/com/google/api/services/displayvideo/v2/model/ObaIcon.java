@@ -32,14 +32,14 @@ public final class ObaIcon extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The click tracking URL of the OBA icon. Only URLs of the following domains are
-   * allowed: * https://info.evidon.com * https://l.betrad.com
+   * allowed: * `https://info.evidon.com` * `https://l.betrad.com`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String clickTrackingUrl;
 
   /**
-   * The dimensions of the OBA icon.
+   * Optional. The dimensions of the OBA icon.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,35 +47,35 @@ public final class ObaIcon extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The landing page URL of the OBA icon. Only URLs of the following domains are allowed:
-   * * https://info.evidon.com * https://l.betrad.com
+   * * `https://info.evidon.com` * `https://l.betrad.com`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String landingPageUrl;
 
   /**
-   * The position of the OBA icon on the creative.
+   * Optional. The position of the OBA icon on the creative.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String position;
 
   /**
-   * The program of the OBA icon. For example: “AdChoices”.
+   * Optional. The program of the OBA icon. For example: “AdChoices”.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String program;
 
   /**
-   * The MIME type of the OBA icon resource.
+   * Optional. The MIME type of the OBA icon resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceMimeType;
 
   /**
-   * The URL of the OBA icon resource.
+   * Optional. The URL of the OBA icon resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,7 +83,7 @@ public final class ObaIcon extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The view tracking URL of the OBA icon. Only URLs of the following domains are
-   * allowed: * https://info.evidon.com * https://l.betrad.com
+   * allowed: * `https://info.evidon.com` * `https://l.betrad.com`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,7 +91,7 @@ public final class ObaIcon extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The click tracking URL of the OBA icon. Only URLs of the following domains are
-   * allowed: * https://info.evidon.com * https://l.betrad.com
+   * allowed: * `https://info.evidon.com` * `https://l.betrad.com`
    * @return value or {@code null} for none
    */
   public java.lang.String getClickTrackingUrl() {
@@ -100,7 +100,7 @@ public final class ObaIcon extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The click tracking URL of the OBA icon. Only URLs of the following domains are
-   * allowed: * https://info.evidon.com * https://l.betrad.com
+   * allowed: * `https://info.evidon.com` * `https://l.betrad.com`
    * @param clickTrackingUrl clickTrackingUrl or {@code null} for none
    */
   public ObaIcon setClickTrackingUrl(java.lang.String clickTrackingUrl) {
@@ -109,7 +109,7 @@ public final class ObaIcon extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The dimensions of the OBA icon.
+   * Optional. The dimensions of the OBA icon.
    * @return value or {@code null} for none
    */
   public Dimensions getDimensions() {
@@ -117,7 +117,7 @@ public final class ObaIcon extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The dimensions of the OBA icon.
+   * Optional. The dimensions of the OBA icon.
    * @param dimensions dimensions or {@code null} for none
    */
   public ObaIcon setDimensions(Dimensions dimensions) {
@@ -127,7 +127,7 @@ public final class ObaIcon extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The landing page URL of the OBA icon. Only URLs of the following domains are allowed:
-   * * https://info.evidon.com * https://l.betrad.com
+   * * `https://info.evidon.com` * `https://l.betrad.com`
    * @return value or {@code null} for none
    */
   public java.lang.String getLandingPageUrl() {
@@ -136,7 +136,7 @@ public final class ObaIcon extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The landing page URL of the OBA icon. Only URLs of the following domains are allowed:
-   * * https://info.evidon.com * https://l.betrad.com
+   * * `https://info.evidon.com` * `https://l.betrad.com`
    * @param landingPageUrl landingPageUrl or {@code null} for none
    */
   public ObaIcon setLandingPageUrl(java.lang.String landingPageUrl) {
@@ -145,7 +145,7 @@ public final class ObaIcon extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The position of the OBA icon on the creative.
+   * Optional. The position of the OBA icon on the creative.
    * @return value or {@code null} for none
    */
   public java.lang.String getPosition() {
@@ -153,7 +153,7 @@ public final class ObaIcon extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The position of the OBA icon on the creative.
+   * Optional. The position of the OBA icon on the creative.
    * @param position position or {@code null} for none
    */
   public ObaIcon setPosition(java.lang.String position) {
@@ -162,7 +162,7 @@ public final class ObaIcon extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The program of the OBA icon. For example: “AdChoices”.
+   * Optional. The program of the OBA icon. For example: “AdChoices”.
    * @return value or {@code null} for none
    */
   public java.lang.String getProgram() {
@@ -170,7 +170,7 @@ public final class ObaIcon extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The program of the OBA icon. For example: “AdChoices”.
+   * Optional. The program of the OBA icon. For example: “AdChoices”.
    * @param program program or {@code null} for none
    */
   public ObaIcon setProgram(java.lang.String program) {
@@ -179,7 +179,7 @@ public final class ObaIcon extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The MIME type of the OBA icon resource.
+   * Optional. The MIME type of the OBA icon resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceMimeType() {
@@ -187,7 +187,7 @@ public final class ObaIcon extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The MIME type of the OBA icon resource.
+   * Optional. The MIME type of the OBA icon resource.
    * @param resourceMimeType resourceMimeType or {@code null} for none
    */
   public ObaIcon setResourceMimeType(java.lang.String resourceMimeType) {
@@ -196,7 +196,7 @@ public final class ObaIcon extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The URL of the OBA icon resource.
+   * Optional. The URL of the OBA icon resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceUrl() {
@@ -204,7 +204,7 @@ public final class ObaIcon extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The URL of the OBA icon resource.
+   * Optional. The URL of the OBA icon resource.
    * @param resourceUrl resourceUrl or {@code null} for none
    */
   public ObaIcon setResourceUrl(java.lang.String resourceUrl) {
@@ -214,7 +214,7 @@ public final class ObaIcon extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The view tracking URL of the OBA icon. Only URLs of the following domains are
-   * allowed: * https://info.evidon.com * https://l.betrad.com
+   * allowed: * `https://info.evidon.com` * `https://l.betrad.com`
    * @return value or {@code null} for none
    */
   public java.lang.String getViewTrackingUrl() {
@@ -223,7 +223,7 @@ public final class ObaIcon extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The view tracking URL of the OBA icon. Only URLs of the following domains are
-   * allowed: * https://info.evidon.com * https://l.betrad.com
+   * allowed: * `https://info.evidon.com` * `https://l.betrad.com`
    * @param viewTrackingUrl viewTrackingUrl or {@code null} for none
    */
   public ObaIcon setViewTrackingUrl(java.lang.String viewTrackingUrl) {

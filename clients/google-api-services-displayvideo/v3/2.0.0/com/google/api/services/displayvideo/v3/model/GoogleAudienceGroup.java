@@ -33,7 +33,7 @@ public final class GoogleAudienceGroup extends com.google.api.client.json.Generi
 
   /**
    * Required. All Google audience targeting settings in Google audience group. Repeated settings
-   * with same id will be ignored.
+   * with the same id will be ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -41,7 +41,7 @@ public final class GoogleAudienceGroup extends com.google.api.client.json.Generi
 
   /**
    * Required. All Google audience targeting settings in Google audience group. Repeated settings
-   * with same id will be ignored.
+   * with the same id will be ignored.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleAudienceTargetingSetting> getSettings() {
@@ -50,7 +50,7 @@ public final class GoogleAudienceGroup extends com.google.api.client.json.Generi
 
   /**
    * Required. All Google audience targeting settings in Google audience group. Repeated settings
-   * with same id will be ignored.
+   * with the same id will be ignored.
    * @param settings settings or {@code null} for none
    */
   public GoogleAudienceGroup setSettings(java.util.List<GoogleAudienceTargetingSetting> settings) {

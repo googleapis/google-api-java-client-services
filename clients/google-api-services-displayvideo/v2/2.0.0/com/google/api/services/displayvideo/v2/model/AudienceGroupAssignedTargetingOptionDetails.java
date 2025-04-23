@@ -21,7 +21,6 @@ package com.google.api.services.displayvideo.v2.model;
  * an AssignedTargetingOption when targeting_type is `TARGETING_TYPE_AUDIENCE_GROUP`. The relation
  * between each group is UNION, except for excluded_first_and_third_party_audience_group and
  * excluded_google_audience_group, of which COMPLEMENT is used as an INTERSECTION with other groups.
- * NEXT_ID: 9
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Display & Video 360 API. For a detailed explanation
@@ -35,9 +34,9 @@ package com.google.api.services.displayvideo.v2.model;
 public final class AudienceGroupAssignedTargetingOptionDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * The Google audience ids of the excluded Google audience group. Used for negative targeting. The
-   * COMPLEMENT of the UNION of this group and other excluded audience groups is used as an
-   * INTERSECTION to any positive audience targeting. Only contains Affinity, In-market and
+   * Optional. The Google audience ids of the excluded Google audience group. Used for negative
+   * targeting. The COMPLEMENT of the UNION of this group and other excluded audience groups is used
+   * as an INTERSECTION to any positive audience targeting. Only contains Affinity, In-market and
    * Installed-apps type Google audiences. All items are logically ‘OR’ of each other.
    * The value may be {@code null}.
    */
@@ -45,32 +44,32 @@ public final class AudienceGroupAssignedTargetingOptionDetails extends com.googl
   private GoogleAudienceGroup excludedGoogleAudienceGroup;
 
   /**
-   * The combined audience ids of the included combined audience group. Contains combined audience
-   * ids only.
+   * Optional. The combined audience ids of the included combined audience group. Contains combined
+   * audience ids only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private CombinedAudienceGroup includedCombinedAudienceGroup;
 
   /**
-   * The custom list ids of the included custom list group. Contains custom list ids only.
+   * Optional. The custom list ids of the included custom list group. Contains custom list ids only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private CustomListGroup includedCustomListGroup;
 
   /**
-   * The Google audience ids of the included Google audience group. Contains Google audience ids
-   * only.
+   * Optional. The Google audience ids of the included Google audience group. Contains Google
+   * audience ids only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleAudienceGroup includedGoogleAudienceGroup;
 
   /**
-   * The Google audience ids of the excluded Google audience group. Used for negative targeting. The
-   * COMPLEMENT of the UNION of this group and other excluded audience groups is used as an
-   * INTERSECTION to any positive audience targeting. Only contains Affinity, In-market and
+   * Optional. The Google audience ids of the excluded Google audience group. Used for negative
+   * targeting. The COMPLEMENT of the UNION of this group and other excluded audience groups is used
+   * as an INTERSECTION to any positive audience targeting. Only contains Affinity, In-market and
    * Installed-apps type Google audiences. All items are logically ‘OR’ of each other.
    * @return value or {@code null} for none
    */
@@ -79,9 +78,9 @@ public final class AudienceGroupAssignedTargetingOptionDetails extends com.googl
   }
 
   /**
-   * The Google audience ids of the excluded Google audience group. Used for negative targeting. The
-   * COMPLEMENT of the UNION of this group and other excluded audience groups is used as an
-   * INTERSECTION to any positive audience targeting. Only contains Affinity, In-market and
+   * Optional. The Google audience ids of the excluded Google audience group. Used for negative
+   * targeting. The COMPLEMENT of the UNION of this group and other excluded audience groups is used
+   * as an INTERSECTION to any positive audience targeting. Only contains Affinity, In-market and
    * Installed-apps type Google audiences. All items are logically ‘OR’ of each other.
    * @param excludedGoogleAudienceGroup excludedGoogleAudienceGroup or {@code null} for none
    */
@@ -91,8 +90,8 @@ public final class AudienceGroupAssignedTargetingOptionDetails extends com.googl
   }
 
   /**
-   * The combined audience ids of the included combined audience group. Contains combined audience
-   * ids only.
+   * Optional. The combined audience ids of the included combined audience group. Contains combined
+   * audience ids only.
    * @return value or {@code null} for none
    */
   public CombinedAudienceGroup getIncludedCombinedAudienceGroup() {
@@ -100,8 +99,8 @@ public final class AudienceGroupAssignedTargetingOptionDetails extends com.googl
   }
 
   /**
-   * The combined audience ids of the included combined audience group. Contains combined audience
-   * ids only.
+   * Optional. The combined audience ids of the included combined audience group. Contains combined
+   * audience ids only.
    * @param includedCombinedAudienceGroup includedCombinedAudienceGroup or {@code null} for none
    */
   public AudienceGroupAssignedTargetingOptionDetails setIncludedCombinedAudienceGroup(CombinedAudienceGroup includedCombinedAudienceGroup) {
@@ -110,7 +109,7 @@ public final class AudienceGroupAssignedTargetingOptionDetails extends com.googl
   }
 
   /**
-   * The custom list ids of the included custom list group. Contains custom list ids only.
+   * Optional. The custom list ids of the included custom list group. Contains custom list ids only.
    * @return value or {@code null} for none
    */
   public CustomListGroup getIncludedCustomListGroup() {
@@ -118,7 +117,7 @@ public final class AudienceGroupAssignedTargetingOptionDetails extends com.googl
   }
 
   /**
-   * The custom list ids of the included custom list group. Contains custom list ids only.
+   * Optional. The custom list ids of the included custom list group. Contains custom list ids only.
    * @param includedCustomListGroup includedCustomListGroup or {@code null} for none
    */
   public AudienceGroupAssignedTargetingOptionDetails setIncludedCustomListGroup(CustomListGroup includedCustomListGroup) {
@@ -127,8 +126,8 @@ public final class AudienceGroupAssignedTargetingOptionDetails extends com.googl
   }
 
   /**
-   * The Google audience ids of the included Google audience group. Contains Google audience ids
-   * only.
+   * Optional. The Google audience ids of the included Google audience group. Contains Google
+   * audience ids only.
    * @return value or {@code null} for none
    */
   public GoogleAudienceGroup getIncludedGoogleAudienceGroup() {
@@ -136,8 +135,8 @@ public final class AudienceGroupAssignedTargetingOptionDetails extends com.googl
   }
 
   /**
-   * The Google audience ids of the included Google audience group. Contains Google audience ids
-   * only.
+   * Optional. The Google audience ids of the included Google audience group. Contains Google
+   * audience ids only.
    * @param includedGoogleAudienceGroup includedGoogleAudienceGroup or {@code null} for none
    */
   public AudienceGroupAssignedTargetingOptionDetails setIncludedGoogleAudienceGroup(GoogleAudienceGroup includedGoogleAudienceGroup) {

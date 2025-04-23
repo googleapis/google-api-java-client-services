@@ -14,10 +14,11 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.displayvideo.v3.model;
+package com.google.api.services.displayvideo.v4.model;
 
 /**
- * Type for the response returned by [SdfUploadTaskService.CreateSdfUploadTask].
+ * Represents a targetable content theme. This will be populated in the content_theme_details field
+ * of the TargetingOption when targeting_type is `TARGETING_TYPE_CONTENT_THEME_EXCLUSION`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Display & Video 360 API. For a detailed explanation
@@ -28,46 +29,40 @@ package com.google.api.services.displayvideo.v3.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class SdfUploadTask extends com.google.api.client.json.GenericJson {
+public final class ContentThemeTargetingOptionDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * A resource name to be used in media.download to Download the script files. Or media.upload to
-   * Upload the script files. Resource names have the format
-   * `download/sdfuploadtasks/media/{media_id}`.
+   * Output only. An enum for the DV360 content theme content classifier.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String resourceName;
+  private java.lang.String contentTheme;
 
   /**
-   * A resource name to be used in media.download to Download the script files. Or media.upload to
-   * Upload the script files. Resource names have the format
-   * `download/sdfuploadtasks/media/{media_id}`.
+   * Output only. An enum for the DV360 content theme content classifier.
    * @return value or {@code null} for none
    */
-  public java.lang.String getResourceName() {
-    return resourceName;
+  public java.lang.String getContentTheme() {
+    return contentTheme;
   }
 
   /**
-   * A resource name to be used in media.download to Download the script files. Or media.upload to
-   * Upload the script files. Resource names have the format
-   * `download/sdfuploadtasks/media/{media_id}`.
-   * @param resourceName resourceName or {@code null} for none
+   * Output only. An enum for the DV360 content theme content classifier.
+   * @param contentTheme contentTheme or {@code null} for none
    */
-  public SdfUploadTask setResourceName(java.lang.String resourceName) {
-    this.resourceName = resourceName;
+  public ContentThemeTargetingOptionDetails setContentTheme(java.lang.String contentTheme) {
+    this.contentTheme = contentTheme;
     return this;
   }
 
   @Override
-  public SdfUploadTask set(String fieldName, Object value) {
-    return (SdfUploadTask) super.set(fieldName, value);
+  public ContentThemeTargetingOptionDetails set(String fieldName, Object value) {
+    return (ContentThemeTargetingOptionDetails) super.set(fieldName, value);
   }
 
   @Override
-  public SdfUploadTask clone() {
-    return (SdfUploadTask) super.clone();
+  public ContentThemeTargetingOptionDetails clone() {
+    return (ContentThemeTargetingOptionDetails) super.clone();
   }
 
 }

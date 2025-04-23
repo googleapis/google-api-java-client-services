@@ -25,7 +25,7 @@ package com.google.api.services.slides.v1;
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://developers.google.com/slides/" target="_blank">API Documentation</a>
+ * <a href="https://developers.google.com/workspace/slides/" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>
@@ -700,8 +700,8 @@ public class Slides extends com.google.api.client.googleapis.services.json.Abstr
       }
       /**
        * Generates a thumbnail of the latest version of the specified page in the presentation and returns
-       * a URL to the thumbnail image. This request counts as an [expensive read request](/slides/limits)
-       * for quota purposes.
+       * a URL to the thumbnail image. This request counts as an [expensive read
+       * request](https://developers.google.com/workspace/slides/limits) for quota purposes.
        *
        * Create a request for the method "pages.getThumbnail".
        *
@@ -725,7 +725,7 @@ public class Slides extends com.google.api.client.googleapis.services.json.Abstr
         /**
          * Generates a thumbnail of the latest version of the specified page in the presentation and
          * returns a URL to the thumbnail image. This request counts as an [expensive read
-         * request](/slides/limits) for quota purposes.
+         * request](https://developers.google.com/workspace/slides/limits) for quota purposes.
          *
          * Create a request for the method "pages.getThumbnail".
          *

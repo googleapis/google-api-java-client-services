@@ -46,6 +46,14 @@ public final class GoogleCloudDatacatalogV1MigrationConfig extends com.google.ap
   private java.lang.String tagTemplateMigration;
 
   /**
+   * The time when the Tag Template migration was enabled. If the Tag Template migration is not
+   * enabled, this field is not set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String templateMigrationEnabledTime;
+
+  /**
    * Opt-in status for the UI switch to Dataplex.
    * @return value or {@code null} for none
    */
@@ -76,6 +84,25 @@ public final class GoogleCloudDatacatalogV1MigrationConfig extends com.google.ap
    */
   public GoogleCloudDatacatalogV1MigrationConfig setTagTemplateMigration(java.lang.String tagTemplateMigration) {
     this.tagTemplateMigration = tagTemplateMigration;
+    return this;
+  }
+
+  /**
+   * The time when the Tag Template migration was enabled. If the Tag Template migration is not
+   * enabled, this field is not set.
+   * @return value or {@code null} for none
+   */
+  public String getTemplateMigrationEnabledTime() {
+    return templateMigrationEnabledTime;
+  }
+
+  /**
+   * The time when the Tag Template migration was enabled. If the Tag Template migration is not
+   * enabled, this field is not set.
+   * @param templateMigrationEnabledTime templateMigrationEnabledTime or {@code null} for none
+   */
+  public GoogleCloudDatacatalogV1MigrationConfig setTemplateMigrationEnabledTime(String templateMigrationEnabledTime) {
+    this.templateMigrationEnabledTime = templateMigrationEnabledTime;
     return this;
   }
 

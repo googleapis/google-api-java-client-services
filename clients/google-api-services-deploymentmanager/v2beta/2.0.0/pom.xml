@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-deploymentmanager</artifactId>
-  <version>v2beta-rev20250102-2.0.0</version>
-  <name>Cloud Deployment Manager V2 API v2beta-rev20250102-2.0.0</name>
+  <version>v2beta-rev20250403-2.0.0</version>
+  <name>Cloud Deployment Manager V2 API v2beta-rev20250403-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

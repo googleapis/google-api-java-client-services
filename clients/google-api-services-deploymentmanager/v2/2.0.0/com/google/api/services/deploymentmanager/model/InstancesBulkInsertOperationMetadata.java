@@ -31,6 +31,14 @@ package com.google.api.services.deploymentmanager.model;
 public final class InstancesBulkInsertOperationMetadata extends com.google.api.client.json.GenericJson {
 
   /**
+   * [Output Only] The machine type of the VMs that were created used internally only by KCP flex
+   * bulk insert.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String machineType;
+
+  /**
    * Status information per location (location name is key). Example key: zones/us-central1-a
    * The value may be {@code null}.
    */
@@ -41,6 +49,25 @@ public final class InstancesBulkInsertOperationMetadata extends com.google.api.c
     // hack to force ProGuard to consider BulkInsertOperationStatus used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(BulkInsertOperationStatus.class);
+  }
+
+  /**
+   * [Output Only] The machine type of the VMs that were created used internally only by KCP flex
+   * bulk insert.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMachineType() {
+    return machineType;
+  }
+
+  /**
+   * [Output Only] The machine type of the VMs that were created used internally only by KCP flex
+   * bulk insert.
+   * @param machineType machineType or {@code null} for none
+   */
+  public InstancesBulkInsertOperationMetadata setMachineType(java.lang.String machineType) {
+    this.machineType = machineType;
+    return this;
   }
 
   /**

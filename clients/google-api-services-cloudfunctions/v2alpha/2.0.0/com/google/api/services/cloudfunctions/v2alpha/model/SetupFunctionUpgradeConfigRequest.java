@@ -29,6 +29,36 @@ package com.google.api.services.cloudfunctions.v2alpha.model;
 @SuppressWarnings("javadoc")
 public final class SetupFunctionUpgradeConfigRequest extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Optional. The trigger's service account. The service account must have permission to invoke
+   * Cloud Run services, the permission is `run.routes.invoke`. If empty, defaults to the Compute
+   * Engine default service account: `{project_number}-compute@developer.gserviceaccount.com`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String triggerServiceAccount;
+
+  /**
+   * Optional. The trigger's service account. The service account must have permission to invoke
+   * Cloud Run services, the permission is `run.routes.invoke`. If empty, defaults to the Compute
+   * Engine default service account: `{project_number}-compute@developer.gserviceaccount.com`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTriggerServiceAccount() {
+    return triggerServiceAccount;
+  }
+
+  /**
+   * Optional. The trigger's service account. The service account must have permission to invoke
+   * Cloud Run services, the permission is `run.routes.invoke`. If empty, defaults to the Compute
+   * Engine default service account: `{project_number}-compute@developer.gserviceaccount.com`.
+   * @param triggerServiceAccount triggerServiceAccount or {@code null} for none
+   */
+  public SetupFunctionUpgradeConfigRequest setTriggerServiceAccount(java.lang.String triggerServiceAccount) {
+    this.triggerServiceAccount = triggerServiceAccount;
+    return this;
+  }
+
   @Override
   public SetupFunctionUpgradeConfigRequest set(String fieldName, Object value) {
     return (SetupFunctionUpgradeConfigRequest) super.set(fieldName, value);

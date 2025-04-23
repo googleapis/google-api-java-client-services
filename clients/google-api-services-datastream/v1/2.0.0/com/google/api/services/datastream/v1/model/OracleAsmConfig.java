@@ -58,7 +58,8 @@ public final class OracleAsmConfig extends com.google.api.client.json.GenericJso
   private OracleSslConfig oracleSslConfig;
 
   /**
-   * Optional. Password for the Oracle ASM connection.
+   * Optional. Password for the Oracle ASM connection. Mutually exclusive with the
+   * `secret_manager_stored_password` field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,6 +71,14 @@ public final class OracleAsmConfig extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.lang.Integer port;
+
+  /**
+   * Optional. A reference to a Secret Manager resource name storing the Oracle ASM connection
+   * password. Mutually exclusive with the `password` field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String secretManagerStoredPassword;
 
   /**
    * Required. Username for the Oracle ASM connection.
@@ -147,7 +156,8 @@ public final class OracleAsmConfig extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. Password for the Oracle ASM connection.
+   * Optional. Password for the Oracle ASM connection. Mutually exclusive with the
+   * `secret_manager_stored_password` field.
    * @return value or {@code null} for none
    */
   public java.lang.String getPassword() {
@@ -155,7 +165,8 @@ public final class OracleAsmConfig extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. Password for the Oracle ASM connection.
+   * Optional. Password for the Oracle ASM connection. Mutually exclusive with the
+   * `secret_manager_stored_password` field.
    * @param password password or {@code null} for none
    */
   public OracleAsmConfig setPassword(java.lang.String password) {
@@ -177,6 +188,25 @@ public final class OracleAsmConfig extends com.google.api.client.json.GenericJso
    */
   public OracleAsmConfig setPort(java.lang.Integer port) {
     this.port = port;
+    return this;
+  }
+
+  /**
+   * Optional. A reference to a Secret Manager resource name storing the Oracle ASM connection
+   * password. Mutually exclusive with the `password` field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSecretManagerStoredPassword() {
+    return secretManagerStoredPassword;
+  }
+
+  /**
+   * Optional. A reference to a Secret Manager resource name storing the Oracle ASM connection
+   * password. Mutually exclusive with the `password` field.
+   * @param secretManagerStoredPassword secretManagerStoredPassword or {@code null} for none
+   */
+  public OracleAsmConfig setSecretManagerStoredPassword(java.lang.String secretManagerStoredPassword) {
+    this.secretManagerStoredPassword = secretManagerStoredPassword;
     return this;
   }
 

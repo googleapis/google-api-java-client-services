@@ -59,6 +59,13 @@ public final class DiscoverConnectionProfileRequest extends com.google.api.clien
   private java.lang.Integer hierarchyDepth;
 
   /**
+   * MongoDB cluster to enrich with child data objects and metadata.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MongodbCluster mongodbCluster;
+
+  /**
    * MySQL RDBMS to enrich with child data objects and metadata.
    * The value may be {@code null}.
    */
@@ -78,6 +85,13 @@ public final class DiscoverConnectionProfileRequest extends com.google.api.clien
    */
   @com.google.api.client.util.Key
   private PostgresqlRdbms postgresqlRdbms;
+
+  /**
+   * Salesforce organization to enrich with child data objects and metadata.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SalesforceOrg salesforceOrg;
 
   /**
    * SQLServer RDBMS to enrich with child data objects and metadata.
@@ -157,6 +171,23 @@ public final class DiscoverConnectionProfileRequest extends com.google.api.clien
   }
 
   /**
+   * MongoDB cluster to enrich with child data objects and metadata.
+   * @return value or {@code null} for none
+   */
+  public MongodbCluster getMongodbCluster() {
+    return mongodbCluster;
+  }
+
+  /**
+   * MongoDB cluster to enrich with child data objects and metadata.
+   * @param mongodbCluster mongodbCluster or {@code null} for none
+   */
+  public DiscoverConnectionProfileRequest setMongodbCluster(MongodbCluster mongodbCluster) {
+    this.mongodbCluster = mongodbCluster;
+    return this;
+  }
+
+  /**
    * MySQL RDBMS to enrich with child data objects and metadata.
    * @return value or {@code null} for none
    */
@@ -204,6 +235,23 @@ public final class DiscoverConnectionProfileRequest extends com.google.api.clien
    */
   public DiscoverConnectionProfileRequest setPostgresqlRdbms(PostgresqlRdbms postgresqlRdbms) {
     this.postgresqlRdbms = postgresqlRdbms;
+    return this;
+  }
+
+  /**
+   * Salesforce organization to enrich with child data objects and metadata.
+   * @return value or {@code null} for none
+   */
+  public SalesforceOrg getSalesforceOrg() {
+    return salesforceOrg;
+  }
+
+  /**
+   * Salesforce organization to enrich with child data objects and metadata.
+   * @param salesforceOrg salesforceOrg or {@code null} for none
+   */
+  public DiscoverConnectionProfileRequest setSalesforceOrg(SalesforceOrg salesforceOrg) {
+    this.salesforceOrg = salesforceOrg;
     return this;
   }
 

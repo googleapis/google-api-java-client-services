@@ -63,7 +63,6 @@ public final class MysqlSslConfig extends com.google.api.client.json.GenericJson
   /**
    * Optional. Input only. PEM-encoded private key associated with the Client Certificate. If this
    * field is used then the 'client_certificate' and the 'ca_certificate' fields are mandatory.
-   * Mutually exclusive with the `secret_manager_stored_client_key` field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -153,7 +152,6 @@ public final class MysqlSslConfig extends com.google.api.client.json.GenericJson
   /**
    * Optional. Input only. PEM-encoded private key associated with the Client Certificate. If this
    * field is used then the 'client_certificate' and the 'ca_certificate' fields are mandatory.
-   * Mutually exclusive with the `secret_manager_stored_client_key` field.
    * @return value or {@code null} for none
    */
   public java.lang.String getClientKey() {
@@ -163,7 +161,6 @@ public final class MysqlSslConfig extends com.google.api.client.json.GenericJson
   /**
    * Optional. Input only. PEM-encoded private key associated with the Client Certificate. If this
    * field is used then the 'client_certificate' and the 'ca_certificate' fields are mandatory.
-   * Mutually exclusive with the `secret_manager_stored_client_key` field.
    * @param clientKey clientKey or {@code null} for none
    */
   public MysqlSslConfig setClientKey(java.lang.String clientKey) {

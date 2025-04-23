@@ -38,7 +38,7 @@ public final class GoogleCloudOsloginControlplaneRegionalV1alphaSignSshPublicKey
   private java.lang.String appEngineInstance;
 
   /**
-   * The compute instance to sign the SSH public key for. Expected format:
+   * The Compute instance to sign the SSH public key for. Expected format:
    * projects/{project}/zones/{zone}/instances/{numeric_instance_id}
    * The value may be {@code null}.
    */
@@ -46,11 +46,9 @@ public final class GoogleCloudOsloginControlplaneRegionalV1alphaSignSshPublicKey
   private java.lang.String computeInstance;
 
   /**
-   * Optional. The service account for the Compute instance. If the instance in question does not
-   * have a service account, this field should be left empty. If the wrong service account is
-   * provided, this operation will return a signed certificate that will not be accepted by the VM.
-   * During rollout of the new regionalized SignSshPublicKey API, this field will be required for
-   * all requests, but the VM will not initially carry out the
+   * Optional. The service account for the instance. If the instance in question does not have a
+   * service account, this field should be left empty. If the wrong service account is provided,
+   * this operation will return a signed certificate that will not be accepted by the VM.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,7 +81,7 @@ public final class GoogleCloudOsloginControlplaneRegionalV1alphaSignSshPublicKey
   }
 
   /**
-   * The compute instance to sign the SSH public key for. Expected format:
+   * The Compute instance to sign the SSH public key for. Expected format:
    * projects/{project}/zones/{zone}/instances/{numeric_instance_id}
    * @return value or {@code null} for none
    */
@@ -92,7 +90,7 @@ public final class GoogleCloudOsloginControlplaneRegionalV1alphaSignSshPublicKey
   }
 
   /**
-   * The compute instance to sign the SSH public key for. Expected format:
+   * The Compute instance to sign the SSH public key for. Expected format:
    * projects/{project}/zones/{zone}/instances/{numeric_instance_id}
    * @param computeInstance computeInstance or {@code null} for none
    */
@@ -102,11 +100,9 @@ public final class GoogleCloudOsloginControlplaneRegionalV1alphaSignSshPublicKey
   }
 
   /**
-   * Optional. The service account for the Compute instance. If the instance in question does not
-   * have a service account, this field should be left empty. If the wrong service account is
-   * provided, this operation will return a signed certificate that will not be accepted by the VM.
-   * During rollout of the new regionalized SignSshPublicKey API, this field will be required for
-   * all requests, but the VM will not initially carry out the
+   * Optional. The service account for the instance. If the instance in question does not have a
+   * service account, this field should be left empty. If the wrong service account is provided,
+   * this operation will return a signed certificate that will not be accepted by the VM.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccount() {
@@ -114,11 +110,9 @@ public final class GoogleCloudOsloginControlplaneRegionalV1alphaSignSshPublicKey
   }
 
   /**
-   * Optional. The service account for the Compute instance. If the instance in question does not
-   * have a service account, this field should be left empty. If the wrong service account is
-   * provided, this operation will return a signed certificate that will not be accepted by the VM.
-   * During rollout of the new regionalized SignSshPublicKey API, this field will be required for
-   * all requests, but the VM will not initially carry out the
+   * Optional. The service account for the instance. If the instance in question does not have a
+   * service account, this field should be left empty. If the wrong service account is provided,
+   * this operation will return a signed certificate that will not be accepted by the VM.
    * @param serviceAccount serviceAccount or {@code null} for none
    */
   public GoogleCloudOsloginControlplaneRegionalV1alphaSignSshPublicKeyRequest setServiceAccount(java.lang.String serviceAccount) {

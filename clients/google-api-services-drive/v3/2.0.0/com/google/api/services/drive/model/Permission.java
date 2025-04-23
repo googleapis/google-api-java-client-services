@@ -20,9 +20,9 @@ package com.google.api.services.drive.model;
  * A permission for a file. A permission grants a user, group, domain, or the world access to a file
  * or a folder hierarchy. By default, permissions requests only return a subset of fields.
  * Permission kind, ID, type, and role are always returned. To retrieve specific fields, see
- * https://developers.google.com/drive/api/guides/fields-parameter. Some resource methods (such as
- * `permissions.update`) require a `permissionId`. Use the `permissions.list` method to retrieve the
- * ID for a file, folder, or shared drive.
+ * https://developers.google.com/workspace/drive/api/guides/fields-parameter. Some resource methods
+ * (such as `permissions.update`) require a `permissionId`. Use the `permissions.list` method to
+ * retrieve the ID for a file, folder, or shared drive.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Drive API. For a detailed explanation see:

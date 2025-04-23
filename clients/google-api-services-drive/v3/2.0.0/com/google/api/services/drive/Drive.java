@@ -25,7 +25,7 @@ package com.google.api.services.drive;
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://developers.google.com/drive/" target="_blank">API Documentation</a>
+ * <a href="https://developers.google.com/workspace/drive/" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>
@@ -155,9 +155,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
     /**
      * Gets information about the user, the user's Drive, and system capabilities. For more information,
-     * see [Return user info](https://developers.google.com/drive/api/guides/user-info). Required: The
-     * `fields` parameter must be set. To return the exact fields you need, see [Return specific
-     * fields](https://developers.google.com/drive/api/guides/fields-parameter).
+     * see [Return user info](https://developers.google.com/workspace/drive/api/guides/user-info).
+     * Required: The `fields` parameter must be set. To return the exact fields you need, see [Return
+     * specific fields](https://developers.google.com/workspace/drive/api/guides/fields-parameter).
      *
      * Create a request for the method "about.get".
      *
@@ -178,9 +178,10 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Gets information about the user, the user's Drive, and system capabilities. For more
-       * information, see [Return user info](https://developers.google.com/drive/api/guides/user-info).
-       * Required: The `fields` parameter must be set. To return the exact fields you need, see [Return
-       * specific fields](https://developers.google.com/drive/api/guides/fields-parameter).
+       * information, see [Return user
+       * info](https://developers.google.com/workspace/drive/api/guides/user-info). Required: The
+       * `fields` parameter must be set. To return the exact fields you need, see [Return specific
+       * fields](https://developers.google.com/workspace/drive/api/guides/fields-parameter).
        *
        * Create a request for the method "about.get".
        *
@@ -753,7 +754,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
     /**
      * Gets a specific app. For more information, see [Return user
-     * info](https://developers.google.com/drive/api/guides/user-info).
+     * info](https://developers.google.com/workspace/drive/api/guides/user-info).
      *
      * Create a request for the method "apps.get".
      *
@@ -775,7 +776,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Gets a specific app. For more information, see [Return user
-       * info](https://developers.google.com/drive/api/guides/user-info).
+       * info](https://developers.google.com/workspace/drive/api/guides/user-info).
        *
        * Create a request for the method "apps.get".
        *
@@ -880,7 +881,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
     }
     /**
      * Lists a user's installed apps. For more information, see [Return user
-     * info](https://developers.google.com/drive/api/guides/user-info).
+     * info](https://developers.google.com/workspace/drive/api/guides/user-info).
      *
      * Create a request for the method "apps.list".
      *
@@ -901,7 +902,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Lists a user's installed apps. For more information, see [Return user
-       * info](https://developers.google.com/drive/api/guides/user-info).
+       * info](https://developers.google.com/workspace/drive/api/guides/user-info).
        *
        * Create a request for the method "apps.list".
        *
@@ -1090,7 +1091,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
     /**
      * Gets the starting pageToken for listing future changes. For more information, see [Retrieve
-     * changes](https://developers.google.com/drive/api/guides/manage-changes).
+     * changes](https://developers.google.com/workspace/drive/api/guides/manage-changes).
      *
      * Create a request for the method "changes.getStartPageToken".
      *
@@ -1111,7 +1112,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Gets the starting pageToken for listing future changes. For more information, see [Retrieve
-       * changes](https://developers.google.com/drive/api/guides/manage-changes).
+       * changes](https://developers.google.com/workspace/drive/api/guides/manage-changes).
        *
        * Create a request for the method "changes.getStartPageToken".
        *
@@ -1324,7 +1325,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
     }
     /**
      * Lists the changes for a user or shared drive. For more information, see [Retrieve
-     * changes](https://developers.google.com/drive/api/guides/manage-changes).
+     * changes](https://developers.google.com/workspace/drive/api/guides/manage-changes).
      *
      * Create a request for the method "changes.list".
      *
@@ -1348,7 +1349,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Lists the changes for a user or shared drive. For more information, see [Retrieve
-       * changes](https://developers.google.com/drive/api/guides/manage-changes).
+       * changes](https://developers.google.com/workspace/drive/api/guides/manage-changes).
        *
        * Create a request for the method "changes.list".
        *
@@ -1918,7 +1919,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
     }
     /**
      * Subscribes to changes for a user. For more information, see [Notifications for resource
-     * changes](https://developers.google.com/drive/api/guides/push).
+     * changes](https://developers.google.com/workspace/drive/api/guides/push).
      *
      * Create a request for the method "changes.watch".
      *
@@ -1943,7 +1944,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Subscribes to changes for a user. For more information, see [Notifications for resource
-       * changes](https://developers.google.com/drive/api/guides/push).
+       * changes](https://developers.google.com/workspace/drive/api/guides/push).
        *
        * Create a request for the method "changes.watch".
        *
@@ -2527,7 +2528,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
     /**
      * Stops watching resources through this channel. For more information, see [Notifications for
-     * resource changes](https://developers.google.com/drive/api/guides/push).
+     * resource changes](https://developers.google.com/workspace/drive/api/guides/push).
      *
      * Create a request for the method "channels.stop".
      *
@@ -2549,7 +2550,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Stops watching resources through this channel. For more information, see [Notifications for
-       * resource changes](https://developers.google.com/drive/api/guides/push).
+       * resource changes](https://developers.google.com/workspace/drive/api/guides/push).
        *
        * Create a request for the method "channels.stop".
        *
@@ -2650,9 +2651,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
     /**
      * Creates a comment on a file. For more information, see [Manage comments and
-     * replies](https://developers.google.com/drive/api/guides/manage-comments). Required: The `fields`
-     * parameter must be set. To return the exact fields you need, see [Return specific
-     * fields](https://developers.google.com/drive/api/guides/fields-parameter).
+     * replies](https://developers.google.com/workspace/drive/api/guides/manage-comments). Required: The
+     * `fields` parameter must be set. To return the exact fields you need, see [Return specific
+     * fields](https://developers.google.com/workspace/drive/api/guides/fields-parameter).
      *
      * Create a request for the method "comments.create".
      *
@@ -2675,9 +2676,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Creates a comment on a file. For more information, see [Manage comments and
-       * replies](https://developers.google.com/drive/api/guides/manage-comments). Required: The
-       * `fields` parameter must be set. To return the exact fields you need, see [Return specific
-       * fields](https://developers.google.com/drive/api/guides/fields-parameter).
+       * replies](https://developers.google.com/workspace/drive/api/guides/manage-comments). Required:
+       * The `fields` parameter must be set. To return the exact fields you need, see [Return specific
+       * fields](https://developers.google.com/workspace/drive/api/guides/fields-parameter).
        *
        * Create a request for the method "comments.create".
        *
@@ -2775,9 +2776,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
     }
     /**
      * Deletes a comment. For more information, see [Manage comments and
-     * replies](https://developers.google.com/drive/api/guides/manage-comments). Required: The `fields`
-     * parameter must be set. To return the exact fields you need, see [Return specific
-     * fields](https://developers.google.com/drive/api/guides/fields-parameter).
+     * replies](https://developers.google.com/workspace/drive/api/guides/manage-comments). Required: The
+     * `fields` parameter must be set. To return the exact fields you need, see [Return specific
+     * fields](https://developers.google.com/workspace/drive/api/guides/fields-parameter).
      *
      * Create a request for the method "comments.delete".
      *
@@ -2800,9 +2801,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Deletes a comment. For more information, see [Manage comments and
-       * replies](https://developers.google.com/drive/api/guides/manage-comments). Required: The
-       * `fields` parameter must be set. To return the exact fields you need, see [Return specific
-       * fields](https://developers.google.com/drive/api/guides/fields-parameter).
+       * replies](https://developers.google.com/workspace/drive/api/guides/manage-comments). Required:
+       * The `fields` parameter must be set. To return the exact fields you need, see [Return specific
+       * fields](https://developers.google.com/workspace/drive/api/guides/fields-parameter).
        *
        * Create a request for the method "comments.delete".
        *
@@ -2915,9 +2916,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
     }
     /**
      * Gets a comment by ID. For more information, see [Manage comments and
-     * replies](https://developers.google.com/drive/api/guides/manage-comments). Required: The `fields`
-     * parameter must be set. To return the exact fields you need, see [Return specific
-     * fields](https://developers.google.com/drive/api/guides/fields-parameter).
+     * replies](https://developers.google.com/workspace/drive/api/guides/manage-comments). Required: The
+     * `fields` parameter must be set. To return the exact fields you need, see [Return specific
+     * fields](https://developers.google.com/workspace/drive/api/guides/fields-parameter).
      *
      * Create a request for the method "comments.get".
      *
@@ -2940,9 +2941,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Gets a comment by ID. For more information, see [Manage comments and
-       * replies](https://developers.google.com/drive/api/guides/manage-comments). Required: The
-       * `fields` parameter must be set. To return the exact fields you need, see [Return specific
-       * fields](https://developers.google.com/drive/api/guides/fields-parameter).
+       * replies](https://developers.google.com/workspace/drive/api/guides/manage-comments). Required:
+       * The `fields` parameter must be set. To return the exact fields you need, see [Return specific
+       * fields](https://developers.google.com/workspace/drive/api/guides/fields-parameter).
        *
        * Create a request for the method "comments.get".
        *
@@ -3115,9 +3116,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
     }
     /**
      * Lists a file's comments. For more information, see [Manage comments and
-     * replies](https://developers.google.com/drive/api/guides/manage-comments). Required: The `fields`
-     * parameter must be set. To return the exact fields you need, see [Return specific
-     * fields](https://developers.google.com/drive/api/guides/fields-parameter).
+     * replies](https://developers.google.com/workspace/drive/api/guides/manage-comments). Required: The
+     * `fields` parameter must be set. To return the exact fields you need, see [Return specific
+     * fields](https://developers.google.com/workspace/drive/api/guides/fields-parameter).
      *
      * Create a request for the method "comments.list".
      *
@@ -3139,9 +3140,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Lists a file's comments. For more information, see [Manage comments and
-       * replies](https://developers.google.com/drive/api/guides/manage-comments). Required: The
-       * `fields` parameter must be set. To return the exact fields you need, see [Return specific
-       * fields](https://developers.google.com/drive/api/guides/fields-parameter).
+       * replies](https://developers.google.com/workspace/drive/api/guides/manage-comments). Required:
+       * The `fields` parameter must be set. To return the exact fields you need, see [Return specific
+       * fields](https://developers.google.com/workspace/drive/api/guides/fields-parameter).
        *
        * Create a request for the method "comments.list".
        *
@@ -3351,9 +3352,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
     }
     /**
      * Updates a comment with patch semantics. For more information, see [Manage comments and
-     * replies](https://developers.google.com/drive/api/guides/manage-comments). Required: The `fields`
-     * parameter must be set. To return the exact fields you need, see [Return specific
-     * fields](https://developers.google.com/drive/api/guides/fields-parameter).
+     * replies](https://developers.google.com/workspace/drive/api/guides/manage-comments). Required: The
+     * `fields` parameter must be set. To return the exact fields you need, see [Return specific
+     * fields](https://developers.google.com/workspace/drive/api/guides/fields-parameter).
      *
      * Create a request for the method "comments.update".
      *
@@ -3377,9 +3378,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Updates a comment with patch semantics. For more information, see [Manage comments and
-       * replies](https://developers.google.com/drive/api/guides/manage-comments). Required: The
-       * `fields` parameter must be set. To return the exact fields you need, see [Return specific
-       * fields](https://developers.google.com/drive/api/guides/fields-parameter).
+       * replies](https://developers.google.com/workspace/drive/api/guides/manage-comments). Required:
+       * The `fields` parameter must be set. To return the exact fields you need, see [Return specific
+       * fields](https://developers.google.com/workspace/drive/api/guides/fields-parameter).
        *
        * Create a request for the method "comments.update".
        *
@@ -4171,7 +4172,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
     /**
      * Lists the user's shared drives. This method accepts the `q` parameter, which is a search query
      * combining one or more search terms. For more information, see the [Search for shared
-     * drives](/drive/api/guides/search-shareddrives) guide.
+     * drives](/workspace/drive/api/guides/search-shareddrives) guide.
      *
      * Create a request for the method "drives.list".
      *
@@ -4193,7 +4194,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       /**
        * Lists the user's shared drives. This method accepts the `q` parameter, which is a search query
        * combining one or more search terms. For more information, see the [Search for shared
-       * drives](/drive/api/guides/search-shareddrives) guide.
+       * drives](/workspace/drive/api/guides/search-shareddrives) guide.
        *
        * Create a request for the method "drives.list".
        *
@@ -5117,7 +5118,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
      * following characteristics: - *Maximum file size:* 5,120 GB - *Accepted Media MIME types:*`*`
      * Note: Specify a valid MIME type, rather than the literal `*` value. The literal `*` is only used
      * to indicate that any valid MIME type can be uploaded. For more information on uploading files,
-     * see [Upload file data](/drive/api/guides/manage-uploads). Apps creating shortcuts with
+     * see [Upload file data](/workspace/drive/api/guides/manage-uploads). Apps creating shortcuts with
      * `files.create` must specify the MIME type `application/vnd.google-apps.shortcut`. Apps should
      * specify a file extension in the `name` property when inserting files with the API. For example,
      * an operation to insert a JPEG file should specify something like `"name": "cat.jpg"` in the
@@ -5146,7 +5147,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
      * following characteristics: - *Maximum file size:* 5,120 GB - *Accepted Media MIME types:*`*`
      * Note: Specify a valid MIME type, rather than the literal `*` value. The literal `*` is only used
      * to indicate that any valid MIME type can be uploaded. For more information on uploading files,
-     * see [Upload file data](/drive/api/guides/manage-uploads). Apps creating shortcuts with
+     * see [Upload file data](/workspace/drive/api/guides/manage-uploads). Apps creating shortcuts with
      * `files.create` must specify the MIME type `application/vnd.google-apps.shortcut`. Apps should
      * specify a file extension in the `name` property when inserting files with the API. For example,
      * an operation to insert a JPEG file should specify something like `"name": "cat.jpg"` in the
@@ -5186,15 +5187,16 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * following characteristics: - *Maximum file size:* 5,120 GB - *Accepted Media MIME types:*`*`
        * Note: Specify a valid MIME type, rather than the literal `*` value. The literal `*` is only
        * used to indicate that any valid MIME type can be uploaded. For more information on uploading
-       * files, see [Upload file data](/drive/api/guides/manage-uploads). Apps creating shortcuts with
-       * `files.create` must specify the MIME type `application/vnd.google-apps.shortcut`. Apps should
-       * specify a file extension in the `name` property when inserting files with the API. For example,
-       * an operation to insert a JPEG file should specify something like `"name": "cat.jpg"` in the
-       * metadata. Subsequent `GET` requests include the read-only `fileExtension` property populated
-       * with the extension originally specified in the `title` property. When a Google Drive user
-       * requests to download a file, or when the file is downloaded through the sync client, Drive
-       * builds a full filename (with extension) based on the title. In cases where the extension is
-       * missing, Drive attempts to determine the extension based on the file's MIME type.
+       * files, see [Upload file data](/workspace/drive/api/guides/manage-uploads). Apps creating
+       * shortcuts with `files.create` must specify the MIME type `application/vnd.google-
+       * apps.shortcut`. Apps should specify a file extension in the `name` property when inserting
+       * files with the API. For example, an operation to insert a JPEG file should specify something
+       * like `"name": "cat.jpg"` in the metadata. Subsequent `GET` requests include the read-only
+       * `fileExtension` property populated with the extension originally specified in the `title`
+       * property. When a Google Drive user requests to download a file, or when the file is downloaded
+       * through the sync client, Drive builds a full filename (with extension) based on the title. In
+       * cases where the extension is missing, Drive attempts to determine the extension based on the
+       * file's MIME type.
        *
        * Create a request for the method "files.create".
        *
@@ -5215,15 +5217,16 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * following characteristics: - *Maximum file size:* 5,120 GB - *Accepted Media MIME types:*`*`
        * Note: Specify a valid MIME type, rather than the literal `*` value. The literal `*` is only
        * used to indicate that any valid MIME type can be uploaded. For more information on uploading
-       * files, see [Upload file data](/drive/api/guides/manage-uploads). Apps creating shortcuts with
-       * `files.create` must specify the MIME type `application/vnd.google-apps.shortcut`. Apps should
-       * specify a file extension in the `name` property when inserting files with the API. For example,
-       * an operation to insert a JPEG file should specify something like `"name": "cat.jpg"` in the
-       * metadata. Subsequent `GET` requests include the read-only `fileExtension` property populated
-       * with the extension originally specified in the `title` property. When a Google Drive user
-       * requests to download a file, or when the file is downloaded through the sync client, Drive
-       * builds a full filename (with extension) based on the title. In cases where the extension is
-       * missing, Drive attempts to determine the extension based on the file's MIME type.
+       * files, see [Upload file data](/workspace/drive/api/guides/manage-uploads). Apps creating
+       * shortcuts with `files.create` must specify the MIME type `application/vnd.google-
+       * apps.shortcut`. Apps should specify a file extension in the `name` property when inserting
+       * files with the API. For example, an operation to insert a JPEG file should specify something
+       * like `"name": "cat.jpg"` in the metadata. Subsequent `GET` requests include the read-only
+       * `fileExtension` property populated with the extension originally specified in the `title`
+       * property. When a Google Drive user requests to download a file, or when the file is downloaded
+       * through the sync client, Drive builds a full filename (with extension) based on the title. In
+       * cases where the extension is missing, Drive attempts to determine the extension based on the
+       * file's MIME type.
        *
        * Create a request for the method "files.create".
        *
@@ -6591,8 +6594,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
      * Gets a file's metadata or content by ID. If you provide the URL parameter `alt=media`, then the
      * response includes the file contents in the response body. Downloading content with `alt=media`
      * only works if the file is stored in Drive. To download Google Docs, Sheets, and Slides use
-     * [`files.export`](/drive/api/reference/rest/v3/files/export) instead. For more information, see
-     * [Download & export files](/drive/api/guides/manage-downloads).
+     * [`files.export`](/workspace/drive/api/reference/rest/v3/files/export) instead. For more
+     * information, see [Download & export files](/workspace/drive/api/guides/manage-downloads).
      *
      * Create a request for the method "files.get".
      *
@@ -6616,8 +6619,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * Gets a file's metadata or content by ID. If you provide the URL parameter `alt=media`, then the
        * response includes the file contents in the response body. Downloading content with `alt=media`
        * only works if the file is stored in Drive. To download Google Docs, Sheets, and Slides use
-       * [`files.export`](/drive/api/reference/rest/v3/files/export) instead. For more information, see
-       * [Download & export files](/drive/api/guides/manage-downloads).
+       * [`files.export`](/workspace/drive/api/reference/rest/v3/files/export) instead. For more
+       * information, see [Download & export files](/workspace/drive/api/guides/manage-downloads).
        *
        * Create a request for the method "files.get".
        *
@@ -6931,9 +6934,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
     /**
      * Lists the user's files. This method accepts the `q` parameter, which is a search query combining
      * one or more search terms. For more information, see the [Search for files &
-     * folders](/drive/api/guides/search-files) guide. *Note:* This method returns *all* files by
-     * default, including trashed files. If you don't want trashed files to appear in the list, use the
-     * `trashed=false` query parameter to remove trashed files from the results.
+     * folders](/workspace/drive/api/guides/search-files) guide. *Note:* This method returns *all* files
+     * by default, including trashed files. If you don't want trashed files to appear in the list, use
+     * the `trashed=false` query parameter to remove trashed files from the results.
      *
      * Create a request for the method "files.list".
      *
@@ -6955,9 +6958,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       /**
        * Lists the user's files. This method accepts the `q` parameter, which is a search query
        * combining one or more search terms. For more information, see the [Search for files &
-       * folders](/drive/api/guides/search-files) guide. *Note:* This method returns *all* files by
-       * default, including trashed files. If you don't want trashed files to appear in the list, use
-       * the `trashed=false` query parameter to remove trashed files from the results.
+       * folders](/workspace/drive/api/guides/search-files) guide. *Note:* This method returns *all*
+       * files by default, including trashed files. If you don't want trashed files to appear in the
+       * list, use the `trashed=false` query parameter to remove trashed files from the results.
        *
        * Create a request for the method "files.list".
        *
@@ -7772,7 +7775,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
      * size:* 5,120 GB - *Accepted Media MIME types:*`*` Note: Specify a valid MIME type, rather than
      * the literal `*` value. The literal `*` is only used to indicate that any valid MIME type can be
      * uploaded. For more information on uploading files, see [Upload file
-     * data](/drive/api/guides/manage-uploads).
+     * data](/workspace/drive/api/guides/manage-uploads).
      *
      * Create a request for the method "files.update".
      *
@@ -7797,7 +7800,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
      * size:* 5,120 GB - *Accepted Media MIME types:*`*` Note: Specify a valid MIME type, rather than
      * the literal `*` value. The literal `*` is only used to indicate that any valid MIME type can be
      * uploaded. For more information on uploading files, see [Upload file
-     * data](/drive/api/guides/manage-uploads).
+     * data](/workspace/drive/api/guides/manage-uploads).
      *
      * Create a request for the method "files.update".
      *
@@ -7832,7 +7835,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * *Maximum file size:* 5,120 GB - *Accepted Media MIME types:*`*` Note: Specify a valid MIME
        * type, rather than the literal `*` value. The literal `*` is only used to indicate that any
        * valid MIME type can be uploaded. For more information on uploading files, see [Upload file
-       * data](/drive/api/guides/manage-uploads).
+       * data](/workspace/drive/api/guides/manage-uploads).
        *
        * Create a request for the method "files.update".
        *
@@ -7858,7 +7861,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * *Maximum file size:* 5,120 GB - *Accepted Media MIME types:*`*` Note: Specify a valid MIME
        * type, rather than the literal `*` value. The literal `*` is only used to indicate that any
        * valid MIME type can be uploaded. For more information on uploading files, see [Upload file
-       * data](/drive/api/guides/manage-uploads).
+       * data](/workspace/drive/api/guides/manage-uploads).
        *
        * Create a request for the method "files.update".
        *

@@ -38,14 +38,21 @@ public final class ProbingDetails extends com.google.api.client.json.GenericJson
   private java.lang.String abortCause;
 
   /**
-   * The EdgeLocation from which a packet destined for/originating from the internet will
-   * egress/ingress the Google network. This will only be populated for a connectivity test which
-   * has an internet destination/source address. The absence of this field *must not* be used as an
-   * indication that the destination/source is part of the Google network.
+   * The EdgeLocation from which a packet, destined to the internet, will egress the Google network.
+   * This will only be populated for a connectivity test which has an internet destination address.
+   * The absence of this field *must not* be used as an indication that the destination is part of
+   * the Google network.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private EdgeLocation destinationEgressLocation;
+
+  /**
+   * Probing results for all edge devices.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<SingleEdgeResponse> edgeResponses;
 
   /**
    * The source and destination endpoints derived from the test input and used for active probing.
@@ -60,6 +67,13 @@ public final class ProbingDetails extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private Status error;
+
+  /**
+   * Whether all relevant edge devices were probed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean probedAllDevices;
 
   /**
    * Latency as measured by active probing in one direction: from the source to the destination
@@ -115,10 +129,10 @@ public final class ProbingDetails extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The EdgeLocation from which a packet destined for/originating from the internet will
-   * egress/ingress the Google network. This will only be populated for a connectivity test which
-   * has an internet destination/source address. The absence of this field *must not* be used as an
-   * indication that the destination/source is part of the Google network.
+   * The EdgeLocation from which a packet, destined to the internet, will egress the Google network.
+   * This will only be populated for a connectivity test which has an internet destination address.
+   * The absence of this field *must not* be used as an indication that the destination is part of
+   * the Google network.
    * @return value or {@code null} for none
    */
   public EdgeLocation getDestinationEgressLocation() {
@@ -126,14 +140,31 @@ public final class ProbingDetails extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The EdgeLocation from which a packet destined for/originating from the internet will
-   * egress/ingress the Google network. This will only be populated for a connectivity test which
-   * has an internet destination/source address. The absence of this field *must not* be used as an
-   * indication that the destination/source is part of the Google network.
+   * The EdgeLocation from which a packet, destined to the internet, will egress the Google network.
+   * This will only be populated for a connectivity test which has an internet destination address.
+   * The absence of this field *must not* be used as an indication that the destination is part of
+   * the Google network.
    * @param destinationEgressLocation destinationEgressLocation or {@code null} for none
    */
   public ProbingDetails setDestinationEgressLocation(EdgeLocation destinationEgressLocation) {
     this.destinationEgressLocation = destinationEgressLocation;
+    return this;
+  }
+
+  /**
+   * Probing results for all edge devices.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<SingleEdgeResponse> getEdgeResponses() {
+    return edgeResponses;
+  }
+
+  /**
+   * Probing results for all edge devices.
+   * @param edgeResponses edgeResponses or {@code null} for none
+   */
+  public ProbingDetails setEdgeResponses(java.util.List<SingleEdgeResponse> edgeResponses) {
+    this.edgeResponses = edgeResponses;
     return this;
   }
 
@@ -168,6 +199,23 @@ public final class ProbingDetails extends com.google.api.client.json.GenericJson
    */
   public ProbingDetails setError(Status error) {
     this.error = error;
+    return this;
+  }
+
+  /**
+   * Whether all relevant edge devices were probed.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getProbedAllDevices() {
+    return probedAllDevices;
+  }
+
+  /**
+   * Whether all relevant edge devices were probed.
+   * @param probedAllDevices probedAllDevices or {@code null} for none
+   */
+  public ProbingDetails setProbedAllDevices(java.lang.Boolean probedAllDevices) {
+    this.probedAllDevices = probedAllDevices;
     return this;
   }
 

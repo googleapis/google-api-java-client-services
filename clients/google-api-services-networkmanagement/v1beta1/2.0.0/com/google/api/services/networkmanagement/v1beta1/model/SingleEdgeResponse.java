@@ -17,7 +17,7 @@
 package com.google.api.services.networkmanagement.v1beta1.model;
 
 /**
- * Results of active probing from the last run of the test.
+ * Probing results for a single edge device.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Management API. For a detailed explanation
@@ -28,14 +28,7 @@ package com.google.api.services.networkmanagement.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ProbingDetails extends com.google.api.client.json.GenericJson {
-
-  /**
-   * The reason probing was aborted.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String abortCause;
+public final class SingleEdgeResponse extends com.google.api.client.json.GenericJson {
 
   /**
    * The EdgeLocation from which a packet, destined to the internet, will egress the Google network.
@@ -48,32 +41,11 @@ public final class ProbingDetails extends com.google.api.client.json.GenericJson
   private EdgeLocation destinationEgressLocation;
 
   /**
-   * Probing results for all edge devices.
+   * Router name in the format '{router}.{metroshard}'. For example: pf01.aaa01, pr02.aaa01.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<SingleEdgeResponse> edgeResponses;
-
-  /**
-   * The source and destination endpoints derived from the test input and used for active probing.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private EndpointInfo endpointInfo;
-
-  /**
-   * Details about an internal failure or the cancellation of active probing.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private Status error;
-
-  /**
-   * Whether all relevant edge devices were probed.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean probedAllDevices;
+  private java.lang.String destinationRouter;
 
   /**
    * Latency as measured by active probing in one direction: from the source to the destination
@@ -84,7 +56,7 @@ public final class ProbingDetails extends com.google.api.client.json.GenericJson
   private LatencyDistribution probingLatency;
 
   /**
-   * The overall result of active probing.
+   * The overall result of active probing for this egress device.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -105,30 +77,6 @@ public final class ProbingDetails extends com.google.api.client.json.GenericJson
   private java.lang.Integer successfulProbeCount;
 
   /**
-   * The time that reachability was assessed through active probing.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private String verifyTime;
-
-  /**
-   * The reason probing was aborted.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getAbortCause() {
-    return abortCause;
-  }
-
-  /**
-   * The reason probing was aborted.
-   * @param abortCause abortCause or {@code null} for none
-   */
-  public ProbingDetails setAbortCause(java.lang.String abortCause) {
-    this.abortCause = abortCause;
-    return this;
-  }
-
-  /**
    * The EdgeLocation from which a packet, destined to the internet, will egress the Google network.
    * This will only be populated for a connectivity test which has an internet destination address.
    * The absence of this field *must not* be used as an indication that the destination is part of
@@ -146,76 +94,25 @@ public final class ProbingDetails extends com.google.api.client.json.GenericJson
    * the Google network.
    * @param destinationEgressLocation destinationEgressLocation or {@code null} for none
    */
-  public ProbingDetails setDestinationEgressLocation(EdgeLocation destinationEgressLocation) {
+  public SingleEdgeResponse setDestinationEgressLocation(EdgeLocation destinationEgressLocation) {
     this.destinationEgressLocation = destinationEgressLocation;
     return this;
   }
 
   /**
-   * Probing results for all edge devices.
+   * Router name in the format '{router}.{metroshard}'. For example: pf01.aaa01, pr02.aaa01.
    * @return value or {@code null} for none
    */
-  public java.util.List<SingleEdgeResponse> getEdgeResponses() {
-    return edgeResponses;
+  public java.lang.String getDestinationRouter() {
+    return destinationRouter;
   }
 
   /**
-   * Probing results for all edge devices.
-   * @param edgeResponses edgeResponses or {@code null} for none
+   * Router name in the format '{router}.{metroshard}'. For example: pf01.aaa01, pr02.aaa01.
+   * @param destinationRouter destinationRouter or {@code null} for none
    */
-  public ProbingDetails setEdgeResponses(java.util.List<SingleEdgeResponse> edgeResponses) {
-    this.edgeResponses = edgeResponses;
-    return this;
-  }
-
-  /**
-   * The source and destination endpoints derived from the test input and used for active probing.
-   * @return value or {@code null} for none
-   */
-  public EndpointInfo getEndpointInfo() {
-    return endpointInfo;
-  }
-
-  /**
-   * The source and destination endpoints derived from the test input and used for active probing.
-   * @param endpointInfo endpointInfo or {@code null} for none
-   */
-  public ProbingDetails setEndpointInfo(EndpointInfo endpointInfo) {
-    this.endpointInfo = endpointInfo;
-    return this;
-  }
-
-  /**
-   * Details about an internal failure or the cancellation of active probing.
-   * @return value or {@code null} for none
-   */
-  public Status getError() {
-    return error;
-  }
-
-  /**
-   * Details about an internal failure or the cancellation of active probing.
-   * @param error error or {@code null} for none
-   */
-  public ProbingDetails setError(Status error) {
-    this.error = error;
-    return this;
-  }
-
-  /**
-   * Whether all relevant edge devices were probed.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getProbedAllDevices() {
-    return probedAllDevices;
-  }
-
-  /**
-   * Whether all relevant edge devices were probed.
-   * @param probedAllDevices probedAllDevices or {@code null} for none
-   */
-  public ProbingDetails setProbedAllDevices(java.lang.Boolean probedAllDevices) {
-    this.probedAllDevices = probedAllDevices;
+  public SingleEdgeResponse setDestinationRouter(java.lang.String destinationRouter) {
+    this.destinationRouter = destinationRouter;
     return this;
   }
 
@@ -233,13 +130,13 @@ public final class ProbingDetails extends com.google.api.client.json.GenericJson
    * endpoint.
    * @param probingLatency probingLatency or {@code null} for none
    */
-  public ProbingDetails setProbingLatency(LatencyDistribution probingLatency) {
+  public SingleEdgeResponse setProbingLatency(LatencyDistribution probingLatency) {
     this.probingLatency = probingLatency;
     return this;
   }
 
   /**
-   * The overall result of active probing.
+   * The overall result of active probing for this egress device.
    * @return value or {@code null} for none
    */
   public java.lang.String getResult() {
@@ -247,10 +144,10 @@ public final class ProbingDetails extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The overall result of active probing.
+   * The overall result of active probing for this egress device.
    * @param result result or {@code null} for none
    */
-  public ProbingDetails setResult(java.lang.String result) {
+  public SingleEdgeResponse setResult(java.lang.String result) {
     this.result = result;
     return this;
   }
@@ -267,7 +164,7 @@ public final class ProbingDetails extends com.google.api.client.json.GenericJson
    * Number of probes sent.
    * @param sentProbeCount sentProbeCount or {@code null} for none
    */
-  public ProbingDetails setSentProbeCount(java.lang.Integer sentProbeCount) {
+  public SingleEdgeResponse setSentProbeCount(java.lang.Integer sentProbeCount) {
     this.sentProbeCount = sentProbeCount;
     return this;
   }
@@ -284,36 +181,19 @@ public final class ProbingDetails extends com.google.api.client.json.GenericJson
    * Number of probes that reached the destination.
    * @param successfulProbeCount successfulProbeCount or {@code null} for none
    */
-  public ProbingDetails setSuccessfulProbeCount(java.lang.Integer successfulProbeCount) {
+  public SingleEdgeResponse setSuccessfulProbeCount(java.lang.Integer successfulProbeCount) {
     this.successfulProbeCount = successfulProbeCount;
     return this;
   }
 
-  /**
-   * The time that reachability was assessed through active probing.
-   * @return value or {@code null} for none
-   */
-  public String getVerifyTime() {
-    return verifyTime;
-  }
-
-  /**
-   * The time that reachability was assessed through active probing.
-   * @param verifyTime verifyTime or {@code null} for none
-   */
-  public ProbingDetails setVerifyTime(String verifyTime) {
-    this.verifyTime = verifyTime;
-    return this;
+  @Override
+  public SingleEdgeResponse set(String fieldName, Object value) {
+    return (SingleEdgeResponse) super.set(fieldName, value);
   }
 
   @Override
-  public ProbingDetails set(String fieldName, Object value) {
-    return (ProbingDetails) super.set(fieldName, value);
-  }
-
-  @Override
-  public ProbingDetails clone() {
-    return (ProbingDetails) super.clone();
+  public SingleEdgeResponse clone() {
+    return (SingleEdgeResponse) super.clone();
   }
 
 }

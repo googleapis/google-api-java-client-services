@@ -32,7 +32,8 @@ public final class NumberFormat extends com.google.api.client.json.GenericJson {
   /**
    * Pattern string used for formatting. If not set, a default pattern based on the user's locale
    * will be used if necessary for the given type. See the [Date and Number Formats
-   * guide](/sheets/api/guides/formats) for more information about the supported patterns.
+   * guide](https://developers.google.com/workspace/sheets/api/guides/formats) for more information
+   * about the supported patterns.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,7 +49,8 @@ public final class NumberFormat extends com.google.api.client.json.GenericJson {
   /**
    * Pattern string used for formatting. If not set, a default pattern based on the user's locale
    * will be used if necessary for the given type. See the [Date and Number Formats
-   * guide](/sheets/api/guides/formats) for more information about the supported patterns.
+   * guide](https://developers.google.com/workspace/sheets/api/guides/formats) for more information
+   * about the supported patterns.
    * @return value or {@code null} for none
    */
   public java.lang.String getPattern() {
@@ -58,7 +60,8 @@ public final class NumberFormat extends com.google.api.client.json.GenericJson {
   /**
    * Pattern string used for formatting. If not set, a default pattern based on the user's locale
    * will be used if necessary for the given type. See the [Date and Number Formats
-   * guide](/sheets/api/guides/formats) for more information about the supported patterns.
+   * guide](https://developers.google.com/workspace/sheets/api/guides/formats) for more information
+   * about the supported patterns.
    * @param pattern pattern or {@code null} for none
    */
   public NumberFormat setPattern(java.lang.String pattern) {

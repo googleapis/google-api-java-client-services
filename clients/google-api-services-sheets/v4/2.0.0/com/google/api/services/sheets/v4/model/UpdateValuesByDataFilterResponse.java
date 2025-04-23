@@ -59,7 +59,9 @@ public final class UpdateValuesByDataFilterResponse extends com.google.api.clien
   private ValueRange updatedData;
 
   /**
-   * The range (in [A1 notation](/sheets/api/guides/concepts#cell)) that updates were applied to.
+   * The range (in [A1
+   * notation](https://developers.google.com/workspace/sheets/api/guides/concepts#cell)) that
+   * updates were applied to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -143,7 +145,9 @@ public final class UpdateValuesByDataFilterResponse extends com.google.api.clien
   }
 
   /**
-   * The range (in [A1 notation](/sheets/api/guides/concepts#cell)) that updates were applied to.
+   * The range (in [A1
+   * notation](https://developers.google.com/workspace/sheets/api/guides/concepts#cell)) that
+   * updates were applied to.
    * @return value or {@code null} for none
    */
   public java.lang.String getUpdatedRange() {
@@ -151,7 +155,9 @@ public final class UpdateValuesByDataFilterResponse extends com.google.api.clien
   }
 
   /**
-   * The range (in [A1 notation](/sheets/api/guides/concepts#cell)) that updates were applied to.
+   * The range (in [A1
+   * notation](https://developers.google.com/workspace/sheets/api/guides/concepts#cell)) that
+   * updates were applied to.
    * @param updatedRange updatedRange or {@code null} for none
    */
   public UpdateValuesByDataFilterResponse setUpdatedRange(java.lang.String updatedRange) {

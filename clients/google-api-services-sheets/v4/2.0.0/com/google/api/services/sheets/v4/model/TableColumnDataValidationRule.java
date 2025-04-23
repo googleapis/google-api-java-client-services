@@ -17,7 +17,7 @@
 package com.google.api.services.sheets.v4.model;
 
 /**
- * The request for clearing more than one range of values in a spreadsheet.
+ * A data validation rule for a column in a table.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Sheets API. For a detailed explanation see:
@@ -27,43 +27,43 @@ package com.google.api.services.sheets.v4.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class BatchClearValuesRequest extends com.google.api.client.json.GenericJson {
+public final class TableColumnDataValidationRule extends com.google.api.client.json.GenericJson {
 
   /**
-   * The ranges to clear, in [A1 notation or R1C1
-   * notation](https://developers.google.com/workspace/sheets/api/guides/concepts#cell).
+   * The condition that data in the cell must match. Valid only if the [BooleanCondition.type] is
+   * ONE_OF_LIST.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> ranges;
+  private BooleanCondition condition;
 
   /**
-   * The ranges to clear, in [A1 notation or R1C1
-   * notation](https://developers.google.com/workspace/sheets/api/guides/concepts#cell).
+   * The condition that data in the cell must match. Valid only if the [BooleanCondition.type] is
+   * ONE_OF_LIST.
    * @return value or {@code null} for none
    */
-  public java.util.List<java.lang.String> getRanges() {
-    return ranges;
+  public BooleanCondition getCondition() {
+    return condition;
   }
 
   /**
-   * The ranges to clear, in [A1 notation or R1C1
-   * notation](https://developers.google.com/workspace/sheets/api/guides/concepts#cell).
-   * @param ranges ranges or {@code null} for none
+   * The condition that data in the cell must match. Valid only if the [BooleanCondition.type] is
+   * ONE_OF_LIST.
+   * @param condition condition or {@code null} for none
    */
-  public BatchClearValuesRequest setRanges(java.util.List<java.lang.String> ranges) {
-    this.ranges = ranges;
+  public TableColumnDataValidationRule setCondition(BooleanCondition condition) {
+    this.condition = condition;
     return this;
   }
 
   @Override
-  public BatchClearValuesRequest set(String fieldName, Object value) {
-    return (BatchClearValuesRequest) super.set(fieldName, value);
+  public TableColumnDataValidationRule set(String fieldName, Object value) {
+    return (TableColumnDataValidationRule) super.set(fieldName, value);
   }
 
   @Override
-  public BatchClearValuesRequest clone() {
-    return (BatchClearValuesRequest) super.clone();
+  public TableColumnDataValidationRule clone() {
+    return (TableColumnDataValidationRule) super.clone();
   }
 
 }

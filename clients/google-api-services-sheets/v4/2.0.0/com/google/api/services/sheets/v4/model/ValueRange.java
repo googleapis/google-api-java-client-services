@@ -42,7 +42,8 @@ public final class ValueRange extends com.google.api.client.json.GenericJson {
   private java.lang.String majorDimension;
 
   /**
-   * The range the values cover, in [A1 notation](/sheets/api/guides/concepts#cell). For output,
+   * The range the values cover, in [A1
+   * notation](https://developers.google.com/workspace/sheets/api/guides/concepts#cell). For output,
    * this range indicates the entire requested range, even though the values will exclude trailing
    * rows and columns. When appending values, this field represents the range to search for a table,
    * after which values will be appended.
@@ -90,7 +91,8 @@ public final class ValueRange extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The range the values cover, in [A1 notation](/sheets/api/guides/concepts#cell). For output,
+   * The range the values cover, in [A1
+   * notation](https://developers.google.com/workspace/sheets/api/guides/concepts#cell). For output,
    * this range indicates the entire requested range, even though the values will exclude trailing
    * rows and columns. When appending values, this field represents the range to search for a table,
    * after which values will be appended.
@@ -101,7 +103,8 @@ public final class ValueRange extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The range the values cover, in [A1 notation](/sheets/api/guides/concepts#cell). For output,
+   * The range the values cover, in [A1
+   * notation](https://developers.google.com/workspace/sheets/api/guides/concepts#cell). For output,
    * this range indicates the entire requested range, even though the values will exclude trailing
    * rows and columns. When appending values, this field represents the range to search for a table,
    * after which values will be appended.

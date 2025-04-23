@@ -61,6 +61,14 @@ public final class BasicFilter extends com.google.api.client.json.GenericJson {
   private java.util.List<SortSpec> sortSpecs;
 
   /**
+   * The table this filter is backed by, if any. When writing, only one of range or table_id may be
+   * set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String tableId;
+
+  /**
    * The criteria for showing/hiding values per column. The map's key is the column index, and the
    * value is the criteria for that column. This field is deprecated in favor of filter_specs.
    * @return value or {@code null} for none
@@ -131,6 +139,25 @@ public final class BasicFilter extends com.google.api.client.json.GenericJson {
    */
   public BasicFilter setSortSpecs(java.util.List<SortSpec> sortSpecs) {
     this.sortSpecs = sortSpecs;
+    return this;
+  }
+
+  /**
+   * The table this filter is backed by, if any. When writing, only one of range or table_id may be
+   * set.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTableId() {
+    return tableId;
+  }
+
+  /**
+   * The table this filter is backed by, if any. When writing, only one of range or table_id may be
+   * set.
+   * @param tableId tableId or {@code null} for none
+   */
+  public BasicFilter setTableId(java.lang.String tableId) {
+    this.tableId = tableId;
     return this;
   }
 

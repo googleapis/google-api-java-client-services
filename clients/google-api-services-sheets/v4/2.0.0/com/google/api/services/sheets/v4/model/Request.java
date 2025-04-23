@@ -100,6 +100,13 @@ public final class Request extends com.google.api.client.json.GenericJson {
   private AddSlicerRequest addSlicer;
 
   /**
+   * Adds a table.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AddTableRequest addTable;
+
+  /**
    * Appends cells after the last row with data in a sheet.
    * The value may be {@code null}.
    */
@@ -253,6 +260,13 @@ public final class Request extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private DeleteSheetRequest deleteSheet;
+
+  /**
+   * A request for deleting a table.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DeleteTableRequest deleteTable;
 
   /**
    * Duplicates a filter view.
@@ -493,6 +507,13 @@ public final class Request extends com.google.api.client.json.GenericJson {
   private UpdateSpreadsheetPropertiesRequest updateSpreadsheetProperties;
 
   /**
+   * Updates a table.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private UpdateTableRequest updateTable;
+
+  /**
    * Adds a new banded range
    * @return value or {@code null} for none
    */
@@ -659,6 +680,23 @@ public final class Request extends com.google.api.client.json.GenericJson {
    */
   public Request setAddSlicer(AddSlicerRequest addSlicer) {
     this.addSlicer = addSlicer;
+    return this;
+  }
+
+  /**
+   * Adds a table.
+   * @return value or {@code null} for none
+   */
+  public AddTableRequest getAddTable() {
+    return addTable;
+  }
+
+  /**
+   * Adds a table.
+   * @param addTable addTable or {@code null} for none
+   */
+  public Request setAddTable(AddTableRequest addTable) {
+    this.addTable = addTable;
     return this;
   }
 
@@ -1035,6 +1073,23 @@ public final class Request extends com.google.api.client.json.GenericJson {
    */
   public Request setDeleteSheet(DeleteSheetRequest deleteSheet) {
     this.deleteSheet = deleteSheet;
+    return this;
+  }
+
+  /**
+   * A request for deleting a table.
+   * @return value or {@code null} for none
+   */
+  public DeleteTableRequest getDeleteTable() {
+    return deleteTable;
+  }
+
+  /**
+   * A request for deleting a table.
+   * @param deleteTable deleteTable or {@code null} for none
+   */
+  public Request setDeleteTable(DeleteTableRequest deleteTable) {
+    this.deleteTable = deleteTable;
     return this;
   }
 
@@ -1613,6 +1668,23 @@ public final class Request extends com.google.api.client.json.GenericJson {
    */
   public Request setUpdateSpreadsheetProperties(UpdateSpreadsheetPropertiesRequest updateSpreadsheetProperties) {
     this.updateSpreadsheetProperties = updateSpreadsheetProperties;
+    return this;
+  }
+
+  /**
+   * Updates a table.
+   * @return value or {@code null} for none
+   */
+  public UpdateTableRequest getUpdateTable() {
+    return updateTable;
+  }
+
+  /**
+   * Updates a table.
+   * @param updateTable updateTable or {@code null} for none
+   */
+  public Request setUpdateTable(UpdateTableRequest updateTable) {
+    this.updateTable = updateTable;
     return this;
   }
 

@@ -30,13 +30,6 @@ package com.google.api.services.reports.model;
 public final class ResourceDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * Id of the application to which this resource belongs
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long applicationId;
-
-  /**
    * List of labels applied on the resource
    * The value may be {@code null}.
    */
@@ -55,13 +48,6 @@ public final class ResourceDetails extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
-
-  /**
-   * Owner of the resource.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String ownerEmail;
 
   /**
    * Defines relationship of the resource to the events
@@ -84,23 +70,6 @@ public final class ResourceDetails extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
-
-  /**
-   * Id of the application to which this resource belongs
-   * @return value or {@code null} for none
-   */
-  public java.lang.Long getApplicationId() {
-    return applicationId;
-  }
-
-  /**
-   * Id of the application to which this resource belongs
-   * @param applicationId applicationId or {@code null} for none
-   */
-  public ResourceDetails setApplicationId(java.lang.Long applicationId) {
-    this.applicationId = applicationId;
-    return this;
-  }
 
   /**
    * List of labels applied on the resource
@@ -133,23 +102,6 @@ public final class ResourceDetails extends com.google.api.client.json.GenericJso
    */
   public ResourceDetails setId(java.lang.String id) {
     this.id = id;
-    return this;
-  }
-
-  /**
-   * Owner of the resource.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getOwnerEmail() {
-    return ownerEmail;
-  }
-
-  /**
-   * Owner of the resource.
-   * @param ownerEmail ownerEmail or {@code null} for none
-   */
-  public ResourceDetails setOwnerEmail(java.lang.String ownerEmail) {
-    this.ownerEmail = ownerEmail;
     return this;
   }
 

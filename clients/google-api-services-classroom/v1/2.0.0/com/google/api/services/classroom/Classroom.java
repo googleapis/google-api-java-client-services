@@ -534,6 +534,139 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
       }
     }
     /**
+     * Returns the grading period settings in a course. This method returns the following error codes: *
+     * `PERMISSION_DENIED` if the requesting user isn't permitted to access the grading period settings
+     * in the requested course or for access errors. * `NOT_FOUND` if the requested course does not
+     * exist.
+     *
+     * Create a request for the method "courses.getGradingPeriodSettings".
+     *
+     * This request holds the parameters needed by the classroom server.  After setting any optional
+     * parameters, call the {@link GetGradingPeriodSettings#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param courseId Required. The identifier of the course.
+     * @return the request
+     */
+    public GetGradingPeriodSettings getGradingPeriodSettings(java.lang.String courseId) throws java.io.IOException {
+      GetGradingPeriodSettings result = new GetGradingPeriodSettings(courseId);
+      initialize(result);
+      return result;
+    }
+
+    public class GetGradingPeriodSettings extends ClassroomRequest<com.google.api.services.classroom.model.GradingPeriodSettings> {
+
+      private static final String REST_PATH = "v1/courses/{courseId}/gradingPeriodSettings";
+
+      /**
+       * Returns the grading period settings in a course. This method returns the following error codes:
+       * * `PERMISSION_DENIED` if the requesting user isn't permitted to access the grading period
+       * settings in the requested course or for access errors. * `NOT_FOUND` if the requested course
+       * does not exist.
+       *
+       * Create a request for the method "courses.getGradingPeriodSettings".
+       *
+       * This request holds the parameters needed by the the classroom server.  After setting any
+       * optional parameters, call the {@link GetGradingPeriodSettings#execute()} method to invoke the
+       * remote operation. <p> {@link GetGradingPeriodSettings#initialize(com.google.api.client.googleap
+       * is.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+       * immediately after invoking the constructor. </p>
+       *
+       * @param courseId Required. The identifier of the course.
+       * @since 1.13
+       */
+      protected GetGradingPeriodSettings(java.lang.String courseId) {
+        super(Classroom.this, "GET", REST_PATH, null, com.google.api.services.classroom.model.GradingPeriodSettings.class);
+        this.courseId = com.google.api.client.util.Preconditions.checkNotNull(courseId, "Required parameter courseId must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetGradingPeriodSettings set$Xgafv(java.lang.String $Xgafv) {
+        return (GetGradingPeriodSettings) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetGradingPeriodSettings setAccessToken(java.lang.String accessToken) {
+        return (GetGradingPeriodSettings) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetGradingPeriodSettings setAlt(java.lang.String alt) {
+        return (GetGradingPeriodSettings) super.setAlt(alt);
+      }
+
+      @Override
+      public GetGradingPeriodSettings setCallback(java.lang.String callback) {
+        return (GetGradingPeriodSettings) super.setCallback(callback);
+      }
+
+      @Override
+      public GetGradingPeriodSettings setFields(java.lang.String fields) {
+        return (GetGradingPeriodSettings) super.setFields(fields);
+      }
+
+      @Override
+      public GetGradingPeriodSettings setKey(java.lang.String key) {
+        return (GetGradingPeriodSettings) super.setKey(key);
+      }
+
+      @Override
+      public GetGradingPeriodSettings setOauthToken(java.lang.String oauthToken) {
+        return (GetGradingPeriodSettings) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetGradingPeriodSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetGradingPeriodSettings) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetGradingPeriodSettings setQuotaUser(java.lang.String quotaUser) {
+        return (GetGradingPeriodSettings) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetGradingPeriodSettings setUploadType(java.lang.String uploadType) {
+        return (GetGradingPeriodSettings) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetGradingPeriodSettings setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetGradingPeriodSettings) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The identifier of the course. */
+      @com.google.api.client.util.Key
+      private java.lang.String courseId;
+
+      /** Required. The identifier of the course.
+       */
+      public java.lang.String getCourseId() {
+        return courseId;
+      }
+
+      /** Required. The identifier of the course. */
+      public GetGradingPeriodSettings setCourseId(java.lang.String courseId) {
+        this.courseId = courseId;
+        return this;
+      }
+
+      @Override
+      public GetGradingPeriodSettings set(String parameterName, Object value) {
+        return (GetGradingPeriodSettings) super.set(parameterName, value);
+      }
+    }
+    /**
      * Returns a list of courses that the requesting user is permitted to view, restricted to those that
      * match the request. Returned courses are ordered by creation time, with the most recently created
      * coming first. This method returns the following error codes: * `PERMISSION_DENIED` for access
@@ -1076,6 +1209,184 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
       @Override
       public Update set(String parameterName, Object value) {
         return (Update) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Updates grading period settings of a course. Individual grading periods can be added, removed, or
+     * modified using this method. The requesting user and course owner must be eligible to modify
+     * Grading Periods. For details, see [licensing
+     * requirements](https://developers.google.com/classroom/grading-periods/manage-grading-
+     * periods#licensing_requirements). This method returns the following error codes: *
+     * `PERMISSION_DENIED` if the requesting user is not permitted to modify the grading period settings
+     * in a course or for access errors: * UserIneligibleToUpdateGradingPeriodSettings *
+     * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if the requested course does not
+     * exist.
+     *
+     * Create a request for the method "courses.updateGradingPeriodSettings".
+     *
+     * This request holds the parameters needed by the classroom server.  After setting any optional
+     * parameters, call the {@link UpdateGradingPeriodSettings#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param courseId Required. The identifier of the course.
+     * @param content the {@link com.google.api.services.classroom.model.GradingPeriodSettings}
+     * @return the request
+     */
+    public UpdateGradingPeriodSettings updateGradingPeriodSettings(java.lang.String courseId, com.google.api.services.classroom.model.GradingPeriodSettings content) throws java.io.IOException {
+      UpdateGradingPeriodSettings result = new UpdateGradingPeriodSettings(courseId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class UpdateGradingPeriodSettings extends ClassroomRequest<com.google.api.services.classroom.model.GradingPeriodSettings> {
+
+      private static final String REST_PATH = "v1/courses/{courseId}/gradingPeriodSettings";
+
+      /**
+       * Updates grading period settings of a course. Individual grading periods can be added, removed,
+       * or modified using this method. The requesting user and course owner must be eligible to modify
+       * Grading Periods. For details, see [licensing
+       * requirements](https://developers.google.com/classroom/grading-periods/manage-grading-
+       * periods#licensing_requirements). This method returns the following error codes: *
+       * `PERMISSION_DENIED` if the requesting user is not permitted to modify the grading period
+       * settings in a course or for access errors: * UserIneligibleToUpdateGradingPeriodSettings *
+       * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if the requested course does not
+       * exist.
+       *
+       * Create a request for the method "courses.updateGradingPeriodSettings".
+       *
+       * This request holds the parameters needed by the the classroom server.  After setting any
+       * optional parameters, call the {@link UpdateGradingPeriodSettings#execute()} method to invoke
+       * the remote operation. <p> {@link UpdateGradingPeriodSettings#initialize(com.google.api.client.g
+       * oogleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+       * immediately after invoking the constructor. </p>
+       *
+       * @param courseId Required. The identifier of the course.
+       * @param content the {@link com.google.api.services.classroom.model.GradingPeriodSettings}
+       * @since 1.13
+       */
+      protected UpdateGradingPeriodSettings(java.lang.String courseId, com.google.api.services.classroom.model.GradingPeriodSettings content) {
+        super(Classroom.this, "PATCH", REST_PATH, content, com.google.api.services.classroom.model.GradingPeriodSettings.class);
+        this.courseId = com.google.api.client.util.Preconditions.checkNotNull(courseId, "Required parameter courseId must be specified.");
+      }
+
+      @Override
+      public UpdateGradingPeriodSettings set$Xgafv(java.lang.String $Xgafv) {
+        return (UpdateGradingPeriodSettings) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public UpdateGradingPeriodSettings setAccessToken(java.lang.String accessToken) {
+        return (UpdateGradingPeriodSettings) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public UpdateGradingPeriodSettings setAlt(java.lang.String alt) {
+        return (UpdateGradingPeriodSettings) super.setAlt(alt);
+      }
+
+      @Override
+      public UpdateGradingPeriodSettings setCallback(java.lang.String callback) {
+        return (UpdateGradingPeriodSettings) super.setCallback(callback);
+      }
+
+      @Override
+      public UpdateGradingPeriodSettings setFields(java.lang.String fields) {
+        return (UpdateGradingPeriodSettings) super.setFields(fields);
+      }
+
+      @Override
+      public UpdateGradingPeriodSettings setKey(java.lang.String key) {
+        return (UpdateGradingPeriodSettings) super.setKey(key);
+      }
+
+      @Override
+      public UpdateGradingPeriodSettings setOauthToken(java.lang.String oauthToken) {
+        return (UpdateGradingPeriodSettings) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public UpdateGradingPeriodSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (UpdateGradingPeriodSettings) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public UpdateGradingPeriodSettings setQuotaUser(java.lang.String quotaUser) {
+        return (UpdateGradingPeriodSettings) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public UpdateGradingPeriodSettings setUploadType(java.lang.String uploadType) {
+        return (UpdateGradingPeriodSettings) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public UpdateGradingPeriodSettings setUploadProtocol(java.lang.String uploadProtocol) {
+        return (UpdateGradingPeriodSettings) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The identifier of the course. */
+      @com.google.api.client.util.Key
+      private java.lang.String courseId;
+
+      /** Required. The identifier of the course.
+       */
+      public java.lang.String getCourseId() {
+        return courseId;
+      }
+
+      /** Required. The identifier of the course. */
+      public UpdateGradingPeriodSettings setCourseId(java.lang.String courseId) {
+        this.courseId = courseId;
+        return this;
+      }
+
+      /**
+       * Mask that identifies which fields in the GradingPeriodSettings to update. The
+       * GradingPeriodSettings `grading_periods` list will be fully replaced by the grading periods
+       * specified in the update request. For example: * Grading periods included in the list
+       * without an ID are considered additions, and a new ID will be assigned when the request is
+       * made. * Grading periods that currently exist, but are missing from the request will be
+       * considered deletions. * Grading periods with an existing ID and modified data are
+       * considered edits. Unmodified data will be left as is. * Grading periods included with an
+       * unknown ID will result in an error. The following fields may be specified: *
+       * `grading_periods` * `apply_to_existing_coursework`
+       */
+      @com.google.api.client.util.Key
+      private String updateMask;
+
+      /** Mask that identifies which fields in the GradingPeriodSettings to update. The GradingPeriodSettings
+     `grading_periods` list will be fully replaced by the grading periods specified in the update
+     request. For example: * Grading periods included in the list without an ID are considered
+     additions, and a new ID will be assigned when the request is made. * Grading periods that currently
+     exist, but are missing from the request will be considered deletions. * Grading periods with an
+     existing ID and modified data are considered edits. Unmodified data will be left as is. * Grading
+     periods included with an unknown ID will result in an error. The following fields may be specified:
+     * `grading_periods` * `apply_to_existing_coursework`
+       */
+      public String getUpdateMask() {
+        return updateMask;
+      }
+
+      /**
+       * Mask that identifies which fields in the GradingPeriodSettings to update. The
+       * GradingPeriodSettings `grading_periods` list will be fully replaced by the grading periods
+       * specified in the update request. For example: * Grading periods included in the list
+       * without an ID are considered additions, and a new ID will be assigned when the request is
+       * made. * Grading periods that currently exist, but are missing from the request will be
+       * considered deletions. * Grading periods with an existing ID and modified data are
+       * considered edits. Unmodified data will be left as is. * Grading periods included with an
+       * unknown ID will result in an error. The following fields may be specified: *
+       * `grading_periods` * `apply_to_existing_coursework`
+       */
+      public UpdateGradingPeriodSettings setUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+      }
+
+      @Override
+      public UpdateGradingPeriodSettings set(String parameterName, Object value) {
+        return (UpdateGradingPeriodSettings) super.set(parameterName, value);
       }
     }
 
@@ -5250,9 +5561,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * not set in the `CourseWork` object, an `INVALID_ARGUMENT` error is returned. The
          * following fields may be specified by teachers: * `title` * `description` * `state` *
          * `due_date` * `due_time` * `max_points` * `scheduled_time` *
-         * `submission_modification_mode` * `topic_id` * `grading_period_id` Available in
-         * [V1_20240401_PREVIEW](https://developers.google.com/classroom/reference/preview) and
-         * later.
+         * `submission_modification_mode` * `topic_id` * `grading_period_id`
          */
         @com.google.api.client.util.Key
         private String updateMask;
@@ -5263,8 +5572,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
        does not support empty values is included in the update mask and not set in the `CourseWork`
        object, an `INVALID_ARGUMENT` error is returned. The following fields may be specified by teachers:
        * `title` * `description` * `state` * `due_date` * `due_time` * `max_points` * `scheduled_time` *
-       `submission_modification_mode` * `topic_id` * `grading_period_id` Available in
-       [V1_20240401_PREVIEW](https://developers.google.com/classroom/reference/preview) and later.
+       `submission_modification_mode` * `topic_id` * `grading_period_id`
          */
         public String getUpdateMask() {
           return updateMask;
@@ -5278,9 +5586,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * not set in the `CourseWork` object, an `INVALID_ARGUMENT` error is returned. The
          * following fields may be specified by teachers: * `title` * `description` * `state` *
          * `due_date` * `due_time` * `max_points` * `scheduled_time` *
-         * `submission_modification_mode` * `topic_id` * `grading_period_id` Available in
-         * [V1_20240401_PREVIEW](https://developers.google.com/classroom/reference/preview) and
-         * later.
+         * `submission_modification_mode` * `topic_id` * `grading_period_id`
          */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;

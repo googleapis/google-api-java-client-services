@@ -38,7 +38,7 @@ public final class Material extends com.google.api.client.json.GenericJson {
   private SharedDriveFile driveFile;
 
   /**
-   * Google Forms material.
+   * Google Forms material. Read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,7 +77,7 @@ public final class Material extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Google Forms material.
+   * Google Forms material. Read-only.
    * @return value or {@code null} for none
    */
   public Form getForm() {
@@ -85,7 +85,7 @@ public final class Material extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Google Forms material.
+   * Google Forms material. Read-only.
    * @param form form or {@code null} for none
    */
   public Material setForm(Form form) {

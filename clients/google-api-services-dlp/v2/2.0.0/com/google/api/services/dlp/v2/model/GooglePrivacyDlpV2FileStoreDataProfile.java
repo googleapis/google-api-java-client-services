@@ -90,7 +90,7 @@ public final class GooglePrivacyDlpV2FileStoreDataProfile extends com.google.api
   private java.util.List<GooglePrivacyDlpV2FileStoreInfoTypeSummary> fileStoreInfoTypeSummaries;
 
   /**
-   * The file store does not have any files.
+   * The file store does not have any files. If the profiling failed, this will be false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -227,6 +227,13 @@ public final class GooglePrivacyDlpV2FileStoreDataProfile extends com.google.api
   private java.lang.String state;
 
   /**
+   * The tags attached to the resource, including any tags attached during profiling.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GooglePrivacyDlpV2Tag> tags;
+
+  /**
    * The snapshot of the configurations used to generate the profile.
    * @return value or {@code null} for none
    */
@@ -352,7 +359,7 @@ public final class GooglePrivacyDlpV2FileStoreDataProfile extends com.google.api
   }
 
   /**
-   * The file store does not have any files.
+   * The file store does not have any files. If the profiling failed, this will be false.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getFileStoreIsEmpty() {
@@ -360,7 +367,7 @@ public final class GooglePrivacyDlpV2FileStoreDataProfile extends com.google.api
   }
 
   /**
-   * The file store does not have any files.
+   * The file store does not have any files. If the profiling failed, this will be false.
    * @param fileStoreIsEmpty fileStoreIsEmpty or {@code null} for none
    */
   public GooglePrivacyDlpV2FileStoreDataProfile setFileStoreIsEmpty(java.lang.Boolean fileStoreIsEmpty) {
@@ -676,6 +683,23 @@ public final class GooglePrivacyDlpV2FileStoreDataProfile extends com.google.api
    */
   public GooglePrivacyDlpV2FileStoreDataProfile setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * The tags attached to the resource, including any tags attached during profiling.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GooglePrivacyDlpV2Tag> getTags() {
+    return tags;
+  }
+
+  /**
+   * The tags attached to the resource, including any tags attached during profiling.
+   * @param tags tags or {@code null} for none
+   */
+  public GooglePrivacyDlpV2FileStoreDataProfile setTags(java.util.List<GooglePrivacyDlpV2Tag> tags) {
+    this.tags = tags;
     return this;
   }
 

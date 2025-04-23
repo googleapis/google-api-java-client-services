@@ -79,6 +79,16 @@ public final class GooglePrivacyDlpV2InfoTypeDescription extends com.google.api.
   private GooglePrivacyDlpV2SensitivityScore sensitivityScore;
 
   /**
+   * If this field is set, this infoType is a general infoType and these specific infoTypes are
+   * contained within it. General infoTypes are infoTypes that encompass multiple specific
+   * infoTypes. For example, the "GEOGRAPHIC_DATA" general infoType would have set for this field
+   * "LOCATION", "LOCATION_COORDINATES", and "STREET_ADDRESS".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> specificInfoTypes;
+
+  /**
    * Which parts of the API supports this InfoType.
    * The value may be {@code null}.
    */
@@ -191,6 +201,29 @@ public final class GooglePrivacyDlpV2InfoTypeDescription extends com.google.api.
    */
   public GooglePrivacyDlpV2InfoTypeDescription setSensitivityScore(GooglePrivacyDlpV2SensitivityScore sensitivityScore) {
     this.sensitivityScore = sensitivityScore;
+    return this;
+  }
+
+  /**
+   * If this field is set, this infoType is a general infoType and these specific infoTypes are
+   * contained within it. General infoTypes are infoTypes that encompass multiple specific
+   * infoTypes. For example, the "GEOGRAPHIC_DATA" general infoType would have set for this field
+   * "LOCATION", "LOCATION_COORDINATES", and "STREET_ADDRESS".
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getSpecificInfoTypes() {
+    return specificInfoTypes;
+  }
+
+  /**
+   * If this field is set, this infoType is a general infoType and these specific infoTypes are
+   * contained within it. General infoTypes are infoTypes that encompass multiple specific
+   * infoTypes. For example, the "GEOGRAPHIC_DATA" general infoType would have set for this field
+   * "LOCATION", "LOCATION_COORDINATES", and "STREET_ADDRESS".
+   * @param specificInfoTypes specificInfoTypes or {@code null} for none
+   */
+  public GooglePrivacyDlpV2InfoTypeDescription setSpecificInfoTypes(java.util.List<java.lang.String> specificInfoTypes) {
+    this.specificInfoTypes = specificInfoTypes;
     return this;
   }
 

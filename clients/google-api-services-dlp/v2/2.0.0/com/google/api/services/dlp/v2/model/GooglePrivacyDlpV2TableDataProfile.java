@@ -249,6 +249,15 @@ public final class GooglePrivacyDlpV2TableDataProfile extends com.google.api.cli
   private java.lang.Long tableSizeBytes;
 
   /**
+   * The tags attached to the table, including any tags attached during profiling. Because tags are
+   * attached to Cloud SQL instances rather than Cloud SQL tables, this field is empty for Cloud SQL
+   * table profiles.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GooglePrivacyDlpV2Tag> tags;
+
+  /**
    * The snapshot of the configurations used to generate the profile.
    * @return value or {@code null} for none
    */
@@ -729,6 +738,27 @@ public final class GooglePrivacyDlpV2TableDataProfile extends com.google.api.cli
    */
   public GooglePrivacyDlpV2TableDataProfile setTableSizeBytes(java.lang.Long tableSizeBytes) {
     this.tableSizeBytes = tableSizeBytes;
+    return this;
+  }
+
+  /**
+   * The tags attached to the table, including any tags attached during profiling. Because tags are
+   * attached to Cloud SQL instances rather than Cloud SQL tables, this field is empty for Cloud SQL
+   * table profiles.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GooglePrivacyDlpV2Tag> getTags() {
+    return tags;
+  }
+
+  /**
+   * The tags attached to the table, including any tags attached during profiling. Because tags are
+   * attached to Cloud SQL instances rather than Cloud SQL tables, this field is empty for Cloud SQL
+   * table profiles.
+   * @param tags tags or {@code null} for none
+   */
+  public GooglePrivacyDlpV2TableDataProfile setTags(java.util.List<GooglePrivacyDlpV2Tag> tags) {
+    this.tags = tags;
     return this;
   }
 

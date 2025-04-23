@@ -38,7 +38,7 @@ public final class Resource extends com.google.api.client.json.GenericJson {
    * resource. Custom org policy backend uses these attributes to enforce custom org policies. For
    * create operations, GCP service is expected to pass resource from customer request as is. For
    * update/patch operations, GCP service is expected to compute the next state with the patch
-   * provided by the user. See go/custom-constraints-org-policy-integration-guide for additional
+   * provided by the user. See go/federated-custom-org-policy-integration-guide for additional
    * details.
    * The value may be {@code null}.
    */
@@ -123,7 +123,7 @@ public final class Resource extends com.google.api.client.json.GenericJson {
    * resource. Custom org policy backend uses these attributes to enforce custom org policies. For
    * create operations, GCP service is expected to pass resource from customer request as is. For
    * update/patch operations, GCP service is expected to compute the next state with the patch
-   * provided by the user. See go/custom-constraints-org-policy-integration-guide for additional
+   * provided by the user. See go/federated-custom-org-policy-integration-guide for additional
    * details.
    * @return value or {@code null} for none
    */
@@ -139,7 +139,7 @@ public final class Resource extends com.google.api.client.json.GenericJson {
    * resource. Custom org policy backend uses these attributes to enforce custom org policies. For
    * create operations, GCP service is expected to pass resource from customer request as is. For
    * update/patch operations, GCP service is expected to compute the next state with the patch
-   * provided by the user. See go/custom-constraints-org-policy-integration-guide for additional
+   * provided by the user. See go/federated-custom-org-policy-integration-guide for additional
    * details.
    * @param expectedNextState expectedNextState or {@code null} for none
    */

@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-gamesManagement</artifactId>
-  <version>v1management-rev20241209-2.0.0</version>
-  <name>Google Play Game Management v1management-rev20241209-2.0.0</name>
+  <version>v1management-rev20250320-2.0.0</version>
+  <name>Google Play Games Services Management API v1management-rev20250320-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
@@ -86,8 +86,8 @@
         </executions>
         <configuration>
           <doclint>none</doclint>
-          <doctitle>Google Play Game Management ${project.version}</doctitle>
-          <windowtitle>Google Play Game Management ${project.version}</windowtitle>
+          <doctitle>Google Play Games Services Management API ${project.version}</doctitle>
+          <windowtitle>Google Play Games Services Management API ${project.version}</windowtitle>
           <links>
             <link>http://docs.oracle.com/javase/7/docs/api</link>
             <link>https://googleapis.dev/java/google-http-client/1.46.3/</link>

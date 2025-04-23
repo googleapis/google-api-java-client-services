@@ -23,8 +23,8 @@ package com.google.api.services.paymentsresellersubscription.v1;
  */
 public class PaymentsResellerSubscriptionScopes {
 
-  /** Associate you with your personal info on Google. */
-  public static final String OPENID = "openid";
+  /** See and/or control the devices that you selected. */
+  public static final String SDM_SERVICE = "https://www.googleapis.com/auth/sdm.service";
 
   /**
    * Returns an unmodifiable set that contains all scopes declared by this class.
@@ -33,7 +33,7 @@ public class PaymentsResellerSubscriptionScopes {
    */
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
-    set.add(OPENID);
+    set.add(SDM_SERVICE);
     return java.util.Collections.unmodifiableSet(set);
   }
 

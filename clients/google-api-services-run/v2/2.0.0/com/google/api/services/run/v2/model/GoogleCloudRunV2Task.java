@@ -136,6 +136,13 @@ public final class GoogleCloudRunV2Task extends com.google.api.client.json.Gener
   private java.lang.Long generation;
 
   /**
+   * Optional. Output only. True if GPU zonal redundancy is disabled on this task.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean gpuZonalRedundancyDisabled;
+
+  /**
    * Output only. Index of the Task, unique per execution, and beginning at 0.
    * The value may be {@code null}.
    */
@@ -511,6 +518,23 @@ public final class GoogleCloudRunV2Task extends com.google.api.client.json.Gener
    */
   public GoogleCloudRunV2Task setGeneration(java.lang.Long generation) {
     this.generation = generation;
+    return this;
+  }
+
+  /**
+   * Optional. Output only. True if GPU zonal redundancy is disabled on this task.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getGpuZonalRedundancyDisabled() {
+    return gpuZonalRedundancyDisabled;
+  }
+
+  /**
+   * Optional. Output only. True if GPU zonal redundancy is disabled on this task.
+   * @param gpuZonalRedundancyDisabled gpuZonalRedundancyDisabled or {@code null} for none
+   */
+  public GoogleCloudRunV2Task setGpuZonalRedundancyDisabled(java.lang.Boolean gpuZonalRedundancyDisabled) {
+    this.gpuZonalRedundancyDisabled = gpuZonalRedundancyDisabled;
     return this;
   }
 

@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-baremetalsolution</artifactId>
-  <version>v2-rev20240830-2.0.0</version>
-  <name>Bare Metal Solution API v2-rev20240830-2.0.0</name>
+  <version>v2-rev20250414-2.0.0</version>
+  <name>Bare Metal Solution API v2-rev20250414-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

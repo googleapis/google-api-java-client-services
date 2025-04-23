@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-contactcenteraiplatform</artifactId>
-  <version>v1alpha1-rev20250320-2.0.0</version>
-  <name>Contact Center AI Platform API v1alpha1-rev20250320-2.0.0</name>
+  <version>v1alpha1-rev20250414-2.0.0</version>
+  <name>Contact Center AI Platform API v1alpha1-rev20250414-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

@@ -30,6 +30,15 @@ package com.google.api.services.logging.v2.model;
 public final class LogEntry extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. AppHub application metadata associated with this LogEntry. May be empty if there
+   * is no associated AppHub application or multiple associated applications (such as for VPC flow
+   * logs)
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AppHub apphub;
+
+  /**
    * Output only. The Error Reporting (https://cloud.google.com/error-reporting) error groups
    * associated with this LogEntry. Error Reporting sets the values for this field during error
    * group creation.For more information, see View error details( https://cloud.google.com/error-
@@ -224,6 +233,27 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean traceSampled;
+
+  /**
+   * Output only. AppHub application metadata associated with this LogEntry. May be empty if there
+   * is no associated AppHub application or multiple associated applications (such as for VPC flow
+   * logs)
+   * @return value or {@code null} for none
+   */
+  public AppHub getApphub() {
+    return apphub;
+  }
+
+  /**
+   * Output only. AppHub application metadata associated with this LogEntry. May be empty if there
+   * is no associated AppHub application or multiple associated applications (such as for VPC flow
+   * logs)
+   * @param apphub apphub or {@code null} for none
+   */
+  public LogEntry setApphub(AppHub apphub) {
+    this.apphub = apphub;
+    return this;
+  }
 
   /**
    * Output only. The Error Reporting (https://cloud.google.com/error-reporting) error groups

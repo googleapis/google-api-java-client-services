@@ -149,6 +149,13 @@ public final class WorkloadIdentityPoolProvider extends com.google.api.client.js
   private java.lang.String state;
 
   /**
+   * An X.509-type identity provider.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private X509 x509;
+
+  /**
    * Optional. [A Common Expression Language](https://opensource.google/projects/cel) expression, in
    * plain text, to restrict what otherwise valid authentication credentials issued by the provider
    * should not be accepted. The expression must output a boolean representing whether to allow the
@@ -414,6 +421,23 @@ public final class WorkloadIdentityPoolProvider extends com.google.api.client.js
    */
   public WorkloadIdentityPoolProvider setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * An X.509-type identity provider.
+   * @return value or {@code null} for none
+   */
+  public X509 getX509() {
+    return x509;
+  }
+
+  /**
+   * An X.509-type identity provider.
+   * @param x509 x509 or {@code null} for none
+   */
+  public WorkloadIdentityPoolProvider setX509(X509 x509) {
+    this.x509 = x509;
     return this;
   }
 

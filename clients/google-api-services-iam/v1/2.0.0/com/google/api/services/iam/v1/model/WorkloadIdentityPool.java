@@ -63,6 +63,28 @@ public final class WorkloadIdentityPool extends com.google.api.client.json.Gener
   private String expireTime;
 
   /**
+   * Optional. Defines the Certificate Authority (CA) pool resources and configurations required for
+   * issuance and rotation of mTLS workload certificates.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InlineCertificateIssuanceConfig inlineCertificateIssuanceConfig;
+
+  /**
+   * Optional. Represents config to add additional trusted trust domains.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InlineTrustConfig inlineTrustConfig;
+
+  /**
+   * Immutable. The mode the pool is operating in.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String mode;
+
+  /**
    * Output only. The resource name of the pool.
    * The value may be {@code null}.
    */
@@ -147,6 +169,59 @@ public final class WorkloadIdentityPool extends com.google.api.client.json.Gener
    */
   public WorkloadIdentityPool setExpireTime(String expireTime) {
     this.expireTime = expireTime;
+    return this;
+  }
+
+  /**
+   * Optional. Defines the Certificate Authority (CA) pool resources and configurations required for
+   * issuance and rotation of mTLS workload certificates.
+   * @return value or {@code null} for none
+   */
+  public InlineCertificateIssuanceConfig getInlineCertificateIssuanceConfig() {
+    return inlineCertificateIssuanceConfig;
+  }
+
+  /**
+   * Optional. Defines the Certificate Authority (CA) pool resources and configurations required for
+   * issuance and rotation of mTLS workload certificates.
+   * @param inlineCertificateIssuanceConfig inlineCertificateIssuanceConfig or {@code null} for none
+   */
+  public WorkloadIdentityPool setInlineCertificateIssuanceConfig(InlineCertificateIssuanceConfig inlineCertificateIssuanceConfig) {
+    this.inlineCertificateIssuanceConfig = inlineCertificateIssuanceConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Represents config to add additional trusted trust domains.
+   * @return value or {@code null} for none
+   */
+  public InlineTrustConfig getInlineTrustConfig() {
+    return inlineTrustConfig;
+  }
+
+  /**
+   * Optional. Represents config to add additional trusted trust domains.
+   * @param inlineTrustConfig inlineTrustConfig or {@code null} for none
+   */
+  public WorkloadIdentityPool setInlineTrustConfig(InlineTrustConfig inlineTrustConfig) {
+    this.inlineTrustConfig = inlineTrustConfig;
+    return this;
+  }
+
+  /**
+   * Immutable. The mode the pool is operating in.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMode() {
+    return mode;
+  }
+
+  /**
+   * Immutable. The mode the pool is operating in.
+   * @param mode mode or {@code null} for none
+   */
+  public WorkloadIdentityPool setMode(java.lang.String mode) {
+    this.mode = mode;
     return this;
   }
 

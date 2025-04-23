@@ -8409,6 +8409,153 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
+         * Gets IAM policies for one of WorkloadIdentityPool WorkloadIdentityPoolNamespace
+         * WorkloadIdentityPoolManagedIdentity
+         *
+         * Create a request for the method "workloadIdentityPools.getIamPolicy".
+         *
+         * This request holds the parameters needed by the iam server.  After setting any optional
+         * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation.
+         *
+         * @param resource REQUIRED: The resource for which the policy is being requested. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
+         * @param content the {@link com.google.api.services.iam.v1.model.GetIamPolicyRequest}
+         * @return the request
+         */
+        public GetIamPolicy getIamPolicy(java.lang.String resource, com.google.api.services.iam.v1.model.GetIamPolicyRequest content) throws java.io.IOException {
+          GetIamPolicy result = new GetIamPolicy(resource, content);
+          initialize(result);
+          return result;
+        }
+
+        public class GetIamPolicy extends IamRequest<com.google.api.services.iam.v1.model.Policy> {
+
+          private static final String REST_PATH = "v1/{+resource}:getIamPolicy";
+
+          private final java.util.regex.Pattern RESOURCE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+$");
+
+          /**
+           * Gets IAM policies for one of WorkloadIdentityPool WorkloadIdentityPoolNamespace
+           * WorkloadIdentityPoolManagedIdentity
+           *
+           * Create a request for the method "workloadIdentityPools.getIamPolicy".
+           *
+           * This request holds the parameters needed by the the iam server.  After setting any optional
+           * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation. <p>
+           * {@link
+           * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param resource REQUIRED: The resource for which the policy is being requested. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
+           * @param content the {@link com.google.api.services.iam.v1.model.GetIamPolicyRequest}
+           * @since 1.13
+           */
+          protected GetIamPolicy(java.lang.String resource, com.google.api.services.iam.v1.model.GetIamPolicyRequest content) {
+            super(Iam.this, "POST", REST_PATH, content, com.google.api.services.iam.v1.model.Policy.class);
+            this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+$");
+            }
+          }
+
+          @Override
+          public GetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+            return (GetIamPolicy) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GetIamPolicy setAccessToken(java.lang.String accessToken) {
+            return (GetIamPolicy) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GetIamPolicy setAlt(java.lang.String alt) {
+            return (GetIamPolicy) super.setAlt(alt);
+          }
+
+          @Override
+          public GetIamPolicy setCallback(java.lang.String callback) {
+            return (GetIamPolicy) super.setCallback(callback);
+          }
+
+          @Override
+          public GetIamPolicy setFields(java.lang.String fields) {
+            return (GetIamPolicy) super.setFields(fields);
+          }
+
+          @Override
+          public GetIamPolicy setKey(java.lang.String key) {
+            return (GetIamPolicy) super.setKey(key);
+          }
+
+          @Override
+          public GetIamPolicy setOauthToken(java.lang.String oauthToken) {
+            return (GetIamPolicy) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GetIamPolicy) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+            return (GetIamPolicy) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GetIamPolicy setUploadType(java.lang.String uploadType) {
+            return (GetIamPolicy) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GetIamPolicy) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy is being requested. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String resource;
+
+          /** REQUIRED: The resource for which the policy is being requested. See [Resource
+         names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+         field.
+           */
+          public java.lang.String getResource() {
+            return resource;
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy is being requested. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
+           */
+          public GetIamPolicy setResource(java.lang.String resource) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+$");
+            }
+            this.resource = resource;
+            return this;
+          }
+
+          @Override
+          public GetIamPolicy set(String parameterName, Object value) {
+            return (GetIamPolicy) super.set(parameterName, value);
+          }
+        }
+        /**
          * Lists all non-deleted WorkloadIdentityPools in a project. If `show_deleted` is set to `true`,
          * then deleted pools are also listed.
          *
@@ -8757,6 +8904,300 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
+         * Sets IAM policies on one of WorkloadIdentityPool WorkloadIdentityPoolNamespace
+         * WorkloadIdentityPoolManagedIdentity
+         *
+         * Create a request for the method "workloadIdentityPools.setIamPolicy".
+         *
+         * This request holds the parameters needed by the iam server.  After setting any optional
+         * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
+         *
+         * @param resource REQUIRED: The resource for which the policy is being specified. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
+         * @param content the {@link com.google.api.services.iam.v1.model.SetIamPolicyRequest}
+         * @return the request
+         */
+        public SetIamPolicy setIamPolicy(java.lang.String resource, com.google.api.services.iam.v1.model.SetIamPolicyRequest content) throws java.io.IOException {
+          SetIamPolicy result = new SetIamPolicy(resource, content);
+          initialize(result);
+          return result;
+        }
+
+        public class SetIamPolicy extends IamRequest<com.google.api.services.iam.v1.model.Policy> {
+
+          private static final String REST_PATH = "v1/{+resource}:setIamPolicy";
+
+          private final java.util.regex.Pattern RESOURCE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+$");
+
+          /**
+           * Sets IAM policies on one of WorkloadIdentityPool WorkloadIdentityPoolNamespace
+           * WorkloadIdentityPoolManagedIdentity
+           *
+           * Create a request for the method "workloadIdentityPools.setIamPolicy".
+           *
+           * This request holds the parameters needed by the the iam server.  After setting any optional
+           * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation. <p>
+           * {@link
+           * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param resource REQUIRED: The resource for which the policy is being specified. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
+           * @param content the {@link com.google.api.services.iam.v1.model.SetIamPolicyRequest}
+           * @since 1.13
+           */
+          protected SetIamPolicy(java.lang.String resource, com.google.api.services.iam.v1.model.SetIamPolicyRequest content) {
+            super(Iam.this, "POST", REST_PATH, content, com.google.api.services.iam.v1.model.Policy.class);
+            this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+$");
+            }
+          }
+
+          @Override
+          public SetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+            return (SetIamPolicy) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public SetIamPolicy setAccessToken(java.lang.String accessToken) {
+            return (SetIamPolicy) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public SetIamPolicy setAlt(java.lang.String alt) {
+            return (SetIamPolicy) super.setAlt(alt);
+          }
+
+          @Override
+          public SetIamPolicy setCallback(java.lang.String callback) {
+            return (SetIamPolicy) super.setCallback(callback);
+          }
+
+          @Override
+          public SetIamPolicy setFields(java.lang.String fields) {
+            return (SetIamPolicy) super.setFields(fields);
+          }
+
+          @Override
+          public SetIamPolicy setKey(java.lang.String key) {
+            return (SetIamPolicy) super.setKey(key);
+          }
+
+          @Override
+          public SetIamPolicy setOauthToken(java.lang.String oauthToken) {
+            return (SetIamPolicy) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public SetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (SetIamPolicy) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public SetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+            return (SetIamPolicy) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public SetIamPolicy setUploadType(java.lang.String uploadType) {
+            return (SetIamPolicy) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public SetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+            return (SetIamPolicy) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy is being specified. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String resource;
+
+          /** REQUIRED: The resource for which the policy is being specified. See [Resource
+         names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+         field.
+           */
+          public java.lang.String getResource() {
+            return resource;
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy is being specified. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
+           */
+          public SetIamPolicy setResource(java.lang.String resource) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+$");
+            }
+            this.resource = resource;
+            return this;
+          }
+
+          @Override
+          public SetIamPolicy set(String parameterName, Object value) {
+            return (SetIamPolicy) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Returns the caller's permissions on one of WorkloadIdentityPool WorkloadIdentityPoolNamespace
+         * WorkloadIdentityPoolManagedIdentity
+         *
+         * Create a request for the method "workloadIdentityPools.testIamPermissions".
+         *
+         * This request holds the parameters needed by the iam server.  After setting any optional
+         * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
+         *
+         * @param resource REQUIRED: The resource for which the policy detail is being requested. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
+         * @param content the {@link com.google.api.services.iam.v1.model.TestIamPermissionsRequest}
+         * @return the request
+         */
+        public TestIamPermissions testIamPermissions(java.lang.String resource, com.google.api.services.iam.v1.model.TestIamPermissionsRequest content) throws java.io.IOException {
+          TestIamPermissions result = new TestIamPermissions(resource, content);
+          initialize(result);
+          return result;
+        }
+
+        public class TestIamPermissions extends IamRequest<com.google.api.services.iam.v1.model.TestIamPermissionsResponse> {
+
+          private static final String REST_PATH = "v1/{+resource}:testIamPermissions";
+
+          private final java.util.regex.Pattern RESOURCE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+$");
+
+          /**
+           * Returns the caller's permissions on one of WorkloadIdentityPool WorkloadIdentityPoolNamespace
+           * WorkloadIdentityPoolManagedIdentity
+           *
+           * Create a request for the method "workloadIdentityPools.testIamPermissions".
+           *
+           * This request holds the parameters needed by the the iam server.  After setting any optional
+           * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
+           * operation. <p> {@link TestIamPermissions#initialize(com.google.api.client.googleapis.services.A
+           * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param resource REQUIRED: The resource for which the policy detail is being requested. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
+           * @param content the {@link com.google.api.services.iam.v1.model.TestIamPermissionsRequest}
+           * @since 1.13
+           */
+          protected TestIamPermissions(java.lang.String resource, com.google.api.services.iam.v1.model.TestIamPermissionsRequest content) {
+            super(Iam.this, "POST", REST_PATH, content, com.google.api.services.iam.v1.model.TestIamPermissionsResponse.class);
+            this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+$");
+            }
+          }
+
+          @Override
+          public TestIamPermissions set$Xgafv(java.lang.String $Xgafv) {
+            return (TestIamPermissions) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public TestIamPermissions setAccessToken(java.lang.String accessToken) {
+            return (TestIamPermissions) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public TestIamPermissions setAlt(java.lang.String alt) {
+            return (TestIamPermissions) super.setAlt(alt);
+          }
+
+          @Override
+          public TestIamPermissions setCallback(java.lang.String callback) {
+            return (TestIamPermissions) super.setCallback(callback);
+          }
+
+          @Override
+          public TestIamPermissions setFields(java.lang.String fields) {
+            return (TestIamPermissions) super.setFields(fields);
+          }
+
+          @Override
+          public TestIamPermissions setKey(java.lang.String key) {
+            return (TestIamPermissions) super.setKey(key);
+          }
+
+          @Override
+          public TestIamPermissions setOauthToken(java.lang.String oauthToken) {
+            return (TestIamPermissions) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public TestIamPermissions setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (TestIamPermissions) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public TestIamPermissions setQuotaUser(java.lang.String quotaUser) {
+            return (TestIamPermissions) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public TestIamPermissions setUploadType(java.lang.String uploadType) {
+            return (TestIamPermissions) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public TestIamPermissions setUploadProtocol(java.lang.String uploadProtocol) {
+            return (TestIamPermissions) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy detail is being requested. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String resource;
+
+          /** REQUIRED: The resource for which the policy detail is being requested. See [Resource
+         names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+         field.
+           */
+          public java.lang.String getResource() {
+            return resource;
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy detail is being requested. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
+           */
+          public TestIamPermissions setResource(java.lang.String resource) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+$");
+            }
+            this.resource = resource;
+            return this;
+          }
+
+          @Override
+          public TestIamPermissions set(String parameterName, Object value) {
+            return (TestIamPermissions) super.set(parameterName, value);
+          }
+        }
+        /**
          * Undeletes a WorkloadIdentityPool, as long as it was deleted fewer than 30 days ago.
          *
          * Create a request for the method "workloadIdentityPools.undelete".
@@ -8909,6 +9350,918 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         public class Namespaces {
 
           /**
+           * Creates a new WorkloadIdentityPoolNamespace in a WorkloadIdentityPool.
+           *
+           * Create a request for the method "namespaces.create".
+           *
+           * This request holds the parameters needed by the iam server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent resource to create the namespace in. The only supported location is `global`.
+           * @param content the {@link com.google.api.services.iam.v1.model.WorkloadIdentityPoolNamespace}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.iam.v1.model.WorkloadIdentityPoolNamespace content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends IamRequest<com.google.api.services.iam.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+parent}/namespaces";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+$");
+
+            /**
+             * Creates a new WorkloadIdentityPoolNamespace in a WorkloadIdentityPool.
+             *
+             * Create a request for the method "namespaces.create".
+             *
+             * This request holds the parameters needed by the the iam server.  After setting any optional
+             * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent resource to create the namespace in. The only supported location is `global`.
+             * @param content the {@link com.google.api.services.iam.v1.model.WorkloadIdentityPoolNamespace}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.iam.v1.model.WorkloadIdentityPoolNamespace content) {
+              super(Iam.this, "POST", REST_PATH, content, com.google.api.services.iam.v1.model.Operation.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent resource to create the namespace in. The only supported location
+             * is `global`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent resource to create the namespace in. The only supported location is `global`.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The parent resource to create the namespace in. The only supported location
+             * is `global`.
+             */
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Required. The ID to use for the namespace. This value must: * contain at most 63
+             * characters * contain only lowercase alphanumeric characters or `-` * start with an
+             * alphanumeric character * end with an alphanumeric character The prefix "gcp-" will be
+             * reserved for future uses.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String workloadIdentityPoolNamespaceId;
+
+            /** Required. The ID to use for the namespace. This value must: * contain at most 63 characters *
+           contain only lowercase alphanumeric characters or `-` * start with an alphanumeric character * end
+           with an alphanumeric character The prefix "gcp-" will be reserved for future uses.
+             */
+            public java.lang.String getWorkloadIdentityPoolNamespaceId() {
+              return workloadIdentityPoolNamespaceId;
+            }
+
+            /**
+             * Required. The ID to use for the namespace. This value must: * contain at most 63
+             * characters * contain only lowercase alphanumeric characters or `-` * start with an
+             * alphanumeric character * end with an alphanumeric character The prefix "gcp-" will be
+             * reserved for future uses.
+             */
+            public Create setWorkloadIdentityPoolNamespaceId(java.lang.String workloadIdentityPoolNamespaceId) {
+              this.workloadIdentityPoolNamespaceId = workloadIdentityPoolNamespaceId;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes a WorkloadIdentityPoolNamespace. You can undelete a namespace for 30 days. After 30 days,
+           * deletion is permanent.
+           *
+           * Create a request for the method "namespaces.delete".
+           *
+           * This request holds the parameters needed by the iam server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the namespace to delete.
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends IamRequest<com.google.api.services.iam.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/namespaces/[^/]+$");
+
+            /**
+             * Deletes a WorkloadIdentityPoolNamespace. You can undelete a namespace for 30 days. After 30
+             * days, deletion is permanent.
+             *
+             * Create a request for the method "namespaces.delete".
+             *
+             * This request holds the parameters needed by the the iam server.  After setting any optional
+             * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the namespace to delete.
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(Iam.this, "DELETE", REST_PATH, null, com.google.api.services.iam.v1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/namespaces/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The name of the namespace to delete. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the namespace to delete.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. The name of the namespace to delete. */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/namespaces/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Gets an individual WorkloadIdentityPoolNamespace.
+           *
+           * Create a request for the method "namespaces.get".
+           *
+           * This request holds the parameters needed by the iam server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the namespace to retrieve.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends IamRequest<com.google.api.services.iam.v1.model.WorkloadIdentityPoolNamespace> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/namespaces/[^/]+$");
+
+            /**
+             * Gets an individual WorkloadIdentityPoolNamespace.
+             *
+             * Create a request for the method "namespaces.get".
+             *
+             * This request holds the parameters needed by the the iam server.  After setting any optional
+             * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+             * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the namespace to retrieve.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(Iam.this, "GET", REST_PATH, null, com.google.api.services.iam.v1.model.WorkloadIdentityPoolNamespace.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/namespaces/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The name of the namespace to retrieve. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the namespace to retrieve.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. The name of the namespace to retrieve. */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/namespaces/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists all non-deleted WorkloadIdentityPoolNamespaces in a workload identity pool. If
+           * `show_deleted` is set to `true`, then deleted namespaces are also listed.
+           *
+           * Create a request for the method "namespaces.list".
+           *
+           * This request holds the parameters needed by the iam server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent resource to list namespaces for.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends IamRequest<com.google.api.services.iam.v1.model.ListWorkloadIdentityPoolNamespacesResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/namespaces";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+$");
+
+            /**
+             * Lists all non-deleted WorkloadIdentityPoolNamespaces in a workload identity pool. If
+             * `show_deleted` is set to `true`, then deleted namespaces are also listed.
+             *
+             * Create a request for the method "namespaces.list".
+             *
+             * This request holds the parameters needed by the the iam server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+             * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent resource to list namespaces for.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(Iam.this, "GET", REST_PATH, null, com.google.api.services.iam.v1.model.ListWorkloadIdentityPoolNamespacesResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The parent resource to list namespaces for. */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent resource to list namespaces for.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /** Required. The parent resource to list namespaces for. */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * The maximum number of namespaces to return. If unspecified, at most 50 namespaces are
+             * returned. The maximum value is 1000; values above are 1000 truncated to 1000.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** The maximum number of namespaces to return. If unspecified, at most 50 namespaces are returned. The
+           maximum value is 1000; values above are 1000 truncated to 1000.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * The maximum number of namespaces to return. If unspecified, at most 50 namespaces are
+             * returned. The maximum value is 1000; values above are 1000 truncated to 1000.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * A page token, received from a previous `ListWorkloadIdentityPoolNamespaces` call.
+             * Provide this to retrieve the subsequent page.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** A page token, received from a previous `ListWorkloadIdentityPoolNamespaces` call. Provide this to
+           retrieve the subsequent page.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * A page token, received from a previous `ListWorkloadIdentityPoolNamespaces` call.
+             * Provide this to retrieve the subsequent page.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            /** Whether to return soft-deleted namespaces. */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean showDeleted;
+
+            /** Whether to return soft-deleted namespaces.
+             */
+            public java.lang.Boolean getShowDeleted() {
+              return showDeleted;
+            }
+
+            /** Whether to return soft-deleted namespaces. */
+            public List setShowDeleted(java.lang.Boolean showDeleted) {
+              this.showDeleted = showDeleted;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Updates an existing WorkloadIdentityPoolNamespace in a WorkloadIdentityPool.
+           *
+           * Create a request for the method "namespaces.patch".
+           *
+           * This request holds the parameters needed by the iam server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           *
+           * @param name Output only. The resource name of the namespace.
+           * @param content the {@link com.google.api.services.iam.v1.model.WorkloadIdentityPoolNamespace}
+           * @return the request
+           */
+          public Patch patch(java.lang.String name, com.google.api.services.iam.v1.model.WorkloadIdentityPoolNamespace content) throws java.io.IOException {
+            Patch result = new Patch(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Patch extends IamRequest<com.google.api.services.iam.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/namespaces/[^/]+$");
+
+            /**
+             * Updates an existing WorkloadIdentityPoolNamespace in a WorkloadIdentityPool.
+             *
+             * Create a request for the method "namespaces.patch".
+             *
+             * This request holds the parameters needed by the the iam server.  After setting any optional
+             * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+             * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Output only. The resource name of the namespace.
+             * @param content the {@link com.google.api.services.iam.v1.model.WorkloadIdentityPoolNamespace}
+             * @since 1.13
+             */
+            protected Patch(java.lang.String name, com.google.api.services.iam.v1.model.WorkloadIdentityPoolNamespace content) {
+              super(Iam.this, "PATCH", REST_PATH, content, com.google.api.services.iam.v1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/namespaces/[^/]+$");
+              }
+            }
+
+            @Override
+            public Patch set$Xgafv(java.lang.String $Xgafv) {
+              return (Patch) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Patch setAccessToken(java.lang.String accessToken) {
+              return (Patch) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Patch setAlt(java.lang.String alt) {
+              return (Patch) super.setAlt(alt);
+            }
+
+            @Override
+            public Patch setCallback(java.lang.String callback) {
+              return (Patch) super.setCallback(callback);
+            }
+
+            @Override
+            public Patch setFields(java.lang.String fields) {
+              return (Patch) super.setFields(fields);
+            }
+
+            @Override
+            public Patch setKey(java.lang.String key) {
+              return (Patch) super.setKey(key);
+            }
+
+            @Override
+            public Patch setOauthToken(java.lang.String oauthToken) {
+              return (Patch) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Patch) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Patch setQuotaUser(java.lang.String quotaUser) {
+              return (Patch) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Patch setUploadType(java.lang.String uploadType) {
+              return (Patch) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Patch) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Output only. The resource name of the namespace. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Output only. The resource name of the namespace.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Output only. The resource name of the namespace. */
+            public Patch setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/namespaces/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /** Required. The list of fields to update. */
+            @com.google.api.client.util.Key
+            private String updateMask;
+
+            /** Required. The list of fields to update.
+             */
+            public String getUpdateMask() {
+              return updateMask;
+            }
+
+            /** Required. The list of fields to update. */
+            public Patch setUpdateMask(String updateMask) {
+              this.updateMask = updateMask;
+              return this;
+            }
+
+            @Override
+            public Patch set(String parameterName, Object value) {
+              return (Patch) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Undeletes a WorkloadIdentityPoolNamespace, as long as it was deleted fewer than 30 days ago.
+           *
+           * Create a request for the method "namespaces.undelete".
+           *
+           * This request holds the parameters needed by the iam server.  After setting any optional
+           * parameters, call the {@link Undelete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the namespace to undelete.
+           * @param content the {@link com.google.api.services.iam.v1.model.UndeleteWorkloadIdentityPoolNamespaceRequest}
+           * @return the request
+           */
+          public Undelete undelete(java.lang.String name, com.google.api.services.iam.v1.model.UndeleteWorkloadIdentityPoolNamespaceRequest content) throws java.io.IOException {
+            Undelete result = new Undelete(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Undelete extends IamRequest<com.google.api.services.iam.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+name}:undelete";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/namespaces/[^/]+$");
+
+            /**
+             * Undeletes a WorkloadIdentityPoolNamespace, as long as it was deleted fewer than 30 days ago.
+             *
+             * Create a request for the method "namespaces.undelete".
+             *
+             * This request holds the parameters needed by the the iam server.  After setting any optional
+             * parameters, call the {@link Undelete#execute()} method to invoke the remote operation. <p>
+             * {@link
+             * Undelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the namespace to undelete.
+             * @param content the {@link com.google.api.services.iam.v1.model.UndeleteWorkloadIdentityPoolNamespaceRequest}
+             * @since 1.13
+             */
+            protected Undelete(java.lang.String name, com.google.api.services.iam.v1.model.UndeleteWorkloadIdentityPoolNamespaceRequest content) {
+              super(Iam.this, "POST", REST_PATH, content, com.google.api.services.iam.v1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/namespaces/[^/]+$");
+              }
+            }
+
+            @Override
+            public Undelete set$Xgafv(java.lang.String $Xgafv) {
+              return (Undelete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Undelete setAccessToken(java.lang.String accessToken) {
+              return (Undelete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Undelete setAlt(java.lang.String alt) {
+              return (Undelete) super.setAlt(alt);
+            }
+
+            @Override
+            public Undelete setCallback(java.lang.String callback) {
+              return (Undelete) super.setCallback(callback);
+            }
+
+            @Override
+            public Undelete setFields(java.lang.String fields) {
+              return (Undelete) super.setFields(fields);
+            }
+
+            @Override
+            public Undelete setKey(java.lang.String key) {
+              return (Undelete) super.setKey(key);
+            }
+
+            @Override
+            public Undelete setOauthToken(java.lang.String oauthToken) {
+              return (Undelete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Undelete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Undelete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Undelete setQuotaUser(java.lang.String quotaUser) {
+              return (Undelete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Undelete setUploadType(java.lang.String uploadType) {
+              return (Undelete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Undelete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Undelete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The name of the namespace to undelete. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the namespace to undelete.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. The name of the namespace to undelete. */
+            public Undelete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/namespaces/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Undelete set(String parameterName, Object value) {
+              return (Undelete) super.set(parameterName, value);
+            }
+          }
+
+          /**
            * An accessor for creating requests from the ManagedIdentities collection.
            *
            * <p>The typical use is:</p>
@@ -8927,6 +10280,1578 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
            * The "managedIdentities" collection of methods.
            */
           public class ManagedIdentities {
+
+            /**
+             * Add an AttestationRule on a WorkloadIdentityPoolManagedIdentity. The total attestation rules
+             * after addition must not exceed 50.
+             *
+             * Create a request for the method "managedIdentities.addAttestationRule".
+             *
+             * This request holds the parameters needed by the iam server.  After setting any optional
+             * parameters, call the {@link AddAttestationRule#execute()} method to invoke the remote operation.
+             *
+             * @param resource Required. The resource name of the managed identity or namespace resource to add an attestation rule
+             *        to.
+             * @param content the {@link com.google.api.services.iam.v1.model.AddAttestationRuleRequest}
+             * @return the request
+             */
+            public AddAttestationRule addAttestationRule(java.lang.String resource, com.google.api.services.iam.v1.model.AddAttestationRuleRequest content) throws java.io.IOException {
+              AddAttestationRule result = new AddAttestationRule(resource, content);
+              initialize(result);
+              return result;
+            }
+
+            public class AddAttestationRule extends IamRequest<com.google.api.services.iam.v1.model.Operation> {
+
+              private static final String REST_PATH = "v1/{+resource}:addAttestationRule";
+
+              private final java.util.regex.Pattern RESOURCE_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/namespaces/[^/]+/managedIdentities/[^/]+$");
+
+              /**
+               * Add an AttestationRule on a WorkloadIdentityPoolManagedIdentity. The total attestation rules
+               * after addition must not exceed 50.
+               *
+               * Create a request for the method "managedIdentities.addAttestationRule".
+               *
+               * This request holds the parameters needed by the the iam server.  After setting any optional
+               * parameters, call the {@link AddAttestationRule#execute()} method to invoke the remote
+               * operation. <p> {@link AddAttestationRule#initialize(com.google.api.client.googleapis.services.A
+               * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+               * invoking the constructor. </p>
+               *
+               * @param resource Required. The resource name of the managed identity or namespace resource to add an attestation rule
+             *        to.
+               * @param content the {@link com.google.api.services.iam.v1.model.AddAttestationRuleRequest}
+               * @since 1.13
+               */
+              protected AddAttestationRule(java.lang.String resource, com.google.api.services.iam.v1.model.AddAttestationRuleRequest content) {
+                super(Iam.this, "POST", REST_PATH, content, com.google.api.services.iam.v1.model.Operation.class);
+                this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                      "Parameter resource must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/namespaces/[^/]+/managedIdentities/[^/]+$");
+                }
+              }
+
+              @Override
+              public AddAttestationRule set$Xgafv(java.lang.String $Xgafv) {
+                return (AddAttestationRule) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public AddAttestationRule setAccessToken(java.lang.String accessToken) {
+                return (AddAttestationRule) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public AddAttestationRule setAlt(java.lang.String alt) {
+                return (AddAttestationRule) super.setAlt(alt);
+              }
+
+              @Override
+              public AddAttestationRule setCallback(java.lang.String callback) {
+                return (AddAttestationRule) super.setCallback(callback);
+              }
+
+              @Override
+              public AddAttestationRule setFields(java.lang.String fields) {
+                return (AddAttestationRule) super.setFields(fields);
+              }
+
+              @Override
+              public AddAttestationRule setKey(java.lang.String key) {
+                return (AddAttestationRule) super.setKey(key);
+              }
+
+              @Override
+              public AddAttestationRule setOauthToken(java.lang.String oauthToken) {
+                return (AddAttestationRule) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public AddAttestationRule setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (AddAttestationRule) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public AddAttestationRule setQuotaUser(java.lang.String quotaUser) {
+                return (AddAttestationRule) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public AddAttestationRule setUploadType(java.lang.String uploadType) {
+                return (AddAttestationRule) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public AddAttestationRule setUploadProtocol(java.lang.String uploadProtocol) {
+                return (AddAttestationRule) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The resource name of the managed identity or namespace resource to add an
+               * attestation rule to.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String resource;
+
+              /** Required. The resource name of the managed identity or namespace resource to add an attestation
+             rule to.
+               */
+              public java.lang.String getResource() {
+                return resource;
+              }
+
+              /**
+               * Required. The resource name of the managed identity or namespace resource to add an
+               * attestation rule to.
+               */
+              public AddAttestationRule setResource(java.lang.String resource) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                      "Parameter resource must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/namespaces/[^/]+/managedIdentities/[^/]+$");
+                }
+                this.resource = resource;
+                return this;
+              }
+
+              @Override
+              public AddAttestationRule set(String parameterName, Object value) {
+                return (AddAttestationRule) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Creates a new WorkloadIdentityPoolManagedIdentity in a WorkloadIdentityPoolNamespace.
+             *
+             * Create a request for the method "managedIdentities.create".
+             *
+             * This request holds the parameters needed by the iam server.  After setting any optional
+             * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. The parent resource to create the manage identity in. The only supported location is
+             *        `global`.
+             * @param content the {@link com.google.api.services.iam.v1.model.WorkloadIdentityPoolManagedIdentity}
+             * @return the request
+             */
+            public Create create(java.lang.String parent, com.google.api.services.iam.v1.model.WorkloadIdentityPoolManagedIdentity content) throws java.io.IOException {
+              Create result = new Create(parent, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Create extends IamRequest<com.google.api.services.iam.v1.model.Operation> {
+
+              private static final String REST_PATH = "v1/{+parent}/managedIdentities";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/namespaces/[^/]+$");
+
+              /**
+               * Creates a new WorkloadIdentityPoolManagedIdentity in a WorkloadIdentityPoolNamespace.
+               *
+               * Create a request for the method "managedIdentities.create".
+               *
+               * This request holds the parameters needed by the the iam server.  After setting any optional
+               * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+               * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. The parent resource to create the manage identity in. The only supported location is
+             *        `global`.
+               * @param content the {@link com.google.api.services.iam.v1.model.WorkloadIdentityPoolManagedIdentity}
+               * @since 1.13
+               */
+              protected Create(java.lang.String parent, com.google.api.services.iam.v1.model.WorkloadIdentityPoolManagedIdentity content) {
+                super(Iam.this, "POST", REST_PATH, content, com.google.api.services.iam.v1.model.Operation.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/namespaces/[^/]+$");
+                }
+              }
+
+              @Override
+              public Create set$Xgafv(java.lang.String $Xgafv) {
+                return (Create) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Create setAccessToken(java.lang.String accessToken) {
+                return (Create) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Create setAlt(java.lang.String alt) {
+                return (Create) super.setAlt(alt);
+              }
+
+              @Override
+              public Create setCallback(java.lang.String callback) {
+                return (Create) super.setCallback(callback);
+              }
+
+              @Override
+              public Create setFields(java.lang.String fields) {
+                return (Create) super.setFields(fields);
+              }
+
+              @Override
+              public Create setKey(java.lang.String key) {
+                return (Create) super.setKey(key);
+              }
+
+              @Override
+              public Create setOauthToken(java.lang.String oauthToken) {
+                return (Create) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Create) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Create setQuotaUser(java.lang.String quotaUser) {
+                return (Create) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Create setUploadType(java.lang.String uploadType) {
+                return (Create) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Create setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Create) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The parent resource to create the manage identity in. The only supported
+               * location is `global`.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The parent resource to create the manage identity in. The only supported location is
+             `global`.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. The parent resource to create the manage identity in. The only supported
+               * location is `global`.
+               */
+              public Create setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/namespaces/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /**
+               * Required. The ID to use for the managed identity. This value must: * contain at
+               * most 63 characters * contain only lowercase alphanumeric characters or `-` * start
+               * with an alphanumeric character * end with an alphanumeric character The prefix
+               * "gcp-" will be reserved for future uses.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String workloadIdentityPoolManagedIdentityId;
+
+              /** Required. The ID to use for the managed identity. This value must: * contain at most 63 characters
+             * contain only lowercase alphanumeric characters or `-` * start with an alphanumeric character *
+             end with an alphanumeric character The prefix "gcp-" will be reserved for future uses.
+               */
+              public java.lang.String getWorkloadIdentityPoolManagedIdentityId() {
+                return workloadIdentityPoolManagedIdentityId;
+              }
+
+              /**
+               * Required. The ID to use for the managed identity. This value must: * contain at
+               * most 63 characters * contain only lowercase alphanumeric characters or `-` * start
+               * with an alphanumeric character * end with an alphanumeric character The prefix
+               * "gcp-" will be reserved for future uses.
+               */
+              public Create setWorkloadIdentityPoolManagedIdentityId(java.lang.String workloadIdentityPoolManagedIdentityId) {
+                this.workloadIdentityPoolManagedIdentityId = workloadIdentityPoolManagedIdentityId;
+                return this;
+              }
+
+              @Override
+              public Create set(String parameterName, Object value) {
+                return (Create) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Deletes a WorkloadIdentityPoolManagedIdentity. You can undelete a managed identity for 30 days.
+             * After 30 days, deletion is permanent.
+             *
+             * Create a request for the method "managedIdentities.delete".
+             *
+             * This request holds the parameters needed by the iam server.  After setting any optional
+             * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The name of the managed identity to delete.
+             * @return the request
+             */
+            public Delete delete(java.lang.String name) throws java.io.IOException {
+              Delete result = new Delete(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Delete extends IamRequest<com.google.api.services.iam.v1.model.Operation> {
+
+              private static final String REST_PATH = "v1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/namespaces/[^/]+/managedIdentities/[^/]+$");
+
+              /**
+               * Deletes a WorkloadIdentityPoolManagedIdentity. You can undelete a managed identity for 30 days.
+               * After 30 days, deletion is permanent.
+               *
+               * Create a request for the method "managedIdentities.delete".
+               *
+               * This request holds the parameters needed by the the iam server.  After setting any optional
+               * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+               * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The name of the managed identity to delete.
+               * @since 1.13
+               */
+              protected Delete(java.lang.String name) {
+                super(Iam.this, "DELETE", REST_PATH, null, com.google.api.services.iam.v1.model.Operation.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/namespaces/[^/]+/managedIdentities/[^/]+$");
+                }
+              }
+
+              @Override
+              public Delete set$Xgafv(java.lang.String $Xgafv) {
+                return (Delete) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Delete setAccessToken(java.lang.String accessToken) {
+                return (Delete) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Delete setAlt(java.lang.String alt) {
+                return (Delete) super.setAlt(alt);
+              }
+
+              @Override
+              public Delete setCallback(java.lang.String callback) {
+                return (Delete) super.setCallback(callback);
+              }
+
+              @Override
+              public Delete setFields(java.lang.String fields) {
+                return (Delete) super.setFields(fields);
+              }
+
+              @Override
+              public Delete setKey(java.lang.String key) {
+                return (Delete) super.setKey(key);
+              }
+
+              @Override
+              public Delete setOauthToken(java.lang.String oauthToken) {
+                return (Delete) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Delete) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Delete setQuotaUser(java.lang.String quotaUser) {
+                return (Delete) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Delete setUploadType(java.lang.String uploadType) {
+                return (Delete) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Delete) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. The name of the managed identity to delete. */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The name of the managed identity to delete.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /** Required. The name of the managed identity to delete. */
+              public Delete setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/namespaces/[^/]+/managedIdentities/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Delete set(String parameterName, Object value) {
+                return (Delete) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Gets an individual WorkloadIdentityPoolManagedIdentity.
+             *
+             * Create a request for the method "managedIdentities.get".
+             *
+             * This request holds the parameters needed by the iam server.  After setting any optional
+             * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The name of the managed identity to retrieve.
+             * @return the request
+             */
+            public Get get(java.lang.String name) throws java.io.IOException {
+              Get result = new Get(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Get extends IamRequest<com.google.api.services.iam.v1.model.WorkloadIdentityPoolManagedIdentity> {
+
+              private static final String REST_PATH = "v1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/namespaces/[^/]+/managedIdentities/[^/]+$");
+
+              /**
+               * Gets an individual WorkloadIdentityPoolManagedIdentity.
+               *
+               * Create a request for the method "managedIdentities.get".
+               *
+               * This request holds the parameters needed by the the iam server.  After setting any optional
+               * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+               * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+               * called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The name of the managed identity to retrieve.
+               * @since 1.13
+               */
+              protected Get(java.lang.String name) {
+                super(Iam.this, "GET", REST_PATH, null, com.google.api.services.iam.v1.model.WorkloadIdentityPoolManagedIdentity.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/namespaces/[^/]+/managedIdentities/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public Get set$Xgafv(java.lang.String $Xgafv) {
+                return (Get) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Get setAccessToken(java.lang.String accessToken) {
+                return (Get) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Get setAlt(java.lang.String alt) {
+                return (Get) super.setAlt(alt);
+              }
+
+              @Override
+              public Get setCallback(java.lang.String callback) {
+                return (Get) super.setCallback(callback);
+              }
+
+              @Override
+              public Get setFields(java.lang.String fields) {
+                return (Get) super.setFields(fields);
+              }
+
+              @Override
+              public Get setKey(java.lang.String key) {
+                return (Get) super.setKey(key);
+              }
+
+              @Override
+              public Get setOauthToken(java.lang.String oauthToken) {
+                return (Get) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Get) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Get setQuotaUser(java.lang.String quotaUser) {
+                return (Get) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Get setUploadType(java.lang.String uploadType) {
+                return (Get) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Get setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Get) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. The name of the managed identity to retrieve. */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The name of the managed identity to retrieve.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /** Required. The name of the managed identity to retrieve. */
+              public Get setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/namespaces/[^/]+/managedIdentities/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Get set(String parameterName, Object value) {
+                return (Get) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Lists all non-deleted WorkloadIdentityPoolManagedIdentitys in a namespace. If `show_deleted` is
+             * set to `true`, then deleted managed identites are also listed.
+             *
+             * Create a request for the method "managedIdentities.list".
+             *
+             * This request holds the parameters needed by the iam server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. The parent resource to list managed identities for.
+             * @return the request
+             */
+            public List list(java.lang.String parent) throws java.io.IOException {
+              List result = new List(parent);
+              initialize(result);
+              return result;
+            }
+
+            public class List extends IamRequest<com.google.api.services.iam.v1.model.ListWorkloadIdentityPoolManagedIdentitiesResponse> {
+
+              private static final String REST_PATH = "v1/{+parent}/managedIdentities";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/namespaces/[^/]+$");
+
+              /**
+               * Lists all non-deleted WorkloadIdentityPoolManagedIdentitys in a namespace. If `show_deleted` is
+               * set to `true`, then deleted managed identites are also listed.
+               *
+               * Create a request for the method "managedIdentities.list".
+               *
+               * This request holds the parameters needed by the the iam server.  After setting any optional
+               * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+               * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+               * called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. The parent resource to list managed identities for.
+               * @since 1.13
+               */
+              protected List(java.lang.String parent) {
+                super(Iam.this, "GET", REST_PATH, null, com.google.api.services.iam.v1.model.ListWorkloadIdentityPoolManagedIdentitiesResponse.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/namespaces/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public List set$Xgafv(java.lang.String $Xgafv) {
+                return (List) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public List setAccessToken(java.lang.String accessToken) {
+                return (List) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public List setAlt(java.lang.String alt) {
+                return (List) super.setAlt(alt);
+              }
+
+              @Override
+              public List setCallback(java.lang.String callback) {
+                return (List) super.setCallback(callback);
+              }
+
+              @Override
+              public List setFields(java.lang.String fields) {
+                return (List) super.setFields(fields);
+              }
+
+              @Override
+              public List setKey(java.lang.String key) {
+                return (List) super.setKey(key);
+              }
+
+              @Override
+              public List setOauthToken(java.lang.String oauthToken) {
+                return (List) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (List) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public List setQuotaUser(java.lang.String quotaUser) {
+                return (List) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public List setUploadType(java.lang.String uploadType) {
+                return (List) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public List setUploadProtocol(java.lang.String uploadProtocol) {
+                return (List) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. The parent resource to list managed identities for. */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The parent resource to list managed identities for.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /** Required. The parent resource to list managed identities for. */
+              public List setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/namespaces/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /**
+               * The maximum number of managed identities to return. If unspecified, at most 50
+               * managed identities are returned. The maximum value is 1000; values above are 1000
+               * truncated to 1000.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.Integer pageSize;
+
+              /** The maximum number of managed identities to return. If unspecified, at most 50 managed identities
+             are returned. The maximum value is 1000; values above are 1000 truncated to 1000.
+               */
+              public java.lang.Integer getPageSize() {
+                return pageSize;
+              }
+
+              /**
+               * The maximum number of managed identities to return. If unspecified, at most 50
+               * managed identities are returned. The maximum value is 1000; values above are 1000
+               * truncated to 1000.
+               */
+              public List setPageSize(java.lang.Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+              }
+
+              /**
+               * A page token, received from a previous `ListWorkloadIdentityPoolManagedIdentities`
+               * call. Provide this to retrieve the subsequent page.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String pageToken;
+
+              /** A page token, received from a previous `ListWorkloadIdentityPoolManagedIdentities` call. Provide
+             this to retrieve the subsequent page.
+               */
+              public java.lang.String getPageToken() {
+                return pageToken;
+              }
+
+              /**
+               * A page token, received from a previous `ListWorkloadIdentityPoolManagedIdentities`
+               * call. Provide this to retrieve the subsequent page.
+               */
+              public List setPageToken(java.lang.String pageToken) {
+                this.pageToken = pageToken;
+                return this;
+              }
+
+              /** Whether to return soft-deleted managed identities. */
+              @com.google.api.client.util.Key
+              private java.lang.Boolean showDeleted;
+
+              /** Whether to return soft-deleted managed identities.
+               */
+              public java.lang.Boolean getShowDeleted() {
+                return showDeleted;
+              }
+
+              /** Whether to return soft-deleted managed identities. */
+              public List setShowDeleted(java.lang.Boolean showDeleted) {
+                this.showDeleted = showDeleted;
+                return this;
+              }
+
+              @Override
+              public List set(String parameterName, Object value) {
+                return (List) super.set(parameterName, value);
+              }
+            }
+            /**
+             * List all AttestationRule on a WorkloadIdentityPoolManagedIdentity.
+             *
+             * Create a request for the method "managedIdentities.listAttestationRules".
+             *
+             * This request holds the parameters needed by the iam server.  After setting any optional
+             * parameters, call the {@link ListAttestationRules#execute()} method to invoke the remote
+             * operation.
+             *
+             * @param resource Required. The resource name of the managed identity or namespace resource to list attestation rules
+             *        of.
+             * @return the request
+             */
+            public ListAttestationRules listAttestationRules(java.lang.String resource) throws java.io.IOException {
+              ListAttestationRules result = new ListAttestationRules(resource);
+              initialize(result);
+              return result;
+            }
+
+            public class ListAttestationRules extends IamRequest<com.google.api.services.iam.v1.model.ListAttestationRulesResponse> {
+
+              private static final String REST_PATH = "v1/{+resource}:listAttestationRules";
+
+              private final java.util.regex.Pattern RESOURCE_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/namespaces/[^/]+/managedIdentities/[^/]+$");
+
+              /**
+               * List all AttestationRule on a WorkloadIdentityPoolManagedIdentity.
+               *
+               * Create a request for the method "managedIdentities.listAttestationRules".
+               *
+               * This request holds the parameters needed by the the iam server.  After setting any optional
+               * parameters, call the {@link ListAttestationRules#execute()} method to invoke the remote
+               * operation. <p> {@link ListAttestationRules#initialize(com.google.api.client.googleapis.services
+               * .AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+               * invoking the constructor. </p>
+               *
+               * @param resource Required. The resource name of the managed identity or namespace resource to list attestation rules
+             *        of.
+               * @since 1.13
+               */
+              protected ListAttestationRules(java.lang.String resource) {
+                super(Iam.this, "GET", REST_PATH, null, com.google.api.services.iam.v1.model.ListAttestationRulesResponse.class);
+                this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                      "Parameter resource must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/namespaces/[^/]+/managedIdentities/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public ListAttestationRules set$Xgafv(java.lang.String $Xgafv) {
+                return (ListAttestationRules) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public ListAttestationRules setAccessToken(java.lang.String accessToken) {
+                return (ListAttestationRules) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public ListAttestationRules setAlt(java.lang.String alt) {
+                return (ListAttestationRules) super.setAlt(alt);
+              }
+
+              @Override
+              public ListAttestationRules setCallback(java.lang.String callback) {
+                return (ListAttestationRules) super.setCallback(callback);
+              }
+
+              @Override
+              public ListAttestationRules setFields(java.lang.String fields) {
+                return (ListAttestationRules) super.setFields(fields);
+              }
+
+              @Override
+              public ListAttestationRules setKey(java.lang.String key) {
+                return (ListAttestationRules) super.setKey(key);
+              }
+
+              @Override
+              public ListAttestationRules setOauthToken(java.lang.String oauthToken) {
+                return (ListAttestationRules) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public ListAttestationRules setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (ListAttestationRules) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public ListAttestationRules setQuotaUser(java.lang.String quotaUser) {
+                return (ListAttestationRules) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public ListAttestationRules setUploadType(java.lang.String uploadType) {
+                return (ListAttestationRules) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public ListAttestationRules setUploadProtocol(java.lang.String uploadProtocol) {
+                return (ListAttestationRules) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The resource name of the managed identity or namespace resource to list
+               * attestation rules of.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String resource;
+
+              /** Required. The resource name of the managed identity or namespace resource to list attestation rules
+             of.
+               */
+              public java.lang.String getResource() {
+                return resource;
+              }
+
+              /**
+               * Required. The resource name of the managed identity or namespace resource to list
+               * attestation rules of.
+               */
+              public ListAttestationRules setResource(java.lang.String resource) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                      "Parameter resource must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/namespaces/[^/]+/managedIdentities/[^/]+$");
+                }
+                this.resource = resource;
+                return this;
+              }
+
+              /**
+               * Optional. A query filter. Supports the following function: * `container_ids()`:
+               * Returns only the AttestationRules under the specific container ids. The function
+               * expects a comma-delimited list with only project numbers and must use the format
+               * `projects/`. For example: `container_ids(projects/, projects/,...)`.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String filter;
+
+              /** Optional. A query filter. Supports the following function: * `container_ids()`: Returns only the
+             AttestationRules under the specific container ids. The function expects a comma-delimited list with
+             only project numbers and must use the format `projects/`. For example: `container_ids(projects/,
+             projects/,...)`.
+               */
+              public java.lang.String getFilter() {
+                return filter;
+              }
+
+              /**
+               * Optional. A query filter. Supports the following function: * `container_ids()`:
+               * Returns only the AttestationRules under the specific container ids. The function
+               * expects a comma-delimited list with only project numbers and must use the format
+               * `projects/`. For example: `container_ids(projects/, projects/,...)`.
+               */
+              public ListAttestationRules setFilter(java.lang.String filter) {
+                this.filter = filter;
+                return this;
+              }
+
+              /**
+               * Optional. The maximum number of AttestationRules to return. If unspecified, at most
+               * 50 AttestationRules are returned. The maximum value is 100; values above 100 are
+               * truncated to 100.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.Integer pageSize;
+
+              /** Optional. The maximum number of AttestationRules to return. If unspecified, at most 50
+             AttestationRules are returned. The maximum value is 100; values above 100 are truncated to 100.
+               */
+              public java.lang.Integer getPageSize() {
+                return pageSize;
+              }
+
+              /**
+               * Optional. The maximum number of AttestationRules to return. If unspecified, at most
+               * 50 AttestationRules are returned. The maximum value is 100; values above 100 are
+               * truncated to 100.
+               */
+              public ListAttestationRules setPageSize(java.lang.Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+              }
+
+              /**
+               * Optional. A page token, received from a previous
+               * `ListWorkloadIdentityPoolProviderKeys` call. Provide this to retrieve the
+               * subsequent page.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String pageToken;
+
+              /** Optional. A page token, received from a previous `ListWorkloadIdentityPoolProviderKeys` call.
+             Provide this to retrieve the subsequent page.
+               */
+              public java.lang.String getPageToken() {
+                return pageToken;
+              }
+
+              /**
+               * Optional. A page token, received from a previous
+               * `ListWorkloadIdentityPoolProviderKeys` call. Provide this to retrieve the
+               * subsequent page.
+               */
+              public ListAttestationRules setPageToken(java.lang.String pageToken) {
+                this.pageToken = pageToken;
+                return this;
+              }
+
+              @Override
+              public ListAttestationRules set(String parameterName, Object value) {
+                return (ListAttestationRules) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Updates an existing WorkloadIdentityPoolManagedIdentity in a WorkloadIdentityPoolNamespace.
+             *
+             * Create a request for the method "managedIdentities.patch".
+             *
+             * This request holds the parameters needed by the iam server.  After setting any optional
+             * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+             *
+             * @param name Output only. The resource name of the managed identity.
+             * @param content the {@link com.google.api.services.iam.v1.model.WorkloadIdentityPoolManagedIdentity}
+             * @return the request
+             */
+            public Patch patch(java.lang.String name, com.google.api.services.iam.v1.model.WorkloadIdentityPoolManagedIdentity content) throws java.io.IOException {
+              Patch result = new Patch(name, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Patch extends IamRequest<com.google.api.services.iam.v1.model.Operation> {
+
+              private static final String REST_PATH = "v1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/namespaces/[^/]+/managedIdentities/[^/]+$");
+
+              /**
+               * Updates an existing WorkloadIdentityPoolManagedIdentity in a WorkloadIdentityPoolNamespace.
+               *
+               * Create a request for the method "managedIdentities.patch".
+               *
+               * This request holds the parameters needed by the the iam server.  After setting any optional
+               * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+               * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Output only. The resource name of the managed identity.
+               * @param content the {@link com.google.api.services.iam.v1.model.WorkloadIdentityPoolManagedIdentity}
+               * @since 1.13
+               */
+              protected Patch(java.lang.String name, com.google.api.services.iam.v1.model.WorkloadIdentityPoolManagedIdentity content) {
+                super(Iam.this, "PATCH", REST_PATH, content, com.google.api.services.iam.v1.model.Operation.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/namespaces/[^/]+/managedIdentities/[^/]+$");
+                }
+              }
+
+              @Override
+              public Patch set$Xgafv(java.lang.String $Xgafv) {
+                return (Patch) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Patch setAccessToken(java.lang.String accessToken) {
+                return (Patch) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Patch setAlt(java.lang.String alt) {
+                return (Patch) super.setAlt(alt);
+              }
+
+              @Override
+              public Patch setCallback(java.lang.String callback) {
+                return (Patch) super.setCallback(callback);
+              }
+
+              @Override
+              public Patch setFields(java.lang.String fields) {
+                return (Patch) super.setFields(fields);
+              }
+
+              @Override
+              public Patch setKey(java.lang.String key) {
+                return (Patch) super.setKey(key);
+              }
+
+              @Override
+              public Patch setOauthToken(java.lang.String oauthToken) {
+                return (Patch) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Patch) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Patch setQuotaUser(java.lang.String quotaUser) {
+                return (Patch) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Patch setUploadType(java.lang.String uploadType) {
+                return (Patch) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Patch) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Output only. The resource name of the managed identity. */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Output only. The resource name of the managed identity.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /** Output only. The resource name of the managed identity. */
+              public Patch setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/namespaces/[^/]+/managedIdentities/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              /** Required. The list of fields to update. */
+              @com.google.api.client.util.Key
+              private String updateMask;
+
+              /** Required. The list of fields to update.
+               */
+              public String getUpdateMask() {
+                return updateMask;
+              }
+
+              /** Required. The list of fields to update. */
+              public Patch setUpdateMask(String updateMask) {
+                this.updateMask = updateMask;
+                return this;
+              }
+
+              @Override
+              public Patch set(String parameterName, Object value) {
+                return (Patch) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Remove an AttestationRule on a WorkloadIdentityPoolManagedIdentity.
+             *
+             * Create a request for the method "managedIdentities.removeAttestationRule".
+             *
+             * This request holds the parameters needed by the iam server.  After setting any optional
+             * parameters, call the {@link RemoveAttestationRule#execute()} method to invoke the remote
+             * operation.
+             *
+             * @param resource Required. The resource name of the managed identity or namespace resource to remove an attestation
+             *        rule from.
+             * @param content the {@link com.google.api.services.iam.v1.model.RemoveAttestationRuleRequest}
+             * @return the request
+             */
+            public RemoveAttestationRule removeAttestationRule(java.lang.String resource, com.google.api.services.iam.v1.model.RemoveAttestationRuleRequest content) throws java.io.IOException {
+              RemoveAttestationRule result = new RemoveAttestationRule(resource, content);
+              initialize(result);
+              return result;
+            }
+
+            public class RemoveAttestationRule extends IamRequest<com.google.api.services.iam.v1.model.Operation> {
+
+              private static final String REST_PATH = "v1/{+resource}:removeAttestationRule";
+
+              private final java.util.regex.Pattern RESOURCE_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/namespaces/[^/]+/managedIdentities/[^/]+$");
+
+              /**
+               * Remove an AttestationRule on a WorkloadIdentityPoolManagedIdentity.
+               *
+               * Create a request for the method "managedIdentities.removeAttestationRule".
+               *
+               * This request holds the parameters needed by the the iam server.  After setting any optional
+               * parameters, call the {@link RemoveAttestationRule#execute()} method to invoke the remote
+               * operation. <p> {@link RemoveAttestationRule#initialize(com.google.api.client.googleapis.service
+               * s.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+               * invoking the constructor. </p>
+               *
+               * @param resource Required. The resource name of the managed identity or namespace resource to remove an attestation
+             *        rule from.
+               * @param content the {@link com.google.api.services.iam.v1.model.RemoveAttestationRuleRequest}
+               * @since 1.13
+               */
+              protected RemoveAttestationRule(java.lang.String resource, com.google.api.services.iam.v1.model.RemoveAttestationRuleRequest content) {
+                super(Iam.this, "POST", REST_PATH, content, com.google.api.services.iam.v1.model.Operation.class);
+                this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                      "Parameter resource must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/namespaces/[^/]+/managedIdentities/[^/]+$");
+                }
+              }
+
+              @Override
+              public RemoveAttestationRule set$Xgafv(java.lang.String $Xgafv) {
+                return (RemoveAttestationRule) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public RemoveAttestationRule setAccessToken(java.lang.String accessToken) {
+                return (RemoveAttestationRule) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public RemoveAttestationRule setAlt(java.lang.String alt) {
+                return (RemoveAttestationRule) super.setAlt(alt);
+              }
+
+              @Override
+              public RemoveAttestationRule setCallback(java.lang.String callback) {
+                return (RemoveAttestationRule) super.setCallback(callback);
+              }
+
+              @Override
+              public RemoveAttestationRule setFields(java.lang.String fields) {
+                return (RemoveAttestationRule) super.setFields(fields);
+              }
+
+              @Override
+              public RemoveAttestationRule setKey(java.lang.String key) {
+                return (RemoveAttestationRule) super.setKey(key);
+              }
+
+              @Override
+              public RemoveAttestationRule setOauthToken(java.lang.String oauthToken) {
+                return (RemoveAttestationRule) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public RemoveAttestationRule setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (RemoveAttestationRule) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public RemoveAttestationRule setQuotaUser(java.lang.String quotaUser) {
+                return (RemoveAttestationRule) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public RemoveAttestationRule setUploadType(java.lang.String uploadType) {
+                return (RemoveAttestationRule) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public RemoveAttestationRule setUploadProtocol(java.lang.String uploadProtocol) {
+                return (RemoveAttestationRule) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The resource name of the managed identity or namespace resource to remove
+               * an attestation rule from.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String resource;
+
+              /** Required. The resource name of the managed identity or namespace resource to remove an attestation
+             rule from.
+               */
+              public java.lang.String getResource() {
+                return resource;
+              }
+
+              /**
+               * Required. The resource name of the managed identity or namespace resource to remove
+               * an attestation rule from.
+               */
+              public RemoveAttestationRule setResource(java.lang.String resource) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                      "Parameter resource must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/namespaces/[^/]+/managedIdentities/[^/]+$");
+                }
+                this.resource = resource;
+                return this;
+              }
+
+              @Override
+              public RemoveAttestationRule set(String parameterName, Object value) {
+                return (RemoveAttestationRule) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Set all AttestationRule on a WorkloadIdentityPoolManagedIdentity. A maximum of 50
+             * AttestationRules can be set.
+             *
+             * Create a request for the method "managedIdentities.setAttestationRules".
+             *
+             * This request holds the parameters needed by the iam server.  After setting any optional
+             * parameters, call the {@link SetAttestationRules#execute()} method to invoke the remote operation.
+             *
+             * @param resource Required. The resource name of the managed identity or namespace resource to add an attestation rule
+             *        to.
+             * @param content the {@link com.google.api.services.iam.v1.model.SetAttestationRulesRequest}
+             * @return the request
+             */
+            public SetAttestationRules setAttestationRules(java.lang.String resource, com.google.api.services.iam.v1.model.SetAttestationRulesRequest content) throws java.io.IOException {
+              SetAttestationRules result = new SetAttestationRules(resource, content);
+              initialize(result);
+              return result;
+            }
+
+            public class SetAttestationRules extends IamRequest<com.google.api.services.iam.v1.model.Operation> {
+
+              private static final String REST_PATH = "v1/{+resource}:setAttestationRules";
+
+              private final java.util.regex.Pattern RESOURCE_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/namespaces/[^/]+/managedIdentities/[^/]+$");
+
+              /**
+               * Set all AttestationRule on a WorkloadIdentityPoolManagedIdentity. A maximum of 50
+               * AttestationRules can be set.
+               *
+               * Create a request for the method "managedIdentities.setAttestationRules".
+               *
+               * This request holds the parameters needed by the the iam server.  After setting any optional
+               * parameters, call the {@link SetAttestationRules#execute()} method to invoke the remote
+               * operation. <p> {@link SetAttestationRules#initialize(com.google.api.client.googleapis.services.
+               * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+               * invoking the constructor. </p>
+               *
+               * @param resource Required. The resource name of the managed identity or namespace resource to add an attestation rule
+             *        to.
+               * @param content the {@link com.google.api.services.iam.v1.model.SetAttestationRulesRequest}
+               * @since 1.13
+               */
+              protected SetAttestationRules(java.lang.String resource, com.google.api.services.iam.v1.model.SetAttestationRulesRequest content) {
+                super(Iam.this, "POST", REST_PATH, content, com.google.api.services.iam.v1.model.Operation.class);
+                this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                      "Parameter resource must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/namespaces/[^/]+/managedIdentities/[^/]+$");
+                }
+              }
+
+              @Override
+              public SetAttestationRules set$Xgafv(java.lang.String $Xgafv) {
+                return (SetAttestationRules) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public SetAttestationRules setAccessToken(java.lang.String accessToken) {
+                return (SetAttestationRules) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public SetAttestationRules setAlt(java.lang.String alt) {
+                return (SetAttestationRules) super.setAlt(alt);
+              }
+
+              @Override
+              public SetAttestationRules setCallback(java.lang.String callback) {
+                return (SetAttestationRules) super.setCallback(callback);
+              }
+
+              @Override
+              public SetAttestationRules setFields(java.lang.String fields) {
+                return (SetAttestationRules) super.setFields(fields);
+              }
+
+              @Override
+              public SetAttestationRules setKey(java.lang.String key) {
+                return (SetAttestationRules) super.setKey(key);
+              }
+
+              @Override
+              public SetAttestationRules setOauthToken(java.lang.String oauthToken) {
+                return (SetAttestationRules) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public SetAttestationRules setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (SetAttestationRules) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public SetAttestationRules setQuotaUser(java.lang.String quotaUser) {
+                return (SetAttestationRules) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public SetAttestationRules setUploadType(java.lang.String uploadType) {
+                return (SetAttestationRules) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public SetAttestationRules setUploadProtocol(java.lang.String uploadProtocol) {
+                return (SetAttestationRules) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The resource name of the managed identity or namespace resource to add an
+               * attestation rule to.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String resource;
+
+              /** Required. The resource name of the managed identity or namespace resource to add an attestation
+             rule to.
+               */
+              public java.lang.String getResource() {
+                return resource;
+              }
+
+              /**
+               * Required. The resource name of the managed identity or namespace resource to add an
+               * attestation rule to.
+               */
+              public SetAttestationRules setResource(java.lang.String resource) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                      "Parameter resource must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/namespaces/[^/]+/managedIdentities/[^/]+$");
+                }
+                this.resource = resource;
+                return this;
+              }
+
+              @Override
+              public SetAttestationRules set(String parameterName, Object value) {
+                return (SetAttestationRules) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Undeletes a WorkloadIdentityPoolManagedIdentity, as long as it was deleted fewer than 30 days
+             * ago.
+             *
+             * Create a request for the method "managedIdentities.undelete".
+             *
+             * This request holds the parameters needed by the iam server.  After setting any optional
+             * parameters, call the {@link Undelete#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The name of the managed identity to undelete.
+             * @param content the {@link com.google.api.services.iam.v1.model.UndeleteWorkloadIdentityPoolManagedIdentityRequest}
+             * @return the request
+             */
+            public Undelete undelete(java.lang.String name, com.google.api.services.iam.v1.model.UndeleteWorkloadIdentityPoolManagedIdentityRequest content) throws java.io.IOException {
+              Undelete result = new Undelete(name, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Undelete extends IamRequest<com.google.api.services.iam.v1.model.Operation> {
+
+              private static final String REST_PATH = "v1/{+name}:undelete";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/namespaces/[^/]+/managedIdentities/[^/]+$");
+
+              /**
+               * Undeletes a WorkloadIdentityPoolManagedIdentity, as long as it was deleted fewer than 30 days
+               * ago.
+               *
+               * Create a request for the method "managedIdentities.undelete".
+               *
+               * This request holds the parameters needed by the the iam server.  After setting any optional
+               * parameters, call the {@link Undelete#execute()} method to invoke the remote operation. <p>
+               * {@link
+               * Undelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The name of the managed identity to undelete.
+               * @param content the {@link com.google.api.services.iam.v1.model.UndeleteWorkloadIdentityPoolManagedIdentityRequest}
+               * @since 1.13
+               */
+              protected Undelete(java.lang.String name, com.google.api.services.iam.v1.model.UndeleteWorkloadIdentityPoolManagedIdentityRequest content) {
+                super(Iam.this, "POST", REST_PATH, content, com.google.api.services.iam.v1.model.Operation.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/namespaces/[^/]+/managedIdentities/[^/]+$");
+                }
+              }
+
+              @Override
+              public Undelete set$Xgafv(java.lang.String $Xgafv) {
+                return (Undelete) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Undelete setAccessToken(java.lang.String accessToken) {
+                return (Undelete) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Undelete setAlt(java.lang.String alt) {
+                return (Undelete) super.setAlt(alt);
+              }
+
+              @Override
+              public Undelete setCallback(java.lang.String callback) {
+                return (Undelete) super.setCallback(callback);
+              }
+
+              @Override
+              public Undelete setFields(java.lang.String fields) {
+                return (Undelete) super.setFields(fields);
+              }
+
+              @Override
+              public Undelete setKey(java.lang.String key) {
+                return (Undelete) super.setKey(key);
+              }
+
+              @Override
+              public Undelete setOauthToken(java.lang.String oauthToken) {
+                return (Undelete) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Undelete setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Undelete) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Undelete setQuotaUser(java.lang.String quotaUser) {
+                return (Undelete) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Undelete setUploadType(java.lang.String uploadType) {
+                return (Undelete) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Undelete setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Undelete) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. The name of the managed identity to undelete. */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The name of the managed identity to undelete.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /** Required. The name of the managed identity to undelete. */
+              public Undelete setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+/namespaces/[^/]+/managedIdentities/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Undelete set(String parameterName, Object value) {
+                return (Undelete) super.set(parameterName, value);
+              }
+            }
 
             /**
              * An accessor for creating requests from the Operations collection.
@@ -14700,11 +17625,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         }
       }
       /**
-       * **Note:** This method is deprecated. Use the [signBlob](https://cloud.google.com/iam/help/rest-
-       * credentials/v1/projects.serviceAccounts/signBlob) method in the IAM Service Account Credentials
-       * API instead. If you currently use this method, see the [migration
-       * guide](https://cloud.google.com/iam/help/credentials/migrate-api) for instructions. Signs a blob
-       * using the system-managed private key for a ServiceAccount.
+       * Signs a blob using the system-managed private key for a ServiceAccount.
        *
        * Create a request for the method "serviceAccounts.signBlob".
        *
@@ -14739,11 +17660,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             java.util.regex.Pattern.compile("^projects/[^/]+/serviceAccounts/[^/]+$");
 
         /**
-         * **Note:** This method is deprecated. Use the [signBlob](https://cloud.google.com/iam/help/rest-
-         * credentials/v1/projects.serviceAccounts/signBlob) method in the IAM Service Account Credentials
-         * API instead. If you currently use this method, see the [migration
-         * guide](https://cloud.google.com/iam/help/credentials/migrate-api) for instructions. Signs a
-         * blob using the system-managed private key for a ServiceAccount.
+         * Signs a blob using the system-managed private key for a ServiceAccount.
          *
          * Create a request for the method "serviceAccounts.signBlob".
          *
@@ -14892,11 +17809,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
         }
       }
       /**
-       * **Note:** This method is deprecated. Use the [signJwt](https://cloud.google.com/iam/help/rest-
-       * credentials/v1/projects.serviceAccounts/signJwt) method in the IAM Service Account Credentials
-       * API instead. If you currently use this method, see the [migration
-       * guide](https://cloud.google.com/iam/help/credentials/migrate-api) for instructions. Signs a JSON
-       * Web Token (JWT) using the system-managed private key for a ServiceAccount.
+       * Signs a JSON Web Token (JWT) using the system-managed private key for a ServiceAccount.
        *
        * Create a request for the method "serviceAccounts.signJwt".
        *
@@ -14931,11 +17844,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             java.util.regex.Pattern.compile("^projects/[^/]+/serviceAccounts/[^/]+$");
 
         /**
-         * **Note:** This method is deprecated. Use the [signJwt](https://cloud.google.com/iam/help/rest-
-         * credentials/v1/projects.serviceAccounts/signJwt) method in the IAM Service Account Credentials
-         * API instead. If you currently use this method, see the [migration
-         * guide](https://cloud.google.com/iam/help/credentials/migrate-api) for instructions. Signs a
-         * JSON Web Token (JWT) using the system-managed private key for a ServiceAccount.
+         * Signs a JSON Web Token (JWT) using the system-managed private key for a ServiceAccount.
          *
          * Create a request for the method "serviceAccounts.signJwt".
          *

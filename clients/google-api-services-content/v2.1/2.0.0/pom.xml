@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-content</artifactId>
-  <version>v2.1-rev20250301-2.0.0</version>
-  <name>Content API for Shopping v2.1-rev20250301-2.0.0</name>
+  <version>v2.1-rev20250408-2.0.0</version>
+  <name>Content API for Shopping v2.1-rev20250408-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

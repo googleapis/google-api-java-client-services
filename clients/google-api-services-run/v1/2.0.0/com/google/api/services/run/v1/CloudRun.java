@@ -6113,6 +6113,944 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
       }
 
     }
+    /**
+     * An accessor for creating requests from the Workerpools collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code CloudRun run = new CloudRun(...);}
+     *   {@code CloudRun.Workerpools.List request = run.workerpools().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Workerpools workerpools() {
+      return new Workerpools();
+    }
+
+    /**
+     * The "workerpools" collection of methods.
+     */
+    public class Workerpools {
+
+      /**
+       * Creates a new WorkerPool. WorkerPool creation will trigger a new deployment. Use GetWorkerPool,
+       * and check worker_pool.status to determine if the WorkerPool is ready.
+       *
+       * Create a request for the method "workerpools.create".
+       *
+       * This request holds the parameters needed by the run server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The resource's parent. In Cloud Run, it may be one of the following: *
+       *        `{project_id_or_number}` * `namespaces/{project_id_or_number}` *
+       *        `namespaces/{project_id_or_number}/workerpools` *
+       *        `projects/{project_id_or_number}/locations/{region}` *
+       *        `projects/{project_id_or_number}/regions/{region}`
+       * @param content the {@link com.google.api.services.run.v1.model.WorkerPool}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.api.services.run.v1.model.WorkerPool content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends CloudRunRequest<com.google.api.services.run.v1.model.WorkerPool> {
+
+        private static final String REST_PATH = "apis/run.googleapis.com/v1/{+parent}/workerpools";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^namespaces/[^/]+$");
+
+        /**
+         * Creates a new WorkerPool. WorkerPool creation will trigger a new deployment. Use GetWorkerPool,
+         * and check worker_pool.status to determine if the WorkerPool is ready.
+         *
+         * Create a request for the method "workerpools.create".
+         *
+         * This request holds the parameters needed by the the run server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The resource's parent. In Cloud Run, it may be one of the following: *
+       *        `{project_id_or_number}` * `namespaces/{project_id_or_number}` *
+       *        `namespaces/{project_id_or_number}/workerpools` *
+       *        `projects/{project_id_or_number}/locations/{region}` *
+       *        `projects/{project_id_or_number}/regions/{region}`
+         * @param content the {@link com.google.api.services.run.v1.model.WorkerPool}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.api.services.run.v1.model.WorkerPool content) {
+          super(CloudRun.this, "POST", REST_PATH, content, com.google.api.services.run.v1.model.WorkerPool.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^namespaces/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The resource's parent. In Cloud Run, it may be one of the following: *
+         * `{project_id_or_number}` * `namespaces/{project_id_or_number}` *
+         * `namespaces/{project_id_or_number}/workerpools` *
+         * `projects/{project_id_or_number}/locations/{region}` *
+         * `projects/{project_id_or_number}/regions/{region}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The resource's parent. In Cloud Run, it may be one of the following: *
+       `{project_id_or_number}` * `namespaces/{project_id_or_number}` *
+       `namespaces/{project_id_or_number}/workerpools` *
+       `projects/{project_id_or_number}/locations/{region}` *
+       `projects/{project_id_or_number}/regions/{region}`
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The resource's parent. In Cloud Run, it may be one of the following: *
+         * `{project_id_or_number}` * `namespaces/{project_id_or_number}` *
+         * `namespaces/{project_id_or_number}/workerpools` *
+         * `projects/{project_id_or_number}/locations/{region}` *
+         * `projects/{project_id_or_number}/regions/{region}`
+         */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^namespaces/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Indicates that the server should validate the request and populate default values without
+         * persisting the request. Supported values: `all`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String dryRun;
+
+        /** Indicates that the server should validate the request and populate default values without
+       persisting the request. Supported values: `all`
+         */
+        public java.lang.String getDryRun() {
+          return dryRun;
+        }
+
+        /**
+         * Indicates that the server should validate the request and populate default values without
+         * persisting the request. Supported values: `all`
+         */
+        public Create setDryRun(java.lang.String dryRun) {
+          this.dryRun = dryRun;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Deletes the provided worker pool. This will cause the WorkerPool to stop all instances and will
+       * delete all associated WorkerPoolRevisions.
+       *
+       * Create a request for the method "workerpools.delete".
+       *
+       * This request holds the parameters needed by the run server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The fully qualified name of the worker pool to delete. It can be any of the following
+       *        forms: * `namespaces/{project_id_or_number}/workerpools/{worker_pool_name}` (only when the
+       *        `endpoint` is regional) *
+       *        `projects/{project_id_or_number}/locations/{region}/workerpools/{worker_pool_name}` *
+       *        `projects/{project_id_or_number}/regions/{region}/workerpools/{worker_pool_name}`
+       * @return the request
+       */
+      public Delete delete(java.lang.String name) throws java.io.IOException {
+        Delete result = new Delete(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends CloudRunRequest<com.google.api.services.run.v1.model.Status> {
+
+        private static final String REST_PATH = "apis/run.googleapis.com/v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^namespaces/[^/]+/workerpools/[^/]+$");
+
+        /**
+         * Deletes the provided worker pool. This will cause the WorkerPool to stop all instances and will
+         * delete all associated WorkerPoolRevisions.
+         *
+         * Create a request for the method "workerpools.delete".
+         *
+         * This request holds the parameters needed by the the run server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The fully qualified name of the worker pool to delete. It can be any of the following
+       *        forms: * `namespaces/{project_id_or_number}/workerpools/{worker_pool_name}` (only when the
+       *        `endpoint` is regional) *
+       *        `projects/{project_id_or_number}/locations/{region}/workerpools/{worker_pool_name}` *
+       *        `projects/{project_id_or_number}/regions/{region}/workerpools/{worker_pool_name}`
+         * @since 1.13
+         */
+        protected Delete(java.lang.String name) {
+          super(CloudRun.this, "DELETE", REST_PATH, null, com.google.api.services.run.v1.model.Status.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^namespaces/[^/]+/workerpools/[^/]+$");
+          }
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The fully qualified name of the worker pool to delete. It can be any of the
+         * following forms: * `namespaces/{project_id_or_number}/workerpools/{worker_pool_name}`
+         * (only when the `endpoint` is regional) *
+         * `projects/{project_id_or_number}/locations/{region}/workerpools/{worker_pool_name}` *
+         * `projects/{project_id_or_number}/regions/{region}/workerpools/{worker_pool_name}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The fully qualified name of the worker pool to delete. It can be any of the following
+       forms: * `namespaces/{project_id_or_number}/workerpools/{worker_pool_name}` (only when the
+       `endpoint` is regional) *
+       `projects/{project_id_or_number}/locations/{region}/workerpools/{worker_pool_name}` *
+       `projects/{project_id_or_number}/regions/{region}/workerpools/{worker_pool_name}`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The fully qualified name of the worker pool to delete. It can be any of the
+         * following forms: * `namespaces/{project_id_or_number}/workerpools/{worker_pool_name}`
+         * (only when the `endpoint` is regional) *
+         * `projects/{project_id_or_number}/locations/{region}/workerpools/{worker_pool_name}` *
+         * `projects/{project_id_or_number}/regions/{region}/workerpools/{worker_pool_name}`
+         */
+        public Delete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^namespaces/[^/]+/workerpools/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * Indicates that the server should validate the request and populate default values without
+         * persisting the request. Supported values: `all`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String dryRun;
+
+        /** Indicates that the server should validate the request and populate default values without
+       persisting the request. Supported values: `all`
+         */
+        public java.lang.String getDryRun() {
+          return dryRun;
+        }
+
+        /**
+         * Indicates that the server should validate the request and populate default values without
+         * persisting the request. Supported values: `all`
+         */
+        public Delete setDryRun(java.lang.String dryRun) {
+          this.dryRun = dryRun;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Gets information about a worker pool.
+       *
+       * Create a request for the method "workerpools.get".
+       *
+       * This request holds the parameters needed by the run server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The fully qualified name of the worker pool to retrieve. It can be any of the following
+       *        forms: * `namespaces/{project_id_or_number}/workerpools/{worker_pool_name}` (only when the
+       *        `endpoint` is regional) *
+       *        `projects/{project_id_or_number}/locations/{region}/workerpools/{worker_pool_name}` *
+       *        `projects/{project_id_or_number}/regions/{region}/workerpools/{worker_pool_name}`
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends CloudRunRequest<com.google.api.services.run.v1.model.WorkerPool> {
+
+        private static final String REST_PATH = "apis/run.googleapis.com/v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^namespaces/[^/]+/workerpools/[^/]+$");
+
+        /**
+         * Gets information about a worker pool.
+         *
+         * Create a request for the method "workerpools.get".
+         *
+         * This request holds the parameters needed by the the run server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+         * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The fully qualified name of the worker pool to retrieve. It can be any of the following
+       *        forms: * `namespaces/{project_id_or_number}/workerpools/{worker_pool_name}` (only when the
+       *        `endpoint` is regional) *
+       *        `projects/{project_id_or_number}/locations/{region}/workerpools/{worker_pool_name}` *
+       *        `projects/{project_id_or_number}/regions/{region}/workerpools/{worker_pool_name}`
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(CloudRun.this, "GET", REST_PATH, null, com.google.api.services.run.v1.model.WorkerPool.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^namespaces/[^/]+/workerpools/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The fully qualified name of the worker pool to retrieve. It can be any of the
+         * following forms: * `namespaces/{project_id_or_number}/workerpools/{worker_pool_name}`
+         * (only when the `endpoint` is regional) *
+         * `projects/{project_id_or_number}/locations/{region}/workerpools/{worker_pool_name}` *
+         * `projects/{project_id_or_number}/regions/{region}/workerpools/{worker_pool_name}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The fully qualified name of the worker pool to retrieve. It can be any of the following
+       forms: * `namespaces/{project_id_or_number}/workerpools/{worker_pool_name}` (only when the
+       `endpoint` is regional) *
+       `projects/{project_id_or_number}/locations/{region}/workerpools/{worker_pool_name}` *
+       `projects/{project_id_or_number}/regions/{region}/workerpools/{worker_pool_name}`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The fully qualified name of the worker pool to retrieve. It can be any of the
+         * following forms: * `namespaces/{project_id_or_number}/workerpools/{worker_pool_name}`
+         * (only when the `endpoint` is regional) *
+         * `projects/{project_id_or_number}/locations/{region}/workerpools/{worker_pool_name}` *
+         * `projects/{project_id_or_number}/regions/{region}/workerpools/{worker_pool_name}`
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^namespaces/[^/]+/workerpools/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists worker pools for the given project and region. Results are sorted by creation time,
+       * descending.
+       *
+       * Create a request for the method "workerpools.list".
+       *
+       * This request holds the parameters needed by the run server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The parent from where the resources should be listed. In Cloud Run, it may be one of the
+       *        following: * `{project_id_or_number}` * `namespaces/{project_id_or_number}` *
+       *        `namespaces/{project_id_or_number}/workerpools` *
+       *        `projects/{project_id_or_number}/locations/{region}` *
+       *        `projects/{project_id_or_number}/regions/{region}`
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends CloudRunRequest<com.google.api.services.run.v1.model.ListWorkerPoolsResponse> {
+
+        private static final String REST_PATH = "apis/run.googleapis.com/v1/{+parent}/workerpools";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^namespaces/[^/]+$");
+
+        /**
+         * Lists worker pools for the given project and region. Results are sorted by creation time,
+         * descending.
+         *
+         * Create a request for the method "workerpools.list".
+         *
+         * This request holds the parameters needed by the the run server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+         * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The parent from where the resources should be listed. In Cloud Run, it may be one of the
+       *        following: * `{project_id_or_number}` * `namespaces/{project_id_or_number}` *
+       *        `namespaces/{project_id_or_number}/workerpools` *
+       *        `projects/{project_id_or_number}/locations/{region}` *
+       *        `projects/{project_id_or_number}/regions/{region}`
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(CloudRun.this, "GET", REST_PATH, null, com.google.api.services.run.v1.model.ListWorkerPoolsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^namespaces/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The parent from where the resources should be listed. In Cloud Run, it may be
+         * one of the following: * `{project_id_or_number}` * `namespaces/{project_id_or_number}` *
+         * `namespaces/{project_id_or_number}/workerpools` *
+         * `projects/{project_id_or_number}/locations/{region}` *
+         * `projects/{project_id_or_number}/regions/{region}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The parent from where the resources should be listed. In Cloud Run, it may be one of the
+       following: * `{project_id_or_number}` * `namespaces/{project_id_or_number}` *
+       `namespaces/{project_id_or_number}/workerpools` *
+       `projects/{project_id_or_number}/locations/{region}` *
+       `projects/{project_id_or_number}/regions/{region}`
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The parent from where the resources should be listed. In Cloud Run, it may be
+         * one of the following: * `{project_id_or_number}` * `namespaces/{project_id_or_number}` *
+         * `namespaces/{project_id_or_number}/workerpools` *
+         * `projects/{project_id_or_number}/locations/{region}` *
+         * `projects/{project_id_or_number}/regions/{region}`
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^namespaces/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /** Encoded string to continue paging. */
+        @com.google.api.client.util.Key("continue")
+        private java.lang.String continue__;
+
+        /** Encoded string to continue paging.
+         */
+        public java.lang.String getContinue() {
+          return continue__;
+        }
+
+        /** Encoded string to continue paging. */
+        public List setContinue(java.lang.String continue__) {
+          this.continue__ = continue__;
+          return this;
+        }
+
+        /** =, !=, exists, in, and notIn. */
+        @com.google.api.client.util.Key
+        private java.lang.String labelSelector;
+
+        /**=, !=, exists, in, and notIn.
+      =,
+
+         */
+        public java.lang.String getLabelSelector() {
+          return labelSelector;
+        }
+
+        /** =, !=, exists, in, and notIn. */
+        public List setLabelSelector(java.lang.String labelSelector) {
+          this.labelSelector = labelSelector;
+          return this;
+        }
+
+        /** The maximum number of records that should be returned. */
+        @com.google.api.client.util.Key
+        private java.lang.Integer limit;
+
+        /** The maximum number of records that should be returned.
+         */
+        public java.lang.Integer getLimit() {
+          return limit;
+        }
+
+        /** The maximum number of records that should be returned. */
+        public List setLimit(java.lang.Integer limit) {
+          this.limit = limit;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Replaces a worker pool. Only the spec and metadata labels and annotations are modifiable. After
+       * the Update request, Cloud Run will work to make the 'status' match the requested 'spec'. May
+       * provide metadata.resourceVersion to enforce update from last read for optimistic concurrency
+       * control.
+       *
+       * Create a request for the method "workerpools.replaceWorkerPool".
+       *
+       * This request holds the parameters needed by the run server.  After setting any optional
+       * parameters, call the {@link ReplaceWorkerPool#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The fully qualified name of the worker pool to replace. It can be any of the following
+       *        forms: * `namespaces/{project_id_or_number}/workerpools/{worker_pool_name}` (only when the
+       *        `endpoint` is regional) *
+       *        `projects/{project_id_or_number}/locations/{region}/workerpools/{worker_pool_name}` *
+       *        `projects/{project_id_or_number}/regions/{region}/workerpools/{worker_pool_name}`
+       * @param content the {@link com.google.api.services.run.v1.model.WorkerPool}
+       * @return the request
+       */
+      public ReplaceWorkerPool replaceWorkerPool(java.lang.String name, com.google.api.services.run.v1.model.WorkerPool content) throws java.io.IOException {
+        ReplaceWorkerPool result = new ReplaceWorkerPool(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class ReplaceWorkerPool extends CloudRunRequest<com.google.api.services.run.v1.model.WorkerPool> {
+
+        private static final String REST_PATH = "apis/run.googleapis.com/v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^namespaces/[^/]+/workerpools/[^/]+$");
+
+        /**
+         * Replaces a worker pool. Only the spec and metadata labels and annotations are modifiable. After
+         * the Update request, Cloud Run will work to make the 'status' match the requested 'spec'. May
+         * provide metadata.resourceVersion to enforce update from last read for optimistic concurrency
+         * control.
+         *
+         * Create a request for the method "workerpools.replaceWorkerPool".
+         *
+         * This request holds the parameters needed by the the run server.  After setting any optional
+         * parameters, call the {@link ReplaceWorkerPool#execute()} method to invoke the remote operation.
+         * <p> {@link ReplaceWorkerPool#initialize(com.google.api.client.googleapis.services.AbstractGoogl
+         * eClientRequest)} must be called to initialize this instance immediately after invoking the
+         * constructor. </p>
+         *
+         * @param name Required. The fully qualified name of the worker pool to replace. It can be any of the following
+       *        forms: * `namespaces/{project_id_or_number}/workerpools/{worker_pool_name}` (only when the
+       *        `endpoint` is regional) *
+       *        `projects/{project_id_or_number}/locations/{region}/workerpools/{worker_pool_name}` *
+       *        `projects/{project_id_or_number}/regions/{region}/workerpools/{worker_pool_name}`
+         * @param content the {@link com.google.api.services.run.v1.model.WorkerPool}
+         * @since 1.13
+         */
+        protected ReplaceWorkerPool(java.lang.String name, com.google.api.services.run.v1.model.WorkerPool content) {
+          super(CloudRun.this, "PUT", REST_PATH, content, com.google.api.services.run.v1.model.WorkerPool.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^namespaces/[^/]+/workerpools/[^/]+$");
+          }
+        }
+
+        @Override
+        public ReplaceWorkerPool set$Xgafv(java.lang.String $Xgafv) {
+          return (ReplaceWorkerPool) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public ReplaceWorkerPool setAccessToken(java.lang.String accessToken) {
+          return (ReplaceWorkerPool) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public ReplaceWorkerPool setAlt(java.lang.String alt) {
+          return (ReplaceWorkerPool) super.setAlt(alt);
+        }
+
+        @Override
+        public ReplaceWorkerPool setCallback(java.lang.String callback) {
+          return (ReplaceWorkerPool) super.setCallback(callback);
+        }
+
+        @Override
+        public ReplaceWorkerPool setFields(java.lang.String fields) {
+          return (ReplaceWorkerPool) super.setFields(fields);
+        }
+
+        @Override
+        public ReplaceWorkerPool setKey(java.lang.String key) {
+          return (ReplaceWorkerPool) super.setKey(key);
+        }
+
+        @Override
+        public ReplaceWorkerPool setOauthToken(java.lang.String oauthToken) {
+          return (ReplaceWorkerPool) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public ReplaceWorkerPool setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (ReplaceWorkerPool) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public ReplaceWorkerPool setQuotaUser(java.lang.String quotaUser) {
+          return (ReplaceWorkerPool) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public ReplaceWorkerPool setUploadType(java.lang.String uploadType) {
+          return (ReplaceWorkerPool) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public ReplaceWorkerPool setUploadProtocol(java.lang.String uploadProtocol) {
+          return (ReplaceWorkerPool) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The fully qualified name of the worker pool to replace. It can be any of the
+         * following forms: * `namespaces/{project_id_or_number}/workerpools/{worker_pool_name}`
+         * (only when the `endpoint` is regional) *
+         * `projects/{project_id_or_number}/locations/{region}/workerpools/{worker_pool_name}` *
+         * `projects/{project_id_or_number}/regions/{region}/workerpools/{worker_pool_name}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The fully qualified name of the worker pool to replace. It can be any of the following
+       forms: * `namespaces/{project_id_or_number}/workerpools/{worker_pool_name}` (only when the
+       `endpoint` is regional) *
+       `projects/{project_id_or_number}/locations/{region}/workerpools/{worker_pool_name}` *
+       `projects/{project_id_or_number}/regions/{region}/workerpools/{worker_pool_name}`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The fully qualified name of the worker pool to replace. It can be any of the
+         * following forms: * `namespaces/{project_id_or_number}/workerpools/{worker_pool_name}`
+         * (only when the `endpoint` is regional) *
+         * `projects/{project_id_or_number}/locations/{region}/workerpools/{worker_pool_name}` *
+         * `projects/{project_id_or_number}/regions/{region}/workerpools/{worker_pool_name}`
+         */
+        public ReplaceWorkerPool setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^namespaces/[^/]+/workerpools/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * Indicates that the server should validate the request and populate default values without
+         * persisting the request. Supported values: `all`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String dryRun;
+
+        /** Indicates that the server should validate the request and populate default values without
+       persisting the request. Supported values: `all`
+         */
+        public java.lang.String getDryRun() {
+          return dryRun;
+        }
+
+        /**
+         * Indicates that the server should validate the request and populate default values without
+         * persisting the request. Supported values: `all`
+         */
+        public ReplaceWorkerPool setDryRun(java.lang.String dryRun) {
+          this.dryRun = dryRun;
+          return this;
+        }
+
+        @Override
+        public ReplaceWorkerPool set(String parameterName, Object value) {
+          return (ReplaceWorkerPool) super.set(parameterName, value);
+        }
+      }
+
+    }
   }
 
   /**

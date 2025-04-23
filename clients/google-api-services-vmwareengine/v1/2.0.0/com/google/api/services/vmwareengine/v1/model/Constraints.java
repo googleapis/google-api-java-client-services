@@ -31,6 +31,14 @@ package com.google.api.services.vmwareengine.v1.model;
 public final class Constraints extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Output Only. A list of intervals in which maintenance windows are not allowed. Any
+   * time window that overlaps with any of these intervals will be considered invalid.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<WeeklyTimeInterval> disallowedIntervals;
+
+  /**
    * Output only. Minimum number of hours must be allotted for the upgrade activities for each
    * selected day. This is a minimum; the upgrade schedule can allot more hours for the given day.
    * The value may be {@code null}.
@@ -53,6 +61,25 @@ public final class Constraints extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private Interval rescheduleDateRange;
+
+  /**
+   * Output only. Output Only. A list of intervals in which maintenance windows are not allowed. Any
+   * time window that overlaps with any of these intervals will be considered invalid.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<WeeklyTimeInterval> getDisallowedIntervals() {
+    return disallowedIntervals;
+  }
+
+  /**
+   * Output only. Output Only. A list of intervals in which maintenance windows are not allowed. Any
+   * time window that overlaps with any of these intervals will be considered invalid.
+   * @param disallowedIntervals disallowedIntervals or {@code null} for none
+   */
+  public Constraints setDisallowedIntervals(java.util.List<WeeklyTimeInterval> disallowedIntervals) {
+    this.disallowedIntervals = disallowedIntervals;
+    return this;
+  }
 
   /**
    * Output only. Minimum number of hours must be allotted for the upgrade activities for each

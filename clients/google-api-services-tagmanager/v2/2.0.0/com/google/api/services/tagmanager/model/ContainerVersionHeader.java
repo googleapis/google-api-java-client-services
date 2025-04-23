@@ -86,20 +86,6 @@ public final class ContainerVersionHeader extends com.google.api.client.json.Gen
   private java.lang.String numGtagConfigs;
 
   /**
-   * Number of macros in the container version.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String numMacros;
-
-  /**
-   * Number of rules in the container version.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String numRules;
-
-  /**
    * Number of tags in the container version.
    * The value may be {@code null}.
    */
@@ -274,40 +260,6 @@ public final class ContainerVersionHeader extends com.google.api.client.json.Gen
    */
   public ContainerVersionHeader setNumGtagConfigs(java.lang.String numGtagConfigs) {
     this.numGtagConfigs = numGtagConfigs;
-    return this;
-  }
-
-  /**
-   * Number of macros in the container version.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getNumMacros() {
-    return numMacros;
-  }
-
-  /**
-   * Number of macros in the container version.
-   * @param numMacros numMacros or {@code null} for none
-   */
-  public ContainerVersionHeader setNumMacros(java.lang.String numMacros) {
-    this.numMacros = numMacros;
-    return this;
-  }
-
-  /**
-   * Number of rules in the container version.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getNumRules() {
-    return numRules;
-  }
-
-  /**
-   * Number of rules in the container version.
-   * @param numRules numRules or {@code null} for none
-   */
-  public ContainerVersionHeader setNumRules(java.lang.String numRules) {
-    this.numRules = numRules;
     return this;
   }
 

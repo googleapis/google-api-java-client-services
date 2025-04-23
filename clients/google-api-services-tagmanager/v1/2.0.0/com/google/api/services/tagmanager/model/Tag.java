@@ -37,13 +37,6 @@ public final class Tag extends com.google.api.client.json.GenericJson {
   private java.lang.String accountId;
 
   /**
-   * Blocking rule IDs. If any of the listed rules evaluate to true, the tag will not fire.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> blockingRuleId;
-
-  /**
    * Blocking trigger IDs. If any of the listed triggers evaluate to true, the tag will not fire.
    * The value may be {@code null}.
    */
@@ -64,14 +57,6 @@ public final class Tag extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String fingerprint;
-
-  /**
-   * Firing rule IDs. A tag will fire when any of the listed rules are true and all of its
-   * blockingRuleIds (if any specified) are false.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> firingRuleId;
 
   /**
    * Firing trigger IDs. A tag will fire when any of the listed triggers are true and all of its
@@ -212,23 +197,6 @@ public final class Tag extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Blocking rule IDs. If any of the listed rules evaluate to true, the tag will not fire.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getBlockingRuleId() {
-    return blockingRuleId;
-  }
-
-  /**
-   * Blocking rule IDs. If any of the listed rules evaluate to true, the tag will not fire.
-   * @param blockingRuleId blockingRuleId or {@code null} for none
-   */
-  public Tag setBlockingRuleId(java.util.List<java.lang.String> blockingRuleId) {
-    this.blockingRuleId = blockingRuleId;
-    return this;
-  }
-
-  /**
    * Blocking trigger IDs. If any of the listed triggers evaluate to true, the tag will not fire.
    * @return value or {@code null} for none
    */
@@ -278,25 +246,6 @@ public final class Tag extends com.google.api.client.json.GenericJson {
    */
   public Tag setFingerprint(java.lang.String fingerprint) {
     this.fingerprint = fingerprint;
-    return this;
-  }
-
-  /**
-   * Firing rule IDs. A tag will fire when any of the listed rules are true and all of its
-   * blockingRuleIds (if any specified) are false.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getFiringRuleId() {
-    return firingRuleId;
-  }
-
-  /**
-   * Firing rule IDs. A tag will fire when any of the listed rules are true and all of its
-   * blockingRuleIds (if any specified) are false.
-   * @param firingRuleId firingRuleId or {@code null} for none
-   */
-  public Tag setFiringRuleId(java.util.List<java.lang.String> firingRuleId) {
-    this.firingRuleId = firingRuleId;
     return this;
   }
 

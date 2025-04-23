@@ -110,7 +110,8 @@ public final class VpcFlowLogsConfig extends com.google.api.client.json.GenericJ
 
   /**
    * Optional. The state of the VPC Flow Log configuration. Default value is ENABLED. When creating
-   * a new configuration, it must be enabled.
+   * a new configuration, it must be enabled. Setting state=DISABLED will pause the log generation
+   * for this config.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -327,7 +328,8 @@ public final class VpcFlowLogsConfig extends com.google.api.client.json.GenericJ
 
   /**
    * Optional. The state of the VPC Flow Log configuration. Default value is ENABLED. When creating
-   * a new configuration, it must be enabled.
+   * a new configuration, it must be enabled. Setting state=DISABLED will pause the log generation
+   * for this config.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -336,7 +338,8 @@ public final class VpcFlowLogsConfig extends com.google.api.client.json.GenericJ
 
   /**
    * Optional. The state of the VPC Flow Log configuration. Default value is ENABLED. When creating
-   * a new configuration, it must be enabled.
+   * a new configuration, it must be enabled. Setting state=DISABLED will pause the log generation
+   * for this config.
    * @param state state or {@code null} for none
    */
   public VpcFlowLogsConfig setState(java.lang.String state) {

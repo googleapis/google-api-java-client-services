@@ -1457,6 +1457,29 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
             return this;
           }
 
+          /**
+           * Optional. Filter the WorkstationClusters to be listed. Possible filters are described
+           * in https://google.aip.dev/160.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Filter the WorkstationClusters to be listed. Possible filters are described in
+         https://google.aip.dev/160.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. Filter the WorkstationClusters to be listed. Possible filters are described
+           * in https://google.aip.dev/160.
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
           /** Optional. Maximum number of items to return. */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
@@ -2547,6 +2570,29 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
                     "^projects/[^/]+/locations/[^/]+/workstationClusters/[^/]+$");
               }
               this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Optional. Filter the WorkstationConfigs to be listed. Possible filters are described
+             * in https://google.aip.dev/160.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Optional. Filter the WorkstationConfigs to be listed. Possible filters are described in
+           https://google.aip.dev/160.
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /**
+             * Optional. Filter the WorkstationConfigs to be listed. Possible filters are described
+             * in https://google.aip.dev/160.
+             */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
               return this;
             }
 
@@ -4227,6 +4273,29 @@ public class CloudWorkstations extends com.google.api.client.googleapis.services
                       "^projects/[^/]+/locations/[^/]+/workstationClusters/[^/]+/workstationConfigs/[^/]+$");
                 }
                 this.parent = parent;
+                return this;
+              }
+
+              /**
+               * Optional. Filter the Workstations to be listed. Possible filters are described in
+               * https://google.aip.dev/160.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String filter;
+
+              /** Optional. Filter the Workstations to be listed. Possible filters are described in
+             https://google.aip.dev/160.
+               */
+              public java.lang.String getFilter() {
+                return filter;
+              }
+
+              /**
+               * Optional. Filter the Workstations to be listed. Possible filters are described in
+               * https://google.aip.dev/160.
+               */
+              public List setFilter(java.lang.String filter) {
+                this.filter = filter;
                 return this;
               }
 

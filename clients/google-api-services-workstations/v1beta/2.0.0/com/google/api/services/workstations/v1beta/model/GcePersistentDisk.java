@@ -62,8 +62,8 @@ public final class GcePersistentDisk extends com.google.api.client.json.GenericJ
    * is set. Must be empty if read_only is false. Updating source_snapshot will update content in
    * the ephemeral directory after the workstation is restarted. Only file systems supported by
    * Container-Optimized OS (COS) are explicitly supported. For a list of supported file systems,
-   * please refer to the [COS documentation](https://cloud.google.com/container-optimized-
-   * os/docs/concepts/supported-filesystems). This field is mutable.
+   * see [the filesystems available in Container-Optimized OS](https://cloud.google.com/container-
+   * optimized-os/docs/concepts/supported-filesystems). This field is mutable.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -137,8 +137,8 @@ public final class GcePersistentDisk extends com.google.api.client.json.GenericJ
    * is set. Must be empty if read_only is false. Updating source_snapshot will update content in
    * the ephemeral directory after the workstation is restarted. Only file systems supported by
    * Container-Optimized OS (COS) are explicitly supported. For a list of supported file systems,
-   * please refer to the [COS documentation](https://cloud.google.com/container-optimized-
-   * os/docs/concepts/supported-filesystems). This field is mutable.
+   * see [the filesystems available in Container-Optimized OS](https://cloud.google.com/container-
+   * optimized-os/docs/concepts/supported-filesystems). This field is mutable.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceSnapshot() {
@@ -150,8 +150,8 @@ public final class GcePersistentDisk extends com.google.api.client.json.GenericJ
    * is set. Must be empty if read_only is false. Updating source_snapshot will update content in
    * the ephemeral directory after the workstation is restarted. Only file systems supported by
    * Container-Optimized OS (COS) are explicitly supported. For a list of supported file systems,
-   * please refer to the [COS documentation](https://cloud.google.com/container-optimized-
-   * os/docs/concepts/supported-filesystems). This field is mutable.
+   * see [the filesystems available in Container-Optimized OS](https://cloud.google.com/container-
+   * optimized-os/docs/concepts/supported-filesystems). This field is mutable.
    * @param sourceSnapshot sourceSnapshot or {@code null} for none
    */
   public GcePersistentDisk setSourceSnapshot(java.lang.String sourceSnapshot) {

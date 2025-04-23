@@ -17,7 +17,7 @@
 package com.google.api.services.connectors.v1.model;
 
 /**
- * Response message for ConnectorsService.ListManagedZones
+ * JWT claims used for the jwt-bearer authorization grant.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Connectors API. For a detailed explanation see:
@@ -27,88 +27,88 @@ package com.google.api.services.connectors.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ListManagedZonesResponse extends com.google.api.client.json.GenericJson {
+public final class EndUserAuthenticationConfigOauth2JwtBearerJwtClaims extends com.google.api.client.json.GenericJson {
 
   /**
-   * ManagedZones.
+   * Value for the "aud" claim.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<ManagedZone> managedZones;
+  private java.lang.String audience;
 
   /**
-   * Next page token.
+   * Value for the "iss" claim.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String nextPageToken;
+  private java.lang.String issuer;
 
   /**
-   * Locations that could not be reached.
+   * Value for the "sub" claim.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> unreachable;
+  private java.lang.String subject;
 
   /**
-   * ManagedZones.
+   * Value for the "aud" claim.
    * @return value or {@code null} for none
    */
-  public java.util.List<ManagedZone> getManagedZones() {
-    return managedZones;
+  public java.lang.String getAudience() {
+    return audience;
   }
 
   /**
-   * ManagedZones.
-   * @param managedZones managedZones or {@code null} for none
+   * Value for the "aud" claim.
+   * @param audience audience or {@code null} for none
    */
-  public ListManagedZonesResponse setManagedZones(java.util.List<ManagedZone> managedZones) {
-    this.managedZones = managedZones;
+  public EndUserAuthenticationConfigOauth2JwtBearerJwtClaims setAudience(java.lang.String audience) {
+    this.audience = audience;
     return this;
   }
 
   /**
-   * Next page token.
+   * Value for the "iss" claim.
    * @return value or {@code null} for none
    */
-  public java.lang.String getNextPageToken() {
-    return nextPageToken;
+  public java.lang.String getIssuer() {
+    return issuer;
   }
 
   /**
-   * Next page token.
-   * @param nextPageToken nextPageToken or {@code null} for none
+   * Value for the "iss" claim.
+   * @param issuer issuer or {@code null} for none
    */
-  public ListManagedZonesResponse setNextPageToken(java.lang.String nextPageToken) {
-    this.nextPageToken = nextPageToken;
+  public EndUserAuthenticationConfigOauth2JwtBearerJwtClaims setIssuer(java.lang.String issuer) {
+    this.issuer = issuer;
     return this;
   }
 
   /**
-   * Locations that could not be reached.
+   * Value for the "sub" claim.
    * @return value or {@code null} for none
    */
-  public java.util.List<java.lang.String> getUnreachable() {
-    return unreachable;
+  public java.lang.String getSubject() {
+    return subject;
   }
 
   /**
-   * Locations that could not be reached.
-   * @param unreachable unreachable or {@code null} for none
+   * Value for the "sub" claim.
+   * @param subject subject or {@code null} for none
    */
-  public ListManagedZonesResponse setUnreachable(java.util.List<java.lang.String> unreachable) {
-    this.unreachable = unreachable;
+  public EndUserAuthenticationConfigOauth2JwtBearerJwtClaims setSubject(java.lang.String subject) {
+    this.subject = subject;
     return this;
   }
 
   @Override
-  public ListManagedZonesResponse set(String fieldName, Object value) {
-    return (ListManagedZonesResponse) super.set(fieldName, value);
+  public EndUserAuthenticationConfigOauth2JwtBearerJwtClaims set(String fieldName, Object value) {
+    return (EndUserAuthenticationConfigOauth2JwtBearerJwtClaims) super.set(fieldName, value);
   }
 
   @Override
-  public ListManagedZonesResponse clone() {
-    return (ListManagedZonesResponse) super.clone();
+  public EndUserAuthenticationConfigOauth2JwtBearerJwtClaims clone() {
+    return (EndUserAuthenticationConfigOauth2JwtBearerJwtClaims) super.clone();
   }
 
 }

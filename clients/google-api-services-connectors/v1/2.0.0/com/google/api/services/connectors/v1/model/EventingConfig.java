@@ -17,7 +17,7 @@
 package com.google.api.services.connectors.v1.model;
 
 /**
- * Eventing Configuration of a connection
+ * Eventing Configuration of a connection next: 18
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Connectors API. For a detailed explanation see:
@@ -105,6 +105,13 @@ public final class EventingConfig extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private DestinationConfig registrationDestinationConfig;
+
+  /**
+   * Optional. Ssl config of a connection
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SslConfig sslConfig;
 
   /**
    * Optional. Additional eventing related field values
@@ -275,6 +282,23 @@ public final class EventingConfig extends com.google.api.client.json.GenericJson
    */
   public EventingConfig setRegistrationDestinationConfig(DestinationConfig registrationDestinationConfig) {
     this.registrationDestinationConfig = registrationDestinationConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Ssl config of a connection
+   * @return value or {@code null} for none
+   */
+  public SslConfig getSslConfig() {
+    return sslConfig;
+  }
+
+  /**
+   * Optional. Ssl config of a connection
+   * @param sslConfig sslConfig or {@code null} for none
+   */
+  public EventingConfig setSslConfig(SslConfig sslConfig) {
+    this.sslConfig = sslConfig;
     return this;
   }
 

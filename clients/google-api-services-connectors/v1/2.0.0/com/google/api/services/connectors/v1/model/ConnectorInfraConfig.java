@@ -101,6 +101,13 @@ public final class ConnectorInfraConfig extends com.google.api.client.json.Gener
   private java.lang.Boolean provisionCloudSpanner;
 
   /**
+   * Indicate whether memstore is required for connector job.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean provisionMemstore;
+
+  /**
    * Max QPS supported by the connector version before throttling of requests.
    * The value may be {@code null}.
    */
@@ -295,6 +302,23 @@ public final class ConnectorInfraConfig extends com.google.api.client.json.Gener
    */
   public ConnectorInfraConfig setProvisionCloudSpanner(java.lang.Boolean provisionCloudSpanner) {
     this.provisionCloudSpanner = provisionCloudSpanner;
+    return this;
+  }
+
+  /**
+   * Indicate whether memstore is required for connector job.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getProvisionMemstore() {
+    return provisionMemstore;
+  }
+
+  /**
+   * Indicate whether memstore is required for connector job.
+   * @param provisionMemstore provisionMemstore or {@code null} for none
+   */
+  public ConnectorInfraConfig setProvisionMemstore(java.lang.Boolean provisionMemstore) {
+    this.provisionMemstore = provisionMemstore;
     return this;
   }
 

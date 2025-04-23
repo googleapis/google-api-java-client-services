@@ -30,16 +30,16 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1DataQualityDimension extends com.google.api.client.json.GenericJson {
 
   /**
-   * The dimension name a rule belongs to. Supported dimensions are "COMPLETENESS", "ACCURACY",
-   * "CONSISTENCY", "VALIDITY", "UNIQUENESS", "FRESHNESS", "VOLUME"
+   * Optional. The dimension name a rule belongs to. Custom dimension name is supported with all
+   * uppercase letters and maximum length of 30 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The dimension name a rule belongs to. Supported dimensions are "COMPLETENESS", "ACCURACY",
-   * "CONSISTENCY", "VALIDITY", "UNIQUENESS", "FRESHNESS", "VOLUME"
+   * Optional. The dimension name a rule belongs to. Custom dimension name is supported with all
+   * uppercase letters and maximum length of 30 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -47,8 +47,8 @@ public final class GoogleCloudDataplexV1DataQualityDimension extends com.google.
   }
 
   /**
-   * The dimension name a rule belongs to. Supported dimensions are "COMPLETENESS", "ACCURACY",
-   * "CONSISTENCY", "VALIDITY", "UNIQUENESS", "FRESHNESS", "VOLUME"
+   * Optional. The dimension name a rule belongs to. Custom dimension name is supported with all
+   * uppercase letters and maximum length of 30 characters.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDataplexV1DataQualityDimension setName(java.lang.String name) {

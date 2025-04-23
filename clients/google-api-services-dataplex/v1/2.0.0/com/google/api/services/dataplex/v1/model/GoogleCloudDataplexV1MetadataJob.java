@@ -37,6 +37,20 @@ public final class GoogleCloudDataplexV1MetadataJob extends com.google.api.clien
   private String createTime;
 
   /**
+   * Output only. Export job result.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDataplexV1MetadataJobExportJobResult exportResult;
+
+  /**
+   * Export job specification.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDataplexV1MetadataJobExportJobSpec exportSpec;
+
+  /**
    * Output only. Import job result.
    * The value may be {@code null}.
    */
@@ -108,6 +122,40 @@ public final class GoogleCloudDataplexV1MetadataJob extends com.google.api.clien
    */
   public GoogleCloudDataplexV1MetadataJob setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Output only. Export job result.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDataplexV1MetadataJobExportJobResult getExportResult() {
+    return exportResult;
+  }
+
+  /**
+   * Output only. Export job result.
+   * @param exportResult exportResult or {@code null} for none
+   */
+  public GoogleCloudDataplexV1MetadataJob setExportResult(GoogleCloudDataplexV1MetadataJobExportJobResult exportResult) {
+    this.exportResult = exportResult;
+    return this;
+  }
+
+  /**
+   * Export job specification.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDataplexV1MetadataJobExportJobSpec getExportSpec() {
+    return exportSpec;
+  }
+
+  /**
+   * Export job specification.
+   * @param exportSpec exportSpec or {@code null} for none
+   */
+  public GoogleCloudDataplexV1MetadataJob setExportSpec(GoogleCloudDataplexV1MetadataJobExportJobSpec exportSpec) {
+    this.exportSpec = exportSpec;
     return this;
   }
 

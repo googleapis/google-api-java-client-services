@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-ondemandscanning</artifactId>
-  <version>v1beta1-rev20250217-2.0.0</version>
-  <name>On-Demand Scanning API v1beta1-rev20250217-2.0.0</name>
+  <version>v1beta1-rev20250321-2.0.0</version>
+  <name>On-Demand Scanning API v1beta1-rev20250321-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

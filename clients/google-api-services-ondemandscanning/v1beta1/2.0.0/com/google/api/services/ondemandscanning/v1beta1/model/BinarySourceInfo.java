@@ -34,7 +34,7 @@ public final class BinarySourceInfo extends com.google.api.client.json.GenericJs
    * The binary package. This is significant when the source is different than the binary itself.
    * Historically if they've differed, we've stored the name of the source and its version in the
    * package/version fields, but we should also store the binary package info, as that's what's
-   * actually installed. See b/175908657#comment15.
+   * actually installed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,7 +54,7 @@ public final class BinarySourceInfo extends com.google.api.client.json.GenericJs
    * The binary package. This is significant when the source is different than the binary itself.
    * Historically if they've differed, we've stored the name of the source and its version in the
    * package/version fields, but we should also store the binary package info, as that's what's
-   * actually installed. See b/175908657#comment15.
+   * actually installed.
    * @return value or {@code null} for none
    */
   public PackageVersion getBinaryVersion() {
@@ -65,7 +65,7 @@ public final class BinarySourceInfo extends com.google.api.client.json.GenericJs
    * The binary package. This is significant when the source is different than the binary itself.
    * Historically if they've differed, we've stored the name of the source and its version in the
    * package/version fields, but we should also store the binary package info, as that's what's
-   * actually installed. See b/175908657#comment15.
+   * actually installed.
    * @param binaryVersion binaryVersion or {@code null} for none
    */
   public BinarySourceInfo setBinaryVersion(PackageVersion binaryVersion) {

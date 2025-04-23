@@ -45,7 +45,8 @@ public final class ListThreadsResponse extends com.google.api.client.json.Generi
 
   /**
    * List of threads. Note that each thread resource does not contain a list of `messages`. The list
-   * of `messages` for a given thread can be fetched using the threads.get method.
+   * of `messages` for a given thread can be fetched using the [`threads.get`](https://developers.go
+   * ogle.com/workspace/gmail/api/v1/reference/users/threads/get) method.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,7 +88,8 @@ public final class ListThreadsResponse extends com.google.api.client.json.Generi
 
   /**
    * List of threads. Note that each thread resource does not contain a list of `messages`. The list
-   * of `messages` for a given thread can be fetched using the threads.get method.
+   * of `messages` for a given thread can be fetched using the [`threads.get`](https://developers.go
+   * ogle.com/workspace/gmail/api/v1/reference/users/threads/get) method.
    * @return value or {@code null} for none
    */
   public java.util.List<Thread> getThreads() {
@@ -96,7 +98,8 @@ public final class ListThreadsResponse extends com.google.api.client.json.Generi
 
   /**
    * List of threads. Note that each thread resource does not contain a list of `messages`. The list
-   * of `messages` for a given thread can be fetched using the threads.get method.
+   * of `messages` for a given thread can be fetched using the [`threads.get`](https://developers.go
+   * ogle.com/workspace/gmail/api/v1/reference/users/threads/get) method.
    * @param threads threads or {@code null} for none
    */
   public ListThreadsResponse setThreads(java.util.List<Thread> threads) {

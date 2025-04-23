@@ -44,7 +44,8 @@ public final class GoogleCloudApigeeV1DeveloperApp extends com.google.api.client
   private java.lang.String appFamily;
 
   /**
-   * ID of the developer app.
+   * ID of the developer app. This ID is not user specified but is automatically generated on app
+   * creation. appId is a UUID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -172,7 +173,8 @@ public final class GoogleCloudApigeeV1DeveloperApp extends com.google.api.client
   }
 
   /**
-   * ID of the developer app.
+   * ID of the developer app. This ID is not user specified but is automatically generated on app
+   * creation. appId is a UUID.
    * @return value or {@code null} for none
    */
   public java.lang.String getAppId() {
@@ -180,7 +182,8 @@ public final class GoogleCloudApigeeV1DeveloperApp extends com.google.api.client
   }
 
   /**
-   * ID of the developer app.
+   * ID of the developer app. This ID is not user specified but is automatically generated on app
+   * creation. appId is a UUID.
    * @param appId appId or {@code null} for none
    */
   public GoogleCloudApigeeV1DeveloperApp setAppId(java.lang.String appId) {

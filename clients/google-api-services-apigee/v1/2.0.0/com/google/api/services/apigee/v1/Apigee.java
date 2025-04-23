@@ -33516,7 +33516,8 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
             }
           }
           /**
-           * Updates the certificate in an alias.
+           * Updates the certificate in an alias. The updated certificate must be in PEM- or DER-encoded X.509
+           * format.
            *
            * Create a request for the method "aliases.update".
            *
@@ -33542,7 +33543,8 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
                 java.util.regex.Pattern.compile("^organizations/[^/]+/environments/[^/]+/keystores/[^/]+/aliases/[^/]+$");
 
             /**
-             * Updates the certificate in an alias.
+             * Updates the certificate in an alias. The updated certificate must be in PEM- or DER-encoded
+             * X.509 format.
              *
              * Create a request for the method "aliases.update".
              *

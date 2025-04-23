@@ -19,7 +19,7 @@ package com.google.api.services.driveactivity.v2.model;
 /**
  * Information about the target of activity. For more information on how activity history is shared
  * with users, see [Activity history
- * visibility](https://developers.google.com/drive/activity/v2#activityhistory).
+ * visibility](https://developers.google.com/workspace/drive/activity/v2#activityhistory).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Drive Activity API. For a detailed explanation see:

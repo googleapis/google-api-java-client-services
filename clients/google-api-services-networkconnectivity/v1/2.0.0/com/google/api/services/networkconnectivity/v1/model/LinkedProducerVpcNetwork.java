@@ -68,6 +68,13 @@ public final class LinkedProducerVpcNetwork extends com.google.api.client.json.G
   private java.lang.String producerNetwork;
 
   /**
+   * Output only. The proposed exclude export IP ranges waiting for hub administration's approval.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> proposedExcludeExportRanges;
+
+  /**
    * Optional. The proposed include export IP ranges waiting for hub administration's approval.
    * The value may be {@code null}.
    */
@@ -167,6 +174,23 @@ public final class LinkedProducerVpcNetwork extends com.google.api.client.json.G
    */
   public LinkedProducerVpcNetwork setProducerNetwork(java.lang.String producerNetwork) {
     this.producerNetwork = producerNetwork;
+    return this;
+  }
+
+  /**
+   * Output only. The proposed exclude export IP ranges waiting for hub administration's approval.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getProposedExcludeExportRanges() {
+    return proposedExcludeExportRanges;
+  }
+
+  /**
+   * Output only. The proposed exclude export IP ranges waiting for hub administration's approval.
+   * @param proposedExcludeExportRanges proposedExcludeExportRanges or {@code null} for none
+   */
+  public LinkedProducerVpcNetwork setProposedExcludeExportRanges(java.util.List<java.lang.String> proposedExcludeExportRanges) {
+    this.proposedExcludeExportRanges = proposedExcludeExportRanges;
     return this;
   }
 

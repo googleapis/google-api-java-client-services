@@ -7833,17 +7833,24 @@ public class Networkconnectivity extends com.google.api.client.googleapis.servic
             return this;
           }
 
-          /** Required. Unique id of the Regional Endpoint to be created. */
+          /**
+           * Required. Unique id of the Regional Endpoint to be created. @pattern:
+           * ^[-a-z0-9](?:[-a-z0-9]{0,44})[a-z0-9]$
+           */
           @com.google.api.client.util.Key
           private java.lang.String regionalEndpointId;
 
-          /** Required. Unique id of the Regional Endpoint to be created.
+          /** Required. Unique id of the Regional Endpoint to be created. @pattern:
+         ^[-a-z0-9](?:[-a-z0-9]{0,44})[a-z0-9]$
            */
           public java.lang.String getRegionalEndpointId() {
             return regionalEndpointId;
           }
 
-          /** Required. Unique id of the Regional Endpoint to be created. */
+          /**
+           * Required. Unique id of the Regional Endpoint to be created. @pattern:
+           * ^[-a-z0-9](?:[-a-z0-9]{0,44})[a-z0-9]$
+           */
           public Create setRegionalEndpointId(java.lang.String regionalEndpointId) {
             this.regionalEndpointId = regionalEndpointId;
             return this;

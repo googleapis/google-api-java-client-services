@@ -37,6 +37,16 @@ public final class GoogleCloudAiplatformV1beta1RagFileParsingConfigLlmParser ext
   private java.lang.String customParsingPrompt;
 
   /**
+   * The maximum number of requests the job is allowed to make to the LLM model per minute in this
+   * project. Consult https://cloud.google.com/vertex-ai/generative-ai/docs/quotas and your document
+   * size to set an appropriate value here. If this value is not specified,
+   * max_parsing_requests_per_min will be used by indexing pipeline job as the global limit.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer globalMaxParsingRequestsPerMin;
+
+  /**
    * The maximum number of requests the job is allowed to make to the LLM model per minute. Consult
    * https://cloud.google.com/vertex-ai/generative-ai/docs/quotas and your document size to set an
    * appropriate value here. If unspecified, a default value of 5000 QPM would be used.
@@ -67,6 +77,29 @@ public final class GoogleCloudAiplatformV1beta1RagFileParsingConfigLlmParser ext
    */
   public GoogleCloudAiplatformV1beta1RagFileParsingConfigLlmParser setCustomParsingPrompt(java.lang.String customParsingPrompt) {
     this.customParsingPrompt = customParsingPrompt;
+    return this;
+  }
+
+  /**
+   * The maximum number of requests the job is allowed to make to the LLM model per minute in this
+   * project. Consult https://cloud.google.com/vertex-ai/generative-ai/docs/quotas and your document
+   * size to set an appropriate value here. If this value is not specified,
+   * max_parsing_requests_per_min will be used by indexing pipeline job as the global limit.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getGlobalMaxParsingRequestsPerMin() {
+    return globalMaxParsingRequestsPerMin;
+  }
+
+  /**
+   * The maximum number of requests the job is allowed to make to the LLM model per minute in this
+   * project. Consult https://cloud.google.com/vertex-ai/generative-ai/docs/quotas and your document
+   * size to set an appropriate value here. If this value is not specified,
+   * max_parsing_requests_per_min will be used by indexing pipeline job as the global limit.
+   * @param globalMaxParsingRequestsPerMin globalMaxParsingRequestsPerMin or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RagFileParsingConfigLlmParser setGlobalMaxParsingRequestsPerMin(java.lang.Integer globalMaxParsingRequestsPerMin) {
+    this.globalMaxParsingRequestsPerMin = globalMaxParsingRequestsPerMin;
     return this;
   }
 

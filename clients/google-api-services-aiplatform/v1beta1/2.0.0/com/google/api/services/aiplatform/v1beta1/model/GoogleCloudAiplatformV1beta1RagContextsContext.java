@@ -30,6 +30,13 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1RagContextsContext extends com.google.api.client.json.GenericJson {
 
   /**
+   * Context of the retrieved chunk.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1RagChunk chunk;
+
+  /**
    * The distance between the query dense embedding vector and the context text vector.
    * The value may be {@code null}.
    */
@@ -76,6 +83,23 @@ public final class GoogleCloudAiplatformV1beta1RagContextsContext extends com.go
    */
   @com.google.api.client.util.Key
   private java.lang.String text;
+
+  /**
+   * Context of the retrieved chunk.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RagChunk getChunk() {
+    return chunk;
+  }
+
+  /**
+   * Context of the retrieved chunk.
+   * @param chunk chunk or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RagContextsContext setChunk(GoogleCloudAiplatformV1beta1RagChunk chunk) {
+    this.chunk = chunk;
+    return this;
+  }
 
   /**
    * The distance between the query dense embedding vector and the context text vector.

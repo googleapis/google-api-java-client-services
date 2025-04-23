@@ -32,7 +32,7 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1FunctionCall extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Required. The function parameters and values in JSON object format. See
+   * Optional. The function parameters and values in JSON object format. See
    * [FunctionDeclaration.parameters] for parameter details.
    * The value may be {@code null}.
    */
@@ -55,7 +55,7 @@ public final class GoogleCloudAiplatformV1beta1FunctionCall extends com.google.a
   private java.lang.String name;
 
   /**
-   * Optional. Required. The function parameters and values in JSON object format. See
+   * Optional. The function parameters and values in JSON object format. See
    * [FunctionDeclaration.parameters] for parameter details.
    * @return value or {@code null} for none
    */
@@ -64,7 +64,7 @@ public final class GoogleCloudAiplatformV1beta1FunctionCall extends com.google.a
   }
 
   /**
-   * Optional. Required. The function parameters and values in JSON object format. See
+   * Optional. The function parameters and values in JSON object format. See
    * [FunctionDeclaration.parameters] for parameter details.
    * @param args args or {@code null} for none
    */

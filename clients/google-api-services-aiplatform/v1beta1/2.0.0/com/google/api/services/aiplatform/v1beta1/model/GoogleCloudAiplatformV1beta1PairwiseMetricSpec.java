@@ -44,6 +44,16 @@ public final class GoogleCloudAiplatformV1beta1PairwiseMetricSpec extends com.go
   private java.lang.String candidateResponseFieldName;
 
   /**
+   * Optional. CustomOutputFormatConfig allows customization of metric output. When this config is
+   * set, the default output is replaced with the raw output string. If a custom format is chosen,
+   * the `pairwise_choice` and `explanation` fields in the corresponding metric result will be
+   * empty.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1CustomOutputFormatConfig customOutputFormatConfig;
+
+  /**
    * Required. Metric prompt template for pairwise metric.
    * The value may be {@code null}.
    */
@@ -88,6 +98,29 @@ public final class GoogleCloudAiplatformV1beta1PairwiseMetricSpec extends com.go
    */
   public GoogleCloudAiplatformV1beta1PairwiseMetricSpec setCandidateResponseFieldName(java.lang.String candidateResponseFieldName) {
     this.candidateResponseFieldName = candidateResponseFieldName;
+    return this;
+  }
+
+  /**
+   * Optional. CustomOutputFormatConfig allows customization of metric output. When this config is
+   * set, the default output is replaced with the raw output string. If a custom format is chosen,
+   * the `pairwise_choice` and `explanation` fields in the corresponding metric result will be
+   * empty.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1CustomOutputFormatConfig getCustomOutputFormatConfig() {
+    return customOutputFormatConfig;
+  }
+
+  /**
+   * Optional. CustomOutputFormatConfig allows customization of metric output. When this config is
+   * set, the default output is replaced with the raw output string. If a custom format is chosen,
+   * the `pairwise_choice` and `explanation` fields in the corresponding metric result will be
+   * empty.
+   * @param customOutputFormatConfig customOutputFormatConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1PairwiseMetricSpec setCustomOutputFormatConfig(GoogleCloudAiplatformV1beta1CustomOutputFormatConfig customOutputFormatConfig) {
+    this.customOutputFormatConfig = customOutputFormatConfig;
     return this;
   }
 

@@ -30,7 +30,9 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1DistillationSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * The base teacher model that is being distilled, e.g., "gemini-1.0-pro-002".
+   * The base teacher model that is being distilled. See [Supported
+   * models](https://cloud.google.com/vertex-ai/generative-ai/docs/model-
+   * reference/tuning#supported_models).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,7 +87,9 @@ public final class GoogleCloudAiplatformV1beta1DistillationSpec extends com.goog
   private java.lang.String validationDatasetUri;
 
   /**
-   * The base teacher model that is being distilled, e.g., "gemini-1.0-pro-002".
+   * The base teacher model that is being distilled. See [Supported
+   * models](https://cloud.google.com/vertex-ai/generative-ai/docs/model-
+   * reference/tuning#supported_models).
    * @return value or {@code null} for none
    */
   public java.lang.String getBaseTeacherModel() {
@@ -93,7 +97,9 @@ public final class GoogleCloudAiplatformV1beta1DistillationSpec extends com.goog
   }
 
   /**
-   * The base teacher model that is being distilled, e.g., "gemini-1.0-pro-002".
+   * The base teacher model that is being distilled. See [Supported
+   * models](https://cloud.google.com/vertex-ai/generative-ai/docs/model-
+   * reference/tuning#supported_models).
    * @param baseTeacherModel baseTeacherModel or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1DistillationSpec setBaseTeacherModel(java.lang.String baseTeacherModel) {

@@ -30,7 +30,8 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1TuningJob extends com.google.api.client.json.GenericJson {
 
   /**
-   * The base model that is being tuned, e.g., "gemini-1.0-pro-002". .
+   * The base model that is being tuned. See [Supported models](https://cloud.google.com/vertex-
+   * ai/generative-ai/docs/model-reference/tuning#supported_models).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -161,7 +162,8 @@ public final class GoogleCloudAiplatformV1TuningJob extends com.google.api.clien
   private String updateTime;
 
   /**
-   * The base model that is being tuned, e.g., "gemini-1.0-pro-002". .
+   * The base model that is being tuned. See [Supported models](https://cloud.google.com/vertex-
+   * ai/generative-ai/docs/model-reference/tuning#supported_models).
    * @return value or {@code null} for none
    */
   public java.lang.String getBaseModel() {
@@ -169,7 +171,8 @@ public final class GoogleCloudAiplatformV1TuningJob extends com.google.api.clien
   }
 
   /**
-   * The base model that is being tuned, e.g., "gemini-1.0-pro-002". .
+   * The base model that is being tuned. See [Supported models](https://cloud.google.com/vertex-
+   * ai/generative-ai/docs/model-reference/tuning#supported_models).
    * @param baseModel baseModel or {@code null} for none
    */
   public GoogleCloudAiplatformV1TuningJob setBaseModel(java.lang.String baseModel) {

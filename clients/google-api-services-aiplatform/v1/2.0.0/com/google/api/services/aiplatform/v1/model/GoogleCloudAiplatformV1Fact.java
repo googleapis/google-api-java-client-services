@@ -30,6 +30,13 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1Fact extends com.google.api.client.json.GenericJson {
 
   /**
+   * If present, chunk properties.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1RagChunk chunk;
+
+  /**
    * Query that is used to retrieve this fact.
    * The value may be {@code null}.
    */
@@ -75,6 +82,23 @@ public final class GoogleCloudAiplatformV1Fact extends com.google.api.client.jso
    */
   @com.google.api.client.util.Key
   private java.lang.Double vectorDistance;
+
+  /**
+   * If present, chunk properties.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1RagChunk getChunk() {
+    return chunk;
+  }
+
+  /**
+   * If present, chunk properties.
+   * @param chunk chunk or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1Fact setChunk(GoogleCloudAiplatformV1RagChunk chunk) {
+    this.chunk = chunk;
+    return this;
+  }
 
   /**
    * Query that is used to retrieve this fact.

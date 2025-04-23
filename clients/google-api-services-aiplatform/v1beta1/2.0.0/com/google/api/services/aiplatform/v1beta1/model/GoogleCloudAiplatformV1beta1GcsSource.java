@@ -31,8 +31,7 @@ public final class GoogleCloudAiplatformV1beta1GcsSource extends com.google.api.
 
   /**
    * Required. Google Cloud Storage URI(-s) to the input file(s). May contain wildcards. For more
-   * information on wildcards, see
-   * https://cloud.google.com/storage/docs/gsutil/addlhelp/WildcardNames.
+   * information on wildcards, see https://cloud.google.com/storage/docs/wildcards.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,8 +39,7 @@ public final class GoogleCloudAiplatformV1beta1GcsSource extends com.google.api.
 
   /**
    * Required. Google Cloud Storage URI(-s) to the input file(s). May contain wildcards. For more
-   * information on wildcards, see
-   * https://cloud.google.com/storage/docs/gsutil/addlhelp/WildcardNames.
+   * information on wildcards, see https://cloud.google.com/storage/docs/wildcards.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUris() {
@@ -50,8 +48,7 @@ public final class GoogleCloudAiplatformV1beta1GcsSource extends com.google.api.
 
   /**
    * Required. Google Cloud Storage URI(-s) to the input file(s). May contain wildcards. For more
-   * information on wildcards, see
-   * https://cloud.google.com/storage/docs/gsutil/addlhelp/WildcardNames.
+   * information on wildcards, see https://cloud.google.com/storage/docs/wildcards.
    * @param uris uris or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1GcsSource setUris(java.util.List<java.lang.String> uris) {

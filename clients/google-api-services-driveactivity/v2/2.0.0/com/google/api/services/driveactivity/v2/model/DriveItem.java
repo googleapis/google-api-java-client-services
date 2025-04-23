@@ -58,7 +58,8 @@ public final class DriveItem extends com.google.api.client.json.GenericJson {
   private Folder folder;
 
   /**
-   * The MIME type of the Drive item. See https://developers.google.com/drive/v3/web/mime-types.
+   * The MIME type of the Drive item. See https://developers.google.com/workspace/drive/v3/web/mime-
+   * types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -154,7 +155,8 @@ public final class DriveItem extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The MIME type of the Drive item. See https://developers.google.com/drive/v3/web/mime-types.
+   * The MIME type of the Drive item. See https://developers.google.com/workspace/drive/v3/web/mime-
+   * types.
    * @return value or {@code null} for none
    */
   public java.lang.String getMimeType() {
@@ -162,7 +164,8 @@ public final class DriveItem extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The MIME type of the Drive item. See https://developers.google.com/drive/v3/web/mime-types.
+   * The MIME type of the Drive item. See https://developers.google.com/workspace/drive/v3/web/mime-
+   * types.
    * @param mimeType mimeType or {@code null} for none
    */
   public DriveItem setMimeType(java.lang.String mimeType) {

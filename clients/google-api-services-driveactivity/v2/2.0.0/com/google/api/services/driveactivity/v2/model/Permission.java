@@ -59,8 +59,9 @@ public final class Permission extends com.google.api.client.json.GenericJson {
   private Group group;
 
   /**
-   * Indicates the [Google Drive permissions role](https://developers.google.com/drive/web/manage-
-   * sharing#roles). The role determines a user's ability to read, write, and comment on items.
+   * Indicates the [Google Drive permissions
+   * role](https://developers.google.com/workspace/drive/web/manage-sharing#roles). The role
+   * determines a user's ability to read, write, and comment on items.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -144,8 +145,9 @@ public final class Permission extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates the [Google Drive permissions role](https://developers.google.com/drive/web/manage-
-   * sharing#roles). The role determines a user's ability to read, write, and comment on items.
+   * Indicates the [Google Drive permissions
+   * role](https://developers.google.com/workspace/drive/web/manage-sharing#roles). The role
+   * determines a user's ability to read, write, and comment on items.
    * @return value or {@code null} for none
    */
   public java.lang.String getRole() {
@@ -153,8 +155,9 @@ public final class Permission extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates the [Google Drive permissions role](https://developers.google.com/drive/web/manage-
-   * sharing#roles). The role determines a user's ability to read, write, and comment on items.
+   * Indicates the [Google Drive permissions
+   * role](https://developers.google.com/workspace/drive/web/manage-sharing#roles). The role
+   * determines a user's ability to read, write, and comment on items.
    * @param role role or {@code null} for none
    */
   public Permission setRole(java.lang.String role) {

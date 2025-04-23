@@ -31,7 +31,7 @@ public final class FileComment extends com.google.api.client.json.GenericJson {
 
   /**
    * The comment in the discussion thread. This identifier is an opaque string compatible with the
-   * Drive API; see https://developers.google.com/drive/v3/reference/comments/get
+   * Drive API; see https://developers.google.com/workspace/drive/v3/reference/comments/get
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,7 +40,7 @@ public final class FileComment extends com.google.api.client.json.GenericJson {
   /**
    * The discussion thread to which the comment was added. This identifier is an opaque string
    * compatible with the Drive API and references the first comment in a discussion; see
-   * https://developers.google.com/drive/v3/reference/comments/get
+   * https://developers.google.com/workspace/drive/v3/reference/comments/get
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,7 +63,7 @@ public final class FileComment extends com.google.api.client.json.GenericJson {
 
   /**
    * The comment in the discussion thread. This identifier is an opaque string compatible with the
-   * Drive API; see https://developers.google.com/drive/v3/reference/comments/get
+   * Drive API; see https://developers.google.com/workspace/drive/v3/reference/comments/get
    * @return value or {@code null} for none
    */
   public java.lang.String getLegacyCommentId() {
@@ -72,7 +72,7 @@ public final class FileComment extends com.google.api.client.json.GenericJson {
 
   /**
    * The comment in the discussion thread. This identifier is an opaque string compatible with the
-   * Drive API; see https://developers.google.com/drive/v3/reference/comments/get
+   * Drive API; see https://developers.google.com/workspace/drive/v3/reference/comments/get
    * @param legacyCommentId legacyCommentId or {@code null} for none
    */
   public FileComment setLegacyCommentId(java.lang.String legacyCommentId) {
@@ -83,7 +83,7 @@ public final class FileComment extends com.google.api.client.json.GenericJson {
   /**
    * The discussion thread to which the comment was added. This identifier is an opaque string
    * compatible with the Drive API and references the first comment in a discussion; see
-   * https://developers.google.com/drive/v3/reference/comments/get
+   * https://developers.google.com/workspace/drive/v3/reference/comments/get
    * @return value or {@code null} for none
    */
   public java.lang.String getLegacyDiscussionId() {
@@ -93,7 +93,7 @@ public final class FileComment extends com.google.api.client.json.GenericJson {
   /**
    * The discussion thread to which the comment was added. This identifier is an opaque string
    * compatible with the Drive API and references the first comment in a discussion; see
-   * https://developers.google.com/drive/v3/reference/comments/get
+   * https://developers.google.com/workspace/drive/v3/reference/comments/get
    * @param legacyDiscussionId legacyDiscussionId or {@code null} for none
    */
   public FileComment setLegacyDiscussionId(java.lang.String legacyDiscussionId) {

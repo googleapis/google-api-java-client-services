@@ -17,7 +17,7 @@
 package com.google.api.services.searchads360.v0.model;
 
 /**
- * A view on the usage of ad group ad asset combination.
+ * A view on the usage of asset group asset top combinations.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Search Ads 360 Reporting API. For a detailed

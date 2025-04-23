@@ -52,6 +52,13 @@ public final class BulkCheckRequest extends com.google.api.client.json.GenericJs
   private Asset defaultTarget;
 
   /**
+   * Same configuration as in CheckRequest; all statement checks will use the same configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean returnRelationExtensions;
+
+  /**
    * List of statements to check. For each statement, you can omit a field if the corresponding
    * default_* field below was supplied. Minimum 1 statement; maximum 1,000 statements. Any
    * additional statements will be ignored.
@@ -108,6 +115,23 @@ public final class BulkCheckRequest extends com.google.api.client.json.GenericJs
    */
   public BulkCheckRequest setDefaultTarget(Asset defaultTarget) {
     this.defaultTarget = defaultTarget;
+    return this;
+  }
+
+  /**
+   * Same configuration as in CheckRequest; all statement checks will use the same configuration.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getReturnRelationExtensions() {
+    return returnRelationExtensions;
+  }
+
+  /**
+   * Same configuration as in CheckRequest; all statement checks will use the same configuration.
+   * @param returnRelationExtensions returnRelationExtensions or {@code null} for none
+   */
+  public BulkCheckRequest setReturnRelationExtensions(java.lang.Boolean returnRelationExtensions) {
+    this.returnRelationExtensions = returnRelationExtensions;
     return this;
   }
 

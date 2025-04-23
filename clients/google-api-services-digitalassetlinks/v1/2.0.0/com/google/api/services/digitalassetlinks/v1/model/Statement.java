@@ -48,6 +48,22 @@ public final class Statement extends com.google.api.client.json.GenericJson {
   private java.lang.String relation;
 
   /**
+   * Statements may specify relation level extensions/payloads to express more details when
+   * declaring permissions to grant from the source asset to the target asset. These relation
+   * extensions should be specified in the `relation_extensions` object, keyed by the relation type
+   * they're associated with. { relation: ["delegate_permission/common.handle_all_urls"], target:
+   * {...}, relation_extensions: { "delegate_permission/common.handle_all_urls": {
+   * ...handle_all_urls specific payload specified here... } } } When requested, and specified in
+   * the statement file, the API will return relation_extensions associated with the statement's
+   * relation type. i.e. the API will only return relation_extensions specified for
+   * "delegate_permission/common.handle_all_urls" if this statement object's relation type is
+   * "delegate_permission/common.handle_all_urls".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Object> relationExtensions;
+
+  /**
    * Every statement has a source asset. REQUIRED
    * The value may be {@code null}.
    */
@@ -87,6 +103,41 @@ public final class Statement extends com.google.api.client.json.GenericJson {
    */
   public Statement setRelation(java.lang.String relation) {
     this.relation = relation;
+    return this;
+  }
+
+  /**
+   * Statements may specify relation level extensions/payloads to express more details when
+   * declaring permissions to grant from the source asset to the target asset. These relation
+   * extensions should be specified in the `relation_extensions` object, keyed by the relation type
+   * they're associated with. { relation: ["delegate_permission/common.handle_all_urls"], target:
+   * {...}, relation_extensions: { "delegate_permission/common.handle_all_urls": {
+   * ...handle_all_urls specific payload specified here... } } } When requested, and specified in
+   * the statement file, the API will return relation_extensions associated with the statement's
+   * relation type. i.e. the API will only return relation_extensions specified for
+   * "delegate_permission/common.handle_all_urls" if this statement object's relation type is
+   * "delegate_permission/common.handle_all_urls".
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Object> getRelationExtensions() {
+    return relationExtensions;
+  }
+
+  /**
+   * Statements may specify relation level extensions/payloads to express more details when
+   * declaring permissions to grant from the source asset to the target asset. These relation
+   * extensions should be specified in the `relation_extensions` object, keyed by the relation type
+   * they're associated with. { relation: ["delegate_permission/common.handle_all_urls"], target:
+   * {...}, relation_extensions: { "delegate_permission/common.handle_all_urls": {
+   * ...handle_all_urls specific payload specified here... } } } When requested, and specified in
+   * the statement file, the API will return relation_extensions associated with the statement's
+   * relation type. i.e. the API will only return relation_extensions specified for
+   * "delegate_permission/common.handle_all_urls" if this statement object's relation type is
+   * "delegate_permission/common.handle_all_urls".
+   * @param relationExtensions relationExtensions or {@code null} for none
+   */
+  public Statement setRelationExtensions(java.util.Map<String, java.lang.Object> relationExtensions) {
+    this.relationExtensions = relationExtensions;
     return this;
   }
 

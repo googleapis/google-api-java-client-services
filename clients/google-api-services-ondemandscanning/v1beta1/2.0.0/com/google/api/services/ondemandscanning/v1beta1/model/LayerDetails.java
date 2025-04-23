@@ -17,8 +17,7 @@
 package com.google.api.services.ondemandscanning.v1beta1.model;
 
 /**
- * Details about the layer a package was found in. This should be the same as the LayerDetails
- * message in google3/third_party/scalibr/binary/proto/scan_result.proto.
+ * Details about the layer a package was found in.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the On-Demand Scanning API. For a detailed explanation

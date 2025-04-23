@@ -153,7 +153,7 @@ public final class PackageData extends com.google.api.client.json.GenericJson {
   private java.lang.String packageType;
 
   /**
-   * CVEs that this package is no longer vulnerable to go/drydock-dd-custom-binary-scanning
+   * CVEs that this package is no longer vulnerable to
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -430,7 +430,7 @@ public final class PackageData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * CVEs that this package is no longer vulnerable to go/drydock-dd-custom-binary-scanning
+   * CVEs that this package is no longer vulnerable to
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPatchedCve() {
@@ -438,7 +438,7 @@ public final class PackageData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * CVEs that this package is no longer vulnerable to go/drydock-dd-custom-binary-scanning
+   * CVEs that this package is no longer vulnerable to
    * @param patchedCve patchedCve or {@code null} for none
    */
   public PackageData setPatchedCve(java.util.List<java.lang.String> patchedCve) {

@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-sts</artifactId>
-  <version>v1beta-rev20250313-2.0.0</version>
-  <name>Security Token Service API v1beta-rev20250313-2.0.0</name>
+  <version>v1beta-rev20250331-2.0.0</version>
+  <name>Security Token Service API v1beta-rev20250331-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

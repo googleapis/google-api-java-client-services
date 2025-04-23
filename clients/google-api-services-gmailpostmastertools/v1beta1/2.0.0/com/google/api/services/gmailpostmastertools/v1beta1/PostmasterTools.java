@@ -25,7 +25,7 @@ package com.google.api.services.gmailpostmastertools.v1beta1;
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://developers.google.com/gmail/postmaster" target="_blank">API Documentation</a>
+ * <a href="https://developers.google.com/workspace/gmail/postmaster" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>

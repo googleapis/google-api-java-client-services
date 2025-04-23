@@ -38,6 +38,15 @@ public final class SubstringMatchCriteria extends com.google.api.client.json.Gen
   private java.lang.Boolean matchCase;
 
   /**
+   * Optional. True if the find value should be treated as a regular expression. Any backslashes in
+   * the pattern should be escaped. - `True`: the search text is treated as a regular expressions. -
+   * `False`: the search text is treated as a substring for matching.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean searchByRegex;
+
+  /**
    * The text to search for in the document.
    * The value may be {@code null}.
    */
@@ -60,6 +69,27 @@ public final class SubstringMatchCriteria extends com.google.api.client.json.Gen
    */
   public SubstringMatchCriteria setMatchCase(java.lang.Boolean matchCase) {
     this.matchCase = matchCase;
+    return this;
+  }
+
+  /**
+   * Optional. True if the find value should be treated as a regular expression. Any backslashes in
+   * the pattern should be escaped. - `True`: the search text is treated as a regular expressions. -
+   * `False`: the search text is treated as a substring for matching.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSearchByRegex() {
+    return searchByRegex;
+  }
+
+  /**
+   * Optional. True if the find value should be treated as a regular expression. Any backslashes in
+   * the pattern should be escaped. - `True`: the search text is treated as a regular expressions. -
+   * `False`: the search text is treated as a substring for matching.
+   * @param searchByRegex searchByRegex or {@code null} for none
+   */
+  public SubstringMatchCriteria setSearchByRegex(java.lang.Boolean searchByRegex) {
+    this.searchByRegex = searchByRegex;
     return this;
   }
 

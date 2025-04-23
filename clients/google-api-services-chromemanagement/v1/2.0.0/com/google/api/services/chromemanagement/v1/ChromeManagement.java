@@ -4354,17 +4354,24 @@ public class ChromeManagement extends com.google.api.client.googleapis.services.
           return this;
         }
 
-        /** Type of the app. */
+        /**
+         * Type of the app. Optional. If not provided, an app type will be inferred from the format
+         * of the app ID.
+         */
         @com.google.api.client.util.Key
         private java.lang.String appType;
 
-        /** Type of the app.
+        /** Type of the app. Optional. If not provided, an app type will be inferred from the format of the app
+       ID.
          */
         public java.lang.String getAppType() {
           return appType;
         }
 
-        /** Type of the app. */
+        /**
+         * Type of the app. Optional. If not provided, an app type will be inferred from the format
+         * of the app ID.
+         */
         public FindInstalledAppDevices setAppType(java.lang.String appType) {
           this.appType = appType;
           return this;

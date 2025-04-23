@@ -17,7 +17,8 @@
 package com.google.api.services.chromepolicy.v1.model;
 
 /**
- * A network setting contains network configurations.
+ * A network setting contains network configurations. It adheres to the PolicyAPI formats defined
+ * under the namespace chrome.networks.{wifi/ethernet/cellular/vpn}.Details
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Chrome Policy API. For a detailed explanation see:

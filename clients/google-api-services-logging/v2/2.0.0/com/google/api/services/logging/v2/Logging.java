@@ -1677,6 +1677,29 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
 
         /**
+         * Optional. A list of extra location types that should be used as conditions for
+         * controlling the visibility of the locations.
+         */
+        @com.google.api.client.util.Key
+        private java.util.List<java.lang.String> extraLocationTypes;
+
+        /** Optional. A list of extra location types that should be used as conditions for controlling the
+       visibility of the locations.
+         */
+        public java.util.List<java.lang.String> getExtraLocationTypes() {
+          return extraLocationTypes;
+        }
+
+        /**
+         * Optional. A list of extra location types that should be used as conditions for
+         * controlling the visibility of the locations.
+         */
+        public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
+          this.extraLocationTypes = extraLocationTypes;
+          return this;
+        }
+
+        /**
          * A filter to narrow down results to a preferred subset. The filtering language accepts
          * strings like "displayName=tokyo", and is documented in more detail in AIP-160
          * (https://google.aip.dev/160).
@@ -3250,9 +3273,6 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            *
            * @param parent Required. The full resource name of the bucket to create a link for.
            *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * @param content the {@link com.google.api.services.logging.v2.model.Link}
            * @return the request
            */
@@ -3282,9 +3302,6 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
              *
              * @param parent Required. The full resource name of the bucket to create a link for.
            *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
              * @param content the {@link com.google.api.services.logging.v2.model.Link}
              * @since 1.13
              */
@@ -3356,18 +3373,12 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             /**
              * Required. The full resource name of the bucket to create a link for.
              * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-             * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-             * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-             * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. The full resource name of the bucket to create a link for.
            "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
              */
             public java.lang.String getParent() {
               return parent;
@@ -3376,9 +3387,6 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             /**
              * Required. The full resource name of the bucket to create a link for.
              * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-             * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-             * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-             * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
              */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -11652,6 +11660,29 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
 
         /**
+         * Optional. A list of extra location types that should be used as conditions for
+         * controlling the visibility of the locations.
+         */
+        @com.google.api.client.util.Key
+        private java.util.List<java.lang.String> extraLocationTypes;
+
+        /** Optional. A list of extra location types that should be used as conditions for controlling the
+       visibility of the locations.
+         */
+        public java.util.List<java.lang.String> getExtraLocationTypes() {
+          return extraLocationTypes;
+        }
+
+        /**
+         * Optional. A list of extra location types that should be used as conditions for
+         * controlling the visibility of the locations.
+         */
+        public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
+          this.extraLocationTypes = extraLocationTypes;
+          return this;
+        }
+
+        /**
          * A filter to narrow down results to a preferred subset. The filtering language accepts
          * strings like "displayName=tokyo", and is documented in more detail in AIP-160
          * (https://google.aip.dev/160).
@@ -13225,9 +13256,6 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            *
            * @param parent Required. The full resource name of the bucket to create a link for.
            *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * @param content the {@link com.google.api.services.logging.v2.model.Link}
            * @return the request
            */
@@ -13257,9 +13285,6 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
              *
              * @param parent Required. The full resource name of the bucket to create a link for.
            *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
              * @param content the {@link com.google.api.services.logging.v2.model.Link}
              * @since 1.13
              */
@@ -13331,18 +13356,12 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             /**
              * Required. The full resource name of the bucket to create a link for.
              * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-             * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-             * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-             * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. The full resource name of the bucket to create a link for.
            "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
              */
             public java.lang.String getParent() {
               return parent;
@@ -13351,9 +13370,6 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             /**
              * Required. The full resource name of the bucket to create a link for.
              * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-             * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-             * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-             * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
              */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -20180,6 +20196,29 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
       }
 
       /**
+       * Optional. A list of extra location types that should be used as conditions for controlling
+       * the visibility of the locations.
+       */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> extraLocationTypes;
+
+      /** Optional. A list of extra location types that should be used as conditions for controlling the
+     visibility of the locations.
+       */
+      public java.util.List<java.lang.String> getExtraLocationTypes() {
+        return extraLocationTypes;
+      }
+
+      /**
+       * Optional. A list of extra location types that should be used as conditions for controlling
+       * the visibility of the locations.
+       */
+      public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
+        this.extraLocationTypes = extraLocationTypes;
+        return this;
+      }
+
+      /**
        * A filter to narrow down results to a preferred subset. The filtering language accepts
        * strings like "displayName=tokyo", and is documented in more detail in AIP-160
        * (https://google.aip.dev/160).
@@ -21751,9 +21790,6 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
          *
          * @param parent Required. The full resource name of the bucket to create a link for.
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
          * @param content the {@link com.google.api.services.logging.v2.model.Link}
          * @return the request
          */
@@ -21783,9 +21819,6 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            *
            * @param parent Required. The full resource name of the bucket to create a link for.
          *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-         *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-         *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-         *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * @param content the {@link com.google.api.services.logging.v2.model.Link}
            * @since 1.13
            */
@@ -21857,18 +21890,12 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           /**
            * Required. The full resource name of the bucket to create a link for.
            * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The full resource name of the bucket to create a link for.
          "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-         "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-         "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-         "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            */
           public java.lang.String getParent() {
             return parent;
@@ -21877,9 +21904,6 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
           /**
            * Required. The full resource name of the bucket to create a link for.
            * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -26781,6 +26805,29 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
 
         /**
+         * Optional. A list of extra location types that should be used as conditions for
+         * controlling the visibility of the locations.
+         */
+        @com.google.api.client.util.Key
+        private java.util.List<java.lang.String> extraLocationTypes;
+
+        /** Optional. A list of extra location types that should be used as conditions for controlling the
+       visibility of the locations.
+         */
+        public java.util.List<java.lang.String> getExtraLocationTypes() {
+          return extraLocationTypes;
+        }
+
+        /**
+         * Optional. A list of extra location types that should be used as conditions for
+         * controlling the visibility of the locations.
+         */
+        public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
+          this.extraLocationTypes = extraLocationTypes;
+          return this;
+        }
+
+        /**
          * A filter to narrow down results to a preferred subset. The filtering language accepts
          * strings like "displayName=tokyo", and is documented in more detail in AIP-160
          * (https://google.aip.dev/160).
@@ -28354,9 +28401,6 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            *
            * @param parent Required. The full resource name of the bucket to create a link for.
            *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * @param content the {@link com.google.api.services.logging.v2.model.Link}
            * @return the request
            */
@@ -28386,9 +28430,6 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
              *
              * @param parent Required. The full resource name of the bucket to create a link for.
            *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
              * @param content the {@link com.google.api.services.logging.v2.model.Link}
              * @since 1.13
              */
@@ -28460,18 +28501,12 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             /**
              * Required. The full resource name of the bucket to create a link for.
              * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-             * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-             * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-             * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. The full resource name of the bucket to create a link for.
            "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
              */
             public java.lang.String getParent() {
               return parent;
@@ -28480,9 +28515,6 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             /**
              * Required. The full resource name of the bucket to create a link for.
              * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-             * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-             * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-             * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
              */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -36561,6 +36593,29 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
         }
 
         /**
+         * Optional. A list of extra location types that should be used as conditions for
+         * controlling the visibility of the locations.
+         */
+        @com.google.api.client.util.Key
+        private java.util.List<java.lang.String> extraLocationTypes;
+
+        /** Optional. A list of extra location types that should be used as conditions for controlling the
+       visibility of the locations.
+         */
+        public java.util.List<java.lang.String> getExtraLocationTypes() {
+          return extraLocationTypes;
+        }
+
+        /**
+         * Optional. A list of extra location types that should be used as conditions for
+         * controlling the visibility of the locations.
+         */
+        public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
+          this.extraLocationTypes = extraLocationTypes;
+          return this;
+        }
+
+        /**
          * A filter to narrow down results to a preferred subset. The filtering language accepts
          * strings like "displayName=tokyo", and is documented in more detail in AIP-160
          * (https://google.aip.dev/160).
@@ -38134,9 +38189,6 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
            *
            * @param parent Required. The full resource name of the bucket to create a link for.
            *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
            * @param content the {@link com.google.api.services.logging.v2.model.Link}
            * @return the request
            */
@@ -38166,9 +38218,6 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
              *
              * @param parent Required. The full resource name of the bucket to create a link for.
            *        "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           *        "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           *        "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           *        "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
              * @param content the {@link com.google.api.services.logging.v2.model.Link}
              * @since 1.13
              */
@@ -38240,18 +38289,12 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             /**
              * Required. The full resource name of the bucket to create a link for.
              * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-             * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-             * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-             * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. The full resource name of the bucket to create a link for.
            "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-           "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
              */
             public java.lang.String getParent() {
               return parent;
@@ -38260,9 +38303,6 @@ public class Logging extends com.google.api.client.googleapis.services.json.Abst
             /**
              * Required. The full resource name of the bucket to create a link for.
              * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-             * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-             * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-             * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
              */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {

@@ -47,9 +47,6 @@ public final class CreateLinkRequest extends com.google.api.client.json.GenericJ
   /**
    * Required. The full resource name of the bucket to create a link for.
    * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-   * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-   * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-   * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,9 +91,6 @@ public final class CreateLinkRequest extends com.google.api.client.json.GenericJ
   /**
    * Required. The full resource name of the bucket to create a link for.
    * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-   * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-   * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-   * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
    * @return value or {@code null} for none
    */
   public java.lang.String getParent() {
@@ -106,9 +100,6 @@ public final class CreateLinkRequest extends com.google.api.client.json.GenericJ
   /**
    * Required. The full resource name of the bucket to create a link for.
    * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-   * "organizations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-   * "billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
-   * "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
    * @param parent parent or {@code null} for none
    */
   public CreateLinkRequest setParent(java.lang.String parent) {

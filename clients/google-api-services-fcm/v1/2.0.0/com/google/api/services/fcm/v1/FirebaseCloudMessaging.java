@@ -182,9 +182,8 @@ public class FirebaseCloudMessaging extends com.google.api.client.googleapis.ser
        * parameters, call the {@link Send#execute()} method to invoke the remote operation.
        *
        * @param parent Required. It contains the Firebase project id (i.e. the unique identifier for your Firebase
-       *        project), in the format of `projects/{project_id}`. For legacy support, the numeric
-       *        project number with no padding is also supported in the format of
-       *        `projects/{project_number}`.
+       *        project), in the format of `projects/{project_id}`. The numeric project number with no
+       *        padding is also supported in the format of `projects/{project_number}`.
        * @param content the {@link com.google.api.services.fcm.v1.model.SendMessageRequest}
        * @return the request
        */
@@ -212,9 +211,8 @@ public class FirebaseCloudMessaging extends com.google.api.client.googleapis.ser
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param parent Required. It contains the Firebase project id (i.e. the unique identifier for your Firebase
-       *        project), in the format of `projects/{project_id}`. For legacy support, the numeric
-       *        project number with no padding is also supported in the format of
-       *        `projects/{project_number}`.
+       *        project), in the format of `projects/{project_id}`. The numeric project number with no
+       *        padding is also supported in the format of `projects/{project_number}`.
          * @param content the {@link com.google.api.services.fcm.v1.model.SendMessageRequest}
          * @since 1.13
          */
@@ -285,16 +283,15 @@ public class FirebaseCloudMessaging extends com.google.api.client.googleapis.ser
 
         /**
          * Required. It contains the Firebase project id (i.e. the unique identifier for your
-         * Firebase project), in the format of `projects/{project_id}`. For legacy support, the
-         * numeric project number with no padding is also supported in the format of
-         * `projects/{project_number}`.
+         * Firebase project), in the format of `projects/{project_id}`. The numeric project number
+         * with no padding is also supported in the format of `projects/{project_number}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
         /** Required. It contains the Firebase project id (i.e. the unique identifier for your Firebase
-       project), in the format of `projects/{project_id}`. For legacy support, the numeric project number
-       with no padding is also supported in the format of `projects/{project_number}`.
+       project), in the format of `projects/{project_id}`. The numeric project number with no padding is
+       also supported in the format of `projects/{project_number}`.
          */
         public java.lang.String getParent() {
           return parent;
@@ -302,9 +299,8 @@ public class FirebaseCloudMessaging extends com.google.api.client.googleapis.ser
 
         /**
          * Required. It contains the Firebase project id (i.e. the unique identifier for your
-         * Firebase project), in the format of `projects/{project_id}`. For legacy support, the
-         * numeric project number with no padding is also supported in the format of
-         * `projects/{project_number}`.
+         * Firebase project), in the format of `projects/{project_id}`. The numeric project number
+         * with no padding is also supported in the format of `projects/{project_number}`.
          */
         public Send setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {

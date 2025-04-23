@@ -44,6 +44,14 @@ public final class BootDiskConfig extends com.google.api.client.json.GenericJson
   private java.lang.Boolean enableConfidentialCompute;
 
   /**
+   * Optional. Image from which boot disk is to be created. If not specified, the default image for
+   * the runtime version will be used. Example: `projects/$PROJECT_ID/global/images/$IMAGE_NAME`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceImage;
+
+  /**
    * Optional. Customer encryption key for boot disk.
    * @return value or {@code null} for none
    */
@@ -74,6 +82,25 @@ public final class BootDiskConfig extends com.google.api.client.json.GenericJson
    */
   public BootDiskConfig setEnableConfidentialCompute(java.lang.Boolean enableConfidentialCompute) {
     this.enableConfidentialCompute = enableConfidentialCompute;
+    return this;
+  }
+
+  /**
+   * Optional. Image from which boot disk is to be created. If not specified, the default image for
+   * the runtime version will be used. Example: `projects/$PROJECT_ID/global/images/$IMAGE_NAME`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceImage() {
+    return sourceImage;
+  }
+
+  /**
+   * Optional. Image from which boot disk is to be created. If not specified, the default image for
+   * the runtime version will be used. Example: `projects/$PROJECT_ID/global/images/$IMAGE_NAME`.
+   * @param sourceImage sourceImage or {@code null} for none
+   */
+  public BootDiskConfig setSourceImage(java.lang.String sourceImage) {
+    this.sourceImage = sourceImage;
     return this;
   }
 

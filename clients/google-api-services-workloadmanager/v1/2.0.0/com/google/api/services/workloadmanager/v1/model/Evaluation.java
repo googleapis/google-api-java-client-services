@@ -17,7 +17,7 @@
 package com.google.api.services.workloadmanager.v1.model;
 
 /**
- * LINT.IfChange Message describing Evaluation object
+ * Message describing Evaluation object
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Workload Manager API. For a detailed explanation see:

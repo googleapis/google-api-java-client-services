@@ -61,6 +61,21 @@ public final class Authority extends com.google.api.client.json.GenericJson {
   private java.lang.String oidcJwks;
 
   /**
+   * Optional. Output only. The identity provider for the scope-tenancy workload identity pool.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String scopeTenancyIdentityProvider;
+
+  /**
+   * Optional. Output only. The name of the scope-tenancy workload identity pool. This pool is set
+   * in the fleet-level feature.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String scopeTenancyWorkloadIdentityPool;
+
+  /**
    * Output only. The name of the workload identity pool in which `issuer` will be recognized. There
    * is a single Workload Identity Pool per Hub that is shared between all Memberships that belong
    * to that Hub. For a Hub hosted in {PROJECT_ID}, the workload pool format is
@@ -166,6 +181,42 @@ public final class Authority extends com.google.api.client.json.GenericJson {
    */
   public Authority encodeOidcJwks(byte[] oidcJwks) {
     this.oidcJwks = com.google.api.client.util.Base64.encodeBase64URLSafeString(oidcJwks);
+    return this;
+  }
+
+  /**
+   * Optional. Output only. The identity provider for the scope-tenancy workload identity pool.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getScopeTenancyIdentityProvider() {
+    return scopeTenancyIdentityProvider;
+  }
+
+  /**
+   * Optional. Output only. The identity provider for the scope-tenancy workload identity pool.
+   * @param scopeTenancyIdentityProvider scopeTenancyIdentityProvider or {@code null} for none
+   */
+  public Authority setScopeTenancyIdentityProvider(java.lang.String scopeTenancyIdentityProvider) {
+    this.scopeTenancyIdentityProvider = scopeTenancyIdentityProvider;
+    return this;
+  }
+
+  /**
+   * Optional. Output only. The name of the scope-tenancy workload identity pool. This pool is set
+   * in the fleet-level feature.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getScopeTenancyWorkloadIdentityPool() {
+    return scopeTenancyWorkloadIdentityPool;
+  }
+
+  /**
+   * Optional. Output only. The name of the scope-tenancy workload identity pool. This pool is set
+   * in the fleet-level feature.
+   * @param scopeTenancyWorkloadIdentityPool scopeTenancyWorkloadIdentityPool or {@code null} for none
+   */
+  public Authority setScopeTenancyWorkloadIdentityPool(java.lang.String scopeTenancyWorkloadIdentityPool) {
+    this.scopeTenancyWorkloadIdentityPool = scopeTenancyWorkloadIdentityPool;
     return this;
   }
 

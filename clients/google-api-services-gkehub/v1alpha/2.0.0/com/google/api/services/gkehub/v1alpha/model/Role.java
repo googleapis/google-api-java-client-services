@@ -30,11 +30,35 @@ package com.google.api.services.gkehub.v1alpha.model;
 public final class Role extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. custom_role is the name of a custom KubernetesClusterRole to use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String customRole;
+
+  /**
    * predefined_role is the Kubernetes default role to use
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String predefinedRole;
+
+  /**
+   * Optional. custom_role is the name of a custom KubernetesClusterRole to use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCustomRole() {
+    return customRole;
+  }
+
+  /**
+   * Optional. custom_role is the name of a custom KubernetesClusterRole to use.
+   * @param customRole customRole or {@code null} for none
+   */
+  public Role setCustomRole(java.lang.String customRole) {
+    this.customRole = customRole;
+    return this;
+  }
 
   /**
    * predefined_role is the Kubernetes default role to use

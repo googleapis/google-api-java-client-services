@@ -51,6 +51,13 @@ public final class CommonFeatureState extends com.google.api.client.json.Generic
   private FleetObservabilityFeatureState fleetobservability;
 
   /**
+   * RBAC Role Binding Actuation feature state
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RBACRoleBindingActuationFeatureState rbacrolebindingactuation;
+
+  /**
    * Output only. The "running state" of the Feature in this Fleet.
    * The value may be {@code null}.
    */
@@ -105,6 +112,23 @@ public final class CommonFeatureState extends com.google.api.client.json.Generic
    */
   public CommonFeatureState setFleetobservability(FleetObservabilityFeatureState fleetobservability) {
     this.fleetobservability = fleetobservability;
+    return this;
+  }
+
+  /**
+   * RBAC Role Binding Actuation feature state
+   * @return value or {@code null} for none
+   */
+  public RBACRoleBindingActuationFeatureState getRbacrolebindingactuation() {
+    return rbacrolebindingactuation;
+  }
+
+  /**
+   * RBAC Role Binding Actuation feature state
+   * @param rbacrolebindingactuation rbacrolebindingactuation or {@code null} for none
+   */
+  public CommonFeatureState setRbacrolebindingactuation(RBACRoleBindingActuationFeatureState rbacrolebindingactuation) {
+    this.rbacrolebindingactuation = rbacrolebindingactuation;
     return this;
   }
 

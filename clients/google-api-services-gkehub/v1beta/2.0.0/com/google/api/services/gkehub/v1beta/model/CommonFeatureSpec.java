@@ -30,13 +30,6 @@ package com.google.api.services.gkehub.v1beta.model;
 public final class CommonFeatureSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * Anthos Observability spec
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private AnthosObservabilityFeatureSpec anthosobservability;
-
-  /**
    * Appdevexperience specific spec.
    * The value may be {@code null}.
    */
@@ -72,21 +65,11 @@ public final class CommonFeatureSpec extends com.google.api.client.json.GenericJ
   private MultiClusterIngressFeatureSpec multiclusteringress;
 
   /**
-   * Anthos Observability spec
-   * @return value or {@code null} for none
+   * RBAC Role Binding Actuation feature spec
+   * The value may be {@code null}.
    */
-  public AnthosObservabilityFeatureSpec getAnthosobservability() {
-    return anthosobservability;
-  }
-
-  /**
-   * Anthos Observability spec
-   * @param anthosobservability anthosobservability or {@code null} for none
-   */
-  public CommonFeatureSpec setAnthosobservability(AnthosObservabilityFeatureSpec anthosobservability) {
-    this.anthosobservability = anthosobservability;
-    return this;
-  }
+  @com.google.api.client.util.Key
+  private RBACRoleBindingActuationFeatureSpec rbacrolebindingactuation;
 
   /**
    * Appdevexperience specific spec.
@@ -170,6 +153,23 @@ public final class CommonFeatureSpec extends com.google.api.client.json.GenericJ
    */
   public CommonFeatureSpec setMulticlusteringress(MultiClusterIngressFeatureSpec multiclusteringress) {
     this.multiclusteringress = multiclusteringress;
+    return this;
+  }
+
+  /**
+   * RBAC Role Binding Actuation feature spec
+   * @return value or {@code null} for none
+   */
+  public RBACRoleBindingActuationFeatureSpec getRbacrolebindingactuation() {
+    return rbacrolebindingactuation;
+  }
+
+  /**
+   * RBAC Role Binding Actuation feature spec
+   * @param rbacrolebindingactuation rbacrolebindingactuation or {@code null} for none
+   */
+  public CommonFeatureSpec setRbacrolebindingactuation(RBACRoleBindingActuationFeatureSpec rbacrolebindingactuation) {
+    this.rbacrolebindingactuation = rbacrolebindingactuation;
     return this;
   }
 

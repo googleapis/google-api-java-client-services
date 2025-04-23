@@ -445,6 +445,29 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
+         * Optional. A list of extra location types that should be used as conditions for
+         * controlling the visibility of the locations.
+         */
+        @com.google.api.client.util.Key
+        private java.util.List<java.lang.String> extraLocationTypes;
+
+        /** Optional. A list of extra location types that should be used as conditions for controlling the
+       visibility of the locations.
+         */
+        public java.util.List<java.lang.String> getExtraLocationTypes() {
+          return extraLocationTypes;
+        }
+
+        /**
+         * Optional. A list of extra location types that should be used as conditions for
+         * controlling the visibility of the locations.
+         */
+        public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
+          this.extraLocationTypes = extraLocationTypes;
+          return this;
+        }
+
+        /**
          * A filter to narrow down results to a preferred subset. The filtering language accepts
          * strings like `"displayName=tokyo"`, and is documented in more detail in
          * [AIP-160](https://google.aip.dev/160).
@@ -515,6 +538,973 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
       }
 
       /**
+       * An accessor for creating requests from the Memberships collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code GKEHub gkehub = new GKEHub(...);}
+       *   {@code GKEHub.Memberships.List request = gkehub.memberships().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Memberships memberships() {
+        return new Memberships();
+      }
+
+      /**
+       * The "memberships" collection of methods.
+       */
+      public class Memberships {
+
+        /**
+         * An accessor for creating requests from the Features collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code GKEHub gkehub = new GKEHub(...);}
+         *   {@code GKEHub.Features.List request = gkehub.features().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Features features() {
+          return new Features();
+        }
+
+        /**
+         * The "features" collection of methods.
+         */
+        public class Features {
+
+          /**
+           * Creates membershipFeature under a given parent.
+           *
+           * Create a request for the method "features.create".
+           *
+           * This request holds the parameters needed by the gkehub server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The name of parent where the MembershipFeature will be created. Specified in the format
+           *        `projects/locations/memberships`.
+           * @param content the {@link com.google.api.services.gkehub.v2.model.MembershipFeature}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.gkehub.v2.model.MembershipFeature content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends GKEHubRequest<com.google.api.services.gkehub.v2.model.Operation> {
+
+            private static final String REST_PATH = "v2/{+parent}/features";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/memberships/[^/]+$");
+
+            /**
+             * Creates membershipFeature under a given parent.
+             *
+             * Create a request for the method "features.create".
+             *
+             * This request holds the parameters needed by the the gkehub server.  After setting any optional
+             * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The name of parent where the MembershipFeature will be created. Specified in the format
+           *        `projects/locations/memberships`.
+             * @param content the {@link com.google.api.services.gkehub.v2.model.MembershipFeature}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.gkehub.v2.model.MembershipFeature content) {
+              super(GKEHub.this, "POST", REST_PATH, content, com.google.api.services.gkehub.v2.model.Operation.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/memberships/[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of parent where the MembershipFeature will be created. Specified
+             * in the format `projects/locations/memberships`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The name of parent where the MembershipFeature will be created. Specified in the format
+           `projects/locations/memberships`.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The name of parent where the MembershipFeature will be created. Specified
+             * in the format `projects/locations/memberships`.
+             */
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/memberships/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /** Required. The ID of the membership_feature to create. */
+            @com.google.api.client.util.Key
+            private java.lang.String featureId;
+
+            /** Required. The ID of the membership_feature to create.
+             */
+            public java.lang.String getFeatureId() {
+              return featureId;
+            }
+
+            /** Required. The ID of the membership_feature to create. */
+            public Create setFeatureId(java.lang.String featureId) {
+              this.featureId = featureId;
+              return this;
+            }
+
+            /** Idempotent request UUID. */
+            @com.google.api.client.util.Key
+            private java.lang.String requestId;
+
+            /** Idempotent request UUID.
+             */
+            public java.lang.String getRequestId() {
+              return requestId;
+            }
+
+            /** Idempotent request UUID. */
+            public Create setRequestId(java.lang.String requestId) {
+              this.requestId = requestId;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Removes a membershipFeature.
+           *
+           * Create a request for the method "features.delete".
+           *
+           * This request holds the parameters needed by the gkehub server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the membershipFeature to be deleted. Specified in the format
+           *        `projects/locations/memberships/features`.
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends GKEHubRequest<com.google.api.services.gkehub.v2.model.Operation> {
+
+            private static final String REST_PATH = "v2/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/memberships/[^/]+/features/[^/]+$");
+
+            /**
+             * Removes a membershipFeature.
+             *
+             * Create a request for the method "features.delete".
+             *
+             * This request holds the parameters needed by the the gkehub server.  After setting any optional
+             * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the membershipFeature to be deleted. Specified in the format
+           *        `projects/locations/memberships/features`.
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(GKEHub.this, "DELETE", REST_PATH, null, com.google.api.services.gkehub.v2.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/memberships/[^/]+/features/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the membershipFeature to be deleted. Specified in the format
+             * `projects/locations/memberships/features`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the membershipFeature to be deleted. Specified in the format
+           `projects/locations/memberships/features`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the membershipFeature to be deleted. Specified in the format
+             * `projects/locations/memberships/features`.
+             */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/memberships/[^/]+/features/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /** Idempotent request UUID. */
+            @com.google.api.client.util.Key
+            private java.lang.String requestId;
+
+            /** Idempotent request UUID.
+             */
+            public java.lang.String getRequestId() {
+              return requestId;
+            }
+
+            /** Idempotent request UUID. */
+            public Delete setRequestId(java.lang.String requestId) {
+              this.requestId = requestId;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * ========= MembershipFeature Services ========= Gets details of a membershipFeature.
+           *
+           * Create a request for the method "features.get".
+           *
+           * This request holds the parameters needed by the gkehub server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The MembershipFeature resource name in the format
+           *        `projects/locations/memberships/features`.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends GKEHubRequest<com.google.api.services.gkehub.v2.model.MembershipFeature> {
+
+            private static final String REST_PATH = "v2/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/memberships/[^/]+/features/[^/]+$");
+
+            /**
+             * ========= MembershipFeature Services ========= Gets details of a membershipFeature.
+             *
+             * Create a request for the method "features.get".
+             *
+             * This request holds the parameters needed by the the gkehub server.  After setting any optional
+             * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+             * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The MembershipFeature resource name in the format
+           *        `projects/locations/memberships/features`.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(GKEHub.this, "GET", REST_PATH, null, com.google.api.services.gkehub.v2.model.MembershipFeature.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/memberships/[^/]+/features/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The MembershipFeature resource name in the format
+             * `projects/locations/memberships/features`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The MembershipFeature resource name in the format
+           `projects/locations/memberships/features`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The MembershipFeature resource name in the format
+             * `projects/locations/memberships/features`.
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/memberships/[^/]+/features/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists MembershipFeatures in a given project and location.
+           *
+           * Create a request for the method "features.list".
+           *
+           * This request holds the parameters needed by the gkehub server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent where the MembershipFeature will be listed. In the format:
+           *        `projects/locations/memberships`.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends GKEHubRequest<com.google.api.services.gkehub.v2.model.ListMembershipFeaturesResponse> {
+
+            private static final String REST_PATH = "v2/{+parent}/features";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/memberships/[^/]+$");
+
+            /**
+             * Lists MembershipFeatures in a given project and location.
+             *
+             * Create a request for the method "features.list".
+             *
+             * This request holds the parameters needed by the the gkehub server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+             * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent where the MembershipFeature will be listed. In the format:
+           *        `projects/locations/memberships`.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(GKEHub.this, "GET", REST_PATH, null, com.google.api.services.gkehub.v2.model.ListMembershipFeaturesResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/memberships/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent where the MembershipFeature will be listed. In the format:
+             * `projects/locations/memberships`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent where the MembershipFeature will be listed. In the format:
+           `projects/locations/memberships`.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The parent where the MembershipFeature will be listed. In the format:
+             * `projects/locations/memberships`.
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/memberships/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Lists MembershipFeatures that match the filter expression, following the syntax
+             * outlined in https://google.aip.dev/160. Examples: - Feature with the name
+             * "helloworld" in project "foo-proj" and membership "member-bar": name = "projects/foo-
+             * proj/locations/global/memberships/member-bar/features/helloworld" - Features that
+             * have a label called `foo`: labels.foo:* - Features that have a label called `foo`
+             * whose value is `bar`: labels.foo = bar
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Lists MembershipFeatures that match the filter expression, following the syntax outlined in
+           https://google.aip.dev/160. Examples: - Feature with the name "helloworld" in project "foo-proj"
+           and membership "member-bar": name = "projects/foo-proj/locations/global/memberships/member-
+           bar/features/helloworld" - Features that have a label called `foo`: labels.foo:* - Features that
+           have a label called `foo` whose value is `bar`: labels.foo = bar
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /**
+             * Lists MembershipFeatures that match the filter expression, following the syntax
+             * outlined in https://google.aip.dev/160. Examples: - Feature with the name
+             * "helloworld" in project "foo-proj" and membership "member-bar": name = "projects/foo-
+             * proj/locations/global/memberships/member-bar/features/helloworld" - Features that
+             * have a label called `foo`: labels.foo:* - Features that have a label called `foo`
+             * whose value is `bar`: labels.foo = bar
+             */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /**
+             * One or more fields to compare and use to sort the output. See
+             * https://google.aip.dev/132#ordering.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String orderBy;
+
+            /** One or more fields to compare and use to sort the output. See https://google.aip.dev/132#ordering.
+             */
+            public java.lang.String getOrderBy() {
+              return orderBy;
+            }
+
+            /**
+             * One or more fields to compare and use to sort the output. See
+             * https://google.aip.dev/132#ordering.
+             */
+            public List setOrderBy(java.lang.String orderBy) {
+              this.orderBy = orderBy;
+              return this;
+            }
+
+            /**
+             * When requesting a 'page' of resources, `page_size` specifies number of resources to
+             * return. If unspecified or set to 0, all resources will be returned.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** When requesting a 'page' of resources, `page_size` specifies number of resources to return. If
+           unspecified or set to 0, all resources will be returned.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * When requesting a 'page' of resources, `page_size` specifies number of resources to
+             * return. If unspecified or set to 0, all resources will be returned.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Token returned by previous call to `ListFeatures` which specifies the position in the
+             * list from where to continue listing the resources.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Token returned by previous call to `ListFeatures` which specifies the position in the list from
+           where to continue listing the resources.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Token returned by previous call to `ListFeatures` which specifies the position in the
+             * list from where to continue listing the resources.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Updates an existing MembershipFeature.
+           *
+           * Create a request for the method "features.patch".
+           *
+           * This request holds the parameters needed by the gkehub server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           *
+           * @param name Output only. The resource name of the membershipFeature, in the format:
+           *        `projects/{project}/locations/{location}/memberships/{membership}/features/{feature}`.
+           *        Note that `membershipFeatures` is shortened to `features` in the resource name. (see
+           *        http://go/aip/122#collection-identifiers)
+           * @param content the {@link com.google.api.services.gkehub.v2.model.MembershipFeature}
+           * @return the request
+           */
+          public Patch patch(java.lang.String name, com.google.api.services.gkehub.v2.model.MembershipFeature content) throws java.io.IOException {
+            Patch result = new Patch(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Patch extends GKEHubRequest<com.google.api.services.gkehub.v2.model.Operation> {
+
+            private static final String REST_PATH = "v2/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/memberships/[^/]+/features/[^/]+$");
+
+            /**
+             * Updates an existing MembershipFeature.
+             *
+             * Create a request for the method "features.patch".
+             *
+             * This request holds the parameters needed by the the gkehub server.  After setting any optional
+             * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+             * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Output only. The resource name of the membershipFeature, in the format:
+           *        `projects/{project}/locations/{location}/memberships/{membership}/features/{feature}`.
+           *        Note that `membershipFeatures` is shortened to `features` in the resource name. (see
+           *        http://go/aip/122#collection-identifiers)
+             * @param content the {@link com.google.api.services.gkehub.v2.model.MembershipFeature}
+             * @since 1.13
+             */
+            protected Patch(java.lang.String name, com.google.api.services.gkehub.v2.model.MembershipFeature content) {
+              super(GKEHub.this, "PATCH", REST_PATH, content, com.google.api.services.gkehub.v2.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/memberships/[^/]+/features/[^/]+$");
+              }
+            }
+
+            @Override
+            public Patch set$Xgafv(java.lang.String $Xgafv) {
+              return (Patch) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Patch setAccessToken(java.lang.String accessToken) {
+              return (Patch) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Patch setAlt(java.lang.String alt) {
+              return (Patch) super.setAlt(alt);
+            }
+
+            @Override
+            public Patch setCallback(java.lang.String callback) {
+              return (Patch) super.setCallback(callback);
+            }
+
+            @Override
+            public Patch setFields(java.lang.String fields) {
+              return (Patch) super.setFields(fields);
+            }
+
+            @Override
+            public Patch setKey(java.lang.String key) {
+              return (Patch) super.setKey(key);
+            }
+
+            @Override
+            public Patch setOauthToken(java.lang.String oauthToken) {
+              return (Patch) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Patch) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Patch setQuotaUser(java.lang.String quotaUser) {
+              return (Patch) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Patch setUploadType(java.lang.String uploadType) {
+              return (Patch) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Patch) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Output only. The resource name of the membershipFeature, in the format: `projects/{pr
+             * oject}/locations/{location}/memberships/{membership}/features/{feature}`. Note that
+             * `membershipFeatures` is shortened to `features` in the resource name. (see
+             * http://go/aip/122#collection-identifiers)
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Output only. The resource name of the membershipFeature, in the format:
+           `projects/{project}/locations/{location}/memberships/{membership}/features/{feature}`. Note that
+           `membershipFeatures` is shortened to `features` in the resource name. (see
+           http://go/aip/122#collection-identifiers)
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Output only. The resource name of the membershipFeature, in the format: `projects/{pr
+             * oject}/locations/{location}/memberships/{membership}/features/{feature}`. Note that
+             * `membershipFeatures` is shortened to `features` in the resource name. (see
+             * http://go/aip/122#collection-identifiers)
+             */
+            public Patch setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/memberships/[^/]+/features/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Optional. If set to true, and the MembershipFeature is not found, a new
+             * MembershipFeature will be created. In this situation, `update_mask` is ignored.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean allowMissing;
+
+            /** Optional. If set to true, and the MembershipFeature is not found, a new MembershipFeature will be
+           created. In this situation, `update_mask` is ignored.
+             */
+            public java.lang.Boolean getAllowMissing() {
+              return allowMissing;
+            }
+
+            /**
+             * Optional. If set to true, and the MembershipFeature is not found, a new
+             * MembershipFeature will be created. In this situation, `update_mask` is ignored.
+             */
+            public Patch setAllowMissing(java.lang.Boolean allowMissing) {
+              this.allowMissing = allowMissing;
+              return this;
+            }
+
+            /** Idempotent request UUID. */
+            @com.google.api.client.util.Key
+            private java.lang.String requestId;
+
+            /** Idempotent request UUID.
+             */
+            public java.lang.String getRequestId() {
+              return requestId;
+            }
+
+            /** Idempotent request UUID. */
+            public Patch setRequestId(java.lang.String requestId) {
+              this.requestId = requestId;
+              return this;
+            }
+
+            /** Required. Mask of fields to update. */
+            @com.google.api.client.util.Key
+            private String updateMask;
+
+            /** Required. Mask of fields to update.
+             */
+            public String getUpdateMask() {
+              return updateMask;
+            }
+
+            /** Required. Mask of fields to update. */
+            public Patch setUpdateMask(String updateMask) {
+              this.updateMask = updateMask;
+              return this;
+            }
+
+            @Override
+            public Patch set(String parameterName, Object value) {
+              return (Patch) super.set(parameterName, value);
+            }
+          }
+
+        }
+      }
+      /**
        * An accessor for creating requests from the Operations collection.
        *
        * <p>The typical use is:</p>
@@ -540,7 +1530,7 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
          * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
          * methods to check whether the cancellation succeeded or whether the operation completed despite
          * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
-         * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+         * operation with an Operation.error value with a google.rpc.Status.code of `1`, corresponding to
          * `Code.CANCELLED`.
          *
          * Create a request for the method "operations.cancel".
@@ -571,7 +1561,7 @@ public class GKEHub extends com.google.api.client.googleapis.services.json.Abstr
            * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
            * methods to check whether the cancellation succeeded or whether the operation completed despite
            * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
-           * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+           * operation with an Operation.error value with a google.rpc.Status.code of `1`, corresponding to
            * `Code.CANCELLED`.
            *
            * Create a request for the method "operations.cancel".

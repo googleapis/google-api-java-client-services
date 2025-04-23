@@ -39,6 +39,13 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   private Authority authority;
 
   /**
+   * Output only. The tier of the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String clusterTier;
+
+  /**
    * Output only. When the Membership was created.
    * The value may be {@code null}.
    */
@@ -78,7 +85,8 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   private java.lang.String externalId;
 
   /**
-   * Optional. Labels for this membership.
+   * Optional. Labels for this membership. These labels are not leveraged by multi-cluster features,
+   * instead, we prefer cluster labels, which can be set on GKE cluster or other cluster types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -154,6 +162,23 @@ public final class Membership extends com.google.api.client.json.GenericJson {
    */
   public Membership setAuthority(Authority authority) {
     this.authority = authority;
+    return this;
+  }
+
+  /**
+   * Output only. The tier of the cluster.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getClusterTier() {
+    return clusterTier;
+  }
+
+  /**
+   * Output only. The tier of the cluster.
+   * @param clusterTier clusterTier or {@code null} for none
+   */
+  public Membership setClusterTier(java.lang.String clusterTier) {
+    this.clusterTier = clusterTier;
     return this;
   }
 
@@ -251,7 +276,8 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Labels for this membership.
+   * Optional. Labels for this membership. These labels are not leveraged by multi-cluster features,
+   * instead, we prefer cluster labels, which can be set on GKE cluster or other cluster types.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -259,7 +285,8 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Labels for this membership.
+   * Optional. Labels for this membership. These labels are not leveraged by multi-cluster features,
+   * instead, we prefer cluster labels, which can be set on GKE cluster or other cluster types.
    * @param labels labels or {@code null} for none
    */
   public Membership setLabels(java.util.Map<String, java.lang.String> labels) {

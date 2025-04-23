@@ -30,6 +30,21 @@ package com.google.api.services.netapp.v1.model;
 public final class BackupVault extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Region where the backups are stored. Format:
+   * `projects/{project_id}/locations/{location}`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String backupRegion;
+
+  /**
+   * Optional. Type of backup vault to be created. Default is IN_REGION.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String backupVaultType;
+
+  /**
    * Output only. Create time of the backup vault.
    * The value may be {@code null}.
    */
@@ -42,6 +57,14 @@ public final class BackupVault extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
+
+  /**
+   * Output only. Name of the Backup vault created in backup region. Format:
+   * `projects/{project_id}/locations/{location}/backupVaults/{backup_vault_id}`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String destinationBackupVault;
 
   /**
    * Resource labels to represent user provided metadata.
@@ -59,11 +82,63 @@ public final class BackupVault extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Output only. Name of the Backup vault created in source region. Format:
+   * `projects/{project_id}/locations/{location}/backupVaults/{backup_vault_id}`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceBackupVault;
+
+  /**
+   * Output only. Region in which the backup vault is created. Format:
+   * `projects/{project_id}/locations/{location}`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceRegion;
+
+  /**
    * Output only. The backup vault state.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
+
+  /**
+   * Optional. Region where the backups are stored. Format:
+   * `projects/{project_id}/locations/{location}`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBackupRegion() {
+    return backupRegion;
+  }
+
+  /**
+   * Optional. Region where the backups are stored. Format:
+   * `projects/{project_id}/locations/{location}`
+   * @param backupRegion backupRegion or {@code null} for none
+   */
+  public BackupVault setBackupRegion(java.lang.String backupRegion) {
+    this.backupRegion = backupRegion;
+    return this;
+  }
+
+  /**
+   * Optional. Type of backup vault to be created. Default is IN_REGION.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBackupVaultType() {
+    return backupVaultType;
+  }
+
+  /**
+   * Optional. Type of backup vault to be created. Default is IN_REGION.
+   * @param backupVaultType backupVaultType or {@code null} for none
+   */
+  public BackupVault setBackupVaultType(java.lang.String backupVaultType) {
+    this.backupVaultType = backupVaultType;
+    return this;
+  }
 
   /**
    * Output only. Create time of the backup vault.
@@ -100,6 +175,25 @@ public final class BackupVault extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. Name of the Backup vault created in backup region. Format:
+   * `projects/{project_id}/locations/{location}/backupVaults/{backup_vault_id}`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDestinationBackupVault() {
+    return destinationBackupVault;
+  }
+
+  /**
+   * Output only. Name of the Backup vault created in backup region. Format:
+   * `projects/{project_id}/locations/{location}/backupVaults/{backup_vault_id}`
+   * @param destinationBackupVault destinationBackupVault or {@code null} for none
+   */
+  public BackupVault setDestinationBackupVault(java.lang.String destinationBackupVault) {
+    this.destinationBackupVault = destinationBackupVault;
+    return this;
+  }
+
+  /**
    * Resource labels to represent user provided metadata.
    * @return value or {@code null} for none
    */
@@ -132,6 +226,44 @@ public final class BackupVault extends com.google.api.client.json.GenericJson {
    */
   public BackupVault setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. Name of the Backup vault created in source region. Format:
+   * `projects/{project_id}/locations/{location}/backupVaults/{backup_vault_id}`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceBackupVault() {
+    return sourceBackupVault;
+  }
+
+  /**
+   * Output only. Name of the Backup vault created in source region. Format:
+   * `projects/{project_id}/locations/{location}/backupVaults/{backup_vault_id}`
+   * @param sourceBackupVault sourceBackupVault or {@code null} for none
+   */
+  public BackupVault setSourceBackupVault(java.lang.String sourceBackupVault) {
+    this.sourceBackupVault = sourceBackupVault;
+    return this;
+  }
+
+  /**
+   * Output only. Region in which the backup vault is created. Format:
+   * `projects/{project_id}/locations/{location}`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceRegion() {
+    return sourceRegion;
+  }
+
+  /**
+   * Output only. Region in which the backup vault is created. Format:
+   * `projects/{project_id}/locations/{location}`
+   * @param sourceRegion sourceRegion or {@code null} for none
+   */
+  public BackupVault setSourceRegion(java.lang.String sourceRegion) {
+    this.sourceRegion = sourceRegion;
     return this;
   }
 

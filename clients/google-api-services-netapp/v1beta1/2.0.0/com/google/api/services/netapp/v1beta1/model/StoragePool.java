@@ -60,6 +60,14 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
+   * Optional. True if using Independent Scaling of capacity and performance (Hyperdisk) By default
+   * set to false
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean customPerformanceEnabled;
+
+  /**
    * Optional. Description of the storage pool
    * The value may be {@code null}.
    */
@@ -165,6 +173,21 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   private java.lang.String stateDetails;
 
   /**
+   * Optional. Custom Performance Total IOPS of the pool If not provided, it will be calculated
+   * based on the total_throughput_mibps
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long totalIops;
+
+  /**
+   * Optional. Custom Performance Total Throughput of the pool (in MiB/s)
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long totalThroughputMibps;
+
+  /**
    * Output only. Allocated size of all volumes in GIB in the storage pool
    * The value may be {@code null}.
    */
@@ -252,6 +275,25 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
    */
   public StoragePool setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Optional. True if using Independent Scaling of capacity and performance (Hyperdisk) By default
+   * set to false
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getCustomPerformanceEnabled() {
+    return customPerformanceEnabled;
+  }
+
+  /**
+   * Optional. True if using Independent Scaling of capacity and performance (Hyperdisk) By default
+   * set to false
+   * @param customPerformanceEnabled customPerformanceEnabled or {@code null} for none
+   */
+  public StoragePool setCustomPerformanceEnabled(java.lang.Boolean customPerformanceEnabled) {
+    this.customPerformanceEnabled = customPerformanceEnabled;
     return this;
   }
 
@@ -507,6 +549,42 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
    */
   public StoragePool setStateDetails(java.lang.String stateDetails) {
     this.stateDetails = stateDetails;
+    return this;
+  }
+
+  /**
+   * Optional. Custom Performance Total IOPS of the pool If not provided, it will be calculated
+   * based on the total_throughput_mibps
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getTotalIops() {
+    return totalIops;
+  }
+
+  /**
+   * Optional. Custom Performance Total IOPS of the pool If not provided, it will be calculated
+   * based on the total_throughput_mibps
+   * @param totalIops totalIops or {@code null} for none
+   */
+  public StoragePool setTotalIops(java.lang.Long totalIops) {
+    this.totalIops = totalIops;
+    return this;
+  }
+
+  /**
+   * Optional. Custom Performance Total Throughput of the pool (in MiB/s)
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getTotalThroughputMibps() {
+    return totalThroughputMibps;
+  }
+
+  /**
+   * Optional. Custom Performance Total Throughput of the pool (in MiB/s)
+   * @param totalThroughputMibps totalThroughputMibps or {@code null} for none
+   */
+  public StoragePool setTotalThroughputMibps(java.lang.Long totalThroughputMibps) {
+    this.totalThroughputMibps = totalThroughputMibps;
     return this;
   }
 

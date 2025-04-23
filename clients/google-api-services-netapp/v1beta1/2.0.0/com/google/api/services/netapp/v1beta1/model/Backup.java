@@ -30,6 +30,14 @@ package com.google.api.services.netapp.v1beta1.model;
 public final class Backup extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Region in which backup is stored. Format:
+   * `projects/{project_id}/locations/{location}`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String backupRegion;
+
+  /**
    * Output only. Type of backup, manually created or created by a backup policy.
    * The value may be {@code null}.
    */
@@ -113,12 +121,39 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
+   * Output only. Region of the volume from which the backup was created. Format:
+   * `projects/{project_id}/locations/{location}`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String volumeRegion;
+
+  /**
    * Output only. Size of the file system when the backup was created. When creating a new volume
    * from the backup, the volume capacity will have to be at least as big.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long volumeUsageBytes;
+
+  /**
+   * Output only. Region in which backup is stored. Format:
+   * `projects/{project_id}/locations/{location}`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBackupRegion() {
+    return backupRegion;
+  }
+
+  /**
+   * Output only. Region in which backup is stored. Format:
+   * `projects/{project_id}/locations/{location}`
+   * @param backupRegion backupRegion or {@code null} for none
+   */
+  public Backup setBackupRegion(java.lang.String backupRegion) {
+    this.backupRegion = backupRegion;
+    return this;
+  }
 
   /**
    * Output only. Type of backup, manually created or created by a backup policy.
@@ -316,6 +351,25 @@ public final class Backup extends com.google.api.client.json.GenericJson {
    */
   public Backup setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Output only. Region of the volume from which the backup was created. Format:
+   * `projects/{project_id}/locations/{location}`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVolumeRegion() {
+    return volumeRegion;
+  }
+
+  /**
+   * Output only. Region of the volume from which the backup was created. Format:
+   * `projects/{project_id}/locations/{location}`
+   * @param volumeRegion volumeRegion or {@code null} for none
+   */
+  public Backup setVolumeRegion(java.lang.String volumeRegion) {
+    this.volumeRegion = volumeRegion;
     return this;
   }
 

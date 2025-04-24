@@ -17,9 +17,9 @@
 package com.google.api.services.workspaceevents.v1.model;
 
 /**
- * [Developer Preview](https://developers.google.com/workspace/preview). A subscription to receive
- * events about a Google Workspace resource. To learn more about subscriptions, see the [Google
- * Workspace Events API overview](https://developers.google.com/workspace/events).
+ * A subscription to receive events about a Google Workspace resource. To learn more about
+ * subscriptions, see the [Google Workspace Events API
+ * overview](https://developers.google.com/workspace/events).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Workspace Events API. For a detailed

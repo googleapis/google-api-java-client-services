@@ -211,14 +211,14 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   private java.lang.String name;
 
   /**
-   * The number of nodes in a read pool.
+   * The number of read pool nodes in a read pool.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer nodeCount;
 
   /**
-   * Output only. Entries containing information about each node of the read pool.
+   * Output only. Entries containing information about each read pool node of the read pool.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -858,7 +858,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The number of nodes in a read pool.
+   * The number of read pool nodes in a read pool.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getNodeCount() {
@@ -866,7 +866,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The number of nodes in a read pool.
+   * The number of read pool nodes in a read pool.
    * @param nodeCount nodeCount or {@code null} for none
    */
   public DatabaseInstance setNodeCount(java.lang.Integer nodeCount) {
@@ -875,7 +875,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. Entries containing information about each node of the read pool.
+   * Output only. Entries containing information about each read pool node of the read pool.
    * @return value or {@code null} for none
    */
   public java.util.List<PoolNodeConfig> getNodes() {
@@ -883,7 +883,7 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. Entries containing information about each node of the read pool.
+   * Output only. Entries containing information about each read pool node of the read pool.
    * @param nodes nodes or {@code null} for none
    */
   public DatabaseInstance setNodes(java.util.List<PoolNodeConfig> nodes) {

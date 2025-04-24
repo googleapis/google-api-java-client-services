@@ -210,7 +210,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   /**
    * Optional. When this parameter is set to true, Cloud SQL instances can connect to Vertex AI to
    * pass requests for real-time predictions and insights to the AI. The default value is false.
-   * This applies only to Cloud SQL for PostgreSQL instances.
+   * This applies only to Cloud SQL for MySQL and Cloud SQL for PostgreSQL instances.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -747,7 +747,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   /**
    * Optional. When this parameter is set to true, Cloud SQL instances can connect to Vertex AI to
    * pass requests for real-time predictions and insights to the AI. The default value is false.
-   * This applies only to Cloud SQL for PostgreSQL instances.
+   * This applies only to Cloud SQL for MySQL and Cloud SQL for PostgreSQL instances.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableGoogleMlIntegration() {
@@ -757,7 +757,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   /**
    * Optional. When this parameter is set to true, Cloud SQL instances can connect to Vertex AI to
    * pass requests for real-time predictions and insights to the AI. The default value is false.
-   * This applies only to Cloud SQL for PostgreSQL instances.
+   * This applies only to Cloud SQL for MySQL and Cloud SQL for PostgreSQL instances.
    * @param enableGoogleMlIntegration enableGoogleMlIntegration or {@code null} for none
    */
   public Settings setEnableGoogleMlIntegration(java.lang.Boolean enableGoogleMlIntegration) {

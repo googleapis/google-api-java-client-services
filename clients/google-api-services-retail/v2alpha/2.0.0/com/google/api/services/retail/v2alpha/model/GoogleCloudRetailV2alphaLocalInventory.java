@@ -59,7 +59,10 @@ public final class GoogleCloudRetailV2alphaLocalInventory extends com.google.api
    * For primary products with no variants set the true availability at the primary level.
    * Corresponding properties: Google Merchant Center property
    * [availability](https://support.google.com/merchants/answer/6324448). Schema.org property
-   * [Offer.availability](https://schema.org/availability).
+   * [Offer.availability](https://schema.org/availability). This field is currently only used by the
+   * Recommendations API. For Search, please make use of fulfillment_types or custom attributes for
+   * similar behaviour. See [here]( https://cloud.google.com/retail/docs/local-inventory-
+   * updates#local-inventory-update-methods) for more details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -134,7 +137,10 @@ public final class GoogleCloudRetailV2alphaLocalInventory extends com.google.api
    * For primary products with no variants set the true availability at the primary level.
    * Corresponding properties: Google Merchant Center property
    * [availability](https://support.google.com/merchants/answer/6324448). Schema.org property
-   * [Offer.availability](https://schema.org/availability).
+   * [Offer.availability](https://schema.org/availability). This field is currently only used by the
+   * Recommendations API. For Search, please make use of fulfillment_types or custom attributes for
+   * similar behaviour. See [here]( https://cloud.google.com/retail/docs/local-inventory-
+   * updates#local-inventory-update-methods) for more details.
    * @return value or {@code null} for none
    */
   public java.lang.String getAvailability() {
@@ -149,7 +155,10 @@ public final class GoogleCloudRetailV2alphaLocalInventory extends com.google.api
    * For primary products with no variants set the true availability at the primary level.
    * Corresponding properties: Google Merchant Center property
    * [availability](https://support.google.com/merchants/answer/6324448). Schema.org property
-   * [Offer.availability](https://schema.org/availability).
+   * [Offer.availability](https://schema.org/availability). This field is currently only used by the
+   * Recommendations API. For Search, please make use of fulfillment_types or custom attributes for
+   * similar behaviour. See [here]( https://cloud.google.com/retail/docs/local-inventory-
+   * updates#local-inventory-update-methods) for more details.
    * @param availability availability or {@code null} for none
    */
   public GoogleCloudRetailV2alphaLocalInventory setAvailability(java.lang.String availability) {

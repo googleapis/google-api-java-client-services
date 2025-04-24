@@ -46,6 +46,13 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   private java.lang.Double allocatedStorageSizeTb;
 
   /**
+   * Optional. The list of allowlisted IP addresses for the Autonomous Database.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> allowlistedIps;
+
+  /**
    * Output only. The details for the Oracle APEX Application Development.
    * The value may be {@code null}.
    */
@@ -129,6 +136,14 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   private java.util.List<CustomerContact> customerContacts;
 
   /**
+   * Output only. The date and time the Autonomous Data Guard role was changed for the standby
+   * Autonomous Database.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String dataGuardRoleChangedTime;
+
+  /**
    * Output only. The current state of the Data Safe registration for the Autonomous Database.
    * The value may be {@code null}.
    */
@@ -176,6 +191,14 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
    */
   @com.google.api.client.util.Key
   private java.lang.String dbWorkload;
+
+  /**
+   * Output only. The date and time the Disaster Recovery role was changed for the standby
+   * Autonomous Database.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String disasterRecoveryRoleChangedTime;
 
   /**
    * Output only. This field indicates the number of seconds of data loss during a Data Guard
@@ -481,6 +504,23 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   }
 
   /**
+   * Optional. The list of allowlisted IP addresses for the Autonomous Database.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAllowlistedIps() {
+    return allowlistedIps;
+  }
+
+  /**
+   * Optional. The list of allowlisted IP addresses for the Autonomous Database.
+   * @param allowlistedIps allowlistedIps or {@code null} for none
+   */
+  public AutonomousDatabaseProperties setAllowlistedIps(java.util.List<java.lang.String> allowlistedIps) {
+    this.allowlistedIps = allowlistedIps;
+    return this;
+  }
+
+  /**
    * Output only. The details for the Oracle APEX Application Development.
    * @return value or {@code null} for none
    */
@@ -680,6 +720,25 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
   }
 
   /**
+   * Output only. The date and time the Autonomous Data Guard role was changed for the standby
+   * Autonomous Database.
+   * @return value or {@code null} for none
+   */
+  public String getDataGuardRoleChangedTime() {
+    return dataGuardRoleChangedTime;
+  }
+
+  /**
+   * Output only. The date and time the Autonomous Data Guard role was changed for the standby
+   * Autonomous Database.
+   * @param dataGuardRoleChangedTime dataGuardRoleChangedTime or {@code null} for none
+   */
+  public AutonomousDatabaseProperties setDataGuardRoleChangedTime(String dataGuardRoleChangedTime) {
+    this.dataGuardRoleChangedTime = dataGuardRoleChangedTime;
+    return this;
+  }
+
+  /**
    * Output only. The current state of the Data Safe registration for the Autonomous Database.
    * @return value or {@code null} for none
    */
@@ -795,6 +854,25 @@ public final class AutonomousDatabaseProperties extends com.google.api.client.js
    */
   public AutonomousDatabaseProperties setDbWorkload(java.lang.String dbWorkload) {
     this.dbWorkload = dbWorkload;
+    return this;
+  }
+
+  /**
+   * Output only. The date and time the Disaster Recovery role was changed for the standby
+   * Autonomous Database.
+   * @return value or {@code null} for none
+   */
+  public String getDisasterRecoveryRoleChangedTime() {
+    return disasterRecoveryRoleChangedTime;
+  }
+
+  /**
+   * Output only. The date and time the Disaster Recovery role was changed for the standby
+   * Autonomous Database.
+   * @param disasterRecoveryRoleChangedTime disasterRecoveryRoleChangedTime or {@code null} for none
+   */
+  public AutonomousDatabaseProperties setDisasterRecoveryRoleChangedTime(String disasterRecoveryRoleChangedTime) {
+    this.disasterRecoveryRoleChangedTime = disasterRecoveryRoleChangedTime;
     return this;
   }
 

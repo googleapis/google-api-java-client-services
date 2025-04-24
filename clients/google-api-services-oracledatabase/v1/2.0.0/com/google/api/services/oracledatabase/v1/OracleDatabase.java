@@ -445,6 +445,29 @@ public class OracleDatabase extends com.google.api.client.googleapis.services.js
         }
 
         /**
+         * Optional. A list of extra location types that should be used as conditions for
+         * controlling the visibility of the locations.
+         */
+        @com.google.api.client.util.Key
+        private java.util.List<java.lang.String> extraLocationTypes;
+
+        /** Optional. A list of extra location types that should be used as conditions for controlling the
+       visibility of the locations.
+         */
+        public java.util.List<java.lang.String> getExtraLocationTypes() {
+          return extraLocationTypes;
+        }
+
+        /**
+         * Optional. A list of extra location types that should be used as conditions for
+         * controlling the visibility of the locations.
+         */
+        public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
+          this.extraLocationTypes = extraLocationTypes;
+          return this;
+        }
+
+        /**
          * A filter to narrow down results to a preferred subset. The filtering language accepts
          * strings like `"displayName=tokyo"`, and is documented in more detail in
          * [AIP-160](https://google.aip.dev/160).
@@ -1894,6 +1917,146 @@ public class OracleDatabase extends com.google.api.client.googleapis.services.js
           }
         }
         /**
+         * Restarts an Autonomous Database.
+         *
+         * Create a request for the method "autonomousDatabases.restart".
+         *
+         * This request holds the parameters needed by the oracledatabase server.  After setting any
+         * optional parameters, call the {@link Restart#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the Autonomous Database in the following format:
+         *        projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}.
+         * @param content the {@link com.google.api.services.oracledatabase.v1.model.RestartAutonomousDatabaseRequest}
+         * @return the request
+         */
+        public Restart restart(java.lang.String name, com.google.api.services.oracledatabase.v1.model.RestartAutonomousDatabaseRequest content) throws java.io.IOException {
+          Restart result = new Restart(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Restart extends OracleDatabaseRequest<com.google.api.services.oracledatabase.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}:restart";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/autonomousDatabases/[^/]+$");
+
+          /**
+           * Restarts an Autonomous Database.
+           *
+           * Create a request for the method "autonomousDatabases.restart".
+           *
+           * This request holds the parameters needed by the the oracledatabase server.  After setting any
+           * optional parameters, call the {@link Restart#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Restart#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the Autonomous Database in the following format:
+         *        projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}.
+           * @param content the {@link com.google.api.services.oracledatabase.v1.model.RestartAutonomousDatabaseRequest}
+           * @since 1.13
+           */
+          protected Restart(java.lang.String name, com.google.api.services.oracledatabase.v1.model.RestartAutonomousDatabaseRequest content) {
+            super(OracleDatabase.this, "POST", REST_PATH, content, com.google.api.services.oracledatabase.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/autonomousDatabases/[^/]+$");
+            }
+          }
+
+          @Override
+          public Restart set$Xgafv(java.lang.String $Xgafv) {
+            return (Restart) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Restart setAccessToken(java.lang.String accessToken) {
+            return (Restart) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Restart setAlt(java.lang.String alt) {
+            return (Restart) super.setAlt(alt);
+          }
+
+          @Override
+          public Restart setCallback(java.lang.String callback) {
+            return (Restart) super.setCallback(callback);
+          }
+
+          @Override
+          public Restart setFields(java.lang.String fields) {
+            return (Restart) super.setFields(fields);
+          }
+
+          @Override
+          public Restart setKey(java.lang.String key) {
+            return (Restart) super.setKey(key);
+          }
+
+          @Override
+          public Restart setOauthToken(java.lang.String oauthToken) {
+            return (Restart) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Restart setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Restart) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Restart setQuotaUser(java.lang.String quotaUser) {
+            return (Restart) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Restart setUploadType(java.lang.String uploadType) {
+            return (Restart) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Restart setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Restart) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the Autonomous Database in the following format:
+           * projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the Autonomous Database in the following format:
+         projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the Autonomous Database in the following format:
+           * projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}.
+           */
+          public Restart setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/autonomousDatabases/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Restart set(String parameterName, Object value) {
+            return (Restart) super.set(parameterName, value);
+          }
+        }
+        /**
          * Restores a single Autonomous Database.
          *
          * Create a request for the method "autonomousDatabases.restore".
@@ -2031,6 +2194,425 @@ public class OracleDatabase extends com.google.api.client.googleapis.services.js
           @Override
           public Restore set(String parameterName, Object value) {
             return (Restore) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Starts an Autonomous Database.
+         *
+         * Create a request for the method "autonomousDatabases.start".
+         *
+         * This request holds the parameters needed by the oracledatabase server.  After setting any
+         * optional parameters, call the {@link Start#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the Autonomous Database in the following format:
+         *        projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}.
+         * @param content the {@link com.google.api.services.oracledatabase.v1.model.StartAutonomousDatabaseRequest}
+         * @return the request
+         */
+        public Start start(java.lang.String name, com.google.api.services.oracledatabase.v1.model.StartAutonomousDatabaseRequest content) throws java.io.IOException {
+          Start result = new Start(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Start extends OracleDatabaseRequest<com.google.api.services.oracledatabase.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}:start";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/autonomousDatabases/[^/]+$");
+
+          /**
+           * Starts an Autonomous Database.
+           *
+           * Create a request for the method "autonomousDatabases.start".
+           *
+           * This request holds the parameters needed by the the oracledatabase server.  After setting any
+           * optional parameters, call the {@link Start#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Start#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the Autonomous Database in the following format:
+         *        projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}.
+           * @param content the {@link com.google.api.services.oracledatabase.v1.model.StartAutonomousDatabaseRequest}
+           * @since 1.13
+           */
+          protected Start(java.lang.String name, com.google.api.services.oracledatabase.v1.model.StartAutonomousDatabaseRequest content) {
+            super(OracleDatabase.this, "POST", REST_PATH, content, com.google.api.services.oracledatabase.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/autonomousDatabases/[^/]+$");
+            }
+          }
+
+          @Override
+          public Start set$Xgafv(java.lang.String $Xgafv) {
+            return (Start) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Start setAccessToken(java.lang.String accessToken) {
+            return (Start) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Start setAlt(java.lang.String alt) {
+            return (Start) super.setAlt(alt);
+          }
+
+          @Override
+          public Start setCallback(java.lang.String callback) {
+            return (Start) super.setCallback(callback);
+          }
+
+          @Override
+          public Start setFields(java.lang.String fields) {
+            return (Start) super.setFields(fields);
+          }
+
+          @Override
+          public Start setKey(java.lang.String key) {
+            return (Start) super.setKey(key);
+          }
+
+          @Override
+          public Start setOauthToken(java.lang.String oauthToken) {
+            return (Start) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Start setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Start) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Start setQuotaUser(java.lang.String quotaUser) {
+            return (Start) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Start setUploadType(java.lang.String uploadType) {
+            return (Start) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Start setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Start) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the Autonomous Database in the following format:
+           * projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the Autonomous Database in the following format:
+         projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the Autonomous Database in the following format:
+           * projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}.
+           */
+          public Start setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/autonomousDatabases/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Start set(String parameterName, Object value) {
+            return (Start) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Stops an Autonomous Database.
+         *
+         * Create a request for the method "autonomousDatabases.stop".
+         *
+         * This request holds the parameters needed by the oracledatabase server.  After setting any
+         * optional parameters, call the {@link Stop#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the Autonomous Database in the following format:
+         *        projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}.
+         * @param content the {@link com.google.api.services.oracledatabase.v1.model.StopAutonomousDatabaseRequest}
+         * @return the request
+         */
+        public Stop stop(java.lang.String name, com.google.api.services.oracledatabase.v1.model.StopAutonomousDatabaseRequest content) throws java.io.IOException {
+          Stop result = new Stop(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Stop extends OracleDatabaseRequest<com.google.api.services.oracledatabase.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}:stop";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/autonomousDatabases/[^/]+$");
+
+          /**
+           * Stops an Autonomous Database.
+           *
+           * Create a request for the method "autonomousDatabases.stop".
+           *
+           * This request holds the parameters needed by the the oracledatabase server.  After setting any
+           * optional parameters, call the {@link Stop#execute()} method to invoke the remote operation. <p>
+           * {@link Stop#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the Autonomous Database in the following format:
+         *        projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}.
+           * @param content the {@link com.google.api.services.oracledatabase.v1.model.StopAutonomousDatabaseRequest}
+           * @since 1.13
+           */
+          protected Stop(java.lang.String name, com.google.api.services.oracledatabase.v1.model.StopAutonomousDatabaseRequest content) {
+            super(OracleDatabase.this, "POST", REST_PATH, content, com.google.api.services.oracledatabase.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/autonomousDatabases/[^/]+$");
+            }
+          }
+
+          @Override
+          public Stop set$Xgafv(java.lang.String $Xgafv) {
+            return (Stop) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Stop setAccessToken(java.lang.String accessToken) {
+            return (Stop) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Stop setAlt(java.lang.String alt) {
+            return (Stop) super.setAlt(alt);
+          }
+
+          @Override
+          public Stop setCallback(java.lang.String callback) {
+            return (Stop) super.setCallback(callback);
+          }
+
+          @Override
+          public Stop setFields(java.lang.String fields) {
+            return (Stop) super.setFields(fields);
+          }
+
+          @Override
+          public Stop setKey(java.lang.String key) {
+            return (Stop) super.setKey(key);
+          }
+
+          @Override
+          public Stop setOauthToken(java.lang.String oauthToken) {
+            return (Stop) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Stop setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Stop) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Stop setQuotaUser(java.lang.String quotaUser) {
+            return (Stop) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Stop setUploadType(java.lang.String uploadType) {
+            return (Stop) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Stop setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Stop) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the Autonomous Database in the following format:
+           * projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the Autonomous Database in the following format:
+         projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the Autonomous Database in the following format:
+           * projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}.
+           */
+          public Stop setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/autonomousDatabases/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Stop set(String parameterName, Object value) {
+            return (Stop) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Initiates a switchover of specified autonomous deatabase to the associated peer database.
+         *
+         * Create a request for the method "autonomousDatabases.switchover".
+         *
+         * This request holds the parameters needed by the oracledatabase server.  After setting any
+         * optional parameters, call the {@link Switchover#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the Autonomous Database in the following format:
+         *        projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}.
+         * @param content the {@link com.google.api.services.oracledatabase.v1.model.SwitchoverAutonomousDatabaseRequest}
+         * @return the request
+         */
+        public Switchover switchover(java.lang.String name, com.google.api.services.oracledatabase.v1.model.SwitchoverAutonomousDatabaseRequest content) throws java.io.IOException {
+          Switchover result = new Switchover(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Switchover extends OracleDatabaseRequest<com.google.api.services.oracledatabase.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}:switchover";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/autonomousDatabases/[^/]+$");
+
+          /**
+           * Initiates a switchover of specified autonomous deatabase to the associated peer database.
+           *
+           * Create a request for the method "autonomousDatabases.switchover".
+           *
+           * This request holds the parameters needed by the the oracledatabase server.  After setting any
+           * optional parameters, call the {@link Switchover#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Switchover#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the Autonomous Database in the following format:
+         *        projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}.
+           * @param content the {@link com.google.api.services.oracledatabase.v1.model.SwitchoverAutonomousDatabaseRequest}
+           * @since 1.13
+           */
+          protected Switchover(java.lang.String name, com.google.api.services.oracledatabase.v1.model.SwitchoverAutonomousDatabaseRequest content) {
+            super(OracleDatabase.this, "POST", REST_PATH, content, com.google.api.services.oracledatabase.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/autonomousDatabases/[^/]+$");
+            }
+          }
+
+          @Override
+          public Switchover set$Xgafv(java.lang.String $Xgafv) {
+            return (Switchover) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Switchover setAccessToken(java.lang.String accessToken) {
+            return (Switchover) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Switchover setAlt(java.lang.String alt) {
+            return (Switchover) super.setAlt(alt);
+          }
+
+          @Override
+          public Switchover setCallback(java.lang.String callback) {
+            return (Switchover) super.setCallback(callback);
+          }
+
+          @Override
+          public Switchover setFields(java.lang.String fields) {
+            return (Switchover) super.setFields(fields);
+          }
+
+          @Override
+          public Switchover setKey(java.lang.String key) {
+            return (Switchover) super.setKey(key);
+          }
+
+          @Override
+          public Switchover setOauthToken(java.lang.String oauthToken) {
+            return (Switchover) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Switchover setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Switchover) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Switchover setQuotaUser(java.lang.String quotaUser) {
+            return (Switchover) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Switchover setUploadType(java.lang.String uploadType) {
+            return (Switchover) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Switchover setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Switchover) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the Autonomous Database in the following format:
+           * projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the Autonomous Database in the following format:
+         projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the Autonomous Database in the following format:
+           * projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}.
+           */
+          public Switchover setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/autonomousDatabases/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Switchover set(String parameterName, Object value) {
+            return (Switchover) super.set(parameterName, value);
           }
         }
 

@@ -192,14 +192,14 @@ public final class User extends com.google.api.client.json.GenericJson {
   public static final class Picture extends com.google.api.client.json.GenericJson {
 
     /**
-     * Output Only. A URL that points to a profile picture of this user.
+     * Output only. A URL that points to a profile picture of this user.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.String url;
 
     /**
-     * Output Only. A URL that points to a profile picture of this user.
+     * Output only. A URL that points to a profile picture of this user.
      * @return value or {@code null} for none
      */
     public java.lang.String getUrl() {
@@ -207,7 +207,7 @@ public final class User extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Output Only. A URL that points to a profile picture of this user.
+     * Output only. A URL that points to a profile picture of this user.
      * @param url url or {@code null} for none
      */
     public Picture setUrl(java.lang.String url) {

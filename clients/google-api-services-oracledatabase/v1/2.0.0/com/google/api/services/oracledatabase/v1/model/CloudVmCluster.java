@@ -32,14 +32,14 @@ package com.google.api.services.oracledatabase.v1.model;
 public final class CloudVmCluster extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. CIDR range of the backup subnet.
+   * Optional. CIDR range of the backup subnet.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String backupSubnetCidr;
 
   /**
-   * Required. Network settings. CIDR to use for cluster IP allocation.
+   * Optional. Network settings. CIDR to use for cluster IP allocation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,7 +92,7 @@ public final class CloudVmCluster extends com.google.api.client.json.GenericJson
   private java.lang.String name;
 
   /**
-   * Required. The name of the VPC network. Format: projects/{project}/global/networks/{network}
+   * Optional. The name of the VPC network. Format: projects/{project}/global/networks/{network}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -106,7 +106,7 @@ public final class CloudVmCluster extends com.google.api.client.json.GenericJson
   private CloudVmClusterProperties properties;
 
   /**
-   * Required. CIDR range of the backup subnet.
+   * Optional. CIDR range of the backup subnet.
    * @return value or {@code null} for none
    */
   public java.lang.String getBackupSubnetCidr() {
@@ -114,7 +114,7 @@ public final class CloudVmCluster extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. CIDR range of the backup subnet.
+   * Optional. CIDR range of the backup subnet.
    * @param backupSubnetCidr backupSubnetCidr or {@code null} for none
    */
   public CloudVmCluster setBackupSubnetCidr(java.lang.String backupSubnetCidr) {
@@ -123,7 +123,7 @@ public final class CloudVmCluster extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. Network settings. CIDR to use for cluster IP allocation.
+   * Optional. Network settings. CIDR to use for cluster IP allocation.
    * @return value or {@code null} for none
    */
   public java.lang.String getCidr() {
@@ -131,7 +131,7 @@ public final class CloudVmCluster extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. Network settings. CIDR to use for cluster IP allocation.
+   * Optional. Network settings. CIDR to use for cluster IP allocation.
    * @param cidr cidr or {@code null} for none
    */
   public CloudVmCluster setCidr(java.lang.String cidr) {
@@ -250,7 +250,7 @@ public final class CloudVmCluster extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. The name of the VPC network. Format: projects/{project}/global/networks/{network}
+   * Optional. The name of the VPC network. Format: projects/{project}/global/networks/{network}
    * @return value or {@code null} for none
    */
   public java.lang.String getNetwork() {
@@ -258,7 +258,7 @@ public final class CloudVmCluster extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. The name of the VPC network. Format: projects/{project}/global/networks/{network}
+   * Optional. The name of the VPC network. Format: projects/{project}/global/networks/{network}
    * @param network network or {@code null} for none
    */
   public CloudVmCluster setNetwork(java.lang.String network) {

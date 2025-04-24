@@ -61,6 +61,14 @@ public final class AutonomousDatabase extends com.google.api.client.json.Generic
   private java.lang.String database;
 
   /**
+   * Output only. List of supported GCP region to clone the Autonomous Database for disaster
+   * recovery. Format: `project/{project}/locations/{location}`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> disasterRecoverySupportedLocations;
+
+  /**
    * Optional. The display name for the Autonomous Database. The name does not have to be unique
    * within your project.
    * The value may be {@code null}.
@@ -99,11 +107,27 @@ public final class AutonomousDatabase extends com.google.api.client.json.Generic
   private java.lang.String network;
 
   /**
+   * Output only. The peer Autonomous Database names of the given Autonomous Database.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> peerAutonomousDatabases;
+
+  /**
    * Optional. The properties of the Autonomous Database.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AutonomousDatabaseProperties properties;
+
+  /**
+   * Optional. The source Autonomous Database configuration for the standby Autonomous Database. The
+   * source Autonomous Database is configured while creating the Peer Autonomous Database and can't
+   * be updated after creation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SourceConfig sourceConfig;
 
   /**
    * Optional. The password for the default ADMIN user.
@@ -172,6 +196,25 @@ public final class AutonomousDatabase extends com.google.api.client.json.Generic
    */
   public AutonomousDatabase setDatabase(java.lang.String database) {
     this.database = database;
+    return this;
+  }
+
+  /**
+   * Output only. List of supported GCP region to clone the Autonomous Database for disaster
+   * recovery. Format: `project/{project}/locations/{location}`.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getDisasterRecoverySupportedLocations() {
+    return disasterRecoverySupportedLocations;
+  }
+
+  /**
+   * Output only. List of supported GCP region to clone the Autonomous Database for disaster
+   * recovery. Format: `project/{project}/locations/{location}`.
+   * @param disasterRecoverySupportedLocations disasterRecoverySupportedLocations or {@code null} for none
+   */
+  public AutonomousDatabase setDisasterRecoverySupportedLocations(java.util.List<java.lang.String> disasterRecoverySupportedLocations) {
+    this.disasterRecoverySupportedLocations = disasterRecoverySupportedLocations;
     return this;
   }
 
@@ -267,6 +310,23 @@ public final class AutonomousDatabase extends com.google.api.client.json.Generic
   }
 
   /**
+   * Output only. The peer Autonomous Database names of the given Autonomous Database.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getPeerAutonomousDatabases() {
+    return peerAutonomousDatabases;
+  }
+
+  /**
+   * Output only. The peer Autonomous Database names of the given Autonomous Database.
+   * @param peerAutonomousDatabases peerAutonomousDatabases or {@code null} for none
+   */
+  public AutonomousDatabase setPeerAutonomousDatabases(java.util.List<java.lang.String> peerAutonomousDatabases) {
+    this.peerAutonomousDatabases = peerAutonomousDatabases;
+    return this;
+  }
+
+  /**
    * Optional. The properties of the Autonomous Database.
    * @return value or {@code null} for none
    */
@@ -280,6 +340,27 @@ public final class AutonomousDatabase extends com.google.api.client.json.Generic
    */
   public AutonomousDatabase setProperties(AutonomousDatabaseProperties properties) {
     this.properties = properties;
+    return this;
+  }
+
+  /**
+   * Optional. The source Autonomous Database configuration for the standby Autonomous Database. The
+   * source Autonomous Database is configured while creating the Peer Autonomous Database and can't
+   * be updated after creation.
+   * @return value or {@code null} for none
+   */
+  public SourceConfig getSourceConfig() {
+    return sourceConfig;
+  }
+
+  /**
+   * Optional. The source Autonomous Database configuration for the standby Autonomous Database. The
+   * source Autonomous Database is configured while creating the Peer Autonomous Database and can't
+   * be updated after creation.
+   * @param sourceConfig sourceConfig or {@code null} for none
+   */
+  public AutonomousDatabase setSourceConfig(SourceConfig sourceConfig) {
+    this.sourceConfig = sourceConfig;
     return this;
   }
 

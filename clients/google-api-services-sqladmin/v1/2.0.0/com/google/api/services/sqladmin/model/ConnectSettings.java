@@ -87,14 +87,14 @@ public final class ConnectSettings extends com.google.api.client.json.GenericJso
   private java.lang.String kind;
 
   /**
-   * The number of nodes in a read pool.
+   * The number of read pool nodes in a read pool.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer nodeCount;
 
   /**
-   * Output only. Entries containing information about each node of the read pool.
+   * Output only. Entries containing information about each read pool node of the read pool.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -271,7 +271,7 @@ public final class ConnectSettings extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The number of nodes in a read pool.
+   * The number of read pool nodes in a read pool.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getNodeCount() {
@@ -279,7 +279,7 @@ public final class ConnectSettings extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The number of nodes in a read pool.
+   * The number of read pool nodes in a read pool.
    * @param nodeCount nodeCount or {@code null} for none
    */
   public ConnectSettings setNodeCount(java.lang.Integer nodeCount) {
@@ -288,7 +288,7 @@ public final class ConnectSettings extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. Entries containing information about each node of the read pool.
+   * Output only. Entries containing information about each read pool node of the read pool.
    * @return value or {@code null} for none
    */
   public java.util.List<ConnectPoolNodeConfig> getNodes() {
@@ -296,7 +296,7 @@ public final class ConnectSettings extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. Entries containing information about each node of the read pool.
+   * Output only. Entries containing information about each read pool node of the read pool.
    * @param nodes nodes or {@code null} for none
    */
   public ConnectSettings setNodes(java.util.List<ConnectPoolNodeConfig> nodes) {

@@ -17,7 +17,7 @@
 package com.google.api.services.sqladmin.model;
 
 /**
- * Details of a single node of a read pool.
+ * Details of a single read pool node of a read pool.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud SQL Admin API. For a detailed explanation see:
@@ -30,14 +30,14 @@ package com.google.api.services.sqladmin.model;
 public final class PoolNodeConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The DNS name of the node.
+   * Output only. The DNS name of the read pool node.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String dnsName;
 
   /**
-   * Output only. The list of DNS names used by this node.
+   * Output only. The list of DNS names used by this read pool node.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,14 +50,15 @@ public final class PoolNodeConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. The serving zone of the node.
+   * Output only. The zone of the read pool node.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String gceZone;
 
   /**
-   * Output only. Mappings containing IP addresses that can be used to connect to the node.
+   * Output only. Mappings containing IP addresses that can be used to connect to the read pool
+   * node.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,21 +71,21 @@ public final class PoolNodeConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. The name of the node, to be used for retrieving metrics and logs for the node.
+   * Output only. The name of the read pool node, to be used for retrieving metrics and logs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output only. The current state of the node.
+   * Output only. The current state of the read pool node.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * Output only. The DNS name of the node.
+   * Output only. The DNS name of the read pool node.
    * @return value or {@code null} for none
    */
   public java.lang.String getDnsName() {
@@ -92,7 +93,7 @@ public final class PoolNodeConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. The DNS name of the node.
+   * Output only. The DNS name of the read pool node.
    * @param dnsName dnsName or {@code null} for none
    */
   public PoolNodeConfig setDnsName(java.lang.String dnsName) {
@@ -101,7 +102,7 @@ public final class PoolNodeConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. The list of DNS names used by this node.
+   * Output only. The list of DNS names used by this read pool node.
    * @return value or {@code null} for none
    */
   public java.util.List<DnsNameMapping> getDnsNames() {
@@ -109,7 +110,7 @@ public final class PoolNodeConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. The list of DNS names used by this node.
+   * Output only. The list of DNS names used by this read pool node.
    * @param dnsNames dnsNames or {@code null} for none
    */
   public PoolNodeConfig setDnsNames(java.util.List<DnsNameMapping> dnsNames) {
@@ -118,7 +119,7 @@ public final class PoolNodeConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. The serving zone of the node.
+   * Output only. The zone of the read pool node.
    * @return value or {@code null} for none
    */
   public java.lang.String getGceZone() {
@@ -126,7 +127,7 @@ public final class PoolNodeConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. The serving zone of the node.
+   * Output only. The zone of the read pool node.
    * @param gceZone gceZone or {@code null} for none
    */
   public PoolNodeConfig setGceZone(java.lang.String gceZone) {
@@ -135,7 +136,8 @@ public final class PoolNodeConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. Mappings containing IP addresses that can be used to connect to the node.
+   * Output only. Mappings containing IP addresses that can be used to connect to the read pool
+   * node.
    * @return value or {@code null} for none
    */
   public java.util.List<IpMapping> getIpAddresses() {
@@ -143,7 +145,8 @@ public final class PoolNodeConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. Mappings containing IP addresses that can be used to connect to the node.
+   * Output only. Mappings containing IP addresses that can be used to connect to the read pool
+   * node.
    * @param ipAddresses ipAddresses or {@code null} for none
    */
   public PoolNodeConfig setIpAddresses(java.util.List<IpMapping> ipAddresses) {
@@ -152,7 +155,7 @@ public final class PoolNodeConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. The name of the node, to be used for retrieving metrics and logs for the node.
+   * Output only. The name of the read pool node, to be used for retrieving metrics and logs.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -160,7 +163,7 @@ public final class PoolNodeConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. The name of the node, to be used for retrieving metrics and logs for the node.
+   * Output only. The name of the read pool node, to be used for retrieving metrics and logs.
    * @param name name or {@code null} for none
    */
   public PoolNodeConfig setName(java.lang.String name) {
@@ -169,7 +172,7 @@ public final class PoolNodeConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. The current state of the node.
+   * Output only. The current state of the read pool node.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -177,7 +180,7 @@ public final class PoolNodeConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. The current state of the node.
+   * Output only. The current state of the read pool node.
    * @param state state or {@code null} for none
    */
   public PoolNodeConfig setState(java.lang.String state) {

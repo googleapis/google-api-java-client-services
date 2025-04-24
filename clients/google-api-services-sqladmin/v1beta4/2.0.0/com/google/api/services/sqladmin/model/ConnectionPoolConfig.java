@@ -30,20 +30,6 @@ package com.google.api.services.sqladmin.model;
 public final class ConnectionPoolConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Client idle timeout.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private String clientConnectionIdleTimeout;
-
-  /**
-   * Managed connection pool size.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Integer connPoolSize;
-
-  /**
    * Whether managed connection pooling is enabled.
    * The value may be {@code null}.
    */
@@ -56,68 +42,6 @@ public final class ConnectionPoolConfig extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private java.util.List<ConnectionPoolFlags> flags;
-
-  /**
-   * Maximum number of client connections in connection pool.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Integer maxClientConnections;
-
-  /**
-   * The managed connection pool mode for the instance.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String poolMode;
-
-  /**
-   * Query wait timeout.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private String queryWaitTimeout;
-
-  /**
-   * Server idle timeout.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private String serverConnectionIdleTimeout;
-
-  /**
-   * Client idle timeout.
-   * @return value or {@code null} for none
-   */
-  public String getClientConnectionIdleTimeout() {
-    return clientConnectionIdleTimeout;
-  }
-
-  /**
-   * Client idle timeout.
-   * @param clientConnectionIdleTimeout clientConnectionIdleTimeout or {@code null} for none
-   */
-  public ConnectionPoolConfig setClientConnectionIdleTimeout(String clientConnectionIdleTimeout) {
-    this.clientConnectionIdleTimeout = clientConnectionIdleTimeout;
-    return this;
-  }
-
-  /**
-   * Managed connection pool size.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Integer getConnPoolSize() {
-    return connPoolSize;
-  }
-
-  /**
-   * Managed connection pool size.
-   * @param connPoolSize connPoolSize or {@code null} for none
-   */
-  public ConnectionPoolConfig setConnPoolSize(java.lang.Integer connPoolSize) {
-    this.connPoolSize = connPoolSize;
-    return this;
-  }
 
   /**
    * Whether managed connection pooling is enabled.
@@ -150,74 +74,6 @@ public final class ConnectionPoolConfig extends com.google.api.client.json.Gener
    */
   public ConnectionPoolConfig setFlags(java.util.List<ConnectionPoolFlags> flags) {
     this.flags = flags;
-    return this;
-  }
-
-  /**
-   * Maximum number of client connections in connection pool.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Integer getMaxClientConnections() {
-    return maxClientConnections;
-  }
-
-  /**
-   * Maximum number of client connections in connection pool.
-   * @param maxClientConnections maxClientConnections or {@code null} for none
-   */
-  public ConnectionPoolConfig setMaxClientConnections(java.lang.Integer maxClientConnections) {
-    this.maxClientConnections = maxClientConnections;
-    return this;
-  }
-
-  /**
-   * The managed connection pool mode for the instance.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getPoolMode() {
-    return poolMode;
-  }
-
-  /**
-   * The managed connection pool mode for the instance.
-   * @param poolMode poolMode or {@code null} for none
-   */
-  public ConnectionPoolConfig setPoolMode(java.lang.String poolMode) {
-    this.poolMode = poolMode;
-    return this;
-  }
-
-  /**
-   * Query wait timeout.
-   * @return value or {@code null} for none
-   */
-  public String getQueryWaitTimeout() {
-    return queryWaitTimeout;
-  }
-
-  /**
-   * Query wait timeout.
-   * @param queryWaitTimeout queryWaitTimeout or {@code null} for none
-   */
-  public ConnectionPoolConfig setQueryWaitTimeout(String queryWaitTimeout) {
-    this.queryWaitTimeout = queryWaitTimeout;
-    return this;
-  }
-
-  /**
-   * Server idle timeout.
-   * @return value or {@code null} for none
-   */
-  public String getServerConnectionIdleTimeout() {
-    return serverConnectionIdleTimeout;
-  }
-
-  /**
-   * Server idle timeout.
-   * @param serverConnectionIdleTimeout serverConnectionIdleTimeout or {@code null} for none
-   */
-  public ConnectionPoolConfig setServerConnectionIdleTimeout(String serverConnectionIdleTimeout) {
-    this.serverConnectionIdleTimeout = serverConnectionIdleTimeout;
     return this;
   }
 

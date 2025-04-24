@@ -17,7 +17,7 @@
 package com.google.api.services.sqladmin.model;
 
 /**
- * Details of a single node of a read pool.
+ * Details of a single read pool node of a read pool.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud SQL Admin API. For a detailed explanation see:
@@ -30,35 +30,36 @@ package com.google.api.services.sqladmin.model;
 public final class ConnectPoolNodeConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The DNS name of the node.
+   * Output only. The DNS name of the read pool node.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String dnsName;
 
   /**
-   * Output only. The list of DNS names used by this instance.
+   * Output only. The list of DNS names used by this read pool node.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<DnsNameMapping> dnsNames;
 
   /**
-   * Output only. Mappings containing IP addresses that can be used to connect to the node.
+   * Output only. Mappings containing IP addresses that can be used to connect to the read pool
+   * node.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<IpMapping> ipAddresses;
 
   /**
-   * Output only. The name of the node. Doesn't include the project ID.
+   * Output only. The name of the read pool node. Doesn't include the project ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output only. The DNS name of the node.
+   * Output only. The DNS name of the read pool node.
    * @return value or {@code null} for none
    */
   public java.lang.String getDnsName() {
@@ -66,7 +67,7 @@ public final class ConnectPoolNodeConfig extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. The DNS name of the node.
+   * Output only. The DNS name of the read pool node.
    * @param dnsName dnsName or {@code null} for none
    */
   public ConnectPoolNodeConfig setDnsName(java.lang.String dnsName) {
@@ -75,7 +76,7 @@ public final class ConnectPoolNodeConfig extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. The list of DNS names used by this instance.
+   * Output only. The list of DNS names used by this read pool node.
    * @return value or {@code null} for none
    */
   public java.util.List<DnsNameMapping> getDnsNames() {
@@ -83,7 +84,7 @@ public final class ConnectPoolNodeConfig extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. The list of DNS names used by this instance.
+   * Output only. The list of DNS names used by this read pool node.
    * @param dnsNames dnsNames or {@code null} for none
    */
   public ConnectPoolNodeConfig setDnsNames(java.util.List<DnsNameMapping> dnsNames) {
@@ -92,7 +93,8 @@ public final class ConnectPoolNodeConfig extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. Mappings containing IP addresses that can be used to connect to the node.
+   * Output only. Mappings containing IP addresses that can be used to connect to the read pool
+   * node.
    * @return value or {@code null} for none
    */
   public java.util.List<IpMapping> getIpAddresses() {
@@ -100,7 +102,8 @@ public final class ConnectPoolNodeConfig extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. Mappings containing IP addresses that can be used to connect to the node.
+   * Output only. Mappings containing IP addresses that can be used to connect to the read pool
+   * node.
    * @param ipAddresses ipAddresses or {@code null} for none
    */
   public ConnectPoolNodeConfig setIpAddresses(java.util.List<IpMapping> ipAddresses) {
@@ -109,7 +112,7 @@ public final class ConnectPoolNodeConfig extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. The name of the node. Doesn't include the project ID.
+   * Output only. The name of the read pool node. Doesn't include the project ID.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -117,7 +120,7 @@ public final class ConnectPoolNodeConfig extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. The name of the node. Doesn't include the project ID.
+   * Output only. The name of the read pool node. Doesn't include the project ID.
    * @param name name or {@code null} for none
    */
   public ConnectPoolNodeConfig setName(java.lang.String name) {

@@ -54,6 +54,13 @@ public final class User extends com.google.api.client.json.GenericJson {
   private java.lang.String host;
 
   /**
+   * Indicates if user is active for IAM Authentication.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String iamStatus;
+
+  /**
    * The name of the Cloud SQL instance. This does not include the project ID. Can be omitted for
    * *update* because it is already specified on the URL.
    * The value may be {@code null}.
@@ -166,6 +173,23 @@ public final class User extends com.google.api.client.json.GenericJson {
    */
   public User setHost(java.lang.String host) {
     this.host = host;
+    return this;
+  }
+
+  /**
+   * Indicates if user is active for IAM Authentication.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIamStatus() {
+    return iamStatus;
+  }
+
+  /**
+   * Indicates if user is active for IAM Authentication.
+   * @param iamStatus iamStatus or {@code null} for none
+   */
+  public User setIamStatus(java.lang.String iamStatus) {
+    this.iamStatus = iamStatus;
     return this;
   }
 

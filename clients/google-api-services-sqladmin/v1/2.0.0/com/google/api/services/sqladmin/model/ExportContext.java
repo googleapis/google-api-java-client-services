@@ -74,7 +74,7 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
   private java.lang.String kind;
 
   /**
-   * Option for export offload.
+   * Whether to perform a serverless export.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -208,7 +208,7 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Option for export offload.
+   * Whether to perform a serverless export.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getOffload() {
@@ -216,7 +216,7 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Option for export offload.
+   * Whether to perform a serverless export.
    * @param offload offload or {@code null} for none
    */
   public ExportContext setOffload(java.lang.Boolean offload) {
@@ -857,7 +857,7 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
     public static final class PostgresExportOptions extends com.google.api.client.json.GenericJson {
 
       /**
-       * Optional. Use this option to include DROP SQL statements. These statements are used to delete
+       * Optional. Use this option to include DROP  SQL statements. Use these statements to delete
        * database objects before running the import operation.
        * The value may be {@code null}.
        */
@@ -873,7 +873,7 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
       private java.lang.Boolean ifExists;
 
       /**
-       * Optional. Use this option to include DROP SQL statements. These statements are used to delete
+       * Optional. Use this option to include DROP  SQL statements. Use these statements to delete
        * database objects before running the import operation.
        * @return value or {@code null} for none
        */
@@ -882,7 +882,7 @@ public final class ExportContext extends com.google.api.client.json.GenericJson 
       }
 
       /**
-       * Optional. Use this option to include DROP SQL statements. These statements are used to delete
+       * Optional. Use this option to include DROP  SQL statements. Use these statements to delete
        * database objects before running the import operation.
        * @param clean clean or {@code null} for none
        */

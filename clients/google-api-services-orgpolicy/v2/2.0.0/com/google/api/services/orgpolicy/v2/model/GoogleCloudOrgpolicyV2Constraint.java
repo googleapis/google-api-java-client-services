@@ -68,6 +68,14 @@ public final class GoogleCloudOrgpolicyV2Constraint extends com.google.api.clien
   private java.lang.String displayName;
 
   /**
+   * Managed constraint and canned constraint sometimes can have equivalents. This field is used to
+   * store the equivalent constraint name.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String equivalentConstraint;
+
+  /**
    * Defines this constraint as being a list constraint.
    * The value may be {@code null}.
    */
@@ -166,6 +174,25 @@ public final class GoogleCloudOrgpolicyV2Constraint extends com.google.api.clien
    */
   public GoogleCloudOrgpolicyV2Constraint setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Managed constraint and canned constraint sometimes can have equivalents. This field is used to
+   * store the equivalent constraint name.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEquivalentConstraint() {
+    return equivalentConstraint;
+  }
+
+  /**
+   * Managed constraint and canned constraint sometimes can have equivalents. This field is used to
+   * store the equivalent constraint name.
+   * @param equivalentConstraint equivalentConstraint or {@code null} for none
+   */
+  public GoogleCloudOrgpolicyV2Constraint setEquivalentConstraint(java.lang.String equivalentConstraint) {
+    this.equivalentConstraint = equivalentConstraint;
     return this;
   }
 

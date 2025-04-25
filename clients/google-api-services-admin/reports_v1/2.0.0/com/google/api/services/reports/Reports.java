@@ -25,7 +25,7 @@ package com.google.api.services.reports;
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://developers.google.com/admin-sdk/" target="_blank">API Documentation</a>
+ * <a href="https://developers.google.com/workspace/admin/" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>

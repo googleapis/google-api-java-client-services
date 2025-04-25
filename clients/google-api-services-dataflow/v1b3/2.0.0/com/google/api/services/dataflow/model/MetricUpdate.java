@@ -30,6 +30,15 @@ package com.google.api.services.dataflow.model;
 public final class MetricUpdate extends com.google.api.client.json.GenericJson {
 
   /**
+   * Worker-computed aggregate value for the "Trie" aggregation kind. The only possible value type
+   * is a BoundedTrieNode. Introduced this field to avoid breaking older SDKs when Dataflow service
+   * starts to populate the `bounded_trie` field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Object boundedTrie;
+
+  /**
    * True if this metric is reported as the total cumulative aggregate value accumulated since the
    * worker started working on this WorkItem. By default this is false, indicating that this metric
    * is reported as a delta that is not associated with any WorkItem.
@@ -126,6 +135,27 @@ public final class MetricUpdate extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Worker-computed aggregate value for the "Trie" aggregation kind. The only possible value type
+   * is a BoundedTrieNode. Introduced this field to avoid breaking older SDKs when Dataflow service
+   * starts to populate the `bounded_trie` field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Object getBoundedTrie() {
+    return boundedTrie;
+  }
+
+  /**
+   * Worker-computed aggregate value for the "Trie" aggregation kind. The only possible value type
+   * is a BoundedTrieNode. Introduced this field to avoid breaking older SDKs when Dataflow service
+   * starts to populate the `bounded_trie` field.
+   * @param boundedTrie boundedTrie or {@code null} for none
+   */
+  public MetricUpdate setBoundedTrie(java.lang.Object boundedTrie) {
+    this.boundedTrie = boundedTrie;
+    return this;
+  }
 
   /**
    * True if this metric is reported as the total cumulative aggregate value accumulated since the

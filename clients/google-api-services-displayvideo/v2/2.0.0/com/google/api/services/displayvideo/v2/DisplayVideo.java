@@ -17401,9 +17401,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
     }
     /**
      * Updates an existing custom bidding algorithm. Returns the updated custom bidding algorithm if
-     * successful. *Warning*: Starting **April 1, 2025**, requests updating custom bidding algorithms
-     * that are assigned to line items will return an error. [Read more about this announced
-     * change](/display-video/api/deprecations#features.custom_bidding_floodlight).
+     * successful. Requests updating a custom bidding algorithm assigned to a line item will return an
+     * error.
      *
      * Create a request for the method "customBiddingAlgorithms.patch".
      *
@@ -17429,9 +17428,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
 
       /**
        * Updates an existing custom bidding algorithm. Returns the updated custom bidding algorithm if
-       * successful. *Warning*: Starting **April 1, 2025**, requests updating custom bidding algorithms
-       * that are assigned to line items will return an error. [Read more about this announced
-       * change](/display-video/api/deprecations#features.custom_bidding_floodlight).
+       * successful. Requests updating a custom bidding algorithm assigned to a line item will return an
+       * error.
        *
        * Create a request for the method "customBiddingAlgorithms.patch".
        *
@@ -17736,10 +17734,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
     public class Scripts {
 
       /**
-       * Creates a new custom bidding script. Returns the newly created script if successful. *Warning*:
-       * Starting **April 1, 2025**, requests updating custom bidding algorithms that are assigned to line
-       * items will return an error. [Read more about this announced change](/display-
-       * video/api/deprecations#features.custom_bidding_floodlight).
+       * Creates a new custom bidding script. Returns the newly created script if successful. Requests
+       * creating a custom bidding script under an algorithm assigned to a line item will return an error.
        *
        * Create a request for the method "scripts.create".
        *
@@ -17764,10 +17760,9 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^[^/]+$");
 
         /**
-         * Creates a new custom bidding script. Returns the newly created script if successful. *Warning*:
-         * Starting **April 1, 2025**, requests updating custom bidding algorithms that are assigned to
-         * line items will return an error. [Read more about this announced change](/display-
-         * video/api/deprecations#features.custom_bidding_floodlight).
+         * Creates a new custom bidding script. Returns the newly created script if successful. Requests
+         * creating a custom bidding script under an algorithm assigned to a line item will return an
+         * error.
          *
          * Create a request for the method "scripts.create".
          *
@@ -26950,7 +26945,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
      * asynchronous operation. The metadata type of this operation is SdfDownloadTaskMetadata. If the
      * request is successful, the response type of the operation is SdfDownloadTask. The response will
      * not include the download files, which must be retrieved with media.download. The state of
-     * operation can be retrieved with sdfdownloadtask.operations.get. Any errors can be found in the
+     * operation can be retrieved with `sdfdownloadtasks.operations.get`. Any errors can be found in the
      * error.message. Note that error.details is expected to be empty.
      *
      * Create a request for the method "sdfdownloadtasks.create".
@@ -26976,8 +26971,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
        * asynchronous operation. The metadata type of this operation is SdfDownloadTaskMetadata. If the
        * request is successful, the response type of the operation is SdfDownloadTask. The response will
        * not include the download files, which must be retrieved with media.download. The state of
-       * operation can be retrieved with sdfdownloadtask.operations.get. Any errors can be found in the
-       * error.message. Note that error.details is expected to be empty.
+       * operation can be retrieved with `sdfdownloadtasks.operations.get`. Any errors can be found in
+       * the error.message. Note that error.details is expected to be empty.
        *
        * Create a request for the method "sdfdownloadtasks.create".
        *

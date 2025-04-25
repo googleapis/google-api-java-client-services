@@ -39,6 +39,22 @@ public final class SourceObjectIdentifier extends com.google.api.client.json.Gen
   private java.lang.String database;
 
   /**
+   * Optional. The schema name. This will be required only if the object uses a schema name as part
+   * of its unique identifier.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String schema;
+
+  /**
+   * Optional. The table name. This will be required only if the object is a level below database or
+   * schema.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String table;
+
+  /**
    * Required. The type of the migration job object.
    * The value may be {@code null}.
    */
@@ -61,6 +77,44 @@ public final class SourceObjectIdentifier extends com.google.api.client.json.Gen
    */
   public SourceObjectIdentifier setDatabase(java.lang.String database) {
     this.database = database;
+    return this;
+  }
+
+  /**
+   * Optional. The schema name. This will be required only if the object uses a schema name as part
+   * of its unique identifier.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSchema() {
+    return schema;
+  }
+
+  /**
+   * Optional. The schema name. This will be required only if the object uses a schema name as part
+   * of its unique identifier.
+   * @param schema schema or {@code null} for none
+   */
+  public SourceObjectIdentifier setSchema(java.lang.String schema) {
+    this.schema = schema;
+    return this;
+  }
+
+  /**
+   * Optional. The table name. This will be required only if the object is a level below database or
+   * schema.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTable() {
+    return table;
+  }
+
+  /**
+   * Optional. The table name. This will be required only if the object is a level below database or
+   * schema.
+   * @param table table or {@code null} for none
+   */
+  public SourceObjectIdentifier setTable(java.lang.String table) {
+    this.table = table;
     return this;
   }
 

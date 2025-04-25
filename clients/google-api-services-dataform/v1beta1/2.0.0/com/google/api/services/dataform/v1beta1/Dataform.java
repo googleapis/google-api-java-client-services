@@ -2106,7 +2106,8 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
-         * Lists Repositories in a given project and location.
+         * Lists Repositories in a given project and location. **Note:** *This method can return
+         * repositories not shown in the [Dataform UI](https://console.cloud.google.com/bigquery/dataform)*.
          *
          * Create a request for the method "repositories.list".
          *
@@ -2130,7 +2131,9 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists Repositories in a given project and location.
+           * Lists Repositories in a given project and location. **Note:** *This method can return
+           * repositories not shown in the [Dataform
+           * UI](https://console.cloud.google.com/bigquery/dataform)*.
            *
            * Create a request for the method "repositories.list".
            *

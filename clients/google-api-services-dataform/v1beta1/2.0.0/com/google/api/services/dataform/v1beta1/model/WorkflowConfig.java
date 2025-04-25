@@ -44,6 +44,13 @@ public final class WorkflowConfig extends com.google.api.client.json.GenericJson
   private java.lang.String cronSchedule;
 
   /**
+   * Optional. Disables automatic creation of workflow invocations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean disabled;
+
+  /**
    * Output only. All the metadata information that is used internally to serve the resource. For
    * example: timestamps, flags, status fields, etc. The format of this field is a JSON string.
    * The value may be {@code null}.
@@ -136,6 +143,23 @@ public final class WorkflowConfig extends com.google.api.client.json.GenericJson
    */
   public WorkflowConfig setCronSchedule(java.lang.String cronSchedule) {
     this.cronSchedule = cronSchedule;
+    return this;
+  }
+
+  /**
+   * Optional. Disables automatic creation of workflow invocations.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDisabled() {
+    return disabled;
+  }
+
+  /**
+   * Optional. Disables automatic creation of workflow invocations.
+   * @param disabled disabled or {@code null} for none
+   */
+  public WorkflowConfig setDisabled(java.lang.Boolean disabled) {
+    this.disabled = disabled;
     return this;
   }
 

@@ -17,8 +17,8 @@
 package com.google.api.services.meet.v2.model;
 
 /**
- * Configuration related to smart notes in a meeting space. More details about smart notes
- * https://support.google.com/meet/answer/14754931?hl=en.
+ * Configuration related to smart notes in a meeting space. For more information about smart notes,
+ * see ["Take notes for me" in Google Meet](https://support.google.com/meet/answer/14754931).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Meet API. For a detailed explanation see:

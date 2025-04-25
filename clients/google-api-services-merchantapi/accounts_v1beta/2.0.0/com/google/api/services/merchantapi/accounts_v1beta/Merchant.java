@@ -3409,7 +3409,10 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
     public class Issues {
 
       /**
-       * Lists all account issues of a Merchant Center account.
+       * Lists all account issues of a Merchant Center account. When called on a multi-client account,
+       * this method only returns issues belonging to that account, not its sub-accounts. To retrieve
+       * issues for sub-accounts, you must first call the accounts.listSubaccounts method to obtain a list
+       * of sub-accounts, and then call `accounts.issues.list` for each sub-account individually.
        *
        * Create a request for the method "issues.list".
        *
@@ -3433,7 +3436,10 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
             java.util.regex.Pattern.compile("^accounts/[^/]+$");
 
         /**
-         * Lists all account issues of a Merchant Center account.
+         * Lists all account issues of a Merchant Center account. When called on a multi-client account,
+         * this method only returns issues belonging to that account, not its sub-accounts. To retrieve
+         * issues for sub-accounts, you must first call the accounts.listSubaccounts method to obtain a
+         * list of sub-accounts, and then call `accounts.issues.list` for each sub-account individually.
          *
          * Create a request for the method "issues.list".
          *

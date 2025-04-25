@@ -45,6 +45,13 @@ public final class CompilationResultAction extends com.google.api.client.json.Ge
   private Target canonicalTarget;
 
   /**
+   * The data preparation executed by this action.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DataPreparation dataPreparation;
+
+  /**
    * The declaration declared by this action.
    * The value may be {@code null}.
    */
@@ -128,6 +135,23 @@ public final class CompilationResultAction extends com.google.api.client.json.Ge
    */
   public CompilationResultAction setCanonicalTarget(Target canonicalTarget) {
     this.canonicalTarget = canonicalTarget;
+    return this;
+  }
+
+  /**
+   * The data preparation executed by this action.
+   * @return value or {@code null} for none
+   */
+  public DataPreparation getDataPreparation() {
+    return dataPreparation;
+  }
+
+  /**
+   * The data preparation executed by this action.
+   * @param dataPreparation dataPreparation or {@code null} for none
+   */
+  public CompilationResultAction setDataPreparation(DataPreparation dataPreparation) {
+    this.dataPreparation = dataPreparation;
     return this;
   }
 

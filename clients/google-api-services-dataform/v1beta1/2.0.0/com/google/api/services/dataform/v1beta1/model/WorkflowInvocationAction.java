@@ -45,6 +45,13 @@ public final class WorkflowInvocationAction extends com.google.api.client.json.G
   private Target canonicalTarget;
 
   /**
+   * Output only. The workflow action's data preparation action details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DataPreparationAction dataPreparationAction;
+
+  /**
    * Output only. If and only if action's state is FAILED a failure reason is set.
    * The value may be {@code null}.
    */
@@ -122,6 +129,23 @@ public final class WorkflowInvocationAction extends com.google.api.client.json.G
    */
   public WorkflowInvocationAction setCanonicalTarget(Target canonicalTarget) {
     this.canonicalTarget = canonicalTarget;
+    return this;
+  }
+
+  /**
+   * Output only. The workflow action's data preparation action details.
+   * @return value or {@code null} for none
+   */
+  public DataPreparationAction getDataPreparationAction() {
+    return dataPreparationAction;
+  }
+
+  /**
+   * Output only. The workflow action's data preparation action details.
+   * @param dataPreparationAction dataPreparationAction or {@code null} for none
+   */
+  public WorkflowInvocationAction setDataPreparationAction(DataPreparationAction dataPreparationAction) {
+    this.dataPreparationAction = dataPreparationAction;
     return this;
   }
 

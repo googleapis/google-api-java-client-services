@@ -37,6 +37,13 @@ public final class CodeCompilationConfig extends com.google.api.client.json.Gene
   private java.lang.String assertionSchema;
 
   /**
+   * Optional. The prefix to prepend to built-in assertion names.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String builtinAssertionNamePrefix;
+
+  /**
    * Optional. The suffix that should be appended to all database (Google Cloud project ID) names.
    * The value may be {@code null}.
    */
@@ -107,6 +114,23 @@ public final class CodeCompilationConfig extends com.google.api.client.json.Gene
    */
   public CodeCompilationConfig setAssertionSchema(java.lang.String assertionSchema) {
     this.assertionSchema = assertionSchema;
+    return this;
+  }
+
+  /**
+   * Optional. The prefix to prepend to built-in assertion names.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBuiltinAssertionNamePrefix() {
+    return builtinAssertionNamePrefix;
+  }
+
+  /**
+   * Optional. The prefix to prepend to built-in assertion names.
+   * @param builtinAssertionNamePrefix builtinAssertionNamePrefix or {@code null} for none
+   */
+  public CodeCompilationConfig setBuiltinAssertionNamePrefix(java.lang.String builtinAssertionNamePrefix) {
+    this.builtinAssertionNamePrefix = builtinAssertionNamePrefix;
     return this;
   }
 

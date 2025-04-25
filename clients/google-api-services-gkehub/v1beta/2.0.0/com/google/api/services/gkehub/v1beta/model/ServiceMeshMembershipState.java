@@ -30,8 +30,7 @@ package com.google.api.services.gkehub.v1beta.model;
 public final class ServiceMeshMembershipState extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. List of conditions reported for this membership. TODO b/395151419: Use the common
-   * Condition message.
+   * Output only. List of conditions reported for this membership.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,8 +57,7 @@ public final class ServiceMeshMembershipState extends com.google.api.client.json
   private ServiceMeshDataPlaneManagement dataPlaneManagement;
 
   /**
-   * Output only. List of conditions reported for this membership. TODO b/395151419: Use the common
-   * Condition message.
+   * Output only. List of conditions reported for this membership.
    * @return value or {@code null} for none
    */
   public java.util.List<ServiceMeshCondition> getConditions() {
@@ -67,8 +65,7 @@ public final class ServiceMeshMembershipState extends com.google.api.client.json
   }
 
   /**
-   * Output only. List of conditions reported for this membership. TODO b/395151419: Use the common
-   * Condition message.
+   * Output only. List of conditions reported for this membership.
    * @param conditions conditions or {@code null} for none
    */
   public ServiceMeshMembershipState setConditions(java.util.List<ServiceMeshCondition> conditions) {

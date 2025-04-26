@@ -80,6 +80,13 @@ public final class InstanceInfo extends com.google.api.client.json.GenericJson {
   private java.lang.String pscNetworkAttachmentUri;
 
   /**
+   * Indicates whether the Compute Engine instance is running.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean running;
+
+  /**
    * Service account authorized for the instance.
    * The value may be {@code null}.
    */
@@ -209,6 +216,23 @@ public final class InstanceInfo extends com.google.api.client.json.GenericJson {
    */
   public InstanceInfo setPscNetworkAttachmentUri(java.lang.String pscNetworkAttachmentUri) {
     this.pscNetworkAttachmentUri = pscNetworkAttachmentUri;
+    return this;
+  }
+
+  /**
+   * Indicates whether the Compute Engine instance is running.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getRunning() {
+    return running;
+  }
+
+  /**
+   * Indicates whether the Compute Engine instance is running.
+   * @param running running or {@code null} for none
+   */
+  public InstanceInfo setRunning(java.lang.Boolean running) {
+    this.running = running;
     return this;
   }
 

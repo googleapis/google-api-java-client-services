@@ -37,7 +37,7 @@ public final class GoogleCloudApigeeV1ApiSecurityConfig extends com.google.api.c
   private java.lang.Boolean enabled;
 
   /**
-   * Output only. Time at which the API Security add-on expires in in milliseconds since epoch. If
+   * Output only. Time at which the API Security add-on expires in milliseconds since epoch. If
    * unspecified, the add-on will never expire.
    * The value may be {@code null}.
    */
@@ -62,7 +62,7 @@ public final class GoogleCloudApigeeV1ApiSecurityConfig extends com.google.api.c
   }
 
   /**
-   * Output only. Time at which the API Security add-on expires in in milliseconds since epoch. If
+   * Output only. Time at which the API Security add-on expires in milliseconds since epoch. If
    * unspecified, the add-on will never expire.
    * @return value or {@code null} for none
    */
@@ -71,7 +71,7 @@ public final class GoogleCloudApigeeV1ApiSecurityConfig extends com.google.api.c
   }
 
   /**
-   * Output only. Time at which the API Security add-on expires in in milliseconds since epoch. If
+   * Output only. Time at which the API Security add-on expires in milliseconds since epoch. If
    * unspecified, the add-on will never expire.
    * @param expiresAt expiresAt or {@code null} for none
    */

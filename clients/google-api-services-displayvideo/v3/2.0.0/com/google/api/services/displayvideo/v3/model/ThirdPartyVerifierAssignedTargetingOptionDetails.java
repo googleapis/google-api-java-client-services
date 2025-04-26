@@ -32,7 +32,7 @@ package com.google.api.services.displayvideo.v3.model;
 public final class ThirdPartyVerifierAssignedTargetingOptionDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * Third party brand verifier -- Adloox.
+   * Third party brand verifier -- Scope3 (previously known as Adloox).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +53,7 @@ public final class ThirdPartyVerifierAssignedTargetingOptionDetails extends com.
   private IntegralAdScience integralAdScience;
 
   /**
-   * Third party brand verifier -- Adloox.
+   * Third party brand verifier -- Scope3 (previously known as Adloox).
    * @return value or {@code null} for none
    */
   public Adloox getAdloox() {
@@ -61,7 +61,7 @@ public final class ThirdPartyVerifierAssignedTargetingOptionDetails extends com.
   }
 
   /**
-   * Third party brand verifier -- Adloox.
+   * Third party brand verifier -- Scope3 (previously known as Adloox).
    * @param adloox adloox or {@code null} for none
    */
   public ThirdPartyVerifierAssignedTargetingOptionDetails setAdloox(Adloox adloox) {

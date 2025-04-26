@@ -31,11 +31,59 @@ package com.google.api.services.displayvideo.v3.model;
 public final class AlgorithmRulesSignal extends com.google.api.client.json.GenericJson {
 
   /**
+   * Signal based on active views.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String activeViewSignal;
+
+  /**
+   * Signal based on clicks.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String clickSignal;
+
+  /**
    * Signal based on impressions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String impressionSignal;
+
+  /**
+   * Signal based on active views.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getActiveViewSignal() {
+    return activeViewSignal;
+  }
+
+  /**
+   * Signal based on active views.
+   * @param activeViewSignal activeViewSignal or {@code null} for none
+   */
+  public AlgorithmRulesSignal setActiveViewSignal(java.lang.String activeViewSignal) {
+    this.activeViewSignal = activeViewSignal;
+    return this;
+  }
+
+  /**
+   * Signal based on clicks.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getClickSignal() {
+    return clickSignal;
+  }
+
+  /**
+   * Signal based on clicks.
+   * @param clickSignal clickSignal or {@code null} for none
+   */
+  public AlgorithmRulesSignal setClickSignal(java.lang.String clickSignal) {
+    this.clickSignal = clickSignal;
+    return this;
+  }
 
   /**
    * Signal based on impressions.

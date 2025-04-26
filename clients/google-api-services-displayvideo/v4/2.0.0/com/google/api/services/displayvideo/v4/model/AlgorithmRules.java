@@ -31,11 +31,42 @@ package com.google.api.services.displayvideo.v4.model;
 public final class AlgorithmRules extends com.google.api.client.json.GenericJson {
 
   /**
+   * Attribution model for the algorithm.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long attributionModelId;
+
+  /**
    * Rules for the impression signals.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AlgorithmRulesRuleset impressionSignalRuleset;
+
+  /**
+   * Rules for the post-impression signals.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AlgorithmRulesRuleset postImpressionSignalRuleset;
+
+  /**
+   * Attribution model for the algorithm.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getAttributionModelId() {
+    return attributionModelId;
+  }
+
+  /**
+   * Attribution model for the algorithm.
+   * @param attributionModelId attributionModelId or {@code null} for none
+   */
+  public AlgorithmRules setAttributionModelId(java.lang.Long attributionModelId) {
+    this.attributionModelId = attributionModelId;
+    return this;
+  }
 
   /**
    * Rules for the impression signals.
@@ -51,6 +82,23 @@ public final class AlgorithmRules extends com.google.api.client.json.GenericJson
    */
   public AlgorithmRules setImpressionSignalRuleset(AlgorithmRulesRuleset impressionSignalRuleset) {
     this.impressionSignalRuleset = impressionSignalRuleset;
+    return this;
+  }
+
+  /**
+   * Rules for the post-impression signals.
+   * @return value or {@code null} for none
+   */
+  public AlgorithmRulesRuleset getPostImpressionSignalRuleset() {
+    return postImpressionSignalRuleset;
+  }
+
+  /**
+   * Rules for the post-impression signals.
+   * @param postImpressionSignalRuleset postImpressionSignalRuleset or {@code null} for none
+   */
+  public AlgorithmRules setPostImpressionSignalRuleset(AlgorithmRulesRuleset postImpressionSignalRuleset) {
+    this.postImpressionSignalRuleset = postImpressionSignalRuleset;
     return this;
   }
 

@@ -32,6 +32,13 @@ package com.google.api.services.firebaseml.v2beta.model;
 public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Can either be a boolean or an object; controls the presence of additional properties.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Object additionalProperties;
+
+  /**
    * Optional. The value should be validated against any (one or more) of the subschemas in the
    * list.
    * The value may be {@code null}.
@@ -209,6 +216,23 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * Optional. Can either be a boolean or an object; controls the presence of additional properties.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Object getAdditionalProperties() {
+    return additionalProperties;
+  }
+
+  /**
+   * Optional. Can either be a boolean or an object; controls the presence of additional properties.
+   * @param additionalProperties additionalProperties or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Schema setAdditionalProperties(java.lang.Object additionalProperties) {
+    this.additionalProperties = additionalProperties;
+    return this;
+  }
 
   /**
    * Optional. The value should be validated against any (one or more) of the subschemas in the

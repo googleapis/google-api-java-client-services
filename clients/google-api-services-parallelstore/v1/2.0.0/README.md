@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-parallelstore</artifactId>
-      <version>v1-rev20250326-2.0.0</version>
+      <version>v1-rev20250416-2.0.0</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  implementation 'com.google.apis:google-api-services-parallelstore:v1-rev20250326-2.0.0'
+  implementation 'com.google.apis:google-api-services-parallelstore:v1-rev20250416-2.0.0'
 }
 ```
 

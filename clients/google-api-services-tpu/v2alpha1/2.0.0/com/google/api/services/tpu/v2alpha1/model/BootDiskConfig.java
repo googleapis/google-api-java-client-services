@@ -37,11 +37,37 @@ public final class BootDiskConfig extends com.google.api.client.json.GenericJson
   private CustomerEncryptionKey customerEncryptionKey;
 
   /**
+   * Optional. Size of the boot disk in GB. It must be larger than or equal to the size of the
+   * image.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long diskSizeGb;
+
+  /**
    * Optional. Whether the boot disk will be created with confidential compute mode.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enableConfidentialCompute;
+
+  /**
+   * Optional. Indicates how many IOPS to provision for the disk. This sets the number of I/O
+   * operations per second that the disk can handle. To learn more about IOPS, see [Provisioning
+   * persistent disk
+   * performance](https://cloud.google.com/compute/docs/disks/performance#provisioned-iops).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long provisionedIops;
+
+  /**
+   * Optional. Indicates how much throughput to provision for the disk. This sets the number of
+   * throughput MB per second that the disk can handle.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long provisionedThroughput;
 
   /**
    * Optional. Image from which boot disk is to be created. If not specified, the default image for
@@ -69,6 +95,25 @@ public final class BootDiskConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * Optional. Size of the boot disk in GB. It must be larger than or equal to the size of the
+   * image.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getDiskSizeGb() {
+    return diskSizeGb;
+  }
+
+  /**
+   * Optional. Size of the boot disk in GB. It must be larger than or equal to the size of the
+   * image.
+   * @param diskSizeGb diskSizeGb or {@code null} for none
+   */
+  public BootDiskConfig setDiskSizeGb(java.lang.Long diskSizeGb) {
+    this.diskSizeGb = diskSizeGb;
+    return this;
+  }
+
+  /**
    * Optional. Whether the boot disk will be created with confidential compute mode.
    * @return value or {@code null} for none
    */
@@ -82,6 +127,48 @@ public final class BootDiskConfig extends com.google.api.client.json.GenericJson
    */
   public BootDiskConfig setEnableConfidentialCompute(java.lang.Boolean enableConfidentialCompute) {
     this.enableConfidentialCompute = enableConfidentialCompute;
+    return this;
+  }
+
+  /**
+   * Optional. Indicates how many IOPS to provision for the disk. This sets the number of I/O
+   * operations per second that the disk can handle. To learn more about IOPS, see [Provisioning
+   * persistent disk
+   * performance](https://cloud.google.com/compute/docs/disks/performance#provisioned-iops).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getProvisionedIops() {
+    return provisionedIops;
+  }
+
+  /**
+   * Optional. Indicates how many IOPS to provision for the disk. This sets the number of I/O
+   * operations per second that the disk can handle. To learn more about IOPS, see [Provisioning
+   * persistent disk
+   * performance](https://cloud.google.com/compute/docs/disks/performance#provisioned-iops).
+   * @param provisionedIops provisionedIops or {@code null} for none
+   */
+  public BootDiskConfig setProvisionedIops(java.lang.Long provisionedIops) {
+    this.provisionedIops = provisionedIops;
+    return this;
+  }
+
+  /**
+   * Optional. Indicates how much throughput to provision for the disk. This sets the number of
+   * throughput MB per second that the disk can handle.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getProvisionedThroughput() {
+    return provisionedThroughput;
+  }
+
+  /**
+   * Optional. Indicates how much throughput to provision for the disk. This sets the number of
+   * throughput MB per second that the disk can handle.
+   * @param provisionedThroughput provisionedThroughput or {@code null} for none
+   */
+  public BootDiskConfig setProvisionedThroughput(java.lang.Long provisionedThroughput) {
+    this.provisionedThroughput = provisionedThroughput;
     return this;
   }
 

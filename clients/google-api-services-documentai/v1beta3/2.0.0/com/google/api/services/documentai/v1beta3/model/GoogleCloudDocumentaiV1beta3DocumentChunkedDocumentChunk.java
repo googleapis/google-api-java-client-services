@@ -31,6 +31,13 @@ package com.google.api.services.documentai.v1beta3.model;
 public final class GoogleCloudDocumentaiV1beta3DocumentChunkedDocumentChunk extends com.google.api.client.json.GenericJson {
 
   /**
+   * Chunk fields inside this chunk.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDocumentaiV1beta3DocumentChunkedDocumentChunkChunkField> chunkFields;
+
+  /**
    * ID of the chunk.
    * The value may be {@code null}.
    */
@@ -71,6 +78,23 @@ public final class GoogleCloudDocumentaiV1beta3DocumentChunkedDocumentChunk exte
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> sourceBlockIds;
+
+  /**
+   * Chunk fields inside this chunk.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDocumentaiV1beta3DocumentChunkedDocumentChunkChunkField> getChunkFields() {
+    return chunkFields;
+  }
+
+  /**
+   * Chunk fields inside this chunk.
+   * @param chunkFields chunkFields or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3DocumentChunkedDocumentChunk setChunkFields(java.util.List<GoogleCloudDocumentaiV1beta3DocumentChunkedDocumentChunkChunkField> chunkFields) {
+    this.chunkFields = chunkFields;
+    return this;
+  }
 
   /**
    * ID of the chunk.

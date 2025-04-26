@@ -46,6 +46,13 @@ public final class GoogleCloudDocumentaiV1beta3DocumentSchemaEntityTypeProperty 
   private java.lang.String displayName;
 
   /**
+   * Grounding config of the entity type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String groundingConfig;
+
+  /**
    * The name of the property. Follows the same guidelines as the EntityType name.
    * The value may be {@code null}.
    */
@@ -107,6 +114,23 @@ public final class GoogleCloudDocumentaiV1beta3DocumentSchemaEntityTypeProperty 
    */
   public GoogleCloudDocumentaiV1beta3DocumentSchemaEntityTypeProperty setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Grounding config of the entity type.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGroundingConfig() {
+    return groundingConfig;
+  }
+
+  /**
+   * Grounding config of the entity type.
+   * @param groundingConfig groundingConfig or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3DocumentSchemaEntityTypeProperty setGroundingConfig(java.lang.String groundingConfig) {
+    this.groundingConfig = groundingConfig;
     return this;
   }
 

@@ -17,7 +17,7 @@
 package com.google.api.services.displayvideo.v4.model;
 
 /**
- * Type for the metadata returned by [SdfDownloadTaskService.CreateSdfDownloadTask].
+ * Type for the metadata returned by SdfDownloadTaskService.CreateSdfDownloadTask.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Display & Video 360 API. For a detailed explanation

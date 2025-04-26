@@ -17,7 +17,7 @@
 package com.google.api.services.displayvideo.v3.model;
 
 /**
- * Details of Adloox brand safety settings.
+ * Details of Scope3 (previously known as Adloox) brand safety settings.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Display & Video 360 API. For a detailed explanation
@@ -78,14 +78,14 @@ public final class Adloox extends com.google.api.client.json.GenericJson {
   private java.lang.String displayIabViewability;
 
   /**
-   * Adloox categories to exclude.
+   * Scope3 categories to exclude.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> excludedAdlooxCategories;
 
   /**
-   * Optional. Adloox's fraud IVT MFA categories to exclude.
+   * Optional. Scope3's fraud IVT MFA categories to exclude.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -267,7 +267,7 @@ public final class Adloox extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Adloox categories to exclude.
+   * Scope3 categories to exclude.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getExcludedAdlooxCategories() {
@@ -275,7 +275,7 @@ public final class Adloox extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Adloox categories to exclude.
+   * Scope3 categories to exclude.
    * @param excludedAdlooxCategories excludedAdlooxCategories or {@code null} for none
    */
   public Adloox setExcludedAdlooxCategories(java.util.List<java.lang.String> excludedAdlooxCategories) {
@@ -284,7 +284,7 @@ public final class Adloox extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Adloox's fraud IVT MFA categories to exclude.
+   * Optional. Scope3's fraud IVT MFA categories to exclude.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getExcludedFraudIvtMfaCategories() {
@@ -292,7 +292,7 @@ public final class Adloox extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Adloox's fraud IVT MFA categories to exclude.
+   * Optional. Scope3's fraud IVT MFA categories to exclude.
    * @param excludedFraudIvtMfaCategories excludedFraudIvtMfaCategories or {@code null} for none
    */
   public Adloox setExcludedFraudIvtMfaCategories(java.util.List<java.lang.String> excludedFraudIvtMfaCategories) {

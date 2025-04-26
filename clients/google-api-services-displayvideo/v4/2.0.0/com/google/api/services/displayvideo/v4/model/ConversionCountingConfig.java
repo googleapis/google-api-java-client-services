@@ -34,11 +34,9 @@ public final class ConversionCountingConfig extends com.google.api.client.json.G
   /**
    * The Floodlight activity configs used to track conversions. The number of conversions counted is
    * the sum of all of the conversions counted by all of the Floodlight activity IDs specified in
-   * this field. *Warning*: Starting **April 1, 2025**, this field will no longer be writable while
-   * a custom bidding algorithm is assigned to the line item. If you set this field and assign a
-   * custom bidding algorithm in the same request, the floodlight activities must match the ones
-   * used by the custom bidding algorithm. [Read more about this announced change](/display-
-   * video/api/deprecations#features.custom_bidding_floodlight).
+   * this field. This field can't be updated if a custom bidding algorithm is assigned to the line
+   * item. If you set this field and assign a custom bidding algorithm in the same request, the
+   * floodlight activities must match the ones used by the custom bidding algorithm.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,11 +54,9 @@ public final class ConversionCountingConfig extends com.google.api.client.json.G
   /**
    * The Floodlight activity configs used to track conversions. The number of conversions counted is
    * the sum of all of the conversions counted by all of the Floodlight activity IDs specified in
-   * this field. *Warning*: Starting **April 1, 2025**, this field will no longer be writable while
-   * a custom bidding algorithm is assigned to the line item. If you set this field and assign a
-   * custom bidding algorithm in the same request, the floodlight activities must match the ones
-   * used by the custom bidding algorithm. [Read more about this announced change](/display-
-   * video/api/deprecations#features.custom_bidding_floodlight).
+   * this field. This field can't be updated if a custom bidding algorithm is assigned to the line
+   * item. If you set this field and assign a custom bidding algorithm in the same request, the
+   * floodlight activities must match the ones used by the custom bidding algorithm.
    * @return value or {@code null} for none
    */
   public java.util.List<TrackingFloodlightActivityConfig> getFloodlightActivityConfigs() {
@@ -70,11 +66,9 @@ public final class ConversionCountingConfig extends com.google.api.client.json.G
   /**
    * The Floodlight activity configs used to track conversions. The number of conversions counted is
    * the sum of all of the conversions counted by all of the Floodlight activity IDs specified in
-   * this field. *Warning*: Starting **April 1, 2025**, this field will no longer be writable while
-   * a custom bidding algorithm is assigned to the line item. If you set this field and assign a
-   * custom bidding algorithm in the same request, the floodlight activities must match the ones
-   * used by the custom bidding algorithm. [Read more about this announced change](/display-
-   * video/api/deprecations#features.custom_bidding_floodlight).
+   * this field. This field can't be updated if a custom bidding algorithm is assigned to the line
+   * item. If you set this field and assign a custom bidding algorithm in the same request, the
+   * floodlight activities must match the ones used by the custom bidding algorithm.
    * @param floodlightActivityConfigs floodlightActivityConfigs or {@code null} for none
    */
   public ConversionCountingConfig setFloodlightActivityConfigs(java.util.List<TrackingFloodlightActivityConfig> floodlightActivityConfigs) {

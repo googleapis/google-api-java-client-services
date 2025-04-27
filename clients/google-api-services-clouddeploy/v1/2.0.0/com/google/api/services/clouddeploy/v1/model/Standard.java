@@ -30,16 +30,16 @@ package com.google.api.services.clouddeploy.v1.model;
 public final class Standard extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Configuration for the postdeploy job. If this is not configured, postdeploy job will
-   * not be present.
+   * Optional. Configuration for the postdeploy job. If this is not configured, the postdeploy job
+   * will not be present.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Postdeploy postdeploy;
 
   /**
-   * Optional. Configuration for the predeploy job. If this is not configured, predeploy job will
-   * not be present.
+   * Optional. Configuration for the predeploy job. If this is not configured, the predeploy job
+   * will not be present.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,8 +53,8 @@ public final class Standard extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean verify;
 
   /**
-   * Optional. Configuration for the postdeploy job. If this is not configured, postdeploy job will
-   * not be present.
+   * Optional. Configuration for the postdeploy job. If this is not configured, the postdeploy job
+   * will not be present.
    * @return value or {@code null} for none
    */
   public Postdeploy getPostdeploy() {
@@ -62,8 +62,8 @@ public final class Standard extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Configuration for the postdeploy job. If this is not configured, postdeploy job will
-   * not be present.
+   * Optional. Configuration for the postdeploy job. If this is not configured, the postdeploy job
+   * will not be present.
    * @param postdeploy postdeploy or {@code null} for none
    */
   public Standard setPostdeploy(Postdeploy postdeploy) {
@@ -72,8 +72,8 @@ public final class Standard extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Configuration for the predeploy job. If this is not configured, predeploy job will
-   * not be present.
+   * Optional. Configuration for the predeploy job. If this is not configured, the predeploy job
+   * will not be present.
    * @return value or {@code null} for none
    */
   public Predeploy getPredeploy() {
@@ -81,8 +81,8 @@ public final class Standard extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Configuration for the predeploy job. If this is not configured, predeploy job will
-   * not be present.
+   * Optional. Configuration for the predeploy job. If this is not configured, the predeploy job
+   * will not be present.
    * @param predeploy predeploy or {@code null} for none
    */
   public Standard setPredeploy(Predeploy predeploy) {

@@ -53,6 +53,18 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1Instance exten
   private java.lang.String consumerDefinedName;
 
   /**
+   * Optional. The consumer_project_number associated with this Apigee instance. This field is added
+   * specifically to support Apigee integration with SLM Rollout and UMM. It represents the
+   * numerical project ID of the GCP project that consumes this Apigee instance. It is used for SLM
+   * rollout notifications and UMM integration, enabling proper mapping to customer projects and log
+   * delivery for Apigee instances. This field complements consumer_project_id and may be used for
+   * specific Apigee scenarios where the numerical ID is required.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String consumerProjectNumber;
+
+  /**
    * Output only. Timestamp when the resource was created.
    * The value may be {@code null}.
    */
@@ -206,6 +218,33 @@ public final class GoogleCloudSaasacceleratorManagementProvidersV1Instance exten
    */
   public GoogleCloudSaasacceleratorManagementProvidersV1Instance setConsumerDefinedName(java.lang.String consumerDefinedName) {
     this.consumerDefinedName = consumerDefinedName;
+    return this;
+  }
+
+  /**
+   * Optional. The consumer_project_number associated with this Apigee instance. This field is added
+   * specifically to support Apigee integration with SLM Rollout and UMM. It represents the
+   * numerical project ID of the GCP project that consumes this Apigee instance. It is used for SLM
+   * rollout notifications and UMM integration, enabling proper mapping to customer projects and log
+   * delivery for Apigee instances. This field complements consumer_project_id and may be used for
+   * specific Apigee scenarios where the numerical ID is required.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getConsumerProjectNumber() {
+    return consumerProjectNumber;
+  }
+
+  /**
+   * Optional. The consumer_project_number associated with this Apigee instance. This field is added
+   * specifically to support Apigee integration with SLM Rollout and UMM. It represents the
+   * numerical project ID of the GCP project that consumes this Apigee instance. It is used for SLM
+   * rollout notifications and UMM integration, enabling proper mapping to customer projects and log
+   * delivery for Apigee instances. This field complements consumer_project_id and may be used for
+   * specific Apigee scenarios where the numerical ID is required.
+   * @param consumerProjectNumber consumerProjectNumber or {@code null} for none
+   */
+  public GoogleCloudSaasacceleratorManagementProvidersV1Instance setConsumerProjectNumber(java.lang.String consumerProjectNumber) {
+    this.consumerProjectNumber = consumerProjectNumber;
     return this;
   }
 

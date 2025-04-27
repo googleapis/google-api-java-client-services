@@ -79,6 +79,13 @@ public final class CommonFeatureState extends com.google.api.client.json.Generic
   private FeatureState state;
 
   /**
+   * WorkloadIdentity fleet-level state.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private WorkloadIdentityFeatureState workloadidentity;
+
+  /**
    * Appdevexperience specific state.
    * @return value or {@code null} for none
    */
@@ -194,6 +201,23 @@ public final class CommonFeatureState extends com.google.api.client.json.Generic
    */
   public CommonFeatureState setState(FeatureState state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * WorkloadIdentity fleet-level state.
+   * @return value or {@code null} for none
+   */
+  public WorkloadIdentityFeatureState getWorkloadidentity() {
+    return workloadidentity;
+  }
+
+  /**
+   * WorkloadIdentity fleet-level state.
+   * @param workloadidentity workloadidentity or {@code null} for none
+   */
+  public CommonFeatureState setWorkloadidentity(WorkloadIdentityFeatureState workloadidentity) {
+    this.workloadidentity = workloadidentity;
     return this;
   }
 

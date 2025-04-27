@@ -93,6 +93,13 @@ public final class CommonFeatureSpec extends com.google.api.client.json.GenericJ
   private FeatureSpec workloadcertificate;
 
   /**
+   * Workload Identity feature spec.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private WorkloadIdentityFeatureSpec workloadidentity;
+
+  /**
    * Appdevexperience specific spec.
    * @return value or {@code null} for none
    */
@@ -242,6 +249,23 @@ public final class CommonFeatureSpec extends com.google.api.client.json.GenericJ
    */
   public CommonFeatureSpec setWorkloadcertificate(FeatureSpec workloadcertificate) {
     this.workloadcertificate = workloadcertificate;
+    return this;
+  }
+
+  /**
+   * Workload Identity feature spec.
+   * @return value or {@code null} for none
+   */
+  public WorkloadIdentityFeatureSpec getWorkloadidentity() {
+    return workloadidentity;
+  }
+
+  /**
+   * Workload Identity feature spec.
+   * @param workloadidentity workloadidentity or {@code null} for none
+   */
+  public CommonFeatureSpec setWorkloadidentity(WorkloadIdentityFeatureSpec workloadidentity) {
+    this.workloadidentity = workloadidentity;
     return this;
   }
 

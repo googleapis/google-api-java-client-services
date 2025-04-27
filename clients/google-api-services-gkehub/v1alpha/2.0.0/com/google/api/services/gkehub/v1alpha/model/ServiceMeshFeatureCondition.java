@@ -17,8 +17,7 @@
 package com.google.api.services.gkehub.v1alpha.model;
 
 /**
- * Condition being reported. TODO b/395151419: This message should be used to replace the
- * membership-level Condition message.
+ * Condition being reported.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the GKE Hub API. For a detailed explanation see:

@@ -31,14 +31,26 @@ package com.google.api.services.iamcredentials.v1.model;
 public final class GenerateIdTokenResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The OpenId Connect ID token.
+   * The OpenId Connect ID token. The token is a JSON Web Token (JWT) that contains a payload with
+   * claims. See the [JSON Web Token spec](https://tools.ietf.org/html/rfc7519) for more
+   * information. Here is an example of a decoded JWT payload: ``` { "iss":
+   * "https://accounts.google.com", "iat": 1496953245, "exp": 1496953245, "aud":
+   * "https://www.example.com", "sub": "107517467455664443765", "azp": "107517467455664443765",
+   * "email": "my-iam-account@my-project.iam.gserviceaccount.com", "email_verified": true, "google":
+   * { "organization_number": 123456 } } ```
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String token;
 
   /**
-   * The OpenId Connect ID token.
+   * The OpenId Connect ID token. The token is a JSON Web Token (JWT) that contains a payload with
+   * claims. See the [JSON Web Token spec](https://tools.ietf.org/html/rfc7519) for more
+   * information. Here is an example of a decoded JWT payload: ``` { "iss":
+   * "https://accounts.google.com", "iat": 1496953245, "exp": 1496953245, "aud":
+   * "https://www.example.com", "sub": "107517467455664443765", "azp": "107517467455664443765",
+   * "email": "my-iam-account@my-project.iam.gserviceaccount.com", "email_verified": true, "google":
+   * { "organization_number": 123456 } } ```
    * @return value or {@code null} for none
    */
   public java.lang.String getToken() {
@@ -46,7 +58,13 @@ public final class GenerateIdTokenResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * The OpenId Connect ID token.
+   * The OpenId Connect ID token. The token is a JSON Web Token (JWT) that contains a payload with
+   * claims. See the [JSON Web Token spec](https://tools.ietf.org/html/rfc7519) for more
+   * information. Here is an example of a decoded JWT payload: ``` { "iss":
+   * "https://accounts.google.com", "iat": 1496953245, "exp": 1496953245, "aud":
+   * "https://www.example.com", "sub": "107517467455664443765", "azp": "107517467455664443765",
+   * "email": "my-iam-account@my-project.iam.gserviceaccount.com", "email_verified": true, "google":
+   * { "organization_number": 123456 } } ```
    * @param token token or {@code null} for none
    */
   public GenerateIdTokenResponse setToken(java.lang.String token) {

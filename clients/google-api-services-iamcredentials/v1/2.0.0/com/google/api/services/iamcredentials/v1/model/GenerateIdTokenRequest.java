@@ -59,6 +59,15 @@ public final class GenerateIdTokenRequest extends com.google.api.client.json.Gen
   private java.lang.Boolean includeEmail;
 
   /**
+   * Include the organization number of the service account in the token. If set to `true`, the
+   * token will contain a `google.organization_number` claim. The value of the claim will be `null`
+   * if the service account isn't associated with an organization.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean organizationNumberIncluded;
+
+  /**
    * Required. The audience for the token, such as the API or account that this token grants access
    * to.
    * @return value or {@code null} for none
@@ -120,6 +129,27 @@ public final class GenerateIdTokenRequest extends com.google.api.client.json.Gen
    */
   public GenerateIdTokenRequest setIncludeEmail(java.lang.Boolean includeEmail) {
     this.includeEmail = includeEmail;
+    return this;
+  }
+
+  /**
+   * Include the organization number of the service account in the token. If set to `true`, the
+   * token will contain a `google.organization_number` claim. The value of the claim will be `null`
+   * if the service account isn't associated with an organization.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getOrganizationNumberIncluded() {
+    return organizationNumberIncluded;
+  }
+
+  /**
+   * Include the organization number of the service account in the token. If set to `true`, the
+   * token will contain a `google.organization_number` claim. The value of the claim will be `null`
+   * if the service account isn't associated with an organization.
+   * @param organizationNumberIncluded organizationNumberIncluded or {@code null} for none
+   */
+  public GenerateIdTokenRequest setOrganizationNumberIncluded(java.lang.Boolean organizationNumberIncluded) {
+    this.organizationNumberIncluded = organizationNumberIncluded;
     return this;
   }
 

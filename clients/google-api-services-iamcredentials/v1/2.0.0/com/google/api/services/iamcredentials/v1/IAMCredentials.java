@@ -134,6 +134,190 @@ public class IAMCredentials extends com.google.api.client.googleapis.services.js
   }
 
   /**
+   * An accessor for creating requests from the Locations collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code IAMCredentials iamcredentials = new IAMCredentials(...);}
+   *   {@code IAMCredentials.Locations.List request = iamcredentials.locations().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Locations locations() {
+    return new Locations();
+  }
+
+  /**
+   * The "locations" collection of methods.
+   */
+  public class Locations {
+
+    /**
+     * An accessor for creating requests from the WorkforcePools collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code IAMCredentials iamcredentials = new IAMCredentials(...);}
+     *   {@code IAMCredentials.WorkforcePools.List request = iamcredentials.workforcePools().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public WorkforcePools workforcePools() {
+      return new WorkforcePools();
+    }
+
+    /**
+     * The "workforcePools" collection of methods.
+     */
+    public class WorkforcePools {
+
+      /**
+       * Returns the trust boundary info for a given workforce pool.
+       *
+       * Create a request for the method "workforcePools.getAllowedLocations".
+       *
+       * This request holds the parameters needed by the iamcredentials server.  After setting any
+       * optional parameters, call the {@link GetAllowedLocations#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Required. Resource name of workforce pool.
+       * @return the request
+       */
+      public GetAllowedLocations getAllowedLocations(java.lang.String name) throws java.io.IOException {
+        GetAllowedLocations result = new GetAllowedLocations(name);
+        initialize(result);
+        return result;
+      }
+
+      public class GetAllowedLocations extends IAMCredentialsRequest<com.google.api.services.iamcredentials.v1.model.WorkforcePoolAllowedLocations> {
+
+        private static final String REST_PATH = "v1/{+name}/allowedLocations";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^locations/[^/]+/workforcePools/[^/]+$");
+
+        /**
+         * Returns the trust boundary info for a given workforce pool.
+         *
+         * Create a request for the method "workforcePools.getAllowedLocations".
+         *
+         * This request holds the parameters needed by the the iamcredentials server.  After setting any
+         * optional parameters, call the {@link GetAllowedLocations#execute()} method to invoke the remote
+         * operation. <p> {@link GetAllowedLocations#initialize(com.google.api.client.googleapis.services.
+         * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param name Required. Resource name of workforce pool.
+         * @since 1.13
+         */
+        protected GetAllowedLocations(java.lang.String name) {
+          super(IAMCredentials.this, "GET", REST_PATH, null, com.google.api.services.iamcredentials.v1.model.WorkforcePoolAllowedLocations.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^locations/[^/]+/workforcePools/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public GetAllowedLocations set$Xgafv(java.lang.String $Xgafv) {
+          return (GetAllowedLocations) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GetAllowedLocations setAccessToken(java.lang.String accessToken) {
+          return (GetAllowedLocations) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GetAllowedLocations setAlt(java.lang.String alt) {
+          return (GetAllowedLocations) super.setAlt(alt);
+        }
+
+        @Override
+        public GetAllowedLocations setCallback(java.lang.String callback) {
+          return (GetAllowedLocations) super.setCallback(callback);
+        }
+
+        @Override
+        public GetAllowedLocations setFields(java.lang.String fields) {
+          return (GetAllowedLocations) super.setFields(fields);
+        }
+
+        @Override
+        public GetAllowedLocations setKey(java.lang.String key) {
+          return (GetAllowedLocations) super.setKey(key);
+        }
+
+        @Override
+        public GetAllowedLocations setOauthToken(java.lang.String oauthToken) {
+          return (GetAllowedLocations) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetAllowedLocations setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetAllowedLocations) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetAllowedLocations setQuotaUser(java.lang.String quotaUser) {
+          return (GetAllowedLocations) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetAllowedLocations setUploadType(java.lang.String uploadType) {
+          return (GetAllowedLocations) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GetAllowedLocations setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GetAllowedLocations) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. Resource name of workforce pool. */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Resource name of workforce pool.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Required. Resource name of workforce pool. */
+        public GetAllowedLocations setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^locations/[^/]+/workforcePools/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public GetAllowedLocations set(String parameterName, Object value) {
+          return (GetAllowedLocations) super.set(parameterName, value);
+        }
+      }
+
+    }
+  }
+
+  /**
    * An accessor for creating requests from the Projects collection.
    *
    * <p>The typical use is:</p>
@@ -153,6 +337,189 @@ public class IAMCredentials extends com.google.api.client.googleapis.services.js
    */
   public class Projects {
 
+    /**
+     * An accessor for creating requests from the Locations collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code IAMCredentials iamcredentials = new IAMCredentials(...);}
+     *   {@code IAMCredentials.Locations.List request = iamcredentials.locations().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Locations locations() {
+      return new Locations();
+    }
+
+    /**
+     * The "locations" collection of methods.
+     */
+    public class Locations {
+
+      /**
+       * An accessor for creating requests from the WorkloadIdentityPools collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code IAMCredentials iamcredentials = new IAMCredentials(...);}
+       *   {@code IAMCredentials.WorkloadIdentityPools.List request = iamcredentials.workloadIdentityPools().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public WorkloadIdentityPools workloadIdentityPools() {
+        return new WorkloadIdentityPools();
+      }
+
+      /**
+       * The "workloadIdentityPools" collection of methods.
+       */
+      public class WorkloadIdentityPools {
+
+        /**
+         * Returns the trust boundary info for a given workload identity pool.
+         *
+         * Create a request for the method "workloadIdentityPools.getAllowedLocations".
+         *
+         * This request holds the parameters needed by the iamcredentials server.  After setting any
+         * optional parameters, call the {@link GetAllowedLocations#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param name Required. Resource name of workload identity pool.
+         * @return the request
+         */
+        public GetAllowedLocations getAllowedLocations(java.lang.String name) throws java.io.IOException {
+          GetAllowedLocations result = new GetAllowedLocations(name);
+          initialize(result);
+          return result;
+        }
+
+        public class GetAllowedLocations extends IAMCredentialsRequest<com.google.api.services.iamcredentials.v1.model.WorkloadIdentityPoolAllowedLocations> {
+
+          private static final String REST_PATH = "v1/{+name}/allowedLocations";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+$");
+
+          /**
+           * Returns the trust boundary info for a given workload identity pool.
+           *
+           * Create a request for the method "workloadIdentityPools.getAllowedLocations".
+           *
+           * This request holds the parameters needed by the the iamcredentials server.  After setting any
+           * optional parameters, call the {@link GetAllowedLocations#execute()} method to invoke the remote
+           * operation. <p> {@link GetAllowedLocations#initialize(com.google.api.client.googleapis.services.
+           * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param name Required. Resource name of workload identity pool.
+           * @since 1.13
+           */
+          protected GetAllowedLocations(java.lang.String name) {
+            super(IAMCredentials.this, "GET", REST_PATH, null, com.google.api.services.iamcredentials.v1.model.WorkloadIdentityPoolAllowedLocations.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public GetAllowedLocations set$Xgafv(java.lang.String $Xgafv) {
+            return (GetAllowedLocations) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GetAllowedLocations setAccessToken(java.lang.String accessToken) {
+            return (GetAllowedLocations) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GetAllowedLocations setAlt(java.lang.String alt) {
+            return (GetAllowedLocations) super.setAlt(alt);
+          }
+
+          @Override
+          public GetAllowedLocations setCallback(java.lang.String callback) {
+            return (GetAllowedLocations) super.setCallback(callback);
+          }
+
+          @Override
+          public GetAllowedLocations setFields(java.lang.String fields) {
+            return (GetAllowedLocations) super.setFields(fields);
+          }
+
+          @Override
+          public GetAllowedLocations setKey(java.lang.String key) {
+            return (GetAllowedLocations) super.setKey(key);
+          }
+
+          @Override
+          public GetAllowedLocations setOauthToken(java.lang.String oauthToken) {
+            return (GetAllowedLocations) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GetAllowedLocations setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GetAllowedLocations) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GetAllowedLocations setQuotaUser(java.lang.String quotaUser) {
+            return (GetAllowedLocations) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GetAllowedLocations setUploadType(java.lang.String uploadType) {
+            return (GetAllowedLocations) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GetAllowedLocations setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GetAllowedLocations) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Resource name of workload identity pool. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Resource name of workload identity pool.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. Resource name of workload identity pool. */
+          public GetAllowedLocations setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public GetAllowedLocations set(String parameterName, Object value) {
+            return (GetAllowedLocations) super.set(parameterName, value);
+          }
+        }
+
+      }
+    }
     /**
      * An accessor for creating requests from the ServiceAccounts collection.
      *

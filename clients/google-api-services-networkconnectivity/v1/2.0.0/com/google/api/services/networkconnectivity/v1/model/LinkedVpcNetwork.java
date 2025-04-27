@@ -47,7 +47,7 @@ public final class LinkedVpcNetwork extends com.google.api.client.json.GenericJs
   /**
    * Output only. The list of Producer VPC spokes that this VPC spoke is a service consumer VPC
    * spoke for. These producer VPCs are connected through VPC peering to this spoke's backing VPC
-   * network. Because they are directly connected throuh VPC peering, NCC export filters do not
+   * network. Because they are directly connected through VPC peering, NCC export filters do not
    * apply between the service consumer VPC spoke and any of its producer VPC spokes. This VPC spoke
    * cannot be deleted as long as any of these producer VPC spokes are connected to the NCC Hub.
    * The value may be {@code null}.
@@ -113,7 +113,7 @@ public final class LinkedVpcNetwork extends com.google.api.client.json.GenericJs
   /**
    * Output only. The list of Producer VPC spokes that this VPC spoke is a service consumer VPC
    * spoke for. These producer VPCs are connected through VPC peering to this spoke's backing VPC
-   * network. Because they are directly connected throuh VPC peering, NCC export filters do not
+   * network. Because they are directly connected through VPC peering, NCC export filters do not
    * apply between the service consumer VPC spoke and any of its producer VPC spokes. This VPC spoke
    * cannot be deleted as long as any of these producer VPC spokes are connected to the NCC Hub.
    * @return value or {@code null} for none
@@ -125,7 +125,7 @@ public final class LinkedVpcNetwork extends com.google.api.client.json.GenericJs
   /**
    * Output only. The list of Producer VPC spokes that this VPC spoke is a service consumer VPC
    * spoke for. These producer VPCs are connected through VPC peering to this spoke's backing VPC
-   * network. Because they are directly connected throuh VPC peering, NCC export filters do not
+   * network. Because they are directly connected through VPC peering, NCC export filters do not
    * apply between the service consumer VPC spoke and any of its producer VPC spokes. This VPC spoke
    * cannot be deleted as long as any of these producer VPC spokes are connected to the NCC Hub.
    * @param producerVpcSpokes producerVpcSpokes or {@code null} for none

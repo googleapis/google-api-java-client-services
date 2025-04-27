@@ -100,6 +100,13 @@ public final class MembershipFeatureState extends com.google.api.client.json.Gen
   private FeatureState state;
 
   /**
+   * Workload Identity membership specific state.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private WorkloadIdentityMembershipState workloadidentity;
+
+  /**
    * Appdevexperience specific state.
    * @return value or {@code null} for none
    */
@@ -266,6 +273,23 @@ public final class MembershipFeatureState extends com.google.api.client.json.Gen
    */
   public MembershipFeatureState setState(FeatureState state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Workload Identity membership specific state.
+   * @return value or {@code null} for none
+   */
+  public WorkloadIdentityMembershipState getWorkloadidentity() {
+    return workloadidentity;
+  }
+
+  /**
+   * Workload Identity membership specific state.
+   * @param workloadidentity workloadidentity or {@code null} for none
+   */
+  public MembershipFeatureState setWorkloadidentity(WorkloadIdentityMembershipState workloadidentity) {
+    this.workloadidentity = workloadidentity;
     return this;
   }
 

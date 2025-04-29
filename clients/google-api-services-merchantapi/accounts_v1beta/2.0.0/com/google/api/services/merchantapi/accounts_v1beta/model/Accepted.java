@@ -38,7 +38,7 @@ public final class Accepted extends com.google.api.client.json.GenericJson {
   private java.lang.String acceptedBy;
 
   /**
-   * The accepted [termsOfService](google.shopping.merchant.accounts.v1main.TermsOfService).
+   * The accepted termsOfService.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,7 +73,7 @@ public final class Accepted extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The accepted [termsOfService](google.shopping.merchant.accounts.v1main.TermsOfService).
+   * The accepted termsOfService.
    * @return value or {@code null} for none
    */
   public java.lang.String getTermsOfService() {
@@ -81,7 +81,7 @@ public final class Accepted extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The accepted [termsOfService](google.shopping.merchant.accounts.v1main.TermsOfService).
+   * The accepted termsOfService.
    * @param termsOfService termsOfService or {@code null} for none
    */
   public Accepted setTermsOfService(java.lang.String termsOfService) {

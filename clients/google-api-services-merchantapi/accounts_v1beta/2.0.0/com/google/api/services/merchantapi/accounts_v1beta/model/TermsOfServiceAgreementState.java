@@ -25,7 +25,7 @@ package com.google.api.services.merchantapi.accounts_v1beta.model;
  * `valid_until` field. The `required` terms of services need to be accepted before `valid_until` in
  * order for the account to continue having a valid agreement. When accepting new terms of services
  * we expect 3Ps to display the text associated with the given terms of service agreement (the url
- * to the file containing the text is added in the Required message below as `tos_file_uri`. The
+ * to the file containing the text is added in the Required message below as `tos_file_uri`). The
  * actual acceptance of the terms of service is done by calling accept on the `TermsOfService`
  * resource.
  *

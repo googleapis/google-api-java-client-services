@@ -118,12 +118,13 @@ public final class ProductInput extends com.google.api.client.json.GenericJson {
   private java.lang.String product;
 
   /**
-   * Optional. Represents the existing version (freshness) of the product, which can be used to
-   * preserve the right order when multiple updates are done at the same time. If set, the insertion
-   * is prevented when version number is lower than the current version number of the existing
-   * product. Re-insertion (for example, product refresh after 30 days) can be performed with the
-   * current `version_number`. Only supported for insertions into primary data sources. If the
-   * operation is prevented, the aborted exception will be thrown.
+   * Optional. Immutable. Represents the existing version (freshness) of the product, which can be
+   * used to preserve the right order when multiple updates are done at the same time. If set, the
+   * insertion is prevented when version number is lower than the current version number of the
+   * existing product. Re-insertion (for example, product refresh after 30 days) can be performed
+   * with the current `version_number`. Only supported for insertions into primary data sources. Do
+   * not set this field for updates. Do not set this field for insertions into supplemental data
+   * sources. If the operation is prevented, the aborted exception will be thrown.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -294,12 +295,13 @@ public final class ProductInput extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Represents the existing version (freshness) of the product, which can be used to
-   * preserve the right order when multiple updates are done at the same time. If set, the insertion
-   * is prevented when version number is lower than the current version number of the existing
-   * product. Re-insertion (for example, product refresh after 30 days) can be performed with the
-   * current `version_number`. Only supported for insertions into primary data sources. If the
-   * operation is prevented, the aborted exception will be thrown.
+   * Optional. Immutable. Represents the existing version (freshness) of the product, which can be
+   * used to preserve the right order when multiple updates are done at the same time. If set, the
+   * insertion is prevented when version number is lower than the current version number of the
+   * existing product. Re-insertion (for example, product refresh after 30 days) can be performed
+   * with the current `version_number`. Only supported for insertions into primary data sources. Do
+   * not set this field for updates. Do not set this field for insertions into supplemental data
+   * sources. If the operation is prevented, the aborted exception will be thrown.
    * @return value or {@code null} for none
    */
   public java.lang.Long getVersionNumber() {
@@ -307,12 +309,13 @@ public final class ProductInput extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Represents the existing version (freshness) of the product, which can be used to
-   * preserve the right order when multiple updates are done at the same time. If set, the insertion
-   * is prevented when version number is lower than the current version number of the existing
-   * product. Re-insertion (for example, product refresh after 30 days) can be performed with the
-   * current `version_number`. Only supported for insertions into primary data sources. If the
-   * operation is prevented, the aborted exception will be thrown.
+   * Optional. Immutable. Represents the existing version (freshness) of the product, which can be
+   * used to preserve the right order when multiple updates are done at the same time. If set, the
+   * insertion is prevented when version number is lower than the current version number of the
+   * existing product. Re-insertion (for example, product refresh after 30 days) can be performed
+   * with the current `version_number`. Only supported for insertions into primary data sources. Do
+   * not set this field for updates. Do not set this field for insertions into supplemental data
+   * sources. If the operation is prevented, the aborted exception will be thrown.
    * @param versionNumber versionNumber or {@code null} for none
    */
   public ProductInput setVersionNumber(java.lang.Long versionNumber) {

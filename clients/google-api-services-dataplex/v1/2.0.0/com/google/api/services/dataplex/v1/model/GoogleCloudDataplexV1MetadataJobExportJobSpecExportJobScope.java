@@ -17,7 +17,7 @@
 package com.google.api.services.dataplex.v1.model;
 
 /**
- * Scope of the export job.
+ * The scope of the export job.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataplex API. For a detailed explanation see:
@@ -30,59 +30,62 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1MetadataJobExportJobSpecExportJobScope extends com.google.api.client.json.GenericJson {
 
   /**
-   * The aspect types that are in scope for the export job. Optional. If specified, only aspects of
-   * the specified types will be affected by the job. Must follow the format:
-   * "projects//locations//aspectTypes/"
+   * The aspect types that are in scope for the export job, specified as relative resource names in
+   * the format projects/{project_id_or_number}/locations/{location}/aspectTypes/{aspect_type_id}.
+   * Only aspects that belong to the specified aspect types are affected by the job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> aspectTypes;
 
   /**
-   * The entry groups that are in scope for the export job. Optional. If specified, only entries in
-   * the specified entry groups will be exported by the job. Must be in the VPC-SC perimeter of the
-   * job. The location of the entry groups must be the same as the job. Either projects or
-   * entry_groups can be specified when organization_level_export is set to false. Must follow the
-   * format: "projects//locations//entryGroups/"
+   * The entry groups whose metadata you want to export, in the format
+   * projects/{project_id_or_number}/locations/{location_id}/entryGroups/{entry_group_id}. Only the
+   * entries in the specified entry groups are exported.The entry groups must be in the same
+   * location and the same VPC Service Controls perimeter as the job.If you set the job scope to be
+   * a list of entry groups, then set the organization-level export flag to false and don't provide
+   * a list of projects.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> entryGroups;
 
   /**
-   * If specified, only entries of the specified types will be affected by the job. Must follow the
-   * format: "projects//locations//entryTypes/"
+   * The entry types that are in scope for the export job, specified as relative resource names in
+   * the format projects/{project_id_or_number}/locations/{location}/entryTypes/{entry_type_id}.
+   * Only entries that belong to the specified entry types are affected by the job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> entryTypes;
 
   /**
-   * Indicating if it is an organization level export job. - When set to true, exports all entries
-   * from entry groups and projects sharing the same organization id of the Metadata Job. Only
-   * projects and entry groups in the VPC-SC perimeter will be exported. The projects and entry
-   * groups are ignored. - When set to false, one of the projects or entry groups must be specified.
-   * - Default to false.
+   * Whether the metadata export job is an organization-level export job. If true, the job exports
+   * the entries from the same organization and VPC Service Controls perimeter as the job. The
+   * project that the job belongs to determines the VPC Service Controls perimeter. If you set the
+   * job scope to be at the organization level, then don't provide a list of projects or entry
+   * groups. If false, you must specify a list of projects or a list of entry groups whose entries
+   * you want to export.The default is false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean organizationLevel;
 
   /**
-   * The projects that are in the scope of the export job. Can either be project numbers or project
-   * IDs. If specified, only the entries from the specified projects will be exported. The projects
-   * must be in the same organization and in the VPC-SC perimeter. Either projects or entry_groups
-   * can be specified when organization_level_export is set to false. Must follow the format:
-   * "projects/"
+   * The projects whose metadata you want to export, in the format projects/{project_id_or_number}.
+   * Only the entries from the specified projects are exported.The projects must be in the same
+   * organization and VPC Service Controls perimeter as the job.If you set the job scope to be a
+   * list of projects, then set the organization-level export flag to false and don't provide a list
+   * of entry groups.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> projects;
 
   /**
-   * The aspect types that are in scope for the export job. Optional. If specified, only aspects of
-   * the specified types will be affected by the job. Must follow the format:
-   * "projects//locations//aspectTypes/"
+   * The aspect types that are in scope for the export job, specified as relative resource names in
+   * the format projects/{project_id_or_number}/locations/{location}/aspectTypes/{aspect_type_id}.
+   * Only aspects that belong to the specified aspect types are affected by the job.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAspectTypes() {
@@ -90,9 +93,9 @@ public final class GoogleCloudDataplexV1MetadataJobExportJobSpecExportJobScope e
   }
 
   /**
-   * The aspect types that are in scope for the export job. Optional. If specified, only aspects of
-   * the specified types will be affected by the job. Must follow the format:
-   * "projects//locations//aspectTypes/"
+   * The aspect types that are in scope for the export job, specified as relative resource names in
+   * the format projects/{project_id_or_number}/locations/{location}/aspectTypes/{aspect_type_id}.
+   * Only aspects that belong to the specified aspect types are affected by the job.
    * @param aspectTypes aspectTypes or {@code null} for none
    */
   public GoogleCloudDataplexV1MetadataJobExportJobSpecExportJobScope setAspectTypes(java.util.List<java.lang.String> aspectTypes) {
@@ -101,11 +104,12 @@ public final class GoogleCloudDataplexV1MetadataJobExportJobSpecExportJobScope e
   }
 
   /**
-   * The entry groups that are in scope for the export job. Optional. If specified, only entries in
-   * the specified entry groups will be exported by the job. Must be in the VPC-SC perimeter of the
-   * job. The location of the entry groups must be the same as the job. Either projects or
-   * entry_groups can be specified when organization_level_export is set to false. Must follow the
-   * format: "projects//locations//entryGroups/"
+   * The entry groups whose metadata you want to export, in the format
+   * projects/{project_id_or_number}/locations/{location_id}/entryGroups/{entry_group_id}. Only the
+   * entries in the specified entry groups are exported.The entry groups must be in the same
+   * location and the same VPC Service Controls perimeter as the job.If you set the job scope to be
+   * a list of entry groups, then set the organization-level export flag to false and don't provide
+   * a list of projects.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getEntryGroups() {
@@ -113,11 +117,12 @@ public final class GoogleCloudDataplexV1MetadataJobExportJobSpecExportJobScope e
   }
 
   /**
-   * The entry groups that are in scope for the export job. Optional. If specified, only entries in
-   * the specified entry groups will be exported by the job. Must be in the VPC-SC perimeter of the
-   * job. The location of the entry groups must be the same as the job. Either projects or
-   * entry_groups can be specified when organization_level_export is set to false. Must follow the
-   * format: "projects//locations//entryGroups/"
+   * The entry groups whose metadata you want to export, in the format
+   * projects/{project_id_or_number}/locations/{location_id}/entryGroups/{entry_group_id}. Only the
+   * entries in the specified entry groups are exported.The entry groups must be in the same
+   * location and the same VPC Service Controls perimeter as the job.If you set the job scope to be
+   * a list of entry groups, then set the organization-level export flag to false and don't provide
+   * a list of projects.
    * @param entryGroups entryGroups or {@code null} for none
    */
   public GoogleCloudDataplexV1MetadataJobExportJobSpecExportJobScope setEntryGroups(java.util.List<java.lang.String> entryGroups) {
@@ -126,8 +131,9 @@ public final class GoogleCloudDataplexV1MetadataJobExportJobSpecExportJobScope e
   }
 
   /**
-   * If specified, only entries of the specified types will be affected by the job. Must follow the
-   * format: "projects//locations//entryTypes/"
+   * The entry types that are in scope for the export job, specified as relative resource names in
+   * the format projects/{project_id_or_number}/locations/{location}/entryTypes/{entry_type_id}.
+   * Only entries that belong to the specified entry types are affected by the job.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getEntryTypes() {
@@ -135,8 +141,9 @@ public final class GoogleCloudDataplexV1MetadataJobExportJobSpecExportJobScope e
   }
 
   /**
-   * If specified, only entries of the specified types will be affected by the job. Must follow the
-   * format: "projects//locations//entryTypes/"
+   * The entry types that are in scope for the export job, specified as relative resource names in
+   * the format projects/{project_id_or_number}/locations/{location}/entryTypes/{entry_type_id}.
+   * Only entries that belong to the specified entry types are affected by the job.
    * @param entryTypes entryTypes or {@code null} for none
    */
   public GoogleCloudDataplexV1MetadataJobExportJobSpecExportJobScope setEntryTypes(java.util.List<java.lang.String> entryTypes) {
@@ -145,11 +152,12 @@ public final class GoogleCloudDataplexV1MetadataJobExportJobSpecExportJobScope e
   }
 
   /**
-   * Indicating if it is an organization level export job. - When set to true, exports all entries
-   * from entry groups and projects sharing the same organization id of the Metadata Job. Only
-   * projects and entry groups in the VPC-SC perimeter will be exported. The projects and entry
-   * groups are ignored. - When set to false, one of the projects or entry groups must be specified.
-   * - Default to false.
+   * Whether the metadata export job is an organization-level export job. If true, the job exports
+   * the entries from the same organization and VPC Service Controls perimeter as the job. The
+   * project that the job belongs to determines the VPC Service Controls perimeter. If you set the
+   * job scope to be at the organization level, then don't provide a list of projects or entry
+   * groups. If false, you must specify a list of projects or a list of entry groups whose entries
+   * you want to export.The default is false.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getOrganizationLevel() {
@@ -157,11 +165,12 @@ public final class GoogleCloudDataplexV1MetadataJobExportJobSpecExportJobScope e
   }
 
   /**
-   * Indicating if it is an organization level export job. - When set to true, exports all entries
-   * from entry groups and projects sharing the same organization id of the Metadata Job. Only
-   * projects and entry groups in the VPC-SC perimeter will be exported. The projects and entry
-   * groups are ignored. - When set to false, one of the projects or entry groups must be specified.
-   * - Default to false.
+   * Whether the metadata export job is an organization-level export job. If true, the job exports
+   * the entries from the same organization and VPC Service Controls perimeter as the job. The
+   * project that the job belongs to determines the VPC Service Controls perimeter. If you set the
+   * job scope to be at the organization level, then don't provide a list of projects or entry
+   * groups. If false, you must specify a list of projects or a list of entry groups whose entries
+   * you want to export.The default is false.
    * @param organizationLevel organizationLevel or {@code null} for none
    */
   public GoogleCloudDataplexV1MetadataJobExportJobSpecExportJobScope setOrganizationLevel(java.lang.Boolean organizationLevel) {
@@ -170,11 +179,11 @@ public final class GoogleCloudDataplexV1MetadataJobExportJobSpecExportJobScope e
   }
 
   /**
-   * The projects that are in the scope of the export job. Can either be project numbers or project
-   * IDs. If specified, only the entries from the specified projects will be exported. The projects
-   * must be in the same organization and in the VPC-SC perimeter. Either projects or entry_groups
-   * can be specified when organization_level_export is set to false. Must follow the format:
-   * "projects/"
+   * The projects whose metadata you want to export, in the format projects/{project_id_or_number}.
+   * Only the entries from the specified projects are exported.The projects must be in the same
+   * organization and VPC Service Controls perimeter as the job.If you set the job scope to be a
+   * list of projects, then set the organization-level export flag to false and don't provide a list
+   * of entry groups.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getProjects() {
@@ -182,11 +191,11 @@ public final class GoogleCloudDataplexV1MetadataJobExportJobSpecExportJobScope e
   }
 
   /**
-   * The projects that are in the scope of the export job. Can either be project numbers or project
-   * IDs. If specified, only the entries from the specified projects will be exported. The projects
-   * must be in the same organization and in the VPC-SC perimeter. Either projects or entry_groups
-   * can be specified when organization_level_export is set to false. Must follow the format:
-   * "projects/"
+   * The projects whose metadata you want to export, in the format projects/{project_id_or_number}.
+   * Only the entries from the specified projects are exported.The projects must be in the same
+   * organization and VPC Service Controls perimeter as the job.If you set the job scope to be a
+   * list of projects, then set the organization-level export flag to false and don't provide a list
+   * of entry groups.
    * @param projects projects or {@code null} for none
    */
   public GoogleCloudDataplexV1MetadataJobExportJobSpecExportJobScope setProjects(java.util.List<java.lang.String> projects) {

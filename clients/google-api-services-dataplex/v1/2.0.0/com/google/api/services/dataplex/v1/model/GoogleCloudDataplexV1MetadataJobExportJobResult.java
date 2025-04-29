@@ -17,7 +17,8 @@
 package com.google.api.services.dataplex.v1.model;
 
 /**
- * Export Job Results. The result is based on the snapshot at the time when the job is created.
+ * Summary results from a metadata export job. The results are a snapshot of the metadata at the
+ * time when the job was created. The exported entries are saved to a Cloud Storage bucket.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataplex API. For a detailed explanation see:
@@ -30,21 +31,21 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1MetadataJobExportJobResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The error message if the export job failed.
+   * Output only. The error message if the metadata export job failed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String errorMessage;
 
   /**
-   * Output only. The number of entries that have been exported.
+   * Output only. The number of entries that were exported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long exportedEntries;
 
   /**
-   * Output only. The error message if the export job failed.
+   * Output only. The error message if the metadata export job failed.
    * @return value or {@code null} for none
    */
   public java.lang.String getErrorMessage() {
@@ -52,7 +53,7 @@ public final class GoogleCloudDataplexV1MetadataJobExportJobResult extends com.g
   }
 
   /**
-   * Output only. The error message if the export job failed.
+   * Output only. The error message if the metadata export job failed.
    * @param errorMessage errorMessage or {@code null} for none
    */
   public GoogleCloudDataplexV1MetadataJobExportJobResult setErrorMessage(java.lang.String errorMessage) {
@@ -61,7 +62,7 @@ public final class GoogleCloudDataplexV1MetadataJobExportJobResult extends com.g
   }
 
   /**
-   * Output only. The number of entries that have been exported.
+   * Output only. The number of entries that were exported.
    * @return value or {@code null} for none
    */
   public java.lang.Long getExportedEntries() {
@@ -69,7 +70,7 @@ public final class GoogleCloudDataplexV1MetadataJobExportJobResult extends com.g
   }
 
   /**
-   * Output only. The number of entries that have been exported.
+   * Output only. The number of entries that were exported.
    * @param exportedEntries exportedEntries or {@code null} for none
    */
   public GoogleCloudDataplexV1MetadataJobExportJobResult setExportedEntries(java.lang.Long exportedEntries) {

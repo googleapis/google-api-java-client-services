@@ -8,7 +8,7 @@
   "gsonVersion": "2.11.0",
   "httpClientLibrary": "1.46.3",
   "httpClientVersion": "4.5.14",
-  "jackson2CoreVersion": "2.18.2",
+  "jackson2CoreVersion": "2.19.0",
   "jdo2ApiVersion": "2.3-eb",
   "jettyVersion": "6.1.26",
   "jettyUtilVersion": "6.1.26",

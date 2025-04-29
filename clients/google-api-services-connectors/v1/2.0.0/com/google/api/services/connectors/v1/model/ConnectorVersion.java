@@ -105,13 +105,6 @@ public final class ConnectorVersion extends com.google.api.client.json.GenericJs
   private EventingConfigTemplate eventingConfigTemplate;
 
   /**
-   * Output only. Is async operations supported.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean isAsyncOperationsSupported;
-
-  /**
    * Output only. Is custom actions supported.
    * The value may be {@code null}.
    */
@@ -369,23 +362,6 @@ public final class ConnectorVersion extends com.google.api.client.json.GenericJs
    */
   public ConnectorVersion setEventingConfigTemplate(EventingConfigTemplate eventingConfigTemplate) {
     this.eventingConfigTemplate = eventingConfigTemplate;
-    return this;
-  }
-
-  /**
-   * Output only. Is async operations supported.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getIsAsyncOperationsSupported() {
-    return isAsyncOperationsSupported;
-  }
-
-  /**
-   * Output only. Is async operations supported.
-   * @param isAsyncOperationsSupported isAsyncOperationsSupported or {@code null} for none
-   */
-  public ConnectorVersion setIsAsyncOperationsSupported(java.lang.Boolean isAsyncOperationsSupported) {
-    this.isAsyncOperationsSupported = isAsyncOperationsSupported;
     return this;
   }
 

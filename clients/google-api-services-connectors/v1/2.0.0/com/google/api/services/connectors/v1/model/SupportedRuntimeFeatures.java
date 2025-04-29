@@ -37,6 +37,13 @@ public final class SupportedRuntimeFeatures extends com.google.api.client.json.G
   private java.lang.Boolean actionApis;
 
   /**
+   * Specifies if the connector supports async long running operations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean asyncOperations;
+
+  /**
    * Specifies if the connector supports entity apis like 'createEntity'.
    * The value may be {@code null}.
    */
@@ -64,6 +71,23 @@ public final class SupportedRuntimeFeatures extends com.google.api.client.json.G
    */
   public SupportedRuntimeFeatures setActionApis(java.lang.Boolean actionApis) {
     this.actionApis = actionApis;
+    return this;
+  }
+
+  /**
+   * Specifies if the connector supports async long running operations.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAsyncOperations() {
+    return asyncOperations;
+  }
+
+  /**
+   * Specifies if the connector supports async long running operations.
+   * @param asyncOperations asyncOperations or {@code null} for none
+   */
+  public SupportedRuntimeFeatures setAsyncOperations(java.lang.Boolean asyncOperations) {
+    this.asyncOperations = asyncOperations;
     return this;
   }
 

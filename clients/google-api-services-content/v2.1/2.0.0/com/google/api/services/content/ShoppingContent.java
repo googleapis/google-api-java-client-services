@@ -10137,7 +10137,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       }
     }
     /**
-     * Sets the inventory verification contract for the specified country.
+     * Sets the inventory verification contact for the specified country.
      *
      * Create a request for the method "liasettings.setinventoryverificationcontact".
      *
@@ -10166,7 +10166,7 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
       private static final String REST_PATH = "{merchantId}/liasettings/{accountId}/setinventoryverificationcontact";
 
       /**
-       * Sets the inventory verification contract for the specified country.
+       * Sets the inventory verification contact for the specified country.
        *
        * Create a request for the method "liasettings.setinventoryverificationcontact".
        *

@@ -4,7 +4,7 @@
   "generator": "java1_15",
   "releaseVersion": "2.0.0",
   "baseClientLibrary": "2.7.2",
-  "oauthClientLibrary": "1.38.0",
+  "oauthClientLibrary": "1.39.0",
   "gsonVersion": "2.11.0",
   "httpClientLibrary": "1.46.3",
   "httpClientVersion": "4.5.14",

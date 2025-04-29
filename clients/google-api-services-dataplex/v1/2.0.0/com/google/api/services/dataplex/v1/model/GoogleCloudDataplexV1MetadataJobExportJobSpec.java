@@ -17,7 +17,7 @@
 package com.google.api.services.dataplex.v1.model;
 
 /**
- * Export job specification.
+ * Job specification for a metadata export job.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataplex API. For a detailed explanation see:
@@ -30,25 +30,31 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1MetadataJobExportJobSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The root path of the exported metadata. Must be in the format: "gs://" Or specify a
-   * customized prefix after the bucket: "gs://.../". The length limit of the customized prefix is
-   * 128 characters. The bucket must be in the same VPC-SC perimeter with the job.
+   * Required. The root path of the Cloud Storage bucket to export the metadata to, in the format
+   * gs://{bucket}/. You can optionally specify a custom prefix after the bucket name, in the format
+   * gs://{bucket}/{prefix}/. The maximum length of the custom prefix is 128 characters. Dataplex
+   * constructs the object path for the exported files by using the bucket name and prefix that you
+   * provide, followed by a system-generated path.The bucket must be in the same VPC Service
+   * Controls perimeter as the job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String outputPath;
 
   /**
-   * Required. Selects the entries to be exported by this job.
+   * Required. The scope of the export job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDataplexV1MetadataJobExportJobSpecExportJobScope scope;
 
   /**
-   * Required. The root path of the exported metadata. Must be in the format: "gs://" Or specify a
-   * customized prefix after the bucket: "gs://.../". The length limit of the customized prefix is
-   * 128 characters. The bucket must be in the same VPC-SC perimeter with the job.
+   * Required. The root path of the Cloud Storage bucket to export the metadata to, in the format
+   * gs://{bucket}/. You can optionally specify a custom prefix after the bucket name, in the format
+   * gs://{bucket}/{prefix}/. The maximum length of the custom prefix is 128 characters. Dataplex
+   * constructs the object path for the exported files by using the bucket name and prefix that you
+   * provide, followed by a system-generated path.The bucket must be in the same VPC Service
+   * Controls perimeter as the job.
    * @return value or {@code null} for none
    */
   public java.lang.String getOutputPath() {
@@ -56,9 +62,12 @@ public final class GoogleCloudDataplexV1MetadataJobExportJobSpec extends com.goo
   }
 
   /**
-   * Required. The root path of the exported metadata. Must be in the format: "gs://" Or specify a
-   * customized prefix after the bucket: "gs://.../". The length limit of the customized prefix is
-   * 128 characters. The bucket must be in the same VPC-SC perimeter with the job.
+   * Required. The root path of the Cloud Storage bucket to export the metadata to, in the format
+   * gs://{bucket}/. You can optionally specify a custom prefix after the bucket name, in the format
+   * gs://{bucket}/{prefix}/. The maximum length of the custom prefix is 128 characters. Dataplex
+   * constructs the object path for the exported files by using the bucket name and prefix that you
+   * provide, followed by a system-generated path.The bucket must be in the same VPC Service
+   * Controls perimeter as the job.
    * @param outputPath outputPath or {@code null} for none
    */
   public GoogleCloudDataplexV1MetadataJobExportJobSpec setOutputPath(java.lang.String outputPath) {
@@ -67,7 +76,7 @@ public final class GoogleCloudDataplexV1MetadataJobExportJobSpec extends com.goo
   }
 
   /**
-   * Required. Selects the entries to be exported by this job.
+   * Required. The scope of the export job.
    * @return value or {@code null} for none
    */
   public GoogleCloudDataplexV1MetadataJobExportJobSpecExportJobScope getScope() {
@@ -75,7 +84,7 @@ public final class GoogleCloudDataplexV1MetadataJobExportJobSpec extends com.goo
   }
 
   /**
-   * Required. Selects the entries to be exported by this job.
+   * Required. The scope of the export job.
    * @param scope scope or {@code null} for none
    */
   public GoogleCloudDataplexV1MetadataJobExportJobSpec setScope(GoogleCloudDataplexV1MetadataJobExportJobSpecExportJobScope scope) {

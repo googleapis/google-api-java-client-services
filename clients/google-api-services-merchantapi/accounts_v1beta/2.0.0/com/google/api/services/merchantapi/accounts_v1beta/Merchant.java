@@ -5483,6 +5483,1231 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
 
     }
     /**
+     * An accessor for creating requests from the Relationships collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Merchant merchantapi = new Merchant(...);}
+     *   {@code Merchant.Relationships.List request = merchantapi.relationships().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Relationships relationships() {
+      return new Relationships();
+    }
+
+    /**
+     * The "relationships" collection of methods.
+     */
+    public class Relationships {
+
+      /**
+       * Retrieve an account relationship.
+       *
+       * Create a request for the method "relationships.get".
+       *
+       * This request holds the parameters needed by the merchantapi server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The resource name of the account relationship to get.
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends MerchantRequest<com.google.api.services.merchantapi.accounts_v1beta.model.AccountRelationship> {
+
+        private static final String REST_PATH = "accounts/v1beta/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+/relationships/[^/]+$");
+
+        /**
+         * Retrieve an account relationship.
+         *
+         * Create a request for the method "relationships.get".
+         *
+         * This request holds the parameters needed by the the merchantapi server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The resource name of the account relationship to get.
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(Merchant.this, "GET", REST_PATH, null, com.google.api.services.merchantapi.accounts_v1beta.model.AccountRelationship.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^accounts/[^/]+/relationships/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The resource name of the account relationship to get. */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The resource name of the account relationship to get.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Required. The resource name of the account relationship to get. */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^accounts/[^/]+/relationships/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * List account relationships for the specified account.
+       *
+       * Create a request for the method "relationships.list".
+       *
+       * This request holds the parameters needed by the merchantapi server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The parent account of the account relationship to filter by.
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends MerchantRequest<com.google.api.services.merchantapi.accounts_v1beta.model.ListAccountRelationshipsResponse> {
+
+        private static final String REST_PATH = "accounts/v1beta/{+parent}/relationships";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+$");
+
+        /**
+         * List account relationships for the specified account.
+         *
+         * Create a request for the method "relationships.list".
+         *
+         * This request holds the parameters needed by the the merchantapi server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The parent account of the account relationship to filter by.
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(Merchant.this, "GET", REST_PATH, null, com.google.api.services.merchantapi.accounts_v1beta.model.ListAccountRelationshipsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accounts/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The parent account of the account relationship to filter by. */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The parent account of the account relationship to filter by.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /** Required. The parent account of the account relationship to filter by. */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accounts/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Optional. The maximum number of elements to return in the response. Use for paging. If no
+         * `page_size` is specified, `100` is used as the default value. The maximum allowed value
+         * is `1000`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. The maximum number of elements to return in the response. Use for paging. If no
+       `page_size` is specified, `100` is used as the default value. The maximum allowed value is `1000`.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Optional. The maximum number of elements to return in the response. Use for paging. If no
+         * `page_size` is specified, `100` is used as the default value. The maximum allowed value
+         * is `1000`.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /** Optional. The token returned by the previous `list` request. */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. The token returned by the previous `list` request.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /** Optional. The token returned by the previous `list` request. */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates the account relationship. Executing this method requires admin access.
+       *
+       * Create a request for the method "relationships.patch".
+       *
+       * This request holds the parameters needed by the merchantapi server.  After setting any optional
+       * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param name Identifier. The resource name of the account relationship.
+       * @param content the {@link com.google.api.services.merchantapi.accounts_v1beta.model.AccountRelationship}
+       * @return the request
+       */
+      public Patch patch(java.lang.String name, com.google.api.services.merchantapi.accounts_v1beta.model.AccountRelationship content) throws java.io.IOException {
+        Patch result = new Patch(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends MerchantRequest<com.google.api.services.merchantapi.accounts_v1beta.model.AccountRelationship> {
+
+        private static final String REST_PATH = "accounts/v1beta/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+/relationships/[^/]+$");
+
+        /**
+         * Updates the account relationship. Executing this method requires admin access.
+         *
+         * Create a request for the method "relationships.patch".
+         *
+         * This request holds the parameters needed by the the merchantapi server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Identifier. The resource name of the account relationship.
+         * @param content the {@link com.google.api.services.merchantapi.accounts_v1beta.model.AccountRelationship}
+         * @since 1.13
+         */
+        protected Patch(java.lang.String name, com.google.api.services.merchantapi.accounts_v1beta.model.AccountRelationship content) {
+          super(Merchant.this, "PATCH", REST_PATH, content, com.google.api.services.merchantapi.accounts_v1beta.model.AccountRelationship.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^accounts/[^/]+/relationships/[^/]+$");
+          }
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Identifier. The resource name of the account relationship. */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Identifier. The resource name of the account relationship.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Identifier. The resource name of the account relationship. */
+        public Patch setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^accounts/[^/]+/relationships/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * Optional. List of fields being updated. The following fields are supported (in both
+         * `snake_case` and `lowerCamelCase`): - `account_id_alias`
+         */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Optional. List of fields being updated. The following fields are supported (in both `snake_case`
+       and `lowerCamelCase`): - `account_id_alias`
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /**
+         * Optional. List of fields being updated. The following fields are supported (in both
+         * `snake_case` and `lowerCamelCase`): - `account_id_alias`
+         */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
+     * An accessor for creating requests from the Services collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Merchant merchantapi = new Merchant(...);}
+     *   {@code Merchant.Services.List request = merchantapi.services().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Services services() {
+      return new Services();
+    }
+
+    /**
+     * The "services" collection of methods.
+     */
+    public class Services {
+
+      /**
+       * Approve an account service proposal.
+       *
+       * Create a request for the method "services.approve".
+       *
+       * This request holds the parameters needed by the merchantapi server.  After setting any optional
+       * parameters, call the {@link Approve#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The resource name of the account service to approve.
+       * @param content the {@link com.google.api.services.merchantapi.accounts_v1beta.model.ApproveAccountServiceRequest}
+       * @return the request
+       */
+      public Approve approve(java.lang.String name, com.google.api.services.merchantapi.accounts_v1beta.model.ApproveAccountServiceRequest content) throws java.io.IOException {
+        Approve result = new Approve(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Approve extends MerchantRequest<com.google.api.services.merchantapi.accounts_v1beta.model.AccountService> {
+
+        private static final String REST_PATH = "accounts/v1beta/{+name}:approve";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+/services/[^/]+$");
+
+        /**
+         * Approve an account service proposal.
+         *
+         * Create a request for the method "services.approve".
+         *
+         * This request holds the parameters needed by the the merchantapi server.  After setting any
+         * optional parameters, call the {@link Approve#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Approve#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The resource name of the account service to approve.
+         * @param content the {@link com.google.api.services.merchantapi.accounts_v1beta.model.ApproveAccountServiceRequest}
+         * @since 1.13
+         */
+        protected Approve(java.lang.String name, com.google.api.services.merchantapi.accounts_v1beta.model.ApproveAccountServiceRequest content) {
+          super(Merchant.this, "POST", REST_PATH, content, com.google.api.services.merchantapi.accounts_v1beta.model.AccountService.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^accounts/[^/]+/services/[^/]+$");
+          }
+        }
+
+        @Override
+        public Approve set$Xgafv(java.lang.String $Xgafv) {
+          return (Approve) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Approve setAccessToken(java.lang.String accessToken) {
+          return (Approve) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Approve setAlt(java.lang.String alt) {
+          return (Approve) super.setAlt(alt);
+        }
+
+        @Override
+        public Approve setCallback(java.lang.String callback) {
+          return (Approve) super.setCallback(callback);
+        }
+
+        @Override
+        public Approve setFields(java.lang.String fields) {
+          return (Approve) super.setFields(fields);
+        }
+
+        @Override
+        public Approve setKey(java.lang.String key) {
+          return (Approve) super.setKey(key);
+        }
+
+        @Override
+        public Approve setOauthToken(java.lang.String oauthToken) {
+          return (Approve) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Approve setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Approve) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Approve setQuotaUser(java.lang.String quotaUser) {
+          return (Approve) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Approve setUploadType(java.lang.String uploadType) {
+          return (Approve) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Approve setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Approve) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The resource name of the account service to approve. */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The resource name of the account service to approve.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Required. The resource name of the account service to approve. */
+        public Approve setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^accounts/[^/]+/services/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Approve set(String parameterName, Object value) {
+          return (Approve) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Retrieve an account service.
+       *
+       * Create a request for the method "services.get".
+       *
+       * This request holds the parameters needed by the merchantapi server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The resource name of the account service to get.
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends MerchantRequest<com.google.api.services.merchantapi.accounts_v1beta.model.AccountService> {
+
+        private static final String REST_PATH = "accounts/v1beta/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+/services/[^/]+$");
+
+        /**
+         * Retrieve an account service.
+         *
+         * Create a request for the method "services.get".
+         *
+         * This request holds the parameters needed by the the merchantapi server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The resource name of the account service to get.
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(Merchant.this, "GET", REST_PATH, null, com.google.api.services.merchantapi.accounts_v1beta.model.AccountService.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^accounts/[^/]+/services/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The resource name of the account service to get. */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The resource name of the account service to get.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Required. The resource name of the account service to get. */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^accounts/[^/]+/services/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * List account services for the specified accounts. Supports filtering.
+       *
+       * Create a request for the method "services.list".
+       *
+       * This request holds the parameters needed by the merchantapi server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The parent account of the account service to filter by.
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends MerchantRequest<com.google.api.services.merchantapi.accounts_v1beta.model.ListAccountServicesResponse> {
+
+        private static final String REST_PATH = "accounts/v1beta/{+parent}/services";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+$");
+
+        /**
+         * List account services for the specified accounts. Supports filtering.
+         *
+         * Create a request for the method "services.list".
+         *
+         * This request holds the parameters needed by the the merchantapi server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The parent account of the account service to filter by.
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(Merchant.this, "GET", REST_PATH, null, com.google.api.services.merchantapi.accounts_v1beta.model.ListAccountServicesResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accounts/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The parent account of the account service to filter by. */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The parent account of the account service to filter by.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /** Required. The parent account of the account service to filter by. */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accounts/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Optional. The maximum number of elements to return in the response. Use for paging. If no
+         * `page_size` is specified, `100` is used as the default value. The maximum allowed value
+         * is `1000`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. The maximum number of elements to return in the response. Use for paging. If no
+       `page_size` is specified, `100` is used as the default value. The maximum allowed value is `1000`.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Optional. The maximum number of elements to return in the response. Use for paging. If no
+         * `page_size` is specified, `100` is used as the default value. The maximum allowed value
+         * is `1000`.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /** Optional. The token returned by the previous `list` request. */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. The token returned by the previous `list` request.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /** Optional. The token returned by the previous `list` request. */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Propose an account service.
+       *
+       * Create a request for the method "services.propose".
+       *
+       * This request holds the parameters needed by the merchantapi server.  After setting any optional
+       * parameters, call the {@link Propose#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The resource name of the parent account for the service.
+       * @param content the {@link com.google.api.services.merchantapi.accounts_v1beta.model.ProposeAccountServiceRequest}
+       * @return the request
+       */
+      public Propose propose(java.lang.String parent, com.google.api.services.merchantapi.accounts_v1beta.model.ProposeAccountServiceRequest content) throws java.io.IOException {
+        Propose result = new Propose(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Propose extends MerchantRequest<com.google.api.services.merchantapi.accounts_v1beta.model.AccountService> {
+
+        private static final String REST_PATH = "accounts/v1beta/{+parent}/services:propose";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+$");
+
+        /**
+         * Propose an account service.
+         *
+         * Create a request for the method "services.propose".
+         *
+         * This request holds the parameters needed by the the merchantapi server.  After setting any
+         * optional parameters, call the {@link Propose#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Propose#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The resource name of the parent account for the service.
+         * @param content the {@link com.google.api.services.merchantapi.accounts_v1beta.model.ProposeAccountServiceRequest}
+         * @since 1.13
+         */
+        protected Propose(java.lang.String parent, com.google.api.services.merchantapi.accounts_v1beta.model.ProposeAccountServiceRequest content) {
+          super(Merchant.this, "POST", REST_PATH, content, com.google.api.services.merchantapi.accounts_v1beta.model.AccountService.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accounts/[^/]+$");
+          }
+        }
+
+        @Override
+        public Propose set$Xgafv(java.lang.String $Xgafv) {
+          return (Propose) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Propose setAccessToken(java.lang.String accessToken) {
+          return (Propose) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Propose setAlt(java.lang.String alt) {
+          return (Propose) super.setAlt(alt);
+        }
+
+        @Override
+        public Propose setCallback(java.lang.String callback) {
+          return (Propose) super.setCallback(callback);
+        }
+
+        @Override
+        public Propose setFields(java.lang.String fields) {
+          return (Propose) super.setFields(fields);
+        }
+
+        @Override
+        public Propose setKey(java.lang.String key) {
+          return (Propose) super.setKey(key);
+        }
+
+        @Override
+        public Propose setOauthToken(java.lang.String oauthToken) {
+          return (Propose) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Propose setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Propose) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Propose setQuotaUser(java.lang.String quotaUser) {
+          return (Propose) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Propose setUploadType(java.lang.String uploadType) {
+          return (Propose) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Propose setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Propose) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The resource name of the parent account for the service. */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The resource name of the parent account for the service.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /** Required. The resource name of the parent account for the service. */
+        public Propose setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^accounts/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Propose set(String parameterName, Object value) {
+          return (Propose) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Reject an account service (both proposed and approve services can be rejected).
+       *
+       * Create a request for the method "services.reject".
+       *
+       * This request holds the parameters needed by the merchantapi server.  After setting any optional
+       * parameters, call the {@link Reject#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The resource name of the account service to reject.
+       * @param content the {@link com.google.api.services.merchantapi.accounts_v1beta.model.RejectAccountServiceRequest}
+       * @return the request
+       */
+      public Reject reject(java.lang.String name, com.google.api.services.merchantapi.accounts_v1beta.model.RejectAccountServiceRequest content) throws java.io.IOException {
+        Reject result = new Reject(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Reject extends MerchantRequest<com.google.api.services.merchantapi.accounts_v1beta.model.Empty> {
+
+        private static final String REST_PATH = "accounts/v1beta/{+name}:reject";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+/services/[^/]+$");
+
+        /**
+         * Reject an account service (both proposed and approve services can be rejected).
+         *
+         * Create a request for the method "services.reject".
+         *
+         * This request holds the parameters needed by the the merchantapi server.  After setting any
+         * optional parameters, call the {@link Reject#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Reject#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The resource name of the account service to reject.
+         * @param content the {@link com.google.api.services.merchantapi.accounts_v1beta.model.RejectAccountServiceRequest}
+         * @since 1.13
+         */
+        protected Reject(java.lang.String name, com.google.api.services.merchantapi.accounts_v1beta.model.RejectAccountServiceRequest content) {
+          super(Merchant.this, "POST", REST_PATH, content, com.google.api.services.merchantapi.accounts_v1beta.model.Empty.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^accounts/[^/]+/services/[^/]+$");
+          }
+        }
+
+        @Override
+        public Reject set$Xgafv(java.lang.String $Xgafv) {
+          return (Reject) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Reject setAccessToken(java.lang.String accessToken) {
+          return (Reject) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Reject setAlt(java.lang.String alt) {
+          return (Reject) super.setAlt(alt);
+        }
+
+        @Override
+        public Reject setCallback(java.lang.String callback) {
+          return (Reject) super.setCallback(callback);
+        }
+
+        @Override
+        public Reject setFields(java.lang.String fields) {
+          return (Reject) super.setFields(fields);
+        }
+
+        @Override
+        public Reject setKey(java.lang.String key) {
+          return (Reject) super.setKey(key);
+        }
+
+        @Override
+        public Reject setOauthToken(java.lang.String oauthToken) {
+          return (Reject) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Reject setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Reject) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Reject setQuotaUser(java.lang.String quotaUser) {
+          return (Reject) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Reject setUploadType(java.lang.String uploadType) {
+          return (Reject) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Reject setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Reject) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The resource name of the account service to reject. */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The resource name of the account service to reject.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Required. The resource name of the account service to reject. */
+        public Reject setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^accounts/[^/]+/services/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Reject set(String parameterName, Object value) {
+          return (Reject) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
      * An accessor for creating requests from the ShippingSettings collection.
      *
      * <p>The typical use is:</p>

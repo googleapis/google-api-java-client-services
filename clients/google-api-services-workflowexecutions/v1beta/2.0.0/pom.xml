@@ -90,8 +90,8 @@
           <windowtitle>Workflow Executions API ${project.version}</windowtitle>
           <links>
             <link>http://docs.oracle.com/javase/7/docs/api</link>
-            <link>https://googleapis.dev/java/google-http-client/1.46.3/</link>
-            <link>https://googleapis.dev/java/google-oauth-client/1.38.0/</link>
+            <link>https://googleapis.dev/java/google-http-client/1.47.0/</link>
+            <link>https://googleapis.dev/java/google-oauth-client/1.39.0/</link>
             <link>https://googleapis.dev/java/google-api-client/2.7.2/</link>
           </links>
         </configuration>

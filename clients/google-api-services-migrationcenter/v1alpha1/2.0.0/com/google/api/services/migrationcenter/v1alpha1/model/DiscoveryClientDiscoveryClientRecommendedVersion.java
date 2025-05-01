@@ -30,21 +30,21 @@ package com.google.api.services.migrationcenter.v1alpha1.model;
 public final class DiscoveryClientDiscoveryClientRecommendedVersion extends com.google.api.client.json.GenericJson {
 
   /**
-   * The URI of the discovery client version.
+   * Output only. The URI of the discovery client version.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
 
   /**
-   * The version of the discovery client.
+   * Output only. The version of the discovery client.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String version;
 
   /**
-   * The URI of the discovery client version.
+   * Output only. The URI of the discovery client version.
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -52,7 +52,7 @@ public final class DiscoveryClientDiscoveryClientRecommendedVersion extends com.
   }
 
   /**
-   * The URI of the discovery client version.
+   * Output only. The URI of the discovery client version.
    * @param uri uri or {@code null} for none
    */
   public DiscoveryClientDiscoveryClientRecommendedVersion setUri(java.lang.String uri) {
@@ -61,7 +61,7 @@ public final class DiscoveryClientDiscoveryClientRecommendedVersion extends com.
   }
 
   /**
-   * The version of the discovery client.
+   * Output only. The version of the discovery client.
    * @return value or {@code null} for none
    */
   public java.lang.String getVersion() {
@@ -69,7 +69,7 @@ public final class DiscoveryClientDiscoveryClientRecommendedVersion extends com.
   }
 
   /**
-   * The version of the discovery client.
+   * Output only. The version of the discovery client.
    * @param version version or {@code null} for none
    */
   public DiscoveryClientDiscoveryClientRecommendedVersion setVersion(java.lang.String version) {

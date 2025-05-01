@@ -66,6 +66,27 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   private DatabaseDetails databaseDetails;
 
   /**
+   * Optional. Indicates if the asset is hidden.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean hidden;
+
+  /**
+   * Optional. An optional reason for marking this asset as hidden.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String hideReason;
+
+  /**
+   * Output only. The timestamp when the asset was marked as hidden.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String hideTime;
+
+  /**
    * Output only. The list of insights associated with the asset.
    * The value may be {@code null}.
    */
@@ -203,6 +224,57 @@ public final class Asset extends com.google.api.client.json.GenericJson {
    */
   public Asset setDatabaseDetails(DatabaseDetails databaseDetails) {
     this.databaseDetails = databaseDetails;
+    return this;
+  }
+
+  /**
+   * Optional. Indicates if the asset is hidden.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getHidden() {
+    return hidden;
+  }
+
+  /**
+   * Optional. Indicates if the asset is hidden.
+   * @param hidden hidden or {@code null} for none
+   */
+  public Asset setHidden(java.lang.Boolean hidden) {
+    this.hidden = hidden;
+    return this;
+  }
+
+  /**
+   * Optional. An optional reason for marking this asset as hidden.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getHideReason() {
+    return hideReason;
+  }
+
+  /**
+   * Optional. An optional reason for marking this asset as hidden.
+   * @param hideReason hideReason or {@code null} for none
+   */
+  public Asset setHideReason(java.lang.String hideReason) {
+    this.hideReason = hideReason;
+    return this;
+  }
+
+  /**
+   * Output only. The timestamp when the asset was marked as hidden.
+   * @return value or {@code null} for none
+   */
+  public String getHideTime() {
+    return hideTime;
+  }
+
+  /**
+   * Output only. The timestamp when the asset was marked as hidden.
+   * @param hideTime hideTime or {@code null} for none
+   */
+  public Asset setHideTime(String hideTime) {
+    this.hideTime = hideTime;
     return this;
   }
 

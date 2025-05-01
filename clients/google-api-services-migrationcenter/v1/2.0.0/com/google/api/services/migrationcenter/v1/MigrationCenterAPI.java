@@ -1827,6 +1827,29 @@ public class MigrationCenterAPI extends com.google.api.client.googleapis.service
             return this;
           }
 
+          /**
+           * Optional. When this value is set to 'true,' the response will include all assets,
+           * including those that are hidden.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean showHidden;
+
+          /** Optional. When this value is set to 'true,' the response will include all assets, including those
+         that are hidden.
+           */
+          public java.lang.Boolean getShowHidden() {
+            return showHidden;
+          }
+
+          /**
+           * Optional. When this value is set to 'true,' the response will include all assets,
+           * including those that are hidden.
+           */
+          public List setShowHidden(java.lang.Boolean showHidden) {
+            this.showHidden = showHidden;
+            return this;
+          }
+
           /** View of the assets. Defaults to BASIC. */
           @com.google.api.client.util.Key
           private java.lang.String view;

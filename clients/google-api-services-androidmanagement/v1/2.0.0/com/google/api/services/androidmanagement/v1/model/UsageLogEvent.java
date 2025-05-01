@@ -52,6 +52,13 @@ public final class UsageLogEvent extends com.google.api.client.json.GenericJson 
   private AppProcessStartEvent appProcessStartEvent;
 
   /**
+   * An admin has enabled or disabled backup service. Part of SECURITY_LOGS.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BackupServiceToggledEvent backupServiceToggledEvent;
+
+  /**
    * A new root certificate was installed into the system's trusted credential storage. Part of
    * SECURITY_LOGS.
    * The value may be {@code null}.
@@ -333,6 +340,23 @@ public final class UsageLogEvent extends com.google.api.client.json.GenericJson 
    */
   public UsageLogEvent setAppProcessStartEvent(AppProcessStartEvent appProcessStartEvent) {
     this.appProcessStartEvent = appProcessStartEvent;
+    return this;
+  }
+
+  /**
+   * An admin has enabled or disabled backup service. Part of SECURITY_LOGS.
+   * @return value or {@code null} for none
+   */
+  public BackupServiceToggledEvent getBackupServiceToggledEvent() {
+    return backupServiceToggledEvent;
+  }
+
+  /**
+   * An admin has enabled or disabled backup service. Part of SECURITY_LOGS.
+   * @param backupServiceToggledEvent backupServiceToggledEvent or {@code null} for none
+   */
+  public UsageLogEvent setBackupServiceToggledEvent(BackupServiceToggledEvent backupServiceToggledEvent) {
+    this.backupServiceToggledEvent = backupServiceToggledEvent;
     return this;
   }
 

@@ -4635,7 +4635,7 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the androidmanagement server.  After setting any
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name The name of the web app in the form enterprises/{enterpriseId}/webApp/{packageName}.
+       * @param name The name of the web app in the form enterprises/{enterpriseId}/webApps/{packageName}.
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -4662,7 +4662,7 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name The name of the web app in the form enterprises/{enterpriseId}/webApp/{packageName}.
+         * @param name The name of the web app in the form enterprises/{enterpriseId}/webApps/{packageName}.
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -4740,17 +4740,21 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
           return (Get) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** The name of the web app in the form enterprises/{enterpriseId}/webApp/{packageName}. */
+        /**
+         * The name of the web app in the form enterprises/{enterpriseId}/webApps/{packageName}.
+         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** The name of the web app in the form enterprises/{enterpriseId}/webApp/{packageName}.
+        /** The name of the web app in the form enterprises/{enterpriseId}/webApps/{packageName}.
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** The name of the web app in the form enterprises/{enterpriseId}/webApp/{packageName}. */
+        /**
+         * The name of the web app in the form enterprises/{enterpriseId}/webApps/{packageName}.
+         */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

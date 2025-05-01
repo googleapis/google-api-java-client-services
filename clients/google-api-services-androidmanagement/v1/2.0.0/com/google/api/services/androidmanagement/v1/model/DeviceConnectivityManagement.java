@@ -32,6 +32,13 @@ package com.google.api.services.androidmanagement.v1.model;
 public final class DeviceConnectivityManagement extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Controls whether Bluetooth sharing is allowed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String bluetoothSharing;
+
+  /**
    * Controls Wi-Fi configuring privileges. Based on the option set, user will have either full or
    * limited or no control in configuring Wi-Fi networks.
    * The value may be {@code null}.
@@ -78,6 +85,23 @@ public final class DeviceConnectivityManagement extends com.google.api.client.js
    */
   @com.google.api.client.util.Key
   private WifiSsidPolicy wifiSsidPolicy;
+
+  /**
+   * Optional. Controls whether Bluetooth sharing is allowed.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBluetoothSharing() {
+    return bluetoothSharing;
+  }
+
+  /**
+   * Optional. Controls whether Bluetooth sharing is allowed.
+   * @param bluetoothSharing bluetoothSharing or {@code null} for none
+   */
+  public DeviceConnectivityManagement setBluetoothSharing(java.lang.String bluetoothSharing) {
+    this.bluetoothSharing = bluetoothSharing;
+    return this;
+  }
 
   /**
    * Controls Wi-Fi configuring privileges. Based on the option set, user will have either full or

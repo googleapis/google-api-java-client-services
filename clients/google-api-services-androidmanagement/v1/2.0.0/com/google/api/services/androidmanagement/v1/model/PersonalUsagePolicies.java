@@ -38,6 +38,13 @@ public final class PersonalUsagePolicies extends com.google.api.client.json.Gene
   private java.util.List<java.lang.String> accountTypesWithManagementDisabled;
 
   /**
+   * Optional. Whether bluetooth sharing is allowed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String bluetoothSharing;
+
+  /**
    * If true, the camera is disabled on the personal profile.
    * The value may be {@code null}.
    */
@@ -104,6 +111,23 @@ public final class PersonalUsagePolicies extends com.google.api.client.json.Gene
    */
   public PersonalUsagePolicies setAccountTypesWithManagementDisabled(java.util.List<java.lang.String> accountTypesWithManagementDisabled) {
     this.accountTypesWithManagementDisabled = accountTypesWithManagementDisabled;
+    return this;
+  }
+
+  /**
+   * Optional. Whether bluetooth sharing is allowed.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBluetoothSharing() {
+    return bluetoothSharing;
+  }
+
+  /**
+   * Optional. Whether bluetooth sharing is allowed.
+   * @param bluetoothSharing bluetoothSharing or {@code null} for none
+   */
+  public PersonalUsagePolicies setBluetoothSharing(java.lang.String bluetoothSharing) {
+    this.bluetoothSharing = bluetoothSharing;
     return this;
   }
 

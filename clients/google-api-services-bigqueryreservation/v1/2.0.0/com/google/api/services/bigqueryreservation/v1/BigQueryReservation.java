@@ -2885,9 +2885,10 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
          * This request holds the parameters needed by the bigqueryreservation server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name The resource name of the reservation, e.g., `projects/locations/reservations/team1-prod`. The
-         *        reservation_id must only contain lower case alphanumeric characters or dashes. It must
-         *        start with a letter and must not end with a dash. Its maximum length is 64 characters.
+         * @param name Identifier. The resource name of the reservation, e.g.,
+         *        `projects/locations/reservations/team1-prod`. The reservation_id must only contain lower
+         *        case alphanumeric characters or dashes. It must start with a letter and must not end with
+         *        a dash. Its maximum length is 64 characters.
          * @param content the {@link com.google.api.services.bigqueryreservation.v1.model.Reservation}
          * @return the request
          */
@@ -2915,9 +2916,10 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The resource name of the reservation, e.g., `projects/locations/reservations/team1-prod`. The
-         *        reservation_id must only contain lower case alphanumeric characters or dashes. It must
-         *        start with a letter and must not end with a dash. Its maximum length is 64 characters.
+           * @param name Identifier. The resource name of the reservation, e.g.,
+         *        `projects/locations/reservations/team1-prod`. The reservation_id must only contain lower
+         *        case alphanumeric characters or dashes. It must start with a letter and must not end with
+         *        a dash. Its maximum length is 64 characters.
            * @param content the {@link com.google.api.services.bigqueryreservation.v1.model.Reservation}
            * @since 1.13
            */
@@ -2987,7 +2989,7 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
           }
 
           /**
-           * The resource name of the reservation, e.g.,
+           * Identifier. The resource name of the reservation, e.g.,
            * `projects/locations/reservations/team1-prod`. The reservation_id must only contain
            * lower case alphanumeric characters or dashes. It must start with a letter and must not
            * end with a dash. Its maximum length is 64 characters.
@@ -2995,16 +2997,17 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The resource name of the reservation, e.g., `projects/locations/reservations/team1-prod`. The
-         reservation_id must only contain lower case alphanumeric characters or dashes. It must start with a
-         letter and must not end with a dash. Its maximum length is 64 characters.
+          /** Identifier. The resource name of the reservation, e.g.,
+         `projects/locations/reservations/team1-prod`. The reservation_id must only contain lower case
+         alphanumeric characters or dashes. It must start with a letter and must not end with a dash. Its
+         maximum length is 64 characters.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * The resource name of the reservation, e.g.,
+           * Identifier. The resource name of the reservation, e.g.,
            * `projects/locations/reservations/team1-prod`. The reservation_id must only contain
            * lower case alphanumeric characters or dashes. It must start with a letter and must not
            * end with a dash. Its maximum length is 64 characters.

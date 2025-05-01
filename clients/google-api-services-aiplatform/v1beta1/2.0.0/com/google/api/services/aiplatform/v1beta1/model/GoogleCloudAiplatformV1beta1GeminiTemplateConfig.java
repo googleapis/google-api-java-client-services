@@ -30,7 +30,7 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1GeminiTemplateConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Map of template params to the columns in the dataset table.
+   * Required. Map of template parameters to the columns in the dataset table.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,7 @@ public final class GoogleCloudAiplatformV1beta1GeminiTemplateConfig extends com.
   private GoogleCloudAiplatformV1beta1GeminiExample geminiExample;
 
   /**
-   * Required. Map of template params to the columns in the dataset table.
+   * Required. Map of template parameters to the columns in the dataset table.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getFieldMapping() {
@@ -53,7 +53,7 @@ public final class GoogleCloudAiplatformV1beta1GeminiTemplateConfig extends com.
   }
 
   /**
-   * Required. Map of template params to the columns in the dataset table.
+   * Required. Map of template parameters to the columns in the dataset table.
    * @param fieldMapping fieldMapping or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1GeminiTemplateConfig setFieldMapping(java.util.Map<String, java.lang.String> fieldMapping) {

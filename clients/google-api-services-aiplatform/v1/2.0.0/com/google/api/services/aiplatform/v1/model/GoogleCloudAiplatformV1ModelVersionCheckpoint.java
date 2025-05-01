@@ -44,14 +44,6 @@ public final class GoogleCloudAiplatformV1ModelVersionCheckpoint extends com.goo
   private java.lang.Long epoch;
 
   /**
-   * Identifier. The resource name of the ModelVersionCheckpoint. Format: `projects/{project}/locati
-   * ons/{location}/models/{model}/versions/{version}/checkpoints/{checkpoint}`
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String name;
-
-  /**
    * The step of the checkpoint.
    * The value may be {@code null}.
    */
@@ -89,25 +81,6 @@ public final class GoogleCloudAiplatformV1ModelVersionCheckpoint extends com.goo
    */
   public GoogleCloudAiplatformV1ModelVersionCheckpoint setEpoch(java.lang.Long epoch) {
     this.epoch = epoch;
-    return this;
-  }
-
-  /**
-   * Identifier. The resource name of the ModelVersionCheckpoint. Format: `projects/{project}/locati
-   * ons/{location}/models/{model}/versions/{version}/checkpoints/{checkpoint}`
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getName() {
-    return name;
-  }
-
-  /**
-   * Identifier. The resource name of the ModelVersionCheckpoint. Format: `projects/{project}/locati
-   * ons/{location}/models/{model}/versions/{version}/checkpoints/{checkpoint}`
-   * @param name name or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1ModelVersionCheckpoint setName(java.lang.String name) {
-    this.name = name;
     return this;
   }
 

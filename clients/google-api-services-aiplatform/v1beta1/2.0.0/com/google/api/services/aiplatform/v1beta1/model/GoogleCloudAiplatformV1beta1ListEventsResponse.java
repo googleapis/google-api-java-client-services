@@ -38,7 +38,7 @@ public final class GoogleCloudAiplatformV1beta1ListEventsResponse extends com.go
   private java.lang.String nextPageToken;
 
   /**
-   * A list of events matching the request.
+   * A list of events matching the request. Ordered by timestamp in ascending order.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +64,7 @@ public final class GoogleCloudAiplatformV1beta1ListEventsResponse extends com.go
   }
 
   /**
-   * A list of events matching the request.
+   * A list of events matching the request. Ordered by timestamp in ascending order.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudAiplatformV1beta1SessionEvent> getSessionEvents() {
@@ -72,7 +72,7 @@ public final class GoogleCloudAiplatformV1beta1ListEventsResponse extends com.go
   }
 
   /**
-   * A list of events matching the request.
+   * A list of events matching the request. Ordered by timestamp in ascending order.
    * @param sessionEvents sessionEvents or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ListEventsResponse setSessionEvents(java.util.List<GoogleCloudAiplatformV1beta1SessionEvent> sessionEvents) {

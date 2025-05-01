@@ -17,7 +17,7 @@
 package com.google.api.services.forms.v1.model;
 
 /**
- * The response of a `SetPublishSettings` request.
+ * The response of a SetPublishSettings request.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Forms API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.forms.v1.model;
 public final class SetPublishSettingsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The ID of the Form. This is same as the `Form.form_id` field.
+   * Required. The ID of the Form. This is same as the Form.form_id field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class SetPublishSettingsResponse extends com.google.api.client.json
   private PublishSettings publishSettings;
 
   /**
-   * Required. The ID of the Form. This is same as the `Form.form_id` field.
+   * Required. The ID of the Form. This is same as the Form.form_id field.
    * @return value or {@code null} for none
    */
   public java.lang.String getFormId() {
@@ -52,7 +52,7 @@ public final class SetPublishSettingsResponse extends com.google.api.client.json
   }
 
   /**
-   * Required. The ID of the Form. This is same as the `Form.form_id` field.
+   * Required. The ID of the Form. This is same as the Form.form_id field.
    * @param formId formId or {@code null} for none
    */
   public SetPublishSettingsResponse setFormId(java.lang.String formId) {

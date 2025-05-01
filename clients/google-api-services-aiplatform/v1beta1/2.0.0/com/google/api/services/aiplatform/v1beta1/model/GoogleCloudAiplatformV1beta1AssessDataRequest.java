@@ -44,6 +44,13 @@ public final class GoogleCloudAiplatformV1beta1AssessDataRequest extends com.goo
   private GoogleCloudAiplatformV1beta1AssessDataRequestBatchPredictionValidationAssessmentConfig batchPredictionValidationAssessmentConfig;
 
   /**
+   * Optional. The Gemini request read config for the dataset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1GeminiRequestReadConfig geminiRequestReadConfig;
+
+  /**
    * Optional. Config for assembling templates with a Gemini API structure to assess assembled data.
    * The value may be {@code null}.
    */
@@ -103,6 +110,23 @@ public final class GoogleCloudAiplatformV1beta1AssessDataRequest extends com.goo
    */
   public GoogleCloudAiplatformV1beta1AssessDataRequest setBatchPredictionValidationAssessmentConfig(GoogleCloudAiplatformV1beta1AssessDataRequestBatchPredictionValidationAssessmentConfig batchPredictionValidationAssessmentConfig) {
     this.batchPredictionValidationAssessmentConfig = batchPredictionValidationAssessmentConfig;
+    return this;
+  }
+
+  /**
+   * Optional. The Gemini request read config for the dataset.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GeminiRequestReadConfig getGeminiRequestReadConfig() {
+    return geminiRequestReadConfig;
+  }
+
+  /**
+   * Optional. The Gemini request read config for the dataset.
+   * @param geminiRequestReadConfig geminiRequestReadConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1AssessDataRequest setGeminiRequestReadConfig(GoogleCloudAiplatformV1beta1GeminiRequestReadConfig geminiRequestReadConfig) {
+    this.geminiRequestReadConfig = geminiRequestReadConfig;
     return this;
   }
 

@@ -45,6 +45,14 @@ public final class GoogleCloudAiplatformV1beta1DeployRequestDeployConfig extends
   private java.lang.Boolean fastTryoutEnabled;
 
   /**
+   * Optional. System labels for Model Garden deployments. These labels are managed by Google and
+   * for tracking purposes only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> systemLabels;
+
+  /**
    * Optional. The dedicated resources to use for the endpoint. If not set, the default resources
    * will be used.
    * @return value or {@code null} for none
@@ -77,6 +85,25 @@ public final class GoogleCloudAiplatformV1beta1DeployRequestDeployConfig extends
    */
   public GoogleCloudAiplatformV1beta1DeployRequestDeployConfig setFastTryoutEnabled(java.lang.Boolean fastTryoutEnabled) {
     this.fastTryoutEnabled = fastTryoutEnabled;
+    return this;
+  }
+
+  /**
+   * Optional. System labels for Model Garden deployments. These labels are managed by Google and
+   * for tracking purposes only.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getSystemLabels() {
+    return systemLabels;
+  }
+
+  /**
+   * Optional. System labels for Model Garden deployments. These labels are managed by Google and
+   * for tracking purposes only.
+   * @param systemLabels systemLabels or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1DeployRequestDeployConfig setSystemLabels(java.util.Map<String, java.lang.String> systemLabels) {
+    this.systemLabels = systemLabels;
     return this;
   }
 

@@ -30,6 +30,13 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1AssembleDataRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The read config for the dataset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1GeminiRequestReadConfig geminiRequestReadConfig;
+
+  /**
    * Optional. Config for assembling templates with a Gemini API structure.
    * The value may be {@code null}.
    */
@@ -43,6 +50,23 @@ public final class GoogleCloudAiplatformV1beta1AssembleDataRequest extends com.g
    */
   @com.google.api.client.util.Key
   private java.lang.String requestColumnName;
+
+  /**
+   * Optional. The read config for the dataset.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GeminiRequestReadConfig getGeminiRequestReadConfig() {
+    return geminiRequestReadConfig;
+  }
+
+  /**
+   * Optional. The read config for the dataset.
+   * @param geminiRequestReadConfig geminiRequestReadConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1AssembleDataRequest setGeminiRequestReadConfig(GoogleCloudAiplatformV1beta1GeminiRequestReadConfig geminiRequestReadConfig) {
+    this.geminiRequestReadConfig = geminiRequestReadConfig;
+    return this;
+  }
 
   /**
    * Optional. Config for assembling templates with a Gemini API structure.

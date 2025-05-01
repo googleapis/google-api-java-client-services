@@ -37,7 +37,7 @@ public final class Info extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * Output only. The title of the document which is visible in Drive. If `Info.title` is empty,
+   * Output only. The title of the document which is visible in Drive. If Info.title is empty,
    * `document_title` may appear in its place in the Google Forms UI and be visible to responders.
    * `document_title` can be set on create, but cannot be modified by a batchUpdate request. Please
    * use the [Google Drive API](https://developers.google.com/drive/api/v3/reference/files/update)
@@ -72,7 +72,7 @@ public final class Info extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The title of the document which is visible in Drive. If `Info.title` is empty,
+   * Output only. The title of the document which is visible in Drive. If Info.title is empty,
    * `document_title` may appear in its place in the Google Forms UI and be visible to responders.
    * `document_title` can be set on create, but cannot be modified by a batchUpdate request. Please
    * use the [Google Drive API](https://developers.google.com/drive/api/v3/reference/files/update)
@@ -84,7 +84,7 @@ public final class Info extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The title of the document which is visible in Drive. If `Info.title` is empty,
+   * Output only. The title of the document which is visible in Drive. If Info.title is empty,
    * `document_title` may appear in its place in the Google Forms UI and be visible to responders.
    * `document_title` can be set on create, but cannot be modified by a batchUpdate request. Please
    * use the [Google Drive API](https://developers.google.com/drive/api/v3/reference/files/update)

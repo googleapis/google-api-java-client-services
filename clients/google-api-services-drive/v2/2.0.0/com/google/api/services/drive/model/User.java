@@ -37,7 +37,8 @@ public final class User extends com.google.api.client.json.GenericJson {
   private java.lang.String displayName;
 
   /**
-   * Output only. The email address of the user.
+   * Output only. The email address of the user. This may not be present in certain contexts if the
+   * user has not made their email address visible to the requester.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,14 +53,14 @@ public final class User extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean isAuthenticatedUser;
 
   /**
-   * Output only. This is always `drive#user`.
+   * Output only. Identifies what kind of resource this is. Value: the fixed string `drive#user`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kind;
 
   /**
-   * Output only. The user's ID as visible in the permissions collection.
+   * Output only. The user's ID as visible in Permission resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,7 +91,8 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The email address of the user.
+   * Output only. The email address of the user. This may not be present in certain contexts if the
+   * user has not made their email address visible to the requester.
    * @return value or {@code null} for none
    */
   public java.lang.String getEmailAddress() {
@@ -98,7 +100,8 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The email address of the user.
+   * Output only. The email address of the user. This may not be present in certain contexts if the
+   * user has not made their email address visible to the requester.
    * @param emailAddress emailAddress or {@code null} for none
    */
   public User setEmailAddress(java.lang.String emailAddress) {
@@ -126,7 +129,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. This is always `drive#user`.
+   * Output only. Identifies what kind of resource this is. Value: the fixed string `drive#user`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -134,7 +137,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. This is always `drive#user`.
+   * Output only. Identifies what kind of resource this is. Value: the fixed string `drive#user`.
    * @param kind kind or {@code null} for none
    */
   public User setKind(java.lang.String kind) {
@@ -143,7 +146,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The user's ID as visible in the permissions collection.
+   * Output only. The user's ID as visible in Permission resources.
    * @return value or {@code null} for none
    */
   public java.lang.String getPermissionId() {
@@ -151,7 +154,7 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The user's ID as visible in the permissions collection.
+   * Output only. The user's ID as visible in Permission resources.
    * @param permissionId permissionId or {@code null} for none
    */
   public User setPermissionId(java.lang.String permissionId) {

@@ -31,8 +31,8 @@ package com.google.api.services.artifactregistry.v1.model;
 public final class BatchDeleteVersionsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The names of the versions to delete. A maximum of 10000 versions can be deleted in a
-   * batch.
+   * Required. The names of the versions to delete. The maximum number of versions deleted per batch
+   * is determined by the service and is dependent on the available resources in the region.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,8 +46,8 @@ public final class BatchDeleteVersionsRequest extends com.google.api.client.json
   private java.lang.Boolean validateOnly;
 
   /**
-   * Required. The names of the versions to delete. A maximum of 10000 versions can be deleted in a
-   * batch.
+   * Required. The names of the versions to delete. The maximum number of versions deleted per batch
+   * is determined by the service and is dependent on the available resources in the region.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getNames() {
@@ -55,8 +55,8 @@ public final class BatchDeleteVersionsRequest extends com.google.api.client.json
   }
 
   /**
-   * Required. The names of the versions to delete. A maximum of 10000 versions can be deleted in a
-   * batch.
+   * Required. The names of the versions to delete. The maximum number of versions deleted per batch
+   * is determined by the service and is dependent on the available resources in the region.
    * @param names names or {@code null} for none
    */
   public BatchDeleteVersionsRequest setNames(java.util.List<java.lang.String> names) {

@@ -44,6 +44,14 @@ public final class AggregateAssetsValuesRequest extends com.google.api.client.js
   private java.lang.String filter;
 
   /**
+   * Optional. When this value is set to 'true,' the response will include all assets, including
+   * those that are hidden.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean showHidden;
+
+  /**
    * Array of aggregations to perform. Up to 25 aggregations can be defined.
    * @return value or {@code null} for none
    */
@@ -74,6 +82,25 @@ public final class AggregateAssetsValuesRequest extends com.google.api.client.js
    */
   public AggregateAssetsValuesRequest setFilter(java.lang.String filter) {
     this.filter = filter;
+    return this;
+  }
+
+  /**
+   * Optional. When this value is set to 'true,' the response will include all assets, including
+   * those that are hidden.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getShowHidden() {
+    return showHidden;
+  }
+
+  /**
+   * Optional. When this value is set to 'true,' the response will include all assets, including
+   * those that are hidden.
+   * @param showHidden showHidden or {@code null} for none
+   */
+  public AggregateAssetsValuesRequest setShowHidden(java.lang.Boolean showHidden) {
+    this.showHidden = showHidden;
     return this;
   }
 

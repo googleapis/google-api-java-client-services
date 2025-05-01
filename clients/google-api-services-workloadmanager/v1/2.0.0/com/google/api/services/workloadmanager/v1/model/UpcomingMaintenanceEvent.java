@@ -44,6 +44,13 @@ public final class UpcomingMaintenanceEvent extends com.google.api.client.json.G
   private java.lang.String maintenanceStatus;
 
   /**
+   * Optional. Instance maintenance behavior. Could be "MIGRATE" or "TERMINATE".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String onHostMaintenance;
+
+  /**
    * Optional. Start time
    * The value may be {@code null}.
    */
@@ -88,6 +95,23 @@ public final class UpcomingMaintenanceEvent extends com.google.api.client.json.G
    */
   public UpcomingMaintenanceEvent setMaintenanceStatus(java.lang.String maintenanceStatus) {
     this.maintenanceStatus = maintenanceStatus;
+    return this;
+  }
+
+  /**
+   * Optional. Instance maintenance behavior. Could be "MIGRATE" or "TERMINATE".
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOnHostMaintenance() {
+    return onHostMaintenance;
+  }
+
+  /**
+   * Optional. Instance maintenance behavior. Could be "MIGRATE" or "TERMINATE".
+   * @param onHostMaintenance onHostMaintenance or {@code null} for none
+   */
+  public UpcomingMaintenanceEvent setOnHostMaintenance(java.lang.String onHostMaintenance) {
+    this.onHostMaintenance = onHostMaintenance;
     return this;
   }
 

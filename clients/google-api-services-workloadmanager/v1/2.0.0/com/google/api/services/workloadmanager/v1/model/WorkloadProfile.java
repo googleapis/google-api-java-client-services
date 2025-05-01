@@ -80,25 +80,11 @@ public final class WorkloadProfile extends com.google.api.client.json.GenericJso
   private SapWorkload sapWorkload;
 
   /**
-   * The sqlserver workload content
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private SqlserverWorkload sqlserverWorkload;
-
-  /**
    * Output only. [output only] the current state if a a workload
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
-
-  /**
-   * The 3 tier web app workload content
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private ThreeTierWorkload threeTierWorkload;
 
   /**
    * Required. The type of the workload
@@ -229,23 +215,6 @@ public final class WorkloadProfile extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The sqlserver workload content
-   * @return value or {@code null} for none
-   */
-  public SqlserverWorkload getSqlserverWorkload() {
-    return sqlserverWorkload;
-  }
-
-  /**
-   * The sqlserver workload content
-   * @param sqlserverWorkload sqlserverWorkload or {@code null} for none
-   */
-  public WorkloadProfile setSqlserverWorkload(SqlserverWorkload sqlserverWorkload) {
-    this.sqlserverWorkload = sqlserverWorkload;
-    return this;
-  }
-
-  /**
    * Output only. [output only] the current state if a a workload
    * @return value or {@code null} for none
    */
@@ -259,23 +228,6 @@ public final class WorkloadProfile extends com.google.api.client.json.GenericJso
    */
   public WorkloadProfile setState(java.lang.String state) {
     this.state = state;
-    return this;
-  }
-
-  /**
-   * The 3 tier web app workload content
-   * @return value or {@code null} for none
-   */
-  public ThreeTierWorkload getThreeTierWorkload() {
-    return threeTierWorkload;
-  }
-
-  /**
-   * The 3 tier web app workload content
-   * @param threeTierWorkload threeTierWorkload or {@code null} for none
-   */
-  public WorkloadProfile setThreeTierWorkload(ThreeTierWorkload threeTierWorkload) {
-    this.threeTierWorkload = threeTierWorkload;
     return this;
   }
 

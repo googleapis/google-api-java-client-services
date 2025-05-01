@@ -116,7 +116,7 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
 
   /**
    * Optional. Specifies the timeout for each individual message on the stream. The timeout must be
-   * between `10`-`1000` milliseconds. Required for callout extensions. This field is not supported
+   * between `10`-`10000` milliseconds. Required for callout extensions. This field is not supported
    * for plugin extensions. Setting it results in a validation error.
    * The value may be {@code null}.
    */
@@ -316,7 +316,7 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
 
   /**
    * Optional. Specifies the timeout for each individual message on the stream. The timeout must be
-   * between `10`-`1000` milliseconds. Required for callout extensions. This field is not supported
+   * between `10`-`10000` milliseconds. Required for callout extensions. This field is not supported
    * for plugin extensions. Setting it results in a validation error.
    * @return value or {@code null} for none
    */
@@ -326,7 +326,7 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
 
   /**
    * Optional. Specifies the timeout for each individual message on the stream. The timeout must be
-   * between `10`-`1000` milliseconds. Required for callout extensions. This field is not supported
+   * between `10`-`10000` milliseconds. Required for callout extensions. This field is not supported
    * for plugin extensions. Setting it results in a validation error.
    * @param timeout timeout or {@code null} for none
    */

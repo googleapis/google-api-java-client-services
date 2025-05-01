@@ -31,15 +31,15 @@ package com.google.api.services.bigqueryreservation.v1.model;
 public final class Reservation extends com.google.api.client.json.GenericJson {
 
   /**
-   * The configuration parameters for the auto scaling feature.
+   * Optional. The configuration parameters for the auto scaling feature.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Autoscale autoscale;
 
   /**
-   * Job concurrency target which sets a soft upper bound on the number of jobs that can run
-   * concurrently in this reservation. This is a soft target due to asynchronous nature of the
+   * Optional. Job concurrency target which sets a soft upper bound on the number of jobs that can
+   * run concurrently in this reservation. This is a soft target due to asynchronous nature of the
    * system and various optimizations for small queries. Default value is 0 which means that
    * concurrency target will be automatically computed by the system. NOTE: this field is exposed as
    * target job concurrency in the Information Schema, DDL and BigQuery CLI.
@@ -56,15 +56,15 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   private String creationTime;
 
   /**
-   * Edition of the reservation.
+   * Optional. Edition of the reservation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String edition;
 
   /**
-   * If false, any query or pipeline job using this reservation will use idle slots from other
-   * reservations within the same admin project. If true, a query or pipeline job using this
+   * Optional. If false, any query or pipeline job using this reservation will use idle slots from
+   * other reservations within the same admin project. If true, a query or pipeline job using this
    * reservation will execute with the slot capacity specified in the slot_capacity field at most.
    * The value may be {@code null}.
    */
@@ -124,9 +124,10 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean multiRegionAuxiliary;
 
   /**
-   * The resource name of the reservation, e.g., `projects/locations/reservations/team1-prod`. The
-   * reservation_id must only contain lower case alphanumeric characters or dashes. It must start
-   * with a letter and must not end with a dash. Its maximum length is 64 characters.
+   * Identifier. The resource name of the reservation, e.g.,
+   * `projects/locations/reservations/team1-prod`. The reservation_id must only contain lower case
+   * alphanumeric characters or dashes. It must start with a letter and must not end with a dash.
+   * Its maximum length is 64 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -162,8 +163,8 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   private ReplicationStatus replicationStatus;
 
   /**
-   * The scaling mode for the reservation. If the field is present but max_slots is not present,
-   * requests will be rejected with error code `google.rpc.Code.INVALID_ARGUMENT`.
+   * Optional. The scaling mode for the reservation. If the field is present but max_slots is not
+   * present, requests will be rejected with error code `google.rpc.Code.INVALID_ARGUMENT`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -180,15 +181,15 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   private java.lang.String secondaryLocation;
 
   /**
-   * Baseline slots available to this reservation. A slot is a unit of computational power in
-   * BigQuery, and serves as the unit of parallelism. Queries using this reservation might use more
-   * slots during runtime if ignore_idle_slots is set to false, or autoscaling is enabled. The total
-   * slot_capacity of the reservation and its siblings may exceed the total slot_count of capacity
-   * commitments. In that case, the exceeding slots will be charged with the autoscale SKU. You can
-   * increase the number of baseline slots in a reservation every few minutes. If you want to
-   * decrease your baseline slots, you are limited to once an hour if you have recently changed your
-   * baseline slot capacity and your baseline slots exceed your committed slots. Otherwise, you can
-   * decrease your baseline slots every few minutes.
+   * Optional. Baseline slots available to this reservation. A slot is a unit of computational power
+   * in BigQuery, and serves as the unit of parallelism. Queries using this reservation might use
+   * more slots during runtime if ignore_idle_slots is set to false, or autoscaling is enabled. The
+   * total slot_capacity of the reservation and its siblings may exceed the total slot_count of
+   * capacity commitments. In that case, the exceeding slots will be charged with the autoscale SKU.
+   * You can increase the number of baseline slots in a reservation every few minutes. If you want
+   * to decrease your baseline slots, you are limited to once an hour if you have recently changed
+   * your baseline slot capacity and your baseline slots exceed your committed slots. Otherwise, you
+   * can decrease your baseline slots every few minutes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -202,7 +203,7 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   private String updateTime;
 
   /**
-   * The configuration parameters for the auto scaling feature.
+   * Optional. The configuration parameters for the auto scaling feature.
    * @return value or {@code null} for none
    */
   public Autoscale getAutoscale() {
@@ -210,7 +211,7 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The configuration parameters for the auto scaling feature.
+   * Optional. The configuration parameters for the auto scaling feature.
    * @param autoscale autoscale or {@code null} for none
    */
   public Reservation setAutoscale(Autoscale autoscale) {
@@ -219,8 +220,8 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Job concurrency target which sets a soft upper bound on the number of jobs that can run
-   * concurrently in this reservation. This is a soft target due to asynchronous nature of the
+   * Optional. Job concurrency target which sets a soft upper bound on the number of jobs that can
+   * run concurrently in this reservation. This is a soft target due to asynchronous nature of the
    * system and various optimizations for small queries. Default value is 0 which means that
    * concurrency target will be automatically computed by the system. NOTE: this field is exposed as
    * target job concurrency in the Information Schema, DDL and BigQuery CLI.
@@ -231,8 +232,8 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Job concurrency target which sets a soft upper bound on the number of jobs that can run
-   * concurrently in this reservation. This is a soft target due to asynchronous nature of the
+   * Optional. Job concurrency target which sets a soft upper bound on the number of jobs that can
+   * run concurrently in this reservation. This is a soft target due to asynchronous nature of the
    * system and various optimizations for small queries. Default value is 0 which means that
    * concurrency target will be automatically computed by the system. NOTE: this field is exposed as
    * target job concurrency in the Information Schema, DDL and BigQuery CLI.
@@ -261,7 +262,7 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Edition of the reservation.
+   * Optional. Edition of the reservation.
    * @return value or {@code null} for none
    */
   public java.lang.String getEdition() {
@@ -269,7 +270,7 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Edition of the reservation.
+   * Optional. Edition of the reservation.
    * @param edition edition or {@code null} for none
    */
   public Reservation setEdition(java.lang.String edition) {
@@ -278,8 +279,8 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If false, any query or pipeline job using this reservation will use idle slots from other
-   * reservations within the same admin project. If true, a query or pipeline job using this
+   * Optional. If false, any query or pipeline job using this reservation will use idle slots from
+   * other reservations within the same admin project. If true, a query or pipeline job using this
    * reservation will execute with the slot capacity specified in the slot_capacity field at most.
    * @return value or {@code null} for none
    */
@@ -288,8 +289,8 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If false, any query or pipeline job using this reservation will use idle slots from other
-   * reservations within the same admin project. If true, a query or pipeline job using this
+   * Optional. If false, any query or pipeline job using this reservation will use idle slots from
+   * other reservations within the same admin project. If true, a query or pipeline job using this
    * reservation will execute with the slot capacity specified in the slot_capacity field at most.
    * @param ignoreIdleSlots ignoreIdleSlots or {@code null} for none
    */
@@ -412,9 +413,10 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The resource name of the reservation, e.g., `projects/locations/reservations/team1-prod`. The
-   * reservation_id must only contain lower case alphanumeric characters or dashes. It must start
-   * with a letter and must not end with a dash. Its maximum length is 64 characters.
+   * Identifier. The resource name of the reservation, e.g.,
+   * `projects/locations/reservations/team1-prod`. The reservation_id must only contain lower case
+   * alphanumeric characters or dashes. It must start with a letter and must not end with a dash.
+   * Its maximum length is 64 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -422,9 +424,10 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The resource name of the reservation, e.g., `projects/locations/reservations/team1-prod`. The
-   * reservation_id must only contain lower case alphanumeric characters or dashes. It must start
-   * with a letter and must not end with a dash. Its maximum length is 64 characters.
+   * Identifier. The resource name of the reservation, e.g.,
+   * `projects/locations/reservations/team1-prod`. The reservation_id must only contain lower case
+   * alphanumeric characters or dashes. It must start with a letter and must not end with a dash.
+   * Its maximum length is 64 characters.
    * @param name name or {@code null} for none
    */
   public Reservation setName(java.lang.String name) {
@@ -500,8 +503,8 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The scaling mode for the reservation. If the field is present but max_slots is not present,
-   * requests will be rejected with error code `google.rpc.Code.INVALID_ARGUMENT`.
+   * Optional. The scaling mode for the reservation. If the field is present but max_slots is not
+   * present, requests will be rejected with error code `google.rpc.Code.INVALID_ARGUMENT`.
    * @return value or {@code null} for none
    */
   public java.lang.String getScalingMode() {
@@ -509,8 +512,8 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The scaling mode for the reservation. If the field is present but max_slots is not present,
-   * requests will be rejected with error code `google.rpc.Code.INVALID_ARGUMENT`.
+   * Optional. The scaling mode for the reservation. If the field is present but max_slots is not
+   * present, requests will be rejected with error code `google.rpc.Code.INVALID_ARGUMENT`.
    * @param scalingMode scalingMode or {@code null} for none
    */
   public Reservation setScalingMode(java.lang.String scalingMode) {
@@ -542,15 +545,15 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Baseline slots available to this reservation. A slot is a unit of computational power in
-   * BigQuery, and serves as the unit of parallelism. Queries using this reservation might use more
-   * slots during runtime if ignore_idle_slots is set to false, or autoscaling is enabled. The total
-   * slot_capacity of the reservation and its siblings may exceed the total slot_count of capacity
-   * commitments. In that case, the exceeding slots will be charged with the autoscale SKU. You can
-   * increase the number of baseline slots in a reservation every few minutes. If you want to
-   * decrease your baseline slots, you are limited to once an hour if you have recently changed your
-   * baseline slot capacity and your baseline slots exceed your committed slots. Otherwise, you can
-   * decrease your baseline slots every few minutes.
+   * Optional. Baseline slots available to this reservation. A slot is a unit of computational power
+   * in BigQuery, and serves as the unit of parallelism. Queries using this reservation might use
+   * more slots during runtime if ignore_idle_slots is set to false, or autoscaling is enabled. The
+   * total slot_capacity of the reservation and its siblings may exceed the total slot_count of
+   * capacity commitments. In that case, the exceeding slots will be charged with the autoscale SKU.
+   * You can increase the number of baseline slots in a reservation every few minutes. If you want
+   * to decrease your baseline slots, you are limited to once an hour if you have recently changed
+   * your baseline slot capacity and your baseline slots exceed your committed slots. Otherwise, you
+   * can decrease your baseline slots every few minutes.
    * @return value or {@code null} for none
    */
   public java.lang.Long getSlotCapacity() {
@@ -558,15 +561,15 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Baseline slots available to this reservation. A slot is a unit of computational power in
-   * BigQuery, and serves as the unit of parallelism. Queries using this reservation might use more
-   * slots during runtime if ignore_idle_slots is set to false, or autoscaling is enabled. The total
-   * slot_capacity of the reservation and its siblings may exceed the total slot_count of capacity
-   * commitments. In that case, the exceeding slots will be charged with the autoscale SKU. You can
-   * increase the number of baseline slots in a reservation every few minutes. If you want to
-   * decrease your baseline slots, you are limited to once an hour if you have recently changed your
-   * baseline slot capacity and your baseline slots exceed your committed slots. Otherwise, you can
-   * decrease your baseline slots every few minutes.
+   * Optional. Baseline slots available to this reservation. A slot is a unit of computational power
+   * in BigQuery, and serves as the unit of parallelism. Queries using this reservation might use
+   * more slots during runtime if ignore_idle_slots is set to false, or autoscaling is enabled. The
+   * total slot_capacity of the reservation and its siblings may exceed the total slot_count of
+   * capacity commitments. In that case, the exceeding slots will be charged with the autoscale SKU.
+   * You can increase the number of baseline slots in a reservation every few minutes. If you want
+   * to decrease your baseline slots, you are limited to once an hour if you have recently changed
+   * your baseline slot capacity and your baseline slots exceed your committed slots. Otherwise, you
+   * can decrease your baseline slots every few minutes.
    * @param slotCapacity slotCapacity or {@code null} for none
    */
   public Reservation setSlotCapacity(java.lang.Long slotCapacity) {

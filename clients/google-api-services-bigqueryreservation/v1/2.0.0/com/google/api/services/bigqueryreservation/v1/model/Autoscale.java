@@ -41,7 +41,7 @@ public final class Autoscale extends com.google.api.client.json.GenericJson {
   private java.lang.Long currentSlots;
 
   /**
-   * Number of slots to be scaled when needed.
+   * Optional. Number of slots to be scaled when needed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -71,7 +71,7 @@ public final class Autoscale extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Number of slots to be scaled when needed.
+   * Optional. Number of slots to be scaled when needed.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMaxSlots() {
@@ -79,7 +79,7 @@ public final class Autoscale extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Number of slots to be scaled when needed.
+   * Optional. Number of slots to be scaled when needed.
    * @param maxSlots maxSlots or {@code null} for none
    */
   public Autoscale setMaxSlots(java.lang.Long maxSlots) {

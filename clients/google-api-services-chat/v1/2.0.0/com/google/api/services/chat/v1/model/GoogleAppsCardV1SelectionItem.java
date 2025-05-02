@@ -40,6 +40,12 @@ public final class GoogleAppsCardV1SelectionItem extends com.google.api.client.j
   private java.lang.String bottomText;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAppsCardV1MaterialIcon materialIcon;
+
+  /**
    * Whether the item is selected by default. If the selection input only accepts one value (such as
    * for radio buttons or a dropdown menu), only set this field for one item.
    * The value may be {@code null}.
@@ -48,9 +54,6 @@ public final class GoogleAppsCardV1SelectionItem extends com.google.api.client.j
   private java.lang.Boolean selected;
 
   /**
-   * For multiselect menus, the URL for the icon displayed next to the item's `text` field. Supports
-   * PNG and JPEG files. Must be an `HTTPS` URL. For example,
-   * `https://developers.google.com/workspace/chat/images/quickstart-app-avatar.png`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,6 +95,21 @@ public final class GoogleAppsCardV1SelectionItem extends com.google.api.client.j
   }
 
   /**
+   * @return value or {@code null} for none
+   */
+  public GoogleAppsCardV1MaterialIcon getMaterialIcon() {
+    return materialIcon;
+  }
+
+  /**
+   * @param materialIcon materialIcon or {@code null} for none
+   */
+  public GoogleAppsCardV1SelectionItem setMaterialIcon(GoogleAppsCardV1MaterialIcon materialIcon) {
+    this.materialIcon = materialIcon;
+    return this;
+  }
+
+  /**
    * Whether the item is selected by default. If the selection input only accepts one value (such as
    * for radio buttons or a dropdown menu), only set this field for one item.
    * @return value or {@code null} for none
@@ -111,9 +129,6 @@ public final class GoogleAppsCardV1SelectionItem extends com.google.api.client.j
   }
 
   /**
-   * For multiselect menus, the URL for the icon displayed next to the item's `text` field. Supports
-   * PNG and JPEG files. Must be an `HTTPS` URL. For example,
-   * `https://developers.google.com/workspace/chat/images/quickstart-app-avatar.png`.
    * @return value or {@code null} for none
    */
   public java.lang.String getStartIconUri() {
@@ -121,9 +136,6 @@ public final class GoogleAppsCardV1SelectionItem extends com.google.api.client.j
   }
 
   /**
-   * For multiselect menus, the URL for the icon displayed next to the item's `text` field. Supports
-   * PNG and JPEG files. Must be an `HTTPS` URL. For example,
-   * `https://developers.google.com/workspace/chat/images/quickstart-app-avatar.png`.
    * @param startIconUri startIconUri or {@code null} for none
    */
   public GoogleAppsCardV1SelectionItem setStartIconUri(java.lang.String startIconUri) {

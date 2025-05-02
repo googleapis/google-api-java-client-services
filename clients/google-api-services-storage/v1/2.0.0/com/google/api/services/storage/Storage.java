@@ -11739,6 +11739,22 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
+      /** Set of properties to return. Defaults to noAcl. */
+      @com.google.api.client.util.Key
+      private java.lang.String projection;
+
+      /** Set of properties to return. Defaults to noAcl.
+       */
+      public java.lang.String getProjection() {
+        return projection;
+      }
+
+      /** Set of properties to return. Defaults to noAcl. */
+      public Move setProjection(java.lang.String projection) {
+        this.projection = projection;
+        return this;
+      }
+
       /** The project to be billed for this request. Required for Requester Pays buckets. */
       @com.google.api.client.util.Key
       private java.lang.String userProject;

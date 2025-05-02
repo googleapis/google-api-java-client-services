@@ -2612,7 +2612,7 @@ public class BigtableAdmin extends com.google.api.client.googleapis.services.jso
          * This request holds the parameters needed by the bigtableadmin server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name The unique name of the app profile. Values are of the form
+         * @param name The unique name of the app profile, up to 50 characters long. Values are of the form
          *        `projects/{project}/instances/{instance}/appProfiles/_a-zA-Z0-9*`.
          * @param content the {@link com.google.api.services.bigtableadmin.v2.model.AppProfile}
          * @return the request
@@ -2641,7 +2641,7 @@ public class BigtableAdmin extends com.google.api.client.googleapis.services.jso
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name The unique name of the app profile. Values are of the form
+           * @param name The unique name of the app profile, up to 50 characters long. Values are of the form
          *        `projects/{project}/instances/{instance}/appProfiles/_a-zA-Z0-9*`.
            * @param content the {@link com.google.api.services.bigtableadmin.v2.model.AppProfile}
            * @since 1.13
@@ -2712,13 +2712,13 @@ public class BigtableAdmin extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * The unique name of the app profile. Values are of the form
+           * The unique name of the app profile, up to 50 characters long. Values are of the form
            * `projects/{project}/instances/{instance}/appProfiles/_a-zA-Z0-9*`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The unique name of the app profile. Values are of the form
+          /** The unique name of the app profile, up to 50 characters long. Values are of the form
          `projects/{project}/instances/{instance}/appProfiles/_a-zA-Z0-9*`.
            */
           public java.lang.String getName() {
@@ -2726,7 +2726,7 @@ public class BigtableAdmin extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * The unique name of the app profile. Values are of the form
+           * The unique name of the app profile, up to 50 characters long. Values are of the form
            * `projects/{project}/instances/{instance}/appProfiles/_a-zA-Z0-9*`.
            */
           public Patch setName(java.lang.String name) {

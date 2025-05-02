@@ -17,7 +17,7 @@
 package com.google.api.services.trafficdirector.v3.model;
 
 /**
- * [#next-free-field: 7]
+ * [#next-free-field: 8]
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Traffic Director API. For a detailed explanation see:
@@ -59,6 +59,14 @@ public final class SocketAddress extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.String namedPort;
+
+  /**
+   * The Linux network namespace to bind the socket to. If this is set, Envoy will create the socket
+   * in the specified network namespace. Only supported on Linux. [#not-implemented-hide:]
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String networkNamespaceFilepath;
 
   /**
    * The value may be {@code null}.
@@ -150,6 +158,25 @@ public final class SocketAddress extends com.google.api.client.json.GenericJson 
    */
   public SocketAddress setNamedPort(java.lang.String namedPort) {
     this.namedPort = namedPort;
+    return this;
+  }
+
+  /**
+   * The Linux network namespace to bind the socket to. If this is set, Envoy will create the socket
+   * in the specified network namespace. Only supported on Linux. [#not-implemented-hide:]
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNetworkNamespaceFilepath() {
+    return networkNamespaceFilepath;
+  }
+
+  /**
+   * The Linux network namespace to bind the socket to. If this is set, Envoy will create the socket
+   * in the specified network namespace. Only supported on Linux. [#not-implemented-hide:]
+   * @param networkNamespaceFilepath networkNamespaceFilepath or {@code null} for none
+   */
+  public SocketAddress setNetworkNamespaceFilepath(java.lang.String networkNamespaceFilepath) {
+    this.networkNamespaceFilepath = networkNamespaceFilepath;
     return this;
   }
 

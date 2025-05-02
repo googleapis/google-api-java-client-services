@@ -35206,24 +35206,17 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
             return this;
           }
 
-          /**
-           * Maximum number of result items to return. The default and maximum value that can be
-           * returned is 14400.
-           */
+          /** Maximum number of result items to return. */
           @com.google.api.client.util.Key
           private java.lang.String limit;
 
-          /** Maximum number of result items to return. The default and maximum value that can be returned is
-         14400.
+          /** Maximum number of result items to return.
            */
           public java.lang.String getLimit() {
             return limit;
           }
 
-          /**
-           * Maximum number of result items to return. The default and maximum value that can be
-           * returned is 14400.
-           */
+          /** Maximum number of result items to return. */
           public Get setLimit(java.lang.String limit) {
             this.limit = limit;
             return this;
@@ -35329,17 +35322,17 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
             return this;
           }
 
-          /** Comma-separated list of columns to sort the final result. */
+          /** Comma-separated list of metrics to sort the final result. */
           @com.google.api.client.util.Key
           private java.lang.String sortby;
 
-          /** Comma-separated list of columns to sort the final result.
+          /** Comma-separated list of metrics to sort the final result.
            */
           public java.lang.String getSortby() {
             return sortby;
           }
 
-          /** Comma-separated list of columns to sort the final result. */
+          /** Comma-separated list of metrics to sort the final result. */
           public Get setSortby(java.lang.String sortby) {
             this.sortby = sortby;
             return this;
@@ -41775,24 +41768,17 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
             return this;
           }
 
-          /**
-           * Maximum number of result items to return. The default and maximum value that can be
-           * returned is 14400.
-           */
+          /** Maximum number of result items to return. */
           @com.google.api.client.util.Key
           private java.lang.String limit;
 
-          /** Maximum number of result items to return. The default and maximum value that can be returned is
-         14400.
+          /** Maximum number of result items to return.
            */
           public java.lang.String getLimit() {
             return limit;
           }
 
-          /**
-           * Maximum number of result items to return. The default and maximum value that can be
-           * returned is 14400.
-           */
+          /** Maximum number of result items to return. */
           public Get setLimit(java.lang.String limit) {
             this.limit = limit;
             return this;
@@ -41896,17 +41882,17 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
             return this;
           }
 
-          /** Comma-separated list of columns to sort the final result. */
+          /** Comma-separated list of metrics to sort the final result. */
           @com.google.api.client.util.Key
           private java.lang.String sortby;
 
-          /** Comma-separated list of columns to sort the final result.
+          /** Comma-separated list of metrics to sort the final result.
            */
           public java.lang.String getSortby() {
             return sortby;
           }
 
-          /** Comma-separated list of columns to sort the final result. */
+          /** Comma-separated list of metrics to sort the final result. */
           public Get setSortby(java.lang.String sortby) {
             this.sortby = sortby;
             return this;
@@ -45450,24 +45436,17 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           return this;
         }
 
-        /**
-         * Maximum number of result items to return. The default and maximum value that can be
-         * returned is 14400.
-         */
+        /** Maximum number of result items to return. */
         @com.google.api.client.util.Key
         private java.lang.String limit;
 
-        /** Maximum number of result items to return. The default and maximum value that can be returned is
-       14400.
+        /** Maximum number of result items to return.
          */
         public java.lang.String getLimit() {
           return limit;
         }
 
-        /**
-         * Maximum number of result items to return. The default and maximum value that can be
-         * returned is 14400.
-         */
+        /** Maximum number of result items to return. */
         public Get setLimit(java.lang.String limit) {
           this.limit = limit;
           return this;
@@ -45551,17 +45530,17 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           return this;
         }
 
-        /** Comma-separated list of columns to sort the final result. */
+        /** Comma-separated list of metrics to sort the final result. */
         @com.google.api.client.util.Key
         private java.lang.String sortby;
 
-        /** Comma-separated list of columns to sort the final result.
+        /** Comma-separated list of metrics to sort the final result.
          */
         public java.lang.String getSortby() {
           return sortby;
         }
 
-        /** Comma-separated list of columns to sort the final result. */
+        /** Comma-separated list of metrics to sort the final result. */
         public Get setSortby(java.lang.String sortby) {
           this.sortby = sortby;
           return this;
@@ -50178,24 +50157,17 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           return this;
         }
 
-        /**
-         * Maximum number of result items to return. The default and maximum value that can be
-         * returned is 14400.
-         */
+        /** Maximum number of result items to return. */
         @com.google.api.client.util.Key
         private java.lang.String limit;
 
-        /** Maximum number of result items to return. The default and maximum value that can be returned is
-       14400.
+        /** Maximum number of result items to return.
          */
         public java.lang.String getLimit() {
           return limit;
         }
 
-        /**
-         * Maximum number of result items to return. The default and maximum value that can be
-         * returned is 14400.
-         */
+        /** Maximum number of result items to return. */
         public Get setLimit(java.lang.String limit) {
           this.limit = limit;
           return this;
@@ -50285,17 +50257,17 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           return this;
         }
 
-        /** Comma-separated list of columns used to sort the final result. */
+        /** Comma-separated list of metrics used to sort the final result. */
         @com.google.api.client.util.Key
         private java.lang.String sortby;
 
-        /** Comma-separated list of columns used to sort the final result.
+        /** Comma-separated list of metrics used to sort the final result.
          */
         public java.lang.String getSortby() {
           return sortby;
         }
 
-        /** Comma-separated list of columns used to sort the final result. */
+        /** Comma-separated list of metrics used to sort the final result. */
         public Get setSortby(java.lang.String sortby) {
           this.sortby = sortby;
           return this;

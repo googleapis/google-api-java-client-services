@@ -31,6 +31,13 @@ package com.google.api.services.documentai.v1beta3.model;
 public final class GoogleCloudDocumentaiV1beta3DocumentDocumentLayoutDocumentLayoutBlockLayoutTableBlock extends com.google.api.client.json.GenericJson {
 
   /**
+   * Annotation of the table block.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDocumentaiV1beta3DocumentAnnotations annotations;
+
+  /**
    * Body rows containing main table content.
    * The value may be {@code null}.
    */
@@ -50,6 +57,23 @@ public final class GoogleCloudDocumentaiV1beta3DocumentDocumentLayoutDocumentLay
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDocumentaiV1beta3DocumentDocumentLayoutDocumentLayoutBlockLayoutTableRow> headerRows;
+
+  /**
+   * Annotation of the table block.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3DocumentAnnotations getAnnotations() {
+    return annotations;
+  }
+
+  /**
+   * Annotation of the table block.
+   * @param annotations annotations or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3DocumentDocumentLayoutDocumentLayoutBlockLayoutTableBlock setAnnotations(GoogleCloudDocumentaiV1beta3DocumentAnnotations annotations) {
+    this.annotations = annotations;
+    return this;
+  }
 
   /**
    * Body rows containing main table content.

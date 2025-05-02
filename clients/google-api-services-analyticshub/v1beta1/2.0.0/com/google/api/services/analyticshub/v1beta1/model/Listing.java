@@ -32,6 +32,14 @@ package com.google.api.services.analyticshub.v1beta1.model;
 public final class Listing extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. If true, the listing is only available to get the resource metadata. Listing is non
+   * subscribable.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean allowOnlyMetadataSharing;
+
+  /**
    * Required. Shared dataset i.e. BigQuery dataset source.
    * The value may be {@code null}.
    */
@@ -131,6 +139,25 @@ public final class Listing extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
+
+  /**
+   * Optional. If true, the listing is only available to get the resource metadata. Listing is non
+   * subscribable.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAllowOnlyMetadataSharing() {
+    return allowOnlyMetadataSharing;
+  }
+
+  /**
+   * Optional. If true, the listing is only available to get the resource metadata. Listing is non
+   * subscribable.
+   * @param allowOnlyMetadataSharing allowOnlyMetadataSharing or {@code null} for none
+   */
+  public Listing setAllowOnlyMetadataSharing(java.lang.Boolean allowOnlyMetadataSharing) {
+    this.allowOnlyMetadataSharing = allowOnlyMetadataSharing;
+    return this;
+  }
 
   /**
    * Required. Shared dataset i.e. BigQuery dataset source.

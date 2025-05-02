@@ -49,14 +49,14 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Output only. For future use.
+   * Output only. Whether the dataset satisfies zone isolation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean satisfiesPzi;
 
   /**
-   * Output only. For future use.
+   * Output only. Whether the dataset satisfies zone separation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -112,7 +112,7 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. For future use.
+   * Output only. Whether the dataset satisfies zone isolation.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSatisfiesPzi() {
@@ -120,7 +120,7 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. For future use.
+   * Output only. Whether the dataset satisfies zone isolation.
    * @param satisfiesPzi satisfiesPzi or {@code null} for none
    */
   public Dataset setSatisfiesPzi(java.lang.Boolean satisfiesPzi) {
@@ -129,7 +129,7 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. For future use.
+   * Output only. Whether the dataset satisfies zone separation.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSatisfiesPzs() {
@@ -137,7 +137,7 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. For future use.
+   * Output only. Whether the dataset satisfies zone separation.
    * @param satisfiesPzs satisfiesPzs or {@code null} for none
    */
   public Dataset setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {

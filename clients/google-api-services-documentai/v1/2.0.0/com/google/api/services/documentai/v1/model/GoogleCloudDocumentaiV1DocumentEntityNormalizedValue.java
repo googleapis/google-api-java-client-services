@@ -84,6 +84,12 @@ public final class GoogleCloudDocumentaiV1DocumentEntityNormalizedValue extends 
   private GoogleTypeMoney moneyValue;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean signatureValue;
+
+  /**
    * Optional. An optional field to store a normalized string. For some entity types, one of
    * respective `structured_value` fields may also be populated. Also not all the types of
    * `structured_value` will be normalized. For example, some processors may not generate `float` or
@@ -220,6 +226,21 @@ public final class GoogleCloudDocumentaiV1DocumentEntityNormalizedValue extends 
    */
   public GoogleCloudDocumentaiV1DocumentEntityNormalizedValue setMoneyValue(GoogleTypeMoney moneyValue) {
     this.moneyValue = moneyValue;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSignatureValue() {
+    return signatureValue;
+  }
+
+  /**
+   * @param signatureValue signatureValue or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1DocumentEntityNormalizedValue setSignatureValue(java.lang.Boolean signatureValue) {
+    this.signatureValue = signatureValue;
     return this;
   }
 

@@ -64,7 +64,7 @@ public final class AppProfile extends com.google.api.client.json.GenericJson {
   private MultiClusterRoutingUseAny multiClusterRoutingUseAny;
 
   /**
-   * The unique name of the app profile. Values are of the form
+   * The unique name of the app profile, up to 50 characters long. Values are of the form
    * `projects/{project}/instances/{instance}/appProfiles/_a-zA-Z0-9*`.
    * The value may be {@code null}.
    */
@@ -171,7 +171,7 @@ public final class AppProfile extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The unique name of the app profile. Values are of the form
+   * The unique name of the app profile, up to 50 characters long. Values are of the form
    * `projects/{project}/instances/{instance}/appProfiles/_a-zA-Z0-9*`.
    * @return value or {@code null} for none
    */
@@ -180,7 +180,7 @@ public final class AppProfile extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The unique name of the app profile. Values are of the form
+   * The unique name of the app profile, up to 50 characters long. Values are of the form
    * `projects/{project}/instances/{instance}/appProfiles/_a-zA-Z0-9*`.
    * @param name name or {@code null} for none
    */

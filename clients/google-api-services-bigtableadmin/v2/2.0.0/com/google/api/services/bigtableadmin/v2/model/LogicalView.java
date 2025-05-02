@@ -31,6 +31,13 @@ package com.google.api.services.bigtableadmin.v2.model;
 public final class LogicalView extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Set to true to make the LogicalView protected against deletion.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean deletionProtection;
+
+  /**
    * Optional. The etag for this logical view. This may be sent on update requests to ensure that
    * the client has an up-to-date value before proceeding. The server returns an ABORTED error on a
    * mismatched etag.
@@ -53,6 +60,23 @@ public final class LogicalView extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String query;
+
+  /**
+   * Optional. Set to true to make the LogicalView protected against deletion.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDeletionProtection() {
+    return deletionProtection;
+  }
+
+  /**
+   * Optional. Set to true to make the LogicalView protected against deletion.
+   * @param deletionProtection deletionProtection or {@code null} for none
+   */
+  public LogicalView setDeletionProtection(java.lang.Boolean deletionProtection) {
+    this.deletionProtection = deletionProtection;
+    return this;
+  }
 
   /**
    * Optional. The etag for this logical view. This may be sent on update requests to ensure that

@@ -45,9 +45,9 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsMavenArti
   private java.lang.String groupId;
 
   /**
-   * Path to an artifact in the build's workspace to be uploaded to Artifact Registry. This can be
-   * either an absolute path, e.g. /workspace/my-app/target/my-app-1.0.SNAPSHOT.jar or a relative
-   * path from /workspace, e.g. my-app/target/my-app-1.0.SNAPSHOT.jar.
+   * Optional. Path to an artifact in the build's workspace to be uploaded to Artifact Registry.
+   * This can be either an absolute path, e.g. /workspace/my-app/target/my-app-1.0.SNAPSHOT.jar or a
+   * relative path from /workspace, e.g. my-app/target/my-app-1.0.SNAPSHOT.jar.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -104,9 +104,9 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsMavenArti
   }
 
   /**
-   * Path to an artifact in the build's workspace to be uploaded to Artifact Registry. This can be
-   * either an absolute path, e.g. /workspace/my-app/target/my-app-1.0.SNAPSHOT.jar or a relative
-   * path from /workspace, e.g. my-app/target/my-app-1.0.SNAPSHOT.jar.
+   * Optional. Path to an artifact in the build's workspace to be uploaded to Artifact Registry.
+   * This can be either an absolute path, e.g. /workspace/my-app/target/my-app-1.0.SNAPSHOT.jar or a
+   * relative path from /workspace, e.g. my-app/target/my-app-1.0.SNAPSHOT.jar.
    * @return value or {@code null} for none
    */
   public java.lang.String getPath() {
@@ -114,9 +114,9 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsMavenArti
   }
 
   /**
-   * Path to an artifact in the build's workspace to be uploaded to Artifact Registry. This can be
-   * either an absolute path, e.g. /workspace/my-app/target/my-app-1.0.SNAPSHOT.jar or a relative
-   * path from /workspace, e.g. my-app/target/my-app-1.0.SNAPSHOT.jar.
+   * Optional. Path to an artifact in the build's workspace to be uploaded to Artifact Registry.
+   * This can be either an absolute path, e.g. /workspace/my-app/target/my-app-1.0.SNAPSHOT.jar or a
+   * relative path from /workspace, e.g. my-app/target/my-app-1.0.SNAPSHOT.jar.
    * @param path path or {@code null} for none
    */
   public ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsMavenArtifact setPath(java.lang.String path) {

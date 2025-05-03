@@ -956,27 +956,27 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Field by which to sort the list. Acceptable values are: * `displayName` (default) *
-       * `entityStatus` * `updateTime` The default sorting order is ascending. To specify descending
-       * order for a field, a suffix "desc" should be added to the field name. For example,
-       * `displayName desc`.
+       * Field by which to sort the list. Acceptable values are: * `advertiserId` (default) *
+       * `displayName` * `entityStatus` * `updateTime` The default sorting order is ascending. To
+       * specify descending order for a field, a suffix "desc" should be added to the field name.
+       * For example, `displayName desc`.
        */
       @com.google.api.client.util.Key
       private java.lang.String orderBy;
 
-      /** Field by which to sort the list. Acceptable values are: * `displayName` (default) * `entityStatus`
-     * `updateTime` The default sorting order is ascending. To specify descending order for a field, a
-     suffix "desc" should be added to the field name. For example, `displayName desc`.
+      /** Field by which to sort the list. Acceptable values are: * `advertiserId` (default) * `displayName`
+     * `entityStatus` * `updateTime` The default sorting order is ascending. To specify descending order
+     for a field, a suffix "desc" should be added to the field name. For example, `displayName desc`.
        */
       public java.lang.String getOrderBy() {
         return orderBy;
       }
 
       /**
-       * Field by which to sort the list. Acceptable values are: * `displayName` (default) *
-       * `entityStatus` * `updateTime` The default sorting order is ascending. To specify descending
-       * order for a field, a suffix "desc" should be added to the field name. For example,
-       * `displayName desc`.
+       * Field by which to sort the list. Acceptable values are: * `advertiserId` (default) *
+       * `displayName` * `entityStatus` * `updateTime` The default sorting order is ascending. To
+       * specify descending order for a field, a suffix "desc" should be added to the field name.
+       * For example, `displayName desc`.
        */
       public List setOrderBy(java.lang.String orderBy) {
         this.orderBy = orderBy;
@@ -14889,7 +14889,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          *        `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` *
          *        `TARGETING_TYPE_OMID` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` *
          *        `TARGETING_TYPE_YOUTUBE_VIDEO` * `TARGETING_TYPE_YOUTUBE_CHANNEL` *
-         *        `TARGETING_TYPE_KEYWORD`
+         *        `TARGETING_TYPE_KEYWORD` * `TARGETING_TYPE_CONTENT_THEME_EXCLUSION`
          * @param assignedTargetingOptionId Required. An identifier unique to the targeting type in this advertiser that identifies the assigned
          *        targeting option being requested.
          * @return the request
@@ -14928,7 +14928,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          *        `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` *
          *        `TARGETING_TYPE_OMID` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` *
          *        `TARGETING_TYPE_YOUTUBE_VIDEO` * `TARGETING_TYPE_YOUTUBE_CHANNEL` *
-         *        `TARGETING_TYPE_KEYWORD`
+         *        `TARGETING_TYPE_KEYWORD` * `TARGETING_TYPE_CONTENT_THEME_EXCLUSION`
            * @param assignedTargetingOptionId Required. An identifier unique to the targeting type in this advertiser that identifies the assigned
          *        targeting option being requested.
            * @since 1.13
@@ -15036,7 +15036,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
            * types: * `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` *
            * `TARGETING_TYPE_OMID` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` *
            * `TARGETING_TYPE_YOUTUBE_VIDEO` * `TARGETING_TYPE_YOUTUBE_CHANNEL` *
-           * `TARGETING_TYPE_KEYWORD`
+           * `TARGETING_TYPE_KEYWORD` * `TARGETING_TYPE_CONTENT_THEME_EXCLUSION`
            */
           @com.google.api.client.util.Key
           private java.lang.String targetingType;
@@ -15044,7 +15044,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           /** Required. Identifies the type of this assigned targeting option. Supported targeting types: *
          `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` * `TARGETING_TYPE_OMID`
          * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` * `TARGETING_TYPE_YOUTUBE_VIDEO` *
-         `TARGETING_TYPE_YOUTUBE_CHANNEL` * `TARGETING_TYPE_KEYWORD`
+         `TARGETING_TYPE_YOUTUBE_CHANNEL` * `TARGETING_TYPE_KEYWORD` *
+         `TARGETING_TYPE_CONTENT_THEME_EXCLUSION`
            */
           public java.lang.String getTargetingType() {
             return targetingType;
@@ -15055,7 +15056,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
            * types: * `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` *
            * `TARGETING_TYPE_OMID` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` *
            * `TARGETING_TYPE_YOUTUBE_VIDEO` * `TARGETING_TYPE_YOUTUBE_CHANNEL` *
-           * `TARGETING_TYPE_KEYWORD`
+           * `TARGETING_TYPE_KEYWORD` * `TARGETING_TYPE_CONTENT_THEME_EXCLUSION`
            */
           public Get setTargetingType(java.lang.String targetingType) {
             if (!getSuppressPatternChecks()) {
@@ -15113,7 +15114,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          *        `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` *
          *        `TARGETING_TYPE_OMID` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` *
          *        `TARGETING_TYPE_YOUTUBE_VIDEO` * `TARGETING_TYPE_YOUTUBE_CHANNEL` *
-         *        `TARGETING_TYPE_KEYWORD`
+         *        `TARGETING_TYPE_KEYWORD` * `TARGETING_TYPE_CONTENT_THEME_EXCLUSION`
          * @return the request
          */
         public List list(java.lang.Long advertiserId, java.lang.String targetingType) throws java.io.IOException {
@@ -15147,7 +15148,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          *        `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` *
          *        `TARGETING_TYPE_OMID` * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` *
          *        `TARGETING_TYPE_YOUTUBE_VIDEO` * `TARGETING_TYPE_YOUTUBE_CHANNEL` *
-         *        `TARGETING_TYPE_KEYWORD`
+         *        `TARGETING_TYPE_KEYWORD` * `TARGETING_TYPE_CONTENT_THEME_EXCLUSION`
            * @since 1.13
            */
           protected List(java.lang.Long advertiserId, java.lang.String targetingType) {
@@ -15247,7 +15248,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
            * targeting types: * `TARGETING_TYPE_CHANNEL` *
            * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` * `TARGETING_TYPE_OMID` *
            * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` * `TARGETING_TYPE_YOUTUBE_VIDEO` *
-           * `TARGETING_TYPE_YOUTUBE_CHANNEL` * `TARGETING_TYPE_KEYWORD`
+           * `TARGETING_TYPE_YOUTUBE_CHANNEL` * `TARGETING_TYPE_KEYWORD` *
+           * `TARGETING_TYPE_CONTENT_THEME_EXCLUSION`
            */
           @com.google.api.client.util.Key
           private java.lang.String targetingType;
@@ -15255,7 +15257,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           /** Required. Identifies the type of assigned targeting options to list. Supported targeting types: *
          `TARGETING_TYPE_CHANNEL` * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` * `TARGETING_TYPE_OMID`
          * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` * `TARGETING_TYPE_YOUTUBE_VIDEO` *
-         `TARGETING_TYPE_YOUTUBE_CHANNEL` * `TARGETING_TYPE_KEYWORD`
+         `TARGETING_TYPE_YOUTUBE_CHANNEL` * `TARGETING_TYPE_KEYWORD` *
+         `TARGETING_TYPE_CONTENT_THEME_EXCLUSION`
            */
           public java.lang.String getTargetingType() {
             return targetingType;
@@ -15266,7 +15269,8 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
            * targeting types: * `TARGETING_TYPE_CHANNEL` *
            * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` * `TARGETING_TYPE_OMID` *
            * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` * `TARGETING_TYPE_YOUTUBE_VIDEO` *
-           * `TARGETING_TYPE_YOUTUBE_CHANNEL` * `TARGETING_TYPE_KEYWORD`
+           * `TARGETING_TYPE_YOUTUBE_CHANNEL` * `TARGETING_TYPE_KEYWORD` *
+           * `TARGETING_TYPE_CONTENT_THEME_EXCLUSION`
            */
           public List setTargetingType(java.lang.String targetingType) {
             if (!getSuppressPatternChecks()) {

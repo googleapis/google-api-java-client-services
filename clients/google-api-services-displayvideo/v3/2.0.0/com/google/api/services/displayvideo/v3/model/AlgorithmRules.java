@@ -31,7 +31,7 @@ package com.google.api.services.displayvideo.v3.model;
 public final class AlgorithmRules extends com.google.api.client.json.GenericJson {
 
   /**
-   * Attribution model for the algorithm.
+   * Attribution model for the algorithm. This field is only supported for allowlisted partners.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -45,14 +45,14 @@ public final class AlgorithmRules extends com.google.api.client.json.GenericJson
   private AlgorithmRulesRuleset impressionSignalRuleset;
 
   /**
-   * Rules for the post-impression signals.
+   * Rules for the post-impression signals. This field is only supported for allowlisted partners.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AlgorithmRulesRuleset postImpressionSignalRuleset;
 
   /**
-   * Attribution model for the algorithm.
+   * Attribution model for the algorithm. This field is only supported for allowlisted partners.
    * @return value or {@code null} for none
    */
   public java.lang.Long getAttributionModelId() {
@@ -60,7 +60,7 @@ public final class AlgorithmRules extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Attribution model for the algorithm.
+   * Attribution model for the algorithm. This field is only supported for allowlisted partners.
    * @param attributionModelId attributionModelId or {@code null} for none
    */
   public AlgorithmRules setAttributionModelId(java.lang.Long attributionModelId) {
@@ -86,7 +86,7 @@ public final class AlgorithmRules extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Rules for the post-impression signals.
+   * Rules for the post-impression signals. This field is only supported for allowlisted partners.
    * @return value or {@code null} for none
    */
   public AlgorithmRulesRuleset getPostImpressionSignalRuleset() {
@@ -94,7 +94,7 @@ public final class AlgorithmRules extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Rules for the post-impression signals.
+   * Rules for the post-impression signals. This field is only supported for allowlisted partners.
    * @param postImpressionSignalRuleset postImpressionSignalRuleset or {@code null} for none
    */
   public AlgorithmRules setPostImpressionSignalRuleset(AlgorithmRulesRuleset postImpressionSignalRuleset) {

@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-displayvideo</artifactId>
-  <version>v4-rev20250424-2.0.0</version>
-  <name>Display &amp; Video 360 API v4-rev20250424-2.0.0</name>
+  <version>v4-rev20250501-2.0.0</version>
+  <name>Display &amp; Video 360 API v4-rev20250501-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

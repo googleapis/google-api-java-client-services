@@ -2476,7 +2476,7 @@ public class OracleDatabase extends com.google.api.client.googleapis.services.js
           }
         }
         /**
-         * Initiates a switchover of specified autonomous deatabase to the associated peer database.
+         * Initiates a switchover of specified autonomous database to the associated peer database.
          *
          * Create a request for the method "autonomousDatabases.switchover".
          *
@@ -2502,7 +2502,7 @@ public class OracleDatabase extends com.google.api.client.googleapis.services.js
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/autonomousDatabases/[^/]+$");
 
           /**
-           * Initiates a switchover of specified autonomous deatabase to the associated peer database.
+           * Initiates a switchover of specified autonomous database to the associated peer database.
            *
            * Create a request for the method "autonomousDatabases.switchover".
            *

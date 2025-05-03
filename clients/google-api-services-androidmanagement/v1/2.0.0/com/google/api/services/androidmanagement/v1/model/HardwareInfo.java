@@ -84,6 +84,19 @@ public final class HardwareInfo extends com.google.api.client.json.GenericJson {
   private java.lang.String enterpriseSpecificId;
 
   /**
+   * Output only. Information related to the eUICC chip.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<EuiccChipInfo> euiccChipInfo;
+
+  static {
+    // hack to force ProGuard to consider EuiccChipInfo used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(EuiccChipInfo.class);
+  }
+
+  /**
    * GPU shutdown temperature thresholds in Celsius for each GPU on the device.
    * The value may be {@code null}.
    */
@@ -261,6 +274,23 @@ public final class HardwareInfo extends com.google.api.client.json.GenericJson {
    */
   public HardwareInfo setEnterpriseSpecificId(java.lang.String enterpriseSpecificId) {
     this.enterpriseSpecificId = enterpriseSpecificId;
+    return this;
+  }
+
+  /**
+   * Output only. Information related to the eUICC chip.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<EuiccChipInfo> getEuiccChipInfo() {
+    return euiccChipInfo;
+  }
+
+  /**
+   * Output only. Information related to the eUICC chip.
+   * @param euiccChipInfo euiccChipInfo or {@code null} for none
+   */
+  public HardwareInfo setEuiccChipInfo(java.util.List<EuiccChipInfo> euiccChipInfo) {
+    this.euiccChipInfo = euiccChipInfo;
     return this;
   }
 

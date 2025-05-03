@@ -782,8 +782,8 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
-     * Updates the retention period and description of the backup. You can use this API to update final
-     * backups only.
+     * This API updates the following: 1- retention period and description of backup in case of final
+     * backups only. 2- gcbdr_soft_delete_status of backup in case of GCBDR managed backups only.
      *
      * Create a request for the method "Backups.UpdateBackup".
      *
@@ -808,8 +808,8 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
           java.util.regex.Pattern.compile("^projects/[^/]+/backups/[^/]+$");
 
       /**
-       * Updates the retention period and description of the backup. You can use this API to update
-       * final backups only.
+       * This API updates the following: 1- retention period and description of backup in case of final
+       * backups only. 2- gcbdr_soft_delete_status of backup in case of GCBDR managed backups only.
        *
        * Create a request for the method "Backups.UpdateBackup".
        *
@@ -914,22 +914,24 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * The list of fields that you can update. You can update only the description and retention
-       * period of the final backup.
+       * The list of fields that you can update. 1- You can update only the description and
+       * retention period for a final backup. 2- You can update only the gcbdr_soft_delete_status
+       * for GCBDR managed backup.
        */
       @com.google.api.client.util.Key
       private String updateMask;
 
-      /** The list of fields that you can update. You can update only the description and retention period of
-     the final backup.
+      /** The list of fields that you can update. 1- You can update only the description and retention period
+     for a final backup. 2- You can update only the gcbdr_soft_delete_status for GCBDR managed backup.
        */
       public String getUpdateMask() {
         return updateMask;
       }
 
       /**
-       * The list of fields that you can update. You can update only the description and retention
-       * period of the final backup.
+       * The list of fields that you can update. 1- You can update only the description and
+       * retention period for a final backup. 2- You can update only the gcbdr_soft_delete_status
+       * for GCBDR managed backup.
        */
       public UpdateBackup setUpdateMask(String updateMask) {
         this.updateMask = updateMask;
@@ -5611,6 +5613,141 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       @Override
       public Patch set(String parameterName, Object value) {
         return (Patch) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Point in time restore for an instance managed by Google Cloud Backup and Disaster Recovery.
+     *
+     * Create a request for the method "instances.pointInTimeRestore".
+     *
+     * This request holds the parameters needed by the sqladmin server.  After setting any optional
+     * parameters, call the {@link PointInTimeRestore#execute()} method to invoke the remote operation.
+     *
+     * @param parent Required. The parent resource where you created this instance. Format: projects/{project}
+     * @param content the {@link com.google.api.services.sqladmin.model.PointInTimeRestoreContext}
+     * @return the request
+     */
+    public PointInTimeRestore pointInTimeRestore(java.lang.String parent, com.google.api.services.sqladmin.model.PointInTimeRestoreContext content) throws java.io.IOException {
+      PointInTimeRestore result = new PointInTimeRestore(parent, content);
+      initialize(result);
+      return result;
+    }
+
+    public class PointInTimeRestore extends SQLAdminRequest<com.google.api.services.sqladmin.model.Operation> {
+
+      private static final String REST_PATH = "v1/{+parent}:pointInTimeRestore";
+
+      private final java.util.regex.Pattern PARENT_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+      /**
+       * Point in time restore for an instance managed by Google Cloud Backup and Disaster Recovery.
+       *
+       * Create a request for the method "instances.pointInTimeRestore".
+       *
+       * This request holds the parameters needed by the the sqladmin server.  After setting any
+       * optional parameters, call the {@link PointInTimeRestore#execute()} method to invoke the remote
+       * operation. <p> {@link PointInTimeRestore#initialize(com.google.api.client.googleapis.services.A
+       * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param parent Required. The parent resource where you created this instance. Format: projects/{project}
+       * @param content the {@link com.google.api.services.sqladmin.model.PointInTimeRestoreContext}
+       * @since 1.13
+       */
+      protected PointInTimeRestore(java.lang.String parent, com.google.api.services.sqladmin.model.PointInTimeRestoreContext content) {
+        super(SQLAdmin.this, "POST", REST_PATH, content, com.google.api.services.sqladmin.model.Operation.class);
+        this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^projects/[^/]+$");
+        }
+      }
+
+      @Override
+      public PointInTimeRestore set$Xgafv(java.lang.String $Xgafv) {
+        return (PointInTimeRestore) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public PointInTimeRestore setAccessToken(java.lang.String accessToken) {
+        return (PointInTimeRestore) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public PointInTimeRestore setAlt(java.lang.String alt) {
+        return (PointInTimeRestore) super.setAlt(alt);
+      }
+
+      @Override
+      public PointInTimeRestore setCallback(java.lang.String callback) {
+        return (PointInTimeRestore) super.setCallback(callback);
+      }
+
+      @Override
+      public PointInTimeRestore setFields(java.lang.String fields) {
+        return (PointInTimeRestore) super.setFields(fields);
+      }
+
+      @Override
+      public PointInTimeRestore setKey(java.lang.String key) {
+        return (PointInTimeRestore) super.setKey(key);
+      }
+
+      @Override
+      public PointInTimeRestore setOauthToken(java.lang.String oauthToken) {
+        return (PointInTimeRestore) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public PointInTimeRestore setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (PointInTimeRestore) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public PointInTimeRestore setQuotaUser(java.lang.String quotaUser) {
+        return (PointInTimeRestore) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public PointInTimeRestore setUploadType(java.lang.String uploadType) {
+        return (PointInTimeRestore) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public PointInTimeRestore setUploadProtocol(java.lang.String uploadProtocol) {
+        return (PointInTimeRestore) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The parent resource where you created this instance. Format: projects/{project}
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String parent;
+
+      /** Required. The parent resource where you created this instance. Format: projects/{project}
+       */
+      public java.lang.String getParent() {
+        return parent;
+      }
+
+      /**
+       * Required. The parent resource where you created this instance. Format: projects/{project}
+       */
+      public PointInTimeRestore setParent(java.lang.String parent) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^projects/[^/]+$");
+        }
+        this.parent = parent;
+        return this;
+      }
+
+      @Override
+      public PointInTimeRestore set(String parameterName, Object value) {
+        return (PointInTimeRestore) super.set(parameterName, value);
       }
     }
     /**

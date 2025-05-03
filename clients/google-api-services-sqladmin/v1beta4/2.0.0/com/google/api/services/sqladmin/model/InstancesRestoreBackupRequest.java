@@ -39,6 +39,15 @@ public final class InstancesRestoreBackupRequest extends com.google.api.client.j
   private java.lang.String backup;
 
   /**
+   * The name of the backup that's used to restore a Cloud SQL instance: Format: "projects/{project-
+   * id}/locations/{location}/backupVaults/{backupvault}/dataSources/{datasource}/backups/{backup-
+   * uid}". Only one of restore_backup_context, backup, backupdr_backup can be passed to the input.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String backupdrBackup;
+
+  /**
    * Parameters required to perform the restore backup operation.
    * The value may be {@code null}.
    */
@@ -73,6 +82,27 @@ public final class InstancesRestoreBackupRequest extends com.google.api.client.j
    */
   public InstancesRestoreBackupRequest setBackup(java.lang.String backup) {
     this.backup = backup;
+    return this;
+  }
+
+  /**
+   * The name of the backup that's used to restore a Cloud SQL instance: Format: "projects/{project-
+   * id}/locations/{location}/backupVaults/{backupvault}/dataSources/{datasource}/backups/{backup-
+   * uid}". Only one of restore_backup_context, backup, backupdr_backup can be passed to the input.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBackupdrBackup() {
+    return backupdrBackup;
+  }
+
+  /**
+   * The name of the backup that's used to restore a Cloud SQL instance: Format: "projects/{project-
+   * id}/locations/{location}/backupVaults/{backupvault}/dataSources/{datasource}/backups/{backup-
+   * uid}". Only one of restore_backup_context, backup, backupdr_backup can be passed to the input.
+   * @param backupdrBackup backupdrBackup or {@code null} for none
+   */
+  public InstancesRestoreBackupRequest setBackupdrBackup(java.lang.String backupdrBackup) {
+    this.backupdrBackup = backupdrBackup;
     return this;
   }
 

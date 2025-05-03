@@ -3062,6 +3062,22 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           return this;
         }
 
+        /** Optional. Internal only. */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean semanticSearch;
+
+        /** Optional. Internal only.
+         */
+        public java.lang.Boolean getSemanticSearch() {
+          return semanticSearch;
+        }
+
+        /** Optional. Internal only. */
+        public SearchEntries setSemanticSearch(java.lang.Boolean semanticSearch) {
+          this.semanticSearch = semanticSearch;
+          return this;
+        }
+
         @Override
         public SearchEntries set(String parameterName, Object value) {
           return (SearchEntries) super.set(parameterName, value);
@@ -13582,6 +13598,479 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
 
         }
+        /**
+         * An accessor for creating requests from the EntryLinks collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code CloudDataplex dataplex = new CloudDataplex(...);}
+         *   {@code CloudDataplex.EntryLinks.List request = dataplex.entryLinks().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public EntryLinks entryLinks() {
+          return new EntryLinks();
+        }
+
+        /**
+         * The "entryLinks" collection of methods.
+         */
+        public class EntryLinks {
+
+          /**
+           * Creates an Entry Link.
+           *
+           * Create a request for the method "entryLinks.create".
+           *
+           * This request holds the parameters needed by the dataplex server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The resource name of the parent Entry Group:
+           *        projects/{project}/locations/{location}/entryGroups/{entry_group}.
+           * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1EntryLink}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1EntryLink content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1EntryLink> {
+
+            private static final String REST_PATH = "v1/{+parent}/entryLinks";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+$");
+
+            /**
+             * Creates an Entry Link.
+             *
+             * Create a request for the method "entryLinks.create".
+             *
+             * This request holds the parameters needed by the the dataplex server.  After setting any
+             * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The resource name of the parent Entry Group:
+           *        projects/{project}/locations/{location}/entryGroups/{entry_group}.
+             * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1EntryLink}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1EntryLink content) {
+              super(CloudDataplex.this, "POST", REST_PATH, content, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1EntryLink.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the parent Entry Group:
+             * projects/{project}/locations/{location}/entryGroups/{entry_group}.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The resource name of the parent Entry Group:
+           projects/{project}/locations/{location}/entryGroups/{entry_group}.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The resource name of the parent Entry Group:
+             * projects/{project}/locations/{location}/entryGroups/{entry_group}.
+             */
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Required. Entry Link identifier * Must contain only lowercase letters, numbers and
+             * hyphens. * Must start with a letter. * Must be between 1-63 characters. * Must end
+             * with a number or a letter. * Must be unique within the EntryGroup.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String entryLinkId;
+
+            /** Required. Entry Link identifier * Must contain only lowercase letters, numbers and hyphens. * Must
+           start with a letter. * Must be between 1-63 characters. * Must end with a number or a letter. *
+           Must be unique within the EntryGroup.
+             */
+            public java.lang.String getEntryLinkId() {
+              return entryLinkId;
+            }
+
+            /**
+             * Required. Entry Link identifier * Must contain only lowercase letters, numbers and
+             * hyphens. * Must start with a letter. * Must be between 1-63 characters. * Must end
+             * with a number or a letter. * Must be unique within the EntryGroup.
+             */
+            public Create setEntryLinkId(java.lang.String entryLinkId) {
+              this.entryLinkId = entryLinkId;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes an Entry Link.
+           *
+           * Create a request for the method "entryLinks.delete".
+           *
+           * This request holds the parameters needed by the dataplex server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name of the Entry Link:
+           *        projects/{project}/locations/{location}/entryGroups/{entry_group}/entryLinks/{entry_link}.
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1EntryLink> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+/entryLinks/[^/]+$");
+
+            /**
+             * Deletes an Entry Link.
+             *
+             * Create a request for the method "entryLinks.delete".
+             *
+             * This request holds the parameters needed by the the dataplex server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name of the Entry Link:
+           *        projects/{project}/locations/{location}/entryGroups/{entry_group}/entryLinks/{entry_link}.
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(CloudDataplex.this, "DELETE", REST_PATH, null, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1EntryLink.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+/entryLinks/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the Entry Link: projects/{project}/locations/{location
+             * }/entryGroups/{entry_group}/entryLinks/{entry_link}.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of the Entry Link:
+           projects/{project}/locations/{location}/entryGroups/{entry_group}/entryLinks/{entry_link}.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name of the Entry Link: projects/{project}/locations/{location
+             * }/entryGroups/{entry_group}/entryLinks/{entry_link}.
+             */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+/entryLinks/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Gets an entry link.
+           *
+           * Create a request for the method "entryLinks.get".
+           *
+           * This request holds the parameters needed by the dataplex server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name of the Entry Link:
+           *        projects/{project}/locations/{location}/entryGroups/{entry_group}/entryLinks/{entry_link}.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1EntryLink> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+/entryLinks/[^/]+$");
+
+            /**
+             * Gets an entry link.
+             *
+             * Create a request for the method "entryLinks.get".
+             *
+             * This request holds the parameters needed by the the dataplex server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name of the Entry Link:
+           *        projects/{project}/locations/{location}/entryGroups/{entry_group}/entryLinks/{entry_link}.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(CloudDataplex.this, "GET", REST_PATH, null, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1EntryLink.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+/entryLinks/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the Entry Link: projects/{project}/locations/{location
+             * }/entryGroups/{entry_group}/entryLinks/{entry_link}.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of the Entry Link:
+           projects/{project}/locations/{location}/entryGroups/{entry_group}/entryLinks/{entry_link}.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name of the Entry Link: projects/{project}/locations/{location
+             * }/entryGroups/{entry_group}/entryLinks/{entry_link}.
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+/entryLinks/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+
+        }
       }
       /**
        * An accessor for creating requests from the EntryLinkTypes collection.
@@ -15556,6 +16045,495 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
       public class Glossaries {
 
         /**
+         * Creates a new Glossary resource.
+         *
+         * Create a request for the method "glossaries.create".
+         *
+         * This request holds the parameters needed by the dataplex server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource where this Glossary will be created. Format:
+         *        projects/{projectId}/locations/{locationId} where locationId refers to a GCP region.
+         * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1Glossary}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1Glossary content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1/{+parent}/glossaries";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a new Glossary resource.
+           *
+           * Create a request for the method "glossaries.create".
+           *
+           * This request holds the parameters needed by the the dataplex server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource where this Glossary will be created. Format:
+         *        projects/{projectId}/locations/{locationId} where locationId refers to a GCP region.
+           * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1Glossary}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1Glossary content) {
+            super(CloudDataplex.this, "POST", REST_PATH, content, com.google.api.services.dataplex.v1.model.GoogleLongrunningOperation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent resource where this Glossary will be created. Format:
+           * projects/{projectId}/locations/{locationId} where locationId refers to a GCP region.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource where this Glossary will be created. Format:
+         projects/{projectId}/locations/{locationId} where locationId refers to a GCP region.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent resource where this Glossary will be created. Format:
+           * projects/{projectId}/locations/{locationId} where locationId refers to a GCP region.
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Required. Glossary ID: Glossary identifier. */
+          @com.google.api.client.util.Key
+          private java.lang.String glossaryId;
+
+          /** Required. Glossary ID: Glossary identifier.
+           */
+          public java.lang.String getGlossaryId() {
+            return glossaryId;
+          }
+
+          /** Required. Glossary ID: Glossary identifier. */
+          public Create setGlossaryId(java.lang.String glossaryId) {
+            this.glossaryId = glossaryId;
+            return this;
+          }
+
+          /**
+           * Optional. Validates the request without actually creating the glossary. Default: false.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. Validates the request without actually creating the glossary. Default: false.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /**
+           * Optional. Validates the request without actually creating the glossary. Default: false.
+           */
+          public Create setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a Glossary resource. All the categories and terms within the glossary must be deleted
+         * before a glossary can be deleted.
+         *
+         * Create a request for the method "glossaries.delete".
+         *
+         * This request holds the parameters needed by the dataplex server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the Glossary to delete. Format:
+         *        projects/{project}/locations/{location}/glossary/{glossary}
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/glossaries/[^/]+$");
+
+          /**
+           * Deletes a Glossary resource. All the categories and terms within the glossary must be deleted
+           * before a glossary can be deleted.
+           *
+           * Create a request for the method "glossaries.delete".
+           *
+           * This request holds the parameters needed by the the dataplex server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the Glossary to delete. Format:
+         *        projects/{project}/locations/{location}/glossary/{glossary}
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(CloudDataplex.this, "DELETE", REST_PATH, null, com.google.api.services.dataplex.v1.model.GoogleLongrunningOperation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/glossaries/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the Glossary to delete. Format:
+           * projects/{project}/locations/{location}/glossary/{glossary}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the Glossary to delete. Format:
+         projects/{project}/locations/{location}/glossary/{glossary}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the Glossary to delete. Format:
+           * projects/{project}/locations/{location}/glossary/{glossary}
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/glossaries/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. The etag of the Glossary. If this is provided, it must match the server's
+           * etag. If the etag is provided and does not match the server-computed etag, the request
+           * must fail with a ABORTED error code.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String etag;
+
+          /** Optional. The etag of the Glossary. If this is provided, it must match the server's etag. If the
+         etag is provided and does not match the server-computed etag, the request must fail with a ABORTED
+         error code.
+           */
+          public java.lang.String getEtag() {
+            return etag;
+          }
+
+          /**
+           * Optional. The etag of the Glossary. If this is provided, it must match the server's
+           * etag. If the etag is provided and does not match the server-computed etag, the request
+           * must fail with a ABORTED error code.
+           */
+          public Delete setEtag(java.lang.String etag) {
+            this.etag = etag;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Retrieves a specified Glossary resource.
+         *
+         * Create a request for the method "glossaries.get".
+         *
+         * This request holds the parameters needed by the dataplex server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the Glossary to retrieve. Format:
+         *        projects/{project}/locations/{location}/glossaries/{glossary}
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1Glossary> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/glossaries/[^/]+$");
+
+          /**
+           * Retrieves a specified Glossary resource.
+           *
+           * Create a request for the method "glossaries.get".
+           *
+           * This request holds the parameters needed by the the dataplex server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the Glossary to retrieve. Format:
+         *        projects/{project}/locations/{location}/glossaries/{glossary}
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(CloudDataplex.this, "GET", REST_PATH, null, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1Glossary.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/glossaries/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the Glossary to retrieve. Format:
+           * projects/{project}/locations/{location}/glossaries/{glossary}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the Glossary to retrieve. Format:
+         projects/{project}/locations/{location}/glossaries/{glossary}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the Glossary to retrieve. Format:
+           * projects/{project}/locations/{location}/glossaries/{glossary}
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/glossaries/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
          * Gets the access control policy for a resource. Returns an empty policy if the resource exists and
          * does not have a policy set.
          *
@@ -15750,6 +16728,429 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           @Override
           public GetIamPolicy set(String parameterName, Object value) {
             return (GetIamPolicy) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists Glossary resources in a project and location.
+         *
+         * Create a request for the method "glossaries.list".
+         *
+         * This request holds the parameters needed by the dataplex server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent, which has this collection of glossaries. Format:
+         *        projects/{project}/locations/{location} Location is the GCP region.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1ListGlossariesResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/glossaries";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists Glossary resources in a project and location.
+           *
+           * Create a request for the method "glossaries.list".
+           *
+           * This request holds the parameters needed by the the dataplex server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent, which has this collection of glossaries. Format:
+         *        projects/{project}/locations/{location} Location is the GCP region.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(CloudDataplex.this, "GET", REST_PATH, null, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1ListGlossariesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent, which has this collection of glossaries. Format:
+           * projects/{project}/locations/{location} Location is the GCP region.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent, which has this collection of glossaries. Format:
+         projects/{project}/locations/{location} Location is the GCP region.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent, which has this collection of glossaries. Format:
+           * projects/{project}/locations/{location} Location is the GCP region.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. Filter expression that filters glossaries listed in the response. Initially,
+           * no filter is supported.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Filter expression that filters glossaries listed in the response. Initially, no filter is
+         supported.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. Filter expression that filters glossaries listed in the response. Initially,
+           * no filter is supported.
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. Order by expression that orders glossaries listed in the response. Order by
+           * fields are: name or create_time for the result. If not specified, the ordering is
+           * undefined.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. Order by expression that orders glossaries listed in the response. Order by fields are:
+         name or create_time for the result. If not specified, the ordering is undefined.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /**
+           * Optional. Order by expression that orders glossaries listed in the response. Order by
+           * fields are: name or create_time for the result. If not specified, the ordering is
+           * undefined.
+           */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of glossaries to return. The service may return fewer than
+           * this value. If unspecified, at most 50 glossaries will be returned. The maximum value
+           * is 1000; values above 1000 will be coerced to 1000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of glossaries to return. The service may return fewer than this value.
+         If unspecified, at most 50 glossaries will be returned. The maximum value is 1000; values above
+         1000 will be coerced to 1000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of glossaries to return. The service may return fewer than
+           * this value. If unspecified, at most 50 glossaries will be returned. The maximum value
+           * is 1000; values above 1000 will be coerced to 1000.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A page token, received from a previous ListGlossaries call. Provide this to
+           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * ListGlossaries must match the call that provided the page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A page token, received from a previous ListGlossaries call. Provide this to retrieve the
+         subsequent page. When paginating, all other parameters provided to ListGlossaries must match the
+         call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. A page token, received from a previous ListGlossaries call. Provide this to
+           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * ListGlossaries must match the call that provided the page token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates a Glossary resource.
+         *
+         * Create a request for the method "glossaries.patch".
+         *
+         * This request holds the parameters needed by the dataplex server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Output only. Identifier. The resource name of the Glossary. Format:
+         *        projects/{projectId}/locations/{locationId}/glossaries/{glossaryId}
+         * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1Glossary}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1Glossary content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/glossaries/[^/]+$");
+
+          /**
+           * Updates a Glossary resource.
+           *
+           * Create a request for the method "glossaries.patch".
+           *
+           * This request holds the parameters needed by the the dataplex server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Output only. Identifier. The resource name of the Glossary. Format:
+         *        projects/{projectId}/locations/{locationId}/glossaries/{glossaryId}
+           * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1Glossary}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1Glossary content) {
+            super(CloudDataplex.this, "PATCH", REST_PATH, content, com.google.api.services.dataplex.v1.model.GoogleLongrunningOperation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/glossaries/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Output only. Identifier. The resource name of the Glossary. Format:
+           * projects/{projectId}/locations/{locationId}/glossaries/{glossaryId}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Output only. Identifier. The resource name of the Glossary. Format:
+         projects/{projectId}/locations/{locationId}/glossaries/{glossaryId}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Output only. Identifier. The resource name of the Glossary. Format:
+           * projects/{projectId}/locations/{locationId}/glossaries/{glossaryId}
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/glossaries/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** Required. The list of fields to update. */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Required. The list of fields to update.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /** Required. The list of fields to update. */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          /**
+           * Optional. Validates the request without actually updating the glossary. Default: false.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. Validates the request without actually updating the glossary. Default: false.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /**
+           * Optional. Validates the request without actually updating the glossary. Default: false.
+           */
+          public Patch setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
           }
         }
         /**
@@ -16070,6 +17471,456 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
         public class Categories {
 
           /**
+           * GlossaryCategory APIs are CCFE passthrough APIs. Creates a new GlossaryCategory resource.
+           *
+           * Create a request for the method "categories.create".
+           *
+           * This request holds the parameters needed by the dataplex server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent resource where this GlossaryCategory will be created. Format:
+           *        projects/{projectId}/locations/{locationId}/glossaries/{glossaryId} where locationId
+           *        refers to a GCP region.
+           * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1GlossaryCategory}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1GlossaryCategory content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1GlossaryCategory> {
+
+            private static final String REST_PATH = "v1/{+parent}/categories";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/glossaries/[^/]+$");
+
+            /**
+             * GlossaryCategory APIs are CCFE passthrough APIs. Creates a new GlossaryCategory resource.
+             *
+             * Create a request for the method "categories.create".
+             *
+             * This request holds the parameters needed by the the dataplex server.  After setting any
+             * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent resource where this GlossaryCategory will be created. Format:
+           *        projects/{projectId}/locations/{locationId}/glossaries/{glossaryId} where locationId
+           *        refers to a GCP region.
+             * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1GlossaryCategory}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1GlossaryCategory content) {
+              super(CloudDataplex.this, "POST", REST_PATH, content, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1GlossaryCategory.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/glossaries/[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent resource where this GlossaryCategory will be created. Format:
+             * projects/{projectId}/locations/{locationId}/glossaries/{glossaryId} where locationId
+             * refers to a GCP region.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent resource where this GlossaryCategory will be created. Format:
+           projects/{projectId}/locations/{locationId}/glossaries/{glossaryId} where locationId refers to a
+           GCP region.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The parent resource where this GlossaryCategory will be created. Format:
+             * projects/{projectId}/locations/{locationId}/glossaries/{glossaryId} where locationId
+             * refers to a GCP region.
+             */
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/glossaries/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /** Required. Category ID: GlossaryCategory identifier. */
+            @com.google.api.client.util.Key
+            private java.lang.String categoryId;
+
+            /** Required. Category ID: GlossaryCategory identifier.
+             */
+            public java.lang.String getCategoryId() {
+              return categoryId;
+            }
+
+            /** Required. Category ID: GlossaryCategory identifier. */
+            public Create setCategoryId(java.lang.String categoryId) {
+              this.categoryId = categoryId;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes a GlossaryCategory resource. All the categories and terms nested directly under the
+           * category will be moved one level up to the parent in the hierarchy.
+           *
+           * Create a request for the method "categories.delete".
+           *
+           * This request holds the parameters needed by the dataplex server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the GlossaryCategory to delete. Format:
+           *        projects/{project}/locations/{location}/glossary/{glossary}/categories/{glossary_category}
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.Empty> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/glossaries/[^/]+/categories/[^/]+$");
+
+            /**
+             * Deletes a GlossaryCategory resource. All the categories and terms nested directly under the
+             * category will be moved one level up to the parent in the hierarchy.
+             *
+             * Create a request for the method "categories.delete".
+             *
+             * This request holds the parameters needed by the the dataplex server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the GlossaryCategory to delete. Format:
+           *        projects/{project}/locations/{location}/glossary/{glossary}/categories/{glossary_category}
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(CloudDataplex.this, "DELETE", REST_PATH, null, com.google.api.services.dataplex.v1.model.Empty.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/glossaries/[^/]+/categories/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the GlossaryCategory to delete. Format: projects/{project}/loca
+             * tions/{location}/glossary/{glossary}/categories/{glossary_category}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the GlossaryCategory to delete. Format:
+           projects/{project}/locations/{location}/glossary/{glossary}/categories/{glossary_category}
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the GlossaryCategory to delete. Format: projects/{project}/loca
+             * tions/{location}/glossary/{glossary}/categories/{glossary_category}
+             */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/glossaries/[^/]+/categories/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Retrieves a specified GlossaryCategory resource.
+           *
+           * Create a request for the method "categories.get".
+           *
+           * This request holds the parameters needed by the dataplex server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the GlossaryCategory to retrieve. Format:
+           *        projects/{project}/locations/{location}/glossaries/{glossary}/categories/{glossary_categor
+           *        y}
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1GlossaryCategory> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/glossaries/[^/]+/categories/[^/]+$");
+
+            /**
+             * Retrieves a specified GlossaryCategory resource.
+             *
+             * Create a request for the method "categories.get".
+             *
+             * This request holds the parameters needed by the the dataplex server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the GlossaryCategory to retrieve. Format:
+           *        projects/{project}/locations/{location}/glossaries/{glossary}/categories/{glossary_categor
+           *        y}
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(CloudDataplex.this, "GET", REST_PATH, null, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1GlossaryCategory.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/glossaries/[^/]+/categories/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the GlossaryCategory to retrieve. Format: projects/{project}/lo
+             * cations/{location}/glossaries/{glossary}/categories/{glossary_category}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the GlossaryCategory to retrieve. Format:
+           projects/{project}/locations/{location}/glossaries/{glossary}/categories/{glossary_category}
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the GlossaryCategory to retrieve. Format: projects/{project}/lo
+             * cations/{location}/glossaries/{glossary}/categories/{glossary_category}
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/glossaries/[^/]+/categories/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
            * Gets the access control policy for a resource. Returns an empty policy if the resource exists and
            * does not have a policy set.
            *
@@ -16264,6 +18115,419 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             @Override
             public GetIamPolicy set(String parameterName, Object value) {
               return (GetIamPolicy) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists GlossaryCategory resources in a glossary.
+           *
+           * Create a request for the method "categories.list".
+           *
+           * This request holds the parameters needed by the dataplex server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent, which has this collection of categories. Format:
+           *        projects/{project}/locations/{location}/glossaries/{glossary} Location is the GCP region.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1ListGlossaryCategoriesResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/categories";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/glossaries/[^/]+$");
+
+            /**
+             * Lists GlossaryCategory resources in a glossary.
+             *
+             * Create a request for the method "categories.list".
+             *
+             * This request holds the parameters needed by the the dataplex server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent, which has this collection of categories. Format:
+           *        projects/{project}/locations/{location}/glossaries/{glossary} Location is the GCP region.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(CloudDataplex.this, "GET", REST_PATH, null, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1ListGlossaryCategoriesResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/glossaries/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent, which has this collection of categories. Format:
+             * projects/{project}/locations/{location}/glossaries/{glossary} Location is the GCP
+             * region.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent, which has this collection of categories. Format:
+           projects/{project}/locations/{location}/glossaries/{glossary} Location is the GCP region.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The parent, which has this collection of categories. Format:
+             * projects/{project}/locations/{location}/glossaries/{glossary} Location is the GCP
+             * region.
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/glossaries/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Optional. Filter expression that filters categories listed in the response. Filters
+             * supported: List GlossaryCategories based on immediate parent in the resource
+             * hierarchy. This will only return the GlossaryCategories nested directly under the
+             * parent and no other subsequent nested categories will be returned.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Optional. Filter expression that filters categories listed in the response. Filters supported: List
+           GlossaryCategories based on immediate parent in the resource hierarchy. This will only return the
+           GlossaryCategories nested directly under the parent and no other subsequent nested categories will
+           be returned.
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /**
+             * Optional. Filter expression that filters categories listed in the response. Filters
+             * supported: List GlossaryCategories based on immediate parent in the resource
+             * hierarchy. This will only return the GlossaryCategories nested directly under the
+             * parent and no other subsequent nested categories will be returned.
+             */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /**
+             * Optional. Order by expression that orders categories listed in the response. Order by
+             * fields are: name or create_time for the result. If not specified, the ordering is
+             * undefined.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String orderBy;
+
+            /** Optional. Order by expression that orders categories listed in the response. Order by fields are:
+           name or create_time for the result. If not specified, the ordering is undefined.
+             */
+            public java.lang.String getOrderBy() {
+              return orderBy;
+            }
+
+            /**
+             * Optional. Order by expression that orders categories listed in the response. Order by
+             * fields are: name or create_time for the result. If not specified, the ordering is
+             * undefined.
+             */
+            public List setOrderBy(java.lang.String orderBy) {
+              this.orderBy = orderBy;
+              return this;
+            }
+
+            /**
+             * Optional. The maximum number of categories to return. The service may return fewer
+             * than this value. If unspecified, at most 50 categories will be returned. The maximum
+             * value is 1000; values above 1000 will be coerced to 1000.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. The maximum number of categories to return. The service may return fewer than this value.
+           If unspecified, at most 50 categories will be returned. The maximum value is 1000; values above
+           1000 will be coerced to 1000.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. The maximum number of categories to return. The service may return fewer
+             * than this value. If unspecified, at most 50 categories will be returned. The maximum
+             * value is 1000; values above 1000 will be coerced to 1000.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. A page token, received from a previous ListGlossaryCategories call. Provide
+             * this to retrieve the subsequent page. When paginating, all other parameters provided
+             * to ListGlossaryCategories must match the call that provided the page token.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. A page token, received from a previous ListGlossaryCategories call. Provide this to
+           retrieve the subsequent page. When paginating, all other parameters provided to
+           ListGlossaryCategories must match the call that provided the page token.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. A page token, received from a previous ListGlossaryCategories call. Provide
+             * this to retrieve the subsequent page. When paginating, all other parameters provided
+             * to ListGlossaryCategories must match the call that provided the page token.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Updates a GlossaryCategory resource.
+           *
+           * Create a request for the method "categories.patch".
+           *
+           * This request holds the parameters needed by the dataplex server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           *
+           * @param name Output only. Identifier. The resource name of the GlossaryCategory. Format:
+           *        projects/{projectId}/locations/{locationId}/glossaries/{glossaryId}/categories/{categoryId
+           *        }
+           * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1GlossaryCategory}
+           * @return the request
+           */
+          public Patch patch(java.lang.String name, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1GlossaryCategory content) throws java.io.IOException {
+            Patch result = new Patch(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Patch extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1GlossaryCategory> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/glossaries/[^/]+/categories/[^/]+$");
+
+            /**
+             * Updates a GlossaryCategory resource.
+             *
+             * Create a request for the method "categories.patch".
+             *
+             * This request holds the parameters needed by the the dataplex server.  After setting any
+             * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Output only. Identifier. The resource name of the GlossaryCategory. Format:
+           *        projects/{projectId}/locations/{locationId}/glossaries/{glossaryId}/categories/{categoryId
+           *        }
+             * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1GlossaryCategory}
+             * @since 1.13
+             */
+            protected Patch(java.lang.String name, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1GlossaryCategory content) {
+              super(CloudDataplex.this, "PATCH", REST_PATH, content, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1GlossaryCategory.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/glossaries/[^/]+/categories/[^/]+$");
+              }
+            }
+
+            @Override
+            public Patch set$Xgafv(java.lang.String $Xgafv) {
+              return (Patch) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Patch setAccessToken(java.lang.String accessToken) {
+              return (Patch) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Patch setAlt(java.lang.String alt) {
+              return (Patch) super.setAlt(alt);
+            }
+
+            @Override
+            public Patch setCallback(java.lang.String callback) {
+              return (Patch) super.setCallback(callback);
+            }
+
+            @Override
+            public Patch setFields(java.lang.String fields) {
+              return (Patch) super.setFields(fields);
+            }
+
+            @Override
+            public Patch setKey(java.lang.String key) {
+              return (Patch) super.setKey(key);
+            }
+
+            @Override
+            public Patch setOauthToken(java.lang.String oauthToken) {
+              return (Patch) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Patch) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Patch setQuotaUser(java.lang.String quotaUser) {
+              return (Patch) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Patch setUploadType(java.lang.String uploadType) {
+              return (Patch) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Patch) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Output only. Identifier. The resource name of the GlossaryCategory. Format: projects/
+             * {projectId}/locations/{locationId}/glossaries/{glossaryId}/categories/{categoryId}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Output only. Identifier. The resource name of the GlossaryCategory. Format:
+           projects/{projectId}/locations/{locationId}/glossaries/{glossaryId}/categories/{categoryId}
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Output only. Identifier. The resource name of the GlossaryCategory. Format: projects/
+             * {projectId}/locations/{locationId}/glossaries/{glossaryId}/categories/{categoryId}
+             */
+            public Patch setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/glossaries/[^/]+/categories/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /** Required. The list of fields to update. */
+            @com.google.api.client.util.Key
+            private String updateMask;
+
+            /** Required. The list of fields to update.
+             */
+            public String getUpdateMask() {
+              return updateMask;
+            }
+
+            /** Required. The list of fields to update. */
+            public Patch setUpdateMask(String updateMask) {
+              this.updateMask = updateMask;
+              return this;
+            }
+
+            @Override
+            public Patch set(String parameterName, Object value) {
+              return (Patch) super.set(parameterName, value);
             }
           }
           /**
@@ -16585,6 +18849,452 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
         public class Terms {
 
           /**
+           * GlossaryTerm APIs are CCFE passthrough APIs. Creates a new GlossaryTerm resource.
+           *
+           * Create a request for the method "terms.create".
+           *
+           * This request holds the parameters needed by the dataplex server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent resource where this GlossaryTerm will be created. Format:
+           *        projects/{projectId}/locations/{locationId}/glossaries/{glossaryId} where locationId
+           *        refers to a GCP region.
+           * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1GlossaryTerm}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1GlossaryTerm content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1GlossaryTerm> {
+
+            private static final String REST_PATH = "v1/{+parent}/terms";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/glossaries/[^/]+$");
+
+            /**
+             * GlossaryTerm APIs are CCFE passthrough APIs. Creates a new GlossaryTerm resource.
+             *
+             * Create a request for the method "terms.create".
+             *
+             * This request holds the parameters needed by the the dataplex server.  After setting any
+             * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent resource where this GlossaryTerm will be created. Format:
+           *        projects/{projectId}/locations/{locationId}/glossaries/{glossaryId} where locationId
+           *        refers to a GCP region.
+             * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1GlossaryTerm}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1GlossaryTerm content) {
+              super(CloudDataplex.this, "POST", REST_PATH, content, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1GlossaryTerm.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/glossaries/[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent resource where this GlossaryTerm will be created. Format:
+             * projects/{projectId}/locations/{locationId}/glossaries/{glossaryId} where locationId
+             * refers to a GCP region.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent resource where this GlossaryTerm will be created. Format:
+           projects/{projectId}/locations/{locationId}/glossaries/{glossaryId} where locationId refers to a
+           GCP region.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The parent resource where this GlossaryTerm will be created. Format:
+             * projects/{projectId}/locations/{locationId}/glossaries/{glossaryId} where locationId
+             * refers to a GCP region.
+             */
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/glossaries/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /** Required. Term ID: GlossaryTerm identifier. */
+            @com.google.api.client.util.Key
+            private java.lang.String termId;
+
+            /** Required. Term ID: GlossaryTerm identifier.
+             */
+            public java.lang.String getTermId() {
+              return termId;
+            }
+
+            /** Required. Term ID: GlossaryTerm identifier. */
+            public Create setTermId(java.lang.String termId) {
+              this.termId = termId;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes a GlossaryTerm resource.
+           *
+           * Create a request for the method "terms.delete".
+           *
+           * This request holds the parameters needed by the dataplex server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the GlossaryTerm to delete. Format:
+           *        projects/{project}/locations/{location}/glossary/{glossary}/terms/{glossary_term}
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.Empty> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/glossaries/[^/]+/terms/[^/]+$");
+
+            /**
+             * Deletes a GlossaryTerm resource.
+             *
+             * Create a request for the method "terms.delete".
+             *
+             * This request holds the parameters needed by the the dataplex server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the GlossaryTerm to delete. Format:
+           *        projects/{project}/locations/{location}/glossary/{glossary}/terms/{glossary_term}
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(CloudDataplex.this, "DELETE", REST_PATH, null, com.google.api.services.dataplex.v1.model.Empty.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/glossaries/[^/]+/terms/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the GlossaryTerm to delete. Format:
+             * projects/{project}/locations/{location}/glossary/{glossary}/terms/{glossary_term}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the GlossaryTerm to delete. Format:
+           projects/{project}/locations/{location}/glossary/{glossary}/terms/{glossary_term}
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the GlossaryTerm to delete. Format:
+             * projects/{project}/locations/{location}/glossary/{glossary}/terms/{glossary_term}
+             */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/glossaries/[^/]+/terms/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Retrieves a specified GlossaryTerm resource.
+           *
+           * Create a request for the method "terms.get".
+           *
+           * This request holds the parameters needed by the dataplex server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the GlossaryTerm to retrieve. Format:
+           *        projects/{project}/locations/{location}/glossaries/{glossary}/terms/{glossary_term}
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1GlossaryTerm> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/glossaries/[^/]+/terms/[^/]+$");
+
+            /**
+             * Retrieves a specified GlossaryTerm resource.
+             *
+             * Create a request for the method "terms.get".
+             *
+             * This request holds the parameters needed by the the dataplex server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the GlossaryTerm to retrieve. Format:
+           *        projects/{project}/locations/{location}/glossaries/{glossary}/terms/{glossary_term}
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(CloudDataplex.this, "GET", REST_PATH, null, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1GlossaryTerm.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/glossaries/[^/]+/terms/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the GlossaryTerm to retrieve. Format:
+             * projects/{project}/locations/{location}/glossaries/{glossary}/terms/{glossary_term}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the GlossaryTerm to retrieve. Format:
+           projects/{project}/locations/{location}/glossaries/{glossary}/terms/{glossary_term}
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the GlossaryTerm to retrieve. Format:
+             * projects/{project}/locations/{location}/glossaries/{glossary}/terms/{glossary_term}
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/glossaries/[^/]+/terms/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
            * Gets the access control policy for a resource. Returns an empty policy if the resource exists and
            * does not have a policy set.
            *
@@ -16779,6 +19489,416 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             @Override
             public GetIamPolicy set(String parameterName, Object value) {
               return (GetIamPolicy) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists GlossaryTerm resources in a glossary.
+           *
+           * Create a request for the method "terms.list".
+           *
+           * This request holds the parameters needed by the dataplex server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent, which has this collection of terms. Format:
+           *        projects/{project}/locations/{location}/glossaries/{glossary} Location is the GCP region.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1ListGlossaryTermsResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/terms";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/glossaries/[^/]+$");
+
+            /**
+             * Lists GlossaryTerm resources in a glossary.
+             *
+             * Create a request for the method "terms.list".
+             *
+             * This request holds the parameters needed by the the dataplex server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent, which has this collection of terms. Format:
+           *        projects/{project}/locations/{location}/glossaries/{glossary} Location is the GCP region.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(CloudDataplex.this, "GET", REST_PATH, null, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1ListGlossaryTermsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/glossaries/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent, which has this collection of terms. Format:
+             * projects/{project}/locations/{location}/glossaries/{glossary} Location is the GCP
+             * region.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent, which has this collection of terms. Format:
+           projects/{project}/locations/{location}/glossaries/{glossary} Location is the GCP region.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The parent, which has this collection of terms. Format:
+             * projects/{project}/locations/{location}/glossaries/{glossary} Location is the GCP
+             * region.
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/glossaries/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Optional. Filter expression that filters terms listed in the response. Filters
+             * supported: List GlossaryTerms based on immediate parent in the resource hierarchy.
+             * This will only return the terms nested directly under the parent and no other
+             * subsequent nested terms will be returned.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Optional. Filter expression that filters terms listed in the response. Filters supported: List
+           GlossaryTerms based on immediate parent in the resource hierarchy. This will only return the terms
+           nested directly under the parent and no other subsequent nested terms will be returned.
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /**
+             * Optional. Filter expression that filters terms listed in the response. Filters
+             * supported: List GlossaryTerms based on immediate parent in the resource hierarchy.
+             * This will only return the terms nested directly under the parent and no other
+             * subsequent nested terms will be returned.
+             */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /**
+             * Optional. Order by expression that orders terms listed in the response. Order by
+             * fields are: name or create_time for the result. If not specified, the ordering is
+             * undefined.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String orderBy;
+
+            /** Optional. Order by expression that orders terms listed in the response. Order by fields are: name
+           or create_time for the result. If not specified, the ordering is undefined.
+             */
+            public java.lang.String getOrderBy() {
+              return orderBy;
+            }
+
+            /**
+             * Optional. Order by expression that orders terms listed in the response. Order by
+             * fields are: name or create_time for the result. If not specified, the ordering is
+             * undefined.
+             */
+            public List setOrderBy(java.lang.String orderBy) {
+              this.orderBy = orderBy;
+              return this;
+            }
+
+            /**
+             * Optional. The maximum number of terms to return. The service may return fewer than
+             * this value. If unspecified, at most 50 terms will be returned. The maximum value is
+             * 1000; values above 1000 will be coerced to 1000.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. The maximum number of terms to return. The service may return fewer than this value. If
+           unspecified, at most 50 terms will be returned. The maximum value is 1000; values above 1000 will
+           be coerced to 1000.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. The maximum number of terms to return. The service may return fewer than
+             * this value. If unspecified, at most 50 terms will be returned. The maximum value is
+             * 1000; values above 1000 will be coerced to 1000.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. A page token, received from a previous ListGlossaryTerms call. Provide this
+             * to retrieve the subsequent page. When paginating, all other parameters provided to
+             * ListGlossaryTerms must match the call that provided the page token.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. A page token, received from a previous ListGlossaryTerms call. Provide this to retrieve
+           the subsequent page. When paginating, all other parameters provided to ListGlossaryTerms must match
+           the call that provided the page token.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. A page token, received from a previous ListGlossaryTerms call. Provide this
+             * to retrieve the subsequent page. When paginating, all other parameters provided to
+             * ListGlossaryTerms must match the call that provided the page token.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Updates a GlossaryTerm resource.
+           *
+           * Create a request for the method "terms.patch".
+           *
+           * This request holds the parameters needed by the dataplex server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           *
+           * @param name Output only. Identifier. The resource name of the GlossaryTerm. Format:
+           *        projects/{projectId}/locations/{locationId}/glossaries/{glossaryId}/terms/{termId}
+           * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1GlossaryTerm}
+           * @return the request
+           */
+          public Patch patch(java.lang.String name, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1GlossaryTerm content) throws java.io.IOException {
+            Patch result = new Patch(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Patch extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1GlossaryTerm> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/glossaries/[^/]+/terms/[^/]+$");
+
+            /**
+             * Updates a GlossaryTerm resource.
+             *
+             * Create a request for the method "terms.patch".
+             *
+             * This request holds the parameters needed by the the dataplex server.  After setting any
+             * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Output only. Identifier. The resource name of the GlossaryTerm. Format:
+           *        projects/{projectId}/locations/{locationId}/glossaries/{glossaryId}/terms/{termId}
+             * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1GlossaryTerm}
+             * @since 1.13
+             */
+            protected Patch(java.lang.String name, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1GlossaryTerm content) {
+              super(CloudDataplex.this, "PATCH", REST_PATH, content, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1GlossaryTerm.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/glossaries/[^/]+/terms/[^/]+$");
+              }
+            }
+
+            @Override
+            public Patch set$Xgafv(java.lang.String $Xgafv) {
+              return (Patch) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Patch setAccessToken(java.lang.String accessToken) {
+              return (Patch) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Patch setAlt(java.lang.String alt) {
+              return (Patch) super.setAlt(alt);
+            }
+
+            @Override
+            public Patch setCallback(java.lang.String callback) {
+              return (Patch) super.setCallback(callback);
+            }
+
+            @Override
+            public Patch setFields(java.lang.String fields) {
+              return (Patch) super.setFields(fields);
+            }
+
+            @Override
+            public Patch setKey(java.lang.String key) {
+              return (Patch) super.setKey(key);
+            }
+
+            @Override
+            public Patch setOauthToken(java.lang.String oauthToken) {
+              return (Patch) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Patch) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Patch setQuotaUser(java.lang.String quotaUser) {
+              return (Patch) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Patch setUploadType(java.lang.String uploadType) {
+              return (Patch) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Patch) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Output only. Identifier. The resource name of the GlossaryTerm. Format:
+             * projects/{projectId}/locations/{locationId}/glossaries/{glossaryId}/terms/{termId}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Output only. Identifier. The resource name of the GlossaryTerm. Format:
+           projects/{projectId}/locations/{locationId}/glossaries/{glossaryId}/terms/{termId}
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Output only. Identifier. The resource name of the GlossaryTerm. Format:
+             * projects/{projectId}/locations/{locationId}/glossaries/{glossaryId}/terms/{termId}
+             */
+            public Patch setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/glossaries/[^/]+/terms/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /** Required. The list of fields to update. */
+            @com.google.api.client.util.Key
+            private String updateMask;
+
+            /** Required. The list of fields to update.
+             */
+            public String getUpdateMask() {
+              return updateMask;
+            }
+
+            /** Required. The list of fields to update. */
+            public Patch setUpdateMask(String updateMask) {
+              this.updateMask = updateMask;
+              return this;
+            }
+
+            @Override
+            public Patch set(String parameterName, Object value) {
+              return (Patch) super.set(parameterName, value);
             }
           }
           /**

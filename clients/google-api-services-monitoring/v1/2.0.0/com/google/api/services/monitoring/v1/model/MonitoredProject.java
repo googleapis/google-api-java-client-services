@@ -38,6 +38,13 @@ public final class MonitoredProject extends com.google.api.client.json.GenericJs
   private String createTime;
 
   /**
+   * Output only. Set if the project has been tombstoned by the user.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isTombstoned;
+
+  /**
    * Immutable. The resource name of the MonitoredProject. On input, the resource name includes the
    * scoping project ID and monitored project ID. On output, it contains the equivalent project
    * numbers. Example: locations/global/metricsScopes/{SCOPING_PROJECT_ID_OR_NUMBER}/projects/{MONIT
@@ -61,6 +68,23 @@ public final class MonitoredProject extends com.google.api.client.json.GenericJs
    */
   public MonitoredProject setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Output only. Set if the project has been tombstoned by the user.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsTombstoned() {
+    return isTombstoned;
+  }
+
+  /**
+   * Output only. Set if the project has been tombstoned by the user.
+   * @param isTombstoned isTombstoned or {@code null} for none
+   */
+  public MonitoredProject setIsTombstoned(java.lang.Boolean isTombstoned) {
+    this.isTombstoned = isTombstoned;
     return this;
   }
 

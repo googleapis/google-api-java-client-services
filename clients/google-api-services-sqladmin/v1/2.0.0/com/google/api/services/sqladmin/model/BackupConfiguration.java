@@ -37,6 +37,13 @@ public final class BackupConfiguration extends com.google.api.client.json.Generi
   private BackupRetentionSettings backupRetentionSettings;
 
   /**
+   * Output only. Backup tier that manages the backups for the instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String backupTier;
+
+  /**
    * (MySQL only) Whether binary log is enabled. If backup configuration is disabled, binarylog must
    * be disabled as well.
    * The value may be {@code null}.
@@ -115,6 +122,23 @@ public final class BackupConfiguration extends com.google.api.client.json.Generi
    */
   public BackupConfiguration setBackupRetentionSettings(BackupRetentionSettings backupRetentionSettings) {
     this.backupRetentionSettings = backupRetentionSettings;
+    return this;
+  }
+
+  /**
+   * Output only. Backup tier that manages the backups for the instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBackupTier() {
+    return backupTier;
+  }
+
+  /**
+   * Output only. Backup tier that manages the backups for the instance.
+   * @param backupTier backupTier or {@code null} for none
+   */
+  public BackupConfiguration setBackupTier(java.lang.String backupTier) {
+    this.backupTier = backupTier;
     return this;
   }
 

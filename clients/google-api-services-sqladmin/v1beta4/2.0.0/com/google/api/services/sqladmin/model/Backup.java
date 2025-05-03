@@ -17,7 +17,7 @@
 package com.google.api.services.sqladmin.model;
 
 /**
- * A backup resource.
+ * A backup resource. Next ID: 30
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud SQL Admin API. For a detailed explanation see:

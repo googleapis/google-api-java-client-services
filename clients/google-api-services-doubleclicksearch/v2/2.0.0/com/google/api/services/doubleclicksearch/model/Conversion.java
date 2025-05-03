@@ -17,7 +17,8 @@
 package com.google.api.services.doubleclicksearch.model;
 
 /**
- * A conversion containing data relevant to DoubleClick Search.
+ * A conversion containing data relevant to DoubleClick Search. Common DS3 API conversion fields: Id
+ * Range [1 - 2800]. Next Id to use: 33
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Search Ads 360 API. For a detailed explanation see:

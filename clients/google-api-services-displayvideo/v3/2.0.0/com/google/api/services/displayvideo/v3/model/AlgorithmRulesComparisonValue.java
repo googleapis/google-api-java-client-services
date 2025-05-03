@@ -101,7 +101,7 @@ public final class AlgorithmRulesComparisonValue extends com.google.api.client.j
   private java.lang.String stringValue;
 
   /**
-   * Video player size value.
+   * Video player size value. This field is only supported for allowlisted partners.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -278,7 +278,7 @@ public final class AlgorithmRulesComparisonValue extends com.google.api.client.j
   }
 
   /**
-   * Video player size value.
+   * Video player size value. This field is only supported for allowlisted partners.
    * @return value or {@code null} for none
    */
   public java.lang.String getVideoPlayerSizeValue() {
@@ -286,7 +286,7 @@ public final class AlgorithmRulesComparisonValue extends com.google.api.client.j
   }
 
   /**
-   * Video player size value.
+   * Video player size value. This field is only supported for allowlisted partners.
    * @param videoPlayerSizeValue videoPlayerSizeValue or {@code null} for none
    */
   public AlgorithmRulesComparisonValue setVideoPlayerSizeValue(java.lang.String videoPlayerSizeValue) {

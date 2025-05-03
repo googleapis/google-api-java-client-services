@@ -73,7 +73,8 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
   private MerchantReviewDataSource merchantReviewDataSource;
 
   /**
-   * Identifier. The name of the data source. Format: `accounts/{account}/dataSources/{datasource}`
+   * Required. Identifier. The name of the data source. Format:
+   * `accounts/{account}/dataSources/{datasource}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -221,7 +222,8 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier. The name of the data source. Format: `accounts/{account}/dataSources/{datasource}`
+   * Required. Identifier. The name of the data source. Format:
+   * `accounts/{account}/dataSources/{datasource}`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -229,7 +231,8 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier. The name of the data source. Format: `accounts/{account}/dataSources/{datasource}`
+   * Required. Identifier. The name of the data source. Format:
+   * `accounts/{account}/dataSources/{datasource}`
    * @param name name or {@code null} for none
    */
   public DataSource setName(java.lang.String name) {

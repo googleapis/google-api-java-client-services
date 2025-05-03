@@ -766,7 +766,7 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
      * This request holds the parameters needed by the merchantapi server.  After setting any optional
      * parameters, call the {@link ListSubaccounts#execute()} method to invoke the remote operation.
      *
-     * @param provider Required. The aggregation service provider. Format: `accounts/{providerId}`
+     * @param provider Required. The aggregation service provider. Format: `accounts/{accountId}`
      * @return the request
      */
     public ListSubaccounts listSubaccounts(java.lang.String provider) throws java.io.IOException {
@@ -796,7 +796,7 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
        * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
        * the constructor. </p>
        *
-       * @param provider Required. The aggregation service provider. Format: `accounts/{providerId}`
+       * @param provider Required. The aggregation service provider. Format: `accounts/{accountId}`
        * @since 1.13
        */
       protected ListSubaccounts(java.lang.String provider) {
@@ -874,17 +874,17 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
         return (ListSubaccounts) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Required. The aggregation service provider. Format: `accounts/{providerId}` */
+      /** Required. The aggregation service provider. Format: `accounts/{accountId}` */
       @com.google.api.client.util.Key
       private java.lang.String provider;
 
-      /** Required. The aggregation service provider. Format: `accounts/{providerId}`
+      /** Required. The aggregation service provider. Format: `accounts/{accountId}`
        */
       public java.lang.String getProvider() {
         return provider;
       }
 
-      /** Required. The aggregation service provider. Format: `accounts/{providerId}` */
+      /** Required. The aggregation service provider. Format: `accounts/{accountId}` */
       public ListSubaccounts setProvider(java.lang.String provider) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(PROVIDER_PATTERN.matcher(provider).matches(),

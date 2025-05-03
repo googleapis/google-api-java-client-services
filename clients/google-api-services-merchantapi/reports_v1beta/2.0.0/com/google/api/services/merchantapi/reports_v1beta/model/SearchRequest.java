@@ -48,8 +48,9 @@ public final class SearchRequest extends com.google.api.client.json.GenericJson 
 
   /**
    * Required. Query that defines a report to be retrieved. For details on how to construct your
-   * query, see the Query Language guide. For the full list of available tables and fields, see the
-   * Available fields.
+   * query, see the [Query Language guide](/merchant/api/guides/reports/query-language). For the
+   * full list of available tables and fields, see the [Available
+   * fields](/merchant/api/reference/rest/reports_v1beta/accounts.reports).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,8 +98,9 @@ public final class SearchRequest extends com.google.api.client.json.GenericJson 
 
   /**
    * Required. Query that defines a report to be retrieved. For details on how to construct your
-   * query, see the Query Language guide. For the full list of available tables and fields, see the
-   * Available fields.
+   * query, see the [Query Language guide](/merchant/api/guides/reports/query-language). For the
+   * full list of available tables and fields, see the [Available
+   * fields](/merchant/api/reference/rest/reports_v1beta/accounts.reports).
    * @return value or {@code null} for none
    */
   public java.lang.String getQuery() {
@@ -107,8 +109,9 @@ public final class SearchRequest extends com.google.api.client.json.GenericJson 
 
   /**
    * Required. Query that defines a report to be retrieved. For details on how to construct your
-   * query, see the Query Language guide. For the full list of available tables and fields, see the
-   * Available fields.
+   * query, see the [Query Language guide](/merchant/api/guides/reports/query-language). For the
+   * full list of available tables and fields, see the [Available
+   * fields](/merchant/api/reference/rest/reports_v1beta/accounts.reports).
    * @param query query or {@code null} for none
    */
   public SearchRequest setQuery(java.lang.String query) {

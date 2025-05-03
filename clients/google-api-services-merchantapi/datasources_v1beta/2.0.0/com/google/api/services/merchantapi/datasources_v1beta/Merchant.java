@@ -940,7 +940,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the merchantapi server.  After setting any optional
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name Identifier. The name of the data source. Format: `accounts/{account}/dataSources/{datasource}`
+       * @param name Required. Identifier. The name of the data source. Format:
+       *        `accounts/{account}/dataSources/{datasource}`
        * @param content the {@link com.google.api.services.merchantapi.datasources_v1beta.model.DataSource}
        * @return the request
        */
@@ -969,7 +970,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Identifier. The name of the data source. Format: `accounts/{account}/dataSources/{datasource}`
+         * @param name Required. Identifier. The name of the data source. Format:
+       *        `accounts/{account}/dataSources/{datasource}`
          * @param content the {@link com.google.api.services.merchantapi.datasources_v1beta.model.DataSource}
          * @since 1.13
          */
@@ -1039,20 +1041,21 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * Identifier. The name of the data source. Format:
+         * Required. Identifier. The name of the data source. Format:
          * `accounts/{account}/dataSources/{datasource}`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Identifier. The name of the data source. Format: `accounts/{account}/dataSources/{datasource}`
+        /** Required. Identifier. The name of the data source. Format:
+       `accounts/{account}/dataSources/{datasource}`
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Identifier. The name of the data source. Format:
+         * Required. Identifier. The name of the data source. Format:
          * `accounts/{account}/dataSources/{datasource}`
          */
         public Patch setName(java.lang.String name) {

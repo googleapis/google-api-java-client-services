@@ -43,7 +43,8 @@ public final class LfpMerchantState extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The inventory statistics for the merchant.
+   * The inventory statistics for the merchant. The field will be absent if the merchant has no
+   * inventory submitted through LFP.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,7 +66,8 @@ public final class LfpMerchantState extends com.google.api.client.json.GenericJs
   private java.lang.String name;
 
   /**
-   * Output only. The state per store from the specified merchant.
+   * Output only. The state per store from the specified merchant. The field will be absent if the
+   * merchant has no stores submitted through LFP.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,7 +91,8 @@ public final class LfpMerchantState extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The inventory statistics for the merchant.
+   * The inventory statistics for the merchant. The field will be absent if the merchant has no
+   * inventory submitted through LFP.
    * @return value or {@code null} for none
    */
   public InventoryStats getInventoryStats() {
@@ -97,7 +100,8 @@ public final class LfpMerchantState extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The inventory statistics for the merchant.
+   * The inventory statistics for the merchant. The field will be absent if the merchant has no
+   * inventory submitted through LFP.
    * @param inventoryStats inventoryStats or {@code null} for none
    */
   public LfpMerchantState setInventoryStats(InventoryStats inventoryStats) {
@@ -142,7 +146,8 @@ public final class LfpMerchantState extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. The state per store from the specified merchant.
+   * Output only. The state per store from the specified merchant. The field will be absent if the
+   * merchant has no stores submitted through LFP.
    * @return value or {@code null} for none
    */
   public java.util.List<LfpStoreState> getStoreStates() {
@@ -150,7 +155,8 @@ public final class LfpMerchantState extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. The state per store from the specified merchant.
+   * Output only. The state per store from the specified merchant. The field will be absent if the
+   * merchant has no stores submitted through LFP.
    * @param storeStates storeStates or {@code null} for none
    */
   public LfpMerchantState setStoreStates(java.util.List<LfpStoreState> storeStates) {

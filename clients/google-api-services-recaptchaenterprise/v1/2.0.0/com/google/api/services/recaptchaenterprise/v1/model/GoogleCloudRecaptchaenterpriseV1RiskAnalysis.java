@@ -61,6 +61,20 @@ public final class GoogleCloudRecaptchaenterpriseV1RiskAnalysis extends com.goog
   private java.lang.Float score;
 
   /**
+   * Output only. Bots with identities that have been verified by reCAPTCHA and detected in the
+   * event.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudRecaptchaenterpriseV1Bot> verifiedBots;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudRecaptchaenterpriseV1Bot used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudRecaptchaenterpriseV1Bot.class);
+  }
+
+  /**
    * Output only. Challenge information for SCORE_AND_CHALLENGE and INVISIBLE keys
    * @return value or {@code null} for none
    */
@@ -129,6 +143,25 @@ public final class GoogleCloudRecaptchaenterpriseV1RiskAnalysis extends com.goog
    */
   public GoogleCloudRecaptchaenterpriseV1RiskAnalysis setScore(java.lang.Float score) {
     this.score = score;
+    return this;
+  }
+
+  /**
+   * Output only. Bots with identities that have been verified by reCAPTCHA and detected in the
+   * event.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudRecaptchaenterpriseV1Bot> getVerifiedBots() {
+    return verifiedBots;
+  }
+
+  /**
+   * Output only. Bots with identities that have been verified by reCAPTCHA and detected in the
+   * event.
+   * @param verifiedBots verifiedBots or {@code null} for none
+   */
+  public GoogleCloudRecaptchaenterpriseV1RiskAnalysis setVerifiedBots(java.util.List<GoogleCloudRecaptchaenterpriseV1Bot> verifiedBots) {
+    this.verifiedBots = verifiedBots;
     return this;
   }
 

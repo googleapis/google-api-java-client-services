@@ -52,8 +52,8 @@ public final class UploadGenericArtifactRequest extends com.google.api.client.js
   /**
    * The ID of the version of the generic artifact. If the version does not exist, a new version
    * will be created. The version_id must start and end with a letter or number, can only contain
-   * lowercase letters, numbers, hyphens and periods, i.e. [a-z0-9-.] and cannot exceed a total of
-   * 128 characters. Creating a version called `latest` is not allowed.
+   * lowercase letters, numbers, the following characters [-.+~:], i.e.[a-z0-9-.+~:] and cannot
+   * exceed a total of 128 characters. Creating a version called `latest` is not allowed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,8 +102,8 @@ public final class UploadGenericArtifactRequest extends com.google.api.client.js
   /**
    * The ID of the version of the generic artifact. If the version does not exist, a new version
    * will be created. The version_id must start and end with a letter or number, can only contain
-   * lowercase letters, numbers, hyphens and periods, i.e. [a-z0-9-.] and cannot exceed a total of
-   * 128 characters. Creating a version called `latest` is not allowed.
+   * lowercase letters, numbers, the following characters [-.+~:], i.e.[a-z0-9-.+~:] and cannot
+   * exceed a total of 128 characters. Creating a version called `latest` is not allowed.
    * @return value or {@code null} for none
    */
   public java.lang.String getVersionId() {
@@ -113,8 +113,8 @@ public final class UploadGenericArtifactRequest extends com.google.api.client.js
   /**
    * The ID of the version of the generic artifact. If the version does not exist, a new version
    * will be created. The version_id must start and end with a letter or number, can only contain
-   * lowercase letters, numbers, hyphens and periods, i.e. [a-z0-9-.] and cannot exceed a total of
-   * 128 characters. Creating a version called `latest` is not allowed.
+   * lowercase letters, numbers, the following characters [-.+~:], i.e.[a-z0-9-.+~:] and cannot
+   * exceed a total of 128 characters. Creating a version called `latest` is not allowed.
    * @param versionId versionId or {@code null} for none
    */
   public UploadGenericArtifactRequest setVersionId(java.lang.String versionId) {

@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-datacatalog</artifactId>
-  <version>v1-rev20250411-2.0.0</version>
-  <name>Google Cloud Data Catalog API v1-rev20250411-2.0.0</name>
+  <version>v1-rev20250429-2.0.0</version>
+  <name>Google Cloud Data Catalog API v1-rev20250429-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

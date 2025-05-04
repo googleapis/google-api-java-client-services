@@ -1203,6 +1203,29 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
+      /**
+       * Optional. Specifies the fields of dataset that update/patch operation is targeting By
+       * default, both metadata and ACL fields are updated.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String updateMode;
+
+      /** Optional. Specifies the fields of dataset that update/patch operation is targeting By default, both
+     metadata and ACL fields are updated.
+       */
+      public java.lang.String getUpdateMode() {
+        return updateMode;
+      }
+
+      /**
+       * Optional. Specifies the fields of dataset that update/patch operation is targeting By
+       * default, both metadata and ACL fields are updated.
+       */
+      public Patch setUpdateMode(java.lang.String updateMode) {
+        this.updateMode = updateMode;
+        return this;
+      }
+
       @Override
       public Patch set(String parameterName, Object value) {
         return (Patch) super.set(parameterName, value);
@@ -1586,6 +1609,29 @@ public class Bigquery extends com.google.api.client.googleapis.services.json.Abs
        */
       public Update setAccessPolicyVersion(java.lang.Integer accessPolicyVersion) {
         this.accessPolicyVersion = accessPolicyVersion;
+        return this;
+      }
+
+      /**
+       * Optional. Specifies the fields of dataset that update/patch operation is targeting By
+       * default, both metadata and ACL fields are updated.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String updateMode;
+
+      /** Optional. Specifies the fields of dataset that update/patch operation is targeting By default, both
+     metadata and ACL fields are updated.
+       */
+      public java.lang.String getUpdateMode() {
+        return updateMode;
+      }
+
+      /**
+       * Optional. Specifies the fields of dataset that update/patch operation is targeting By
+       * default, both metadata and ACL fields are updated.
+       */
+      public Update setUpdateMode(java.lang.String updateMode) {
+        this.updateMode = updateMode;
         return this;
       }
 

@@ -256,8 +256,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   private java.util.List<RoutineReference> referencedRoutines;
 
   /**
-   * Output only. Referenced tables for the job. Queries that reference more than 50 tables will not
-   * have a complete list.
+   * Output only. Referenced tables for the job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -975,8 +974,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. Referenced tables for the job. Queries that reference more than 50 tables will not
-   * have a complete list.
+   * Output only. Referenced tables for the job.
    * @return value or {@code null} for none
    */
   public java.util.List<TableReference> getReferencedTables() {
@@ -984,8 +982,7 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. Referenced tables for the job. Queries that reference more than 50 tables will not
-   * have a complete list.
+   * Output only. Referenced tables for the job.
    * @param referencedTables referencedTables or {@code null} for none
    */
   public JobStatistics2 setReferencedTables(java.util.List<TableReference> referencedTables) {

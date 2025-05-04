@@ -437,8 +437,8 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   private TimePartitioning timePartitioning;
 
   /**
-   * Optional. [Experimental] Default time zone that will apply when parsing timestamp values that
-   * have no specific time zone.
+   * Optional. Default time zone that will apply when parsing timestamp values that have no specific
+   * time zone.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1395,8 +1395,8 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. [Experimental] Default time zone that will apply when parsing timestamp values that
-   * have no specific time zone.
+   * Optional. Default time zone that will apply when parsing timestamp values that have no specific
+   * time zone.
    * @return value or {@code null} for none
    */
   public java.lang.String getTimeZone() {
@@ -1404,8 +1404,8 @@ public final class JobConfigurationLoad extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. [Experimental] Default time zone that will apply when parsing timestamp values that
-   * have no specific time zone.
+   * Optional. Default time zone that will apply when parsing timestamp values that have no specific
+   * time zone.
    * @param timeZone timeZone or {@code null} for none
    */
   public JobConfigurationLoad setTimeZone(java.lang.String timeZone) {

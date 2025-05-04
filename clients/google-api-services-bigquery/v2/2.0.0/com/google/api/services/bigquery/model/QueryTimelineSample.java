@@ -68,6 +68,14 @@ public final class QueryTimelineSample extends com.google.api.client.json.Generi
   private java.lang.Long pendingUnits;
 
   /**
+   * Total shuffle usage ratio in shuffle RAM per reservation of this query. This will be provided
+   * for reservation customers only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double shuffleRamUsageRatio;
+
+  /**
    * Cumulative slot-ms consumed by the query.
    * The value may be {@code null}.
    */
@@ -162,6 +170,25 @@ public final class QueryTimelineSample extends com.google.api.client.json.Generi
    */
   public QueryTimelineSample setPendingUnits(java.lang.Long pendingUnits) {
     this.pendingUnits = pendingUnits;
+    return this;
+  }
+
+  /**
+   * Total shuffle usage ratio in shuffle RAM per reservation of this query. This will be provided
+   * for reservation customers only.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getShuffleRamUsageRatio() {
+    return shuffleRamUsageRatio;
+  }
+
+  /**
+   * Total shuffle usage ratio in shuffle RAM per reservation of this query. This will be provided
+   * for reservation customers only.
+   * @param shuffleRamUsageRatio shuffleRamUsageRatio or {@code null} for none
+   */
+  public QueryTimelineSample setShuffleRamUsageRatio(java.lang.Double shuffleRamUsageRatio) {
+    this.shuffleRamUsageRatio = shuffleRamUsageRatio;
     return this;
   }
 

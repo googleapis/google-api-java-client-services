@@ -150,6 +150,13 @@ public final class BareMetalCluster extends com.google.api.client.json.GenericJs
   private java.lang.String localName;
 
   /**
+   * Output only. The namespace of the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String localNamespace;
+
+  /**
    * Maintenance configuration.
    * The value may be {@code null}.
    */
@@ -550,6 +557,23 @@ public final class BareMetalCluster extends com.google.api.client.json.GenericJs
    */
   public BareMetalCluster setLocalName(java.lang.String localName) {
     this.localName = localName;
+    return this;
+  }
+
+  /**
+   * Output only. The namespace of the cluster.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLocalNamespace() {
+    return localNamespace;
+  }
+
+  /**
+   * Output only. The namespace of the cluster.
+   * @param localNamespace localNamespace or {@code null} for none
+   */
+  public BareMetalCluster setLocalNamespace(java.lang.String localNamespace) {
+    this.localNamespace = localNamespace;
     return this;
   }
 

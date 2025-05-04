@@ -78,14 +78,14 @@ public final class Repository extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Output only. If set, the repository satisfies physical zone isolation.
+   * Output only. Whether or not this repository satisfies PZI.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean satisfiesPzi;
 
   /**
-   * Output only. If set, the repository satisfies physical zone separation.
+   * Output only. Whether or not this repository satisfies PZS.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -219,7 +219,7 @@ public final class Repository extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. If set, the repository satisfies physical zone isolation.
+   * Output only. Whether or not this repository satisfies PZI.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSatisfiesPzi() {
@@ -227,7 +227,7 @@ public final class Repository extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. If set, the repository satisfies physical zone isolation.
+   * Output only. Whether or not this repository satisfies PZI.
    * @param satisfiesPzi satisfiesPzi or {@code null} for none
    */
   public Repository setSatisfiesPzi(java.lang.Boolean satisfiesPzi) {
@@ -236,7 +236,7 @@ public final class Repository extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. If set, the repository satisfies physical zone separation.
+   * Output only. Whether or not this repository satisfies PZS.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSatisfiesPzs() {
@@ -244,7 +244,7 @@ public final class Repository extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. If set, the repository satisfies physical zone separation.
+   * Output only. Whether or not this repository satisfies PZS.
    * @param satisfiesPzs satisfiesPzs or {@code null} for none
    */
   public Repository setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {

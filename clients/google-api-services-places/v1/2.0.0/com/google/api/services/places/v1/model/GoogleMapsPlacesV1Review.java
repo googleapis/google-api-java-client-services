@@ -95,13 +95,6 @@ public final class GoogleMapsPlacesV1Review extends com.google.api.client.json.G
   private GoogleTypeLocalizedText text;
 
   /**
-   * The date when the author visited the place. This is trucated to month.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleMapsPlacesV1ReviewVisitDate visitDate;
-
-  /**
    * This review's author.
    * @return value or {@code null} for none
    */
@@ -255,23 +248,6 @@ public final class GoogleMapsPlacesV1Review extends com.google.api.client.json.G
    */
   public GoogleMapsPlacesV1Review setText(GoogleTypeLocalizedText text) {
     this.text = text;
-    return this;
-  }
-
-  /**
-   * The date when the author visited the place. This is trucated to month.
-   * @return value or {@code null} for none
-   */
-  public GoogleMapsPlacesV1ReviewVisitDate getVisitDate() {
-    return visitDate;
-  }
-
-  /**
-   * The date when the author visited the place. This is trucated to month.
-   * @param visitDate visitDate or {@code null} for none
-   */
-  public GoogleMapsPlacesV1Review setVisitDate(GoogleMapsPlacesV1ReviewVisitDate visitDate) {
-    this.visitDate = visitDate;
     return this;
   }
 

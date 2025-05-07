@@ -38,8 +38,7 @@ public final class GoogleMapsPlacesV1PlaceGoogleMapsLinks extends com.google.api
   private java.lang.String directionsUri;
 
   /**
-   * A link to show photos of this place. This link is currently not supported on Google Maps Mobile
-   * and only works on the web version of Google Maps.
+   * A link to show reviews of this place on Google Maps.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,16 +52,14 @@ public final class GoogleMapsPlacesV1PlaceGoogleMapsLinks extends com.google.api
   private java.lang.String placeUri;
 
   /**
-   * A link to show reviews of this place. This link is currently not supported on Google Maps
-   * Mobile and only works on the web version of Google Maps.
+   * A link to show reviews of this place on Google Maps.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String reviewsUri;
 
   /**
-   * A link to write a review for this place. This link is currently not supported on Google Maps
-   * Mobile and only works on the web version of Google Maps.
+   * A link to show reviews of this place on Google Maps.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,8 +85,7 @@ public final class GoogleMapsPlacesV1PlaceGoogleMapsLinks extends com.google.api
   }
 
   /**
-   * A link to show photos of this place. This link is currently not supported on Google Maps Mobile
-   * and only works on the web version of Google Maps.
+   * A link to show reviews of this place on Google Maps.
    * @return value or {@code null} for none
    */
   public java.lang.String getPhotosUri() {
@@ -97,8 +93,7 @@ public final class GoogleMapsPlacesV1PlaceGoogleMapsLinks extends com.google.api
   }
 
   /**
-   * A link to show photos of this place. This link is currently not supported on Google Maps Mobile
-   * and only works on the web version of Google Maps.
+   * A link to show reviews of this place on Google Maps.
    * @param photosUri photosUri or {@code null} for none
    */
   public GoogleMapsPlacesV1PlaceGoogleMapsLinks setPhotosUri(java.lang.String photosUri) {
@@ -124,8 +119,7 @@ public final class GoogleMapsPlacesV1PlaceGoogleMapsLinks extends com.google.api
   }
 
   /**
-   * A link to show reviews of this place. This link is currently not supported on Google Maps
-   * Mobile and only works on the web version of Google Maps.
+   * A link to show reviews of this place on Google Maps.
    * @return value or {@code null} for none
    */
   public java.lang.String getReviewsUri() {
@@ -133,8 +127,7 @@ public final class GoogleMapsPlacesV1PlaceGoogleMapsLinks extends com.google.api
   }
 
   /**
-   * A link to show reviews of this place. This link is currently not supported on Google Maps
-   * Mobile and only works on the web version of Google Maps.
+   * A link to show reviews of this place on Google Maps.
    * @param reviewsUri reviewsUri or {@code null} for none
    */
   public GoogleMapsPlacesV1PlaceGoogleMapsLinks setReviewsUri(java.lang.String reviewsUri) {
@@ -143,8 +136,7 @@ public final class GoogleMapsPlacesV1PlaceGoogleMapsLinks extends com.google.api
   }
 
   /**
-   * A link to write a review for this place. This link is currently not supported on Google Maps
-   * Mobile and only works on the web version of Google Maps.
+   * A link to show reviews of this place on Google Maps.
    * @return value or {@code null} for none
    */
   public java.lang.String getWriteAReviewUri() {
@@ -152,8 +144,7 @@ public final class GoogleMapsPlacesV1PlaceGoogleMapsLinks extends com.google.api
   }
 
   /**
-   * A link to write a review for this place. This link is currently not supported on Google Maps
-   * Mobile and only works on the web version of Google Maps.
+   * A link to show reviews of this place on Google Maps.
    * @param writeAReviewUri writeAReviewUri or {@code null} for none
    */
   public GoogleMapsPlacesV1PlaceGoogleMapsLinks setWriteAReviewUri(java.lang.String writeAReviewUri) {

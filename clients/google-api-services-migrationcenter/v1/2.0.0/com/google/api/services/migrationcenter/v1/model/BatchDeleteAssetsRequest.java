@@ -38,6 +38,13 @@ public final class BatchDeleteAssetsRequest extends com.google.api.client.json.G
   private java.lang.Boolean allowMissing;
 
   /**
+   * Optional. Optional cascading rules for deleting related assets.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<CascadingRule> cascadingRules;
+
+  /**
    * Required. The IDs of the assets to delete. A maximum of 1000 assets can be deleted in a batch.
    * Format: projects/{project}/locations/{location}/assets/{name}.
    * The value may be {@code null}.
@@ -61,6 +68,23 @@ public final class BatchDeleteAssetsRequest extends com.google.api.client.json.G
    */
   public BatchDeleteAssetsRequest setAllowMissing(java.lang.Boolean allowMissing) {
     this.allowMissing = allowMissing;
+    return this;
+  }
+
+  /**
+   * Optional. Optional cascading rules for deleting related assets.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<CascadingRule> getCascadingRules() {
+    return cascadingRules;
+  }
+
+  /**
+   * Optional. Optional cascading rules for deleting related assets.
+   * @param cascadingRules cascadingRules or {@code null} for none
+   */
+  public BatchDeleteAssetsRequest setCascadingRules(java.util.List<CascadingRule> cascadingRules) {
+    this.cascadingRules = cascadingRules;
     return this;
   }
 

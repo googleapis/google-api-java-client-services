@@ -30,8 +30,8 @@ package com.google.api.services.chromepolicy.v1.model;
 public final class Proto2FileDescriptorProto extends com.google.api.client.json.GenericJson {
 
   /**
-   * BEGIN GOOGLE-INTERNAL TODO(b/297898292) Deprecate and remove this field in favor of enums. END
-   * GOOGLE-INTERNAL
+   * copybara:strip_begin TODO(b/297898292) Deprecate and remove this field in favor of enums.
+   * copybara:strip_end
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,8 +95,8 @@ public final class Proto2FileDescriptorProto extends com.google.api.client.json.
   private java.lang.String syntax;
 
   /**
-   * BEGIN GOOGLE-INTERNAL TODO(b/297898292) Deprecate and remove this field in favor of enums. END
-   * GOOGLE-INTERNAL
+   * copybara:strip_begin TODO(b/297898292) Deprecate and remove this field in favor of enums.
+   * copybara:strip_end
    * @return value or {@code null} for none
    */
   public java.lang.String getEditionDeprecated() {
@@ -104,8 +104,8 @@ public final class Proto2FileDescriptorProto extends com.google.api.client.json.
   }
 
   /**
-   * BEGIN GOOGLE-INTERNAL TODO(b/297898292) Deprecate and remove this field in favor of enums. END
-   * GOOGLE-INTERNAL
+   * copybara:strip_begin TODO(b/297898292) Deprecate and remove this field in favor of enums.
+   * copybara:strip_end
    * @param editionDeprecated editionDeprecated or {@code null} for none
    */
   public Proto2FileDescriptorProto setEditionDeprecated(java.lang.String editionDeprecated) {

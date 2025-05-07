@@ -32,6 +32,13 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Can either be a boolean or an object; controls the presence of additional properties.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Object additionalProperties;
+
+  /**
    * Optional. The value should be validated against any (one or more) of the subschemas in the
    * list.
    * The value may be {@code null}.
@@ -45,6 +52,13 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
    */
   @com.google.api.client.util.Key("default")
   private java.lang.Object default__;
+
+  /**
+   * Optional. A map of definitions for use by `ref` Only allowed at the root of the schema.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, GoogleCloudAiplatformV1beta1Schema> defs;
 
   /**
    * Optional. The description of the data.
@@ -171,6 +185,18 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
   private java.util.List<java.lang.String> propertyOrdering;
 
   /**
+   * Optional. Allows indirect references between schema nodes. The value should be a valid
+   * reference to a child of the root `defs`. For example, the following schema defines a reference
+   * to a schema node named "Pet": type: object properties: pet: ref: #/defs/Pet defs: Pet: type:
+   * object properties: name: type: string The value of the "pet" property is a reference to the
+   * schema node named "Pet". See details in https://json-schema.org/understanding-json-
+   * schema/structuring
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ref;
+
+  /**
    * Optional. Required properties of Type.OBJECT.
    * The value may be {@code null}.
    */
@@ -190,6 +216,23 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * Optional. Can either be a boolean or an object; controls the presence of additional properties.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Object getAdditionalProperties() {
+    return additionalProperties;
+  }
+
+  /**
+   * Optional. Can either be a boolean or an object; controls the presence of additional properties.
+   * @param additionalProperties additionalProperties or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Schema setAdditionalProperties(java.lang.Object additionalProperties) {
+    this.additionalProperties = additionalProperties;
+    return this;
+  }
 
   /**
    * Optional. The value should be validated against any (one or more) of the subschemas in the
@@ -224,6 +267,23 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
    */
   public GoogleCloudAiplatformV1beta1Schema setDefault(java.lang.Object default__) {
     this.default__ = default__;
+    return this;
+  }
+
+  /**
+   * Optional. A map of definitions for use by `ref` Only allowed at the root of the schema.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, GoogleCloudAiplatformV1beta1Schema> getDefs() {
+    return defs;
+  }
+
+  /**
+   * Optional. A map of definitions for use by `ref` Only allowed at the root of the schema.
+   * @param defs defs or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Schema setDefs(java.util.Map<String, GoogleCloudAiplatformV1beta1Schema> defs) {
+    this.defs = defs;
     return this;
   }
 
@@ -523,6 +583,33 @@ public final class GoogleCloudAiplatformV1beta1Schema extends com.google.api.cli
    */
   public GoogleCloudAiplatformV1beta1Schema setPropertyOrdering(java.util.List<java.lang.String> propertyOrdering) {
     this.propertyOrdering = propertyOrdering;
+    return this;
+  }
+
+  /**
+   * Optional. Allows indirect references between schema nodes. The value should be a valid
+   * reference to a child of the root `defs`. For example, the following schema defines a reference
+   * to a schema node named "Pet": type: object properties: pet: ref: #/defs/Pet defs: Pet: type:
+   * object properties: name: type: string The value of the "pet" property is a reference to the
+   * schema node named "Pet". See details in https://json-schema.org/understanding-json-
+   * schema/structuring
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRef() {
+    return ref;
+  }
+
+  /**
+   * Optional. Allows indirect references between schema nodes. The value should be a valid
+   * reference to a child of the root `defs`. For example, the following schema defines a reference
+   * to a schema node named "Pet": type: object properties: pet: ref: #/defs/Pet defs: Pet: type:
+   * object properties: name: type: string The value of the "pet" property is a reference to the
+   * schema node named "Pet". See details in https://json-schema.org/understanding-json-
+   * schema/structuring
+   * @param ref ref or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Schema setRef(java.lang.String ref) {
+    this.ref = ref;
     return this;
   }
 

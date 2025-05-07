@@ -30,6 +30,14 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1SupervisedTuningSpec extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. If set to true, disable intermediate checkpoints for SFT and only the last checkpoint
+   * will be exported. Otherwise, enable intermediate checkpoints for SFT. Default is false.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean exportLastCheckpointOnly;
+
+  /**
    * Optional. Hyperparameters for SFT.
    * The value may be {@code null}.
    */
@@ -51,6 +59,25 @@ public final class GoogleCloudAiplatformV1beta1SupervisedTuningSpec extends com.
    */
   @com.google.api.client.util.Key
   private java.lang.String validationDatasetUri;
+
+  /**
+   * Optional. If set to true, disable intermediate checkpoints for SFT and only the last checkpoint
+   * will be exported. Otherwise, enable intermediate checkpoints for SFT. Default is false.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getExportLastCheckpointOnly() {
+    return exportLastCheckpointOnly;
+  }
+
+  /**
+   * Optional. If set to true, disable intermediate checkpoints for SFT and only the last checkpoint
+   * will be exported. Otherwise, enable intermediate checkpoints for SFT. Default is false.
+   * @param exportLastCheckpointOnly exportLastCheckpointOnly or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1SupervisedTuningSpec setExportLastCheckpointOnly(java.lang.Boolean exportLastCheckpointOnly) {
+    this.exportLastCheckpointOnly = exportLastCheckpointOnly;
+    return this;
+  }
 
   /**
    * Optional. Hyperparameters for SFT.

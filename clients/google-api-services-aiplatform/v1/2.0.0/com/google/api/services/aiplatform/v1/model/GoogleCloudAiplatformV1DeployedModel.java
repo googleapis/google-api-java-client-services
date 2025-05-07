@@ -38,6 +38,13 @@ public final class GoogleCloudAiplatformV1DeployedModel extends com.google.api.c
   private GoogleCloudAiplatformV1AutomaticResources automaticResources;
 
   /**
+   * The checkpoint id of the model.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String checkpointId;
+
+  /**
    * Output only. Timestamp when the DeployedModel was created.
    * The value may be {@code null}.
    */
@@ -202,6 +209,23 @@ public final class GoogleCloudAiplatformV1DeployedModel extends com.google.api.c
    */
   public GoogleCloudAiplatformV1DeployedModel setAutomaticResources(GoogleCloudAiplatformV1AutomaticResources automaticResources) {
     this.automaticResources = automaticResources;
+    return this;
+  }
+
+  /**
+   * The checkpoint id of the model.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCheckpointId() {
+    return checkpointId;
+  }
+
+  /**
+   * The checkpoint id of the model.
+   * @param checkpointId checkpointId or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1DeployedModel setCheckpointId(java.lang.String checkpointId) {
+    this.checkpointId = checkpointId;
     return this;
   }
 

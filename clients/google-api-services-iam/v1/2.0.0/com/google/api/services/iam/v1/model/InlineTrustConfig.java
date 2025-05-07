@@ -34,26 +34,24 @@ package com.google.api.services.iam.v1.model;
 public final class InlineTrustConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Maps specific trust domains (e.g., "example.com") to their corresponding TrustStore
-   * objects, which contain the trusted root certificates for that domain. There can be a maximum of
-   * 10 trust domain entries in this map. Note that a trust domain automatically trusts itself and
-   * don't need to be specified here. If however, this WorkloadIdentityPool's trust domain contains
-   * any trust anchors in the additional_trust_bundles map, those trust anchors will be *appended
-   * to* the Trust Bundle automatically derived from your InlineCertificateIssuanceConfig's
-   * ca_pools.
+   * Optional. Maps specific trust domains (e.g., "example.com") to their corresponding TrustStore,
+   * which contain the trusted root certificates for that domain. There can be a maximum of 10 trust
+   * domain entries in this map. Note that a trust domain automatically trusts itself and don't need
+   * to be specified here. If however, this WorkloadIdentityPool's trust domain contains any trust
+   * anchors in the additional_trust_bundles map, those trust anchors will be *appended to* the
+   * trust bundle automatically derived from your InlineCertificateIssuanceConfig's ca_pools.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, TrustStore> additionalTrustBundles;
 
   /**
-   * Optional. Maps specific trust domains (e.g., "example.com") to their corresponding TrustStore
-   * objects, which contain the trusted root certificates for that domain. There can be a maximum of
-   * 10 trust domain entries in this map. Note that a trust domain automatically trusts itself and
-   * don't need to be specified here. If however, this WorkloadIdentityPool's trust domain contains
-   * any trust anchors in the additional_trust_bundles map, those trust anchors will be *appended
-   * to* the Trust Bundle automatically derived from your InlineCertificateIssuanceConfig's
-   * ca_pools.
+   * Optional. Maps specific trust domains (e.g., "example.com") to their corresponding TrustStore,
+   * which contain the trusted root certificates for that domain. There can be a maximum of 10 trust
+   * domain entries in this map. Note that a trust domain automatically trusts itself and don't need
+   * to be specified here. If however, this WorkloadIdentityPool's trust domain contains any trust
+   * anchors in the additional_trust_bundles map, those trust anchors will be *appended to* the
+   * trust bundle automatically derived from your InlineCertificateIssuanceConfig's ca_pools.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, TrustStore> getAdditionalTrustBundles() {
@@ -61,13 +59,12 @@ public final class InlineTrustConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Maps specific trust domains (e.g., "example.com") to their corresponding TrustStore
-   * objects, which contain the trusted root certificates for that domain. There can be a maximum of
-   * 10 trust domain entries in this map. Note that a trust domain automatically trusts itself and
-   * don't need to be specified here. If however, this WorkloadIdentityPool's trust domain contains
-   * any trust anchors in the additional_trust_bundles map, those trust anchors will be *appended
-   * to* the Trust Bundle automatically derived from your InlineCertificateIssuanceConfig's
-   * ca_pools.
+   * Optional. Maps specific trust domains (e.g., "example.com") to their corresponding TrustStore,
+   * which contain the trusted root certificates for that domain. There can be a maximum of 10 trust
+   * domain entries in this map. Note that a trust domain automatically trusts itself and don't need
+   * to be specified here. If however, this WorkloadIdentityPool's trust domain contains any trust
+   * anchors in the additional_trust_bundles map, those trust anchors will be *appended to* the
+   * trust bundle automatically derived from your InlineCertificateIssuanceConfig's ca_pools.
    * @param additionalTrustBundles additionalTrustBundles or {@code null} for none
    */
   public InlineTrustConfig setAdditionalTrustBundles(java.util.Map<String, TrustStore> additionalTrustBundles) {

@@ -44,9 +44,9 @@ public final class Oidc extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> allowedAudiences;
 
   /**
-   * Required. The OIDC issuer URL. Must be an HTTPS endpoint. Used per OpenID Connect Discovery 1.0
-   * spec to locate the provider's public keys (via `jwks_uri`) for verifying tokens like the OIDC
-   * ID token. These public key types must be 'EC' or 'RSA'.
+   * Required. The OIDC issuer URL. Must be an HTTPS endpoint. Per OpenID Connect Discovery 1.0
+   * spec, the OIDC issuer URL is used to locate the provider's public keys (via `jwks_uri`) for
+   * verifying tokens like the OIDC ID token. These public key types must be 'EC' or 'RSA'.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,9 +94,9 @@ public final class Oidc extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The OIDC issuer URL. Must be an HTTPS endpoint. Used per OpenID Connect Discovery 1.0
-   * spec to locate the provider's public keys (via `jwks_uri`) for verifying tokens like the OIDC
-   * ID token. These public key types must be 'EC' or 'RSA'.
+   * Required. The OIDC issuer URL. Must be an HTTPS endpoint. Per OpenID Connect Discovery 1.0
+   * spec, the OIDC issuer URL is used to locate the provider's public keys (via `jwks_uri`) for
+   * verifying tokens like the OIDC ID token. These public key types must be 'EC' or 'RSA'.
    * @return value or {@code null} for none
    */
   public java.lang.String getIssuerUri() {
@@ -104,9 +104,9 @@ public final class Oidc extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The OIDC issuer URL. Must be an HTTPS endpoint. Used per OpenID Connect Discovery 1.0
-   * spec to locate the provider's public keys (via `jwks_uri`) for verifying tokens like the OIDC
-   * ID token. These public key types must be 'EC' or 'RSA'.
+   * Required. The OIDC issuer URL. Must be an HTTPS endpoint. Per OpenID Connect Discovery 1.0
+   * spec, the OIDC issuer URL is used to locate the provider's public keys (via `jwks_uri`) for
+   * verifying tokens like the OIDC ID token. These public key types must be 'EC' or 'RSA'.
    * @param issuerUri issuerUri or {@code null} for none
    */
   public Oidc setIssuerUri(java.lang.String issuerUri) {

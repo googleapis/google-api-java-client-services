@@ -32,20 +32,20 @@ package com.google.api.services.iam.v1.model;
 public final class X509 extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. A Trust store, use this trust store as a wrapper to config the trust anchor and
+   * Required. A TrustStore. Use this trust store as a wrapper to config the trust anchor and
    * optional intermediate cas to help build the trust chain for the incoming end entity
-   * certificate. Follow the x509 guidelines to define those PEM encoded certs. Only 1 trust store
-   * is currently supported.
+   * certificate. Follow the X.509 guidelines to define those PEM encoded certs. Only one trust
+   * store is currently supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TrustStore trustStore;
 
   /**
-   * Required. A Trust store, use this trust store as a wrapper to config the trust anchor and
+   * Required. A TrustStore. Use this trust store as a wrapper to config the trust anchor and
    * optional intermediate cas to help build the trust chain for the incoming end entity
-   * certificate. Follow the x509 guidelines to define those PEM encoded certs. Only 1 trust store
-   * is currently supported.
+   * certificate. Follow the X.509 guidelines to define those PEM encoded certs. Only one trust
+   * store is currently supported.
    * @return value or {@code null} for none
    */
   public TrustStore getTrustStore() {
@@ -53,10 +53,10 @@ public final class X509 extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. A Trust store, use this trust store as a wrapper to config the trust anchor and
+   * Required. A TrustStore. Use this trust store as a wrapper to config the trust anchor and
    * optional intermediate cas to help build the trust chain for the incoming end entity
-   * certificate. Follow the x509 guidelines to define those PEM encoded certs. Only 1 trust store
-   * is currently supported.
+   * certificate. Follow the X.509 guidelines to define those PEM encoded certs. Only one trust
+   * store is currently supported.
    * @param trustStore trustStore or {@code null} for none
    */
   public X509 setTrustStore(TrustStore trustStore) {

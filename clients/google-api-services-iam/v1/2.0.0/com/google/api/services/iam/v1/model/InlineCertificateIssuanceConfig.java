@@ -32,10 +32,10 @@ package com.google.api.services.iam.v1.model;
 public final class InlineCertificateIssuanceConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. A required mapping of a cloud region to the CA pool resource located in that region
-   * used for certificate issuance, adhering to these constraints: * Key format: A supported cloud
-   * region name equivalent to the location identifier in the corresponding map entry's value. *
-   * Value format: A valid CA pool resource path format like:
+   * Optional. A required mapping of a Google Cloud region to the CA pool resource located in that
+   * region. The CA pool is used for certificate issuance, adhering to the following constraints: *
+   * Key format: A supported cloud region name equivalent to the location identifier in the
+   * corresponding map entry's value. * Value format: A valid CA pool resource path format like:
    * "projects/{project}/locations/{location}/caPools/{ca_pool}" * Region Matching: Workloads are
    * ONLY issued certificates from CA pools within the same region. Also the CA pool region (in
    * value) must match the workload's region (key).
@@ -46,7 +46,7 @@ public final class InlineCertificateIssuanceConfig extends com.google.api.client
 
   /**
    * Optional. Key algorithm to use when generating the key pair. This key pair will be used to
-   * create the certificate. If unspecified, this will default to ECDSA_P256.
+   * create the certificate. If not specified, this will default to ECDSA_P256.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,7 +54,7 @@ public final class InlineCertificateIssuanceConfig extends com.google.api.client
 
   /**
    * Optional. Lifetime of the workload certificates issued by the CA pool. Must be between 10 hours
-   * - 30 days. If unspecified, this will be defaulted to 24 hours.
+   * and 30 days. If not specified, this will be defaulted to 24 hours.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,18 +62,18 @@ public final class InlineCertificateIssuanceConfig extends com.google.api.client
 
   /**
    * Optional. Rotation window percentage indicating when certificate rotation should be initiated
-   * based on remaining lifetime. Must be between 10 - 80. If unspecified, this will be defaulted to
-   * 50.
+   * based on remaining lifetime. Must be between 10 and 80. If not specified, this will be
+   * defaulted to 50.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer rotationWindowPercentage;
 
   /**
-   * Optional. A required mapping of a cloud region to the CA pool resource located in that region
-   * used for certificate issuance, adhering to these constraints: * Key format: A supported cloud
-   * region name equivalent to the location identifier in the corresponding map entry's value. *
-   * Value format: A valid CA pool resource path format like:
+   * Optional. A required mapping of a Google Cloud region to the CA pool resource located in that
+   * region. The CA pool is used for certificate issuance, adhering to the following constraints: *
+   * Key format: A supported cloud region name equivalent to the location identifier in the
+   * corresponding map entry's value. * Value format: A valid CA pool resource path format like:
    * "projects/{project}/locations/{location}/caPools/{ca_pool}" * Region Matching: Workloads are
    * ONLY issued certificates from CA pools within the same region. Also the CA pool region (in
    * value) must match the workload's region (key).
@@ -84,10 +84,10 @@ public final class InlineCertificateIssuanceConfig extends com.google.api.client
   }
 
   /**
-   * Optional. A required mapping of a cloud region to the CA pool resource located in that region
-   * used for certificate issuance, adhering to these constraints: * Key format: A supported cloud
-   * region name equivalent to the location identifier in the corresponding map entry's value. *
-   * Value format: A valid CA pool resource path format like:
+   * Optional. A required mapping of a Google Cloud region to the CA pool resource located in that
+   * region. The CA pool is used for certificate issuance, adhering to the following constraints: *
+   * Key format: A supported cloud region name equivalent to the location identifier in the
+   * corresponding map entry's value. * Value format: A valid CA pool resource path format like:
    * "projects/{project}/locations/{location}/caPools/{ca_pool}" * Region Matching: Workloads are
    * ONLY issued certificates from CA pools within the same region. Also the CA pool region (in
    * value) must match the workload's region (key).
@@ -100,7 +100,7 @@ public final class InlineCertificateIssuanceConfig extends com.google.api.client
 
   /**
    * Optional. Key algorithm to use when generating the key pair. This key pair will be used to
-   * create the certificate. If unspecified, this will default to ECDSA_P256.
+   * create the certificate. If not specified, this will default to ECDSA_P256.
    * @return value or {@code null} for none
    */
   public java.lang.String getKeyAlgorithm() {
@@ -109,7 +109,7 @@ public final class InlineCertificateIssuanceConfig extends com.google.api.client
 
   /**
    * Optional. Key algorithm to use when generating the key pair. This key pair will be used to
-   * create the certificate. If unspecified, this will default to ECDSA_P256.
+   * create the certificate. If not specified, this will default to ECDSA_P256.
    * @param keyAlgorithm keyAlgorithm or {@code null} for none
    */
   public InlineCertificateIssuanceConfig setKeyAlgorithm(java.lang.String keyAlgorithm) {
@@ -119,7 +119,7 @@ public final class InlineCertificateIssuanceConfig extends com.google.api.client
 
   /**
    * Optional. Lifetime of the workload certificates issued by the CA pool. Must be between 10 hours
-   * - 30 days. If unspecified, this will be defaulted to 24 hours.
+   * and 30 days. If not specified, this will be defaulted to 24 hours.
    * @return value or {@code null} for none
    */
   public String getLifetime() {
@@ -128,7 +128,7 @@ public final class InlineCertificateIssuanceConfig extends com.google.api.client
 
   /**
    * Optional. Lifetime of the workload certificates issued by the CA pool. Must be between 10 hours
-   * - 30 days. If unspecified, this will be defaulted to 24 hours.
+   * and 30 days. If not specified, this will be defaulted to 24 hours.
    * @param lifetime lifetime or {@code null} for none
    */
   public InlineCertificateIssuanceConfig setLifetime(String lifetime) {
@@ -138,8 +138,8 @@ public final class InlineCertificateIssuanceConfig extends com.google.api.client
 
   /**
    * Optional. Rotation window percentage indicating when certificate rotation should be initiated
-   * based on remaining lifetime. Must be between 10 - 80. If unspecified, this will be defaulted to
-   * 50.
+   * based on remaining lifetime. Must be between 10 and 80. If not specified, this will be
+   * defaulted to 50.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getRotationWindowPercentage() {
@@ -148,8 +148,8 @@ public final class InlineCertificateIssuanceConfig extends com.google.api.client
 
   /**
    * Optional. Rotation window percentage indicating when certificate rotation should be initiated
-   * based on remaining lifetime. Must be between 10 - 80. If unspecified, this will be defaulted to
-   * 50.
+   * based on remaining lifetime. Must be between 10 and 80. If not specified, this will be
+   * defaulted to 50.
    * @param rotationWindowPercentage rotationWindowPercentage or {@code null} for none
    */
   public InlineCertificateIssuanceConfig setRotationWindowPercentage(java.lang.Integer rotationWindowPercentage) {

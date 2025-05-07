@@ -2812,10 +2812,10 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
        * already claimed, this will recheck the verification (unless the merchant is exempted from
        * claiming, which also exempts from verification) and return a successful response. If ownership
        * can no longer be verified, it will return an error, but it won't clear the claim. In case of
-       * failure, a canonical error message will be returned: * PERMISSION_DENIED: user doesn't have the
-       * necessary permissions on this MC account; * FAILED_PRECONDITION: - The account is not a Merchant
-       * Center account; - MC account doesn't have a homepage; - claiming failed (in this case the error
-       * message will contain more details).
+       * failure, a canonical error message is returned: * PERMISSION_DENIED: User doesn't have the
+       * necessary permissions on this Merchant Center account. * FAILED_PRECONDITION: - The account is
+       * not a Merchant Center account. - Merchant Center account doesn't have a homepage. - Claiming
+       * failed (in this case the error message contains more details).
        *
        * Create a request for the method "homepage.claim".
        *
@@ -2844,10 +2844,10 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          * already claimed, this will recheck the verification (unless the merchant is exempted from
          * claiming, which also exempts from verification) and return a successful response. If ownership
          * can no longer be verified, it will return an error, but it won't clear the claim. In case of
-         * failure, a canonical error message will be returned: * PERMISSION_DENIED: user doesn't have the
-         * necessary permissions on this MC account; * FAILED_PRECONDITION: - The account is not a
-         * Merchant Center account; - MC account doesn't have a homepage; - claiming failed (in this case
-         * the error message will contain more details).
+         * failure, a canonical error message is returned: * PERMISSION_DENIED: User doesn't have the
+         * necessary permissions on this Merchant Center account. * FAILED_PRECONDITION: - The account is
+         * not a Merchant Center account. - Merchant Center account doesn't have a homepage. - Claiming
+         * failed (in this case the error message contains more details).
          *
          * Create a request for the method "homepage.claim".
          *

@@ -18,11 +18,11 @@ package com.google.api.services.merchantapi.accounts_v1beta.model;
 
 /**
  * Defines participation in a given program for the specified account. Programs provide a mechanism
- * for adding functionality to merchant accounts. A typical example of this is the [Free product lis
- * tings](https://support.google.com/merchants/topic/9240261?ref_topic=7257954,7259405,&sjid=7966486
- * 81813264022-EU) program, which enables products from a merchant's store to be shown across Google
- * for free. The following list is the available set of program resource IDs accessible through the
- * API: * `free-listings` * `shopping-ads` * `youtube-shopping-checkout`
+ * for adding functionality to merchant accounts. A typical example of this is the [Free product
+ * listings](https://support.google.com/merchants/answer/13889434) program, which enables products
+ * from a merchant's store to be shown across Google for free. The following list is the available
+ * set of program resource IDs accessible through the API: * `free-listings` * `shopping-ads` *
+ * `youtube-shopping-checkout`
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:

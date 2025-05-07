@@ -31,7 +31,8 @@ public final class ClaimHomepageRequest extends com.google.api.client.json.Gener
 
   /**
    * Optional. When set to `true`, this option removes any existing claim on the requested website
-   * and replaces it with a claim from the account that makes the request.
+   * from any other account to the account making the request, effectively replacing the previous
+   * claim.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -39,7 +40,8 @@ public final class ClaimHomepageRequest extends com.google.api.client.json.Gener
 
   /**
    * Optional. When set to `true`, this option removes any existing claim on the requested website
-   * and replaces it with a claim from the account that makes the request.
+   * from any other account to the account making the request, effectively replacing the previous
+   * claim.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getOverwrite() {
@@ -48,7 +50,8 @@ public final class ClaimHomepageRequest extends com.google.api.client.json.Gener
 
   /**
    * Optional. When set to `true`, this option removes any existing claim on the requested website
-   * and replaces it with a claim from the account that makes the request.
+   * from any other account to the account making the request, effectively replacing the previous
+   * claim.
    * @param overwrite overwrite or {@code null} for none
    */
   public ClaimHomepageRequest setOverwrite(java.lang.Boolean overwrite) {

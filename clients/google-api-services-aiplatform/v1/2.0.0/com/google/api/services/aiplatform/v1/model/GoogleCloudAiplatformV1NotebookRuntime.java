@@ -18,7 +18,8 @@ package com.google.api.services.aiplatform.v1.model;
 
 /**
  * A runtime is a virtual machine allocated to a particular user for a particular Notebook file on
- * temporary basis with lifetime limited to 24 hours.
+ * temporary basis with lifetime. Default runtimes have a lifetime of 18 hours, while custom
+ * runtimes last for 6 months from their creation or last upgrade.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:

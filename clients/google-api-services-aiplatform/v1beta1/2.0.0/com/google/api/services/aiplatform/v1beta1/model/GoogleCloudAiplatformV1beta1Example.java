@@ -52,6 +52,14 @@ public final class GoogleCloudAiplatformV1beta1Example extends com.google.api.cl
   private java.lang.String exampleId;
 
   /**
+   * Identifier. The resource name of the Example. Format: `projects/{project}/locations/{location}/
+   * reasoningEngines/{reasoning_engine}/examples/{example}`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String name;
+
+  /**
    * An example of chat history and its expected outcome to be used with GenerateContent.
    * The value may be {@code null}.
    */
@@ -108,6 +116,25 @@ public final class GoogleCloudAiplatformV1beta1Example extends com.google.api.cl
    */
   public GoogleCloudAiplatformV1beta1Example setExampleId(java.lang.String exampleId) {
     this.exampleId = exampleId;
+    return this;
+  }
+
+  /**
+   * Identifier. The resource name of the Example. Format: `projects/{project}/locations/{location}/
+   * reasoningEngines/{reasoning_engine}/examples/{example}`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getName() {
+    return name;
+  }
+
+  /**
+   * Identifier. The resource name of the Example. Format: `projects/{project}/locations/{location}/
+   * reasoningEngines/{reasoning_engine}/examples/{example}`
+   * @param name name or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Example setName(java.lang.String name) {
+    this.name = name;
     return this;
   }
 

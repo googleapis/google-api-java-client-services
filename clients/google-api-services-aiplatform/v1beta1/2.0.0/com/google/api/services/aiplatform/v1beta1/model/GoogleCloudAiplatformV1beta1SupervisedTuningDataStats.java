@@ -31,7 +31,7 @@ public final class GoogleCloudAiplatformV1beta1SupervisedTuningDataStats extends
 
   /**
    * Output only. For each index in `truncated_example_indices`, the user-facing reason why the
-   * example was dropped. Must not include example itself.
+   * example was dropped.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -124,7 +124,7 @@ public final class GoogleCloudAiplatformV1beta1SupervisedTuningDataStats extends
 
   /**
    * Output only. For each index in `truncated_example_indices`, the user-facing reason why the
-   * example was dropped. Must not include example itself.
+   * example was dropped.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDroppedExampleReasons() {
@@ -133,7 +133,7 @@ public final class GoogleCloudAiplatformV1beta1SupervisedTuningDataStats extends
 
   /**
    * Output only. For each index in `truncated_example_indices`, the user-facing reason why the
-   * example was dropped. Must not include example itself.
+   * example was dropped.
    * @param droppedExampleReasons droppedExampleReasons or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1SupervisedTuningDataStats setDroppedExampleReasons(java.util.List<java.lang.String> droppedExampleReasons) {

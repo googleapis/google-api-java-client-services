@@ -8409,8 +8409,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
-         * Gets IAM policies for one of WorkloadIdentityPool WorkloadIdentityPoolNamespace
-         * WorkloadIdentityPoolManagedIdentity
+         * Gets the IAM policy of a WorkloadIdentityPool.
          *
          * Create a request for the method "workloadIdentityPools.getIamPolicy".
          *
@@ -8437,8 +8436,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+$");
 
           /**
-           * Gets IAM policies for one of WorkloadIdentityPool WorkloadIdentityPoolNamespace
-           * WorkloadIdentityPoolManagedIdentity
+           * Gets the IAM policy of a WorkloadIdentityPool.
            *
            * Create a request for the method "workloadIdentityPools.getIamPolicy".
            *
@@ -8904,8 +8902,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
-         * Sets IAM policies on one of WorkloadIdentityPool WorkloadIdentityPoolNamespace
-         * WorkloadIdentityPoolManagedIdentity
+         * Sets the IAM policies on a WorkloadIdentityPool
          *
          * Create a request for the method "workloadIdentityPools.setIamPolicy".
          *
@@ -8932,8 +8929,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+$");
 
           /**
-           * Sets IAM policies on one of WorkloadIdentityPool WorkloadIdentityPoolNamespace
-           * WorkloadIdentityPoolManagedIdentity
+           * Sets the IAM policies on a WorkloadIdentityPool
            *
            * Create a request for the method "workloadIdentityPools.setIamPolicy".
            *
@@ -9051,8 +9047,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
-         * Returns the caller's permissions on one of WorkloadIdentityPool WorkloadIdentityPoolNamespace
-         * WorkloadIdentityPoolManagedIdentity
+         * Returns the caller's permissions on a WorkloadIdentityPool
          *
          * Create a request for the method "workloadIdentityPools.testIamPermissions".
          *
@@ -9079,8 +9074,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/workloadIdentityPools/[^/]+$");
 
           /**
-           * Returns the caller's permissions on one of WorkloadIdentityPool WorkloadIdentityPoolNamespace
-           * WorkloadIdentityPoolManagedIdentity
+           * Returns the caller's permissions on a WorkloadIdentityPool
            *
            * Create a request for the method "workloadIdentityPools.testIamPermissions".
            *
@@ -10860,7 +10854,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
             }
             /**
              * Lists all non-deleted WorkloadIdentityPoolManagedIdentitys in a namespace. If `show_deleted` is
-             * set to `true`, then deleted managed identites are also listed.
+             * set to `true`, then deleted managed identities are also listed.
              *
              * Create a request for the method "managedIdentities.list".
              *
@@ -10885,7 +10879,7 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
 
               /**
                * Lists all non-deleted WorkloadIdentityPoolManagedIdentitys in a namespace. If `show_deleted` is
-               * set to `true`, then deleted managed identites are also listed.
+               * set to `true`, then deleted managed identities are also listed.
                *
                * Create a request for the method "managedIdentities.list".
                *

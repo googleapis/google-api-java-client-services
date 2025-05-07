@@ -18,7 +18,7 @@ package com.google.api.services.iam.v1.model;
 
 /**
  * Trust store that contains trust anchors and optional intermediate CAs used in PKI to build trust
- * chain and verify client's identity.
+ * chain and verify a client's identity.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Identity and Access Management (IAM) API. For a
@@ -32,8 +32,8 @@ package com.google.api.services.iam.v1.model;
 public final class TrustStore extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Set of intermediate CA certificates used for building the trust chain to trust
-   * anchor. IMPORTANT: * Intermediate CAs are only supported when configuring x509 federation.
+   * Optional. Set of intermediate CA certificates used for building the trust chain to the trust
+   * anchor. Important: Intermediate CAs are only supported for X.509 federation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,9 +46,9 @@ public final class TrustStore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. List of Trust Anchors to be used while performing validation against a given
-   * TrustStore. The incoming end entity's certificate must be chained up to one of the trust
-   * anchors here.
+   * Required. List of trust anchors to be used while performing validation against a given
+   * TrustStore. The incoming end entity's certificate must be in the trust chain of one of the
+   * trust anchors here.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,8 +61,8 @@ public final class TrustStore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Set of intermediate CA certificates used for building the trust chain to trust
-   * anchor. IMPORTANT: * Intermediate CAs are only supported when configuring x509 federation.
+   * Optional. Set of intermediate CA certificates used for building the trust chain to the trust
+   * anchor. Important: Intermediate CAs are only supported for X.509 federation.
    * @return value or {@code null} for none
    */
   public java.util.List<IntermediateCA> getIntermediateCas() {
@@ -70,8 +70,8 @@ public final class TrustStore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Set of intermediate CA certificates used for building the trust chain to trust
-   * anchor. IMPORTANT: * Intermediate CAs are only supported when configuring x509 federation.
+   * Optional. Set of intermediate CA certificates used for building the trust chain to the trust
+   * anchor. Important: Intermediate CAs are only supported for X.509 federation.
    * @param intermediateCas intermediateCas or {@code null} for none
    */
   public TrustStore setIntermediateCas(java.util.List<IntermediateCA> intermediateCas) {
@@ -80,9 +80,9 @@ public final class TrustStore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. List of Trust Anchors to be used while performing validation against a given
-   * TrustStore. The incoming end entity's certificate must be chained up to one of the trust
-   * anchors here.
+   * Required. List of trust anchors to be used while performing validation against a given
+   * TrustStore. The incoming end entity's certificate must be in the trust chain of one of the
+   * trust anchors here.
    * @return value or {@code null} for none
    */
   public java.util.List<TrustAnchor> getTrustAnchors() {
@@ -90,9 +90,9 @@ public final class TrustStore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. List of Trust Anchors to be used while performing validation against a given
-   * TrustStore. The incoming end entity's certificate must be chained up to one of the trust
-   * anchors here.
+   * Required. List of trust anchors to be used while performing validation against a given
+   * TrustStore. The incoming end entity's certificate must be in the trust chain of one of the
+   * trust anchors here.
    * @param trustAnchors trustAnchors or {@code null} for none
    */
   public TrustStore setTrustAnchors(java.util.List<TrustAnchor> trustAnchors) {

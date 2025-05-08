@@ -33,7 +33,7 @@ package com.google.api.services.adsense.v2.model;
 public final class PolicyTopic extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Deprecated. Policy topics no longer have a "must-fix" classification.
+   * Required. Deprecated. Always set to false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,7 +56,7 @@ public final class PolicyTopic extends com.google.api.client.json.GenericJson {
   private java.lang.String type;
 
   /**
-   * Required. Deprecated. Policy topics no longer have a "must-fix" classification.
+   * Required. Deprecated. Always set to false.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getMustFix() {
@@ -64,7 +64,7 @@ public final class PolicyTopic extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Deprecated. Policy topics no longer have a "must-fix" classification.
+   * Required. Deprecated. Always set to false.
    * @param mustFix mustFix or {@code null} for none
    */
   public PolicyTopic setMustFix(java.lang.Boolean mustFix) {

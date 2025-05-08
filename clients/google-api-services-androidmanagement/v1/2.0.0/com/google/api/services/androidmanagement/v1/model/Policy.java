@@ -307,6 +307,14 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean ensureVerifyAppsEnabled;
 
   /**
+   * Optional. Controls whether the enterpriseDisplayName is visible on the device (e.g. lock screen
+   * message on company-owned devices).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String enterpriseDisplayNameVisibility;
+
+  /**
    * Whether factory resetting from settings is disabled.
    * The value may be {@code null}.
    */
@@ -594,11 +602,12 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.util.List<PolicyEnforcementRule> policyEnforcementRules;
 
   /**
-   * Controls whether preferential network service is enabled on the work profile. For example, an
-   * organization may have an agreement with a carrier that all of the work data from its employees'
-   * devices will be sent via a network service dedicated for enterprise use. An example of a
-   * supported preferential network service is the enterprise slice on 5G networks. This has no
-   * effect on fully managed devices.
+   * Controls whether preferential network service is enabled on the work profile or on fully
+   * managed devices. For example, an organization may have an agreement with a carrier that all of
+   * the work data from its employees' devices will be sent via a network service dedicated for
+   * enterprise use. An example of a supported preferential network service is the enterprise slice
+   * on 5G networks. This policy has no effect if preferentialNetworkServiceSettings or
+   * ApplicationPolicy.preferentialNetworkId is set on devices running Android 13 or above.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1441,6 +1450,25 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Controls whether the enterpriseDisplayName is visible on the device (e.g. lock screen
+   * message on company-owned devices).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEnterpriseDisplayNameVisibility() {
+    return enterpriseDisplayNameVisibility;
+  }
+
+  /**
+   * Optional. Controls whether the enterpriseDisplayName is visible on the device (e.g. lock screen
+   * message on company-owned devices).
+   * @param enterpriseDisplayNameVisibility enterpriseDisplayNameVisibility or {@code null} for none
+   */
+  public Policy setEnterpriseDisplayNameVisibility(java.lang.String enterpriseDisplayNameVisibility) {
+    this.enterpriseDisplayNameVisibility = enterpriseDisplayNameVisibility;
+    return this;
+  }
+
+  /**
    * Whether factory resetting from settings is disabled.
    * @return value or {@code null} for none
    */
@@ -2066,11 +2094,12 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Controls whether preferential network service is enabled on the work profile. For example, an
-   * organization may have an agreement with a carrier that all of the work data from its employees'
-   * devices will be sent via a network service dedicated for enterprise use. An example of a
-   * supported preferential network service is the enterprise slice on 5G networks. This has no
-   * effect on fully managed devices.
+   * Controls whether preferential network service is enabled on the work profile or on fully
+   * managed devices. For example, an organization may have an agreement with a carrier that all of
+   * the work data from its employees' devices will be sent via a network service dedicated for
+   * enterprise use. An example of a supported preferential network service is the enterprise slice
+   * on 5G networks. This policy has no effect if preferentialNetworkServiceSettings or
+   * ApplicationPolicy.preferentialNetworkId is set on devices running Android 13 or above.
    * @return value or {@code null} for none
    */
   public java.lang.String getPreferentialNetworkService() {
@@ -2078,11 +2107,12 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Controls whether preferential network service is enabled on the work profile. For example, an
-   * organization may have an agreement with a carrier that all of the work data from its employees'
-   * devices will be sent via a network service dedicated for enterprise use. An example of a
-   * supported preferential network service is the enterprise slice on 5G networks. This has no
-   * effect on fully managed devices.
+   * Controls whether preferential network service is enabled on the work profile or on fully
+   * managed devices. For example, an organization may have an agreement with a carrier that all of
+   * the work data from its employees' devices will be sent via a network service dedicated for
+   * enterprise use. An example of a supported preferential network service is the enterprise slice
+   * on 5G networks. This policy has no effect if preferentialNetworkServiceSettings or
+   * ApplicationPolicy.preferentialNetworkId is set on devices running Android 13 or above.
    * @param preferentialNetworkService preferentialNetworkService or {@code null} for none
    */
   public Policy setPreferentialNetworkService(java.lang.String preferentialNetworkService) {

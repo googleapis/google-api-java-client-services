@@ -17,7 +17,7 @@
 package com.google.api.services.oracledatabase.v1.model;
 
 /**
- * The source configuration for the standby Autonomnous Database.
+ * The source configuration for the standby Autonomous Database.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Oracle Database@Google Cloud API. For a detailed

@@ -190,6 +190,18 @@ public final class ApplicationPolicy extends com.google.api.client.json.GenericJ
   private java.util.List<PermissionGrant> permissionGrants;
 
   /**
+   * Optional. ID of the preferential network the application uses. There must be a configuration
+   * for the specified network ID in preferentialNetworkServiceConfigs. If set to
+   * PREFERENTIAL_NETWORK_ID_UNSPECIFIED, the application will use the default network ID specified
+   * in defaultPreferentialNetworkId. See the documentation of defaultPreferentialNetworkId for the
+   * list of apps excluded from this defaulting. This applies on both work profiles and fully
+   * managed devices on Android 13 and above.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String preferentialNetworkId;
+
+  /**
    * Optional. Specifies whether user control is permitted for the app. User control includes user
    * actions like force-stopping and clearing app data. Supported on Android 11 and above.
    * The value may be {@code null}.
@@ -570,6 +582,33 @@ public final class ApplicationPolicy extends com.google.api.client.json.GenericJ
    */
   public ApplicationPolicy setPermissionGrants(java.util.List<PermissionGrant> permissionGrants) {
     this.permissionGrants = permissionGrants;
+    return this;
+  }
+
+  /**
+   * Optional. ID of the preferential network the application uses. There must be a configuration
+   * for the specified network ID in preferentialNetworkServiceConfigs. If set to
+   * PREFERENTIAL_NETWORK_ID_UNSPECIFIED, the application will use the default network ID specified
+   * in defaultPreferentialNetworkId. See the documentation of defaultPreferentialNetworkId for the
+   * list of apps excluded from this defaulting. This applies on both work profiles and fully
+   * managed devices on Android 13 and above.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPreferentialNetworkId() {
+    return preferentialNetworkId;
+  }
+
+  /**
+   * Optional. ID of the preferential network the application uses. There must be a configuration
+   * for the specified network ID in preferentialNetworkServiceConfigs. If set to
+   * PREFERENTIAL_NETWORK_ID_UNSPECIFIED, the application will use the default network ID specified
+   * in defaultPreferentialNetworkId. See the documentation of defaultPreferentialNetworkId for the
+   * list of apps excluded from this defaulting. This applies on both work profiles and fully
+   * managed devices on Android 13 and above.
+   * @param preferentialNetworkId preferentialNetworkId or {@code null} for none
+   */
+  public ApplicationPolicy setPreferentialNetworkId(java.lang.String preferentialNetworkId) {
+    this.preferentialNetworkId = preferentialNetworkId;
     return this;
   }
 

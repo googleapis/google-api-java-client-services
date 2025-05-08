@@ -39,7 +39,7 @@ public final class AutonomousDatabase extends com.google.api.client.json.Generic
   private java.lang.String adminPassword;
 
   /**
-   * Optional. The subnet CIDR range for the Autonmous Database.
+   * Optional. The subnet CIDR range for the Autonomous Database.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -147,7 +147,7 @@ public final class AutonomousDatabase extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. The subnet CIDR range for the Autonmous Database.
+   * Optional. The subnet CIDR range for the Autonomous Database.
    * @return value or {@code null} for none
    */
   public java.lang.String getCidr() {
@@ -155,7 +155,7 @@ public final class AutonomousDatabase extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. The subnet CIDR range for the Autonmous Database.
+   * Optional. The subnet CIDR range for the Autonomous Database.
    * @param cidr cidr or {@code null} for none
    */
   public AutonomousDatabase setCidr(java.lang.String cidr) {

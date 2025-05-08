@@ -45,6 +45,14 @@ public final class GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessment ext
   private GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessmentCardTestingVerdict cardTestingVerdict;
 
   /**
+   * Output only. Reasons why the transaction is probably fraudulent and received a high transaction
+   * risk score.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessmentRiskReason> riskReasons;
+
+  /**
    * Output only. Assessment of this transaction for risk of a stolen instrument.
    * The value may be {@code null}.
    */
@@ -90,6 +98,25 @@ public final class GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessment ext
    */
   public GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessment setCardTestingVerdict(GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessmentCardTestingVerdict cardTestingVerdict) {
     this.cardTestingVerdict = cardTestingVerdict;
+    return this;
+  }
+
+  /**
+   * Output only. Reasons why the transaction is probably fraudulent and received a high transaction
+   * risk score.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessmentRiskReason> getRiskReasons() {
+    return riskReasons;
+  }
+
+  /**
+   * Output only. Reasons why the transaction is probably fraudulent and received a high transaction
+   * risk score.
+   * @param riskReasons riskReasons or {@code null} for none
+   */
+  public GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessment setRiskReasons(java.util.List<GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessmentRiskReason> riskReasons) {
+    this.riskReasons = riskReasons;
     return this;
   }
 

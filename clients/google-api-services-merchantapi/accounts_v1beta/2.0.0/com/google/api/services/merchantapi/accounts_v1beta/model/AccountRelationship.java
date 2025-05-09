@@ -46,7 +46,8 @@ public final class AccountRelationship extends com.google.api.client.json.Generi
   private java.lang.String accountIdAlias;
 
   /**
-   * Identifier. The resource name of the account relationship.
+   * Identifier. The resource name of the account relationship. Format:
+   * `accounts/{account}/relationships/{relationship}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,7 +93,8 @@ public final class AccountRelationship extends com.google.api.client.json.Generi
   }
 
   /**
-   * Identifier. The resource name of the account relationship.
+   * Identifier. The resource name of the account relationship. Format:
+   * `accounts/{account}/relationships/{relationship}`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -100,7 +102,8 @@ public final class AccountRelationship extends com.google.api.client.json.Generi
   }
 
   /**
-   * Identifier. The resource name of the account relationship.
+   * Identifier. The resource name of the account relationship. Format:
+   * `accounts/{account}/relationships/{relationship}`
    * @param name name or {@code null} for none
    */
   public AccountRelationship setName(java.lang.String name) {

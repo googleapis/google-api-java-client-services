@@ -174,7 +174,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
     public class DataSources {
 
       /**
-       * Creates the new data source configuration for the given account.
+       * Creates the new data source configuration for the given account. This method always creates a new
+       * data source.
        *
        * Create a request for the method "dataSources.create".
        *
@@ -199,7 +200,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
             java.util.regex.Pattern.compile("^accounts/[^/]+$");
 
         /**
-         * Creates the new data source configuration for the given account.
+         * Creates the new data source configuration for the given account. This method always creates a
+         * new data source.
          *
          * Create a request for the method "dataSources.create".
          *

@@ -141,6 +141,13 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   private java.lang.String tempStoragePrefix;
 
   /**
+   * Optional. True when any worker pool that uses public IPs is present.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean usePublicIps;
+
+  /**
    * Output only. Whether the job uses the Streaming Engine resource-based billing model.
    * The value may be {@code null}.
    */
@@ -448,6 +455,23 @@ public final class Environment extends com.google.api.client.json.GenericJson {
    */
   public Environment setTempStoragePrefix(java.lang.String tempStoragePrefix) {
     this.tempStoragePrefix = tempStoragePrefix;
+    return this;
+  }
+
+  /**
+   * Optional. True when any worker pool that uses public IPs is present.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getUsePublicIps() {
+    return usePublicIps;
+  }
+
+  /**
+   * Optional. True when any worker pool that uses public IPs is present.
+   * @param usePublicIps usePublicIps or {@code null} for none
+   */
+  public Environment setUsePublicIps(java.lang.Boolean usePublicIps) {
+    this.usePublicIps = usePublicIps;
     return this;
   }
 

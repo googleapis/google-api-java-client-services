@@ -45,6 +45,13 @@ public final class GoogleMapsPlacesV1PlaceReviewSummary extends com.google.api.c
   private java.lang.String flagContentUri;
 
   /**
+   * A link to show reviews of this place on Google Maps.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String reviewsUri;
+
+  /**
    * The summary of user reviews.
    * The value may be {@code null}.
    */
@@ -84,6 +91,23 @@ public final class GoogleMapsPlacesV1PlaceReviewSummary extends com.google.api.c
    */
   public GoogleMapsPlacesV1PlaceReviewSummary setFlagContentUri(java.lang.String flagContentUri) {
     this.flagContentUri = flagContentUri;
+    return this;
+  }
+
+  /**
+   * A link to show reviews of this place on Google Maps.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getReviewsUri() {
+    return reviewsUri;
+  }
+
+  /**
+   * A link to show reviews of this place on Google Maps.
+   * @param reviewsUri reviewsUri or {@code null} for none
+   */
+  public GoogleMapsPlacesV1PlaceReviewSummary setReviewsUri(java.lang.String reviewsUri) {
+    this.reviewsUri = reviewsUri;
     return this;
   }
 

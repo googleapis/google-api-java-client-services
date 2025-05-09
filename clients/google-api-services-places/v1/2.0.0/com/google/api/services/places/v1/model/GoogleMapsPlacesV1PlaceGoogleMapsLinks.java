@@ -59,7 +59,7 @@ public final class GoogleMapsPlacesV1PlaceGoogleMapsLinks extends com.google.api
   private java.lang.String reviewsUri;
 
   /**
-   * A link to show reviews of this place on Google Maps.
+   * A link to write a review for this place on Google Maps.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -136,7 +136,7 @@ public final class GoogleMapsPlacesV1PlaceGoogleMapsLinks extends com.google.api
   }
 
   /**
-   * A link to show reviews of this place on Google Maps.
+   * A link to write a review for this place on Google Maps.
    * @return value or {@code null} for none
    */
   public java.lang.String getWriteAReviewUri() {
@@ -144,7 +144,7 @@ public final class GoogleMapsPlacesV1PlaceGoogleMapsLinks extends com.google.api
   }
 
   /**
-   * A link to show reviews of this place on Google Maps.
+   * A link to write a review for this place on Google Maps.
    * @param writeAReviewUri writeAReviewUri or {@code null} for none
    */
   public GoogleMapsPlacesV1PlaceGoogleMapsLinks setWriteAReviewUri(java.lang.String writeAReviewUri) {

@@ -57,16 +57,6 @@ public final class GoogleCloudRetailV2alphaConversationalSearchResponse extends 
   private java.util.List<GoogleCloudRetailV2alphaConversationalSearchResponseRefinedSearch> refinedSearch;
 
   /**
-   * This field is deprecated. Please find the refinded_query from search response when using
-   * CONVERSATIONAL_FILTER_ONLY mode in ConversationalSearchResponse.refined_search instead. The
-   * rephrased query based on the user's query and the conversation history. It can be used to fetch
-   * the relevant search results.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String rephrasedQuery;
-
-  /**
    * Conversation UUID. This field will be stored in client side storage to maintain the
    * conversation session with server and will be used for next search request's
    * ConversationalSearchRequest.conversation_id to restore conversation state in server.
@@ -124,29 +114,6 @@ public final class GoogleCloudRetailV2alphaConversationalSearchResponse extends 
    */
   public GoogleCloudRetailV2alphaConversationalSearchResponse setRefinedSearch(java.util.List<GoogleCloudRetailV2alphaConversationalSearchResponseRefinedSearch> refinedSearch) {
     this.refinedSearch = refinedSearch;
-    return this;
-  }
-
-  /**
-   * This field is deprecated. Please find the refinded_query from search response when using
-   * CONVERSATIONAL_FILTER_ONLY mode in ConversationalSearchResponse.refined_search instead. The
-   * rephrased query based on the user's query and the conversation history. It can be used to fetch
-   * the relevant search results.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getRephrasedQuery() {
-    return rephrasedQuery;
-  }
-
-  /**
-   * This field is deprecated. Please find the refinded_query from search response when using
-   * CONVERSATIONAL_FILTER_ONLY mode in ConversationalSearchResponse.refined_search instead. The
-   * rephrased query based on the user's query and the conversation history. It can be used to fetch
-   * the relevant search results.
-   * @param rephrasedQuery rephrasedQuery or {@code null} for none
-   */
-  public GoogleCloudRetailV2alphaConversationalSearchResponse setRephrasedQuery(java.lang.String rephrasedQuery) {
-    this.rephrasedQuery = rephrasedQuery;
     return this;
   }
 

@@ -31,18 +31,21 @@ package com.google.api.services.securitycenter.v1.model;
 public final class Position extends com.google.api.client.json.GenericJson {
 
   /**
+   * The column number.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer columnNumber;
 
   /**
+   * The line number.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer lineNumber;
 
   /**
+   * The column number.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getColumnNumber() {
@@ -50,6 +53,7 @@ public final class Position extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The column number.
    * @param columnNumber columnNumber or {@code null} for none
    */
   public Position setColumnNumber(java.lang.Integer columnNumber) {
@@ -58,6 +62,7 @@ public final class Position extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The line number.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getLineNumber() {
@@ -65,6 +70,7 @@ public final class Position extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The line number.
    * @param lineNumber lineNumber or {@code null} for none
    */
   public Position setLineNumber(java.lang.Integer lineNumber) {

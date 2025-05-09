@@ -40,7 +40,7 @@ public final class CustomModuleValidationError extends com.google.api.client.jso
 
   /**
    * The end position of the error in the uploaded text version of the module. This field may be
-   * omitted if no specific position applies, or if one could not be computed..
+   * omitted if no specific position applies, or if one could not be computed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,7 +81,7 @@ public final class CustomModuleValidationError extends com.google.api.client.jso
 
   /**
    * The end position of the error in the uploaded text version of the module. This field may be
-   * omitted if no specific position applies, or if one could not be computed..
+   * omitted if no specific position applies, or if one could not be computed.
    * @return value or {@code null} for none
    */
   public Position getEnd() {
@@ -90,7 +90,7 @@ public final class CustomModuleValidationError extends com.google.api.client.jso
 
   /**
    * The end position of the error in the uploaded text version of the module. This field may be
-   * omitted if no specific position applies, or if one could not be computed..
+   * omitted if no specific position applies, or if one could not be computed.
    * @param end end or {@code null} for none
    */
   public CustomModuleValidationError setEnd(Position end) {

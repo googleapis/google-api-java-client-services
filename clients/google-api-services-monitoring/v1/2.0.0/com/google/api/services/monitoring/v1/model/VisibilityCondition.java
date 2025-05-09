@@ -30,14 +30,14 @@ package com.google.api.services.monitoring.v1.model;
 public final class VisibilityCondition extends com.google.api.client.json.GenericJson {
 
   /**
-   * A condition whose evaluation is based on the value of a template1 variable.
+   * A condition whose evaluation is based on the value of a template variable.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TemplateVariableCondition templateVariableCondition;
 
   /**
-   * A condition whose evaluation is based on the value of a template1 variable.
+   * A condition whose evaluation is based on the value of a template variable.
    * @return value or {@code null} for none
    */
   public TemplateVariableCondition getTemplateVariableCondition() {
@@ -45,7 +45,7 @@ public final class VisibilityCondition extends com.google.api.client.json.Generi
   }
 
   /**
-   * A condition whose evaluation is based on the value of a template1 variable.
+   * A condition whose evaluation is based on the value of a template variable.
    * @param templateVariableCondition templateVariableCondition or {@code null} for none
    */
   public VisibilityCondition setTemplateVariableCondition(TemplateVariableCondition templateVariableCondition) {

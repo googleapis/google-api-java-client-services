@@ -97,7 +97,8 @@ public final class AccountService extends com.google.api.client.json.GenericJson
   private java.lang.String mutability;
 
   /**
-   * Identifier. The resource name of the account service.
+   * Identifier. The resource name of the account service. Format:
+   * `accounts/{account}/services/{service}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -262,7 +263,8 @@ public final class AccountService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Identifier. The resource name of the account service.
+   * Identifier. The resource name of the account service. Format:
+   * `accounts/{account}/services/{service}`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -270,7 +272,8 @@ public final class AccountService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Identifier. The resource name of the account service.
+   * Identifier. The resource name of the account service. Format:
+   * `accounts/{account}/services/{service}`
    * @param name name or {@code null} for none
    */
   public AccountService setName(java.lang.String name) {

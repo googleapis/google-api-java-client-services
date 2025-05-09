@@ -5510,7 +5510,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the merchantapi server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The resource name of the account relationship to get.
+       * @param name Required. The resource name of the account relationship to get. Format:
+       *        `accounts/{account}/relationships/{relationship}`
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -5536,7 +5537,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The resource name of the account relationship to get.
+         * @param name Required. The resource name of the account relationship to get. Format:
+       *        `accounts/{account}/relationships/{relationship}`
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -5614,17 +5616,24 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
           return (Get) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. The resource name of the account relationship to get. */
+        /**
+         * Required. The resource name of the account relationship to get. Format:
+         * `accounts/{account}/relationships/{relationship}`
+         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The resource name of the account relationship to get.
+        /** Required. The resource name of the account relationship to get. Format:
+       `accounts/{account}/relationships/{relationship}`
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** Required. The resource name of the account relationship to get. */
+        /**
+         * Required. The resource name of the account relationship to get. Format:
+         * `accounts/{account}/relationships/{relationship}`
+         */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -5648,7 +5657,7 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the merchantapi server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent account of the account relationship to filter by.
+       * @param parent Required. The parent account of the account relationship to filter by. Format: `accounts/{account}`
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -5674,7 +5683,7 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent account of the account relationship to filter by.
+         * @param parent Required. The parent account of the account relationship to filter by. Format: `accounts/{account}`
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -5752,17 +5761,23 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. The parent account of the account relationship to filter by. */
+        /**
+         * Required. The parent account of the account relationship to filter by. Format:
+         * `accounts/{account}`
+         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent account of the account relationship to filter by.
+        /** Required. The parent account of the account relationship to filter by. Format: `accounts/{account}`
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /** Required. The parent account of the account relationship to filter by. */
+        /**
+         * Required. The parent account of the account relationship to filter by. Format:
+         * `accounts/{account}`
+         */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -5827,7 +5842,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the merchantapi server.  After setting any optional
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name Identifier. The resource name of the account relationship.
+       * @param name Identifier. The resource name of the account relationship. Format:
+       *        `accounts/{account}/relationships/{relationship}`
        * @param content the {@link com.google.api.services.merchantapi.accounts_v1beta.model.AccountRelationship}
        * @return the request
        */
@@ -5855,7 +5871,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Identifier. The resource name of the account relationship.
+         * @param name Identifier. The resource name of the account relationship. Format:
+       *        `accounts/{account}/relationships/{relationship}`
          * @param content the {@link com.google.api.services.merchantapi.accounts_v1beta.model.AccountRelationship}
          * @since 1.13
          */
@@ -5924,17 +5941,24 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
           return (Patch) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Identifier. The resource name of the account relationship. */
+        /**
+         * Identifier. The resource name of the account relationship. Format:
+         * `accounts/{account}/relationships/{relationship}`
+         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Identifier. The resource name of the account relationship.
+        /** Identifier. The resource name of the account relationship. Format:
+       `accounts/{account}/relationships/{relationship}`
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** Identifier. The resource name of the account relationship. */
+        /**
+         * Identifier. The resource name of the account relationship. Format:
+         * `accounts/{account}/relationships/{relationship}`
+         */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -6003,7 +6027,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the merchantapi server.  After setting any optional
        * parameters, call the {@link Approve#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The resource name of the account service to approve.
+       * @param name Required. The resource name of the account service to approve. Format:
+       *        `accounts/{account}/services/{service}`
        * @param content the {@link com.google.api.services.merchantapi.accounts_v1beta.model.ApproveAccountServiceRequest}
        * @return the request
        */
@@ -6031,7 +6056,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          * Approve#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The resource name of the account service to approve.
+         * @param name Required. The resource name of the account service to approve. Format:
+       *        `accounts/{account}/services/{service}`
          * @param content the {@link com.google.api.services.merchantapi.accounts_v1beta.model.ApproveAccountServiceRequest}
          * @since 1.13
          */
@@ -6100,17 +6126,24 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
           return (Approve) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. The resource name of the account service to approve. */
+        /**
+         * Required. The resource name of the account service to approve. Format:
+         * `accounts/{account}/services/{service}`
+         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The resource name of the account service to approve.
+        /** Required. The resource name of the account service to approve. Format:
+       `accounts/{account}/services/{service}`
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** Required. The resource name of the account service to approve. */
+        /**
+         * Required. The resource name of the account service to approve. Format:
+         * `accounts/{account}/services/{service}`
+         */
         public Approve setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -6134,7 +6167,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the merchantapi server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The resource name of the account service to get.
+       * @param name Required. The resource name of the account service to get. Format:
+       *        `accounts/{account}/services/{service}`
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -6160,7 +6194,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The resource name of the account service to get.
+         * @param name Required. The resource name of the account service to get. Format:
+       *        `accounts/{account}/services/{service}`
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -6238,17 +6273,24 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
           return (Get) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. The resource name of the account service to get. */
+        /**
+         * Required. The resource name of the account service to get. Format:
+         * `accounts/{account}/services/{service}`
+         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The resource name of the account service to get.
+        /** Required. The resource name of the account service to get. Format:
+       `accounts/{account}/services/{service}`
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** Required. The resource name of the account service to get. */
+        /**
+         * Required. The resource name of the account service to get. Format:
+         * `accounts/{account}/services/{service}`
+         */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -6272,7 +6314,7 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the merchantapi server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent account of the account service to filter by.
+       * @param parent Required. The parent account of the account service to filter by. Format: `accounts/{account}`
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -6298,7 +6340,7 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent account of the account service to filter by.
+         * @param parent Required. The parent account of the account service to filter by. Format: `accounts/{account}`
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -6376,17 +6418,23 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. The parent account of the account service to filter by. */
+        /**
+         * Required. The parent account of the account service to filter by. Format:
+         * `accounts/{account}`
+         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent account of the account service to filter by.
+        /** Required. The parent account of the account service to filter by. Format: `accounts/{account}`
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /** Required. The parent account of the account service to filter by. */
+        /**
+         * Required. The parent account of the account service to filter by. Format:
+         * `accounts/{account}`
+         */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -6451,7 +6499,7 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the merchantapi server.  After setting any optional
        * parameters, call the {@link Propose#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The resource name of the parent account for the service.
+       * @param parent Required. The resource name of the parent account for the service. Format: `accounts/{account}`
        * @param content the {@link com.google.api.services.merchantapi.accounts_v1beta.model.ProposeAccountServiceRequest}
        * @return the request
        */
@@ -6479,7 +6527,7 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          * Propose#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The resource name of the parent account for the service.
+         * @param parent Required. The resource name of the parent account for the service. Format: `accounts/{account}`
          * @param content the {@link com.google.api.services.merchantapi.accounts_v1beta.model.ProposeAccountServiceRequest}
          * @since 1.13
          */
@@ -6548,17 +6596,23 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
           return (Propose) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. The resource name of the parent account for the service. */
+        /**
+         * Required. The resource name of the parent account for the service. Format:
+         * `accounts/{account}`
+         */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The resource name of the parent account for the service.
+        /** Required. The resource name of the parent account for the service. Format: `accounts/{account}`
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /** Required. The resource name of the parent account for the service. */
+        /**
+         * Required. The resource name of the parent account for the service. Format:
+         * `accounts/{account}`
+         */
         public Propose setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -6582,7 +6636,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
        * This request holds the parameters needed by the merchantapi server.  After setting any optional
        * parameters, call the {@link Reject#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The resource name of the account service to reject.
+       * @param name Required. The resource name of the account service to reject. Format:
+       *        `accounts/{account}/services/{service}`
        * @param content the {@link com.google.api.services.merchantapi.accounts_v1beta.model.RejectAccountServiceRequest}
        * @return the request
        */
@@ -6610,7 +6665,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          * Reject#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The resource name of the account service to reject.
+         * @param name Required. The resource name of the account service to reject. Format:
+       *        `accounts/{account}/services/{service}`
          * @param content the {@link com.google.api.services.merchantapi.accounts_v1beta.model.RejectAccountServiceRequest}
          * @since 1.13
          */
@@ -6679,17 +6735,24 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
           return (Reject) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. The resource name of the account service to reject. */
+        /**
+         * Required. The resource name of the account service to reject. Format:
+         * `accounts/{account}/services/{service}`
+         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The resource name of the account service to reject.
+        /** Required. The resource name of the account service to reject. Format:
+       `accounts/{account}/services/{service}`
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** Required. The resource name of the account service to reject. */
+        /**
+         * Required. The resource name of the account service to reject. Format:
+         * `accounts/{account}/services/{service}`
+         */
         public Reject setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

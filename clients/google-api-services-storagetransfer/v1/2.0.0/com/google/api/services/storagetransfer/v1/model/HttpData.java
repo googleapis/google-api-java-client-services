@@ -48,7 +48,8 @@ public final class HttpData extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The URL that points to the file that stores the object list entries. This file must
-   * allow public access. Currently, only URLs with HTTP and HTTPS schemes are supported.
+   * allow public access. The URL is either an HTTP/HTTPS address (e.g.
+   * `https://example.com/urllist.tsv`) or a Cloud Storage path (e.g. `gs://my-bucket/urllist.tsv`).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,7 +57,8 @@ public final class HttpData extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The URL that points to the file that stores the object list entries. This file must
-   * allow public access. Currently, only URLs with HTTP and HTTPS schemes are supported.
+   * allow public access. The URL is either an HTTP/HTTPS address (e.g.
+   * `https://example.com/urllist.tsv`) or a Cloud Storage path (e.g. `gs://my-bucket/urllist.tsv`).
    * @return value or {@code null} for none
    */
   public java.lang.String getListUrl() {
@@ -65,7 +67,8 @@ public final class HttpData extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The URL that points to the file that stores the object list entries. This file must
-   * allow public access. Currently, only URLs with HTTP and HTTPS schemes are supported.
+   * allow public access. The URL is either an HTTP/HTTPS address (e.g.
+   * `https://example.com/urllist.tsv`) or a Cloud Storage path (e.g. `gs://my-bucket/urllist.tsv`).
    * @param listUrl listUrl or {@code null} for none
    */
   public HttpData setListUrl(java.lang.String listUrl) {

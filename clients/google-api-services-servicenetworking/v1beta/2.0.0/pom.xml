@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-servicenetworking</artifactId>
-  <version>v1beta-rev20250312-2.0.0</version>
-  <name>Service Networking API v1beta-rev20250312-2.0.0</name>
+  <version>v1beta-rev20250506-2.0.0</version>
+  <name>Service Networking API v1beta-rev20250506-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

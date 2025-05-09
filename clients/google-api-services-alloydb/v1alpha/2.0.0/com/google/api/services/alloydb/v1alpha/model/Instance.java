@@ -31,6 +31,17 @@ package com.google.api.services.alloydb.v1alpha.model;
 public final class Instance extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Specifies whether an instance needs to spin up. Once the instance is active, the
+   * activation policy can be updated to the `NEVER` to stop the instance. Likewise, the activation
+   * policy can be updated to `ALWAYS` to start the instance. There are restrictions around when an
+   * instance can/cannot be activated (for example, a read pool instance should be stopped before
+   * stopping primary etc.). Please refer to the API documentation for more details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String activationPolicy;
+
+  /**
    * Annotations to allow client tools to store small amount of arbitrary data. This is distinct
    * from labels. https://google.aip.dev/128
    * The value may be {@code null}.
@@ -291,6 +302,31 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private Node writableNode;
+
+  /**
+   * Optional. Specifies whether an instance needs to spin up. Once the instance is active, the
+   * activation policy can be updated to the `NEVER` to stop the instance. Likewise, the activation
+   * policy can be updated to `ALWAYS` to start the instance. There are restrictions around when an
+   * instance can/cannot be activated (for example, a read pool instance should be stopped before
+   * stopping primary etc.). Please refer to the API documentation for more details.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getActivationPolicy() {
+    return activationPolicy;
+  }
+
+  /**
+   * Optional. Specifies whether an instance needs to spin up. Once the instance is active, the
+   * activation policy can be updated to the `NEVER` to stop the instance. Likewise, the activation
+   * policy can be updated to `ALWAYS` to start the instance. There are restrictions around when an
+   * instance can/cannot be activated (for example, a read pool instance should be stopped before
+   * stopping primary etc.). Please refer to the API documentation for more details.
+   * @param activationPolicy activationPolicy or {@code null} for none
+   */
+  public Instance setActivationPolicy(java.lang.String activationPolicy) {
+    this.activationPolicy = activationPolicy;
+    return this;
+  }
 
   /**
    * Annotations to allow client tools to store small amount of arbitrary data. This is distinct

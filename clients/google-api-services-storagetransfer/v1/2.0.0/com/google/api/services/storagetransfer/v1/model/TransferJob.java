@@ -129,6 +129,20 @@ public final class TransferJob extends com.google.api.client.json.GenericJson {
   private Schedule schedule;
 
   /**
+   * Optional. The service account to be used to access resources in the consumer project in the
+   * transfer job. We accept `email` or `uniqueId` for the service account. Service account format
+   * is projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID} See https://cloud.google.com/iam/docs
+   * /reference/credentials/rest/v1/projects.serviceAccounts/generateAccessToken#path-parameters for
+   * details. Caller requires the following IAM permission on the specified service account:
+   * `iam.serviceAccounts.actAs`. project-PROJECT_NUMBER@storage-transfer-
+   * service.iam.gserviceaccount.com requires the following IAM permission on the specified service
+   * account: `iam.serviceAccounts.getAccessToken`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceAccount;
+
+  /**
    * Status of the job. This value MUST be specified for `CreateTransferJobRequests`. **Note:** The
    * effect of the new job status takes place during a subsequent job run. For example, if you
    * change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is
@@ -376,6 +390,37 @@ public final class TransferJob extends com.google.api.client.json.GenericJson {
    */
   public TransferJob setSchedule(Schedule schedule) {
     this.schedule = schedule;
+    return this;
+  }
+
+  /**
+   * Optional. The service account to be used to access resources in the consumer project in the
+   * transfer job. We accept `email` or `uniqueId` for the service account. Service account format
+   * is projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID} See https://cloud.google.com/iam/docs
+   * /reference/credentials/rest/v1/projects.serviceAccounts/generateAccessToken#path-parameters for
+   * details. Caller requires the following IAM permission on the specified service account:
+   * `iam.serviceAccounts.actAs`. project-PROJECT_NUMBER@storage-transfer-
+   * service.iam.gserviceaccount.com requires the following IAM permission on the specified service
+   * account: `iam.serviceAccounts.getAccessToken`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceAccount() {
+    return serviceAccount;
+  }
+
+  /**
+   * Optional. The service account to be used to access resources in the consumer project in the
+   * transfer job. We accept `email` or `uniqueId` for the service account. Service account format
+   * is projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID} See https://cloud.google.com/iam/docs
+   * /reference/credentials/rest/v1/projects.serviceAccounts/generateAccessToken#path-parameters for
+   * details. Caller requires the following IAM permission on the specified service account:
+   * `iam.serviceAccounts.actAs`. project-PROJECT_NUMBER@storage-transfer-
+   * service.iam.gserviceaccount.com requires the following IAM permission on the specified service
+   * account: `iam.serviceAccounts.getAccessToken`
+   * @param serviceAccount serviceAccount or {@code null} for none
+   */
+  public TransferJob setServiceAccount(java.lang.String serviceAccount) {
+    this.serviceAccount = serviceAccount;
     return this;
   }
 

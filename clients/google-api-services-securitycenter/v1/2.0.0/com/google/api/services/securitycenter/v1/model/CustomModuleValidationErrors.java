@@ -32,6 +32,7 @@ package com.google.api.services.securitycenter.v1.model;
 public final class CustomModuleValidationErrors extends com.google.api.client.json.GenericJson {
 
   /**
+   * The list of errors.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,6 +45,7 @@ public final class CustomModuleValidationErrors extends com.google.api.client.js
   }
 
   /**
+   * The list of errors.
    * @return value or {@code null} for none
    */
   public java.util.List<CustomModuleValidationError> getErrors() {
@@ -51,6 +53,7 @@ public final class CustomModuleValidationErrors extends com.google.api.client.js
   }
 
   /**
+   * The list of errors.
    * @param errors errors or {@code null} for none
    */
   public CustomModuleValidationErrors setErrors(java.util.List<CustomModuleValidationError> errors) {

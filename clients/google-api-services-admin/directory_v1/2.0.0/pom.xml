@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-admin-directory</artifactId>
-  <version>directory_v1-rev20250421-2.0.0</version>
-  <name>Admin SDK API directory_v1-rev20250421-2.0.0</name>
+  <version>directory_v1-rev20250505-2.0.0</version>
+  <name>Admin SDK API directory_v1-rev20250505-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

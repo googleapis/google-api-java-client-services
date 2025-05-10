@@ -11672,7 +11672,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
            * are allowed. To avoid service disruptions, a consumer key and secret should not exceed 2 KBs
            * each. **Note**: When creating the consumer key and secret, an association to API products will
            * not be made. Therefore, you should not specify the associated API products in your request.
-           * Instead, use the ProductizeAppGroupAppKey API to make the association after the consumer key and
+           * Instead, use the UpdateAppGroupAppKey API to make the association after the consumer key and
            * secret are created. If a consumer key and secret already exist, you can keep them or delete them
            * using the DeleteAppGroupAppKey API.
            *
@@ -11706,8 +11706,8 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
              * are allowed. To avoid service disruptions, a consumer key and secret should not exceed 2 KBs
              * each. **Note**: When creating the consumer key and secret, an association to API products will
              * not be made. Therefore, you should not specify the associated API products in your request.
-             * Instead, use the ProductizeAppGroupAppKey API to make the association after the consumer key
-             * and secret are created. If a consumer key and secret already exist, you can keep them or delete
+             * Instead, use the UpdateAppGroupAppKey API to make the association after the consumer key and
+             * secret are created. If a consumer key and secret already exist, you can keep them or delete
              * them using the DeleteAppGroupAppKey API.
              *
              * Create a request for the method "keys.create".

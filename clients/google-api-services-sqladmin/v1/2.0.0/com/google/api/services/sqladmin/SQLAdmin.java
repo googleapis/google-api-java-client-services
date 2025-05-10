@@ -782,8 +782,8 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
-     * This API updates the following: 1- retention period and description of backup in case of final
-     * backups only. 2- gcbdr_soft_delete_status of backup in case of GCBDR managed backups only.
+     * Updates the retention period and description of the backup. You can use this API to update final
+     * backups only.
      *
      * Create a request for the method "Backups.UpdateBackup".
      *
@@ -808,8 +808,8 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
           java.util.regex.Pattern.compile("^projects/[^/]+/backups/[^/]+$");
 
       /**
-       * This API updates the following: 1- retention period and description of backup in case of final
-       * backups only. 2- gcbdr_soft_delete_status of backup in case of GCBDR managed backups only.
+       * Updates the retention period and description of the backup. You can use this API to update
+       * final backups only.
        *
        * Create a request for the method "Backups.UpdateBackup".
        *
@@ -914,24 +914,22 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * The list of fields that you can update. 1- You can update only the description and
-       * retention period for a final backup. 2- You can update only the gcbdr_soft_delete_status
-       * for GCBDR managed backup.
+       * The list of fields that you can update. You can update only the description and retention
+       * period of the final backup.
        */
       @com.google.api.client.util.Key
       private String updateMask;
 
-      /** The list of fields that you can update. 1- You can update only the description and retention period
-     for a final backup. 2- You can update only the gcbdr_soft_delete_status for GCBDR managed backup.
+      /** The list of fields that you can update. You can update only the description and retention period of
+     the final backup.
        */
       public String getUpdateMask() {
         return updateMask;
       }
 
       /**
-       * The list of fields that you can update. 1- You can update only the description and
-       * retention period for a final backup. 2- You can update only the gcbdr_soft_delete_status
-       * for GCBDR managed backup.
+       * The list of fields that you can update. You can update only the description and retention
+       * period of the final backup.
        */
       public UpdateBackup setUpdateMask(String updateMask) {
         this.updateMask = updateMask;

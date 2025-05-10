@@ -17,7 +17,7 @@
 package com.google.api.services.integrations.v1.model;
 
 /**
- * The request for scheduling an integration. Next available id: 11
+ * The request for scheduling an integration.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Application Integration API. For a detailed

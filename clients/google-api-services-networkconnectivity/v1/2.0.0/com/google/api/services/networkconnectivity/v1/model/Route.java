@@ -93,6 +93,13 @@ public final class Route extends com.google.api.client.json.GenericJson {
   private NextHopRouterApplianceInstance nextHopRouterApplianceInstance;
 
   /**
+   * Immutable. The next-hop spoke for packets on this route.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NextHopSpoke nextHopSpoke;
+
+  /**
    * Immutable. The destination VPC network for packets on this route.
    * The value may be {@code null}.
    */
@@ -297,6 +304,23 @@ public final class Route extends com.google.api.client.json.GenericJson {
    */
   public Route setNextHopRouterApplianceInstance(NextHopRouterApplianceInstance nextHopRouterApplianceInstance) {
     this.nextHopRouterApplianceInstance = nextHopRouterApplianceInstance;
+    return this;
+  }
+
+  /**
+   * Immutable. The next-hop spoke for packets on this route.
+   * @return value or {@code null} for none
+   */
+  public NextHopSpoke getNextHopSpoke() {
+    return nextHopSpoke;
+  }
+
+  /**
+   * Immutable. The next-hop spoke for packets on this route.
+   * @param nextHopSpoke nextHopSpoke or {@code null} for none
+   */
+  public Route setNextHopSpoke(NextHopSpoke nextHopSpoke) {
+    this.nextHopSpoke = nextHopSpoke;
     return this;
   }
 

@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.networkconnectivity.v1alpha1.model;
+package com.google.api.services.networkconnectivity.v1.model;
 
 /**
  * Range auto-allocation options, to be optionally used when CIDR block is not explicitly set.
@@ -31,7 +31,7 @@ package com.google.api.services.networkconnectivity.v1alpha1.model;
 public final class AllocationOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Allocation strategy. Not setting this field when the allocation is requested means an
+   * Optional. Allocation strategy Not setting this field when the allocation is requested means an
    * implementation defined strategy is used.
    * The value may be {@code null}.
    */
@@ -48,7 +48,7 @@ public final class AllocationOptions extends com.google.api.client.json.GenericJ
   private java.lang.Integer firstAvailableRangesLookupSize;
 
   /**
-   * Optional. Allocation strategy. Not setting this field when the allocation is requested means an
+   * Optional. Allocation strategy Not setting this field when the allocation is requested means an
    * implementation defined strategy is used.
    * @return value or {@code null} for none
    */
@@ -57,7 +57,7 @@ public final class AllocationOptions extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Allocation strategy. Not setting this field when the allocation is requested means an
+   * Optional. Allocation strategy Not setting this field when the allocation is requested means an
    * implementation defined strategy is used.
    * @param allocationStrategy allocationStrategy or {@code null} for none
    */

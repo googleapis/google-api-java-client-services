@@ -9311,6 +9311,49 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
+      /** Whether the request should enforce expansive access rules. */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean enforceExpansiveAccess;
+
+      /** Whether the request should enforce expansive access rules. [default: false]
+       */
+      public java.lang.Boolean getEnforceExpansiveAccess() {
+        return enforceExpansiveAccess;
+      }
+
+      /** Whether the request should enforce expansive access rules. */
+      public Create setEnforceExpansiveAccess(java.lang.Boolean enforceExpansiveAccess) {
+        this.enforceExpansiveAccess = enforceExpansiveAccess;
+        return this;
+      }
+
+      /**
+       * Convenience method that returns only {@link Boolean#TRUE} or {@link Boolean#FALSE}.
+       *
+       * <p>
+       * Boolean properties can have four possible values:
+       * {@code null}, {@link com.google.api.client.util.Data#NULL_BOOLEAN}, {@link Boolean#TRUE}
+       * or {@link Boolean#FALSE}.
+       * </p>
+       *
+       * <p>
+       * This method returns {@link Boolean#TRUE} if the default of the property is {@link Boolean#TRUE}
+       * and it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * {@link Boolean#FALSE} is returned if the default of the property is {@link Boolean#FALSE} and
+       * it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * </p>
+       *
+       * <p>
+       * Whether the request should enforce expansive access rules.
+       * </p>
+       */
+      public boolean isEnforceExpansiveAccess() {
+        if (enforceExpansiveAccess == null || enforceExpansiveAccess == com.google.api.client.util.Data.NULL_BOOLEAN) {
+          return false;
+        }
+        return enforceExpansiveAccess;
+      }
+
       /** Deprecated: See `moveToNewOwnersRoot` for details. */
       @com.google.api.client.util.Key
       private java.lang.Boolean enforceSingleParent;

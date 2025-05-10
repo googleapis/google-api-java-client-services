@@ -74,6 +74,18 @@ public final class BackendServiceHAPolicy extends com.google.api.client.json.Gen
   private java.lang.String fastIPMove;
 
   /**
+   * Selects one of the network endpoints attached to the backend NEGs of this service as the active
+   * endpoint (the leader) that receives all traffic. When the leader changes, there is no
+   * connection draining to persist existing connections on the old leader. You are responsible for
+   * selecting a suitable endpoint as the leader. For example, preferring a healthy endpoint over
+   * unhealthy ones. Note that this service does not track backend endpoint health, and selects the
+   * configured leader unconditionally.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BackendServiceHAPolicyLeader leader;
+
+  /**
    * Specifies whether fast IP move is enabled, and if so, the mechanism to achieve it. Supported
    * values are: - DISABLED: Fast IP Move is disabled. You can only use the haPolicy.leader API to
    * update the leader. - >GARP_RA: Provides a method to very quickly define a new network endpoint
@@ -161,6 +173,33 @@ public final class BackendServiceHAPolicy extends com.google.api.client.json.Gen
    */
   public BackendServiceHAPolicy setFastIPMove(java.lang.String fastIPMove) {
     this.fastIPMove = fastIPMove;
+    return this;
+  }
+
+  /**
+   * Selects one of the network endpoints attached to the backend NEGs of this service as the active
+   * endpoint (the leader) that receives all traffic. When the leader changes, there is no
+   * connection draining to persist existing connections on the old leader. You are responsible for
+   * selecting a suitable endpoint as the leader. For example, preferring a healthy endpoint over
+   * unhealthy ones. Note that this service does not track backend endpoint health, and selects the
+   * configured leader unconditionally.
+   * @return value or {@code null} for none
+   */
+  public BackendServiceHAPolicyLeader getLeader() {
+    return leader;
+  }
+
+  /**
+   * Selects one of the network endpoints attached to the backend NEGs of this service as the active
+   * endpoint (the leader) that receives all traffic. When the leader changes, there is no
+   * connection draining to persist existing connections on the old leader. You are responsible for
+   * selecting a suitable endpoint as the leader. For example, preferring a healthy endpoint over
+   * unhealthy ones. Note that this service does not track backend endpoint health, and selects the
+   * configured leader unconditionally.
+   * @param leader leader or {@code null} for none
+   */
+  public BackendServiceHAPolicy setLeader(BackendServiceHAPolicyLeader leader) {
+    this.leader = leader;
     return this;
   }
 

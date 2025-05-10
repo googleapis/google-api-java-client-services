@@ -133,6 +133,13 @@ public final class GoogleCloudDialogflowCxV3ResponseMessage extends com.google.a
   private GoogleCloudDialogflowCxV3ResponseMessageText text;
 
   /**
+   * Returns the definition of a tool call that should be executed by the client.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3ToolCall toolCall;
+
+  /**
    * The channel which the response is associated with. Clients can specify the channel via
    * QueryParameters.channel, and only associated channel response will be returned.
    * @return value or {@code null} for none
@@ -353,6 +360,23 @@ public final class GoogleCloudDialogflowCxV3ResponseMessage extends com.google.a
    */
   public GoogleCloudDialogflowCxV3ResponseMessage setText(GoogleCloudDialogflowCxV3ResponseMessageText text) {
     this.text = text;
+    return this;
+  }
+
+  /**
+   * Returns the definition of a tool call that should be executed by the client.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3ToolCall getToolCall() {
+    return toolCall;
+  }
+
+  /**
+   * Returns the definition of a tool call that should be executed by the client.
+   * @param toolCall toolCall or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3ResponseMessage setToolCall(GoogleCloudDialogflowCxV3ToolCall toolCall) {
+    this.toolCall = toolCall;
     return this;
   }
 

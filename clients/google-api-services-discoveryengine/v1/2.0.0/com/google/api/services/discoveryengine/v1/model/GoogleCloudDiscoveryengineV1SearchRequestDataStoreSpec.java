@@ -39,6 +39,15 @@ public final class GoogleCloudDiscoveryengineV1SearchRequestDataStoreSpec extend
   private GoogleCloudDiscoveryengineV1SearchRequestBoostSpec boostSpec;
 
   /**
+   * Optional. Custom search operators which if specified will be used to filter results from
+   * workspace data stores. For more information on custom search operators, see
+   * [SearchOperators](https://support.google.com/cloudsearch/answer/6172299).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String customSearchOperators;
+
+  /**
    * Required. Full resource name of DataStore, such as `projects/{project}/locations/{location}/col
    * lections/{collection_id}/dataStores/{data_store_id}`.
    * The value may be {@code null}.
@@ -71,6 +80,27 @@ public final class GoogleCloudDiscoveryengineV1SearchRequestDataStoreSpec extend
    */
   public GoogleCloudDiscoveryengineV1SearchRequestDataStoreSpec setBoostSpec(GoogleCloudDiscoveryengineV1SearchRequestBoostSpec boostSpec) {
     this.boostSpec = boostSpec;
+    return this;
+  }
+
+  /**
+   * Optional. Custom search operators which if specified will be used to filter results from
+   * workspace data stores. For more information on custom search operators, see
+   * [SearchOperators](https://support.google.com/cloudsearch/answer/6172299).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCustomSearchOperators() {
+    return customSearchOperators;
+  }
+
+  /**
+   * Optional. Custom search operators which if specified will be used to filter results from
+   * workspace data stores. For more information on custom search operators, see
+   * [SearchOperators](https://support.google.com/cloudsearch/answer/6172299).
+   * @param customSearchOperators customSearchOperators or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1SearchRequestDataStoreSpec setCustomSearchOperators(java.lang.String customSearchOperators) {
+    this.customSearchOperators = customSearchOperators;
     return this;
   }
 

@@ -82,8 +82,7 @@ public final class GoogleCloudDiscoveryengineV1alphaControl extends com.google.a
   private java.lang.String name;
 
   /**
-   * Promote certain links based on predefined trigger queries. This now only supports basic site
-   * search.
+   * Promote certain links based on predefined trigger queries.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -229,8 +228,7 @@ public final class GoogleCloudDiscoveryengineV1alphaControl extends com.google.a
   }
 
   /**
-   * Promote certain links based on predefined trigger queries. This now only supports basic site
-   * search.
+   * Promote certain links based on predefined trigger queries.
    * @return value or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaControlPromoteAction getPromoteAction() {
@@ -238,8 +236,7 @@ public final class GoogleCloudDiscoveryengineV1alphaControl extends com.google.a
   }
 
   /**
-   * Promote certain links based on predefined trigger queries. This now only supports basic site
-   * search.
+   * Promote certain links based on predefined trigger queries.
    * @param promoteAction promoteAction or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaControl setPromoteAction(GoogleCloudDiscoveryengineV1alphaControlPromoteAction promoteAction) {

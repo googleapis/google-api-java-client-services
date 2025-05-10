@@ -69,7 +69,7 @@ public final class GoogleCloudDiscoveryengineV1betaCheckGroundingResponseClaim e
 
   /**
    * Confidence score for the claim in the answer candidate, in the range of [0, 1]. This is set
-   * only when enable_claim_level_score is true.
+   * only when `CheckGroundingRequest.grounding_spec.enable_claim_level_score` is true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -177,7 +177,7 @@ public final class GoogleCloudDiscoveryengineV1betaCheckGroundingResponseClaim e
 
   /**
    * Confidence score for the claim in the answer candidate, in the range of [0, 1]. This is set
-   * only when enable_claim_level_score is true.
+   * only when `CheckGroundingRequest.grounding_spec.enable_claim_level_score` is true.
    * @return value or {@code null} for none
    */
   public java.lang.Double getScore() {
@@ -186,7 +186,7 @@ public final class GoogleCloudDiscoveryengineV1betaCheckGroundingResponseClaim e
 
   /**
    * Confidence score for the claim in the answer candidate, in the range of [0, 1]. This is set
-   * only when enable_claim_level_score is true.
+   * only when `CheckGroundingRequest.grounding_spec.enable_claim_level_score` is true.
    * @param score score or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaCheckGroundingResponseClaim setScore(java.lang.Double score) {

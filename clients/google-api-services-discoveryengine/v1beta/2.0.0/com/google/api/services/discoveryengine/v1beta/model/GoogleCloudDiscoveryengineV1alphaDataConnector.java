@@ -91,12 +91,19 @@ public final class GoogleCloudDiscoveryengineV1alphaDataConnector extends com.go
 
   /**
    * Output only. The type of connector. Each source can only map to one type. For example,
-   * salesforce, confluence and jira have THIRD_PARTY connector type. It is notmutable once set by
+   * salesforce, confluence and jira have THIRD_PARTY connector type. It is not mutable once set by
    * system.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String connectorType;
+
+  /**
+   * Optional. Whether the END USER AUTHENTICATION connector is created in SaaS.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean createEuaSaas;
 
   /**
    * Output only. Timestamp the DataConnector was created at.
@@ -421,7 +428,7 @@ public final class GoogleCloudDiscoveryengineV1alphaDataConnector extends com.go
 
   /**
    * Output only. The type of connector. Each source can only map to one type. For example,
-   * salesforce, confluence and jira have THIRD_PARTY connector type. It is notmutable once set by
+   * salesforce, confluence and jira have THIRD_PARTY connector type. It is not mutable once set by
    * system.
    * @return value or {@code null} for none
    */
@@ -431,12 +438,29 @@ public final class GoogleCloudDiscoveryengineV1alphaDataConnector extends com.go
 
   /**
    * Output only. The type of connector. Each source can only map to one type. For example,
-   * salesforce, confluence and jira have THIRD_PARTY connector type. It is notmutable once set by
+   * salesforce, confluence and jira have THIRD_PARTY connector type. It is not mutable once set by
    * system.
    * @param connectorType connectorType or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaDataConnector setConnectorType(java.lang.String connectorType) {
     this.connectorType = connectorType;
+    return this;
+  }
+
+  /**
+   * Optional. Whether the END USER AUTHENTICATION connector is created in SaaS.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getCreateEuaSaas() {
+    return createEuaSaas;
+  }
+
+  /**
+   * Optional. Whether the END USER AUTHENTICATION connector is created in SaaS.
+   * @param createEuaSaas createEuaSaas or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaDataConnector setCreateEuaSaas(java.lang.Boolean createEuaSaas) {
+    this.createEuaSaas = createEuaSaas;
     return this;
   }
 

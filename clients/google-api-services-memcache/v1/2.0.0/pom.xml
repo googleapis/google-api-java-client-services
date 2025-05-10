@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-memcache</artifactId>
-  <version>v1-rev20250206-2.0.0</version>
-  <name>Cloud Memorystore for Memcached API v1-rev20250206-2.0.0</name>
+  <version>v1-rev20250505-2.0.0</version>
+  <name>Cloud Memorystore for Memcached API v1-rev20250505-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

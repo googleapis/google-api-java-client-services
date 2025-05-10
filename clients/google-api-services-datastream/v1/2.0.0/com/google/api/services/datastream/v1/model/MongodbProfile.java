@@ -30,7 +30,9 @@ package com.google.api.services.datastream.v1.model;
 public final class MongodbProfile extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. List of host addresses for a MongoDB cluster.
+   * Required. List of host addresses for a MongoDB cluster. For SRV connection format, this list
+   * must contain exactly one DNS host without a port. For Standard connection format, this list
+   * must contain all the required hosts in the cluster with their respective ports.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +54,8 @@ public final class MongodbProfile extends com.google.api.client.json.GenericJson
 
   /**
    * Optional. Name of the replica set. Only needed for self hosted replica set type MongoDB
-   * cluster.
+   * cluster. For SRV connection format, this field must be empty. For Standard connection format,
+   * this field must be specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,7 +91,9 @@ public final class MongodbProfile extends com.google.api.client.json.GenericJson
   private java.lang.String username;
 
   /**
-   * Required. List of host addresses for a MongoDB cluster.
+   * Required. List of host addresses for a MongoDB cluster. For SRV connection format, this list
+   * must contain exactly one DNS host without a port. For Standard connection format, this list
+   * must contain all the required hosts in the cluster with their respective ports.
    * @return value or {@code null} for none
    */
   public java.util.List<HostAddress> getHostAddresses() {
@@ -96,7 +101,9 @@ public final class MongodbProfile extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. List of host addresses for a MongoDB cluster.
+   * Required. List of host addresses for a MongoDB cluster. For SRV connection format, this list
+   * must contain exactly one DNS host without a port. For Standard connection format, this list
+   * must contain all the required hosts in the cluster with their respective ports.
    * @param hostAddresses hostAddresses or {@code null} for none
    */
   public MongodbProfile setHostAddresses(java.util.List<HostAddress> hostAddresses) {
@@ -125,7 +132,8 @@ public final class MongodbProfile extends com.google.api.client.json.GenericJson
 
   /**
    * Optional. Name of the replica set. Only needed for self hosted replica set type MongoDB
-   * cluster.
+   * cluster. For SRV connection format, this field must be empty. For Standard connection format,
+   * this field must be specified.
    * @return value or {@code null} for none
    */
   public java.lang.String getReplicaSet() {
@@ -134,7 +142,8 @@ public final class MongodbProfile extends com.google.api.client.json.GenericJson
 
   /**
    * Optional. Name of the replica set. Only needed for self hosted replica set type MongoDB
-   * cluster.
+   * cluster. For SRV connection format, this field must be empty. For Standard connection format,
+   * this field must be specified.
    * @param replicaSet replicaSet or {@code null} for none
    */
   public MongodbProfile setReplicaSet(java.lang.String replicaSet) {

@@ -31,7 +31,7 @@ public final class GoogleCloudOsloginControlplaneRegionalV1alphaSignSshPublicKey
 
   /**
    * The App Engine instance to sign the SSH public key for. Expected format:
-   * services/{service}/versions/{version}/instances/{instance}
+   * apps/{app}/services/{service}/versions/{version}/instances/{instance}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,7 +63,7 @@ public final class GoogleCloudOsloginControlplaneRegionalV1alphaSignSshPublicKey
 
   /**
    * The App Engine instance to sign the SSH public key for. Expected format:
-   * services/{service}/versions/{version}/instances/{instance}
+   * apps/{app}/services/{service}/versions/{version}/instances/{instance}
    * @return value or {@code null} for none
    */
   public java.lang.String getAppEngineInstance() {
@@ -72,7 +72,7 @@ public final class GoogleCloudOsloginControlplaneRegionalV1alphaSignSshPublicKey
 
   /**
    * The App Engine instance to sign the SSH public key for. Expected format:
-   * services/{service}/versions/{version}/instances/{instance}
+   * apps/{app}/services/{service}/versions/{version}/instances/{instance}
    * @param appEngineInstance appEngineInstance or {@code null} for none
    */
   public GoogleCloudOsloginControlplaneRegionalV1alphaSignSshPublicKeyRequest setAppEngineInstance(java.lang.String appEngineInstance) {

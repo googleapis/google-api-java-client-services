@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-notebooks</artifactId>
-  <version>v1-rev20241204-2.0.0</version>
-  <name>Notebooks API v1-rev20241204-2.0.0</name>
+  <version>v1-rev20250430-2.0.0</version>
+  <name>Notebooks API v1-rev20250430-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

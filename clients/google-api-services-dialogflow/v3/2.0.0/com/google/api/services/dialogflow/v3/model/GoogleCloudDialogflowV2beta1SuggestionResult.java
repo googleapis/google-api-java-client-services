@@ -38,6 +38,13 @@ public final class GoogleCloudDialogflowV2beta1SuggestionResult extends com.goog
   private GoogleRpcStatus error;
 
   /**
+   * Suggestions generated using generators triggered by customer or agent messages.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowV2beta1GenerateSuggestionsResponse generateSuggestionsResponse;
+
+  /**
    * SuggestArticlesResponse if request is for ARTICLE_SUGGESTION.
    * The value may be {@code null}.
    */
@@ -93,6 +100,23 @@ public final class GoogleCloudDialogflowV2beta1SuggestionResult extends com.goog
    */
   public GoogleCloudDialogflowV2beta1SuggestionResult setError(GoogleRpcStatus error) {
     this.error = error;
+    return this;
+  }
+
+  /**
+   * Suggestions generated using generators triggered by customer or agent messages.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1GenerateSuggestionsResponse getGenerateSuggestionsResponse() {
+    return generateSuggestionsResponse;
+  }
+
+  /**
+   * Suggestions generated using generators triggered by customer or agent messages.
+   * @param generateSuggestionsResponse generateSuggestionsResponse or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1SuggestionResult setGenerateSuggestionsResponse(GoogleCloudDialogflowV2beta1GenerateSuggestionsResponse generateSuggestionsResponse) {
+    this.generateSuggestionsResponse = generateSuggestionsResponse;
     return this;
   }
 

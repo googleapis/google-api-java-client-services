@@ -145,6 +145,13 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfig extends com.goo
   private java.lang.Boolean enableConversationalSearch;
 
   /**
+   * Optional. Output only. Whether to enable private knowledge graph.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enablePrivateKnowledgeGraph;
+
+  /**
    * Turn on or off collecting the search result quality feedback from end users.
    * The value may be {@code null}.
    */
@@ -566,6 +573,23 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfig extends com.goo
    */
   public GoogleCloudDiscoveryengineV1alphaWidgetConfig setEnableConversationalSearch(java.lang.Boolean enableConversationalSearch) {
     this.enableConversationalSearch = enableConversationalSearch;
+    return this;
+  }
+
+  /**
+   * Optional. Output only. Whether to enable private knowledge graph.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnablePrivateKnowledgeGraph() {
+    return enablePrivateKnowledgeGraph;
+  }
+
+  /**
+   * Optional. Output only. Whether to enable private knowledge graph.
+   * @param enablePrivateKnowledgeGraph enablePrivateKnowledgeGraph or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaWidgetConfig setEnablePrivateKnowledgeGraph(java.lang.Boolean enablePrivateKnowledgeGraph) {
+    this.enablePrivateKnowledgeGraph = enablePrivateKnowledgeGraph;
     return this;
   }
 

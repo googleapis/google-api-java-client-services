@@ -47287,6 +47287,148 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
       public class UserStores {
 
         /**
+         * Updates the User License. This method is used for batch assign/unassign licenses to users.
+         *
+         * Create a request for the method "userStores.batchUpdateUserLicenses".
+         *
+         * This request holds the parameters needed by the discoveryengine server.  After setting any
+         * optional parameters, call the {@link BatchUpdateUserLicenses#execute()} method to invoke the
+         * remote operation.
+         *
+         * @param parent Required. The parent UserStore resource name, format:
+         *        `projects/{project}/locations/{location}/userStores/{user_store_id}`.
+         * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaBatchUpdateUserLicensesRequest}
+         * @return the request
+         */
+        public BatchUpdateUserLicenses batchUpdateUserLicenses(java.lang.String parent, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaBatchUpdateUserLicensesRequest content) throws java.io.IOException {
+          BatchUpdateUserLicenses result = new BatchUpdateUserLicenses(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class BatchUpdateUserLicenses extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1alpha/{+parent}:batchUpdateUserLicenses";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/userStores/[^/]+$");
+
+          /**
+           * Updates the User License. This method is used for batch assign/unassign licenses to users.
+           *
+           * Create a request for the method "userStores.batchUpdateUserLicenses".
+           *
+           * This request holds the parameters needed by the the discoveryengine server.  After setting any
+           * optional parameters, call the {@link BatchUpdateUserLicenses#execute()} method to invoke the
+           * remote operation. <p> {@link BatchUpdateUserLicenses#initialize(com.google.api.client.googleapi
+           * s.services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+           * after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent UserStore resource name, format:
+         *        `projects/{project}/locations/{location}/userStores/{user_store_id}`.
+           * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaBatchUpdateUserLicensesRequest}
+           * @since 1.13
+           */
+          protected BatchUpdateUserLicenses(java.lang.String parent, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaBatchUpdateUserLicensesRequest content) {
+            super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleLongrunningOperation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/userStores/[^/]+$");
+            }
+          }
+
+          @Override
+          public BatchUpdateUserLicenses set$Xgafv(java.lang.String $Xgafv) {
+            return (BatchUpdateUserLicenses) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public BatchUpdateUserLicenses setAccessToken(java.lang.String accessToken) {
+            return (BatchUpdateUserLicenses) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public BatchUpdateUserLicenses setAlt(java.lang.String alt) {
+            return (BatchUpdateUserLicenses) super.setAlt(alt);
+          }
+
+          @Override
+          public BatchUpdateUserLicenses setCallback(java.lang.String callback) {
+            return (BatchUpdateUserLicenses) super.setCallback(callback);
+          }
+
+          @Override
+          public BatchUpdateUserLicenses setFields(java.lang.String fields) {
+            return (BatchUpdateUserLicenses) super.setFields(fields);
+          }
+
+          @Override
+          public BatchUpdateUserLicenses setKey(java.lang.String key) {
+            return (BatchUpdateUserLicenses) super.setKey(key);
+          }
+
+          @Override
+          public BatchUpdateUserLicenses setOauthToken(java.lang.String oauthToken) {
+            return (BatchUpdateUserLicenses) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public BatchUpdateUserLicenses setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (BatchUpdateUserLicenses) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public BatchUpdateUserLicenses setQuotaUser(java.lang.String quotaUser) {
+            return (BatchUpdateUserLicenses) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public BatchUpdateUserLicenses setUploadType(java.lang.String uploadType) {
+            return (BatchUpdateUserLicenses) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public BatchUpdateUserLicenses setUploadProtocol(java.lang.String uploadProtocol) {
+            return (BatchUpdateUserLicenses) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent UserStore resource name, format:
+           * `projects/{project}/locations/{location}/userStores/{user_store_id}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent UserStore resource name, format:
+         `projects/{project}/locations/{location}/userStores/{user_store_id}`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent UserStore resource name, format:
+           * `projects/{project}/locations/{location}/userStores/{user_store_id}`.
+           */
+          public BatchUpdateUserLicenses setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/userStores/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public BatchUpdateUserLicenses set(String parameterName, Object value) {
+            return (BatchUpdateUserLicenses) super.set(parameterName, value);
+          }
+        }
+
+        /**
          * An accessor for creating requests from the Operations collection.
          *
          * <p>The typical use is:</p>
@@ -47624,6 +47766,263 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
 
             /** The standard list page token. */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
+         * An accessor for creating requests from the UserLicenses collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
+         *   {@code DiscoveryEngine.UserLicenses.List request = discoveryengine.userLicenses().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public UserLicenses userLicenses() {
+          return new UserLicenses();
+        }
+
+        /**
+         * The "userLicenses" collection of methods.
+         */
+        public class UserLicenses {
+
+          /**
+           * Lists the User Licenses.
+           *
+           * Create a request for the method "userLicenses.list".
+           *
+           * This request holds the parameters needed by the discoveryengine server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent UserStore resource name, format:
+           *        `projects/{project}/locations/{location}/userStores/{user_store_id}`.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaListUserLicensesResponse> {
+
+            private static final String REST_PATH = "v1alpha/{+parent}/userLicenses";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/userStores/[^/]+$");
+
+            /**
+             * Lists the User Licenses.
+             *
+             * Create a request for the method "userLicenses.list".
+             *
+             * This request holds the parameters needed by the the discoveryengine server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent UserStore resource name, format:
+           *        `projects/{project}/locations/{location}/userStores/{user_store_id}`.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaListUserLicensesResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/userStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent UserStore resource name, format:
+             * `projects/{project}/locations/{location}/userStores/{user_store_id}`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent UserStore resource name, format:
+           `projects/{project}/locations/{location}/userStores/{user_store_id}`.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The parent UserStore resource name, format:
+             * `projects/{project}/locations/{location}/userStores/{user_store_id}`.
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/userStores/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Optional. Filter for the list request. Supported fields: * `license_assignment_state`
+             * Examples: * `license_assignment_state = ASSIGNED` to list assigned user licenses. *
+             * `license_assignment_state = NO_LICENSE` to list not licensed users. *
+             * `license_assignment_state = NO_LICENSE_ATTEMPTED_LOGIN` to list users who attempted
+             * login but no license assigned. * `license_assignment_state !=
+             * NO_LICENSE_ATTEMPTED_LOGIN` to filter out users who attempted login but no license
+             * assigned.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Optional. Filter for the list request. Supported fields: * `license_assignment_state` Examples: *
+           `license_assignment_state = ASSIGNED` to list assigned user licenses. * `license_assignment_state =
+           NO_LICENSE` to list not licensed users. * `license_assignment_state = NO_LICENSE_ATTEMPTED_LOGIN`
+           to list users who attempted login but no license assigned. * `license_assignment_state !=
+           NO_LICENSE_ATTEMPTED_LOGIN` to filter out users who attempted login but no license assigned.
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /**
+             * Optional. Filter for the list request. Supported fields: * `license_assignment_state`
+             * Examples: * `license_assignment_state = ASSIGNED` to list assigned user licenses. *
+             * `license_assignment_state = NO_LICENSE` to list not licensed users. *
+             * `license_assignment_state = NO_LICENSE_ATTEMPTED_LOGIN` to list users who attempted
+             * login but no license assigned. * `license_assignment_state !=
+             * NO_LICENSE_ATTEMPTED_LOGIN` to filter out users who attempted login but no license
+             * assigned.
+             */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /**
+             * Optional. Requested page size. Server may return fewer items than requested. If
+             * unspecified, defaults to 10. The maximum value is 50; values above 50 will be coerced
+             * to 50. If this field is negative, an INVALID_ARGUMENT error is returned.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. Requested page size. Server may return fewer items than requested. If unspecified,
+           defaults to 10. The maximum value is 50; values above 50 will be coerced to 50. If this field is
+           negative, an INVALID_ARGUMENT error is returned.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. Requested page size. Server may return fewer items than requested. If
+             * unspecified, defaults to 10. The maximum value is 50; values above 50 will be coerced
+             * to 50. If this field is negative, an INVALID_ARGUMENT error is returned.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. A page token, received from a previous `ListUserLicenses` call. Provide
+             * this to retrieve the subsequent page. When paginating, all other parameters provided
+             * to `ListUserLicenses` must match the call that provided the page token.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. A page token, received from a previous `ListUserLicenses` call. Provide this to retrieve
+           the subsequent page. When paginating, all other parameters provided to `ListUserLicenses` must
+           match the call that provided the page token.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. A page token, received from a previous `ListUserLicenses` call. Provide
+             * this to retrieve the subsequent page. When paginating, all other parameters provided
+             * to `ListUserLicenses` must match the call that provided the page token.
+             */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
               return this;

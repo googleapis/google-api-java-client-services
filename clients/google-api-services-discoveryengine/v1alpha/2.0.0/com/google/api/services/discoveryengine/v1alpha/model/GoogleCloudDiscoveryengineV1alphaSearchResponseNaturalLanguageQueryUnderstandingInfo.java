@@ -51,14 +51,6 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchResponseNaturalLanguag
   private java.lang.String rewrittenQuery;
 
   /**
-   * Optional. The SQL request that was generated from the natural language query understanding
-   * phase.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudDiscoveryengineV1alphaSearchResponseNaturalLanguageQueryUnderstandingInfoSqlRequest sqlRequest;
-
-  /**
    * The filters that were extracted from the input query represented in a structured form.
    * The value may be {@code null}.
    */
@@ -113,25 +105,6 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchResponseNaturalLanguag
    */
   public GoogleCloudDiscoveryengineV1alphaSearchResponseNaturalLanguageQueryUnderstandingInfo setRewrittenQuery(java.lang.String rewrittenQuery) {
     this.rewrittenQuery = rewrittenQuery;
-    return this;
-  }
-
-  /**
-   * Optional. The SQL request that was generated from the natural language query understanding
-   * phase.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudDiscoveryengineV1alphaSearchResponseNaturalLanguageQueryUnderstandingInfoSqlRequest getSqlRequest() {
-    return sqlRequest;
-  }
-
-  /**
-   * Optional. The SQL request that was generated from the natural language query understanding
-   * phase.
-   * @param sqlRequest sqlRequest or {@code null} for none
-   */
-  public GoogleCloudDiscoveryengineV1alphaSearchResponseNaturalLanguageQueryUnderstandingInfo setSqlRequest(GoogleCloudDiscoveryengineV1alphaSearchResponseNaturalLanguageQueryUnderstandingInfoSqlRequest sqlRequest) {
-    this.sqlRequest = sqlRequest;
     return this;
   }
 

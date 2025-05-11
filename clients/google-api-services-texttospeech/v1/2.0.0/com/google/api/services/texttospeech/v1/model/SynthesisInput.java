@@ -43,6 +43,13 @@ public final class SynthesisInput extends com.google.api.client.json.GenericJson
   private CustomPronunciations customPronunciations;
 
   /**
+   * Markup for HD voices specifically. This field may not be used with any other voices.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String markup;
+
+  /**
    * The multi-speaker input to be synthesized. Only applicable for multi-speaker synthesis.
    * The value may be {@code null}.
    */
@@ -87,6 +94,23 @@ public final class SynthesisInput extends com.google.api.client.json.GenericJson
    */
   public SynthesisInput setCustomPronunciations(CustomPronunciations customPronunciations) {
     this.customPronunciations = customPronunciations;
+    return this;
+  }
+
+  /**
+   * Markup for HD voices specifically. This field may not be used with any other voices.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMarkup() {
+    return markup;
+  }
+
+  /**
+   * Markup for HD voices specifically. This field may not be used with any other voices.
+   * @param markup markup or {@code null} for none
+   */
+  public SynthesisInput setMarkup(java.lang.String markup) {
+    this.markup = markup;
     return this;
   }
 

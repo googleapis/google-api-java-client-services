@@ -32,8 +32,8 @@ package com.google.api.services.bigqueryreservation.v1.model;
 public final class Assignment extends com.google.api.client.json.GenericJson {
 
   /**
-   * The resource which will use the reservation. E.g. `projects/myproject`, `folders/123`, or
-   * `organizations/456`.
+   * Optional. The resource which will use the reservation. E.g. `projects/myproject`,
+   * `folders/123`, or `organizations/456`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +52,7 @@ public final class Assignment extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean enableGeminiInBigquery;
 
   /**
-   * Which type of jobs will use the reservation.
+   * Optional. Which type of jobs will use the reservation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,8 +76,8 @@ public final class Assignment extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
-   * The resource which will use the reservation. E.g. `projects/myproject`, `folders/123`, or
-   * `organizations/456`.
+   * Optional. The resource which will use the reservation. E.g. `projects/myproject`,
+   * `folders/123`, or `organizations/456`.
    * @return value or {@code null} for none
    */
   public java.lang.String getAssignee() {
@@ -85,8 +85,8 @@ public final class Assignment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The resource which will use the reservation. E.g. `projects/myproject`, `folders/123`, or
-   * `organizations/456`.
+   * Optional. The resource which will use the reservation. E.g. `projects/myproject`,
+   * `folders/123`, or `organizations/456`.
    * @param assignee assignee or {@code null} for none
    */
   public Assignment setAssignee(java.lang.String assignee) {
@@ -122,7 +122,7 @@ public final class Assignment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Which type of jobs will use the reservation.
+   * Optional. Which type of jobs will use the reservation.
    * @return value or {@code null} for none
    */
   public java.lang.String getJobType() {
@@ -130,7 +130,7 @@ public final class Assignment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Which type of jobs will use the reservation.
+   * Optional. Which type of jobs will use the reservation.
    * @param jobType jobType or {@code null} for none
    */
   public Assignment setJobType(java.lang.String jobType) {

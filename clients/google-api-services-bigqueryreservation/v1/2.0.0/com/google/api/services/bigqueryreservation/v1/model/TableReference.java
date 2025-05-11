@@ -32,28 +32,28 @@ package com.google.api.services.bigqueryreservation.v1.model;
 public final class TableReference extends com.google.api.client.json.GenericJson {
 
   /**
-   * The ID of the dataset in the above project.
+   * Optional. The ID of the dataset in the above project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String datasetId;
 
   /**
-   * The assigned project ID of the project.
+   * Optional. The assigned project ID of the project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String projectId;
 
   /**
-   * The ID of the table in the above dataset.
+   * Optional. The ID of the table in the above dataset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String tableId;
 
   /**
-   * The ID of the dataset in the above project.
+   * Optional. The ID of the dataset in the above project.
    * @return value or {@code null} for none
    */
   public java.lang.String getDatasetId() {
@@ -61,7 +61,7 @@ public final class TableReference extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The ID of the dataset in the above project.
+   * Optional. The ID of the dataset in the above project.
    * @param datasetId datasetId or {@code null} for none
    */
   public TableReference setDatasetId(java.lang.String datasetId) {
@@ -70,7 +70,7 @@ public final class TableReference extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The assigned project ID of the project.
+   * Optional. The assigned project ID of the project.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -78,7 +78,7 @@ public final class TableReference extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The assigned project ID of the project.
+   * Optional. The assigned project ID of the project.
    * @param projectId projectId or {@code null} for none
    */
   public TableReference setProjectId(java.lang.String projectId) {
@@ -87,7 +87,7 @@ public final class TableReference extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The ID of the table in the above dataset.
+   * Optional. The ID of the table in the above dataset.
    * @return value or {@code null} for none
    */
   public java.lang.String getTableId() {
@@ -95,7 +95,7 @@ public final class TableReference extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The ID of the table in the above dataset.
+   * Optional. The ID of the table in the above dataset.
    * @param tableId tableId or {@code null} for none
    */
   public TableReference setTableId(java.lang.String tableId) {

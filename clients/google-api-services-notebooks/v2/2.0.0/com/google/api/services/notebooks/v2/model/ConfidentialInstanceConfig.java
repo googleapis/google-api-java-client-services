@@ -37,13 +37,6 @@ public final class ConfidentialInstanceConfig extends com.google.api.client.json
   private java.lang.String confidentialInstanceType;
 
   /**
-   * Optional. Defines whether the instance should have confidential compute enabled.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean enableConfidentialCompute;
-
-  /**
    * Optional. Defines the type of technology used by the confidential instance.
    * @return value or {@code null} for none
    */
@@ -57,23 +50,6 @@ public final class ConfidentialInstanceConfig extends com.google.api.client.json
    */
   public ConfidentialInstanceConfig setConfidentialInstanceType(java.lang.String confidentialInstanceType) {
     this.confidentialInstanceType = confidentialInstanceType;
-    return this;
-  }
-
-  /**
-   * Optional. Defines whether the instance should have confidential compute enabled.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getEnableConfidentialCompute() {
-    return enableConfidentialCompute;
-  }
-
-  /**
-   * Optional. Defines whether the instance should have confidential compute enabled.
-   * @param enableConfidentialCompute enableConfidentialCompute or {@code null} for none
-   */
-  public ConfidentialInstanceConfig setEnableConfidentialCompute(java.lang.Boolean enableConfidentialCompute) {
-    this.enableConfidentialCompute = enableConfidentialCompute;
     return this;
   }
 

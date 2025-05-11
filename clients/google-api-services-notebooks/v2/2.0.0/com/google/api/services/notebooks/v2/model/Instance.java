@@ -51,6 +51,14 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean disableProxyAccess;
 
   /**
+   * Optional. If true, deletion protection will be enabled for this Workbench Instance. If false,
+   * deletion protection will be disabled for this Workbench Instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableDeletionProtection;
+
+  /**
    * Optional. Flag that specifies that a notebook can be accessed with third party identity
    * provider.
    * The value may be {@code null}.
@@ -210,6 +218,25 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setDisableProxyAccess(java.lang.Boolean disableProxyAccess) {
     this.disableProxyAccess = disableProxyAccess;
+    return this;
+  }
+
+  /**
+   * Optional. If true, deletion protection will be enabled for this Workbench Instance. If false,
+   * deletion protection will be disabled for this Workbench Instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableDeletionProtection() {
+    return enableDeletionProtection;
+  }
+
+  /**
+   * Optional. If true, deletion protection will be enabled for this Workbench Instance. If false,
+   * deletion protection will be disabled for this Workbench Instance.
+   * @param enableDeletionProtection enableDeletionProtection or {@code null} for none
+   */
+  public Instance setEnableDeletionProtection(java.lang.Boolean enableDeletionProtection) {
+    this.enableDeletionProtection = enableDeletionProtection;
     return this;
   }
 

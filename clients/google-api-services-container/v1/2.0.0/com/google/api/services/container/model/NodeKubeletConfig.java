@@ -147,6 +147,14 @@ public final class NodeKubeletConfig extends com.google.api.client.json.GenericJ
   private java.lang.Boolean insecureKubeletReadonlyPortEnabled;
 
   /**
+   * Optional. Controls NUMA-aware Memory Manager configuration on the node. For more information,
+   * see: https://kubernetes.io/docs/tasks/administer-cluster/memory-manager/
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MemoryManager memoryManager;
+
+  /**
    * Set the Pod PID limits. See https://kubernetes.io/docs/concepts/policy/pid-limiting/#pod-pid-
    * limits Controls the maximum number of processes allowed to run in a pod. The value must be
    * greater than or equal to 1024 and less than 4194304.
@@ -154,6 +162,14 @@ public final class NodeKubeletConfig extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long podPidsLimit;
+
+  /**
+   * Optional. Controls Topology Manager configuration on the node. For more information, see:
+   * https://kubernetes.io/docs/tasks/administer-cluster/topology-manager/
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TopologyManager topologyManager;
 
   /**
    * Optional. Defines a comma-separated allowlist of unsafe sysctls or sysctl patterns (ending in
@@ -421,6 +437,25 @@ public final class NodeKubeletConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * Optional. Controls NUMA-aware Memory Manager configuration on the node. For more information,
+   * see: https://kubernetes.io/docs/tasks/administer-cluster/memory-manager/
+   * @return value or {@code null} for none
+   */
+  public MemoryManager getMemoryManager() {
+    return memoryManager;
+  }
+
+  /**
+   * Optional. Controls NUMA-aware Memory Manager configuration on the node. For more information,
+   * see: https://kubernetes.io/docs/tasks/administer-cluster/memory-manager/
+   * @param memoryManager memoryManager or {@code null} for none
+   */
+  public NodeKubeletConfig setMemoryManager(MemoryManager memoryManager) {
+    this.memoryManager = memoryManager;
+    return this;
+  }
+
+  /**
    * Set the Pod PID limits. See https://kubernetes.io/docs/concepts/policy/pid-limiting/#pod-pid-
    * limits Controls the maximum number of processes allowed to run in a pod. The value must be
    * greater than or equal to 1024 and less than 4194304.
@@ -438,6 +473,25 @@ public final class NodeKubeletConfig extends com.google.api.client.json.GenericJ
    */
   public NodeKubeletConfig setPodPidsLimit(java.lang.Long podPidsLimit) {
     this.podPidsLimit = podPidsLimit;
+    return this;
+  }
+
+  /**
+   * Optional. Controls Topology Manager configuration on the node. For more information, see:
+   * https://kubernetes.io/docs/tasks/administer-cluster/topology-manager/
+   * @return value or {@code null} for none
+   */
+  public TopologyManager getTopologyManager() {
+    return topologyManager;
+  }
+
+  /**
+   * Optional. Controls Topology Manager configuration on the node. For more information, see:
+   * https://kubernetes.io/docs/tasks/administer-cluster/topology-manager/
+   * @param topologyManager topologyManager or {@code null} for none
+   */
+  public NodeKubeletConfig setTopologyManager(TopologyManager topologyManager) {
+    this.topologyManager = topologyManager;
     return this;
   }
 

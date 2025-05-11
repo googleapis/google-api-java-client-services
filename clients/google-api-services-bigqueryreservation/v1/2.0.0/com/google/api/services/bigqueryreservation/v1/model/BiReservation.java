@@ -31,7 +31,7 @@ package com.google.api.services.bigqueryreservation.v1.model;
 public final class BiReservation extends com.google.api.client.json.GenericJson {
 
   /**
-   * The resource name of the singleton BI reservation. Reservation names have the form
+   * Identifier. The resource name of the singleton BI reservation. Reservation names have the form
    * `projects/{project_id}/locations/{location_id}/biReservation`.
    * The value may be {@code null}.
    */
@@ -39,14 +39,14 @@ public final class BiReservation extends com.google.api.client.json.GenericJson 
   private java.lang.String name;
 
   /**
-   * Preferred tables to use BI capacity for.
+   * Optional. Preferred tables to use BI capacity for.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<TableReference> preferredTables;
 
   /**
-   * Size of a reservation, in bytes.
+   * Optional. Size of a reservation, in bytes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -60,7 +60,7 @@ public final class BiReservation extends com.google.api.client.json.GenericJson 
   private String updateTime;
 
   /**
-   * The resource name of the singleton BI reservation. Reservation names have the form
+   * Identifier. The resource name of the singleton BI reservation. Reservation names have the form
    * `projects/{project_id}/locations/{location_id}/biReservation`.
    * @return value or {@code null} for none
    */
@@ -69,7 +69,7 @@ public final class BiReservation extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The resource name of the singleton BI reservation. Reservation names have the form
+   * Identifier. The resource name of the singleton BI reservation. Reservation names have the form
    * `projects/{project_id}/locations/{location_id}/biReservation`.
    * @param name name or {@code null} for none
    */
@@ -79,7 +79,7 @@ public final class BiReservation extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Preferred tables to use BI capacity for.
+   * Optional. Preferred tables to use BI capacity for.
    * @return value or {@code null} for none
    */
   public java.util.List<TableReference> getPreferredTables() {
@@ -87,7 +87,7 @@ public final class BiReservation extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Preferred tables to use BI capacity for.
+   * Optional. Preferred tables to use BI capacity for.
    * @param preferredTables preferredTables or {@code null} for none
    */
   public BiReservation setPreferredTables(java.util.List<TableReference> preferredTables) {
@@ -96,7 +96,7 @@ public final class BiReservation extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Size of a reservation, in bytes.
+   * Optional. Size of a reservation, in bytes.
    * @return value or {@code null} for none
    */
   public java.lang.Long getSize() {
@@ -104,7 +104,7 @@ public final class BiReservation extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Size of a reservation, in bytes.
+   * Optional. Size of a reservation, in bytes.
    * @param size size or {@code null} for none
    */
   public BiReservation setSize(java.lang.Long size) {

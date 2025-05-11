@@ -54,7 +54,7 @@ public final class CapacityCommitment extends com.google.api.client.json.Generic
   private String commitmentStartTime;
 
   /**
-   * Edition of the capacity commitment.
+   * Optional. Edition of the capacity commitment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,23 +97,23 @@ public final class CapacityCommitment extends com.google.api.client.json.Generic
   private java.lang.String name;
 
   /**
-   * Capacity commitment commitment plan.
+   * Optional. Capacity commitment commitment plan.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String plan;
 
   /**
-   * The plan this capacity commitment is converted to after commitment_end_time passes. Once the
-   * plan is changed, committed period is extended according to commitment plan. Only applicable for
-   * ANNUAL and TRIAL commitments.
+   * Optional. The plan this capacity commitment is converted to after commitment_end_time passes.
+   * Once the plan is changed, committed period is extended according to commitment plan. Only
+   * applicable for ANNUAL and TRIAL commitments.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String renewalPlan;
 
   /**
-   * Number of slots in this commitment.
+   * Optional. Number of slots in this commitment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -171,7 +171,7 @@ public final class CapacityCommitment extends com.google.api.client.json.Generic
   }
 
   /**
-   * Edition of the capacity commitment.
+   * Optional. Edition of the capacity commitment.
    * @return value or {@code null} for none
    */
   public java.lang.String getEdition() {
@@ -179,7 +179,7 @@ public final class CapacityCommitment extends com.google.api.client.json.Generic
   }
 
   /**
-   * Edition of the capacity commitment.
+   * Optional. Edition of the capacity commitment.
    * @param edition edition or {@code null} for none
    */
   public CapacityCommitment setEdition(java.lang.String edition) {
@@ -272,7 +272,7 @@ public final class CapacityCommitment extends com.google.api.client.json.Generic
   }
 
   /**
-   * Capacity commitment commitment plan.
+   * Optional. Capacity commitment commitment plan.
    * @return value or {@code null} for none
    */
   public java.lang.String getPlan() {
@@ -280,7 +280,7 @@ public final class CapacityCommitment extends com.google.api.client.json.Generic
   }
 
   /**
-   * Capacity commitment commitment plan.
+   * Optional. Capacity commitment commitment plan.
    * @param plan plan or {@code null} for none
    */
   public CapacityCommitment setPlan(java.lang.String plan) {
@@ -289,9 +289,9 @@ public final class CapacityCommitment extends com.google.api.client.json.Generic
   }
 
   /**
-   * The plan this capacity commitment is converted to after commitment_end_time passes. Once the
-   * plan is changed, committed period is extended according to commitment plan. Only applicable for
-   * ANNUAL and TRIAL commitments.
+   * Optional. The plan this capacity commitment is converted to after commitment_end_time passes.
+   * Once the plan is changed, committed period is extended according to commitment plan. Only
+   * applicable for ANNUAL and TRIAL commitments.
    * @return value or {@code null} for none
    */
   public java.lang.String getRenewalPlan() {
@@ -299,9 +299,9 @@ public final class CapacityCommitment extends com.google.api.client.json.Generic
   }
 
   /**
-   * The plan this capacity commitment is converted to after commitment_end_time passes. Once the
-   * plan is changed, committed period is extended according to commitment plan. Only applicable for
-   * ANNUAL and TRIAL commitments.
+   * Optional. The plan this capacity commitment is converted to after commitment_end_time passes.
+   * Once the plan is changed, committed period is extended according to commitment plan. Only
+   * applicable for ANNUAL and TRIAL commitments.
    * @param renewalPlan renewalPlan or {@code null} for none
    */
   public CapacityCommitment setRenewalPlan(java.lang.String renewalPlan) {
@@ -310,7 +310,7 @@ public final class CapacityCommitment extends com.google.api.client.json.Generic
   }
 
   /**
-   * Number of slots in this commitment.
+   * Optional. Number of slots in this commitment.
    * @return value or {@code null} for none
    */
   public java.lang.Long getSlotCount() {
@@ -318,7 +318,7 @@ public final class CapacityCommitment extends com.google.api.client.json.Generic
   }
 
   /**
-   * Number of slots in this commitment.
+   * Optional. Number of slots in this commitment.
    * @param slotCount slotCount or {@code null} for none
    */
   public CapacityCommitment setSlotCount(java.lang.Long slotCount) {

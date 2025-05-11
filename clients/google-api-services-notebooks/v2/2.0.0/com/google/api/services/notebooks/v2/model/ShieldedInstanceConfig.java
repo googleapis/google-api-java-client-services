@@ -35,7 +35,7 @@ public final class ShieldedInstanceConfig extends com.google.api.client.json.Gen
    * Optional. Defines whether the VM instance has integrity monitoring enabled. Enables monitoring
    * and attestation of the boot integrity of the VM instance. The attestation is performed against
    * the integrity policy baseline. This baseline is initially derived from the implicitly trusted
-   * boot image when the VM instance is created. Enabled by default.
+   * boot image when the VM instance is created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +51,7 @@ public final class ShieldedInstanceConfig extends com.google.api.client.json.Gen
   private java.lang.Boolean enableSecureBoot;
 
   /**
-   * Optional. Defines whether the VM instance has the vTPM enabled. Enabled by default.
+   * Optional. Defines whether the VM instance has the vTPM enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class ShieldedInstanceConfig extends com.google.api.client.json.Gen
    * Optional. Defines whether the VM instance has integrity monitoring enabled. Enables monitoring
    * and attestation of the boot integrity of the VM instance. The attestation is performed against
    * the integrity policy baseline. This baseline is initially derived from the implicitly trusted
-   * boot image when the VM instance is created. Enabled by default.
+   * boot image when the VM instance is created.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableIntegrityMonitoring() {
@@ -72,7 +72,7 @@ public final class ShieldedInstanceConfig extends com.google.api.client.json.Gen
    * Optional. Defines whether the VM instance has integrity monitoring enabled. Enables monitoring
    * and attestation of the boot integrity of the VM instance. The attestation is performed against
    * the integrity policy baseline. This baseline is initially derived from the implicitly trusted
-   * boot image when the VM instance is created. Enabled by default.
+   * boot image when the VM instance is created.
    * @param enableIntegrityMonitoring enableIntegrityMonitoring or {@code null} for none
    */
   public ShieldedInstanceConfig setEnableIntegrityMonitoring(java.lang.Boolean enableIntegrityMonitoring) {
@@ -102,7 +102,7 @@ public final class ShieldedInstanceConfig extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. Defines whether the VM instance has the vTPM enabled. Enabled by default.
+   * Optional. Defines whether the VM instance has the vTPM enabled.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableVtpm() {
@@ -110,7 +110,7 @@ public final class ShieldedInstanceConfig extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. Defines whether the VM instance has the vTPM enabled. Enabled by default.
+   * Optional. Defines whether the VM instance has the vTPM enabled.
    * @param enableVtpm enableVtpm or {@code null} for none
    */
   public ShieldedInstanceConfig setEnableVtpm(java.lang.Boolean enableVtpm) {

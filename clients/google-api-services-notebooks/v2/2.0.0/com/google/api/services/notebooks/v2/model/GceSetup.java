@@ -133,6 +133,13 @@ public final class GceSetup extends com.google.api.client.json.GenericJson {
   private java.util.List<NetworkInterface> networkInterfaces;
 
   /**
+   * Optional. Specifies the reservations that this instance can consume from.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ReservationAffinity reservationAffinity;
+
+  /**
    * Optional. The service account that serves as an identity for the VM instance. Currently
    * supports only one service account.
    * The value may be {@code null}.
@@ -378,6 +385,23 @@ public final class GceSetup extends com.google.api.client.json.GenericJson {
    */
   public GceSetup setNetworkInterfaces(java.util.List<NetworkInterface> networkInterfaces) {
     this.networkInterfaces = networkInterfaces;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies the reservations that this instance can consume from.
+   * @return value or {@code null} for none
+   */
+  public ReservationAffinity getReservationAffinity() {
+    return reservationAffinity;
+  }
+
+  /**
+   * Optional. Specifies the reservations that this instance can consume from.
+   * @param reservationAffinity reservationAffinity or {@code null} for none
+   */
+  public GceSetup setReservationAffinity(ReservationAffinity reservationAffinity) {
+    this.reservationAffinity = reservationAffinity;
     return this;
   }
 

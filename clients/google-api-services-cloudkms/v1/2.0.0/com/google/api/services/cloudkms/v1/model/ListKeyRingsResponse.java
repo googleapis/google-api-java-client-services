@@ -52,7 +52,8 @@ public final class ListKeyRingsResponse extends com.google.api.client.json.Gener
   private java.lang.String nextPageToken;
 
   /**
-   * The total number of KeyRings that matched the query.
+   * The total number of KeyRings that matched the query. This field is not populated if
+   * ListKeyRingsRequest.filter is applied.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,7 +96,8 @@ public final class ListKeyRingsResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * The total number of KeyRings that matched the query.
+   * The total number of KeyRings that matched the query. This field is not populated if
+   * ListKeyRingsRequest.filter is applied.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTotalSize() {
@@ -103,7 +105,8 @@ public final class ListKeyRingsResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * The total number of KeyRings that matched the query.
+   * The total number of KeyRings that matched the query. This field is not populated if
+   * ListKeyRingsRequest.filter is applied.
    * @param totalSize totalSize or {@code null} for none
    */
   public ListKeyRingsResponse setTotalSize(java.lang.Integer totalSize) {

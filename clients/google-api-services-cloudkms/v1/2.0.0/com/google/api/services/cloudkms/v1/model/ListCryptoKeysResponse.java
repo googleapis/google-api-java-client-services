@@ -52,7 +52,8 @@ public final class ListCryptoKeysResponse extends com.google.api.client.json.Gen
   private java.lang.String nextPageToken;
 
   /**
-   * The total number of CryptoKeys that matched the query.
+   * The total number of CryptoKeys that matched the query. This field is not populated if
+   * ListCryptoKeysRequest.filter is applied.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,7 +96,8 @@ public final class ListCryptoKeysResponse extends com.google.api.client.json.Gen
   }
 
   /**
-   * The total number of CryptoKeys that matched the query.
+   * The total number of CryptoKeys that matched the query. This field is not populated if
+   * ListCryptoKeysRequest.filter is applied.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTotalSize() {
@@ -103,7 +105,8 @@ public final class ListCryptoKeysResponse extends com.google.api.client.json.Gen
   }
 
   /**
-   * The total number of CryptoKeys that matched the query.
+   * The total number of CryptoKeys that matched the query. This field is not populated if
+   * ListCryptoKeysRequest.filter is applied.
    * @param totalSize totalSize or {@code null} for none
    */
   public ListCryptoKeysResponse setTotalSize(java.lang.Integer totalSize) {

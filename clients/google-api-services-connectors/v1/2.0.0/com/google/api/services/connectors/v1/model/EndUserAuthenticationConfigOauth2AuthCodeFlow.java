@@ -28,7 +28,7 @@ package com.google.api.services.connectors.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Oauth2AuthCodeFlow extends com.google.api.client.json.GenericJson {
+public final class EndUserAuthenticationConfigOauth2AuthCodeFlow extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Authorization code to be exchanged for access and refresh tokens.
@@ -56,7 +56,7 @@ public final class Oauth2AuthCodeFlow extends com.google.api.client.json.Generic
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private Secret clientSecret;
+  private EUASecret clientSecret;
 
   /**
    * Optional. Whether to enable PKCE when the user performs the auth code flow.
@@ -64,6 +64,13 @@ public final class Oauth2AuthCodeFlow extends com.google.api.client.json.Generic
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enablePkce;
+
+  /**
+   * Optional. Auth Code Data
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private OAuthTokenData oauthTokenData;
 
   /**
    * Optional. PKCE verifier to be used during the auth code exchange.
@@ -98,7 +105,7 @@ public final class Oauth2AuthCodeFlow extends com.google.api.client.json.Generic
    * Optional. Authorization code to be exchanged for access and refresh tokens.
    * @param authCode authCode or {@code null} for none
    */
-  public Oauth2AuthCodeFlow setAuthCode(java.lang.String authCode) {
+  public EndUserAuthenticationConfigOauth2AuthCodeFlow setAuthCode(java.lang.String authCode) {
     this.authCode = authCode;
     return this;
   }
@@ -115,7 +122,7 @@ public final class Oauth2AuthCodeFlow extends com.google.api.client.json.Generic
    * Optional. Auth URL for Authorization Code Flow
    * @param authUri authUri or {@code null} for none
    */
-  public Oauth2AuthCodeFlow setAuthUri(java.lang.String authUri) {
+  public EndUserAuthenticationConfigOauth2AuthCodeFlow setAuthUri(java.lang.String authUri) {
     this.authUri = authUri;
     return this;
   }
@@ -132,7 +139,7 @@ public final class Oauth2AuthCodeFlow extends com.google.api.client.json.Generic
    * Optional. Client ID for user-provided OAuth app.
    * @param clientId clientId or {@code null} for none
    */
-  public Oauth2AuthCodeFlow setClientId(java.lang.String clientId) {
+  public EndUserAuthenticationConfigOauth2AuthCodeFlow setClientId(java.lang.String clientId) {
     this.clientId = clientId;
     return this;
   }
@@ -141,7 +148,7 @@ public final class Oauth2AuthCodeFlow extends com.google.api.client.json.Generic
    * Optional. Client secret for user-provided OAuth app.
    * @return value or {@code null} for none
    */
-  public Secret getClientSecret() {
+  public EUASecret getClientSecret() {
     return clientSecret;
   }
 
@@ -149,7 +156,7 @@ public final class Oauth2AuthCodeFlow extends com.google.api.client.json.Generic
    * Optional. Client secret for user-provided OAuth app.
    * @param clientSecret clientSecret or {@code null} for none
    */
-  public Oauth2AuthCodeFlow setClientSecret(Secret clientSecret) {
+  public EndUserAuthenticationConfigOauth2AuthCodeFlow setClientSecret(EUASecret clientSecret) {
     this.clientSecret = clientSecret;
     return this;
   }
@@ -166,8 +173,25 @@ public final class Oauth2AuthCodeFlow extends com.google.api.client.json.Generic
    * Optional. Whether to enable PKCE when the user performs the auth code flow.
    * @param enablePkce enablePkce or {@code null} for none
    */
-  public Oauth2AuthCodeFlow setEnablePkce(java.lang.Boolean enablePkce) {
+  public EndUserAuthenticationConfigOauth2AuthCodeFlow setEnablePkce(java.lang.Boolean enablePkce) {
     this.enablePkce = enablePkce;
+    return this;
+  }
+
+  /**
+   * Optional. Auth Code Data
+   * @return value or {@code null} for none
+   */
+  public OAuthTokenData getOauthTokenData() {
+    return oauthTokenData;
+  }
+
+  /**
+   * Optional. Auth Code Data
+   * @param oauthTokenData oauthTokenData or {@code null} for none
+   */
+  public EndUserAuthenticationConfigOauth2AuthCodeFlow setOauthTokenData(OAuthTokenData oauthTokenData) {
+    this.oauthTokenData = oauthTokenData;
     return this;
   }
 
@@ -183,7 +207,7 @@ public final class Oauth2AuthCodeFlow extends com.google.api.client.json.Generic
    * Optional. PKCE verifier to be used during the auth code exchange.
    * @param pkceVerifier pkceVerifier or {@code null} for none
    */
-  public Oauth2AuthCodeFlow setPkceVerifier(java.lang.String pkceVerifier) {
+  public EndUserAuthenticationConfigOauth2AuthCodeFlow setPkceVerifier(java.lang.String pkceVerifier) {
     this.pkceVerifier = pkceVerifier;
     return this;
   }
@@ -200,7 +224,7 @@ public final class Oauth2AuthCodeFlow extends com.google.api.client.json.Generic
    * Optional. Redirect URI to be provided during the auth code exchange.
    * @param redirectUri redirectUri or {@code null} for none
    */
-  public Oauth2AuthCodeFlow setRedirectUri(java.lang.String redirectUri) {
+  public EndUserAuthenticationConfigOauth2AuthCodeFlow setRedirectUri(java.lang.String redirectUri) {
     this.redirectUri = redirectUri;
     return this;
   }
@@ -217,19 +241,19 @@ public final class Oauth2AuthCodeFlow extends com.google.api.client.json.Generic
    * Optional. Scopes the connection will request when the user performs the auth code flow.
    * @param scopes scopes or {@code null} for none
    */
-  public Oauth2AuthCodeFlow setScopes(java.util.List<java.lang.String> scopes) {
+  public EndUserAuthenticationConfigOauth2AuthCodeFlow setScopes(java.util.List<java.lang.String> scopes) {
     this.scopes = scopes;
     return this;
   }
 
   @Override
-  public Oauth2AuthCodeFlow set(String fieldName, Object value) {
-    return (Oauth2AuthCodeFlow) super.set(fieldName, value);
+  public EndUserAuthenticationConfigOauth2AuthCodeFlow set(String fieldName, Object value) {
+    return (EndUserAuthenticationConfigOauth2AuthCodeFlow) super.set(fieldName, value);
   }
 
   @Override
-  public Oauth2AuthCodeFlow clone() {
-    return (Oauth2AuthCodeFlow) super.clone();
+  public EndUserAuthenticationConfigOauth2AuthCodeFlow clone() {
+    return (EndUserAuthenticationConfigOauth2AuthCodeFlow) super.clone();
   }
 
 }

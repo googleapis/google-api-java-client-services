@@ -17,7 +17,7 @@
 package com.google.api.services.connectors.v1.model;
 
 /**
- * Determines whether or no a connection is locked. If locked, a reason must be specified.
+ * Header details for a given header to be added to Endpoint.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Connectors API. For a detailed explanation see:
@@ -27,64 +27,64 @@ package com.google.api.services.connectors.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class LockConfig extends com.google.api.client.json.GenericJson {
+public final class EndUserAuthenticationNotifyEndpointDestinationEndPointHeader extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Indicates whether or not the connection is locked.
+   * Required. Key of Header.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Boolean locked;
+  private java.lang.String key;
 
   /**
-   * Optional. Describes why a connection is locked.
+   * Required. Value of Header.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String reason;
+  private java.lang.String value;
 
   /**
-   * Optional. Indicates whether or not the connection is locked.
+   * Required. Key of Header.
    * @return value or {@code null} for none
    */
-  public java.lang.Boolean getLocked() {
-    return locked;
+  public java.lang.String getKey() {
+    return key;
   }
 
   /**
-   * Optional. Indicates whether or not the connection is locked.
-   * @param locked locked or {@code null} for none
+   * Required. Key of Header.
+   * @param key key or {@code null} for none
    */
-  public LockConfig setLocked(java.lang.Boolean locked) {
-    this.locked = locked;
+  public EndUserAuthenticationNotifyEndpointDestinationEndPointHeader setKey(java.lang.String key) {
+    this.key = key;
     return this;
   }
 
   /**
-   * Optional. Describes why a connection is locked.
+   * Required. Value of Header.
    * @return value or {@code null} for none
    */
-  public java.lang.String getReason() {
-    return reason;
+  public java.lang.String getValue() {
+    return value;
   }
 
   /**
-   * Optional. Describes why a connection is locked.
-   * @param reason reason or {@code null} for none
+   * Required. Value of Header.
+   * @param value value or {@code null} for none
    */
-  public LockConfig setReason(java.lang.String reason) {
-    this.reason = reason;
+  public EndUserAuthenticationNotifyEndpointDestinationEndPointHeader setValue(java.lang.String value) {
+    this.value = value;
     return this;
   }
 
   @Override
-  public LockConfig set(String fieldName, Object value) {
-    return (LockConfig) super.set(fieldName, value);
+  public EndUserAuthenticationNotifyEndpointDestinationEndPointHeader set(String fieldName, Object value) {
+    return (EndUserAuthenticationNotifyEndpointDestinationEndPointHeader) super.set(fieldName, value);
   }
 
   @Override
-  public LockConfig clone() {
-    return (LockConfig) super.clone();
+  public EndUserAuthenticationNotifyEndpointDestinationEndPointHeader clone() {
+    return (EndUserAuthenticationNotifyEndpointDestinationEndPointHeader) super.clone();
   }
 
 }

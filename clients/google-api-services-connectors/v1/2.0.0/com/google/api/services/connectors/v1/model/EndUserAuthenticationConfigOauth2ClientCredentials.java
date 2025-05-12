@@ -17,7 +17,8 @@
 package com.google.api.services.connectors.v1.model;
 
 /**
- * Determines whether or no a connection is locked. If locked, a reason must be specified.
+ * Parameters to support Oauth 2.0 Client Credentials Grant Authentication. See
+ * https://tools.ietf.org/html/rfc6749#section-1.3.4 for more details.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Connectors API. For a detailed explanation see:
@@ -27,64 +28,64 @@ package com.google.api.services.connectors.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class LockConfig extends com.google.api.client.json.GenericJson {
+public final class EndUserAuthenticationConfigOauth2ClientCredentials extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Indicates whether or not the connection is locked.
+   * The client identifier.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Boolean locked;
+  private java.lang.String clientId;
 
   /**
-   * Optional. Describes why a connection is locked.
+   * Required. string value or secret version containing the client secret.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String reason;
+  private EUASecret clientSecret;
 
   /**
-   * Optional. Indicates whether or not the connection is locked.
+   * The client identifier.
    * @return value or {@code null} for none
    */
-  public java.lang.Boolean getLocked() {
-    return locked;
+  public java.lang.String getClientId() {
+    return clientId;
   }
 
   /**
-   * Optional. Indicates whether or not the connection is locked.
-   * @param locked locked or {@code null} for none
+   * The client identifier.
+   * @param clientId clientId or {@code null} for none
    */
-  public LockConfig setLocked(java.lang.Boolean locked) {
-    this.locked = locked;
+  public EndUserAuthenticationConfigOauth2ClientCredentials setClientId(java.lang.String clientId) {
+    this.clientId = clientId;
     return this;
   }
 
   /**
-   * Optional. Describes why a connection is locked.
+   * Required. string value or secret version containing the client secret.
    * @return value or {@code null} for none
    */
-  public java.lang.String getReason() {
-    return reason;
+  public EUASecret getClientSecret() {
+    return clientSecret;
   }
 
   /**
-   * Optional. Describes why a connection is locked.
-   * @param reason reason or {@code null} for none
+   * Required. string value or secret version containing the client secret.
+   * @param clientSecret clientSecret or {@code null} for none
    */
-  public LockConfig setReason(java.lang.String reason) {
-    this.reason = reason;
+  public EndUserAuthenticationConfigOauth2ClientCredentials setClientSecret(EUASecret clientSecret) {
+    this.clientSecret = clientSecret;
     return this;
   }
 
   @Override
-  public LockConfig set(String fieldName, Object value) {
-    return (LockConfig) super.set(fieldName, value);
+  public EndUserAuthenticationConfigOauth2ClientCredentials set(String fieldName, Object value) {
+    return (EndUserAuthenticationConfigOauth2ClientCredentials) super.set(fieldName, value);
   }
 
   @Override
-  public LockConfig clone() {
-    return (LockConfig) super.clone();
+  public EndUserAuthenticationConfigOauth2ClientCredentials clone() {
+    return (EndUserAuthenticationConfigOauth2ClientCredentials) super.clone();
   }
 
 }

@@ -30,21 +30,21 @@ package com.google.api.services.connectors.v1.model;
 public final class NodeConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Maximum number of nodes in the runtime nodes.
+   * Optional. Maximum number of nodes in the runtime nodes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer maxNodeCount;
 
   /**
-   * Minimum number of nodes in the runtime nodes.
+   * Optional. Minimum number of nodes in the runtime nodes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer minNodeCount;
 
   /**
-   * Maximum number of nodes in the runtime nodes.
+   * Optional. Maximum number of nodes in the runtime nodes.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxNodeCount() {
@@ -52,7 +52,7 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Maximum number of nodes in the runtime nodes.
+   * Optional. Maximum number of nodes in the runtime nodes.
    * @param maxNodeCount maxNodeCount or {@code null} for none
    */
   public NodeConfig setMaxNodeCount(java.lang.Integer maxNodeCount) {
@@ -61,7 +61,7 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Minimum number of nodes in the runtime nodes.
+   * Optional. Minimum number of nodes in the runtime nodes.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMinNodeCount() {
@@ -69,7 +69,7 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Minimum number of nodes in the runtime nodes.
+   * Optional. Minimum number of nodes in the runtime nodes.
    * @param minNodeCount minNodeCount or {@code null} for none
    */
   public NodeConfig setMinNodeCount(java.lang.Integer minNodeCount) {

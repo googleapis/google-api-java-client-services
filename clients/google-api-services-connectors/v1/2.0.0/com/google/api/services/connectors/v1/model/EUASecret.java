@@ -17,7 +17,7 @@
 package com.google.api.services.connectors.v1.model;
 
 /**
- * Determines whether or no a connection is locked. If locked, a reason must be specified.
+ * EUASecret provides a reference to entries in Secret Manager.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Connectors API. For a detailed explanation see:
@@ -27,64 +27,67 @@ package com.google.api.services.connectors.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class LockConfig extends com.google.api.client.json.GenericJson {
+public final class EUASecret extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Indicates whether or not the connection is locked.
+   * Optional. The plain string value of the secret.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Boolean locked;
+  private java.lang.String secretValue;
 
   /**
-   * Optional. Describes why a connection is locked.
+   * Optional. The resource name of the secret version in the format, format as:
+   * `projects/secrets/versions`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String reason;
+  private java.lang.String secretVersion;
 
   /**
-   * Optional. Indicates whether or not the connection is locked.
+   * Optional. The plain string value of the secret.
    * @return value or {@code null} for none
    */
-  public java.lang.Boolean getLocked() {
-    return locked;
+  public java.lang.String getSecretValue() {
+    return secretValue;
   }
 
   /**
-   * Optional. Indicates whether or not the connection is locked.
-   * @param locked locked or {@code null} for none
+   * Optional. The plain string value of the secret.
+   * @param secretValue secretValue or {@code null} for none
    */
-  public LockConfig setLocked(java.lang.Boolean locked) {
-    this.locked = locked;
+  public EUASecret setSecretValue(java.lang.String secretValue) {
+    this.secretValue = secretValue;
     return this;
   }
 
   /**
-   * Optional. Describes why a connection is locked.
+   * Optional. The resource name of the secret version in the format, format as:
+   * `projects/secrets/versions`.
    * @return value or {@code null} for none
    */
-  public java.lang.String getReason() {
-    return reason;
+  public java.lang.String getSecretVersion() {
+    return secretVersion;
   }
 
   /**
-   * Optional. Describes why a connection is locked.
-   * @param reason reason or {@code null} for none
+   * Optional. The resource name of the secret version in the format, format as:
+   * `projects/secrets/versions`.
+   * @param secretVersion secretVersion or {@code null} for none
    */
-  public LockConfig setReason(java.lang.String reason) {
-    this.reason = reason;
+  public EUASecret setSecretVersion(java.lang.String secretVersion) {
+    this.secretVersion = secretVersion;
     return this;
   }
 
   @Override
-  public LockConfig set(String fieldName, Object value) {
-    return (LockConfig) super.set(fieldName, value);
+  public EUASecret set(String fieldName, Object value) {
+    return (EUASecret) super.set(fieldName, value);
   }
 
   @Override
-  public LockConfig clone() {
-    return (LockConfig) super.clone();
+  public EUASecret clone() {
+    return (EUASecret) super.clone();
   }
 
 }

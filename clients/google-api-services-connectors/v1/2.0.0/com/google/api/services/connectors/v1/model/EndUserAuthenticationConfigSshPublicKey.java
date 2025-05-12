@@ -27,38 +27,38 @@ package com.google.api.services.connectors.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class SshPublicKey extends com.google.api.client.json.GenericJson {
+public final class EndUserAuthenticationConfigSshPublicKey extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Format of SSH Client cert.
+   * Format of SSH Client cert.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String certType;
 
   /**
-   * Optional. SSH Client Cert. It should contain both public and private key.
+   * Required. SSH Client Cert. It should contain both public and private key.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private Secret sshClientCert;
+  private EUASecret sshClientCert;
 
   /**
-   * Optional. Password (passphrase) for ssh client certificate if it has one.
+   * Required. Password (passphrase) for ssh client certificate if it has one.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private Secret sshClientCertPass;
+  private EUASecret sshClientCertPass;
 
   /**
-   * Optional. The user account used to authenticate.
+   * The user account used to authenticate.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String username;
 
   /**
-   * Optional. Format of SSH Client cert.
+   * Format of SSH Client cert.
    * @return value or {@code null} for none
    */
   public java.lang.String getCertType() {
@@ -66,50 +66,50 @@ public final class SshPublicKey extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Format of SSH Client cert.
+   * Format of SSH Client cert.
    * @param certType certType or {@code null} for none
    */
-  public SshPublicKey setCertType(java.lang.String certType) {
+  public EndUserAuthenticationConfigSshPublicKey setCertType(java.lang.String certType) {
     this.certType = certType;
     return this;
   }
 
   /**
-   * Optional. SSH Client Cert. It should contain both public and private key.
+   * Required. SSH Client Cert. It should contain both public and private key.
    * @return value or {@code null} for none
    */
-  public Secret getSshClientCert() {
+  public EUASecret getSshClientCert() {
     return sshClientCert;
   }
 
   /**
-   * Optional. SSH Client Cert. It should contain both public and private key.
+   * Required. SSH Client Cert. It should contain both public and private key.
    * @param sshClientCert sshClientCert or {@code null} for none
    */
-  public SshPublicKey setSshClientCert(Secret sshClientCert) {
+  public EndUserAuthenticationConfigSshPublicKey setSshClientCert(EUASecret sshClientCert) {
     this.sshClientCert = sshClientCert;
     return this;
   }
 
   /**
-   * Optional. Password (passphrase) for ssh client certificate if it has one.
+   * Required. Password (passphrase) for ssh client certificate if it has one.
    * @return value or {@code null} for none
    */
-  public Secret getSshClientCertPass() {
+  public EUASecret getSshClientCertPass() {
     return sshClientCertPass;
   }
 
   /**
-   * Optional. Password (passphrase) for ssh client certificate if it has one.
+   * Required. Password (passphrase) for ssh client certificate if it has one.
    * @param sshClientCertPass sshClientCertPass or {@code null} for none
    */
-  public SshPublicKey setSshClientCertPass(Secret sshClientCertPass) {
+  public EndUserAuthenticationConfigSshPublicKey setSshClientCertPass(EUASecret sshClientCertPass) {
     this.sshClientCertPass = sshClientCertPass;
     return this;
   }
 
   /**
-   * Optional. The user account used to authenticate.
+   * The user account used to authenticate.
    * @return value or {@code null} for none
    */
   public java.lang.String getUsername() {
@@ -117,22 +117,22 @@ public final class SshPublicKey extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The user account used to authenticate.
+   * The user account used to authenticate.
    * @param username username or {@code null} for none
    */
-  public SshPublicKey setUsername(java.lang.String username) {
+  public EndUserAuthenticationConfigSshPublicKey setUsername(java.lang.String username) {
     this.username = username;
     return this;
   }
 
   @Override
-  public SshPublicKey set(String fieldName, Object value) {
-    return (SshPublicKey) super.set(fieldName, value);
+  public EndUserAuthenticationConfigSshPublicKey set(String fieldName, Object value) {
+    return (EndUserAuthenticationConfigSshPublicKey) super.set(fieldName, value);
   }
 
   @Override
-  public SshPublicKey clone() {
-    return (SshPublicKey) super.clone();
+  public EndUserAuthenticationConfigSshPublicKey clone() {
+    return (EndUserAuthenticationConfigSshPublicKey) super.clone();
   }
 
 }

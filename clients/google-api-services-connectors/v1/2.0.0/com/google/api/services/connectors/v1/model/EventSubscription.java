@@ -58,8 +58,8 @@ public final class EventSubscription extends com.google.api.client.json.GenericJ
   private JMS jms;
 
   /**
-   * Required. Resource name of the EventSubscription. Format: projects/{project}/locations/{locatio
-   * n}/connections/{connection}/eventSubscriptions/{event_subscription}
+   * Required. Identifier. Resource name of the EventSubscription. Format: projects/{project}/locati
+   * ons/{location}/connections/{connection}/eventSubscriptions/{event_subscription}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -175,8 +175,8 @@ public final class EventSubscription extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. Resource name of the EventSubscription. Format: projects/{project}/locations/{locatio
-   * n}/connections/{connection}/eventSubscriptions/{event_subscription}
+   * Required. Identifier. Resource name of the EventSubscription. Format: projects/{project}/locati
+   * ons/{location}/connections/{connection}/eventSubscriptions/{event_subscription}
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -184,8 +184,8 @@ public final class EventSubscription extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. Resource name of the EventSubscription. Format: projects/{project}/locations/{locatio
-   * n}/connections/{connection}/eventSubscriptions/{event_subscription}
+   * Required. Identifier. Resource name of the EventSubscription. Format: projects/{project}/locati
+   * ons/{location}/connections/{connection}/eventSubscriptions/{event_subscription}
    * @param name name or {@code null} for none
    */
   public EventSubscription setName(java.lang.String name) {

@@ -143,6 +143,13 @@ public final class ConnectorVersion extends com.google.api.client.json.GenericJs
   private java.lang.String name;
 
   /**
+   * Optional. The priority entity types for the connector version.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<PriorityEntityType> priorityEntityTypes;
+
+  /**
    * Output only. ReleaseVersion of the connector, for example: "1.0.1-alpha".
    * The value may be {@code null}.
    */
@@ -453,6 +460,23 @@ public final class ConnectorVersion extends com.google.api.client.json.GenericJs
    */
   public ConnectorVersion setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. The priority entity types for the connector version.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<PriorityEntityType> getPriorityEntityTypes() {
+    return priorityEntityTypes;
+  }
+
+  /**
+   * Optional. The priority entity types for the connector version.
+   * @param priorityEntityTypes priorityEntityTypes or {@code null} for none
+   */
+  public ConnectorVersion setPriorityEntityTypes(java.util.List<PriorityEntityType> priorityEntityTypes) {
+    this.priorityEntityTypes = priorityEntityTypes;
     return this;
   }
 

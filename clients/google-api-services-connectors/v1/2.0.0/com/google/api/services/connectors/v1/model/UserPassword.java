@@ -30,21 +30,21 @@ package com.google.api.services.connectors.v1.model;
 public final class UserPassword extends com.google.api.client.json.GenericJson {
 
   /**
-   * Secret version reference containing the password.
+   * Optional. Secret version reference containing the password.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Secret password;
 
   /**
-   * Username.
+   * Optional. Username.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String username;
 
   /**
-   * Secret version reference containing the password.
+   * Optional. Secret version reference containing the password.
    * @return value or {@code null} for none
    */
   public Secret getPassword() {
@@ -52,7 +52,7 @@ public final class UserPassword extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Secret version reference containing the password.
+   * Optional. Secret version reference containing the password.
    * @param password password or {@code null} for none
    */
   public UserPassword setPassword(Secret password) {
@@ -61,7 +61,7 @@ public final class UserPassword extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Username.
+   * Optional. Username.
    * @return value or {@code null} for none
    */
   public java.lang.String getUsername() {
@@ -69,7 +69,7 @@ public final class UserPassword extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Username.
+   * Optional. Username.
    * @param username username or {@code null} for none
    */
   public UserPassword setUsername(java.lang.String username) {

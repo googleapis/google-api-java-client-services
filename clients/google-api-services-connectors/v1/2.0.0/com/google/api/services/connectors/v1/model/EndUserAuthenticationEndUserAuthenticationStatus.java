@@ -17,7 +17,7 @@
 package com.google.api.services.connectors.v1.model;
 
 /**
- * Determines whether or no a connection is locked. If locked, a reason must be specified.
+ * EndUserAuthentication Status denotes the status of the EndUserAuthentication resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Connectors API. For a detailed explanation see:
@@ -27,64 +27,64 @@ package com.google.api.services.connectors.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class LockConfig extends com.google.api.client.json.GenericJson {
+public final class EndUserAuthenticationEndUserAuthenticationStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Indicates whether or not the connection is locked.
+   * Output only. Description of the state.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Boolean locked;
+  private java.lang.String description;
 
   /**
-   * Optional. Describes why a connection is locked.
+   * Output only. State of Event Subscription resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String reason;
+  private java.lang.String state;
 
   /**
-   * Optional. Indicates whether or not the connection is locked.
+   * Output only. Description of the state.
    * @return value or {@code null} for none
    */
-  public java.lang.Boolean getLocked() {
-    return locked;
+  public java.lang.String getDescription() {
+    return description;
   }
 
   /**
-   * Optional. Indicates whether or not the connection is locked.
-   * @param locked locked or {@code null} for none
+   * Output only. Description of the state.
+   * @param description description or {@code null} for none
    */
-  public LockConfig setLocked(java.lang.Boolean locked) {
-    this.locked = locked;
+  public EndUserAuthenticationEndUserAuthenticationStatus setDescription(java.lang.String description) {
+    this.description = description;
     return this;
   }
 
   /**
-   * Optional. Describes why a connection is locked.
+   * Output only. State of Event Subscription resource.
    * @return value or {@code null} for none
    */
-  public java.lang.String getReason() {
-    return reason;
+  public java.lang.String getState() {
+    return state;
   }
 
   /**
-   * Optional. Describes why a connection is locked.
-   * @param reason reason or {@code null} for none
+   * Output only. State of Event Subscription resource.
+   * @param state state or {@code null} for none
    */
-  public LockConfig setReason(java.lang.String reason) {
-    this.reason = reason;
+  public EndUserAuthenticationEndUserAuthenticationStatus setState(java.lang.String state) {
+    this.state = state;
     return this;
   }
 
   @Override
-  public LockConfig set(String fieldName, Object value) {
-    return (LockConfig) super.set(fieldName, value);
+  public EndUserAuthenticationEndUserAuthenticationStatus set(String fieldName, Object value) {
+    return (EndUserAuthenticationEndUserAuthenticationStatus) super.set(fieldName, value);
   }
 
   @Override
-  public LockConfig clone() {
-    return (LockConfig) super.clone();
+  public EndUserAuthenticationEndUserAuthenticationStatus clone() {
+    return (EndUserAuthenticationEndUserAuthenticationStatus) super.clone();
   }
 
 }

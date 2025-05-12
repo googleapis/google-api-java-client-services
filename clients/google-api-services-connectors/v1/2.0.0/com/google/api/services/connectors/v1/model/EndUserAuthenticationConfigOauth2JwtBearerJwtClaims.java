@@ -27,31 +27,31 @@ package com.google.api.services.connectors.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class JwtClaims extends com.google.api.client.json.GenericJson {
+public final class EndUserAuthenticationConfigOauth2JwtBearerJwtClaims extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Value for the "aud" claim.
+   * Value for the "aud" claim.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String audience;
 
   /**
-   * Optional. Value for the "iss" claim.
+   * Value for the "iss" claim.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String issuer;
 
   /**
-   * Optional. Value for the "sub" claim.
+   * Value for the "sub" claim.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String subject;
 
   /**
-   * Optional. Value for the "aud" claim.
+   * Value for the "aud" claim.
    * @return value or {@code null} for none
    */
   public java.lang.String getAudience() {
@@ -59,16 +59,16 @@ public final class JwtClaims extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Value for the "aud" claim.
+   * Value for the "aud" claim.
    * @param audience audience or {@code null} for none
    */
-  public JwtClaims setAudience(java.lang.String audience) {
+  public EndUserAuthenticationConfigOauth2JwtBearerJwtClaims setAudience(java.lang.String audience) {
     this.audience = audience;
     return this;
   }
 
   /**
-   * Optional. Value for the "iss" claim.
+   * Value for the "iss" claim.
    * @return value or {@code null} for none
    */
   public java.lang.String getIssuer() {
@@ -76,16 +76,16 @@ public final class JwtClaims extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Value for the "iss" claim.
+   * Value for the "iss" claim.
    * @param issuer issuer or {@code null} for none
    */
-  public JwtClaims setIssuer(java.lang.String issuer) {
+  public EndUserAuthenticationConfigOauth2JwtBearerJwtClaims setIssuer(java.lang.String issuer) {
     this.issuer = issuer;
     return this;
   }
 
   /**
-   * Optional. Value for the "sub" claim.
+   * Value for the "sub" claim.
    * @return value or {@code null} for none
    */
   public java.lang.String getSubject() {
@@ -93,22 +93,22 @@ public final class JwtClaims extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Value for the "sub" claim.
+   * Value for the "sub" claim.
    * @param subject subject or {@code null} for none
    */
-  public JwtClaims setSubject(java.lang.String subject) {
+  public EndUserAuthenticationConfigOauth2JwtBearerJwtClaims setSubject(java.lang.String subject) {
     this.subject = subject;
     return this;
   }
 
   @Override
-  public JwtClaims set(String fieldName, Object value) {
-    return (JwtClaims) super.set(fieldName, value);
+  public EndUserAuthenticationConfigOauth2JwtBearerJwtClaims set(String fieldName, Object value) {
+    return (EndUserAuthenticationConfigOauth2JwtBearerJwtClaims) super.set(fieldName, value);
   }
 
   @Override
-  public JwtClaims clone() {
-    return (JwtClaims) super.clone();
+  public EndUserAuthenticationConfigOauth2JwtBearerJwtClaims clone() {
+    return (EndUserAuthenticationConfigOauth2JwtBearerJwtClaims) super.clone();
   }
 
 }

@@ -17,7 +17,8 @@
 package com.google.api.services.connectors.v1.model;
 
 /**
- * ConfigVariable represents a configuration variable present in a Connection. or AuthConfig.
+ * EndUserAuthenticationConfigVariable represents a configuration variable present in a
+ * EndUserAuthentication.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Connectors API. For a detailed explanation see:
@@ -27,7 +28,7 @@ package com.google.api.services.connectors.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ConfigVariable extends com.google.api.client.json.GenericJson {
+public final class EndUserAuthenticationConfigVariable extends com.google.api.client.json.GenericJson {
 
   /**
    * Value is a bool.
@@ -37,13 +38,6 @@ public final class ConfigVariable extends com.google.api.client.json.GenericJson
   private java.lang.Boolean boolValue;
 
   /**
-   * Value is a Encryption Key.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private EncryptionKey encryptionKeyValue;
-
-  /**
    * Value is an integer
    * The value may be {@code null}.
    */
@@ -51,18 +45,18 @@ public final class ConfigVariable extends com.google.api.client.json.GenericJson
   private java.lang.Long intValue;
 
   /**
-   * Optional. Key of the config variable.
+   * Required. Key of the config variable.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String key;
 
   /**
-   * Value is a secret.
+   * Value is a secret
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private Secret secretValue;
+  private EUASecret secretValue;
 
   /**
    * Value is a string.
@@ -83,25 +77,8 @@ public final class ConfigVariable extends com.google.api.client.json.GenericJson
    * Value is a bool.
    * @param boolValue boolValue or {@code null} for none
    */
-  public ConfigVariable setBoolValue(java.lang.Boolean boolValue) {
+  public EndUserAuthenticationConfigVariable setBoolValue(java.lang.Boolean boolValue) {
     this.boolValue = boolValue;
-    return this;
-  }
-
-  /**
-   * Value is a Encryption Key.
-   * @return value or {@code null} for none
-   */
-  public EncryptionKey getEncryptionKeyValue() {
-    return encryptionKeyValue;
-  }
-
-  /**
-   * Value is a Encryption Key.
-   * @param encryptionKeyValue encryptionKeyValue or {@code null} for none
-   */
-  public ConfigVariable setEncryptionKeyValue(EncryptionKey encryptionKeyValue) {
-    this.encryptionKeyValue = encryptionKeyValue;
     return this;
   }
 
@@ -117,13 +94,13 @@ public final class ConfigVariable extends com.google.api.client.json.GenericJson
    * Value is an integer
    * @param intValue intValue or {@code null} for none
    */
-  public ConfigVariable setIntValue(java.lang.Long intValue) {
+  public EndUserAuthenticationConfigVariable setIntValue(java.lang.Long intValue) {
     this.intValue = intValue;
     return this;
   }
 
   /**
-   * Optional. Key of the config variable.
+   * Required. Key of the config variable.
    * @return value or {@code null} for none
    */
   public java.lang.String getKey() {
@@ -131,27 +108,27 @@ public final class ConfigVariable extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Key of the config variable.
+   * Required. Key of the config variable.
    * @param key key or {@code null} for none
    */
-  public ConfigVariable setKey(java.lang.String key) {
+  public EndUserAuthenticationConfigVariable setKey(java.lang.String key) {
     this.key = key;
     return this;
   }
 
   /**
-   * Value is a secret.
+   * Value is a secret
    * @return value or {@code null} for none
    */
-  public Secret getSecretValue() {
+  public EUASecret getSecretValue() {
     return secretValue;
   }
 
   /**
-   * Value is a secret.
+   * Value is a secret
    * @param secretValue secretValue or {@code null} for none
    */
-  public ConfigVariable setSecretValue(Secret secretValue) {
+  public EndUserAuthenticationConfigVariable setSecretValue(EUASecret secretValue) {
     this.secretValue = secretValue;
     return this;
   }
@@ -168,19 +145,19 @@ public final class ConfigVariable extends com.google.api.client.json.GenericJson
    * Value is a string.
    * @param stringValue stringValue or {@code null} for none
    */
-  public ConfigVariable setStringValue(java.lang.String stringValue) {
+  public EndUserAuthenticationConfigVariable setStringValue(java.lang.String stringValue) {
     this.stringValue = stringValue;
     return this;
   }
 
   @Override
-  public ConfigVariable set(String fieldName, Object value) {
-    return (ConfigVariable) super.set(fieldName, value);
+  public EndUserAuthenticationConfigVariable set(String fieldName, Object value) {
+    return (EndUserAuthenticationConfigVariable) super.set(fieldName, value);
   }
 
   @Override
-  public ConfigVariable clone() {
-    return (ConfigVariable) super.clone();
+  public EndUserAuthenticationConfigVariable clone() {
+    return (EndUserAuthenticationConfigVariable) super.clone();
   }
 
 }

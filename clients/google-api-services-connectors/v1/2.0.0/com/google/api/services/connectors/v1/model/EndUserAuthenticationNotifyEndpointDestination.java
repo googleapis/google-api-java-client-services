@@ -17,7 +17,7 @@
 package com.google.api.services.connectors.v1.model;
 
 /**
- * Message for EventSubscription Destination to act on receiving an event
+ * Message for NotifyEndpointDestination Destination to hit when the refresh token is expired.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Connectors API. For a detailed explanation see:
@@ -27,72 +27,48 @@ package com.google.api.services.connectors.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class EventSubscriptionDestination extends com.google.api.client.json.GenericJson {
+public final class EndUserAuthenticationNotifyEndpointDestination extends com.google.api.client.json.GenericJson {
 
   /**
-   * OPTION 1: Hit an endpoint when we receive an event.
+   * Optional. OPTION 1: Hit an endpoint when the refresh token is expired.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private EndPoint endpoint;
+  private EndUserAuthenticationNotifyEndpointDestinationEndPoint endpoint;
 
   /**
-   * OPTION 3: Write the event to Pub/Sub topic.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private PubSub pubsub;
-
-  /**
-   * Optional. Service account needed for runtime plane to trigger IP workflow.
+   * Required. Service account needed for runtime plane to notify the backend.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String serviceAccount;
 
   /**
-   * Optional. type of the destination
+   * Required. type of the destination
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * OPTION 1: Hit an endpoint when we receive an event.
+   * Optional. OPTION 1: Hit an endpoint when the refresh token is expired.
    * @return value or {@code null} for none
    */
-  public EndPoint getEndpoint() {
+  public EndUserAuthenticationNotifyEndpointDestinationEndPoint getEndpoint() {
     return endpoint;
   }
 
   /**
-   * OPTION 1: Hit an endpoint when we receive an event.
+   * Optional. OPTION 1: Hit an endpoint when the refresh token is expired.
    * @param endpoint endpoint or {@code null} for none
    */
-  public EventSubscriptionDestination setEndpoint(EndPoint endpoint) {
+  public EndUserAuthenticationNotifyEndpointDestination setEndpoint(EndUserAuthenticationNotifyEndpointDestinationEndPoint endpoint) {
     this.endpoint = endpoint;
     return this;
   }
 
   /**
-   * OPTION 3: Write the event to Pub/Sub topic.
-   * @return value or {@code null} for none
-   */
-  public PubSub getPubsub() {
-    return pubsub;
-  }
-
-  /**
-   * OPTION 3: Write the event to Pub/Sub topic.
-   * @param pubsub pubsub or {@code null} for none
-   */
-  public EventSubscriptionDestination setPubsub(PubSub pubsub) {
-    this.pubsub = pubsub;
-    return this;
-  }
-
-  /**
-   * Optional. Service account needed for runtime plane to trigger IP workflow.
+   * Required. Service account needed for runtime plane to notify the backend.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccount() {
@@ -100,16 +76,16 @@ public final class EventSubscriptionDestination extends com.google.api.client.js
   }
 
   /**
-   * Optional. Service account needed for runtime plane to trigger IP workflow.
+   * Required. Service account needed for runtime plane to notify the backend.
    * @param serviceAccount serviceAccount or {@code null} for none
    */
-  public EventSubscriptionDestination setServiceAccount(java.lang.String serviceAccount) {
+  public EndUserAuthenticationNotifyEndpointDestination setServiceAccount(java.lang.String serviceAccount) {
     this.serviceAccount = serviceAccount;
     return this;
   }
 
   /**
-   * Optional. type of the destination
+   * Required. type of the destination
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -117,22 +93,22 @@ public final class EventSubscriptionDestination extends com.google.api.client.js
   }
 
   /**
-   * Optional. type of the destination
+   * Required. type of the destination
    * @param type type or {@code null} for none
    */
-  public EventSubscriptionDestination setType(java.lang.String type) {
+  public EndUserAuthenticationNotifyEndpointDestination setType(java.lang.String type) {
     this.type = type;
     return this;
   }
 
   @Override
-  public EventSubscriptionDestination set(String fieldName, Object value) {
-    return (EventSubscriptionDestination) super.set(fieldName, value);
+  public EndUserAuthenticationNotifyEndpointDestination set(String fieldName, Object value) {
+    return (EndUserAuthenticationNotifyEndpointDestination) super.set(fieldName, value);
   }
 
   @Override
-  public EventSubscriptionDestination clone() {
-    return (EventSubscriptionDestination) super.clone();
+  public EndUserAuthenticationNotifyEndpointDestination clone() {
+    return (EndUserAuthenticationNotifyEndpointDestination) super.clone();
   }
 
 }

@@ -136,6 +136,15 @@ public final class Connection extends com.google.api.client.json.GenericJson {
   private java.lang.String envoyImageLocation;
 
   /**
+   * Optional. Additional Oauth2.0 Auth config for EUA. If the connection is configured using non-
+   * OAuth authentication but OAuth needs to be used for EUA, this field can be populated with the
+   * OAuth config. This should be a OAuth2AuthCodeFlow Auth type only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AuthConfig euaOauthAuthConfig;
+
+  /**
    * Optional. Eventing config of a connection
    * The value may be {@code null}.
    */
@@ -155,6 +164,15 @@ public final class Connection extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private EventingRuntimeData eventingRuntimeData;
+
+  /**
+   * Optional. Fallback on admin credentials for the connection. If this both auth_override_enabled
+   * and fallback_on_admin_credentials are set to true, the connection will use the admin
+   * credentials if the dynamic auth header is not present during auth override.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean fallbackOnAdminCredentials;
 
   /**
    * Output only. The name of the Hostname of the Service Directory service with TLS.
@@ -520,6 +538,27 @@ public final class Connection extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Additional Oauth2.0 Auth config for EUA. If the connection is configured using non-
+   * OAuth authentication but OAuth needs to be used for EUA, this field can be populated with the
+   * OAuth config. This should be a OAuth2AuthCodeFlow Auth type only.
+   * @return value or {@code null} for none
+   */
+  public AuthConfig getEuaOauthAuthConfig() {
+    return euaOauthAuthConfig;
+  }
+
+  /**
+   * Optional. Additional Oauth2.0 Auth config for EUA. If the connection is configured using non-
+   * OAuth authentication but OAuth needs to be used for EUA, this field can be populated with the
+   * OAuth config. This should be a OAuth2AuthCodeFlow Auth type only.
+   * @param euaOauthAuthConfig euaOauthAuthConfig or {@code null} for none
+   */
+  public Connection setEuaOauthAuthConfig(AuthConfig euaOauthAuthConfig) {
+    this.euaOauthAuthConfig = euaOauthAuthConfig;
+    return this;
+  }
+
+  /**
    * Optional. Eventing config of a connection
    * @return value or {@code null} for none
    */
@@ -567,6 +606,27 @@ public final class Connection extends com.google.api.client.json.GenericJson {
    */
   public Connection setEventingRuntimeData(EventingRuntimeData eventingRuntimeData) {
     this.eventingRuntimeData = eventingRuntimeData;
+    return this;
+  }
+
+  /**
+   * Optional. Fallback on admin credentials for the connection. If this both auth_override_enabled
+   * and fallback_on_admin_credentials are set to true, the connection will use the admin
+   * credentials if the dynamic auth header is not present during auth override.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getFallbackOnAdminCredentials() {
+    return fallbackOnAdminCredentials;
+  }
+
+  /**
+   * Optional. Fallback on admin credentials for the connection. If this both auth_override_enabled
+   * and fallback_on_admin_credentials are set to true, the connection will use the admin
+   * credentials if the dynamic auth header is not present during auth override.
+   * @param fallbackOnAdminCredentials fallbackOnAdminCredentials or {@code null} for none
+   */
+  public Connection setFallbackOnAdminCredentials(java.lang.Boolean fallbackOnAdminCredentials) {
+    this.fallbackOnAdminCredentials = fallbackOnAdminCredentials;
     return this;
   }
 

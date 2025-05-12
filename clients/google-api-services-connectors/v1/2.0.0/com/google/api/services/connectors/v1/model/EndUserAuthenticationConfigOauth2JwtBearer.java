@@ -28,70 +28,70 @@ package com.google.api.services.connectors.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Oauth2JwtBearer extends com.google.api.client.json.GenericJson {
+public final class EndUserAuthenticationConfigOauth2JwtBearer extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Secret version reference containing a PKCS#8 PEM-encoded private key associated with
-   * the Client Certificate. This private key will be used to sign JWTs used for the jwt-bearer
-   * authorization grant. Specified in the form as: `projects/secrets/versions`.
+   * Required. secret version/value reference containing a PKCS#8 PEM-encoded private key associated
+   * with the Client Certificate. This private key will be used to sign JWTs used for the jwt-bearer
+   * authorization grant. Specified in the form as: `projects/strings/versions`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private Secret clientKey;
+  private EUASecret clientKey;
 
   /**
-   * Optional. JwtClaims providers fields to generate the token.
+   * JwtClaims providers fields to generate the token.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private JwtClaims jwtClaims;
+  private EndUserAuthenticationConfigOauth2JwtBearerJwtClaims jwtClaims;
 
   /**
-   * Optional. Secret version reference containing a PKCS#8 PEM-encoded private key associated with
-   * the Client Certificate. This private key will be used to sign JWTs used for the jwt-bearer
-   * authorization grant. Specified in the form as: `projects/secrets/versions`.
+   * Required. secret version/value reference containing a PKCS#8 PEM-encoded private key associated
+   * with the Client Certificate. This private key will be used to sign JWTs used for the jwt-bearer
+   * authorization grant. Specified in the form as: `projects/strings/versions`.
    * @return value or {@code null} for none
    */
-  public Secret getClientKey() {
+  public EUASecret getClientKey() {
     return clientKey;
   }
 
   /**
-   * Optional. Secret version reference containing a PKCS#8 PEM-encoded private key associated with
-   * the Client Certificate. This private key will be used to sign JWTs used for the jwt-bearer
-   * authorization grant. Specified in the form as: `projects/secrets/versions`.
+   * Required. secret version/value reference containing a PKCS#8 PEM-encoded private key associated
+   * with the Client Certificate. This private key will be used to sign JWTs used for the jwt-bearer
+   * authorization grant. Specified in the form as: `projects/strings/versions`.
    * @param clientKey clientKey or {@code null} for none
    */
-  public Oauth2JwtBearer setClientKey(Secret clientKey) {
+  public EndUserAuthenticationConfigOauth2JwtBearer setClientKey(EUASecret clientKey) {
     this.clientKey = clientKey;
     return this;
   }
 
   /**
-   * Optional. JwtClaims providers fields to generate the token.
+   * JwtClaims providers fields to generate the token.
    * @return value or {@code null} for none
    */
-  public JwtClaims getJwtClaims() {
+  public EndUserAuthenticationConfigOauth2JwtBearerJwtClaims getJwtClaims() {
     return jwtClaims;
   }
 
   /**
-   * Optional. JwtClaims providers fields to generate the token.
+   * JwtClaims providers fields to generate the token.
    * @param jwtClaims jwtClaims or {@code null} for none
    */
-  public Oauth2JwtBearer setJwtClaims(JwtClaims jwtClaims) {
+  public EndUserAuthenticationConfigOauth2JwtBearer setJwtClaims(EndUserAuthenticationConfigOauth2JwtBearerJwtClaims jwtClaims) {
     this.jwtClaims = jwtClaims;
     return this;
   }
 
   @Override
-  public Oauth2JwtBearer set(String fieldName, Object value) {
-    return (Oauth2JwtBearer) super.set(fieldName, value);
+  public EndUserAuthenticationConfigOauth2JwtBearer set(String fieldName, Object value) {
+    return (EndUserAuthenticationConfigOauth2JwtBearer) super.set(fieldName, value);
   }
 
   @Override
-  public Oauth2JwtBearer clone() {
-    return (Oauth2JwtBearer) super.clone();
+  public EndUserAuthenticationConfigOauth2JwtBearer clone() {
+    return (EndUserAuthenticationConfigOauth2JwtBearer) super.clone();
   }
 
 }

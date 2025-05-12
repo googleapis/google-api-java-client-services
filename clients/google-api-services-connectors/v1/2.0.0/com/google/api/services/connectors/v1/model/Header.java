@@ -30,21 +30,21 @@ package com.google.api.services.connectors.v1.model;
 public final class Header extends com.google.api.client.json.GenericJson {
 
   /**
-   * Key of Header.
+   * Optional. Key of Header.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String key;
 
   /**
-   * Value of Header.
+   * Optional. Value of Header.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String value;
 
   /**
-   * Key of Header.
+   * Optional. Key of Header.
    * @return value or {@code null} for none
    */
   public java.lang.String getKey() {
@@ -52,7 +52,7 @@ public final class Header extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Key of Header.
+   * Optional. Key of Header.
    * @param key key or {@code null} for none
    */
   public Header setKey(java.lang.String key) {
@@ -61,7 +61,7 @@ public final class Header extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Value of Header.
+   * Optional. Value of Header.
    * @return value or {@code null} for none
    */
   public java.lang.String getValue() {
@@ -69,7 +69,7 @@ public final class Header extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Value of Header.
+   * Optional. Value of Header.
    * @param value value or {@code null} for none
    */
   public Header setValue(java.lang.String value) {

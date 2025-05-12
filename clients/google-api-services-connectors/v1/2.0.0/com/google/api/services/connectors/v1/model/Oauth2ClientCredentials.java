@@ -31,21 +31,21 @@ package com.google.api.services.connectors.v1.model;
 public final class Oauth2ClientCredentials extends com.google.api.client.json.GenericJson {
 
   /**
-   * The client identifier.
+   * Optional. The client identifier.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String clientId;
 
   /**
-   * Secret version reference containing the client secret.
+   * Optional. Secret version reference containing the client secret.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Secret clientSecret;
 
   /**
-   * The client identifier.
+   * Optional. The client identifier.
    * @return value or {@code null} for none
    */
   public java.lang.String getClientId() {
@@ -53,7 +53,7 @@ public final class Oauth2ClientCredentials extends com.google.api.client.json.Ge
   }
 
   /**
-   * The client identifier.
+   * Optional. The client identifier.
    * @param clientId clientId or {@code null} for none
    */
   public Oauth2ClientCredentials setClientId(java.lang.String clientId) {
@@ -62,7 +62,7 @@ public final class Oauth2ClientCredentials extends com.google.api.client.json.Ge
   }
 
   /**
-   * Secret version reference containing the client secret.
+   * Optional. Secret version reference containing the client secret.
    * @return value or {@code null} for none
    */
   public Secret getClientSecret() {
@@ -70,7 +70,7 @@ public final class Oauth2ClientCredentials extends com.google.api.client.json.Ge
   }
 
   /**
-   * Secret version reference containing the client secret.
+   * Optional. Secret version reference containing the client secret.
    * @param clientSecret clientSecret or {@code null} for none
    */
   public Oauth2ClientCredentials setClientSecret(Secret clientSecret) {

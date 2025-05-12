@@ -30,8 +30,8 @@ package com.google.api.services.connectors.v1.model;
 public final class EncryptionKey extends com.google.api.client.json.GenericJson {
 
   /**
-   * The [KMS key name] with which the content of the Operation is encrypted. The expected format:
-   * `projects/locations/keyRings/cryptoKeys`. Will be empty string if google managed.
+   * Optional. The [KMS key name] with which the content of the Operation is encrypted. The expected
+   * format: `projects/locations/keyRings/cryptoKeys`. Will be empty string if google managed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,8 +45,8 @@ public final class EncryptionKey extends com.google.api.client.json.GenericJson 
   private java.lang.String type;
 
   /**
-   * The [KMS key name] with which the content of the Operation is encrypted. The expected format:
-   * `projects/locations/keyRings/cryptoKeys`. Will be empty string if google managed.
+   * Optional. The [KMS key name] with which the content of the Operation is encrypted. The expected
+   * format: `projects/locations/keyRings/cryptoKeys`. Will be empty string if google managed.
    * @return value or {@code null} for none
    */
   public java.lang.String getKmsKeyName() {
@@ -54,8 +54,8 @@ public final class EncryptionKey extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The [KMS key name] with which the content of the Operation is encrypted. The expected format:
-   * `projects/locations/keyRings/cryptoKeys`. Will be empty string if google managed.
+   * Optional. The [KMS key name] with which the content of the Operation is encrypted. The expected
+   * format: `projects/locations/keyRings/cryptoKeys`. Will be empty string if google managed.
    * @param kmsKeyName kmsKeyName or {@code null} for none
    */
   public EncryptionKey setKmsKeyName(java.lang.String kmsKeyName) {

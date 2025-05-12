@@ -30,7 +30,7 @@ package com.google.api.services.connectors.v1.model;
 public final class ConnectorsLogConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Enabled represents whether logging is enabled or not for a connection.
+   * Optional. Enabled represents whether logging is enabled or not for a connection.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class ConnectorsLogConfig extends com.google.api.client.json.Generi
   private java.lang.String level;
 
   /**
-   * Enabled represents whether logging is enabled or not for a connection.
+   * Optional. Enabled represents whether logging is enabled or not for a connection.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnabled() {
@@ -52,7 +52,7 @@ public final class ConnectorsLogConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * Enabled represents whether logging is enabled or not for a connection.
+   * Optional. Enabled represents whether logging is enabled or not for a connection.
    * @param enabled enabled or {@code null} for none
    */
   public ConnectorsLogConfig setEnabled(java.lang.Boolean enabled) {

@@ -27,10 +27,10 @@ package com.google.api.services.connectors.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class EndPoint extends com.google.api.client.json.GenericJson {
+public final class EndUserAuthenticationNotifyEndpointDestinationEndPoint extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The URI of the Endpoint.
+   * Required. The URI of the Endpoint.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -41,10 +41,10 @@ public final class EndPoint extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<Header> headers;
+  private java.util.List<EndUserAuthenticationNotifyEndpointDestinationEndPointHeader> headers;
 
   /**
-   * Optional. The URI of the Endpoint.
+   * Required. The URI of the Endpoint.
    * @return value or {@code null} for none
    */
   public java.lang.String getEndpointUri() {
@@ -52,10 +52,10 @@ public final class EndPoint extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The URI of the Endpoint.
+   * Required. The URI of the Endpoint.
    * @param endpointUri endpointUri or {@code null} for none
    */
-  public EndPoint setEndpointUri(java.lang.String endpointUri) {
+  public EndUserAuthenticationNotifyEndpointDestinationEndPoint setEndpointUri(java.lang.String endpointUri) {
     this.endpointUri = endpointUri;
     return this;
   }
@@ -64,7 +64,7 @@ public final class EndPoint extends com.google.api.client.json.GenericJson {
    * Optional. List of Header to be added to the Endpoint.
    * @return value or {@code null} for none
    */
-  public java.util.List<Header> getHeaders() {
+  public java.util.List<EndUserAuthenticationNotifyEndpointDestinationEndPointHeader> getHeaders() {
     return headers;
   }
 
@@ -72,19 +72,19 @@ public final class EndPoint extends com.google.api.client.json.GenericJson {
    * Optional. List of Header to be added to the Endpoint.
    * @param headers headers or {@code null} for none
    */
-  public EndPoint setHeaders(java.util.List<Header> headers) {
+  public EndUserAuthenticationNotifyEndpointDestinationEndPoint setHeaders(java.util.List<EndUserAuthenticationNotifyEndpointDestinationEndPointHeader> headers) {
     this.headers = headers;
     return this;
   }
 
   @Override
-  public EndPoint set(String fieldName, Object value) {
-    return (EndPoint) super.set(fieldName, value);
+  public EndUserAuthenticationNotifyEndpointDestinationEndPoint set(String fieldName, Object value) {
+    return (EndUserAuthenticationNotifyEndpointDestinationEndPoint) super.set(fieldName, value);
   }
 
   @Override
-  public EndPoint clone() {
-    return (EndPoint) super.clone();
+  public EndUserAuthenticationNotifyEndpointDestinationEndPoint clone() {
+    return (EndUserAuthenticationNotifyEndpointDestinationEndPoint) super.clone();
   }
 
 }

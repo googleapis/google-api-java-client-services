@@ -17,7 +17,7 @@
 package com.google.api.services.connectors.v1.model;
 
 /**
- * AuthConfig defines details of a authentication type.
+ * EndUserAuthenticationConfig defines details of a authentication configuration for EUC
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Connectors API. For a detailed explanation see:
@@ -27,24 +27,24 @@ package com.google.api.services.connectors.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class AuthConfig extends com.google.api.client.json.GenericJson {
+public final class EndUserAuthenticationConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. List containing additional auth configs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<ConfigVariable> additionalVariables;
+  private java.util.List<EndUserAuthenticationConfigVariable> additionalVariables;
 
   /**
-   * Optional. Identifier key for auth config
+   * Identifier key for auth config
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String authKey;
 
   /**
-   * Optional. The type of authentication configured.
+   * The type of authentication configured.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,48 +55,48 @@ public final class AuthConfig extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private Oauth2AuthCodeFlow oauth2AuthCodeFlow;
+  private EndUserAuthenticationConfigOauth2AuthCodeFlow oauth2AuthCodeFlow;
 
   /**
    * Oauth2AuthCodeFlowGoogleManaged.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private Oauth2AuthCodeFlowGoogleManaged oauth2AuthCodeFlowGoogleManaged;
+  private EndUserAuthenticationConfigOauth2AuthCodeFlowGoogleManaged oauth2AuthCodeFlowGoogleManaged;
 
   /**
    * Oauth2ClientCredentials.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private Oauth2ClientCredentials oauth2ClientCredentials;
+  private EndUserAuthenticationConfigOauth2ClientCredentials oauth2ClientCredentials;
 
   /**
    * Oauth2JwtBearer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private Oauth2JwtBearer oauth2JwtBearer;
+  private EndUserAuthenticationConfigOauth2JwtBearer oauth2JwtBearer;
 
   /**
    * SSH Public Key.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private SshPublicKey sshPublicKey;
+  private EndUserAuthenticationConfigSshPublicKey sshPublicKey;
 
   /**
    * UserPassword.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private UserPassword userPassword;
+  private EndUserAuthenticationConfigUserPassword userPassword;
 
   /**
    * Optional. List containing additional auth configs.
    * @return value or {@code null} for none
    */
-  public java.util.List<ConfigVariable> getAdditionalVariables() {
+  public java.util.List<EndUserAuthenticationConfigVariable> getAdditionalVariables() {
     return additionalVariables;
   }
 
@@ -104,13 +104,13 @@ public final class AuthConfig extends com.google.api.client.json.GenericJson {
    * Optional. List containing additional auth configs.
    * @param additionalVariables additionalVariables or {@code null} for none
    */
-  public AuthConfig setAdditionalVariables(java.util.List<ConfigVariable> additionalVariables) {
+  public EndUserAuthenticationConfig setAdditionalVariables(java.util.List<EndUserAuthenticationConfigVariable> additionalVariables) {
     this.additionalVariables = additionalVariables;
     return this;
   }
 
   /**
-   * Optional. Identifier key for auth config
+   * Identifier key for auth config
    * @return value or {@code null} for none
    */
   public java.lang.String getAuthKey() {
@@ -118,16 +118,16 @@ public final class AuthConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Identifier key for auth config
+   * Identifier key for auth config
    * @param authKey authKey or {@code null} for none
    */
-  public AuthConfig setAuthKey(java.lang.String authKey) {
+  public EndUserAuthenticationConfig setAuthKey(java.lang.String authKey) {
     this.authKey = authKey;
     return this;
   }
 
   /**
-   * Optional. The type of authentication configured.
+   * The type of authentication configured.
    * @return value or {@code null} for none
    */
   public java.lang.String getAuthType() {
@@ -135,10 +135,10 @@ public final class AuthConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The type of authentication configured.
+   * The type of authentication configured.
    * @param authType authType or {@code null} for none
    */
-  public AuthConfig setAuthType(java.lang.String authType) {
+  public EndUserAuthenticationConfig setAuthType(java.lang.String authType) {
     this.authType = authType;
     return this;
   }
@@ -147,7 +147,7 @@ public final class AuthConfig extends com.google.api.client.json.GenericJson {
    * Oauth2AuthCodeFlow.
    * @return value or {@code null} for none
    */
-  public Oauth2AuthCodeFlow getOauth2AuthCodeFlow() {
+  public EndUserAuthenticationConfigOauth2AuthCodeFlow getOauth2AuthCodeFlow() {
     return oauth2AuthCodeFlow;
   }
 
@@ -155,7 +155,7 @@ public final class AuthConfig extends com.google.api.client.json.GenericJson {
    * Oauth2AuthCodeFlow.
    * @param oauth2AuthCodeFlow oauth2AuthCodeFlow or {@code null} for none
    */
-  public AuthConfig setOauth2AuthCodeFlow(Oauth2AuthCodeFlow oauth2AuthCodeFlow) {
+  public EndUserAuthenticationConfig setOauth2AuthCodeFlow(EndUserAuthenticationConfigOauth2AuthCodeFlow oauth2AuthCodeFlow) {
     this.oauth2AuthCodeFlow = oauth2AuthCodeFlow;
     return this;
   }
@@ -164,7 +164,7 @@ public final class AuthConfig extends com.google.api.client.json.GenericJson {
    * Oauth2AuthCodeFlowGoogleManaged.
    * @return value or {@code null} for none
    */
-  public Oauth2AuthCodeFlowGoogleManaged getOauth2AuthCodeFlowGoogleManaged() {
+  public EndUserAuthenticationConfigOauth2AuthCodeFlowGoogleManaged getOauth2AuthCodeFlowGoogleManaged() {
     return oauth2AuthCodeFlowGoogleManaged;
   }
 
@@ -172,7 +172,7 @@ public final class AuthConfig extends com.google.api.client.json.GenericJson {
    * Oauth2AuthCodeFlowGoogleManaged.
    * @param oauth2AuthCodeFlowGoogleManaged oauth2AuthCodeFlowGoogleManaged or {@code null} for none
    */
-  public AuthConfig setOauth2AuthCodeFlowGoogleManaged(Oauth2AuthCodeFlowGoogleManaged oauth2AuthCodeFlowGoogleManaged) {
+  public EndUserAuthenticationConfig setOauth2AuthCodeFlowGoogleManaged(EndUserAuthenticationConfigOauth2AuthCodeFlowGoogleManaged oauth2AuthCodeFlowGoogleManaged) {
     this.oauth2AuthCodeFlowGoogleManaged = oauth2AuthCodeFlowGoogleManaged;
     return this;
   }
@@ -181,7 +181,7 @@ public final class AuthConfig extends com.google.api.client.json.GenericJson {
    * Oauth2ClientCredentials.
    * @return value or {@code null} for none
    */
-  public Oauth2ClientCredentials getOauth2ClientCredentials() {
+  public EndUserAuthenticationConfigOauth2ClientCredentials getOauth2ClientCredentials() {
     return oauth2ClientCredentials;
   }
 
@@ -189,7 +189,7 @@ public final class AuthConfig extends com.google.api.client.json.GenericJson {
    * Oauth2ClientCredentials.
    * @param oauth2ClientCredentials oauth2ClientCredentials or {@code null} for none
    */
-  public AuthConfig setOauth2ClientCredentials(Oauth2ClientCredentials oauth2ClientCredentials) {
+  public EndUserAuthenticationConfig setOauth2ClientCredentials(EndUserAuthenticationConfigOauth2ClientCredentials oauth2ClientCredentials) {
     this.oauth2ClientCredentials = oauth2ClientCredentials;
     return this;
   }
@@ -198,7 +198,7 @@ public final class AuthConfig extends com.google.api.client.json.GenericJson {
    * Oauth2JwtBearer.
    * @return value or {@code null} for none
    */
-  public Oauth2JwtBearer getOauth2JwtBearer() {
+  public EndUserAuthenticationConfigOauth2JwtBearer getOauth2JwtBearer() {
     return oauth2JwtBearer;
   }
 
@@ -206,7 +206,7 @@ public final class AuthConfig extends com.google.api.client.json.GenericJson {
    * Oauth2JwtBearer.
    * @param oauth2JwtBearer oauth2JwtBearer or {@code null} for none
    */
-  public AuthConfig setOauth2JwtBearer(Oauth2JwtBearer oauth2JwtBearer) {
+  public EndUserAuthenticationConfig setOauth2JwtBearer(EndUserAuthenticationConfigOauth2JwtBearer oauth2JwtBearer) {
     this.oauth2JwtBearer = oauth2JwtBearer;
     return this;
   }
@@ -215,7 +215,7 @@ public final class AuthConfig extends com.google.api.client.json.GenericJson {
    * SSH Public Key.
    * @return value or {@code null} for none
    */
-  public SshPublicKey getSshPublicKey() {
+  public EndUserAuthenticationConfigSshPublicKey getSshPublicKey() {
     return sshPublicKey;
   }
 
@@ -223,7 +223,7 @@ public final class AuthConfig extends com.google.api.client.json.GenericJson {
    * SSH Public Key.
    * @param sshPublicKey sshPublicKey or {@code null} for none
    */
-  public AuthConfig setSshPublicKey(SshPublicKey sshPublicKey) {
+  public EndUserAuthenticationConfig setSshPublicKey(EndUserAuthenticationConfigSshPublicKey sshPublicKey) {
     this.sshPublicKey = sshPublicKey;
     return this;
   }
@@ -232,7 +232,7 @@ public final class AuthConfig extends com.google.api.client.json.GenericJson {
    * UserPassword.
    * @return value or {@code null} for none
    */
-  public UserPassword getUserPassword() {
+  public EndUserAuthenticationConfigUserPassword getUserPassword() {
     return userPassword;
   }
 
@@ -240,19 +240,19 @@ public final class AuthConfig extends com.google.api.client.json.GenericJson {
    * UserPassword.
    * @param userPassword userPassword or {@code null} for none
    */
-  public AuthConfig setUserPassword(UserPassword userPassword) {
+  public EndUserAuthenticationConfig setUserPassword(EndUserAuthenticationConfigUserPassword userPassword) {
     this.userPassword = userPassword;
     return this;
   }
 
   @Override
-  public AuthConfig set(String fieldName, Object value) {
-    return (AuthConfig) super.set(fieldName, value);
+  public EndUserAuthenticationConfig set(String fieldName, Object value) {
+    return (EndUserAuthenticationConfig) super.set(fieldName, value);
   }
 
   @Override
-  public AuthConfig clone() {
-    return (AuthConfig) super.clone();
+  public EndUserAuthenticationConfig clone() {
+    return (EndUserAuthenticationConfig) super.clone();
   }
 
 }

@@ -52,6 +52,13 @@ public final class AuthCodeData extends com.google.api.client.json.GenericJson {
   private java.lang.String redirectUri;
 
   /**
+   * Scopes the connection will request when the user performs the auth code flow.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> scopes;
+
+  /**
    * OAuth authorization code.
    * @return value or {@code null} for none
    */
@@ -99,6 +106,23 @@ public final class AuthCodeData extends com.google.api.client.json.GenericJson {
    */
   public AuthCodeData setRedirectUri(java.lang.String redirectUri) {
     this.redirectUri = redirectUri;
+    return this;
+  }
+
+  /**
+   * Scopes the connection will request when the user performs the auth code flow.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getScopes() {
+    return scopes;
+  }
+
+  /**
+   * Scopes the connection will request when the user performs the auth code flow.
+   * @param scopes scopes or {@code null} for none
+   */
+  public AuthCodeData setScopes(java.util.List<java.lang.String> scopes) {
+    this.scopes = scopes;
     return this;
   }
 

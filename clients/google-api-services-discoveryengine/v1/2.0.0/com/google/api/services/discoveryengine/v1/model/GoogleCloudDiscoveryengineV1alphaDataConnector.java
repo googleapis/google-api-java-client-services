@@ -61,8 +61,9 @@ public final class GoogleCloudDiscoveryengineV1alphaDataConnector extends com.go
   }
 
   /**
-   * Indicates whether the connector is disabled for auto run. It can be used to pause periodical
-   * and real time sync.
+   * Optional. Indicates whether the connector is disabled for auto run. It can be used to pause
+   * periodical and real time sync. Update: with the introduction of incremental_sync_disabled,
+   * auto_run_disabled is used to pause/disable only full syncs
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -165,6 +166,23 @@ public final class GoogleCloudDiscoveryengineV1alphaDataConnector extends com.go
    */
   @com.google.api.client.util.Key
   private GoogleCloudDiscoveryengineV1alphaIdentityScheduleConfig identityScheduleConfig;
+
+  /**
+   * Optional. The refresh interval specifically for incremental data syncs. If unset, incremental
+   * syncs will use the default from env, set to 3hrs. The minimum is 30 minutes and maximum is 7
+   * days.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String incrementalRefreshInterval;
+
+  /**
+   * Optional. Indicates whether incremental syncs are paused for this connector. This is
+   * independent of auto_run_disabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean incrementalSyncDisabled;
 
   /**
    * Input only. The KMS key to be used to protect the DataStores managed by this connector. Must be
@@ -357,8 +375,9 @@ public final class GoogleCloudDiscoveryengineV1alphaDataConnector extends com.go
   }
 
   /**
-   * Indicates whether the connector is disabled for auto run. It can be used to pause periodical
-   * and real time sync.
+   * Optional. Indicates whether the connector is disabled for auto run. It can be used to pause
+   * periodical and real time sync. Update: with the introduction of incremental_sync_disabled,
+   * auto_run_disabled is used to pause/disable only full syncs
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAutoRunDisabled() {
@@ -366,8 +385,9 @@ public final class GoogleCloudDiscoveryengineV1alphaDataConnector extends com.go
   }
 
   /**
-   * Indicates whether the connector is disabled for auto run. It can be used to pause periodical
-   * and real time sync.
+   * Optional. Indicates whether the connector is disabled for auto run. It can be used to pause
+   * periodical and real time sync. Update: with the introduction of incremental_sync_disabled,
+   * auto_run_disabled is used to pause/disable only full syncs
    * @param autoRunDisabled autoRunDisabled or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaDataConnector setAutoRunDisabled(java.lang.Boolean autoRunDisabled) {
@@ -607,6 +627,46 @@ public final class GoogleCloudDiscoveryengineV1alphaDataConnector extends com.go
    */
   public GoogleCloudDiscoveryengineV1alphaDataConnector setIdentityScheduleConfig(GoogleCloudDiscoveryengineV1alphaIdentityScheduleConfig identityScheduleConfig) {
     this.identityScheduleConfig = identityScheduleConfig;
+    return this;
+  }
+
+  /**
+   * Optional. The refresh interval specifically for incremental data syncs. If unset, incremental
+   * syncs will use the default from env, set to 3hrs. The minimum is 30 minutes and maximum is 7
+   * days.
+   * @return value or {@code null} for none
+   */
+  public String getIncrementalRefreshInterval() {
+    return incrementalRefreshInterval;
+  }
+
+  /**
+   * Optional. The refresh interval specifically for incremental data syncs. If unset, incremental
+   * syncs will use the default from env, set to 3hrs. The minimum is 30 minutes and maximum is 7
+   * days.
+   * @param incrementalRefreshInterval incrementalRefreshInterval or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaDataConnector setIncrementalRefreshInterval(String incrementalRefreshInterval) {
+    this.incrementalRefreshInterval = incrementalRefreshInterval;
+    return this;
+  }
+
+  /**
+   * Optional. Indicates whether incremental syncs are paused for this connector. This is
+   * independent of auto_run_disabled.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIncrementalSyncDisabled() {
+    return incrementalSyncDisabled;
+  }
+
+  /**
+   * Optional. Indicates whether incremental syncs are paused for this connector. This is
+   * independent of auto_run_disabled.
+   * @param incrementalSyncDisabled incrementalSyncDisabled or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaDataConnector setIncrementalSyncDisabled(java.lang.Boolean incrementalSyncDisabled) {
+    this.incrementalSyncDisabled = incrementalSyncDisabled;
     return this;
   }
 

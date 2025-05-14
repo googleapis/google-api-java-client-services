@@ -31,7 +31,14 @@ package com.google.api.services.retail.v2alpha.model;
 public final class GoogleCloudRetailV2alphaMerchantCenterFeedFilter extends com.google.api.client.json.GenericJson {
 
   /**
-   * Merchant Center primary feed ID.
+   * AFM data source ID.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long dataSourceId;
+
+  /**
+   * Merchant Center primary feed ID. Deprecated: use data_source_id instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -45,7 +52,24 @@ public final class GoogleCloudRetailV2alphaMerchantCenterFeedFilter extends com.
   private java.lang.String primaryFeedName;
 
   /**
-   * Merchant Center primary feed ID.
+   * AFM data source ID.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getDataSourceId() {
+    return dataSourceId;
+  }
+
+  /**
+   * AFM data source ID.
+   * @param dataSourceId dataSourceId or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaMerchantCenterFeedFilter setDataSourceId(java.lang.Long dataSourceId) {
+    this.dataSourceId = dataSourceId;
+    return this;
+  }
+
+  /**
+   * Merchant Center primary feed ID. Deprecated: use data_source_id instead.
    * @return value or {@code null} for none
    */
   public java.lang.Long getPrimaryFeedId() {
@@ -53,7 +77,7 @@ public final class GoogleCloudRetailV2alphaMerchantCenterFeedFilter extends com.
   }
 
   /**
-   * Merchant Center primary feed ID.
+   * Merchant Center primary feed ID. Deprecated: use data_source_id instead.
    * @param primaryFeedId primaryFeedId or {@code null} for none
    */
   public GoogleCloudRetailV2alphaMerchantCenterFeedFilter setPrimaryFeedId(java.lang.Long primaryFeedId) {

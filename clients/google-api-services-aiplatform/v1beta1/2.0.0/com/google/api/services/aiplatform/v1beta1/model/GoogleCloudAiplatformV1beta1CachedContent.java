@@ -51,6 +51,14 @@ public final class GoogleCloudAiplatformV1beta1CachedContent extends com.google.
   private java.lang.String displayName;
 
   /**
+   * Input only. Immutable. Customer-managed encryption key spec for a `CachedContent`. If set, this
+   * `CachedContent` and all its sub-resources will be secured by this key.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1EncryptionSpec encryptionSpec;
+
+  /**
    * Timestamp of when this resource is considered expired. This is *always* provided on output,
    * regardless of what was sent on input.
    * The value may be {@code null}.
@@ -166,6 +174,25 @@ public final class GoogleCloudAiplatformV1beta1CachedContent extends com.google.
    */
   public GoogleCloudAiplatformV1beta1CachedContent setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Input only. Immutable. Customer-managed encryption key spec for a `CachedContent`. If set, this
+   * `CachedContent` and all its sub-resources will be secured by this key.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EncryptionSpec getEncryptionSpec() {
+    return encryptionSpec;
+  }
+
+  /**
+   * Input only. Immutable. Customer-managed encryption key spec for a `CachedContent`. If set, this
+   * `CachedContent` and all its sub-resources will be secured by this key.
+   * @param encryptionSpec encryptionSpec or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1CachedContent setEncryptionSpec(GoogleCloudAiplatformV1beta1EncryptionSpec encryptionSpec) {
+    this.encryptionSpec = encryptionSpec;
     return this;
   }
 

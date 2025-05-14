@@ -37,6 +37,13 @@ public final class GoogleCloudAiplatformV1RagFileParsingConfig extends com.googl
   private GoogleCloudAiplatformV1RagFileParsingConfigLayoutParser layoutParser;
 
   /**
+   * The LLM Parser to use for RagFiles.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1RagFileParsingConfigLlmParser llmParser;
+
+  /**
    * The Layout Parser to use for RagFiles.
    * @return value or {@code null} for none
    */
@@ -50,6 +57,23 @@ public final class GoogleCloudAiplatformV1RagFileParsingConfig extends com.googl
    */
   public GoogleCloudAiplatformV1RagFileParsingConfig setLayoutParser(GoogleCloudAiplatformV1RagFileParsingConfigLayoutParser layoutParser) {
     this.layoutParser = layoutParser;
+    return this;
+  }
+
+  /**
+   * The LLM Parser to use for RagFiles.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1RagFileParsingConfigLlmParser getLlmParser() {
+    return llmParser;
+  }
+
+  /**
+   * The LLM Parser to use for RagFiles.
+   * @param llmParser llmParser or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1RagFileParsingConfig setLlmParser(GoogleCloudAiplatformV1RagFileParsingConfigLlmParser llmParser) {
+    this.llmParser = llmParser;
     return this;
   }
 

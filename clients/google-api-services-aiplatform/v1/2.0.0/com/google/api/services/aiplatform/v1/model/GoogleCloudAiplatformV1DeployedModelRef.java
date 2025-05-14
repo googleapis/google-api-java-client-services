@@ -30,6 +30,13 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1DeployedModelRef extends com.google.api.client.json.GenericJson {
 
   /**
+   * Immutable. The ID of the Checkpoint deployed in the DeployedModel.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String checkpointId;
+
+  /**
    * Immutable. An ID of a DeployedModel in the above Endpoint.
    * The value may be {@code null}.
    */
@@ -42,6 +49,23 @@ public final class GoogleCloudAiplatformV1DeployedModelRef extends com.google.ap
    */
   @com.google.api.client.util.Key
   private java.lang.String endpoint;
+
+  /**
+   * Immutable. The ID of the Checkpoint deployed in the DeployedModel.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCheckpointId() {
+    return checkpointId;
+  }
+
+  /**
+   * Immutable. The ID of the Checkpoint deployed in the DeployedModel.
+   * @param checkpointId checkpointId or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1DeployedModelRef setCheckpointId(java.lang.String checkpointId) {
+    this.checkpointId = checkpointId;
+    return this;
+  }
 
   /**
    * Immutable. An ID of a DeployedModel in the above Endpoint.

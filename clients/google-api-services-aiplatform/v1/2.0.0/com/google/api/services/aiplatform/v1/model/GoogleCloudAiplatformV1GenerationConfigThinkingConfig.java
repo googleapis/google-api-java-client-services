@@ -30,12 +30,39 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1GenerationConfigThinkingConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Indicates whether to include thoughts in the response. If true, thoughts are returned
+   * only when available.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean includeThoughts;
+
+  /**
    * Optional. Indicates the thinking budget in tokens. This is only applied when enable_thinking is
    * true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer thinkingBudget;
+
+  /**
+   * Optional. Indicates whether to include thoughts in the response. If true, thoughts are returned
+   * only when available.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIncludeThoughts() {
+    return includeThoughts;
+  }
+
+  /**
+   * Optional. Indicates whether to include thoughts in the response. If true, thoughts are returned
+   * only when available.
+   * @param includeThoughts includeThoughts or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1GenerationConfigThinkingConfig setIncludeThoughts(java.lang.Boolean includeThoughts) {
+    this.includeThoughts = includeThoughts;
+    return this;
+  }
 
   /**
    * Optional. Indicates the thinking budget in tokens. This is only applied when enable_thinking is

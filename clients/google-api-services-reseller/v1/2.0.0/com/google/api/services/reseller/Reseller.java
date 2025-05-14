@@ -2405,28 +2405,22 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * The intented insert action. The usage of this field is governed by certain policies which
-       * are being developed & tested currently. Hence, these might not work as intended. Once this
-       * is fully tested & available to consume, we will share more information about its usage,
-       * limitations and policy documentation.
+       * The intented insert action. Advised to set this when the customer already has a
+       * subscription for a different SKU in the same product.
        */
       @com.google.api.client.util.Key
       private java.lang.String action;
 
-      /** The intented insert action. The usage of this field is governed by certain policies which are being
-     developed & tested currently. Hence, these might not work as intended. Once this is fully tested &
-     available to consume, we will share more information about its usage, limitations and policy
-     documentation.
+      /** The intented insert action. Advised to set this when the customer already has a subscription for a
+     different SKU in the same product.
        */
       public java.lang.String getAction() {
         return action;
       }
 
       /**
-       * The intented insert action. The usage of this field is governed by certain policies which
-       * are being developed & tested currently. Hence, these might not work as intended. Once this
-       * is fully tested & available to consume, we will share more information about its usage,
-       * limitations and policy documentation.
+       * The intented insert action. Advised to set this when the customer already has a
+       * subscription for a different SKU in the same product.
        */
       public Insert setAction(java.lang.String action) {
         this.action = action;
@@ -2466,18 +2460,13 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
 
       /**
        * The sku_id of the existing subscription to be upgraded or downgraded. This is required when
-       * action is SWITCH. The usage of this field is governed by certain policies which are being
-       * developed & tested currently. Hence, these might not work as intended. Once this is fully
-       * tested & available to consume, we will share more information about its usage, limitations
-       * and policy documentation.
+       * action is SWITCH.
        */
       @com.google.api.client.util.Key
       private java.lang.String sourceSkuId;
 
       /** The sku_id of the existing subscription to be upgraded or downgraded. This is required when action
-     is SWITCH. The usage of this field is governed by certain policies which are being developed &
-     tested currently. Hence, these might not work as intended. Once this is fully tested & available to
-     consume, we will share more information about its usage, limitations and policy documentation.
+     is SWITCH.
        */
       public java.lang.String getSourceSkuId() {
         return sourceSkuId;
@@ -2485,10 +2474,7 @@ public class Reseller extends com.google.api.client.googleapis.services.json.Abs
 
       /**
        * The sku_id of the existing subscription to be upgraded or downgraded. This is required when
-       * action is SWITCH. The usage of this field is governed by certain policies which are being
-       * developed & tested currently. Hence, these might not work as intended. Once this is fully
-       * tested & available to consume, we will share more information about its usage, limitations
-       * and policy documentation.
+       * action is SWITCH.
        */
       public Insert setSourceSkuId(java.lang.String sourceSkuId) {
         this.sourceSkuId = sourceSkuId;

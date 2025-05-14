@@ -158,7 +158,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
      * administrator must turn custom emojis on for the organization. For more information, see [Learn
      * about custom emojis in Google Chat](https://support.google.com/chat/answer/12800149) and [Manage
      * custom emoji permissions](https://support.google.com/a/answer/12850085). Requires [user
-     * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+     * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+     * with the [authorization scope](https://developers.google.com/workspace/chat/authenticate-
+     * authorize#chat-api-scopes): - `https://www.googleapis.com/auth/chat.customemojis`
      *
      * Create a request for the method "customEmojis.create".
      *
@@ -183,7 +185,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * administrator must turn custom emojis on for the organization. For more information, see [Learn
        * about custom emojis in Google Chat](https://support.google.com/chat/answer/12800149) and
        * [Manage custom emoji permissions](https://support.google.com/a/answer/12850085). Requires [user
-       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+       * with the [authorization scope](https://developers.google.com/workspace/chat/authenticate-
+       * authorize#chat-api-scopes): - `https://www.googleapis.com/auth/chat.customemojis`
        *
        * Create a request for the method "customEmojis.create".
        *
@@ -268,7 +272,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
      * For more information, see [Learn about custom emojis in Google
      * Chat](https://support.google.com/chat/answer/12800149) and [Manage custom emoji
      * permissions](https://support.google.com/a/answer/12850085). Requires [user
-     * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+     * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+     * with the [authorization scope](https://developers.google.com/workspace/chat/authenticate-
+     * authorize#chat-api-scopes): - `https://www.googleapis.com/auth/chat.customemojis`
      *
      * Create a request for the method "customEmojis.delete".
      *
@@ -302,7 +308,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * organization. For more information, see [Learn about custom emojis in Google
        * Chat](https://support.google.com/chat/answer/12800149) and [Manage custom emoji
        * permissions](https://support.google.com/a/answer/12850085). Requires [user
-       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+       * with the [authorization scope](https://developers.google.com/workspace/chat/authenticate-
+       * authorize#chat-api-scopes): - `https://www.googleapis.com/auth/chat.customemojis`
        *
        * Create a request for the method "customEmojis.delete".
        *
@@ -425,7 +433,11 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
      * information, see [Learn about custom emojis in Google
      * Chat](https://support.google.com/chat/answer/12800149) and [Manage custom emoji
      * permissions](https://support.google.com/a/answer/12850085). Requires [user
-     * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+     * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+     * with one of the following [authorization
+     * scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes): -
+     * `https://www.googleapis.com/auth/chat.customemojis.readonly` -
+     * `https://www.googleapis.com/auth/chat.customemojis`
      *
      * Create a request for the method "customEmojis.get".
      *
@@ -456,7 +468,11 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * information, see [Learn about custom emojis in Google
        * Chat](https://support.google.com/chat/answer/12800149) and [Manage custom emoji
        * permissions](https://support.google.com/a/answer/12850085). Requires [user
-       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+       * with one of the following [authorization
+       * scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes): -
+       * `https://www.googleapis.com/auth/chat.customemojis.readonly` -
+       * `https://www.googleapis.com/auth/chat.customemojis`
        *
        * Create a request for the method "customEmojis.get".
        *
@@ -587,7 +603,11 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
      * For more information, see [Learn about custom emojis in Google
      * Chat](https://support.google.com/chat/answer/12800149) and [Manage custom emoji
      * permissions](https://support.google.com/a/answer/12850085). Requires [user
-     * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+     * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+     * with one of the following [authorization
+     * scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes): -
+     * `https://www.googleapis.com/auth/chat.customemojis.readonly` -
+     * `https://www.googleapis.com/auth/chat.customemojis`
      *
      * Create a request for the method "customEmojis.list".
      *
@@ -612,7 +632,11 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * organization. For more information, see [Learn about custom emojis in Google
        * Chat](https://support.google.com/chat/answer/12800149) and [Manage custom emoji
        * permissions](https://support.google.com/a/answer/12850085). Requires [user
-       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+       * with one of the following [authorization
+       * scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes): -
+       * `https://www.googleapis.com/auth/chat.customemojis.readonly` -
+       * `https://www.googleapis.com/auth/chat.customemojis`
        *
        * Create a request for the method "customEmojis.list".
        *
@@ -965,10 +989,14 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
     /**
      * Uploads an attachment. For an example, see [Upload media as a file
      * attachment](https://developers.google.com/workspace/chat/upload-media-attachments). Requires user
-     * [authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
-     * You can upload attachments up to 200 MB. Certain file types aren't supported. For details, see
-     * [File types blocked by Google Chat](https://support.google.com/chat/answer/7651457?&co=GENIE.Plat
-     * form%3DDesktop#File%20types%20blocked%20in%20Google%20Chat).
+     * [authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+     * with one of the following [authorization
+     * scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes): -
+     * `https://www.googleapis.com/auth/chat.messages.create` -
+     * `https://www.googleapis.com/auth/chat.messages` - `https://www.googleapis.com/auth/chat.import`
+     * (import mode spaces only) You can upload attachments up to 200 MB. Certain file types aren't
+     * supported. For details, see [File types blocked by Google Chat](https://support.google.com/chat/a
+     * nswer/7651457?&co=GENIE.Platform%3DDesktop#File%20types%20blocked%20in%20Google%20Chat).
      *
      * Create a request for the method "media.upload".
      *
@@ -989,10 +1017,14 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
     /**
      * Uploads an attachment. For an example, see [Upload media as a file
      * attachment](https://developers.google.com/workspace/chat/upload-media-attachments). Requires user
-     * [authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
-     * You can upload attachments up to 200 MB. Certain file types aren't supported. For details, see
-     * [File types blocked by Google Chat](https://support.google.com/chat/answer/7651457?&co=GENIE.Plat
-     * form%3DDesktop#File%20types%20blocked%20in%20Google%20Chat).
+     * [authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+     * with one of the following [authorization
+     * scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes): -
+     * `https://www.googleapis.com/auth/chat.messages.create` -
+     * `https://www.googleapis.com/auth/chat.messages` - `https://www.googleapis.com/auth/chat.import`
+     * (import mode spaces only) You can upload attachments up to 200 MB. Certain file types aren't
+     * supported. For details, see [File types blocked by Google Chat](https://support.google.com/chat/a
+     * nswer/7651457?&co=GENIE.Platform%3DDesktop#File%20types%20blocked%20in%20Google%20Chat).
      *
      * Create a request for the method "media.upload".
      *
@@ -1027,9 +1059,13 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * Uploads an attachment. For an example, see [Upload media as a file
        * attachment](https://developers.google.com/workspace/chat/upload-media-attachments). Requires
        * user [authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
-       * user). You can upload attachments up to 200 MB. Certain file types aren't supported. For
-       * details, see [File types blocked by Google Chat](https://support.google.com/chat/answer/7651457
-       * ?&co=GENIE.Platform%3DDesktop#File%20types%20blocked%20in%20Google%20Chat).
+       * user) with one of the following [authorization
+       * scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes): -
+       * `https://www.googleapis.com/auth/chat.messages.create` -
+       * `https://www.googleapis.com/auth/chat.messages` - `https://www.googleapis.com/auth/chat.import`
+       * (import mode spaces only) You can upload attachments up to 200 MB. Certain file types aren't
+       * supported. For details, see [File types blocked by Google Chat](https://support.google.com/chat
+       * /answer/7651457?&co=GENIE.Platform%3DDesktop#File%20types%20blocked%20in%20Google%20Chat).
        *
        * Create a request for the method "media.upload".
        *
@@ -1057,9 +1093,13 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * Uploads an attachment. For an example, see [Upload media as a file
        * attachment](https://developers.google.com/workspace/chat/upload-media-attachments). Requires
        * user [authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
-       * user). You can upload attachments up to 200 MB. Certain file types aren't supported. For
-       * details, see [File types blocked by Google Chat](https://support.google.com/chat/answer/7651457
-       * ?&co=GENIE.Platform%3DDesktop#File%20types%20blocked%20in%20Google%20Chat).
+       * user) with one of the following [authorization
+       * scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes): -
+       * `https://www.googleapis.com/auth/chat.messages.create` -
+       * `https://www.googleapis.com/auth/chat.messages` - `https://www.googleapis.com/auth/chat.import`
+       * (import mode spaces only) You can upload attachments up to 200 MB. Certain file types aren't
+       * supported. For details, see [File types blocked by Google Chat](https://support.google.com/chat
+       * /answer/7651457?&co=GENIE.Platform%3DDesktop#File%20types%20blocked%20in%20Google%20Chat).
        *
        * Create a request for the method "media.upload".
        *
@@ -1198,10 +1238,12 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
     /**
      * Completes the [import process](https://developers.google.com/workspace/chat/import-data) for the
-     * specified space and makes it visible to users. Requires [app
-     * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) and
-     * domain-wide delegation. For more information, see [Authorize Google Chat apps to import
-     * data](https://developers.google.com/workspace/chat/authorize-import).
+     * specified space and makes it visible to users. Requires [user
+     * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+     * and domain-wide delegation with the [authorization
+     * scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes): -
+     * `https://www.googleapis.com/auth/chat.import` For more information, see [Authorize Google Chat
+     * apps to import data](https://developers.google.com/workspace/chat/authorize-import).
      *
      * Create a request for the method "spaces.completeImport".
      *
@@ -1227,10 +1269,12 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
       /**
        * Completes the [import process](https://developers.google.com/workspace/chat/import-data) for
-       * the specified space and makes it visible to users. Requires [app
-       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
-       * and domain-wide delegation. For more information, see [Authorize Google Chat apps to import
-       * data](https://developers.google.com/workspace/chat/authorize-import).
+       * the specified space and makes it visible to users. Requires [user
+       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+       * and domain-wide delegation with the [authorization
+       * scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes): -
+       * `https://www.googleapis.com/auth/chat.import` For more information, see [Authorize Google Chat
+       * apps to import data](https://developers.google.com/workspace/chat/authorize-import).
        *
        * Create a request for the method "spaces.completeImport".
        *
@@ -1342,15 +1386,20 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
      * [authentication](https://developers.google.com/workspace/chat/authenticate-authorize): - [App
      * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
      * with [administrator approval](https://support.google.com/a?p=chat-app-auth) in [Developer
-     * Preview](https://developers.google.com/workspace/preview) - [User
+     * Preview](https://developers.google.com/workspace/preview) and one of the following authorization
+     * scopes: - `https://www.googleapis.com/auth/chat.app.spaces.create` -
+     * `https://www.googleapis.com/auth/chat.app.spaces` - [User
      * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-     * When authenticating as an app, the `space.customer` field must be set in the request. Space
-     * membership upon creation depends on whether the space is created in `Import mode`: * **Import
-     * mode:** No members are created. * **All other modes:** The calling user is added as a member.
-     * This is: * The app itself when using app authentication. * The human user when using user
-     * authentication. If you receive the error message `ALREADY_EXISTS` when creating a space, try a
-     * different `displayName`. An existing space within the Google Workspace organization might already
-     * use this display name.
+     * with one of the following authorization scopes: -
+     * `https://www.googleapis.com/auth/chat.spaces.create` -
+     * `https://www.googleapis.com/auth/chat.spaces` - `https://www.googleapis.com/auth/chat.import`
+     * (import mode spaces only) When authenticating as an app, the `space.customer` field must be set
+     * in the request. Space membership upon creation depends on whether the space is created in `Import
+     * mode`: * **Import mode:** No members are created. * **All other modes:** The calling user is
+     * added as a member. This is: * The app itself when using app authentication. * The human user when
+     * using user authentication. If you receive the error message `ALREADY_EXISTS` when creating a
+     * space, try a different `displayName`. An existing space within the Google Workspace organization
+     * might already use this display name.
      *
      * Create a request for the method "spaces.create".
      *
@@ -1377,15 +1426,20 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * [authentication](https://developers.google.com/workspace/chat/authenticate-authorize): - [App
        * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
        * with [administrator approval](https://support.google.com/a?p=chat-app-auth) in [Developer
-       * Preview](https://developers.google.com/workspace/preview) - [User
+       * Preview](https://developers.google.com/workspace/preview) and one of the following
+       * authorization scopes: - `https://www.googleapis.com/auth/chat.app.spaces.create` -
+       * `https://www.googleapis.com/auth/chat.app.spaces` - [User
        * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-       * When authenticating as an app, the `space.customer` field must be set in the request. Space
-       * membership upon creation depends on whether the space is created in `Import mode`: * **Import
-       * mode:** No members are created. * **All other modes:** The calling user is added as a member.
-       * This is: * The app itself when using app authentication. * The human user when using user
-       * authentication. If you receive the error message `ALREADY_EXISTS` when creating a space, try a
-       * different `displayName`. An existing space within the Google Workspace organization might
-       * already use this display name.
+       * with one of the following authorization scopes: -
+       * `https://www.googleapis.com/auth/chat.spaces.create` -
+       * `https://www.googleapis.com/auth/chat.spaces` - `https://www.googleapis.com/auth/chat.import`
+       * (import mode spaces only) When authenticating as an app, the `space.customer` field must be set
+       * in the request. Space membership upon creation depends on whether the space is created in
+       * `Import mode`: * **Import mode:** No members are created. * **All other modes:** The calling
+       * user is added as a member. This is: * The app itself when using app authentication. * The human
+       * user when using user authentication. If you receive the error message `ALREADY_EXISTS` when
+       * creating a space, try a different `displayName`. An existing space within the Google Workspace
+       * organization might already use this display name.
        *
        * Create a request for the method "spaces.create".
        *
@@ -1495,14 +1549,17 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
      * resources—like messages posted in the space and memberships in the space—are also deleted. For an
      * example, see [Delete a space](https://developers.google.com/workspace/chat/delete-spaces).
      * Supports the following types of
-     * [authentication](https://developers.google.com/workspace/chat/authenticate-authorize): -
-     * Developer Preview: [App
+     * [authentication](https://developers.google.com/workspace/chat/authenticate-authorize): - [App
      * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
-     * with [administrator approval](https://support.google.com/a?p=chat-app-auth). Requires that the
-     * Chat app created the space using app authentication. - [User
+     * with [administrator approval](https://support.google.com/a?p=chat-app-auth) in [Developer
+     * Preview](https://developers.google.com/workspace/preview) and the authorization scope: -
+     * `https://www.googleapis.com/auth/chat.app.delete` (only in spaces the app created) - [User
      * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-     * You can authenticate and authorize this method with administrator privileges by setting the
-     * `use_admin_access` field in the request.
+     * with one of the following authorization scopes: - `https://www.googleapis.com/auth/chat.delete` -
+     * `https://www.googleapis.com/auth/chat.import` (import mode spaces only) - User authentication
+     * grants administrator privileges when an administrator account authenticates, `use_admin_access`
+     * is `true`, and the following authorization scope is used: -
+     * `https://www.googleapis.com/auth/chat.admin.delete`
      *
      * Create a request for the method "spaces.delete".
      *
@@ -1530,14 +1587,17 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * resources—like messages posted in the space and memberships in the space—are also deleted. For
        * an example, see [Delete a space](https://developers.google.com/workspace/chat/delete-spaces).
        * Supports the following types of
-       * [authentication](https://developers.google.com/workspace/chat/authenticate-authorize): -
-       * Developer Preview: [App
+       * [authentication](https://developers.google.com/workspace/chat/authenticate-authorize): - [App
        * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
-       * with [administrator approval](https://support.google.com/a?p=chat-app-auth). Requires that the
-       * Chat app created the space using app authentication. - [User
+       * with [administrator approval](https://support.google.com/a?p=chat-app-auth) in [Developer
+       * Preview](https://developers.google.com/workspace/preview) and the authorization scope: -
+       * `https://www.googleapis.com/auth/chat.app.delete` (only in spaces the app created) - [User
        * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-       * You can authenticate and authorize this method with administrator privileges by setting the
-       * `use_admin_access` field in the request.
+       * with one of the following authorization scopes: - `https://www.googleapis.com/auth/chat.delete`
+       * - `https://www.googleapis.com/auth/chat.import` (import mode spaces only) - User authentication
+       * grants administrator privileges when an administrator account authenticates, `use_admin_access`
+       * is `true`, and the following authorization scope is used: -
+       * `https://www.googleapis.com/auth/chat.admin.delete`
        *
        * Create a request for the method "spaces.delete".
        *
@@ -1681,12 +1741,15 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
      * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app),
      * returns the direct message space between the specified user and the calling Chat app. With [user
      * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user),
-     * returns the direct message space between the specified user and the authenticated user. //
-     * Supports the following types of
+     * returns the direct message space between the specified user and the authenticated user. Supports
+     * the following types of
      * [authentication](https://developers.google.com/workspace/chat/authenticate-authorize): - [App
-     * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) -
-     * [User authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
-     * user)
+     * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+     * with the authorization scope: - `https://www.googleapis.com/auth/chat.bot` - [User
+     * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+     * with one of the following authorization scopes: -
+     * `https://www.googleapis.com/auth/chat.spaces.readonly` -
+     * `https://www.googleapis.com/auth/chat.spaces`
      *
      * Create a request for the method "spaces.findDirectMessage".
      *
@@ -1713,11 +1776,14 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * returns the direct message space between the specified user and the calling Chat app. With
        * [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
        * user), returns the direct message space between the specified user and the authenticated user.
-       * // Supports the following types of
+       * Supports the following types of
        * [authentication](https://developers.google.com/workspace/chat/authenticate-authorize): - [App
-       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) -
-       * [User authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
-       * user)
+       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+       * with the authorization scope: - `https://www.googleapis.com/auth/chat.bot` - [User
+       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+       * with one of the following authorization scopes: -
+       * `https://www.googleapis.com/auth/chat.spaces.readonly` -
+       * `https://www.googleapis.com/auth/chat.spaces`
        *
        * Create a request for the method "spaces.findDirectMessage".
        *
@@ -1853,10 +1919,18 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
      * Returns details about a space. For an example, see [Get details about a
      * space](https://developers.google.com/workspace/chat/get-spaces). Supports the following types of
      * [authentication](https://developers.google.com/workspace/chat/authenticate-authorize): - [App
-     * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) -
-     * [User authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
-     * user) You can authenticate and authorize this method with administrator privileges by setting the
-     * `use_admin_access` field in the request.
+     * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+     * with one of the following authorization scopes: - `https://www.googleapis.com/auth/chat.bot` -
+     * `https://www.googleapis.com/auth/chat.app.spaces` with [administrator
+     * approval](https://support.google.com/a?p=chat-app-auth) - [User
+     * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+     * with one of the following authorization scopes: -
+     * `https://www.googleapis.com/auth/chat.spaces.readonly` -
+     * `https://www.googleapis.com/auth/chat.spaces` - User authentication grants administrator
+     * privileges when an administrator account authenticates, `use_admin_access` is `true`, and one of
+     * the following authorization scopes is used: -
+     * `https://www.googleapis.com/auth/chat.admin.spaces.readonly` -
+     * `https://www.googleapis.com/auth/chat.admin.spaces`
      *
      * Create a request for the method "spaces.get".
      *
@@ -1884,9 +1958,17 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * space](https://developers.google.com/workspace/chat/get-spaces). Supports the following types
        * of [authentication](https://developers.google.com/workspace/chat/authenticate-authorize): -
        * [App authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
-       * app) - [User authentication](https://developers.google.com/workspace/chat/authenticate-
-       * authorize-chat-user) You can authenticate and authorize this method with administrator
-       * privileges by setting the `use_admin_access` field in the request.
+       * app) with one of the following authorization scopes: -
+       * `https://www.googleapis.com/auth/chat.bot` - `https://www.googleapis.com/auth/chat.app.spaces`
+       * with [administrator approval](https://support.google.com/a?p=chat-app-auth) - [User
+       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+       * with one of the following authorization scopes: -
+       * `https://www.googleapis.com/auth/chat.spaces.readonly` -
+       * `https://www.googleapis.com/auth/chat.spaces` - User authentication grants administrator
+       * privileges when an administrator account authenticates, `use_admin_access` is `true`, and one
+       * of the following authorization scopes is used: -
+       * `https://www.googleapis.com/auth/chat.admin.spaces.readonly` -
+       * `https://www.googleapis.com/auth/chat.admin.spaces`
        *
        * Create a request for the method "spaces.get".
        *
@@ -2044,11 +2126,14 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
      * is sent. For an example, see [List spaces](https://developers.google.com/workspace/chat/list-
      * spaces). Supports the following types of
      * [authentication](https://developers.google.com/workspace/chat/authenticate-authorize): - [App
-     * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) -
-     * [User authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
-     * user) To list all named spaces by Google Workspace organization, use the [`spaces.search()`](http
-     * s://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/search) method using
-     * Workspace administrator privileges instead.
+     * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+     * with the authorization scope: - `https://www.googleapis.com/auth/chat.bot` - [User
+     * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+     * with one of the following authorization scopes: -
+     * `https://www.googleapis.com/auth/chat.spaces.readonly` -
+     * `https://www.googleapis.com/auth/chat.spaces` To list all named spaces by Google Workspace
+     * organization, use the [`spaces.search()`](https://developers.google.com/workspace/chat/api/refere
+     * nce/rest/v1/spaces/search) method using Workspace administrator privileges instead.
      *
      * Create a request for the method "spaces.list".
      *
@@ -2073,10 +2158,13 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * spaces](https://developers.google.com/workspace/chat/list-spaces). Supports the following types
        * of [authentication](https://developers.google.com/workspace/chat/authenticate-authorize): -
        * [App authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
-       * app) - [User authentication](https://developers.google.com/workspace/chat/authenticate-
-       * authorize-chat-user) To list all named spaces by Google Workspace organization, use the [`space
-       * s.search()`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/search)
-       * method using Workspace administrator privileges instead.
+       * app) with the authorization scope: - `https://www.googleapis.com/auth/chat.bot` - [User
+       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+       * with one of the following authorization scopes: -
+       * `https://www.googleapis.com/auth/chat.spaces.readonly` -
+       * `https://www.googleapis.com/auth/chat.spaces` To list all named spaces by Google Workspace
+       * organization, use the [`spaces.search()`](https://developers.google.com/workspace/chat/api/refe
+       * rence/rest/v1/spaces/search) method using Workspace administrator privileges instead.
        *
        * Create a request for the method "spaces.list".
        *
@@ -2261,10 +2349,14 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
      * [authentication](https://developers.google.com/workspace/chat/authenticate-authorize): - [App
      * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
      * with [administrator approval](https://support.google.com/a?p=chat-app-auth) in [Developer
-     * Preview](https://developers.google.com/workspace/preview) - [User
+     * Preview](https://developers.google.com/workspace/preview) and one of the following authorization
+     * scopes: - `https://www.googleapis.com/auth/chat.app.spaces` - [User
      * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-     * You can authenticate and authorize this method with administrator privileges by setting the
-     * `use_admin_access` field in the request.
+     * with one of the following authorization scopes: - `https://www.googleapis.com/auth/chat.spaces` -
+     * `https://www.googleapis.com/auth/chat.import` (import mode spaces only) - User authentication
+     * grants administrator privileges when an administrator account authenticates, `use_admin_access`
+     * is `true`, and the following authorization scopes is used: -
+     * `https://www.googleapis.com/auth/chat.admin.spaces`
      *
      * Create a request for the method "spaces.patch".
      *
@@ -2301,10 +2393,14 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * [authentication](https://developers.google.com/workspace/chat/authenticate-authorize): - [App
        * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
        * with [administrator approval](https://support.google.com/a?p=chat-app-auth) in [Developer
-       * Preview](https://developers.google.com/workspace/preview) - [User
+       * Preview](https://developers.google.com/workspace/preview) and one of the following
+       * authorization scopes: - `https://www.googleapis.com/auth/chat.app.spaces` - [User
        * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-       * You can authenticate and authorize this method with administrator privileges by setting the
-       * `use_admin_access` field in the request.
+       * with one of the following authorization scopes: - `https://www.googleapis.com/auth/chat.spaces`
+       * - `https://www.googleapis.com/auth/chat.import` (import mode spaces only) - User authentication
+       * grants administrator privileges when an administrator account authenticates, `use_admin_access`
+       * is `true`, and the following authorization scopes is used: -
+       * `https://www.googleapis.com/auth/chat.admin.spaces`
        *
        * Create a request for the method "spaces.patch".
        *
@@ -2589,7 +2685,11 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
      * Returns a list of spaces in a Google Workspace organization based on an administrator's search.
      * Requires [user authentication with administrator
      * privileges](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user#admin-
-     * privileges). In the request, set `use_admin_access` to `true`.
+     * privileges) and one of the following [authorization
+     * scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes): -
+     * `https://www.googleapis.com/auth/chat.admin.spaces.readonly` -
+     * `https://www.googleapis.com/auth/chat.admin.spaces` In the request, set `use_admin_access` to
+     * `true`.
      *
      * Create a request for the method "spaces.search".
      *
@@ -2612,7 +2712,11 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * Returns a list of spaces in a Google Workspace organization based on an administrator's search.
        * Requires [user authentication with administrator
        * privileges](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
-       * user#admin-privileges). In the request, set `use_admin_access` to `true`.
+       * user#admin-privileges) and one of the following [authorization
+       * scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes): -
+       * `https://www.googleapis.com/auth/chat.admin.spaces.readonly` -
+       * `https://www.googleapis.com/auth/chat.admin.spaces` In the request, set `use_admin_access` to
+       * `true`.
        *
        * Create a request for the method "spaces.search".
        *
@@ -2969,7 +3073,11 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
      * receive the error message `ALREADY_EXISTS` when setting up a space, try a different
      * `displayName`. An existing space within the Google Workspace organization might already use this
      * display name. Requires [user
-     * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+     * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+     * with one of the following [authorization
+     * scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes): -
+     * `https://www.googleapis.com/auth/chat.spaces.create` -
+     * `https://www.googleapis.com/auth/chat.spaces`
      *
      * Create a request for the method "spaces.setup".
      *
@@ -3021,7 +3129,10 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * error message `ALREADY_EXISTS` when setting up a space, try a different `displayName`. An
        * existing space within the Google Workspace organization might already use this display name.
        * Requires [user authentication](https://developers.google.com/workspace/chat/authenticate-
-       * authorize-chat-user).
+       * authorize-chat-user) with one of the following [authorization
+       * scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes): -
+       * `https://www.googleapis.com/auth/chat.spaces.create` -
+       * `https://www.googleapis.com/auth/chat.spaces`
        *
        * Create a request for the method "spaces.setup".
        *
@@ -3127,15 +3238,21 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * [authentication](https://developers.google.com/workspace/chat/authenticate-authorize): - [App
        * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
        * with [administrator approval](https://support.google.com/a?p=chat-app-auth) in [Developer
-       * Preview](https://developers.google.com/workspace/preview) - [User
+       * Preview](https://developers.google.com/workspace/preview) and the authorization scope: -
+       * `https://www.googleapis.com/auth/chat.app.memberships` - [User
        * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-       * You can authenticate and authorize this method with administrator privileges by setting the
-       * `use_admin_access` field in the request. For example usage, see: - [Invite or add a user to a
-       * space](https://developers.google.com/workspace/chat/create-members#create-user-membership). -
-       * [Invite or add a Google Group to a space](https://developers.google.com/workspace/chat/create-
-       * members#create-group-membership). - [Add the Chat app to a
-       * space](https://developers.google.com/workspace/chat/create-members#create-membership-calling-
-       * api).
+       * with one of the following authorization scopes: -
+       * `https://www.googleapis.com/auth/chat.memberships` -
+       * `https://www.googleapis.com/auth/chat.memberships.app` (to add the calling app to the space) -
+       * `https://www.googleapis.com/auth/chat.import` (import mode spaces only) - User authentication
+       * grants administrator privileges when an administrator account authenticates, `use_admin_access`
+       * is `true`, and the following authorization scope is used: -
+       * `https://www.googleapis.com/auth/chat.admin.memberships` For example usage, see: - [Invite or add
+       * a user to a space](https://developers.google.com/workspace/chat/create-members#create-user-
+       * membership). - [Invite or add a Google Group to a
+       * space](https://developers.google.com/workspace/chat/create-members#create-group-membership). -
+       * [Add the Chat app to a space](https://developers.google.com/workspace/chat/create-members#create-
+       * membership-calling-api).
        *
        * Create a request for the method "members.create".
        *
@@ -3168,15 +3285,21 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * [authentication](https://developers.google.com/workspace/chat/authenticate-authorize): - [App
          * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
          * with [administrator approval](https://support.google.com/a?p=chat-app-auth) in [Developer
-         * Preview](https://developers.google.com/workspace/preview) - [User
+         * Preview](https://developers.google.com/workspace/preview) and the authorization scope: -
+         * `https://www.googleapis.com/auth/chat.app.memberships` - [User
          * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-         * You can authenticate and authorize this method with administrator privileges by setting the
-         * `use_admin_access` field in the request. For example usage, see: - [Invite or add a user to a
-         * space](https://developers.google.com/workspace/chat/create-members#create-user-membership). -
-         * [Invite or add a Google Group to a space](https://developers.google.com/workspace/chat/create-
-         * members#create-group-membership). - [Add the Chat app to a
-         * space](https://developers.google.com/workspace/chat/create-members#create-membership-calling-
-         * api).
+         * with one of the following authorization scopes: -
+         * `https://www.googleapis.com/auth/chat.memberships` -
+         * `https://www.googleapis.com/auth/chat.memberships.app` (to add the calling app to the space) -
+         * `https://www.googleapis.com/auth/chat.import` (import mode spaces only) - User authentication
+         * grants administrator privileges when an administrator account authenticates, `use_admin_access`
+         * is `true`, and the following authorization scope is used: -
+         * `https://www.googleapis.com/auth/chat.admin.memberships` For example usage, see: - [Invite or
+         * add a user to a space](https://developers.google.com/workspace/chat/create-members#create-user-
+         * membership). - [Invite or add a Google Group to a
+         * space](https://developers.google.com/workspace/chat/create-members#create-group-membership). -
+         * [Add the Chat app to a space](https://developers.google.com/workspace/chat/create-
+         * members#create-membership-calling-api).
          *
          * Create a request for the method "members.create".
          *
@@ -3330,11 +3453,17 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * of [authentication](https://developers.google.com/workspace/chat/authenticate-authorize): - [App
        * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
        * with [administrator approval](https://support.google.com/a?p=chat-app-auth) in [Developer
-       * Preview](https://developers.google.com/workspace/preview) - [User
+       * Preview](https://developers.google.com/workspace/preview) and the authorization scope: -
+       * `https://www.googleapis.com/auth/chat.app.memberships` - [User
        * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-       * You can authenticate and authorize this method with administrator privileges by setting the
-       * `use_admin_access` field in the request. To delete memberships for space managers, the requester
-       * must be a space manager. If you're using [app
+       * with one of the following authorization scopes: -
+       * `https://www.googleapis.com/auth/chat.memberships` -
+       * `https://www.googleapis.com/auth/chat.memberships.app` (to remove the calling app from the space)
+       * - `https://www.googleapis.com/auth/chat.import` (import mode spaces only) - User authentication
+       * grants administrator privileges when an administrator account authenticates, `use_admin_access`
+       * is `true`, and the following authorization scope is used: -
+       * `https://www.googleapis.com/auth/chat.admin.memberships` To delete memberships for space
+       * managers, the requester must be a space manager. If you're using [app
        * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) the
        * application must be the space creator.
        *
@@ -3375,11 +3504,17 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * types of [authentication](https://developers.google.com/workspace/chat/authenticate-authorize):
          * - [App authentication](https://developers.google.com/workspace/chat/authenticate-authorize-
          * chat-app) with [administrator approval](https://support.google.com/a?p=chat-app-auth) in
-         * [Developer Preview](https://developers.google.com/workspace/preview) - [User
+         * [Developer Preview](https://developers.google.com/workspace/preview) and the authorization
+         * scope: - `https://www.googleapis.com/auth/chat.app.memberships` - [User
          * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-         * You can authenticate and authorize this method with administrator privileges by setting the
-         * `use_admin_access` field in the request. To delete memberships for space managers, the
-         * requester must be a space manager. If you're using [app
+         * with one of the following authorization scopes: -
+         * `https://www.googleapis.com/auth/chat.memberships` -
+         * `https://www.googleapis.com/auth/chat.memberships.app` (to remove the calling app from the
+         * space) - `https://www.googleapis.com/auth/chat.import` (import mode spaces only) - User
+         * authentication grants administrator privileges when an administrator account authenticates,
+         * `use_admin_access` is `true`, and the following authorization scope is used: -
+         * `https://www.googleapis.com/auth/chat.admin.memberships` To delete memberships for space
+         * managers, the requester must be a space manager. If you're using [app
          * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
          * the application must be the space creator.
          *
@@ -3568,10 +3703,15 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * Chat app's membership](https://developers.google.com/workspace/chat/get-members). Supports the
        * following types of [authentication](https://developers.google.com/workspace/chat/authenticate-
        * authorize): - [App authentication](https://developers.google.com/workspace/chat/authenticate-
-       * authorize-chat-app) - [User
-       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-       * You can authenticate and authorize this method with administrator privileges by setting the
-       * `use_admin_access` field in the request.
+       * authorize-chat-app) with the authorization scope: - `https://www.googleapis.com/auth/chat.bot` -
+       * [User authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
+       * user) with one of the following authorization scopes: -
+       * `https://www.googleapis.com/auth/chat.memberships.readonly` -
+       * `https://www.googleapis.com/auth/chat.memberships` - User authentication grants administrator
+       * privileges when an administrator account authenticates, `use_admin_access` is `true`, and one of
+       * the following authorization scopes is used: -
+       * `https://www.googleapis.com/auth/chat.admin.memberships.readonly` -
+       * `https://www.googleapis.com/auth/chat.admin.memberships`
        *
        * Create a request for the method "members.get".
        *
@@ -3604,10 +3744,15 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * Chat app's membership](https://developers.google.com/workspace/chat/get-members). Supports the
          * following types of [authentication](https://developers.google.com/workspace/chat/authenticate-
          * authorize): - [App authentication](https://developers.google.com/workspace/chat/authenticate-
-         * authorize-chat-app) - [User
-         * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-         * You can authenticate and authorize this method with administrator privileges by setting the
-         * `use_admin_access` field in the request.
+         * authorize-chat-app) with the authorization scope: - `https://www.googleapis.com/auth/chat.bot`
+         * - [User authentication](https://developers.google.com/workspace/chat/authenticate-authorize-
+         * chat-user) with one of the following authorization scopes: -
+         * `https://www.googleapis.com/auth/chat.memberships.readonly` -
+         * `https://www.googleapis.com/auth/chat.memberships` - User authentication grants administrator
+         * privileges when an administrator account authenticates, `use_admin_access` is `true`, and one
+         * of the following authorization scopes is used: -
+         * `https://www.googleapis.com/auth/chat.admin.memberships.readonly` -
+         * `https://www.googleapis.com/auth/chat.admin.memberships`
          *
          * Create a request for the method "members.get".
          *
@@ -3789,9 +3934,16 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * lists memberships in spaces that the authenticated user has access to. Supports the following
        * types of [authentication](https://developers.google.com/workspace/chat/authenticate-authorize): -
        * [App authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
-       * app) - [User authentication](https://developers.google.com/workspace/chat/authenticate-authorize-
-       * chat-user) You can authenticate and authorize this method with administrator privileges by
-       * setting the `use_admin_access` field in the request.
+       * app) with the authorization scope: - `https://www.googleapis.com/auth/chat.bot` - [User
+       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+       * with one of the following authorization scopes: -
+       * `https://www.googleapis.com/auth/chat.memberships.readonly` -
+       * `https://www.googleapis.com/auth/chat.memberships` -
+       * `https://www.googleapis.com/auth/chat.import` (import mode spaces only) - User authentication
+       * grants administrator privileges when an administrator account authenticates, `use_admin_access`
+       * is `true`, and one of the following authorization scopes is used: -
+       * `https://www.googleapis.com/auth/chat.admin.memberships.readonly` -
+       * `https://www.googleapis.com/auth/chat.admin.memberships`
        *
        * Create a request for the method "members.list".
        *
@@ -3825,9 +3977,16 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * lists memberships in spaces that the authenticated user has access to. Supports the following
          * types of [authentication](https://developers.google.com/workspace/chat/authenticate-authorize):
          * - [App authentication](https://developers.google.com/workspace/chat/authenticate-authorize-
-         * chat-app) - [User authentication](https://developers.google.com/workspace/chat/authenticate-
-         * authorize-chat-user) You can authenticate and authorize this method with administrator
-         * privileges by setting the `use_admin_access` field in the request.
+         * chat-app) with the authorization scope: - `https://www.googleapis.com/auth/chat.bot` - [User
+         * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+         * with one of the following authorization scopes: -
+         * `https://www.googleapis.com/auth/chat.memberships.readonly` -
+         * `https://www.googleapis.com/auth/chat.memberships` -
+         * `https://www.googleapis.com/auth/chat.import` (import mode spaces only) - User authentication
+         * grants administrator privileges when an administrator account authenticates, `use_admin_access`
+         * is `true`, and one of the following authorization scopes is used: -
+         * `https://www.googleapis.com/auth/chat.admin.memberships.readonly` -
+         * `https://www.googleapis.com/auth/chat.admin.memberships`
          *
          * Create a request for the method "members.list".
          *
@@ -4158,14 +4317,18 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
       /**
        * Updates a membership. For an example, see [Update a user's membership in a
        * space](https://developers.google.com/workspace/chat/update-members). Supports the following types
-       * of [authentication](https://developers.google.com/workspace/chat/authenticate-authorize): -
-       * Developer Preview: [App
+       * of [authentication](https://developers.google.com/workspace/chat/authenticate-authorize): - [App
        * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
-       * with [administrator approval](https://support.google.com/a?p=chat-app-auth). Requires that the
-       * Chat app created the space using app authentication. - [User
+       * with [administrator approval](https://support.google.com/a?p=chat-app-auth) in [Developer
+       * Preview](https://developers.google.com/workspace/preview) and the authorization scope: -
+       * `https://www.googleapis.com/auth/chat.app.memberships` (only in spaces the app created) - [User
        * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-       * You can authenticate and authorize this method with administrator privileges by setting the
-       * `use_admin_access` field in the request.
+       * with one of the following authorization scopes: -
+       * `https://www.googleapis.com/auth/chat.memberships` -
+       * `https://www.googleapis.com/auth/chat.import` (import mode spaces only) - User authentication
+       * grants administrator privileges when an administrator account authenticates, `use_admin_access`
+       * is `true`, and the following authorization scope is used: -
+       * `https://www.googleapis.com/auth/chat.admin.memberships`
        *
        * Create a request for the method "members.patch".
        *
@@ -4194,13 +4357,17 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * Updates a membership. For an example, see [Update a user's membership in a
          * space](https://developers.google.com/workspace/chat/update-members). Supports the following
          * types of [authentication](https://developers.google.com/workspace/chat/authenticate-authorize):
-         * - Developer Preview: [App
-         * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
-         * with [administrator approval](https://support.google.com/a?p=chat-app-auth). Requires that the
-         * Chat app created the space using app authentication. - [User
-         * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-         * You can authenticate and authorize this method with administrator privileges by setting the
-         * `use_admin_access` field in the request.
+         * - [App authentication](https://developers.google.com/workspace/chat/authenticate-authorize-
+         * chat-app) with [administrator approval](https://support.google.com/a?p=chat-app-auth) in
+         * [Developer Preview](https://developers.google.com/workspace/preview) and the authorization
+         * scope: - `https://www.googleapis.com/auth/chat.app.memberships` (only in spaces the app
+         * created) - [User authentication](https://developers.google.com/workspace/chat/authenticate-
+         * authorize-chat-user) with one of the following authorization scopes: -
+         * `https://www.googleapis.com/auth/chat.memberships` -
+         * `https://www.googleapis.com/auth/chat.import` (import mode spaces only) - User authentication
+         * grants administrator privileges when an administrator account authenticates, `use_admin_access`
+         * is `true`, and the following authorization scope is used: -
+         * `https://www.googleapis.com/auth/chat.admin.memberships`
          *
          * Create a request for the method "members.patch".
          *
@@ -4393,14 +4560,19 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
       /**
        * Creates a message in a Google Chat space. For an example, see [Send a
-       * message](https://developers.google.com/workspace/chat/create-messages). The `create()` method
-       * requires either [user authentication](https://developers.google.com/workspace/chat/authenticate-
-       * authorize-chat-user) or [app
-       * authentication](https://developers.google.com/workspace/chat/authorize-import). Chat attributes
-       * the message sender differently depending on the type of authentication that you use in your
-       * request. The following image shows how Chat attributes a message when you use app authentication.
-       * Chat displays the Chat app as the message sender. The content of the message can contain text
-       * (`text`), cards (`cardsV2`), and accessory widgets (`accessoryWidgets`). ![Message sent with app
+       * message](https://developers.google.com/workspace/chat/create-messages). Supports the following
+       * types of [authentication](https://developers.google.com/workspace/chat/authenticate-authorize): -
+       * [App authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
+       * app) with the authorization scope: - `https://www.googleapis.com/auth/chat.bot` - [User
+       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+       * with one of the following authorization scopes: -
+       * `https://www.googleapis.com/auth/chat.messages.create` -
+       * `https://www.googleapis.com/auth/chat.messages` - `https://www.googleapis.com/auth/chat.import`
+       * (import mode spaces only) Chat attributes the message sender differently depending on the type of
+       * authentication that you use in your request. The following image shows how Chat attributes a
+       * message when you use app authentication. Chat displays the Chat app as the message sender. The
+       * content of the message can contain text (`text`), cards (`cardsV2`), and accessory widgets
+       * (`accessoryWidgets`). ![Message sent with app
        * authentication](https://developers.google.com/workspace/chat/images/message-app-auth.svg) The
        * following image shows how Chat attributes a message when you use user authentication. Chat
        * displays the user as the message sender and attributes the Chat app to the message by displaying
@@ -4435,15 +4607,19 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
         /**
          * Creates a message in a Google Chat space. For an example, see [Send a
-         * message](https://developers.google.com/workspace/chat/create-messages). The `create()` method
-         * requires either [user
+         * message](https://developers.google.com/workspace/chat/create-messages). Supports the following
+         * types of [authentication](https://developers.google.com/workspace/chat/authenticate-authorize):
+         * - [App authentication](https://developers.google.com/workspace/chat/authenticate-authorize-
+         * chat-app) with the authorization scope: - `https://www.googleapis.com/auth/chat.bot` - [User
          * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
-         * or [app authentication](https://developers.google.com/workspace/chat/authorize-import). Chat
-         * attributes the message sender differently depending on the type of authentication that you use
-         * in your request. The following image shows how Chat attributes a message when you use app
-         * authentication. Chat displays the Chat app as the message sender. The content of the message
-         * can contain text (`text`), cards (`cardsV2`), and accessory widgets (`accessoryWidgets`).
-         * ![Message sent with app
+         * with one of the following authorization scopes: -
+         * `https://www.googleapis.com/auth/chat.messages.create` -
+         * `https://www.googleapis.com/auth/chat.messages` - `https://www.googleapis.com/auth/chat.import`
+         * (import mode spaces only) Chat attributes the message sender differently depending on the type
+         * of authentication that you use in your request. The following image shows how Chat attributes a
+         * message when you use app authentication. Chat displays the Chat app as the message sender. The
+         * content of the message can contain text (`text`), cards (`cardsV2`), and accessory widgets
+         * (`accessoryWidgets`). ![Message sent with app
          * authentication](https://developers.google.com/workspace/chat/images/message-app-auth.svg) The
          * following image shows how Chat attributes a message when you use user authentication. Chat
          * displays the user as the message sender and attributes the Chat app to the message by
@@ -4695,9 +4871,11 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * message](https://developers.google.com/workspace/chat/delete-messages). Supports the following
        * types of [authentication](https://developers.google.com/workspace/chat/authenticate-authorize): -
        * [App authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
-       * app) - [User authentication](https://developers.google.com/workspace/chat/authenticate-authorize-
-       * chat-user) When using app authentication, requests can only delete messages created by the
-       * calling Chat app.
+       * app) with the authorization scope: - `https://www.googleapis.com/auth/chat.bot` - [User
+       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+       * with one of the following authorization scopes: - `https://www.googleapis.com/auth/chat.messages`
+       * - `https://www.googleapis.com/auth/chat.import` (import mode spaces only) When using app
+       * authentication, requests can only delete messages created by the calling Chat app.
        *
        * Create a request for the method "messages.delete".
        *
@@ -4728,9 +4906,12 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * message](https://developers.google.com/workspace/chat/delete-messages). Supports the following
          * types of [authentication](https://developers.google.com/workspace/chat/authenticate-authorize):
          * - [App authentication](https://developers.google.com/workspace/chat/authenticate-authorize-
-         * chat-app) - [User authentication](https://developers.google.com/workspace/chat/authenticate-
-         * authorize-chat-user) When using app authentication, requests can only delete messages created
-         * by the calling Chat app.
+         * chat-app) with the authorization scope: - `https://www.googleapis.com/auth/chat.bot` - [User
+         * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+         * with one of the following authorization scopes: -
+         * `https://www.googleapis.com/auth/chat.messages` - `https://www.googleapis.com/auth/chat.import`
+         * (import mode spaces only) When using app authentication, requests can only delete messages
+         * created by the calling Chat app.
          *
          * Create a request for the method "messages.delete".
          *
@@ -4885,9 +5066,13 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * Returns details about a message. For an example, see [Get details about a
        * message](https://developers.google.com/workspace/chat/get-messages). Supports the following types
        * of [authentication](https://developers.google.com/workspace/chat/authenticate-authorize): - [App
-       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app) -
-       * [User authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
-       * user) Note: Might return a message from a blocked member or space.
+       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+       * with the authorization scope: - `https://www.googleapis.com/auth/chat.bot` - [User
+       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+       * with one of the following authorization scopes: -
+       * `https://www.googleapis.com/auth/chat.messages.readonly` -
+       * `https://www.googleapis.com/auth/chat.messages` Note: Might return a message from a blocked
+       * member or space.
        *
        * Create a request for the method "messages.get".
        *
@@ -4918,8 +5103,12 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * message](https://developers.google.com/workspace/chat/get-messages). Supports the following
          * types of [authentication](https://developers.google.com/workspace/chat/authenticate-authorize):
          * - [App authentication](https://developers.google.com/workspace/chat/authenticate-authorize-
-         * chat-app) - [User authentication](https://developers.google.com/workspace/chat/authenticate-
-         * authorize-chat-user) Note: Might return a message from a blocked member or space.
+         * chat-app) with the authorization scope: - `https://www.googleapis.com/auth/chat.bot` - [User
+         * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+         * with one of the following authorization scopes: -
+         * `https://www.googleapis.com/auth/chat.messages.readonly` -
+         * `https://www.googleapis.com/auth/chat.messages` Note: Might return a message from a blocked
+         * member or space.
          *
          * Create a request for the method "messages.get".
          *
@@ -5055,7 +5244,11 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * example, see [List
        * messages](https://developers.google.com/workspace/chat/api/guides/v1/messages/list). Requires
        * [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
-       * user).
+       * user) with one of the following [authorization
+       * scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes): -
+       * `https://www.googleapis.com/auth/chat.messages.readonly` -
+       * `https://www.googleapis.com/auth/chat.messages` - `https://www.googleapis.com/auth/chat.import`
+       * (import mode spaces only)
        *
        * Create a request for the method "messages.list".
        *
@@ -5085,7 +5278,11 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * `{}`. For an example, see [List
          * messages](https://developers.google.com/workspace/chat/api/guides/v1/messages/list). Requires
          * [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
-         * user).
+         * user) with one of the following [authorization
+         * scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes): -
+         * `https://www.googleapis.com/auth/chat.messages.readonly` -
+         * `https://www.googleapis.com/auth/chat.messages` - `https://www.googleapis.com/auth/chat.import`
+         * (import mode spaces only)
          *
          * Create a request for the method "messages.list".
          *
@@ -5377,9 +5574,11 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * message](https://developers.google.com/workspace/chat/update-messages). Supports the following
        * types of [authentication](https://developers.google.com/workspace/chat/authenticate-authorize): -
        * [App authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
-       * app) - [User authentication](https://developers.google.com/workspace/chat/authenticate-authorize-
-       * chat-user) When using app authentication, requests can only update messages created by the
-       * calling Chat app.
+       * app) with the authorization scope: - `https://www.googleapis.com/auth/chat.bot` - [User
+       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+       * with one of the following authorization scopes: - `https://www.googleapis.com/auth/chat.messages`
+       * - `https://www.googleapis.com/auth/chat.import` (import mode spaces only) When using app
+       * authentication, requests can only update messages created by the calling Chat app.
        *
        * Create a request for the method "messages.patch".
        *
@@ -5418,9 +5617,12 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * message](https://developers.google.com/workspace/chat/update-messages). Supports the following
          * types of [authentication](https://developers.google.com/workspace/chat/authenticate-authorize):
          * - [App authentication](https://developers.google.com/workspace/chat/authenticate-authorize-
-         * chat-app) - [User authentication](https://developers.google.com/workspace/chat/authenticate-
-         * authorize-chat-user) When using app authentication, requests can only update messages created
-         * by the calling Chat app.
+         * chat-app) with the authorization scope: - `https://www.googleapis.com/auth/chat.bot` - [User
+         * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+         * with one of the following authorization scopes: -
+         * `https://www.googleapis.com/auth/chat.messages` - `https://www.googleapis.com/auth/chat.import`
+         * (import mode spaces only) When using app authentication, requests can only update messages
+         * created by the calling Chat app.
          *
          * Create a request for the method "messages.patch".
          *
@@ -5628,9 +5830,11 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * message](https://developers.google.com/workspace/chat/update-messages). Supports the following
        * types of [authentication](https://developers.google.com/workspace/chat/authenticate-authorize): -
        * [App authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
-       * app) - [User authentication](https://developers.google.com/workspace/chat/authenticate-authorize-
-       * chat-user) When using app authentication, requests can only update messages created by the
-       * calling Chat app.
+       * app) with the authorization scope: - `https://www.googleapis.com/auth/chat.bot` - [User
+       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+       * with one of the following authorization scopes: - `https://www.googleapis.com/auth/chat.messages`
+       * - `https://www.googleapis.com/auth/chat.import` (import mode spaces only) When using app
+       * authentication, requests can only update messages created by the calling Chat app.
        *
        * Create a request for the method "messages.update".
        *
@@ -5669,9 +5873,12 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * message](https://developers.google.com/workspace/chat/update-messages). Supports the following
          * types of [authentication](https://developers.google.com/workspace/chat/authenticate-authorize):
          * - [App authentication](https://developers.google.com/workspace/chat/authenticate-authorize-
-         * chat-app) - [User authentication](https://developers.google.com/workspace/chat/authenticate-
-         * authorize-chat-user) When using app authentication, requests can only update messages created
-         * by the calling Chat app.
+         * chat-app) with the authorization scope: - `https://www.googleapis.com/auth/chat.bot` - [User
+         * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+         * with one of the following authorization scopes: -
+         * `https://www.googleapis.com/auth/chat.messages` - `https://www.googleapis.com/auth/chat.import`
+         * (import mode spaces only) When using app authentication, requests can only update messages
+         * created by the calling Chat app.
          *
          * Create a request for the method "messages.update".
          *
@@ -5898,7 +6105,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * API](https://developers.google.com/workspace/chat/api/reference/rest/v1/media/download). For an
          * example, see [Get metadata about a message
          * attachment](https://developers.google.com/workspace/chat/get-media-attachments). Requires [app
-         * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app).
+         * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+         * with the [authorization scope](https://developers.google.com/workspace/chat/authenticate-
+         * authorize#chat-api-scopes): - `https://www.googleapis.com/auth/chat.bot`
          *
          * Create a request for the method "attachments.get".
          *
@@ -5927,7 +6136,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
            * API](https://developers.google.com/workspace/chat/api/reference/rest/v1/media/download). For an
            * example, see [Get metadata about a message
            * attachment](https://developers.google.com/workspace/chat/get-media-attachments). Requires [app
-           * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app).
+           * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+           * with the [authorization scope](https://developers.google.com/workspace/chat/authenticate-
+           * authorize#chat-api-scopes): - `https://www.googleapis.com/auth/chat.bot`
            *
            * Create a request for the method "attachments.get".
            *
@@ -6073,7 +6284,13 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         /**
          * Creates a reaction and adds it to a message. For an example, see [Add a reaction to a
          * message](https://developers.google.com/workspace/chat/create-reactions). Requires [user
-         * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+         * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+         * with one of the following [authorization
+         * scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes): -
+         * `https://www.googleapis.com/auth/chat.messages.reactions.create` -
+         * `https://www.googleapis.com/auth/chat.messages.reactions` -
+         * `https://www.googleapis.com/auth/chat.messages` - `https://www.googleapis.com/auth/chat.import`
+         * (import mode spaces only)
          *
          * Create a request for the method "reactions.create".
          *
@@ -6100,7 +6317,13 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
           /**
            * Creates a reaction and adds it to a message. For an example, see [Add a reaction to a
            * message](https://developers.google.com/workspace/chat/create-reactions). Requires [user
-           * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+           * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+           * with one of the following [authorization
+           * scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes): -
+           * `https://www.googleapis.com/auth/chat.messages.reactions.create` -
+           * `https://www.googleapis.com/auth/chat.messages.reactions` -
+           * `https://www.googleapis.com/auth/chat.messages` - `https://www.googleapis.com/auth/chat.import`
+           * (import mode spaces only)
            *
            * Create a request for the method "reactions.create".
            *
@@ -6213,7 +6436,12 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         /**
          * Deletes a reaction to a message. For an example, see [Delete a
          * reaction](https://developers.google.com/workspace/chat/delete-reactions). Requires [user
-         * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+         * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+         * with one of the following [authorization
+         * scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes): -
+         * `https://www.googleapis.com/auth/chat.messages.reactions` -
+         * `https://www.googleapis.com/auth/chat.messages` - `https://www.googleapis.com/auth/chat.import`
+         * (import mode spaces only)
          *
          * Create a request for the method "reactions.delete".
          *
@@ -6240,7 +6468,12 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
           /**
            * Deletes a reaction to a message. For an example, see [Delete a
            * reaction](https://developers.google.com/workspace/chat/delete-reactions). Requires [user
-           * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+           * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+           * with one of the following [authorization
+           * scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes): -
+           * `https://www.googleapis.com/auth/chat.messages.reactions` -
+           * `https://www.googleapis.com/auth/chat.messages` - `https://www.googleapis.com/auth/chat.import`
+           * (import mode spaces only)
            *
            * Create a request for the method "reactions.delete".
            *
@@ -6354,7 +6587,13 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         /**
          * Lists reactions to a message. For an example, see [List reactions for a
          * message](https://developers.google.com/workspace/chat/list-reactions). Requires [user
-         * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+         * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+         * with one of the following [authorization
+         * scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes): -
+         * `https://www.googleapis.com/auth/chat.messages.reactions.readonly` -
+         * `https://www.googleapis.com/auth/chat.messages.reactions` -
+         * `https://www.googleapis.com/auth/chat.messages.readonly` -
+         * `https://www.googleapis.com/auth/chat.messages`
          *
          * Create a request for the method "reactions.list".
          *
@@ -6380,7 +6619,13 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
           /**
            * Lists reactions to a message. For an example, see [List reactions for a
            * message](https://developers.google.com/workspace/chat/list-reactions). Requires [user
-           * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+           * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+           * with one of the following [authorization
+           * scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes): -
+           * `https://www.googleapis.com/auth/chat.messages.reactions.readonly` -
+           * `https://www.googleapis.com/auth/chat.messages.reactions` -
+           * `https://www.googleapis.com/auth/chat.messages.readonly` -
+           * `https://www.googleapis.com/auth/chat.messages`
            *
            * Create a request for the method "reactions.list".
            *
@@ -6653,9 +6898,18 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * new message but the message was later updated, the server returns the updated `Message` resource
        * in the event payload. Note: The `permissionSettings` field is not returned in the Space object of
        * the Space event data for this request. Requires [user
-       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
-       * To get an event, the authenticated user must be a member of the space. For an example, see [Get
-       * details about an event from a Google Chat
+       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+       * with an [authorization scope](https://developers.google.com/workspace/chat/authenticate-
+       * authorize#chat-api-scopes) appropriate for reading the requested data: -
+       * `https://www.googleapis.com/auth/chat.spaces.readonly` -
+       * `https://www.googleapis.com/auth/chat.spaces` -
+       * `https://www.googleapis.com/auth/chat.messages.readonly` -
+       * `https://www.googleapis.com/auth/chat.messages` -
+       * `https://www.googleapis.com/auth/chat.messages.reactions.readonly` -
+       * `https://www.googleapis.com/auth/chat.messages.reactions` -
+       * `https://www.googleapis.com/auth/chat.memberships.readonly` -
+       * `https://www.googleapis.com/auth/chat.memberships` To get an event, the authenticated user must
+       * be a member of the space. For an example, see [Get details about an event from a Google Chat
        * space](https://developers.google.com/workspace/chat/get-space-event).
        *
        * Create a request for the method "spaceEvents.get".
@@ -6686,9 +6940,18 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * about a new message but the message was later updated, the server returns the updated `Message`
          * resource in the event payload. Note: The `permissionSettings` field is not returned in the
          * Space object of the Space event data for this request. Requires [user
-         * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
-         * To get an event, the authenticated user must be a member of the space. For an example, see [Get
-         * details about an event from a Google Chat
+         * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+         * with an [authorization scope](https://developers.google.com/workspace/chat/authenticate-
+         * authorize#chat-api-scopes) appropriate for reading the requested data: -
+         * `https://www.googleapis.com/auth/chat.spaces.readonly` -
+         * `https://www.googleapis.com/auth/chat.spaces` -
+         * `https://www.googleapis.com/auth/chat.messages.readonly` -
+         * `https://www.googleapis.com/auth/chat.messages` -
+         * `https://www.googleapis.com/auth/chat.messages.reactions.readonly` -
+         * `https://www.googleapis.com/auth/chat.messages.reactions` -
+         * `https://www.googleapis.com/auth/chat.memberships.readonly` -
+         * `https://www.googleapis.com/auth/chat.memberships` To get an event, the authenticated user must
+         * be a member of the space. For an example, see [Get details about an event from a Google Chat
          * space](https://developers.google.com/workspace/chat/get-space-event).
          *
          * Create a request for the method "spaceEvents.get".
@@ -6815,9 +7078,19 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * space members, the server returns `Membership` resources that contain the latest membership
        * details. If new members were removed during the requested period, the event payload contains an
        * empty `Membership` resource. Requires [user
-       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
-       * To list events, the authenticated user must be a member of the space. For an example, see [List
-       * events from a Google Chat space](https://developers.google.com/workspace/chat/list-space-events).
+       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+       * with an [authorization scope](https://developers.google.com/workspace/chat/authenticate-
+       * authorize#chat-api-scopes) appropriate for reading the requested data: -
+       * `https://www.googleapis.com/auth/chat.spaces.readonly` -
+       * `https://www.googleapis.com/auth/chat.spaces` -
+       * `https://www.googleapis.com/auth/chat.messages.readonly` -
+       * `https://www.googleapis.com/auth/chat.messages` -
+       * `https://www.googleapis.com/auth/chat.messages.reactions.readonly` -
+       * `https://www.googleapis.com/auth/chat.messages.reactions` -
+       * `https://www.googleapis.com/auth/chat.memberships.readonly` -
+       * `https://www.googleapis.com/auth/chat.memberships` To list events, the authenticated user must be
+       * a member of the space. For an example, see [List events from a Google Chat
+       * space](https://developers.google.com/workspace/chat/list-space-events).
        *
        * Create a request for the method "spaceEvents.list".
        *
@@ -6849,10 +7122,19 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * new space members, the server returns `Membership` resources that contain the latest membership
          * details. If new members were removed during the requested period, the event payload contains an
          * empty `Membership` resource. Requires [user
-         * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
-         * To list events, the authenticated user must be a member of the space. For an example, see [List
-         * events from a Google Chat space](https://developers.google.com/workspace/chat/list-space-
-         * events).
+         * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+         * with an [authorization scope](https://developers.google.com/workspace/chat/authenticate-
+         * authorize#chat-api-scopes) appropriate for reading the requested data: -
+         * `https://www.googleapis.com/auth/chat.spaces.readonly` -
+         * `https://www.googleapis.com/auth/chat.spaces` -
+         * `https://www.googleapis.com/auth/chat.messages.readonly` -
+         * `https://www.googleapis.com/auth/chat.messages` -
+         * `https://www.googleapis.com/auth/chat.messages.reactions.readonly` -
+         * `https://www.googleapis.com/auth/chat.messages.reactions` -
+         * `https://www.googleapis.com/auth/chat.memberships.readonly` -
+         * `https://www.googleapis.com/auth/chat.memberships` To list events, the authenticated user must
+         * be a member of the space. For an example, see [List events from a Google Chat
+         * space](https://developers.google.com/workspace/chat/list-space-events).
          *
          * Create a request for the method "spaceEvents.list".
          *
@@ -7165,7 +7447,11 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * Returns details about a user's read state within a space, used to identify read and unread
        * messages. For an example, see [Get details about a user's space read
        * state](https://developers.google.com/workspace/chat/get-space-read-state). Requires [user
-       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+       * with one of the following [authorization
+       * scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes): -
+       * `https://www.googleapis.com/auth/chat.users.readstate.readonly` -
+       * `https://www.googleapis.com/auth/chat.users.readstate`
        *
        * Create a request for the method "spaces.getSpaceReadState".
        *
@@ -7197,7 +7483,11 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * Returns details about a user's read state within a space, used to identify read and unread
          * messages. For an example, see [Get details about a user's space read
          * state](https://developers.google.com/workspace/chat/get-space-read-state). Requires [user
-         * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+         * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+         * with one of the following [authorization
+         * scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes): -
+         * `https://www.googleapis.com/auth/chat.users.readstate.readonly` -
+         * `https://www.googleapis.com/auth/chat.users.readstate`
          *
          * Create a request for the method "spaces.getSpaceReadState".
          *
@@ -7338,7 +7628,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * Updates a user's read state within a space, used to identify read and unread messages. For an
        * example, see [Update a user's space read
        * state](https://developers.google.com/workspace/chat/update-space-read-state). Requires [user
-       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+       * with the [authorization scope](https://developers.google.com/workspace/chat/authenticate-
+       * authorize#chat-api-scopes): - `https://www.googleapis.com/auth/chat.users.readstate`
        *
        * Create a request for the method "spaces.updateSpaceReadState".
        *
@@ -7367,7 +7659,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * Updates a user's read state within a space, used to identify read and unread messages. For an
          * example, see [Update a user's space read
          * state](https://developers.google.com/workspace/chat/update-space-read-state). Requires [user
-         * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+         * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+         * with the [authorization scope](https://developers.google.com/workspace/chat/authenticate-
+         * authorize#chat-api-scopes): - `https://www.googleapis.com/auth/chat.users.readstate`
          *
          * Create a request for the method "spaces.updateSpaceReadState".
          *
@@ -7541,7 +7835,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * Gets the space notification setting. For an example, see [Get the caller's space notification
          * setting](https://developers.google.com/workspace/chat/get-space-notification-setting). Requires
          * [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
-         * user).
+         * user) with the [authorization scope](https://developers.google.com/workspace/chat/authenticate-
+         * authorize#chat-api-scopes): - `https://www.googleapis.com/auth/chat.users.spacesettings`
          *
          * Create a request for the method "spaceNotificationSetting.get".
          *
@@ -7572,7 +7867,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
            * Gets the space notification setting. For an example, see [Get the caller's space notification
            * setting](https://developers.google.com/workspace/chat/get-space-notification-setting). Requires
            * [user authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
-           * user).
+           * user) with the [authorization scope](https://developers.google.com/workspace/chat/authenticate-
+           * authorize#chat-api-scopes): - `https://www.googleapis.com/auth/chat.users.spacesettings`
            *
            * Create a request for the method "spaceNotificationSetting.get".
            *
@@ -7709,7 +8005,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * Updates the space notification setting. For an example, see [Update the caller's space
          * notification setting](https://developers.google.com/workspace/chat/update-space-notification-
          * setting). Requires [user
-         * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+         * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+         * with the [authorization scope](https://developers.google.com/workspace/chat/authenticate-
+         * authorize#chat-api-scopes): - `https://www.googleapis.com/auth/chat.users.spacesettings`
          *
          * Create a request for the method "spaceNotificationSetting.patch".
          *
@@ -7738,7 +8036,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
            * Updates the space notification setting. For an example, see [Update the caller's space
            * notification setting](https://developers.google.com/workspace/chat/update-space-notification-
            * setting). Requires [user
-           * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+           * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+           * with the [authorization scope](https://developers.google.com/workspace/chat/authenticate-
+           * authorize#chat-api-scopes): - `https://www.googleapis.com/auth/chat.users.spacesettings`
            *
            * Create a request for the method "spaceNotificationSetting.patch".
            *
@@ -7892,7 +8192,11 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * Returns details about a user's read state within a thread, used to identify read and unread
          * messages. For an example, see [Get details about a user's thread read
          * state](https://developers.google.com/workspace/chat/get-thread-read-state). Requires [user
-         * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+         * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+         * with one of the following [authorization
+         * scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes): -
+         * `https://www.googleapis.com/auth/chat.users.readstate.readonly` -
+         * `https://www.googleapis.com/auth/chat.users.readstate`
          *
          * Create a request for the method "threads.getThreadReadState".
          *
@@ -7925,7 +8229,11 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
            * Returns details about a user's read state within a thread, used to identify read and unread
            * messages. For an example, see [Get details about a user's thread read
            * state](https://developers.google.com/workspace/chat/get-thread-read-state). Requires [user
-           * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+           * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+           * with one of the following [authorization
+           * scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes): -
+           * `https://www.googleapis.com/auth/chat.users.readstate.readonly` -
+           * `https://www.googleapis.com/auth/chat.users.readstate`
            *
            * Create a request for the method "threads.getThreadReadState".
            *

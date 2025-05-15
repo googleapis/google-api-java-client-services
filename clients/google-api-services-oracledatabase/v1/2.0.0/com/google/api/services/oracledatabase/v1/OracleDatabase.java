@@ -4589,7 +4589,7 @@ public class OracleDatabase extends com.google.api.client.googleapis.services.js
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
            * @param parent Required. The parent value for database node in the following format:
-           *        projects/{project}/locations/{location}/cloudVmClusters/{cloudVmCluster}.
+           *        projects/{project}/locations/{location}/cloudVmClusters/{cloudVmCluster}. .
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -4616,7 +4616,7 @@ public class OracleDatabase extends com.google.api.client.googleapis.services.js
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param parent Required. The parent value for database node in the following format:
-           *        projects/{project}/locations/{location}/cloudVmClusters/{cloudVmCluster}.
+           *        projects/{project}/locations/{location}/cloudVmClusters/{cloudVmCluster}. .
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -4696,13 +4696,13 @@ public class OracleDatabase extends com.google.api.client.googleapis.services.js
 
             /**
              * Required. The parent value for database node in the following format:
-             * projects/{project}/locations/{location}/cloudVmClusters/{cloudVmCluster}.
+             * projects/{project}/locations/{location}/cloudVmClusters/{cloudVmCluster}. .
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. The parent value for database node in the following format:
-           projects/{project}/locations/{location}/cloudVmClusters/{cloudVmCluster}.
+           projects/{project}/locations/{location}/cloudVmClusters/{cloudVmCluster}. .
              */
             public java.lang.String getParent() {
               return parent;
@@ -4710,7 +4710,7 @@ public class OracleDatabase extends com.google.api.client.googleapis.services.js
 
             /**
              * Required. The parent value for database node in the following format:
-             * projects/{project}/locations/{location}/cloudVmClusters/{cloudVmCluster}.
+             * projects/{project}/locations/{location}/cloudVmClusters/{cloudVmCluster}. .
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {

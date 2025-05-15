@@ -81,7 +81,7 @@ public final class Folder extends com.google.api.client.json.GenericJson {
   private java.lang.String managementProject;
 
   /**
-   * Output only. The resource name of the folder. Its format is `folders/{folder_id}`, for example:
+   * Identifier. The resource name of the folder. Its format is `folders/{folder_id}`, for example:
    * "folders/1234".
    * The value may be {@code null}.
    */
@@ -239,7 +239,7 @@ public final class Folder extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The resource name of the folder. Its format is `folders/{folder_id}`, for example:
+   * Identifier. The resource name of the folder. Its format is `folders/{folder_id}`, for example:
    * "folders/1234".
    * @return value or {@code null} for none
    */
@@ -248,7 +248,7 @@ public final class Folder extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The resource name of the folder. Its format is `folders/{folder_id}`, for example:
+   * Identifier. The resource name of the folder. Its format is `folders/{folder_id}`, for example:
    * "folders/1234".
    * @param name name or {@code null} for none
    */

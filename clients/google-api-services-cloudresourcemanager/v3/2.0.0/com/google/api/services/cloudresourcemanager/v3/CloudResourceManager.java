@@ -1306,7 +1306,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
      * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
      * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
-     * @param name Output only. The resource name of the folder. Its format is `folders/{folder_id}`, for example:
+     * @param name Identifier. The resource name of the folder. Its format is `folders/{folder_id}`, for example:
      *        "folders/1234".
      * @param content the {@link com.google.api.services.cloudresourcemanager.v3.model.Folder}
      * @return the request
@@ -1342,7 +1342,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
        * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Output only. The resource name of the folder. Its format is `folders/{folder_id}`, for example:
+       * @param name Identifier. The resource name of the folder. Its format is `folders/{folder_id}`, for example:
      *        "folders/1234".
        * @param content the {@link com.google.api.services.cloudresourcemanager.v3.model.Folder}
        * @since 1.13
@@ -1413,13 +1413,13 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       }
 
       /**
-       * Output only. The resource name of the folder. Its format is `folders/{folder_id}`, for
+       * Identifier. The resource name of the folder. Its format is `folders/{folder_id}`, for
        * example: "folders/1234".
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Output only. The resource name of the folder. Its format is `folders/{folder_id}`, for example:
+      /** Identifier. The resource name of the folder. Its format is `folders/{folder_id}`, for example:
      "folders/1234".
        */
       public java.lang.String getName() {
@@ -1427,7 +1427,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       }
 
       /**
-       * Output only. The resource name of the folder. Its format is `folders/{folder_id}`, for
+       * Identifier. The resource name of the folder. Its format is `folders/{folder_id}`, for
        * example: "folders/1234".
        */
       public Patch setName(java.lang.String name) {

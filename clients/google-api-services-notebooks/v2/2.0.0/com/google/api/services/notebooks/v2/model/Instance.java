@@ -97,9 +97,9 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String id;
 
   /**
-   * Optional. Input only. The owner of this instance after creation. Format: `alias@example.com`
-   * Currently supports one owner only. If not specified, all of the service account users of your
-   * VM instance's service account can use the instance.
+   * Optional. The owner of this instance after creation. Format: `alias@example.com` Currently
+   * supports one owner only. If not specified, all of the service account users of your VM
+   * instance's service account can use the instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -332,9 +332,9 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Input only. The owner of this instance after creation. Format: `alias@example.com`
-   * Currently supports one owner only. If not specified, all of the service account users of your
-   * VM instance's service account can use the instance.
+   * Optional. The owner of this instance after creation. Format: `alias@example.com` Currently
+   * supports one owner only. If not specified, all of the service account users of your VM
+   * instance's service account can use the instance.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getInstanceOwners() {
@@ -342,9 +342,9 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Input only. The owner of this instance after creation. Format: `alias@example.com`
-   * Currently supports one owner only. If not specified, all of the service account users of your
-   * VM instance's service account can use the instance.
+   * Optional. The owner of this instance after creation. Format: `alias@example.com` Currently
+   * supports one owner only. If not specified, all of the service account users of your VM
+   * instance's service account can use the instance.
    * @param instanceOwners instanceOwners or {@code null} for none
    */
   public Instance setInstanceOwners(java.util.List<java.lang.String> instanceOwners) {

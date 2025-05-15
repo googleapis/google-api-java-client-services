@@ -31,22 +31,36 @@ package com.google.api.services.iam.v1.model;
 public final class GoogleIamAdminV1WorkforcePoolProviderExtraAttributesOAuth2ClientQueryParameters extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The filter used to request specific records from IdP. In case of attributes type as
-   * AZURE_AD_GROUPS_MAIL, it represents the filter used to request specific groups for users from
-   * IdP. By default, all of the groups associated with the user are fetched. The groups should be
-   * mail enabled and security enabled. See https://learn.microsoft.com/en-us/graph/search-query-
-   * parameter for more details.
+   * Optional. The filter used to request specific records from the IdP. By default, all of the
+   * groups that are associated with a user are fetched. For Microsoft Entra ID, you can add
+   * `$search` query parameters using [Keyword Query Language] (https://learn.microsoft.com/en-
+   * us/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference). To learn
+   * more about `$search` querying in Microsoft Entra ID, see [Use the `$search` query parameter]
+   * (https://learn.microsoft.com/en-us/graph/search-query-parameter). Additionally, Workforce
+   * Identity Federation automatically adds the following [`$filter` query parameters]
+   * (https://learn.microsoft.com/en-us/graph/filter-query-parameter), based on the value of
+   * `attributes_type`. Values passed to `filter` are converted to `$search` query parameters.
+   * Additional `$filter` query parameters cannot be added using this field. *
+   * `AZURE_AD_GROUPS_MAIL`: `mailEnabled` and `securityEnabled` filters are applied. *
+   * `AZURE_AD_GROUPS_ID`: `securityEnabled` filter is applied.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String filter;
 
   /**
-   * Optional. The filter used to request specific records from IdP. In case of attributes type as
-   * AZURE_AD_GROUPS_MAIL, it represents the filter used to request specific groups for users from
-   * IdP. By default, all of the groups associated with the user are fetched. The groups should be
-   * mail enabled and security enabled. See https://learn.microsoft.com/en-us/graph/search-query-
-   * parameter for more details.
+   * Optional. The filter used to request specific records from the IdP. By default, all of the
+   * groups that are associated with a user are fetched. For Microsoft Entra ID, you can add
+   * `$search` query parameters using [Keyword Query Language] (https://learn.microsoft.com/en-
+   * us/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference). To learn
+   * more about `$search` querying in Microsoft Entra ID, see [Use the `$search` query parameter]
+   * (https://learn.microsoft.com/en-us/graph/search-query-parameter). Additionally, Workforce
+   * Identity Federation automatically adds the following [`$filter` query parameters]
+   * (https://learn.microsoft.com/en-us/graph/filter-query-parameter), based on the value of
+   * `attributes_type`. Values passed to `filter` are converted to `$search` query parameters.
+   * Additional `$filter` query parameters cannot be added using this field. *
+   * `AZURE_AD_GROUPS_MAIL`: `mailEnabled` and `securityEnabled` filters are applied. *
+   * `AZURE_AD_GROUPS_ID`: `securityEnabled` filter is applied.
    * @return value or {@code null} for none
    */
   public java.lang.String getFilter() {
@@ -54,11 +68,18 @@ public final class GoogleIamAdminV1WorkforcePoolProviderExtraAttributesOAuth2Cli
   }
 
   /**
-   * Optional. The filter used to request specific records from IdP. In case of attributes type as
-   * AZURE_AD_GROUPS_MAIL, it represents the filter used to request specific groups for users from
-   * IdP. By default, all of the groups associated with the user are fetched. The groups should be
-   * mail enabled and security enabled. See https://learn.microsoft.com/en-us/graph/search-query-
-   * parameter for more details.
+   * Optional. The filter used to request specific records from the IdP. By default, all of the
+   * groups that are associated with a user are fetched. For Microsoft Entra ID, you can add
+   * `$search` query parameters using [Keyword Query Language] (https://learn.microsoft.com/en-
+   * us/sharepoint/dev/general-development/keyword-query-language-kql-syntax-reference). To learn
+   * more about `$search` querying in Microsoft Entra ID, see [Use the `$search` query parameter]
+   * (https://learn.microsoft.com/en-us/graph/search-query-parameter). Additionally, Workforce
+   * Identity Federation automatically adds the following [`$filter` query parameters]
+   * (https://learn.microsoft.com/en-us/graph/filter-query-parameter), based on the value of
+   * `attributes_type`. Values passed to `filter` are converted to `$search` query parameters.
+   * Additional `$filter` query parameters cannot be added using this field. *
+   * `AZURE_AD_GROUPS_MAIL`: `mailEnabled` and `securityEnabled` filters are applied. *
+   * `AZURE_AD_GROUPS_ID`: `securityEnabled` filter is applied.
    * @param filter filter or {@code null} for none
    */
   public GoogleIamAdminV1WorkforcePoolProviderExtraAttributesOAuth2ClientQueryParameters setFilter(java.lang.String filter) {

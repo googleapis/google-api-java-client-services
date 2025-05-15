@@ -96,6 +96,15 @@ public final class WorkforcePoolProvider extends com.google.api.client.json.Gene
   private java.lang.String description;
 
   /**
+   * Optional. If true, populates additional debug information in Cloud Audit Logs for this
+   * provider. Logged attribute mappings and values can be found in `sts.googleapis.com` data access
+   * logs. Default value is false.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean detailedAuditLogging;
+
+  /**
    * Optional. Disables the workforce pool provider. You cannot use a disabled provider to exchange
    * tokens. However, existing tokens still grant access.
    * The value may be {@code null}.
@@ -292,6 +301,27 @@ public final class WorkforcePoolProvider extends com.google.api.client.json.Gene
    */
   public WorkforcePoolProvider setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Optional. If true, populates additional debug information in Cloud Audit Logs for this
+   * provider. Logged attribute mappings and values can be found in `sts.googleapis.com` data access
+   * logs. Default value is false.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDetailedAuditLogging() {
+    return detailedAuditLogging;
+  }
+
+  /**
+   * Optional. If true, populates additional debug information in Cloud Audit Logs for this
+   * provider. Logged attribute mappings and values can be found in `sts.googleapis.com` data access
+   * logs. Default value is false.
+   * @param detailedAuditLogging detailedAuditLogging or {@code null} for none
+   */
+  public WorkforcePoolProvider setDetailedAuditLogging(java.lang.Boolean detailedAuditLogging) {
+    this.detailedAuditLogging = detailedAuditLogging;
     return this;
   }
 

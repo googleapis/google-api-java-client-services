@@ -7310,6 +7310,8176 @@ public class ManagedKafka extends com.google.api.client.googleapis.services.json
         }
 
       }
+      /**
+       * An accessor for creating requests from the SchemaRegistries collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code ManagedKafka managedkafka = new ManagedKafka(...);}
+       *   {@code ManagedKafka.SchemaRegistries.List request = managedkafka.schemaRegistries().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public SchemaRegistries schemaRegistries() {
+        return new SchemaRegistries();
+      }
+
+      /**
+       * The "schemaRegistries" collection of methods.
+       */
+      public class SchemaRegistries {
+
+        /**
+         * Create a schema registry instance.
+         *
+         * Create a request for the method "schemaRegistries.create".
+         *
+         * This request holds the parameters needed by the managedkafka server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent whose schema registry instance is to be created. Structured like:
+         *        `projects/{project}/locations/{location}`
+         * @param content the {@link com.google.api.services.managedkafka.v1.model.CreateSchemaRegistryRequest}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.managedkafka.v1.model.CreateSchemaRegistryRequest content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends ManagedKafkaRequest<com.google.api.services.managedkafka.v1.model.SchemaRegistry> {
+
+          private static final String REST_PATH = "v1/{+parent}/schemaRegistries";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Create a schema registry instance.
+           *
+           * Create a request for the method "schemaRegistries.create".
+           *
+           * This request holds the parameters needed by the the managedkafka server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent whose schema registry instance is to be created. Structured like:
+         *        `projects/{project}/locations/{location}`
+           * @param content the {@link com.google.api.services.managedkafka.v1.model.CreateSchemaRegistryRequest}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.managedkafka.v1.model.CreateSchemaRegistryRequest content) {
+            super(ManagedKafka.this, "POST", REST_PATH, content, com.google.api.services.managedkafka.v1.model.SchemaRegistry.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent whose schema registry instance is to be created. Structured like:
+           * `projects/{project}/locations/{location}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent whose schema registry instance is to be created. Structured like:
+         `projects/{project}/locations/{location}`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent whose schema registry instance is to be created. Structured like:
+           * `projects/{project}/locations/{location}`
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Delete a schema registry instance.
+         *
+         * Create a request for the method "schemaRegistries.delete".
+         *
+         * This request holds the parameters needed by the managedkafka server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the schema registry instance to delete. Structured like:
+         *        `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}`
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends ManagedKafkaRequest<com.google.api.services.managedkafka.v1.model.Empty> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+$");
+
+          /**
+           * Delete a schema registry instance.
+           *
+           * Create a request for the method "schemaRegistries.delete".
+           *
+           * This request holds the parameters needed by the the managedkafka server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the schema registry instance to delete. Structured like:
+         *        `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}`
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(ManagedKafka.this, "DELETE", REST_PATH, null, com.google.api.services.managedkafka.v1.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the schema registry instance to delete. Structured like:
+           * `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the schema registry instance to delete. Structured like:
+         `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the schema registry instance to delete. Structured like:
+           * `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}`
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Get the schema registry instance.
+         *
+         * Create a request for the method "schemaRegistries.get".
+         *
+         * This request holds the parameters needed by the managedkafka server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the schema registry instance to return. Structured like:
+         *        `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}`
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends ManagedKafkaRequest<com.google.api.services.managedkafka.v1.model.SchemaRegistry> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+$");
+
+          /**
+           * Get the schema registry instance.
+           *
+           * Create a request for the method "schemaRegistries.get".
+           *
+           * This request holds the parameters needed by the the managedkafka server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the schema registry instance to return. Structured like:
+         *        `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}`
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(ManagedKafka.this, "GET", REST_PATH, null, com.google.api.services.managedkafka.v1.model.SchemaRegistry.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the schema registry instance to return. Structured like:
+           * `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the schema registry instance to return. Structured like:
+         `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the schema registry instance to return. Structured like:
+           * `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}`
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * List schema registries.
+         *
+         * Create a request for the method "schemaRegistries.list".
+         *
+         * This request holds the parameters needed by the managedkafka server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent whose schema registry instances are to be listed. Structured like:
+         *        `projects/{project}/locations/{location}`
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends ManagedKafkaRequest<com.google.api.services.managedkafka.v1.model.ListSchemaRegistriesResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/schemaRegistries";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * List schema registries.
+           *
+           * Create a request for the method "schemaRegistries.list".
+           *
+           * This request holds the parameters needed by the the managedkafka server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent whose schema registry instances are to be listed. Structured like:
+         *        `projects/{project}/locations/{location}`
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(ManagedKafka.this, "GET", REST_PATH, null, com.google.api.services.managedkafka.v1.model.ListSchemaRegistriesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent whose schema registry instances are to be listed. Structured like:
+           * `projects/{project}/locations/{location}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent whose schema registry instances are to be listed. Structured like:
+         `projects/{project}/locations/{location}`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent whose schema registry instances are to be listed. Structured like:
+           * `projects/{project}/locations/{location}`
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+        /**
+         * An accessor for creating requests from the Compatibility collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code ManagedKafka managedkafka = new ManagedKafka(...);}
+         *   {@code ManagedKafka.Compatibility.List request = managedkafka.compatibility().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Compatibility compatibility() {
+          return new Compatibility();
+        }
+
+        /**
+         * The "compatibility" collection of methods.
+         */
+        public class Compatibility {
+
+          /**
+           * Check compatibility of a schema with all versions or a specific version of a subject.
+           *
+           * Create a request for the method "compatibility.checkCompatibility".
+           *
+           * This request holds the parameters needed by the managedkafka server.  After setting any optional
+           * parameters, call the {@link CheckCompatibility#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the resource to check compatibility for. The format is either of following: *
+           *        projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/compatibility/s
+           *        ubjects/versions: Check compatibility with one or more versions of the specified subject.
+           *        * projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/compatibility
+           *        /subjects/{subject}/versions/{version}: Check compatibility with a specific version of the
+           *        subject.
+           * @param content the {@link com.google.api.services.managedkafka.v1.model.CheckCompatibilityRequest}
+           * @return the request
+           */
+          public CheckCompatibility checkCompatibility(java.lang.String name, com.google.api.services.managedkafka.v1.model.CheckCompatibilityRequest content) throws java.io.IOException {
+            CheckCompatibility result = new CheckCompatibility(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class CheckCompatibility extends ManagedKafkaRequest<com.google.api.services.managedkafka.v1.model.CheckCompatibilityResponse> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/compatibility/.*$");
+
+            /**
+             * Check compatibility of a schema with all versions or a specific version of a subject.
+             *
+             * Create a request for the method "compatibility.checkCompatibility".
+             *
+             * This request holds the parameters needed by the the managedkafka server.  After setting any
+             * optional parameters, call the {@link CheckCompatibility#execute()} method to invoke the remote
+             * operation. <p> {@link CheckCompatibility#initialize(com.google.api.client.googleapis.services.A
+             * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param name Required. The name of the resource to check compatibility for. The format is either of following: *
+           *        projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/compatibility/s
+           *        ubjects/versions: Check compatibility with one or more versions of the specified subject.
+           *        * projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/compatibility
+           *        /subjects/{subject}/versions/{version}: Check compatibility with a specific version of the
+           *        subject.
+             * @param content the {@link com.google.api.services.managedkafka.v1.model.CheckCompatibilityRequest}
+             * @since 1.13
+             */
+            protected CheckCompatibility(java.lang.String name, com.google.api.services.managedkafka.v1.model.CheckCompatibilityRequest content) {
+              super(ManagedKafka.this, "POST", REST_PATH, content, com.google.api.services.managedkafka.v1.model.CheckCompatibilityResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/compatibility/.*$");
+              }
+            }
+
+            @Override
+            public CheckCompatibility set$Xgafv(java.lang.String $Xgafv) {
+              return (CheckCompatibility) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public CheckCompatibility setAccessToken(java.lang.String accessToken) {
+              return (CheckCompatibility) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public CheckCompatibility setAlt(java.lang.String alt) {
+              return (CheckCompatibility) super.setAlt(alt);
+            }
+
+            @Override
+            public CheckCompatibility setCallback(java.lang.String callback) {
+              return (CheckCompatibility) super.setCallback(callback);
+            }
+
+            @Override
+            public CheckCompatibility setFields(java.lang.String fields) {
+              return (CheckCompatibility) super.setFields(fields);
+            }
+
+            @Override
+            public CheckCompatibility setKey(java.lang.String key) {
+              return (CheckCompatibility) super.setKey(key);
+            }
+
+            @Override
+            public CheckCompatibility setOauthToken(java.lang.String oauthToken) {
+              return (CheckCompatibility) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public CheckCompatibility setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (CheckCompatibility) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public CheckCompatibility setQuotaUser(java.lang.String quotaUser) {
+              return (CheckCompatibility) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public CheckCompatibility setUploadType(java.lang.String uploadType) {
+              return (CheckCompatibility) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public CheckCompatibility setUploadProtocol(java.lang.String uploadProtocol) {
+              return (CheckCompatibility) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the resource to check compatibility for. The format is either
+             * of following: * projects/{project}/locations/{location}/schemaRegistries/{schema_regi
+             * stry}/compatibility/subjects/versions: Check compatibility with one or more versions
+             * of the specified subject. * projects/{project}/locations/{location}/schemaRegistries/
+             * {schema_registry}/compatibility/subjects/{subject}/versions/{version}: Check
+             * compatibility with a specific version of the subject.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the resource to check compatibility for. The format is either of following: *
+           projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/compatibility/subjects/v
+           ersions: Check compatibility with one or more versions of the specified subject. * projects/{projec
+           t}/locations/{location}/schemaRegistries/{schema_registry}/compatibility/subjects/{subject}/version
+           s/{version}: Check compatibility with a specific version of the subject.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the resource to check compatibility for. The format is either
+             * of following: * projects/{project}/locations/{location}/schemaRegistries/{schema_regi
+             * stry}/compatibility/subjects/versions: Check compatibility with one or more versions
+             * of the specified subject. * projects/{project}/locations/{location}/schemaRegistries/
+             * {schema_registry}/compatibility/subjects/{subject}/versions/{version}: Check
+             * compatibility with a specific version of the subject.
+             */
+            public CheckCompatibility setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/compatibility/.*$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public CheckCompatibility set(String parameterName, Object value) {
+              return (CheckCompatibility) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
+         * An accessor for creating requests from the Config collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code ManagedKafka managedkafka = new ManagedKafka(...);}
+         *   {@code ManagedKafka.Config.List request = managedkafka.config().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Config config() {
+          return new Config();
+        }
+
+        /**
+         * The "config" collection of methods.
+         */
+        public class Config {
+
+          /**
+           * Delete schema config for a subject.
+           *
+           * Create a request for the method "config.delete".
+           *
+           * This request holds the parameters needed by the managedkafka server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name of subject to delete the config for. The format is *
+           *        projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/config/{subject
+           *        }
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends ManagedKafkaRequest<com.google.api.services.managedkafka.v1.model.SchemaConfig> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/config/.*$");
+
+            /**
+             * Delete schema config for a subject.
+             *
+             * Create a request for the method "config.delete".
+             *
+             * This request holds the parameters needed by the the managedkafka server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name of subject to delete the config for. The format is *
+           *        projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/config/{subject
+           *        }
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(ManagedKafka.this, "DELETE", REST_PATH, null, com.google.api.services.managedkafka.v1.model.SchemaConfig.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/config/.*$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of subject to delete the config for. The format is * proj
+             * ects/{project}/locations/{location}/schemaRegistries/{schema_registry}/config/{subjec
+             * t}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of subject to delete the config for. The format is *
+           projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/config/{subject}
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name of subject to delete the config for. The format is * proj
+             * ects/{project}/locations/{location}/schemaRegistries/{schema_registry}/config/{subjec
+             * t}
+             */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/config/.*$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Get schema config at global level or for a subject.
+           *
+           * Create a request for the method "config.get".
+           *
+           * This request holds the parameters needed by the managedkafka server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name to get the config for. It can be either of following: *
+           *        projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/config: Get
+           *        config at global level. * projects/{project}/locations/{location}/schemaRegistries/{schema
+           *        _registry}/config/{subject}: Get config for a specific subject.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends ManagedKafkaRequest<com.google.api.services.managedkafka.v1.model.SchemaConfig> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/config/.*$");
+
+            /**
+             * Get schema config at global level or for a subject.
+             *
+             * Create a request for the method "config.get".
+             *
+             * This request holds the parameters needed by the the managedkafka server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name to get the config for. It can be either of following: *
+           *        projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/config: Get
+           *        config at global level. * projects/{project}/locations/{location}/schemaRegistries/{schema
+           *        _registry}/config/{subject}: Get config for a specific subject.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(ManagedKafka.this, "GET", REST_PATH, null, com.google.api.services.managedkafka.v1.model.SchemaConfig.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/config/.*$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name to get the config for. It can be either of following: *
+             * projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/config:
+             * Get config at global level. * projects/{project}/locations/{location}/schemaRegistrie
+             * s/{schema_registry}/config/{subject}: Get config for a specific subject.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name to get the config for. It can be either of following: *
+           projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/config: Get config at
+           global level. *
+           projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/config/{subject}: Get
+           config for a specific subject.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name to get the config for. It can be either of following: *
+             * projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/config:
+             * Get config at global level. * projects/{project}/locations/{location}/schemaRegistrie
+             * s/{schema_registry}/config/{subject}: Get config for a specific subject.
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/config/.*$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Optional. If true, the config will fall back to the config at the global level if no
+             * subject level config is found.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean defaultToGlobal;
+
+            /** Optional. If true, the config will fall back to the config at the global level if no subject level
+           config is found.
+             */
+            public java.lang.Boolean getDefaultToGlobal() {
+              return defaultToGlobal;
+            }
+
+            /**
+             * Optional. If true, the config will fall back to the config at the global level if no
+             * subject level config is found.
+             */
+            public Get setDefaultToGlobal(java.lang.Boolean defaultToGlobal) {
+              this.defaultToGlobal = defaultToGlobal;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Update config at global level or for a subject. Creates a SchemaSubject-level SchemaConfig if it
+           * does not exist.
+           *
+           * Create a request for the method "config.update".
+           *
+           * This request holds the parameters needed by the managedkafka server.  After setting any optional
+           * parameters, call the {@link Update#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name to update the config for. It can be either of following: *
+           *        projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/config: Update
+           *        config at global level. * projects/{project}/locations/{location}/schemaRegistries/{schema
+           *        _registry}/config/{subject}: Update config for a specific subject.
+           * @param content the {@link com.google.api.services.managedkafka.v1.model.UpdateSchemaConfigRequest}
+           * @return the request
+           */
+          public Update update(java.lang.String name, com.google.api.services.managedkafka.v1.model.UpdateSchemaConfigRequest content) throws java.io.IOException {
+            Update result = new Update(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Update extends ManagedKafkaRequest<com.google.api.services.managedkafka.v1.model.SchemaConfig> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/config/.*$");
+
+            /**
+             * Update config at global level or for a subject. Creates a SchemaSubject-level SchemaConfig if
+             * it does not exist.
+             *
+             * Create a request for the method "config.update".
+             *
+             * This request holds the parameters needed by the the managedkafka server.  After setting any
+             * optional parameters, call the {@link Update#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name to update the config for. It can be either of following: *
+           *        projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/config: Update
+           *        config at global level. * projects/{project}/locations/{location}/schemaRegistries/{schema
+           *        _registry}/config/{subject}: Update config for a specific subject.
+             * @param content the {@link com.google.api.services.managedkafka.v1.model.UpdateSchemaConfigRequest}
+             * @since 1.13
+             */
+            protected Update(java.lang.String name, com.google.api.services.managedkafka.v1.model.UpdateSchemaConfigRequest content) {
+              super(ManagedKafka.this, "PUT", REST_PATH, content, com.google.api.services.managedkafka.v1.model.SchemaConfig.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/config/.*$");
+              }
+            }
+
+            @Override
+            public Update set$Xgafv(java.lang.String $Xgafv) {
+              return (Update) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Update setAccessToken(java.lang.String accessToken) {
+              return (Update) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Update setAlt(java.lang.String alt) {
+              return (Update) super.setAlt(alt);
+            }
+
+            @Override
+            public Update setCallback(java.lang.String callback) {
+              return (Update) super.setCallback(callback);
+            }
+
+            @Override
+            public Update setFields(java.lang.String fields) {
+              return (Update) super.setFields(fields);
+            }
+
+            @Override
+            public Update setKey(java.lang.String key) {
+              return (Update) super.setKey(key);
+            }
+
+            @Override
+            public Update setOauthToken(java.lang.String oauthToken) {
+              return (Update) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Update setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Update) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Update setQuotaUser(java.lang.String quotaUser) {
+              return (Update) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Update setUploadType(java.lang.String uploadType) {
+              return (Update) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Update setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Update) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name to update the config for. It can be either of following:
+             * * projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/config:
+             * Update config at global level. * projects/{project}/locations/{location}/schemaRegist
+             * ries/{schema_registry}/config/{subject}: Update config for a specific subject.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name to update the config for. It can be either of following: *
+           projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/config: Update config at
+           global level. *
+           projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/config/{subject}: Update
+           config for a specific subject.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name to update the config for. It can be either of following:
+             * * projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/config:
+             * Update config at global level. * projects/{project}/locations/{location}/schemaRegist
+             * ries/{schema_registry}/config/{subject}: Update config for a specific subject.
+             */
+            public Update setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/config/.*$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Update set(String parameterName, Object value) {
+              return (Update) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
+         * An accessor for creating requests from the Contexts collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code ManagedKafka managedkafka = new ManagedKafka(...);}
+         *   {@code ManagedKafka.Contexts.List request = managedkafka.contexts().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Contexts contexts() {
+          return new Contexts();
+        }
+
+        /**
+         * The "contexts" collection of methods.
+         */
+        public class Contexts {
+
+          /**
+           * Get the context.
+           *
+           * Create a request for the method "contexts.get".
+           *
+           * This request holds the parameters needed by the managedkafka server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the context to return. Structured like:
+           *        `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/contexts/{cont
+           *        ext}`
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends ManagedKafkaRequest<com.google.api.services.managedkafka.v1.model.Context> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+$");
+
+            /**
+             * Get the context.
+             *
+             * Create a request for the method "contexts.get".
+             *
+             * This request holds the parameters needed by the the managedkafka server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the context to return. Structured like:
+           *        `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/contexts/{cont
+           *        ext}`
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(ManagedKafka.this, "GET", REST_PATH, null, com.google.api.services.managedkafka.v1.model.Context.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the context to return. Structured like: `projects/{project}/loc
+             * ations/{location}/schemaRegistries/{schema_registry}/contexts/{context}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the context to return. Structured like:
+           `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/contexts/{context}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the context to return. Structured like: `projects/{project}/loc
+             * ations/{location}/schemaRegistries/{schema_registry}/contexts/{context}`
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * List contexts for a schema registry.
+           *
+           * Create a request for the method "contexts.list".
+           *
+           * This request holds the parameters needed by the managedkafka server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent of the contexts. Structured like:
+           *        `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}`
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends ManagedKafkaRequest<com.google.api.services.managedkafka.v1.model.HttpBody> {
+
+            private static final String REST_PATH = "v1/{+parent}/contexts";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+$");
+
+            /**
+             * List contexts for a schema registry.
+             *
+             * Create a request for the method "contexts.list".
+             *
+             * This request holds the parameters needed by the the managedkafka server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent of the contexts. Structured like:
+           *        `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}`
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(ManagedKafka.this, "GET", REST_PATH, null, com.google.api.services.managedkafka.v1.model.HttpBody.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent of the contexts. Structured like:
+             * `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent of the contexts. Structured like:
+           `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}`
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The parent of the contexts. Structured like:
+             * `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}`
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+          /**
+           * An accessor for creating requests from the Compatibility collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code ManagedKafka managedkafka = new ManagedKafka(...);}
+           *   {@code ManagedKafka.Compatibility.List request = managedkafka.compatibility().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public Compatibility compatibility() {
+            return new Compatibility();
+          }
+
+          /**
+           * The "compatibility" collection of methods.
+           */
+          public class Compatibility {
+
+            /**
+             * Check compatibility of a schema with all versions or a specific version of a subject.
+             *
+             * Create a request for the method "compatibility.checkCompatibility".
+             *
+             * This request holds the parameters needed by the managedkafka server.  After setting any optional
+             * parameters, call the {@link CheckCompatibility#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The name of the resource to check compatibility for. The format is either of following: *
+             *        projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/compatibility/s
+             *        ubjects/versions: Check compatibility with one or more versions of the specified subject.
+             *        * projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/compatibility
+             *        /subjects/{subject}/versions/{version}: Check compatibility with a specific version of the
+             *        subject.
+             * @param content the {@link com.google.api.services.managedkafka.v1.model.CheckCompatibilityRequest}
+             * @return the request
+             */
+            public CheckCompatibility checkCompatibility(java.lang.String name, com.google.api.services.managedkafka.v1.model.CheckCompatibilityRequest content) throws java.io.IOException {
+              CheckCompatibility result = new CheckCompatibility(name, content);
+              initialize(result);
+              return result;
+            }
+
+            public class CheckCompatibility extends ManagedKafkaRequest<com.google.api.services.managedkafka.v1.model.CheckCompatibilityResponse> {
+
+              private static final String REST_PATH = "v1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+/compatibility/.*$");
+
+              /**
+               * Check compatibility of a schema with all versions or a specific version of a subject.
+               *
+               * Create a request for the method "compatibility.checkCompatibility".
+               *
+               * This request holds the parameters needed by the the managedkafka server.  After setting any
+               * optional parameters, call the {@link CheckCompatibility#execute()} method to invoke the remote
+               * operation. <p> {@link CheckCompatibility#initialize(com.google.api.client.googleapis.services.A
+               * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+               * invoking the constructor. </p>
+               *
+               * @param name Required. The name of the resource to check compatibility for. The format is either of following: *
+             *        projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/compatibility/s
+             *        ubjects/versions: Check compatibility with one or more versions of the specified subject.
+             *        * projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/compatibility
+             *        /subjects/{subject}/versions/{version}: Check compatibility with a specific version of the
+             *        subject.
+               * @param content the {@link com.google.api.services.managedkafka.v1.model.CheckCompatibilityRequest}
+               * @since 1.13
+               */
+              protected CheckCompatibility(java.lang.String name, com.google.api.services.managedkafka.v1.model.CheckCompatibilityRequest content) {
+                super(ManagedKafka.this, "POST", REST_PATH, content, com.google.api.services.managedkafka.v1.model.CheckCompatibilityResponse.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+/compatibility/.*$");
+                }
+              }
+
+              @Override
+              public CheckCompatibility set$Xgafv(java.lang.String $Xgafv) {
+                return (CheckCompatibility) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public CheckCompatibility setAccessToken(java.lang.String accessToken) {
+                return (CheckCompatibility) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public CheckCompatibility setAlt(java.lang.String alt) {
+                return (CheckCompatibility) super.setAlt(alt);
+              }
+
+              @Override
+              public CheckCompatibility setCallback(java.lang.String callback) {
+                return (CheckCompatibility) super.setCallback(callback);
+              }
+
+              @Override
+              public CheckCompatibility setFields(java.lang.String fields) {
+                return (CheckCompatibility) super.setFields(fields);
+              }
+
+              @Override
+              public CheckCompatibility setKey(java.lang.String key) {
+                return (CheckCompatibility) super.setKey(key);
+              }
+
+              @Override
+              public CheckCompatibility setOauthToken(java.lang.String oauthToken) {
+                return (CheckCompatibility) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public CheckCompatibility setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (CheckCompatibility) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public CheckCompatibility setQuotaUser(java.lang.String quotaUser) {
+                return (CheckCompatibility) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public CheckCompatibility setUploadType(java.lang.String uploadType) {
+                return (CheckCompatibility) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public CheckCompatibility setUploadProtocol(java.lang.String uploadProtocol) {
+                return (CheckCompatibility) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The name of the resource to check compatibility for. The format is either
+               * of following: * projects/{project}/locations/{location}/schemaRegistries/{schema_re
+               * gistry}/compatibility/subjects/versions: Check compatibility with one or more
+               * versions of the specified subject. * projects/{project}/locations/{location}/schema
+               * Registries/{schema_registry}/compatibility/subjects/{subject}/versions/{version}:
+               * Check compatibility with a specific version of the subject.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The name of the resource to check compatibility for. The format is either of following: *
+             projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/compatibility/subjects/v
+             ersions: Check compatibility with one or more versions of the specified subject. * projects/{projec
+             t}/locations/{location}/schemaRegistries/{schema_registry}/compatibility/subjects/{subject}/version
+             s/{version}: Check compatibility with a specific version of the subject.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The name of the resource to check compatibility for. The format is either
+               * of following: * projects/{project}/locations/{location}/schemaRegistries/{schema_re
+               * gistry}/compatibility/subjects/versions: Check compatibility with one or more
+               * versions of the specified subject. * projects/{project}/locations/{location}/schema
+               * Registries/{schema_registry}/compatibility/subjects/{subject}/versions/{version}:
+               * Check compatibility with a specific version of the subject.
+               */
+              public CheckCompatibility setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+/compatibility/.*$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public CheckCompatibility set(String parameterName, Object value) {
+                return (CheckCompatibility) super.set(parameterName, value);
+              }
+            }
+
+          }
+          /**
+           * An accessor for creating requests from the Config collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code ManagedKafka managedkafka = new ManagedKafka(...);}
+           *   {@code ManagedKafka.Config.List request = managedkafka.config().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public Config config() {
+            return new Config();
+          }
+
+          /**
+           * The "config" collection of methods.
+           */
+          public class Config {
+
+            /**
+             * Delete schema config for a subject.
+             *
+             * Create a request for the method "config.delete".
+             *
+             * This request holds the parameters needed by the managedkafka server.  After setting any optional
+             * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The resource name of subject to delete the config for. The format is *
+             *        projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/config/{subject
+             *        }
+             * @return the request
+             */
+            public Delete delete(java.lang.String name) throws java.io.IOException {
+              Delete result = new Delete(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Delete extends ManagedKafkaRequest<com.google.api.services.managedkafka.v1.model.SchemaConfig> {
+
+              private static final String REST_PATH = "v1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+/config/.*$");
+
+              /**
+               * Delete schema config for a subject.
+               *
+               * Create a request for the method "config.delete".
+               *
+               * This request holds the parameters needed by the the managedkafka server.  After setting any
+               * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The resource name of subject to delete the config for. The format is *
+             *        projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/config/{subject
+             *        }
+               * @since 1.13
+               */
+              protected Delete(java.lang.String name) {
+                super(ManagedKafka.this, "DELETE", REST_PATH, null, com.google.api.services.managedkafka.v1.model.SchemaConfig.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+/config/.*$");
+                }
+              }
+
+              @Override
+              public Delete set$Xgafv(java.lang.String $Xgafv) {
+                return (Delete) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Delete setAccessToken(java.lang.String accessToken) {
+                return (Delete) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Delete setAlt(java.lang.String alt) {
+                return (Delete) super.setAlt(alt);
+              }
+
+              @Override
+              public Delete setCallback(java.lang.String callback) {
+                return (Delete) super.setCallback(callback);
+              }
+
+              @Override
+              public Delete setFields(java.lang.String fields) {
+                return (Delete) super.setFields(fields);
+              }
+
+              @Override
+              public Delete setKey(java.lang.String key) {
+                return (Delete) super.setKey(key);
+              }
+
+              @Override
+              public Delete setOauthToken(java.lang.String oauthToken) {
+                return (Delete) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Delete) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Delete setQuotaUser(java.lang.String quotaUser) {
+                return (Delete) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Delete setUploadType(java.lang.String uploadType) {
+                return (Delete) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Delete) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The resource name of subject to delete the config for. The format is * pr
+               * ojects/{project}/locations/{location}/schemaRegistries/{schema_registry}/config/{su
+               * bject}
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The resource name of subject to delete the config for. The format is *
+             projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/config/{subject}
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The resource name of subject to delete the config for. The format is * pr
+               * ojects/{project}/locations/{location}/schemaRegistries/{schema_registry}/config/{su
+               * bject}
+               */
+              public Delete setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+/config/.*$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Delete set(String parameterName, Object value) {
+                return (Delete) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Get schema config at global level or for a subject.
+             *
+             * Create a request for the method "config.get".
+             *
+             * This request holds the parameters needed by the managedkafka server.  After setting any optional
+             * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The resource name to get the config for. It can be either of following: *
+             *        projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/config: Get
+             *        config at global level. * projects/{project}/locations/{location}/schemaRegistries/{schema
+             *        _registry}/config/{subject}: Get config for a specific subject.
+             * @return the request
+             */
+            public Get get(java.lang.String name) throws java.io.IOException {
+              Get result = new Get(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Get extends ManagedKafkaRequest<com.google.api.services.managedkafka.v1.model.SchemaConfig> {
+
+              private static final String REST_PATH = "v1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+/config/.*$");
+
+              /**
+               * Get schema config at global level or for a subject.
+               *
+               * Create a request for the method "config.get".
+               *
+               * This request holds the parameters needed by the the managedkafka server.  After setting any
+               * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+               * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The resource name to get the config for. It can be either of following: *
+             *        projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/config: Get
+             *        config at global level. * projects/{project}/locations/{location}/schemaRegistries/{schema
+             *        _registry}/config/{subject}: Get config for a specific subject.
+               * @since 1.13
+               */
+              protected Get(java.lang.String name) {
+                super(ManagedKafka.this, "GET", REST_PATH, null, com.google.api.services.managedkafka.v1.model.SchemaConfig.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+/config/.*$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public Get set$Xgafv(java.lang.String $Xgafv) {
+                return (Get) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Get setAccessToken(java.lang.String accessToken) {
+                return (Get) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Get setAlt(java.lang.String alt) {
+                return (Get) super.setAlt(alt);
+              }
+
+              @Override
+              public Get setCallback(java.lang.String callback) {
+                return (Get) super.setCallback(callback);
+              }
+
+              @Override
+              public Get setFields(java.lang.String fields) {
+                return (Get) super.setFields(fields);
+              }
+
+              @Override
+              public Get setKey(java.lang.String key) {
+                return (Get) super.setKey(key);
+              }
+
+              @Override
+              public Get setOauthToken(java.lang.String oauthToken) {
+                return (Get) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Get) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Get setQuotaUser(java.lang.String quotaUser) {
+                return (Get) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Get setUploadType(java.lang.String uploadType) {
+                return (Get) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Get setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Get) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The resource name to get the config for. It can be either of following: *
+               * projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/config:
+               * Get config at global level. * projects/{project}/locations/{location}/schemaRegistr
+               * ies/{schema_registry}/config/{subject}: Get config for a specific subject.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The resource name to get the config for. It can be either of following: *
+             projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/config: Get config at
+             global level. *
+             projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/config/{subject}: Get
+             config for a specific subject.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The resource name to get the config for. It can be either of following: *
+               * projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/config:
+               * Get config at global level. * projects/{project}/locations/{location}/schemaRegistr
+               * ies/{schema_registry}/config/{subject}: Get config for a specific subject.
+               */
+              public Get setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+/config/.*$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              /**
+               * Optional. If true, the config will fall back to the config at the global level if
+               * no subject level config is found.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.Boolean defaultToGlobal;
+
+              /** Optional. If true, the config will fall back to the config at the global level if no subject level
+             config is found.
+               */
+              public java.lang.Boolean getDefaultToGlobal() {
+                return defaultToGlobal;
+              }
+
+              /**
+               * Optional. If true, the config will fall back to the config at the global level if
+               * no subject level config is found.
+               */
+              public Get setDefaultToGlobal(java.lang.Boolean defaultToGlobal) {
+                this.defaultToGlobal = defaultToGlobal;
+                return this;
+              }
+
+              @Override
+              public Get set(String parameterName, Object value) {
+                return (Get) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Update config at global level or for a subject. Creates a SchemaSubject-level SchemaConfig if it
+             * does not exist.
+             *
+             * Create a request for the method "config.update".
+             *
+             * This request holds the parameters needed by the managedkafka server.  After setting any optional
+             * parameters, call the {@link Update#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The resource name to update the config for. It can be either of following: *
+             *        projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/config: Update
+             *        config at global level. * projects/{project}/locations/{location}/schemaRegistries/{schema
+             *        _registry}/config/{subject}: Update config for a specific subject.
+             * @param content the {@link com.google.api.services.managedkafka.v1.model.UpdateSchemaConfigRequest}
+             * @return the request
+             */
+            public Update update(java.lang.String name, com.google.api.services.managedkafka.v1.model.UpdateSchemaConfigRequest content) throws java.io.IOException {
+              Update result = new Update(name, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Update extends ManagedKafkaRequest<com.google.api.services.managedkafka.v1.model.SchemaConfig> {
+
+              private static final String REST_PATH = "v1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+/config/.*$");
+
+              /**
+               * Update config at global level or for a subject. Creates a SchemaSubject-level SchemaConfig if
+               * it does not exist.
+               *
+               * Create a request for the method "config.update".
+               *
+               * This request holds the parameters needed by the the managedkafka server.  After setting any
+               * optional parameters, call the {@link Update#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The resource name to update the config for. It can be either of following: *
+             *        projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/config: Update
+             *        config at global level. * projects/{project}/locations/{location}/schemaRegistries/{schema
+             *        _registry}/config/{subject}: Update config for a specific subject.
+               * @param content the {@link com.google.api.services.managedkafka.v1.model.UpdateSchemaConfigRequest}
+               * @since 1.13
+               */
+              protected Update(java.lang.String name, com.google.api.services.managedkafka.v1.model.UpdateSchemaConfigRequest content) {
+                super(ManagedKafka.this, "PUT", REST_PATH, content, com.google.api.services.managedkafka.v1.model.SchemaConfig.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+/config/.*$");
+                }
+              }
+
+              @Override
+              public Update set$Xgafv(java.lang.String $Xgafv) {
+                return (Update) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Update setAccessToken(java.lang.String accessToken) {
+                return (Update) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Update setAlt(java.lang.String alt) {
+                return (Update) super.setAlt(alt);
+              }
+
+              @Override
+              public Update setCallback(java.lang.String callback) {
+                return (Update) super.setCallback(callback);
+              }
+
+              @Override
+              public Update setFields(java.lang.String fields) {
+                return (Update) super.setFields(fields);
+              }
+
+              @Override
+              public Update setKey(java.lang.String key) {
+                return (Update) super.setKey(key);
+              }
+
+              @Override
+              public Update setOauthToken(java.lang.String oauthToken) {
+                return (Update) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Update setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Update) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Update setQuotaUser(java.lang.String quotaUser) {
+                return (Update) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Update setUploadType(java.lang.String uploadType) {
+                return (Update) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Update setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Update) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The resource name to update the config for. It can be either of
+               * following: *
+               * projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/config:
+               * Update config at global level. * projects/{project}/locations/{location}/schemaRegi
+               * stries/{schema_registry}/config/{subject}: Update config for a specific subject.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The resource name to update the config for. It can be either of following: *
+             projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/config: Update config at
+             global level. *
+             projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/config/{subject}: Update
+             config for a specific subject.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The resource name to update the config for. It can be either of
+               * following: *
+               * projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/config:
+               * Update config at global level. * projects/{project}/locations/{location}/schemaRegi
+               * stries/{schema_registry}/config/{subject}: Update config for a specific subject.
+               */
+              public Update setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+/config/.*$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Update set(String parameterName, Object value) {
+                return (Update) super.set(parameterName, value);
+              }
+            }
+
+          }
+          /**
+           * An accessor for creating requests from the Mode collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code ManagedKafka managedkafka = new ManagedKafka(...);}
+           *   {@code ManagedKafka.Mode.List request = managedkafka.mode().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public Mode mode() {
+            return new Mode();
+          }
+
+          /**
+           * The "mode" collection of methods.
+           */
+          public class Mode {
+
+            /**
+             * Get mode at global level or for a subject.
+             *
+             * Create a request for the method "mode.get".
+             *
+             * This request holds the parameters needed by the managedkafka server.  After setting any optional
+             * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The resource name of the mode. The format is *
+             *        projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/mode/{subject}:
+             *        mode for a schema registry, or * projects/{project}/locations/{location}/schemaRegistries/
+             *        {schema_registry}/contexts/{context}/mode/{subject}: mode for a specific subject in a
+             *        specific context
+             * @return the request
+             */
+            public Get get(java.lang.String name) throws java.io.IOException {
+              Get result = new Get(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Get extends ManagedKafkaRequest<com.google.api.services.managedkafka.v1.model.SchemaMode> {
+
+              private static final String REST_PATH = "v1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+/mode/.*$");
+
+              /**
+               * Get mode at global level or for a subject.
+               *
+               * Create a request for the method "mode.get".
+               *
+               * This request holds the parameters needed by the the managedkafka server.  After setting any
+               * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+               * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The resource name of the mode. The format is *
+             *        projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/mode/{subject}:
+             *        mode for a schema registry, or * projects/{project}/locations/{location}/schemaRegistries/
+             *        {schema_registry}/contexts/{context}/mode/{subject}: mode for a specific subject in a
+             *        specific context
+               * @since 1.13
+               */
+              protected Get(java.lang.String name) {
+                super(ManagedKafka.this, "GET", REST_PATH, null, com.google.api.services.managedkafka.v1.model.SchemaMode.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+/mode/.*$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public Get set$Xgafv(java.lang.String $Xgafv) {
+                return (Get) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Get setAccessToken(java.lang.String accessToken) {
+                return (Get) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Get setAlt(java.lang.String alt) {
+                return (Get) super.setAlt(alt);
+              }
+
+              @Override
+              public Get setCallback(java.lang.String callback) {
+                return (Get) super.setCallback(callback);
+              }
+
+              @Override
+              public Get setFields(java.lang.String fields) {
+                return (Get) super.setFields(fields);
+              }
+
+              @Override
+              public Get setKey(java.lang.String key) {
+                return (Get) super.setKey(key);
+              }
+
+              @Override
+              public Get setOauthToken(java.lang.String oauthToken) {
+                return (Get) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Get) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Get setQuotaUser(java.lang.String quotaUser) {
+                return (Get) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Get setUploadType(java.lang.String uploadType) {
+                return (Get) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Get setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Get) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The resource name of the mode. The format is * projects/{project}/locatio
+               * ns/{location}/schemaRegistries/{schema_registry}/mode/{subject}: mode for a schema
+               * registry, or * projects/{project}/locations/{location}/schemaRegistries/{schema_reg
+               * istry}/contexts/{context}/mode/{subject}: mode for a specific subject in a specific
+               * context
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The resource name of the mode. The format is *
+             projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/mode/{subject}: mode for
+             a schema registry, or * projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/
+             contexts/{context}/mode/{subject}: mode for a specific subject in a specific context
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The resource name of the mode. The format is * projects/{project}/locatio
+               * ns/{location}/schemaRegistries/{schema_registry}/mode/{subject}: mode for a schema
+               * registry, or * projects/{project}/locations/{location}/schemaRegistries/{schema_reg
+               * istry}/contexts/{context}/mode/{subject}: mode for a specific subject in a specific
+               * context
+               */
+              public Get setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+/mode/.*$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Get set(String parameterName, Object value) {
+                return (Get) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Update mode at global level or for a subject.
+             *
+             * Create a request for the method "mode.update".
+             *
+             * This request holds the parameters needed by the managedkafka server.  After setting any optional
+             * parameters, call the {@link Update#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The resource name of the mode. The format is *
+             *        projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/mode/{subject}:
+             *        mode for a schema registry, or * projects/{project}/locations/{location}/schemaRegistries/
+             *        {schema_registry}/contexts/{context}/mode/{subject}: mode for a specific subject in a
+             *        specific context
+             * @param content the {@link com.google.api.services.managedkafka.v1.model.UpdateSchemaModeRequest}
+             * @return the request
+             */
+            public Update update(java.lang.String name, com.google.api.services.managedkafka.v1.model.UpdateSchemaModeRequest content) throws java.io.IOException {
+              Update result = new Update(name, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Update extends ManagedKafkaRequest<com.google.api.services.managedkafka.v1.model.SchemaMode> {
+
+              private static final String REST_PATH = "v1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+/mode/.*$");
+
+              /**
+               * Update mode at global level or for a subject.
+               *
+               * Create a request for the method "mode.update".
+               *
+               * This request holds the parameters needed by the the managedkafka server.  After setting any
+               * optional parameters, call the {@link Update#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The resource name of the mode. The format is *
+             *        projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/mode/{subject}:
+             *        mode for a schema registry, or * projects/{project}/locations/{location}/schemaRegistries/
+             *        {schema_registry}/contexts/{context}/mode/{subject}: mode for a specific subject in a
+             *        specific context
+               * @param content the {@link com.google.api.services.managedkafka.v1.model.UpdateSchemaModeRequest}
+               * @since 1.13
+               */
+              protected Update(java.lang.String name, com.google.api.services.managedkafka.v1.model.UpdateSchemaModeRequest content) {
+                super(ManagedKafka.this, "PUT", REST_PATH, content, com.google.api.services.managedkafka.v1.model.SchemaMode.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+/mode/.*$");
+                }
+              }
+
+              @Override
+              public Update set$Xgafv(java.lang.String $Xgafv) {
+                return (Update) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Update setAccessToken(java.lang.String accessToken) {
+                return (Update) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Update setAlt(java.lang.String alt) {
+                return (Update) super.setAlt(alt);
+              }
+
+              @Override
+              public Update setCallback(java.lang.String callback) {
+                return (Update) super.setCallback(callback);
+              }
+
+              @Override
+              public Update setFields(java.lang.String fields) {
+                return (Update) super.setFields(fields);
+              }
+
+              @Override
+              public Update setKey(java.lang.String key) {
+                return (Update) super.setKey(key);
+              }
+
+              @Override
+              public Update setOauthToken(java.lang.String oauthToken) {
+                return (Update) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Update setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Update) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Update setQuotaUser(java.lang.String quotaUser) {
+                return (Update) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Update setUploadType(java.lang.String uploadType) {
+                return (Update) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Update setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Update) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The resource name of the mode. The format is * projects/{project}/locatio
+               * ns/{location}/schemaRegistries/{schema_registry}/mode/{subject}: mode for a schema
+               * registry, or * projects/{project}/locations/{location}/schemaRegistries/{schema_reg
+               * istry}/contexts/{context}/mode/{subject}: mode for a specific subject in a specific
+               * context
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The resource name of the mode. The format is *
+             projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/mode/{subject}: mode for
+             a schema registry, or * projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/
+             contexts/{context}/mode/{subject}: mode for a specific subject in a specific context
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The resource name of the mode. The format is * projects/{project}/locatio
+               * ns/{location}/schemaRegistries/{schema_registry}/mode/{subject}: mode for a schema
+               * registry, or * projects/{project}/locations/{location}/schemaRegistries/{schema_reg
+               * istry}/contexts/{context}/mode/{subject}: mode for a specific subject in a specific
+               * context
+               */
+              public Update setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+/mode/.*$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Update set(String parameterName, Object value) {
+                return (Update) super.set(parameterName, value);
+              }
+            }
+
+          }
+          /**
+           * An accessor for creating requests from the Schemas collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code ManagedKafka managedkafka = new ManagedKafka(...);}
+           *   {@code ManagedKafka.Schemas.List request = managedkafka.schemas().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public Schemas schemas() {
+            return new Schemas();
+          }
+
+          /**
+           * The "schemas" collection of methods.
+           */
+          public class Schemas {
+
+            /**
+             * Get the schema for the given schema id.
+             *
+             * Create a request for the method "schemas.get".
+             *
+             * This request holds the parameters needed by the managedkafka server.  After setting any optional
+             * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The name of the schema to return. Structured like:
+             *        `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/schemas/ids/{s
+             *        chema}`
+             * @return the request
+             */
+            public Get get(java.lang.String name) throws java.io.IOException {
+              Get result = new Get(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Get extends ManagedKafkaRequest<com.google.api.services.managedkafka.v1.model.Schema> {
+
+              private static final String REST_PATH = "v1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+/schemas/.*$");
+
+              /**
+               * Get the schema for the given schema id.
+               *
+               * Create a request for the method "schemas.get".
+               *
+               * This request holds the parameters needed by the the managedkafka server.  After setting any
+               * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+               * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The name of the schema to return. Structured like:
+             *        `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/schemas/ids/{s
+             *        chema}`
+               * @since 1.13
+               */
+              protected Get(java.lang.String name) {
+                super(ManagedKafka.this, "GET", REST_PATH, null, com.google.api.services.managedkafka.v1.model.Schema.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+/schemas/.*$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public Get set$Xgafv(java.lang.String $Xgafv) {
+                return (Get) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Get setAccessToken(java.lang.String accessToken) {
+                return (Get) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Get setAlt(java.lang.String alt) {
+                return (Get) super.setAlt(alt);
+              }
+
+              @Override
+              public Get setCallback(java.lang.String callback) {
+                return (Get) super.setCallback(callback);
+              }
+
+              @Override
+              public Get setFields(java.lang.String fields) {
+                return (Get) super.setFields(fields);
+              }
+
+              @Override
+              public Get setKey(java.lang.String key) {
+                return (Get) super.setKey(key);
+              }
+
+              @Override
+              public Get setOauthToken(java.lang.String oauthToken) {
+                return (Get) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Get) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Get setQuotaUser(java.lang.String quotaUser) {
+                return (Get) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Get setUploadType(java.lang.String uploadType) {
+                return (Get) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Get setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Get) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The name of the schema to return. Structured like: `projects/{project}/lo
+               * cations/{location}/schemaRegistries/{schema_registry}/schemas/ids/{schema}`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The name of the schema to return. Structured like:
+             `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/schemas/ids/{schema}`
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The name of the schema to return. Structured like: `projects/{project}/lo
+               * cations/{location}/schemaRegistries/{schema_registry}/schemas/ids/{schema}`
+               */
+              public Get setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+/schemas/.*$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              /**
+               * Optional. Used to limit the search for the schema ID to a specific subject,
+               * otherwise the schema ID will be searched for in all subjects in the given specified
+               * context.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String subject;
+
+              /** Optional. Used to limit the search for the schema ID to a specific subject, otherwise the schema ID
+             will be searched for in all subjects in the given specified context.
+               */
+              public java.lang.String getSubject() {
+                return subject;
+              }
+
+              /**
+               * Optional. Used to limit the search for the schema ID to a specific subject,
+               * otherwise the schema ID will be searched for in all subjects in the given specified
+               * context.
+               */
+              public Get setSubject(java.lang.String subject) {
+                this.subject = subject;
+                return this;
+              }
+
+              @Override
+              public Get set(String parameterName, Object value) {
+                return (Get) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Get the schema string for the given schema id. The response will be the schema string.
+             *
+             * Create a request for the method "schemas.getSchema".
+             *
+             * This request holds the parameters needed by the managedkafka server.  After setting any optional
+             * parameters, call the {@link GetSchema#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The name of the schema to return. Structured like:
+             *        `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/schemas/ids/{s
+             *        chema}`
+             * @return the request
+             */
+            public GetSchema getSchema(java.lang.String name) throws java.io.IOException {
+              GetSchema result = new GetSchema(name);
+              initialize(result);
+              return result;
+            }
+
+            public class GetSchema extends ManagedKafkaRequest<com.google.api.services.managedkafka.v1.model.HttpBody> {
+
+              private static final String REST_PATH = "v1/{+name}/schema";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+/schemas/.*$");
+
+              /**
+               * Get the schema string for the given schema id. The response will be the schema string.
+               *
+               * Create a request for the method "schemas.getSchema".
+               *
+               * This request holds the parameters needed by the the managedkafka server.  After setting any
+               * optional parameters, call the {@link GetSchema#execute()} method to invoke the remote
+               * operation. <p> {@link
+               * GetSchema#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The name of the schema to return. Structured like:
+             *        `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/schemas/ids/{s
+             *        chema}`
+               * @since 1.13
+               */
+              protected GetSchema(java.lang.String name) {
+                super(ManagedKafka.this, "GET", REST_PATH, null, com.google.api.services.managedkafka.v1.model.HttpBody.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+/schemas/.*$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public GetSchema set$Xgafv(java.lang.String $Xgafv) {
+                return (GetSchema) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public GetSchema setAccessToken(java.lang.String accessToken) {
+                return (GetSchema) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public GetSchema setAlt(java.lang.String alt) {
+                return (GetSchema) super.setAlt(alt);
+              }
+
+              @Override
+              public GetSchema setCallback(java.lang.String callback) {
+                return (GetSchema) super.setCallback(callback);
+              }
+
+              @Override
+              public GetSchema setFields(java.lang.String fields) {
+                return (GetSchema) super.setFields(fields);
+              }
+
+              @Override
+              public GetSchema setKey(java.lang.String key) {
+                return (GetSchema) super.setKey(key);
+              }
+
+              @Override
+              public GetSchema setOauthToken(java.lang.String oauthToken) {
+                return (GetSchema) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public GetSchema setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (GetSchema) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public GetSchema setQuotaUser(java.lang.String quotaUser) {
+                return (GetSchema) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public GetSchema setUploadType(java.lang.String uploadType) {
+                return (GetSchema) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public GetSchema setUploadProtocol(java.lang.String uploadProtocol) {
+                return (GetSchema) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The name of the schema to return. Structured like: `projects/{project}/lo
+               * cations/{location}/schemaRegistries/{schema_registry}/schemas/ids/{schema}`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The name of the schema to return. Structured like:
+             `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/schemas/ids/{schema}`
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The name of the schema to return. Structured like: `projects/{project}/lo
+               * cations/{location}/schemaRegistries/{schema_registry}/schemas/ids/{schema}`
+               */
+              public GetSchema setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+/schemas/.*$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              /**
+               * Optional. Used to limit the search for the schema ID to a specific subject,
+               * otherwise the schema ID will be searched for in all subjects in the given specified
+               * context.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String subject;
+
+              /** Optional. Used to limit the search for the schema ID to a specific subject, otherwise the schema ID
+             will be searched for in all subjects in the given specified context.
+               */
+              public java.lang.String getSubject() {
+                return subject;
+              }
+
+              /**
+               * Optional. Used to limit the search for the schema ID to a specific subject,
+               * otherwise the schema ID will be searched for in all subjects in the given specified
+               * context.
+               */
+              public GetSchema setSubject(java.lang.String subject) {
+                this.subject = subject;
+                return this;
+              }
+
+              @Override
+              public GetSchema set(String parameterName, Object value) {
+                return (GetSchema) super.set(parameterName, value);
+              }
+            }
+
+            /**
+             * An accessor for creating requests from the Subjects collection.
+             *
+             * <p>The typical use is:</p>
+             * <pre>
+             *   {@code ManagedKafka managedkafka = new ManagedKafka(...);}
+             *   {@code ManagedKafka.Subjects.List request = managedkafka.subjects().list(parameters ...)}
+             * </pre>
+             *
+             * @return the resource collection
+             */
+            public Subjects subjects() {
+              return new Subjects();
+            }
+
+            /**
+             * The "subjects" collection of methods.
+             */
+            public class Subjects {
+
+              /**
+               * List subjects which reference a particular schema id. The response will be an array of subject
+               * names.
+               *
+               * Create a request for the method "subjects.list".
+               *
+               * This request holds the parameters needed by the managedkafka server.  After setting any optional
+               * parameters, call the {@link List#execute()} method to invoke the remote operation.
+               *
+               * @param parent Required. The schema resource whose associated subjects are to be listed. Structured like:
+               *        `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/schemas/ids/{s
+               *        chema}` or `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/con
+               *        texts/{context}/schemas/ids/{schema}`
+               * @return the request
+               */
+              public List list(java.lang.String parent) throws java.io.IOException {
+                List result = new List(parent);
+                initialize(result);
+                return result;
+              }
+
+              public class List extends ManagedKafkaRequest<com.google.api.services.managedkafka.v1.model.HttpBody> {
+
+                private static final String REST_PATH = "v1/{+parent}/subjects";
+
+                private final java.util.regex.Pattern PARENT_PATTERN =
+                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+/schemas/.*$");
+
+                /**
+                 * List subjects which reference a particular schema id. The response will be an array of subject
+                 * names.
+                 *
+                 * Create a request for the method "subjects.list".
+                 *
+                 * This request holds the parameters needed by the the managedkafka server.  After setting any
+                 * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+                 * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+                 * must be called to initialize this instance immediately after invoking the constructor. </p>
+                 *
+                 * @param parent Required. The schema resource whose associated subjects are to be listed. Structured like:
+               *        `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/schemas/ids/{s
+               *        chema}` or `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/con
+               *        texts/{context}/schemas/ids/{schema}`
+                 * @since 1.13
+                 */
+                protected List(java.lang.String parent) {
+                  super(ManagedKafka.this, "GET", REST_PATH, null, com.google.api.services.managedkafka.v1.model.HttpBody.class);
+                  this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                        "Parameter parent must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+/schemas/.*$");
+                  }
+                }
+
+                @Override
+                public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                  return super.executeUsingHead();
+                }
+
+                @Override
+                public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                  return super.buildHttpRequestUsingHead();
+                }
+
+                @Override
+                public List set$Xgafv(java.lang.String $Xgafv) {
+                  return (List) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public List setAccessToken(java.lang.String accessToken) {
+                  return (List) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public List setAlt(java.lang.String alt) {
+                  return (List) super.setAlt(alt);
+                }
+
+                @Override
+                public List setCallback(java.lang.String callback) {
+                  return (List) super.setCallback(callback);
+                }
+
+                @Override
+                public List setFields(java.lang.String fields) {
+                  return (List) super.setFields(fields);
+                }
+
+                @Override
+                public List setKey(java.lang.String key) {
+                  return (List) super.setKey(key);
+                }
+
+                @Override
+                public List setOauthToken(java.lang.String oauthToken) {
+                  return (List) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (List) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public List setQuotaUser(java.lang.String quotaUser) {
+                  return (List) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public List setUploadType(java.lang.String uploadType) {
+                  return (List) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public List setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (List) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /**
+                 * Required. The schema resource whose associated subjects are to be listed.
+                 * Structured like: `projects/{project}/locations/{location}/schemaRegistries/{schem
+                 * a_registry}/schemas/ids/{schema}` or `projects/{project}/locations/{location}/sch
+                 * emaRegistries/{schema_registry}/contexts/{context}/schemas/ids/{schema}`
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String parent;
+
+                /** Required. The schema resource whose associated subjects are to be listed. Structured like:
+               `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/schemas/ids/{schema}`
+               or `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/contexts/{context}/s
+               chemas/ids/{schema}`
+                 */
+                public java.lang.String getParent() {
+                  return parent;
+                }
+
+                /**
+                 * Required. The schema resource whose associated subjects are to be listed.
+                 * Structured like: `projects/{project}/locations/{location}/schemaRegistries/{schem
+                 * a_registry}/schemas/ids/{schema}` or `projects/{project}/locations/{location}/sch
+                 * emaRegistries/{schema_registry}/contexts/{context}/schemas/ids/{schema}`
+                 */
+                public List setParent(java.lang.String parent) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                        "Parameter parent must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+/schemas/.*$");
+                  }
+                  this.parent = parent;
+                  return this;
+                }
+
+                /**
+                 * Optional. If true, the response will include soft-deleted subjects. The default
+                 * is false.
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.Boolean deleted;
+
+                /** Optional. If true, the response will include soft-deleted subjects. The default is false.
+                 */
+                public java.lang.Boolean getDeleted() {
+                  return deleted;
+                }
+
+                /**
+                 * Optional. If true, the response will include soft-deleted subjects. The default
+                 * is false.
+                 */
+                public List setDeleted(java.lang.Boolean deleted) {
+                  this.deleted = deleted;
+                  return this;
+                }
+
+                /** Optional. The subject to filter the subjects by. */
+                @com.google.api.client.util.Key
+                private java.lang.String subject;
+
+                /** Optional. The subject to filter the subjects by.
+                 */
+                public java.lang.String getSubject() {
+                  return subject;
+                }
+
+                /** Optional. The subject to filter the subjects by. */
+                public List setSubject(java.lang.String subject) {
+                  this.subject = subject;
+                  return this;
+                }
+
+                @Override
+                public List set(String parameterName, Object value) {
+                  return (List) super.set(parameterName, value);
+                }
+              }
+
+            }
+            /**
+             * An accessor for creating requests from the Types collection.
+             *
+             * <p>The typical use is:</p>
+             * <pre>
+             *   {@code ManagedKafka managedkafka = new ManagedKafka(...);}
+             *   {@code ManagedKafka.Types.List request = managedkafka.types().list(parameters ...)}
+             * </pre>
+             *
+             * @return the resource collection
+             */
+            public Types types() {
+              return new Types();
+            }
+
+            /**
+             * The "types" collection of methods.
+             */
+            public class Types {
+
+              /**
+               * List the supported schema types. The response will be an array of schema types.
+               *
+               * Create a request for the method "types.list".
+               *
+               * This request holds the parameters needed by the managedkafka server.  After setting any optional
+               * parameters, call the {@link List#execute()} method to invoke the remote operation.
+               *
+               * @param parent Required. The parent schema registry whose schema types are to be listed. Structured like:
+               *        `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}`
+               * @return the request
+               */
+              public List list(java.lang.String parent) throws java.io.IOException {
+                List result = new List(parent);
+                initialize(result);
+                return result;
+              }
+
+              public class List extends ManagedKafkaRequest<com.google.api.services.managedkafka.v1.model.HttpBody> {
+
+                private static final String REST_PATH = "v1/{+parent}/schemas/types";
+
+                private final java.util.regex.Pattern PARENT_PATTERN =
+                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+$");
+
+                /**
+                 * List the supported schema types. The response will be an array of schema types.
+                 *
+                 * Create a request for the method "types.list".
+                 *
+                 * This request holds the parameters needed by the the managedkafka server.  After setting any
+                 * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+                 * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+                 * must be called to initialize this instance immediately after invoking the constructor. </p>
+                 *
+                 * @param parent Required. The parent schema registry whose schema types are to be listed. Structured like:
+               *        `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}`
+                 * @since 1.13
+                 */
+                protected List(java.lang.String parent) {
+                  super(ManagedKafka.this, "GET", REST_PATH, null, com.google.api.services.managedkafka.v1.model.HttpBody.class);
+                  this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                        "Parameter parent must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+$");
+                  }
+                }
+
+                @Override
+                public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                  return super.executeUsingHead();
+                }
+
+                @Override
+                public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                  return super.buildHttpRequestUsingHead();
+                }
+
+                @Override
+                public List set$Xgafv(java.lang.String $Xgafv) {
+                  return (List) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public List setAccessToken(java.lang.String accessToken) {
+                  return (List) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public List setAlt(java.lang.String alt) {
+                  return (List) super.setAlt(alt);
+                }
+
+                @Override
+                public List setCallback(java.lang.String callback) {
+                  return (List) super.setCallback(callback);
+                }
+
+                @Override
+                public List setFields(java.lang.String fields) {
+                  return (List) super.setFields(fields);
+                }
+
+                @Override
+                public List setKey(java.lang.String key) {
+                  return (List) super.setKey(key);
+                }
+
+                @Override
+                public List setOauthToken(java.lang.String oauthToken) {
+                  return (List) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (List) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public List setQuotaUser(java.lang.String quotaUser) {
+                  return (List) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public List setUploadType(java.lang.String uploadType) {
+                  return (List) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public List setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (List) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /**
+                 * Required. The parent schema registry whose schema types are to be listed.
+                 * Structured like:
+                 * `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}`
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String parent;
+
+                /** Required. The parent schema registry whose schema types are to be listed. Structured like:
+               `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}`
+                 */
+                public java.lang.String getParent() {
+                  return parent;
+                }
+
+                /**
+                 * Required. The parent schema registry whose schema types are to be listed.
+                 * Structured like:
+                 * `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}`
+                 */
+                public List setParent(java.lang.String parent) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                        "Parameter parent must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+$");
+                  }
+                  this.parent = parent;
+                  return this;
+                }
+
+                @Override
+                public List set(String parameterName, Object value) {
+                  return (List) super.set(parameterName, value);
+                }
+              }
+
+            }
+            /**
+             * An accessor for creating requests from the Versions collection.
+             *
+             * <p>The typical use is:</p>
+             * <pre>
+             *   {@code ManagedKafka managedkafka = new ManagedKafka(...);}
+             *   {@code ManagedKafka.Versions.List request = managedkafka.versions().list(parameters ...)}
+             * </pre>
+             *
+             * @return the resource collection
+             */
+            public Versions versions() {
+              return new Versions();
+            }
+
+            /**
+             * The "versions" collection of methods.
+             */
+            public class Versions {
+
+              /**
+               * List the schema versions for the given schema id. The response will be an array of subject-
+               * version pairs as: [{"subject":"subject1", "version":1}, {"subject":"subject2", "version":2}].
+               *
+               * Create a request for the method "versions.list".
+               *
+               * This request holds the parameters needed by the managedkafka server.  After setting any optional
+               * parameters, call the {@link List#execute()} method to invoke the remote operation.
+               *
+               * @param parent Required. The schema whose schema versions are to be listed. Structured like:
+               *        `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/schemas/ids/{s
+               *        chema}` or `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/con
+               *        texts/{context}/schemas/ids/{schema}`
+               * @return the request
+               */
+              public List list(java.lang.String parent) throws java.io.IOException {
+                List result = new List(parent);
+                initialize(result);
+                return result;
+              }
+
+              public class List extends ManagedKafkaRequest<com.google.api.services.managedkafka.v1.model.HttpBody> {
+
+                private static final String REST_PATH = "v1/{+parent}/versions";
+
+                private final java.util.regex.Pattern PARENT_PATTERN =
+                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+/schemas/.*$");
+
+                /**
+                 * List the schema versions for the given schema id. The response will be an array of subject-
+                 * version pairs as: [{"subject":"subject1", "version":1}, {"subject":"subject2", "version":2}].
+                 *
+                 * Create a request for the method "versions.list".
+                 *
+                 * This request holds the parameters needed by the the managedkafka server.  After setting any
+                 * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+                 * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+                 * must be called to initialize this instance immediately after invoking the constructor. </p>
+                 *
+                 * @param parent Required. The schema whose schema versions are to be listed. Structured like:
+               *        `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/schemas/ids/{s
+               *        chema}` or `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/con
+               *        texts/{context}/schemas/ids/{schema}`
+                 * @since 1.13
+                 */
+                protected List(java.lang.String parent) {
+                  super(ManagedKafka.this, "GET", REST_PATH, null, com.google.api.services.managedkafka.v1.model.HttpBody.class);
+                  this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                        "Parameter parent must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+/schemas/.*$");
+                  }
+                }
+
+                @Override
+                public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                  return super.executeUsingHead();
+                }
+
+                @Override
+                public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                  return super.buildHttpRequestUsingHead();
+                }
+
+                @Override
+                public List set$Xgafv(java.lang.String $Xgafv) {
+                  return (List) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public List setAccessToken(java.lang.String accessToken) {
+                  return (List) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public List setAlt(java.lang.String alt) {
+                  return (List) super.setAlt(alt);
+                }
+
+                @Override
+                public List setCallback(java.lang.String callback) {
+                  return (List) super.setCallback(callback);
+                }
+
+                @Override
+                public List setFields(java.lang.String fields) {
+                  return (List) super.setFields(fields);
+                }
+
+                @Override
+                public List setKey(java.lang.String key) {
+                  return (List) super.setKey(key);
+                }
+
+                @Override
+                public List setOauthToken(java.lang.String oauthToken) {
+                  return (List) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (List) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public List setQuotaUser(java.lang.String quotaUser) {
+                  return (List) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public List setUploadType(java.lang.String uploadType) {
+                  return (List) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public List setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (List) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /**
+                 * Required. The schema whose schema versions are to be listed. Structured like: `pr
+                 * ojects/{project}/locations/{location}/schemaRegistries/{schema_registry}/schemas/
+                 * ids/{schema}` or `projects/{project}/locations/{location}/schemaRegistries/{schem
+                 * a_registry}/contexts/{context}/schemas/ids/{schema}`
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String parent;
+
+                /** Required. The schema whose schema versions are to be listed. Structured like:
+               `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/schemas/ids/{schema}`
+               or `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/contexts/{context}/s
+               chemas/ids/{schema}`
+                 */
+                public java.lang.String getParent() {
+                  return parent;
+                }
+
+                /**
+                 * Required. The schema whose schema versions are to be listed. Structured like: `pr
+                 * ojects/{project}/locations/{location}/schemaRegistries/{schema_registry}/schemas/
+                 * ids/{schema}` or `projects/{project}/locations/{location}/schemaRegistries/{schem
+                 * a_registry}/contexts/{context}/schemas/ids/{schema}`
+                 */
+                public List setParent(java.lang.String parent) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                        "Parameter parent must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+/schemas/.*$");
+                  }
+                  this.parent = parent;
+                  return this;
+                }
+
+                /**
+                 * Optional. If true, the response will include soft-deleted versions of the schema,
+                 * even if the subject is soft-deleted. The default is false.
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.Boolean deleted;
+
+                /** Optional. If true, the response will include soft-deleted versions of the schema, even if the
+               subject is soft-deleted. The default is false.
+                 */
+                public java.lang.Boolean getDeleted() {
+                  return deleted;
+                }
+
+                /**
+                 * Optional. If true, the response will include soft-deleted versions of the schema,
+                 * even if the subject is soft-deleted. The default is false.
+                 */
+                public List setDeleted(java.lang.Boolean deleted) {
+                  this.deleted = deleted;
+                  return this;
+                }
+
+                /** Optional. The subject to filter the subjects by. */
+                @com.google.api.client.util.Key
+                private java.lang.String subject;
+
+                /** Optional. The subject to filter the subjects by.
+                 */
+                public java.lang.String getSubject() {
+                  return subject;
+                }
+
+                /** Optional. The subject to filter the subjects by. */
+                public List setSubject(java.lang.String subject) {
+                  this.subject = subject;
+                  return this;
+                }
+
+                @Override
+                public List set(String parameterName, Object value) {
+                  return (List) super.set(parameterName, value);
+                }
+              }
+
+            }
+          }
+          /**
+           * An accessor for creating requests from the Subjects collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code ManagedKafka managedkafka = new ManagedKafka(...);}
+           *   {@code ManagedKafka.Subjects.List request = managedkafka.subjects().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public Subjects subjects() {
+            return new Subjects();
+          }
+
+          /**
+           * The "subjects" collection of methods.
+           */
+          public class Subjects {
+
+            /**
+             * Delete a subject. The response will be an array of versions of the deleted subject.
+             *
+             * Create a request for the method "subjects.delete".
+             *
+             * This request holds the parameters needed by the managedkafka server.  After setting any optional
+             * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The name of the subject to delete. Structured like:
+             *        `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/subjects/{subj
+             *        ect}` or `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/conte
+             *        xts/{context}/subjects/{subject}`
+             * @return the request
+             */
+            public Delete delete(java.lang.String name) throws java.io.IOException {
+              Delete result = new Delete(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Delete extends ManagedKafkaRequest<com.google.api.services.managedkafka.v1.model.HttpBody> {
+
+              private static final String REST_PATH = "v1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+/subjects/[^/]+$");
+
+              /**
+               * Delete a subject. The response will be an array of versions of the deleted subject.
+               *
+               * Create a request for the method "subjects.delete".
+               *
+               * This request holds the parameters needed by the the managedkafka server.  After setting any
+               * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The name of the subject to delete. Structured like:
+             *        `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/subjects/{subj
+             *        ect}` or `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/conte
+             *        xts/{context}/subjects/{subject}`
+               * @since 1.13
+               */
+              protected Delete(java.lang.String name) {
+                super(ManagedKafka.this, "DELETE", REST_PATH, null, com.google.api.services.managedkafka.v1.model.HttpBody.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+/subjects/[^/]+$");
+                }
+              }
+
+              @Override
+              public Delete set$Xgafv(java.lang.String $Xgafv) {
+                return (Delete) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Delete setAccessToken(java.lang.String accessToken) {
+                return (Delete) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Delete setAlt(java.lang.String alt) {
+                return (Delete) super.setAlt(alt);
+              }
+
+              @Override
+              public Delete setCallback(java.lang.String callback) {
+                return (Delete) super.setCallback(callback);
+              }
+
+              @Override
+              public Delete setFields(java.lang.String fields) {
+                return (Delete) super.setFields(fields);
+              }
+
+              @Override
+              public Delete setKey(java.lang.String key) {
+                return (Delete) super.setKey(key);
+              }
+
+              @Override
+              public Delete setOauthToken(java.lang.String oauthToken) {
+                return (Delete) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Delete) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Delete setQuotaUser(java.lang.String quotaUser) {
+                return (Delete) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Delete setUploadType(java.lang.String uploadType) {
+                return (Delete) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Delete) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The name of the subject to delete. Structured like: `projects/{project}/l
+               * ocations/{location}/schemaRegistries/{schema_registry}/subjects/{subject}` or `proj
+               * ects/{project}/locations/{location}/schemaRegistries/{schema_registry}/contexts/{co
+               * ntext}/subjects/{subject}`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The name of the subject to delete. Structured like:
+             `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/subjects/{subject}` or
+             `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/contexts/{context}/subj
+             ects/{subject}`
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The name of the subject to delete. Structured like: `projects/{project}/l
+               * ocations/{location}/schemaRegistries/{schema_registry}/subjects/{subject}` or `proj
+               * ects/{project}/locations/{location}/schemaRegistries/{schema_registry}/contexts/{co
+               * ntext}/subjects/{subject}`
+               */
+              public Delete setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+/subjects/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              /**
+               * Optional. If true, the subject and all associated metadata including the schema ID
+               * will be deleted permanently. Otherwise, only the subject is soft-deleted. The
+               * default is false. Soft-deleted subjects can still be searched in ListSubjects API
+               * call with deleted=true query parameter. A soft-delete of a subject must be
+               * performed before a hard-delete.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.Boolean permanent;
+
+              /** Optional. If true, the subject and all associated metadata including the schema ID will be deleted
+             permanently. Otherwise, only the subject is soft-deleted. The default is false. Soft-deleted
+             subjects can still be searched in ListSubjects API call with deleted=true query parameter. A soft-
+             delete of a subject must be performed before a hard-delete.
+               */
+              public java.lang.Boolean getPermanent() {
+                return permanent;
+              }
+
+              /**
+               * Optional. If true, the subject and all associated metadata including the schema ID
+               * will be deleted permanently. Otherwise, only the subject is soft-deleted. The
+               * default is false. Soft-deleted subjects can still be searched in ListSubjects API
+               * call with deleted=true query parameter. A soft-delete of a subject must be
+               * performed before a hard-delete.
+               */
+              public Delete setPermanent(java.lang.Boolean permanent) {
+                this.permanent = permanent;
+                return this;
+              }
+
+              @Override
+              public Delete set(String parameterName, Object value) {
+                return (Delete) super.set(parameterName, value);
+              }
+            }
+            /**
+             * List subjects in the schema registry. The response will be an array of subject names.
+             *
+             * Create a request for the method "subjects.list".
+             *
+             * This request holds the parameters needed by the managedkafka server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. The parent schema registry/context whose subjects are to be listed. Structured like:
+             *        `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}` or `projects/
+             *        {project}/locations/{location}/schemaRegistries/{schema_registry}/contexts/{context}`
+             * @return the request
+             */
+            public List list(java.lang.String parent) throws java.io.IOException {
+              List result = new List(parent);
+              initialize(result);
+              return result;
+            }
+
+            public class List extends ManagedKafkaRequest<com.google.api.services.managedkafka.v1.model.HttpBody> {
+
+              private static final String REST_PATH = "v1/{+parent}/subjects";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+$");
+
+              /**
+               * List subjects in the schema registry. The response will be an array of subject names.
+               *
+               * Create a request for the method "subjects.list".
+               *
+               * This request holds the parameters needed by the the managedkafka server.  After setting any
+               * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+               * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. The parent schema registry/context whose subjects are to be listed. Structured like:
+             *        `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}` or `projects/
+             *        {project}/locations/{location}/schemaRegistries/{schema_registry}/contexts/{context}`
+               * @since 1.13
+               */
+              protected List(java.lang.String parent) {
+                super(ManagedKafka.this, "GET", REST_PATH, null, com.google.api.services.managedkafka.v1.model.HttpBody.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public List set$Xgafv(java.lang.String $Xgafv) {
+                return (List) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public List setAccessToken(java.lang.String accessToken) {
+                return (List) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public List setAlt(java.lang.String alt) {
+                return (List) super.setAlt(alt);
+              }
+
+              @Override
+              public List setCallback(java.lang.String callback) {
+                return (List) super.setCallback(callback);
+              }
+
+              @Override
+              public List setFields(java.lang.String fields) {
+                return (List) super.setFields(fields);
+              }
+
+              @Override
+              public List setKey(java.lang.String key) {
+                return (List) super.setKey(key);
+              }
+
+              @Override
+              public List setOauthToken(java.lang.String oauthToken) {
+                return (List) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (List) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public List setQuotaUser(java.lang.String quotaUser) {
+                return (List) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public List setUploadType(java.lang.String uploadType) {
+                return (List) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public List setUploadProtocol(java.lang.String uploadProtocol) {
+                return (List) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The parent schema registry/context whose subjects are to be listed.
+               * Structured like:
+               * `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}` or `pr
+               * ojects/{project}/locations/{location}/schemaRegistries/{schema_registry}/contexts/{
+               * context}`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The parent schema registry/context whose subjects are to be listed. Structured like:
+             `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}` or
+             `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/contexts/{context}`
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. The parent schema registry/context whose subjects are to be listed.
+               * Structured like:
+               * `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}` or `pr
+               * ojects/{project}/locations/{location}/schemaRegistries/{schema_registry}/contexts/{
+               * context}`
+               */
+              public List setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /**
+               * Optional. If true, the response will include soft-deleted subjects. The default is
+               * false.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.Boolean deleted;
+
+              /** Optional. If true, the response will include soft-deleted subjects. The default is false.
+               */
+              public java.lang.Boolean getDeleted() {
+                return deleted;
+              }
+
+              /**
+               * Optional. If true, the response will include soft-deleted subjects. The default is
+               * false.
+               */
+              public List setDeleted(java.lang.Boolean deleted) {
+                this.deleted = deleted;
+                return this;
+              }
+
+              /**
+               * Optional. The context to filter the subjects by, in the format of `:.{context}:`.
+               * If unset, all subjects in the registry are returned. Set to empty string or add as
+               * '?subjectPrefix=' at the end of this request to list subjects in the default
+               * context.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String subjectPrefix;
+
+              /** Optional. The context to filter the subjects by, in the format of `:.{context}:`. If unset, all
+             subjects in the registry are returned. Set to empty string or add as '?subjectPrefix=' at the end
+             of this request to list subjects in the default context.
+               */
+              public java.lang.String getSubjectPrefix() {
+                return subjectPrefix;
+              }
+
+              /**
+               * Optional. The context to filter the subjects by, in the format of `:.{context}:`.
+               * If unset, all subjects in the registry are returned. Set to empty string or add as
+               * '?subjectPrefix=' at the end of this request to list subjects in the default
+               * context.
+               */
+              public List setSubjectPrefix(java.lang.String subjectPrefix) {
+                this.subjectPrefix = subjectPrefix;
+                return this;
+              }
+
+              @Override
+              public List set(String parameterName, Object value) {
+                return (List) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Lookup a schema under the specified subject.
+             *
+             * Create a request for the method "subjects.lookupVersion".
+             *
+             * This request holds the parameters needed by the managedkafka server.  After setting any optional
+             * parameters, call the {@link LookupVersion#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. The subject to lookup the schema in. Structured like:
+             *        `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/subjects/{subj
+             *        ect}` or `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/conte
+             *        xts/{context}/subjects/{subject}`
+             * @param content the {@link com.google.api.services.managedkafka.v1.model.LookupVersionRequest}
+             * @return the request
+             */
+            public LookupVersion lookupVersion(java.lang.String parent, com.google.api.services.managedkafka.v1.model.LookupVersionRequest content) throws java.io.IOException {
+              LookupVersion result = new LookupVersion(parent, content);
+              initialize(result);
+              return result;
+            }
+
+            public class LookupVersion extends ManagedKafkaRequest<com.google.api.services.managedkafka.v1.model.SchemaVersion> {
+
+              private static final String REST_PATH = "v1/{+parent}";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+/subjects/[^/]+$");
+
+              /**
+               * Lookup a schema under the specified subject.
+               *
+               * Create a request for the method "subjects.lookupVersion".
+               *
+               * This request holds the parameters needed by the the managedkafka server.  After setting any
+               * optional parameters, call the {@link LookupVersion#execute()} method to invoke the remote
+               * operation. <p> {@link LookupVersion#initialize(com.google.api.client.googleapis.services.Abstra
+               * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+               * the constructor. </p>
+               *
+               * @param parent Required. The subject to lookup the schema in. Structured like:
+             *        `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/subjects/{subj
+             *        ect}` or `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/conte
+             *        xts/{context}/subjects/{subject}`
+               * @param content the {@link com.google.api.services.managedkafka.v1.model.LookupVersionRequest}
+               * @since 1.13
+               */
+              protected LookupVersion(java.lang.String parent, com.google.api.services.managedkafka.v1.model.LookupVersionRequest content) {
+                super(ManagedKafka.this, "POST", REST_PATH, content, com.google.api.services.managedkafka.v1.model.SchemaVersion.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+/subjects/[^/]+$");
+                }
+              }
+
+              @Override
+              public LookupVersion set$Xgafv(java.lang.String $Xgafv) {
+                return (LookupVersion) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public LookupVersion setAccessToken(java.lang.String accessToken) {
+                return (LookupVersion) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public LookupVersion setAlt(java.lang.String alt) {
+                return (LookupVersion) super.setAlt(alt);
+              }
+
+              @Override
+              public LookupVersion setCallback(java.lang.String callback) {
+                return (LookupVersion) super.setCallback(callback);
+              }
+
+              @Override
+              public LookupVersion setFields(java.lang.String fields) {
+                return (LookupVersion) super.setFields(fields);
+              }
+
+              @Override
+              public LookupVersion setKey(java.lang.String key) {
+                return (LookupVersion) super.setKey(key);
+              }
+
+              @Override
+              public LookupVersion setOauthToken(java.lang.String oauthToken) {
+                return (LookupVersion) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public LookupVersion setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (LookupVersion) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public LookupVersion setQuotaUser(java.lang.String quotaUser) {
+                return (LookupVersion) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public LookupVersion setUploadType(java.lang.String uploadType) {
+                return (LookupVersion) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public LookupVersion setUploadProtocol(java.lang.String uploadProtocol) {
+                return (LookupVersion) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The subject to lookup the schema in. Structured like: `projects/{project}
+               * /locations/{location}/schemaRegistries/{schema_registry}/subjects/{subject}` or `pr
+               * ojects/{project}/locations/{location}/schemaRegistries/{schema_registry}/contexts/{
+               * context}/subjects/{subject}`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The subject to lookup the schema in. Structured like:
+             `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/subjects/{subject}` or
+             `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/contexts/{context}/subj
+             ects/{subject}`
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. The subject to lookup the schema in. Structured like: `projects/{project}
+               * /locations/{location}/schemaRegistries/{schema_registry}/subjects/{subject}` or `pr
+               * ojects/{project}/locations/{location}/schemaRegistries/{schema_registry}/contexts/{
+               * context}/subjects/{subject}`
+               */
+              public LookupVersion setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+/subjects/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              @Override
+              public LookupVersion set(String parameterName, Object value) {
+                return (LookupVersion) super.set(parameterName, value);
+              }
+            }
+
+            /**
+             * An accessor for creating requests from the Versions collection.
+             *
+             * <p>The typical use is:</p>
+             * <pre>
+             *   {@code ManagedKafka managedkafka = new ManagedKafka(...);}
+             *   {@code ManagedKafka.Versions.List request = managedkafka.versions().list(parameters ...)}
+             * </pre>
+             *
+             * @return the resource collection
+             */
+            public Versions versions() {
+              return new Versions();
+            }
+
+            /**
+             * The "versions" collection of methods.
+             */
+            public class Versions {
+
+              /**
+               * Register a new version under a given subject with the given schema.
+               *
+               * Create a request for the method "versions.create".
+               *
+               * This request holds the parameters needed by the managedkafka server.  After setting any optional
+               * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+               *
+               * @param parent Required. The subject to create the version for. Structured like:
+               *        `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/subjects/{subj
+               *        ect}` or `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/conte
+               *        xts/{context}/subjects/{subject}`
+               * @param content the {@link com.google.api.services.managedkafka.v1.model.CreateVersionRequest}
+               * @return the request
+               */
+              public Create create(java.lang.String parent, com.google.api.services.managedkafka.v1.model.CreateVersionRequest content) throws java.io.IOException {
+                Create result = new Create(parent, content);
+                initialize(result);
+                return result;
+              }
+
+              public class Create extends ManagedKafkaRequest<com.google.api.services.managedkafka.v1.model.CreateVersionResponse> {
+
+                private static final String REST_PATH = "v1/{+parent}/versions";
+
+                private final java.util.regex.Pattern PARENT_PATTERN =
+                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+/subjects/[^/]+$");
+
+                /**
+                 * Register a new version under a given subject with the given schema.
+                 *
+                 * Create a request for the method "versions.create".
+                 *
+                 * This request holds the parameters needed by the the managedkafka server.  After setting any
+                 * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+                 * <p> {@link
+                 * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+                 * be called to initialize this instance immediately after invoking the constructor. </p>
+                 *
+                 * @param parent Required. The subject to create the version for. Structured like:
+               *        `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/subjects/{subj
+               *        ect}` or `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/conte
+               *        xts/{context}/subjects/{subject}`
+                 * @param content the {@link com.google.api.services.managedkafka.v1.model.CreateVersionRequest}
+                 * @since 1.13
+                 */
+                protected Create(java.lang.String parent, com.google.api.services.managedkafka.v1.model.CreateVersionRequest content) {
+                  super(ManagedKafka.this, "POST", REST_PATH, content, com.google.api.services.managedkafka.v1.model.CreateVersionResponse.class);
+                  this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                        "Parameter parent must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+/subjects/[^/]+$");
+                  }
+                }
+
+                @Override
+                public Create set$Xgafv(java.lang.String $Xgafv) {
+                  return (Create) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public Create setAccessToken(java.lang.String accessToken) {
+                  return (Create) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public Create setAlt(java.lang.String alt) {
+                  return (Create) super.setAlt(alt);
+                }
+
+                @Override
+                public Create setCallback(java.lang.String callback) {
+                  return (Create) super.setCallback(callback);
+                }
+
+                @Override
+                public Create setFields(java.lang.String fields) {
+                  return (Create) super.setFields(fields);
+                }
+
+                @Override
+                public Create setKey(java.lang.String key) {
+                  return (Create) super.setKey(key);
+                }
+
+                @Override
+                public Create setOauthToken(java.lang.String oauthToken) {
+                  return (Create) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (Create) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public Create setQuotaUser(java.lang.String quotaUser) {
+                  return (Create) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public Create setUploadType(java.lang.String uploadType) {
+                  return (Create) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public Create setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (Create) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /**
+                 * Required. The subject to create the version for. Structured like: `projects/{proj
+                 * ect}/locations/{location}/schemaRegistries/{schema_registry}/subjects/{subject}`
+                 * or `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/co
+                 * ntexts/{context}/subjects/{subject}`
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String parent;
+
+                /** Required. The subject to create the version for. Structured like:
+               `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/subjects/{subject}` or
+               `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/contexts/{context}/subj
+               ects/{subject}`
+                 */
+                public java.lang.String getParent() {
+                  return parent;
+                }
+
+                /**
+                 * Required. The subject to create the version for. Structured like: `projects/{proj
+                 * ect}/locations/{location}/schemaRegistries/{schema_registry}/subjects/{subject}`
+                 * or `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/co
+                 * ntexts/{context}/subjects/{subject}`
+                 */
+                public Create setParent(java.lang.String parent) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                        "Parameter parent must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+/subjects/[^/]+$");
+                  }
+                  this.parent = parent;
+                  return this;
+                }
+
+                @Override
+                public Create set(String parameterName, Object value) {
+                  return (Create) super.set(parameterName, value);
+                }
+              }
+              /**
+               * Delete a version of a subject. The response will be the deleted version id.
+               *
+               * Create a request for the method "versions.delete".
+               *
+               * This request holds the parameters needed by the managedkafka server.  After setting any optional
+               * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+               *
+               * @param name Required. The name of the subject version to delete. Structured like: `projects/{project}/locations/
+               *        {location}/schemaRegistries/{schema_registry}/subjects/{subject}/versions/{version}` or `p
+               *        rojects/{project}/locations/{location}/schemaRegistries/{schema_registry}/contexts/{contex
+               *        t}/subjects/{subject}/versions/{version}`
+               * @return the request
+               */
+              public Delete delete(java.lang.String name) throws java.io.IOException {
+                Delete result = new Delete(name);
+                initialize(result);
+                return result;
+              }
+
+              public class Delete extends ManagedKafkaRequest<com.google.api.services.managedkafka.v1.model.HttpBody> {
+
+                private static final String REST_PATH = "v1/{+name}";
+
+                private final java.util.regex.Pattern NAME_PATTERN =
+                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+/subjects/[^/]+/versions/[^/]+$");
+
+                /**
+                 * Delete a version of a subject. The response will be the deleted version id.
+                 *
+                 * Create a request for the method "versions.delete".
+                 *
+                 * This request holds the parameters needed by the the managedkafka server.  After setting any
+                 * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+                 * <p> {@link
+                 * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+                 * be called to initialize this instance immediately after invoking the constructor. </p>
+                 *
+                 * @param name Required. The name of the subject version to delete. Structured like: `projects/{project}/locations/
+               *        {location}/schemaRegistries/{schema_registry}/subjects/{subject}/versions/{version}` or `p
+               *        rojects/{project}/locations/{location}/schemaRegistries/{schema_registry}/contexts/{contex
+               *        t}/subjects/{subject}/versions/{version}`
+                 * @since 1.13
+                 */
+                protected Delete(java.lang.String name) {
+                  super(ManagedKafka.this, "DELETE", REST_PATH, null, com.google.api.services.managedkafka.v1.model.HttpBody.class);
+                  this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+/subjects/[^/]+/versions/[^/]+$");
+                  }
+                }
+
+                @Override
+                public Delete set$Xgafv(java.lang.String $Xgafv) {
+                  return (Delete) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public Delete setAccessToken(java.lang.String accessToken) {
+                  return (Delete) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public Delete setAlt(java.lang.String alt) {
+                  return (Delete) super.setAlt(alt);
+                }
+
+                @Override
+                public Delete setCallback(java.lang.String callback) {
+                  return (Delete) super.setCallback(callback);
+                }
+
+                @Override
+                public Delete setFields(java.lang.String fields) {
+                  return (Delete) super.setFields(fields);
+                }
+
+                @Override
+                public Delete setKey(java.lang.String key) {
+                  return (Delete) super.setKey(key);
+                }
+
+                @Override
+                public Delete setOauthToken(java.lang.String oauthToken) {
+                  return (Delete) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (Delete) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public Delete setQuotaUser(java.lang.String quotaUser) {
+                  return (Delete) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public Delete setUploadType(java.lang.String uploadType) {
+                  return (Delete) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (Delete) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /**
+                 * Required. The name of the subject version to delete. Structured like: `projects/{
+                 * project}/locations/{location}/schemaRegistries/{schema_registry}/subjects/{subjec
+                 * t}/versions/{version}` or `projects/{project}/locations/{location}/schemaRegistri
+                 * es/{schema_registry}/contexts/{context}/subjects/{subject}/versions/{version}`
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String name;
+
+                /** Required. The name of the subject version to delete. Structured like: `projects/{project}/locations
+               /{location}/schemaRegistries/{schema_registry}/subjects/{subject}/versions/{version}` or `projects/
+               {project}/locations/{location}/schemaRegistries/{schema_registry}/contexts/{context}/subjects/{subj
+               ect}/versions/{version}`
+                 */
+                public java.lang.String getName() {
+                  return name;
+                }
+
+                /**
+                 * Required. The name of the subject version to delete. Structured like: `projects/{
+                 * project}/locations/{location}/schemaRegistries/{schema_registry}/subjects/{subjec
+                 * t}/versions/{version}` or `projects/{project}/locations/{location}/schemaRegistri
+                 * es/{schema_registry}/contexts/{context}/subjects/{subject}/versions/{version}`
+                 */
+                public Delete setName(java.lang.String name) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+/subjects/[^/]+/versions/[^/]+$");
+                  }
+                  this.name = name;
+                  return this;
+                }
+
+                /**
+                 * Optional. If true, both the version and the referenced schema ID will be
+                 * permanently deleted. The default is false. If false, the version will be deleted
+                 * but the schema ID will be retained. Soft-deleted versions can still be searched
+                 * in ListVersions API call with deleted=true query parameter. A soft-delete of a
+                 * version must be performed before a hard-delete.
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.Boolean permanent;
+
+                /** Optional. If true, both the version and the referenced schema ID will be permanently deleted. The
+               default is false. If false, the version will be deleted but the schema ID will be retained. Soft-
+               deleted versions can still be searched in ListVersions API call with deleted=true query parameter.
+               A soft-delete of a version must be performed before a hard-delete.
+                 */
+                public java.lang.Boolean getPermanent() {
+                  return permanent;
+                }
+
+                /**
+                 * Optional. If true, both the version and the referenced schema ID will be
+                 * permanently deleted. The default is false. If false, the version will be deleted
+                 * but the schema ID will be retained. Soft-deleted versions can still be searched
+                 * in ListVersions API call with deleted=true query parameter. A soft-delete of a
+                 * version must be performed before a hard-delete.
+                 */
+                public Delete setPermanent(java.lang.Boolean permanent) {
+                  this.permanent = permanent;
+                  return this;
+                }
+
+                @Override
+                public Delete set(String parameterName, Object value) {
+                  return (Delete) super.set(parameterName, value);
+                }
+              }
+              /**
+               * Get a versioned schema (schema with subject/version) of a subject.
+               *
+               * Create a request for the method "versions.get".
+               *
+               * This request holds the parameters needed by the managedkafka server.  After setting any optional
+               * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+               *
+               * @param name Required. The name of the subject to return versions. Structured like: `projects/{project}/locations
+               *        /{location}/schemaRegistries/{schema_registry}/subjects/{subject}/versions/{version}` or `
+               *        projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/contexts/{conte
+               *        xt}/subjects/{subject}/versions/{version}`
+               * @return the request
+               */
+              public Get get(java.lang.String name) throws java.io.IOException {
+                Get result = new Get(name);
+                initialize(result);
+                return result;
+              }
+
+              public class Get extends ManagedKafkaRequest<com.google.api.services.managedkafka.v1.model.SchemaVersion> {
+
+                private static final String REST_PATH = "v1/{+name}";
+
+                private final java.util.regex.Pattern NAME_PATTERN =
+                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+/subjects/[^/]+/versions/[^/]+$");
+
+                /**
+                 * Get a versioned schema (schema with subject/version) of a subject.
+                 *
+                 * Create a request for the method "versions.get".
+                 *
+                 * This request holds the parameters needed by the the managedkafka server.  After setting any
+                 * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+                 * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+                 * must be called to initialize this instance immediately after invoking the constructor. </p>
+                 *
+                 * @param name Required. The name of the subject to return versions. Structured like: `projects/{project}/locations
+               *        /{location}/schemaRegistries/{schema_registry}/subjects/{subject}/versions/{version}` or `
+               *        projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/contexts/{conte
+               *        xt}/subjects/{subject}/versions/{version}`
+                 * @since 1.13
+                 */
+                protected Get(java.lang.String name) {
+                  super(ManagedKafka.this, "GET", REST_PATH, null, com.google.api.services.managedkafka.v1.model.SchemaVersion.class);
+                  this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+/subjects/[^/]+/versions/[^/]+$");
+                  }
+                }
+
+                @Override
+                public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                  return super.executeUsingHead();
+                }
+
+                @Override
+                public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                  return super.buildHttpRequestUsingHead();
+                }
+
+                @Override
+                public Get set$Xgafv(java.lang.String $Xgafv) {
+                  return (Get) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public Get setAccessToken(java.lang.String accessToken) {
+                  return (Get) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public Get setAlt(java.lang.String alt) {
+                  return (Get) super.setAlt(alt);
+                }
+
+                @Override
+                public Get setCallback(java.lang.String callback) {
+                  return (Get) super.setCallback(callback);
+                }
+
+                @Override
+                public Get setFields(java.lang.String fields) {
+                  return (Get) super.setFields(fields);
+                }
+
+                @Override
+                public Get setKey(java.lang.String key) {
+                  return (Get) super.setKey(key);
+                }
+
+                @Override
+                public Get setOauthToken(java.lang.String oauthToken) {
+                  return (Get) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (Get) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public Get setQuotaUser(java.lang.String quotaUser) {
+                  return (Get) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public Get setUploadType(java.lang.String uploadType) {
+                  return (Get) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public Get setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (Get) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /**
+                 * Required. The name of the subject to return versions. Structured like: `projects/
+                 * {project}/locations/{location}/schemaRegistries/{schema_registry}/subjects/{subje
+                 * ct}/versions/{version}` or `projects/{project}/locations/{location}/schemaRegistr
+                 * ies/{schema_registry}/contexts/{context}/subjects/{subject}/versions/{version}`
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String name;
+
+                /** Required. The name of the subject to return versions. Structured like: `projects/{project}/location
+               s/{location}/schemaRegistries/{schema_registry}/subjects/{subject}/versions/{version}` or `projects
+               /{project}/locations/{location}/schemaRegistries/{schema_registry}/contexts/{context}/subjects/{sub
+               ject}/versions/{version}`
+                 */
+                public java.lang.String getName() {
+                  return name;
+                }
+
+                /**
+                 * Required. The name of the subject to return versions. Structured like: `projects/
+                 * {project}/locations/{location}/schemaRegistries/{schema_registry}/subjects/{subje
+                 * ct}/versions/{version}` or `projects/{project}/locations/{location}/schemaRegistr
+                 * ies/{schema_registry}/contexts/{context}/subjects/{subject}/versions/{version}`
+                 */
+                public Get setName(java.lang.String name) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+/subjects/[^/]+/versions/[^/]+$");
+                  }
+                  this.name = name;
+                  return this;
+                }
+
+                /**
+                 * Optional. If true, no matter if the subject/version is soft-deleted or not, it
+                 * returns the version details. If false, it returns NOT_FOUND error if the
+                 * subject/version is soft-deleted. The default is false.
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.Boolean deleted;
+
+                /** Optional. If true, no matter if the subject/version is soft-deleted or not, it returns the version
+               details. If false, it returns NOT_FOUND error if the subject/version is soft-deleted. The default
+               is false.
+                 */
+                public java.lang.Boolean getDeleted() {
+                  return deleted;
+                }
+
+                /**
+                 * Optional. If true, no matter if the subject/version is soft-deleted or not, it
+                 * returns the version details. If false, it returns NOT_FOUND error if the
+                 * subject/version is soft-deleted. The default is false.
+                 */
+                public Get setDeleted(java.lang.Boolean deleted) {
+                  this.deleted = deleted;
+                  return this;
+                }
+
+                @Override
+                public Get set(String parameterName, Object value) {
+                  return (Get) super.set(parameterName, value);
+                }
+              }
+              /**
+               * Get the schema string only for a version of a subject. The response will be the schema string.
+               *
+               * Create a request for the method "versions.getSchema".
+               *
+               * This request holds the parameters needed by the managedkafka server.  After setting any optional
+               * parameters, call the {@link GetSchema#execute()} method to invoke the remote operation.
+               *
+               * @param name Required. The name of the subject to return versions. Structured like: `projects/{project}/locations
+               *        /{location}/schemaRegistries/{schema_registry}/subjects/{subject}/versions/{version}` or `
+               *        projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/contexts/{conte
+               *        xt}/subjects/{subject}/versions/{version}`
+               * @return the request
+               */
+              public GetSchema getSchema(java.lang.String name) throws java.io.IOException {
+                GetSchema result = new GetSchema(name);
+                initialize(result);
+                return result;
+              }
+
+              public class GetSchema extends ManagedKafkaRequest<com.google.api.services.managedkafka.v1.model.HttpBody> {
+
+                private static final String REST_PATH = "v1/{+name}/schema";
+
+                private final java.util.regex.Pattern NAME_PATTERN =
+                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+/subjects/[^/]+/versions/[^/]+$");
+
+                /**
+                 * Get the schema string only for a version of a subject. The response will be the schema string.
+                 *
+                 * Create a request for the method "versions.getSchema".
+                 *
+                 * This request holds the parameters needed by the the managedkafka server.  After setting any
+                 * optional parameters, call the {@link GetSchema#execute()} method to invoke the remote
+                 * operation. <p> {@link
+                 * GetSchema#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+                 * must be called to initialize this instance immediately after invoking the constructor. </p>
+                 *
+                 * @param name Required. The name of the subject to return versions. Structured like: `projects/{project}/locations
+               *        /{location}/schemaRegistries/{schema_registry}/subjects/{subject}/versions/{version}` or `
+               *        projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/contexts/{conte
+               *        xt}/subjects/{subject}/versions/{version}`
+                 * @since 1.13
+                 */
+                protected GetSchema(java.lang.String name) {
+                  super(ManagedKafka.this, "GET", REST_PATH, null, com.google.api.services.managedkafka.v1.model.HttpBody.class);
+                  this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+/subjects/[^/]+/versions/[^/]+$");
+                  }
+                }
+
+                @Override
+                public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                  return super.executeUsingHead();
+                }
+
+                @Override
+                public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                  return super.buildHttpRequestUsingHead();
+                }
+
+                @Override
+                public GetSchema set$Xgafv(java.lang.String $Xgafv) {
+                  return (GetSchema) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public GetSchema setAccessToken(java.lang.String accessToken) {
+                  return (GetSchema) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public GetSchema setAlt(java.lang.String alt) {
+                  return (GetSchema) super.setAlt(alt);
+                }
+
+                @Override
+                public GetSchema setCallback(java.lang.String callback) {
+                  return (GetSchema) super.setCallback(callback);
+                }
+
+                @Override
+                public GetSchema setFields(java.lang.String fields) {
+                  return (GetSchema) super.setFields(fields);
+                }
+
+                @Override
+                public GetSchema setKey(java.lang.String key) {
+                  return (GetSchema) super.setKey(key);
+                }
+
+                @Override
+                public GetSchema setOauthToken(java.lang.String oauthToken) {
+                  return (GetSchema) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public GetSchema setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (GetSchema) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public GetSchema setQuotaUser(java.lang.String quotaUser) {
+                  return (GetSchema) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public GetSchema setUploadType(java.lang.String uploadType) {
+                  return (GetSchema) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public GetSchema setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (GetSchema) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /**
+                 * Required. The name of the subject to return versions. Structured like: `projects/
+                 * {project}/locations/{location}/schemaRegistries/{schema_registry}/subjects/{subje
+                 * ct}/versions/{version}` or `projects/{project}/locations/{location}/schemaRegistr
+                 * ies/{schema_registry}/contexts/{context}/subjects/{subject}/versions/{version}`
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String name;
+
+                /** Required. The name of the subject to return versions. Structured like: `projects/{project}/location
+               s/{location}/schemaRegistries/{schema_registry}/subjects/{subject}/versions/{version}` or `projects
+               /{project}/locations/{location}/schemaRegistries/{schema_registry}/contexts/{context}/subjects/{sub
+               ject}/versions/{version}`
+                 */
+                public java.lang.String getName() {
+                  return name;
+                }
+
+                /**
+                 * Required. The name of the subject to return versions. Structured like: `projects/
+                 * {project}/locations/{location}/schemaRegistries/{schema_registry}/subjects/{subje
+                 * ct}/versions/{version}` or `projects/{project}/locations/{location}/schemaRegistr
+                 * ies/{schema_registry}/contexts/{context}/subjects/{subject}/versions/{version}`
+                 */
+                public GetSchema setName(java.lang.String name) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+/subjects/[^/]+/versions/[^/]+$");
+                  }
+                  this.name = name;
+                  return this;
+                }
+
+                /**
+                 * Optional. If true, no matter if the subject/version is soft-deleted or not, it
+                 * returns the version details. If false, it returns NOT_FOUND error if the
+                 * subject/version is soft-deleted. The default is false.
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.Boolean deleted;
+
+                /** Optional. If true, no matter if the subject/version is soft-deleted or not, it returns the version
+               details. If false, it returns NOT_FOUND error if the subject/version is soft-deleted. The default
+               is false.
+                 */
+                public java.lang.Boolean getDeleted() {
+                  return deleted;
+                }
+
+                /**
+                 * Optional. If true, no matter if the subject/version is soft-deleted or not, it
+                 * returns the version details. If false, it returns NOT_FOUND error if the
+                 * subject/version is soft-deleted. The default is false.
+                 */
+                public GetSchema setDeleted(java.lang.Boolean deleted) {
+                  this.deleted = deleted;
+                  return this;
+                }
+
+                @Override
+                public GetSchema set(String parameterName, Object value) {
+                  return (GetSchema) super.set(parameterName, value);
+                }
+              }
+              /**
+               * Get all versions of a subject. The response will be an array of versions of the subject.
+               *
+               * Create a request for the method "versions.list".
+               *
+               * This request holds the parameters needed by the managedkafka server.  After setting any optional
+               * parameters, call the {@link List#execute()} method to invoke the remote operation.
+               *
+               * @param parent Required. The subject whose versions are to be listed. Structured like:
+               *        `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/subjects/{subj
+               *        ect}` or `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/conte
+               *        xts/{context}/subjects/{subject}`
+               * @return the request
+               */
+              public List list(java.lang.String parent) throws java.io.IOException {
+                List result = new List(parent);
+                initialize(result);
+                return result;
+              }
+
+              public class List extends ManagedKafkaRequest<com.google.api.services.managedkafka.v1.model.HttpBody> {
+
+                private static final String REST_PATH = "v1/{+parent}/versions";
+
+                private final java.util.regex.Pattern PARENT_PATTERN =
+                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+/subjects/[^/]+$");
+
+                /**
+                 * Get all versions of a subject. The response will be an array of versions of the subject.
+                 *
+                 * Create a request for the method "versions.list".
+                 *
+                 * This request holds the parameters needed by the the managedkafka server.  After setting any
+                 * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+                 * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+                 * must be called to initialize this instance immediately after invoking the constructor. </p>
+                 *
+                 * @param parent Required. The subject whose versions are to be listed. Structured like:
+               *        `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/subjects/{subj
+               *        ect}` or `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/conte
+               *        xts/{context}/subjects/{subject}`
+                 * @since 1.13
+                 */
+                protected List(java.lang.String parent) {
+                  super(ManagedKafka.this, "GET", REST_PATH, null, com.google.api.services.managedkafka.v1.model.HttpBody.class);
+                  this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                        "Parameter parent must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+/subjects/[^/]+$");
+                  }
+                }
+
+                @Override
+                public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                  return super.executeUsingHead();
+                }
+
+                @Override
+                public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                  return super.buildHttpRequestUsingHead();
+                }
+
+                @Override
+                public List set$Xgafv(java.lang.String $Xgafv) {
+                  return (List) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public List setAccessToken(java.lang.String accessToken) {
+                  return (List) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public List setAlt(java.lang.String alt) {
+                  return (List) super.setAlt(alt);
+                }
+
+                @Override
+                public List setCallback(java.lang.String callback) {
+                  return (List) super.setCallback(callback);
+                }
+
+                @Override
+                public List setFields(java.lang.String fields) {
+                  return (List) super.setFields(fields);
+                }
+
+                @Override
+                public List setKey(java.lang.String key) {
+                  return (List) super.setKey(key);
+                }
+
+                @Override
+                public List setOauthToken(java.lang.String oauthToken) {
+                  return (List) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (List) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public List setQuotaUser(java.lang.String quotaUser) {
+                  return (List) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public List setUploadType(java.lang.String uploadType) {
+                  return (List) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public List setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (List) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /**
+                 * Required. The subject whose versions are to be listed. Structured like: `projects
+                 * /{project}/locations/{location}/schemaRegistries/{schema_registry}/subjects/{subj
+                 * ect}` or `projects/{project}/locations/{location}/schemaRegistries/{schema_regist
+                 * ry}/contexts/{context}/subjects/{subject}`
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String parent;
+
+                /** Required. The subject whose versions are to be listed. Structured like:
+               `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/subjects/{subject}` or
+               `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/contexts/{context}/subj
+               ects/{subject}`
+                 */
+                public java.lang.String getParent() {
+                  return parent;
+                }
+
+                /**
+                 * Required. The subject whose versions are to be listed. Structured like: `projects
+                 * /{project}/locations/{location}/schemaRegistries/{schema_registry}/subjects/{subj
+                 * ect}` or `projects/{project}/locations/{location}/schemaRegistries/{schema_regist
+                 * ry}/contexts/{context}/subjects/{subject}`
+                 */
+                public List setParent(java.lang.String parent) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                        "Parameter parent must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+/subjects/[^/]+$");
+                  }
+                  this.parent = parent;
+                  return this;
+                }
+
+                /**
+                 * Optional. If true, the response will include soft-deleted versions of an active
+                 * or soft-deleted subject. The default is false.
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.Boolean deleted;
+
+                /** Optional. If true, the response will include soft-deleted versions of an active or soft-deleted
+               subject. The default is false.
+                 */
+                public java.lang.Boolean getDeleted() {
+                  return deleted;
+                }
+
+                /**
+                 * Optional. If true, the response will include soft-deleted versions of an active
+                 * or soft-deleted subject. The default is false.
+                 */
+                public List setDeleted(java.lang.Boolean deleted) {
+                  this.deleted = deleted;
+                  return this;
+                }
+
+                @Override
+                public List set(String parameterName, Object value) {
+                  return (List) super.set(parameterName, value);
+                }
+              }
+
+              /**
+               * An accessor for creating requests from the Referencedby collection.
+               *
+               * <p>The typical use is:</p>
+               * <pre>
+               *   {@code ManagedKafka managedkafka = new ManagedKafka(...);}
+               *   {@code ManagedKafka.Referencedby.List request = managedkafka.referencedby().list(parameters ...)}
+               * </pre>
+               *
+               * @return the resource collection
+               */
+              public Referencedby referencedby() {
+                return new Referencedby();
+              }
+
+              /**
+               * The "referencedby" collection of methods.
+               */
+              public class Referencedby {
+
+                /**
+                 * Get a list of IDs of schemas that reference the schema with the given subject and version.
+                 *
+                 * Create a request for the method "referencedby.list".
+                 *
+                 * This request holds the parameters needed by the managedkafka server.  After setting any optional
+                 * parameters, call the {@link List#execute()} method to invoke the remote operation.
+                 *
+                 * @param parent Required. The version to list referenced by. Structured like: `projects/{project}/locations/{locatio
+                 *        n}/schemaRegistries/{schema_registry}/subjects/{subject}/versions/{version}` or `projects/
+                 *        {project}/locations/{location}/schemaRegistries/{schema_registry}/contexts/{context}/subje
+                 *        cts/{subject}/versions/{version}`
+                 * @return the request
+                 */
+                public List list(java.lang.String parent) throws java.io.IOException {
+                  List result = new List(parent);
+                  initialize(result);
+                  return result;
+                }
+
+                public class List extends ManagedKafkaRequest<com.google.api.services.managedkafka.v1.model.HttpBody> {
+
+                  private static final String REST_PATH = "v1/{+parent}/referencedby";
+
+                  private final java.util.regex.Pattern PARENT_PATTERN =
+                      java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+/subjects/[^/]+/versions/[^/]+$");
+
+                  /**
+                   * Get a list of IDs of schemas that reference the schema with the given subject and version.
+                   *
+                   * Create a request for the method "referencedby.list".
+                   *
+                   * This request holds the parameters needed by the the managedkafka server.  After setting any
+                   * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+                   * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+                   * must be called to initialize this instance immediately after invoking the constructor. </p>
+                   *
+                   * @param parent Required. The version to list referenced by. Structured like: `projects/{project}/locations/{locatio
+                 *        n}/schemaRegistries/{schema_registry}/subjects/{subject}/versions/{version}` or `projects/
+                 *        {project}/locations/{location}/schemaRegistries/{schema_registry}/contexts/{context}/subje
+                 *        cts/{subject}/versions/{version}`
+                   * @since 1.13
+                   */
+                  protected List(java.lang.String parent) {
+                    super(ManagedKafka.this, "GET", REST_PATH, null, com.google.api.services.managedkafka.v1.model.HttpBody.class);
+                    this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                    if (!getSuppressPatternChecks()) {
+                      com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                          "Parameter parent must conform to the pattern " +
+                          "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+/subjects/[^/]+/versions/[^/]+$");
+                    }
+                  }
+
+                  @Override
+                  public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                    return super.executeUsingHead();
+                  }
+
+                  @Override
+                  public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                    return super.buildHttpRequestUsingHead();
+                  }
+
+                  @Override
+                  public List set$Xgafv(java.lang.String $Xgafv) {
+                    return (List) super.set$Xgafv($Xgafv);
+                  }
+
+                  @Override
+                  public List setAccessToken(java.lang.String accessToken) {
+                    return (List) super.setAccessToken(accessToken);
+                  }
+
+                  @Override
+                  public List setAlt(java.lang.String alt) {
+                    return (List) super.setAlt(alt);
+                  }
+
+                  @Override
+                  public List setCallback(java.lang.String callback) {
+                    return (List) super.setCallback(callback);
+                  }
+
+                  @Override
+                  public List setFields(java.lang.String fields) {
+                    return (List) super.setFields(fields);
+                  }
+
+                  @Override
+                  public List setKey(java.lang.String key) {
+                    return (List) super.setKey(key);
+                  }
+
+                  @Override
+                  public List setOauthToken(java.lang.String oauthToken) {
+                    return (List) super.setOauthToken(oauthToken);
+                  }
+
+                  @Override
+                  public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                    return (List) super.setPrettyPrint(prettyPrint);
+                  }
+
+                  @Override
+                  public List setQuotaUser(java.lang.String quotaUser) {
+                    return (List) super.setQuotaUser(quotaUser);
+                  }
+
+                  @Override
+                  public List setUploadType(java.lang.String uploadType) {
+                    return (List) super.setUploadType(uploadType);
+                  }
+
+                  @Override
+                  public List setUploadProtocol(java.lang.String uploadProtocol) {
+                    return (List) super.setUploadProtocol(uploadProtocol);
+                  }
+
+                  /**
+                   * Required. The version to list referenced by. Structured like: `projects/{projec
+                   * t}/locations/{location}/schemaRegistries/{schema_registry}/subjects/{subject}/v
+                   * ersions/{version}` or `projects/{project}/locations/{location}/schemaRegistries
+                   * /{schema_registry}/contexts/{context}/subjects/{subject}/versions/{version}`
+                   */
+                  @com.google.api.client.util.Key
+                  private java.lang.String parent;
+
+                  /** Required. The version to list referenced by. Structured like: `projects/{project}/locations/{locati
+                 on}/schemaRegistries/{schema_registry}/subjects/{subject}/versions/{version}` or `projects/{project
+                 }/locations/{location}/schemaRegistries/{schema_registry}/contexts/{context}/subjects/{subject}/ver
+                 sions/{version}`
+                   */
+                  public java.lang.String getParent() {
+                    return parent;
+                  }
+
+                  /**
+                   * Required. The version to list referenced by. Structured like: `projects/{projec
+                   * t}/locations/{location}/schemaRegistries/{schema_registry}/subjects/{subject}/v
+                   * ersions/{version}` or `projects/{project}/locations/{location}/schemaRegistries
+                   * /{schema_registry}/contexts/{context}/subjects/{subject}/versions/{version}`
+                   */
+                  public List setParent(java.lang.String parent) {
+                    if (!getSuppressPatternChecks()) {
+                      com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                          "Parameter parent must conform to the pattern " +
+                          "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+/subjects/[^/]+/versions/[^/]+$");
+                    }
+                    this.parent = parent;
+                    return this;
+                  }
+
+                  @Override
+                  public List set(String parameterName, Object value) {
+                    return (List) super.set(parameterName, value);
+                  }
+                }
+
+              }
+            }
+          }
+        }
+        /**
+         * An accessor for creating requests from the Mode collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code ManagedKafka managedkafka = new ManagedKafka(...);}
+         *   {@code ManagedKafka.Mode.List request = managedkafka.mode().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Mode mode() {
+          return new Mode();
+        }
+
+        /**
+         * The "mode" collection of methods.
+         */
+        public class Mode {
+
+          /**
+           * Get mode at global level or for a subject.
+           *
+           * Create a request for the method "mode.get".
+           *
+           * This request holds the parameters needed by the managedkafka server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name of the mode. The format is *
+           *        projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/mode/{subject}:
+           *        mode for a schema registry, or * projects/{project}/locations/{location}/schemaRegistries/
+           *        {schema_registry}/contexts/{context}/mode/{subject}: mode for a specific subject in a
+           *        specific context
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends ManagedKafkaRequest<com.google.api.services.managedkafka.v1.model.SchemaMode> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/mode/.*$");
+
+            /**
+             * Get mode at global level or for a subject.
+             *
+             * Create a request for the method "mode.get".
+             *
+             * This request holds the parameters needed by the the managedkafka server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name of the mode. The format is *
+           *        projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/mode/{subject}:
+           *        mode for a schema registry, or * projects/{project}/locations/{location}/schemaRegistries/
+           *        {schema_registry}/contexts/{context}/mode/{subject}: mode for a specific subject in a
+           *        specific context
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(ManagedKafka.this, "GET", REST_PATH, null, com.google.api.services.managedkafka.v1.model.SchemaMode.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/mode/.*$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the mode. The format is * projects/{project}/locations
+             * /{location}/schemaRegistries/{schema_registry}/mode/{subject}: mode for a schema
+             * registry, or * projects/{project}/locations/{location}/schemaRegistries/{schema_regis
+             * try}/contexts/{context}/mode/{subject}: mode for a specific subject in a specific
+             * context
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of the mode. The format is *
+           projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/mode/{subject}: mode for
+           a schema registry, or * projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/
+           contexts/{context}/mode/{subject}: mode for a specific subject in a specific context
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name of the mode. The format is * projects/{project}/locations
+             * /{location}/schemaRegistries/{schema_registry}/mode/{subject}: mode for a schema
+             * registry, or * projects/{project}/locations/{location}/schemaRegistries/{schema_regis
+             * try}/contexts/{context}/mode/{subject}: mode for a specific subject in a specific
+             * context
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/mode/.*$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Update mode at global level or for a subject.
+           *
+           * Create a request for the method "mode.update".
+           *
+           * This request holds the parameters needed by the managedkafka server.  After setting any optional
+           * parameters, call the {@link Update#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name of the mode. The format is *
+           *        projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/mode/{subject}:
+           *        mode for a schema registry, or * projects/{project}/locations/{location}/schemaRegistries/
+           *        {schema_registry}/contexts/{context}/mode/{subject}: mode for a specific subject in a
+           *        specific context
+           * @param content the {@link com.google.api.services.managedkafka.v1.model.UpdateSchemaModeRequest}
+           * @return the request
+           */
+          public Update update(java.lang.String name, com.google.api.services.managedkafka.v1.model.UpdateSchemaModeRequest content) throws java.io.IOException {
+            Update result = new Update(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Update extends ManagedKafkaRequest<com.google.api.services.managedkafka.v1.model.SchemaMode> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/mode/.*$");
+
+            /**
+             * Update mode at global level or for a subject.
+             *
+             * Create a request for the method "mode.update".
+             *
+             * This request holds the parameters needed by the the managedkafka server.  After setting any
+             * optional parameters, call the {@link Update#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name of the mode. The format is *
+           *        projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/mode/{subject}:
+           *        mode for a schema registry, or * projects/{project}/locations/{location}/schemaRegistries/
+           *        {schema_registry}/contexts/{context}/mode/{subject}: mode for a specific subject in a
+           *        specific context
+             * @param content the {@link com.google.api.services.managedkafka.v1.model.UpdateSchemaModeRequest}
+             * @since 1.13
+             */
+            protected Update(java.lang.String name, com.google.api.services.managedkafka.v1.model.UpdateSchemaModeRequest content) {
+              super(ManagedKafka.this, "PUT", REST_PATH, content, com.google.api.services.managedkafka.v1.model.SchemaMode.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/mode/.*$");
+              }
+            }
+
+            @Override
+            public Update set$Xgafv(java.lang.String $Xgafv) {
+              return (Update) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Update setAccessToken(java.lang.String accessToken) {
+              return (Update) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Update setAlt(java.lang.String alt) {
+              return (Update) super.setAlt(alt);
+            }
+
+            @Override
+            public Update setCallback(java.lang.String callback) {
+              return (Update) super.setCallback(callback);
+            }
+
+            @Override
+            public Update setFields(java.lang.String fields) {
+              return (Update) super.setFields(fields);
+            }
+
+            @Override
+            public Update setKey(java.lang.String key) {
+              return (Update) super.setKey(key);
+            }
+
+            @Override
+            public Update setOauthToken(java.lang.String oauthToken) {
+              return (Update) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Update setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Update) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Update setQuotaUser(java.lang.String quotaUser) {
+              return (Update) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Update setUploadType(java.lang.String uploadType) {
+              return (Update) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Update setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Update) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the mode. The format is * projects/{project}/locations
+             * /{location}/schemaRegistries/{schema_registry}/mode/{subject}: mode for a schema
+             * registry, or * projects/{project}/locations/{location}/schemaRegistries/{schema_regis
+             * try}/contexts/{context}/mode/{subject}: mode for a specific subject in a specific
+             * context
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of the mode. The format is *
+           projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/mode/{subject}: mode for
+           a schema registry, or * projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/
+           contexts/{context}/mode/{subject}: mode for a specific subject in a specific context
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name of the mode. The format is * projects/{project}/locations
+             * /{location}/schemaRegistries/{schema_registry}/mode/{subject}: mode for a schema
+             * registry, or * projects/{project}/locations/{location}/schemaRegistries/{schema_regis
+             * try}/contexts/{context}/mode/{subject}: mode for a specific subject in a specific
+             * context
+             */
+            public Update setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/mode/.*$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Update set(String parameterName, Object value) {
+              return (Update) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
+         * An accessor for creating requests from the Schemas collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code ManagedKafka managedkafka = new ManagedKafka(...);}
+         *   {@code ManagedKafka.Schemas.List request = managedkafka.schemas().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Schemas schemas() {
+          return new Schemas();
+        }
+
+        /**
+         * The "schemas" collection of methods.
+         */
+        public class Schemas {
+
+          /**
+           * Get the schema for the given schema id.
+           *
+           * Create a request for the method "schemas.get".
+           *
+           * This request holds the parameters needed by the managedkafka server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the schema to return. Structured like:
+           *        `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/schemas/ids/{s
+           *        chema}`
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends ManagedKafkaRequest<com.google.api.services.managedkafka.v1.model.Schema> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/schemas/.*$");
+
+            /**
+             * Get the schema for the given schema id.
+             *
+             * Create a request for the method "schemas.get".
+             *
+             * This request holds the parameters needed by the the managedkafka server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the schema to return. Structured like:
+           *        `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/schemas/ids/{s
+           *        chema}`
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(ManagedKafka.this, "GET", REST_PATH, null, com.google.api.services.managedkafka.v1.model.Schema.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/schemas/.*$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the schema to return. Structured like: `projects/{project}/loca
+             * tions/{location}/schemaRegistries/{schema_registry}/schemas/ids/{schema}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the schema to return. Structured like:
+           `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/schemas/ids/{schema}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the schema to return. Structured like: `projects/{project}/loca
+             * tions/{location}/schemaRegistries/{schema_registry}/schemas/ids/{schema}`
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/schemas/.*$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Optional. Used to limit the search for the schema ID to a specific subject, otherwise
+             * the schema ID will be searched for in all subjects in the given specified context.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String subject;
+
+            /** Optional. Used to limit the search for the schema ID to a specific subject, otherwise the schema ID
+           will be searched for in all subjects in the given specified context.
+             */
+            public java.lang.String getSubject() {
+              return subject;
+            }
+
+            /**
+             * Optional. Used to limit the search for the schema ID to a specific subject, otherwise
+             * the schema ID will be searched for in all subjects in the given specified context.
+             */
+            public Get setSubject(java.lang.String subject) {
+              this.subject = subject;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Get the schema string for the given schema id. The response will be the schema string.
+           *
+           * Create a request for the method "schemas.getSchema".
+           *
+           * This request holds the parameters needed by the managedkafka server.  After setting any optional
+           * parameters, call the {@link GetSchema#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the schema to return. Structured like:
+           *        `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/schemas/ids/{s
+           *        chema}`
+           * @return the request
+           */
+          public GetSchema getSchema(java.lang.String name) throws java.io.IOException {
+            GetSchema result = new GetSchema(name);
+            initialize(result);
+            return result;
+          }
+
+          public class GetSchema extends ManagedKafkaRequest<com.google.api.services.managedkafka.v1.model.HttpBody> {
+
+            private static final String REST_PATH = "v1/{+name}/schema";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/schemas/.*$");
+
+            /**
+             * Get the schema string for the given schema id. The response will be the schema string.
+             *
+             * Create a request for the method "schemas.getSchema".
+             *
+             * This request holds the parameters needed by the the managedkafka server.  After setting any
+             * optional parameters, call the {@link GetSchema#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * GetSchema#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the schema to return. Structured like:
+           *        `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/schemas/ids/{s
+           *        chema}`
+             * @since 1.13
+             */
+            protected GetSchema(java.lang.String name) {
+              super(ManagedKafka.this, "GET", REST_PATH, null, com.google.api.services.managedkafka.v1.model.HttpBody.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/schemas/.*$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public GetSchema set$Xgafv(java.lang.String $Xgafv) {
+              return (GetSchema) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public GetSchema setAccessToken(java.lang.String accessToken) {
+              return (GetSchema) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public GetSchema setAlt(java.lang.String alt) {
+              return (GetSchema) super.setAlt(alt);
+            }
+
+            @Override
+            public GetSchema setCallback(java.lang.String callback) {
+              return (GetSchema) super.setCallback(callback);
+            }
+
+            @Override
+            public GetSchema setFields(java.lang.String fields) {
+              return (GetSchema) super.setFields(fields);
+            }
+
+            @Override
+            public GetSchema setKey(java.lang.String key) {
+              return (GetSchema) super.setKey(key);
+            }
+
+            @Override
+            public GetSchema setOauthToken(java.lang.String oauthToken) {
+              return (GetSchema) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public GetSchema setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (GetSchema) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public GetSchema setQuotaUser(java.lang.String quotaUser) {
+              return (GetSchema) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public GetSchema setUploadType(java.lang.String uploadType) {
+              return (GetSchema) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public GetSchema setUploadProtocol(java.lang.String uploadProtocol) {
+              return (GetSchema) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the schema to return. Structured like: `projects/{project}/loca
+             * tions/{location}/schemaRegistries/{schema_registry}/schemas/ids/{schema}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the schema to return. Structured like:
+           `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/schemas/ids/{schema}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the schema to return. Structured like: `projects/{project}/loca
+             * tions/{location}/schemaRegistries/{schema_registry}/schemas/ids/{schema}`
+             */
+            public GetSchema setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/schemas/.*$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Optional. Used to limit the search for the schema ID to a specific subject, otherwise
+             * the schema ID will be searched for in all subjects in the given specified context.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String subject;
+
+            /** Optional. Used to limit the search for the schema ID to a specific subject, otherwise the schema ID
+           will be searched for in all subjects in the given specified context.
+             */
+            public java.lang.String getSubject() {
+              return subject;
+            }
+
+            /**
+             * Optional. Used to limit the search for the schema ID to a specific subject, otherwise
+             * the schema ID will be searched for in all subjects in the given specified context.
+             */
+            public GetSchema setSubject(java.lang.String subject) {
+              this.subject = subject;
+              return this;
+            }
+
+            @Override
+            public GetSchema set(String parameterName, Object value) {
+              return (GetSchema) super.set(parameterName, value);
+            }
+          }
+
+          /**
+           * An accessor for creating requests from the Subjects collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code ManagedKafka managedkafka = new ManagedKafka(...);}
+           *   {@code ManagedKafka.Subjects.List request = managedkafka.subjects().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public Subjects subjects() {
+            return new Subjects();
+          }
+
+          /**
+           * The "subjects" collection of methods.
+           */
+          public class Subjects {
+
+            /**
+             * List subjects which reference a particular schema id. The response will be an array of subject
+             * names.
+             *
+             * Create a request for the method "subjects.list".
+             *
+             * This request holds the parameters needed by the managedkafka server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. The schema resource whose associated subjects are to be listed. Structured like:
+             *        `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/schemas/ids/{s
+             *        chema}` or `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/con
+             *        texts/{context}/schemas/ids/{schema}`
+             * @return the request
+             */
+            public List list(java.lang.String parent) throws java.io.IOException {
+              List result = new List(parent);
+              initialize(result);
+              return result;
+            }
+
+            public class List extends ManagedKafkaRequest<com.google.api.services.managedkafka.v1.model.HttpBody> {
+
+              private static final String REST_PATH = "v1/{+parent}/subjects";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/schemas/.*$");
+
+              /**
+               * List subjects which reference a particular schema id. The response will be an array of subject
+               * names.
+               *
+               * Create a request for the method "subjects.list".
+               *
+               * This request holds the parameters needed by the the managedkafka server.  After setting any
+               * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+               * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. The schema resource whose associated subjects are to be listed. Structured like:
+             *        `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/schemas/ids/{s
+             *        chema}` or `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/con
+             *        texts/{context}/schemas/ids/{schema}`
+               * @since 1.13
+               */
+              protected List(java.lang.String parent) {
+                super(ManagedKafka.this, "GET", REST_PATH, null, com.google.api.services.managedkafka.v1.model.HttpBody.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/schemas/.*$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public List set$Xgafv(java.lang.String $Xgafv) {
+                return (List) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public List setAccessToken(java.lang.String accessToken) {
+                return (List) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public List setAlt(java.lang.String alt) {
+                return (List) super.setAlt(alt);
+              }
+
+              @Override
+              public List setCallback(java.lang.String callback) {
+                return (List) super.setCallback(callback);
+              }
+
+              @Override
+              public List setFields(java.lang.String fields) {
+                return (List) super.setFields(fields);
+              }
+
+              @Override
+              public List setKey(java.lang.String key) {
+                return (List) super.setKey(key);
+              }
+
+              @Override
+              public List setOauthToken(java.lang.String oauthToken) {
+                return (List) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (List) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public List setQuotaUser(java.lang.String quotaUser) {
+                return (List) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public List setUploadType(java.lang.String uploadType) {
+                return (List) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public List setUploadProtocol(java.lang.String uploadProtocol) {
+                return (List) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The schema resource whose associated subjects are to be listed.
+               * Structured like: `projects/{project}/locations/{location}/schemaRegistries/{schema_
+               * registry}/schemas/ids/{schema}` or `projects/{project}/locations/{location}/schemaR
+               * egistries/{schema_registry}/contexts/{context}/schemas/ids/{schema}`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The schema resource whose associated subjects are to be listed. Structured like:
+             `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/schemas/ids/{schema}`
+             or `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/contexts/{context}/s
+             chemas/ids/{schema}`
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. The schema resource whose associated subjects are to be listed.
+               * Structured like: `projects/{project}/locations/{location}/schemaRegistries/{schema_
+               * registry}/schemas/ids/{schema}` or `projects/{project}/locations/{location}/schemaR
+               * egistries/{schema_registry}/contexts/{context}/schemas/ids/{schema}`
+               */
+              public List setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/schemas/.*$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /**
+               * Optional. If true, the response will include soft-deleted subjects. The default is
+               * false.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.Boolean deleted;
+
+              /** Optional. If true, the response will include soft-deleted subjects. The default is false.
+               */
+              public java.lang.Boolean getDeleted() {
+                return deleted;
+              }
+
+              /**
+               * Optional. If true, the response will include soft-deleted subjects. The default is
+               * false.
+               */
+              public List setDeleted(java.lang.Boolean deleted) {
+                this.deleted = deleted;
+                return this;
+              }
+
+              /** Optional. The subject to filter the subjects by. */
+              @com.google.api.client.util.Key
+              private java.lang.String subject;
+
+              /** Optional. The subject to filter the subjects by.
+               */
+              public java.lang.String getSubject() {
+                return subject;
+              }
+
+              /** Optional. The subject to filter the subjects by. */
+              public List setSubject(java.lang.String subject) {
+                this.subject = subject;
+                return this;
+              }
+
+              @Override
+              public List set(String parameterName, Object value) {
+                return (List) super.set(parameterName, value);
+              }
+            }
+
+          }
+          /**
+           * An accessor for creating requests from the Types collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code ManagedKafka managedkafka = new ManagedKafka(...);}
+           *   {@code ManagedKafka.Types.List request = managedkafka.types().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public Types types() {
+            return new Types();
+          }
+
+          /**
+           * The "types" collection of methods.
+           */
+          public class Types {
+
+            /**
+             * List the supported schema types. The response will be an array of schema types.
+             *
+             * Create a request for the method "types.list".
+             *
+             * This request holds the parameters needed by the managedkafka server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. The parent schema registry whose schema types are to be listed. Structured like:
+             *        `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}`
+             * @return the request
+             */
+            public List list(java.lang.String parent) throws java.io.IOException {
+              List result = new List(parent);
+              initialize(result);
+              return result;
+            }
+
+            public class List extends ManagedKafkaRequest<com.google.api.services.managedkafka.v1.model.HttpBody> {
+
+              private static final String REST_PATH = "v1/{+parent}/schemas/types";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+$");
+
+              /**
+               * List the supported schema types. The response will be an array of schema types.
+               *
+               * Create a request for the method "types.list".
+               *
+               * This request holds the parameters needed by the the managedkafka server.  After setting any
+               * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+               * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. The parent schema registry whose schema types are to be listed. Structured like:
+             *        `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}`
+               * @since 1.13
+               */
+              protected List(java.lang.String parent) {
+                super(ManagedKafka.this, "GET", REST_PATH, null, com.google.api.services.managedkafka.v1.model.HttpBody.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public List set$Xgafv(java.lang.String $Xgafv) {
+                return (List) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public List setAccessToken(java.lang.String accessToken) {
+                return (List) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public List setAlt(java.lang.String alt) {
+                return (List) super.setAlt(alt);
+              }
+
+              @Override
+              public List setCallback(java.lang.String callback) {
+                return (List) super.setCallback(callback);
+              }
+
+              @Override
+              public List setFields(java.lang.String fields) {
+                return (List) super.setFields(fields);
+              }
+
+              @Override
+              public List setKey(java.lang.String key) {
+                return (List) super.setKey(key);
+              }
+
+              @Override
+              public List setOauthToken(java.lang.String oauthToken) {
+                return (List) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (List) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public List setQuotaUser(java.lang.String quotaUser) {
+                return (List) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public List setUploadType(java.lang.String uploadType) {
+                return (List) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public List setUploadProtocol(java.lang.String uploadProtocol) {
+                return (List) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The parent schema registry whose schema types are to be listed.
+               * Structured like:
+               * `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The parent schema registry whose schema types are to be listed. Structured like:
+             `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}`
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. The parent schema registry whose schema types are to be listed.
+               * Structured like:
+               * `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}`
+               */
+              public List setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              @Override
+              public List set(String parameterName, Object value) {
+                return (List) super.set(parameterName, value);
+              }
+            }
+
+          }
+          /**
+           * An accessor for creating requests from the Versions collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code ManagedKafka managedkafka = new ManagedKafka(...);}
+           *   {@code ManagedKafka.Versions.List request = managedkafka.versions().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public Versions versions() {
+            return new Versions();
+          }
+
+          /**
+           * The "versions" collection of methods.
+           */
+          public class Versions {
+
+            /**
+             * List the schema versions for the given schema id. The response will be an array of subject-
+             * version pairs as: [{"subject":"subject1", "version":1}, {"subject":"subject2", "version":2}].
+             *
+             * Create a request for the method "versions.list".
+             *
+             * This request holds the parameters needed by the managedkafka server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. The schema whose schema versions are to be listed. Structured like:
+             *        `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/schemas/ids/{s
+             *        chema}` or `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/con
+             *        texts/{context}/schemas/ids/{schema}`
+             * @return the request
+             */
+            public List list(java.lang.String parent) throws java.io.IOException {
+              List result = new List(parent);
+              initialize(result);
+              return result;
+            }
+
+            public class List extends ManagedKafkaRequest<com.google.api.services.managedkafka.v1.model.HttpBody> {
+
+              private static final String REST_PATH = "v1/{+parent}/versions";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/schemas/.*$");
+
+              /**
+               * List the schema versions for the given schema id. The response will be an array of subject-
+               * version pairs as: [{"subject":"subject1", "version":1}, {"subject":"subject2", "version":2}].
+               *
+               * Create a request for the method "versions.list".
+               *
+               * This request holds the parameters needed by the the managedkafka server.  After setting any
+               * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+               * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. The schema whose schema versions are to be listed. Structured like:
+             *        `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/schemas/ids/{s
+             *        chema}` or `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/con
+             *        texts/{context}/schemas/ids/{schema}`
+               * @since 1.13
+               */
+              protected List(java.lang.String parent) {
+                super(ManagedKafka.this, "GET", REST_PATH, null, com.google.api.services.managedkafka.v1.model.HttpBody.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/schemas/.*$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public List set$Xgafv(java.lang.String $Xgafv) {
+                return (List) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public List setAccessToken(java.lang.String accessToken) {
+                return (List) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public List setAlt(java.lang.String alt) {
+                return (List) super.setAlt(alt);
+              }
+
+              @Override
+              public List setCallback(java.lang.String callback) {
+                return (List) super.setCallback(callback);
+              }
+
+              @Override
+              public List setFields(java.lang.String fields) {
+                return (List) super.setFields(fields);
+              }
+
+              @Override
+              public List setKey(java.lang.String key) {
+                return (List) super.setKey(key);
+              }
+
+              @Override
+              public List setOauthToken(java.lang.String oauthToken) {
+                return (List) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (List) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public List setQuotaUser(java.lang.String quotaUser) {
+                return (List) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public List setUploadType(java.lang.String uploadType) {
+                return (List) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public List setUploadProtocol(java.lang.String uploadProtocol) {
+                return (List) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The schema whose schema versions are to be listed. Structured like: `proj
+               * ects/{project}/locations/{location}/schemaRegistries/{schema_registry}/schemas/ids/
+               * {schema}` or `projects/{project}/locations/{location}/schemaRegistries/{schema_regi
+               * stry}/contexts/{context}/schemas/ids/{schema}`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The schema whose schema versions are to be listed. Structured like:
+             `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/schemas/ids/{schema}`
+             or `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/contexts/{context}/s
+             chemas/ids/{schema}`
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. The schema whose schema versions are to be listed. Structured like: `proj
+               * ects/{project}/locations/{location}/schemaRegistries/{schema_registry}/schemas/ids/
+               * {schema}` or `projects/{project}/locations/{location}/schemaRegistries/{schema_regi
+               * stry}/contexts/{context}/schemas/ids/{schema}`
+               */
+              public List setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/schemas/.*$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /**
+               * Optional. If true, the response will include soft-deleted versions of the schema,
+               * even if the subject is soft-deleted. The default is false.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.Boolean deleted;
+
+              /** Optional. If true, the response will include soft-deleted versions of the schema, even if the
+             subject is soft-deleted. The default is false.
+               */
+              public java.lang.Boolean getDeleted() {
+                return deleted;
+              }
+
+              /**
+               * Optional. If true, the response will include soft-deleted versions of the schema,
+               * even if the subject is soft-deleted. The default is false.
+               */
+              public List setDeleted(java.lang.Boolean deleted) {
+                this.deleted = deleted;
+                return this;
+              }
+
+              /** Optional. The subject to filter the subjects by. */
+              @com.google.api.client.util.Key
+              private java.lang.String subject;
+
+              /** Optional. The subject to filter the subjects by.
+               */
+              public java.lang.String getSubject() {
+                return subject;
+              }
+
+              /** Optional. The subject to filter the subjects by. */
+              public List setSubject(java.lang.String subject) {
+                this.subject = subject;
+                return this;
+              }
+
+              @Override
+              public List set(String parameterName, Object value) {
+                return (List) super.set(parameterName, value);
+              }
+            }
+
+          }
+        }
+        /**
+         * An accessor for creating requests from the Subjects collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code ManagedKafka managedkafka = new ManagedKafka(...);}
+         *   {@code ManagedKafka.Subjects.List request = managedkafka.subjects().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Subjects subjects() {
+          return new Subjects();
+        }
+
+        /**
+         * The "subjects" collection of methods.
+         */
+        public class Subjects {
+
+          /**
+           * Delete a subject. The response will be an array of versions of the deleted subject.
+           *
+           * Create a request for the method "subjects.delete".
+           *
+           * This request holds the parameters needed by the managedkafka server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the subject to delete. Structured like:
+           *        `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/subjects/{subj
+           *        ect}` or `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/conte
+           *        xts/{context}/subjects/{subject}`
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends ManagedKafkaRequest<com.google.api.services.managedkafka.v1.model.HttpBody> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/subjects/[^/]+$");
+
+            /**
+             * Delete a subject. The response will be an array of versions of the deleted subject.
+             *
+             * Create a request for the method "subjects.delete".
+             *
+             * This request holds the parameters needed by the the managedkafka server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the subject to delete. Structured like:
+           *        `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/subjects/{subj
+           *        ect}` or `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/conte
+           *        xts/{context}/subjects/{subject}`
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(ManagedKafka.this, "DELETE", REST_PATH, null, com.google.api.services.managedkafka.v1.model.HttpBody.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/subjects/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the subject to delete. Structured like: `projects/{project}/loc
+             * ations/{location}/schemaRegistries/{schema_registry}/subjects/{subject}` or `projects
+             * /{project}/locations/{location}/schemaRegistries/{schema_registry}/contexts/{context}
+             * /subjects/{subject}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the subject to delete. Structured like:
+           `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/subjects/{subject}` or
+           `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/contexts/{context}/subj
+           ects/{subject}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the subject to delete. Structured like: `projects/{project}/loc
+             * ations/{location}/schemaRegistries/{schema_registry}/subjects/{subject}` or `projects
+             * /{project}/locations/{location}/schemaRegistries/{schema_registry}/contexts/{context}
+             * /subjects/{subject}`
+             */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/subjects/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Optional. If true, the subject and all associated metadata including the schema ID
+             * will be deleted permanently. Otherwise, only the subject is soft-deleted. The default
+             * is false. Soft-deleted subjects can still be searched in ListSubjects API call with
+             * deleted=true query parameter. A soft-delete of a subject must be performed before a
+             * hard-delete.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean permanent;
+
+            /** Optional. If true, the subject and all associated metadata including the schema ID will be deleted
+           permanently. Otherwise, only the subject is soft-deleted. The default is false. Soft-deleted
+           subjects can still be searched in ListSubjects API call with deleted=true query parameter. A soft-
+           delete of a subject must be performed before a hard-delete.
+             */
+            public java.lang.Boolean getPermanent() {
+              return permanent;
+            }
+
+            /**
+             * Optional. If true, the subject and all associated metadata including the schema ID
+             * will be deleted permanently. Otherwise, only the subject is soft-deleted. The default
+             * is false. Soft-deleted subjects can still be searched in ListSubjects API call with
+             * deleted=true query parameter. A soft-delete of a subject must be performed before a
+             * hard-delete.
+             */
+            public Delete setPermanent(java.lang.Boolean permanent) {
+              this.permanent = permanent;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * List subjects in the schema registry. The response will be an array of subject names.
+           *
+           * Create a request for the method "subjects.list".
+           *
+           * This request holds the parameters needed by the managedkafka server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent schema registry/context whose subjects are to be listed. Structured like:
+           *        `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}` or `projects/
+           *        {project}/locations/{location}/schemaRegistries/{schema_registry}/contexts/{context}`
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends ManagedKafkaRequest<com.google.api.services.managedkafka.v1.model.HttpBody> {
+
+            private static final String REST_PATH = "v1/{+parent}/subjects";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+$");
+
+            /**
+             * List subjects in the schema registry. The response will be an array of subject names.
+             *
+             * Create a request for the method "subjects.list".
+             *
+             * This request holds the parameters needed by the the managedkafka server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent schema registry/context whose subjects are to be listed. Structured like:
+           *        `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}` or `projects/
+           *        {project}/locations/{location}/schemaRegistries/{schema_registry}/contexts/{context}`
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(ManagedKafka.this, "GET", REST_PATH, null, com.google.api.services.managedkafka.v1.model.HttpBody.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent schema registry/context whose subjects are to be listed.
+             * Structured like:
+             * `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}` or `proj
+             * ects/{project}/locations/{location}/schemaRegistries/{schema_registry}/contexts/{cont
+             * ext}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent schema registry/context whose subjects are to be listed. Structured like:
+           `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}` or
+           `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/contexts/{context}`
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The parent schema registry/context whose subjects are to be listed.
+             * Structured like:
+             * `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}` or `proj
+             * ects/{project}/locations/{location}/schemaRegistries/{schema_registry}/contexts/{cont
+             * ext}`
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Optional. If true, the response will include soft-deleted subjects. The default is
+             * false.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean deleted;
+
+            /** Optional. If true, the response will include soft-deleted subjects. The default is false.
+             */
+            public java.lang.Boolean getDeleted() {
+              return deleted;
+            }
+
+            /**
+             * Optional. If true, the response will include soft-deleted subjects. The default is
+             * false.
+             */
+            public List setDeleted(java.lang.Boolean deleted) {
+              this.deleted = deleted;
+              return this;
+            }
+
+            /**
+             * Optional. The context to filter the subjects by, in the format of `:.{context}:`. If
+             * unset, all subjects in the registry are returned. Set to empty string or add as
+             * '?subjectPrefix=' at the end of this request to list subjects in the default context.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String subjectPrefix;
+
+            /** Optional. The context to filter the subjects by, in the format of `:.{context}:`. If unset, all
+           subjects in the registry are returned. Set to empty string or add as '?subjectPrefix=' at the end
+           of this request to list subjects in the default context.
+             */
+            public java.lang.String getSubjectPrefix() {
+              return subjectPrefix;
+            }
+
+            /**
+             * Optional. The context to filter the subjects by, in the format of `:.{context}:`. If
+             * unset, all subjects in the registry are returned. Set to empty string or add as
+             * '?subjectPrefix=' at the end of this request to list subjects in the default context.
+             */
+            public List setSubjectPrefix(java.lang.String subjectPrefix) {
+              this.subjectPrefix = subjectPrefix;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lookup a schema under the specified subject.
+           *
+           * Create a request for the method "subjects.lookupVersion".
+           *
+           * This request holds the parameters needed by the managedkafka server.  After setting any optional
+           * parameters, call the {@link LookupVersion#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The subject to lookup the schema in. Structured like:
+           *        `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/subjects/{subj
+           *        ect}` or `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/conte
+           *        xts/{context}/subjects/{subject}`
+           * @param content the {@link com.google.api.services.managedkafka.v1.model.LookupVersionRequest}
+           * @return the request
+           */
+          public LookupVersion lookupVersion(java.lang.String parent, com.google.api.services.managedkafka.v1.model.LookupVersionRequest content) throws java.io.IOException {
+            LookupVersion result = new LookupVersion(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class LookupVersion extends ManagedKafkaRequest<com.google.api.services.managedkafka.v1.model.SchemaVersion> {
+
+            private static final String REST_PATH = "v1/{+parent}";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/subjects/[^/]+$");
+
+            /**
+             * Lookup a schema under the specified subject.
+             *
+             * Create a request for the method "subjects.lookupVersion".
+             *
+             * This request holds the parameters needed by the the managedkafka server.  After setting any
+             * optional parameters, call the {@link LookupVersion#execute()} method to invoke the remote
+             * operation. <p> {@link LookupVersion#initialize(com.google.api.client.googleapis.services.Abstra
+             * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+             * the constructor. </p>
+             *
+             * @param parent Required. The subject to lookup the schema in. Structured like:
+           *        `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/subjects/{subj
+           *        ect}` or `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/conte
+           *        xts/{context}/subjects/{subject}`
+             * @param content the {@link com.google.api.services.managedkafka.v1.model.LookupVersionRequest}
+             * @since 1.13
+             */
+            protected LookupVersion(java.lang.String parent, com.google.api.services.managedkafka.v1.model.LookupVersionRequest content) {
+              super(ManagedKafka.this, "POST", REST_PATH, content, com.google.api.services.managedkafka.v1.model.SchemaVersion.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/subjects/[^/]+$");
+              }
+            }
+
+            @Override
+            public LookupVersion set$Xgafv(java.lang.String $Xgafv) {
+              return (LookupVersion) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public LookupVersion setAccessToken(java.lang.String accessToken) {
+              return (LookupVersion) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public LookupVersion setAlt(java.lang.String alt) {
+              return (LookupVersion) super.setAlt(alt);
+            }
+
+            @Override
+            public LookupVersion setCallback(java.lang.String callback) {
+              return (LookupVersion) super.setCallback(callback);
+            }
+
+            @Override
+            public LookupVersion setFields(java.lang.String fields) {
+              return (LookupVersion) super.setFields(fields);
+            }
+
+            @Override
+            public LookupVersion setKey(java.lang.String key) {
+              return (LookupVersion) super.setKey(key);
+            }
+
+            @Override
+            public LookupVersion setOauthToken(java.lang.String oauthToken) {
+              return (LookupVersion) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public LookupVersion setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (LookupVersion) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public LookupVersion setQuotaUser(java.lang.String quotaUser) {
+              return (LookupVersion) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public LookupVersion setUploadType(java.lang.String uploadType) {
+              return (LookupVersion) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public LookupVersion setUploadProtocol(java.lang.String uploadProtocol) {
+              return (LookupVersion) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The subject to lookup the schema in. Structured like: `projects/{project}/l
+             * ocations/{location}/schemaRegistries/{schema_registry}/subjects/{subject}` or `projec
+             * ts/{project}/locations/{location}/schemaRegistries/{schema_registry}/contexts/{contex
+             * t}/subjects/{subject}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The subject to lookup the schema in. Structured like:
+           `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/subjects/{subject}` or
+           `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/contexts/{context}/subj
+           ects/{subject}`
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The subject to lookup the schema in. Structured like: `projects/{project}/l
+             * ocations/{location}/schemaRegistries/{schema_registry}/subjects/{subject}` or `projec
+             * ts/{project}/locations/{location}/schemaRegistries/{schema_registry}/contexts/{contex
+             * t}/subjects/{subject}`
+             */
+            public LookupVersion setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/subjects/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public LookupVersion set(String parameterName, Object value) {
+              return (LookupVersion) super.set(parameterName, value);
+            }
+          }
+
+          /**
+           * An accessor for creating requests from the Versions collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code ManagedKafka managedkafka = new ManagedKafka(...);}
+           *   {@code ManagedKafka.Versions.List request = managedkafka.versions().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public Versions versions() {
+            return new Versions();
+          }
+
+          /**
+           * The "versions" collection of methods.
+           */
+          public class Versions {
+
+            /**
+             * Register a new version under a given subject with the given schema.
+             *
+             * Create a request for the method "versions.create".
+             *
+             * This request holds the parameters needed by the managedkafka server.  After setting any optional
+             * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. The subject to create the version for. Structured like:
+             *        `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/subjects/{subj
+             *        ect}` or `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/conte
+             *        xts/{context}/subjects/{subject}`
+             * @param content the {@link com.google.api.services.managedkafka.v1.model.CreateVersionRequest}
+             * @return the request
+             */
+            public Create create(java.lang.String parent, com.google.api.services.managedkafka.v1.model.CreateVersionRequest content) throws java.io.IOException {
+              Create result = new Create(parent, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Create extends ManagedKafkaRequest<com.google.api.services.managedkafka.v1.model.CreateVersionResponse> {
+
+              private static final String REST_PATH = "v1/{+parent}/versions";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/subjects/[^/]+$");
+
+              /**
+               * Register a new version under a given subject with the given schema.
+               *
+               * Create a request for the method "versions.create".
+               *
+               * This request holds the parameters needed by the the managedkafka server.  After setting any
+               * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. The subject to create the version for. Structured like:
+             *        `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/subjects/{subj
+             *        ect}` or `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/conte
+             *        xts/{context}/subjects/{subject}`
+               * @param content the {@link com.google.api.services.managedkafka.v1.model.CreateVersionRequest}
+               * @since 1.13
+               */
+              protected Create(java.lang.String parent, com.google.api.services.managedkafka.v1.model.CreateVersionRequest content) {
+                super(ManagedKafka.this, "POST", REST_PATH, content, com.google.api.services.managedkafka.v1.model.CreateVersionResponse.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/subjects/[^/]+$");
+                }
+              }
+
+              @Override
+              public Create set$Xgafv(java.lang.String $Xgafv) {
+                return (Create) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Create setAccessToken(java.lang.String accessToken) {
+                return (Create) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Create setAlt(java.lang.String alt) {
+                return (Create) super.setAlt(alt);
+              }
+
+              @Override
+              public Create setCallback(java.lang.String callback) {
+                return (Create) super.setCallback(callback);
+              }
+
+              @Override
+              public Create setFields(java.lang.String fields) {
+                return (Create) super.setFields(fields);
+              }
+
+              @Override
+              public Create setKey(java.lang.String key) {
+                return (Create) super.setKey(key);
+              }
+
+              @Override
+              public Create setOauthToken(java.lang.String oauthToken) {
+                return (Create) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Create) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Create setQuotaUser(java.lang.String quotaUser) {
+                return (Create) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Create setUploadType(java.lang.String uploadType) {
+                return (Create) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Create setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Create) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The subject to create the version for. Structured like: `projects/{projec
+               * t}/locations/{location}/schemaRegistries/{schema_registry}/subjects/{subject}` or `
+               * projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/contexts
+               * /{context}/subjects/{subject}`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The subject to create the version for. Structured like:
+             `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/subjects/{subject}` or
+             `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/contexts/{context}/subj
+             ects/{subject}`
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. The subject to create the version for. Structured like: `projects/{projec
+               * t}/locations/{location}/schemaRegistries/{schema_registry}/subjects/{subject}` or `
+               * projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/contexts
+               * /{context}/subjects/{subject}`
+               */
+              public Create setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/subjects/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              @Override
+              public Create set(String parameterName, Object value) {
+                return (Create) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Delete a version of a subject. The response will be the deleted version id.
+             *
+             * Create a request for the method "versions.delete".
+             *
+             * This request holds the parameters needed by the managedkafka server.  After setting any optional
+             * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The name of the subject version to delete. Structured like: `projects/{project}/locations/
+             *        {location}/schemaRegistries/{schema_registry}/subjects/{subject}/versions/{version}` or `p
+             *        rojects/{project}/locations/{location}/schemaRegistries/{schema_registry}/contexts/{contex
+             *        t}/subjects/{subject}/versions/{version}`
+             * @return the request
+             */
+            public Delete delete(java.lang.String name) throws java.io.IOException {
+              Delete result = new Delete(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Delete extends ManagedKafkaRequest<com.google.api.services.managedkafka.v1.model.HttpBody> {
+
+              private static final String REST_PATH = "v1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/subjects/[^/]+/versions/[^/]+$");
+
+              /**
+               * Delete a version of a subject. The response will be the deleted version id.
+               *
+               * Create a request for the method "versions.delete".
+               *
+               * This request holds the parameters needed by the the managedkafka server.  After setting any
+               * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The name of the subject version to delete. Structured like: `projects/{project}/locations/
+             *        {location}/schemaRegistries/{schema_registry}/subjects/{subject}/versions/{version}` or `p
+             *        rojects/{project}/locations/{location}/schemaRegistries/{schema_registry}/contexts/{contex
+             *        t}/subjects/{subject}/versions/{version}`
+               * @since 1.13
+               */
+              protected Delete(java.lang.String name) {
+                super(ManagedKafka.this, "DELETE", REST_PATH, null, com.google.api.services.managedkafka.v1.model.HttpBody.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/subjects/[^/]+/versions/[^/]+$");
+                }
+              }
+
+              @Override
+              public Delete set$Xgafv(java.lang.String $Xgafv) {
+                return (Delete) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Delete setAccessToken(java.lang.String accessToken) {
+                return (Delete) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Delete setAlt(java.lang.String alt) {
+                return (Delete) super.setAlt(alt);
+              }
+
+              @Override
+              public Delete setCallback(java.lang.String callback) {
+                return (Delete) super.setCallback(callback);
+              }
+
+              @Override
+              public Delete setFields(java.lang.String fields) {
+                return (Delete) super.setFields(fields);
+              }
+
+              @Override
+              public Delete setKey(java.lang.String key) {
+                return (Delete) super.setKey(key);
+              }
+
+              @Override
+              public Delete setOauthToken(java.lang.String oauthToken) {
+                return (Delete) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Delete) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Delete setQuotaUser(java.lang.String quotaUser) {
+                return (Delete) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Delete setUploadType(java.lang.String uploadType) {
+                return (Delete) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Delete) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The name of the subject version to delete. Structured like: `projects/{pr
+               * oject}/locations/{location}/schemaRegistries/{schema_registry}/subjects/{subject}/v
+               * ersions/{version}` or `projects/{project}/locations/{location}/schemaRegistries/{sc
+               * hema_registry}/contexts/{context}/subjects/{subject}/versions/{version}`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The name of the subject version to delete. Structured like: `projects/{project}/locations
+             /{location}/schemaRegistries/{schema_registry}/subjects/{subject}/versions/{version}` or `projects/
+             {project}/locations/{location}/schemaRegistries/{schema_registry}/contexts/{context}/subjects/{subj
+             ect}/versions/{version}`
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The name of the subject version to delete. Structured like: `projects/{pr
+               * oject}/locations/{location}/schemaRegistries/{schema_registry}/subjects/{subject}/v
+               * ersions/{version}` or `projects/{project}/locations/{location}/schemaRegistries/{sc
+               * hema_registry}/contexts/{context}/subjects/{subject}/versions/{version}`
+               */
+              public Delete setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/subjects/[^/]+/versions/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              /**
+               * Optional. If true, both the version and the referenced schema ID will be
+               * permanently deleted. The default is false. If false, the version will be deleted
+               * but the schema ID will be retained. Soft-deleted versions can still be searched in
+               * ListVersions API call with deleted=true query parameter. A soft-delete of a version
+               * must be performed before a hard-delete.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.Boolean permanent;
+
+              /** Optional. If true, both the version and the referenced schema ID will be permanently deleted. The
+             default is false. If false, the version will be deleted but the schema ID will be retained. Soft-
+             deleted versions can still be searched in ListVersions API call with deleted=true query parameter.
+             A soft-delete of a version must be performed before a hard-delete.
+               */
+              public java.lang.Boolean getPermanent() {
+                return permanent;
+              }
+
+              /**
+               * Optional. If true, both the version and the referenced schema ID will be
+               * permanently deleted. The default is false. If false, the version will be deleted
+               * but the schema ID will be retained. Soft-deleted versions can still be searched in
+               * ListVersions API call with deleted=true query parameter. A soft-delete of a version
+               * must be performed before a hard-delete.
+               */
+              public Delete setPermanent(java.lang.Boolean permanent) {
+                this.permanent = permanent;
+                return this;
+              }
+
+              @Override
+              public Delete set(String parameterName, Object value) {
+                return (Delete) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Get a versioned schema (schema with subject/version) of a subject.
+             *
+             * Create a request for the method "versions.get".
+             *
+             * This request holds the parameters needed by the managedkafka server.  After setting any optional
+             * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The name of the subject to return versions. Structured like: `projects/{project}/locations
+             *        /{location}/schemaRegistries/{schema_registry}/subjects/{subject}/versions/{version}` or `
+             *        projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/contexts/{conte
+             *        xt}/subjects/{subject}/versions/{version}`
+             * @return the request
+             */
+            public Get get(java.lang.String name) throws java.io.IOException {
+              Get result = new Get(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Get extends ManagedKafkaRequest<com.google.api.services.managedkafka.v1.model.SchemaVersion> {
+
+              private static final String REST_PATH = "v1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/subjects/[^/]+/versions/[^/]+$");
+
+              /**
+               * Get a versioned schema (schema with subject/version) of a subject.
+               *
+               * Create a request for the method "versions.get".
+               *
+               * This request holds the parameters needed by the the managedkafka server.  After setting any
+               * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+               * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The name of the subject to return versions. Structured like: `projects/{project}/locations
+             *        /{location}/schemaRegistries/{schema_registry}/subjects/{subject}/versions/{version}` or `
+             *        projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/contexts/{conte
+             *        xt}/subjects/{subject}/versions/{version}`
+               * @since 1.13
+               */
+              protected Get(java.lang.String name) {
+                super(ManagedKafka.this, "GET", REST_PATH, null, com.google.api.services.managedkafka.v1.model.SchemaVersion.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/subjects/[^/]+/versions/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public Get set$Xgafv(java.lang.String $Xgafv) {
+                return (Get) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Get setAccessToken(java.lang.String accessToken) {
+                return (Get) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Get setAlt(java.lang.String alt) {
+                return (Get) super.setAlt(alt);
+              }
+
+              @Override
+              public Get setCallback(java.lang.String callback) {
+                return (Get) super.setCallback(callback);
+              }
+
+              @Override
+              public Get setFields(java.lang.String fields) {
+                return (Get) super.setFields(fields);
+              }
+
+              @Override
+              public Get setKey(java.lang.String key) {
+                return (Get) super.setKey(key);
+              }
+
+              @Override
+              public Get setOauthToken(java.lang.String oauthToken) {
+                return (Get) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Get) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Get setQuotaUser(java.lang.String quotaUser) {
+                return (Get) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Get setUploadType(java.lang.String uploadType) {
+                return (Get) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Get setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Get) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The name of the subject to return versions. Structured like: `projects/{p
+               * roject}/locations/{location}/schemaRegistries/{schema_registry}/subjects/{subject}/
+               * versions/{version}` or `projects/{project}/locations/{location}/schemaRegistries/{s
+               * chema_registry}/contexts/{context}/subjects/{subject}/versions/{version}`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The name of the subject to return versions. Structured like: `projects/{project}/location
+             s/{location}/schemaRegistries/{schema_registry}/subjects/{subject}/versions/{version}` or `projects
+             /{project}/locations/{location}/schemaRegistries/{schema_registry}/contexts/{context}/subjects/{sub
+             ject}/versions/{version}`
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The name of the subject to return versions. Structured like: `projects/{p
+               * roject}/locations/{location}/schemaRegistries/{schema_registry}/subjects/{subject}/
+               * versions/{version}` or `projects/{project}/locations/{location}/schemaRegistries/{s
+               * chema_registry}/contexts/{context}/subjects/{subject}/versions/{version}`
+               */
+              public Get setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/subjects/[^/]+/versions/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              /**
+               * Optional. If true, no matter if the subject/version is soft-deleted or not, it
+               * returns the version details. If false, it returns NOT_FOUND error if the
+               * subject/version is soft-deleted. The default is false.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.Boolean deleted;
+
+              /** Optional. If true, no matter if the subject/version is soft-deleted or not, it returns the version
+             details. If false, it returns NOT_FOUND error if the subject/version is soft-deleted. The default
+             is false.
+               */
+              public java.lang.Boolean getDeleted() {
+                return deleted;
+              }
+
+              /**
+               * Optional. If true, no matter if the subject/version is soft-deleted or not, it
+               * returns the version details. If false, it returns NOT_FOUND error if the
+               * subject/version is soft-deleted. The default is false.
+               */
+              public Get setDeleted(java.lang.Boolean deleted) {
+                this.deleted = deleted;
+                return this;
+              }
+
+              @Override
+              public Get set(String parameterName, Object value) {
+                return (Get) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Get the schema string only for a version of a subject. The response will be the schema string.
+             *
+             * Create a request for the method "versions.getSchema".
+             *
+             * This request holds the parameters needed by the managedkafka server.  After setting any optional
+             * parameters, call the {@link GetSchema#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The name of the subject to return versions. Structured like: `projects/{project}/locations
+             *        /{location}/schemaRegistries/{schema_registry}/subjects/{subject}/versions/{version}` or `
+             *        projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/contexts/{conte
+             *        xt}/subjects/{subject}/versions/{version}`
+             * @return the request
+             */
+            public GetSchema getSchema(java.lang.String name) throws java.io.IOException {
+              GetSchema result = new GetSchema(name);
+              initialize(result);
+              return result;
+            }
+
+            public class GetSchema extends ManagedKafkaRequest<com.google.api.services.managedkafka.v1.model.HttpBody> {
+
+              private static final String REST_PATH = "v1/{+name}/schema";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/subjects/[^/]+/versions/[^/]+$");
+
+              /**
+               * Get the schema string only for a version of a subject. The response will be the schema string.
+               *
+               * Create a request for the method "versions.getSchema".
+               *
+               * This request holds the parameters needed by the the managedkafka server.  After setting any
+               * optional parameters, call the {@link GetSchema#execute()} method to invoke the remote
+               * operation. <p> {@link
+               * GetSchema#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The name of the subject to return versions. Structured like: `projects/{project}/locations
+             *        /{location}/schemaRegistries/{schema_registry}/subjects/{subject}/versions/{version}` or `
+             *        projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/contexts/{conte
+             *        xt}/subjects/{subject}/versions/{version}`
+               * @since 1.13
+               */
+              protected GetSchema(java.lang.String name) {
+                super(ManagedKafka.this, "GET", REST_PATH, null, com.google.api.services.managedkafka.v1.model.HttpBody.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/subjects/[^/]+/versions/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public GetSchema set$Xgafv(java.lang.String $Xgafv) {
+                return (GetSchema) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public GetSchema setAccessToken(java.lang.String accessToken) {
+                return (GetSchema) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public GetSchema setAlt(java.lang.String alt) {
+                return (GetSchema) super.setAlt(alt);
+              }
+
+              @Override
+              public GetSchema setCallback(java.lang.String callback) {
+                return (GetSchema) super.setCallback(callback);
+              }
+
+              @Override
+              public GetSchema setFields(java.lang.String fields) {
+                return (GetSchema) super.setFields(fields);
+              }
+
+              @Override
+              public GetSchema setKey(java.lang.String key) {
+                return (GetSchema) super.setKey(key);
+              }
+
+              @Override
+              public GetSchema setOauthToken(java.lang.String oauthToken) {
+                return (GetSchema) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public GetSchema setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (GetSchema) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public GetSchema setQuotaUser(java.lang.String quotaUser) {
+                return (GetSchema) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public GetSchema setUploadType(java.lang.String uploadType) {
+                return (GetSchema) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public GetSchema setUploadProtocol(java.lang.String uploadProtocol) {
+                return (GetSchema) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The name of the subject to return versions. Structured like: `projects/{p
+               * roject}/locations/{location}/schemaRegistries/{schema_registry}/subjects/{subject}/
+               * versions/{version}` or `projects/{project}/locations/{location}/schemaRegistries/{s
+               * chema_registry}/contexts/{context}/subjects/{subject}/versions/{version}`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The name of the subject to return versions. Structured like: `projects/{project}/location
+             s/{location}/schemaRegistries/{schema_registry}/subjects/{subject}/versions/{version}` or `projects
+             /{project}/locations/{location}/schemaRegistries/{schema_registry}/contexts/{context}/subjects/{sub
+             ject}/versions/{version}`
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The name of the subject to return versions. Structured like: `projects/{p
+               * roject}/locations/{location}/schemaRegistries/{schema_registry}/subjects/{subject}/
+               * versions/{version}` or `projects/{project}/locations/{location}/schemaRegistries/{s
+               * chema_registry}/contexts/{context}/subjects/{subject}/versions/{version}`
+               */
+              public GetSchema setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/subjects/[^/]+/versions/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              /**
+               * Optional. If true, no matter if the subject/version is soft-deleted or not, it
+               * returns the version details. If false, it returns NOT_FOUND error if the
+               * subject/version is soft-deleted. The default is false.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.Boolean deleted;
+
+              /** Optional. If true, no matter if the subject/version is soft-deleted or not, it returns the version
+             details. If false, it returns NOT_FOUND error if the subject/version is soft-deleted. The default
+             is false.
+               */
+              public java.lang.Boolean getDeleted() {
+                return deleted;
+              }
+
+              /**
+               * Optional. If true, no matter if the subject/version is soft-deleted or not, it
+               * returns the version details. If false, it returns NOT_FOUND error if the
+               * subject/version is soft-deleted. The default is false.
+               */
+              public GetSchema setDeleted(java.lang.Boolean deleted) {
+                this.deleted = deleted;
+                return this;
+              }
+
+              @Override
+              public GetSchema set(String parameterName, Object value) {
+                return (GetSchema) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Get all versions of a subject. The response will be an array of versions of the subject.
+             *
+             * Create a request for the method "versions.list".
+             *
+             * This request holds the parameters needed by the managedkafka server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. The subject whose versions are to be listed. Structured like:
+             *        `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/subjects/{subj
+             *        ect}` or `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/conte
+             *        xts/{context}/subjects/{subject}`
+             * @return the request
+             */
+            public List list(java.lang.String parent) throws java.io.IOException {
+              List result = new List(parent);
+              initialize(result);
+              return result;
+            }
+
+            public class List extends ManagedKafkaRequest<com.google.api.services.managedkafka.v1.model.HttpBody> {
+
+              private static final String REST_PATH = "v1/{+parent}/versions";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/subjects/[^/]+$");
+
+              /**
+               * Get all versions of a subject. The response will be an array of versions of the subject.
+               *
+               * Create a request for the method "versions.list".
+               *
+               * This request holds the parameters needed by the the managedkafka server.  After setting any
+               * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+               * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. The subject whose versions are to be listed. Structured like:
+             *        `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/subjects/{subj
+             *        ect}` or `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/conte
+             *        xts/{context}/subjects/{subject}`
+               * @since 1.13
+               */
+              protected List(java.lang.String parent) {
+                super(ManagedKafka.this, "GET", REST_PATH, null, com.google.api.services.managedkafka.v1.model.HttpBody.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/subjects/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public List set$Xgafv(java.lang.String $Xgafv) {
+                return (List) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public List setAccessToken(java.lang.String accessToken) {
+                return (List) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public List setAlt(java.lang.String alt) {
+                return (List) super.setAlt(alt);
+              }
+
+              @Override
+              public List setCallback(java.lang.String callback) {
+                return (List) super.setCallback(callback);
+              }
+
+              @Override
+              public List setFields(java.lang.String fields) {
+                return (List) super.setFields(fields);
+              }
+
+              @Override
+              public List setKey(java.lang.String key) {
+                return (List) super.setKey(key);
+              }
+
+              @Override
+              public List setOauthToken(java.lang.String oauthToken) {
+                return (List) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (List) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public List setQuotaUser(java.lang.String quotaUser) {
+                return (List) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public List setUploadType(java.lang.String uploadType) {
+                return (List) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public List setUploadProtocol(java.lang.String uploadProtocol) {
+                return (List) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The subject whose versions are to be listed. Structured like: `projects/{
+               * project}/locations/{location}/schemaRegistries/{schema_registry}/subjects/{subject}
+               * ` or `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/co
+               * ntexts/{context}/subjects/{subject}`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The subject whose versions are to be listed. Structured like:
+             `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/subjects/{subject}` or
+             `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/contexts/{context}/subj
+             ects/{subject}`
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. The subject whose versions are to be listed. Structured like: `projects/{
+               * project}/locations/{location}/schemaRegistries/{schema_registry}/subjects/{subject}
+               * ` or `projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/co
+               * ntexts/{context}/subjects/{subject}`
+               */
+              public List setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/subjects/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /**
+               * Optional. If true, the response will include soft-deleted versions of an active or
+               * soft-deleted subject. The default is false.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.Boolean deleted;
+
+              /** Optional. If true, the response will include soft-deleted versions of an active or soft-deleted
+             subject. The default is false.
+               */
+              public java.lang.Boolean getDeleted() {
+                return deleted;
+              }
+
+              /**
+               * Optional. If true, the response will include soft-deleted versions of an active or
+               * soft-deleted subject. The default is false.
+               */
+              public List setDeleted(java.lang.Boolean deleted) {
+                this.deleted = deleted;
+                return this;
+              }
+
+              @Override
+              public List set(String parameterName, Object value) {
+                return (List) super.set(parameterName, value);
+              }
+            }
+
+            /**
+             * An accessor for creating requests from the Referencedby collection.
+             *
+             * <p>The typical use is:</p>
+             * <pre>
+             *   {@code ManagedKafka managedkafka = new ManagedKafka(...);}
+             *   {@code ManagedKafka.Referencedby.List request = managedkafka.referencedby().list(parameters ...)}
+             * </pre>
+             *
+             * @return the resource collection
+             */
+            public Referencedby referencedby() {
+              return new Referencedby();
+            }
+
+            /**
+             * The "referencedby" collection of methods.
+             */
+            public class Referencedby {
+
+              /**
+               * Get a list of IDs of schemas that reference the schema with the given subject and version.
+               *
+               * Create a request for the method "referencedby.list".
+               *
+               * This request holds the parameters needed by the managedkafka server.  After setting any optional
+               * parameters, call the {@link List#execute()} method to invoke the remote operation.
+               *
+               * @param parent Required. The version to list referenced by. Structured like: `projects/{project}/locations/{locatio
+               *        n}/schemaRegistries/{schema_registry}/subjects/{subject}/versions/{version}` or `projects/
+               *        {project}/locations/{location}/schemaRegistries/{schema_registry}/contexts/{context}/subje
+               *        cts/{subject}/versions/{version}`
+               * @return the request
+               */
+              public List list(java.lang.String parent) throws java.io.IOException {
+                List result = new List(parent);
+                initialize(result);
+                return result;
+              }
+
+              public class List extends ManagedKafkaRequest<com.google.api.services.managedkafka.v1.model.HttpBody> {
+
+                private static final String REST_PATH = "v1/{+parent}/referencedby";
+
+                private final java.util.regex.Pattern PARENT_PATTERN =
+                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/subjects/[^/]+/versions/[^/]+$");
+
+                /**
+                 * Get a list of IDs of schemas that reference the schema with the given subject and version.
+                 *
+                 * Create a request for the method "referencedby.list".
+                 *
+                 * This request holds the parameters needed by the the managedkafka server.  After setting any
+                 * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+                 * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+                 * must be called to initialize this instance immediately after invoking the constructor. </p>
+                 *
+                 * @param parent Required. The version to list referenced by. Structured like: `projects/{project}/locations/{locatio
+               *        n}/schemaRegistries/{schema_registry}/subjects/{subject}/versions/{version}` or `projects/
+               *        {project}/locations/{location}/schemaRegistries/{schema_registry}/contexts/{context}/subje
+               *        cts/{subject}/versions/{version}`
+                 * @since 1.13
+                 */
+                protected List(java.lang.String parent) {
+                  super(ManagedKafka.this, "GET", REST_PATH, null, com.google.api.services.managedkafka.v1.model.HttpBody.class);
+                  this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                        "Parameter parent must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/subjects/[^/]+/versions/[^/]+$");
+                  }
+                }
+
+                @Override
+                public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                  return super.executeUsingHead();
+                }
+
+                @Override
+                public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                  return super.buildHttpRequestUsingHead();
+                }
+
+                @Override
+                public List set$Xgafv(java.lang.String $Xgafv) {
+                  return (List) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public List setAccessToken(java.lang.String accessToken) {
+                  return (List) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public List setAlt(java.lang.String alt) {
+                  return (List) super.setAlt(alt);
+                }
+
+                @Override
+                public List setCallback(java.lang.String callback) {
+                  return (List) super.setCallback(callback);
+                }
+
+                @Override
+                public List setFields(java.lang.String fields) {
+                  return (List) super.setFields(fields);
+                }
+
+                @Override
+                public List setKey(java.lang.String key) {
+                  return (List) super.setKey(key);
+                }
+
+                @Override
+                public List setOauthToken(java.lang.String oauthToken) {
+                  return (List) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (List) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public List setQuotaUser(java.lang.String quotaUser) {
+                  return (List) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public List setUploadType(java.lang.String uploadType) {
+                  return (List) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public List setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (List) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /**
+                 * Required. The version to list referenced by. Structured like: `projects/{project}
+                 * /locations/{location}/schemaRegistries/{schema_registry}/subjects/{subject}/versi
+                 * ons/{version}` or `projects/{project}/locations/{location}/schemaRegistries/{sche
+                 * ma_registry}/contexts/{context}/subjects/{subject}/versions/{version}`
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String parent;
+
+                /** Required. The version to list referenced by. Structured like: `projects/{project}/locations/{locati
+               on}/schemaRegistries/{schema_registry}/subjects/{subject}/versions/{version}` or `projects/{project
+               }/locations/{location}/schemaRegistries/{schema_registry}/contexts/{context}/subjects/{subject}/ver
+               sions/{version}`
+                 */
+                public java.lang.String getParent() {
+                  return parent;
+                }
+
+                /**
+                 * Required. The version to list referenced by. Structured like: `projects/{project}
+                 * /locations/{location}/schemaRegistries/{schema_registry}/subjects/{subject}/versi
+                 * ons/{version}` or `projects/{project}/locations/{location}/schemaRegistries/{sche
+                 * ma_registry}/contexts/{context}/subjects/{subject}/versions/{version}`
+                 */
+                public List setParent(java.lang.String parent) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                        "Parameter parent must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/subjects/[^/]+/versions/[^/]+$");
+                  }
+                  this.parent = parent;
+                  return this;
+                }
+
+                @Override
+                public List set(String parameterName, Object value) {
+                  return (List) super.set(parameterName, value);
+                }
+              }
+
+            }
+          }
+        }
+      }
     }
   }
 

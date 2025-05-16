@@ -90,7 +90,7 @@ public final class GooglePrivacyDlpV2FileStoreDataProfile extends com.google.api
   private java.util.List<GooglePrivacyDlpV2FileStoreInfoTypeSummary> fileStoreInfoTypeSummaries;
 
   /**
-   * The file store does not have any files. If the profiling failed, this will be false.
+   * The file store does not have any files. If the profiling operation failed, this is false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -359,7 +359,7 @@ public final class GooglePrivacyDlpV2FileStoreDataProfile extends com.google.api
   }
 
   /**
-   * The file store does not have any files. If the profiling failed, this will be false.
+   * The file store does not have any files. If the profiling operation failed, this is false.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getFileStoreIsEmpty() {
@@ -367,7 +367,7 @@ public final class GooglePrivacyDlpV2FileStoreDataProfile extends com.google.api
   }
 
   /**
-   * The file store does not have any files. If the profiling failed, this will be false.
+   * The file store does not have any files. If the profiling operation failed, this is false.
    * @param fileStoreIsEmpty fileStoreIsEmpty or {@code null} for none
    */
   public GooglePrivacyDlpV2FileStoreDataProfile setFileStoreIsEmpty(java.lang.Boolean fileStoreIsEmpty) {

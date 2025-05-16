@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-people</artifactId>
-  <version>v1-rev20240313-2.0.0</version>
-  <name>People API v1-rev20240313-2.0.0</name>
+  <version>v1-rev20250513-2.0.0</version>
+  <name>People API v1-rev20250513-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

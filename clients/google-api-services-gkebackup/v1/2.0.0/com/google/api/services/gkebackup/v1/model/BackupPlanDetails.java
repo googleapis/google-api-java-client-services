@@ -30,6 +30,13 @@ package com.google.api.services.gkebackup.v1.model;
 public final class BackupPlanDetails extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Contains details about the BackupConfig of Backups created via this BackupPlan.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BackupConfigDetails backupConfigDetails;
+
+  /**
    * Output only. The fully qualified name of the last successful Backup created under this
    * BackupPlan. `projects/locations/backupPlans/backups`
    * The value may be {@code null}.
@@ -62,6 +69,13 @@ public final class BackupPlanDetails extends com.google.api.client.json.GenericJ
   private java.lang.Integer protectedPodCount;
 
   /**
+   * Output only. Contains details about the RetentionPolicy of Backups created via this BackupPlan.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RetentionPolicyDetails retentionPolicyDetails;
+
+  /**
    * Output only. A number that represents the current risk level of this BackupPlan from RPO
    * perspective with 1 being no risk and 5 being highest risk.
    * The value may be {@code null}.
@@ -75,6 +89,23 @@ public final class BackupPlanDetails extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
+
+  /**
+   * Output only. Contains details about the BackupConfig of Backups created via this BackupPlan.
+   * @return value or {@code null} for none
+   */
+  public BackupConfigDetails getBackupConfigDetails() {
+    return backupConfigDetails;
+  }
+
+  /**
+   * Output only. Contains details about the BackupConfig of Backups created via this BackupPlan.
+   * @param backupConfigDetails backupConfigDetails or {@code null} for none
+   */
+  public BackupPlanDetails setBackupConfigDetails(BackupConfigDetails backupConfigDetails) {
+    this.backupConfigDetails = backupConfigDetails;
+    return this;
+  }
 
   /**
    * Output only. The fully qualified name of the last successful Backup created under this
@@ -149,6 +180,23 @@ public final class BackupPlanDetails extends com.google.api.client.json.GenericJ
    */
   public BackupPlanDetails setProtectedPodCount(java.lang.Integer protectedPodCount) {
     this.protectedPodCount = protectedPodCount;
+    return this;
+  }
+
+  /**
+   * Output only. Contains details about the RetentionPolicy of Backups created via this BackupPlan.
+   * @return value or {@code null} for none
+   */
+  public RetentionPolicyDetails getRetentionPolicyDetails() {
+    return retentionPolicyDetails;
+  }
+
+  /**
+   * Output only. Contains details about the RetentionPolicy of Backups created via this BackupPlan.
+   * @param retentionPolicyDetails retentionPolicyDetails or {@code null} for none
+   */
+  public BackupPlanDetails setRetentionPolicyDetails(RetentionPolicyDetails retentionPolicyDetails) {
+    this.retentionPolicyDetails = retentionPolicyDetails;
     return this;
   }
 

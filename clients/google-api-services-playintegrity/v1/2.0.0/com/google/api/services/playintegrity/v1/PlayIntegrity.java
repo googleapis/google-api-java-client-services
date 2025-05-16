@@ -441,6 +441,138 @@ public class PlayIntegrity extends com.google.api.client.googleapis.services.jso
         return (DecodeIntegrityToken) super.set(parameterName, value);
       }
     }
+    /**
+     * Decodes the PC integrity token and returns the PC token payload.
+     *
+     * Create a request for the method "v1.decodePcIntegrityToken".
+     *
+     * This request holds the parameters needed by the playintegrity server.  After setting any optional
+     * parameters, call the {@link DecodePcIntegrityToken#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param packageName Package name of the app the attached integrity token belongs to.
+     * @param content the {@link com.google.api.services.playintegrity.v1.model.DecodePcIntegrityTokenRequest}
+     * @return the request
+     */
+    public DecodePcIntegrityToken decodePcIntegrityToken(java.lang.String packageName, com.google.api.services.playintegrity.v1.model.DecodePcIntegrityTokenRequest content) throws java.io.IOException {
+      DecodePcIntegrityToken result = new DecodePcIntegrityToken(packageName, content);
+      initialize(result);
+      return result;
+    }
+
+    public class DecodePcIntegrityToken extends PlayIntegrityRequest<com.google.api.services.playintegrity.v1.model.DecodePcIntegrityTokenResponse> {
+
+      private static final String REST_PATH = "v1/{+packageName}:decodePcIntegrityToken";
+
+      private final java.util.regex.Pattern PACKAGE_NAME_PATTERN =
+          java.util.regex.Pattern.compile("^[^/]+$");
+
+      /**
+       * Decodes the PC integrity token and returns the PC token payload.
+       *
+       * Create a request for the method "v1.decodePcIntegrityToken".
+       *
+       * This request holds the parameters needed by the the playintegrity server.  After setting any
+       * optional parameters, call the {@link DecodePcIntegrityToken#execute()} method to invoke the
+       * remote operation. <p> {@link DecodePcIntegrityToken#initialize(com.google.api.client.googleapis
+       * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+       * after invoking the constructor. </p>
+       *
+       * @param packageName Package name of the app the attached integrity token belongs to.
+       * @param content the {@link com.google.api.services.playintegrity.v1.model.DecodePcIntegrityTokenRequest}
+       * @since 1.13
+       */
+      protected DecodePcIntegrityToken(java.lang.String packageName, com.google.api.services.playintegrity.v1.model.DecodePcIntegrityTokenRequest content) {
+        super(PlayIntegrity.this, "POST", REST_PATH, content, com.google.api.services.playintegrity.v1.model.DecodePcIntegrityTokenResponse.class);
+        this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PACKAGE_NAME_PATTERN.matcher(packageName).matches(),
+              "Parameter packageName must conform to the pattern " +
+              "^[^/]+$");
+        }
+      }
+
+      @Override
+      public DecodePcIntegrityToken set$Xgafv(java.lang.String $Xgafv) {
+        return (DecodePcIntegrityToken) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public DecodePcIntegrityToken setAccessToken(java.lang.String accessToken) {
+        return (DecodePcIntegrityToken) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public DecodePcIntegrityToken setAlt(java.lang.String alt) {
+        return (DecodePcIntegrityToken) super.setAlt(alt);
+      }
+
+      @Override
+      public DecodePcIntegrityToken setCallback(java.lang.String callback) {
+        return (DecodePcIntegrityToken) super.setCallback(callback);
+      }
+
+      @Override
+      public DecodePcIntegrityToken setFields(java.lang.String fields) {
+        return (DecodePcIntegrityToken) super.setFields(fields);
+      }
+
+      @Override
+      public DecodePcIntegrityToken setKey(java.lang.String key) {
+        return (DecodePcIntegrityToken) super.setKey(key);
+      }
+
+      @Override
+      public DecodePcIntegrityToken setOauthToken(java.lang.String oauthToken) {
+        return (DecodePcIntegrityToken) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public DecodePcIntegrityToken setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (DecodePcIntegrityToken) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public DecodePcIntegrityToken setQuotaUser(java.lang.String quotaUser) {
+        return (DecodePcIntegrityToken) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public DecodePcIntegrityToken setUploadType(java.lang.String uploadType) {
+        return (DecodePcIntegrityToken) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public DecodePcIntegrityToken setUploadProtocol(java.lang.String uploadProtocol) {
+        return (DecodePcIntegrityToken) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Package name of the app the attached integrity token belongs to. */
+      @com.google.api.client.util.Key
+      private java.lang.String packageName;
+
+      /** Package name of the app the attached integrity token belongs to.
+       */
+      public java.lang.String getPackageName() {
+        return packageName;
+      }
+
+      /** Package name of the app the attached integrity token belongs to. */
+      public DecodePcIntegrityToken setPackageName(java.lang.String packageName) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PACKAGE_NAME_PATTERN.matcher(packageName).matches(),
+              "Parameter packageName must conform to the pattern " +
+              "^[^/]+$");
+        }
+        this.packageName = packageName;
+        return this;
+      }
+
+      @Override
+      public DecodePcIntegrityToken set(String parameterName, Object value) {
+        return (DecodePcIntegrityToken) super.set(parameterName, value);
+      }
+    }
 
   }
 

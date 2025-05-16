@@ -32,7 +32,7 @@ public final class Filter extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The destination IP range of outgoing packets that this policy-based route applies to.
-   * Default is "0.0.0.0/0" if protocol version is IPv4.
+   * Default is "0.0.0.0/0" if protocol version is IPv4 and "::/0" if protocol version is IPv6.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,8 +47,8 @@ public final class Filter extends com.google.api.client.json.GenericJson {
   private java.lang.String ipProtocol;
 
   /**
-   * Required. Internet protocol versions this policy-based route applies to. For this version, only
-   * IPV4 is supported. IPV6 is supported in preview.
+   * Required. Internet protocol versions this policy-based route applies to. IPV4 and IPV6 is
+   * supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,7 +56,7 @@ public final class Filter extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The source IP range of outgoing packets that this policy-based route applies to.
-   * Default is "0.0.0.0/0" if protocol version is IPv4.
+   * Default is "0.0.0.0/0" if protocol version is IPv4 and "::/0" if protocol version is IPv6.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +64,7 @@ public final class Filter extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The destination IP range of outgoing packets that this policy-based route applies to.
-   * Default is "0.0.0.0/0" if protocol version is IPv4.
+   * Default is "0.0.0.0/0" if protocol version is IPv4 and "::/0" if protocol version is IPv6.
    * @return value or {@code null} for none
    */
   public java.lang.String getDestRange() {
@@ -73,7 +73,7 @@ public final class Filter extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The destination IP range of outgoing packets that this policy-based route applies to.
-   * Default is "0.0.0.0/0" if protocol version is IPv4.
+   * Default is "0.0.0.0/0" if protocol version is IPv4 and "::/0" if protocol version is IPv6.
    * @param destRange destRange or {@code null} for none
    */
   public Filter setDestRange(java.lang.String destRange) {
@@ -101,8 +101,8 @@ public final class Filter extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Internet protocol versions this policy-based route applies to. For this version, only
-   * IPV4 is supported. IPV6 is supported in preview.
+   * Required. Internet protocol versions this policy-based route applies to. IPV4 and IPV6 is
+   * supported.
    * @return value or {@code null} for none
    */
   public java.lang.String getProtocolVersion() {
@@ -110,8 +110,8 @@ public final class Filter extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Internet protocol versions this policy-based route applies to. For this version, only
-   * IPV4 is supported. IPV6 is supported in preview.
+   * Required. Internet protocol versions this policy-based route applies to. IPV4 and IPV6 is
+   * supported.
    * @param protocolVersion protocolVersion or {@code null} for none
    */
   public Filter setProtocolVersion(java.lang.String protocolVersion) {
@@ -121,7 +121,7 @@ public final class Filter extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The source IP range of outgoing packets that this policy-based route applies to.
-   * Default is "0.0.0.0/0" if protocol version is IPv4.
+   * Default is "0.0.0.0/0" if protocol version is IPv4 and "::/0" if protocol version is IPv6.
    * @return value or {@code null} for none
    */
   public java.lang.String getSrcRange() {
@@ -130,7 +130,7 @@ public final class Filter extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The source IP range of outgoing packets that this policy-based route applies to.
-   * Default is "0.0.0.0/0" if protocol version is IPv4.
+   * Default is "0.0.0.0/0" if protocol version is IPv4 and "::/0" if protocol version is IPv6.
    * @param srcRange srcRange or {@code null} for none
    */
   public Filter setSrcRange(java.lang.String srcRange) {

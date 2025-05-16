@@ -63,6 +63,15 @@ public final class AzureBlobStorageData extends com.google.api.client.json.Gener
   private java.lang.String credentialsSecret;
 
   /**
+   * Optional. Federated identity config of a user registered Azure application. If
+   * `federated_identity_config` is specified, do not specify azure_credentials or
+   * credentials_secret.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private FederatedIdentityConfig federatedIdentityConfig;
+
+  /**
    * Root path to transfer objects. Must be an empty string or full path name that ends with a '/'.
    * This field is treated as an object prefix. As such, it should generally not begin with a '/'.
    * The value may be {@code null}.
@@ -139,6 +148,27 @@ public final class AzureBlobStorageData extends com.google.api.client.json.Gener
    */
   public AzureBlobStorageData setCredentialsSecret(java.lang.String credentialsSecret) {
     this.credentialsSecret = credentialsSecret;
+    return this;
+  }
+
+  /**
+   * Optional. Federated identity config of a user registered Azure application. If
+   * `federated_identity_config` is specified, do not specify azure_credentials or
+   * credentials_secret.
+   * @return value or {@code null} for none
+   */
+  public FederatedIdentityConfig getFederatedIdentityConfig() {
+    return federatedIdentityConfig;
+  }
+
+  /**
+   * Optional. Federated identity config of a user registered Azure application. If
+   * `federated_identity_config` is specified, do not specify azure_credentials or
+   * credentials_secret.
+   * @param federatedIdentityConfig federatedIdentityConfig or {@code null} for none
+   */
+  public AzureBlobStorageData setFederatedIdentityConfig(FederatedIdentityConfig federatedIdentityConfig) {
+    this.federatedIdentityConfig = federatedIdentityConfig;
     return this;
   }
 

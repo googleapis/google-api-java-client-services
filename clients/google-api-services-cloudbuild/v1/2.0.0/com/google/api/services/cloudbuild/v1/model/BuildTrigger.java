@@ -75,6 +75,14 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
+   * Optional. The configuration of a trigger that creates a build whenever an event from the
+   * DeveloperConnect API is received.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DeveloperConnectEventConfig developerConnectEventConfig;
+
+  /**
    * If true, the trigger will never automatically execute a build.
    * The value may be {@code null}.
    */
@@ -356,6 +364,25 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
    */
   public BuildTrigger setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Optional. The configuration of a trigger that creates a build whenever an event from the
+   * DeveloperConnect API is received.
+   * @return value or {@code null} for none
+   */
+  public DeveloperConnectEventConfig getDeveloperConnectEventConfig() {
+    return developerConnectEventConfig;
+  }
+
+  /**
+   * Optional. The configuration of a trigger that creates a build whenever an event from the
+   * DeveloperConnect API is received.
+   * @param developerConnectEventConfig developerConnectEventConfig or {@code null} for none
+   */
+  public BuildTrigger setDeveloperConnectEventConfig(DeveloperConnectEventConfig developerConnectEventConfig) {
+    this.developerConnectEventConfig = developerConnectEventConfig;
     return this;
   }
 

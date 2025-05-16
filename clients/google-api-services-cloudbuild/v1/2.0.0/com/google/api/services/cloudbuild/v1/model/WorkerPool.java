@@ -84,7 +84,7 @@ public final class WorkerPool extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Legacy Private Pool configuration.
+   * Private Pool configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -226,7 +226,7 @@ public final class WorkerPool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Legacy Private Pool configuration.
+   * Private Pool configuration.
    * @return value or {@code null} for none
    */
   public PrivatePoolV1Config getPrivatePoolV1Config() {
@@ -234,7 +234,7 @@ public final class WorkerPool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Legacy Private Pool configuration.
+   * Private Pool configuration.
    * @param privatePoolV1Config privatePoolV1Config or {@code null} for none
    */
   public WorkerPool setPrivatePoolV1Config(PrivatePoolV1Config privatePoolV1Config) {

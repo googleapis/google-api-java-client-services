@@ -3394,7 +3394,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the discoveryengine server.  After setting any
            * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name Immutable. The full resource name of the data store. Format:
+           * @param name Immutable. Identifier. The full resource name of the data store. Format:
            *        `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_stor
            *        e_id}`. This field must be a UTF-8 encoded string with a length limit of 1024 characters.
            * @param content the {@link com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaDataStore}
@@ -3424,7 +3424,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Immutable. The full resource name of the data store. Format:
+             * @param name Immutable. Identifier. The full resource name of the data store. Format:
            *        `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_stor
            *        e_id}`. This field must be a UTF-8 encoded string with a length limit of 1024 characters.
              * @param content the {@link com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaDataStore}
@@ -3496,14 +3496,14 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Immutable. The full resource name of the data store. Format: `projects/{project}/loca
-             * tions/{location}/collections/{collection_id}/dataStores/{data_store_id}`. This field
-             * must be a UTF-8 encoded string with a length limit of 1024 characters.
+             * Immutable. Identifier. The full resource name of the data store. Format: `projects/{p
+             * roject}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}`.
+             * This field must be a UTF-8 encoded string with a length limit of 1024 characters.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Immutable. The full resource name of the data store. Format:
+            /** Immutable. Identifier. The full resource name of the data store. Format:
            `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}`.
            This field must be a UTF-8 encoded string with a length limit of 1024 characters.
              */
@@ -3512,9 +3512,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Immutable. The full resource name of the data store. Format: `projects/{project}/loca
-             * tions/{location}/collections/{collection_id}/dataStores/{data_store_id}`. This field
-             * must be a UTF-8 encoded string with a length limit of 1024 characters.
+             * Immutable. Identifier. The full resource name of the data store. Format: `projects/{p
+             * roject}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}`.
+             * This field must be a UTF-8 encoded string with a length limit of 1024 characters.
              */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -17188,8 +17188,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the discoveryengine server.  After setting any
            * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name Immutable. The fully qualified resource name of the engine. This field must be a UTF-8 encoded
-           *        string with a length limit of 1024 characters. Format:
+           * @param name Immutable. Identifier. The fully qualified resource name of the engine. This field must be a UTF-8
+           *        encoded string with a length limit of 1024 characters. Format:
            *        `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}` engine
            *        should be 1-63 characters, and valid characters are /a-z0-9. Otherwise, an
            *        INVALID_ARGUMENT error is returned.
@@ -17220,8 +17220,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Immutable. The fully qualified resource name of the engine. This field must be a UTF-8 encoded
-           *        string with a length limit of 1024 characters. Format:
+             * @param name Immutable. Identifier. The fully qualified resource name of the engine. This field must be a UTF-8
+           *        encoded string with a length limit of 1024 characters. Format:
            *        `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}` engine
            *        should be 1-63 characters, and valid characters are /a-z0-9. Otherwise, an
            *        INVALID_ARGUMENT error is returned.
@@ -17294,8 +17294,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Immutable. The fully qualified resource name of the engine. This field must be a
-             * UTF-8 encoded string with a length limit of 1024 characters. Format:
+             * Immutable. Identifier. The fully qualified resource name of the engine. This field
+             * must be a UTF-8 encoded string with a length limit of 1024 characters. Format:
              * `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
              * engine should be 1-63 characters, and valid characters are /a-z0-9. Otherwise, an
              * INVALID_ARGUMENT error is returned.
@@ -17303,8 +17303,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Immutable. The fully qualified resource name of the engine. This field must be a UTF-8 encoded
-           string with a length limit of 1024 characters. Format:
+            /** Immutable. Identifier. The fully qualified resource name of the engine. This field must be a UTF-8
+           encoded string with a length limit of 1024 characters. Format:
            `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}` engine should
            be 1-63 characters, and valid characters are /a-z0-9. Otherwise, an INVALID_ARGUMENT error is
            returned.
@@ -17314,8 +17314,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Immutable. The fully qualified resource name of the engine. This field must be a
-             * UTF-8 encoded string with a length limit of 1024 characters. Format:
+             * Immutable. Identifier. The fully qualified resource name of the engine. This field
+             * must be a UTF-8 encoded string with a length limit of 1024 characters. Format:
              * `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
              * engine should be 1-63 characters, and valid characters are /a-z0-9. Otherwise, an
              * INVALID_ARGUMENT error is returned.
@@ -24381,7 +24381,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the discoveryengine server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Immutable. The full resource name of the data store. Format:
+         * @param name Immutable. Identifier. The full resource name of the data store. Format:
          *        `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_stor
          *        e_id}`. This field must be a UTF-8 encoded string with a length limit of 1024 characters.
          * @param content the {@link com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaDataStore}
@@ -24411,7 +24411,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Immutable. The full resource name of the data store. Format:
+           * @param name Immutable. Identifier. The full resource name of the data store. Format:
          *        `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_stor
          *        e_id}`. This field must be a UTF-8 encoded string with a length limit of 1024 characters.
            * @param content the {@link com.google.api.services.discoveryengine.v1beta.model.GoogleCloudDiscoveryengineV1betaDataStore}
@@ -24483,14 +24483,14 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Immutable. The full resource name of the data store. Format: `projects/{project}/locati
-           * ons/{location}/collections/{collection_id}/dataStores/{data_store_id}`. This field must
-           * be a UTF-8 encoded string with a length limit of 1024 characters.
+           * Immutable. Identifier. The full resource name of the data store. Format: `projects/{pro
+           * ject}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}`.
+           * This field must be a UTF-8 encoded string with a length limit of 1024 characters.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Immutable. The full resource name of the data store. Format:
+          /** Immutable. Identifier. The full resource name of the data store. Format:
          `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}`.
          This field must be a UTF-8 encoded string with a length limit of 1024 characters.
            */
@@ -24499,9 +24499,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Immutable. The full resource name of the data store. Format: `projects/{project}/locati
-           * ons/{location}/collections/{collection_id}/dataStores/{data_store_id}`. This field must
-           * be a UTF-8 encoded string with a length limit of 1024 characters.
+           * Immutable. Identifier. The full resource name of the data store. Format: `projects/{pro
+           * ject}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}`.
+           * This field must be a UTF-8 encoded string with a length limit of 1024 characters.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

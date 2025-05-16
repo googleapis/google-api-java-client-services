@@ -44,13 +44,6 @@ public final class GoogleCloudNotebooklmV1alphaUploadSourceFileRequest extends c
   private ApiservingMediaRequestInfo mediaRequestInfo;
 
   /**
-   * The project (notebook) id of the uploaded source. Prefer to use the parent field instead.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String projectId;
-
-  /**
    * The source id of the associated file. If not set, a source id will be generated and a new
    * tentative source will be created.
    * The value may be {@code null}.
@@ -89,23 +82,6 @@ public final class GoogleCloudNotebooklmV1alphaUploadSourceFileRequest extends c
    */
   public GoogleCloudNotebooklmV1alphaUploadSourceFileRequest setMediaRequestInfo(ApiservingMediaRequestInfo mediaRequestInfo) {
     this.mediaRequestInfo = mediaRequestInfo;
-    return this;
-  }
-
-  /**
-   * The project (notebook) id of the uploaded source. Prefer to use the parent field instead.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getProjectId() {
-    return projectId;
-  }
-
-  /**
-   * The project (notebook) id of the uploaded source. Prefer to use the parent field instead.
-   * @param projectId projectId or {@code null} for none
-   */
-  public GoogleCloudNotebooklmV1alphaUploadSourceFileRequest setProjectId(java.lang.String projectId) {
-    this.projectId = projectId;
     return this;
   }
 

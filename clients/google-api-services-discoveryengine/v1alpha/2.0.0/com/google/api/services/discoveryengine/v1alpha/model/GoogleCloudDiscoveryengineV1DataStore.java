@@ -139,9 +139,9 @@ public final class GoogleCloudDiscoveryengineV1DataStore extends com.google.api.
   private java.lang.String kmsKeyName;
 
   /**
-   * Immutable. The full resource name of the data store. Format: `projects/{project}/locations/{loc
-   * ation}/collections/{collection_id}/dataStores/{data_store_id}`. This field must be a UTF-8
-   * encoded string with a length limit of 1024 characters.
+   * Immutable. Identifier. The full resource name of the data store. Format: `projects/{project}/lo
+   * cations/{location}/collections/{collection_id}/dataStores/{data_store_id}`. This field must be
+   * a UTF-8 encoded string with a length limit of 1024 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -444,9 +444,9 @@ public final class GoogleCloudDiscoveryengineV1DataStore extends com.google.api.
   }
 
   /**
-   * Immutable. The full resource name of the data store. Format: `projects/{project}/locations/{loc
-   * ation}/collections/{collection_id}/dataStores/{data_store_id}`. This field must be a UTF-8
-   * encoded string with a length limit of 1024 characters.
+   * Immutable. Identifier. The full resource name of the data store. Format: `projects/{project}/lo
+   * cations/{location}/collections/{collection_id}/dataStores/{data_store_id}`. This field must be
+   * a UTF-8 encoded string with a length limit of 1024 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -454,9 +454,9 @@ public final class GoogleCloudDiscoveryengineV1DataStore extends com.google.api.
   }
 
   /**
-   * Immutable. The full resource name of the data store. Format: `projects/{project}/locations/{loc
-   * ation}/collections/{collection_id}/dataStores/{data_store_id}`. This field must be a UTF-8
-   * encoded string with a length limit of 1024 characters.
+   * Immutable. Identifier. The full resource name of the data store. Format: `projects/{project}/lo
+   * cations/{location}/collections/{collection_id}/dataStores/{data_store_id}`. This field must be
+   * a UTF-8 encoded string with a length limit of 1024 characters.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1DataStore setName(java.lang.String name) {

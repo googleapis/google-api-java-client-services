@@ -30,14 +30,14 @@ package com.google.api.services.discoveryengine.v1.model;
 public final class GoogleCloudDiscoveryengineV1betaDataStoreServingConfigDataStore extends com.google.api.client.json.GenericJson {
 
   /**
-   * If set true, the DataStore will not be available for serving search requests.
+   * Optional. If set true, the DataStore will not be available for serving search requests.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean disabledForServing;
 
   /**
-   * If set true, the DataStore will not be available for serving search requests.
+   * Optional. If set true, the DataStore will not be available for serving search requests.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisabledForServing() {
@@ -45,7 +45,7 @@ public final class GoogleCloudDiscoveryengineV1betaDataStoreServingConfigDataSto
   }
 
   /**
-   * If set true, the DataStore will not be available for serving search requests.
+   * Optional. If set true, the DataStore will not be available for serving search requests.
    * @param disabledForServing disabledForServing or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaDataStoreServingConfigDataStore setDisabledForServing(java.lang.Boolean disabledForServing) {

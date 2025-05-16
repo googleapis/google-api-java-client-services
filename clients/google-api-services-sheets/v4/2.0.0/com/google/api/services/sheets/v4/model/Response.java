@@ -93,6 +93,13 @@ public final class Response extends com.google.api.client.json.GenericJson {
   private AddSlicerResponse addSlicer;
 
   /**
+   * A reply from adding a table.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AddTableResponse addTable;
+
+  /**
    * A reply from cancelling data source object refreshes.
    * The value may be {@code null}.
    */
@@ -347,6 +354,23 @@ public final class Response extends com.google.api.client.json.GenericJson {
    */
   public Response setAddSlicer(AddSlicerResponse addSlicer) {
     this.addSlicer = addSlicer;
+    return this;
+  }
+
+  /**
+   * A reply from adding a table.
+   * @return value or {@code null} for none
+   */
+  public AddTableResponse getAddTable() {
+    return addTable;
+  }
+
+  /**
+   * A reply from adding a table.
+   * @param addTable addTable or {@code null} for none
+   */
+  public Response setAddTable(AddTableResponse addTable) {
+    this.addTable = addTable;
     return this;
   }
 

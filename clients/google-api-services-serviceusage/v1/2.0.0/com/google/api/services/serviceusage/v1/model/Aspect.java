@@ -39,7 +39,7 @@ public final class Aspect extends com.google.api.client.json.GenericJson {
 
   /**
    * Content of the configuration. The underlying schema should be defined by Aspect owners as
-   * protobuf message under `apiserving/configaspects/proto`.
+   * protobuf message under `google/api/configaspects/proto`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +64,7 @@ public final class Aspect extends com.google.api.client.json.GenericJson {
 
   /**
    * Content of the configuration. The underlying schema should be defined by Aspect owners as
-   * protobuf message under `apiserving/configaspects/proto`.
+   * protobuf message under `google/api/configaspects/proto`.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getSpec() {
@@ -73,7 +73,7 @@ public final class Aspect extends com.google.api.client.json.GenericJson {
 
   /**
    * Content of the configuration. The underlying schema should be defined by Aspect owners as
-   * protobuf message under `apiserving/configaspects/proto`.
+   * protobuf message under `google/api/configaspects/proto`.
    * @param spec spec or {@code null} for none
    */
   public Aspect setSpec(java.util.Map<String, java.lang.Object> spec) {

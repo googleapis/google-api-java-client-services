@@ -2776,9 +2776,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
     }
     /**
      * Deletes a comment. For more information, see [Manage comments and
-     * replies](https://developers.google.com/workspace/drive/api/guides/manage-comments). Required: The
-     * `fields` parameter must be set. To return the exact fields you need, see [Return specific
-     * fields](https://developers.google.com/workspace/drive/api/guides/fields-parameter).
+     * replies](https://developers.google.com/workspace/drive/api/guides/manage-comments).
      *
      * Create a request for the method "comments.delete".
      *
@@ -2801,9 +2799,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Deletes a comment. For more information, see [Manage comments and
-       * replies](https://developers.google.com/workspace/drive/api/guides/manage-comments). Required:
-       * The `fields` parameter must be set. To return the exact fields you need, see [Return specific
-       * fields](https://developers.google.com/workspace/drive/api/guides/fields-parameter).
+       * replies](https://developers.google.com/workspace/drive/api/guides/manage-comments).
        *
        * Create a request for the method "comments.delete".
        *

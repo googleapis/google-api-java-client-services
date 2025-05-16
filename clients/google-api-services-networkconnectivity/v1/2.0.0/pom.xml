@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-networkconnectivity</artifactId>
-  <version>v1-rev20250502-2.0.0</version>
-  <name>Network Connectivity API v1-rev20250502-2.0.0</name>
+  <version>v1-rev20250512-2.0.0</version>
+  <name>Network Connectivity API v1-rev20250512-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

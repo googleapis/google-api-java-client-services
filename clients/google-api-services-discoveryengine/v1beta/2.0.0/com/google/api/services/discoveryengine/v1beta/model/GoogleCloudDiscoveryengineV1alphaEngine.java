@@ -59,7 +59,7 @@ public final class GoogleCloudDiscoveryengineV1alphaEngine extends com.google.ap
   private String createTime;
 
   /**
-   * The data stores associated with this engine. For SOLUTION_TYPE_SEARCH and
+   * Optional. The data stores associated with this engine. For SOLUTION_TYPE_SEARCH and
    * SOLUTION_TYPE_RECOMMENDATION type of engines, they can only associate with at most one data
    * store. If solution_type is SOLUTION_TYPE_CHAT, multiple DataStores in the same Collection can
    * be associated here. Note that when used in CreateEngineRequest, one DataStore id must be
@@ -85,9 +85,9 @@ public final class GoogleCloudDiscoveryengineV1alphaEngine extends com.google.ap
   private java.lang.String displayName;
 
   /**
-   * The industry vertical that the engine registers. The restriction of the Engine industry
-   * vertical is based on DataStore: Vertical on Engine has to match vertical of the DataStore
-   * linked to the engine.
+   * Optional. The industry vertical that the engine registers. The restriction of the Engine
+   * industry vertical is based on DataStore: Vertical on Engine has to match vertical of the
+   * DataStore linked to the engine.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,8 +102,8 @@ public final class GoogleCloudDiscoveryengineV1alphaEngine extends com.google.ap
   private GoogleCloudDiscoveryengineV1alphaEngineMediaRecommendationEngineConfig mediaRecommendationEngineConfig;
 
   /**
-   * Immutable. The fully qualified resource name of the engine. This field must be a UTF-8 encoded
-   * string with a length limit of 1024 characters. Format:
+   * Immutable. Identifier. The fully qualified resource name of the engine. This field must be a
+   * UTF-8 encoded string with a length limit of 1024 characters. Format:
    * `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}` engine
    * should be 1-63 characters, and valid characters are /a-z0-9. Otherwise, an INVALID_ARGUMENT
    * error is returned.
@@ -219,7 +219,7 @@ public final class GoogleCloudDiscoveryengineV1alphaEngine extends com.google.ap
   }
 
   /**
-   * The data stores associated with this engine. For SOLUTION_TYPE_SEARCH and
+   * Optional. The data stores associated with this engine. For SOLUTION_TYPE_SEARCH and
    * SOLUTION_TYPE_RECOMMENDATION type of engines, they can only associate with at most one data
    * store. If solution_type is SOLUTION_TYPE_CHAT, multiple DataStores in the same Collection can
    * be associated here. Note that when used in CreateEngineRequest, one DataStore id must be
@@ -231,7 +231,7 @@ public final class GoogleCloudDiscoveryengineV1alphaEngine extends com.google.ap
   }
 
   /**
-   * The data stores associated with this engine. For SOLUTION_TYPE_SEARCH and
+   * Optional. The data stores associated with this engine. For SOLUTION_TYPE_SEARCH and
    * SOLUTION_TYPE_RECOMMENDATION type of engines, they can only associate with at most one data
    * store. If solution_type is SOLUTION_TYPE_CHAT, multiple DataStores in the same Collection can
    * be associated here. Note that when used in CreateEngineRequest, one DataStore id must be
@@ -280,9 +280,9 @@ public final class GoogleCloudDiscoveryengineV1alphaEngine extends com.google.ap
   }
 
   /**
-   * The industry vertical that the engine registers. The restriction of the Engine industry
-   * vertical is based on DataStore: Vertical on Engine has to match vertical of the DataStore
-   * linked to the engine.
+   * Optional. The industry vertical that the engine registers. The restriction of the Engine
+   * industry vertical is based on DataStore: Vertical on Engine has to match vertical of the
+   * DataStore linked to the engine.
    * @return value or {@code null} for none
    */
   public java.lang.String getIndustryVertical() {
@@ -290,9 +290,9 @@ public final class GoogleCloudDiscoveryengineV1alphaEngine extends com.google.ap
   }
 
   /**
-   * The industry vertical that the engine registers. The restriction of the Engine industry
-   * vertical is based on DataStore: Vertical on Engine has to match vertical of the DataStore
-   * linked to the engine.
+   * Optional. The industry vertical that the engine registers. The restriction of the Engine
+   * industry vertical is based on DataStore: Vertical on Engine has to match vertical of the
+   * DataStore linked to the engine.
    * @param industryVertical industryVertical or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaEngine setIndustryVertical(java.lang.String industryVertical) {
@@ -320,8 +320,8 @@ public final class GoogleCloudDiscoveryengineV1alphaEngine extends com.google.ap
   }
 
   /**
-   * Immutable. The fully qualified resource name of the engine. This field must be a UTF-8 encoded
-   * string with a length limit of 1024 characters. Format:
+   * Immutable. Identifier. The fully qualified resource name of the engine. This field must be a
+   * UTF-8 encoded string with a length limit of 1024 characters. Format:
    * `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}` engine
    * should be 1-63 characters, and valid characters are /a-z0-9. Otherwise, an INVALID_ARGUMENT
    * error is returned.
@@ -332,8 +332,8 @@ public final class GoogleCloudDiscoveryengineV1alphaEngine extends com.google.ap
   }
 
   /**
-   * Immutable. The fully qualified resource name of the engine. This field must be a UTF-8 encoded
-   * string with a length limit of 1024 characters. Format:
+   * Immutable. Identifier. The fully qualified resource name of the engine. This field must be a
+   * UTF-8 encoded string with a length limit of 1024 characters. Format:
    * `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}` engine
    * should be 1-63 characters, and valid characters are /a-z0-9. Otherwise, an INVALID_ARGUMENT
    * error is returned.

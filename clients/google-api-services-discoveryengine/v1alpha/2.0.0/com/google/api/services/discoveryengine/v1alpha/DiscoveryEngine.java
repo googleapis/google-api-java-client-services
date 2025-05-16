@@ -6148,7 +6148,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the discoveryengine server.  After setting any
            * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name Immutable. The full resource name of the data store. Format:
+           * @param name Immutable. Identifier. The full resource name of the data store. Format:
            *        `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_stor
            *        e_id}`. This field must be a UTF-8 encoded string with a length limit of 1024 characters.
            * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaDataStore}
@@ -6178,7 +6178,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Immutable. The full resource name of the data store. Format:
+             * @param name Immutable. Identifier. The full resource name of the data store. Format:
            *        `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_stor
            *        e_id}`. This field must be a UTF-8 encoded string with a length limit of 1024 characters.
              * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaDataStore}
@@ -6250,14 +6250,14 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Immutable. The full resource name of the data store. Format: `projects/{project}/loca
-             * tions/{location}/collections/{collection_id}/dataStores/{data_store_id}`. This field
-             * must be a UTF-8 encoded string with a length limit of 1024 characters.
+             * Immutable. Identifier. The full resource name of the data store. Format: `projects/{p
+             * roject}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}`.
+             * This field must be a UTF-8 encoded string with a length limit of 1024 characters.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Immutable. The full resource name of the data store. Format:
+            /** Immutable. Identifier. The full resource name of the data store. Format:
            `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}`.
            This field must be a UTF-8 encoded string with a length limit of 1024 characters.
              */
@@ -6266,9 +6266,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Immutable. The full resource name of the data store. Format: `projects/{project}/loca
-             * tions/{location}/collections/{collection_id}/dataStores/{data_store_id}`. This field
-             * must be a UTF-8 encoded string with a length limit of 1024 characters.
+             * Immutable. Identifier. The full resource name of the data store. Format: `projects/{p
+             * roject}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}`.
+             * This field must be a UTF-8 encoded string with a length limit of 1024 characters.
              */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -21219,8 +21219,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * This request holds the parameters needed by the discoveryengine server.  After setting any
            * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name Immutable. The fully qualified resource name of the engine. This field must be a UTF-8 encoded
-           *        string with a length limit of 1024 characters. Format:
+           * @param name Immutable. Identifier. The fully qualified resource name of the engine. This field must be a UTF-8
+           *        encoded string with a length limit of 1024 characters. Format:
            *        `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}` engine
            *        should be 1-63 characters, and valid characters are /a-z0-9. Otherwise, an
            *        INVALID_ARGUMENT error is returned.
@@ -21251,8 +21251,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Immutable. The fully qualified resource name of the engine. This field must be a UTF-8 encoded
-           *        string with a length limit of 1024 characters. Format:
+             * @param name Immutable. Identifier. The fully qualified resource name of the engine. This field must be a UTF-8
+           *        encoded string with a length limit of 1024 characters. Format:
            *        `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}` engine
            *        should be 1-63 characters, and valid characters are /a-z0-9. Otherwise, an
            *        INVALID_ARGUMENT error is returned.
@@ -21325,8 +21325,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Immutable. The fully qualified resource name of the engine. This field must be a
-             * UTF-8 encoded string with a length limit of 1024 characters. Format:
+             * Immutable. Identifier. The fully qualified resource name of the engine. This field
+             * must be a UTF-8 encoded string with a length limit of 1024 characters. Format:
              * `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
              * engine should be 1-63 characters, and valid characters are /a-z0-9. Otherwise, an
              * INVALID_ARGUMENT error is returned.
@@ -21334,8 +21334,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Immutable. The fully qualified resource name of the engine. This field must be a UTF-8 encoded
-           string with a length limit of 1024 characters. Format:
+            /** Immutable. Identifier. The fully qualified resource name of the engine. This field must be a UTF-8
+           encoded string with a length limit of 1024 characters. Format:
            `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}` engine should
            be 1-63 characters, and valid characters are /a-z0-9. Otherwise, an INVALID_ARGUMENT error is
            returned.
@@ -21345,8 +21345,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Immutable. The fully qualified resource name of the engine. This field must be a
-             * UTF-8 encoded string with a length limit of 1024 characters. Format:
+             * Immutable. Identifier. The fully qualified resource name of the engine. This field
+             * must be a UTF-8 encoded string with a length limit of 1024 characters. Format:
              * `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
              * engine should be 1-63 characters, and valid characters are /a-z0-9. Otherwise, an
              * INVALID_ARGUMENT error is returned.
@@ -28765,7 +28765,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the discoveryengine server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Immutable. The full resource name of the data store. Format:
+         * @param name Immutable. Identifier. The full resource name of the data store. Format:
          *        `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_stor
          *        e_id}`. This field must be a UTF-8 encoded string with a length limit of 1024 characters.
          * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaDataStore}
@@ -28795,7 +28795,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Immutable. The full resource name of the data store. Format:
+           * @param name Immutable. Identifier. The full resource name of the data store. Format:
          *        `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_stor
          *        e_id}`. This field must be a UTF-8 encoded string with a length limit of 1024 characters.
            * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaDataStore}
@@ -28867,14 +28867,14 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Immutable. The full resource name of the data store. Format: `projects/{project}/locati
-           * ons/{location}/collections/{collection_id}/dataStores/{data_store_id}`. This field must
-           * be a UTF-8 encoded string with a length limit of 1024 characters.
+           * Immutable. Identifier. The full resource name of the data store. Format: `projects/{pro
+           * ject}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}`.
+           * This field must be a UTF-8 encoded string with a length limit of 1024 characters.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Immutable. The full resource name of the data store. Format:
+          /** Immutable. Identifier. The full resource name of the data store. Format:
          `projects/{project}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}`.
          This field must be a UTF-8 encoded string with a length limit of 1024 characters.
            */
@@ -28883,9 +28883,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Immutable. The full resource name of the data store. Format: `projects/{project}/locati
-           * ons/{location}/collections/{collection_id}/dataStores/{data_store_id}`. This field must
-           * be a UTF-8 encoded string with a length limit of 1024 characters.
+           * Immutable. Identifier. The full resource name of the data store. Format: `projects/{pro
+           * ject}/locations/{location}/collections/{collection_id}/dataStores/{data_store_id}`.
+           * This field must be a UTF-8 encoded string with a length limit of 1024 characters.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -43720,6 +43720,217 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             @Override
             public List set(String parameterName, Object value) {
               return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
+      }
+      /**
+       * An accessor for creating requests from the Notebooks collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
+       *   {@code DiscoveryEngine.Notebooks.List request = discoveryengine.notebooks().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Notebooks notebooks() {
+        return new Notebooks();
+      }
+
+      /**
+       * The "notebooks" collection of methods.
+       */
+      public class Notebooks {
+
+        /**
+         * An accessor for creating requests from the Sources collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
+         *   {@code DiscoveryEngine.Sources.List request = discoveryengine.sources().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Sources sources() {
+          return new Sources();
+        }
+
+        /**
+         * The "sources" collection of methods.
+         */
+        public class Sources {
+
+          /**
+           * Uploads a file for Notebook LM to use. Creates a Source.
+           *
+           * Create a request for the method "sources.uploadFile".
+           *
+           * This request holds the parameters needed by the discoveryengine server.  After setting any
+           * optional parameters, call the {@link UploadFile#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent resource where the sources will be created. Format:
+           *        projects/{project}/locations/{location}/notebooks/{notebook}
+           * @param sourceId The source id of the associated file. If not set, a source id will be generated and a new tentative
+           *        source will be created.
+           * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudNotebooklmV1alphaUploadSourceFileRequest}
+           * @return the request
+           */
+          public UploadFile uploadFile(java.lang.String parent, java.lang.String sourceId, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudNotebooklmV1alphaUploadSourceFileRequest content) throws java.io.IOException {
+            UploadFile result = new UploadFile(parent, sourceId, content);
+            initialize(result);
+            return result;
+          }
+
+          public class UploadFile extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudNotebooklmV1alphaUploadSourceFileResponse> {
+
+            private static final String REST_PATH = "v1alpha/{+parent}/sources/{sourceId}:uploadFile";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/notebooks/[^/]+$");
+
+            /**
+             * Uploads a file for Notebook LM to use. Creates a Source.
+             *
+             * Create a request for the method "sources.uploadFile".
+             *
+             * This request holds the parameters needed by the the discoveryengine server.  After setting any
+             * optional parameters, call the {@link UploadFile#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * UploadFile#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent resource where the sources will be created. Format:
+           *        projects/{project}/locations/{location}/notebooks/{notebook}
+             * @param sourceId The source id of the associated file. If not set, a source id will be generated and a new tentative
+           *        source will be created.
+             * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudNotebooklmV1alphaUploadSourceFileRequest}
+             * @since 1.13
+             */
+            protected UploadFile(java.lang.String parent, java.lang.String sourceId, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudNotebooklmV1alphaUploadSourceFileRequest content) {
+              super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudNotebooklmV1alphaUploadSourceFileResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/notebooks/[^/]+$");
+              }
+              this.sourceId = com.google.api.client.util.Preconditions.checkNotNull(sourceId, "Required parameter sourceId must be specified.");
+            }
+
+            @Override
+            public UploadFile set$Xgafv(java.lang.String $Xgafv) {
+              return (UploadFile) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public UploadFile setAccessToken(java.lang.String accessToken) {
+              return (UploadFile) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public UploadFile setAlt(java.lang.String alt) {
+              return (UploadFile) super.setAlt(alt);
+            }
+
+            @Override
+            public UploadFile setCallback(java.lang.String callback) {
+              return (UploadFile) super.setCallback(callback);
+            }
+
+            @Override
+            public UploadFile setFields(java.lang.String fields) {
+              return (UploadFile) super.setFields(fields);
+            }
+
+            @Override
+            public UploadFile setKey(java.lang.String key) {
+              return (UploadFile) super.setKey(key);
+            }
+
+            @Override
+            public UploadFile setOauthToken(java.lang.String oauthToken) {
+              return (UploadFile) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public UploadFile setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (UploadFile) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public UploadFile setQuotaUser(java.lang.String quotaUser) {
+              return (UploadFile) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public UploadFile setUploadType(java.lang.String uploadType) {
+              return (UploadFile) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public UploadFile setUploadProtocol(java.lang.String uploadProtocol) {
+              return (UploadFile) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent resource where the sources will be created. Format:
+             * projects/{project}/locations/{location}/notebooks/{notebook}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent resource where the sources will be created. Format:
+           projects/{project}/locations/{location}/notebooks/{notebook}
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The parent resource where the sources will be created. Format:
+             * projects/{project}/locations/{location}/notebooks/{notebook}
+             */
+            public UploadFile setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/notebooks/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * The source id of the associated file. If not set, a source id will be generated and a
+             * new tentative source will be created.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String sourceId;
+
+            /** The source id of the associated file. If not set, a source id will be generated and a new tentative
+           source will be created.
+             */
+            public java.lang.String getSourceId() {
+              return sourceId;
+            }
+
+            /**
+             * The source id of the associated file. If not set, a source id will be generated and a
+             * new tentative source will be created.
+             */
+            public UploadFile setSourceId(java.lang.String sourceId) {
+              this.sourceId = sourceId;
+              return this;
+            }
+
+            @Override
+            public UploadFile set(String parameterName, Object value) {
+              return (UploadFile) super.set(parameterName, value);
             }
           }
 

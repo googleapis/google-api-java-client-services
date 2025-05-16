@@ -30,6 +30,15 @@ package com.google.api.services.gkebackup.v1.model;
 public final class BackupPlan extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The fully qualified name of the BackupChannel to be used to create a backup. This
+   * field is set only if the cluster being backed up is in a different project.
+   * `projects/locations/backupChannels`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String backupChannel;
+
+  /**
    * Optional. Defines the configuration of Backups created via this BackupPlan.
    * The value may be {@code null}.
    */
@@ -174,6 +183,27 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Output only. The fully qualified name of the BackupChannel to be used to create a backup. This
+   * field is set only if the cluster being backed up is in a different project.
+   * `projects/locations/backupChannels`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBackupChannel() {
+    return backupChannel;
+  }
+
+  /**
+   * Output only. The fully qualified name of the BackupChannel to be used to create a backup. This
+   * field is set only if the cluster being backed up is in a different project.
+   * `projects/locations/backupChannels`
+   * @param backupChannel backupChannel or {@code null} for none
+   */
+  public BackupPlan setBackupChannel(java.lang.String backupChannel) {
+    this.backupChannel = backupChannel;
+    return this;
+  }
 
   /**
    * Optional. Defines the configuration of Backups created via this BackupPlan.

@@ -90,6 +90,15 @@ public final class RestorePlan extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Output only. The fully qualified name of the RestoreChannel to be used to create a RestorePlan.
+   * This field is set only if the `backup_plan` is in a different project than the RestorePlan.
+   * Format: `projects/locations/restoreChannels`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String restoreChannel;
+
+  /**
    * Required. Configuration of Restores created via this RestorePlan.
    * The value may be {@code null}.
    */
@@ -264,6 +273,27 @@ public final class RestorePlan extends com.google.api.client.json.GenericJson {
    */
   public RestorePlan setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. The fully qualified name of the RestoreChannel to be used to create a RestorePlan.
+   * This field is set only if the `backup_plan` is in a different project than the RestorePlan.
+   * Format: `projects/locations/restoreChannels`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRestoreChannel() {
+    return restoreChannel;
+  }
+
+  /**
+   * Output only. The fully qualified name of the RestoreChannel to be used to create a RestorePlan.
+   * This field is set only if the `backup_plan` is in a different project than the RestorePlan.
+   * Format: `projects/locations/restoreChannels`
+   * @param restoreChannel restoreChannel or {@code null} for none
+   */
+  public RestorePlan setRestoreChannel(java.lang.String restoreChannel) {
+    this.restoreChannel = restoreChannel;
     return this;
   }
 

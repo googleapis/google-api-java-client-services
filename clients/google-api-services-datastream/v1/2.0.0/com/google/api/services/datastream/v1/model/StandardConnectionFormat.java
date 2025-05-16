@@ -29,6 +29,33 @@ package com.google.api.services.datastream.v1.model;
 @SuppressWarnings("javadoc")
 public final class StandardConnectionFormat extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Optional. Specifies whether the client connects directly to the host[:port] in the connection
+   * URI.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean directConnection;
+
+  /**
+   * Optional. Specifies whether the client connects directly to the host[:port] in the connection
+   * URI.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDirectConnection() {
+    return directConnection;
+  }
+
+  /**
+   * Optional. Specifies whether the client connects directly to the host[:port] in the connection
+   * URI.
+   * @param directConnection directConnection or {@code null} for none
+   */
+  public StandardConnectionFormat setDirectConnection(java.lang.Boolean directConnection) {
+    this.directConnection = directConnection;
+    return this;
+  }
+
   @Override
   public StandardConnectionFormat set(String fieldName, Object value) {
     return (StandardConnectionFormat) super.set(fieldName, value);

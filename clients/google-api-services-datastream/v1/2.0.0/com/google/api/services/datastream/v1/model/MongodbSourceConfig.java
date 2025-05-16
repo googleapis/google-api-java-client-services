@@ -44,6 +44,14 @@ public final class MongodbSourceConfig extends com.google.api.client.json.Generi
   private MongodbCluster includeObjects;
 
   /**
+   * Optional. Maximum number of concurrent backfill tasks. The number should be non-negative and
+   * less than or equal to 50. If not set (or set to 0), the system's default value is used
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer maxConcurrentBackfillTasks;
+
+  /**
    * MongoDB collections to exclude from the stream.
    * @return value or {@code null} for none
    */
@@ -74,6 +82,25 @@ public final class MongodbSourceConfig extends com.google.api.client.json.Generi
    */
   public MongodbSourceConfig setIncludeObjects(MongodbCluster includeObjects) {
     this.includeObjects = includeObjects;
+    return this;
+  }
+
+  /**
+   * Optional. Maximum number of concurrent backfill tasks. The number should be non-negative and
+   * less than or equal to 50. If not set (or set to 0), the system's default value is used
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMaxConcurrentBackfillTasks() {
+    return maxConcurrentBackfillTasks;
+  }
+
+  /**
+   * Optional. Maximum number of concurrent backfill tasks. The number should be non-negative and
+   * less than or equal to 50. If not set (or set to 0), the system's default value is used
+   * @param maxConcurrentBackfillTasks maxConcurrentBackfillTasks or {@code null} for none
+   */
+  public MongodbSourceConfig setMaxConcurrentBackfillTasks(java.lang.Integer maxConcurrentBackfillTasks) {
+    this.maxConcurrentBackfillTasks = maxConcurrentBackfillTasks;
     return this;
   }
 

@@ -40,6 +40,15 @@ public final class PscConfig extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> allowedConsumerProjects;
 
   /**
+   * Optional. The network attachment of the consumer network that the Private Service Connect
+   * enabled Cloud SQL instance is authorized to connect via PSC interface. format:
+   * projects/PROJECT/regions/REGION/networkAttachments/ID
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String networkAttachmentUri;
+
+  /**
    * Optional. The list of settings for requested Private Service Connect consumer endpoints that
    * can be used to connect to this Cloud SQL instance.
    * The value may be {@code null}.
@@ -80,6 +89,27 @@ public final class PscConfig extends com.google.api.client.json.GenericJson {
    */
   public PscConfig setAllowedConsumerProjects(java.util.List<java.lang.String> allowedConsumerProjects) {
     this.allowedConsumerProjects = allowedConsumerProjects;
+    return this;
+  }
+
+  /**
+   * Optional. The network attachment of the consumer network that the Private Service Connect
+   * enabled Cloud SQL instance is authorized to connect via PSC interface. format:
+   * projects/PROJECT/regions/REGION/networkAttachments/ID
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNetworkAttachmentUri() {
+    return networkAttachmentUri;
+  }
+
+  /**
+   * Optional. The network attachment of the consumer network that the Private Service Connect
+   * enabled Cloud SQL instance is authorized to connect via PSC interface. format:
+   * projects/PROJECT/regions/REGION/networkAttachments/ID
+   * @param networkAttachmentUri networkAttachmentUri or {@code null} for none
+   */
+  public PscConfig setNetworkAttachmentUri(java.lang.String networkAttachmentUri) {
+    this.networkAttachmentUri = networkAttachmentUri;
     return this;
   }
 

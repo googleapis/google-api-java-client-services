@@ -272,7 +272,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   private java.lang.String pricingPlan;
 
   /**
-   * Optional. Configuration value for recreation of replica after certain replication lag
+   * Optional. Configuration value for recreation of replica after certain replication lag.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -897,7 +897,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Configuration value for recreation of replica after certain replication lag
+   * Optional. Configuration value for recreation of replica after certain replication lag.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getReplicationLagMaxSeconds() {
@@ -905,7 +905,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Configuration value for recreation of replica after certain replication lag
+   * Optional. Configuration value for recreation of replica after certain replication lag.
    * @param replicationLagMaxSeconds replicationLagMaxSeconds or {@code null} for none
    */
   public Settings setReplicationLagMaxSeconds(java.lang.Integer replicationLagMaxSeconds) {

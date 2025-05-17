@@ -37,7 +37,7 @@ public final class ConnectionPoolConfig extends com.google.api.client.json.Gener
   private java.lang.Boolean connectionPoolingEnabled;
 
   /**
-   * Optional. List of connection pool configuration flags
+   * Optional. List of connection pool configuration flags.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class ConnectionPoolConfig extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. List of connection pool configuration flags
+   * Optional. List of connection pool configuration flags.
    * @return value or {@code null} for none
    */
   public java.util.List<ConnectionPoolFlags> getFlags() {
@@ -69,7 +69,7 @@ public final class ConnectionPoolConfig extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. List of connection pool configuration flags
+   * Optional. List of connection pool configuration flags.
    * @param flags flags or {@code null} for none
    */
   public ConnectionPoolConfig setFlags(java.util.List<ConnectionPoolFlags> flags) {

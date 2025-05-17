@@ -31,8 +31,8 @@ package com.google.api.services.sqladmin.model;
 public final class PscAutoConnectionConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * The consumer network of this consumer endpoint. This must be a resource path that includes both
-   * the host project and the network name. For example,
+   * Optional. The consumer network of this consumer endpoint. This must be a resource path that
+   * includes both the host project and the network name. For example,
    * `projects/project1/global/networks/network1`. The consumer host project of this network might
    * be different from the consumer service project.
    * The value may be {@code null}.
@@ -48,8 +48,8 @@ public final class PscAutoConnectionConfig extends com.google.api.client.json.Ge
   private java.lang.String consumerNetworkStatus;
 
   /**
-   * This is the project ID of consumer service project of this consumer endpoint. Optional. This is
-   * only applicable if consumer_network is a shared vpc network.
+   * Optional. This is the project ID of consumer service project of this consumer endpoint.
+   * Optional. This is only applicable if consumer_network is a shared vpc network.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,8 +70,8 @@ public final class PscAutoConnectionConfig extends com.google.api.client.json.Ge
   private java.lang.String status;
 
   /**
-   * The consumer network of this consumer endpoint. This must be a resource path that includes both
-   * the host project and the network name. For example,
+   * Optional. The consumer network of this consumer endpoint. This must be a resource path that
+   * includes both the host project and the network name. For example,
    * `projects/project1/global/networks/network1`. The consumer host project of this network might
    * be different from the consumer service project.
    * @return value or {@code null} for none
@@ -81,8 +81,8 @@ public final class PscAutoConnectionConfig extends com.google.api.client.json.Ge
   }
 
   /**
-   * The consumer network of this consumer endpoint. This must be a resource path that includes both
-   * the host project and the network name. For example,
+   * Optional. The consumer network of this consumer endpoint. This must be a resource path that
+   * includes both the host project and the network name. For example,
    * `projects/project1/global/networks/network1`. The consumer host project of this network might
    * be different from the consumer service project.
    * @param consumerNetwork consumerNetwork or {@code null} for none
@@ -110,8 +110,8 @@ public final class PscAutoConnectionConfig extends com.google.api.client.json.Ge
   }
 
   /**
-   * This is the project ID of consumer service project of this consumer endpoint. Optional. This is
-   * only applicable if consumer_network is a shared vpc network.
+   * Optional. This is the project ID of consumer service project of this consumer endpoint.
+   * Optional. This is only applicable if consumer_network is a shared vpc network.
    * @return value or {@code null} for none
    */
   public java.lang.String getConsumerProject() {
@@ -119,8 +119,8 @@ public final class PscAutoConnectionConfig extends com.google.api.client.json.Ge
   }
 
   /**
-   * This is the project ID of consumer service project of this consumer endpoint. Optional. This is
-   * only applicable if consumer_network is a shared vpc network.
+   * Optional. This is the project ID of consumer service project of this consumer endpoint.
+   * Optional. This is only applicable if consumer_network is a shared vpc network.
    * @param consumerProject consumerProject or {@code null} for none
    */
   public PscAutoConnectionConfig setConsumerProject(java.lang.String consumerProject) {

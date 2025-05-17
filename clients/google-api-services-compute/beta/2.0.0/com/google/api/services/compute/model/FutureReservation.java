@@ -95,6 +95,13 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
   private java.lang.String description;
 
   /**
+   * Indicates if this group of VMs have emergent maintenance enabled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableEmergentMaintenance;
+
+  /**
    * [Output Only] A unique identifier for this future reservation. The server defines this
    * identifier.
    * The value may be {@code null}.
@@ -369,6 +376,23 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
    */
   public FutureReservation setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Indicates if this group of VMs have emergent maintenance enabled.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableEmergentMaintenance() {
+    return enableEmergentMaintenance;
+  }
+
+  /**
+   * Indicates if this group of VMs have emergent maintenance enabled.
+   * @param enableEmergentMaintenance enableEmergentMaintenance or {@code null} for none
+   */
+  public FutureReservation setEnableEmergentMaintenance(java.lang.Boolean enableEmergentMaintenance) {
+    this.enableEmergentMaintenance = enableEmergentMaintenance;
     return this;
   }
 

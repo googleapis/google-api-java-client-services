@@ -33,7 +33,67 @@ public final class SecurityPolicyDdosProtectionConfig extends com.google.api.cli
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private java.lang.String ddosAdaptiveProtection;
+
+  /**
+   * Adaptive Protection for Network Load Balancers (and VMs with public IPs) builds DDos
+   * mitigations that minimize collateral damage. It quantifies this as the fraction of a non-abuse
+   * baseline that's inadvertently blocked. Rules whose collateral damage exceeds
+   * ddosAdaptiveImpactedBaselineThreshold will not be deployed. Using a lower value will prioritize
+   * keeping collateral damage low, possibly at the cost of its effectiveness in rate limiting some
+   * or all of the attack. It should typically be between 0.01 and 0.10.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float ddosImpactedBaselineThreshold;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.lang.String ddosProtection;
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDdosAdaptiveProtection() {
+    return ddosAdaptiveProtection;
+  }
+
+  /**
+   * @param ddosAdaptiveProtection ddosAdaptiveProtection or {@code null} for none
+   */
+  public SecurityPolicyDdosProtectionConfig setDdosAdaptiveProtection(java.lang.String ddosAdaptiveProtection) {
+    this.ddosAdaptiveProtection = ddosAdaptiveProtection;
+    return this;
+  }
+
+  /**
+   * Adaptive Protection for Network Load Balancers (and VMs with public IPs) builds DDos
+   * mitigations that minimize collateral damage. It quantifies this as the fraction of a non-abuse
+   * baseline that's inadvertently blocked. Rules whose collateral damage exceeds
+   * ddosAdaptiveImpactedBaselineThreshold will not be deployed. Using a lower value will prioritize
+   * keeping collateral damage low, possibly at the cost of its effectiveness in rate limiting some
+   * or all of the attack. It should typically be between 0.01 and 0.10.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getDdosImpactedBaselineThreshold() {
+    return ddosImpactedBaselineThreshold;
+  }
+
+  /**
+   * Adaptive Protection for Network Load Balancers (and VMs with public IPs) builds DDos
+   * mitigations that minimize collateral damage. It quantifies this as the fraction of a non-abuse
+   * baseline that's inadvertently blocked. Rules whose collateral damage exceeds
+   * ddosAdaptiveImpactedBaselineThreshold will not be deployed. Using a lower value will prioritize
+   * keeping collateral damage low, possibly at the cost of its effectiveness in rate limiting some
+   * or all of the attack. It should typically be between 0.01 and 0.10.
+   * @param ddosImpactedBaselineThreshold ddosImpactedBaselineThreshold or {@code null} for none
+   */
+  public SecurityPolicyDdosProtectionConfig setDdosImpactedBaselineThreshold(java.lang.Float ddosImpactedBaselineThreshold) {
+    this.ddosImpactedBaselineThreshold = ddosImpactedBaselineThreshold;
+    return this;
+  }
 
   /**
    * @return value or {@code null} for none

@@ -3320,6 +3320,216 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
           }
 
         }
+        /**
+         * An accessor for creating requests from the DomainMappings collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code Appengine appengine = new Appengine(...);}
+         *   {@code Appengine.DomainMappings.List request = appengine.domainMappings().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public DomainMappings domainMappings() {
+          return new DomainMappings();
+        }
+
+        /**
+         * The "domainMappings" collection of methods.
+         */
+        public class DomainMappings {
+
+          /**
+           * Gets the specified domain mapping.
+           *
+           * Create a request for the method "domainMappings.get".
+           *
+           * This request holds the parameters needed by the appengine server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param projectsId Part of `name`. Name of the resource requested. Example: apps/myapp/domainMappings/example.com.
+           * @param locationsId Part of `name`. See documentation of `projectsId`.
+           * @param applicationsId Part of `name`. See documentation of `projectsId`.
+           * @param domainMappingsId Part of `name`. See documentation of `projectsId`.
+           * @return the request
+           */
+          public Get get(java.lang.String projectsId, java.lang.String locationsId, java.lang.String applicationsId, java.lang.String domainMappingsId) throws java.io.IOException {
+            Get result = new Get(projectsId, locationsId, applicationsId, domainMappingsId);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends AppengineRequest<com.google.api.services.appengine.model.DomainMapping> {
+
+            private static final String REST_PATH = "v1alpha/projects/{projectsId}/locations/{locationsId}/applications/{applicationsId}/domainMappings/{domainMappingsId}";
+
+            /**
+             * Gets the specified domain mapping.
+             *
+             * Create a request for the method "domainMappings.get".
+             *
+             * This request holds the parameters needed by the the appengine server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param projectsId Part of `name`. Name of the resource requested. Example: apps/myapp/domainMappings/example.com.
+             * @param locationsId Part of `name`. See documentation of `projectsId`.
+             * @param applicationsId Part of `name`. See documentation of `projectsId`.
+             * @param domainMappingsId Part of `name`. See documentation of `projectsId`.
+             * @since 1.13
+             */
+            protected Get(java.lang.String projectsId, java.lang.String locationsId, java.lang.String applicationsId, java.lang.String domainMappingsId) {
+              super(Appengine.this, "GET", REST_PATH, null, com.google.api.services.appengine.model.DomainMapping.class);
+              this.projectsId = com.google.api.client.util.Preconditions.checkNotNull(projectsId, "Required parameter projectsId must be specified.");
+              this.locationsId = com.google.api.client.util.Preconditions.checkNotNull(locationsId, "Required parameter locationsId must be specified.");
+              this.applicationsId = com.google.api.client.util.Preconditions.checkNotNull(applicationsId, "Required parameter applicationsId must be specified.");
+              this.domainMappingsId = com.google.api.client.util.Preconditions.checkNotNull(domainMappingsId, "Required parameter domainMappingsId must be specified.");
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Part of `name`. Name of the resource requested. Example:
+             * apps/myapp/domainMappings/example.com.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String projectsId;
+
+            /** Part of `name`. Name of the resource requested. Example: apps/myapp/domainMappings/example.com.
+             */
+            public java.lang.String getProjectsId() {
+              return projectsId;
+            }
+
+            /**
+             * Part of `name`. Name of the resource requested. Example:
+             * apps/myapp/domainMappings/example.com.
+             */
+            public Get setProjectsId(java.lang.String projectsId) {
+              this.projectsId = projectsId;
+              return this;
+            }
+
+            /** Part of `name`. See documentation of `projectsId`. */
+            @com.google.api.client.util.Key
+            private java.lang.String locationsId;
+
+            /** Part of `name`. See documentation of `projectsId`.
+             */
+            public java.lang.String getLocationsId() {
+              return locationsId;
+            }
+
+            /** Part of `name`. See documentation of `projectsId`. */
+            public Get setLocationsId(java.lang.String locationsId) {
+              this.locationsId = locationsId;
+              return this;
+            }
+
+            /** Part of `name`. See documentation of `projectsId`. */
+            @com.google.api.client.util.Key
+            private java.lang.String applicationsId;
+
+            /** Part of `name`. See documentation of `projectsId`.
+             */
+            public java.lang.String getApplicationsId() {
+              return applicationsId;
+            }
+
+            /** Part of `name`. See documentation of `projectsId`. */
+            public Get setApplicationsId(java.lang.String applicationsId) {
+              this.applicationsId = applicationsId;
+              return this;
+            }
+
+            /** Part of `name`. See documentation of `projectsId`. */
+            @com.google.api.client.util.Key
+            private java.lang.String domainMappingsId;
+
+            /** Part of `name`. See documentation of `projectsId`.
+             */
+            public java.lang.String getDomainMappingsId() {
+              return domainMappingsId;
+            }
+
+            /** Part of `name`. See documentation of `projectsId`. */
+            public Get setDomainMappingsId(java.lang.String domainMappingsId) {
+              this.domainMappingsId = domainMappingsId;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+
+        }
       }
       /**
        * An accessor for creating requests from the Operations collection.

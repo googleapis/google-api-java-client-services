@@ -296,7 +296,8 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
 
   /**
    * Maximum Transmission Unit (MTU), in bytes, of packets passing through this interconnect
-   * attachment. Only 1440 and 1500 are allowed. If not specified, the value will default to 1440.
+   * attachment. Valid values are 1440, 1460, 1500, and 8896. If not specified, the value will
+   * default to 1440.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1125,7 +1126,8 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
 
   /**
    * Maximum Transmission Unit (MTU), in bytes, of packets passing through this interconnect
-   * attachment. Only 1440 and 1500 are allowed. If not specified, the value will default to 1440.
+   * attachment. Valid values are 1440, 1460, 1500, and 8896. If not specified, the value will
+   * default to 1440.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMtu() {
@@ -1134,7 +1136,8 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
 
   /**
    * Maximum Transmission Unit (MTU), in bytes, of packets passing through this interconnect
-   * attachment. Only 1440 and 1500 are allowed. If not specified, the value will default to 1440.
+   * attachment. Valid values are 1440, 1460, 1500, and 8896. If not specified, the value will
+   * default to 1440.
    * @param mtu mtu or {@code null} for none
    */
   public InterconnectAttachment setMtu(java.lang.Integer mtu) {

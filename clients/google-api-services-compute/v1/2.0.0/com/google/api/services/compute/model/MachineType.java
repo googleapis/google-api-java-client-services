@@ -137,19 +137,6 @@ public final class MachineType extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * [Output Only] A list of extended scratch disks assigned to the instance.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<ScratchDisks> scratchDisks;
-
-  static {
-    // hack to force ProGuard to consider ScratchDisks used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(ScratchDisks.class);
-  }
-
-  /**
    * [Output Only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
@@ -406,23 +393,6 @@ public final class MachineType extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * [Output Only] A list of extended scratch disks assigned to the instance.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<ScratchDisks> getScratchDisks() {
-    return scratchDisks;
-  }
-
-  /**
-   * [Output Only] A list of extended scratch disks assigned to the instance.
-   * @param scratchDisks scratchDisks or {@code null} for none
-   */
-  public MachineType setScratchDisks(java.util.List<ScratchDisks> scratchDisks) {
-    this.scratchDisks = scratchDisks;
-    return this;
-  }
-
-  /**
    * [Output Only] Server-defined URL for the resource.
    * @return value or {@code null} for none
    */
@@ -527,47 +497,6 @@ public final class MachineType extends com.google.api.client.json.GenericJson {
     @Override
     public Accelerators clone() {
       return (Accelerators) super.clone();
-    }
-
-  }
-
-  /**
-   * Model definition for MachineTypeScratchDisks.
-   */
-  public static final class ScratchDisks extends com.google.api.client.json.GenericJson {
-
-    /**
-     * Size of the scratch disk, defined in GB.
-     * The value may be {@code null}.
-     */
-    @com.google.api.client.util.Key
-    private java.lang.Integer diskGb;
-
-    /**
-     * Size of the scratch disk, defined in GB.
-     * @return value or {@code null} for none
-     */
-    public java.lang.Integer getDiskGb() {
-      return diskGb;
-    }
-
-    /**
-     * Size of the scratch disk, defined in GB.
-     * @param diskGb diskGb or {@code null} for none
-     */
-    public ScratchDisks setDiskGb(java.lang.Integer diskGb) {
-      this.diskGb = diskGb;
-      return this;
-    }
-
-    @Override
-    public ScratchDisks set(String fieldName, Object value) {
-      return (ScratchDisks) super.set(fieldName, value);
-    }
-
-    @Override
-    public ScratchDisks clone() {
-      return (ScratchDisks) super.clone();
     }
 
   }

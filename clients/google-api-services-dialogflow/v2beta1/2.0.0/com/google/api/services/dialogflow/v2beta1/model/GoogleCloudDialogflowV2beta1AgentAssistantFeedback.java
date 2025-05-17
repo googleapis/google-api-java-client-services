@@ -42,7 +42,7 @@ public final class GoogleCloudDialogflowV2beta1AgentAssistantFeedback extends co
    * Optional. Whether or not the information in the document is correct. For example: * Query: "Can
    * I return the package in 2 days once received?" * Suggested document says: "Items must be
    * returned/exchanged within 60 days of the purchase date." * Ground truth: "No return or exchange
-   * is allowed." * [document_correctness]: INCORRECT
+   * is allowed." * document_correctness: INCORRECT
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -103,7 +103,7 @@ public final class GoogleCloudDialogflowV2beta1AgentAssistantFeedback extends co
    * Optional. Whether or not the information in the document is correct. For example: * Query: "Can
    * I return the package in 2 days once received?" * Suggested document says: "Items must be
    * returned/exchanged within 60 days of the purchase date." * Ground truth: "No return or exchange
-   * is allowed." * [document_correctness]: INCORRECT
+   * is allowed." * document_correctness: INCORRECT
    * @return value or {@code null} for none
    */
   public java.lang.String getDocumentCorrectness() {
@@ -114,7 +114,7 @@ public final class GoogleCloudDialogflowV2beta1AgentAssistantFeedback extends co
    * Optional. Whether or not the information in the document is correct. For example: * Query: "Can
    * I return the package in 2 days once received?" * Suggested document says: "Items must be
    * returned/exchanged within 60 days of the purchase date." * Ground truth: "No return or exchange
-   * is allowed." * [document_correctness]: INCORRECT
+   * is allowed." * document_correctness: INCORRECT
    * @param documentCorrectness documentCorrectness or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1AgentAssistantFeedback setDocumentCorrectness(java.lang.String documentCorrectness) {

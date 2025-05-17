@@ -58,6 +58,13 @@ public final class GoogleCloudDialogflowCxV3GenerativeSettings extends com.googl
   private java.lang.String languageCode;
 
   /**
+   * LLM model settings.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3LlmModelSettings llmModelSettings;
+
+  /**
    * Format: `projects//locations//agents//generativeSettings`.
    * The value may be {@code null}.
    */
@@ -129,6 +136,23 @@ public final class GoogleCloudDialogflowCxV3GenerativeSettings extends com.googl
    */
   public GoogleCloudDialogflowCxV3GenerativeSettings setLanguageCode(java.lang.String languageCode) {
     this.languageCode = languageCode;
+    return this;
+  }
+
+  /**
+   * LLM model settings.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3LlmModelSettings getLlmModelSettings() {
+    return llmModelSettings;
+  }
+
+  /**
+   * LLM model settings.
+   * @param llmModelSettings llmModelSettings or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3GenerativeSettings setLlmModelSettings(GoogleCloudDialogflowCxV3LlmModelSettings llmModelSettings) {
+    this.llmModelSettings = llmModelSettings;
     return this;
   }
 

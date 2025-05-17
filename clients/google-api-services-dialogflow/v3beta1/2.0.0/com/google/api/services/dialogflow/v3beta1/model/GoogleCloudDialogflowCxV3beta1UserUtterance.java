@@ -30,11 +30,87 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1UserUtterance extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Audio input.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String audio;
+
+  /**
+   * Optional. Tokens of the audio input.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.Integer> audioTokens;
+
+  /**
    * Required. Message content in text.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String text;
+
+  /**
+   * Optional. Audio input.
+   * @see #decodeAudio()
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAudio() {
+    return audio;
+  }
+
+  /**
+   * Optional. Audio input.
+   * @see #getAudio()
+   * @return Base64 decoded value or {@code null} for none
+   *
+   * @since 1.14
+   */
+  public byte[] decodeAudio() {
+    return com.google.api.client.util.Base64.decodeBase64(audio);
+  }
+
+  /**
+   * Optional. Audio input.
+   * @see #encodeAudio()
+   * @param audio audio or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1UserUtterance setAudio(java.lang.String audio) {
+    this.audio = audio;
+    return this;
+  }
+
+  /**
+   * Optional. Audio input.
+   * @see #setAudio()
+   *
+   * <p>
+   * The value is encoded Base64 or {@code null} for none.
+   * </p>
+   *
+   * @since 1.14
+   */
+  public GoogleCloudDialogflowCxV3beta1UserUtterance encodeAudio(byte[] audio) {
+    this.audio = com.google.api.client.util.Base64.encodeBase64URLSafeString(audio);
+    return this;
+  }
+
+  /**
+   * Optional. Tokens of the audio input.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.Integer> getAudioTokens() {
+    return audioTokens;
+  }
+
+  /**
+   * Optional. Tokens of the audio input.
+   * @param audioTokens audioTokens or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1UserUtterance setAudioTokens(java.util.List<java.lang.Integer> audioTokens) {
+    this.audioTokens = audioTokens;
+    return this;
+  }
 
   /**
    * Required. Message content in text.

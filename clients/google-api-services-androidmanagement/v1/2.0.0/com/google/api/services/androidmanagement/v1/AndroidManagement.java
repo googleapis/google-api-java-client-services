@@ -1312,7 +1312,8 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
     public class Devices {
 
       /**
-       * Deletes a device. This operation wipes the device. Deleted devices do not show up in
+       * Deletes a device. This operation attempts to wipe the device but this is not guaranteed to
+       * succeed if the device is offline for an extended period. Deleted devices do not show up in
        * enterprises.devices.list calls and a 404 is returned from enterprises.devices.get.
        *
        * Create a request for the method "devices.delete".
@@ -1337,7 +1338,8 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
             java.util.regex.Pattern.compile("^enterprises/[^/]+/devices/[^/]+$");
 
         /**
-         * Deletes a device. This operation wipes the device. Deleted devices do not show up in
+         * Deletes a device. This operation attempts to wipe the device but this is not guaranteed to
+         * succeed if the device is offline for an extended period. Deleted devices do not show up in
          * enterprises.devices.list calls and a 404 is returned from enterprises.devices.get.
          *
          * Create a request for the method "devices.delete".

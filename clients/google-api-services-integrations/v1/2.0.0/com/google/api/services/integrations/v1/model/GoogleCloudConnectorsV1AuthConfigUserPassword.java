@@ -31,21 +31,21 @@ package com.google.api.services.integrations.v1.model;
 public final class GoogleCloudConnectorsV1AuthConfigUserPassword extends com.google.api.client.json.GenericJson {
 
   /**
-   * Secret version reference containing the password.
+   * Optional. Secret version reference containing the password.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudConnectorsV1Secret password;
 
   /**
-   * Username.
+   * Optional. Username.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String username;
 
   /**
-   * Secret version reference containing the password.
+   * Optional. Secret version reference containing the password.
    * @return value or {@code null} for none
    */
   public GoogleCloudConnectorsV1Secret getPassword() {
@@ -53,7 +53,7 @@ public final class GoogleCloudConnectorsV1AuthConfigUserPassword extends com.goo
   }
 
   /**
-   * Secret version reference containing the password.
+   * Optional. Secret version reference containing the password.
    * @param password password or {@code null} for none
    */
   public GoogleCloudConnectorsV1AuthConfigUserPassword setPassword(GoogleCloudConnectorsV1Secret password) {
@@ -62,7 +62,7 @@ public final class GoogleCloudConnectorsV1AuthConfigUserPassword extends com.goo
   }
 
   /**
-   * Username.
+   * Optional. Username.
    * @return value or {@code null} for none
    */
   public java.lang.String getUsername() {
@@ -70,7 +70,7 @@ public final class GoogleCloudConnectorsV1AuthConfigUserPassword extends com.goo
   }
 
   /**
-   * Username.
+   * Optional. Username.
    * @param username username or {@code null} for none
    */
   public GoogleCloudConnectorsV1AuthConfigUserPassword setUsername(java.lang.String username) {

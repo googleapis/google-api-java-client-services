@@ -52,8 +52,8 @@ public final class GoogleCloudIdentitytoolkitV1SignUpRequest extends com.google.
 
   /**
    * Whether the user will be disabled upon creation. Disabled accounts are inaccessible except for
-   * requests bearing a Google OAuth2 credential with proper [permissions](https://cloud.google.com
-   * /identity-platform/docs/access-control).
+   * requests bearing a Google OAuth2 credential with proper
+   * [permissions](https://cloud.google.com/identity-platform/docs/access-control).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,8 +78,8 @@ public final class GoogleCloudIdentitytoolkitV1SignUpRequest extends com.google.
 
   /**
    * Whether the user's email is verified. Specifying this field requires a Google OAuth 2.0
-   * credential with the proper [permissions](https://cloud.google.com/identity-platform/docs
-   * /access-control).
+   * credential with the proper [permissions](https://cloud.google.com/identity-
+   * platform/docs/access-control).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -133,8 +133,8 @@ public final class GoogleCloudIdentitytoolkitV1SignUpRequest extends com.google.
 
   /**
    * The phone number of the user to create. Specifying this field requires a Google OAuth 2.0
-   * credential with the proper [permissions](https://cloud.google.com/identity-platform/docs
-   * /access-control).
+   * credential with the proper [permissions](https://cloud.google.com/identity-
+   * platform/docs/access-control).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -225,8 +225,8 @@ public final class GoogleCloudIdentitytoolkitV1SignUpRequest extends com.google.
 
   /**
    * Whether the user will be disabled upon creation. Disabled accounts are inaccessible except for
-   * requests bearing a Google OAuth2 credential with proper [permissions](https://cloud.google.com
-   * /identity-platform/docs/access-control).
+   * requests bearing a Google OAuth2 credential with proper
+   * [permissions](https://cloud.google.com/identity-platform/docs/access-control).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisabled() {
@@ -235,8 +235,8 @@ public final class GoogleCloudIdentitytoolkitV1SignUpRequest extends com.google.
 
   /**
    * Whether the user will be disabled upon creation. Disabled accounts are inaccessible except for
-   * requests bearing a Google OAuth2 credential with proper [permissions](https://cloud.google.com
-   * /identity-platform/docs/access-control).
+   * requests bearing a Google OAuth2 credential with proper
+   * [permissions](https://cloud.google.com/identity-platform/docs/access-control).
    * @param disabled disabled or {@code null} for none
    */
   public GoogleCloudIdentitytoolkitV1SignUpRequest setDisabled(java.lang.Boolean disabled) {
@@ -286,8 +286,8 @@ public final class GoogleCloudIdentitytoolkitV1SignUpRequest extends com.google.
 
   /**
    * Whether the user's email is verified. Specifying this field requires a Google OAuth 2.0
-   * credential with the proper [permissions](https://cloud.google.com/identity-platform/docs
-   * /access-control).
+   * credential with the proper [permissions](https://cloud.google.com/identity-
+   * platform/docs/access-control).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEmailVerified() {
@@ -296,8 +296,8 @@ public final class GoogleCloudIdentitytoolkitV1SignUpRequest extends com.google.
 
   /**
    * Whether the user's email is verified. Specifying this field requires a Google OAuth 2.0
-   * credential with the proper [permissions](https://cloud.google.com/identity-platform/docs
-   * /access-control).
+   * credential with the proper [permissions](https://cloud.google.com/identity-
+   * platform/docs/access-control).
    * @param emailVerified emailVerified or {@code null} for none
    */
   public GoogleCloudIdentitytoolkitV1SignUpRequest setEmailVerified(java.lang.Boolean emailVerified) {
@@ -402,8 +402,8 @@ public final class GoogleCloudIdentitytoolkitV1SignUpRequest extends com.google.
 
   /**
    * The phone number of the user to create. Specifying this field requires a Google OAuth 2.0
-   * credential with the proper [permissions](https://cloud.google.com/identity-platform/docs
-   * /access-control).
+   * credential with the proper [permissions](https://cloud.google.com/identity-
+   * platform/docs/access-control).
    * @return value or {@code null} for none
    */
   public java.lang.String getPhoneNumber() {
@@ -412,8 +412,8 @@ public final class GoogleCloudIdentitytoolkitV1SignUpRequest extends com.google.
 
   /**
    * The phone number of the user to create. Specifying this field requires a Google OAuth 2.0
-   * credential with the proper [permissions](https://cloud.google.com/identity-platform/docs
-   * /access-control).
+   * credential with the proper [permissions](https://cloud.google.com/identity-
+   * platform/docs/access-control).
    * @param phoneNumber phoneNumber or {@code null} for none
    */
   public GoogleCloudIdentitytoolkitV1SignUpRequest setPhoneNumber(java.lang.String phoneNumber) {

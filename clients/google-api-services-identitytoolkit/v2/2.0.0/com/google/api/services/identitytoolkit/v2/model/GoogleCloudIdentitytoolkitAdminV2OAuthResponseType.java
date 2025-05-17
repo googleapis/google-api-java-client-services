@@ -19,8 +19,8 @@ package com.google.api.services.identitytoolkit.v2.model;
 /**
  * The response type to request for in the OAuth authorization flow. You can set either `id_token`
  * or `code` to true, but not both. Setting both types to be simultaneously true (`{code: true,
- * id_token: true}`) is not yet supported. See https://openid.net/specs/openid-connect-core-
- * 1_0.html#Authentication for a mapping of response type to OAuth 2.0 flow.
+ * id_token: true}`) is not yet supported. See https://openid.net/specs/openid-connect-
+ * core-1_0.html#Authentication for a mapping of response type to OAuth 2.0 flow.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Identity Toolkit API. For a detailed explanation see:

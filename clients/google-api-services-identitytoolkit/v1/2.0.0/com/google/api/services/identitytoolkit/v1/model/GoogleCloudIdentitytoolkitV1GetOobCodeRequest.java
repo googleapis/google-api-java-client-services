@@ -141,6 +141,15 @@ public final class GoogleCloudIdentitytoolkitV1GetOobCodeRequest extends com.goo
   private java.lang.String idToken;
 
   /**
+   * Optional. In order to ensure that the url used can be easily opened in iOS or Android, we
+   * create a Hosting link '/__/auth/links'. This optional field contains the domain to use when
+   * constructing a Hosting link. If not set, '.firebaseapp.com' domain will be used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String linkDomain;
+
+  /**
    * The email address the account is being updated to. Required only for VERIFY_AND_CHANGE_EMAIL
    * requests.
    * The value may be {@code null}.
@@ -456,6 +465,27 @@ public final class GoogleCloudIdentitytoolkitV1GetOobCodeRequest extends com.goo
    */
   public GoogleCloudIdentitytoolkitV1GetOobCodeRequest setIdToken(java.lang.String idToken) {
     this.idToken = idToken;
+    return this;
+  }
+
+  /**
+   * Optional. In order to ensure that the url used can be easily opened in iOS or Android, we
+   * create a Hosting link '/__/auth/links'. This optional field contains the domain to use when
+   * constructing a Hosting link. If not set, '.firebaseapp.com' domain will be used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLinkDomain() {
+    return linkDomain;
+  }
+
+  /**
+   * Optional. In order to ensure that the url used can be easily opened in iOS or Android, we
+   * create a Hosting link '/__/auth/links'. This optional field contains the domain to use when
+   * constructing a Hosting link. If not set, '.firebaseapp.com' domain will be used.
+   * @param linkDomain linkDomain or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitV1GetOobCodeRequest setLinkDomain(java.lang.String linkDomain) {
+    this.linkDomain = linkDomain;
     return this;
   }
 

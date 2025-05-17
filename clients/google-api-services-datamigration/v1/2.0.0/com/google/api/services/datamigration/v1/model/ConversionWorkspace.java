@@ -45,6 +45,13 @@ public final class ConversionWorkspace extends com.google.api.client.json.Generi
   private DatabaseEngineInfo destination;
 
   /**
+   * Optional. The provider for the destination database.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String destinationProvider;
+
+  /**
    * Optional. The display name for the workspace.
    * The value may be {@code null}.
    */
@@ -99,6 +106,13 @@ public final class ConversionWorkspace extends com.google.api.client.json.Generi
   private DatabaseEngineInfo source;
 
   /**
+   * Optional. The provider for the source database.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceProvider;
+
+  /**
    * Output only. The timestamp when the workspace resource was last updated.
    * The value may be {@code null}.
    */
@@ -136,6 +150,23 @@ public final class ConversionWorkspace extends com.google.api.client.json.Generi
    */
   public ConversionWorkspace setDestination(DatabaseEngineInfo destination) {
     this.destination = destination;
+    return this;
+  }
+
+  /**
+   * Optional. The provider for the destination database.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDestinationProvider() {
+    return destinationProvider;
+  }
+
+  /**
+   * Optional. The provider for the destination database.
+   * @param destinationProvider destinationProvider or {@code null} for none
+   */
+  public ConversionWorkspace setDestinationProvider(java.lang.String destinationProvider) {
+    this.destinationProvider = destinationProvider;
     return this;
   }
 
@@ -265,6 +296,23 @@ public final class ConversionWorkspace extends com.google.api.client.json.Generi
    */
   public ConversionWorkspace setSource(DatabaseEngineInfo source) {
     this.source = source;
+    return this;
+  }
+
+  /**
+   * Optional. The provider for the source database.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceProvider() {
+    return sourceProvider;
+  }
+
+  /**
+   * Optional. The provider for the source database.
+   * @param sourceProvider sourceProvider or {@code null} for none
+   */
+  public ConversionWorkspace setSourceProvider(java.lang.String sourceProvider) {
+    this.sourceProvider = sourceProvider;
     return this;
   }
 

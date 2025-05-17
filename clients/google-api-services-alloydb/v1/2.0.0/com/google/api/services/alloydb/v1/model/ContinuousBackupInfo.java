@@ -30,7 +30,14 @@ package com.google.api.services.alloydb.v1.model;
 public final class ContinuousBackupInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The earliest restorable time that can be restored to. Output only field.
+   * Output only. The earliest restorable time that can be restored to. If continuous backups and
+   * recovery was recently enabled, the earliest restorable time is the creation time of the
+   * earliest eligible backup within this cluster's continuous backup recovery window. After a
+   * cluster has had continuous backups enabled for the duration of its recovery window, the
+   * earliest restorable time becomes "now minus the recovery window". For example, assuming a point
+   * in time recovery is attempted at 04/16/2025 3:23:00PM with a 14d recovery window, the earliest
+   * restorable time would be 04/02/2025 3:23:00PM. This field is only visible if the
+   * CLUSTER_VIEW_CONTINUOUS_BACKUP cluster view is provided.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,15 +59,21 @@ public final class ContinuousBackupInfo extends com.google.api.client.json.Gener
   private EncryptionInfo encryptionInfo;
 
   /**
-   * Output only. Days of the week on which a continuous backup is taken. Output only field. Ignored
-   * if passed into the request.
+   * Output only. Days of the week on which a continuous backup is taken.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> schedule;
 
   /**
-   * Output only. The earliest restorable time that can be restored to. Output only field.
+   * Output only. The earliest restorable time that can be restored to. If continuous backups and
+   * recovery was recently enabled, the earliest restorable time is the creation time of the
+   * earliest eligible backup within this cluster's continuous backup recovery window. After a
+   * cluster has had continuous backups enabled for the duration of its recovery window, the
+   * earliest restorable time becomes "now minus the recovery window". For example, assuming a point
+   * in time recovery is attempted at 04/16/2025 3:23:00PM with a 14d recovery window, the earliest
+   * restorable time would be 04/02/2025 3:23:00PM. This field is only visible if the
+   * CLUSTER_VIEW_CONTINUOUS_BACKUP cluster view is provided.
    * @return value or {@code null} for none
    */
   public String getEarliestRestorableTime() {
@@ -68,7 +81,14 @@ public final class ContinuousBackupInfo extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. The earliest restorable time that can be restored to. Output only field.
+   * Output only. The earliest restorable time that can be restored to. If continuous backups and
+   * recovery was recently enabled, the earliest restorable time is the creation time of the
+   * earliest eligible backup within this cluster's continuous backup recovery window. After a
+   * cluster has had continuous backups enabled for the duration of its recovery window, the
+   * earliest restorable time becomes "now minus the recovery window". For example, assuming a point
+   * in time recovery is attempted at 04/16/2025 3:23:00PM with a 14d recovery window, the earliest
+   * restorable time would be 04/02/2025 3:23:00PM. This field is only visible if the
+   * CLUSTER_VIEW_CONTINUOUS_BACKUP cluster view is provided.
    * @param earliestRestorableTime earliestRestorableTime or {@code null} for none
    */
   public ContinuousBackupInfo setEarliestRestorableTime(String earliestRestorableTime) {
@@ -113,8 +133,7 @@ public final class ContinuousBackupInfo extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. Days of the week on which a continuous backup is taken. Output only field. Ignored
-   * if passed into the request.
+   * Output only. Days of the week on which a continuous backup is taken.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSchedule() {
@@ -122,8 +141,7 @@ public final class ContinuousBackupInfo extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. Days of the week on which a continuous backup is taken. Output only field. Ignored
-   * if passed into the request.
+   * Output only. Days of the week on which a continuous backup is taken.
    * @param schedule schedule or {@code null} for none
    */
   public ContinuousBackupInfo setSchedule(java.util.List<java.lang.String> schedule) {

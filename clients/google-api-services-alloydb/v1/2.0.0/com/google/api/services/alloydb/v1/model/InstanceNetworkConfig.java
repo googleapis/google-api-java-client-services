@@ -30,6 +30,17 @@ package com.google.api.services.alloydb.v1.model;
 public final class InstanceNetworkConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Name of the allocated IP range for the private IP AlloyDB instance, for example:
+   * "google-managed-services-default". If set, the instance IPs will be created from this allocated
+   * range and will override the IP range used by the parent cluster. The range name must comply
+   * with [RFC 1035](http://go/rfc/1035). Specifically, the name must be 1-63 characters long and
+   * match the regular expression [a-z]([-a-z0-9]*[a-z0-9])?.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String allocatedIpRangeOverride;
+
+  /**
    * Optional. A list of external network authorized to access this instance.
    * The value may be {@code null}.
    */
@@ -66,6 +77,31 @@ public final class InstanceNetworkConfig extends com.google.api.client.json.Gene
    */
   @com.google.api.client.util.Key
   private java.lang.String network;
+
+  /**
+   * Optional. Name of the allocated IP range for the private IP AlloyDB instance, for example:
+   * "google-managed-services-default". If set, the instance IPs will be created from this allocated
+   * range and will override the IP range used by the parent cluster. The range name must comply
+   * with [RFC 1035](http://go/rfc/1035). Specifically, the name must be 1-63 characters long and
+   * match the regular expression [a-z]([-a-z0-9]*[a-z0-9])?.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAllocatedIpRangeOverride() {
+    return allocatedIpRangeOverride;
+  }
+
+  /**
+   * Optional. Name of the allocated IP range for the private IP AlloyDB instance, for example:
+   * "google-managed-services-default". If set, the instance IPs will be created from this allocated
+   * range and will override the IP range used by the parent cluster. The range name must comply
+   * with [RFC 1035](http://go/rfc/1035). Specifically, the name must be 1-63 characters long and
+   * match the regular expression [a-z]([-a-z0-9]*[a-z0-9])?.
+   * @param allocatedIpRangeOverride allocatedIpRangeOverride or {@code null} for none
+   */
+  public InstanceNetworkConfig setAllocatedIpRangeOverride(java.lang.String allocatedIpRangeOverride) {
+    this.allocatedIpRangeOverride = allocatedIpRangeOverride;
+    return this;
+  }
 
   /**
    * Optional. A list of external network authorized to access this instance.

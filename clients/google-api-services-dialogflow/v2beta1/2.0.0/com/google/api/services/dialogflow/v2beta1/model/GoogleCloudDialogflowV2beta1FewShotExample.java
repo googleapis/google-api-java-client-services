@@ -18,7 +18,7 @@ package com.google.api.services.dialogflow.v2beta1.model;
 
 /**
  * Providing examples in the generator (i.e. building a few-shot generator) helps convey the desired
- * format of the LLM response. NEXT_ID: 10
+ * format of the LLM response.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:

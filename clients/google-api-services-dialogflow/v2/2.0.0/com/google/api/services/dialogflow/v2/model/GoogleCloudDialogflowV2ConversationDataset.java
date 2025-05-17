@@ -82,6 +82,20 @@ public final class GoogleCloudDialogflowV2ConversationDataset extends com.google
   private java.lang.String name;
 
   /**
+   * Output only. A read only boolean field reflecting Zone Isolation status of the dataset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzi;
+
+  /**
+   * Output only. A read only boolean field reflecting Zone Separation status of the dataset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzs;
+
+  /**
    * Output only. The number of conversations this conversation dataset contains.
    * @return value or {@code null} for none
    */
@@ -199,6 +213,40 @@ public final class GoogleCloudDialogflowV2ConversationDataset extends com.google
    */
   public GoogleCloudDialogflowV2ConversationDataset setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. A read only boolean field reflecting Zone Isolation status of the dataset.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzi() {
+    return satisfiesPzi;
+  }
+
+  /**
+   * Output only. A read only boolean field reflecting Zone Isolation status of the dataset.
+   * @param satisfiesPzi satisfiesPzi or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2ConversationDataset setSatisfiesPzi(java.lang.Boolean satisfiesPzi) {
+    this.satisfiesPzi = satisfiesPzi;
+    return this;
+  }
+
+  /**
+   * Output only. A read only boolean field reflecting Zone Separation status of the dataset.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzs() {
+    return satisfiesPzs;
+  }
+
+  /**
+   * Output only. A read only boolean field reflecting Zone Separation status of the dataset.
+   * @param satisfiesPzs satisfiesPzs or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2ConversationDataset setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
+    this.satisfiesPzs = satisfiesPzs;
     return this;
   }
 

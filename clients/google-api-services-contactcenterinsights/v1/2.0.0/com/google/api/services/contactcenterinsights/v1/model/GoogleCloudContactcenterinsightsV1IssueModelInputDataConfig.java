@@ -31,7 +31,8 @@ package com.google.api.services.contactcenterinsights.v1.model;
 public final class GoogleCloudContactcenterinsightsV1IssueModelInputDataConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * A filter to reduce the conversations used for training the model to a specific subset.
+   * A filter to reduce the conversations used for training the model to a specific subset. Refer to
+   * https://cloud.google.com/contact-center/insights/docs/filtering for details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +54,8 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelInputDataConfig e
   private java.lang.Long trainingConversationsCount;
 
   /**
-   * A filter to reduce the conversations used for training the model to a specific subset.
+   * A filter to reduce the conversations used for training the model to a specific subset. Refer to
+   * https://cloud.google.com/contact-center/insights/docs/filtering for details.
    * @return value or {@code null} for none
    */
   public java.lang.String getFilter() {
@@ -61,7 +63,8 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelInputDataConfig e
   }
 
   /**
-   * A filter to reduce the conversations used for training the model to a specific subset.
+   * A filter to reduce the conversations used for training the model to a specific subset. Refer to
+   * https://cloud.google.com/contact-center/insights/docs/filtering for details.
    * @param filter filter or {@code null} for none
    */
   public GoogleCloudContactcenterinsightsV1IssueModelInputDataConfig setFilter(java.lang.String filter) {

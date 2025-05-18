@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.analyticshub.v1.model;
+package com.google.api.services.analyticshub.v1beta1.model;
 
 /**
  * Defines the destination bigquery dataset.

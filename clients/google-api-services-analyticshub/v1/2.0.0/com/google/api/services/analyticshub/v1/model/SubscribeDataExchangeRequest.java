@@ -31,7 +31,7 @@ public final class SubscribeDataExchangeRequest extends com.google.api.client.js
 
   /**
    * Required. The parent resource path of the Subscription. e.g.
-   * `projects/subscriberproject/locations/US`
+   * `projects/subscriberproject/locations/us`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,7 +60,7 @@ public final class SubscribeDataExchangeRequest extends com.google.api.client.js
 
   /**
    * Required. The parent resource path of the Subscription. e.g.
-   * `projects/subscriberproject/locations/US`
+   * `projects/subscriberproject/locations/us`
    * @return value or {@code null} for none
    */
   public java.lang.String getDestination() {
@@ -69,7 +69,7 @@ public final class SubscribeDataExchangeRequest extends com.google.api.client.js
 
   /**
    * Required. The parent resource path of the Subscription. e.g.
-   * `projects/subscriberproject/locations/US`
+   * `projects/subscriberproject/locations/us`
    * @param destination destination or {@code null} for none
    */
   public SubscribeDataExchangeRequest setDestination(java.lang.String destination) {

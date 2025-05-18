@@ -47,11 +47,18 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Resource name of the source Data Exchange. e.g.
-   * projects/123/locations/US/dataExchanges/456
+   * projects/123/locations/us/dataExchanges/456
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String dataExchange;
+
+  /**
+   * Optional. BigQuery destination dataset to create for the subscriber.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DestinationDataset destinationDataset;
 
   /**
    * Output only. Timestamp when the subscription was last modified.
@@ -62,7 +69,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Map of listing resource names to associated linked resource, e.g.
-   * projects/123/locations/US/dataExchanges/456/listings/789 -> projects/123/datasets/my_dataset
+   * projects/123/locations/us/dataExchanges/456/listings/789 -> projects/123/datasets/my_dataset
    * For listing-level subscriptions, this is a map of size 1. Only contains values if state ==
    * STATE_ACTIVE.
    * The value may be {@code null}.
@@ -92,7 +99,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Resource name of the source Listing. e.g.
-   * projects/123/locations/US/dataExchanges/456/listings/789
+   * projects/123/locations/us/dataExchanges/456/listings/789
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -108,7 +115,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The resource name of the subscription. e.g.
-   * `projects/myproject/locations/US/subscriptions/123`.
+   * `projects/myproject/locations/us/subscriptions/123`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -187,7 +194,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Resource name of the source Data Exchange. e.g.
-   * projects/123/locations/US/dataExchanges/456
+   * projects/123/locations/us/dataExchanges/456
    * @return value or {@code null} for none
    */
   public java.lang.String getDataExchange() {
@@ -196,11 +203,28 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Resource name of the source Data Exchange. e.g.
-   * projects/123/locations/US/dataExchanges/456
+   * projects/123/locations/us/dataExchanges/456
    * @param dataExchange dataExchange or {@code null} for none
    */
   public Subscription setDataExchange(java.lang.String dataExchange) {
     this.dataExchange = dataExchange;
+    return this;
+  }
+
+  /**
+   * Optional. BigQuery destination dataset to create for the subscriber.
+   * @return value or {@code null} for none
+   */
+  public DestinationDataset getDestinationDataset() {
+    return destinationDataset;
+  }
+
+  /**
+   * Optional. BigQuery destination dataset to create for the subscriber.
+   * @param destinationDataset destinationDataset or {@code null} for none
+   */
+  public Subscription setDestinationDataset(DestinationDataset destinationDataset) {
+    this.destinationDataset = destinationDataset;
     return this;
   }
 
@@ -223,7 +247,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Map of listing resource names to associated linked resource, e.g.
-   * projects/123/locations/US/dataExchanges/456/listings/789 -> projects/123/datasets/my_dataset
+   * projects/123/locations/us/dataExchanges/456/listings/789 -> projects/123/datasets/my_dataset
    * For listing-level subscriptions, this is a map of size 1. Only contains values if state ==
    * STATE_ACTIVE.
    * @return value or {@code null} for none
@@ -234,7 +258,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Map of listing resource names to associated linked resource, e.g.
-   * projects/123/locations/US/dataExchanges/456/listings/789 -> projects/123/datasets/my_dataset
+   * projects/123/locations/us/dataExchanges/456/listings/789 -> projects/123/datasets/my_dataset
    * For listing-level subscriptions, this is a map of size 1. Only contains values if state ==
    * STATE_ACTIVE.
    * @param linkedDatasetMap linkedDatasetMap or {@code null} for none
@@ -265,7 +289,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Resource name of the source Listing. e.g.
-   * projects/123/locations/US/dataExchanges/456/listings/789
+   * projects/123/locations/us/dataExchanges/456/listings/789
    * @return value or {@code null} for none
    */
   public java.lang.String getListing() {
@@ -274,7 +298,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Resource name of the source Listing. e.g.
-   * projects/123/locations/US/dataExchanges/456/listings/789
+   * projects/123/locations/us/dataExchanges/456/listings/789
    * @param listing listing or {@code null} for none
    */
   public Subscription setListing(java.lang.String listing) {
@@ -303,7 +327,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The resource name of the subscription. e.g.
-   * `projects/myproject/locations/US/subscriptions/123`.
+   * `projects/myproject/locations/us/subscriptions/123`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -312,7 +336,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The resource name of the subscription. e.g.
-   * `projects/myproject/locations/US/subscriptions/123`.
+   * `projects/myproject/locations/us/subscriptions/123`.
    * @param name name or {@code null} for none
    */
   public Subscription setName(java.lang.String name) {

@@ -147,6 +147,13 @@ public final class Occurrence extends com.google.api.client.json.GenericJson {
   private SBOMReferenceOccurrence sbomReference;
 
   /**
+   * Describes a secret.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SecretOccurrence secret;
+
+  /**
    * Output only. The time this occurrence was last updated.
    * The value may be {@code null}.
    */
@@ -444,6 +451,23 @@ public final class Occurrence extends com.google.api.client.json.GenericJson {
    */
   public Occurrence setSbomReference(SBOMReferenceOccurrence sbomReference) {
     this.sbomReference = sbomReference;
+    return this;
+  }
+
+  /**
+   * Describes a secret.
+   * @return value or {@code null} for none
+   */
+  public SecretOccurrence getSecret() {
+    return secret;
+  }
+
+  /**
+   * Describes a secret.
+   * @param secret secret or {@code null} for none
+   */
+  public Occurrence setSecret(SecretOccurrence secret) {
+    this.secret = secret;
     return this;
   }
 

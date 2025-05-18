@@ -97,7 +97,7 @@ public final class Listing extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The resource name of the listing. e.g.
-   * `projects/myproject/locations/US/dataExchanges/123/listings/456`
+   * `projects/myproject/locations/us/dataExchanges/123/listings/456`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -328,7 +328,7 @@ public final class Listing extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The resource name of the listing. e.g.
-   * `projects/myproject/locations/US/dataExchanges/123/listings/456`
+   * `projects/myproject/locations/us/dataExchanges/123/listings/456`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -337,7 +337,7 @@ public final class Listing extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The resource name of the listing. e.g.
-   * `projects/myproject/locations/US/dataExchanges/123/listings/456`
+   * `projects/myproject/locations/us/dataExchanges/123/listings/456`
    * @param name name or {@code null} for none
    */
   public Listing setName(java.lang.String name) {

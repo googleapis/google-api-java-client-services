@@ -202,7 +202,7 @@ public class AnalyticsHub extends com.google.api.client.googleapis.services.json
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param organization Required. The organization resource path of the projects containing DataExchanges. e.g.
-         *        `organizations/myorg/locations/US`.
+         *        `organizations/myorg/locations/us`.
          * @return the request
          */
         public List list(java.lang.String organization) throws java.io.IOException {
@@ -229,7 +229,7 @@ public class AnalyticsHub extends com.google.api.client.googleapis.services.json
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param organization Required. The organization resource path of the projects containing DataExchanges. e.g.
-         *        `organizations/myorg/locations/US`.
+         *        `organizations/myorg/locations/us`.
            * @since 1.13
            */
           protected List(java.lang.String organization) {
@@ -309,13 +309,13 @@ public class AnalyticsHub extends com.google.api.client.googleapis.services.json
 
           /**
            * Required. The organization resource path of the projects containing DataExchanges. e.g.
-           * `organizations/myorg/locations/US`.
+           * `organizations/myorg/locations/us`.
            */
           @com.google.api.client.util.Key
           private java.lang.String organization;
 
           /** Required. The organization resource path of the projects containing DataExchanges. e.g.
-         `organizations/myorg/locations/US`.
+         `organizations/myorg/locations/us`.
            */
           public java.lang.String getOrganization() {
             return organization;
@@ -323,7 +323,7 @@ public class AnalyticsHub extends com.google.api.client.googleapis.services.json
 
           /**
            * Required. The organization resource path of the projects containing DataExchanges. e.g.
-           * `organizations/myorg/locations/US`.
+           * `organizations/myorg/locations/us`.
            */
           public List setOrganization(java.lang.String organization) {
             if (!getSuppressPatternChecks()) {
@@ -452,7 +452,7 @@ public class AnalyticsHub extends com.google.api.client.googleapis.services.json
          * This request holds the parameters needed by the analyticshub server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource path of the data exchange. e.g. `projects/myproject/locations/US`.
+         * @param parent Required. The parent resource path of the data exchange. e.g. `projects/myproject/locations/us`.
          * @param content the {@link com.google.api.services.analyticshub.v1beta1.model.DataExchange}
          * @return the request
          */
@@ -480,7 +480,7 @@ public class AnalyticsHub extends com.google.api.client.googleapis.services.json
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource path of the data exchange. e.g. `projects/myproject/locations/US`.
+           * @param parent Required. The parent resource path of the data exchange. e.g. `projects/myproject/locations/us`.
            * @param content the {@link com.google.api.services.analyticshub.v1beta1.model.DataExchange}
            * @since 1.13
            */
@@ -551,12 +551,12 @@ public class AnalyticsHub extends com.google.api.client.googleapis.services.json
 
           /**
            * Required. The parent resource path of the data exchange. e.g.
-           * `projects/myproject/locations/US`.
+           * `projects/myproject/locations/us`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource path of the data exchange. e.g. `projects/myproject/locations/US`.
+          /** Required. The parent resource path of the data exchange. e.g. `projects/myproject/locations/us`.
            */
           public java.lang.String getParent() {
             return parent;
@@ -564,7 +564,7 @@ public class AnalyticsHub extends com.google.api.client.googleapis.services.json
 
           /**
            * Required. The parent resource path of the data exchange. e.g.
-           * `projects/myproject/locations/US`.
+           * `projects/myproject/locations/us`.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -616,7 +616,7 @@ public class AnalyticsHub extends com.google.api.client.googleapis.services.json
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
          * @param name Required. The full name of the data exchange resource that you want to delete. For example,
-         *        `projects/myproject/locations/US/dataExchanges/123`.
+         *        `projects/myproject/locations/us/dataExchanges/123`.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -644,7 +644,7 @@ public class AnalyticsHub extends com.google.api.client.googleapis.services.json
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. The full name of the data exchange resource that you want to delete. For example,
-         *        `projects/myproject/locations/US/dataExchanges/123`.
+         *        `projects/myproject/locations/us/dataExchanges/123`.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -714,13 +714,13 @@ public class AnalyticsHub extends com.google.api.client.googleapis.services.json
 
           /**
            * Required. The full name of the data exchange resource that you want to delete. For
-           * example, `projects/myproject/locations/US/dataExchanges/123`.
+           * example, `projects/myproject/locations/us/dataExchanges/123`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The full name of the data exchange resource that you want to delete. For example,
-         `projects/myproject/locations/US/dataExchanges/123`.
+         `projects/myproject/locations/us/dataExchanges/123`.
            */
           public java.lang.String getName() {
             return name;
@@ -728,7 +728,7 @@ public class AnalyticsHub extends com.google.api.client.googleapis.services.json
 
           /**
            * Required. The full name of the data exchange resource that you want to delete. For
-           * example, `projects/myproject/locations/US/dataExchanges/123`.
+           * example, `projects/myproject/locations/us/dataExchanges/123`.
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -754,7 +754,7 @@ public class AnalyticsHub extends com.google.api.client.googleapis.services.json
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
          * @param name Required. The resource name of the data exchange. e.g.
-         *        `projects/myproject/locations/US/dataExchanges/123`.
+         *        `projects/myproject/locations/us/dataExchanges/123`.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -781,7 +781,7 @@ public class AnalyticsHub extends com.google.api.client.googleapis.services.json
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. The resource name of the data exchange. e.g.
-         *        `projects/myproject/locations/US/dataExchanges/123`.
+         *        `projects/myproject/locations/us/dataExchanges/123`.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -861,13 +861,13 @@ public class AnalyticsHub extends com.google.api.client.googleapis.services.json
 
           /**
            * Required. The resource name of the data exchange. e.g.
-           * `projects/myproject/locations/US/dataExchanges/123`.
+           * `projects/myproject/locations/us/dataExchanges/123`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The resource name of the data exchange. e.g.
-         `projects/myproject/locations/US/dataExchanges/123`.
+         `projects/myproject/locations/us/dataExchanges/123`.
            */
           public java.lang.String getName() {
             return name;
@@ -875,7 +875,7 @@ public class AnalyticsHub extends com.google.api.client.googleapis.services.json
 
           /**
            * Required. The resource name of the data exchange. e.g.
-           * `projects/myproject/locations/US/dataExchanges/123`.
+           * `projects/myproject/locations/us/dataExchanges/123`.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -1045,7 +1045,7 @@ public class AnalyticsHub extends com.google.api.client.googleapis.services.json
          * This request holds the parameters needed by the analyticshub server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource path of the data exchanges. e.g. `projects/myproject/locations/US`.
+         * @param parent Required. The parent resource path of the data exchanges. e.g. `projects/myproject/locations/us`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -1071,7 +1071,7 @@ public class AnalyticsHub extends com.google.api.client.googleapis.services.json
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource path of the data exchanges. e.g. `projects/myproject/locations/US`.
+           * @param parent Required. The parent resource path of the data exchanges. e.g. `projects/myproject/locations/us`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -1151,12 +1151,12 @@ public class AnalyticsHub extends com.google.api.client.googleapis.services.json
 
           /**
            * Required. The parent resource path of the data exchanges. e.g.
-           * `projects/myproject/locations/US`.
+           * `projects/myproject/locations/us`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource path of the data exchanges. e.g. `projects/myproject/locations/US`.
+          /** Required. The parent resource path of the data exchanges. e.g. `projects/myproject/locations/us`.
            */
           public java.lang.String getParent() {
             return parent;
@@ -1164,7 +1164,7 @@ public class AnalyticsHub extends com.google.api.client.googleapis.services.json
 
           /**
            * Required. The parent resource path of the data exchanges. e.g.
-           * `projects/myproject/locations/US`.
+           * `projects/myproject/locations/us`.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -1229,7 +1229,7 @@ public class AnalyticsHub extends com.google.api.client.googleapis.services.json
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
          * @param name Output only. The resource name of the data exchange. e.g.
-         *        `projects/myproject/locations/US/dataExchanges/123`.
+         *        `projects/myproject/locations/us/dataExchanges/123`.
          * @param content the {@link com.google.api.services.analyticshub.v1beta1.model.DataExchange}
          * @return the request
          */
@@ -1258,7 +1258,7 @@ public class AnalyticsHub extends com.google.api.client.googleapis.services.json
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Output only. The resource name of the data exchange. e.g.
-         *        `projects/myproject/locations/US/dataExchanges/123`.
+         *        `projects/myproject/locations/us/dataExchanges/123`.
            * @param content the {@link com.google.api.services.analyticshub.v1beta1.model.DataExchange}
            * @since 1.13
            */
@@ -1329,13 +1329,13 @@ public class AnalyticsHub extends com.google.api.client.googleapis.services.json
 
           /**
            * Output only. The resource name of the data exchange. e.g.
-           * `projects/myproject/locations/US/dataExchanges/123`.
+           * `projects/myproject/locations/us/dataExchanges/123`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Output only. The resource name of the data exchange. e.g.
-         `projects/myproject/locations/US/dataExchanges/123`.
+         `projects/myproject/locations/us/dataExchanges/123`.
            */
           public java.lang.String getName() {
             return name;
@@ -1343,7 +1343,7 @@ public class AnalyticsHub extends com.google.api.client.googleapis.services.json
 
           /**
            * Output only. The resource name of the data exchange. e.g.
-           * `projects/myproject/locations/US/dataExchanges/123`.
+           * `projects/myproject/locations/us/dataExchanges/123`.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -1705,7 +1705,7 @@ public class AnalyticsHub extends com.google.api.client.googleapis.services.json
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
            * @param parent Required. The parent resource path of the listing. e.g.
-           *        `projects/myproject/locations/US/dataExchanges/123`.
+           *        `projects/myproject/locations/us/dataExchanges/123`.
            * @param content the {@link com.google.api.services.analyticshub.v1beta1.model.Listing}
            * @return the request
            */
@@ -1734,7 +1734,7 @@ public class AnalyticsHub extends com.google.api.client.googleapis.services.json
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param parent Required. The parent resource path of the listing. e.g.
-           *        `projects/myproject/locations/US/dataExchanges/123`.
+           *        `projects/myproject/locations/us/dataExchanges/123`.
              * @param content the {@link com.google.api.services.analyticshub.v1beta1.model.Listing}
              * @since 1.13
              */
@@ -1805,13 +1805,13 @@ public class AnalyticsHub extends com.google.api.client.googleapis.services.json
 
             /**
              * Required. The parent resource path of the listing. e.g.
-             * `projects/myproject/locations/US/dataExchanges/123`.
+             * `projects/myproject/locations/us/dataExchanges/123`.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. The parent resource path of the listing. e.g.
-           `projects/myproject/locations/US/dataExchanges/123`.
+           `projects/myproject/locations/us/dataExchanges/123`.
              */
             public java.lang.String getParent() {
               return parent;
@@ -1819,7 +1819,7 @@ public class AnalyticsHub extends com.google.api.client.googleapis.services.json
 
             /**
              * Required. The parent resource path of the listing. e.g.
-             * `projects/myproject/locations/US/dataExchanges/123`.
+             * `projects/myproject/locations/us/dataExchanges/123`.
              */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -1871,7 +1871,7 @@ public class AnalyticsHub extends com.google.api.client.googleapis.services.json
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
            * @param name Required. Resource name of the listing to delete. e.g.
-           *        `projects/myproject/locations/US/dataExchanges/123/listings/456`.
+           *        `projects/myproject/locations/us/dataExchanges/123/listings/456`.
            * @return the request
            */
           public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -1899,7 +1899,7 @@ public class AnalyticsHub extends com.google.api.client.googleapis.services.json
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param name Required. Resource name of the listing to delete. e.g.
-           *        `projects/myproject/locations/US/dataExchanges/123/listings/456`.
+           *        `projects/myproject/locations/us/dataExchanges/123/listings/456`.
              * @since 1.13
              */
             protected Delete(java.lang.String name) {
@@ -1969,13 +1969,13 @@ public class AnalyticsHub extends com.google.api.client.googleapis.services.json
 
             /**
              * Required. Resource name of the listing to delete. e.g.
-             * `projects/myproject/locations/US/dataExchanges/123/listings/456`.
+             * `projects/myproject/locations/us/dataExchanges/123/listings/456`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Required. Resource name of the listing to delete. e.g.
-           `projects/myproject/locations/US/dataExchanges/123/listings/456`.
+           `projects/myproject/locations/us/dataExchanges/123/listings/456`.
              */
             public java.lang.String getName() {
               return name;
@@ -1983,7 +1983,7 @@ public class AnalyticsHub extends com.google.api.client.googleapis.services.json
 
             /**
              * Required. Resource name of the listing to delete. e.g.
-             * `projects/myproject/locations/US/dataExchanges/123/listings/456`.
+             * `projects/myproject/locations/us/dataExchanges/123/listings/456`.
              */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -2009,7 +2009,7 @@ public class AnalyticsHub extends com.google.api.client.googleapis.services.json
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
            * @param name Required. The resource name of the listing. e.g.
-           *        `projects/myproject/locations/US/dataExchanges/123/listings/456`.
+           *        `projects/myproject/locations/us/dataExchanges/123/listings/456`.
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -2036,7 +2036,7 @@ public class AnalyticsHub extends com.google.api.client.googleapis.services.json
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param name Required. The resource name of the listing. e.g.
-           *        `projects/myproject/locations/US/dataExchanges/123/listings/456`.
+           *        `projects/myproject/locations/us/dataExchanges/123/listings/456`.
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -2116,13 +2116,13 @@ public class AnalyticsHub extends com.google.api.client.googleapis.services.json
 
             /**
              * Required. The resource name of the listing. e.g.
-             * `projects/myproject/locations/US/dataExchanges/123/listings/456`.
+             * `projects/myproject/locations/us/dataExchanges/123/listings/456`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Required. The resource name of the listing. e.g.
-           `projects/myproject/locations/US/dataExchanges/123/listings/456`.
+           `projects/myproject/locations/us/dataExchanges/123/listings/456`.
              */
             public java.lang.String getName() {
               return name;
@@ -2130,7 +2130,7 @@ public class AnalyticsHub extends com.google.api.client.googleapis.services.json
 
             /**
              * Required. The resource name of the listing. e.g.
-             * `projects/myproject/locations/US/dataExchanges/123/listings/456`.
+             * `projects/myproject/locations/us/dataExchanges/123/listings/456`.
              */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -2301,7 +2301,7 @@ public class AnalyticsHub extends com.google.api.client.googleapis.services.json
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
            * @param parent Required. The parent resource path of the listing. e.g.
-           *        `projects/myproject/locations/US/dataExchanges/123`.
+           *        `projects/myproject/locations/us/dataExchanges/123`.
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -2328,7 +2328,7 @@ public class AnalyticsHub extends com.google.api.client.googleapis.services.json
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param parent Required. The parent resource path of the listing. e.g.
-           *        `projects/myproject/locations/US/dataExchanges/123`.
+           *        `projects/myproject/locations/us/dataExchanges/123`.
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -2408,13 +2408,13 @@ public class AnalyticsHub extends com.google.api.client.googleapis.services.json
 
             /**
              * Required. The parent resource path of the listing. e.g.
-             * `projects/myproject/locations/US/dataExchanges/123`.
+             * `projects/myproject/locations/us/dataExchanges/123`.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. The parent resource path of the listing. e.g.
-           `projects/myproject/locations/US/dataExchanges/123`.
+           `projects/myproject/locations/us/dataExchanges/123`.
              */
             public java.lang.String getParent() {
               return parent;
@@ -2422,7 +2422,7 @@ public class AnalyticsHub extends com.google.api.client.googleapis.services.json
 
             /**
              * Required. The parent resource path of the listing. e.g.
-             * `projects/myproject/locations/US/dataExchanges/123`.
+             * `projects/myproject/locations/us/dataExchanges/123`.
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -2487,7 +2487,7 @@ public class AnalyticsHub extends com.google.api.client.googleapis.services.json
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
            * @param name Output only. The resource name of the listing. e.g.
-           *        `projects/myproject/locations/US/dataExchanges/123/listings/456`
+           *        `projects/myproject/locations/us/dataExchanges/123/listings/456`
            * @param content the {@link com.google.api.services.analyticshub.v1beta1.model.Listing}
            * @return the request
            */
@@ -2516,7 +2516,7 @@ public class AnalyticsHub extends com.google.api.client.googleapis.services.json
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param name Output only. The resource name of the listing. e.g.
-           *        `projects/myproject/locations/US/dataExchanges/123/listings/456`
+           *        `projects/myproject/locations/us/dataExchanges/123/listings/456`
              * @param content the {@link com.google.api.services.analyticshub.v1beta1.model.Listing}
              * @since 1.13
              */
@@ -2587,13 +2587,13 @@ public class AnalyticsHub extends com.google.api.client.googleapis.services.json
 
             /**
              * Output only. The resource name of the listing. e.g.
-             * `projects/myproject/locations/US/dataExchanges/123/listings/456`
+             * `projects/myproject/locations/us/dataExchanges/123/listings/456`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Output only. The resource name of the listing. e.g.
-           `projects/myproject/locations/US/dataExchanges/123/listings/456`
+           `projects/myproject/locations/us/dataExchanges/123/listings/456`
              */
             public java.lang.String getName() {
               return name;
@@ -2601,7 +2601,7 @@ public class AnalyticsHub extends com.google.api.client.googleapis.services.json
 
             /**
              * Output only. The resource name of the listing. e.g.
-             * `projects/myproject/locations/US/dataExchanges/123/listings/456`
+             * `projects/myproject/locations/us/dataExchanges/123/listings/456`
              */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -2799,7 +2799,7 @@ public class AnalyticsHub extends com.google.api.client.googleapis.services.json
            * parameters, call the {@link Subscribe#execute()} method to invoke the remote operation.
            *
            * @param name Required. Resource name of the listing that you want to subscribe to. e.g.
-           *        `projects/myproject/locations/US/dataExchanges/123/listings/456`.
+           *        `projects/myproject/locations/us/dataExchanges/123/listings/456`.
            * @param content the {@link com.google.api.services.analyticshub.v1beta1.model.SubscribeListingRequest}
            * @return the request
            */
@@ -2830,7 +2830,7 @@ public class AnalyticsHub extends com.google.api.client.googleapis.services.json
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param name Required. Resource name of the listing that you want to subscribe to. e.g.
-           *        `projects/myproject/locations/US/dataExchanges/123/listings/456`.
+           *        `projects/myproject/locations/us/dataExchanges/123/listings/456`.
              * @param content the {@link com.google.api.services.analyticshub.v1beta1.model.SubscribeListingRequest}
              * @since 1.13
              */
@@ -2901,13 +2901,13 @@ public class AnalyticsHub extends com.google.api.client.googleapis.services.json
 
             /**
              * Required. Resource name of the listing that you want to subscribe to. e.g.
-             * `projects/myproject/locations/US/dataExchanges/123/listings/456`.
+             * `projects/myproject/locations/us/dataExchanges/123/listings/456`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Required. Resource name of the listing that you want to subscribe to. e.g.
-           `projects/myproject/locations/US/dataExchanges/123/listings/456`.
+           `projects/myproject/locations/us/dataExchanges/123/listings/456`.
              */
             public java.lang.String getName() {
               return name;
@@ -2915,7 +2915,7 @@ public class AnalyticsHub extends com.google.api.client.googleapis.services.json
 
             /**
              * Required. Resource name of the listing that you want to subscribe to. e.g.
-             * `projects/myproject/locations/US/dataExchanges/123/listings/456`.
+             * `projects/myproject/locations/us/dataExchanges/123/listings/456`.
              */
             public Subscribe setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {

@@ -11185,6 +11185,175 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
             return (List) super.set(parameterName, value);
           }
         }
+        /**
+         * Updates the parameters of a single ServiceBinding.
+         *
+         * Create a request for the method "serviceBindings.patch".
+         *
+         * This request holds the parameters needed by the networkservices server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Identifier. Name of the ServiceBinding resource. It matches pattern
+         *        `projects/locations/serviceBindings/`.
+         * @param content the {@link com.google.api.services.networkservices.v1.model.ServiceBinding}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.networkservices.v1.model.ServiceBinding content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends NetworkServicesRequest<com.google.api.services.networkservices.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/serviceBindings/[^/]+$");
+
+          /**
+           * Updates the parameters of a single ServiceBinding.
+           *
+           * Create a request for the method "serviceBindings.patch".
+           *
+           * This request holds the parameters needed by the the networkservices server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Identifier. Name of the ServiceBinding resource. It matches pattern
+         *        `projects/locations/serviceBindings/`.
+           * @param content the {@link com.google.api.services.networkservices.v1.model.ServiceBinding}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.networkservices.v1.model.ServiceBinding content) {
+            super(NetworkServices.this, "PATCH", REST_PATH, content, com.google.api.services.networkservices.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/serviceBindings/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Identifier. Name of the ServiceBinding resource. It matches pattern
+           * `projects/locations/serviceBindings/`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Identifier. Name of the ServiceBinding resource. It matches pattern
+         `projects/locations/serviceBindings/`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Identifier. Name of the ServiceBinding resource. It matches pattern
+           * `projects/locations/serviceBindings/`.
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/serviceBindings/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. Field mask is used to specify the fields to be overwritten in the
+           * ServiceBinding resource by the update. The fields specified in the update_mask are
+           * relative to the resource, not the full request. A field will be overwritten if it is in
+           * the mask. If the user does not provide a mask then all fields will be overwritten.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Optional. Field mask is used to specify the fields to be overwritten in the ServiceBinding resource
+         by the update. The fields specified in the update_mask are relative to the resource, not the full
+         request. A field will be overwritten if it is in the mask. If the user does not provide a mask then
+         all fields will be overwritten.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Optional. Field mask is used to specify the fields to be overwritten in the
+           * ServiceBinding resource by the update. The fields specified in the update_mask are
+           * relative to the resource, not the full request. A field will be overwritten if it is in
+           * the mask. If the user does not provide a mask then all fields will be overwritten.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
 
       }
       /**

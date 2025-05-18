@@ -161,6 +161,13 @@ public final class Occurrence extends com.google.api.client.json.GenericJson {
   private SBOMReferenceOccurrence sbomReference;
 
   /**
+   * This represents a secret occurrence
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SecretOccurrence secret;
+
+  /**
    * Describes a specific SPDX File.
    * The value may be {@code null}.
    */
@@ -513,6 +520,23 @@ public final class Occurrence extends com.google.api.client.json.GenericJson {
    */
   public Occurrence setSbomReference(SBOMReferenceOccurrence sbomReference) {
     this.sbomReference = sbomReference;
+    return this;
+  }
+
+  /**
+   * This represents a secret occurrence
+   * @return value or {@code null} for none
+   */
+  public SecretOccurrence getSecret() {
+    return secret;
+  }
+
+  /**
+   * This represents a secret occurrence
+   * @param secret secret or {@code null} for none
+   */
+  public Occurrence setSecret(SecretOccurrence secret) {
+    this.secret = secret;
     return this;
   }
 

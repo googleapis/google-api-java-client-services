@@ -145,6 +145,13 @@ public final class Note extends com.google.api.client.json.GenericJson {
   private SBOMReferenceNote sbomReference;
 
   /**
+   * A note describing a secret.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SecretNote secret;
+
+  /**
    * A one sentence description of this `Note`.
    * The value may be {@code null}.
    */
@@ -474,6 +481,23 @@ public final class Note extends com.google.api.client.json.GenericJson {
    */
   public Note setSbomReference(SBOMReferenceNote sbomReference) {
     this.sbomReference = sbomReference;
+    return this;
+  }
+
+  /**
+   * A note describing a secret.
+   * @return value or {@code null} for none
+   */
+  public SecretNote getSecret() {
+    return secret;
+  }
+
+  /**
+   * A note describing a secret.
+   * @param secret secret or {@code null} for none
+   */
+  public Note setSecret(SecretNote secret) {
+    this.secret = secret;
     return this;
   }
 

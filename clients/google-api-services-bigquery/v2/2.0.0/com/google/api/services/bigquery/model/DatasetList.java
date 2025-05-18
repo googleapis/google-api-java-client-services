@@ -194,6 +194,14 @@ public final class DatasetList extends com.google.api.client.json.GenericJson {
     private DatasetReference datasetReference;
 
     /**
+     * Output only. Reference to a read-only external dataset defined in data catalogs outside of
+     * BigQuery. Filled out when the dataset type is EXTERNAL.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private ExternalDatasetReference externalDatasetReference;
+
+    /**
      * An alternate name for the dataset. The friendly name is purely decorative in nature.
      * The value may be {@code null}.
      */
@@ -244,6 +252,25 @@ public final class DatasetList extends com.google.api.client.json.GenericJson {
      */
     public Datasets setDatasetReference(DatasetReference datasetReference) {
       this.datasetReference = datasetReference;
+      return this;
+    }
+
+    /**
+     * Output only. Reference to a read-only external dataset defined in data catalogs outside of
+     * BigQuery. Filled out when the dataset type is EXTERNAL.
+     * @return value or {@code null} for none
+     */
+    public ExternalDatasetReference getExternalDatasetReference() {
+      return externalDatasetReference;
+    }
+
+    /**
+     * Output only. Reference to a read-only external dataset defined in data catalogs outside of
+     * BigQuery. Filled out when the dataset type is EXTERNAL.
+     * @param externalDatasetReference externalDatasetReference or {@code null} for none
+     */
+    public Datasets setExternalDatasetReference(ExternalDatasetReference externalDatasetReference) {
+      this.externalDatasetReference = externalDatasetReference;
       return this;
     }
 

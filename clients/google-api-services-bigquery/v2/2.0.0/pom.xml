@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-bigquery</artifactId>
-  <version>v2-rev20250427-2.0.0</version>
-  <name>BigQuery API v2-rev20250427-2.0.0</name>
+  <version>v2-rev20250511-2.0.0</version>
+  <name>BigQuery API v2-rev20250511-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

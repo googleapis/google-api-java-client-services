@@ -278,11 +278,12 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
    * Optional. Specifies the action that occurs if the destination table already exists. The
    * following values are supported: * WRITE_TRUNCATE: If the table already exists, BigQuery
    * overwrites the data, removes the constraints, and uses the schema from the query result. *
-   * WRITE_APPEND: If the table already exists, BigQuery appends the data to the table. *
-   * WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in
-   * the job result. The default value is WRITE_EMPTY. Each action is atomic and only occurs if
-   * BigQuery is able to complete the job successfully. Creation, truncation and append actions
-   * occur as one atomic update upon job completion.
+   * WRITE_TRUNCATE_DATA: If the table already exists, BigQuery overwrites the data, but keeps the
+   * constraints and schema of the existing table. * WRITE_APPEND: If the table already exists,
+   * BigQuery appends the data to the table. * WRITE_EMPTY: If the table already exists and contains
+   * data, a 'duplicate' error is returned in the job result. The default value is WRITE_EMPTY. Each
+   * action is atomic and only occurs if BigQuery is able to complete the job successfully.
+   * Creation, truncation and append actions occur as one atomic update upon job completion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -964,11 +965,12 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
    * Optional. Specifies the action that occurs if the destination table already exists. The
    * following values are supported: * WRITE_TRUNCATE: If the table already exists, BigQuery
    * overwrites the data, removes the constraints, and uses the schema from the query result. *
-   * WRITE_APPEND: If the table already exists, BigQuery appends the data to the table. *
-   * WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in
-   * the job result. The default value is WRITE_EMPTY. Each action is atomic and only occurs if
-   * BigQuery is able to complete the job successfully. Creation, truncation and append actions
-   * occur as one atomic update upon job completion.
+   * WRITE_TRUNCATE_DATA: If the table already exists, BigQuery overwrites the data, but keeps the
+   * constraints and schema of the existing table. * WRITE_APPEND: If the table already exists,
+   * BigQuery appends the data to the table. * WRITE_EMPTY: If the table already exists and contains
+   * data, a 'duplicate' error is returned in the job result. The default value is WRITE_EMPTY. Each
+   * action is atomic and only occurs if BigQuery is able to complete the job successfully.
+   * Creation, truncation and append actions occur as one atomic update upon job completion.
    * @return value or {@code null} for none
    */
   public java.lang.String getWriteDisposition() {
@@ -979,11 +981,12 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
    * Optional. Specifies the action that occurs if the destination table already exists. The
    * following values are supported: * WRITE_TRUNCATE: If the table already exists, BigQuery
    * overwrites the data, removes the constraints, and uses the schema from the query result. *
-   * WRITE_APPEND: If the table already exists, BigQuery appends the data to the table. *
-   * WRITE_EMPTY: If the table already exists and contains data, a 'duplicate' error is returned in
-   * the job result. The default value is WRITE_EMPTY. Each action is atomic and only occurs if
-   * BigQuery is able to complete the job successfully. Creation, truncation and append actions
-   * occur as one atomic update upon job completion.
+   * WRITE_TRUNCATE_DATA: If the table already exists, BigQuery overwrites the data, but keeps the
+   * constraints and schema of the existing table. * WRITE_APPEND: If the table already exists,
+   * BigQuery appends the data to the table. * WRITE_EMPTY: If the table already exists and contains
+   * data, a 'duplicate' error is returned in the job result. The default value is WRITE_EMPTY. Each
+   * action is atomic and only occurs if BigQuery is able to complete the job successfully.
+   * Creation, truncation and append actions occur as one atomic update upon job completion.
    * @param writeDisposition writeDisposition or {@code null} for none
    */
   public JobConfigurationQuery setWriteDisposition(java.lang.String writeDisposition) {

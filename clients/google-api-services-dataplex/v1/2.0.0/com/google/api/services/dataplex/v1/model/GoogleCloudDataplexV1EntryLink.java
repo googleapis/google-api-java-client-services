@@ -17,7 +17,7 @@
 package com.google.api.services.dataplex.v1.model;
 
 /**
- * EntryLink represents a link between two entries.
+ * EntryLink represents a link between two Entries.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataplex API. For a detailed explanation see:
@@ -38,14 +38,15 @@ public final class GoogleCloudDataplexV1EntryLink extends com.google.api.client.
 
   /**
    * Required. Immutable. Relative resource name of the Entry Link Type used to create this Entry
-   * Link, of the form: projects/{project}/locations/{location}/entryLinkTypes/{entry_link_type}.
+   * Link, of the form:
+   * `projects/{project_id_or_number}/locations/{location_id}/entryLinkTypes/{entry_link_type_id}.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String entryLinkType;
 
   /**
-   * Required. Specifies the entries referenced in the entry link. There should be exactly two entry
+   * Required. Specifies the Entries referenced in the Entry Link. There should be exactly two entry
    * references.
    * The value may be {@code null}.
    */
@@ -53,8 +54,9 @@ public final class GoogleCloudDataplexV1EntryLink extends com.google.api.client.
   private java.util.List<GoogleCloudDataplexV1EntryLinkEntryReference> entryReferences;
 
   /**
-   * Output only. Immutable. Identifier. The relative resource name of the Entry Link, of the form:
-   * projects/{project}/locations/{location}/entryGroups/{entry_group}/entryLinks/{entry_link}.
+   * Output only. Immutable. Identifier. The relative resource name of the Entry Link, of the form: 
+   * projects/{project_id_or_number}/locations/{location_id}/entryGroups/{entry_group_id}/entryLinks
+   * /{entry_link_id}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,7 +88,8 @@ public final class GoogleCloudDataplexV1EntryLink extends com.google.api.client.
 
   /**
    * Required. Immutable. Relative resource name of the Entry Link Type used to create this Entry
-   * Link, of the form: projects/{project}/locations/{location}/entryLinkTypes/{entry_link_type}.
+   * Link, of the form:
+   * `projects/{project_id_or_number}/locations/{location_id}/entryLinkTypes/{entry_link_type_id}.
    * @return value or {@code null} for none
    */
   public java.lang.String getEntryLinkType() {
@@ -95,7 +98,8 @@ public final class GoogleCloudDataplexV1EntryLink extends com.google.api.client.
 
   /**
    * Required. Immutable. Relative resource name of the Entry Link Type used to create this Entry
-   * Link, of the form: projects/{project}/locations/{location}/entryLinkTypes/{entry_link_type}.
+   * Link, of the form:
+   * `projects/{project_id_or_number}/locations/{location_id}/entryLinkTypes/{entry_link_type_id}.
    * @param entryLinkType entryLinkType or {@code null} for none
    */
   public GoogleCloudDataplexV1EntryLink setEntryLinkType(java.lang.String entryLinkType) {
@@ -104,7 +108,7 @@ public final class GoogleCloudDataplexV1EntryLink extends com.google.api.client.
   }
 
   /**
-   * Required. Specifies the entries referenced in the entry link. There should be exactly two entry
+   * Required. Specifies the Entries referenced in the Entry Link. There should be exactly two entry
    * references.
    * @return value or {@code null} for none
    */
@@ -113,7 +117,7 @@ public final class GoogleCloudDataplexV1EntryLink extends com.google.api.client.
   }
 
   /**
-   * Required. Specifies the entries referenced in the entry link. There should be exactly two entry
+   * Required. Specifies the Entries referenced in the Entry Link. There should be exactly two entry
    * references.
    * @param entryReferences entryReferences or {@code null} for none
    */
@@ -123,8 +127,9 @@ public final class GoogleCloudDataplexV1EntryLink extends com.google.api.client.
   }
 
   /**
-   * Output only. Immutable. Identifier. The relative resource name of the Entry Link, of the form:
-   * projects/{project}/locations/{location}/entryGroups/{entry_group}/entryLinks/{entry_link}.
+   * Output only. Immutable. Identifier. The relative resource name of the Entry Link, of the form: 
+   * projects/{project_id_or_number}/locations/{location_id}/entryGroups/{entry_group_id}/entryLinks
+   * /{entry_link_id}
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -132,8 +137,9 @@ public final class GoogleCloudDataplexV1EntryLink extends com.google.api.client.
   }
 
   /**
-   * Output only. Immutable. Identifier. The relative resource name of the Entry Link, of the form:
-   * projects/{project}/locations/{location}/entryGroups/{entry_group}/entryLinks/{entry_link}.
+   * Output only. Immutable. Identifier. The relative resource name of the Entry Link, of the form: 
+   * projects/{project_id_or_number}/locations/{location_id}/entryGroups/{entry_group_id}/entryLinks
+   * /{entry_link_id}
    * @param name name or {@code null} for none
    */
   public GoogleCloudDataplexV1EntryLink setName(java.lang.String name) {

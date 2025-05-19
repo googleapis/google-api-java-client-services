@@ -17,7 +17,7 @@
 package com.google.api.services.dataplex.v1.model;
 
 /**
- * Reference to the Entry that is linked through the entry link.
+ * Reference to the Entry that is linked through the Entry Link.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataplex API. For a detailed explanation see:
@@ -30,31 +30,31 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1EntryLinkEntryReference extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Immutable. The relative resource name of the referenced entry, of the form:
-   * projects/{project}/locations/{location}/entryGroups/{entryGroup}/entries/{entry}.
+   * Required. Immutable. The relative resource name of the referenced Entry, of the form: projects/
+   * {project_id_or_number}/locations/{location_id}/entryGroups/{entry_group_id}/entries/{entry_id}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Immutable. The path in the entry that is referenced in the entry link. Empty path denotes that
-   * the entry itself is referenced in the entry link.
+   * Immutable. The path in the Entry that is referenced in the Entry Link. Empty path denotes that
+   * the Entry itself is referenced in the Entry Link.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String path;
 
   /**
-   * Required. Immutable. The reference type of the entry.
+   * Required. Immutable. The reference type of the Entry.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * Required. Immutable. The relative resource name of the referenced entry, of the form:
-   * projects/{project}/locations/{location}/entryGroups/{entryGroup}/entries/{entry}.
+   * Required. Immutable. The relative resource name of the referenced Entry, of the form: projects/
+   * {project_id_or_number}/locations/{location_id}/entryGroups/{entry_group_id}/entries/{entry_id}
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -62,8 +62,8 @@ public final class GoogleCloudDataplexV1EntryLinkEntryReference extends com.goog
   }
 
   /**
-   * Required. Immutable. The relative resource name of the referenced entry, of the form:
-   * projects/{project}/locations/{location}/entryGroups/{entryGroup}/entries/{entry}.
+   * Required. Immutable. The relative resource name of the referenced Entry, of the form: projects/
+   * {project_id_or_number}/locations/{location_id}/entryGroups/{entry_group_id}/entries/{entry_id}
    * @param name name or {@code null} for none
    */
   public GoogleCloudDataplexV1EntryLinkEntryReference setName(java.lang.String name) {
@@ -72,8 +72,8 @@ public final class GoogleCloudDataplexV1EntryLinkEntryReference extends com.goog
   }
 
   /**
-   * Immutable. The path in the entry that is referenced in the entry link. Empty path denotes that
-   * the entry itself is referenced in the entry link.
+   * Immutable. The path in the Entry that is referenced in the Entry Link. Empty path denotes that
+   * the Entry itself is referenced in the Entry Link.
    * @return value or {@code null} for none
    */
   public java.lang.String getPath() {
@@ -81,8 +81,8 @@ public final class GoogleCloudDataplexV1EntryLinkEntryReference extends com.goog
   }
 
   /**
-   * Immutable. The path in the entry that is referenced in the entry link. Empty path denotes that
-   * the entry itself is referenced in the entry link.
+   * Immutable. The path in the Entry that is referenced in the Entry Link. Empty path denotes that
+   * the Entry itself is referenced in the Entry Link.
    * @param path path or {@code null} for none
    */
   public GoogleCloudDataplexV1EntryLinkEntryReference setPath(java.lang.String path) {
@@ -91,7 +91,7 @@ public final class GoogleCloudDataplexV1EntryLinkEntryReference extends com.goog
   }
 
   /**
-   * Required. Immutable. The reference type of the entry.
+   * Required. Immutable. The reference type of the Entry.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -99,7 +99,7 @@ public final class GoogleCloudDataplexV1EntryLinkEntryReference extends com.goog
   }
 
   /**
-   * Required. Immutable. The reference type of the entry.
+   * Required. Immutable. The reference type of the Entry.
    * @param type type or {@code null} for none
    */
   public GoogleCloudDataplexV1EntryLinkEntryReference setType(java.lang.String type) {

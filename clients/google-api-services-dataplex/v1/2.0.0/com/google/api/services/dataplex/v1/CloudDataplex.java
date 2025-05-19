@@ -2818,7 +2818,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
        * parameters, call the {@link SearchEntries#execute()} method to invoke the remote operation.
        *
        * @param name Required. The project to which the request should be attributed in the following form:
-       *        projects/{project}/locations/{location}.
+       *        projects/{project}/locations/global.
        * @return the request
        */
       public SearchEntries searchEntries(java.lang.String name) throws java.io.IOException {
@@ -2846,7 +2846,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
          * the constructor. </p>
          *
          * @param name Required. The project to which the request should be attributed in the following form:
-       *        projects/{project}/locations/{location}.
+       *        projects/{project}/locations/global.
          * @since 1.13
          */
         protected SearchEntries(java.lang.String name) {
@@ -2916,13 +2916,13 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
         /**
          * Required. The project to which the request should be attributed in the following form:
-         * projects/{project}/locations/{location}.
+         * projects/{project}/locations/global.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. The project to which the request should be attributed in the following form:
-       projects/{project}/locations/{location}.
+       projects/{project}/locations/global.
          */
         public java.lang.String getName() {
           return name;
@@ -2930,7 +2930,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
         /**
          * Required. The project to which the request should be attributed in the following form:
-         * projects/{project}/locations/{location}.
+         * projects/{project}/locations/global.
          */
         public SearchEntries setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -13627,7 +13627,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
            * @param parent Required. The resource name of the parent Entry Group:
-           *        projects/{project}/locations/{location}/entryGroups/{entry_group}.
+           *        projects/{project_id_or_number}/locations/{location_id}/entryGroups/{entry_group_id}.
            * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1EntryLink}
            * @return the request
            */
@@ -13656,7 +13656,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param parent Required. The resource name of the parent Entry Group:
-           *        projects/{project}/locations/{location}/entryGroups/{entry_group}.
+           *        projects/{project_id_or_number}/locations/{location_id}/entryGroups/{entry_group_id}.
              * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1EntryLink}
              * @since 1.13
              */
@@ -13727,13 +13727,13 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
             /**
              * Required. The resource name of the parent Entry Group:
-             * projects/{project}/locations/{location}/entryGroups/{entry_group}.
+             * projects/{project_id_or_number}/locations/{location_id}/entryGroups/{entry_group_id}.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. The resource name of the parent Entry Group:
-           projects/{project}/locations/{location}/entryGroups/{entry_group}.
+           projects/{project_id_or_number}/locations/{location_id}/entryGroups/{entry_group_id}.
              */
             public java.lang.String getParent() {
               return parent;
@@ -13741,7 +13741,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
             /**
              * Required. The resource name of the parent Entry Group:
-             * projects/{project}/locations/{location}/entryGroups/{entry_group}.
+             * projects/{project_id_or_number}/locations/{location_id}/entryGroups/{entry_group_id}.
              */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -13792,8 +13792,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * This request holds the parameters needed by the dataplex server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The resource name of the Entry Link:
-           *        projects/{project}/locations/{location}/entryGroups/{entry_group}/entryLinks/{entry_link}.
+           * @param name Required. The resource name of the Entry Link: projects/{project_id_or_number}/locations/{location_i
+           *        d}/entryGroups/{entry_group_id}/entryLinks/{entry_link_id}.
            * @return the request
            */
           public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -13820,8 +13820,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The resource name of the Entry Link:
-           *        projects/{project}/locations/{location}/entryGroups/{entry_group}/entryLinks/{entry_link}.
+             * @param name Required. The resource name of the Entry Link: projects/{project_id_or_number}/locations/{location_i
+           *        d}/entryGroups/{entry_group_id}/entryLinks/{entry_link_id}.
              * @since 1.13
              */
             protected Delete(java.lang.String name) {
@@ -13890,22 +13890,22 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             }
 
             /**
-             * Required. The resource name of the Entry Link: projects/{project}/locations/{location
-             * }/entryGroups/{entry_group}/entryLinks/{entry_link}.
+             * Required. The resource name of the Entry Link: projects/{project_id_or_number}/locati
+             * ons/{location_id}/entryGroups/{entry_group_id}/entryLinks/{entry_link_id}.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The resource name of the Entry Link:
-           projects/{project}/locations/{location}/entryGroups/{entry_group}/entryLinks/{entry_link}.
+            /** Required. The resource name of the Entry Link: projects/{project_id_or_number}/locations/{location_
+           id}/entryGroups/{entry_group_id}/entryLinks/{entry_link_id}.
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. The resource name of the Entry Link: projects/{project}/locations/{location
-             * }/entryGroups/{entry_group}/entryLinks/{entry_link}.
+             * Required. The resource name of the Entry Link: projects/{project_id_or_number}/locati
+             * ons/{location_id}/entryGroups/{entry_group_id}/entryLinks/{entry_link_id}.
              */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -13923,15 +13923,15 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             }
           }
           /**
-           * Gets an entry link.
+           * Gets an Entry Link.
            *
            * Create a request for the method "entryLinks.get".
            *
            * This request holds the parameters needed by the dataplex server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The resource name of the Entry Link:
-           *        projects/{project}/locations/{location}/entryGroups/{entry_group}/entryLinks/{entry_link}.
+           * @param name Required. The resource name of the Entry Link: projects/{project_id_or_number}/locations/{location_i
+           *        d}/entryGroups/{entry_group_id}/entryLinks/{entry_link_id}.
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -13948,7 +13948,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+/entryLinks/[^/]+$");
 
             /**
-             * Gets an entry link.
+             * Gets an Entry Link.
              *
              * Create a request for the method "entryLinks.get".
              *
@@ -13957,8 +13957,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The resource name of the Entry Link:
-           *        projects/{project}/locations/{location}/entryGroups/{entry_group}/entryLinks/{entry_link}.
+             * @param name Required. The resource name of the Entry Link: projects/{project_id_or_number}/locations/{location_i
+           *        d}/entryGroups/{entry_group_id}/entryLinks/{entry_link_id}.
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -14037,22 +14037,22 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             }
 
             /**
-             * Required. The resource name of the Entry Link: projects/{project}/locations/{location
-             * }/entryGroups/{entry_group}/entryLinks/{entry_link}.
+             * Required. The resource name of the Entry Link: projects/{project_id_or_number}/locati
+             * ons/{location_id}/entryGroups/{entry_group_id}/entryLinks/{entry_link_id}.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The resource name of the Entry Link:
-           projects/{project}/locations/{location}/entryGroups/{entry_group}/entryLinks/{entry_link}.
+            /** Required. The resource name of the Entry Link: projects/{project_id_or_number}/locations/{location_
+           id}/entryGroups/{entry_group_id}/entryLinks/{entry_link_id}.
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. The resource name of the Entry Link: projects/{project}/locations/{location
-             * }/entryGroups/{entry_group}/entryLinks/{entry_link}.
+             * Required. The resource name of the Entry Link: projects/{project_id_or_number}/locati
+             * ons/{location_id}/entryGroups/{entry_group_id}/entryLinks/{entry_link_id}.
              */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {

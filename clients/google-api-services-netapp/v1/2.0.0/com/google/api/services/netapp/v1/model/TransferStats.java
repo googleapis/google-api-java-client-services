@@ -73,7 +73,7 @@ public final class TransferStats extends com.google.api.client.json.GenericJson 
   private String totalTransferDuration;
 
   /**
-   * Cumulative bytes trasferred so far for the replication relatinonship.
+   * Cumulative bytes transferred so far for the replication relationship.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -191,7 +191,7 @@ public final class TransferStats extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Cumulative bytes trasferred so far for the replication relatinonship.
+   * Cumulative bytes transferred so far for the replication relationship.
    * @return value or {@code null} for none
    */
   public java.lang.Long getTransferBytes() {
@@ -199,7 +199,7 @@ public final class TransferStats extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Cumulative bytes trasferred so far for the replication relatinonship.
+   * Cumulative bytes transferred so far for the replication relationship.
    * @param transferBytes transferBytes or {@code null} for none
    */
   public TransferStats setTransferBytes(java.lang.Long transferBytes) {

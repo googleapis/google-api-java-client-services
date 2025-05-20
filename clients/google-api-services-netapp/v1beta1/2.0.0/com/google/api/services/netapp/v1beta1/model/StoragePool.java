@@ -75,6 +75,15 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
+   * Optional. Flag indicating that the hot-tier threshold will be auto-increased by 10% of the hot-
+   * tier when it hits 100%. Default is true. The increment will kick in only if the new size after
+   * increment is still less than or equal to storage pool size.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableHotTierAutoResize;
+
+  /**
    * Output only. Specifies the current pool encryption key source.
    * The value may be {@code null}.
    */
@@ -87,6 +96,15 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean globalAccessAllowed;
+
+  /**
+   * Optional. Total hot tier capacity for the Storage Pool. It is applicable only to Flex service
+   * level. It should be less than the minimum storage pool size and cannot be more than the current
+   * storage pool size. It cannot be decreased once set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long hotTierSizeGib;
 
   /**
    * Optional. Specifies the KMS config to be used for volume encryption.
@@ -315,6 +333,27 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Flag indicating that the hot-tier threshold will be auto-increased by 10% of the hot-
+   * tier when it hits 100%. Default is true. The increment will kick in only if the new size after
+   * increment is still less than or equal to storage pool size.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableHotTierAutoResize() {
+    return enableHotTierAutoResize;
+  }
+
+  /**
+   * Optional. Flag indicating that the hot-tier threshold will be auto-increased by 10% of the hot-
+   * tier when it hits 100%. Default is true. The increment will kick in only if the new size after
+   * increment is still less than or equal to storage pool size.
+   * @param enableHotTierAutoResize enableHotTierAutoResize or {@code null} for none
+   */
+  public StoragePool setEnableHotTierAutoResize(java.lang.Boolean enableHotTierAutoResize) {
+    this.enableHotTierAutoResize = enableHotTierAutoResize;
+    return this;
+  }
+
+  /**
    * Output only. Specifies the current pool encryption key source.
    * @return value or {@code null} for none
    */
@@ -345,6 +384,27 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
    */
   public StoragePool setGlobalAccessAllowed(java.lang.Boolean globalAccessAllowed) {
     this.globalAccessAllowed = globalAccessAllowed;
+    return this;
+  }
+
+  /**
+   * Optional. Total hot tier capacity for the Storage Pool. It is applicable only to Flex service
+   * level. It should be less than the minimum storage pool size and cannot be more than the current
+   * storage pool size. It cannot be decreased once set.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getHotTierSizeGib() {
+    return hotTierSizeGib;
+  }
+
+  /**
+   * Optional. Total hot tier capacity for the Storage Pool. It is applicable only to Flex service
+   * level. It should be less than the minimum storage pool size and cannot be more than the current
+   * storage pool size. It cannot be decreased once set.
+   * @param hotTierSizeGib hotTierSizeGib or {@code null} for none
+   */
+  public StoragePool setHotTierSizeGib(java.lang.Long hotTierSizeGib) {
+    this.hotTierSizeGib = hotTierSizeGib;
     return this;
   }
 

@@ -68,6 +68,13 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
+   * Output only. The time until which the backup is not deletable.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String enforcedRetentionEndTime;
+
+  /**
    * Resource labels to represent user provided metadata.
    * The value may be {@code null}.
    */
@@ -224,6 +231,23 @@ public final class Backup extends com.google.api.client.json.GenericJson {
    */
   public Backup setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Output only. The time until which the backup is not deletable.
+   * @return value or {@code null} for none
+   */
+  public String getEnforcedRetentionEndTime() {
+    return enforcedRetentionEndTime;
+  }
+
+  /**
+   * Output only. The time until which the backup is not deletable.
+   * @param enforcedRetentionEndTime enforcedRetentionEndTime or {@code null} for none
+   */
+  public Backup setEnforcedRetentionEndTime(String enforcedRetentionEndTime) {
+    this.enforcedRetentionEndTime = enforcedRetentionEndTime;
     return this;
   }
 

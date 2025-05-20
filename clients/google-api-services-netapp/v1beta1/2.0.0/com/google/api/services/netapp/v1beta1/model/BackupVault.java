@@ -38,6 +38,13 @@ public final class BackupVault extends com.google.api.client.json.GenericJson {
   private java.lang.String backupRegion;
 
   /**
+   * Optional. Backup retention policy defining the retenton of backups.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BackupRetentionPolicy backupRetentionPolicy;
+
+  /**
    * Optional. Type of backup vault to be created. Default is IN_REGION.
    * The value may be {@code null}.
    */
@@ -120,6 +127,23 @@ public final class BackupVault extends com.google.api.client.json.GenericJson {
    */
   public BackupVault setBackupRegion(java.lang.String backupRegion) {
     this.backupRegion = backupRegion;
+    return this;
+  }
+
+  /**
+   * Optional. Backup retention policy defining the retenton of backups.
+   * @return value or {@code null} for none
+   */
+  public BackupRetentionPolicy getBackupRetentionPolicy() {
+    return backupRetentionPolicy;
+  }
+
+  /**
+   * Optional. Backup retention policy defining the retenton of backups.
+   * @param backupRetentionPolicy backupRetentionPolicy or {@code null} for none
+   */
+  public BackupVault setBackupRetentionPolicy(BackupRetentionPolicy backupRetentionPolicy) {
+    this.backupRetentionPolicy = backupRetentionPolicy;
     return this;
   }
 

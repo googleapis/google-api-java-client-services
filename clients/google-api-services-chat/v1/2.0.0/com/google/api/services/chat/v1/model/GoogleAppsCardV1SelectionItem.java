@@ -40,12 +40,6 @@ public final class GoogleAppsCardV1SelectionItem extends com.google.api.client.j
   private java.lang.String bottomText;
 
   /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleAppsCardV1MaterialIcon materialIcon;
-
-  /**
    * Whether the item is selected by default. If the selection input only accepts one value (such as
    * for radio buttons or a dropdown menu), only set this field for one item.
    * The value may be {@code null}.
@@ -91,21 +85,6 @@ public final class GoogleAppsCardV1SelectionItem extends com.google.api.client.j
    */
   public GoogleAppsCardV1SelectionItem setBottomText(java.lang.String bottomText) {
     this.bottomText = bottomText;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public GoogleAppsCardV1MaterialIcon getMaterialIcon() {
-    return materialIcon;
-  }
-
-  /**
-   * @param materialIcon materialIcon or {@code null} for none
-   */
-  public GoogleAppsCardV1SelectionItem setMaterialIcon(GoogleAppsCardV1MaterialIcon materialIcon) {
-    this.materialIcon = materialIcon;
     return this;
   }
 

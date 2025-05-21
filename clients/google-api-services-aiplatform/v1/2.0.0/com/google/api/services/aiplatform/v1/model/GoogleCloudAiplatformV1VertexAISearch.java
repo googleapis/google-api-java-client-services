@@ -31,6 +31,15 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1VertexAISearch extends com.google.api.client.json.GenericJson {
 
   /**
+   * Specifications that define the specific DataStores to be searched, along with configurations
+   * for those data stores. This is only considered for Engines with multiple data stores. It should
+   * only be set if engine is used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAiplatformV1VertexAISearchDataStoreSpec> dataStoreSpecs;
+
+  /**
    * Optional. Fully-qualified Vertex AI Search data store resource ID. Format:
    * `projects/{project}/locations/{location}/collections/{collection}/dataStores/{dataStore}`
    * The value may be {@code null}.
@@ -60,6 +69,27 @@ public final class GoogleCloudAiplatformV1VertexAISearch extends com.google.api.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer maxResults;
+
+  /**
+   * Specifications that define the specific DataStores to be searched, along with configurations
+   * for those data stores. This is only considered for Engines with multiple data stores. It should
+   * only be set if engine is used.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAiplatformV1VertexAISearchDataStoreSpec> getDataStoreSpecs() {
+    return dataStoreSpecs;
+  }
+
+  /**
+   * Specifications that define the specific DataStores to be searched, along with configurations
+   * for those data stores. This is only considered for Engines with multiple data stores. It should
+   * only be set if engine is used.
+   * @param dataStoreSpecs dataStoreSpecs or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1VertexAISearch setDataStoreSpecs(java.util.List<GoogleCloudAiplatformV1VertexAISearchDataStoreSpec> dataStoreSpecs) {
+    this.dataStoreSpecs = dataStoreSpecs;
+    return this;
+  }
 
   /**
    * Optional. Fully-qualified Vertex AI Search data store resource ID. Format:

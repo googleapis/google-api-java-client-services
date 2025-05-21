@@ -32,7 +32,7 @@ public final class GoogleCloudAiplatformV1beta1FeatureSelectionConfigFeatureConf
   /**
    * Optional. Drift threshold. If calculated difference with baseline data larger than threshold,
    * it will be considered as the feature has drift. If not present, the threshold will be default
-   * to 0.3.
+   * to 0.3. Must be in range [0, 1).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,7 +48,7 @@ public final class GoogleCloudAiplatformV1beta1FeatureSelectionConfigFeatureConf
   /**
    * Optional. Drift threshold. If calculated difference with baseline data larger than threshold,
    * it will be considered as the feature has drift. If not present, the threshold will be default
-   * to 0.3.
+   * to 0.3. Must be in range [0, 1).
    * @return value or {@code null} for none
    */
   public java.lang.Double getDriftThreshold() {
@@ -58,7 +58,7 @@ public final class GoogleCloudAiplatformV1beta1FeatureSelectionConfigFeatureConf
   /**
    * Optional. Drift threshold. If calculated difference with baseline data larger than threshold,
    * it will be considered as the feature has drift. If not present, the threshold will be default
-   * to 0.3.
+   * to 0.3. Must be in range [0, 1).
    * @param driftThreshold driftThreshold or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1FeatureSelectionConfigFeatureConfig setDriftThreshold(java.lang.Double driftThreshold) {

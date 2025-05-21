@@ -29,6 +29,57 @@ package com.google.api.services.aiplatform.v1.model;
 @SuppressWarnings("javadoc")
 public final class GoogleCloudAiplatformV1RagVectorDbConfigRagManagedDb extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Performs an ANN search on RagCorpus. Use this if you have a lot of files (> 10K) in your
+   * RagCorpus and want to reduce the search latency.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1RagVectorDbConfigRagManagedDbANN ann;
+
+  /**
+   * Performs a KNN search on RagCorpus. Default choice if not specified.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1RagVectorDbConfigRagManagedDbKNN knn;
+
+  /**
+   * Performs an ANN search on RagCorpus. Use this if you have a lot of files (> 10K) in your
+   * RagCorpus and want to reduce the search latency.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1RagVectorDbConfigRagManagedDbANN getAnn() {
+    return ann;
+  }
+
+  /**
+   * Performs an ANN search on RagCorpus. Use this if you have a lot of files (> 10K) in your
+   * RagCorpus and want to reduce the search latency.
+   * @param ann ann or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1RagVectorDbConfigRagManagedDb setAnn(GoogleCloudAiplatformV1RagVectorDbConfigRagManagedDbANN ann) {
+    this.ann = ann;
+    return this;
+  }
+
+  /**
+   * Performs a KNN search on RagCorpus. Default choice if not specified.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1RagVectorDbConfigRagManagedDbKNN getKnn() {
+    return knn;
+  }
+
+  /**
+   * Performs a KNN search on RagCorpus. Default choice if not specified.
+   * @param knn knn or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1RagVectorDbConfigRagManagedDb setKnn(GoogleCloudAiplatformV1RagVectorDbConfigRagManagedDbKNN knn) {
+    this.knn = knn;
+    return this;
+  }
+
   @Override
   public GoogleCloudAiplatformV1RagVectorDbConfigRagManagedDb set(String fieldName, Object value) {
     return (GoogleCloudAiplatformV1RagVectorDbConfigRagManagedDb) super.set(fieldName, value);

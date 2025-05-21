@@ -1983,6 +1983,146 @@ public class CloudComposer extends com.google.api.client.googleapis.services.jso
           }
         }
         /**
+         * Restart Airflow web server.
+         *
+         * Create a request for the method "environments.restartWebServer".
+         *
+         * This request holds the parameters needed by the composer server.  After setting any optional
+         * parameters, call the {@link RestartWebServer#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the environment to restart the web server for, in the form:
+         *        "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+         * @param content the {@link com.google.api.services.composer.v1.model.RestartWebServerRequest}
+         * @return the request
+         */
+        public RestartWebServer restartWebServer(java.lang.String name, com.google.api.services.composer.v1.model.RestartWebServerRequest content) throws java.io.IOException {
+          RestartWebServer result = new RestartWebServer(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class RestartWebServer extends CloudComposerRequest<com.google.api.services.composer.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}:restartWebServer";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/environments/[^/]+$");
+
+          /**
+           * Restart Airflow web server.
+           *
+           * Create a request for the method "environments.restartWebServer".
+           *
+           * This request holds the parameters needed by the the composer server.  After setting any
+           * optional parameters, call the {@link RestartWebServer#execute()} method to invoke the remote
+           * operation. <p> {@link RestartWebServer#initialize(com.google.api.client.googleapis.services.Abs
+           * tractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the environment to restart the web server for, in the form:
+         *        "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+           * @param content the {@link com.google.api.services.composer.v1.model.RestartWebServerRequest}
+           * @since 1.13
+           */
+          protected RestartWebServer(java.lang.String name, com.google.api.services.composer.v1.model.RestartWebServerRequest content) {
+            super(CloudComposer.this, "POST", REST_PATH, content, com.google.api.services.composer.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/environments/[^/]+$");
+            }
+          }
+
+          @Override
+          public RestartWebServer set$Xgafv(java.lang.String $Xgafv) {
+            return (RestartWebServer) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public RestartWebServer setAccessToken(java.lang.String accessToken) {
+            return (RestartWebServer) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public RestartWebServer setAlt(java.lang.String alt) {
+            return (RestartWebServer) super.setAlt(alt);
+          }
+
+          @Override
+          public RestartWebServer setCallback(java.lang.String callback) {
+            return (RestartWebServer) super.setCallback(callback);
+          }
+
+          @Override
+          public RestartWebServer setFields(java.lang.String fields) {
+            return (RestartWebServer) super.setFields(fields);
+          }
+
+          @Override
+          public RestartWebServer setKey(java.lang.String key) {
+            return (RestartWebServer) super.setKey(key);
+          }
+
+          @Override
+          public RestartWebServer setOauthToken(java.lang.String oauthToken) {
+            return (RestartWebServer) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public RestartWebServer setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (RestartWebServer) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public RestartWebServer setQuotaUser(java.lang.String quotaUser) {
+            return (RestartWebServer) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public RestartWebServer setUploadType(java.lang.String uploadType) {
+            return (RestartWebServer) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public RestartWebServer setUploadProtocol(java.lang.String uploadProtocol) {
+            return (RestartWebServer) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the environment to restart the web server for, in the
+           * form: "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the environment to restart the web server for, in the form:
+         "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the environment to restart the web server for, in the
+           * form: "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+           */
+          public RestartWebServer setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/environments/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public RestartWebServer set(String parameterName, Object value) {
+            return (RestartWebServer) super.set(parameterName, value);
+          }
+        }
+        /**
          * Creates a snapshots of a Cloud Composer environment. As a result of this operation, snapshot of
          * environment's state is stored in a location specified in the SaveSnapshotRequest.
          *

@@ -56,6 +56,19 @@ public final class GoogleCloudRetailV2SearchResponseSearchResult extends com.goo
   private java.util.Map<String, String> matchingVariantFields;
 
   /**
+   * Google provided available scores.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, GoogleCloudRetailV2DoubleList> modelScores;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudRetailV2DoubleList used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudRetailV2DoubleList.class);
+  }
+
+  /**
    * Specifies previous events related to this product for this user based on UserEvent with same
    * SearchRequest.visitor_id or UserInfo.user_id. This is set only when
    * SearchRequest.PersonalizationSpec.mode is SearchRequest.PersonalizationSpec.Mode.AUTO. Possible
@@ -151,6 +164,23 @@ public final class GoogleCloudRetailV2SearchResponseSearchResult extends com.goo
    */
   public GoogleCloudRetailV2SearchResponseSearchResult setMatchingVariantFields(java.util.Map<String, String> matchingVariantFields) {
     this.matchingVariantFields = matchingVariantFields;
+    return this;
+  }
+
+  /**
+   * Google provided available scores.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, GoogleCloudRetailV2DoubleList> getModelScores() {
+    return modelScores;
+  }
+
+  /**
+   * Google provided available scores.
+   * @param modelScores modelScores or {@code null} for none
+   */
+  public GoogleCloudRetailV2SearchResponseSearchResult setModelScores(java.util.Map<String, GoogleCloudRetailV2DoubleList> modelScores) {
+    this.modelScores = modelScores;
     return this;
   }
 

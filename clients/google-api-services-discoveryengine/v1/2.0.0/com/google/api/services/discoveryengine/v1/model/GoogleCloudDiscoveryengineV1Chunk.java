@@ -38,6 +38,13 @@ public final class GoogleCloudDiscoveryengineV1Chunk extends com.google.api.clie
   private java.util.List<java.lang.String> annotationContents;
 
   /**
+   * Output only. The annotation metadata includes structured content in the current chunk.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDiscoveryengineV1ChunkAnnotationMetadata> annotationMetadata;
+
+  /**
    * Output only. Metadata of the current chunk.
    * The value may be {@code null}.
    */
@@ -120,6 +127,23 @@ public final class GoogleCloudDiscoveryengineV1Chunk extends com.google.api.clie
    */
   public GoogleCloudDiscoveryengineV1Chunk setAnnotationContents(java.util.List<java.lang.String> annotationContents) {
     this.annotationContents = annotationContents;
+    return this;
+  }
+
+  /**
+   * Output only. The annotation metadata includes structured content in the current chunk.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDiscoveryengineV1ChunkAnnotationMetadata> getAnnotationMetadata() {
+    return annotationMetadata;
+  }
+
+  /**
+   * Output only. The annotation metadata includes structured content in the current chunk.
+   * @param annotationMetadata annotationMetadata or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1Chunk setAnnotationMetadata(java.util.List<GoogleCloudDiscoveryengineV1ChunkAnnotationMetadata> annotationMetadata) {
+    this.annotationMetadata = annotationMetadata;
     return this;
   }
 

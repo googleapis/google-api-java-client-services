@@ -47,6 +47,14 @@ public final class GoogleCloudAiplatformV1beta1ModelMonitor extends com.google.a
   private java.lang.String displayName;
 
   /**
+   * Customer-managed encryption key spec for a ModelMonitor. If set, this ModelMonitor and all sub-
+   * resources of this ModelMonitor will be secured by this key.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1EncryptionSpec encryptionSpec;
+
+  /**
    * Optional model explanation spec. It is used for feature attribution monitoring.
    * The value may be {@code null}.
    */
@@ -167,6 +175,25 @@ public final class GoogleCloudAiplatformV1beta1ModelMonitor extends com.google.a
    */
   public GoogleCloudAiplatformV1beta1ModelMonitor setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Customer-managed encryption key spec for a ModelMonitor. If set, this ModelMonitor and all sub-
+   * resources of this ModelMonitor will be secured by this key.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EncryptionSpec getEncryptionSpec() {
+    return encryptionSpec;
+  }
+
+  /**
+   * Customer-managed encryption key spec for a ModelMonitor. If set, this ModelMonitor and all sub-
+   * resources of this ModelMonitor will be secured by this key.
+   * @param encryptionSpec encryptionSpec or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ModelMonitor setEncryptionSpec(GoogleCloudAiplatformV1beta1EncryptionSpec encryptionSpec) {
+    this.encryptionSpec = encryptionSpec;
     return this;
   }
 

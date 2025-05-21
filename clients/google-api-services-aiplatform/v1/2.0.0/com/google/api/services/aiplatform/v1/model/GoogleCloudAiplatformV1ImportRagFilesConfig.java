@@ -114,6 +114,16 @@ public final class GoogleCloudAiplatformV1ImportRagFilesConfig extends com.googl
   private GoogleCloudAiplatformV1RagFileTransformationConfig ragFileTransformationConfig;
 
   /**
+   * Rebuilds the ANN index to optimize for recall on the imported data. Only applicable for
+   * RagCorpora running on RagManagedDb with `retrieval_strategy` set to `ANN`. The rebuild will be
+   * performed using the existing ANN config set on the RagCorpus. To change the ANN config, please
+   * use the UpdateRagCorpus API. Default is false, i.e., index is not rebuilt.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean rebuildAnnIndex;
+
+  /**
    * SharePoint sources.
    * The value may be {@code null}.
    */
@@ -322,6 +332,29 @@ public final class GoogleCloudAiplatformV1ImportRagFilesConfig extends com.googl
    */
   public GoogleCloudAiplatformV1ImportRagFilesConfig setRagFileTransformationConfig(GoogleCloudAiplatformV1RagFileTransformationConfig ragFileTransformationConfig) {
     this.ragFileTransformationConfig = ragFileTransformationConfig;
+    return this;
+  }
+
+  /**
+   * Rebuilds the ANN index to optimize for recall on the imported data. Only applicable for
+   * RagCorpora running on RagManagedDb with `retrieval_strategy` set to `ANN`. The rebuild will be
+   * performed using the existing ANN config set on the RagCorpus. To change the ANN config, please
+   * use the UpdateRagCorpus API. Default is false, i.e., index is not rebuilt.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getRebuildAnnIndex() {
+    return rebuildAnnIndex;
+  }
+
+  /**
+   * Rebuilds the ANN index to optimize for recall on the imported data. Only applicable for
+   * RagCorpora running on RagManagedDb with `retrieval_strategy` set to `ANN`. The rebuild will be
+   * performed using the existing ANN config set on the RagCorpus. To change the ANN config, please
+   * use the UpdateRagCorpus API. Default is false, i.e., index is not rebuilt.
+   * @param rebuildAnnIndex rebuildAnnIndex or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1ImportRagFilesConfig setRebuildAnnIndex(java.lang.Boolean rebuildAnnIndex) {
+    this.rebuildAnnIndex = rebuildAnnIndex;
     return this;
   }
 

@@ -38,6 +38,13 @@ public final class GoogleCloudAiplatformV1beta1ApiAuthApiKeyConfig extends com.g
   private java.lang.String apiKeySecretVersion;
 
   /**
+   * The API key string. Either this or `api_key_secret_version` must be set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String apiKeyString;
+
+  /**
    * Required. The SecretManager secret version resource name storing API key. e.g.
    * projects/{project}/secrets/{secret}/versions/{version}
    * @return value or {@code null} for none
@@ -53,6 +60,23 @@ public final class GoogleCloudAiplatformV1beta1ApiAuthApiKeyConfig extends com.g
    */
   public GoogleCloudAiplatformV1beta1ApiAuthApiKeyConfig setApiKeySecretVersion(java.lang.String apiKeySecretVersion) {
     this.apiKeySecretVersion = apiKeySecretVersion;
+    return this;
+  }
+
+  /**
+   * The API key string. Either this or `api_key_secret_version` must be set.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getApiKeyString() {
+    return apiKeyString;
+  }
+
+  /**
+   * The API key string. Either this or `api_key_secret_version` must be set.
+   * @param apiKeyString apiKeyString or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ApiAuthApiKeyConfig setApiKeyString(java.lang.String apiKeyString) {
+    this.apiKeyString = apiKeyString;
     return this;
   }
 

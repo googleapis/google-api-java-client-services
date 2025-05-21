@@ -85,6 +85,13 @@ public final class GoogleCloudAiplatformV1Part extends com.google.api.client.jso
   private java.lang.String text;
 
   /**
+   * Output only. Indicates if the part is thought from the model.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean thought;
+
+  /**
    * Optional. Video metadata. The metadata should only be specified while the video data is
    * presented in inline_data or file_data.
    * The value may be {@code null}.
@@ -214,6 +221,23 @@ public final class GoogleCloudAiplatformV1Part extends com.google.api.client.jso
    */
   public GoogleCloudAiplatformV1Part setText(java.lang.String text) {
     this.text = text;
+    return this;
+  }
+
+  /**
+   * Output only. Indicates if the part is thought from the model.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getThought() {
+    return thought;
+  }
+
+  /**
+   * Output only. Indicates if the part is thought from the model.
+   * @param thought thought or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1Part setThought(java.lang.Boolean thought) {
+    this.thought = thought;
     return this;
   }
 

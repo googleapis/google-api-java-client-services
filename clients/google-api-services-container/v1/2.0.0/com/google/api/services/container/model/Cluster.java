@@ -38,6 +38,14 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private AddonsConfig addonsConfig;
 
   /**
+   * The list of user specified Kubernetes feature gates. Each string represents the activation
+   * status of a feature gate (e.g. "featureX=true" or "featureX=false")
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> alphaClusterFeatureGates;
+
+  /**
    * Configuration controlling RBAC group membership information.
    * The value may be {@code null}.
    */
@@ -665,6 +673,25 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setAddonsConfig(AddonsConfig addonsConfig) {
     this.addonsConfig = addonsConfig;
+    return this;
+  }
+
+  /**
+   * The list of user specified Kubernetes feature gates. Each string represents the activation
+   * status of a feature gate (e.g. "featureX=true" or "featureX=false")
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAlphaClusterFeatureGates() {
+    return alphaClusterFeatureGates;
+  }
+
+  /**
+   * The list of user specified Kubernetes feature gates. Each string represents the activation
+   * status of a feature gate (e.g. "featureX=true" or "featureX=false")
+   * @param alphaClusterFeatureGates alphaClusterFeatureGates or {@code null} for none
+   */
+  public Cluster setAlphaClusterFeatureGates(java.util.List<java.lang.String> alphaClusterFeatureGates) {
+    this.alphaClusterFeatureGates = alphaClusterFeatureGates;
     return this;
   }
 

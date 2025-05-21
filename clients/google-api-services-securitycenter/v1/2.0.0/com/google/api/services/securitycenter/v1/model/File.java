@@ -54,6 +54,13 @@ public final class File extends com.google.api.client.json.GenericJson {
   private java.lang.Long hashedSize;
 
   /**
+   * Operation(s) performed on a file.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<FileOperation> operations;
+
+  /**
    * True when the hash covers only a prefix of the file.
    * The value may be {@code null}.
    */
@@ -132,6 +139,23 @@ public final class File extends com.google.api.client.json.GenericJson {
    */
   public File setHashedSize(java.lang.Long hashedSize) {
     this.hashedSize = hashedSize;
+    return this;
+  }
+
+  /**
+   * Operation(s) performed on a file.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<FileOperation> getOperations() {
+    return operations;
+  }
+
+  /**
+   * Operation(s) performed on a file.
+   * @param operations operations or {@code null} for none
+   */
+  public File setOperations(java.util.List<FileOperation> operations) {
+    this.operations = operations;
     return this;
   }
 

@@ -2009,18 +2009,18 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       /**
        * Optional. New parent task identifier. If the task is moved to the top level, this parameter
        * is omitted. The task set as parent must exist in the task list and can not be hidden.
-       * Exceptions: 1. Assigned tasks can not be set as parent task (have subtasks) or be moved
-       * under a parent task (become subtasks). 2. Tasks that are both completed and hidden cannot
-       * be nested, so the parent field must be empty.
+       * Exceptions: 1. Assigned and repeating tasks cannot be set as parent tasks (have subtasks),
+       * or be moved under a parent task (become subtasks). 2. Tasks that are both completed and
+       * hidden cannot be nested, so the parent field must be empty.
        */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
       /** Optional. New parent task identifier. If the task is moved to the top level, this parameter is
      omitted. The task set as parent must exist in the task list and can not be hidden. Exceptions: 1.
-     Assigned tasks can not be set as parent task (have subtasks) or be moved under a parent task
-     (become subtasks). 2. Tasks that are both completed and hidden cannot be nested, so the parent
-     field must be empty.
+     Assigned and repeating tasks cannot be set as parent tasks (have subtasks), or be moved under a
+     parent task (become subtasks). 2. Tasks that are both completed and hidden cannot be nested, so the
+     parent field must be empty.
        */
       public java.lang.String getParent() {
         return parent;
@@ -2029,9 +2029,9 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       /**
        * Optional. New parent task identifier. If the task is moved to the top level, this parameter
        * is omitted. The task set as parent must exist in the task list and can not be hidden.
-       * Exceptions: 1. Assigned tasks can not be set as parent task (have subtasks) or be moved
-       * under a parent task (become subtasks). 2. Tasks that are both completed and hidden cannot
-       * be nested, so the parent field must be empty.
+       * Exceptions: 1. Assigned and repeating tasks cannot be set as parent tasks (have subtasks),
+       * or be moved under a parent task (become subtasks). 2. Tasks that are both completed and
+       * hidden cannot be nested, so the parent field must be empty.
        */
       public Move setParent(java.lang.String parent) {
         this.parent = parent;

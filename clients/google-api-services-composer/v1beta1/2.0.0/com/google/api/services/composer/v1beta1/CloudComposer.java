@@ -2027,7 +2027,7 @@ public class CloudComposer extends com.google.api.client.googleapis.services.jso
          * This request holds the parameters needed by the composer server.  After setting any optional
          * parameters, call the {@link RestartWebServer#execute()} method to invoke the remote operation.
          *
-         * @param name The resource name of the environment to restart the web server for, in the form:
+         * @param name Required. The resource name of the environment to restart the web server for, in the form:
          *        "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
          * @param content the {@link com.google.api.services.composer.v1beta1.model.RestartWebServerRequest}
          * @return the request
@@ -2056,7 +2056,7 @@ public class CloudComposer extends com.google.api.client.googleapis.services.jso
            * tractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param name The resource name of the environment to restart the web server for, in the form:
+           * @param name Required. The resource name of the environment to restart the web server for, in the form:
          *        "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
            * @param content the {@link com.google.api.services.composer.v1beta1.model.RestartWebServerRequest}
            * @since 1.13
@@ -2127,13 +2127,13 @@ public class CloudComposer extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * The resource name of the environment to restart the web server for, in the form:
-           * "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+           * Required. The resource name of the environment to restart the web server for, in the
+           * form: "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** The resource name of the environment to restart the web server for, in the form:
+          /** Required. The resource name of the environment to restart the web server for, in the form:
          "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
            */
           public java.lang.String getName() {
@@ -2141,8 +2141,8 @@ public class CloudComposer extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * The resource name of the environment to restart the web server for, in the form:
-           * "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+           * Required. The resource name of the environment to restart the web server for, in the
+           * form: "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
            */
           public RestartWebServer setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

@@ -30,11 +30,19 @@ package com.google.api.services.sheets.v4.model;
 public final class BandedRange extends com.google.api.client.json.GenericJson {
 
   /**
-   * The ID of the banded range.
+   * The ID of the banded range. If unset, refer to banded_range_reference.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer bandedRangeId;
+
+  /**
+   * Output only. The reference of the banded range, used to identify the ID that is not supported
+   * by the banded_range_id.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String bandedRangeReference;
 
   /**
    * Properties for column bands. These properties are applied on a column- by-column basis
@@ -61,7 +69,7 @@ public final class BandedRange extends com.google.api.client.json.GenericJson {
   private BandingProperties rowProperties;
 
   /**
-   * The ID of the banded range.
+   * The ID of the banded range. If unset, refer to banded_range_reference.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getBandedRangeId() {
@@ -69,11 +77,30 @@ public final class BandedRange extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The ID of the banded range.
+   * The ID of the banded range. If unset, refer to banded_range_reference.
    * @param bandedRangeId bandedRangeId or {@code null} for none
    */
   public BandedRange setBandedRangeId(java.lang.Integer bandedRangeId) {
     this.bandedRangeId = bandedRangeId;
+    return this;
+  }
+
+  /**
+   * Output only. The reference of the banded range, used to identify the ID that is not supported
+   * by the banded_range_id.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBandedRangeReference() {
+    return bandedRangeReference;
+  }
+
+  /**
+   * Output only. The reference of the banded range, used to identify the ID that is not supported
+   * by the banded_range_id.
+   * @param bandedRangeReference bandedRangeReference or {@code null} for none
+   */
+  public BandedRange setBandedRangeReference(java.lang.String bandedRangeReference) {
+    this.bandedRangeReference = bandedRangeReference;
     return this;
   }
 

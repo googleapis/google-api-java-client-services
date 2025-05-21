@@ -47,7 +47,7 @@ public final class GoogleCloudApigeeV1UpdateAppGroupAppKeyRequest extends com.go
   private java.util.List<java.lang.String> apiProducts;
 
   /**
-   * The new AppGroupKey to be amended. Note that the status can be updated only via action.
+   * Note that only Scopes and Attributes of the AppGroupAppKey can be amended.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,7 +94,7 @@ public final class GoogleCloudApigeeV1UpdateAppGroupAppKeyRequest extends com.go
   }
 
   /**
-   * The new AppGroupKey to be amended. Note that the status can be updated only via action.
+   * Note that only Scopes and Attributes of the AppGroupAppKey can be amended.
    * @return value or {@code null} for none
    */
   public GoogleCloudApigeeV1AppGroupAppKey getAppGroupAppKey() {
@@ -102,7 +102,7 @@ public final class GoogleCloudApigeeV1UpdateAppGroupAppKeyRequest extends com.go
   }
 
   /**
-   * The new AppGroupKey to be amended. Note that the status can be updated only via action.
+   * Note that only Scopes and Attributes of the AppGroupAppKey can be amended.
    * @param appGroupAppKey appGroupAppKey or {@code null} for none
    */
   public GoogleCloudApigeeV1UpdateAppGroupAppKeyRequest setAppGroupAppKey(GoogleCloudApigeeV1AppGroupAppKey appGroupAppKey) {

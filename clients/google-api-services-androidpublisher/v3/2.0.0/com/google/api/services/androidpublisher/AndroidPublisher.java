@@ -17161,7 +17161,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
       }
       /**
-       * Checks whether a user's subscription purchase is valid and returns its expiry time.
+       * Deprecated: Use purchases.subscriptionsv2.get instead. Checks whether a user's subscription
+       * purchase is valid and returns its expiry time.
        *
        * Create a request for the method "subscriptions.get".
        *
@@ -17185,7 +17186,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/purchases/subscriptions/{subscriptionId}/tokens/{token}";
 
         /**
-         * Checks whether a user's subscription purchase is valid and returns its expiry time.
+         * Deprecated: Use purchases.subscriptionsv2.get instead. Checks whether a user's subscription
+         * purchase is valid and returns its expiry time.
          *
          * Create a request for the method "subscriptions.get".
          *
@@ -17333,8 +17335,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
       }
       /**
-       * Refunds a user's subscription purchase, but the subscription remains valid until its expiration
-       * time and it will continue to recur.
+       * Deprecated: Use orders.refund instead. Refunds a user's subscription purchase, but the
+       * subscription remains valid until its expiration time and it will continue to recur.
        *
        * Create a request for the method "subscriptions.refund".
        *
@@ -17358,8 +17360,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/purchases/subscriptions/{subscriptionId}/tokens/{token}:refund";
 
         /**
-         * Refunds a user's subscription purchase, but the subscription remains valid until its expiration
-         * time and it will continue to recur.
+         * Deprecated: Use orders.refund instead. Refunds a user's subscription purchase, but the
+         * subscription remains valid until its expiration time and it will continue to recur.
          *
          * Create a request for the method "subscriptions.refund".
          *
@@ -17500,8 +17502,9 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
       }
       /**
-       * Refunds and immediately revokes a user's subscription purchase. Access to the subscription will
-       * be terminated immediately and it will stop recurring.
+       * Deprecated: Use purchases.subscriptionsv2.revoke instead. Refunds and immediately revokes a
+       * user's subscription purchase. Access to the subscription will be terminated immediately and it
+       * will stop recurring.
        *
        * Create a request for the method "subscriptions.revoke".
        *
@@ -17525,8 +17528,9 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/purchases/subscriptions/{subscriptionId}/tokens/{token}:revoke";
 
         /**
-         * Refunds and immediately revokes a user's subscription purchase. Access to the subscription will
-         * be terminated immediately and it will stop recurring.
+         * Deprecated: Use purchases.subscriptionsv2.revoke instead. Refunds and immediately revokes a
+         * user's subscription purchase. Access to the subscription will be terminated immediately and it
+         * will stop recurring.
          *
          * Create a request for the method "subscriptions.revoke".
          *

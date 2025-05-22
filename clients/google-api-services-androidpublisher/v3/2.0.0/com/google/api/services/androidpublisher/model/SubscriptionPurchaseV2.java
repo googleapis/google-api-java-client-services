@@ -60,10 +60,11 @@ public final class SubscriptionPurchaseV2 extends com.google.api.client.json.Gen
   private java.lang.String kind;
 
   /**
-   * The order id of the latest order associated with the purchase of the subscription. For
-   * autoRenewing subscription, this is the order id of signup order if it is not renewed yet, or
-   * the last recurring order id (success, pending, or declined order). For prepaid subscription,
-   * this is the order id associated with the queried purchase token.
+   * Deprecated: Use line_items.latest_successful_order_id instead. The order id of the latest order
+   * associated with the purchase of the subscription. For autoRenewing subscription, this is the
+   * order id of signup order if it is not renewed yet, or the last recurring order id (success,
+   * pending, or declined order). For prepaid subscription, this is the order id associated with the
+   * queried purchase token.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -209,10 +210,11 @@ public final class SubscriptionPurchaseV2 extends com.google.api.client.json.Gen
   }
 
   /**
-   * The order id of the latest order associated with the purchase of the subscription. For
-   * autoRenewing subscription, this is the order id of signup order if it is not renewed yet, or
-   * the last recurring order id (success, pending, or declined order). For prepaid subscription,
-   * this is the order id associated with the queried purchase token.
+   * Deprecated: Use line_items.latest_successful_order_id instead. The order id of the latest order
+   * associated with the purchase of the subscription. For autoRenewing subscription, this is the
+   * order id of signup order if it is not renewed yet, or the last recurring order id (success,
+   * pending, or declined order). For prepaid subscription, this is the order id associated with the
+   * queried purchase token.
    * @return value or {@code null} for none
    */
   public java.lang.String getLatestOrderId() {
@@ -220,10 +222,11 @@ public final class SubscriptionPurchaseV2 extends com.google.api.client.json.Gen
   }
 
   /**
-   * The order id of the latest order associated with the purchase of the subscription. For
-   * autoRenewing subscription, this is the order id of signup order if it is not renewed yet, or
-   * the last recurring order id (success, pending, or declined order). For prepaid subscription,
-   * this is the order id associated with the queried purchase token.
+   * Deprecated: Use line_items.latest_successful_order_id instead. The order id of the latest order
+   * associated with the purchase of the subscription. For autoRenewing subscription, this is the
+   * order id of signup order if it is not renewed yet, or the last recurring order id (success,
+   * pending, or declined order). For prepaid subscription, this is the order id associated with the
+   * queried purchase token.
    * @param latestOrderId latestOrderId or {@code null} for none
    */
   public SubscriptionPurchaseV2 setLatestOrderId(java.lang.String latestOrderId) {

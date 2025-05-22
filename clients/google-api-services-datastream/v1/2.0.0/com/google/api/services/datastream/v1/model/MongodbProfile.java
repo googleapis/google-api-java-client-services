@@ -77,6 +77,13 @@ public final class MongodbProfile extends com.google.api.client.json.GenericJson
   private SrvConnectionFormat srvConnectionFormat;
 
   /**
+   * Optional. SSL configuration for the MongoDB connection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MongodbSslConfig sslConfig;
+
+  /**
    * Standard connection format.
    * The value may be {@code null}.
    */
@@ -184,6 +191,23 @@ public final class MongodbProfile extends com.google.api.client.json.GenericJson
    */
   public MongodbProfile setSrvConnectionFormat(SrvConnectionFormat srvConnectionFormat) {
     this.srvConnectionFormat = srvConnectionFormat;
+    return this;
+  }
+
+  /**
+   * Optional. SSL configuration for the MongoDB connection.
+   * @return value or {@code null} for none
+   */
+  public MongodbSslConfig getSslConfig() {
+    return sslConfig;
+  }
+
+  /**
+   * Optional. SSL configuration for the MongoDB connection.
+   * @param sslConfig sslConfig or {@code null} for none
+   */
+  public MongodbProfile setSslConfig(MongodbSslConfig sslConfig) {
+    this.sslConfig = sslConfig;
     return this;
   }
 

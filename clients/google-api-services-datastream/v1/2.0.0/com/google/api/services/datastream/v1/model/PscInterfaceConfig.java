@@ -32,7 +32,7 @@ public final class PscInterfaceConfig extends com.google.api.client.json.Generic
 
   /**
    * Required. Fully qualified name of the Network Attachment that Datastream will connect to.
-   * Format: `projects/{{project}}/regions/{{region}}/networkAttachments/{{name}}`
+   * Format: `projects/{project}/regions/{region}/networkAttachments/{name}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,7 +40,7 @@ public final class PscInterfaceConfig extends com.google.api.client.json.Generic
 
   /**
    * Required. Fully qualified name of the Network Attachment that Datastream will connect to.
-   * Format: `projects/{{project}}/regions/{{region}}/networkAttachments/{{name}}`
+   * Format: `projects/{project}/regions/{region}/networkAttachments/{name}`
    * @return value or {@code null} for none
    */
   public java.lang.String getNetworkAttachment() {
@@ -49,7 +49,7 @@ public final class PscInterfaceConfig extends com.google.api.client.json.Generic
 
   /**
    * Required. Fully qualified name of the Network Attachment that Datastream will connect to.
-   * Format: `projects/{{project}}/regions/{{region}}/networkAttachments/{{name}}`
+   * Format: `projects/{project}/regions/{region}/networkAttachments/{name}`
    * @param networkAttachment networkAttachment or {@code null} for none
    */
   public PscInterfaceConfig setNetworkAttachment(java.lang.String networkAttachment) {

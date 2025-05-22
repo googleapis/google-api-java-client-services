@@ -40,6 +40,16 @@ public final class MethodSettings extends com.google.api.client.json.GenericJson
   private java.util.List<java.lang.String> autoPopulatedFields;
 
   /**
+   * Batching configuration for an API method in client libraries. Example of a YAML configuration:
+   * publishing: method_settings: - selector: google.example.v1.ExampleService.BatchCreateExample
+   * batching: element_count_threshold: 1000 request_byte_threshold: 100000000
+   * delay_threshold_millis: 10
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BatchingConfigProto batching;
+
+  /**
    * Describes settings to use for long-running operations when generating API methods for RPCs.
    * Complements RPCs that use the annotations in google/longrunning/operations.proto. Example of a
    * YAML configuration:: publishing: method_settings: - selector:
@@ -80,6 +90,29 @@ public final class MethodSettings extends com.google.api.client.json.GenericJson
    */
   public MethodSettings setAutoPopulatedFields(java.util.List<java.lang.String> autoPopulatedFields) {
     this.autoPopulatedFields = autoPopulatedFields;
+    return this;
+  }
+
+  /**
+   * Batching configuration for an API method in client libraries. Example of a YAML configuration:
+   * publishing: method_settings: - selector: google.example.v1.ExampleService.BatchCreateExample
+   * batching: element_count_threshold: 1000 request_byte_threshold: 100000000
+   * delay_threshold_millis: 10
+   * @return value or {@code null} for none
+   */
+  public BatchingConfigProto getBatching() {
+    return batching;
+  }
+
+  /**
+   * Batching configuration for an API method in client libraries. Example of a YAML configuration:
+   * publishing: method_settings: - selector: google.example.v1.ExampleService.BatchCreateExample
+   * batching: element_count_threshold: 1000 request_byte_threshold: 100000000
+   * delay_threshold_millis: 10
+   * @param batching batching or {@code null} for none
+   */
+  public MethodSettings setBatching(BatchingConfigProto batching) {
+    this.batching = batching;
     return this;
   }
 

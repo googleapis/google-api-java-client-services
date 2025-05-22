@@ -63,6 +63,7 @@ public final class AlloyDbSettings extends com.google.api.client.json.GenericJso
   private java.util.Map<String, java.lang.String> labels;
 
   /**
+   * Settings for the cluster's primary instance
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -155,6 +156,7 @@ public final class AlloyDbSettings extends com.google.api.client.json.GenericJso
   }
 
   /**
+   * Settings for the cluster's primary instance
    * @return value or {@code null} for none
    */
   public PrimaryInstanceSettings getPrimaryInstanceSettings() {
@@ -162,6 +164,7 @@ public final class AlloyDbSettings extends com.google.api.client.json.GenericJso
   }
 
   /**
+   * Settings for the cluster's primary instance
    * @param primaryInstanceSettings primaryInstanceSettings or {@code null} for none
    */
   public AlloyDbSettings setPrimaryInstanceSettings(PrimaryInstanceSettings primaryInstanceSettings) {

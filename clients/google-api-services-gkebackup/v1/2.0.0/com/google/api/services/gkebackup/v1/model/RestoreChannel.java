@@ -47,8 +47,7 @@ public final class RestoreChannel extends com.google.api.client.json.GenericJson
 
   /**
    * Required. Immutable. The project into which the backups will be restored. The format is
-   * `projects/{project}`. Currently, {project} can only be the project number. Support for project
-   * IDs will be added in the future.
+   * `projects/{projectId}` or `projects/{projectNumber}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -141,8 +140,7 @@ public final class RestoreChannel extends com.google.api.client.json.GenericJson
 
   /**
    * Required. Immutable. The project into which the backups will be restored. The format is
-   * `projects/{project}`. Currently, {project} can only be the project number. Support for project
-   * IDs will be added in the future.
+   * `projects/{projectId}` or `projects/{projectNumber}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getDestinationProject() {
@@ -151,8 +149,7 @@ public final class RestoreChannel extends com.google.api.client.json.GenericJson
 
   /**
    * Required. Immutable. The project into which the backups will be restored. The format is
-   * `projects/{project}`. Currently, {project} can only be the project number. Support for project
-   * IDs will be added in the future.
+   * `projects/{projectId}` or `projects/{projectNumber}`.
    * @param destinationProject destinationProject or {@code null} for none
    */
   public RestoreChannel setDestinationProject(java.lang.String destinationProject) {

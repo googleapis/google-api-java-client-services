@@ -103,6 +103,15 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings exten
   private java.lang.Boolean enableVisualContentSummary;
 
   /**
+   * Output only. Feature config for the engine to opt in or opt out of features. Supported keys: *
+   * `agent-gallery` * `no-code-agent-builder` * `prompt-gallery` * `model-selector` * `notebook-lm`
+   * * `people-search` * `people-search-org-chart` * `bi-directional-audio` * `feedback`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> features;
+
+  /**
    * Describes generative answer configuration.
    * The value may be {@code null}.
    */
@@ -280,6 +289,27 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings exten
    */
   public GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings setEnableVisualContentSummary(java.lang.Boolean enableVisualContentSummary) {
     this.enableVisualContentSummary = enableVisualContentSummary;
+    return this;
+  }
+
+  /**
+   * Output only. Feature config for the engine to opt in or opt out of features. Supported keys: *
+   * `agent-gallery` * `no-code-agent-builder` * `prompt-gallery` * `model-selector` * `notebook-lm`
+   * * `people-search` * `people-search-org-chart` * `bi-directional-audio` * `feedback`
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getFeatures() {
+    return features;
+  }
+
+  /**
+   * Output only. Feature config for the engine to opt in or opt out of features. Supported keys: *
+   * `agent-gallery` * `no-code-agent-builder` * `prompt-gallery` * `model-selector` * `notebook-lm`
+   * * `people-search` * `people-search-org-chart` * `bi-directional-audio` * `feedback`
+   * @param features features or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettings setFeatures(java.util.Map<String, java.lang.String> features) {
+    this.features = features;
     return this;
   }
 

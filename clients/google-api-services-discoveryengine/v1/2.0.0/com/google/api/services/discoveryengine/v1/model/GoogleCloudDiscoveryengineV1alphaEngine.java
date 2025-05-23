@@ -85,6 +85,16 @@ public final class GoogleCloudDiscoveryengineV1alphaEngine extends com.google.ap
   private java.lang.String displayName;
 
   /**
+   * Optional. Feature config for the engine to opt in or opt out of features. Supported keys: *
+   * `*`: all features, if it's present, all other feature state settings are ignored. * `agent-
+   * gallery` * `no-code-agent-builder` * `prompt-gallery` * `model-selector` * `notebook-lm` *
+   * `people-search` * `people-search-org-chart` * `bi-directional-audio` * `feedback`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> features;
+
+  /**
    * Optional. The industry vertical that the engine registers. The restriction of the Engine
    * industry vertical is based on DataStore: Vertical on Engine has to match vertical of the
    * DataStore linked to the engine.
@@ -276,6 +286,29 @@ public final class GoogleCloudDiscoveryengineV1alphaEngine extends com.google.ap
    */
   public GoogleCloudDiscoveryengineV1alphaEngine setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Optional. Feature config for the engine to opt in or opt out of features. Supported keys: *
+   * `*`: all features, if it's present, all other feature state settings are ignored. * `agent-
+   * gallery` * `no-code-agent-builder` * `prompt-gallery` * `model-selector` * `notebook-lm` *
+   * `people-search` * `people-search-org-chart` * `bi-directional-audio` * `feedback`
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getFeatures() {
+    return features;
+  }
+
+  /**
+   * Optional. Feature config for the engine to opt in or opt out of features. Supported keys: *
+   * `*`: all features, if it's present, all other feature state settings are ignored. * `agent-
+   * gallery` * `no-code-agent-builder` * `prompt-gallery` * `model-selector` * `notebook-lm` *
+   * `people-search` * `people-search-org-chart` * `bi-directional-audio` * `feedback`
+   * @param features features or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaEngine setFeatures(java.util.Map<String, java.lang.String> features) {
+    this.features = features;
     return this;
   }
 

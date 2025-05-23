@@ -68,16 +68,6 @@ public final class GoogleCloudDiscoveryengineV1UserLicense extends com.google.ap
   private String updateTime;
 
   /**
-   * Optional. The full resource name of the User, in the format of
-   * `projects/{project}/locations/{location}/userStores/{user_store}/users/{user_id}`. This field
-   * must be a UTF-8 encoded string with a length limit of 2048 characters. If the user field is
-   * empty, it's indicating the user has not logged in yet and no User entity is created.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String user;
-
-  /**
    * Required. Immutable. The user principal of the User, could be email address or other prinical
    * identifier. This field is immutable. Admin assign licenses based on the user principal.
    * The value may be {@code null}.
@@ -180,29 +170,6 @@ public final class GoogleCloudDiscoveryengineV1UserLicense extends com.google.ap
    */
   public GoogleCloudDiscoveryengineV1UserLicense setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
-    return this;
-  }
-
-  /**
-   * Optional. The full resource name of the User, in the format of
-   * `projects/{project}/locations/{location}/userStores/{user_store}/users/{user_id}`. This field
-   * must be a UTF-8 encoded string with a length limit of 2048 characters. If the user field is
-   * empty, it's indicating the user has not logged in yet and no User entity is created.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getUser() {
-    return user;
-  }
-
-  /**
-   * Optional. The full resource name of the User, in the format of
-   * `projects/{project}/locations/{location}/userStores/{user_store}/users/{user_id}`. This field
-   * must be a UTF-8 encoded string with a length limit of 2048 characters. If the user field is
-   * empty, it's indicating the user has not logged in yet and no User entity is created.
-   * @param user user or {@code null} for none
-   */
-  public GoogleCloudDiscoveryengineV1UserLicense setUser(java.lang.String user) {
-    this.user = user;
     return this;
   }
 

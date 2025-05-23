@@ -40,6 +40,14 @@ public final class GoogleCloudDiscoveryengineV1alphaEngineRecommendationMetadata
   private java.lang.String dataState;
 
   /**
+   * Output only. The timestamp when the latest successful training finished. Only applicable on
+   * Media Recommendation engines.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String lastTrainTime;
+
+  /**
    * Output only. The timestamp when the latest successful tune finished. Only applicable on Media
    * Recommendation engines.
    * The value may be {@code null}.
@@ -85,6 +93,25 @@ public final class GoogleCloudDiscoveryengineV1alphaEngineRecommendationMetadata
    */
   public GoogleCloudDiscoveryengineV1alphaEngineRecommendationMetadata setDataState(java.lang.String dataState) {
     this.dataState = dataState;
+    return this;
+  }
+
+  /**
+   * Output only. The timestamp when the latest successful training finished. Only applicable on
+   * Media Recommendation engines.
+   * @return value or {@code null} for none
+   */
+  public String getLastTrainTime() {
+    return lastTrainTime;
+  }
+
+  /**
+   * Output only. The timestamp when the latest successful training finished. Only applicable on
+   * Media Recommendation engines.
+   * @param lastTrainTime lastTrainTime or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaEngineRecommendationMetadata setLastTrainTime(String lastTrainTime) {
+    this.lastTrainTime = lastTrainTime;
     return this;
   }
 

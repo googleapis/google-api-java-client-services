@@ -65,6 +65,14 @@ public final class GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingCo
   private java.util.List<java.lang.String> excludeHtmlIds;
 
   /**
+   * Optional. Contains the required structure types to extract from the document. Supported values:
+   * * `shareholder-structure`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> structuredContentTypes;
+
+  /**
    * Optional. If true, the LLM based annotation is added to the image during parsing.
    * @return value or {@code null} for none
    */
@@ -146,6 +154,25 @@ public final class GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingCo
    */
   public GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingConfigLayoutParsingConfig setExcludeHtmlIds(java.util.List<java.lang.String> excludeHtmlIds) {
     this.excludeHtmlIds = excludeHtmlIds;
+    return this;
+  }
+
+  /**
+   * Optional. Contains the required structure types to extract from the document. Supported values:
+   * * `shareholder-structure`
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getStructuredContentTypes() {
+    return structuredContentTypes;
+  }
+
+  /**
+   * Optional. Contains the required structure types to extract from the document. Supported values:
+   * * `shareholder-structure`
+   * @param structuredContentTypes structuredContentTypes or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingConfigLayoutParsingConfig setStructuredContentTypes(java.util.List<java.lang.String> structuredContentTypes) {
+    this.structuredContentTypes = structuredContentTypes;
     return this;
   }
 

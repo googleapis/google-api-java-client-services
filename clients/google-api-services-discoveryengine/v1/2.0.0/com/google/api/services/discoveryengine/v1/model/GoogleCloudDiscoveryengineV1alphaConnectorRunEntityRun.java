@@ -59,7 +59,7 @@ public final class GoogleCloudDiscoveryengineV1alphaConnectorRunEntityRun extend
   private java.util.List<GoogleRpcStatus> errors;
 
   /**
-   * The number of documents extracted from connector source, ready to be ingested to UCS.
+   * The number of documents extracted from connector source, ready to be ingested to VAIS.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -78,6 +78,14 @@ public final class GoogleCloudDiscoveryengineV1alphaConnectorRunEntityRun extend
    */
   @com.google.api.client.util.Key
   private GoogleCloudDiscoveryengineV1alphaConnectorRunEntityRunProgress progress;
+
+  /**
+   * The number of documents scheduled to be crawled/extracted from connector source. This only
+   * applies to third party connectors.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long scheduledRecordCount;
 
   /**
    * The number of requests sent to 3p API.
@@ -186,7 +194,7 @@ public final class GoogleCloudDiscoveryengineV1alphaConnectorRunEntityRun extend
   }
 
   /**
-   * The number of documents extracted from connector source, ready to be ingested to UCS.
+   * The number of documents extracted from connector source, ready to be ingested to VAIS.
    * @return value or {@code null} for none
    */
   public java.lang.Long getExtractedRecordCount() {
@@ -194,7 +202,7 @@ public final class GoogleCloudDiscoveryengineV1alphaConnectorRunEntityRun extend
   }
 
   /**
-   * The number of documents extracted from connector source, ready to be ingested to UCS.
+   * The number of documents extracted from connector source, ready to be ingested to VAIS.
    * @param extractedRecordCount extractedRecordCount or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaConnectorRunEntityRun setExtractedRecordCount(java.lang.Long extractedRecordCount) {
@@ -233,6 +241,25 @@ public final class GoogleCloudDiscoveryengineV1alphaConnectorRunEntityRun extend
    */
   public GoogleCloudDiscoveryengineV1alphaConnectorRunEntityRun setProgress(GoogleCloudDiscoveryengineV1alphaConnectorRunEntityRunProgress progress) {
     this.progress = progress;
+    return this;
+  }
+
+  /**
+   * The number of documents scheduled to be crawled/extracted from connector source. This only
+   * applies to third party connectors.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getScheduledRecordCount() {
+    return scheduledRecordCount;
+  }
+
+  /**
+   * The number of documents scheduled to be crawled/extracted from connector source. This only
+   * applies to third party connectors.
+   * @param scheduledRecordCount scheduledRecordCount or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaConnectorRunEntityRun setScheduledRecordCount(java.lang.Long scheduledRecordCount) {
+    this.scheduledRecordCount = scheduledRecordCount;
     return this;
   }
 

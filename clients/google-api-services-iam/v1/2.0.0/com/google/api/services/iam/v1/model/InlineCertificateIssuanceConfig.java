@@ -53,7 +53,7 @@ public final class InlineCertificateIssuanceConfig extends com.google.api.client
   private java.lang.String keyAlgorithm;
 
   /**
-   * Optional. Lifetime of the workload certificates issued by the CA pool. Must be between 10 hours
+   * Optional. Lifetime of the workload certificates issued by the CA pool. Must be between 24 hours
    * and 30 days. If not specified, this will be defaulted to 24 hours.
    * The value may be {@code null}.
    */
@@ -61,9 +61,9 @@ public final class InlineCertificateIssuanceConfig extends com.google.api.client
   private String lifetime;
 
   /**
-   * Optional. Rotation window percentage indicating when certificate rotation should be initiated
-   * based on remaining lifetime. Must be between 10 and 80. If not specified, this will be
-   * defaulted to 50.
+   * Optional. Rotation window percentage, the percentage of remaining lifetime after which
+   * certificate rotation is initiated. Must be between 50 and 80. If no value is specified,
+   * rotation window percentage is defaulted to 50.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -118,7 +118,7 @@ public final class InlineCertificateIssuanceConfig extends com.google.api.client
   }
 
   /**
-   * Optional. Lifetime of the workload certificates issued by the CA pool. Must be between 10 hours
+   * Optional. Lifetime of the workload certificates issued by the CA pool. Must be between 24 hours
    * and 30 days. If not specified, this will be defaulted to 24 hours.
    * @return value or {@code null} for none
    */
@@ -127,7 +127,7 @@ public final class InlineCertificateIssuanceConfig extends com.google.api.client
   }
 
   /**
-   * Optional. Lifetime of the workload certificates issued by the CA pool. Must be between 10 hours
+   * Optional. Lifetime of the workload certificates issued by the CA pool. Must be between 24 hours
    * and 30 days. If not specified, this will be defaulted to 24 hours.
    * @param lifetime lifetime or {@code null} for none
    */
@@ -137,9 +137,9 @@ public final class InlineCertificateIssuanceConfig extends com.google.api.client
   }
 
   /**
-   * Optional. Rotation window percentage indicating when certificate rotation should be initiated
-   * based on remaining lifetime. Must be between 10 and 80. If not specified, this will be
-   * defaulted to 50.
+   * Optional. Rotation window percentage, the percentage of remaining lifetime after which
+   * certificate rotation is initiated. Must be between 50 and 80. If no value is specified,
+   * rotation window percentage is defaulted to 50.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getRotationWindowPercentage() {
@@ -147,9 +147,9 @@ public final class InlineCertificateIssuanceConfig extends com.google.api.client
   }
 
   /**
-   * Optional. Rotation window percentage indicating when certificate rotation should be initiated
-   * based on remaining lifetime. Must be between 10 and 80. If not specified, this will be
-   * defaulted to 50.
+   * Optional. Rotation window percentage, the percentage of remaining lifetime after which
+   * certificate rotation is initiated. Must be between 50 and 80. If no value is specified,
+   * rotation window percentage is defaulted to 50.
    * @param rotationWindowPercentage rotationWindowPercentage or {@code null} for none
    */
   public InlineCertificateIssuanceConfig setRotationWindowPercentage(java.lang.Integer rotationWindowPercentage) {

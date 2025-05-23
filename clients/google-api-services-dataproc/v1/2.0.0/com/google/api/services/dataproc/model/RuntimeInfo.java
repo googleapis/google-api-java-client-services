@@ -70,6 +70,13 @@ public final class RuntimeInfo extends com.google.api.client.json.GenericJson {
   private java.lang.String outputUri;
 
   /**
+   * Optional. Properties of the workload organized by origin.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PropertiesInfo propertiesInfo;
+
+  /**
    * Output only. Approximate workload resource usage, calculated when the workload completes (see
    * Dataproc Serverless pricing (https://cloud.google.com/dataproc-serverless/pricing)).Note: This
    * metric calculation may change in the future, for example, to capture cumulative workload
@@ -161,6 +168,23 @@ public final class RuntimeInfo extends com.google.api.client.json.GenericJson {
    */
   public RuntimeInfo setOutputUri(java.lang.String outputUri) {
     this.outputUri = outputUri;
+    return this;
+  }
+
+  /**
+   * Optional. Properties of the workload organized by origin.
+   * @return value or {@code null} for none
+   */
+  public PropertiesInfo getPropertiesInfo() {
+    return propertiesInfo;
+  }
+
+  /**
+   * Optional. Properties of the workload organized by origin.
+   * @param propertiesInfo propertiesInfo or {@code null} for none
+   */
+  public RuntimeInfo setPropertiesInfo(PropertiesInfo propertiesInfo) {
+    this.propertiesInfo = propertiesInfo;
     return this;
   }
 

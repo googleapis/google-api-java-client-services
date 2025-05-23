@@ -51,6 +51,13 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * Optional. The type of the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String clusterType;
+
+  /**
    * Optional. A Cloud Storage bucket used to stage job dependencies, config files, and job driver
    * console output. If you do not specify a staging bucket, Cloud Dataproc will determine a Cloud
    * Storage location (US, ASIA, or EU) for your cluster's staging bucket according to the Compute
@@ -209,6 +216,23 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
    */
   public ClusterConfig setAuxiliaryNodeGroups(java.util.List<AuxiliaryNodeGroup> auxiliaryNodeGroups) {
     this.auxiliaryNodeGroups = auxiliaryNodeGroups;
+    return this;
+  }
+
+  /**
+   * Optional. The type of the cluster.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getClusterType() {
+    return clusterType;
+  }
+
+  /**
+   * Optional. The type of the cluster.
+   * @param clusterType clusterType or {@code null} for none
+   */
+  public ClusterConfig setClusterType(java.lang.String clusterType) {
+    this.clusterType = clusterType;
     return this;
   }
 

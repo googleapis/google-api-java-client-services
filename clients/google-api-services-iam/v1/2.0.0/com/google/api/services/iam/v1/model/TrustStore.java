@@ -17,8 +17,8 @@
 package com.google.api.services.iam.v1.model;
 
 /**
- * Trust store that contains trust anchors and optional intermediate CAs used in PKI to build trust
- * chain and verify a client's identity.
+ * Trust store that contains trust anchors and optional intermediate CAs used in PKI to build a
+ * trust chain(trust hierarchy) and verify a client's identity.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Identity and Access Management (IAM) API. For a

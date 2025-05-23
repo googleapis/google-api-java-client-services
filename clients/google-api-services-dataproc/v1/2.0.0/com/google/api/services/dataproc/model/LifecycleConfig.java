@@ -47,6 +47,24 @@ public final class LifecycleConfig extends com.google.api.client.json.GenericJso
   private String autoDeleteTtl;
 
   /**
+   * Optional. The time when cluster will be auto-stopped (see JSON representation of Timestamp
+   * (https://developers.google.com/protocol-buffers/docs/proto3#json)).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String autoStopTime;
+
+  /**
+   * Optional. The lifetime duration of the cluster. The cluster will be auto-stopped at the end of
+   * this period, calculated from the time of submission of the create or update cluster request.
+   * Minimum value is 10 minutes; maximum value is 14 days (see JSON representation of Duration
+   * (https://developers.google.com/protocol-buffers/docs/proto3#json)).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String autoStopTtl;
+
+  /**
    * Optional. The duration to keep the cluster alive while idling (when no jobs are running).
    * Passing this threshold will cause the cluster to be deleted. Minimum value is 5 minutes;
    * maximum value is 14 days (see JSON representation of Duration
@@ -64,6 +82,16 @@ public final class LifecycleConfig extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private String idleStartTime;
+
+  /**
+   * Optional. The duration to keep the cluster started while idling (when no jobs are running).
+   * Passing this threshold will cause the cluster to be stopped. Minimum value is 5 minutes;
+   * maximum value is 14 days (see JSON representation of Duration
+   * (https://developers.google.com/protocol-buffers/docs/proto3#json)).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String idleStopTtl;
 
   /**
    * Optional. The time when cluster will be auto-deleted (see JSON representation of Timestamp
@@ -102,6 +130,48 @@ public final class LifecycleConfig extends com.google.api.client.json.GenericJso
    */
   public LifecycleConfig setAutoDeleteTtl(String autoDeleteTtl) {
     this.autoDeleteTtl = autoDeleteTtl;
+    return this;
+  }
+
+  /**
+   * Optional. The time when cluster will be auto-stopped (see JSON representation of Timestamp
+   * (https://developers.google.com/protocol-buffers/docs/proto3#json)).
+   * @return value or {@code null} for none
+   */
+  public String getAutoStopTime() {
+    return autoStopTime;
+  }
+
+  /**
+   * Optional. The time when cluster will be auto-stopped (see JSON representation of Timestamp
+   * (https://developers.google.com/protocol-buffers/docs/proto3#json)).
+   * @param autoStopTime autoStopTime or {@code null} for none
+   */
+  public LifecycleConfig setAutoStopTime(String autoStopTime) {
+    this.autoStopTime = autoStopTime;
+    return this;
+  }
+
+  /**
+   * Optional. The lifetime duration of the cluster. The cluster will be auto-stopped at the end of
+   * this period, calculated from the time of submission of the create or update cluster request.
+   * Minimum value is 10 minutes; maximum value is 14 days (see JSON representation of Duration
+   * (https://developers.google.com/protocol-buffers/docs/proto3#json)).
+   * @return value or {@code null} for none
+   */
+  public String getAutoStopTtl() {
+    return autoStopTtl;
+  }
+
+  /**
+   * Optional. The lifetime duration of the cluster. The cluster will be auto-stopped at the end of
+   * this period, calculated from the time of submission of the create or update cluster request.
+   * Minimum value is 10 minutes; maximum value is 14 days (see JSON representation of Duration
+   * (https://developers.google.com/protocol-buffers/docs/proto3#json)).
+   * @param autoStopTtl autoStopTtl or {@code null} for none
+   */
+  public LifecycleConfig setAutoStopTtl(String autoStopTtl) {
+    this.autoStopTtl = autoStopTtl;
     return this;
   }
 
@@ -146,6 +216,29 @@ public final class LifecycleConfig extends com.google.api.client.json.GenericJso
    */
   public LifecycleConfig setIdleStartTime(String idleStartTime) {
     this.idleStartTime = idleStartTime;
+    return this;
+  }
+
+  /**
+   * Optional. The duration to keep the cluster started while idling (when no jobs are running).
+   * Passing this threshold will cause the cluster to be stopped. Minimum value is 5 minutes;
+   * maximum value is 14 days (see JSON representation of Duration
+   * (https://developers.google.com/protocol-buffers/docs/proto3#json)).
+   * @return value or {@code null} for none
+   */
+  public String getIdleStopTtl() {
+    return idleStopTtl;
+  }
+
+  /**
+   * Optional. The duration to keep the cluster started while idling (when no jobs are running).
+   * Passing this threshold will cause the cluster to be stopped. Minimum value is 5 minutes;
+   * maximum value is 14 days (see JSON representation of Duration
+   * (https://developers.google.com/protocol-buffers/docs/proto3#json)).
+   * @param idleStopTtl idleStopTtl or {@code null} for none
+   */
+  public LifecycleConfig setIdleStopTtl(String idleStopTtl) {
+    this.idleStopTtl = idleStopTtl;
     return this;
   }
 

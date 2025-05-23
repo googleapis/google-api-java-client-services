@@ -17,7 +17,7 @@
 package com.google.api.services.dataproc.model;
 
 /**
- * Specifies the config of disk options for a group of VM instances.
+ * Specifies the config of boot disk and attached disk options for a group of VM instances.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataproc API. For a detailed explanation see:

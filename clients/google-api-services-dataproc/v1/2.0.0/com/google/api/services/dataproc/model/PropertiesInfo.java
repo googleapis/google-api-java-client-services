@@ -17,7 +17,7 @@
 package com.google.api.services.dataproc.model;
 
 /**
- * Details of a native query for a Spark Application
+ * Properties of the workload organized by origin.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataproc API. For a detailed explanation see:
@@ -27,40 +27,40 @@ package com.google.api.services.dataproc.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class AccessSessionSparkApplicationNativeSqlQueryResponse extends com.google.api.client.json.GenericJson {
+public final class PropertiesInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Native SQL Execution Data
+   * Output only. Properties set by autotuning engine.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private NativeSqlExecutionUiData executionData;
+  private java.util.Map<String, ValueInfo> autotuningProperties;
 
   /**
-   * Native SQL Execution Data
+   * Output only. Properties set by autotuning engine.
    * @return value or {@code null} for none
    */
-  public NativeSqlExecutionUiData getExecutionData() {
-    return executionData;
+  public java.util.Map<String, ValueInfo> getAutotuningProperties() {
+    return autotuningProperties;
   }
 
   /**
-   * Native SQL Execution Data
-   * @param executionData executionData or {@code null} for none
+   * Output only. Properties set by autotuning engine.
+   * @param autotuningProperties autotuningProperties or {@code null} for none
    */
-  public AccessSessionSparkApplicationNativeSqlQueryResponse setExecutionData(NativeSqlExecutionUiData executionData) {
-    this.executionData = executionData;
+  public PropertiesInfo setAutotuningProperties(java.util.Map<String, ValueInfo> autotuningProperties) {
+    this.autotuningProperties = autotuningProperties;
     return this;
   }
 
   @Override
-  public AccessSessionSparkApplicationNativeSqlQueryResponse set(String fieldName, Object value) {
-    return (AccessSessionSparkApplicationNativeSqlQueryResponse) super.set(fieldName, value);
+  public PropertiesInfo set(String fieldName, Object value) {
+    return (PropertiesInfo) super.set(fieldName, value);
   }
 
   @Override
-  public AccessSessionSparkApplicationNativeSqlQueryResponse clone() {
-    return (AccessSessionSparkApplicationNativeSqlQueryResponse) super.clone();
+  public PropertiesInfo clone() {
+    return (PropertiesInfo) super.clone();
   }
 
 }

@@ -36,6 +36,13 @@ public final class AutoscalingPolicy extends com.google.api.client.json.GenericJ
   private BasicAutoscalingAlgorithm basicAlgorithm;
 
   /**
+   * Optional. The type of the clusters for which this autoscaling policy is to be configured.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String clusterType;
+
+  /**
    * Required. The policy id.The id must contain only letters (a-z, A-Z), numbers (0-9), underscores
    * (_), and hyphens (-). Cannot begin or end with underscore or hyphen. Must consist of between 3
    * and 50 characters.
@@ -93,6 +100,23 @@ public final class AutoscalingPolicy extends com.google.api.client.json.GenericJ
    */
   public AutoscalingPolicy setBasicAlgorithm(BasicAutoscalingAlgorithm basicAlgorithm) {
     this.basicAlgorithm = basicAlgorithm;
+    return this;
+  }
+
+  /**
+   * Optional. The type of the clusters for which this autoscaling policy is to be configured.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getClusterType() {
+    return clusterType;
+  }
+
+  /**
+   * Optional. The type of the clusters for which this autoscaling policy is to be configured.
+   * @param clusterType clusterType or {@code null} for none
+   */
+  public AutoscalingPolicy setClusterType(java.lang.String clusterType) {
+    this.clusterType = clusterType;
     return this;
   }
 

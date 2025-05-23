@@ -1234,7 +1234,7 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
      * This request holds the parameters needed by the cloudsupport server.  After setting any optional
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
-     * @param name The resource name for the case.
+     * @param name Identifier. The resource name for the case.
      * @param content the {@link com.google.api.services.cloudsupport.v2.model.CloudSupportCase}
      * @return the request
      */
@@ -1270,7 +1270,7 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
        * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name The resource name for the case.
+       * @param name Identifier. The resource name for the case.
        * @param content the {@link com.google.api.services.cloudsupport.v2.model.CloudSupportCase}
        * @since 1.13
        */
@@ -1339,17 +1339,17 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
         return (Patch) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** The resource name for the case. */
+      /** Identifier. The resource name for the case. */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** The resource name for the case.
+      /** Identifier. The resource name for the case.
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /** The resource name for the case. */
+      /** Identifier. The resource name for the case. */
       public Patch setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

@@ -100,7 +100,7 @@ public final class CloudSupportCase extends com.google.api.client.json.GenericJs
   private java.lang.String languageCode;
 
   /**
-   * The resource name for the case.
+   * Identifier. The resource name for the case.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -299,7 +299,7 @@ public final class CloudSupportCase extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The resource name for the case.
+   * Identifier. The resource name for the case.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -307,7 +307,7 @@ public final class CloudSupportCase extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The resource name for the case.
+   * Identifier. The resource name for the case.
    * @param name name or {@code null} for none
    */
   public CloudSupportCase setName(java.lang.String name) {

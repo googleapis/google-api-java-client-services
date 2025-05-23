@@ -44,8 +44,7 @@ public final class Actor extends com.google.api.client.json.GenericJson {
   /**
    * The email address of the actor. If not provided, it is inferred from the credentials supplied
    * during case creation. When a name is provided, an email must also be provided. If the user is a
-   * Google Support agent, this is obfuscated. This field is deprecated. Use **username** field
-   * instead.
+   * Google Support agent, this is obfuscated. This field is deprecated. Use `username` instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,8 +91,7 @@ public final class Actor extends com.google.api.client.json.GenericJson {
   /**
    * The email address of the actor. If not provided, it is inferred from the credentials supplied
    * during case creation. When a name is provided, an email must also be provided. If the user is a
-   * Google Support agent, this is obfuscated. This field is deprecated. Use **username** field
-   * instead.
+   * Google Support agent, this is obfuscated. This field is deprecated. Use `username` instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getEmail() {
@@ -103,8 +101,7 @@ public final class Actor extends com.google.api.client.json.GenericJson {
   /**
    * The email address of the actor. If not provided, it is inferred from the credentials supplied
    * during case creation. When a name is provided, an email must also be provided. If the user is a
-   * Google Support agent, this is obfuscated. This field is deprecated. Use **username** field
-   * instead.
+   * Google Support agent, this is obfuscated. This field is deprecated. Use `username` instead.
    * @param email email or {@code null} for none
    */
   public Actor setEmail(java.lang.String email) {

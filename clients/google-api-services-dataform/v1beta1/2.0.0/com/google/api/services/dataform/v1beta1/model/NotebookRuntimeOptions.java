@@ -30,12 +30,42 @@ package com.google.api.services.dataform.v1beta1.model;
 public final class NotebookRuntimeOptions extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The resource name of the [Colab runtime template]
+   * (https://cloud.google.com/colab/docs/runtimes), from which a runtime is created for notebook
+   * executions. If not specified, a runtime is created with Colab's default specifications.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String aiPlatformNotebookRuntimeTemplate;
+
+  /**
    * Optional. The Google Cloud Storage location to upload the result to. Format: `gs://bucket-
    * name`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String gcsOutputBucket;
+
+  /**
+   * Optional. The resource name of the [Colab runtime template]
+   * (https://cloud.google.com/colab/docs/runtimes), from which a runtime is created for notebook
+   * executions. If not specified, a runtime is created with Colab's default specifications.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAiPlatformNotebookRuntimeTemplate() {
+    return aiPlatformNotebookRuntimeTemplate;
+  }
+
+  /**
+   * Optional. The resource name of the [Colab runtime template]
+   * (https://cloud.google.com/colab/docs/runtimes), from which a runtime is created for notebook
+   * executions. If not specified, a runtime is created with Colab's default specifications.
+   * @param aiPlatformNotebookRuntimeTemplate aiPlatformNotebookRuntimeTemplate or {@code null} for none
+   */
+  public NotebookRuntimeOptions setAiPlatformNotebookRuntimeTemplate(java.lang.String aiPlatformNotebookRuntimeTemplate) {
+    this.aiPlatformNotebookRuntimeTemplate = aiPlatformNotebookRuntimeTemplate;
+    return this;
+  }
 
   /**
    * Optional. The Google Cloud Storage location to upload the result to. Format: `gs://bucket-

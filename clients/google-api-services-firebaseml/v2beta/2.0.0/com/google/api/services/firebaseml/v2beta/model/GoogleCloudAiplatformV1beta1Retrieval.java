@@ -37,6 +37,13 @@ public final class GoogleCloudAiplatformV1beta1Retrieval extends com.google.api.
   private java.lang.Boolean disableAttribution;
 
   /**
+   * Use data source powered by external API for grounding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1ExternalApi externalApi;
+
+  /**
    * Set to use data source powered by Vertex AI Search.
    * The value may be {@code null}.
    */
@@ -65,6 +72,23 @@ public final class GoogleCloudAiplatformV1beta1Retrieval extends com.google.api.
    */
   public GoogleCloudAiplatformV1beta1Retrieval setDisableAttribution(java.lang.Boolean disableAttribution) {
     this.disableAttribution = disableAttribution;
+    return this;
+  }
+
+  /**
+   * Use data source powered by external API for grounding.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ExternalApi getExternalApi() {
+    return externalApi;
+  }
+
+  /**
+   * Use data source powered by external API for grounding.
+   * @param externalApi externalApi or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Retrieval setExternalApi(GoogleCloudAiplatformV1beta1ExternalApi externalApi) {
+    this.externalApi = externalApi;
     return this;
   }
 

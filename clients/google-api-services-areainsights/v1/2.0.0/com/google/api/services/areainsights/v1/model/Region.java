@@ -30,14 +30,20 @@ package com.google.api.services.areainsights.v1.model;
 public final class Region extends com.google.api.client.json.GenericJson {
 
   /**
-   * The unique identifier of a specific geographic region.
+   * The [place ID](https://developers.google.com/maps/documentation/places/web-service/place-id) of
+   * the geographic region. Not all region types are supported; see documentation for details.
+   * **Format:** Must be in the format `places/PLACE_ID`, where `PLACE_ID` is the unique identifier
+   * of a place. For example: `places/ChIJPV4oX_65j4ARVW8IJ6IJUYs`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String place;
 
   /**
-   * The unique identifier of a specific geographic region.
+   * The [place ID](https://developers.google.com/maps/documentation/places/web-service/place-id) of
+   * the geographic region. Not all region types are supported; see documentation for details.
+   * **Format:** Must be in the format `places/PLACE_ID`, where `PLACE_ID` is the unique identifier
+   * of a place. For example: `places/ChIJPV4oX_65j4ARVW8IJ6IJUYs`.
    * @return value or {@code null} for none
    */
   public java.lang.String getPlace() {
@@ -45,7 +51,10 @@ public final class Region extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The unique identifier of a specific geographic region.
+   * The [place ID](https://developers.google.com/maps/documentation/places/web-service/place-id) of
+   * the geographic region. Not all region types are supported; see documentation for details.
+   * **Format:** Must be in the format `places/PLACE_ID`, where `PLACE_ID` is the unique identifier
+   * of a place. For example: `places/ChIJPV4oX_65j4ARVW8IJ6IJUYs`.
    * @param place place or {@code null} for none
    */
   public Region setPlace(java.lang.String place) {

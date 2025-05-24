@@ -30,7 +30,8 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1ToolAuthenticationApiKeyConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The API key.
+   * Optional. The API key. If the `secret_version_for_api_key` field is set, this field will be
+   * ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +53,17 @@ public final class GoogleCloudDialogflowCxV3beta1ToolAuthenticationApiKeyConfig 
   private java.lang.String requestLocation;
 
   /**
-   * Required. The API key.
+   * Optional. The name of the SecretManager secret version resource storing the API key. If this
+   * field is set, the `api_key` field will be ignored. Format:
+   * `projects/{project}/secrets/{secret}/versions/{version}`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String secretVersionForApiKey;
+
+  /**
+   * Optional. The API key. If the `secret_version_for_api_key` field is set, this field will be
+   * ignored.
    * @return value or {@code null} for none
    */
   public java.lang.String getApiKey() {
@@ -60,7 +71,8 @@ public final class GoogleCloudDialogflowCxV3beta1ToolAuthenticationApiKeyConfig 
   }
 
   /**
-   * Required. The API key.
+   * Optional. The API key. If the `secret_version_for_api_key` field is set, this field will be
+   * ignored.
    * @param apiKey apiKey or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ToolAuthenticationApiKeyConfig setApiKey(java.lang.String apiKey) {
@@ -101,6 +113,27 @@ public final class GoogleCloudDialogflowCxV3beta1ToolAuthenticationApiKeyConfig 
    */
   public GoogleCloudDialogflowCxV3beta1ToolAuthenticationApiKeyConfig setRequestLocation(java.lang.String requestLocation) {
     this.requestLocation = requestLocation;
+    return this;
+  }
+
+  /**
+   * Optional. The name of the SecretManager secret version resource storing the API key. If this
+   * field is set, the `api_key` field will be ignored. Format:
+   * `projects/{project}/secrets/{secret}/versions/{version}`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSecretVersionForApiKey() {
+    return secretVersionForApiKey;
+  }
+
+  /**
+   * Optional. The name of the SecretManager secret version resource storing the API key. If this
+   * field is set, the `api_key` field will be ignored. Format:
+   * `projects/{project}/secrets/{secret}/versions/{version}`
+   * @param secretVersionForApiKey secretVersionForApiKey or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1ToolAuthenticationApiKeyConfig setSecretVersionForApiKey(java.lang.String secretVersionForApiKey) {
+    this.secretVersionForApiKey = secretVersionForApiKey;
     return this;
   }
 

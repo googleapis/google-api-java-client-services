@@ -30,11 +30,41 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1PlaybookInstruction extends com.google.api.client.json.GenericJson {
 
   /**
+   * General guidelines for the playbook. These are unstructured instructions that are not directly
+   * part of the goal, e.g. "Always be polite". It's valid for this text to be long and used instead
+   * of steps altogether.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String guidelines;
+
+  /**
    * Ordered list of step by step execution instructions to accomplish target goal.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowCxV3beta1PlaybookStep> steps;
+
+  /**
+   * General guidelines for the playbook. These are unstructured instructions that are not directly
+   * part of the goal, e.g. "Always be polite". It's valid for this text to be long and used instead
+   * of steps altogether.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGuidelines() {
+    return guidelines;
+  }
+
+  /**
+   * General guidelines for the playbook. These are unstructured instructions that are not directly
+   * part of the goal, e.g. "Always be polite". It's valid for this text to be long and used instead
+   * of steps altogether.
+   * @param guidelines guidelines or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1PlaybookInstruction setGuidelines(java.lang.String guidelines) {
+    this.guidelines = guidelines;
+    return this;
+  }
 
   /**
    * Ordered list of step by step execution instructions to accomplish target goal.

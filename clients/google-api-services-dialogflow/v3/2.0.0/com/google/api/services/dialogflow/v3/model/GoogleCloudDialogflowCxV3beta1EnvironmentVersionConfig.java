@@ -30,14 +30,18 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Format: projects//locations//agents//flows//versions/.
+   * Required. Both flow and playbook versions are supported. Format for flow version:
+   * projects//locations//agents//flows//versions/. Format for playbook version:
+   * projects//locations//agents//playbooks//versions/.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String version;
 
   /**
-   * Required. Format: projects//locations//agents//flows//versions/.
+   * Required. Both flow and playbook versions are supported. Format for flow version:
+   * projects//locations//agents//flows//versions/. Format for playbook version:
+   * projects//locations//agents//playbooks//versions/.
    * @return value or {@code null} for none
    */
   public java.lang.String getVersion() {
@@ -45,7 +49,9 @@ public final class GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfig extend
   }
 
   /**
-   * Required. Format: projects//locations//agents//flows//versions/.
+   * Required. Both flow and playbook versions are supported. Format for flow version:
+   * projects//locations//agents//flows//versions/. Format for playbook version:
+   * projects//locations//agents//playbooks//versions/.
    * @param version version or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfig setVersion(java.lang.String version) {

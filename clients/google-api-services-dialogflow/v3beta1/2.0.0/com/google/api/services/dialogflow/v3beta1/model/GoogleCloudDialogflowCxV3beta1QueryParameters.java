@@ -59,9 +59,9 @@ public final class GoogleCloudDialogflowCxV3beta1QueryParameters extends com.goo
   private java.lang.String currentPage;
 
   /**
-   * Optional. Start the session with the specified playbook. You can only specify the playbook at
-   * the beginning of the session. Otherwise, an error will be thrown. Format:
-   * `projects//locations//agents//playbooks/`.
+   * Optional. The unique identifier of the playbook to start or continue the session with. If
+   * `current_playbook` is specified, the previous state of the session will be ignored by
+   * Dialogflow. Format: `projects//locations//agents//playbooks/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -257,9 +257,9 @@ public final class GoogleCloudDialogflowCxV3beta1QueryParameters extends com.goo
   }
 
   /**
-   * Optional. Start the session with the specified playbook. You can only specify the playbook at
-   * the beginning of the session. Otherwise, an error will be thrown. Format:
-   * `projects//locations//agents//playbooks/`.
+   * Optional. The unique identifier of the playbook to start or continue the session with. If
+   * `current_playbook` is specified, the previous state of the session will be ignored by
+   * Dialogflow. Format: `projects//locations//agents//playbooks/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getCurrentPlaybook() {
@@ -267,9 +267,9 @@ public final class GoogleCloudDialogflowCxV3beta1QueryParameters extends com.goo
   }
 
   /**
-   * Optional. Start the session with the specified playbook. You can only specify the playbook at
-   * the beginning of the session. Otherwise, an error will be thrown. Format:
-   * `projects//locations//agents//playbooks/`.
+   * Optional. The unique identifier of the playbook to start or continue the session with. If
+   * `current_playbook` is specified, the previous state of the session will be ignored by
+   * Dialogflow. Format: `projects//locations//agents//playbooks/`.
    * @param currentPlaybook currentPlaybook or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1QueryParameters setCurrentPlaybook(java.lang.String currentPlaybook) {

@@ -41,6 +41,20 @@ public final class GoogleCloudDialogflowCxV3Generator extends com.google.api.cli
   private java.lang.String displayName;
 
   /**
+   * The LLM model settings.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3LlmModelSettings llmModelSettings;
+
+  /**
+   * Parameters passed to the LLM to configure its behavior.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3GeneratorModelParameter modelParameter;
+
+  /**
    * The unique identifier of the generator. Must be set for the Generators.UpdateGenerator method.
    * Generators.CreateGenerate populates the name automatically. Format:
    * `projects//locations//agents//generators/`.
@@ -81,6 +95,40 @@ public final class GoogleCloudDialogflowCxV3Generator extends com.google.api.cli
    */
   public GoogleCloudDialogflowCxV3Generator setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * The LLM model settings.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3LlmModelSettings getLlmModelSettings() {
+    return llmModelSettings;
+  }
+
+  /**
+   * The LLM model settings.
+   * @param llmModelSettings llmModelSettings or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3Generator setLlmModelSettings(GoogleCloudDialogflowCxV3LlmModelSettings llmModelSettings) {
+    this.llmModelSettings = llmModelSettings;
+    return this;
+  }
+
+  /**
+   * Parameters passed to the LLM to configure its behavior.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3GeneratorModelParameter getModelParameter() {
+    return modelParameter;
+  }
+
+  /**
+   * Parameters passed to the LLM to configure its behavior.
+   * @param modelParameter modelParameter or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3Generator setModelParameter(GoogleCloudDialogflowCxV3GeneratorModelParameter modelParameter) {
+    this.modelParameter = modelParameter;
     return this;
   }
 

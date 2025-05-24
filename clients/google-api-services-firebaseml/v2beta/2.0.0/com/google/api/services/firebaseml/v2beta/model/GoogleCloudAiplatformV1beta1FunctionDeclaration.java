@@ -63,12 +63,32 @@ public final class GoogleCloudAiplatformV1beta1FunctionDeclaration extends com.g
   private GoogleCloudAiplatformV1beta1Schema parameters;
 
   /**
+   * Optional. Describes the parameters to the function in JSON Schema format. The schema must
+   * describe an object where the properties are the parameters to the function. For example: ``` {
+   * "type": "object", "properties": { "name": { "type": "string" }, "age": { "type": "integer" } },
+   * "additionalProperties": false, "required": ["name", "age"], "propertyOrdering": ["name", "age"]
+   * } ``` This field is mutually exclusive with `parameters`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Object parametersJsonSchema;
+
+  /**
    * Optional. Describes the output from this function in JSON Schema format. Reflects the Open API
    * 3.03 Response Object. The Schema defines the type used for the response value of the function.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1Schema response;
+
+  /**
+   * Optional. Describes the output from this function in JSON Schema format. The value specified by
+   * the schema is the response value of the function. This field is mutually exclusive with
+   * `response`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Object responseJsonSchema;
 
   /**
    * Optional. Description and purpose of the function. Model uses it to decide how and whether to
@@ -138,6 +158,31 @@ public final class GoogleCloudAiplatformV1beta1FunctionDeclaration extends com.g
   }
 
   /**
+   * Optional. Describes the parameters to the function in JSON Schema format. The schema must
+   * describe an object where the properties are the parameters to the function. For example: ``` {
+   * "type": "object", "properties": { "name": { "type": "string" }, "age": { "type": "integer" } },
+   * "additionalProperties": false, "required": ["name", "age"], "propertyOrdering": ["name", "age"]
+   * } ``` This field is mutually exclusive with `parameters`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Object getParametersJsonSchema() {
+    return parametersJsonSchema;
+  }
+
+  /**
+   * Optional. Describes the parameters to the function in JSON Schema format. The schema must
+   * describe an object where the properties are the parameters to the function. For example: ``` {
+   * "type": "object", "properties": { "name": { "type": "string" }, "age": { "type": "integer" } },
+   * "additionalProperties": false, "required": ["name", "age"], "propertyOrdering": ["name", "age"]
+   * } ``` This field is mutually exclusive with `parameters`.
+   * @param parametersJsonSchema parametersJsonSchema or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1FunctionDeclaration setParametersJsonSchema(java.lang.Object parametersJsonSchema) {
+    this.parametersJsonSchema = parametersJsonSchema;
+    return this;
+  }
+
+  /**
    * Optional. Describes the output from this function in JSON Schema format. Reflects the Open API
    * 3.03 Response Object. The Schema defines the type used for the response value of the function.
    * @return value or {@code null} for none
@@ -153,6 +198,27 @@ public final class GoogleCloudAiplatformV1beta1FunctionDeclaration extends com.g
    */
   public GoogleCloudAiplatformV1beta1FunctionDeclaration setResponse(GoogleCloudAiplatformV1beta1Schema response) {
     this.response = response;
+    return this;
+  }
+
+  /**
+   * Optional. Describes the output from this function in JSON Schema format. The value specified by
+   * the schema is the response value of the function. This field is mutually exclusive with
+   * `response`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Object getResponseJsonSchema() {
+    return responseJsonSchema;
+  }
+
+  /**
+   * Optional. Describes the output from this function in JSON Schema format. The value specified by
+   * the schema is the response value of the function. This field is mutually exclusive with
+   * `response`.
+   * @param responseJsonSchema responseJsonSchema or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1FunctionDeclaration setResponseJsonSchema(java.lang.Object responseJsonSchema) {
+    this.responseJsonSchema = responseJsonSchema;
     return this;
   }
 

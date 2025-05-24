@@ -30,7 +30,7 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1ListGlossaryCategoriesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Lists the glossaryCategories in the specified parent.
+   * Lists the GlossaryCategories in the specified parent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +58,7 @@ public final class GoogleCloudDataplexV1ListGlossaryCategoriesResponse extends c
   private java.util.List<java.lang.String> unreachableLocations;
 
   /**
-   * Lists the glossaryCategories in the specified parent.
+   * Lists the GlossaryCategories in the specified parent.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDataplexV1GlossaryCategory> getCategories() {
@@ -66,7 +66,7 @@ public final class GoogleCloudDataplexV1ListGlossaryCategoriesResponse extends c
   }
 
   /**
-   * Lists the glossaryCategories in the specified parent.
+   * Lists the GlossaryCategories in the specified parent.
    * @param categories categories or {@code null} for none
    */
   public GoogleCloudDataplexV1ListGlossaryCategoriesResponse setCategories(java.util.List<GoogleCloudDataplexV1GlossaryCategory> categories) {

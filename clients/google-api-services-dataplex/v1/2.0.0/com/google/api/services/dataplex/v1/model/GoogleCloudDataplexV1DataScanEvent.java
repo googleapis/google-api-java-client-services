@@ -31,6 +31,13 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1DataScanEvent extends com.google.api.client.json.GenericJson {
 
   /**
+   * The status of publishing the data scan to Catalog.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDataplexV1DataScanCatalogPublishingStatus catalogPublishingStatus;
+
+  /**
    * The time when the data scan job was created.
    * The value may be {@code null}.
    */
@@ -141,6 +148,23 @@ public final class GoogleCloudDataplexV1DataScanEvent extends com.google.api.cli
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * The status of publishing the data scan to Catalog.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataScanCatalogPublishingStatus getCatalogPublishingStatus() {
+    return catalogPublishingStatus;
+  }
+
+  /**
+   * The status of publishing the data scan to Catalog.
+   * @param catalogPublishingStatus catalogPublishingStatus or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataScanEvent setCatalogPublishingStatus(GoogleCloudDataplexV1DataScanCatalogPublishingStatus catalogPublishingStatus) {
+    this.catalogPublishingStatus = catalogPublishingStatus;
+    return this;
+  }
 
   /**
    * The time when the data scan job was created.

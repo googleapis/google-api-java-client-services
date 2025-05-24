@@ -30,7 +30,7 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1ListGlossariesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Lists the glossaries in the specified parent.
+   * Lists the Glossaries in the specified parent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +58,7 @@ public final class GoogleCloudDataplexV1ListGlossariesResponse extends com.googl
   private java.util.List<java.lang.String> unreachableLocations;
 
   /**
-   * Lists the glossaries in the specified parent.
+   * Lists the Glossaries in the specified parent.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDataplexV1Glossary> getGlossaries() {
@@ -66,7 +66,7 @@ public final class GoogleCloudDataplexV1ListGlossariesResponse extends com.googl
   }
 
   /**
-   * Lists the glossaries in the specified parent.
+   * Lists the Glossaries in the specified parent.
    * @param glossaries glossaries or {@code null} for none
    */
   public GoogleCloudDataplexV1ListGlossariesResponse setGlossaries(java.util.List<GoogleCloudDataplexV1Glossary> glossaries) {

@@ -17,8 +17,8 @@
 package com.google.api.services.dataplex.v1.model;
 
 /**
- * A GlossaryCategory represents a collection of categories and terms within a Glossary that are
- * related to each other.
+ * A GlossaryCategory represents a collection of GlossaryCategories and GlossaryTerms within a
+ * Glossary that are related to each other.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataplex API. For a detailed explanation see:
@@ -46,7 +46,7 @@ public final class GoogleCloudDataplexV1GlossaryCategory extends com.google.api.
 
   /**
    * Optional. User friendly display name of the GlossaryCategory. This is user-mutable. This will
-   * be same as the categoryId, if not specified.
+   * be same as the GlossaryCategoryId, if not specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,8 +60,8 @@ public final class GoogleCloudDataplexV1GlossaryCategory extends com.google.api.
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Output only. Identifier. The resource name of the GlossaryCategory. Format:
-   * projects/{projectId}/locations/{locationId}/glossaries/{glossaryId}/categories/{categoryId}
+   * Output only. Identifier. The resource name of the GlossaryCategory. Format: projects/{project_i
+   * d_or_number}/locations/{location_id}/glossaries/{glossary_id}/categories/{category_id}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,9 +69,9 @@ public final class GoogleCloudDataplexV1GlossaryCategory extends com.google.api.
 
   /**
    * Required. The immediate parent of the GlossaryCategory in the resource-hierarchy. It can either
-   * be a Glossary or a Category. Format:
-   * projects/{projectId}/locations/{locationId}/glossaries/{glossaryId} OR
-   * projects/{projectId}/locations/{locationId}/glossaries/{glossaryId}/categories/{categoryId}
+   * be a Glossary or a GlossaryCategory. Format:
+   * projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id} OR projects/{p
+   * roject_id_or_number}/locations/{location_id}/glossaries/{glossary_id}/categories/{category_id}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -128,7 +128,7 @@ public final class GoogleCloudDataplexV1GlossaryCategory extends com.google.api.
 
   /**
    * Optional. User friendly display name of the GlossaryCategory. This is user-mutable. This will
-   * be same as the categoryId, if not specified.
+   * be same as the GlossaryCategoryId, if not specified.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -137,7 +137,7 @@ public final class GoogleCloudDataplexV1GlossaryCategory extends com.google.api.
 
   /**
    * Optional. User friendly display name of the GlossaryCategory. This is user-mutable. This will
-   * be same as the categoryId, if not specified.
+   * be same as the GlossaryCategoryId, if not specified.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudDataplexV1GlossaryCategory setDisplayName(java.lang.String displayName) {
@@ -163,8 +163,8 @@ public final class GoogleCloudDataplexV1GlossaryCategory extends com.google.api.
   }
 
   /**
-   * Output only. Identifier. The resource name of the GlossaryCategory. Format:
-   * projects/{projectId}/locations/{locationId}/glossaries/{glossaryId}/categories/{categoryId}
+   * Output only. Identifier. The resource name of the GlossaryCategory. Format: projects/{project_i
+   * d_or_number}/locations/{location_id}/glossaries/{glossary_id}/categories/{category_id}
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -172,8 +172,8 @@ public final class GoogleCloudDataplexV1GlossaryCategory extends com.google.api.
   }
 
   /**
-   * Output only. Identifier. The resource name of the GlossaryCategory. Format:
-   * projects/{projectId}/locations/{locationId}/glossaries/{glossaryId}/categories/{categoryId}
+   * Output only. Identifier. The resource name of the GlossaryCategory. Format: projects/{project_i
+   * d_or_number}/locations/{location_id}/glossaries/{glossary_id}/categories/{category_id}
    * @param name name or {@code null} for none
    */
   public GoogleCloudDataplexV1GlossaryCategory setName(java.lang.String name) {
@@ -183,9 +183,9 @@ public final class GoogleCloudDataplexV1GlossaryCategory extends com.google.api.
 
   /**
    * Required. The immediate parent of the GlossaryCategory in the resource-hierarchy. It can either
-   * be a Glossary or a Category. Format:
-   * projects/{projectId}/locations/{locationId}/glossaries/{glossaryId} OR
-   * projects/{projectId}/locations/{locationId}/glossaries/{glossaryId}/categories/{categoryId}
+   * be a Glossary or a GlossaryCategory. Format:
+   * projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id} OR projects/{p
+   * roject_id_or_number}/locations/{location_id}/glossaries/{glossary_id}/categories/{category_id}
    * @return value or {@code null} for none
    */
   public java.lang.String getParent() {
@@ -194,9 +194,9 @@ public final class GoogleCloudDataplexV1GlossaryCategory extends com.google.api.
 
   /**
    * Required. The immediate parent of the GlossaryCategory in the resource-hierarchy. It can either
-   * be a Glossary or a Category. Format:
-   * projects/{projectId}/locations/{locationId}/glossaries/{glossaryId} OR
-   * projects/{projectId}/locations/{locationId}/glossaries/{glossaryId}/categories/{categoryId}
+   * be a Glossary or a GlossaryCategory. Format:
+   * projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id} OR projects/{p
+   * roject_id_or_number}/locations/{location_id}/glossaries/{glossary_id}/categories/{category_id}
    * @param parent parent or {@code null} for none
    */
   public GoogleCloudDataplexV1GlossaryCategory setParent(java.lang.String parent) {

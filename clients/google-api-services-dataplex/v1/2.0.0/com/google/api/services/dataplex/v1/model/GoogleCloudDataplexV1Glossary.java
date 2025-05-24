@@ -17,8 +17,9 @@
 package com.google.api.services.dataplex.v1.model;
 
 /**
- * A Glossary represents a collection of categories and terms defined by the user. Glossary is a top
- * level resource and is the GCP parent resource of all the categories and terms within it.
+ * A Glossary represents a collection of GlossaryCategories and GlossaryTerms defined by the user.
+ * Glossary is a top level resource and is the GCP parent resource of all the GlossaryCategories and
+ * GlossaryTerms within it.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataplex API. For a detailed explanation see:
@@ -31,29 +32,29 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1Glossary extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The number of categories in the glossary.
+   * Output only. The number of GlossaryCategories in the Glossary.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer categoryCount;
 
   /**
-   * Output only. The time at which the glossary was created.
+   * Output only. The time at which the Glossary was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * Optional. The user-mutable description of the glossary.
+   * Optional. The user-mutable description of the Glossary.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Optional. User friendly display name of the glossary. This is user-mutable. This will be same
-   * as the glossaryId, if not specified.
+   * Optional. User friendly display name of the Glossary. This is user-mutable. This will be same
+   * as the GlossaryId, if not specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,14 +78,14 @@ public final class GoogleCloudDataplexV1Glossary extends com.google.api.client.j
 
   /**
    * Output only. Identifier. The resource name of the Glossary. Format:
-   * projects/{projectId}/locations/{locationId}/glossaries/{glossaryId}
+   * projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output only. The number of terms in the glossary.
+   * Output only. The number of GlossaryTerms in the Glossary.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,14 +100,14 @@ public final class GoogleCloudDataplexV1Glossary extends com.google.api.client.j
   private java.lang.String uid;
 
   /**
-   * Output only. The time at which the glossary was last updated.
+   * Output only. The time at which the Glossary was last updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Output only. The number of categories in the glossary.
+   * Output only. The number of GlossaryCategories in the Glossary.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getCategoryCount() {
@@ -114,7 +115,7 @@ public final class GoogleCloudDataplexV1Glossary extends com.google.api.client.j
   }
 
   /**
-   * Output only. The number of categories in the glossary.
+   * Output only. The number of GlossaryCategories in the Glossary.
    * @param categoryCount categoryCount or {@code null} for none
    */
   public GoogleCloudDataplexV1Glossary setCategoryCount(java.lang.Integer categoryCount) {
@@ -123,7 +124,7 @@ public final class GoogleCloudDataplexV1Glossary extends com.google.api.client.j
   }
 
   /**
-   * Output only. The time at which the glossary was created.
+   * Output only. The time at which the Glossary was created.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -131,7 +132,7 @@ public final class GoogleCloudDataplexV1Glossary extends com.google.api.client.j
   }
 
   /**
-   * Output only. The time at which the glossary was created.
+   * Output only. The time at which the Glossary was created.
    * @param createTime createTime or {@code null} for none
    */
   public GoogleCloudDataplexV1Glossary setCreateTime(String createTime) {
@@ -140,7 +141,7 @@ public final class GoogleCloudDataplexV1Glossary extends com.google.api.client.j
   }
 
   /**
-   * Optional. The user-mutable description of the glossary.
+   * Optional. The user-mutable description of the Glossary.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -148,7 +149,7 @@ public final class GoogleCloudDataplexV1Glossary extends com.google.api.client.j
   }
 
   /**
-   * Optional. The user-mutable description of the glossary.
+   * Optional. The user-mutable description of the Glossary.
    * @param description description or {@code null} for none
    */
   public GoogleCloudDataplexV1Glossary setDescription(java.lang.String description) {
@@ -157,8 +158,8 @@ public final class GoogleCloudDataplexV1Glossary extends com.google.api.client.j
   }
 
   /**
-   * Optional. User friendly display name of the glossary. This is user-mutable. This will be same
-   * as the glossaryId, if not specified.
+   * Optional. User friendly display name of the Glossary. This is user-mutable. This will be same
+   * as the GlossaryId, if not specified.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -166,8 +167,8 @@ public final class GoogleCloudDataplexV1Glossary extends com.google.api.client.j
   }
 
   /**
-   * Optional. User friendly display name of the glossary. This is user-mutable. This will be same
-   * as the glossaryId, if not specified.
+   * Optional. User friendly display name of the Glossary. This is user-mutable. This will be same
+   * as the GlossaryId, if not specified.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudDataplexV1Glossary setDisplayName(java.lang.String displayName) {
@@ -215,7 +216,7 @@ public final class GoogleCloudDataplexV1Glossary extends com.google.api.client.j
 
   /**
    * Output only. Identifier. The resource name of the Glossary. Format:
-   * projects/{projectId}/locations/{locationId}/glossaries/{glossaryId}
+   * projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id}
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -224,7 +225,7 @@ public final class GoogleCloudDataplexV1Glossary extends com.google.api.client.j
 
   /**
    * Output only. Identifier. The resource name of the Glossary. Format:
-   * projects/{projectId}/locations/{locationId}/glossaries/{glossaryId}
+   * projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id}
    * @param name name or {@code null} for none
    */
   public GoogleCloudDataplexV1Glossary setName(java.lang.String name) {
@@ -233,7 +234,7 @@ public final class GoogleCloudDataplexV1Glossary extends com.google.api.client.j
   }
 
   /**
-   * Output only. The number of terms in the glossary.
+   * Output only. The number of GlossaryTerms in the Glossary.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTermCount() {
@@ -241,7 +242,7 @@ public final class GoogleCloudDataplexV1Glossary extends com.google.api.client.j
   }
 
   /**
-   * Output only. The number of terms in the glossary.
+   * Output only. The number of GlossaryTerms in the Glossary.
    * @param termCount termCount or {@code null} for none
    */
   public GoogleCloudDataplexV1Glossary setTermCount(java.lang.Integer termCount) {
@@ -269,7 +270,7 @@ public final class GoogleCloudDataplexV1Glossary extends com.google.api.client.j
   }
 
   /**
-   * Output only. The time at which the glossary was last updated.
+   * Output only. The time at which the Glossary was last updated.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -277,7 +278,7 @@ public final class GoogleCloudDataplexV1Glossary extends com.google.api.client.j
   }
 
   /**
-   * Output only. The time at which the glossary was last updated.
+   * Output only. The time at which the Glossary was last updated.
    * @param updateTime updateTime or {@code null} for none
    */
   public GoogleCloudDataplexV1Glossary setUpdateTime(String updateTime) {

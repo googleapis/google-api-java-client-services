@@ -57,6 +57,15 @@ public final class GoogleCloudDataplexV1DataDiscoverySpecBigQueryPublishingConfi
   private java.lang.String location;
 
   /**
+   * Optional. The project of the BigQuery dataset to publish BigLake external or non-BigLake
+   * external tables to. If not specified, the project of the Cloud Storage bucket will be used. The
+   * format is "projects/{project_id_or_number}".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String project;
+
+  /**
    * Optional. Determines whether to publish discovered tables as BigLake external tables or non-
    * BigLake external tables.
    * The value may be {@code null}.
@@ -121,6 +130,27 @@ public final class GoogleCloudDataplexV1DataDiscoverySpecBigQueryPublishingConfi
    */
   public GoogleCloudDataplexV1DataDiscoverySpecBigQueryPublishingConfig setLocation(java.lang.String location) {
     this.location = location;
+    return this;
+  }
+
+  /**
+   * Optional. The project of the BigQuery dataset to publish BigLake external or non-BigLake
+   * external tables to. If not specified, the project of the Cloud Storage bucket will be used. The
+   * format is "projects/{project_id_or_number}".
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProject() {
+    return project;
+  }
+
+  /**
+   * Optional. The project of the BigQuery dataset to publish BigLake external or non-BigLake
+   * external tables to. If not specified, the project of the Cloud Storage bucket will be used. The
+   * format is "projects/{project_id_or_number}".
+   * @param project project or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataDiscoverySpecBigQueryPublishingConfig setProject(java.lang.String project) {
+    this.project = project;
     return this;
   }
 

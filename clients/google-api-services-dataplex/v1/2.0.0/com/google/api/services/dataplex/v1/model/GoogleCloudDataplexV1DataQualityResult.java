@@ -30,6 +30,13 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1DataQualityResult extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The status of publishing the data scan to Catalog.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDataplexV1DataScanCatalogPublishingStatus catalogPublishingStatus;
+
+  /**
    * Output only. A list of results at the column level.A column will have a corresponding
    * DataQualityColumnResult if and only if there is at least one rule with the 'column' field set
    * to it.
@@ -101,6 +108,23 @@ public final class GoogleCloudDataplexV1DataQualityResult extends com.google.api
    */
   @com.google.api.client.util.Key
   private java.lang.Float score;
+
+  /**
+   * Output only. The status of publishing the data scan to Catalog.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataScanCatalogPublishingStatus getCatalogPublishingStatus() {
+    return catalogPublishingStatus;
+  }
+
+  /**
+   * Output only. The status of publishing the data scan to Catalog.
+   * @param catalogPublishingStatus catalogPublishingStatus or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataQualityResult setCatalogPublishingStatus(GoogleCloudDataplexV1DataScanCatalogPublishingStatus catalogPublishingStatus) {
+    this.catalogPublishingStatus = catalogPublishingStatus;
+    return this;
+  }
 
   /**
    * Output only. A list of results at the column level.A column will have a corresponding

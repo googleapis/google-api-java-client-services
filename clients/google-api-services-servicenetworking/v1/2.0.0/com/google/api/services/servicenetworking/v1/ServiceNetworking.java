@@ -1875,8 +1875,8 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
        * This request holds the parameters needed by the servicenetworking server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent The service that is managing peering connectivity for a service producer's organization. For Google
-       *        services that support this functionality, this value is
+       * @param parent Required. The service that is managing peering connectivity for a service producer's organization.
+       *        For Google services that support this functionality, this value is
        *        `services/servicenetworking.googleapis.com`. If you specify `services/-` as the parameter
        *        value, all configured peering services are listed.
        * @return the request
@@ -1905,8 +1905,8 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent The service that is managing peering connectivity for a service producer's organization. For Google
-       *        services that support this functionality, this value is
+         * @param parent Required. The service that is managing peering connectivity for a service producer's organization.
+       *        For Google services that support this functionality, this value is
        *        `services/servicenetworking.googleapis.com`. If you specify `services/-` as the parameter
        *        value, all configured peering services are listed.
          * @since 1.13
@@ -1987,16 +1987,16 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
         }
 
         /**
-         * The service that is managing peering connectivity for a service producer's organization.
-         * For Google services that support this functionality, this value is
+         * Required. The service that is managing peering connectivity for a service producer's
+         * organization. For Google services that support this functionality, this value is
          * `services/servicenetworking.googleapis.com`. If you specify `services/-` as the parameter
          * value, all configured peering services are listed.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** The service that is managing peering connectivity for a service producer's organization. For Google
-       services that support this functionality, this value is
+        /** Required. The service that is managing peering connectivity for a service producer's organization.
+       For Google services that support this functionality, this value is
        `services/servicenetworking.googleapis.com`. If you specify `services/-` as the parameter value,
        all configured peering services are listed.
          */
@@ -2005,8 +2005,8 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
         }
 
         /**
-         * The service that is managing peering connectivity for a service producer's organization.
-         * For Google services that support this functionality, this value is
+         * Required. The service that is managing peering connectivity for a service producer's
+         * organization. For Google services that support this functionality, this value is
          * `services/servicenetworking.googleapis.com`. If you specify `services/-` as the parameter
          * value, all configured peering services are listed.
          */
@@ -2021,17 +2021,17 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
         }
 
         /**
-         * The name of service consumer's VPC network that's connected with service producer network
-         * through a private connection. The network name must be in the following format:
-         * `projects/{project}/global/networks/{network}`. {project} is a project number, such as in
-         * `12345` that includes the VPC service consumer's VPC network. {network} is the name of
-         * the service consumer's VPC network.
+         * Required. The name of service consumer's VPC network that's connected with service
+         * producer network through a private connection. The network name must be in the following
+         * format: `projects/{project}/global/networks/{network}`. {project} is a project number,
+         * such as in `12345` that includes the VPC service consumer's VPC network. {network} is the
+         * name of the service consumer's VPC network.
          */
         @com.google.api.client.util.Key
         private java.lang.String network;
 
-        /** The name of service consumer's VPC network that's connected with service producer network through a
-       private connection. The network name must be in the following format:
+        /** Required. The name of service consumer's VPC network that's connected with service producer network
+       through a private connection. The network name must be in the following format:
        `projects/{project}/global/networks/{network}`. {project} is a project number, such as in `12345`
        that includes the VPC service consumer's VPC network. {network} is the name of the service
        consumer's VPC network.
@@ -2041,11 +2041,11 @@ public class ServiceNetworking extends com.google.api.client.googleapis.services
         }
 
         /**
-         * The name of service consumer's VPC network that's connected with service producer network
-         * through a private connection. The network name must be in the following format:
-         * `projects/{project}/global/networks/{network}`. {project} is a project number, such as in
-         * `12345` that includes the VPC service consumer's VPC network. {network} is the name of
-         * the service consumer's VPC network.
+         * Required. The name of service consumer's VPC network that's connected with service
+         * producer network through a private connection. The network name must be in the following
+         * format: `projects/{project}/global/networks/{network}`. {project} is a project number,
+         * such as in `12345` that includes the VPC service consumer's VPC network. {network} is the
+         * name of the service consumer's VPC network.
          */
         public List setNetwork(java.lang.String network) {
           this.network = network;

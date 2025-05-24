@@ -134,6 +134,666 @@ public class Safebrowsing extends com.google.api.client.googleapis.services.json
   }
 
   /**
+   * An accessor for creating requests from the HashList collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Safebrowsing safebrowsing = new Safebrowsing(...);}
+   *   {@code Safebrowsing.HashList.List request = safebrowsing.hashList().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public HashList hashList() {
+    return new HashList();
+  }
+
+  /**
+   * The "hashList" collection of methods.
+   */
+  public class HashList {
+
+    /**
+     * Get the latest contents of a hash list. A hash list may either by a threat list or a non-threat
+     * list such as the Global Cache. This is a standard Get method as defined by
+     * https://google.aip.dev/131 and the HTTP method is also GET.
+     *
+     * Create a request for the method "hashList.get".
+     *
+     * This request holds the parameters needed by the safebrowsing server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. The name of this particular hash list. It may be a threat list, or it may be the Global
+     *        Cache.
+     * @return the request
+     */
+    public Get get(java.lang.String name) throws java.io.IOException {
+      Get result = new Get(name);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends SafebrowsingRequest<com.google.api.services.safebrowsing.v5.model.GoogleSecuritySafebrowsingV5HashList> {
+
+      private static final String REST_PATH = "v5/hashList/{name}";
+
+      /**
+       * Get the latest contents of a hash list. A hash list may either by a threat list or a non-threat
+       * list such as the Global Cache. This is a standard Get method as defined by
+       * https://google.aip.dev/131 and the HTTP method is also GET.
+       *
+       * Create a request for the method "hashList.get".
+       *
+       * This request holds the parameters needed by the the safebrowsing server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+       * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. The name of this particular hash list. It may be a threat list, or it may be the Global
+     *        Cache.
+       * @since 1.13
+       */
+      protected Get(java.lang.String name) {
+        super(Safebrowsing.this, "GET", REST_PATH, null, com.google.api.services.safebrowsing.v5.model.GoogleSecuritySafebrowsingV5HashList.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The name of this particular hash list. It may be a threat list, or it may be the
+       * Global Cache.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The name of this particular hash list. It may be a threat list, or it may be the Global
+     Cache.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The name of this particular hash list. It may be a threat list, or it may be the
+       * Global Cache.
+       */
+      public Get setName(java.lang.String name) {
+        this.name = name;
+        return this;
+      }
+
+      /**
+       * Sets the maximum number of entries that the client is willing to have in the local database
+       * for the list. (The server MAY cause the client to store less than this number of entries.)
+       * If omitted or zero, no database size limit is set.
+       */
+      @com.google.api.client.util.Key("sizeConstraints.maxDatabaseEntries")
+      private java.lang.Integer sizeConstraintsMaxDatabaseEntries;
+
+      /** Sets the maximum number of entries that the client is willing to have in the local database for the
+     list. (The server MAY cause the client to store less than this number of entries.) If omitted or
+     zero, no database size limit is set.
+       */
+      public java.lang.Integer getSizeConstraintsMaxDatabaseEntries() {
+        return sizeConstraintsMaxDatabaseEntries;
+      }
+
+      /**
+       * Sets the maximum number of entries that the client is willing to have in the local database
+       * for the list. (The server MAY cause the client to store less than this number of entries.)
+       * If omitted or zero, no database size limit is set.
+       */
+      public Get setSizeConstraintsMaxDatabaseEntries(java.lang.Integer sizeConstraintsMaxDatabaseEntries) {
+        this.sizeConstraintsMaxDatabaseEntries = sizeConstraintsMaxDatabaseEntries;
+        return this;
+      }
+
+      /**
+       * The maximum size in number of entries. The update will not contain more entries than this
+       * value, but it is possible that the update will contain fewer entries than this value. This
+       * MUST be at least 1024. If omitted or zero, no update size limit is set.
+       */
+      @com.google.api.client.util.Key("sizeConstraints.maxUpdateEntries")
+      private java.lang.Integer sizeConstraintsMaxUpdateEntries;
+
+      /** The maximum size in number of entries. The update will not contain more entries than this value,
+     but it is possible that the update will contain fewer entries than this value. This MUST be at
+     least 1024. If omitted or zero, no update size limit is set.
+       */
+      public java.lang.Integer getSizeConstraintsMaxUpdateEntries() {
+        return sizeConstraintsMaxUpdateEntries;
+      }
+
+      /**
+       * The maximum size in number of entries. The update will not contain more entries than this
+       * value, but it is possible that the update will contain fewer entries than this value. This
+       * MUST be at least 1024. If omitted or zero, no update size limit is set.
+       */
+      public Get setSizeConstraintsMaxUpdateEntries(java.lang.Integer sizeConstraintsMaxUpdateEntries) {
+        this.sizeConstraintsMaxUpdateEntries = sizeConstraintsMaxUpdateEntries;
+        return this;
+      }
+
+      /**
+       * The version of the hash list that the client already has. If this is the first time the
+       * client is fetching the hash list, this field MUST be left empty. Otherwise, the client
+       * SHOULD supply the version previously received from the server. The client MUST NOT
+       * manipulate those bytes. **What's new in V5**: in V4 of the API, this was called `states`;
+       * it is now renamed to `version` for clarity.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String version;
+
+      /** The version of the hash list that the client already has. If this is the first time the client is
+     fetching the hash list, this field MUST be left empty. Otherwise, the client SHOULD supply the
+     version previously received from the server. The client MUST NOT manipulate those bytes. **What's
+     new in V5**: in V4 of the API, this was called `states`; it is now renamed to `version` for
+     clarity.
+       */
+      public java.lang.String getVersion() {
+        return version;
+      }
+
+      /**
+       * The version of the hash list that the client already has. If this is the first time the
+       * client is fetching the hash list, this field MUST be left empty. Otherwise, the client
+       * SHOULD supply the version previously received from the server. The client MUST NOT
+       * manipulate those bytes. **What's new in V5**: in V4 of the API, this was called `states`;
+       * it is now renamed to `version` for clarity.
+       */
+      public Get setVersion(java.lang.String version) {
+        this.version = version;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
+   * An accessor for creating requests from the HashLists collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Safebrowsing safebrowsing = new Safebrowsing(...);}
+   *   {@code Safebrowsing.HashLists.List request = safebrowsing.hashLists().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public HashLists hashLists() {
+    return new HashLists();
+  }
+
+  /**
+   * The "hashLists" collection of methods.
+   */
+  public class HashLists {
+
+    /**
+     * Get multiple hash lists at once. It is very common for a client to need to get multiple hash
+     * lists. Using this method is preferred over using the regular Get method multiple times. This is a
+     * standard batch Get method as defined by https://google.aip.dev/231 and the HTTP method is also
+     * GET.
+     *
+     * Create a request for the method "hashLists.batchGet".
+     *
+     * This request holds the parameters needed by the safebrowsing server.  After setting any optional
+     * parameters, call the {@link BatchGet#execute()} method to invoke the remote operation.
+     *
+     * @return the request
+     */
+    public BatchGet batchGet() throws java.io.IOException {
+      BatchGet result = new BatchGet();
+      initialize(result);
+      return result;
+    }
+
+    public class BatchGet extends SafebrowsingRequest<com.google.api.services.safebrowsing.v5.model.GoogleSecuritySafebrowsingV5BatchGetHashListsResponse> {
+
+      private static final String REST_PATH = "v5/hashLists:batchGet";
+
+      /**
+       * Get multiple hash lists at once. It is very common for a client to need to get multiple hash
+       * lists. Using this method is preferred over using the regular Get method multiple times. This is
+       * a standard batch Get method as defined by https://google.aip.dev/231 and the HTTP method is
+       * also GET.
+       *
+       * Create a request for the method "hashLists.batchGet".
+       *
+       * This request holds the parameters needed by the the safebrowsing server.  After setting any
+       * optional parameters, call the {@link BatchGet#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * BatchGet#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected BatchGet() {
+        super(Safebrowsing.this, "GET", REST_PATH, null, com.google.api.services.safebrowsing.v5.model.GoogleSecuritySafebrowsingV5BatchGetHashListsResponse.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public BatchGet set$Xgafv(java.lang.String $Xgafv) {
+        return (BatchGet) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public BatchGet setAccessToken(java.lang.String accessToken) {
+        return (BatchGet) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public BatchGet setAlt(java.lang.String alt) {
+        return (BatchGet) super.setAlt(alt);
+      }
+
+      @Override
+      public BatchGet setCallback(java.lang.String callback) {
+        return (BatchGet) super.setCallback(callback);
+      }
+
+      @Override
+      public BatchGet setFields(java.lang.String fields) {
+        return (BatchGet) super.setFields(fields);
+      }
+
+      @Override
+      public BatchGet setKey(java.lang.String key) {
+        return (BatchGet) super.setKey(key);
+      }
+
+      @Override
+      public BatchGet setOauthToken(java.lang.String oauthToken) {
+        return (BatchGet) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public BatchGet setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (BatchGet) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public BatchGet setQuotaUser(java.lang.String quotaUser) {
+        return (BatchGet) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public BatchGet setUploadType(java.lang.String uploadType) {
+        return (BatchGet) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public BatchGet setUploadProtocol(java.lang.String uploadProtocol) {
+        return (BatchGet) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The names of the particular hash lists. The list MAY be a threat list, or it may
+       * be the Global Cache. The names MUST NOT contain duplicates; if they did, the client will
+       * get an error.
+       */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> names;
+
+      /** Required. The names of the particular hash lists. The list MAY be a threat list, or it may be the
+     Global Cache. The names MUST NOT contain duplicates; if they did, the client will get an error.
+       */
+      public java.util.List<java.lang.String> getNames() {
+        return names;
+      }
+
+      /**
+       * Required. The names of the particular hash lists. The list MAY be a threat list, or it may
+       * be the Global Cache. The names MUST NOT contain duplicates; if they did, the client will
+       * get an error.
+       */
+      public BatchGet setNames(java.util.List<java.lang.String> names) {
+        this.names = names;
+        return this;
+      }
+
+      /**
+       * Sets the maximum number of entries that the client is willing to have in the local database
+       * for the list. (The server MAY cause the client to store less than this number of entries.)
+       * If omitted or zero, no database size limit is set.
+       */
+      @com.google.api.client.util.Key("sizeConstraints.maxDatabaseEntries")
+      private java.lang.Integer sizeConstraintsMaxDatabaseEntries;
+
+      /** Sets the maximum number of entries that the client is willing to have in the local database for the
+     list. (The server MAY cause the client to store less than this number of entries.) If omitted or
+     zero, no database size limit is set.
+       */
+      public java.lang.Integer getSizeConstraintsMaxDatabaseEntries() {
+        return sizeConstraintsMaxDatabaseEntries;
+      }
+
+      /**
+       * Sets the maximum number of entries that the client is willing to have in the local database
+       * for the list. (The server MAY cause the client to store less than this number of entries.)
+       * If omitted or zero, no database size limit is set.
+       */
+      public BatchGet setSizeConstraintsMaxDatabaseEntries(java.lang.Integer sizeConstraintsMaxDatabaseEntries) {
+        this.sizeConstraintsMaxDatabaseEntries = sizeConstraintsMaxDatabaseEntries;
+        return this;
+      }
+
+      /**
+       * The maximum size in number of entries. The update will not contain more entries than this
+       * value, but it is possible that the update will contain fewer entries than this value. This
+       * MUST be at least 1024. If omitted or zero, no update size limit is set.
+       */
+      @com.google.api.client.util.Key("sizeConstraints.maxUpdateEntries")
+      private java.lang.Integer sizeConstraintsMaxUpdateEntries;
+
+      /** The maximum size in number of entries. The update will not contain more entries than this value,
+     but it is possible that the update will contain fewer entries than this value. This MUST be at
+     least 1024. If omitted or zero, no update size limit is set.
+       */
+      public java.lang.Integer getSizeConstraintsMaxUpdateEntries() {
+        return sizeConstraintsMaxUpdateEntries;
+      }
+
+      /**
+       * The maximum size in number of entries. The update will not contain more entries than this
+       * value, but it is possible that the update will contain fewer entries than this value. This
+       * MUST be at least 1024. If omitted or zero, no update size limit is set.
+       */
+      public BatchGet setSizeConstraintsMaxUpdateEntries(java.lang.Integer sizeConstraintsMaxUpdateEntries) {
+        this.sizeConstraintsMaxUpdateEntries = sizeConstraintsMaxUpdateEntries;
+        return this;
+      }
+
+      /**
+       * The versions of the hash list that the client already has. If this is the first time the
+       * client is fetching the hash lists, the field should be left empty. Otherwise, the client
+       * should supply the versions previously received from the server. The client MUST NOT
+       * manipulate those bytes. The client need not send the versions in the same order as the
+       * corresponding list names. The client may send fewer or more versions in a request than
+       * there are names. However the client MUST NOT send multiple versions that correspond to the
+       * same name; if it did, the client will get an error. Historical note: in V4 of the API, this
+       * was called `states`; it is now renamed to `version` for clarity.
+       */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> version;
+
+      /** The versions of the hash list that the client already has. If this is the first time the client is
+     fetching the hash lists, the field should be left empty. Otherwise, the client should supply the
+     versions previously received from the server. The client MUST NOT manipulate those bytes. The
+     client need not send the versions in the same order as the corresponding list names. The client may
+     send fewer or more versions in a request than there are names. However the client MUST NOT send
+     multiple versions that correspond to the same name; if it did, the client will get an error.
+     Historical note: in V4 of the API, this was called `states`; it is now renamed to `version` for
+     clarity.
+       */
+      public java.util.List<java.lang.String> getVersion() {
+        return version;
+      }
+
+      /**
+       * The versions of the hash list that the client already has. If this is the first time the
+       * client is fetching the hash lists, the field should be left empty. Otherwise, the client
+       * should supply the versions previously received from the server. The client MUST NOT
+       * manipulate those bytes. The client need not send the versions in the same order as the
+       * corresponding list names. The client may send fewer or more versions in a request than
+       * there are names. However the client MUST NOT send multiple versions that correspond to the
+       * same name; if it did, the client will get an error. Historical note: in V4 of the API, this
+       * was called `states`; it is now renamed to `version` for clarity.
+       */
+      public BatchGet setVersion(java.util.List<java.lang.String> version) {
+        this.version = version;
+        return this;
+      }
+
+      @Override
+      public BatchGet set(String parameterName, Object value) {
+        return (BatchGet) super.set(parameterName, value);
+      }
+    }
+    /**
+     * List hash lists. In the V5 API, Google will never remove a hash list that has ever been returned
+     * by this method. This enables clients to skip using this method and simply hard-code all hash
+     * lists they need. This is a standard List method as defined by https://google.aip.dev/132 and the
+     * HTTP method is GET.
+     *
+     * Create a request for the method "hashLists.list".
+     *
+     * This request holds the parameters needed by the safebrowsing server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @return the request
+     */
+    public List list() throws java.io.IOException {
+      List result = new List();
+      initialize(result);
+      return result;
+    }
+
+    public class List extends SafebrowsingRequest<com.google.api.services.safebrowsing.v5.model.GoogleSecuritySafebrowsingV5ListHashListsResponse> {
+
+      private static final String REST_PATH = "v5/hashLists";
+
+      /**
+       * List hash lists. In the V5 API, Google will never remove a hash list that has ever been
+       * returned by this method. This enables clients to skip using this method and simply hard-code
+       * all hash lists they need. This is a standard List method as defined by
+       * https://google.aip.dev/132 and the HTTP method is GET.
+       *
+       * Create a request for the method "hashLists.list".
+       *
+       * This request holds the parameters needed by the the safebrowsing server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+       * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected List() {
+        super(Safebrowsing.this, "GET", REST_PATH, null, com.google.api.services.safebrowsing.v5.model.GoogleSecuritySafebrowsingV5ListHashListsResponse.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * The maximum number of hash lists to return. The service may return fewer than this value.
+       * If unspecified, the server will choose a page size, which may be larger than the number of
+       * hash lists so that pagination is not necessary.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** The maximum number of hash lists to return. The service may return fewer than this value. If
+     unspecified, the server will choose a page size, which may be larger than the number of hash lists
+     so that pagination is not necessary.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * The maximum number of hash lists to return. The service may return fewer than this value.
+       * If unspecified, the server will choose a page size, which may be larger than the number of
+       * hash lists so that pagination is not necessary.
+       */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * A page token, received from a previous `ListHashLists` call. Provide this to retrieve the
+       * subsequent page.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** A page token, received from a previous `ListHashLists` call. Provide this to retrieve the
+     subsequent page.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * A page token, received from a previous `ListHashLists` call. Provide this to retrieve the
+       * subsequent page.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the Hashes collection.
    *
    * <p>The typical use is:</p>

@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-safebrowsing</artifactId>
-  <version>v5-rev20240505-2.0.0</version>
-  <name>Safe Browsing API v5-rev20240505-2.0.0</name>
+  <version>v5-rev20250518-2.0.0</version>
+  <name>Safe Browsing API v5-rev20250518-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

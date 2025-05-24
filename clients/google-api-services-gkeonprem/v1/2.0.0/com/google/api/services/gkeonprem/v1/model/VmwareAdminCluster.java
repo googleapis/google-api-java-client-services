@@ -190,6 +190,13 @@ public final class VmwareAdminCluster extends com.google.api.client.json.Generic
   private VmwareAdminPreparedSecretsConfig preparedSecrets;
 
   /**
+   * Configuration for registry.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private VmwareAdminPrivateRegistryConfig privateRegistryConfig;
+
+  /**
    * Output only. If set, there are currently changes in flight to the VMware admin cluster.
    * The value may be {@code null}.
    */
@@ -618,6 +625,23 @@ public final class VmwareAdminCluster extends com.google.api.client.json.Generic
    */
   public VmwareAdminCluster setPreparedSecrets(VmwareAdminPreparedSecretsConfig preparedSecrets) {
     this.preparedSecrets = preparedSecrets;
+    return this;
+  }
+
+  /**
+   * Configuration for registry.
+   * @return value or {@code null} for none
+   */
+  public VmwareAdminPrivateRegistryConfig getPrivateRegistryConfig() {
+    return privateRegistryConfig;
+  }
+
+  /**
+   * Configuration for registry.
+   * @param privateRegistryConfig privateRegistryConfig or {@code null} for none
+   */
+  public VmwareAdminCluster setPrivateRegistryConfig(VmwareAdminPrivateRegistryConfig privateRegistryConfig) {
+    this.privateRegistryConfig = privateRegistryConfig;
     return this;
   }
 

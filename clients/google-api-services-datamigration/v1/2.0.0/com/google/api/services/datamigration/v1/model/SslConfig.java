@@ -57,6 +57,15 @@ public final class SslConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String clientKey;
 
   /**
+   * Optional. SSL flags used for establishing SSL connection to the source database. Only source
+   * specific flags are supported. An object containing a list of "key": "value" pairs. Example: {
+   * "server_certificate_hostname": "server.com"}.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> sslFlags;
+
+  /**
    * Optional. The ssl config type according to 'client_key', 'client_certificate' and
    * 'ca_certificate'.
    * The value may be {@code null}.
@@ -122,6 +131,27 @@ public final class SslConfig extends com.google.api.client.json.GenericJson {
    */
   public SslConfig setClientKey(java.lang.String clientKey) {
     this.clientKey = clientKey;
+    return this;
+  }
+
+  /**
+   * Optional. SSL flags used for establishing SSL connection to the source database. Only source
+   * specific flags are supported. An object containing a list of "key": "value" pairs. Example: {
+   * "server_certificate_hostname": "server.com"}.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getSslFlags() {
+    return sslFlags;
+  }
+
+  /**
+   * Optional. SSL flags used for establishing SSL connection to the source database. Only source
+   * specific flags are supported. An object containing a list of "key": "value" pairs. Example: {
+   * "server_certificate_hostname": "server.com"}.
+   * @param sslFlags sslFlags or {@code null} for none
+   */
+  public SslConfig setSslFlags(java.util.Map<String, java.lang.String> sslFlags) {
+    this.sslFlags = sslFlags;
     return this;
   }
 

@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-monitoring</artifactId>
-  <version>v3-rev20250508-2.0.0</version>
-  <name>Cloud Monitoring API v3-rev20250508-2.0.0</name>
+  <version>v3-rev20250515-2.0.0</version>
+  <name>Cloud Monitoring API v3-rev20250515-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

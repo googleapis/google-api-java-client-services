@@ -31,6 +31,14 @@ package com.google.api.services.integrations.v1.model;
 public final class EnterpriseCrmEventbusProtoTaskExecutionDetails extends com.google.api.client.json.GenericJson {
 
   /**
+   * Indicates whether the task was skipped on failure. Only relevant if the task is in SKIPPED
+   * state.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean skippedOnFailure;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,6 +56,25 @@ public final class EnterpriseCrmEventbusProtoTaskExecutionDetails extends com.go
    */
   @com.google.api.client.util.Key
   private java.lang.String taskNumber;
+
+  /**
+   * Indicates whether the task was skipped on failure. Only relevant if the task is in SKIPPED
+   * state.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSkippedOnFailure() {
+    return skippedOnFailure;
+  }
+
+  /**
+   * Indicates whether the task was skipped on failure. Only relevant if the task is in SKIPPED
+   * state.
+   * @param skippedOnFailure skippedOnFailure or {@code null} for none
+   */
+  public EnterpriseCrmEventbusProtoTaskExecutionDetails setSkippedOnFailure(java.lang.Boolean skippedOnFailure) {
+    this.skippedOnFailure = skippedOnFailure;
+    return this;
+  }
 
   /**
    * @return value or {@code null} for none

@@ -31,7 +31,7 @@ package com.google.api.services.integrations.v1.model;
 public final class GoogleCloudConnectorsV1SslConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Additional SSL related field values
+   * Optional. Additional SSL related field values
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,70 +44,70 @@ public final class GoogleCloudConnectorsV1SslConfig extends com.google.api.clien
   }
 
   /**
-   * Type of Client Cert (PEM/JKS/.. etc.)
+   * Optional. Type of Client Cert (PEM/JKS/.. etc.)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String clientCertType;
 
   /**
-   * Client Certificate
+   * Optional. Client Certificate
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudConnectorsV1Secret clientCertificate;
 
   /**
-   * Client Private Key
+   * Optional. Client Private Key
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudConnectorsV1Secret clientPrivateKey;
 
   /**
-   * Secret containing the passphrase protecting the Client Private Key
+   * Optional. Secret containing the passphrase protecting the Client Private Key
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudConnectorsV1Secret clientPrivateKeyPass;
 
   /**
-   * Private Server Certificate. Needs to be specified if trust model is `PRIVATE`.
+   * Optional. Private Server Certificate. Needs to be specified if trust model is `PRIVATE`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudConnectorsV1Secret privateServerCertificate;
 
   /**
-   * Type of Server Cert (PEM/JKS/.. etc.)
+   * Optional. Type of Server Cert (PEM/JKS/.. etc.)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String serverCertType;
 
   /**
-   * Trust Model of the SSL connection
+   * Optional. Trust Model of the SSL connection
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String trustModel;
 
   /**
-   * Controls the ssl type for the given connector version.
+   * Optional. Controls the ssl type for the given connector version.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * Bool for enabling SSL
+   * Optional. Bool for enabling SSL
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean useSsl;
 
   /**
-   * Additional SSL related field values
+   * Optional. Additional SSL related field values
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudConnectorsV1ConfigVariable> getAdditionalVariables() {
@@ -115,7 +115,7 @@ public final class GoogleCloudConnectorsV1SslConfig extends com.google.api.clien
   }
 
   /**
-   * Additional SSL related field values
+   * Optional. Additional SSL related field values
    * @param additionalVariables additionalVariables or {@code null} for none
    */
   public GoogleCloudConnectorsV1SslConfig setAdditionalVariables(java.util.List<GoogleCloudConnectorsV1ConfigVariable> additionalVariables) {
@@ -124,7 +124,7 @@ public final class GoogleCloudConnectorsV1SslConfig extends com.google.api.clien
   }
 
   /**
-   * Type of Client Cert (PEM/JKS/.. etc.)
+   * Optional. Type of Client Cert (PEM/JKS/.. etc.)
    * @return value or {@code null} for none
    */
   public java.lang.String getClientCertType() {
@@ -132,7 +132,7 @@ public final class GoogleCloudConnectorsV1SslConfig extends com.google.api.clien
   }
 
   /**
-   * Type of Client Cert (PEM/JKS/.. etc.)
+   * Optional. Type of Client Cert (PEM/JKS/.. etc.)
    * @param clientCertType clientCertType or {@code null} for none
    */
   public GoogleCloudConnectorsV1SslConfig setClientCertType(java.lang.String clientCertType) {
@@ -141,7 +141,7 @@ public final class GoogleCloudConnectorsV1SslConfig extends com.google.api.clien
   }
 
   /**
-   * Client Certificate
+   * Optional. Client Certificate
    * @return value or {@code null} for none
    */
   public GoogleCloudConnectorsV1Secret getClientCertificate() {
@@ -149,7 +149,7 @@ public final class GoogleCloudConnectorsV1SslConfig extends com.google.api.clien
   }
 
   /**
-   * Client Certificate
+   * Optional. Client Certificate
    * @param clientCertificate clientCertificate or {@code null} for none
    */
   public GoogleCloudConnectorsV1SslConfig setClientCertificate(GoogleCloudConnectorsV1Secret clientCertificate) {
@@ -158,7 +158,7 @@ public final class GoogleCloudConnectorsV1SslConfig extends com.google.api.clien
   }
 
   /**
-   * Client Private Key
+   * Optional. Client Private Key
    * @return value or {@code null} for none
    */
   public GoogleCloudConnectorsV1Secret getClientPrivateKey() {
@@ -166,7 +166,7 @@ public final class GoogleCloudConnectorsV1SslConfig extends com.google.api.clien
   }
 
   /**
-   * Client Private Key
+   * Optional. Client Private Key
    * @param clientPrivateKey clientPrivateKey or {@code null} for none
    */
   public GoogleCloudConnectorsV1SslConfig setClientPrivateKey(GoogleCloudConnectorsV1Secret clientPrivateKey) {
@@ -175,7 +175,7 @@ public final class GoogleCloudConnectorsV1SslConfig extends com.google.api.clien
   }
 
   /**
-   * Secret containing the passphrase protecting the Client Private Key
+   * Optional. Secret containing the passphrase protecting the Client Private Key
    * @return value or {@code null} for none
    */
   public GoogleCloudConnectorsV1Secret getClientPrivateKeyPass() {
@@ -183,7 +183,7 @@ public final class GoogleCloudConnectorsV1SslConfig extends com.google.api.clien
   }
 
   /**
-   * Secret containing the passphrase protecting the Client Private Key
+   * Optional. Secret containing the passphrase protecting the Client Private Key
    * @param clientPrivateKeyPass clientPrivateKeyPass or {@code null} for none
    */
   public GoogleCloudConnectorsV1SslConfig setClientPrivateKeyPass(GoogleCloudConnectorsV1Secret clientPrivateKeyPass) {
@@ -192,7 +192,7 @@ public final class GoogleCloudConnectorsV1SslConfig extends com.google.api.clien
   }
 
   /**
-   * Private Server Certificate. Needs to be specified if trust model is `PRIVATE`.
+   * Optional. Private Server Certificate. Needs to be specified if trust model is `PRIVATE`.
    * @return value or {@code null} for none
    */
   public GoogleCloudConnectorsV1Secret getPrivateServerCertificate() {
@@ -200,7 +200,7 @@ public final class GoogleCloudConnectorsV1SslConfig extends com.google.api.clien
   }
 
   /**
-   * Private Server Certificate. Needs to be specified if trust model is `PRIVATE`.
+   * Optional. Private Server Certificate. Needs to be specified if trust model is `PRIVATE`.
    * @param privateServerCertificate privateServerCertificate or {@code null} for none
    */
   public GoogleCloudConnectorsV1SslConfig setPrivateServerCertificate(GoogleCloudConnectorsV1Secret privateServerCertificate) {
@@ -209,7 +209,7 @@ public final class GoogleCloudConnectorsV1SslConfig extends com.google.api.clien
   }
 
   /**
-   * Type of Server Cert (PEM/JKS/.. etc.)
+   * Optional. Type of Server Cert (PEM/JKS/.. etc.)
    * @return value or {@code null} for none
    */
   public java.lang.String getServerCertType() {
@@ -217,7 +217,7 @@ public final class GoogleCloudConnectorsV1SslConfig extends com.google.api.clien
   }
 
   /**
-   * Type of Server Cert (PEM/JKS/.. etc.)
+   * Optional. Type of Server Cert (PEM/JKS/.. etc.)
    * @param serverCertType serverCertType or {@code null} for none
    */
   public GoogleCloudConnectorsV1SslConfig setServerCertType(java.lang.String serverCertType) {
@@ -226,7 +226,7 @@ public final class GoogleCloudConnectorsV1SslConfig extends com.google.api.clien
   }
 
   /**
-   * Trust Model of the SSL connection
+   * Optional. Trust Model of the SSL connection
    * @return value or {@code null} for none
    */
   public java.lang.String getTrustModel() {
@@ -234,7 +234,7 @@ public final class GoogleCloudConnectorsV1SslConfig extends com.google.api.clien
   }
 
   /**
-   * Trust Model of the SSL connection
+   * Optional. Trust Model of the SSL connection
    * @param trustModel trustModel or {@code null} for none
    */
   public GoogleCloudConnectorsV1SslConfig setTrustModel(java.lang.String trustModel) {
@@ -243,7 +243,7 @@ public final class GoogleCloudConnectorsV1SslConfig extends com.google.api.clien
   }
 
   /**
-   * Controls the ssl type for the given connector version.
+   * Optional. Controls the ssl type for the given connector version.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -251,7 +251,7 @@ public final class GoogleCloudConnectorsV1SslConfig extends com.google.api.clien
   }
 
   /**
-   * Controls the ssl type for the given connector version.
+   * Optional. Controls the ssl type for the given connector version.
    * @param type type or {@code null} for none
    */
   public GoogleCloudConnectorsV1SslConfig setType(java.lang.String type) {
@@ -260,7 +260,7 @@ public final class GoogleCloudConnectorsV1SslConfig extends com.google.api.clien
   }
 
   /**
-   * Bool for enabling SSL
+   * Optional. Bool for enabling SSL
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUseSsl() {
@@ -268,7 +268,7 @@ public final class GoogleCloudConnectorsV1SslConfig extends com.google.api.clien
   }
 
   /**
-   * Bool for enabling SSL
+   * Optional. Bool for enabling SSL
    * @param useSsl useSsl or {@code null} for none
    */
   public GoogleCloudConnectorsV1SslConfig setUseSsl(java.lang.Boolean useSsl) {

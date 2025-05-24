@@ -31,21 +31,21 @@ package com.google.api.services.integrations.v1.model;
 public final class GoogleCloudConnectorsV1LockConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Indicates whether or not the connection is locked.
+   * Optional. Indicates whether or not the connection is locked.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean locked;
 
   /**
-   * Describes why a connection is locked.
+   * Optional. Describes why a connection is locked.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String reason;
 
   /**
-   * Indicates whether or not the connection is locked.
+   * Optional. Indicates whether or not the connection is locked.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getLocked() {
@@ -53,7 +53,7 @@ public final class GoogleCloudConnectorsV1LockConfig extends com.google.api.clie
   }
 
   /**
-   * Indicates whether or not the connection is locked.
+   * Optional. Indicates whether or not the connection is locked.
    * @param locked locked or {@code null} for none
    */
   public GoogleCloudConnectorsV1LockConfig setLocked(java.lang.Boolean locked) {
@@ -62,7 +62,7 @@ public final class GoogleCloudConnectorsV1LockConfig extends com.google.api.clie
   }
 
   /**
-   * Describes why a connection is locked.
+   * Optional. Describes why a connection is locked.
    * @return value or {@code null} for none
    */
   public java.lang.String getReason() {
@@ -70,7 +70,7 @@ public final class GoogleCloudConnectorsV1LockConfig extends com.google.api.clie
   }
 
   /**
-   * Describes why a connection is locked.
+   * Optional. Describes why a connection is locked.
    * @param reason reason or {@code null} for none
    */
   public GoogleCloudConnectorsV1LockConfig setReason(java.lang.String reason) {

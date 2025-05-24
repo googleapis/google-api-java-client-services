@@ -279,6 +279,13 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   private java.lang.Integer targetSize;
 
   /**
+   * The policy that specifies how the MIG creates its VMs to achieve the target size.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InstanceGroupManagerTargetSizePolicy targetSizePolicy;
+
+  /**
    * The target number of stopped instances for this managed instance group. This number changes
    * when you: - Stop instance using the stopInstances method or start instances using the
    * startInstances method. - Manually change the targetStoppedSize using the update method.
@@ -941,6 +948,23 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
    */
   public InstanceGroupManager setTargetSize(java.lang.Integer targetSize) {
     this.targetSize = targetSize;
+    return this;
+  }
+
+  /**
+   * The policy that specifies how the MIG creates its VMs to achieve the target size.
+   * @return value or {@code null} for none
+   */
+  public InstanceGroupManagerTargetSizePolicy getTargetSizePolicy() {
+    return targetSizePolicy;
+  }
+
+  /**
+   * The policy that specifies how the MIG creates its VMs to achieve the target size.
+   * @param targetSizePolicy targetSizePolicy or {@code null} for none
+   */
+  public InstanceGroupManager setTargetSizePolicy(InstanceGroupManagerTargetSizePolicy targetSizePolicy) {
+    this.targetSizePolicy = targetSizePolicy;
     return this;
   }
 

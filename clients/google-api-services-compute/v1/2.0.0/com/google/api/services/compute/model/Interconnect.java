@@ -118,6 +118,14 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> interconnectAttachments;
 
   /**
+   * [Output Only] URLs of InterconnectGroups that include this Interconnect. Order is arbitrary and
+   * items are unique.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> interconnectGroups;
+
+  /**
    * Type of interconnect, which can take one of the following values: - PARTNER: A partner-managed
    * interconnection shared between customers though a partner. - DEDICATED: A dedicated physical
    * interconnection with the customer. Note that a value IT_PRIVATE has been deprecated in favor of
@@ -493,6 +501,25 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
    */
   public Interconnect setInterconnectAttachments(java.util.List<java.lang.String> interconnectAttachments) {
     this.interconnectAttachments = interconnectAttachments;
+    return this;
+  }
+
+  /**
+   * [Output Only] URLs of InterconnectGroups that include this Interconnect. Order is arbitrary and
+   * items are unique.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getInterconnectGroups() {
+    return interconnectGroups;
+  }
+
+  /**
+   * [Output Only] URLs of InterconnectGroups that include this Interconnect. Order is arbitrary and
+   * items are unique.
+   * @param interconnectGroups interconnectGroups or {@code null} for none
+   */
+  public Interconnect setInterconnectGroups(java.util.List<java.lang.String> interconnectGroups) {
+    this.interconnectGroups = interconnectGroups;
     return this;
   }
 

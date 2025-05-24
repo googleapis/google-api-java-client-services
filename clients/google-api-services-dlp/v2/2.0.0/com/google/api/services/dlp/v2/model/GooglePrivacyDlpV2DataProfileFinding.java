@@ -39,11 +39,27 @@ public final class GooglePrivacyDlpV2DataProfileFinding extends com.google.api.c
   private java.lang.String dataProfileResourceName;
 
   /**
+   * The type of the resource that was profiled.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GooglePrivacyDlpV2DataSourceType dataSourceType;
+
+  /**
    * A unique identifier for the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String findingId;
+
+  /**
+   * The [full resource
+   * name](https://cloud.google.com/apis/design/resource_names#full_resource_name) of the resource
+   * profiled for this finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String fullResourceName;
 
   /**
    * The [type of content](https://cloud.google.com/sensitive-data-protection/docs/infotypes-
@@ -108,6 +124,23 @@ public final class GooglePrivacyDlpV2DataProfileFinding extends com.google.api.c
   }
 
   /**
+   * The type of the resource that was profiled.
+   * @return value or {@code null} for none
+   */
+  public GooglePrivacyDlpV2DataSourceType getDataSourceType() {
+    return dataSourceType;
+  }
+
+  /**
+   * The type of the resource that was profiled.
+   * @param dataSourceType dataSourceType or {@code null} for none
+   */
+  public GooglePrivacyDlpV2DataProfileFinding setDataSourceType(GooglePrivacyDlpV2DataSourceType dataSourceType) {
+    this.dataSourceType = dataSourceType;
+    return this;
+  }
+
+  /**
    * A unique identifier for the finding.
    * @return value or {@code null} for none
    */
@@ -121,6 +154,27 @@ public final class GooglePrivacyDlpV2DataProfileFinding extends com.google.api.c
    */
   public GooglePrivacyDlpV2DataProfileFinding setFindingId(java.lang.String findingId) {
     this.findingId = findingId;
+    return this;
+  }
+
+  /**
+   * The [full resource
+   * name](https://cloud.google.com/apis/design/resource_names#full_resource_name) of the resource
+   * profiled for this finding.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFullResourceName() {
+    return fullResourceName;
+  }
+
+  /**
+   * The [full resource
+   * name](https://cloud.google.com/apis/design/resource_names#full_resource_name) of the resource
+   * profiled for this finding.
+   * @param fullResourceName fullResourceName or {@code null} for none
+   */
+  public GooglePrivacyDlpV2DataProfileFinding setFullResourceName(java.lang.String fullResourceName) {
+    this.fullResourceName = fullResourceName;
     return this;
   }
 

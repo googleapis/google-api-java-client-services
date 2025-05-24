@@ -59,6 +59,13 @@ public final class EnrollBareMetalClusterRequest extends com.google.api.client.j
   private java.lang.String localName;
 
   /**
+   * Optional. The namespace of the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String localNamespace;
+
+  /**
    * Required. The admin cluster this bare metal user cluster belongs to. This is the full resource
    * name of the admin cluster's fleet membership. In the future, references to other resource types
    * might be allowed if admin clusters are modeled as their own resources.
@@ -122,6 +129,23 @@ public final class EnrollBareMetalClusterRequest extends com.google.api.client.j
    */
   public EnrollBareMetalClusterRequest setLocalName(java.lang.String localName) {
     this.localName = localName;
+    return this;
+  }
+
+  /**
+   * Optional. The namespace of the cluster.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLocalNamespace() {
+    return localNamespace;
+  }
+
+  /**
+   * Optional. The namespace of the cluster.
+   * @param localNamespace localNamespace or {@code null} for none
+   */
+  public EnrollBareMetalClusterRequest setLocalNamespace(java.lang.String localNamespace) {
+    this.localNamespace = localNamespace;
     return this;
   }
 

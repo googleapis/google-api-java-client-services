@@ -31,7 +31,7 @@ package com.google.api.services.contactcenterinsights.v1.model;
 public final class GoogleCloudContactcenterinsightsV1SentimentData extends com.google.api.client.json.GenericJson {
 
   /**
-   * A non-negative number from 0 to infinity which represents the abolute magnitude of sentiment
+   * A non-negative number from 0 to infinity which represents the absolute magnitude of sentiment
    * regardless of score.
    * The value may be {@code null}.
    */
@@ -46,7 +46,7 @@ public final class GoogleCloudContactcenterinsightsV1SentimentData extends com.g
   private java.lang.Float score;
 
   /**
-   * A non-negative number from 0 to infinity which represents the abolute magnitude of sentiment
+   * A non-negative number from 0 to infinity which represents the absolute magnitude of sentiment
    * regardless of score.
    * @return value or {@code null} for none
    */
@@ -55,7 +55,7 @@ public final class GoogleCloudContactcenterinsightsV1SentimentData extends com.g
   }
 
   /**
-   * A non-negative number from 0 to infinity which represents the abolute magnitude of sentiment
+   * A non-negative number from 0 to infinity which represents the absolute magnitude of sentiment
    * regardless of score.
    * @param magnitude magnitude or {@code null} for none
    */

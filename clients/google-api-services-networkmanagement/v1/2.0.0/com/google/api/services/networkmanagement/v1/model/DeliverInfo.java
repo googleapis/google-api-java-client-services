@@ -31,6 +31,13 @@ package com.google.api.services.networkmanagement.v1.model;
 public final class DeliverInfo extends com.google.api.client.json.GenericJson {
 
   /**
+   * Recognized type of a Google Service the packet is delivered to (if applicable).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String googleServiceType;
+
+  /**
    * IP address of the target (if applicable).
    * The value may be {@code null}.
    */
@@ -64,6 +71,23 @@ public final class DeliverInfo extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String target;
+
+  /**
+   * Recognized type of a Google Service the packet is delivered to (if applicable).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGoogleServiceType() {
+    return googleServiceType;
+  }
+
+  /**
+   * Recognized type of a Google Service the packet is delivered to (if applicable).
+   * @param googleServiceType googleServiceType or {@code null} for none
+   */
+  public DeliverInfo setGoogleServiceType(java.lang.String googleServiceType) {
+    this.googleServiceType = googleServiceType;
+    return this;
+  }
 
   /**
    * IP address of the target (if applicable).

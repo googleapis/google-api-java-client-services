@@ -38,7 +38,7 @@ public final class GoogleCloudDataplexV1ListGlossaryTermsResponse extends com.go
   private java.lang.String nextPageToken;
 
   /**
-   * Lists the terms in the specified parent.
+   * Lists the GlossaryTerms in the specified parent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,7 +77,7 @@ public final class GoogleCloudDataplexV1ListGlossaryTermsResponse extends com.go
   }
 
   /**
-   * Lists the terms in the specified parent.
+   * Lists the GlossaryTerms in the specified parent.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDataplexV1GlossaryTerm> getTerms() {
@@ -85,7 +85,7 @@ public final class GoogleCloudDataplexV1ListGlossaryTermsResponse extends com.go
   }
 
   /**
-   * Lists the terms in the specified parent.
+   * Lists the GlossaryTerms in the specified parent.
    * @param terms terms or {@code null} for none
    */
   public GoogleCloudDataplexV1ListGlossaryTermsResponse setTerms(java.util.List<GoogleCloudDataplexV1GlossaryTerm> terms) {

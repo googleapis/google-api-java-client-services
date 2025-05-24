@@ -16053,7 +16053,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The parent resource where this Glossary will be created. Format:
-         *        projects/{projectId}/locations/{locationId} where locationId refers to a GCP region.
+         *        projects/{project_id_or_number}/locations/{location_id} where location_id refers to a GCP
+         *        region.
          * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1Glossary}
          * @return the request
          */
@@ -16082,7 +16083,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The parent resource where this Glossary will be created. Format:
-         *        projects/{projectId}/locations/{locationId} where locationId refers to a GCP region.
+         *        projects/{project_id_or_number}/locations/{location_id} where location_id refers to a GCP
+         *        region.
            * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1Glossary}
            * @since 1.13
            */
@@ -16153,13 +16155,14 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The parent resource where this Glossary will be created. Format:
-           * projects/{projectId}/locations/{locationId} where locationId refers to a GCP region.
+           * projects/{project_id_or_number}/locations/{location_id} where location_id refers to a
+           * GCP region.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The parent resource where this Glossary will be created. Format:
-         projects/{projectId}/locations/{locationId} where locationId refers to a GCP region.
+         projects/{project_id_or_number}/locations/{location_id} where location_id refers to a GCP region.
            */
           public java.lang.String getParent() {
             return parent;
@@ -16167,7 +16170,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The parent resource where this Glossary will be created. Format:
-           * projects/{projectId}/locations/{locationId} where locationId refers to a GCP region.
+           * projects/{project_id_or_number}/locations/{location_id} where location_id refers to a
+           * GCP region.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -16196,19 +16200,19 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Optional. Validates the request without actually creating the glossary. Default: false.
+           * Optional. Validates the request without actually creating the Glossary. Default: false.
            */
           @com.google.api.client.util.Key
           private java.lang.Boolean validateOnly;
 
-          /** Optional. Validates the request without actually creating the glossary. Default: false.
+          /** Optional. Validates the request without actually creating the Glossary. Default: false.
            */
           public java.lang.Boolean getValidateOnly() {
             return validateOnly;
           }
 
           /**
-           * Optional. Validates the request without actually creating the glossary. Default: false.
+           * Optional. Validates the request without actually creating the Glossary. Default: false.
            */
           public Create setValidateOnly(java.lang.Boolean validateOnly) {
             this.validateOnly = validateOnly;
@@ -16221,8 +16225,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
         }
         /**
-         * Deletes a Glossary resource. All the categories and terms within the glossary must be deleted
-         * before a glossary can be deleted.
+         * Deletes a Glossary resource. All the categories and terms within the Glossary must be deleted
+         * before the Glossary can be deleted.
          *
          * Create a request for the method "glossaries.delete".
          *
@@ -16230,7 +16234,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
          * @param name Required. The name of the Glossary to delete. Format:
-         *        projects/{project}/locations/{location}/glossary/{glossary}
+         *        projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id}
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -16247,8 +16251,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/glossaries/[^/]+$");
 
           /**
-           * Deletes a Glossary resource. All the categories and terms within the glossary must be deleted
-           * before a glossary can be deleted.
+           * Deletes a Glossary resource. All the categories and terms within the Glossary must be deleted
+           * before the Glossary can be deleted.
            *
            * Create a request for the method "glossaries.delete".
            *
@@ -16259,7 +16263,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. The name of the Glossary to delete. Format:
-         *        projects/{project}/locations/{location}/glossary/{glossary}
+         *        projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id}
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -16329,13 +16333,13 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The name of the Glossary to delete. Format:
-           * projects/{project}/locations/{location}/glossary/{glossary}
+           * projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id}
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The name of the Glossary to delete. Format:
-         projects/{project}/locations/{location}/glossary/{glossary}
+         projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id}
            */
           public java.lang.String getName() {
             return name;
@@ -16343,7 +16347,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The name of the Glossary to delete. Format:
-           * projects/{project}/locations/{location}/glossary/{glossary}
+           * projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id}
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -16387,7 +16391,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
         }
         /**
-         * Retrieves a specified Glossary resource.
+         * Gets a Glossary resource.
          *
          * Create a request for the method "glossaries.get".
          *
@@ -16395,7 +16399,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
          * @param name Required. The name of the Glossary to retrieve. Format:
-         *        projects/{project}/locations/{location}/glossaries/{glossary}
+         *        projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id}
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -16412,7 +16416,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/glossaries/[^/]+$");
 
           /**
-           * Retrieves a specified Glossary resource.
+           * Gets a Glossary resource.
            *
            * Create a request for the method "glossaries.get".
            *
@@ -16422,7 +16426,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. The name of the Glossary to retrieve. Format:
-         *        projects/{project}/locations/{location}/glossaries/{glossary}
+         *        projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id}
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -16502,13 +16506,13 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The name of the Glossary to retrieve. Format:
-           * projects/{project}/locations/{location}/glossaries/{glossary}
+           * projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id}
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The name of the Glossary to retrieve. Format:
-         projects/{project}/locations/{location}/glossaries/{glossary}
+         projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id}
            */
           public java.lang.String getName() {
             return name;
@@ -16516,7 +16520,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The name of the Glossary to retrieve. Format:
-           * projects/{project}/locations/{location}/glossaries/{glossary}
+           * projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id}
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -16738,8 +16742,9 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
          * This request holds the parameters needed by the dataplex server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent, which has this collection of glossaries. Format:
-         *        projects/{project}/locations/{location} Location is the GCP region.
+         * @param parent Required. The parent, which has this collection of Glossaries. Format:
+         *        projects/{project_id_or_number}/locations/{location_id} where location_id refers to a GCP
+         *        region.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -16765,8 +16770,9 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent, which has this collection of glossaries. Format:
-         *        projects/{project}/locations/{location} Location is the GCP region.
+           * @param parent Required. The parent, which has this collection of Glossaries. Format:
+         *        projects/{project_id_or_number}/locations/{location_id} where location_id refers to a GCP
+         *        region.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -16845,22 +16851,24 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Required. The parent, which has this collection of glossaries. Format:
-           * projects/{project}/locations/{location} Location is the GCP region.
+           * Required. The parent, which has this collection of Glossaries. Format:
+           * projects/{project_id_or_number}/locations/{location_id} where location_id refers to a
+           * GCP region.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent, which has this collection of glossaries. Format:
-         projects/{project}/locations/{location} Location is the GCP region.
+          /** Required. The parent, which has this collection of Glossaries. Format:
+         projects/{project_id_or_number}/locations/{location_id} where location_id refers to a GCP region.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The parent, which has this collection of glossaries. Format:
-           * projects/{project}/locations/{location} Location is the GCP region.
+           * Required. The parent, which has this collection of Glossaries. Format:
+           * projects/{project_id_or_number}/locations/{location_id} where location_id refers to a
+           * GCP region.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -16873,22 +16881,25 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Optional. Filter expression that filters glossaries listed in the response. Initially,
-           * no filter is supported.
+           * Optional. Filter expression that filters Glossaries listed in the response. Filters on
+           * proto fields of Glossary are supported. Examples of using a filter are: -
+           * display_name="my-glossary" - categoryCount=1 - termCount=0
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Optional. Filter expression that filters glossaries listed in the response. Initially, no filter is
-         supported.
+          /** Optional. Filter expression that filters Glossaries listed in the response. Filters on proto fields
+         of Glossary are supported. Examples of using a filter are: - display_name="my-glossary" -
+         categoryCount=1 - termCount=0
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
           /**
-           * Optional. Filter expression that filters glossaries listed in the response. Initially,
-           * no filter is supported.
+           * Optional. Filter expression that filters Glossaries listed in the response. Filters on
+           * proto fields of Glossary are supported. Examples of using a filter are: -
+           * display_name="my-glossary" - categoryCount=1 - termCount=0
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -16896,14 +16907,14 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Optional. Order by expression that orders glossaries listed in the response. Order by
+           * Optional. Order by expression that orders Glossaries listed in the response. Order by
            * fields are: name or create_time for the result. If not specified, the ordering is
            * undefined.
            */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** Optional. Order by expression that orders glossaries listed in the response. Order by fields are:
+          /** Optional. Order by expression that orders Glossaries listed in the response. Order by fields are:
          name or create_time for the result. If not specified, the ordering is undefined.
            */
           public java.lang.String getOrderBy() {
@@ -16911,7 +16922,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Optional. Order by expression that orders glossaries listed in the response. Order by
+           * Optional. Order by expression that orders Glossaries listed in the response. Order by
            * fields are: name or create_time for the result. If not specified, the ordering is
            * undefined.
            */
@@ -16921,15 +16932,15 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Optional. The maximum number of glossaries to return. The service may return fewer than
-           * this value. If unspecified, at most 50 glossaries will be returned. The maximum value
+           * Optional. The maximum number of Glossaries to return. The service may return fewer than
+           * this value. If unspecified, at most 50 Glossaries will be returned. The maximum value
            * is 1000; values above 1000 will be coerced to 1000.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Optional. The maximum number of glossaries to return. The service may return fewer than this value.
-         If unspecified, at most 50 glossaries will be returned. The maximum value is 1000; values above
+          /** Optional. The maximum number of Glossaries to return. The service may return fewer than this value.
+         If unspecified, at most 50 Glossaries will be returned. The maximum value is 1000; values above
          1000 will be coerced to 1000.
            */
           public java.lang.Integer getPageSize() {
@@ -16937,8 +16948,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Optional. The maximum number of glossaries to return. The service may return fewer than
-           * this value. If unspecified, at most 50 glossaries will be returned. The maximum value
+           * Optional. The maximum number of Glossaries to return. The service may return fewer than
+           * this value. If unspecified, at most 50 Glossaries will be returned. The maximum value
            * is 1000; values above 1000 will be coerced to 1000.
            */
           public List setPageSize(java.lang.Integer pageSize) {
@@ -16986,7 +16997,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
          * @param name Output only. Identifier. The resource name of the Glossary. Format:
-         *        projects/{projectId}/locations/{locationId}/glossaries/{glossaryId}
+         *        projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id}
          * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1Glossary}
          * @return the request
          */
@@ -17015,7 +17026,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Output only. Identifier. The resource name of the Glossary. Format:
-         *        projects/{projectId}/locations/{locationId}/glossaries/{glossaryId}
+         *        projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id}
            * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1Glossary}
            * @since 1.13
            */
@@ -17086,13 +17097,13 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Output only. Identifier. The resource name of the Glossary. Format:
-           * projects/{projectId}/locations/{locationId}/glossaries/{glossaryId}
+           * projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id}
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Output only. Identifier. The resource name of the Glossary. Format:
-         projects/{projectId}/locations/{locationId}/glossaries/{glossaryId}
+         projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id}
            */
           public java.lang.String getName() {
             return name;
@@ -17100,7 +17111,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Output only. Identifier. The resource name of the Glossary. Format:
-           * projects/{projectId}/locations/{locationId}/glossaries/{glossaryId}
+           * projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id}
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -17129,19 +17140,19 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Optional. Validates the request without actually updating the glossary. Default: false.
+           * Optional. Validates the request without actually updating the Glossary. Default: false.
            */
           @com.google.api.client.util.Key
           private java.lang.Boolean validateOnly;
 
-          /** Optional. Validates the request without actually updating the glossary. Default: false.
+          /** Optional. Validates the request without actually updating the Glossary. Default: false.
            */
           public java.lang.Boolean getValidateOnly() {
             return validateOnly;
           }
 
           /**
-           * Optional. Validates the request without actually updating the glossary. Default: false.
+           * Optional. Validates the request without actually updating the Glossary. Default: false.
            */
           public Patch setValidateOnly(java.lang.Boolean validateOnly) {
             this.validateOnly = validateOnly;
@@ -17471,7 +17482,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
         public class Categories {
 
           /**
-           * GlossaryCategory APIs are CCFE passthrough APIs. Creates a new GlossaryCategory resource.
+           * Creates a new GlossaryCategory resource.
            *
            * Create a request for the method "categories.create".
            *
@@ -17479,8 +17490,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
            * @param parent Required. The parent resource where this GlossaryCategory will be created. Format:
-           *        projects/{projectId}/locations/{locationId}/glossaries/{glossaryId} where locationId
-           *        refers to a GCP region.
+           *        projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id} where
+           *        locationId refers to a GCP region.
            * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1GlossaryCategory}
            * @return the request
            */
@@ -17498,7 +17509,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/glossaries/[^/]+$");
 
             /**
-             * GlossaryCategory APIs are CCFE passthrough APIs. Creates a new GlossaryCategory resource.
+             * Creates a new GlossaryCategory resource.
              *
              * Create a request for the method "categories.create".
              *
@@ -17509,8 +17520,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param parent Required. The parent resource where this GlossaryCategory will be created. Format:
-           *        projects/{projectId}/locations/{locationId}/glossaries/{glossaryId} where locationId
-           *        refers to a GCP region.
+           *        projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id} where
+           *        locationId refers to a GCP region.
              * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1GlossaryCategory}
              * @since 1.13
              */
@@ -17581,15 +17592,15 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
             /**
              * Required. The parent resource where this GlossaryCategory will be created. Format:
-             * projects/{projectId}/locations/{locationId}/glossaries/{glossaryId} where locationId
-             * refers to a GCP region.
+             * projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id}
+             * where locationId refers to a GCP region.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. The parent resource where this GlossaryCategory will be created. Format:
-           projects/{projectId}/locations/{locationId}/glossaries/{glossaryId} where locationId refers to a
-           GCP region.
+           projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id} where locationId
+           refers to a GCP region.
              */
             public java.lang.String getParent() {
               return parent;
@@ -17597,8 +17608,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
             /**
              * Required. The parent resource where this GlossaryCategory will be created. Format:
-             * projects/{projectId}/locations/{locationId}/glossaries/{glossaryId} where locationId
-             * refers to a GCP region.
+             * projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id}
+             * where locationId refers to a GCP region.
              */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -17610,17 +17621,17 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
               return this;
             }
 
-            /** Required. Category ID: GlossaryCategory identifier. */
+            /** Required. GlossaryCategory identifier. */
             @com.google.api.client.util.Key
             private java.lang.String categoryId;
 
-            /** Required. Category ID: GlossaryCategory identifier.
+            /** Required. GlossaryCategory identifier.
              */
             public java.lang.String getCategoryId() {
               return categoryId;
             }
 
-            /** Required. Category ID: GlossaryCategory identifier. */
+            /** Required. GlossaryCategory identifier. */
             public Create setCategoryId(java.lang.String categoryId) {
               this.categoryId = categoryId;
               return this;
@@ -17632,16 +17643,16 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             }
           }
           /**
-           * Deletes a GlossaryCategory resource. All the categories and terms nested directly under the
-           * category will be moved one level up to the parent in the hierarchy.
+           * Deletes a GlossaryCategory resource. All the GlossaryCategories and GlossaryTerms nested directly
+           * under the specified GlossaryCategory will be moved one level up to the parent in the hierarchy.
            *
            * Create a request for the method "categories.delete".
            *
            * This request holds the parameters needed by the dataplex server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The name of the GlossaryCategory to delete. Format:
-           *        projects/{project}/locations/{location}/glossary/{glossary}/categories/{glossary_category}
+           * @param name Required. The name of the GlossaryCategory to delete. Format: projects/{project_id_or_number}/locati
+           *        ons/{location_id}/glossaries/{glossary_id}/categories/{category_id}
            * @return the request
            */
           public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -17658,8 +17669,9 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/glossaries/[^/]+/categories/[^/]+$");
 
             /**
-             * Deletes a GlossaryCategory resource. All the categories and terms nested directly under the
-             * category will be moved one level up to the parent in the hierarchy.
+             * Deletes a GlossaryCategory resource. All the GlossaryCategories and GlossaryTerms nested
+             * directly under the specified GlossaryCategory will be moved one level up to the parent in the
+             * hierarchy.
              *
              * Create a request for the method "categories.delete".
              *
@@ -17669,8 +17681,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The name of the GlossaryCategory to delete. Format:
-           *        projects/{project}/locations/{location}/glossary/{glossary}/categories/{glossary_category}
+             * @param name Required. The name of the GlossaryCategory to delete. Format: projects/{project_id_or_number}/locati
+           *        ons/{location_id}/glossaries/{glossary_id}/categories/{category_id}
              * @since 1.13
              */
             protected Delete(java.lang.String name) {
@@ -17739,22 +17751,22 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             }
 
             /**
-             * Required. The name of the GlossaryCategory to delete. Format: projects/{project}/loca
-             * tions/{location}/glossary/{glossary}/categories/{glossary_category}
+             * Required. The name of the GlossaryCategory to delete. Format: projects/{project_id_or
+             * _number}/locations/{location_id}/glossaries/{glossary_id}/categories/{category_id}
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The name of the GlossaryCategory to delete. Format:
-           projects/{project}/locations/{location}/glossary/{glossary}/categories/{glossary_category}
+            /** Required. The name of the GlossaryCategory to delete. Format: projects/{project_id_or_number}/locat
+           ions/{location_id}/glossaries/{glossary_id}/categories/{category_id}
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. The name of the GlossaryCategory to delete. Format: projects/{project}/loca
-             * tions/{location}/glossary/{glossary}/categories/{glossary_category}
+             * Required. The name of the GlossaryCategory to delete. Format: projects/{project_id_or
+             * _number}/locations/{location_id}/glossaries/{glossary_id}/categories/{category_id}
              */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -17772,16 +17784,15 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             }
           }
           /**
-           * Retrieves a specified GlossaryCategory resource.
+           * Gets a GlossaryCategory resource.
            *
            * Create a request for the method "categories.get".
            *
            * This request holds the parameters needed by the dataplex server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The name of the GlossaryCategory to retrieve. Format:
-           *        projects/{project}/locations/{location}/glossaries/{glossary}/categories/{glossary_categor
-           *        y}
+           * @param name Required. The name of the GlossaryCategory to retrieve. Format: projects/{project_id_or_number}/loca
+           *        tions/{location_id}/glossaries/{glossary_id}/categories/{category_id}
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -17798,7 +17809,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/glossaries/[^/]+/categories/[^/]+$");
 
             /**
-             * Retrieves a specified GlossaryCategory resource.
+             * Gets a GlossaryCategory resource.
              *
              * Create a request for the method "categories.get".
              *
@@ -17807,9 +17818,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The name of the GlossaryCategory to retrieve. Format:
-           *        projects/{project}/locations/{location}/glossaries/{glossary}/categories/{glossary_categor
-           *        y}
+             * @param name Required. The name of the GlossaryCategory to retrieve. Format: projects/{project_id_or_number}/loca
+           *        tions/{location_id}/glossaries/{glossary_id}/categories/{category_id}
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -17888,22 +17898,22 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             }
 
             /**
-             * Required. The name of the GlossaryCategory to retrieve. Format: projects/{project}/lo
-             * cations/{location}/glossaries/{glossary}/categories/{glossary_category}
+             * Required. The name of the GlossaryCategory to retrieve. Format: projects/{project_id_
+             * or_number}/locations/{location_id}/glossaries/{glossary_id}/categories/{category_id}
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The name of the GlossaryCategory to retrieve. Format:
-           projects/{project}/locations/{location}/glossaries/{glossary}/categories/{glossary_category}
+            /** Required. The name of the GlossaryCategory to retrieve. Format: projects/{project_id_or_number}/loc
+           ations/{location_id}/glossaries/{glossary_id}/categories/{category_id}
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. The name of the GlossaryCategory to retrieve. Format: projects/{project}/lo
-             * cations/{location}/glossaries/{glossary}/categories/{glossary_category}
+             * Required. The name of the GlossaryCategory to retrieve. Format: projects/{project_id_
+             * or_number}/locations/{location_id}/glossaries/{glossary_id}/categories/{category_id}
              */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -18118,15 +18128,16 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             }
           }
           /**
-           * Lists GlossaryCategory resources in a glossary.
+           * Lists GlossaryCategory resources in a Glossary.
            *
            * Create a request for the method "categories.list".
            *
            * This request holds the parameters needed by the dataplex server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The parent, which has this collection of categories. Format:
-           *        projects/{project}/locations/{location}/glossaries/{glossary} Location is the GCP region.
+           * @param parent Required. The parent, which has this collection of GlossaryCategories. Format:
+           *        projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id} Location
+           *        is the GCP region.
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -18143,7 +18154,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/glossaries/[^/]+$");
 
             /**
-             * Lists GlossaryCategory resources in a glossary.
+             * Lists GlossaryCategory resources in a Glossary.
              *
              * Create a request for the method "categories.list".
              *
@@ -18152,8 +18163,9 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The parent, which has this collection of categories. Format:
-           *        projects/{project}/locations/{location}/glossaries/{glossary} Location is the GCP region.
+             * @param parent Required. The parent, which has this collection of GlossaryCategories. Format:
+           *        projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id} Location
+           *        is the GCP region.
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -18232,24 +18244,25 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             }
 
             /**
-             * Required. The parent, which has this collection of categories. Format:
-             * projects/{project}/locations/{location}/glossaries/{glossary} Location is the GCP
-             * region.
+             * Required. The parent, which has this collection of GlossaryCategories. Format:
+             * projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id}
+             * Location is the GCP region.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The parent, which has this collection of categories. Format:
-           projects/{project}/locations/{location}/glossaries/{glossary} Location is the GCP region.
+            /** Required. The parent, which has this collection of GlossaryCategories. Format:
+           projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id} Location is the
+           GCP region.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
             /**
-             * Required. The parent, which has this collection of categories. Format:
-             * projects/{project}/locations/{location}/glossaries/{glossary} Location is the GCP
-             * region.
+             * Required. The parent, which has this collection of GlossaryCategories. Format:
+             * projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id}
+             * Location is the GCP region.
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -18262,28 +18275,34 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             }
 
             /**
-             * Optional. Filter expression that filters categories listed in the response. Filters
-             * supported: List GlossaryCategories based on immediate parent in the resource
-             * hierarchy. This will only return the GlossaryCategories nested directly under the
-             * parent and no other subsequent nested categories will be returned.
+             * Optional. Filter expression that filters GlossaryCategories listed in the response.
+             * Filters are supported on the following fields: - immediate_parentExamples of using a
+             * filter are: - immediate_parent="projects/{project_id_or_number}/locations/{location_i
+             * d}/glossaries/{glossary_id}" - immediate_parent="projects/{project_id_or_number}/loca
+             * tions/{location_id}/glossaries/{glossary_id}/categories/{category_id}"This will only
+             * return the GlossaryCategories that are directly nested under the specified parent.
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
-            /** Optional. Filter expression that filters categories listed in the response. Filters supported: List
-           GlossaryCategories based on immediate parent in the resource hierarchy. This will only return the
-           GlossaryCategories nested directly under the parent and no other subsequent nested categories will
-           be returned.
+            /** Optional. Filter expression that filters GlossaryCategories listed in the response. Filters are
+           supported on the following fields: - immediate_parentExamples of using a filter are: -
+           immediate_parent="projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id}"
+           - immediate_parent="projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id
+           }/categories/{category_id}"This will only return the GlossaryCategories that are directly nested
+           under the specified parent.
              */
             public java.lang.String getFilter() {
               return filter;
             }
 
             /**
-             * Optional. Filter expression that filters categories listed in the response. Filters
-             * supported: List GlossaryCategories based on immediate parent in the resource
-             * hierarchy. This will only return the GlossaryCategories nested directly under the
-             * parent and no other subsequent nested categories will be returned.
+             * Optional. Filter expression that filters GlossaryCategories listed in the response.
+             * Filters are supported on the following fields: - immediate_parentExamples of using a
+             * filter are: - immediate_parent="projects/{project_id_or_number}/locations/{location_i
+             * d}/glossaries/{glossary_id}" - immediate_parent="projects/{project_id_or_number}/loca
+             * tions/{location_id}/glossaries/{glossary_id}/categories/{category_id}"This will only
+             * return the GlossaryCategories that are directly nested under the specified parent.
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
@@ -18291,24 +18310,24 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             }
 
             /**
-             * Optional. Order by expression that orders categories listed in the response. Order by
-             * fields are: name or create_time for the result. If not specified, the ordering is
-             * undefined.
+             * Optional. Order by expression that orders GlossaryCategories listed in the response.
+             * Order by fields are: name or create_time for the result. If not specified, the
+             * ordering is undefined.
              */
             @com.google.api.client.util.Key
             private java.lang.String orderBy;
 
-            /** Optional. Order by expression that orders categories listed in the response. Order by fields are:
-           name or create_time for the result. If not specified, the ordering is undefined.
+            /** Optional. Order by expression that orders GlossaryCategories listed in the response. Order by
+           fields are: name or create_time for the result. If not specified, the ordering is undefined.
              */
             public java.lang.String getOrderBy() {
               return orderBy;
             }
 
             /**
-             * Optional. Order by expression that orders categories listed in the response. Order by
-             * fields are: name or create_time for the result. If not specified, the ordering is
-             * undefined.
+             * Optional. Order by expression that orders GlossaryCategories listed in the response.
+             * Order by fields are: name or create_time for the result. If not specified, the
+             * ordering is undefined.
              */
             public List setOrderBy(java.lang.String orderBy) {
               this.orderBy = orderBy;
@@ -18316,25 +18335,25 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             }
 
             /**
-             * Optional. The maximum number of categories to return. The service may return fewer
-             * than this value. If unspecified, at most 50 categories will be returned. The maximum
-             * value is 1000; values above 1000 will be coerced to 1000.
+             * Optional. The maximum number of GlossaryCategories to return. The service may return
+             * fewer than this value. If unspecified, at most 50 GlossaryCategories will be
+             * returned. The maximum value is 1000; values above 1000 will be coerced to 1000.
              */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** Optional. The maximum number of categories to return. The service may return fewer than this value.
-           If unspecified, at most 50 categories will be returned. The maximum value is 1000; values above
-           1000 will be coerced to 1000.
+            /** Optional. The maximum number of GlossaryCategories to return. The service may return fewer than
+           this value. If unspecified, at most 50 GlossaryCategories will be returned. The maximum value is
+           1000; values above 1000 will be coerced to 1000.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
             /**
-             * Optional. The maximum number of categories to return. The service may return fewer
-             * than this value. If unspecified, at most 50 categories will be returned. The maximum
-             * value is 1000; values above 1000 will be coerced to 1000.
+             * Optional. The maximum number of GlossaryCategories to return. The service may return
+             * fewer than this value. If unspecified, at most 50 GlossaryCategories will be
+             * returned. The maximum value is 1000; values above 1000 will be coerced to 1000.
              */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
@@ -18380,9 +18399,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * This request holds the parameters needed by the dataplex server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name Output only. Identifier. The resource name of the GlossaryCategory. Format:
-           *        projects/{projectId}/locations/{locationId}/glossaries/{glossaryId}/categories/{categoryId
-           *        }
+           * @param name Output only. Identifier. The resource name of the GlossaryCategory. Format: projects/{project_id_or_
+           *        number}/locations/{location_id}/glossaries/{glossary_id}/categories/{category_id}
            * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1GlossaryCategory}
            * @return the request
            */
@@ -18410,9 +18428,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Output only. Identifier. The resource name of the GlossaryCategory. Format:
-           *        projects/{projectId}/locations/{locationId}/glossaries/{glossaryId}/categories/{categoryId
-           *        }
+             * @param name Output only. Identifier. The resource name of the GlossaryCategory. Format: projects/{project_id_or_
+           *        number}/locations/{location_id}/glossaries/{glossary_id}/categories/{category_id}
              * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1GlossaryCategory}
              * @since 1.13
              */
@@ -18483,13 +18500,14 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
             /**
              * Output only. Identifier. The resource name of the GlossaryCategory. Format: projects/
-             * {projectId}/locations/{locationId}/glossaries/{glossaryId}/categories/{categoryId}
+             * {project_id_or_number}/locations/{location_id}/glossaries/{glossary_id}/categories/{c
+             * ategory_id}
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Output only. Identifier. The resource name of the GlossaryCategory. Format:
-           projects/{projectId}/locations/{locationId}/glossaries/{glossaryId}/categories/{categoryId}
+            /** Output only. Identifier. The resource name of the GlossaryCategory. Format: projects/{project_id_or
+           _number}/locations/{location_id}/glossaries/{glossary_id}/categories/{category_id}
              */
             public java.lang.String getName() {
               return name;
@@ -18497,7 +18515,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
             /**
              * Output only. Identifier. The resource name of the GlossaryCategory. Format: projects/
-             * {projectId}/locations/{locationId}/glossaries/{glossaryId}/categories/{categoryId}
+             * {project_id_or_number}/locations/{location_id}/glossaries/{glossary_id}/categories/{c
+             * ategory_id}
              */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -18849,16 +18868,16 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
         public class Terms {
 
           /**
-           * GlossaryTerm APIs are CCFE passthrough APIs. Creates a new GlossaryTerm resource.
+           * Creates a new GlossaryTerm resource.
            *
            * Create a request for the method "terms.create".
            *
            * This request holds the parameters needed by the dataplex server.  After setting any optional
            * parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The parent resource where this GlossaryTerm will be created. Format:
-           *        projects/{projectId}/locations/{locationId}/glossaries/{glossaryId} where locationId
-           *        refers to a GCP region.
+           * @param parent Required. The parent resource where the GlossaryTerm will be created. Format:
+           *        projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id} where
+           *        location_id refers to a GCP region.
            * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1GlossaryTerm}
            * @return the request
            */
@@ -18876,7 +18895,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/glossaries/[^/]+$");
 
             /**
-             * GlossaryTerm APIs are CCFE passthrough APIs. Creates a new GlossaryTerm resource.
+             * Creates a new GlossaryTerm resource.
              *
              * Create a request for the method "terms.create".
              *
@@ -18886,9 +18905,9 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The parent resource where this GlossaryTerm will be created. Format:
-           *        projects/{projectId}/locations/{locationId}/glossaries/{glossaryId} where locationId
-           *        refers to a GCP region.
+             * @param parent Required. The parent resource where the GlossaryTerm will be created. Format:
+           *        projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id} where
+           *        location_id refers to a GCP region.
              * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1GlossaryTerm}
              * @since 1.13
              */
@@ -18958,25 +18977,25 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             }
 
             /**
-             * Required. The parent resource where this GlossaryTerm will be created. Format:
-             * projects/{projectId}/locations/{locationId}/glossaries/{glossaryId} where locationId
-             * refers to a GCP region.
+             * Required. The parent resource where the GlossaryTerm will be created. Format:
+             * projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id}
+             * where location_id refers to a GCP region.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The parent resource where this GlossaryTerm will be created. Format:
-           projects/{projectId}/locations/{locationId}/glossaries/{glossaryId} where locationId refers to a
-           GCP region.
+            /** Required. The parent resource where the GlossaryTerm will be created. Format:
+           projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id} where location_id
+           refers to a GCP region.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
             /**
-             * Required. The parent resource where this GlossaryTerm will be created. Format:
-             * projects/{projectId}/locations/{locationId}/glossaries/{glossaryId} where locationId
-             * refers to a GCP region.
+             * Required. The parent resource where the GlossaryTerm will be created. Format:
+             * projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id}
+             * where location_id refers to a GCP region.
              */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -18988,17 +19007,17 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
               return this;
             }
 
-            /** Required. Term ID: GlossaryTerm identifier. */
+            /** Required. GlossaryTerm identifier. */
             @com.google.api.client.util.Key
             private java.lang.String termId;
 
-            /** Required. Term ID: GlossaryTerm identifier.
+            /** Required. GlossaryTerm identifier.
              */
             public java.lang.String getTermId() {
               return termId;
             }
 
-            /** Required. Term ID: GlossaryTerm identifier. */
+            /** Required. GlossaryTerm identifier. */
             public Create setTermId(java.lang.String termId) {
               this.termId = termId;
               return this;
@@ -19018,7 +19037,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
            * @param name Required. The name of the GlossaryTerm to delete. Format:
-           *        projects/{project}/locations/{location}/glossary/{glossary}/terms/{glossary_term}
+           *        projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id}/terms/{te
+           *        rm_id}
            * @return the request
            */
           public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -19046,7 +19066,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param name Required. The name of the GlossaryTerm to delete. Format:
-           *        projects/{project}/locations/{location}/glossary/{glossary}/terms/{glossary_term}
+           *        projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id}/terms/{te
+           *        rm_id}
              * @since 1.13
              */
             protected Delete(java.lang.String name) {
@@ -19115,22 +19136,22 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             }
 
             /**
-             * Required. The name of the GlossaryTerm to delete. Format:
-             * projects/{project}/locations/{location}/glossary/{glossary}/terms/{glossary_term}
+             * Required. The name of the GlossaryTerm to delete. Format: projects/{project_id_or_num
+             * ber}/locations/{location_id}/glossaries/{glossary_id}/terms/{term_id}
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Required. The name of the GlossaryTerm to delete. Format:
-           projects/{project}/locations/{location}/glossary/{glossary}/terms/{glossary_term}
+           projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id}/terms/{term_id}
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. The name of the GlossaryTerm to delete. Format:
-             * projects/{project}/locations/{location}/glossary/{glossary}/terms/{glossary_term}
+             * Required. The name of the GlossaryTerm to delete. Format: projects/{project_id_or_num
+             * ber}/locations/{location_id}/glossaries/{glossary_id}/terms/{term_id}
              */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -19148,7 +19169,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             }
           }
           /**
-           * Retrieves a specified GlossaryTerm resource.
+           * Gets a GlossaryTerm resource.
            *
            * Create a request for the method "terms.get".
            *
@@ -19156,7 +19177,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
            * @param name Required. The name of the GlossaryTerm to retrieve. Format:
-           *        projects/{project}/locations/{location}/glossaries/{glossary}/terms/{glossary_term}
+           *        projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id}/terms/{te
+           *        rm_id}
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -19173,7 +19195,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/glossaries/[^/]+/terms/[^/]+$");
 
             /**
-             * Retrieves a specified GlossaryTerm resource.
+             * Gets a GlossaryTerm resource.
              *
              * Create a request for the method "terms.get".
              *
@@ -19183,7 +19205,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param name Required. The name of the GlossaryTerm to retrieve. Format:
-           *        projects/{project}/locations/{location}/glossaries/{glossary}/terms/{glossary_term}
+           *        projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id}/terms/{te
+           *        rm_id}
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -19262,22 +19285,22 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             }
 
             /**
-             * Required. The name of the GlossaryTerm to retrieve. Format:
-             * projects/{project}/locations/{location}/glossaries/{glossary}/terms/{glossary_term}
+             * Required. The name of the GlossaryTerm to retrieve. Format: projects/{project_id_or_n
+             * umber}/locations/{location_id}/glossaries/{glossary_id}/terms/{term_id}
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Required. The name of the GlossaryTerm to retrieve. Format:
-           projects/{project}/locations/{location}/glossaries/{glossary}/terms/{glossary_term}
+           projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id}/terms/{term_id}
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. The name of the GlossaryTerm to retrieve. Format:
-             * projects/{project}/locations/{location}/glossaries/{glossary}/terms/{glossary_term}
+             * Required. The name of the GlossaryTerm to retrieve. Format: projects/{project_id_or_n
+             * umber}/locations/{location_id}/glossaries/{glossary_id}/terms/{term_id}
              */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -19492,15 +19515,16 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             }
           }
           /**
-           * Lists GlossaryTerm resources in a glossary.
+           * Lists GlossaryTerm resources in a Glossary.
            *
            * Create a request for the method "terms.list".
            *
            * This request holds the parameters needed by the dataplex server.  After setting any optional
            * parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The parent, which has this collection of terms. Format:
-           *        projects/{project}/locations/{location}/glossaries/{glossary} Location is the GCP region.
+           * @param parent Required. The parent, which has this collection of GlossaryTerms. Format:
+           *        projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id} where
+           *        location_id refers to a GCP region.
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -19517,7 +19541,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/glossaries/[^/]+$");
 
             /**
-             * Lists GlossaryTerm resources in a glossary.
+             * Lists GlossaryTerm resources in a Glossary.
              *
              * Create a request for the method "terms.list".
              *
@@ -19526,8 +19550,9 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The parent, which has this collection of terms. Format:
-           *        projects/{project}/locations/{location}/glossaries/{glossary} Location is the GCP region.
+             * @param parent Required. The parent, which has this collection of GlossaryTerms. Format:
+           *        projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id} where
+           *        location_id refers to a GCP region.
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -19606,24 +19631,25 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             }
 
             /**
-             * Required. The parent, which has this collection of terms. Format:
-             * projects/{project}/locations/{location}/glossaries/{glossary} Location is the GCP
-             * region.
+             * Required. The parent, which has this collection of GlossaryTerms. Format:
+             * projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id}
+             * where location_id refers to a GCP region.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The parent, which has this collection of terms. Format:
-           projects/{project}/locations/{location}/glossaries/{glossary} Location is the GCP region.
+            /** Required. The parent, which has this collection of GlossaryTerms. Format:
+           projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id} where location_id
+           refers to a GCP region.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
             /**
-             * Required. The parent, which has this collection of terms. Format:
-             * projects/{project}/locations/{location}/glossaries/{glossary} Location is the GCP
-             * region.
+             * Required. The parent, which has this collection of GlossaryTerms. Format:
+             * projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id}
+             * where location_id refers to a GCP region.
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -19636,27 +19662,34 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             }
 
             /**
-             * Optional. Filter expression that filters terms listed in the response. Filters
-             * supported: List GlossaryTerms based on immediate parent in the resource hierarchy.
-             * This will only return the terms nested directly under the parent and no other
-             * subsequent nested terms will be returned.
+             * Optional. Filter expression that filters GlossaryTerms listed in the response.
+             * Filters are supported on the following fields: - immediate_parentExamples of using a
+             * filter are: - immediate_parent="projects/{project_id_or_number}/locations/{location_i
+             * d}/glossaries/{glossary_id}" - immediate_parent="projects/{project_id_or_number}/loca
+             * tions/{location_id}/glossaries/{glossary_id}/categories/{category_id}"This will only
+             * return the GlossaryTerms that are directly nested under the specified parent.
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
-            /** Optional. Filter expression that filters terms listed in the response. Filters supported: List
-           GlossaryTerms based on immediate parent in the resource hierarchy. This will only return the terms
-           nested directly under the parent and no other subsequent nested terms will be returned.
+            /** Optional. Filter expression that filters GlossaryTerms listed in the response. Filters are
+           supported on the following fields: - immediate_parentExamples of using a filter are: -
+           immediate_parent="projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id}"
+           - immediate_parent="projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id
+           }/categories/{category_id}"This will only return the GlossaryTerms that are directly nested under
+           the specified parent.
              */
             public java.lang.String getFilter() {
               return filter;
             }
 
             /**
-             * Optional. Filter expression that filters terms listed in the response. Filters
-             * supported: List GlossaryTerms based on immediate parent in the resource hierarchy.
-             * This will only return the terms nested directly under the parent and no other
-             * subsequent nested terms will be returned.
+             * Optional. Filter expression that filters GlossaryTerms listed in the response.
+             * Filters are supported on the following fields: - immediate_parentExamples of using a
+             * filter are: - immediate_parent="projects/{project_id_or_number}/locations/{location_i
+             * d}/glossaries/{glossary_id}" - immediate_parent="projects/{project_id_or_number}/loca
+             * tions/{location_id}/glossaries/{glossary_id}/categories/{category_id}"This will only
+             * return the GlossaryTerms that are directly nested under the specified parent.
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
@@ -19664,23 +19697,23 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             }
 
             /**
-             * Optional. Order by expression that orders terms listed in the response. Order by
-             * fields are: name or create_time for the result. If not specified, the ordering is
+             * Optional. Order by expression that orders GlossaryTerms listed in the response. Order
+             * by fields are: name or create_time for the result. If not specified, the ordering is
              * undefined.
              */
             @com.google.api.client.util.Key
             private java.lang.String orderBy;
 
-            /** Optional. Order by expression that orders terms listed in the response. Order by fields are: name
-           or create_time for the result. If not specified, the ordering is undefined.
+            /** Optional. Order by expression that orders GlossaryTerms listed in the response. Order by fields
+           are: name or create_time for the result. If not specified, the ordering is undefined.
              */
             public java.lang.String getOrderBy() {
               return orderBy;
             }
 
             /**
-             * Optional. Order by expression that orders terms listed in the response. Order by
-             * fields are: name or create_time for the result. If not specified, the ordering is
+             * Optional. Order by expression that orders GlossaryTerms listed in the response. Order
+             * by fields are: name or create_time for the result. If not specified, the ordering is
              * undefined.
              */
             public List setOrderBy(java.lang.String orderBy) {
@@ -19689,25 +19722,25 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             }
 
             /**
-             * Optional. The maximum number of terms to return. The service may return fewer than
-             * this value. If unspecified, at most 50 terms will be returned. The maximum value is
-             * 1000; values above 1000 will be coerced to 1000.
+             * Optional. The maximum number of GlossaryTerms to return. The service may return fewer
+             * than this value. If unspecified, at most 50 GlossaryTerms will be returned. The
+             * maximum value is 1000; values above 1000 will be coerced to 1000.
              */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** Optional. The maximum number of terms to return. The service may return fewer than this value. If
-           unspecified, at most 50 terms will be returned. The maximum value is 1000; values above 1000 will
-           be coerced to 1000.
+            /** Optional. The maximum number of GlossaryTerms to return. The service may return fewer than this
+           value. If unspecified, at most 50 GlossaryTerms will be returned. The maximum value is 1000; values
+           above 1000 will be coerced to 1000.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
             /**
-             * Optional. The maximum number of terms to return. The service may return fewer than
-             * this value. If unspecified, at most 50 terms will be returned. The maximum value is
-             * 1000; values above 1000 will be coerced to 1000.
+             * Optional. The maximum number of GlossaryTerms to return. The service may return fewer
+             * than this value. If unspecified, at most 50 GlossaryTerms will be returned. The
+             * maximum value is 1000; values above 1000 will be coerced to 1000.
              */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
@@ -19754,7 +19787,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
            * @param name Output only. Identifier. The resource name of the GlossaryTerm. Format:
-           *        projects/{projectId}/locations/{locationId}/glossaries/{glossaryId}/terms/{termId}
+           *        projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id}/terms/{te
+           *        rm_id}
            * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1GlossaryTerm}
            * @return the request
            */
@@ -19783,7 +19817,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param name Output only. Identifier. The resource name of the GlossaryTerm. Format:
-           *        projects/{projectId}/locations/{locationId}/glossaries/{glossaryId}/terms/{termId}
+           *        projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id}/terms/{te
+           *        rm_id}
              * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1GlossaryTerm}
              * @since 1.13
              */
@@ -19853,22 +19888,22 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             }
 
             /**
-             * Output only. Identifier. The resource name of the GlossaryTerm. Format:
-             * projects/{projectId}/locations/{locationId}/glossaries/{glossaryId}/terms/{termId}
+             * Output only. Identifier. The resource name of the GlossaryTerm. Format: projects/{pro
+             * ject_id_or_number}/locations/{location_id}/glossaries/{glossary_id}/terms/{term_id}
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Output only. Identifier. The resource name of the GlossaryTerm. Format:
-           projects/{projectId}/locations/{locationId}/glossaries/{glossaryId}/terms/{termId}
+           projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id}/terms/{term_id}
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Output only. Identifier. The resource name of the GlossaryTerm. Format:
-             * projects/{projectId}/locations/{locationId}/glossaries/{glossaryId}/terms/{termId}
+             * Output only. Identifier. The resource name of the GlossaryTerm. Format: projects/{pro
+             * ject_id_or_number}/locations/{location_id}/glossaries/{glossary_id}/terms/{term_id}
              */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {

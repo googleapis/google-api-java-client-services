@@ -37,6 +37,20 @@ public final class GoogleCloudDataplexV1DataQualityColumnResult extends com.goog
   private java.lang.String column;
 
   /**
+   * Output only. The dimension-level results for this column.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDataplexV1DataQualityDimensionResult> dimensions;
+
+  /**
+   * Output only. Whether the column passed or failed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean passed;
+
+  /**
    * Output only. The column-level data quality score for this data scan job if and only if the
    * 'column' field is set.The score ranges between between 0, 100 (up to two decimal points).
    * The value may be {@code null}.
@@ -58,6 +72,40 @@ public final class GoogleCloudDataplexV1DataQualityColumnResult extends com.goog
    */
   public GoogleCloudDataplexV1DataQualityColumnResult setColumn(java.lang.String column) {
     this.column = column;
+    return this;
+  }
+
+  /**
+   * Output only. The dimension-level results for this column.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDataplexV1DataQualityDimensionResult> getDimensions() {
+    return dimensions;
+  }
+
+  /**
+   * Output only. The dimension-level results for this column.
+   * @param dimensions dimensions or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataQualityColumnResult setDimensions(java.util.List<GoogleCloudDataplexV1DataQualityDimensionResult> dimensions) {
+    this.dimensions = dimensions;
+    return this;
+  }
+
+  /**
+   * Output only. Whether the column passed or failed.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getPassed() {
+    return passed;
+  }
+
+  /**
+   * Output only. Whether the column passed or failed.
+   * @param passed passed or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataQualityColumnResult setPassed(java.lang.Boolean passed) {
+    this.passed = passed;
     return this;
   }
 

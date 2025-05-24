@@ -31,7 +31,7 @@ public final class GoogleCloudDialogflowV2beta1AudioInput extends com.google.api
 
   /**
    * Required. The natural language speech audio to be processed. A single request can contain up to
-   * 1 minute of speech audio data. The transcribed text cannot contain more than 256 bytes for
+   * 2 minutes of speech audio data. The transcribed text cannot contain more than 256 bytes for
    * virtual agent interactions.
    * The value may be {@code null}.
    */
@@ -47,7 +47,7 @@ public final class GoogleCloudDialogflowV2beta1AudioInput extends com.google.api
 
   /**
    * Required. The natural language speech audio to be processed. A single request can contain up to
-   * 1 minute of speech audio data. The transcribed text cannot contain more than 256 bytes for
+   * 2 minutes of speech audio data. The transcribed text cannot contain more than 256 bytes for
    * virtual agent interactions.
    * @see #decodeAudio()
    * @return value or {@code null} for none
@@ -58,7 +58,7 @@ public final class GoogleCloudDialogflowV2beta1AudioInput extends com.google.api
 
   /**
    * Required. The natural language speech audio to be processed. A single request can contain up to
-   * 1 minute of speech audio data. The transcribed text cannot contain more than 256 bytes for
+   * 2 minutes of speech audio data. The transcribed text cannot contain more than 256 bytes for
    * virtual agent interactions.
    * @see #getAudio()
    * @return Base64 decoded value or {@code null} for none
@@ -71,7 +71,7 @@ public final class GoogleCloudDialogflowV2beta1AudioInput extends com.google.api
 
   /**
    * Required. The natural language speech audio to be processed. A single request can contain up to
-   * 1 minute of speech audio data. The transcribed text cannot contain more than 256 bytes for
+   * 2 minutes of speech audio data. The transcribed text cannot contain more than 256 bytes for
    * virtual agent interactions.
    * @see #encodeAudio()
    * @param audio audio or {@code null} for none
@@ -83,7 +83,7 @@ public final class GoogleCloudDialogflowV2beta1AudioInput extends com.google.api
 
   /**
    * Required. The natural language speech audio to be processed. A single request can contain up to
-   * 1 minute of speech audio data. The transcribed text cannot contain more than 256 bytes for
+   * 2 minutes of speech audio data. The transcribed text cannot contain more than 256 bytes for
    * virtual agent interactions.
    * @see #setAudio()
    *

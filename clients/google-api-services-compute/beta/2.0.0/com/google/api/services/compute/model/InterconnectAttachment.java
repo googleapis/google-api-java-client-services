@@ -39,6 +39,13 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   private java.lang.Boolean adminEnabled;
 
   /**
+   * [Output Only] URL of the AttachmentGroup that includes this Attachment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String attachmentGroup;
+
+  /**
    * Provisioned bandwidth capacity for the interconnect attachment. For attachments of type
    * DEDICATED, the user can set the bandwidth. For attachments of type PARTNER, the Google Partner
    * that is operating the interconnect must set the bandwidth. Output only for PARTNER type,
@@ -50,6 +57,44 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private java.lang.String bandwidth;
+
+  /**
+   * Single IPv4 address + prefix length to be configured on the cloud router interface for this
+   * interconnect attachment. - Both candidate_cloud_router_ip_address and
+   * candidate_customer_router_ip_address fields must be set or both must be unset. - Prefix length
+   * of both candidate_cloud_router_ip_address and candidate_customer_router_ip_address must be the
+   * same. - Max prefix length is 31.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String candidateCloudRouterIpAddress;
+
+  /**
+   * Single IPv6 address + prefix length to be configured on the cloud router interface for this
+   * interconnect attachment. - Both candidate_cloud_router_ipv6_address and
+   * candidate_customer_router_ipv6_address fields must be set or both must be unset. - Prefix
+   * length of both candidate_cloud_router_ipv6_address and candidate_customer_router_ipv6_address
+   * must be the same. - Max prefix length is 126.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String candidateCloudRouterIpv6Address;
+
+  /**
+   * Single IPv4 address + prefix length to be configured on the customer router interface for this
+   * interconnect attachment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String candidateCustomerRouterIpAddress;
+
+  /**
+   * Single IPv6 address + prefix length to be configured on the customer router interface for this
+   * interconnect attachment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String candidateCustomerRouterIpv6Address;
 
   /**
    * This field is not available.
@@ -241,7 +286,8 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
 
   /**
    * Maximum Transmission Unit (MTU), in bytes, of packets passing through this interconnect
-   * attachment. Only 1440 and 1500 are allowed. If not specified, the value will default to 1440.
+   * attachment. Valid values are 1440, 1460, 1500, and 8896. If not specified, the value will
+   * default to 1440.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -420,6 +466,23 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
   }
 
   /**
+   * [Output Only] URL of the AttachmentGroup that includes this Attachment.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAttachmentGroup() {
+    return attachmentGroup;
+  }
+
+  /**
+   * [Output Only] URL of the AttachmentGroup that includes this Attachment.
+   * @param attachmentGroup attachmentGroup or {@code null} for none
+   */
+  public InterconnectAttachment setAttachmentGroup(java.lang.String attachmentGroup) {
+    this.attachmentGroup = attachmentGroup;
+    return this;
+  }
+
+  /**
    * Provisioned bandwidth capacity for the interconnect attachment. For attachments of type
    * DEDICATED, the user can set the bandwidth. For attachments of type PARTNER, the Google Partner
    * that is operating the interconnect must set the bandwidth. Output only for PARTNER type,
@@ -445,6 +508,94 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
    */
   public InterconnectAttachment setBandwidth(java.lang.String bandwidth) {
     this.bandwidth = bandwidth;
+    return this;
+  }
+
+  /**
+   * Single IPv4 address + prefix length to be configured on the cloud router interface for this
+   * interconnect attachment. - Both candidate_cloud_router_ip_address and
+   * candidate_customer_router_ip_address fields must be set or both must be unset. - Prefix length
+   * of both candidate_cloud_router_ip_address and candidate_customer_router_ip_address must be the
+   * same. - Max prefix length is 31.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCandidateCloudRouterIpAddress() {
+    return candidateCloudRouterIpAddress;
+  }
+
+  /**
+   * Single IPv4 address + prefix length to be configured on the cloud router interface for this
+   * interconnect attachment. - Both candidate_cloud_router_ip_address and
+   * candidate_customer_router_ip_address fields must be set or both must be unset. - Prefix length
+   * of both candidate_cloud_router_ip_address and candidate_customer_router_ip_address must be the
+   * same. - Max prefix length is 31.
+   * @param candidateCloudRouterIpAddress candidateCloudRouterIpAddress or {@code null} for none
+   */
+  public InterconnectAttachment setCandidateCloudRouterIpAddress(java.lang.String candidateCloudRouterIpAddress) {
+    this.candidateCloudRouterIpAddress = candidateCloudRouterIpAddress;
+    return this;
+  }
+
+  /**
+   * Single IPv6 address + prefix length to be configured on the cloud router interface for this
+   * interconnect attachment. - Both candidate_cloud_router_ipv6_address and
+   * candidate_customer_router_ipv6_address fields must be set or both must be unset. - Prefix
+   * length of both candidate_cloud_router_ipv6_address and candidate_customer_router_ipv6_address
+   * must be the same. - Max prefix length is 126.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCandidateCloudRouterIpv6Address() {
+    return candidateCloudRouterIpv6Address;
+  }
+
+  /**
+   * Single IPv6 address + prefix length to be configured on the cloud router interface for this
+   * interconnect attachment. - Both candidate_cloud_router_ipv6_address and
+   * candidate_customer_router_ipv6_address fields must be set or both must be unset. - Prefix
+   * length of both candidate_cloud_router_ipv6_address and candidate_customer_router_ipv6_address
+   * must be the same. - Max prefix length is 126.
+   * @param candidateCloudRouterIpv6Address candidateCloudRouterIpv6Address or {@code null} for none
+   */
+  public InterconnectAttachment setCandidateCloudRouterIpv6Address(java.lang.String candidateCloudRouterIpv6Address) {
+    this.candidateCloudRouterIpv6Address = candidateCloudRouterIpv6Address;
+    return this;
+  }
+
+  /**
+   * Single IPv4 address + prefix length to be configured on the customer router interface for this
+   * interconnect attachment.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCandidateCustomerRouterIpAddress() {
+    return candidateCustomerRouterIpAddress;
+  }
+
+  /**
+   * Single IPv4 address + prefix length to be configured on the customer router interface for this
+   * interconnect attachment.
+   * @param candidateCustomerRouterIpAddress candidateCustomerRouterIpAddress or {@code null} for none
+   */
+  public InterconnectAttachment setCandidateCustomerRouterIpAddress(java.lang.String candidateCustomerRouterIpAddress) {
+    this.candidateCustomerRouterIpAddress = candidateCustomerRouterIpAddress;
+    return this;
+  }
+
+  /**
+   * Single IPv6 address + prefix length to be configured on the customer router interface for this
+   * interconnect attachment.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCandidateCustomerRouterIpv6Address() {
+    return candidateCustomerRouterIpv6Address;
+  }
+
+  /**
+   * Single IPv6 address + prefix length to be configured on the customer router interface for this
+   * interconnect attachment.
+   * @param candidateCustomerRouterIpv6Address candidateCustomerRouterIpv6Address or {@code null} for none
+   */
+  public InterconnectAttachment setCandidateCustomerRouterIpv6Address(java.lang.String candidateCustomerRouterIpv6Address) {
+    this.candidateCustomerRouterIpv6Address = candidateCustomerRouterIpv6Address;
     return this;
   }
 
@@ -927,7 +1078,8 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
 
   /**
    * Maximum Transmission Unit (MTU), in bytes, of packets passing through this interconnect
-   * attachment. Only 1440 and 1500 are allowed. If not specified, the value will default to 1440.
+   * attachment. Valid values are 1440, 1460, 1500, and 8896. If not specified, the value will
+   * default to 1440.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMtu() {
@@ -936,7 +1088,8 @@ public final class InterconnectAttachment extends com.google.api.client.json.Gen
 
   /**
    * Maximum Transmission Unit (MTU), in bytes, of packets passing through this interconnect
-   * attachment. Only 1440 and 1500 are allowed. If not specified, the value will default to 1440.
+   * attachment. Valid values are 1440, 1460, 1500, and 8896. If not specified, the value will
+   * default to 1440.
    * @param mtu mtu or {@code null} for none
    */
   public InterconnectAttachment setMtu(java.lang.Integer mtu) {

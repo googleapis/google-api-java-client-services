@@ -91,6 +91,14 @@ public final class Replication extends com.google.api.client.json.GenericJson {
   private java.lang.String hybridReplicationType;
 
   /**
+   * Output only. Copy pastable snapmirror commands to be executed on onprem cluster by the
+   * customer.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private UserCommands hybridReplicationUserCommands;
+
+  /**
    * Resource labels to represent user provided metadata.
    * The value may be {@code null}.
    */
@@ -296,6 +304,25 @@ public final class Replication extends com.google.api.client.json.GenericJson {
    */
   public Replication setHybridReplicationType(java.lang.String hybridReplicationType) {
     this.hybridReplicationType = hybridReplicationType;
+    return this;
+  }
+
+  /**
+   * Output only. Copy pastable snapmirror commands to be executed on onprem cluster by the
+   * customer.
+   * @return value or {@code null} for none
+   */
+  public UserCommands getHybridReplicationUserCommands() {
+    return hybridReplicationUserCommands;
+  }
+
+  /**
+   * Output only. Copy pastable snapmirror commands to be executed on onprem cluster by the
+   * customer.
+   * @param hybridReplicationUserCommands hybridReplicationUserCommands or {@code null} for none
+   */
+  public Replication setHybridReplicationUserCommands(UserCommands hybridReplicationUserCommands) {
+    this.hybridReplicationUserCommands = hybridReplicationUserCommands;
     return this;
   }
 

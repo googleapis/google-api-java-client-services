@@ -30,57 +30,57 @@ package com.google.api.services.netapp.v1beta1.model;
 public final class HybridPeeringDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Copy-paste-able commands to be used on user's ONTAP to accept peering requests.
+   * Output only. Copy-paste-able commands to be used on user's ONTAP to accept peering requests.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String command;
 
   /**
-   * Optional. Expiration time for the peering command to be executed on user's ONTAP.
+   * Output only. Expiration time for the peering command to be executed on user's ONTAP.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String commandExpiryTime;
 
   /**
-   * Optional. Temporary passphrase generated to accept cluster peering command.
+   * Output only. Temporary passphrase generated to accept cluster peering command.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String passphrase;
 
   /**
-   * Optional. Name of the user's local source cluster to be peered with the destination cluster.
+   * Output only. Name of the user's local source cluster to be peered with the destination cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String peerClusterName;
 
   /**
-   * Optional. Name of the user's local source vserver svm to be peered with the destination vserver
-   * svm.
+   * Output only. Name of the user's local source vserver svm to be peered with the destination
+   * vserver svm.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String peerSvmName;
 
   /**
-   * Optional. Name of the user's local source volume to be peered with the destination volume.
+   * Output only. Name of the user's local source volume to be peered with the destination volume.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String peerVolumeName;
 
   /**
-   * Optional. IP address of the subnet.
+   * Output only. IP address of the subnet.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String subnetIp;
 
   /**
-   * Optional. Copy-paste-able commands to be used on user's ONTAP to accept peering requests.
+   * Output only. Copy-paste-able commands to be used on user's ONTAP to accept peering requests.
    * @return value or {@code null} for none
    */
   public java.lang.String getCommand() {
@@ -88,7 +88,7 @@ public final class HybridPeeringDetails extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Copy-paste-able commands to be used on user's ONTAP to accept peering requests.
+   * Output only. Copy-paste-able commands to be used on user's ONTAP to accept peering requests.
    * @param command command or {@code null} for none
    */
   public HybridPeeringDetails setCommand(java.lang.String command) {
@@ -97,7 +97,7 @@ public final class HybridPeeringDetails extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Expiration time for the peering command to be executed on user's ONTAP.
+   * Output only. Expiration time for the peering command to be executed on user's ONTAP.
    * @return value or {@code null} for none
    */
   public String getCommandExpiryTime() {
@@ -105,7 +105,7 @@ public final class HybridPeeringDetails extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Expiration time for the peering command to be executed on user's ONTAP.
+   * Output only. Expiration time for the peering command to be executed on user's ONTAP.
    * @param commandExpiryTime commandExpiryTime or {@code null} for none
    */
   public HybridPeeringDetails setCommandExpiryTime(String commandExpiryTime) {
@@ -114,7 +114,7 @@ public final class HybridPeeringDetails extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Temporary passphrase generated to accept cluster peering command.
+   * Output only. Temporary passphrase generated to accept cluster peering command.
    * @return value or {@code null} for none
    */
   public java.lang.String getPassphrase() {
@@ -122,7 +122,7 @@ public final class HybridPeeringDetails extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Temporary passphrase generated to accept cluster peering command.
+   * Output only. Temporary passphrase generated to accept cluster peering command.
    * @param passphrase passphrase or {@code null} for none
    */
   public HybridPeeringDetails setPassphrase(java.lang.String passphrase) {
@@ -131,7 +131,7 @@ public final class HybridPeeringDetails extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Name of the user's local source cluster to be peered with the destination cluster.
+   * Output only. Name of the user's local source cluster to be peered with the destination cluster.
    * @return value or {@code null} for none
    */
   public java.lang.String getPeerClusterName() {
@@ -139,7 +139,7 @@ public final class HybridPeeringDetails extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Name of the user's local source cluster to be peered with the destination cluster.
+   * Output only. Name of the user's local source cluster to be peered with the destination cluster.
    * @param peerClusterName peerClusterName or {@code null} for none
    */
   public HybridPeeringDetails setPeerClusterName(java.lang.String peerClusterName) {
@@ -148,8 +148,8 @@ public final class HybridPeeringDetails extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Name of the user's local source vserver svm to be peered with the destination vserver
-   * svm.
+   * Output only. Name of the user's local source vserver svm to be peered with the destination
+   * vserver svm.
    * @return value or {@code null} for none
    */
   public java.lang.String getPeerSvmName() {
@@ -157,8 +157,8 @@ public final class HybridPeeringDetails extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Name of the user's local source vserver svm to be peered with the destination vserver
-   * svm.
+   * Output only. Name of the user's local source vserver svm to be peered with the destination
+   * vserver svm.
    * @param peerSvmName peerSvmName or {@code null} for none
    */
   public HybridPeeringDetails setPeerSvmName(java.lang.String peerSvmName) {
@@ -167,7 +167,7 @@ public final class HybridPeeringDetails extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Name of the user's local source volume to be peered with the destination volume.
+   * Output only. Name of the user's local source volume to be peered with the destination volume.
    * @return value or {@code null} for none
    */
   public java.lang.String getPeerVolumeName() {
@@ -175,7 +175,7 @@ public final class HybridPeeringDetails extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Name of the user's local source volume to be peered with the destination volume.
+   * Output only. Name of the user's local source volume to be peered with the destination volume.
    * @param peerVolumeName peerVolumeName or {@code null} for none
    */
   public HybridPeeringDetails setPeerVolumeName(java.lang.String peerVolumeName) {
@@ -184,7 +184,7 @@ public final class HybridPeeringDetails extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. IP address of the subnet.
+   * Output only. IP address of the subnet.
    * @return value or {@code null} for none
    */
   public java.lang.String getSubnetIp() {
@@ -192,7 +192,7 @@ public final class HybridPeeringDetails extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. IP address of the subnet.
+   * Output only. IP address of the subnet.
    * @param subnetIp subnetIp or {@code null} for none
    */
   public HybridPeeringDetails setSubnetIp(java.lang.String subnetIp) {

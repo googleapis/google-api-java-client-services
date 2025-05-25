@@ -38,6 +38,14 @@ public final class AdvancedMachineFeatures extends com.google.api.client.json.Ge
   private java.lang.Boolean enableNestedVirtualization;
 
   /**
+   * Type of Performance Monitoring Unit (PMU) requested on node pool instances. If unset, PMU will
+   * not be available to the node.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String performanceMonitoringUnit;
+
+  /**
    * The number of threads per physical core. To disable simultaneous multithreading (SMT) set this
    * to 1. If unset, the maximum number of threads supported per core by the underlying processor is
    * assumed.
@@ -60,6 +68,25 @@ public final class AdvancedMachineFeatures extends com.google.api.client.json.Ge
    */
   public AdvancedMachineFeatures setEnableNestedVirtualization(java.lang.Boolean enableNestedVirtualization) {
     this.enableNestedVirtualization = enableNestedVirtualization;
+    return this;
+  }
+
+  /**
+   * Type of Performance Monitoring Unit (PMU) requested on node pool instances. If unset, PMU will
+   * not be available to the node.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPerformanceMonitoringUnit() {
+    return performanceMonitoringUnit;
+  }
+
+  /**
+   * Type of Performance Monitoring Unit (PMU) requested on node pool instances. If unset, PMU will
+   * not be available to the node.
+   * @param performanceMonitoringUnit performanceMonitoringUnit or {@code null} for none
+   */
+  public AdvancedMachineFeatures setPerformanceMonitoringUnit(java.lang.String performanceMonitoringUnit) {
+    this.performanceMonitoringUnit = performanceMonitoringUnit;
     return this;
   }
 

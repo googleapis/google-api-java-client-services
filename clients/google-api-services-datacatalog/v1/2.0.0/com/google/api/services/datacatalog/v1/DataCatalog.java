@@ -5217,7 +5217,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
              * ReconcileTagsRequest.force_delete_missing parameter is set, the operation deletes tags not
              * included in the input tag list. `ReconcileTags` returns a long-running operation resource that
              * can be queried with Operations.GetOperation to return ReconcileTagsMetadata and a
-             * ReconcileTagsResponse message.
+             * ReconcileTagsResponse message. Note: SearchCatalog might return stale search results for up to 24
+             * hours after the `ReconcileTags` operation completes.
              *
              * Create a request for the method "tags.reconcile".
              *
@@ -5246,7 +5247,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
                * ReconcileTagsRequest.force_delete_missing parameter is set, the operation deletes tags not
                * included in the input tag list. `ReconcileTags` returns a long-running operation resource that
                * can be queried with Operations.GetOperation to return ReconcileTagsMetadata and a
-               * ReconcileTagsResponse message.
+               * ReconcileTagsResponse message. Note: SearchCatalog might return stale search results for up to
+               * 24 hours after the `ReconcileTags` operation completes.
                *
                * Create a request for the method "tags.reconcile".
                *

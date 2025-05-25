@@ -56,6 +56,16 @@ public final class ReplicationStatus extends com.google.api.client.json.GenericJ
   private String lastReplicationTime;
 
   /**
+   * Output only. The time at which a soft failover for the reservation and its associated datasets
+   * was initiated. After this field is set, all subsequent changes to the reservation will be
+   * rejected unless a hard failover overrides this operation. This field will be cleared once the
+   * failover is complete.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String softFailoverStartTime;
+
+  /**
    * Output only. The last error encountered while trying to replicate changes from the primary to
    * the secondary. This field is only available if the replication has not succeeded since.
    * @return value or {@code null} for none
@@ -111,6 +121,29 @@ public final class ReplicationStatus extends com.google.api.client.json.GenericJ
    */
   public ReplicationStatus setLastReplicationTime(String lastReplicationTime) {
     this.lastReplicationTime = lastReplicationTime;
+    return this;
+  }
+
+  /**
+   * Output only. The time at which a soft failover for the reservation and its associated datasets
+   * was initiated. After this field is set, all subsequent changes to the reservation will be
+   * rejected unless a hard failover overrides this operation. This field will be cleared once the
+   * failover is complete.
+   * @return value or {@code null} for none
+   */
+  public String getSoftFailoverStartTime() {
+    return softFailoverStartTime;
+  }
+
+  /**
+   * Output only. The time at which a soft failover for the reservation and its associated datasets
+   * was initiated. After this field is set, all subsequent changes to the reservation will be
+   * rejected unless a hard failover overrides this operation. This field will be cleared once the
+   * failover is complete.
+   * @param softFailoverStartTime softFailoverStartTime or {@code null} for none
+   */
+  public ReplicationStatus setSoftFailoverStartTime(String softFailoverStartTime) {
+    this.softFailoverStartTime = softFailoverStartTime;
     return this;
   }
 

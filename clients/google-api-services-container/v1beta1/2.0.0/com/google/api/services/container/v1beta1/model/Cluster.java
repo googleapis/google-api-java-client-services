@@ -46,6 +46,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> alphaClusterFeatureGates;
 
   /**
+   * Configuration for limiting anonymous access to all endpoints except the health checks.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AnonymousAuthenticationConfig anonymousAuthenticationConfig;
+
+  /**
    * Configuration controlling RBAC group membership information.
    * The value may be {@code null}.
    */
@@ -762,6 +769,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setAlphaClusterFeatureGates(java.util.List<java.lang.String> alphaClusterFeatureGates) {
     this.alphaClusterFeatureGates = alphaClusterFeatureGates;
+    return this;
+  }
+
+  /**
+   * Configuration for limiting anonymous access to all endpoints except the health checks.
+   * @return value or {@code null} for none
+   */
+  public AnonymousAuthenticationConfig getAnonymousAuthenticationConfig() {
+    return anonymousAuthenticationConfig;
+  }
+
+  /**
+   * Configuration for limiting anonymous access to all endpoints except the health checks.
+   * @param anonymousAuthenticationConfig anonymousAuthenticationConfig or {@code null} for none
+   */
+  public Cluster setAnonymousAuthenticationConfig(AnonymousAuthenticationConfig anonymousAuthenticationConfig) {
+    this.anonymousAuthenticationConfig = anonymousAuthenticationConfig;
     return this;
   }
 

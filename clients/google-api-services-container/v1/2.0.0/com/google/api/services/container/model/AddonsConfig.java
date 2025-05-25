@@ -82,6 +82,13 @@ public final class AddonsConfig extends com.google.api.client.json.GenericJson {
   private GkeBackupAgentConfig gkeBackupAgentConfig;
 
   /**
+   * Configuration for the High Scale Checkpointing add-on.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private HighScaleCheckpointingConfig highScaleCheckpointingConfig;
+
+  /**
    * Configuration for the horizontal pod autoscaling feature, which increases or decreases the
    * number of replica pods a replication controller has based on the resource usage of the existing
    * pods.
@@ -255,6 +262,23 @@ public final class AddonsConfig extends com.google.api.client.json.GenericJson {
    */
   public AddonsConfig setGkeBackupAgentConfig(GkeBackupAgentConfig gkeBackupAgentConfig) {
     this.gkeBackupAgentConfig = gkeBackupAgentConfig;
+    return this;
+  }
+
+  /**
+   * Configuration for the High Scale Checkpointing add-on.
+   * @return value or {@code null} for none
+   */
+  public HighScaleCheckpointingConfig getHighScaleCheckpointingConfig() {
+    return highScaleCheckpointingConfig;
+  }
+
+  /**
+   * Configuration for the High Scale Checkpointing add-on.
+   * @param highScaleCheckpointingConfig highScaleCheckpointingConfig or {@code null} for none
+   */
+  public AddonsConfig setHighScaleCheckpointingConfig(HighScaleCheckpointingConfig highScaleCheckpointingConfig) {
+    this.highScaleCheckpointingConfig = highScaleCheckpointingConfig;
     return this;
   }
 

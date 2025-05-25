@@ -47,6 +47,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private AddonsConfig desiredAddonsConfig;
 
   /**
+   * Configuration for limiting anonymous access to all endpoints except the health checks.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AnonymousAuthenticationConfig desiredAnonymousAuthenticationConfig;
+
+  /**
    * AuthenticatorGroupsConfig specifies the config for the cluster security groups settings.
    * The value may be {@code null}.
    */
@@ -646,6 +653,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredAddonsConfig(AddonsConfig desiredAddonsConfig) {
     this.desiredAddonsConfig = desiredAddonsConfig;
+    return this;
+  }
+
+  /**
+   * Configuration for limiting anonymous access to all endpoints except the health checks.
+   * @return value or {@code null} for none
+   */
+  public AnonymousAuthenticationConfig getDesiredAnonymousAuthenticationConfig() {
+    return desiredAnonymousAuthenticationConfig;
+  }
+
+  /**
+   * Configuration for limiting anonymous access to all endpoints except the health checks.
+   * @param desiredAnonymousAuthenticationConfig desiredAnonymousAuthenticationConfig or {@code null} for none
+   */
+  public ClusterUpdate setDesiredAnonymousAuthenticationConfig(AnonymousAuthenticationConfig desiredAnonymousAuthenticationConfig) {
+    this.desiredAnonymousAuthenticationConfig = desiredAnonymousAuthenticationConfig;
     return this;
   }
 

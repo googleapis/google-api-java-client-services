@@ -471,49 +471,49 @@ public class CloudOSLogin extends com.google.api.client.googleapis.services.json
         return this;
       }
 
-      /** The type of operating system associated with the account. */
+      /** Optional. The type of operating system associated with the account. */
       @com.google.api.client.util.Key
       private java.lang.String operatingSystemType;
 
-      /** The type of operating system associated with the account.
+      /** Optional. The type of operating system associated with the account.
        */
       public java.lang.String getOperatingSystemType() {
         return operatingSystemType;
       }
 
-      /** The type of operating system associated with the account. */
+      /** Optional. The type of operating system associated with the account. */
       public GetLoginProfile setOperatingSystemType(java.lang.String operatingSystemType) {
         this.operatingSystemType = operatingSystemType;
         return this;
       }
 
-      /** The project ID of the Google Cloud Platform project. */
+      /** Required. The project ID of the Google Cloud Platform project. */
       @com.google.api.client.util.Key
       private java.lang.String projectId;
 
-      /** The project ID of the Google Cloud Platform project.
+      /** Required. The project ID of the Google Cloud Platform project.
        */
       public java.lang.String getProjectId() {
         return projectId;
       }
 
-      /** The project ID of the Google Cloud Platform project. */
+      /** Required. The project ID of the Google Cloud Platform project. */
       public GetLoginProfile setProjectId(java.lang.String projectId) {
         this.projectId = projectId;
         return this;
       }
 
-      /** A system ID for filtering the results of the request. */
+      /** Optional. A system ID for filtering the results of the request. */
       @com.google.api.client.util.Key
       private java.lang.String systemId;
 
-      /** A system ID for filtering the results of the request.
+      /** Optional. A system ID for filtering the results of the request.
        */
       public java.lang.String getSystemId() {
         return systemId;
       }
 
-      /** A system ID for filtering the results of the request. */
+      /** Optional. A system ID for filtering the results of the request. */
       public GetLoginProfile setSystemId(java.lang.String systemId) {
         this.systemId = systemId;
         return this;
@@ -889,17 +889,17 @@ public class CloudOSLogin extends com.google.api.client.googleapis.services.json
           return this;
         }
 
-        /** The type of operating system associated with the account. */
+        /** Optional. The type of operating system associated with the account. */
         @com.google.api.client.util.Key
         private java.lang.String operatingSystemType;
 
-        /** The type of operating system associated with the account.
+        /** Optional. The type of operating system associated with the account.
          */
         public java.lang.String getOperatingSystemType() {
           return operatingSystemType;
         }
 
-        /** The type of operating system associated with the account. */
+        /** Optional. The type of operating system associated with the account. */
         public Delete setOperatingSystemType(java.lang.String operatingSystemType) {
           this.operatingSystemType = operatingSystemType;
           return this;
@@ -1071,7 +1071,7 @@ public class CloudOSLogin extends com.google.api.client.googleapis.services.json
          * This request holds the parameters needed by the oslogin server.  After setting any optional
          * parameters, call the {@link SignSshPublicKey#execute()} method to invoke the remote operation.
          *
-         * @param parent The parent project and region for the signing request.
+         * @param parent Required. The parent project and region for the signing request.
          * @param content the {@link com.google.api.services.oslogin.v1alpha.model.SignSshPublicKeyRequest}
          * @return the request
          */
@@ -1100,7 +1100,7 @@ public class CloudOSLogin extends com.google.api.client.googleapis.services.json
            * ClientRequest)} must be called to initialize this instance immediately after invoking the
            * constructor. </p>
            *
-           * @param parent The parent project and region for the signing request.
+           * @param parent Required. The parent project and region for the signing request.
            * @param content the {@link com.google.api.services.oslogin.v1alpha.model.SignSshPublicKeyRequest}
            * @since 1.13
            */
@@ -1169,17 +1169,17 @@ public class CloudOSLogin extends com.google.api.client.googleapis.services.json
             return (SignSshPublicKey) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** The parent project and region for the signing request. */
+          /** Required. The parent project and region for the signing request. */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** The parent project and region for the signing request.
+          /** Required. The parent project and region for the signing request.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** The parent project and region for the signing request. */
+          /** Required. The parent project and region for the signing request. */
           public SignSshPublicKey setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -1225,7 +1225,7 @@ public class CloudOSLogin extends com.google.api.client.googleapis.services.json
          * This request holds the parameters needed by the oslogin server.  After setting any optional
          * parameters, call the {@link SignSshPublicKey#execute()} method to invoke the remote operation.
          *
-         * @param parent The parent project and region for the signing request.
+         * @param parent Required. The parent project and region for the signing request.
          * @param content the {@link com.google.api.services.oslogin.v1alpha.model.SignSshPublicKeyRequest}
          * @return the request
          */
@@ -1254,7 +1254,7 @@ public class CloudOSLogin extends com.google.api.client.googleapis.services.json
            * ClientRequest)} must be called to initialize this instance immediately after invoking the
            * constructor. </p>
            *
-           * @param parent The parent project and region for the signing request.
+           * @param parent Required. The parent project and region for the signing request.
            * @param content the {@link com.google.api.services.oslogin.v1alpha.model.SignSshPublicKeyRequest}
            * @since 1.13
            */
@@ -1323,17 +1323,17 @@ public class CloudOSLogin extends com.google.api.client.googleapis.services.json
             return (SignSshPublicKey) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** The parent project and region for the signing request. */
+          /** Required. The parent project and region for the signing request. */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** The parent project and region for the signing request.
+          /** Required. The parent project and region for the signing request.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** The parent project and region for the signing request. */
+          /** Required. The parent project and region for the signing request. */
           public SignSshPublicKey setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -1937,17 +1937,17 @@ public class CloudOSLogin extends com.google.api.client.googleapis.services.json
           return this;
         }
 
-        /** Mask to control which fields get updated. Updates all if not present. */
+        /** Optional. Mask to control which fields get updated. Updates all if not present. */
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** Mask to control which fields get updated. Updates all if not present.
+        /** Optional. Mask to control which fields get updated. Updates all if not present.
          */
         public String getUpdateMask() {
           return updateMask;
         }
 
-        /** Mask to control which fields get updated. Updates all if not present. */
+        /** Optional. Mask to control which fields get updated. Updates all if not present. */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
           return this;

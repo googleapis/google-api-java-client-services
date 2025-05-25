@@ -2658,6 +2658,22 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
                 return this;
               }
 
+              /** List of 'sort_order' columns to use when returning the results. */
+              @com.google.api.client.util.Key
+              private java.util.List<java.lang.String> sortOrder;
+
+              /** List of 'sort_order' columns to use when returning the results.
+               */
+              public java.util.List<java.lang.String> getSortOrder() {
+                return sortOrder;
+              }
+
+              /** List of 'sort_order' columns to use when returning the results. */
+              public List setSortOrder(java.util.List<java.lang.String> sortOrder) {
+                this.sortOrder = sortOrder;
+                return this;
+              }
+
               @Override
               public List set(String parameterName, Object value) {
                 return (List) super.set(parameterName, value);

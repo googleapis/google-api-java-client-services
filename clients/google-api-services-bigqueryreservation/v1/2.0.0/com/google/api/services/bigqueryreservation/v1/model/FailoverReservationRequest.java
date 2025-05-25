@@ -30,6 +30,30 @@ package com.google.api.services.bigqueryreservation.v1.model;
 @SuppressWarnings("javadoc")
 public final class FailoverReservationRequest extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Optional. failover mode for the failover operation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String failoverMode;
+
+  /**
+   * Optional. failover mode for the failover operation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFailoverMode() {
+    return failoverMode;
+  }
+
+  /**
+   * Optional. failover mode for the failover operation.
+   * @param failoverMode failoverMode or {@code null} for none
+   */
+  public FailoverReservationRequest setFailoverMode(java.lang.String failoverMode) {
+    this.failoverMode = failoverMode;
+    return this;
+  }
+
   @Override
   public FailoverReservationRequest set(String fieldName, Object value) {
     return (FailoverReservationRequest) super.set(fieldName, value);

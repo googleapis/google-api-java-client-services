@@ -297,6 +297,145 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
+     * Gets the KeyAccessJustificationsPolicyConfig for a given organization/folder/projects.
+     *
+     * Create a request for the method "folders.getKajPolicyConfig".
+     *
+     * This request holds the parameters needed by the cloudkms server.  After setting any optional
+     * parameters, call the {@link GetKajPolicyConfig#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. The name of the KeyAccessJustificationsPolicyConfig to get.
+     * @return the request
+     */
+    public GetKajPolicyConfig getKajPolicyConfig(java.lang.String name) throws java.io.IOException {
+      GetKajPolicyConfig result = new GetKajPolicyConfig(name);
+      initialize(result);
+      return result;
+    }
+
+    public class GetKajPolicyConfig extends CloudKMSRequest<com.google.api.services.cloudkms.v1.model.KeyAccessJustificationsPolicyConfig> {
+
+      private static final String REST_PATH = "v1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^folders/[^/]+/kajPolicyConfig$");
+
+      /**
+       * Gets the KeyAccessJustificationsPolicyConfig for a given organization/folder/projects.
+       *
+       * Create a request for the method "folders.getKajPolicyConfig".
+       *
+       * This request holds the parameters needed by the the cloudkms server.  After setting any
+       * optional parameters, call the {@link GetKajPolicyConfig#execute()} method to invoke the remote
+       * operation. <p> {@link GetKajPolicyConfig#initialize(com.google.api.client.googleapis.services.A
+       * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param name Required. The name of the KeyAccessJustificationsPolicyConfig to get.
+       * @since 1.13
+       */
+      protected GetKajPolicyConfig(java.lang.String name) {
+        super(CloudKMS.this, "GET", REST_PATH, null, com.google.api.services.cloudkms.v1.model.KeyAccessJustificationsPolicyConfig.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^folders/[^/]+/kajPolicyConfig$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetKajPolicyConfig set$Xgafv(java.lang.String $Xgafv) {
+        return (GetKajPolicyConfig) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetKajPolicyConfig setAccessToken(java.lang.String accessToken) {
+        return (GetKajPolicyConfig) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetKajPolicyConfig setAlt(java.lang.String alt) {
+        return (GetKajPolicyConfig) super.setAlt(alt);
+      }
+
+      @Override
+      public GetKajPolicyConfig setCallback(java.lang.String callback) {
+        return (GetKajPolicyConfig) super.setCallback(callback);
+      }
+
+      @Override
+      public GetKajPolicyConfig setFields(java.lang.String fields) {
+        return (GetKajPolicyConfig) super.setFields(fields);
+      }
+
+      @Override
+      public GetKajPolicyConfig setKey(java.lang.String key) {
+        return (GetKajPolicyConfig) super.setKey(key);
+      }
+
+      @Override
+      public GetKajPolicyConfig setOauthToken(java.lang.String oauthToken) {
+        return (GetKajPolicyConfig) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetKajPolicyConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetKajPolicyConfig) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetKajPolicyConfig setQuotaUser(java.lang.String quotaUser) {
+        return (GetKajPolicyConfig) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetKajPolicyConfig setUploadType(java.lang.String uploadType) {
+        return (GetKajPolicyConfig) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetKajPolicyConfig setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetKajPolicyConfig) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The name of the KeyAccessJustificationsPolicyConfig to get. */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The name of the KeyAccessJustificationsPolicyConfig to get.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** Required. The name of the KeyAccessJustificationsPolicyConfig to get. */
+      public GetKajPolicyConfig setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^folders/[^/]+/kajPolicyConfig$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public GetKajPolicyConfig set(String parameterName, Object value) {
+        return (GetKajPolicyConfig) super.set(parameterName, value);
+      }
+    }
+    /**
      * Updates the AutokeyConfig for a folder. The caller must have both
      * `cloudkms.autokeyConfigs.update` permission on the parent folder and
      * `cloudkms.cryptoKeys.setIamPolicy` permission on the provided key project. A KeyHandle creation
@@ -457,6 +596,482 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
         return (UpdateAutokeyConfig) super.set(parameterName, value);
       }
     }
+    /**
+     * Updates the KeyAccessJustificationsPolicyConfig for a given organization/folder/projects.
+     *
+     * Create a request for the method "folders.updateKajPolicyConfig".
+     *
+     * This request holds the parameters needed by the cloudkms server.  After setting any optional
+     * parameters, call the {@link UpdateKajPolicyConfig#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param name Identifier. The resource name for this KeyAccessJustificationsPolicyConfig in the format of
+     *        "{organizations|folders|projects}/kajPolicyConfig".
+     * @param content the {@link com.google.api.services.cloudkms.v1.model.KeyAccessJustificationsPolicyConfig}
+     * @return the request
+     */
+    public UpdateKajPolicyConfig updateKajPolicyConfig(java.lang.String name, com.google.api.services.cloudkms.v1.model.KeyAccessJustificationsPolicyConfig content) throws java.io.IOException {
+      UpdateKajPolicyConfig result = new UpdateKajPolicyConfig(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class UpdateKajPolicyConfig extends CloudKMSRequest<com.google.api.services.cloudkms.v1.model.KeyAccessJustificationsPolicyConfig> {
+
+      private static final String REST_PATH = "v1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^folders/[^/]+/kajPolicyConfig$");
+
+      /**
+       * Updates the KeyAccessJustificationsPolicyConfig for a given organization/folder/projects.
+       *
+       * Create a request for the method "folders.updateKajPolicyConfig".
+       *
+       * This request holds the parameters needed by the the cloudkms server.  After setting any
+       * optional parameters, call the {@link UpdateKajPolicyConfig#execute()} method to invoke the
+       * remote operation. <p> {@link UpdateKajPolicyConfig#initialize(com.google.api.client.googleapis.
+       * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+       * after invoking the constructor. </p>
+       *
+       * @param name Identifier. The resource name for this KeyAccessJustificationsPolicyConfig in the format of
+     *        "{organizations|folders|projects}/kajPolicyConfig".
+       * @param content the {@link com.google.api.services.cloudkms.v1.model.KeyAccessJustificationsPolicyConfig}
+       * @since 1.13
+       */
+      protected UpdateKajPolicyConfig(java.lang.String name, com.google.api.services.cloudkms.v1.model.KeyAccessJustificationsPolicyConfig content) {
+        super(CloudKMS.this, "PATCH", REST_PATH, content, com.google.api.services.cloudkms.v1.model.KeyAccessJustificationsPolicyConfig.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^folders/[^/]+/kajPolicyConfig$");
+        }
+      }
+
+      @Override
+      public UpdateKajPolicyConfig set$Xgafv(java.lang.String $Xgafv) {
+        return (UpdateKajPolicyConfig) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public UpdateKajPolicyConfig setAccessToken(java.lang.String accessToken) {
+        return (UpdateKajPolicyConfig) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public UpdateKajPolicyConfig setAlt(java.lang.String alt) {
+        return (UpdateKajPolicyConfig) super.setAlt(alt);
+      }
+
+      @Override
+      public UpdateKajPolicyConfig setCallback(java.lang.String callback) {
+        return (UpdateKajPolicyConfig) super.setCallback(callback);
+      }
+
+      @Override
+      public UpdateKajPolicyConfig setFields(java.lang.String fields) {
+        return (UpdateKajPolicyConfig) super.setFields(fields);
+      }
+
+      @Override
+      public UpdateKajPolicyConfig setKey(java.lang.String key) {
+        return (UpdateKajPolicyConfig) super.setKey(key);
+      }
+
+      @Override
+      public UpdateKajPolicyConfig setOauthToken(java.lang.String oauthToken) {
+        return (UpdateKajPolicyConfig) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public UpdateKajPolicyConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (UpdateKajPolicyConfig) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public UpdateKajPolicyConfig setQuotaUser(java.lang.String quotaUser) {
+        return (UpdateKajPolicyConfig) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public UpdateKajPolicyConfig setUploadType(java.lang.String uploadType) {
+        return (UpdateKajPolicyConfig) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public UpdateKajPolicyConfig setUploadProtocol(java.lang.String uploadProtocol) {
+        return (UpdateKajPolicyConfig) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Identifier. The resource name for this KeyAccessJustificationsPolicyConfig in the format of
+       * "{organizations|folders|projects}/kajPolicyConfig".
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Identifier. The resource name for this KeyAccessJustificationsPolicyConfig in the format of
+     "{organizations|folders|projects}/kajPolicyConfig".
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Identifier. The resource name for this KeyAccessJustificationsPolicyConfig in the format of
+       * "{organizations|folders|projects}/kajPolicyConfig".
+       */
+      public UpdateKajPolicyConfig setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^folders/[^/]+/kajPolicyConfig$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      /** Optional. The list of fields to update. */
+      @com.google.api.client.util.Key
+      private String updateMask;
+
+      /** Optional. The list of fields to update.
+       */
+      public String getUpdateMask() {
+        return updateMask;
+      }
+
+      /** Optional. The list of fields to update. */
+      public UpdateKajPolicyConfig setUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+      }
+
+      @Override
+      public UpdateKajPolicyConfig set(String parameterName, Object value) {
+        return (UpdateKajPolicyConfig) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
+   * An accessor for creating requests from the Organizations collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code CloudKMS cloudkms = new CloudKMS(...);}
+   *   {@code CloudKMS.Organizations.List request = cloudkms.organizations().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Organizations organizations() {
+    return new Organizations();
+  }
+
+  /**
+   * The "organizations" collection of methods.
+   */
+  public class Organizations {
+
+    /**
+     * Gets the KeyAccessJustificationsPolicyConfig for a given organization/folder/projects.
+     *
+     * Create a request for the method "organizations.getKajPolicyConfig".
+     *
+     * This request holds the parameters needed by the cloudkms server.  After setting any optional
+     * parameters, call the {@link GetKajPolicyConfig#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. The name of the KeyAccessJustificationsPolicyConfig to get.
+     * @return the request
+     */
+    public GetKajPolicyConfig getKajPolicyConfig(java.lang.String name) throws java.io.IOException {
+      GetKajPolicyConfig result = new GetKajPolicyConfig(name);
+      initialize(result);
+      return result;
+    }
+
+    public class GetKajPolicyConfig extends CloudKMSRequest<com.google.api.services.cloudkms.v1.model.KeyAccessJustificationsPolicyConfig> {
+
+      private static final String REST_PATH = "v1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^organizations/[^/]+/kajPolicyConfig$");
+
+      /**
+       * Gets the KeyAccessJustificationsPolicyConfig for a given organization/folder/projects.
+       *
+       * Create a request for the method "organizations.getKajPolicyConfig".
+       *
+       * This request holds the parameters needed by the the cloudkms server.  After setting any
+       * optional parameters, call the {@link GetKajPolicyConfig#execute()} method to invoke the remote
+       * operation. <p> {@link GetKajPolicyConfig#initialize(com.google.api.client.googleapis.services.A
+       * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param name Required. The name of the KeyAccessJustificationsPolicyConfig to get.
+       * @since 1.13
+       */
+      protected GetKajPolicyConfig(java.lang.String name) {
+        super(CloudKMS.this, "GET", REST_PATH, null, com.google.api.services.cloudkms.v1.model.KeyAccessJustificationsPolicyConfig.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^organizations/[^/]+/kajPolicyConfig$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetKajPolicyConfig set$Xgafv(java.lang.String $Xgafv) {
+        return (GetKajPolicyConfig) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetKajPolicyConfig setAccessToken(java.lang.String accessToken) {
+        return (GetKajPolicyConfig) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetKajPolicyConfig setAlt(java.lang.String alt) {
+        return (GetKajPolicyConfig) super.setAlt(alt);
+      }
+
+      @Override
+      public GetKajPolicyConfig setCallback(java.lang.String callback) {
+        return (GetKajPolicyConfig) super.setCallback(callback);
+      }
+
+      @Override
+      public GetKajPolicyConfig setFields(java.lang.String fields) {
+        return (GetKajPolicyConfig) super.setFields(fields);
+      }
+
+      @Override
+      public GetKajPolicyConfig setKey(java.lang.String key) {
+        return (GetKajPolicyConfig) super.setKey(key);
+      }
+
+      @Override
+      public GetKajPolicyConfig setOauthToken(java.lang.String oauthToken) {
+        return (GetKajPolicyConfig) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetKajPolicyConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetKajPolicyConfig) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetKajPolicyConfig setQuotaUser(java.lang.String quotaUser) {
+        return (GetKajPolicyConfig) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetKajPolicyConfig setUploadType(java.lang.String uploadType) {
+        return (GetKajPolicyConfig) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetKajPolicyConfig setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetKajPolicyConfig) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The name of the KeyAccessJustificationsPolicyConfig to get. */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The name of the KeyAccessJustificationsPolicyConfig to get.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** Required. The name of the KeyAccessJustificationsPolicyConfig to get. */
+      public GetKajPolicyConfig setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^organizations/[^/]+/kajPolicyConfig$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public GetKajPolicyConfig set(String parameterName, Object value) {
+        return (GetKajPolicyConfig) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Updates the KeyAccessJustificationsPolicyConfig for a given organization/folder/projects.
+     *
+     * Create a request for the method "organizations.updateKajPolicyConfig".
+     *
+     * This request holds the parameters needed by the cloudkms server.  After setting any optional
+     * parameters, call the {@link UpdateKajPolicyConfig#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param name Identifier. The resource name for this KeyAccessJustificationsPolicyConfig in the format of
+     *        "{organizations|folders|projects}/kajPolicyConfig".
+     * @param content the {@link com.google.api.services.cloudkms.v1.model.KeyAccessJustificationsPolicyConfig}
+     * @return the request
+     */
+    public UpdateKajPolicyConfig updateKajPolicyConfig(java.lang.String name, com.google.api.services.cloudkms.v1.model.KeyAccessJustificationsPolicyConfig content) throws java.io.IOException {
+      UpdateKajPolicyConfig result = new UpdateKajPolicyConfig(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class UpdateKajPolicyConfig extends CloudKMSRequest<com.google.api.services.cloudkms.v1.model.KeyAccessJustificationsPolicyConfig> {
+
+      private static final String REST_PATH = "v1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^organizations/[^/]+/kajPolicyConfig$");
+
+      /**
+       * Updates the KeyAccessJustificationsPolicyConfig for a given organization/folder/projects.
+       *
+       * Create a request for the method "organizations.updateKajPolicyConfig".
+       *
+       * This request holds the parameters needed by the the cloudkms server.  After setting any
+       * optional parameters, call the {@link UpdateKajPolicyConfig#execute()} method to invoke the
+       * remote operation. <p> {@link UpdateKajPolicyConfig#initialize(com.google.api.client.googleapis.
+       * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+       * after invoking the constructor. </p>
+       *
+       * @param name Identifier. The resource name for this KeyAccessJustificationsPolicyConfig in the format of
+     *        "{organizations|folders|projects}/kajPolicyConfig".
+       * @param content the {@link com.google.api.services.cloudkms.v1.model.KeyAccessJustificationsPolicyConfig}
+       * @since 1.13
+       */
+      protected UpdateKajPolicyConfig(java.lang.String name, com.google.api.services.cloudkms.v1.model.KeyAccessJustificationsPolicyConfig content) {
+        super(CloudKMS.this, "PATCH", REST_PATH, content, com.google.api.services.cloudkms.v1.model.KeyAccessJustificationsPolicyConfig.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^organizations/[^/]+/kajPolicyConfig$");
+        }
+      }
+
+      @Override
+      public UpdateKajPolicyConfig set$Xgafv(java.lang.String $Xgafv) {
+        return (UpdateKajPolicyConfig) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public UpdateKajPolicyConfig setAccessToken(java.lang.String accessToken) {
+        return (UpdateKajPolicyConfig) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public UpdateKajPolicyConfig setAlt(java.lang.String alt) {
+        return (UpdateKajPolicyConfig) super.setAlt(alt);
+      }
+
+      @Override
+      public UpdateKajPolicyConfig setCallback(java.lang.String callback) {
+        return (UpdateKajPolicyConfig) super.setCallback(callback);
+      }
+
+      @Override
+      public UpdateKajPolicyConfig setFields(java.lang.String fields) {
+        return (UpdateKajPolicyConfig) super.setFields(fields);
+      }
+
+      @Override
+      public UpdateKajPolicyConfig setKey(java.lang.String key) {
+        return (UpdateKajPolicyConfig) super.setKey(key);
+      }
+
+      @Override
+      public UpdateKajPolicyConfig setOauthToken(java.lang.String oauthToken) {
+        return (UpdateKajPolicyConfig) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public UpdateKajPolicyConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (UpdateKajPolicyConfig) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public UpdateKajPolicyConfig setQuotaUser(java.lang.String quotaUser) {
+        return (UpdateKajPolicyConfig) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public UpdateKajPolicyConfig setUploadType(java.lang.String uploadType) {
+        return (UpdateKajPolicyConfig) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public UpdateKajPolicyConfig setUploadProtocol(java.lang.String uploadProtocol) {
+        return (UpdateKajPolicyConfig) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Identifier. The resource name for this KeyAccessJustificationsPolicyConfig in the format of
+       * "{organizations|folders|projects}/kajPolicyConfig".
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Identifier. The resource name for this KeyAccessJustificationsPolicyConfig in the format of
+     "{organizations|folders|projects}/kajPolicyConfig".
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Identifier. The resource name for this KeyAccessJustificationsPolicyConfig in the format of
+       * "{organizations|folders|projects}/kajPolicyConfig".
+       */
+      public UpdateKajPolicyConfig setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^organizations/[^/]+/kajPolicyConfig$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      /** Optional. The list of fields to update. */
+      @com.google.api.client.util.Key
+      private String updateMask;
+
+      /** Optional. The list of fields to update.
+       */
+      public String getUpdateMask() {
+        return updateMask;
+      }
+
+      /** Optional. The list of fields to update. */
+      public UpdateKajPolicyConfig setUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+      }
+
+      @Override
+      public UpdateKajPolicyConfig set(String parameterName, Object value) {
+        return (UpdateKajPolicyConfig) super.set(parameterName, value);
+      }
+    }
 
   }
 
@@ -480,6 +1095,145 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
    */
   public class Projects {
 
+    /**
+     * Gets the KeyAccessJustificationsPolicyConfig for a given organization/folder/projects.
+     *
+     * Create a request for the method "projects.getKajPolicyConfig".
+     *
+     * This request holds the parameters needed by the cloudkms server.  After setting any optional
+     * parameters, call the {@link GetKajPolicyConfig#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. The name of the KeyAccessJustificationsPolicyConfig to get.
+     * @return the request
+     */
+    public GetKajPolicyConfig getKajPolicyConfig(java.lang.String name) throws java.io.IOException {
+      GetKajPolicyConfig result = new GetKajPolicyConfig(name);
+      initialize(result);
+      return result;
+    }
+
+    public class GetKajPolicyConfig extends CloudKMSRequest<com.google.api.services.cloudkms.v1.model.KeyAccessJustificationsPolicyConfig> {
+
+      private static final String REST_PATH = "v1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+/kajPolicyConfig$");
+
+      /**
+       * Gets the KeyAccessJustificationsPolicyConfig for a given organization/folder/projects.
+       *
+       * Create a request for the method "projects.getKajPolicyConfig".
+       *
+       * This request holds the parameters needed by the the cloudkms server.  After setting any
+       * optional parameters, call the {@link GetKajPolicyConfig#execute()} method to invoke the remote
+       * operation. <p> {@link GetKajPolicyConfig#initialize(com.google.api.client.googleapis.services.A
+       * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param name Required. The name of the KeyAccessJustificationsPolicyConfig to get.
+       * @since 1.13
+       */
+      protected GetKajPolicyConfig(java.lang.String name) {
+        super(CloudKMS.this, "GET", REST_PATH, null, com.google.api.services.cloudkms.v1.model.KeyAccessJustificationsPolicyConfig.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/kajPolicyConfig$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetKajPolicyConfig set$Xgafv(java.lang.String $Xgafv) {
+        return (GetKajPolicyConfig) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetKajPolicyConfig setAccessToken(java.lang.String accessToken) {
+        return (GetKajPolicyConfig) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetKajPolicyConfig setAlt(java.lang.String alt) {
+        return (GetKajPolicyConfig) super.setAlt(alt);
+      }
+
+      @Override
+      public GetKajPolicyConfig setCallback(java.lang.String callback) {
+        return (GetKajPolicyConfig) super.setCallback(callback);
+      }
+
+      @Override
+      public GetKajPolicyConfig setFields(java.lang.String fields) {
+        return (GetKajPolicyConfig) super.setFields(fields);
+      }
+
+      @Override
+      public GetKajPolicyConfig setKey(java.lang.String key) {
+        return (GetKajPolicyConfig) super.setKey(key);
+      }
+
+      @Override
+      public GetKajPolicyConfig setOauthToken(java.lang.String oauthToken) {
+        return (GetKajPolicyConfig) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetKajPolicyConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetKajPolicyConfig) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetKajPolicyConfig setQuotaUser(java.lang.String quotaUser) {
+        return (GetKajPolicyConfig) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetKajPolicyConfig setUploadType(java.lang.String uploadType) {
+        return (GetKajPolicyConfig) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetKajPolicyConfig setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetKajPolicyConfig) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The name of the KeyAccessJustificationsPolicyConfig to get. */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The name of the KeyAccessJustificationsPolicyConfig to get.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** Required. The name of the KeyAccessJustificationsPolicyConfig to get. */
+      public GetKajPolicyConfig setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/kajPolicyConfig$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public GetKajPolicyConfig set(String parameterName, Object value) {
+        return (GetKajPolicyConfig) super.set(parameterName, value);
+      }
+    }
     /**
      * Returns the effective Cloud KMS Autokey configuration for a given project.
      *
@@ -632,6 +1386,468 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
       @Override
       public ShowEffectiveAutokeyConfig set(String parameterName, Object value) {
         return (ShowEffectiveAutokeyConfig) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Returns the KeyAccessJustificationsEnrollmentConfig of the resource closest to the given project
+     * in hierarchy.
+     *
+     * Create a request for the method "projects.showEffectiveKeyAccessJustificationsEnrollmentConfig".
+     *
+     * This request holds the parameters needed by the cloudkms server.  After setting any optional
+     * parameters, call the {@link ShowEffectiveKeyAccessJustificationsEnrollmentConfig#execute()}
+     * method to invoke the remote operation.
+     *
+     * @param project Required. The number or id of the project to get the effective
+     *        KeyAccessJustificationsEnrollmentConfig for.
+     * @return the request
+     */
+    public ShowEffectiveKeyAccessJustificationsEnrollmentConfig showEffectiveKeyAccessJustificationsEnrollmentConfig(java.lang.String project) throws java.io.IOException {
+      ShowEffectiveKeyAccessJustificationsEnrollmentConfig result = new ShowEffectiveKeyAccessJustificationsEnrollmentConfig(project);
+      initialize(result);
+      return result;
+    }
+
+    public class ShowEffectiveKeyAccessJustificationsEnrollmentConfig extends CloudKMSRequest<com.google.api.services.cloudkms.v1.model.ShowEffectiveKeyAccessJustificationsEnrollmentConfigResponse> {
+
+      private static final String REST_PATH = "v1/{+project}:showEffectiveKeyAccessJustificationsEnrollmentConfig";
+
+      private final java.util.regex.Pattern PROJECT_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+      /**
+       * Returns the KeyAccessJustificationsEnrollmentConfig of the resource closest to the given
+       * project in hierarchy.
+       *
+       * Create a request for the method
+       * "projects.showEffectiveKeyAccessJustificationsEnrollmentConfig".
+       *
+       * This request holds the parameters needed by the the cloudkms server.  After setting any
+       * optional parameters, call the {@link
+       * ShowEffectiveKeyAccessJustificationsEnrollmentConfig#execute()} method to invoke the remote
+       * operation. <p> {@link ShowEffectiveKeyAccessJustificationsEnrollmentConfig#initialize(com.googl
+       * e.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize
+       * this instance immediately after invoking the constructor. </p>
+       *
+       * @param project Required. The number or id of the project to get the effective
+     *        KeyAccessJustificationsEnrollmentConfig for.
+       * @since 1.13
+       */
+      protected ShowEffectiveKeyAccessJustificationsEnrollmentConfig(java.lang.String project) {
+        super(CloudKMS.this, "GET", REST_PATH, null, com.google.api.services.cloudkms.v1.model.ShowEffectiveKeyAccessJustificationsEnrollmentConfigResponse.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "^projects/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public ShowEffectiveKeyAccessJustificationsEnrollmentConfig set$Xgafv(java.lang.String $Xgafv) {
+        return (ShowEffectiveKeyAccessJustificationsEnrollmentConfig) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public ShowEffectiveKeyAccessJustificationsEnrollmentConfig setAccessToken(java.lang.String accessToken) {
+        return (ShowEffectiveKeyAccessJustificationsEnrollmentConfig) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public ShowEffectiveKeyAccessJustificationsEnrollmentConfig setAlt(java.lang.String alt) {
+        return (ShowEffectiveKeyAccessJustificationsEnrollmentConfig) super.setAlt(alt);
+      }
+
+      @Override
+      public ShowEffectiveKeyAccessJustificationsEnrollmentConfig setCallback(java.lang.String callback) {
+        return (ShowEffectiveKeyAccessJustificationsEnrollmentConfig) super.setCallback(callback);
+      }
+
+      @Override
+      public ShowEffectiveKeyAccessJustificationsEnrollmentConfig setFields(java.lang.String fields) {
+        return (ShowEffectiveKeyAccessJustificationsEnrollmentConfig) super.setFields(fields);
+      }
+
+      @Override
+      public ShowEffectiveKeyAccessJustificationsEnrollmentConfig setKey(java.lang.String key) {
+        return (ShowEffectiveKeyAccessJustificationsEnrollmentConfig) super.setKey(key);
+      }
+
+      @Override
+      public ShowEffectiveKeyAccessJustificationsEnrollmentConfig setOauthToken(java.lang.String oauthToken) {
+        return (ShowEffectiveKeyAccessJustificationsEnrollmentConfig) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public ShowEffectiveKeyAccessJustificationsEnrollmentConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (ShowEffectiveKeyAccessJustificationsEnrollmentConfig) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public ShowEffectiveKeyAccessJustificationsEnrollmentConfig setQuotaUser(java.lang.String quotaUser) {
+        return (ShowEffectiveKeyAccessJustificationsEnrollmentConfig) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public ShowEffectiveKeyAccessJustificationsEnrollmentConfig setUploadType(java.lang.String uploadType) {
+        return (ShowEffectiveKeyAccessJustificationsEnrollmentConfig) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public ShowEffectiveKeyAccessJustificationsEnrollmentConfig setUploadProtocol(java.lang.String uploadProtocol) {
+        return (ShowEffectiveKeyAccessJustificationsEnrollmentConfig) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The number or id of the project to get the effective
+       * KeyAccessJustificationsEnrollmentConfig for.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Required. The number or id of the project to get the effective
+     KeyAccessJustificationsEnrollmentConfig for.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /**
+       * Required. The number or id of the project to get the effective
+       * KeyAccessJustificationsEnrollmentConfig for.
+       */
+      public ShowEffectiveKeyAccessJustificationsEnrollmentConfig setProject(java.lang.String project) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "^projects/[^/]+$");
+        }
+        this.project = project;
+        return this;
+      }
+
+      @Override
+      public ShowEffectiveKeyAccessJustificationsEnrollmentConfig set(String parameterName, Object value) {
+        return (ShowEffectiveKeyAccessJustificationsEnrollmentConfig) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Returns the KeyAccessJustificationsPolicyConfig of the resource closest to the given project in
+     * hierarchy.
+     *
+     * Create a request for the method "projects.showEffectiveKeyAccessJustificationsPolicyConfig".
+     *
+     * This request holds the parameters needed by the cloudkms server.  After setting any optional
+     * parameters, call the {@link ShowEffectiveKeyAccessJustificationsPolicyConfig#execute()} method to
+     * invoke the remote operation.
+     *
+     * @param project Required. The number or id of the project to get the effective KeyAccessJustificationsPolicyConfig.
+     *        In the format of "projects/{|}"
+     * @return the request
+     */
+    public ShowEffectiveKeyAccessJustificationsPolicyConfig showEffectiveKeyAccessJustificationsPolicyConfig(java.lang.String project) throws java.io.IOException {
+      ShowEffectiveKeyAccessJustificationsPolicyConfig result = new ShowEffectiveKeyAccessJustificationsPolicyConfig(project);
+      initialize(result);
+      return result;
+    }
+
+    public class ShowEffectiveKeyAccessJustificationsPolicyConfig extends CloudKMSRequest<com.google.api.services.cloudkms.v1.model.ShowEffectiveKeyAccessJustificationsPolicyConfigResponse> {
+
+      private static final String REST_PATH = "v1/{+project}:showEffectiveKeyAccessJustificationsPolicyConfig";
+
+      private final java.util.regex.Pattern PROJECT_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+      /**
+       * Returns the KeyAccessJustificationsPolicyConfig of the resource closest to the given project in
+       * hierarchy.
+       *
+       * Create a request for the method "projects.showEffectiveKeyAccessJustificationsPolicyConfig".
+       *
+       * This request holds the parameters needed by the the cloudkms server.  After setting any
+       * optional parameters, call the {@link
+       * ShowEffectiveKeyAccessJustificationsPolicyConfig#execute()} method to invoke the remote
+       * operation. <p> {@link ShowEffectiveKeyAccessJustificationsPolicyConfig#initialize(com.google.ap
+       * i.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this
+       * instance immediately after invoking the constructor. </p>
+       *
+       * @param project Required. The number or id of the project to get the effective KeyAccessJustificationsPolicyConfig.
+     *        In the format of "projects/{|}"
+       * @since 1.13
+       */
+      protected ShowEffectiveKeyAccessJustificationsPolicyConfig(java.lang.String project) {
+        super(CloudKMS.this, "GET", REST_PATH, null, com.google.api.services.cloudkms.v1.model.ShowEffectiveKeyAccessJustificationsPolicyConfigResponse.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "^projects/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public ShowEffectiveKeyAccessJustificationsPolicyConfig set$Xgafv(java.lang.String $Xgafv) {
+        return (ShowEffectiveKeyAccessJustificationsPolicyConfig) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public ShowEffectiveKeyAccessJustificationsPolicyConfig setAccessToken(java.lang.String accessToken) {
+        return (ShowEffectiveKeyAccessJustificationsPolicyConfig) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public ShowEffectiveKeyAccessJustificationsPolicyConfig setAlt(java.lang.String alt) {
+        return (ShowEffectiveKeyAccessJustificationsPolicyConfig) super.setAlt(alt);
+      }
+
+      @Override
+      public ShowEffectiveKeyAccessJustificationsPolicyConfig setCallback(java.lang.String callback) {
+        return (ShowEffectiveKeyAccessJustificationsPolicyConfig) super.setCallback(callback);
+      }
+
+      @Override
+      public ShowEffectiveKeyAccessJustificationsPolicyConfig setFields(java.lang.String fields) {
+        return (ShowEffectiveKeyAccessJustificationsPolicyConfig) super.setFields(fields);
+      }
+
+      @Override
+      public ShowEffectiveKeyAccessJustificationsPolicyConfig setKey(java.lang.String key) {
+        return (ShowEffectiveKeyAccessJustificationsPolicyConfig) super.setKey(key);
+      }
+
+      @Override
+      public ShowEffectiveKeyAccessJustificationsPolicyConfig setOauthToken(java.lang.String oauthToken) {
+        return (ShowEffectiveKeyAccessJustificationsPolicyConfig) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public ShowEffectiveKeyAccessJustificationsPolicyConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (ShowEffectiveKeyAccessJustificationsPolicyConfig) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public ShowEffectiveKeyAccessJustificationsPolicyConfig setQuotaUser(java.lang.String quotaUser) {
+        return (ShowEffectiveKeyAccessJustificationsPolicyConfig) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public ShowEffectiveKeyAccessJustificationsPolicyConfig setUploadType(java.lang.String uploadType) {
+        return (ShowEffectiveKeyAccessJustificationsPolicyConfig) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public ShowEffectiveKeyAccessJustificationsPolicyConfig setUploadProtocol(java.lang.String uploadProtocol) {
+        return (ShowEffectiveKeyAccessJustificationsPolicyConfig) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The number or id of the project to get the effective
+       * KeyAccessJustificationsPolicyConfig. In the format of "projects/{|}"
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Required. The number or id of the project to get the effective KeyAccessJustificationsPolicyConfig.
+     In the format of "projects/{|}"
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /**
+       * Required. The number or id of the project to get the effective
+       * KeyAccessJustificationsPolicyConfig. In the format of "projects/{|}"
+       */
+      public ShowEffectiveKeyAccessJustificationsPolicyConfig setProject(java.lang.String project) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "^projects/[^/]+$");
+        }
+        this.project = project;
+        return this;
+      }
+
+      @Override
+      public ShowEffectiveKeyAccessJustificationsPolicyConfig set(String parameterName, Object value) {
+        return (ShowEffectiveKeyAccessJustificationsPolicyConfig) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Updates the KeyAccessJustificationsPolicyConfig for a given organization/folder/projects.
+     *
+     * Create a request for the method "projects.updateKajPolicyConfig".
+     *
+     * This request holds the parameters needed by the cloudkms server.  After setting any optional
+     * parameters, call the {@link UpdateKajPolicyConfig#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param name Identifier. The resource name for this KeyAccessJustificationsPolicyConfig in the format of
+     *        "{organizations|folders|projects}/kajPolicyConfig".
+     * @param content the {@link com.google.api.services.cloudkms.v1.model.KeyAccessJustificationsPolicyConfig}
+     * @return the request
+     */
+    public UpdateKajPolicyConfig updateKajPolicyConfig(java.lang.String name, com.google.api.services.cloudkms.v1.model.KeyAccessJustificationsPolicyConfig content) throws java.io.IOException {
+      UpdateKajPolicyConfig result = new UpdateKajPolicyConfig(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class UpdateKajPolicyConfig extends CloudKMSRequest<com.google.api.services.cloudkms.v1.model.KeyAccessJustificationsPolicyConfig> {
+
+      private static final String REST_PATH = "v1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+/kajPolicyConfig$");
+
+      /**
+       * Updates the KeyAccessJustificationsPolicyConfig for a given organization/folder/projects.
+       *
+       * Create a request for the method "projects.updateKajPolicyConfig".
+       *
+       * This request holds the parameters needed by the the cloudkms server.  After setting any
+       * optional parameters, call the {@link UpdateKajPolicyConfig#execute()} method to invoke the
+       * remote operation. <p> {@link UpdateKajPolicyConfig#initialize(com.google.api.client.googleapis.
+       * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+       * after invoking the constructor. </p>
+       *
+       * @param name Identifier. The resource name for this KeyAccessJustificationsPolicyConfig in the format of
+     *        "{organizations|folders|projects}/kajPolicyConfig".
+       * @param content the {@link com.google.api.services.cloudkms.v1.model.KeyAccessJustificationsPolicyConfig}
+       * @since 1.13
+       */
+      protected UpdateKajPolicyConfig(java.lang.String name, com.google.api.services.cloudkms.v1.model.KeyAccessJustificationsPolicyConfig content) {
+        super(CloudKMS.this, "PATCH", REST_PATH, content, com.google.api.services.cloudkms.v1.model.KeyAccessJustificationsPolicyConfig.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/kajPolicyConfig$");
+        }
+      }
+
+      @Override
+      public UpdateKajPolicyConfig set$Xgafv(java.lang.String $Xgafv) {
+        return (UpdateKajPolicyConfig) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public UpdateKajPolicyConfig setAccessToken(java.lang.String accessToken) {
+        return (UpdateKajPolicyConfig) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public UpdateKajPolicyConfig setAlt(java.lang.String alt) {
+        return (UpdateKajPolicyConfig) super.setAlt(alt);
+      }
+
+      @Override
+      public UpdateKajPolicyConfig setCallback(java.lang.String callback) {
+        return (UpdateKajPolicyConfig) super.setCallback(callback);
+      }
+
+      @Override
+      public UpdateKajPolicyConfig setFields(java.lang.String fields) {
+        return (UpdateKajPolicyConfig) super.setFields(fields);
+      }
+
+      @Override
+      public UpdateKajPolicyConfig setKey(java.lang.String key) {
+        return (UpdateKajPolicyConfig) super.setKey(key);
+      }
+
+      @Override
+      public UpdateKajPolicyConfig setOauthToken(java.lang.String oauthToken) {
+        return (UpdateKajPolicyConfig) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public UpdateKajPolicyConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (UpdateKajPolicyConfig) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public UpdateKajPolicyConfig setQuotaUser(java.lang.String quotaUser) {
+        return (UpdateKajPolicyConfig) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public UpdateKajPolicyConfig setUploadType(java.lang.String uploadType) {
+        return (UpdateKajPolicyConfig) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public UpdateKajPolicyConfig setUploadProtocol(java.lang.String uploadProtocol) {
+        return (UpdateKajPolicyConfig) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Identifier. The resource name for this KeyAccessJustificationsPolicyConfig in the format of
+       * "{organizations|folders|projects}/kajPolicyConfig".
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Identifier. The resource name for this KeyAccessJustificationsPolicyConfig in the format of
+     "{organizations|folders|projects}/kajPolicyConfig".
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Identifier. The resource name for this KeyAccessJustificationsPolicyConfig in the format of
+       * "{organizations|folders|projects}/kajPolicyConfig".
+       */
+      public UpdateKajPolicyConfig setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/kajPolicyConfig$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      /** Optional. The list of fields to update. */
+      @com.google.api.client.util.Key
+      private String updateMask;
+
+      /** Optional. The list of fields to update.
+       */
+      public String getUpdateMask() {
+        return updateMask;
+      }
+
+      /** Optional. The list of fields to update. */
+      public UpdateKajPolicyConfig setUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+      }
+
+      @Override
+      public UpdateKajPolicyConfig set(String parameterName, Object value) {
+        return (UpdateKajPolicyConfig) super.set(parameterName, value);
       }
     }
 

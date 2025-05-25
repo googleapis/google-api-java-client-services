@@ -31,6 +31,15 @@ package com.google.api.services.cloudkms.v1.model;
 public final class AutokeyConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. A checksum computed by the server based on the value of other fields. This may be
+   * sent on update requests to ensure that the client has an up-to-date value before proceeding.
+   * The request will be rejected with an ABORTED error on a mismatched etag.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String etag;
+
+  /**
    * Optional. Name of the key project, e.g. `projects/{PROJECT_ID}` or `projects/{PROJECT_NUMBER}`,
    * where Cloud KMS Autokey will provision a new CryptoKey when a KeyHandle is created. On
    * UpdateAutokeyConfig, the caller will require `cloudkms.cryptoKeys.setIamPolicy` permission on
@@ -56,6 +65,27 @@ public final class AutokeyConfig extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
+
+  /**
+   * Optional. A checksum computed by the server based on the value of other fields. This may be
+   * sent on update requests to ensure that the client has an up-to-date value before proceeding.
+   * The request will be rejected with an ABORTED error on a mismatched etag.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEtag() {
+    return etag;
+  }
+
+  /**
+   * Optional. A checksum computed by the server based on the value of other fields. This may be
+   * sent on update requests to ensure that the client has an up-to-date value before proceeding.
+   * The request will be rejected with an ABORTED error on a mismatched etag.
+   * @param etag etag or {@code null} for none
+   */
+  public AutokeyConfig setEtag(java.lang.String etag) {
+    this.etag = etag;
+    return this;
+  }
 
   /**
    * Optional. Name of the key project, e.g. `projects/{PROJECT_ID}` or `projects/{PROJECT_NUMBER}`,

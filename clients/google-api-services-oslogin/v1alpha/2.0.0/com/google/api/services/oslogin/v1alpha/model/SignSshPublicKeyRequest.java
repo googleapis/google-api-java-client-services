@@ -30,14 +30,14 @@ package com.google.api.services.oslogin.v1alpha.model;
 public final class SignSshPublicKeyRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The SSH public key to sign.
+   * Required. The SSH public key to sign.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sshPublicKey;
 
   /**
-   * The SSH public key to sign.
+   * Required. The SSH public key to sign.
    * @return value or {@code null} for none
    */
   public java.lang.String getSshPublicKey() {
@@ -45,7 +45,7 @@ public final class SignSshPublicKeyRequest extends com.google.api.client.json.Ge
   }
 
   /**
-   * The SSH public key to sign.
+   * Required. The SSH public key to sign.
    * @param sshPublicKey sshPublicKey or {@code null} for none
    */
   public SignSshPublicKeyRequest setSshPublicKey(java.lang.String sshPublicKey) {

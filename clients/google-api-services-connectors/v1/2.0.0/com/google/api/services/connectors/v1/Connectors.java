@@ -2281,7 +2281,8 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
            * `lock_config` To suspend/resume a connection: * `suspended` To update the connection
            * details: * `description` * `labels` * `connector_version` * `config_variables` *
            * `auth_config` * `destination_configs` * `node_config` * `log_config` * `ssl_config` *
-           * `eventing_enablement_type` * `eventing_config` * `auth_override_enabled`
+           * `eventing_enablement_type` * `eventing_config` * `auth_override_enabled` *
+           * `async_operations_enabled`
            */
           @com.google.api.client.util.Key
           private String updateMask;
@@ -2292,7 +2293,8 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
          To lock/unlock a connection: * `lock_config` To suspend/resume a connection: * `suspended` To
          update the connection details: * `description` * `labels` * `connector_version` *
          `config_variables` * `auth_config` * `destination_configs` * `node_config` * `log_config` *
-         `ssl_config` * `eventing_enablement_type` * `eventing_config` * `auth_override_enabled`
+         `ssl_config` * `eventing_enablement_type` * `eventing_config` * `auth_override_enabled` *
+         `async_operations_enabled`
            */
           public String getUpdateMask() {
             return updateMask;
@@ -2306,7 +2308,8 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
            * `lock_config` To suspend/resume a connection: * `suspended` To update the connection
            * details: * `description` * `labels` * `connector_version` * `config_variables` *
            * `auth_config` * `destination_configs` * `node_config` * `log_config` * `ssl_config` *
-           * `eventing_enablement_type` * `eventing_config` * `auth_override_enabled`
+           * `eventing_enablement_type` * `eventing_config` * `auth_override_enabled` *
+           * `async_operations_enabled`
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
@@ -7049,13 +7052,13 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Required. Identifier to assign to the EndpointAttachment. Must be unique within scope
-           * of the parent resource.
+           * of the parent resource. The regex is: `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
            */
           @com.google.api.client.util.Key
           private java.lang.String endpointAttachmentId;
 
           /** Required. Identifier to assign to the EndpointAttachment. Must be unique within scope of the parent
-         resource.
+         resource. The regex is: `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
            */
           public java.lang.String getEndpointAttachmentId() {
             return endpointAttachmentId;
@@ -7063,7 +7066,7 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Required. Identifier to assign to the EndpointAttachment. Must be unique within scope
-           * of the parent resource.
+           * of the parent resource. The regex is: `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`.
            */
           public Create setEndpointAttachmentId(java.lang.String endpointAttachmentId) {
             this.endpointAttachmentId = endpointAttachmentId;
@@ -12446,29 +12449,6 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
               }
 
               /**
-               * Optional. Enum to control whether schema enrichment related fields should be
-               * included in the response.
-               */
-              @com.google.api.client.util.Key
-              private java.lang.String schemaView;
-
-              /** Optional. Enum to control whether schema enrichment related fields should be included in the
-             response.
-               */
-              public java.lang.String getSchemaView() {
-                return schemaView;
-              }
-
-              /**
-               * Optional. Enum to control whether schema enrichment related fields should be
-               * included in the response.
-               */
-              public Get setSchemaView(java.lang.String schemaView) {
-                this.schemaView = schemaView;
-                return this;
-              }
-
-              /**
                * Specifies which fields of the ConnectorVersion are returned in the response.
                * Defaults to `CUSTOMER` view.
                */
@@ -12504,8 +12484,7 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
              * This request holds the parameters needed by the connectors server.  After setting any optional
              * parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. Parent resource of the connectors, of the form: `projects/locations/providers/connectors`
-             *        Only global location is supported for ConnectorVersion resource.
+             * @param parent
              * @return the request
              */
             public List list(java.lang.String parent) throws java.io.IOException {
@@ -12531,8 +12510,7 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
                * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. Parent resource of the connectors, of the form: `projects/locations/providers/connectors`
-             *        Only global location is supported for ConnectorVersion resource.
+               * @param parent
                * @since 1.13
                */
               protected List(java.lang.String parent) {
@@ -12610,26 +12588,16 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
                 return (List) super.setUploadProtocol(uploadProtocol);
               }
 
-              /**
-               * Required. Parent resource of the connectors, of the form:
-               * `projects/locations/providers/connectors` Only global location is supported for
-               * ConnectorVersion resource.
-               */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. Parent resource of the connectors, of the form: `projects/locations/providers/connectors`
-             Only global location is supported for ConnectorVersion resource.
+              /**
+
                */
               public java.lang.String getParent() {
                 return parent;
               }
 
-              /**
-               * Required. Parent resource of the connectors, of the form:
-               * `projects/locations/providers/connectors` Only global location is supported for
-               * ConnectorVersion resource.
-               */
               public List setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -12669,29 +12637,6 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
               /** Page token. */
               public List setPageToken(java.lang.String pageToken) {
                 this.pageToken = pageToken;
-                return this;
-              }
-
-              /**
-               * Optional. Enum to control whether schema enrichment related fields should be
-               * included in the response.
-               */
-              @com.google.api.client.util.Key
-              private java.lang.String schemaView;
-
-              /** Optional. Enum to control whether schema enrichment related fields should be included in the
-             response.
-               */
-              public java.lang.String getSchemaView() {
-                return schemaView;
-              }
-
-              /**
-               * Optional. Enum to control whether schema enrichment related fields should be
-               * included in the response.
-               */
-              public List setSchemaView(java.lang.String schemaView) {
-                this.schemaView = schemaView;
                 return this;
               }
 

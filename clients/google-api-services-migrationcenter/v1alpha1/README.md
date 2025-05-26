@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-migrationcenter</artifactId>
-      <version>v1alpha1-rev20250515-2.0.0</version>
+      <version>v1alpha1-rev20250522-2.0.0</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  implementation 'com.google.apis:google-api-services-migrationcenter:v1alpha1-rev20250515-2.0.0'
+  implementation 'com.google.apis:google-api-services-migrationcenter:v1alpha1-rev20250522-2.0.0'
 }
 ```
 

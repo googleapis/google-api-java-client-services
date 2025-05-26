@@ -86,13 +86,6 @@ public final class DiskEntry extends com.google.api.client.json.GenericJson {
   private java.lang.Long totalFreeBytes;
 
   /**
-   * VMware disk details. Deprecated
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private VmwareDiskConfig vmwareConfig;
-
-  /**
    * Disk label.
    * @return value or {@code null} for none
    */
@@ -225,23 +218,6 @@ public final class DiskEntry extends com.google.api.client.json.GenericJson {
    */
   public DiskEntry setTotalFreeBytes(java.lang.Long totalFreeBytes) {
     this.totalFreeBytes = totalFreeBytes;
-    return this;
-  }
-
-  /**
-   * VMware disk details. Deprecated
-   * @return value or {@code null} for none
-   */
-  public VmwareDiskConfig getVmwareConfig() {
-    return vmwareConfig;
-  }
-
-  /**
-   * VMware disk details. Deprecated
-   * @param vmwareConfig vmwareConfig or {@code null} for none
-   */
-  public DiskEntry setVmwareConfig(VmwareDiskConfig vmwareConfig) {
-    this.vmwareConfig = vmwareConfig;
     return this;
   }
 

@@ -1714,6 +1714,13 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
   public static final class IpFilter extends com.google.api.client.json.GenericJson {
 
     /**
+     * Whether to allow cross-org VPCs in the bucket's IP filter configuration.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.Boolean allowCrossOrgVpcs;
+
+    /**
      * The mode of the IP filter. Valid values are 'Enabled' and 'Disabled'.
      * The value may be {@code null}.
      */
@@ -1739,6 +1746,23 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
       // hack to force ProGuard to consider VpcNetworkSources used, since otherwise it would be stripped out
       // see https://github.com/google/google-api-java-client/issues/543
       com.google.api.client.util.Data.nullOf(VpcNetworkSources.class);
+    }
+
+    /**
+     * Whether to allow cross-org VPCs in the bucket's IP filter configuration.
+     * @return value or {@code null} for none
+     */
+    public java.lang.Boolean getAllowCrossOrgVpcs() {
+      return allowCrossOrgVpcs;
+    }
+
+    /**
+     * Whether to allow cross-org VPCs in the bucket's IP filter configuration.
+     * @param allowCrossOrgVpcs allowCrossOrgVpcs or {@code null} for none
+     */
+    public IpFilter setAllowCrossOrgVpcs(java.lang.Boolean allowCrossOrgVpcs) {
+      this.allowCrossOrgVpcs = allowCrossOrgVpcs;
+      return this;
     }
 
     /**

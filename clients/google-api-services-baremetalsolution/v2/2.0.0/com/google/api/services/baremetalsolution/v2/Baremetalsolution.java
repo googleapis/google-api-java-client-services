@@ -5254,7 +5254,7 @@ public class Baremetalsolution extends com.google.api.client.googleapis.services
           }
         }
         /**
-         * Submit a provisiong configuration for a given project.
+         * Submit a provisioning configuration for a given project.
          *
          * Create a request for the method "provisioningConfigs.submit".
          *
@@ -5279,7 +5279,7 @@ public class Baremetalsolution extends com.google.api.client.googleapis.services
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Submit a provisiong configuration for a given project.
+           * Submit a provisioning configuration for a given project.
            *
            * Create a request for the method "provisioningConfigs.submit".
            *

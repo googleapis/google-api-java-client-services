@@ -52,7 +52,7 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
   private java.lang.Boolean hyperthreading;
 
   /**
-   * A transient unique identifier to idenfity an instance within an ProvisioningConfig request.
+   * A transient unique identifier to identify an instance within an ProvisioningConfig request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -192,7 +192,7 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * A transient unique identifier to idenfity an instance within an ProvisioningConfig request.
+   * A transient unique identifier to identify an instance within an ProvisioningConfig request.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -200,7 +200,7 @@ public final class InstanceConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * A transient unique identifier to idenfity an instance within an ProvisioningConfig request.
+   * A transient unique identifier to identify an instance within an ProvisioningConfig request.
    * @param id id or {@code null} for none
    */
   public InstanceConfig setId(java.lang.String id) {

@@ -7089,15 +7089,15 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
       public class Databases {
 
         /**
-         * Adds split points to specified tables, indexes of a database.
+         * Adds split points to specified tables and indexes of a database.
          *
          * Create a request for the method "databases.addSplitPoints".
          *
          * This request holds the parameters needed by the spanner server.  After setting any optional
          * parameters, call the {@link AddSplitPoints#execute()} method to invoke the remote operation.
          *
-         * @param database Required. The database on whose tables/indexes split points are to be added. Values are of the form
-         *        `projects//instances//databases/`.
+         * @param database Required. The database on whose tables or indexes the split points are to be added. Values are of
+         *        the form `projects//instances//databases/`.
          * @param content the {@link com.google.api.services.spanner.v1.model.AddSplitPointsRequest}
          * @return the request
          */
@@ -7115,7 +7115,7 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
               java.util.regex.Pattern.compile("^projects/[^/]+/instances/[^/]+/databases/[^/]+$");
 
           /**
-           * Adds split points to specified tables, indexes of a database.
+           * Adds split points to specified tables and indexes of a database.
            *
            * Create a request for the method "databases.addSplitPoints".
            *
@@ -7125,8 +7125,8 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
            * ientRequest)} must be called to initialize this instance immediately after invoking the
            * constructor. </p>
            *
-           * @param database Required. The database on whose tables/indexes split points are to be added. Values are of the form
-         *        `projects//instances//databases/`.
+           * @param database Required. The database on whose tables or indexes the split points are to be added. Values are of
+         *        the form `projects//instances//databases/`.
            * @param content the {@link com.google.api.services.spanner.v1.model.AddSplitPointsRequest}
            * @since 1.13
            */
@@ -7196,22 +7196,22 @@ public class Spanner extends com.google.api.client.googleapis.services.json.Abst
           }
 
           /**
-           * Required. The database on whose tables/indexes split points are to be added. Values are
-           * of the form `projects//instances//databases/`.
+           * Required. The database on whose tables or indexes the split points are to be added.
+           * Values are of the form `projects//instances//databases/`.
            */
           @com.google.api.client.util.Key
           private java.lang.String database;
 
-          /** Required. The database on whose tables/indexes split points are to be added. Values are of the form
-         `projects//instances//databases/`.
+          /** Required. The database on whose tables or indexes the split points are to be added. Values are of
+         the form `projects//instances//databases/`.
            */
           public java.lang.String getDatabase() {
             return database;
           }
 
           /**
-           * Required. The database on whose tables/indexes split points are to be added. Values are
-           * of the form `projects//instances//databases/`.
+           * Required. The database on whose tables or indexes the split points are to be added.
+           * Values are of the form `projects//instances//databases/`.
            */
           public AddSplitPoints setDatabase(java.lang.String database) {
             if (!getSuppressPatternChecks()) {

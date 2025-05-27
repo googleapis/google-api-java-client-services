@@ -17,7 +17,7 @@
 package com.google.api.services.spanner.v1.model;
 
 /**
- * The split points of a table/index.
+ * The split points of a table or an index.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Spanner API. For a detailed explanation see:
@@ -46,7 +46,7 @@ public final class SplitPoints extends com.google.api.client.json.GenericJson {
   private java.lang.String index;
 
   /**
-   * Required. The list of split keys, i.e., the split boundaries.
+   * Required. The list of split keys. In essence, the split boundaries.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -104,7 +104,7 @@ public final class SplitPoints extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The list of split keys, i.e., the split boundaries.
+   * Required. The list of split keys. In essence, the split boundaries.
    * @return value or {@code null} for none
    */
   public java.util.List<Key> getKeys() {
@@ -112,7 +112,7 @@ public final class SplitPoints extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The list of split keys, i.e., the split boundaries.
+   * Required. The list of split keys. In essence, the split boundaries.
    * @param keys keys or {@code null} for none
    */
   public SplitPoints setKeys(java.util.List<Key> keys) {

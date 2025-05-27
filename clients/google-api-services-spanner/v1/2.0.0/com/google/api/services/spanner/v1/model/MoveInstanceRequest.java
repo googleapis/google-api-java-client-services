@@ -38,6 +38,19 @@ public final class MoveInstanceRequest extends com.google.api.client.json.Generi
   private java.lang.String targetConfig;
 
   /**
+   * Optional. The configuration for each database in the target instance configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<DatabaseMoveConfig> targetDatabaseMoveConfigs;
+
+  static {
+    // hack to force ProGuard to consider DatabaseMoveConfig used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(DatabaseMoveConfig.class);
+  }
+
+  /**
    * Required. The target instance configuration where to move the instance. Values are of the form
    * `projects//instanceConfigs/`.
    * @return value or {@code null} for none
@@ -53,6 +66,23 @@ public final class MoveInstanceRequest extends com.google.api.client.json.Generi
    */
   public MoveInstanceRequest setTargetConfig(java.lang.String targetConfig) {
     this.targetConfig = targetConfig;
+    return this;
+  }
+
+  /**
+   * Optional. The configuration for each database in the target instance configuration.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<DatabaseMoveConfig> getTargetDatabaseMoveConfigs() {
+    return targetDatabaseMoveConfigs;
+  }
+
+  /**
+   * Optional. The configuration for each database in the target instance configuration.
+   * @param targetDatabaseMoveConfigs targetDatabaseMoveConfigs or {@code null} for none
+   */
+  public MoveInstanceRequest setTargetDatabaseMoveConfigs(java.util.List<DatabaseMoveConfig> targetDatabaseMoveConfigs) {
+    this.targetDatabaseMoveConfigs = targetDatabaseMoveConfigs;
     return this;
   }
 

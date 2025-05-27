@@ -39,8 +39,8 @@ public final class Transaction extends com.google.api.client.json.GenericJson {
   private java.lang.String id;
 
   /**
-   * A precommit token will be included in the response of a BeginTransaction request if the read-
-   * write transaction is on a multiplexed session and a mutation_key was specified in the
+   * A precommit token is included in the response of a BeginTransaction request if the read-write
+   * transaction is on a multiplexed session and a mutation_key was specified in the
    * BeginTransaction. The precommit token with the highest sequence number from this transaction
    * attempt should be passed to the Commit request for this transaction.
    * The value may be {@code null}.
@@ -112,8 +112,8 @@ public final class Transaction extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A precommit token will be included in the response of a BeginTransaction request if the read-
-   * write transaction is on a multiplexed session and a mutation_key was specified in the
+   * A precommit token is included in the response of a BeginTransaction request if the read-write
+   * transaction is on a multiplexed session and a mutation_key was specified in the
    * BeginTransaction. The precommit token with the highest sequence number from this transaction
    * attempt should be passed to the Commit request for this transaction.
    * @return value or {@code null} for none
@@ -123,8 +123,8 @@ public final class Transaction extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A precommit token will be included in the response of a BeginTransaction request if the read-
-   * write transaction is on a multiplexed session and a mutation_key was specified in the
+   * A precommit token is included in the response of a BeginTransaction request if the read-write
+   * transaction is on a multiplexed session and a mutation_key was specified in the
    * BeginTransaction. The precommit token with the highest sequence number from this transaction
    * attempt should be passed to the Commit request for this transaction.
    * @param precommitToken precommitToken or {@code null} for none

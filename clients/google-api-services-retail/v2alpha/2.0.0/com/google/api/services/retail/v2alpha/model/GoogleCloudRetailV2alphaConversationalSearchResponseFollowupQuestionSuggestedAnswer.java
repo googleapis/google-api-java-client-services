@@ -17,7 +17,9 @@
 package com.google.api.services.retail.v2alpha.model;
 
 /**
- * Suggested answers to the follow-up question.
+ * Suggested answers to the follow-up question. If it's numerical attribute, only
+ * ProductAttributeInterval will be set. If it's textual attribute, only productAttributeValue will
+ * be set.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI Search for commerce API. For a detailed

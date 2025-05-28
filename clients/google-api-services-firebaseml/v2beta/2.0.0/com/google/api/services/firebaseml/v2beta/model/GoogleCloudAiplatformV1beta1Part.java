@@ -92,6 +92,13 @@ public final class GoogleCloudAiplatformV1beta1Part extends com.google.api.clien
   private java.lang.Boolean thought;
 
   /**
+   * Optional. An opaque signature for the thought so it can be reused in subsequent requests.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String thoughtSignature;
+
+  /**
    * Optional. Video metadata. The metadata should only be specified while the video data is
    * presented in inline_data or file_data.
    * The value may be {@code null}.
@@ -238,6 +245,51 @@ public final class GoogleCloudAiplatformV1beta1Part extends com.google.api.clien
    */
   public GoogleCloudAiplatformV1beta1Part setThought(java.lang.Boolean thought) {
     this.thought = thought;
+    return this;
+  }
+
+  /**
+   * Optional. An opaque signature for the thought so it can be reused in subsequent requests.
+   * @see #decodeThoughtSignature()
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getThoughtSignature() {
+    return thoughtSignature;
+  }
+
+  /**
+   * Optional. An opaque signature for the thought so it can be reused in subsequent requests.
+   * @see #getThoughtSignature()
+   * @return Base64 decoded value or {@code null} for none
+   *
+   * @since 1.14
+   */
+  public byte[] decodeThoughtSignature() {
+    return com.google.api.client.util.Base64.decodeBase64(thoughtSignature);
+  }
+
+  /**
+   * Optional. An opaque signature for the thought so it can be reused in subsequent requests.
+   * @see #encodeThoughtSignature()
+   * @param thoughtSignature thoughtSignature or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Part setThoughtSignature(java.lang.String thoughtSignature) {
+    this.thoughtSignature = thoughtSignature;
+    return this;
+  }
+
+  /**
+   * Optional. An opaque signature for the thought so it can be reused in subsequent requests.
+   * @see #setThoughtSignature()
+   *
+   * <p>
+   * The value is encoded Base64 or {@code null} for none.
+   * </p>
+   *
+   * @since 1.14
+   */
+  public GoogleCloudAiplatformV1beta1Part encodeThoughtSignature(byte[] thoughtSignature) {
+    this.thoughtSignature = com.google.api.client.util.Base64.encodeBase64URLSafeString(thoughtSignature);
     return this;
   }
 

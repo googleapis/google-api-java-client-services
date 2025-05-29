@@ -256,6 +256,15 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private SecondaryConfig secondaryConfig;
 
   /**
+   * Output only. AlloyDB per-cluster service agent email. This service account is created per-
+   * cluster per-project, and is different from that of the primary service agent which is created
+   * per-project. The service account naming format is subject to change.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceAccountEmail;
+
+  /**
    * SSL configuration for this AlloyDB cluster.
    * The value may be {@code null}.
    */
@@ -838,6 +847,27 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setSecondaryConfig(SecondaryConfig secondaryConfig) {
     this.secondaryConfig = secondaryConfig;
+    return this;
+  }
+
+  /**
+   * Output only. AlloyDB per-cluster service agent email. This service account is created per-
+   * cluster per-project, and is different from that of the primary service agent which is created
+   * per-project. The service account naming format is subject to change.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceAccountEmail() {
+    return serviceAccountEmail;
+  }
+
+  /**
+   * Output only. AlloyDB per-cluster service agent email. This service account is created per-
+   * cluster per-project, and is different from that of the primary service agent which is created
+   * per-project. The service account naming format is subject to change.
+   * @param serviceAccountEmail serviceAccountEmail or {@code null} for none
+   */
+  public Cluster setServiceAccountEmail(java.lang.String serviceAccountEmail) {
+    this.serviceAccountEmail = serviceAccountEmail;
     return this;
   }
 

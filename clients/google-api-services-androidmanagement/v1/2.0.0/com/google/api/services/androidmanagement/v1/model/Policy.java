@@ -837,6 +837,14 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean wifiConfigsLockdownEnabled;
 
   /**
+   * Optional. Controls the work account setup configuration, such as details of whether a Google
+   * authenticated account is required.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private WorkAccountSetupConfig workAccountSetupConfig;
+
+  /**
    * Account types that can't be managed by the user.
    * @return value or {@code null} for none
    */
@@ -2644,6 +2652,25 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    */
   public Policy setWifiConfigsLockdownEnabled(java.lang.Boolean wifiConfigsLockdownEnabled) {
     this.wifiConfigsLockdownEnabled = wifiConfigsLockdownEnabled;
+    return this;
+  }
+
+  /**
+   * Optional. Controls the work account setup configuration, such as details of whether a Google
+   * authenticated account is required.
+   * @return value or {@code null} for none
+   */
+  public WorkAccountSetupConfig getWorkAccountSetupConfig() {
+    return workAccountSetupConfig;
+  }
+
+  /**
+   * Optional. Controls the work account setup configuration, such as details of whether a Google
+   * authenticated account is required.
+   * @param workAccountSetupConfig workAccountSetupConfig or {@code null} for none
+   */
+  public Policy setWorkAccountSetupConfig(WorkAccountSetupConfig workAccountSetupConfig) {
+    this.workAccountSetupConfig = workAccountSetupConfig;
     return this;
   }
 

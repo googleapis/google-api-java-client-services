@@ -44,6 +44,13 @@ public final class GoogleCloudAiplatformV1beta1GenerationConfig extends com.goog
   private java.lang.Integer candidateCount;
 
   /**
+   * Optional. If enabled, the model will detect emotions and adapt its responses accordingly.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableAffectiveDialog;
+
+  /**
    * Optional. Frequency penalties.
    * The value may be {@code null}.
    */
@@ -208,6 +215,23 @@ public final class GoogleCloudAiplatformV1beta1GenerationConfig extends com.goog
    */
   public GoogleCloudAiplatformV1beta1GenerationConfig setCandidateCount(java.lang.Integer candidateCount) {
     this.candidateCount = candidateCount;
+    return this;
+  }
+
+  /**
+   * Optional. If enabled, the model will detect emotions and adapt its responses accordingly.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableAffectiveDialog() {
+    return enableAffectiveDialog;
+  }
+
+  /**
+   * Optional. If enabled, the model will detect emotions and adapt its responses accordingly.
+   * @param enableAffectiveDialog enableAffectiveDialog or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GenerationConfig setEnableAffectiveDialog(java.lang.Boolean enableAffectiveDialog) {
+    this.enableAffectiveDialog = enableAffectiveDialog;
     return this;
   }
 

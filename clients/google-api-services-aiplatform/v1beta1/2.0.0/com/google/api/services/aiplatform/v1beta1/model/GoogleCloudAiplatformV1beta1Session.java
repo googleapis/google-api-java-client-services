@@ -44,8 +44,8 @@ public final class GoogleCloudAiplatformV1beta1Session extends com.google.api.cl
   private java.lang.String displayName;
 
   /**
-   * Required. Identifier. The resource name of the session. Format: 'projects/{project}/locations/{
-   * location}/reasoningEngines/{reasoning_engine}/sessions/{session}'.
+   * Identifier. The resource name of the session. Format: 'projects/{project}/locations/{location}/
+   * reasoningEngines/{reasoning_engine}/sessions/{session}'.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -107,8 +107,8 @@ public final class GoogleCloudAiplatformV1beta1Session extends com.google.api.cl
   }
 
   /**
-   * Required. Identifier. The resource name of the session. Format: 'projects/{project}/locations/{
-   * location}/reasoningEngines/{reasoning_engine}/sessions/{session}'.
+   * Identifier. The resource name of the session. Format: 'projects/{project}/locations/{location}/
+   * reasoningEngines/{reasoning_engine}/sessions/{session}'.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -116,8 +116,8 @@ public final class GoogleCloudAiplatformV1beta1Session extends com.google.api.cl
   }
 
   /**
-   * Required. Identifier. The resource name of the session. Format: 'projects/{project}/locations/{
-   * location}/reasoningEngines/{reasoning_engine}/sessions/{session}'.
+   * Identifier. The resource name of the session. Format: 'projects/{project}/locations/{location}/
+   * reasoningEngines/{reasoning_engine}/sessions/{session}'.
    * @param name name or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Session setName(java.lang.String name) {

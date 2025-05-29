@@ -79,8 +79,8 @@ public final class GoogleCloudAiplatformV1beta1SessionEvent extends com.google.a
   private java.lang.String invocationId;
 
   /**
-   * Required. Identifier. The resource name of the event. Format:`projects/{project}/locations/{loc
-   * ation}/reasoningEngines/{reasoning_engine}/sessions/{session}/events/{event}`.
+   * Identifier. The resource name of the event. Format:`projects/{project}/locations/{location}/rea
+   * soningEngines/{reasoning_engine}/sessions/{session}/events/{event}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -213,8 +213,8 @@ public final class GoogleCloudAiplatformV1beta1SessionEvent extends com.google.a
   }
 
   /**
-   * Required. Identifier. The resource name of the event. Format:`projects/{project}/locations/{loc
-   * ation}/reasoningEngines/{reasoning_engine}/sessions/{session}/events/{event}`.
+   * Identifier. The resource name of the event. Format:`projects/{project}/locations/{location}/rea
+   * soningEngines/{reasoning_engine}/sessions/{session}/events/{event}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -222,8 +222,8 @@ public final class GoogleCloudAiplatformV1beta1SessionEvent extends com.google.a
   }
 
   /**
-   * Required. Identifier. The resource name of the event. Format:`projects/{project}/locations/{loc
-   * ation}/reasoningEngines/{reasoning_engine}/sessions/{session}/events/{event}`.
+   * Identifier. The resource name of the event. Format:`projects/{project}/locations/{location}/rea
+   * soningEngines/{reasoning_engine}/sessions/{session}/events/{event}`.
    * @param name name or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1SessionEvent setName(java.lang.String name) {

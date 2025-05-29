@@ -30,6 +30,22 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1PSCAutomationConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Forwarding rule created by the PSC service automation. Note for Vector search, use
+   * IndexPrivateEndpoint instead.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String forwardingRule;
+
+  /**
+   * Output only. IP address rule created by the PSC service automation. Note for Vector search, use
+   * IndexPrivateEndpoint instead.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ipAddress;
+
+  /**
    * Required. The full name of the Google Compute Engine
    * [network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks).
    * [Format](https://cloud.google.com/compute/docs/reference/rest/v1/networks/insert):
@@ -46,6 +62,44 @@ public final class GoogleCloudAiplatformV1beta1PSCAutomationConfig extends com.g
    */
   @com.google.api.client.util.Key
   private java.lang.String projectId;
+
+  /**
+   * Output only. Forwarding rule created by the PSC service automation. Note for Vector search, use
+   * IndexPrivateEndpoint instead.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getForwardingRule() {
+    return forwardingRule;
+  }
+
+  /**
+   * Output only. Forwarding rule created by the PSC service automation. Note for Vector search, use
+   * IndexPrivateEndpoint instead.
+   * @param forwardingRule forwardingRule or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1PSCAutomationConfig setForwardingRule(java.lang.String forwardingRule) {
+    this.forwardingRule = forwardingRule;
+    return this;
+  }
+
+  /**
+   * Output only. IP address rule created by the PSC service automation. Note for Vector search, use
+   * IndexPrivateEndpoint instead.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIpAddress() {
+    return ipAddress;
+  }
+
+  /**
+   * Output only. IP address rule created by the PSC service automation. Note for Vector search, use
+   * IndexPrivateEndpoint instead.
+   * @param ipAddress ipAddress or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1PSCAutomationConfig setIpAddress(java.lang.String ipAddress) {
+    this.ipAddress = ipAddress;
+    return this;
+  }
 
   /**
    * Required. The full name of the Google Compute Engine

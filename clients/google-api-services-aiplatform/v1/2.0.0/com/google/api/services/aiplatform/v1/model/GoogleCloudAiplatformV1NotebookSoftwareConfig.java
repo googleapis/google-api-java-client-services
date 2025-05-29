@@ -31,6 +31,13 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1NotebookSoftwareConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Google-managed NotebookRuntime colab image.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1ColabImage colabImage;
+
+  /**
    * Optional. Environment variables to be passed to the container. Maximum limit is 100.
    * The value may be {@code null}.
    */
@@ -49,6 +56,23 @@ public final class GoogleCloudAiplatformV1NotebookSoftwareConfig extends com.goo
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1PostStartupScriptConfig postStartupScriptConfig;
+
+  /**
+   * Optional. Google-managed NotebookRuntime colab image.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1ColabImage getColabImage() {
+    return colabImage;
+  }
+
+  /**
+   * Optional. Google-managed NotebookRuntime colab image.
+   * @param colabImage colabImage or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1NotebookSoftwareConfig setColabImage(GoogleCloudAiplatformV1ColabImage colabImage) {
+    this.colabImage = colabImage;
+    return this;
+  }
 
   /**
    * Optional. Environment variables to be passed to the container. Maximum limit is 100.

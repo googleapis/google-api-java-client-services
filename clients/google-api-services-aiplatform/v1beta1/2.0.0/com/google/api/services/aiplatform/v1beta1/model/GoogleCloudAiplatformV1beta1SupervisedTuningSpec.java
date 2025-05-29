@@ -45,16 +45,16 @@ public final class GoogleCloudAiplatformV1beta1SupervisedTuningSpec extends com.
   private GoogleCloudAiplatformV1beta1SupervisedHyperParameters hyperParameters;
 
   /**
-   * Required. Cloud Storage path to file containing training dataset for tuning. The dataset must
-   * be formatted as a JSONL file.
+   * Required. Training dataset used for tuning. The dataset can be specified as either a Cloud
+   * Storage path to a JSONL file or as the resource name of a Vertex Multimodal Dataset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String trainingDatasetUri;
 
   /**
-   * Optional. Cloud Storage path to file containing validation dataset for tuning. The dataset must
-   * be formatted as a JSONL file.
+   * Optional. Validation dataset used for tuning. The dataset can be specified as either a Cloud
+   * Storage path to a JSONL file or as the resource name of a Vertex Multimodal Dataset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,8 +97,8 @@ public final class GoogleCloudAiplatformV1beta1SupervisedTuningSpec extends com.
   }
 
   /**
-   * Required. Cloud Storage path to file containing training dataset for tuning. The dataset must
-   * be formatted as a JSONL file.
+   * Required. Training dataset used for tuning. The dataset can be specified as either a Cloud
+   * Storage path to a JSONL file or as the resource name of a Vertex Multimodal Dataset.
    * @return value or {@code null} for none
    */
   public java.lang.String getTrainingDatasetUri() {
@@ -106,8 +106,8 @@ public final class GoogleCloudAiplatformV1beta1SupervisedTuningSpec extends com.
   }
 
   /**
-   * Required. Cloud Storage path to file containing training dataset for tuning. The dataset must
-   * be formatted as a JSONL file.
+   * Required. Training dataset used for tuning. The dataset can be specified as either a Cloud
+   * Storage path to a JSONL file or as the resource name of a Vertex Multimodal Dataset.
    * @param trainingDatasetUri trainingDatasetUri or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1SupervisedTuningSpec setTrainingDatasetUri(java.lang.String trainingDatasetUri) {
@@ -116,8 +116,8 @@ public final class GoogleCloudAiplatformV1beta1SupervisedTuningSpec extends com.
   }
 
   /**
-   * Optional. Cloud Storage path to file containing validation dataset for tuning. The dataset must
-   * be formatted as a JSONL file.
+   * Optional. Validation dataset used for tuning. The dataset can be specified as either a Cloud
+   * Storage path to a JSONL file or as the resource name of a Vertex Multimodal Dataset.
    * @return value or {@code null} for none
    */
   public java.lang.String getValidationDatasetUri() {
@@ -125,8 +125,8 @@ public final class GoogleCloudAiplatformV1beta1SupervisedTuningSpec extends com.
   }
 
   /**
-   * Optional. Cloud Storage path to file containing validation dataset for tuning. The dataset must
-   * be formatted as a JSONL file.
+   * Optional. Validation dataset used for tuning. The dataset can be specified as either a Cloud
+   * Storage path to a JSONL file or as the resource name of a Vertex Multimodal Dataset.
    * @param validationDatasetUri validationDatasetUri or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1SupervisedTuningSpec setValidationDatasetUri(java.lang.String validationDatasetUri) {

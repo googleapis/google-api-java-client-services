@@ -98,6 +98,13 @@ public final class GoogleChromeManagementV1TelemetryEvent extends com.google.api
   private GoogleChromeManagementV1TelemetryNetworkConnectionStateChangeEvent networkStateChangeEvent;
 
   /**
+   * Output only. Payload for OS crash event. Present only when `event_type` is `OS_CRASH`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleChromeManagementV1TelemetryOsCrashEvent osCrashEvent;
+
+  /**
    * Timestamp that represents when the event was reported.
    * The value may be {@code null}.
    */
@@ -293,6 +300,23 @@ public final class GoogleChromeManagementV1TelemetryEvent extends com.google.api
    */
   public GoogleChromeManagementV1TelemetryEvent setNetworkStateChangeEvent(GoogleChromeManagementV1TelemetryNetworkConnectionStateChangeEvent networkStateChangeEvent) {
     this.networkStateChangeEvent = networkStateChangeEvent;
+    return this;
+  }
+
+  /**
+   * Output only. Payload for OS crash event. Present only when `event_type` is `OS_CRASH`.
+   * @return value or {@code null} for none
+   */
+  public GoogleChromeManagementV1TelemetryOsCrashEvent getOsCrashEvent() {
+    return osCrashEvent;
+  }
+
+  /**
+   * Output only. Payload for OS crash event. Present only when `event_type` is `OS_CRASH`.
+   * @param osCrashEvent osCrashEvent or {@code null} for none
+   */
+  public GoogleChromeManagementV1TelemetryEvent setOsCrashEvent(GoogleChromeManagementV1TelemetryOsCrashEvent osCrashEvent) {
+    this.osCrashEvent = osCrashEvent;
     return this;
   }
 

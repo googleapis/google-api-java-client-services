@@ -32,7 +32,8 @@ public final class DirectoryChromeosdevicesCommandResult extends com.google.api.
   /**
    * The payload for the command result. The following commands respond with a payload: *
    * `DEVICE_START_CRD_SESSION`: Payload is a stringified JSON object in the form: { "url": url }.
-   * The URL provides a link to the Chrome Remote Desktop session. * `FETCH_CRD_AVAILABILITY_INFO`:
+   * The provided URL links to the Chrome Remote Desktop session and requires authentication using
+   * only the `email` associated with the command's issuance. * `FETCH_CRD_AVAILABILITY_INFO`:
    * Payload is a stringified JSON object in the form: { "deviceIdleTimeInSeconds": number,
    * "userSessionType": string, "remoteSupportAvailability": string, "remoteAccessAvailability":
    * string }. The "remoteSupportAvailability" field is set to "AVAILABLE" if `shared` CRD session
@@ -68,7 +69,8 @@ public final class DirectoryChromeosdevicesCommandResult extends com.google.api.
   /**
    * The payload for the command result. The following commands respond with a payload: *
    * `DEVICE_START_CRD_SESSION`: Payload is a stringified JSON object in the form: { "url": url }.
-   * The URL provides a link to the Chrome Remote Desktop session. * `FETCH_CRD_AVAILABILITY_INFO`:
+   * The provided URL links to the Chrome Remote Desktop session and requires authentication using
+   * only the `email` associated with the command's issuance. * `FETCH_CRD_AVAILABILITY_INFO`:
    * Payload is a stringified JSON object in the form: { "deviceIdleTimeInSeconds": number,
    * "userSessionType": string, "remoteSupportAvailability": string, "remoteAccessAvailability":
    * string }. The "remoteSupportAvailability" field is set to "AVAILABLE" if `shared` CRD session
@@ -83,7 +85,8 @@ public final class DirectoryChromeosdevicesCommandResult extends com.google.api.
   /**
    * The payload for the command result. The following commands respond with a payload: *
    * `DEVICE_START_CRD_SESSION`: Payload is a stringified JSON object in the form: { "url": url }.
-   * The URL provides a link to the Chrome Remote Desktop session. * `FETCH_CRD_AVAILABILITY_INFO`:
+   * The provided URL links to the Chrome Remote Desktop session and requires authentication using
+   * only the `email` associated with the command's issuance. * `FETCH_CRD_AVAILABILITY_INFO`:
    * Payload is a stringified JSON object in the form: { "deviceIdleTimeInSeconds": number,
    * "userSessionType": string, "remoteSupportAvailability": string, "remoteAccessAvailability":
    * string }. The "remoteSupportAvailability" field is set to "AVAILABLE" if `shared` CRD session

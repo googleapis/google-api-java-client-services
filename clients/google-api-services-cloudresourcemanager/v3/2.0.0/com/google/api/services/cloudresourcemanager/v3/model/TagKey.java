@@ -98,7 +98,7 @@ public final class TagKey extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Immutable. The user friendly name for a TagKey. The short name should be unique for
-   * TagKeys within the same tag namespace. The short name must be 1-63 characters, beginning and
+   * TagKeys within the same tag namespace. The short name must be 1-256 characters, beginning and
    * ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.),
    * and alphanumerics between.
    * The value may be {@code null}.
@@ -271,7 +271,7 @@ public final class TagKey extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Immutable. The user friendly name for a TagKey. The short name should be unique for
-   * TagKeys within the same tag namespace. The short name must be 1-63 characters, beginning and
+   * TagKeys within the same tag namespace. The short name must be 1-256 characters, beginning and
    * ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.),
    * and alphanumerics between.
    * @return value or {@code null} for none
@@ -282,7 +282,7 @@ public final class TagKey extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Immutable. The user friendly name for a TagKey. The short name should be unique for
-   * TagKeys within the same tag namespace. The short name must be 1-63 characters, beginning and
+   * TagKeys within the same tag namespace. The short name must be 1-256 characters, beginning and
    * ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.),
    * and alphanumerics between.
    * @param shortName shortName or {@code null} for none

@@ -3046,6 +3046,567 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
   }
 
   /**
+   * An accessor for creating requests from the Locations collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code CloudResourceManager cloudresourcemanager = new CloudResourceManager(...);}
+   *   {@code CloudResourceManager.Locations.List request = cloudresourcemanager.locations().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Locations locations() {
+    return new Locations();
+  }
+
+  /**
+   * The "locations" collection of methods.
+   */
+  public class Locations {
+
+    /**
+     * An accessor for creating requests from the EffectiveTagBindingCollections collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code CloudResourceManager cloudresourcemanager = new CloudResourceManager(...);}
+     *   {@code CloudResourceManager.EffectiveTagBindingCollections.List request = cloudresourcemanager.effectiveTagBindingCollections().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public EffectiveTagBindingCollections effectiveTagBindingCollections() {
+      return new EffectiveTagBindingCollections();
+    }
+
+    /**
+     * The "effectiveTagBindingCollections" collection of methods.
+     */
+    public class EffectiveTagBindingCollections {
+
+      /**
+       * Returns effective tag bindings on a GCP resource.
+       *
+       * Create a request for the method "effectiveTagBindingCollections.get".
+       *
+       * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The full name of the EffectiveTagBindingCollection in format:
+       *        `locations/{location}/effectiveTagBindingCollections/{encoded-full-resource-name}` where
+       *        the encoded-full-resource-name is the UTF-8 encoded name of the resource the TagBindings
+       *        are bound to. E.g. "locations/global/effectiveTagBindingCollections/%2f%2fcloudresourceman
+       *        ager.googleapis.com%2fprojects%2f123"
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends CloudResourceManagerRequest<com.google.api.services.cloudresourcemanager.v3.model.EffectiveTagBindingCollection> {
+
+        private static final String REST_PATH = "v3/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^locations/[^/]+/effectiveTagBindingCollections/[^/]+$");
+
+        /**
+         * Returns effective tag bindings on a GCP resource.
+         *
+         * Create a request for the method "effectiveTagBindingCollections.get".
+         *
+         * This request holds the parameters needed by the the cloudresourcemanager server.  After setting
+         * any optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The full name of the EffectiveTagBindingCollection in format:
+       *        `locations/{location}/effectiveTagBindingCollections/{encoded-full-resource-name}` where
+       *        the encoded-full-resource-name is the UTF-8 encoded name of the resource the TagBindings
+       *        are bound to. E.g. "locations/global/effectiveTagBindingCollections/%2f%2fcloudresourceman
+       *        ager.googleapis.com%2fprojects%2f123"
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(CloudResourceManager.this, "GET", REST_PATH, null, com.google.api.services.cloudresourcemanager.v3.model.EffectiveTagBindingCollection.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^locations/[^/]+/effectiveTagBindingCollections/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The full name of the EffectiveTagBindingCollection in format:
+         * `locations/{location}/effectiveTagBindingCollections/{encoded-full-resource-name}` where
+         * the encoded-full-resource-name is the UTF-8 encoded name of the resource the TagBindings
+         * are bound to. E.g. "locations/global/effectiveTagBindingCollections/%2f%2fcloudresourcema
+         * nager.googleapis.com%2fprojects%2f123"
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The full name of the EffectiveTagBindingCollection in format:
+       `locations/{location}/effectiveTagBindingCollections/{encoded-full-resource-name}` where the
+       encoded-full-resource-name is the UTF-8 encoded name of the resource the TagBindings are bound to.
+       E.g. "locations/global/effectiveTagBindingCollections/%2f%2fcloudresourcemanager.googleapis.com%2fp
+       rojects%2f123"
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The full name of the EffectiveTagBindingCollection in format:
+         * `locations/{location}/effectiveTagBindingCollections/{encoded-full-resource-name}` where
+         * the encoded-full-resource-name is the UTF-8 encoded name of the resource the TagBindings
+         * are bound to. E.g. "locations/global/effectiveTagBindingCollections/%2f%2fcloudresourcema
+         * nager.googleapis.com%2fprojects%2f123"
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^locations/[^/]+/effectiveTagBindingCollections/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
+     * An accessor for creating requests from the TagBindingCollections collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code CloudResourceManager cloudresourcemanager = new CloudResourceManager(...);}
+     *   {@code CloudResourceManager.TagBindingCollections.List request = cloudresourcemanager.tagBindingCollections().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public TagBindingCollections tagBindingCollections() {
+      return new TagBindingCollections();
+    }
+
+    /**
+     * The "tagBindingCollections" collection of methods.
+     */
+    public class TagBindingCollections {
+
+      /**
+       * Returns tag bindings directly attached to a GCP resource.
+       *
+       * Create a request for the method "tagBindingCollections.get".
+       *
+       * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The full name of the TagBindingCollection in format:
+       *        `locations/{location}/tagBindingCollections/{encoded-full-resource-name}` where the
+       *        enoded-full-resource-name is the UTF-8 encoded name of the resource the TagBindings are
+       *        bound to. E.g. "locations/global/tagBindingCollections/%2f%2fcloudresourcemanager.googleap
+       *        is.com%2fprojects%2f123"
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends CloudResourceManagerRequest<com.google.api.services.cloudresourcemanager.v3.model.TagBindingCollection> {
+
+        private static final String REST_PATH = "v3/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^locations/[^/]+/tagBindingCollections/[^/]+$");
+
+        /**
+         * Returns tag bindings directly attached to a GCP resource.
+         *
+         * Create a request for the method "tagBindingCollections.get".
+         *
+         * This request holds the parameters needed by the the cloudresourcemanager server.  After setting
+         * any optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The full name of the TagBindingCollection in format:
+       *        `locations/{location}/tagBindingCollections/{encoded-full-resource-name}` where the
+       *        enoded-full-resource-name is the UTF-8 encoded name of the resource the TagBindings are
+       *        bound to. E.g. "locations/global/tagBindingCollections/%2f%2fcloudresourcemanager.googleap
+       *        is.com%2fprojects%2f123"
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(CloudResourceManager.this, "GET", REST_PATH, null, com.google.api.services.cloudresourcemanager.v3.model.TagBindingCollection.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^locations/[^/]+/tagBindingCollections/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The full name of the TagBindingCollection in format:
+         * `locations/{location}/tagBindingCollections/{encoded-full-resource-name}` where the
+         * enoded-full-resource-name is the UTF-8 encoded name of the resource the TagBindings are
+         * bound to. E.g. "locations/global/tagBindingCollections/%2f%2fcloudresourcemanager.googlea
+         * pis.com%2fprojects%2f123"
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The full name of the TagBindingCollection in format:
+       `locations/{location}/tagBindingCollections/{encoded-full-resource-name}` where the enoded-full-
+       resource-name is the UTF-8 encoded name of the resource the TagBindings are bound to. E.g.
+       "locations/global/tagBindingCollections/%2f%2fcloudresourcemanager.googleapis.com%2fprojects%2f123"
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The full name of the TagBindingCollection in format:
+         * `locations/{location}/tagBindingCollections/{encoded-full-resource-name}` where the
+         * enoded-full-resource-name is the UTF-8 encoded name of the resource the TagBindings are
+         * bound to. E.g. "locations/global/tagBindingCollections/%2f%2fcloudresourcemanager.googlea
+         * pis.com%2fprojects%2f123"
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^locations/[^/]+/tagBindingCollections/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates tag bindings directly attached to a GCP resource. Update_mask can be kept empty or "*".
+       *
+       * Create a request for the method "tagBindingCollections.patch".
+       *
+       * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
+       * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param name Identifier. The name of the TagBindingCollection, following the convention:
+       *        `locations/{location}/tagBindingCollections/{encoded-full-resource-name}` where the
+       *        encoded-full-resource-name is the UTF-8 encoded name of the GCP resource the TagBindings
+       *        are bound to. "locations/global/tagBindingCollections/%2f%2fcloudresourcemanager.googleapi
+       *        s.com%2fprojects%2f123"
+       * @param content the {@link com.google.api.services.cloudresourcemanager.v3.model.TagBindingCollection}
+       * @return the request
+       */
+      public Patch patch(java.lang.String name, com.google.api.services.cloudresourcemanager.v3.model.TagBindingCollection content) throws java.io.IOException {
+        Patch result = new Patch(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends CloudResourceManagerRequest<com.google.api.services.cloudresourcemanager.v3.model.Operation> {
+
+        private static final String REST_PATH = "v3/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^locations/[^/]+/tagBindingCollections/[^/]+$");
+
+        /**
+         * Updates tag bindings directly attached to a GCP resource. Update_mask can be kept empty or "*".
+         *
+         * Create a request for the method "tagBindingCollections.patch".
+         *
+         * This request holds the parameters needed by the the cloudresourcemanager server.  After setting
+         * any optional parameters, call the {@link Patch#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Identifier. The name of the TagBindingCollection, following the convention:
+       *        `locations/{location}/tagBindingCollections/{encoded-full-resource-name}` where the
+       *        encoded-full-resource-name is the UTF-8 encoded name of the GCP resource the TagBindings
+       *        are bound to. "locations/global/tagBindingCollections/%2f%2fcloudresourcemanager.googleapi
+       *        s.com%2fprojects%2f123"
+         * @param content the {@link com.google.api.services.cloudresourcemanager.v3.model.TagBindingCollection}
+         * @since 1.13
+         */
+        protected Patch(java.lang.String name, com.google.api.services.cloudresourcemanager.v3.model.TagBindingCollection content) {
+          super(CloudResourceManager.this, "PATCH", REST_PATH, content, com.google.api.services.cloudresourcemanager.v3.model.Operation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^locations/[^/]+/tagBindingCollections/[^/]+$");
+          }
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Identifier. The name of the TagBindingCollection, following the convention:
+         * `locations/{location}/tagBindingCollections/{encoded-full-resource-name}` where the
+         * encoded-full-resource-name is the UTF-8 encoded name of the GCP resource the TagBindings
+         * are bound to. "locations/global/tagBindingCollections/%2f%2fcloudresourcemanager.googleap
+         * is.com%2fprojects%2f123"
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Identifier. The name of the TagBindingCollection, following the convention:
+       `locations/{location}/tagBindingCollections/{encoded-full-resource-name}` where the encoded-full-
+       resource-name is the UTF-8 encoded name of the GCP resource the TagBindings are bound to.
+       "locations/global/tagBindingCollections/%2f%2fcloudresourcemanager.googleapis.com%2fprojects%2f123"
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Identifier. The name of the TagBindingCollection, following the convention:
+         * `locations/{location}/tagBindingCollections/{encoded-full-resource-name}` where the
+         * encoded-full-resource-name is the UTF-8 encoded name of the GCP resource the TagBindings
+         * are bound to. "locations/global/tagBindingCollections/%2f%2fcloudresourcemanager.googleap
+         * is.com%2fprojects%2f123"
+         */
+        public Patch setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^locations/[^/]+/tagBindingCollections/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /** Optional. An update mask to selectively update fields. */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Optional. An update mask to selectively update fields.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /** Optional. An update mask to selectively update fields. */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
+        }
+      }
+
+    }
+  }
+
+  /**
    * An accessor for creating requests from the Operations collection.
    *
    * <p>The typical use is:</p>

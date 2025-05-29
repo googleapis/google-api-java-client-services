@@ -111,6 +111,13 @@ public final class MigratingVm extends com.google.api.client.json.GenericJson {
   private Status error;
 
   /**
+   * Output only. Provides details about the expiration state of the migrating VM.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Expiration expiration;
+
+  /**
    * Output only. The group this migrating vm is included in, if any. The group is represented by
    * the full path of the appropriate Group resource.
    * The value may be {@code null}.
@@ -421,6 +428,23 @@ public final class MigratingVm extends com.google.api.client.json.GenericJson {
    */
   public MigratingVm setError(Status error) {
     this.error = error;
+    return this;
+  }
+
+  /**
+   * Output only. Provides details about the expiration state of the migrating VM.
+   * @return value or {@code null} for none
+   */
+  public Expiration getExpiration() {
+    return expiration;
+  }
+
+  /**
+   * Output only. Provides details about the expiration state of the migrating VM.
+   * @param expiration expiration or {@code null} for none
+   */
+  public MigratingVm setExpiration(Expiration expiration) {
+    this.expiration = expiration;
     return this;
   }
 

@@ -103,8 +103,9 @@ public final class Hub extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> routeTables;
 
   /**
-   * The VPC networks associated with this hub's spokes. This field is read-only. Network
-   * Connectivity Center automatically populates it based on the set of spokes attached to the hub.
+   * Output only. The VPC networks associated with this hub's spokes. This field is read-only.
+   * Network Connectivity Center automatically populates it based on the set of spokes attached to
+   * the hub.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -303,8 +304,9 @@ public final class Hub extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The VPC networks associated with this hub's spokes. This field is read-only. Network
-   * Connectivity Center automatically populates it based on the set of spokes attached to the hub.
+   * Output only. The VPC networks associated with this hub's spokes. This field is read-only.
+   * Network Connectivity Center automatically populates it based on the set of spokes attached to
+   * the hub.
    * @return value or {@code null} for none
    */
   public java.util.List<RoutingVPC> getRoutingVpcs() {
@@ -312,8 +314,9 @@ public final class Hub extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The VPC networks associated with this hub's spokes. This field is read-only. Network
-   * Connectivity Center automatically populates it based on the set of spokes attached to the hub.
+   * Output only. The VPC networks associated with this hub's spokes. This field is read-only.
+   * Network Connectivity Center automatically populates it based on the set of spokes attached to
+   * the hub.
    * @param routingVpcs routingVpcs or {@code null} for none
    */
   public Hub setRoutingVpcs(java.util.List<RoutingVPC> routingVpcs) {

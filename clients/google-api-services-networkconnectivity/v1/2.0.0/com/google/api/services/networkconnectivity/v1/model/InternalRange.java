@@ -48,7 +48,7 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   private String createTime;
 
   /**
-   * A description of this resource.
+   * Optional. A description of this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,7 +71,7 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   private java.lang.Boolean immutable;
 
   /**
-   * The IP range that this internal range defines. NOTE: IPv6 ranges are limited to
+   * Optional. The IP range that this internal range defines. NOTE: IPv6 ranges are limited to
    * usage=EXTERNAL_TO_VPC and peering=FOR_SELF. NOTE: For IPv6 Ranges this field is compulsory,
    * i.e. the address range must be specified explicitly.
    * The value may be {@code null}.
@@ -94,7 +94,7 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   private Migration migration;
 
   /**
-   * Immutable. The name of an internal range. Format:
+   * Identifier. The name of an internal range. Format:
    * projects/{project}/locations/{location}/internalRanges/{internal_range} See:
    * https://google.aip.dev/122#fields-representing-resource-names
    * The value may be {@code null}.
@@ -103,9 +103,9 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   private java.lang.String name;
 
   /**
-   * The URL or resource ID of the network in which to reserve the internal range. The network
-   * cannot be deleted if there are any reserved internal ranges referring to it. Legacy networks
-   * are not supported. For example:
+   * Immutable. The URL or resource ID of the network in which to reserve the internal range. The
+   * network cannot be deleted if there are any reserved internal ranges referring to it. Legacy
+   * networks are not supported. For example:
    * https://www.googleapis.com/compute/v1/projects/{project}/locations/global/networks/{network}
    * projects/{project}/locations/global/networks/{network} {network}
    * The value may be {@code null}.
@@ -121,19 +121,19 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   private java.util.List<java.lang.String> overlaps;
 
   /**
-   * The type of peering set for this internal range.
+   * Optional. The type of peering set for this internal range.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String peering;
 
   /**
-   * An alternate to ip_cidr_range. Can be set when trying to create an IPv4 reservation that
-   * automatically finds a free range of the given size. If both ip_cidr_range and prefix_length are
-   * set, there is an error if the range sizes do not match. Can also be used during updates to
-   * change the range size. NOTE: For IPv6 this field only works if ip_cidr_range is set as well,
-   * and both fields must match. In other words, with IPv6 this field only works as a redundant
-   * parameter.
+   * Optional. An alternate to ip_cidr_range. Can be set when trying to create an IPv4 reservation
+   * that automatically finds a free range of the given size. If both ip_cidr_range and
+   * prefix_length are set, there is an error if the range sizes do not match. Can also be used
+   * during updates to change the range size. NOTE: For IPv6 this field only works if ip_cidr_range
+   * is set as well, and both fields must match. In other words, with IPv6 this field only works as
+   * a redundant parameter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -157,7 +157,7 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   private String updateTime;
 
   /**
-   * The type of usage set for this InternalRange.
+   * Optional. The type of usage set for this InternalRange.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -211,7 +211,7 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * A description of this resource.
+   * Optional. A description of this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -219,7 +219,7 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * A description of this resource.
+   * Optional. A description of this resource.
    * @param description description or {@code null} for none
    */
   public InternalRange setDescription(java.lang.String description) {
@@ -266,7 +266,7 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The IP range that this internal range defines. NOTE: IPv6 ranges are limited to
+   * Optional. The IP range that this internal range defines. NOTE: IPv6 ranges are limited to
    * usage=EXTERNAL_TO_VPC and peering=FOR_SELF. NOTE: For IPv6 Ranges this field is compulsory,
    * i.e. the address range must be specified explicitly.
    * @return value or {@code null} for none
@@ -276,7 +276,7 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The IP range that this internal range defines. NOTE: IPv6 ranges are limited to
+   * Optional. The IP range that this internal range defines. NOTE: IPv6 ranges are limited to
    * usage=EXTERNAL_TO_VPC and peering=FOR_SELF. NOTE: For IPv6 Ranges this field is compulsory,
    * i.e. the address range must be specified explicitly.
    * @param ipCidrRange ipCidrRange or {@code null} for none
@@ -321,7 +321,7 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Immutable. The name of an internal range. Format:
+   * Identifier. The name of an internal range. Format:
    * projects/{project}/locations/{location}/internalRanges/{internal_range} See:
    * https://google.aip.dev/122#fields-representing-resource-names
    * @return value or {@code null} for none
@@ -331,7 +331,7 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Immutable. The name of an internal range. Format:
+   * Identifier. The name of an internal range. Format:
    * projects/{project}/locations/{location}/internalRanges/{internal_range} See:
    * https://google.aip.dev/122#fields-representing-resource-names
    * @param name name or {@code null} for none
@@ -342,9 +342,9 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The URL or resource ID of the network in which to reserve the internal range. The network
-   * cannot be deleted if there are any reserved internal ranges referring to it. Legacy networks
-   * are not supported. For example:
+   * Immutable. The URL or resource ID of the network in which to reserve the internal range. The
+   * network cannot be deleted if there are any reserved internal ranges referring to it. Legacy
+   * networks are not supported. For example:
    * https://www.googleapis.com/compute/v1/projects/{project}/locations/global/networks/{network}
    * projects/{project}/locations/global/networks/{network} {network}
    * @return value or {@code null} for none
@@ -354,9 +354,9 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The URL or resource ID of the network in which to reserve the internal range. The network
-   * cannot be deleted if there are any reserved internal ranges referring to it. Legacy networks
-   * are not supported. For example:
+   * Immutable. The URL or resource ID of the network in which to reserve the internal range. The
+   * network cannot be deleted if there are any reserved internal ranges referring to it. Legacy
+   * networks are not supported. For example:
    * https://www.googleapis.com/compute/v1/projects/{project}/locations/global/networks/{network}
    * projects/{project}/locations/global/networks/{network} {network}
    * @param network network or {@code null} for none
@@ -384,7 +384,7 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The type of peering set for this internal range.
+   * Optional. The type of peering set for this internal range.
    * @return value or {@code null} for none
    */
   public java.lang.String getPeering() {
@@ -392,7 +392,7 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The type of peering set for this internal range.
+   * Optional. The type of peering set for this internal range.
    * @param peering peering or {@code null} for none
    */
   public InternalRange setPeering(java.lang.String peering) {
@@ -401,12 +401,12 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * An alternate to ip_cidr_range. Can be set when trying to create an IPv4 reservation that
-   * automatically finds a free range of the given size. If both ip_cidr_range and prefix_length are
-   * set, there is an error if the range sizes do not match. Can also be used during updates to
-   * change the range size. NOTE: For IPv6 this field only works if ip_cidr_range is set as well,
-   * and both fields must match. In other words, with IPv6 this field only works as a redundant
-   * parameter.
+   * Optional. An alternate to ip_cidr_range. Can be set when trying to create an IPv4 reservation
+   * that automatically finds a free range of the given size. If both ip_cidr_range and
+   * prefix_length are set, there is an error if the range sizes do not match. Can also be used
+   * during updates to change the range size. NOTE: For IPv6 this field only works if ip_cidr_range
+   * is set as well, and both fields must match. In other words, with IPv6 this field only works as
+   * a redundant parameter.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPrefixLength() {
@@ -414,12 +414,12 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * An alternate to ip_cidr_range. Can be set when trying to create an IPv4 reservation that
-   * automatically finds a free range of the given size. If both ip_cidr_range and prefix_length are
-   * set, there is an error if the range sizes do not match. Can also be used during updates to
-   * change the range size. NOTE: For IPv6 this field only works if ip_cidr_range is set as well,
-   * and both fields must match. In other words, with IPv6 this field only works as a redundant
-   * parameter.
+   * Optional. An alternate to ip_cidr_range. Can be set when trying to create an IPv4 reservation
+   * that automatically finds a free range of the given size. If both ip_cidr_range and
+   * prefix_length are set, there is an error if the range sizes do not match. Can also be used
+   * during updates to change the range size. NOTE: For IPv6 this field only works if ip_cidr_range
+   * is set as well, and both fields must match. In other words, with IPv6 this field only works as
+   * a redundant parameter.
    * @param prefixLength prefixLength or {@code null} for none
    */
   public InternalRange setPrefixLength(java.lang.Integer prefixLength) {
@@ -468,7 +468,7 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The type of usage set for this InternalRange.
+   * Optional. The type of usage set for this InternalRange.
    * @return value or {@code null} for none
    */
   public java.lang.String getUsage() {
@@ -476,7 +476,7 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The type of usage set for this InternalRange.
+   * Optional. The type of usage set for this InternalRange.
    * @param usage usage or {@code null} for none
    */
   public InternalRange setUsage(java.lang.String usage) {

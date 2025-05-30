@@ -63,8 +63,8 @@ public final class GoogleCloudEssentialcontactsV1Contact extends com.google.api.
   private java.util.List<java.lang.String> notificationCategorySubscriptions;
 
   /**
-   * The last time the validation_state was updated, either manually or automatically. A contact is
-   * considered stale if its validation state was updated more than 1 year ago.
+   * Output only. The last time the validation_state was updated, either manually or automatically.
+   * A contact is considered stale if its validation state was updated more than 1 year ago.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -155,8 +155,8 @@ public final class GoogleCloudEssentialcontactsV1Contact extends com.google.api.
   }
 
   /**
-   * The last time the validation_state was updated, either manually or automatically. A contact is
-   * considered stale if its validation state was updated more than 1 year ago.
+   * Output only. The last time the validation_state was updated, either manually or automatically.
+   * A contact is considered stale if its validation state was updated more than 1 year ago.
    * @return value or {@code null} for none
    */
   public String getValidateTime() {
@@ -164,8 +164,8 @@ public final class GoogleCloudEssentialcontactsV1Contact extends com.google.api.
   }
 
   /**
-   * The last time the validation_state was updated, either manually or automatically. A contact is
-   * considered stale if its validation state was updated more than 1 year ago.
+   * Output only. The last time the validation_state was updated, either manually or automatically.
+   * A contact is considered stale if its validation state was updated more than 1 year ago.
    * @param validateTime validateTime or {@code null} for none
    */
   public GoogleCloudEssentialcontactsV1Contact setValidateTime(String validateTime) {

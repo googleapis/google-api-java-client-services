@@ -17,14 +17,12 @@
 package com.google.api.services.storagetransfer.v1.model;
 
 /**
- * Identities of a user registered Azure application that enables identity federation to trust
- * tokens issued by the user's Google service account. For more information about Azure application
- * and identity federation, see [Register an application with the Microsoft identity platform]
- * (https://learn.microsoft.com/en-us/entra/identity-platform/quickstart-register-app) Azure RBAC
- * roles then need be assigned to the Azure application to authorize access to the user's Azure data
- * source. For more information about Azure RBAC roles for blobs, see [Manage Access Rights with
- * RBAC] (https://learn.microsoft.com/en-us/rest/api/storageservices/authorize-with-azure-active-
- * directory#manage-access-rights-with-rbac)
+ * The identity of an Azure application through which Storage Transfer Service can authenticate
+ * requests using Azure workload identity federation. Storage Transfer Service can issue requests to
+ * Azure Storage through registered Azure applications, eliminating the need to pass credentials to
+ * Storage Transfer Service directly. To configure federated identity, see [Configure access to
+ * Microsoft Azure Storage](https://cloud.google.com/storage-transfer/docs/source-microsoft-
+ * azure#option_3_authenticate_using_federated_identity).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Storage Transfer API. For a detailed explanation see:
@@ -37,21 +35,21 @@ package com.google.api.services.storagetransfer.v1.model;
 public final class FederatedIdentityConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Client (application) ID of the application with federated credentials.
+   * Required. The client (application) ID of the application with federated credentials.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String clientId;
 
   /**
-   * Required. Tenant (directory) ID of the application with federated credentials.
+   * Required. The tenant (directory) ID of the application with federated credentials.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String tenantId;
 
   /**
-   * Required. Client (application) ID of the application with federated credentials.
+   * Required. The client (application) ID of the application with federated credentials.
    * @return value or {@code null} for none
    */
   public java.lang.String getClientId() {
@@ -59,7 +57,7 @@ public final class FederatedIdentityConfig extends com.google.api.client.json.Ge
   }
 
   /**
-   * Required. Client (application) ID of the application with federated credentials.
+   * Required. The client (application) ID of the application with federated credentials.
    * @param clientId clientId or {@code null} for none
    */
   public FederatedIdentityConfig setClientId(java.lang.String clientId) {
@@ -68,7 +66,7 @@ public final class FederatedIdentityConfig extends com.google.api.client.json.Ge
   }
 
   /**
-   * Required. Tenant (directory) ID of the application with federated credentials.
+   * Required. The tenant (directory) ID of the application with federated credentials.
    * @return value or {@code null} for none
    */
   public java.lang.String getTenantId() {
@@ -76,7 +74,7 @@ public final class FederatedIdentityConfig extends com.google.api.client.json.Ge
   }
 
   /**
-   * Required. Tenant (directory) ID of the application with federated credentials.
+   * Required. The tenant (directory) ID of the application with federated credentials.
    * @param tenantId tenantId or {@code null} for none
    */
   public FederatedIdentityConfig setTenantId(java.lang.String tenantId) {

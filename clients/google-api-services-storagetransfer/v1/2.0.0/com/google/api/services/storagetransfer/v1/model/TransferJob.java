@@ -129,14 +129,13 @@ public final class TransferJob extends com.google.api.client.json.GenericJson {
   private Schedule schedule;
 
   /**
-   * Optional. The service account to be used to access resources in the consumer project in the
-   * transfer job. We accept `email` or `uniqueId` for the service account. Service account format
-   * is projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID} See https://cloud.google.com/iam/docs
-   * /reference/credentials/rest/v1/projects.serviceAccounts/generateAccessToken#path-parameters for
-   * details. Caller requires the following IAM permission on the specified service account:
-   * `iam.serviceAccounts.actAs`. project-PROJECT_NUMBER@storage-transfer-
-   * service.iam.gserviceaccount.com requires the following IAM permission on the specified service
-   * account: `iam.serviceAccounts.getAccessToken`
+   * Optional. The user-managed service account to which to delegate service agent permissions. You
+   * can grant Cloud Storage bucket permissions to this service account instead of to the Transfer
+   * Service service agent. Format is `projects/-/serviceAccounts/ACCOUNT_EMAIL_OR_UNIQUEID` Either
+   * the service account email (`SERVICE_ACCOUNT_NAME@PROJECT_ID.iam.gserviceaccount.com`) or the
+   * unique ID (`123456789012345678901`) are accepted in the string. The `-` wildcard character is
+   * required; replacing it with a project ID is invalid. See https://cloud.google.com//storage-
+   * transfer/docs/delegate-service-agent-permissions for required permissions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -394,14 +393,13 @@ public final class TransferJob extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The service account to be used to access resources in the consumer project in the
-   * transfer job. We accept `email` or `uniqueId` for the service account. Service account format
-   * is projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID} See https://cloud.google.com/iam/docs
-   * /reference/credentials/rest/v1/projects.serviceAccounts/generateAccessToken#path-parameters for
-   * details. Caller requires the following IAM permission on the specified service account:
-   * `iam.serviceAccounts.actAs`. project-PROJECT_NUMBER@storage-transfer-
-   * service.iam.gserviceaccount.com requires the following IAM permission on the specified service
-   * account: `iam.serviceAccounts.getAccessToken`
+   * Optional. The user-managed service account to which to delegate service agent permissions. You
+   * can grant Cloud Storage bucket permissions to this service account instead of to the Transfer
+   * Service service agent. Format is `projects/-/serviceAccounts/ACCOUNT_EMAIL_OR_UNIQUEID` Either
+   * the service account email (`SERVICE_ACCOUNT_NAME@PROJECT_ID.iam.gserviceaccount.com`) or the
+   * unique ID (`123456789012345678901`) are accepted in the string. The `-` wildcard character is
+   * required; replacing it with a project ID is invalid. See https://cloud.google.com//storage-
+   * transfer/docs/delegate-service-agent-permissions for required permissions.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccount() {
@@ -409,14 +407,13 @@ public final class TransferJob extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The service account to be used to access resources in the consumer project in the
-   * transfer job. We accept `email` or `uniqueId` for the service account. Service account format
-   * is projects/-/serviceAccounts/{ACCOUNT_EMAIL_OR_UNIQUEID} See https://cloud.google.com/iam/docs
-   * /reference/credentials/rest/v1/projects.serviceAccounts/generateAccessToken#path-parameters for
-   * details. Caller requires the following IAM permission on the specified service account:
-   * `iam.serviceAccounts.actAs`. project-PROJECT_NUMBER@storage-transfer-
-   * service.iam.gserviceaccount.com requires the following IAM permission on the specified service
-   * account: `iam.serviceAccounts.getAccessToken`
+   * Optional. The user-managed service account to which to delegate service agent permissions. You
+   * can grant Cloud Storage bucket permissions to this service account instead of to the Transfer
+   * Service service agent. Format is `projects/-/serviceAccounts/ACCOUNT_EMAIL_OR_UNIQUEID` Either
+   * the service account email (`SERVICE_ACCOUNT_NAME@PROJECT_ID.iam.gserviceaccount.com`) or the
+   * unique ID (`123456789012345678901`) are accepted in the string. The `-` wildcard character is
+   * required; replacing it with a project ID is invalid. See https://cloud.google.com//storage-
+   * transfer/docs/delegate-service-agent-permissions for required permissions.
    * @param serviceAccount serviceAccount or {@code null} for none
    */
   public TransferJob setServiceAccount(java.lang.String serviceAccount) {

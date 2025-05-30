@@ -30,39 +30,12 @@ package com.google.api.services.networksecurity.v1.model;
 public final class AuthzPolicyAuthzRuleFromRequestSource extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. A list of identities derived from the client's certificate. This field is under
-   * development and we don't recommend using it at this time. Limited to 5 principals.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<AuthzPolicyAuthzRuleStringMatch> principals;
-
-  /**
    * Optional. A list of resources to match against the resource of the source VM of a request.
    * Limited to 5 resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<AuthzPolicyAuthzRuleRequestResource> resources;
-
-  /**
-   * Optional. A list of identities derived from the client's certificate. This field is under
-   * development and we don't recommend using it at this time. Limited to 5 principals.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<AuthzPolicyAuthzRuleStringMatch> getPrincipals() {
-    return principals;
-  }
-
-  /**
-   * Optional. A list of identities derived from the client's certificate. This field is under
-   * development and we don't recommend using it at this time. Limited to 5 principals.
-   * @param principals principals or {@code null} for none
-   */
-  public AuthzPolicyAuthzRuleFromRequestSource setPrincipals(java.util.List<AuthzPolicyAuthzRuleStringMatch> principals) {
-    this.principals = principals;
-    return this;
-  }
 
   /**
    * Optional. A list of resources to match against the resource of the source VM of a request.

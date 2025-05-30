@@ -11195,6 +11195,22 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
               return this;
             }
 
+            /** Optional. List of Job IDs to filter by if provided. */
+            @com.google.api.client.util.Key
+            private java.util.List<java.lang.Long> jobIds;
+
+            /** Optional. List of Job IDs to filter by if provided.
+             */
+            public java.util.List<java.lang.Long> getJobIds() {
+              return jobIds;
+            }
+
+            /** Optional. List of Job IDs to filter by if provided. */
+            public SearchJobs setJobIds(java.util.List<java.lang.Long> jobIds) {
+              this.jobIds = jobIds;
+              return this;
+            }
+
             /** Optional. List only jobs in the specific state. */
             @com.google.api.client.util.Key
             private java.lang.String jobStatus;
@@ -11444,6 +11460,22 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
              */
             public SearchSqlQueries setDetails(java.lang.Boolean details) {
               this.details = details;
+              return this;
+            }
+
+            /** Optional. List of Spark Connect operation IDs to filter by if provided. */
+            @com.google.api.client.util.Key
+            private java.util.List<java.lang.String> operationIds;
+
+            /** Optional. List of Spark Connect operation IDs to filter by if provided.
+             */
+            public java.util.List<java.lang.String> getOperationIds() {
+              return operationIds;
+            }
+
+            /** Optional. List of Spark Connect operation IDs to filter by if provided. */
+            public SearchSqlQueries setOperationIds(java.util.List<java.lang.String> operationIds) {
+              this.operationIds = operationIds;
               return this;
             }
 
@@ -12284,6 +12316,22 @@ public class Dataproc extends com.google.api.client.googleapis.services.json.Abs
             /** Required. Parent (Session) resource reference. */
             public SearchStages setParent(java.lang.String parent) {
               this.parent = parent;
+              return this;
+            }
+
+            /** Optional. List of Stage IDs to filter by if provided. */
+            @com.google.api.client.util.Key
+            private java.util.List<java.lang.Long> stageIds;
+
+            /** Optional. List of Stage IDs to filter by if provided.
+             */
+            public java.util.List<java.lang.Long> getStageIds() {
+              return stageIds;
+            }
+
+            /** Optional. List of Stage IDs to filter by if provided. */
+            public SearchStages setStageIds(java.util.List<java.lang.Long> stageIds) {
+              this.stageIds = stageIds;
               return this;
             }
 

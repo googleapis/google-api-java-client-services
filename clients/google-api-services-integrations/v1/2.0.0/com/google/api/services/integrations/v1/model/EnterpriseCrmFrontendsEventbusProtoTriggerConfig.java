@@ -17,7 +17,7 @@
 package com.google.api.services.integrations.v1.model;
 
 /**
- * Configuration detail of a trigger. Next available id: 20
+ * Configuration detail of a trigger. Next available id: 22
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Application Integration API. For a detailed
@@ -79,6 +79,13 @@ public final class EnterpriseCrmFrontendsEventbusProtoTriggerConfig extends com.
   private java.lang.String errorCatcherId;
 
   /**
+   * Optional. List of input variables for the api trigger.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EnterpriseCrmFrontendsEventbusProtoTriggerConfigVariables inputVariables;
+
+  /**
    * The user created label for a particular trigger.
    * The value may be {@code null}.
    */
@@ -91,6 +98,13 @@ public final class EnterpriseCrmFrontendsEventbusProtoTriggerConfig extends com.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextTasksExecutionPolicy;
+
+  /**
+   * Optional. List of output variables for the api trigger.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EnterpriseCrmFrontendsEventbusProtoTriggerConfigVariables outputVariables;
 
   /**
    * Optional. If set to true, any upcoming requests for this trigger config will be paused and the
@@ -270,6 +284,23 @@ public final class EnterpriseCrmFrontendsEventbusProtoTriggerConfig extends com.
   }
 
   /**
+   * Optional. List of input variables for the api trigger.
+   * @return value or {@code null} for none
+   */
+  public EnterpriseCrmFrontendsEventbusProtoTriggerConfigVariables getInputVariables() {
+    return inputVariables;
+  }
+
+  /**
+   * Optional. List of input variables for the api trigger.
+   * @param inputVariables inputVariables or {@code null} for none
+   */
+  public EnterpriseCrmFrontendsEventbusProtoTriggerConfig setInputVariables(EnterpriseCrmFrontendsEventbusProtoTriggerConfigVariables inputVariables) {
+    this.inputVariables = inputVariables;
+    return this;
+  }
+
+  /**
    * The user created label for a particular trigger.
    * @return value or {@code null} for none
    */
@@ -300,6 +331,23 @@ public final class EnterpriseCrmFrontendsEventbusProtoTriggerConfig extends com.
    */
   public EnterpriseCrmFrontendsEventbusProtoTriggerConfig setNextTasksExecutionPolicy(java.lang.String nextTasksExecutionPolicy) {
     this.nextTasksExecutionPolicy = nextTasksExecutionPolicy;
+    return this;
+  }
+
+  /**
+   * Optional. List of output variables for the api trigger.
+   * @return value or {@code null} for none
+   */
+  public EnterpriseCrmFrontendsEventbusProtoTriggerConfigVariables getOutputVariables() {
+    return outputVariables;
+  }
+
+  /**
+   * Optional. List of output variables for the api trigger.
+   * @param outputVariables outputVariables or {@code null} for none
+   */
+  public EnterpriseCrmFrontendsEventbusProtoTriggerConfig setOutputVariables(EnterpriseCrmFrontendsEventbusProtoTriggerConfigVariables outputVariables) {
+    this.outputVariables = outputVariables;
     return this;
   }
 

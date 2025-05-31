@@ -44,6 +44,13 @@ public final class GoogleCloudDialogflowV2Generator extends com.google.api.clien
   private java.lang.String description;
 
   /**
+   * Input of free from generator to LLM.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowV2FreeFormContext freeFormContext;
+
+  /**
    * Optional. Inference parameters for this generator.
    * The value may be {@code null}.
    */
@@ -59,11 +66,28 @@ public final class GoogleCloudDialogflowV2Generator extends com.google.api.clien
   private java.lang.String name;
 
   /**
+   * Optional. The published Large Language Model name. * To use the latest model version, specify
+   * the model name without version number. Example: `text-bison` * To use a stable model version,
+   * specify the version number as well. Example: `text-bison@002`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String publishedModel;
+
+  /**
    * Input of prebuilt Summarization feature.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2SummarizationContext summarizationContext;
+
+  /**
+   * Optional. Resource names of the tools that the generator can choose from. Format:
+   * `projects//locations//tools/`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> tools;
 
   /**
    * Optional. The trigger event of the generator. It defines when the generator is triggered in a
@@ -115,6 +139,23 @@ public final class GoogleCloudDialogflowV2Generator extends com.google.api.clien
   }
 
   /**
+   * Input of free from generator to LLM.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2FreeFormContext getFreeFormContext() {
+    return freeFormContext;
+  }
+
+  /**
+   * Input of free from generator to LLM.
+   * @param freeFormContext freeFormContext or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2Generator setFreeFormContext(GoogleCloudDialogflowV2FreeFormContext freeFormContext) {
+    this.freeFormContext = freeFormContext;
+    return this;
+  }
+
+  /**
    * Optional. Inference parameters for this generator.
    * @return value or {@code null} for none
    */
@@ -151,6 +192,27 @@ public final class GoogleCloudDialogflowV2Generator extends com.google.api.clien
   }
 
   /**
+   * Optional. The published Large Language Model name. * To use the latest model version, specify
+   * the model name without version number. Example: `text-bison` * To use a stable model version,
+   * specify the version number as well. Example: `text-bison@002`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPublishedModel() {
+    return publishedModel;
+  }
+
+  /**
+   * Optional. The published Large Language Model name. * To use the latest model version, specify
+   * the model name without version number. Example: `text-bison` * To use a stable model version,
+   * specify the version number as well. Example: `text-bison@002`.
+   * @param publishedModel publishedModel or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2Generator setPublishedModel(java.lang.String publishedModel) {
+    this.publishedModel = publishedModel;
+    return this;
+  }
+
+  /**
    * Input of prebuilt Summarization feature.
    * @return value or {@code null} for none
    */
@@ -164,6 +226,25 @@ public final class GoogleCloudDialogflowV2Generator extends com.google.api.clien
    */
   public GoogleCloudDialogflowV2Generator setSummarizationContext(GoogleCloudDialogflowV2SummarizationContext summarizationContext) {
     this.summarizationContext = summarizationContext;
+    return this;
+  }
+
+  /**
+   * Optional. Resource names of the tools that the generator can choose from. Format:
+   * `projects//locations//tools/`.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getTools() {
+    return tools;
+  }
+
+  /**
+   * Optional. Resource names of the tools that the generator can choose from. Format:
+   * `projects//locations//tools/`.
+   * @param tools tools or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2Generator setTools(java.util.List<java.lang.String> tools) {
+    this.tools = tools;
     return this;
   }
 

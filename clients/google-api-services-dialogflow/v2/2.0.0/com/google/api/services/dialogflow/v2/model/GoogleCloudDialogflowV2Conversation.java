@@ -60,6 +60,13 @@ public final class GoogleCloudDialogflowV2Conversation extends com.google.api.cl
   private String endTime;
 
   /**
+   * Output only. The context reference updates provided by external systems.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, GoogleCloudDialogflowV2ConversationContextReference> ingestedContextReferences;
+
+  /**
    * Output only. The current state of the Conversation.
    * The value may be {@code null}.
    */
@@ -87,6 +94,13 @@ public final class GoogleCloudDialogflowV2Conversation extends com.google.api.cl
    */
   @com.google.api.client.util.Key
   private String startTime;
+
+  /**
+   * Output only. The telephony connection information.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowV2ConversationTelephonyConnectionInfo telephonyConnectionInfo;
 
   /**
    * Required. The Conversation Profile to be used to configure this Conversation. This field cannot
@@ -150,6 +164,23 @@ public final class GoogleCloudDialogflowV2Conversation extends com.google.api.cl
    */
   public GoogleCloudDialogflowV2Conversation setEndTime(String endTime) {
     this.endTime = endTime;
+    return this;
+  }
+
+  /**
+   * Output only. The context reference updates provided by external systems.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, GoogleCloudDialogflowV2ConversationContextReference> getIngestedContextReferences() {
+    return ingestedContextReferences;
+  }
+
+  /**
+   * Output only. The context reference updates provided by external systems.
+   * @param ingestedContextReferences ingestedContextReferences or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2Conversation setIngestedContextReferences(java.util.Map<String, GoogleCloudDialogflowV2ConversationContextReference> ingestedContextReferences) {
+    this.ingestedContextReferences = ingestedContextReferences;
     return this;
   }
 
@@ -220,6 +251,23 @@ public final class GoogleCloudDialogflowV2Conversation extends com.google.api.cl
    */
   public GoogleCloudDialogflowV2Conversation setStartTime(String startTime) {
     this.startTime = startTime;
+    return this;
+  }
+
+  /**
+   * Output only. The telephony connection information.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2ConversationTelephonyConnectionInfo getTelephonyConnectionInfo() {
+    return telephonyConnectionInfo;
+  }
+
+  /**
+   * Output only. The telephony connection information.
+   * @param telephonyConnectionInfo telephonyConnectionInfo or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2Conversation setTelephonyConnectionInfo(GoogleCloudDialogflowV2ConversationTelephonyConnectionInfo telephonyConnectionInfo) {
+    this.telephonyConnectionInfo = telephonyConnectionInfo;
     return this;
   }
 

@@ -44,10 +44,10 @@ public final class GoogleCloudDialogflowV2beta1AnalyzeContentRequest extends com
   private GoogleCloudDialogflowV2beta1AudioInput audioInput;
 
   /**
-   * The unique identifier of the CX page to override the `current_page` in the session. Format:
-   * `projects//locations//agents//flows//pages/`. If `cx_current_page` is specified, the previous
-   * state of the session will be ignored by Dialogflow CX, including the previous page and the
-   * previous session parameters. In most cases, `cx_current_page` and `cx_parameters` should be
+   * The unique identifier of the Dialogflow CX page to override the `current_page` in the session.
+   * Format: `projects//locations//agents//flows//pages/`. If `cx_current_page` is specified, the
+   * previous state of the session will be ignored by Dialogflow CX, including the previous page and
+   * the previous session parameters. In most cases, `cx_current_page` and `cx_parameters` should be
    * configured together to direct a session to a specific state. Note: this field should only be
    * used if you are connecting to a Dialogflow CX agent.
    * The value may be {@code null}.
@@ -80,13 +80,13 @@ public final class GoogleCloudDialogflowV2beta1AnalyzeContentRequest extends com
 
   /**
    * Optional. The send time of the message from end user or human agent's perspective. It is used
-   * for identifying the same message under one participant. Given two messages under the same
-   * participant: * If send time are different regardless of whether the content of the messages are
-   * exactly the same, the conversation will regard them as two distinct messages sent by the
-   * participant. * If send time is the same regardless of whether the content of the messages are
-   * exactly the same, the conversation will regard them as same message, and ignore the message
-   * received later. If the value is not provided, a new request will always be regarded as a new
-   * message without any de-duplication.
+   * for identifying the same message under one participant. For BatchCreateMessages API only: Given
+   * two messages under the same participant: * If send time are different regardless of whether the
+   * content of the messages are exactly the same, the conversation will regard them as two distinct
+   * messages sent by the participant. * If send time is the same regardless of whether the content
+   * of the messages are exactly the same, the conversation will regard them as same message, and
+   * ignore the message received later. If the value is not provided, a new request will always be
+   * regarded as a new message without any de-duplication.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -165,10 +165,10 @@ public final class GoogleCloudDialogflowV2beta1AnalyzeContentRequest extends com
   }
 
   /**
-   * The unique identifier of the CX page to override the `current_page` in the session. Format:
-   * `projects//locations//agents//flows//pages/`. If `cx_current_page` is specified, the previous
-   * state of the session will be ignored by Dialogflow CX, including the previous page and the
-   * previous session parameters. In most cases, `cx_current_page` and `cx_parameters` should be
+   * The unique identifier of the Dialogflow CX page to override the `current_page` in the session.
+   * Format: `projects//locations//agents//flows//pages/`. If `cx_current_page` is specified, the
+   * previous state of the session will be ignored by Dialogflow CX, including the previous page and
+   * the previous session parameters. In most cases, `cx_current_page` and `cx_parameters` should be
    * configured together to direct a session to a specific state. Note: this field should only be
    * used if you are connecting to a Dialogflow CX agent.
    * @return value or {@code null} for none
@@ -178,10 +178,10 @@ public final class GoogleCloudDialogflowV2beta1AnalyzeContentRequest extends com
   }
 
   /**
-   * The unique identifier of the CX page to override the `current_page` in the session. Format:
-   * `projects//locations//agents//flows//pages/`. If `cx_current_page` is specified, the previous
-   * state of the session will be ignored by Dialogflow CX, including the previous page and the
-   * previous session parameters. In most cases, `cx_current_page` and `cx_parameters` should be
+   * The unique identifier of the Dialogflow CX page to override the `current_page` in the session.
+   * Format: `projects//locations//agents//flows//pages/`. If `cx_current_page` is specified, the
+   * previous state of the session will be ignored by Dialogflow CX, including the previous page and
+   * the previous session parameters. In most cases, `cx_current_page` and `cx_parameters` should be
    * configured together to direct a session to a specific state. Note: this field should only be
    * used if you are connecting to a Dialogflow CX agent.
    * @param cxCurrentPage cxCurrentPage or {@code null} for none
@@ -248,13 +248,13 @@ public final class GoogleCloudDialogflowV2beta1AnalyzeContentRequest extends com
 
   /**
    * Optional. The send time of the message from end user or human agent's perspective. It is used
-   * for identifying the same message under one participant. Given two messages under the same
-   * participant: * If send time are different regardless of whether the content of the messages are
-   * exactly the same, the conversation will regard them as two distinct messages sent by the
-   * participant. * If send time is the same regardless of whether the content of the messages are
-   * exactly the same, the conversation will regard them as same message, and ignore the message
-   * received later. If the value is not provided, a new request will always be regarded as a new
-   * message without any de-duplication.
+   * for identifying the same message under one participant. For BatchCreateMessages API only: Given
+   * two messages under the same participant: * If send time are different regardless of whether the
+   * content of the messages are exactly the same, the conversation will regard them as two distinct
+   * messages sent by the participant. * If send time is the same regardless of whether the content
+   * of the messages are exactly the same, the conversation will regard them as same message, and
+   * ignore the message received later. If the value is not provided, a new request will always be
+   * regarded as a new message without any de-duplication.
    * @return value or {@code null} for none
    */
   public String getMessageSendTime() {
@@ -263,13 +263,13 @@ public final class GoogleCloudDialogflowV2beta1AnalyzeContentRequest extends com
 
   /**
    * Optional. The send time of the message from end user or human agent's perspective. It is used
-   * for identifying the same message under one participant. Given two messages under the same
-   * participant: * If send time are different regardless of whether the content of the messages are
-   * exactly the same, the conversation will regard them as two distinct messages sent by the
-   * participant. * If send time is the same regardless of whether the content of the messages are
-   * exactly the same, the conversation will regard them as same message, and ignore the message
-   * received later. If the value is not provided, a new request will always be regarded as a new
-   * message without any de-duplication.
+   * for identifying the same message under one participant. For BatchCreateMessages API only: Given
+   * two messages under the same participant: * If send time are different regardless of whether the
+   * content of the messages are exactly the same, the conversation will regard them as two distinct
+   * messages sent by the participant. * If send time is the same regardless of whether the content
+   * of the messages are exactly the same, the conversation will regard them as same message, and
+   * ignore the message received later. If the value is not provided, a new request will always be
+   * regarded as a new message without any de-duplication.
    * @param messageSendTime messageSendTime or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1AnalyzeContentRequest setMessageSendTime(String messageSendTime) {

@@ -52,6 +52,13 @@ public final class GoogleCloudClouddmsV1OperationMetadata extends com.google.api
   private String endTime;
 
   /**
+   * Output only. Additional metadata that is returned by the backend for the operation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> metadata;
+
+  /**
    * Output only. Identifies whether the user has requested cancellation of the operation.
    * Operations that have successfully been cancelled have google.longrunning.Operation.error value
    * with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
@@ -129,6 +136,23 @@ public final class GoogleCloudClouddmsV1OperationMetadata extends com.google.api
    */
   public GoogleCloudClouddmsV1OperationMetadata setEndTime(String endTime) {
     this.endTime = endTime;
+    return this;
+  }
+
+  /**
+   * Output only. Additional metadata that is returned by the backend for the operation.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getMetadata() {
+    return metadata;
+  }
+
+  /**
+   * Output only. Additional metadata that is returned by the backend for the operation.
+   * @param metadata metadata or {@code null} for none
+   */
+  public GoogleCloudClouddmsV1OperationMetadata setMetadata(java.util.Map<String, java.lang.String> metadata) {
+    this.metadata = metadata;
     return this;
   }
 

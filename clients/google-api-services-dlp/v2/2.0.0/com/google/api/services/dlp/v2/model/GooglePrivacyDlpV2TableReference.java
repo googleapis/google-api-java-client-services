@@ -39,6 +39,15 @@ public final class GooglePrivacyDlpV2TableReference extends com.google.api.clien
   private java.lang.String datasetId;
 
   /**
+   * The Google Cloud project ID of the project containing the table. If omitted, the project ID is
+   * inferred from the parent project. This field is required if the parent resource is an
+   * organization.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String projectId;
+
+  /**
    * Name of the table.
    * The value may be {@code null}.
    */
@@ -59,6 +68,27 @@ public final class GooglePrivacyDlpV2TableReference extends com.google.api.clien
    */
   public GooglePrivacyDlpV2TableReference setDatasetId(java.lang.String datasetId) {
     this.datasetId = datasetId;
+    return this;
+  }
+
+  /**
+   * The Google Cloud project ID of the project containing the table. If omitted, the project ID is
+   * inferred from the parent project. This field is required if the parent resource is an
+   * organization.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProjectId() {
+    return projectId;
+  }
+
+  /**
+   * The Google Cloud project ID of the project containing the table. If omitted, the project ID is
+   * inferred from the parent project. This field is required if the parent resource is an
+   * organization.
+   * @param projectId projectId or {@code null} for none
+   */
+  public GooglePrivacyDlpV2TableReference setProjectId(java.lang.String projectId) {
+    this.projectId = projectId;
     return this;
   }
 

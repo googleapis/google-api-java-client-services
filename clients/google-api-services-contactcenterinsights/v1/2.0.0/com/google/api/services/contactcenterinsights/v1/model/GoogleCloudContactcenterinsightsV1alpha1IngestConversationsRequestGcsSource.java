@@ -47,7 +47,7 @@ public final class GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRe
   /**
    * Optional. Custom keys to extract as conversation labels from metadata files in
    * `metadata_bucket_uri`. Keys not included in this field will be ignored. Note that there is a
-   * limit of 20 labels per conversation.
+   * limit of 100 labels per conversation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,7 +101,7 @@ public final class GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRe
   /**
    * Optional. Custom keys to extract as conversation labels from metadata files in
    * `metadata_bucket_uri`. Keys not included in this field will be ignored. Note that there is a
-   * limit of 20 labels per conversation.
+   * limit of 100 labels per conversation.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getCustomMetadataKeys() {
@@ -111,7 +111,7 @@ public final class GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRe
   /**
    * Optional. Custom keys to extract as conversation labels from metadata files in
    * `metadata_bucket_uri`. Keys not included in this field will be ignored. Note that there is a
-   * limit of 20 labels per conversation.
+   * limit of 100 labels per conversation.
    * @param customMetadataKeys customMetadataKeys or {@code null} for none
    */
   public GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRequestGcsSource setCustomMetadataKeys(java.util.List<java.lang.String> customMetadataKeys) {

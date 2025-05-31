@@ -286,7 +286,7 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   private java.lang.Integer targetSize;
 
   /**
-   * Configures how target size of MIG is achieved.
+   * The policy that specifies how the MIG creates its VMs to achieve the target size.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -983,7 +983,7 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
-   * Configures how target size of MIG is achieved.
+   * The policy that specifies how the MIG creates its VMs to achieve the target size.
    * @return value or {@code null} for none
    */
   public InstanceGroupManagerTargetSizePolicy getTargetSizePolicy() {
@@ -991,7 +991,7 @@ public final class InstanceGroupManager extends com.google.api.client.json.Gener
   }
 
   /**
-   * Configures how target size of MIG is achieved.
+   * The policy that specifies how the MIG creates its VMs to achieve the target size.
    * @param targetSizePolicy targetSizePolicy or {@code null} for none
    */
   public InstanceGroupManager setTargetSizePolicy(InstanceGroupManagerTargetSizePolicy targetSizePolicy) {

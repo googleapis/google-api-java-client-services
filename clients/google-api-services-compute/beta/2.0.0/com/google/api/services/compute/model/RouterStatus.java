@@ -74,6 +74,13 @@ public final class RouterStatus extends com.google.api.client.json.GenericJson {
   private java.util.List<RouterStatusNatStatus> natStatus;
 
   /**
+   * URI of the ncc_gateway to which this router associated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String nccGateway;
+
+  /**
    * URI of the network to which this router belongs.
    * The value may be {@code null}.
    */
@@ -153,6 +160,23 @@ public final class RouterStatus extends com.google.api.client.json.GenericJson {
    */
   public RouterStatus setNatStatus(java.util.List<RouterStatusNatStatus> natStatus) {
     this.natStatus = natStatus;
+    return this;
+  }
+
+  /**
+   * URI of the ncc_gateway to which this router associated.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNccGateway() {
+    return nccGateway;
+  }
+
+  /**
+   * URI of the ncc_gateway to which this router associated.
+   * @param nccGateway nccGateway or {@code null} for none
+   */
+  public RouterStatus setNccGateway(java.lang.String nccGateway) {
+    this.nccGateway = nccGateway;
     return this;
   }
 

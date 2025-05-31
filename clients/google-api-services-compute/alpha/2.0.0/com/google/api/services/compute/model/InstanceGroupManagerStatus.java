@@ -44,7 +44,7 @@ public final class InstanceGroupManagerStatus extends com.google.api.client.json
   private java.lang.String autoscaler;
 
   /**
-   * [Output Only] Status of bulk instance operation.
+   * [Output Only] The status of bulk instance operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -111,7 +111,7 @@ public final class InstanceGroupManagerStatus extends com.google.api.client.json
   }
 
   /**
-   * [Output Only] Status of bulk instance operation.
+   * [Output Only] The status of bulk instance operation.
    * @return value or {@code null} for none
    */
   public InstanceGroupManagerStatusBulkInstanceOperation getBulkInstanceOperation() {
@@ -119,7 +119,7 @@ public final class InstanceGroupManagerStatus extends com.google.api.client.json
   }
 
   /**
-   * [Output Only] Status of bulk instance operation.
+   * [Output Only] The status of bulk instance operation.
    * @param bulkInstanceOperation bulkInstanceOperation or {@code null} for none
    */
   public InstanceGroupManagerStatus setBulkInstanceOperation(InstanceGroupManagerStatusBulkInstanceOperation bulkInstanceOperation) {

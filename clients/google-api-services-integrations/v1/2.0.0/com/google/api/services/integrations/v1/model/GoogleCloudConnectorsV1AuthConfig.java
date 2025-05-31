@@ -31,21 +31,21 @@ package com.google.api.services.integrations.v1.model;
 public final class GoogleCloudConnectorsV1AuthConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * List containing additional auth configs.
+   * Optional. List containing additional auth configs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudConnectorsV1ConfigVariable> additionalVariables;
 
   /**
-   * Identifier key for auth config
+   * Optional. Identifier key for auth config
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String authKey;
 
   /**
-   * The type of authentication configured.
+   * Optional. The type of authentication configured.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,6 +57,13 @@ public final class GoogleCloudConnectorsV1AuthConfig extends com.google.api.clie
    */
   @com.google.api.client.util.Key
   private GoogleCloudConnectorsV1AuthConfigOauth2AuthCodeFlow oauth2AuthCodeFlow;
+
+  /**
+   * Oauth2AuthCodeFlowGoogleManaged.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudConnectorsV1AuthConfigOauth2AuthCodeFlowGoogleManaged oauth2AuthCodeFlowGoogleManaged;
 
   /**
    * Oauth2ClientCredentials.
@@ -87,7 +94,7 @@ public final class GoogleCloudConnectorsV1AuthConfig extends com.google.api.clie
   private GoogleCloudConnectorsV1AuthConfigUserPassword userPassword;
 
   /**
-   * List containing additional auth configs.
+   * Optional. List containing additional auth configs.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudConnectorsV1ConfigVariable> getAdditionalVariables() {
@@ -95,7 +102,7 @@ public final class GoogleCloudConnectorsV1AuthConfig extends com.google.api.clie
   }
 
   /**
-   * List containing additional auth configs.
+   * Optional. List containing additional auth configs.
    * @param additionalVariables additionalVariables or {@code null} for none
    */
   public GoogleCloudConnectorsV1AuthConfig setAdditionalVariables(java.util.List<GoogleCloudConnectorsV1ConfigVariable> additionalVariables) {
@@ -104,7 +111,7 @@ public final class GoogleCloudConnectorsV1AuthConfig extends com.google.api.clie
   }
 
   /**
-   * Identifier key for auth config
+   * Optional. Identifier key for auth config
    * @return value or {@code null} for none
    */
   public java.lang.String getAuthKey() {
@@ -112,7 +119,7 @@ public final class GoogleCloudConnectorsV1AuthConfig extends com.google.api.clie
   }
 
   /**
-   * Identifier key for auth config
+   * Optional. Identifier key for auth config
    * @param authKey authKey or {@code null} for none
    */
   public GoogleCloudConnectorsV1AuthConfig setAuthKey(java.lang.String authKey) {
@@ -121,7 +128,7 @@ public final class GoogleCloudConnectorsV1AuthConfig extends com.google.api.clie
   }
 
   /**
-   * The type of authentication configured.
+   * Optional. The type of authentication configured.
    * @return value or {@code null} for none
    */
   public java.lang.String getAuthType() {
@@ -129,7 +136,7 @@ public final class GoogleCloudConnectorsV1AuthConfig extends com.google.api.clie
   }
 
   /**
-   * The type of authentication configured.
+   * Optional. The type of authentication configured.
    * @param authType authType or {@code null} for none
    */
   public GoogleCloudConnectorsV1AuthConfig setAuthType(java.lang.String authType) {
@@ -151,6 +158,23 @@ public final class GoogleCloudConnectorsV1AuthConfig extends com.google.api.clie
    */
   public GoogleCloudConnectorsV1AuthConfig setOauth2AuthCodeFlow(GoogleCloudConnectorsV1AuthConfigOauth2AuthCodeFlow oauth2AuthCodeFlow) {
     this.oauth2AuthCodeFlow = oauth2AuthCodeFlow;
+    return this;
+  }
+
+  /**
+   * Oauth2AuthCodeFlowGoogleManaged.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1AuthConfigOauth2AuthCodeFlowGoogleManaged getOauth2AuthCodeFlowGoogleManaged() {
+    return oauth2AuthCodeFlowGoogleManaged;
+  }
+
+  /**
+   * Oauth2AuthCodeFlowGoogleManaged.
+   * @param oauth2AuthCodeFlowGoogleManaged oauth2AuthCodeFlowGoogleManaged or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1AuthConfig setOauth2AuthCodeFlowGoogleManaged(GoogleCloudConnectorsV1AuthConfigOauth2AuthCodeFlowGoogleManaged oauth2AuthCodeFlowGoogleManaged) {
+    this.oauth2AuthCodeFlowGoogleManaged = oauth2AuthCodeFlowGoogleManaged;
     return this;
   }
 

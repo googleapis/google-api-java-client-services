@@ -32,25 +32,25 @@ package com.google.api.services.integrations.v1.model;
 public final class GoogleCloudConnectorsV1AuthConfigOauth2JwtBearer extends com.google.api.client.json.GenericJson {
 
   /**
-   * Secret version reference containing a PKCS#8 PEM-encoded private key associated with the Client
-   * Certificate. This private key will be used to sign JWTs used for the jwt-bearer authorization
-   * grant. Specified in the form as: `projects/secrets/versions`.
+   * Optional. Secret version reference containing a PKCS#8 PEM-encoded private key associated with
+   * the Client Certificate. This private key will be used to sign JWTs used for the jwt-bearer
+   * authorization grant. Specified in the form as: `projects/secrets/versions`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudConnectorsV1Secret clientKey;
 
   /**
-   * JwtClaims providers fields to generate the token.
+   * Optional. JwtClaims providers fields to generate the token.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudConnectorsV1AuthConfigOauth2JwtBearerJwtClaims jwtClaims;
 
   /**
-   * Secret version reference containing a PKCS#8 PEM-encoded private key associated with the Client
-   * Certificate. This private key will be used to sign JWTs used for the jwt-bearer authorization
-   * grant. Specified in the form as: `projects/secrets/versions`.
+   * Optional. Secret version reference containing a PKCS#8 PEM-encoded private key associated with
+   * the Client Certificate. This private key will be used to sign JWTs used for the jwt-bearer
+   * authorization grant. Specified in the form as: `projects/secrets/versions`.
    * @return value or {@code null} for none
    */
   public GoogleCloudConnectorsV1Secret getClientKey() {
@@ -58,9 +58,9 @@ public final class GoogleCloudConnectorsV1AuthConfigOauth2JwtBearer extends com.
   }
 
   /**
-   * Secret version reference containing a PKCS#8 PEM-encoded private key associated with the Client
-   * Certificate. This private key will be used to sign JWTs used for the jwt-bearer authorization
-   * grant. Specified in the form as: `projects/secrets/versions`.
+   * Optional. Secret version reference containing a PKCS#8 PEM-encoded private key associated with
+   * the Client Certificate. This private key will be used to sign JWTs used for the jwt-bearer
+   * authorization grant. Specified in the form as: `projects/secrets/versions`.
    * @param clientKey clientKey or {@code null} for none
    */
   public GoogleCloudConnectorsV1AuthConfigOauth2JwtBearer setClientKey(GoogleCloudConnectorsV1Secret clientKey) {
@@ -69,7 +69,7 @@ public final class GoogleCloudConnectorsV1AuthConfigOauth2JwtBearer extends com.
   }
 
   /**
-   * JwtClaims providers fields to generate the token.
+   * Optional. JwtClaims providers fields to generate the token.
    * @return value or {@code null} for none
    */
   public GoogleCloudConnectorsV1AuthConfigOauth2JwtBearerJwtClaims getJwtClaims() {
@@ -77,7 +77,7 @@ public final class GoogleCloudConnectorsV1AuthConfigOauth2JwtBearer extends com.
   }
 
   /**
-   * JwtClaims providers fields to generate the token.
+   * Optional. JwtClaims providers fields to generate the token.
    * @param jwtClaims jwtClaims or {@code null} for none
    */
   public GoogleCloudConnectorsV1AuthConfigOauth2JwtBearer setJwtClaims(GoogleCloudConnectorsV1AuthConfigOauth2JwtBearerJwtClaims jwtClaims) {

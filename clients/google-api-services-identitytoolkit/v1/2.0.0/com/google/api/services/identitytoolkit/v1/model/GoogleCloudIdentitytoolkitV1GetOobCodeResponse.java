@@ -51,8 +51,8 @@ public final class GoogleCloudIdentitytoolkitV1GetOobCodeResponse extends com.go
 
   /**
    * If return_oob_link is true in the request, the OOB link to be sent to the user. This returns
-   * the constructed link including [Firebase Dynamic Link](https://firebase.google.com/docs
-   * /dynamic-links) related parameters.
+   * the constructed link including [Firebase Dynamic
+   * Link](https://firebase.google.com/docs/dynamic-links) related parameters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -109,8 +109,8 @@ public final class GoogleCloudIdentitytoolkitV1GetOobCodeResponse extends com.go
 
   /**
    * If return_oob_link is true in the request, the OOB link to be sent to the user. This returns
-   * the constructed link including [Firebase Dynamic Link](https://firebase.google.com/docs
-   * /dynamic-links) related parameters.
+   * the constructed link including [Firebase Dynamic
+   * Link](https://firebase.google.com/docs/dynamic-links) related parameters.
    * @return value or {@code null} for none
    */
   public java.lang.String getOobLink() {
@@ -119,8 +119,8 @@ public final class GoogleCloudIdentitytoolkitV1GetOobCodeResponse extends com.go
 
   /**
    * If return_oob_link is true in the request, the OOB link to be sent to the user. This returns
-   * the constructed link including [Firebase Dynamic Link](https://firebase.google.com/docs
-   * /dynamic-links) related parameters.
+   * the constructed link including [Firebase Dynamic
+   * Link](https://firebase.google.com/docs/dynamic-links) related parameters.
    * @param oobLink oobLink or {@code null} for none
    */
   public GoogleCloudIdentitytoolkitV1GetOobCodeResponse setOobLink(java.lang.String oobLink) {

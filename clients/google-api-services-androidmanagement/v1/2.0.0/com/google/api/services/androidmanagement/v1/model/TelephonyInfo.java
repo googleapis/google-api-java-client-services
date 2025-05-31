@@ -32,11 +32,29 @@ package com.google.api.services.androidmanagement.v1.model;
 public final class TelephonyInfo extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Activation state of the SIM card on the device. This is applicable for eSIMs only.
+   * This is supported on all devices for API level 35 and above. This is always
+   * ACTIVATION_STATE_UNSPECIFIED for physical SIMs and for devices below API level 35.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String activationState;
+
+  /**
    * The carrier name associated with this SIM card.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String carrierName;
+
+  /**
+   * Output only. The configuration mode of the SIM card on the device. This is applicable for eSIMs
+   * only. This is supported on all devices for API level 35 and above. This is always
+   * CONFIG_MODE_UNSPECIFIED for physical SIMs and for devices below API level 35.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String configMode;
 
   /**
    * Output only. The ICCID associated with this SIM card.
@@ -53,6 +71,27 @@ public final class TelephonyInfo extends com.google.api.client.json.GenericJson 
   private java.lang.String phoneNumber;
 
   /**
+   * Output only. Activation state of the SIM card on the device. This is applicable for eSIMs only.
+   * This is supported on all devices for API level 35 and above. This is always
+   * ACTIVATION_STATE_UNSPECIFIED for physical SIMs and for devices below API level 35.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getActivationState() {
+    return activationState;
+  }
+
+  /**
+   * Output only. Activation state of the SIM card on the device. This is applicable for eSIMs only.
+   * This is supported on all devices for API level 35 and above. This is always
+   * ACTIVATION_STATE_UNSPECIFIED for physical SIMs and for devices below API level 35.
+   * @param activationState activationState or {@code null} for none
+   */
+  public TelephonyInfo setActivationState(java.lang.String activationState) {
+    this.activationState = activationState;
+    return this;
+  }
+
+  /**
    * The carrier name associated with this SIM card.
    * @return value or {@code null} for none
    */
@@ -66,6 +105,27 @@ public final class TelephonyInfo extends com.google.api.client.json.GenericJson 
    */
   public TelephonyInfo setCarrierName(java.lang.String carrierName) {
     this.carrierName = carrierName;
+    return this;
+  }
+
+  /**
+   * Output only. The configuration mode of the SIM card on the device. This is applicable for eSIMs
+   * only. This is supported on all devices for API level 35 and above. This is always
+   * CONFIG_MODE_UNSPECIFIED for physical SIMs and for devices below API level 35.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getConfigMode() {
+    return configMode;
+  }
+
+  /**
+   * Output only. The configuration mode of the SIM card on the device. This is applicable for eSIMs
+   * only. This is supported on all devices for API level 35 and above. This is always
+   * CONFIG_MODE_UNSPECIFIED for physical SIMs and for devices below API level 35.
+   * @param configMode configMode or {@code null} for none
+   */
+  public TelephonyInfo setConfigMode(java.lang.String configMode) {
+    this.configMode = configMode;
     return this;
   }
 

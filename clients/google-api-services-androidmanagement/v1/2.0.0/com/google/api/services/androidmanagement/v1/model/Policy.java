@@ -837,6 +837,15 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean wifiConfigsLockdownEnabled;
 
   /**
+   * Optional. Wipe flags to indicate what data is wiped when a device or profile wipe is triggered
+   * due to any reason (for example, non-compliance). This does not apply to the
+   * enterprises.devices.delete method. . This list must not have duplicates.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> wipeDataFlags;
+
+  /**
    * Optional. Controls the work account setup configuration, such as details of whether a Google
    * authenticated account is required.
    * The value may be {@code null}.
@@ -2652,6 +2661,27 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    */
   public Policy setWifiConfigsLockdownEnabled(java.lang.Boolean wifiConfigsLockdownEnabled) {
     this.wifiConfigsLockdownEnabled = wifiConfigsLockdownEnabled;
+    return this;
+  }
+
+  /**
+   * Optional. Wipe flags to indicate what data is wiped when a device or profile wipe is triggered
+   * due to any reason (for example, non-compliance). This does not apply to the
+   * enterprises.devices.delete method. . This list must not have duplicates.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getWipeDataFlags() {
+    return wipeDataFlags;
+  }
+
+  /**
+   * Optional. Wipe flags to indicate what data is wiped when a device or profile wipe is triggered
+   * due to any reason (for example, non-compliance). This does not apply to the
+   * enterprises.devices.delete method. . This list must not have duplicates.
+   * @param wipeDataFlags wipeDataFlags or {@code null} for none
+   */
+  public Policy setWipeDataFlags(java.util.List<java.lang.String> wipeDataFlags) {
+    this.wipeDataFlags = wipeDataFlags;
     return this;
   }
 

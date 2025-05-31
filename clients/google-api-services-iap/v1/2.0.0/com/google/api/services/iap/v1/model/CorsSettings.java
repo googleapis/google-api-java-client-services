@@ -17,7 +17,7 @@
 package com.google.api.services.iap.v1.model;
 
 /**
- * Allows customers to configure HTTP request paths that'll allow HTTP OPTIONS call to bypass
+ * Allows customers to configure HTTP request paths that'll allow HTTP `OPTIONS` call to bypass
  * authentication and authorization.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -32,16 +32,16 @@ package com.google.api.services.iap.v1.model;
 public final class CorsSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * Configuration to allow HTTP OPTIONS calls to skip authorization. If undefined, IAP will not
-   * apply any special logic to OPTIONS requests.
+   * Configuration to allow HTTP `OPTIONS` calls to skip authentication and authorization. If
+   * undefined, IAP will not apply any special logic to `OPTIONS` requests.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean allowHttpOptions;
 
   /**
-   * Configuration to allow HTTP OPTIONS calls to skip authorization. If undefined, IAP will not
-   * apply any special logic to OPTIONS requests.
+   * Configuration to allow HTTP `OPTIONS` calls to skip authentication and authorization. If
+   * undefined, IAP will not apply any special logic to `OPTIONS` requests.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAllowHttpOptions() {
@@ -49,8 +49,8 @@ public final class CorsSettings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Configuration to allow HTTP OPTIONS calls to skip authorization. If undefined, IAP will not
-   * apply any special logic to OPTIONS requests.
+   * Configuration to allow HTTP `OPTIONS` calls to skip authentication and authorization. If
+   * undefined, IAP will not apply any special logic to `OPTIONS` requests.
    * @param allowHttpOptions allowHttpOptions or {@code null} for none
    */
   public CorsSettings setAllowHttpOptions(java.lang.Boolean allowHttpOptions) {

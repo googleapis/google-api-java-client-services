@@ -61,6 +61,19 @@ public final class Resource extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
+   * The locations of the resource. This field is used to determine whether the request is compliant
+   * with Trust Boundaries. Usage: - If unset or empty, the location of authorization is used as the
+   * target location. - For global resources: use a single value of "global". - For regional/multi-
+   * regional resources: use name of the GCP region(s) where the resource exists (e.g., ["us-east1",
+   * "us-west1"]). For multi-regional resources specify the name of each GCP region in the
+   * resource's multi-region. NOTE: Only GCP cloud region names are supported - go/cloud-region-
+   * names.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> locations;
+
+  /**
    * The **relative** name of the resource, which is the URI path of the resource without the
    * leading "/". See https://cloud.google.com/iam/docs/conditions-resource-attributes#resource-name
    * for examples used by other GCP Services. This field is **required** for services integrated
@@ -178,6 +191,35 @@ public final class Resource extends com.google.api.client.json.GenericJson {
    */
   public Resource setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
+    return this;
+  }
+
+  /**
+   * The locations of the resource. This field is used to determine whether the request is compliant
+   * with Trust Boundaries. Usage: - If unset or empty, the location of authorization is used as the
+   * target location. - For global resources: use a single value of "global". - For regional/multi-
+   * regional resources: use name of the GCP region(s) where the resource exists (e.g., ["us-east1",
+   * "us-west1"]). For multi-regional resources specify the name of each GCP region in the
+   * resource's multi-region. NOTE: Only GCP cloud region names are supported - go/cloud-region-
+   * names.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getLocations() {
+    return locations;
+  }
+
+  /**
+   * The locations of the resource. This field is used to determine whether the request is compliant
+   * with Trust Boundaries. Usage: - If unset or empty, the location of authorization is used as the
+   * target location. - For global resources: use a single value of "global". - For regional/multi-
+   * regional resources: use name of the GCP region(s) where the resource exists (e.g., ["us-east1",
+   * "us-west1"]). For multi-regional resources specify the name of each GCP region in the
+   * resource's multi-region. NOTE: Only GCP cloud region names are supported - go/cloud-region-
+   * names.
+   * @param locations locations or {@code null} for none
+   */
+  public Resource setLocations(java.util.List<java.lang.String> locations) {
+    this.locations = locations;
     return this;
   }
 

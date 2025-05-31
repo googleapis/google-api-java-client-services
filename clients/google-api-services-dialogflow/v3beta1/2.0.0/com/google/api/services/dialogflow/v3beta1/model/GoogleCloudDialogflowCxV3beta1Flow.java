@@ -86,6 +86,14 @@ public final class GoogleCloudDialogflowCxV3beta1Flow extends com.google.api.cli
   private GoogleCloudDialogflowCxV3beta1KnowledgeConnectorSettings knowledgeConnectorSettings;
 
   /**
+   * Indicates whether the flow is locked for changes. If the flow is locked, modifications to the
+   * flow will be rejected.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean locked;
+
+  /**
    * Optional. Multi-lingual agent settings for this flow.
    * The value may be {@code null}.
    */
@@ -122,7 +130,7 @@ public final class GoogleCloudDialogflowCxV3beta1Flow extends com.google.api.cli
    * first utterances in the flow. * They are inherited by every page's transition routes and can
    * support use cases such as the user saying "help" or "can I talk to a human?", which can be
    * handled in a common way regardless of the current page. Transition routes defined in the page
-   * have higher priority than those defined in the flow. TransitionRoutes are evalauted in the
+   * have higher priority than those defined in the flow. TransitionRoutes are evaluated in the
    * following order: * TransitionRoutes with intent specified. * TransitionRoutes with only
    * condition specified. TransitionRoutes with intent specified are inherited by pages in the flow.
    * The value may be {@code null}.
@@ -230,6 +238,25 @@ public final class GoogleCloudDialogflowCxV3beta1Flow extends com.google.api.cli
   }
 
   /**
+   * Indicates whether the flow is locked for changes. If the flow is locked, modifications to the
+   * flow will be rejected.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getLocked() {
+    return locked;
+  }
+
+  /**
+   * Indicates whether the flow is locked for changes. If the flow is locked, modifications to the
+   * flow will be rejected.
+   * @param locked locked or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1Flow setLocked(java.lang.Boolean locked) {
+    this.locked = locked;
+    return this;
+  }
+
+  /**
    * Optional. Multi-lingual agent settings for this flow.
    * @return value or {@code null} for none
    */
@@ -310,7 +337,7 @@ public final class GoogleCloudDialogflowCxV3beta1Flow extends com.google.api.cli
    * first utterances in the flow. * They are inherited by every page's transition routes and can
    * support use cases such as the user saying "help" or "can I talk to a human?", which can be
    * handled in a common way regardless of the current page. Transition routes defined in the page
-   * have higher priority than those defined in the flow. TransitionRoutes are evalauted in the
+   * have higher priority than those defined in the flow. TransitionRoutes are evaluated in the
    * following order: * TransitionRoutes with intent specified. * TransitionRoutes with only
    * condition specified. TransitionRoutes with intent specified are inherited by pages in the flow.
    * @return value or {@code null} for none
@@ -324,7 +351,7 @@ public final class GoogleCloudDialogflowCxV3beta1Flow extends com.google.api.cli
    * first utterances in the flow. * They are inherited by every page's transition routes and can
    * support use cases such as the user saying "help" or "can I talk to a human?", which can be
    * handled in a common way regardless of the current page. Transition routes defined in the page
-   * have higher priority than those defined in the flow. TransitionRoutes are evalauted in the
+   * have higher priority than those defined in the flow. TransitionRoutes are evaluated in the
    * following order: * TransitionRoutes with intent specified. * TransitionRoutes with only
    * condition specified. TransitionRoutes with intent specified are inherited by pages in the flow.
    * @param transitionRoutes transitionRoutes or {@code null} for none

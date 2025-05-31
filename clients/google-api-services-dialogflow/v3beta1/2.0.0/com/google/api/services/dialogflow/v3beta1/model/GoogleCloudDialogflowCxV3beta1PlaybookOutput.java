@@ -44,6 +44,13 @@ public final class GoogleCloudDialogflowCxV3beta1PlaybookOutput extends com.goog
   private java.lang.String executionSummary;
 
   /**
+   * End state of the playbook.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String state;
+
+  /**
    * Optional. A Struct object of output parameters for the action.
    * @return value or {@code null} for none
    */
@@ -74,6 +81,23 @@ public final class GoogleCloudDialogflowCxV3beta1PlaybookOutput extends com.goog
    */
   public GoogleCloudDialogflowCxV3beta1PlaybookOutput setExecutionSummary(java.lang.String executionSummary) {
     this.executionSummary = executionSummary;
+    return this;
+  }
+
+  /**
+   * End state of the playbook.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getState() {
+    return state;
+  }
+
+  /**
+   * End state of the playbook.
+   * @param state state or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1PlaybookOutput setState(java.lang.String state) {
+    this.state = state;
     return this;
   }
 

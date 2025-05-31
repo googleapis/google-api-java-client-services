@@ -30,6 +30,13 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2SearchKnowledgeAnswerAnswerSource extends com.google.api.client.json.GenericJson {
 
   /**
+   * Metadata associated with the article.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Object> metadata;
+
+  /**
    * The relevant snippet of the article.
    * The value may be {@code null}.
    */
@@ -49,6 +56,23 @@ public final class GoogleCloudDialogflowV2SearchKnowledgeAnswerAnswerSource exte
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
+
+  /**
+   * Metadata associated with the article.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Object> getMetadata() {
+    return metadata;
+  }
+
+  /**
+   * Metadata associated with the article.
+   * @param metadata metadata or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2SearchKnowledgeAnswerAnswerSource setMetadata(java.util.Map<String, java.lang.Object> metadata) {
+    this.metadata = metadata;
+    return this;
+  }
 
   /**
    * The relevant snippet of the article.

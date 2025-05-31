@@ -59,6 +59,15 @@ public final class GoogleCloudDialogflowCxV3QueryParameters extends com.google.a
   private java.lang.String currentPage;
 
   /**
+   * Optional. The unique identifier of the playbook to start or continue the session with. If
+   * `current_playbook` is specified, the previous state of the session will be ignored by
+   * Dialogflow. Format: `projects//locations//agents//playbooks/`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String currentPlaybook;
+
+  /**
    * Whether to disable webhook calls for this request.
    * The value may be {@code null}.
    */
@@ -92,6 +101,13 @@ public final class GoogleCloudDialogflowCxV3QueryParameters extends com.google.a
    */
   @com.google.api.client.util.Key
   private GoogleTypeLatLng geoLocation;
+
+  /**
+   * Optional. Use the specified LLM model settings for processing the request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3LlmModelSettings llmModelSettings;
 
   /**
    * Additional parameters to be put into session parameters. To remove a parameter from the
@@ -241,6 +257,27 @@ public final class GoogleCloudDialogflowCxV3QueryParameters extends com.google.a
   }
 
   /**
+   * Optional. The unique identifier of the playbook to start or continue the session with. If
+   * `current_playbook` is specified, the previous state of the session will be ignored by
+   * Dialogflow. Format: `projects//locations//agents//playbooks/`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCurrentPlaybook() {
+    return currentPlaybook;
+  }
+
+  /**
+   * Optional. The unique identifier of the playbook to start or continue the session with. If
+   * `current_playbook` is specified, the previous state of the session will be ignored by
+   * Dialogflow. Format: `projects//locations//agents//playbooks/`.
+   * @param currentPlaybook currentPlaybook or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3QueryParameters setCurrentPlaybook(java.lang.String currentPlaybook) {
+    this.currentPlaybook = currentPlaybook;
+    return this;
+  }
+
+  /**
    * Whether to disable webhook calls for this request.
    * @return value or {@code null} for none
    */
@@ -319,6 +356,23 @@ public final class GoogleCloudDialogflowCxV3QueryParameters extends com.google.a
    */
   public GoogleCloudDialogflowCxV3QueryParameters setGeoLocation(GoogleTypeLatLng geoLocation) {
     this.geoLocation = geoLocation;
+    return this;
+  }
+
+  /**
+   * Optional. Use the specified LLM model settings for processing the request.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3LlmModelSettings getLlmModelSettings() {
+    return llmModelSettings;
+  }
+
+  /**
+   * Optional. Use the specified LLM model settings for processing the request.
+   * @param llmModelSettings llmModelSettings or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3QueryParameters setLlmModelSettings(GoogleCloudDialogflowCxV3LlmModelSettings llmModelSettings) {
+    this.llmModelSettings = llmModelSettings;
     return this;
   }
 

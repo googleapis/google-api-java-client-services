@@ -27,7 +27,7 @@ package com.google.api.services.dialogflow.v3.model;
  * barge-in phase and during which the API starts speech detection and may inform the client that an
  * utterance has been detected. Note that no-speech event is not expected in this phase. The client
  * provides this configuration in terms of the durations of those two phases. The durations are
- * measured in terms of the audio length from the the start of the input audio. No-speech event is a
+ * measured in terms of the audio length from the start of the input audio. No-speech event is a
  * response with END_OF_UTTERANCE without any transcript following up.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

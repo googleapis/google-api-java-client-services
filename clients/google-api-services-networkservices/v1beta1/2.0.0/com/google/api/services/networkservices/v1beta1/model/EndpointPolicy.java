@@ -89,6 +89,15 @@ public final class EndpointPolicy extends com.google.api.client.json.GenericJson
   private java.lang.String name;
 
   /**
+   * Optional. A URL referring to a SecurityPolicy resource. SecurityPolicy is used to enforce rate
+   * limiting policy on the inbound traffic at the identified backends. If this field is not set,
+   * rate limiting is disabled for this endpoint.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String securityPolicy;
+
+  /**
    * Optional. A URL referring to ServerTlsPolicy resource. ServerTlsPolicy is used to determine the
    * authentication policy to be applied to terminate the inbound traffic at the identified
    * backends. If this field is not set, authentication is disabled(open) for this endpoint.
@@ -251,6 +260,27 @@ public final class EndpointPolicy extends com.google.api.client.json.GenericJson
    */
   public EndpointPolicy setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. A URL referring to a SecurityPolicy resource. SecurityPolicy is used to enforce rate
+   * limiting policy on the inbound traffic at the identified backends. If this field is not set,
+   * rate limiting is disabled for this endpoint.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSecurityPolicy() {
+    return securityPolicy;
+  }
+
+  /**
+   * Optional. A URL referring to a SecurityPolicy resource. SecurityPolicy is used to enforce rate
+   * limiting policy on the inbound traffic at the identified backends. If this field is not set,
+   * rate limiting is disabled for this endpoint.
+   * @param securityPolicy securityPolicy or {@code null} for none
+   */
+  public EndpointPolicy setSecurityPolicy(java.lang.String securityPolicy) {
+    this.securityPolicy = securityPolicy;
     return this;
   }
 

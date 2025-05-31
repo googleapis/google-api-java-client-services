@@ -19,7 +19,8 @@ package com.google.api.services.networkservices.v1.model;
 /**
  * Specifies the policy on how requests are shadowed to a separate mirrored destination service. The
  * proxy does not wait for responses from the shadow service. Prior to sending traffic to the shadow
- * service, the host/authority header is suffixed with -shadow.
+ * service, the host/authority header is suffixed with -shadow. Mirroring is currently not supported
+ * for Cloud Run destinations.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Services API. For a detailed explanation see:

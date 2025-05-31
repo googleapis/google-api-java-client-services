@@ -39,7 +39,7 @@ public final class RevocationContext extends com.google.api.client.json.GenericJ
   private RevocationContextFullRefund fullRefund;
 
   /**
-   * Optional. Used when a specific item should be refunded in a subscription with multiple items.
+   * Optional. Used when a specific item should be refunded in a subscription with add-on items.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,7 +73,7 @@ public final class RevocationContext extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Used when a specific item should be refunded in a subscription with multiple items.
+   * Optional. Used when a specific item should be refunded in a subscription with add-on items.
    * @return value or {@code null} for none
    */
   public RevocationContextItemBasedRefund getItemBasedRefund() {
@@ -81,7 +81,7 @@ public final class RevocationContext extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Used when a specific item should be refunded in a subscription with multiple items.
+   * Optional. Used when a specific item should be refunded in a subscription with add-on items.
    * @param itemBasedRefund itemBasedRefund or {@code null} for none
    */
   public RevocationContext setItemBasedRefund(RevocationContextItemBasedRefund itemBasedRefund) {

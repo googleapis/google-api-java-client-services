@@ -53,6 +53,14 @@ public final class SubscriptionPurchaseLineItem extends com.google.api.client.js
   private String expiryTime;
 
   /**
+   * The order id of the latest successful order associated with this item. Not present if the item
+   * is not owned by the user yet (e.g. the item being deferred replaced to).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String latestSuccessfulOrderId;
+
+  /**
    * The offer details for this item.
    * The value may be {@code null}.
    */
@@ -130,6 +138,25 @@ public final class SubscriptionPurchaseLineItem extends com.google.api.client.js
    */
   public SubscriptionPurchaseLineItem setExpiryTime(String expiryTime) {
     this.expiryTime = expiryTime;
+    return this;
+  }
+
+  /**
+   * The order id of the latest successful order associated with this item. Not present if the item
+   * is not owned by the user yet (e.g. the item being deferred replaced to).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLatestSuccessfulOrderId() {
+    return latestSuccessfulOrderId;
+  }
+
+  /**
+   * The order id of the latest successful order associated with this item. Not present if the item
+   * is not owned by the user yet (e.g. the item being deferred replaced to).
+   * @param latestSuccessfulOrderId latestSuccessfulOrderId or {@code null} for none
+   */
+  public SubscriptionPurchaseLineItem setLatestSuccessfulOrderId(java.lang.String latestSuccessfulOrderId) {
+    this.latestSuccessfulOrderId = latestSuccessfulOrderId;
     return this;
   }
 

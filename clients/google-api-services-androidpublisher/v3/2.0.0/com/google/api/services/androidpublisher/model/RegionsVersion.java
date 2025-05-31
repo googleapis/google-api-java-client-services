@@ -32,12 +32,12 @@ public final class RegionsVersion extends com.google.api.client.json.GenericJson
 
   /**
    * Required. A string representing the version of available regions being used for the specified
-   * resource. Regional prices for the resource have to be specified according to the information
-   * published in [this article](https://support.google.com/googleplay/android-
-   * developer/answer/10532353). Each time the supported locations substantially change, the version
-   * will be incremented. The latest supported version is available in this article. Using this
-   * field will ensure that creating and updating the resource with an older region's version and
-   * set of regional prices and currencies will succeed even though a new version is available.
+   * resource. Regional prices and latest supported version for the resource have to be specified
+   * according to the information published in [this
+   * article](https://support.google.com/googleplay/android-developer/answer/10532353). Each time
+   * the supported locations substantially change, the version will be incremented. Using this field
+   * will ensure that creating and updating the resource with an older region's version and set of
+   * regional prices and currencies will succeed even though a new version is available.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,12 +45,12 @@ public final class RegionsVersion extends com.google.api.client.json.GenericJson
 
   /**
    * Required. A string representing the version of available regions being used for the specified
-   * resource. Regional prices for the resource have to be specified according to the information
-   * published in [this article](https://support.google.com/googleplay/android-
-   * developer/answer/10532353). Each time the supported locations substantially change, the version
-   * will be incremented. The latest supported version is available in this article. Using this
-   * field will ensure that creating and updating the resource with an older region's version and
-   * set of regional prices and currencies will succeed even though a new version is available.
+   * resource. Regional prices and latest supported version for the resource have to be specified
+   * according to the information published in [this
+   * article](https://support.google.com/googleplay/android-developer/answer/10532353). Each time
+   * the supported locations substantially change, the version will be incremented. Using this field
+   * will ensure that creating and updating the resource with an older region's version and set of
+   * regional prices and currencies will succeed even though a new version is available.
    * @return value or {@code null} for none
    */
   public java.lang.String getVersion() {
@@ -59,12 +59,12 @@ public final class RegionsVersion extends com.google.api.client.json.GenericJson
 
   /**
    * Required. A string representing the version of available regions being used for the specified
-   * resource. Regional prices for the resource have to be specified according to the information
-   * published in [this article](https://support.google.com/googleplay/android-
-   * developer/answer/10532353). Each time the supported locations substantially change, the version
-   * will be incremented. The latest supported version is available in this article. Using this
-   * field will ensure that creating and updating the resource with an older region's version and
-   * set of regional prices and currencies will succeed even though a new version is available.
+   * resource. Regional prices and latest supported version for the resource have to be specified
+   * according to the information published in [this
+   * article](https://support.google.com/googleplay/android-developer/answer/10532353). Each time
+   * the supported locations substantially change, the version will be incremented. Using this field
+   * will ensure that creating and updating the resource with an older region's version and set of
+   * regional prices and currencies will succeed even though a new version is available.
    * @param version version or {@code null} for none
    */
   public RegionsVersion setVersion(java.lang.String version) {

@@ -31,16 +31,16 @@ package com.google.api.services.androidpublisher.model;
 public final class RevocationContextItemBasedRefund extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. If the subscription is a subscription bundle, the product id of the subscription to
-   * revoke.
+   * Required. If the subscription is a subscription with add-ons, the product id of the
+   * subscription item to revoke.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String productId;
 
   /**
-   * Required. If the subscription is a subscription bundle, the product id of the subscription to
-   * revoke.
+   * Required. If the subscription is a subscription with add-ons, the product id of the
+   * subscription item to revoke.
    * @return value or {@code null} for none
    */
   public java.lang.String getProductId() {
@@ -48,8 +48,8 @@ public final class RevocationContextItemBasedRefund extends com.google.api.clien
   }
 
   /**
-   * Required. If the subscription is a subscription bundle, the product id of the subscription to
-   * revoke.
+   * Required. If the subscription is a subscription with add-ons, the product id of the
+   * subscription item to revoke.
    * @param productId productId or {@code null} for none
    */
   public RevocationContextItemBasedRefund setProductId(java.lang.String productId) {

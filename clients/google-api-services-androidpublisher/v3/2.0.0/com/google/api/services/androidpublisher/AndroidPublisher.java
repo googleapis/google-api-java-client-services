@@ -11736,24 +11736,24 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
         /**
          * Required. A string representing the version of available regions being used for the
-         * specified resource. Regional prices for the resource have to be specified according to
-         * the information published in [this
+         * specified resource. Regional prices and latest supported version for the resource have to
+         * be specified according to the information published in [this
          * article](https://support.google.com/googleplay/android-developer/answer/10532353). Each
-         * time the supported locations substantially change, the version will be incremented. The
-         * latest supported version is available in this article. Using this field will ensure that
-         * creating and updating the resource with an older region's version and set of regional
-         * prices and currencies will succeed even though a new version is available.
+         * time the supported locations substantially change, the version will be incremented. Using
+         * this field will ensure that creating and updating the resource with an older region's
+         * version and set of regional prices and currencies will succeed even though a new version
+         * is available.
          */
         @com.google.api.client.util.Key("regionsVersion.version")
         private java.lang.String regionsVersionVersion;
 
         /** Required. A string representing the version of available regions being used for the specified
-       resource. Regional prices for the resource have to be specified according to the information
-       published in [this article](https://support.google.com/googleplay/android-
-       developer/answer/10532353). Each time the supported locations substantially change, the version
-       will be incremented. The latest supported version is available in this article. Using this field
-       will ensure that creating and updating the resource with an older region's version and set of
-       regional prices and currencies will succeed even though a new version is available.
+       resource. Regional prices and latest supported version for the resource have to be specified
+       according to the information published in [this
+       article](https://support.google.com/googleplay/android-developer/answer/10532353). Each time the
+       supported locations substantially change, the version will be incremented. Using this field will
+       ensure that creating and updating the resource with an older region's version and set of regional
+       prices and currencies will succeed even though a new version is available.
          */
         public java.lang.String getRegionsVersionVersion() {
           return regionsVersionVersion;
@@ -11761,13 +11761,13 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
         /**
          * Required. A string representing the version of available regions being used for the
-         * specified resource. Regional prices for the resource have to be specified according to
-         * the information published in [this
+         * specified resource. Regional prices and latest supported version for the resource have to
+         * be specified according to the information published in [this
          * article](https://support.google.com/googleplay/android-developer/answer/10532353). Each
-         * time the supported locations substantially change, the version will be incremented. The
-         * latest supported version is available in this article. Using this field will ensure that
-         * creating and updating the resource with an older region's version and set of regional
-         * prices and currencies will succeed even though a new version is available.
+         * time the supported locations substantially change, the version will be incremented. Using
+         * this field will ensure that creating and updating the resource with an older region's
+         * version and set of regional prices and currencies will succeed even though a new version
+         * is available.
          */
         public Create setRegionsVersionVersion(java.lang.String regionsVersionVersion) {
           this.regionsVersionVersion = regionsVersionVersion;
@@ -12453,24 +12453,24 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
         /**
          * Required. A string representing the version of available regions being used for the
-         * specified resource. Regional prices for the resource have to be specified according to
-         * the information published in [this
+         * specified resource. Regional prices and latest supported version for the resource have to
+         * be specified according to the information published in [this
          * article](https://support.google.com/googleplay/android-developer/answer/10532353). Each
-         * time the supported locations substantially change, the version will be incremented. The
-         * latest supported version is available in this article. Using this field will ensure that
-         * creating and updating the resource with an older region's version and set of regional
-         * prices and currencies will succeed even though a new version is available.
+         * time the supported locations substantially change, the version will be incremented. Using
+         * this field will ensure that creating and updating the resource with an older region's
+         * version and set of regional prices and currencies will succeed even though a new version
+         * is available.
          */
         @com.google.api.client.util.Key("regionsVersion.version")
         private java.lang.String regionsVersionVersion;
 
         /** Required. A string representing the version of available regions being used for the specified
-       resource. Regional prices for the resource have to be specified according to the information
-       published in [this article](https://support.google.com/googleplay/android-
-       developer/answer/10532353). Each time the supported locations substantially change, the version
-       will be incremented. The latest supported version is available in this article. Using this field
-       will ensure that creating and updating the resource with an older region's version and set of
-       regional prices and currencies will succeed even though a new version is available.
+       resource. Regional prices and latest supported version for the resource have to be specified
+       according to the information published in [this
+       article](https://support.google.com/googleplay/android-developer/answer/10532353). Each time the
+       supported locations substantially change, the version will be incremented. Using this field will
+       ensure that creating and updating the resource with an older region's version and set of regional
+       prices and currencies will succeed even though a new version is available.
          */
         public java.lang.String getRegionsVersionVersion() {
           return regionsVersionVersion;
@@ -12478,13 +12478,13 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
         /**
          * Required. A string representing the version of available regions being used for the
-         * specified resource. Regional prices for the resource have to be specified according to
-         * the information published in [this
+         * specified resource. Regional prices and latest supported version for the resource have to
+         * be specified according to the information published in [this
          * article](https://support.google.com/googleplay/android-developer/answer/10532353). Each
-         * time the supported locations substantially change, the version will be incremented. The
-         * latest supported version is available in this article. Using this field will ensure that
-         * creating and updating the resource with an older region's version and set of regional
-         * prices and currencies will succeed even though a new version is available.
+         * time the supported locations substantially change, the version will be incremented. Using
+         * this field will ensure that creating and updating the resource with an older region's
+         * version and set of regional prices and currencies will succeed even though a new version
+         * is available.
          */
         public Patch setRegionsVersionVersion(java.lang.String regionsVersionVersion) {
           this.regionsVersionVersion = regionsVersionVersion;
@@ -14471,25 +14471,24 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
             /**
              * Required. A string representing the version of available regions being used for the
-             * specified resource. Regional prices for the resource have to be specified according
-             * to the information published in [this
+             * specified resource. Regional prices and latest supported version for the resource
+             * have to be specified according to the information published in [this
              * article](https://support.google.com/googleplay/android-developer/answer/10532353).
              * Each time the supported locations substantially change, the version will be
-             * incremented. The latest supported version is available in this article. Using this
-             * field will ensure that creating and updating the resource with an older region's
-             * version and set of regional prices and currencies will succeed even though a new
-             * version is available.
+             * incremented. Using this field will ensure that creating and updating the resource
+             * with an older region's version and set of regional prices and currencies will succeed
+             * even though a new version is available.
              */
             @com.google.api.client.util.Key("regionsVersion.version")
             private java.lang.String regionsVersionVersion;
 
             /** Required. A string representing the version of available regions being used for the specified
-           resource. Regional prices for the resource have to be specified according to the information
-           published in [this article](https://support.google.com/googleplay/android-
-           developer/answer/10532353). Each time the supported locations substantially change, the version
-           will be incremented. The latest supported version is available in this article. Using this field
-           will ensure that creating and updating the resource with an older region's version and set of
-           regional prices and currencies will succeed even though a new version is available.
+           resource. Regional prices and latest supported version for the resource have to be specified
+           according to the information published in [this
+           article](https://support.google.com/googleplay/android-developer/answer/10532353). Each time the
+           supported locations substantially change, the version will be incremented. Using this field will
+           ensure that creating and updating the resource with an older region's version and set of regional
+           prices and currencies will succeed even though a new version is available.
              */
             public java.lang.String getRegionsVersionVersion() {
               return regionsVersionVersion;
@@ -14497,14 +14496,13 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
             /**
              * Required. A string representing the version of available regions being used for the
-             * specified resource. Regional prices for the resource have to be specified according
-             * to the information published in [this
+             * specified resource. Regional prices and latest supported version for the resource
+             * have to be specified according to the information published in [this
              * article](https://support.google.com/googleplay/android-developer/answer/10532353).
              * Each time the supported locations substantially change, the version will be
-             * incremented. The latest supported version is available in this article. Using this
-             * field will ensure that creating and updating the resource with an older region's
-             * version and set of regional prices and currencies will succeed even though a new
-             * version is available.
+             * incremented. Using this field will ensure that creating and updating the resource
+             * with an older region's version and set of regional prices and currencies will succeed
+             * even though a new version is available.
              */
             public Create setRegionsVersionVersion(java.lang.String regionsVersionVersion) {
               this.regionsVersionVersion = regionsVersionVersion;
@@ -15525,25 +15523,24 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
             /**
              * Required. A string representing the version of available regions being used for the
-             * specified resource. Regional prices for the resource have to be specified according
-             * to the information published in [this
+             * specified resource. Regional prices and latest supported version for the resource
+             * have to be specified according to the information published in [this
              * article](https://support.google.com/googleplay/android-developer/answer/10532353).
              * Each time the supported locations substantially change, the version will be
-             * incremented. The latest supported version is available in this article. Using this
-             * field will ensure that creating and updating the resource with an older region's
-             * version and set of regional prices and currencies will succeed even though a new
-             * version is available.
+             * incremented. Using this field will ensure that creating and updating the resource
+             * with an older region's version and set of regional prices and currencies will succeed
+             * even though a new version is available.
              */
             @com.google.api.client.util.Key("regionsVersion.version")
             private java.lang.String regionsVersionVersion;
 
             /** Required. A string representing the version of available regions being used for the specified
-           resource. Regional prices for the resource have to be specified according to the information
-           published in [this article](https://support.google.com/googleplay/android-
-           developer/answer/10532353). Each time the supported locations substantially change, the version
-           will be incremented. The latest supported version is available in this article. Using this field
-           will ensure that creating and updating the resource with an older region's version and set of
-           regional prices and currencies will succeed even though a new version is available.
+           resource. Regional prices and latest supported version for the resource have to be specified
+           according to the information published in [this
+           article](https://support.google.com/googleplay/android-developer/answer/10532353). Each time the
+           supported locations substantially change, the version will be incremented. Using this field will
+           ensure that creating and updating the resource with an older region's version and set of regional
+           prices and currencies will succeed even though a new version is available.
              */
             public java.lang.String getRegionsVersionVersion() {
               return regionsVersionVersion;
@@ -15551,14 +15548,13 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
             /**
              * Required. A string representing the version of available regions being used for the
-             * specified resource. Regional prices for the resource have to be specified according
-             * to the information published in [this
+             * specified resource. Regional prices and latest supported version for the resource
+             * have to be specified according to the information published in [this
              * article](https://support.google.com/googleplay/android-developer/answer/10532353).
              * Each time the supported locations substantially change, the version will be
-             * incremented. The latest supported version is available in this article. Using this
-             * field will ensure that creating and updating the resource with an older region's
-             * version and set of regional prices and currencies will succeed even though a new
-             * version is available.
+             * incremented. Using this field will ensure that creating and updating the resource
+             * with an older region's version and set of regional prices and currencies will succeed
+             * even though a new version is available.
              */
             public Patch setRegionsVersionVersion(java.lang.String regionsVersionVersion) {
               this.regionsVersionVersion = regionsVersionVersion;
@@ -16676,7 +16672,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        *
        * @param packageName The package name of the application for which this subscription was purchased (for example,
        *        'com.some.thing').
-       * @param subscriptionId The purchased subscription ID (for example, 'monthly001').
+       * @param subscriptionId Note: Since May 21, 2025, subscription_id is not required, and not recommended for subscription with
+       *        add-ons. The purchased subscription ID (for example, 'monthly001').
        * @param token The token provided to the user's device when the subscription was purchased.
        * @param content the {@link com.google.api.services.androidpublisher.model.SubscriptionPurchasesAcknowledgeRequest}
        * @return the request
@@ -16704,7 +16701,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          *
          * @param packageName The package name of the application for which this subscription was purchased (for example,
        *        'com.some.thing').
-         * @param subscriptionId The purchased subscription ID (for example, 'monthly001').
+         * @param subscriptionId Note: Since May 21, 2025, subscription_id is not required, and not recommended for subscription with
+       *        add-ons. The purchased subscription ID (for example, 'monthly001').
          * @param token The token provided to the user's device when the subscription was purchased.
          * @param content the {@link com.google.api.services.androidpublisher.model.SubscriptionPurchasesAcknowledgeRequest}
          * @since 1.13
@@ -16794,17 +16792,24 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           return this;
         }
 
-        /** The purchased subscription ID (for example, 'monthly001'). */
+        /**
+         * Note: Since May 21, 2025, subscription_id is not required, and not recommended for
+         * subscription with add-ons. The purchased subscription ID (for example, 'monthly001').
+         */
         @com.google.api.client.util.Key
         private java.lang.String subscriptionId;
 
-        /** The purchased subscription ID (for example, 'monthly001').
+        /** Note: Since May 21, 2025, subscription_id is not required, and not recommended for subscription
+       with add-ons. The purchased subscription ID (for example, 'monthly001').
          */
         public java.lang.String getSubscriptionId() {
           return subscriptionId;
         }
 
-        /** The purchased subscription ID (for example, 'monthly001'). */
+        /**
+         * Note: Since May 21, 2025, subscription_id is not required, and not recommended for
+         * subscription with add-ons. The purchased subscription ID (for example, 'monthly001').
+         */
         public Acknowledge setSubscriptionId(java.lang.String subscriptionId) {
           this.subscriptionId = subscriptionId;
           return this;
@@ -16841,7 +16846,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        *
        * @param packageName The package name of the application for which this subscription was purchased (for example,
        *        'com.some.thing').
-       * @param subscriptionId The purchased subscription ID (for example, 'monthly001').
+       * @param subscriptionId Note: Since May 21, 2025, subscription_id is not required, and not recommended for subscription with
+       *        add-ons. The purchased subscription ID (for example, 'monthly001').
        * @param token The token provided to the user's device when the subscription was purchased.
        * @return the request
        */
@@ -16869,7 +16875,8 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          *
          * @param packageName The package name of the application for which this subscription was purchased (for example,
        *        'com.some.thing').
-         * @param subscriptionId The purchased subscription ID (for example, 'monthly001').
+         * @param subscriptionId Note: Since May 21, 2025, subscription_id is not required, and not recommended for subscription with
+       *        add-ons. The purchased subscription ID (for example, 'monthly001').
          * @param token The token provided to the user's device when the subscription was purchased.
          * @since 1.13
          */
@@ -16958,17 +16965,24 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           return this;
         }
 
-        /** The purchased subscription ID (for example, 'monthly001'). */
+        /**
+         * Note: Since May 21, 2025, subscription_id is not required, and not recommended for
+         * subscription with add-ons. The purchased subscription ID (for example, 'monthly001').
+         */
         @com.google.api.client.util.Key
         private java.lang.String subscriptionId;
 
-        /** The purchased subscription ID (for example, 'monthly001').
+        /** Note: Since May 21, 2025, subscription_id is not required, and not recommended for subscription
+       with add-ons. The purchased subscription ID (for example, 'monthly001').
          */
         public java.lang.String getSubscriptionId() {
           return subscriptionId;
         }
 
-        /** The purchased subscription ID (for example, 'monthly001'). */
+        /**
+         * Note: Since May 21, 2025, subscription_id is not required, and not recommended for
+         * subscription with add-ons. The purchased subscription ID (for example, 'monthly001').
+         */
         public Cancel setSubscriptionId(java.lang.String subscriptionId) {
           this.subscriptionId = subscriptionId;
           return this;

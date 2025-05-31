@@ -17,7 +17,7 @@
 package com.google.api.services.androidpublisher.model;
 
 /**
- * Details about taxation, Google Play policy and legal compliance for subscription products.
+ * Details about taxation, Google Play policy, and legal compliance for subscription products.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Play Android Developer API. For a detailed

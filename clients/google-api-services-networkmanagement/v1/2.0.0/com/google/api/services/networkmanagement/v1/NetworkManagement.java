@@ -2775,6 +2775,7 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
          *
          * @param parent Required. The parent resource of the VPC Flow Logs configuration to create:
          *        `projects/{project_id}/locations/global`
+         *        `organizations/{organization_id}/locations/global`
          * @param content the {@link com.google.api.services.networkmanagement.v1.model.VpcFlowLogsConfig}
          * @return the request
          */
@@ -2809,6 +2810,7 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
            *
            * @param parent Required. The parent resource of the VPC Flow Logs configuration to create:
          *        `projects/{project_id}/locations/global`
+         *        `organizations/{organization_id}/locations/global`
            * @param content the {@link com.google.api.services.networkmanagement.v1.model.VpcFlowLogsConfig}
            * @since 1.13
            */
@@ -2880,12 +2882,13 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
           /**
            * Required. The parent resource of the VPC Flow Logs configuration to create:
            * `projects/{project_id}/locations/global`
+           * `organizations/{organization_id}/locations/global`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The parent resource of the VPC Flow Logs configuration to create:
-         `projects/{project_id}/locations/global`
+         `projects/{project_id}/locations/global` `organizations/{organization_id}/locations/global`
            */
           public java.lang.String getParent() {
             return parent;
@@ -2894,6 +2897,7 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
           /**
            * Required. The parent resource of the VPC Flow Logs configuration to create:
            * `projects/{project_id}/locations/global`
+           * `organizations/{organization_id}/locations/global`
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -2934,8 +2938,9 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
          * This request holds the parameters needed by the networkmanagement server.  After setting any
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. `VpcFlowLogsConfig` resource name using the form:
-         *        `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config}`
+         * @param name Required. `VpcFlowLogsConfig` resource name using one of the form:
+         *        `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config} `organiz
+         *        ations/{organization_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config}`
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -2962,8 +2967,9 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. `VpcFlowLogsConfig` resource name using the form:
-         *        `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config}`
+           * @param name Required. `VpcFlowLogsConfig` resource name using one of the form:
+         *        `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config} `organiz
+         *        ations/{organization_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config}`
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -3032,22 +3038,25 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
           }
 
           /**
-           * Required. `VpcFlowLogsConfig` resource name using the form:
-           * `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config}`
+           * Required. `VpcFlowLogsConfig` resource name using one of the form:
+           * `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config} `orga
+           * nizations/{organization_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. `VpcFlowLogsConfig` resource name using the form:
-         `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config}`
+          /** Required. `VpcFlowLogsConfig` resource name using one of the form:
+         `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config}
+         `organizations/{organization_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config}`
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. `VpcFlowLogsConfig` resource name using the form:
-           * `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config}`
+           * Required. `VpcFlowLogsConfig` resource name using one of the form:
+           * `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config} `orga
+           * nizations/{organization_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config}`
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -3073,7 +3082,8 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
          * @param name Required. `VpcFlowLogsConfig` resource name using the form:
-         *        `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config}`
+         *        `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config}` `organi
+         *        zations/{organization_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config}`
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -3101,7 +3111,8 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. `VpcFlowLogsConfig` resource name using the form:
-         *        `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config}`
+         *        `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config}` `organi
+         *        zations/{organization_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config}`
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -3181,13 +3192,16 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
 
           /**
            * Required. `VpcFlowLogsConfig` resource name using the form:
-           * `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config}`
+           * `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config}` `org
+           * anizations/{organization_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config}
+           * `
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. `VpcFlowLogsConfig` resource name using the form:
          `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config}`
+         `organizations/{organization_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config}`
            */
           public java.lang.String getName() {
             return name;
@@ -3195,7 +3209,9 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
 
           /**
            * Required. `VpcFlowLogsConfig` resource name using the form:
-           * `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config}`
+           * `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config}` `org
+           * anizations/{organization_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config}
+           * `
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -3221,6 +3237,7 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The parent resource of the VpcFlowLogsConfig: `projects/{project_id}/locations/global`
+         *        `organizations/{organization_id}/locations/global`
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -3248,6 +3265,7 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The parent resource of the VpcFlowLogsConfig: `projects/{project_id}/locations/global`
+         *        `organizations/{organization_id}/locations/global`
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -3328,11 +3346,13 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
           /**
            * Required. The parent resource of the VpcFlowLogsConfig:
            * `projects/{project_id}/locations/global`
+           * `organizations/{organization_id}/locations/global`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The parent resource of the VpcFlowLogsConfig: `projects/{project_id}/locations/global`
+         `organizations/{organization_id}/locations/global`
            */
           public java.lang.String getParent() {
             return parent;
@@ -3341,6 +3361,7 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
           /**
            * Required. The parent resource of the VpcFlowLogsConfig:
            * `projects/{project_id}/locations/global`
+           * `organizations/{organization_id}/locations/global`
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -3446,8 +3467,10 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
          * This request holds the parameters needed by the networkmanagement server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Identifier. Unique name of the configuration using the form:
-         *        `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
+         * @param name Identifier. Unique name of the configuration using one of the forms:
+         *        `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}` `org
+         *        anizations/{organization_number}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config
+         *        _id}`
          * @param content the {@link com.google.api.services.networkmanagement.v1.model.VpcFlowLogsConfig}
          * @return the request
          */
@@ -3480,8 +3503,10 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Identifier. Unique name of the configuration using the form:
-         *        `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
+           * @param name Identifier. Unique name of the configuration using one of the forms:
+         *        `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}` `org
+         *        anizations/{organization_number}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config
+         *        _id}`
            * @param content the {@link com.google.api.services.networkmanagement.v1.model.VpcFlowLogsConfig}
            * @since 1.13
            */
@@ -3551,22 +3576,27 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
           }
 
           /**
-           * Identifier. Unique name of the configuration using the form:
-           * `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
+           * Identifier. Unique name of the configuration using one of the forms:
+           * `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}` `
+           * organizations/{organization_number}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_
+           * config_id}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Identifier. Unique name of the configuration using the form:
+          /** Identifier. Unique name of the configuration using one of the forms:
          `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
+         `organizations/{organization_number}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Identifier. Unique name of the configuration using the form:
-           * `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
+           * Identifier. Unique name of the configuration using one of the forms:
+           * `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}` `
+           * organizations/{organization_number}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_
+           * config_id}`
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

@@ -100,8 +100,9 @@ public final class VpcFlowLogsConfig extends com.google.api.client.json.GenericJ
   private java.util.List<java.lang.String> metadataFields;
 
   /**
-   * Identifier. Unique name of the configuration using the form:
-   * `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
+   * Identifier. Unique name of the configuration using one of the forms:
+   * `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}` `organiza
+   * tions/{organization_number}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -305,8 +306,9 @@ public final class VpcFlowLogsConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Identifier. Unique name of the configuration using the form:
-   * `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
+   * Identifier. Unique name of the configuration using one of the forms:
+   * `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}` `organiza
+   * tions/{organization_number}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -314,8 +316,9 @@ public final class VpcFlowLogsConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Identifier. Unique name of the configuration using the form:
-   * `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
+   * Identifier. Unique name of the configuration using one of the forms:
+   * `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}` `organiza
+   * tions/{organization_number}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
    * @param name name or {@code null} for none
    */
   public VpcFlowLogsConfig setName(java.lang.String name) {

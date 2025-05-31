@@ -76,6 +76,14 @@ public final class FirewallInfo extends com.google.api.client.json.GenericJson {
   private java.lang.String policy;
 
   /**
+   * The priority of the firewall policy that this rule is associated with. This field is not
+   * applicable to VPC firewall rules and implied VPC firewall rules.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer policyPriority;
+
+  /**
    * The URI of the firewall policy that this rule is associated with. This field is not applicable
    * to VPC firewall rules and implied VPC firewall rules.
    * The value may be {@code null}.
@@ -215,6 +223,25 @@ public final class FirewallInfo extends com.google.api.client.json.GenericJson {
    */
   public FirewallInfo setPolicy(java.lang.String policy) {
     this.policy = policy;
+    return this;
+  }
+
+  /**
+   * The priority of the firewall policy that this rule is associated with. This field is not
+   * applicable to VPC firewall rules and implied VPC firewall rules.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getPolicyPriority() {
+    return policyPriority;
+  }
+
+  /**
+   * The priority of the firewall policy that this rule is associated with. This field is not
+   * applicable to VPC firewall rules and implied VPC firewall rules.
+   * @param policyPriority policyPriority or {@code null} for none
+   */
+  public FirewallInfo setPolicyPriority(java.lang.Integer policyPriority) {
+    this.policyPriority = policyPriority;
     return this;
   }
 

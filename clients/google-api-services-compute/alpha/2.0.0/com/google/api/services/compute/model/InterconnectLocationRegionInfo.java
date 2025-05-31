@@ -39,6 +39,14 @@ public final class InterconnectLocationRegionInfo extends com.google.api.client.
   private java.lang.Long expectedRttMs;
 
   /**
+   * Identifies whether L2 Interconnect Attachments can be created in this region for interconnects
+   * that are in this location.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean l2ForwardingEnabled;
+
+  /**
    * Identifies the network presence of this location.
    * The value may be {@code null}.
    */
@@ -68,6 +76,25 @@ public final class InterconnectLocationRegionInfo extends com.google.api.client.
    */
   public InterconnectLocationRegionInfo setExpectedRttMs(java.lang.Long expectedRttMs) {
     this.expectedRttMs = expectedRttMs;
+    return this;
+  }
+
+  /**
+   * Identifies whether L2 Interconnect Attachments can be created in this region for interconnects
+   * that are in this location.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getL2ForwardingEnabled() {
+    return l2ForwardingEnabled;
+  }
+
+  /**
+   * Identifies whether L2 Interconnect Attachments can be created in this region for interconnects
+   * that are in this location.
+   * @param l2ForwardingEnabled l2ForwardingEnabled or {@code null} for none
+   */
+  public InterconnectLocationRegionInfo setL2ForwardingEnabled(java.lang.Boolean l2ForwardingEnabled) {
+    this.l2ForwardingEnabled = l2ForwardingEnabled;
     return this;
   }
 

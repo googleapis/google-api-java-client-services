@@ -69,6 +69,14 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   private java.lang.String fingerprint;
 
   /**
+   * Indicate whether igmp query is enabled on the network interface or not. If enabled, also
+   * indicates the version of IGMP supported.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String igmpQuery;
+
+  /**
    * The prefix length of the primary internal IPv6 range.
    * The value may be {@code null}.
    */
@@ -301,6 +309,25 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
    */
   public NetworkInterface encodeFingerprint(byte[] fingerprint) {
     this.fingerprint = com.google.api.client.util.Base64.encodeBase64URLSafeString(fingerprint);
+    return this;
+  }
+
+  /**
+   * Indicate whether igmp query is enabled on the network interface or not. If enabled, also
+   * indicates the version of IGMP supported.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIgmpQuery() {
+    return igmpQuery;
+  }
+
+  /**
+   * Indicate whether igmp query is enabled on the network interface or not. If enabled, also
+   * indicates the version of IGMP supported.
+   * @param igmpQuery igmpQuery or {@code null} for none
+   */
+  public NetworkInterface setIgmpQuery(java.lang.String igmpQuery) {
+    this.igmpQuery = igmpQuery;
     return this;
   }
 

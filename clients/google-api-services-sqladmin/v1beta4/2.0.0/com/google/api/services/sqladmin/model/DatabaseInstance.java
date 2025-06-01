@@ -248,6 +248,13 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   private SqlOutOfDiskReport outOfDiskReport;
 
   /**
+   * Input only. PITR related fields added for Instance Independent PITR.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PITRFields pitrFields;
+
+  /**
    * Output only. DEPRECATED: please use write_endpoint instead.
    * The value may be {@code null}.
    */
@@ -950,6 +957,23 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
    */
   public DatabaseInstance setOutOfDiskReport(SqlOutOfDiskReport outOfDiskReport) {
     this.outOfDiskReport = outOfDiskReport;
+    return this;
+  }
+
+  /**
+   * Input only. PITR related fields added for Instance Independent PITR.
+   * @return value or {@code null} for none
+   */
+  public PITRFields getPitrFields() {
+    return pitrFields;
+  }
+
+  /**
+   * Input only. PITR related fields added for Instance Independent PITR.
+   * @param pitrFields pitrFields or {@code null} for none
+   */
+  public DatabaseInstance setPitrFields(PITRFields pitrFields) {
+    this.pitrFields = pitrFields;
     return this;
   }
 

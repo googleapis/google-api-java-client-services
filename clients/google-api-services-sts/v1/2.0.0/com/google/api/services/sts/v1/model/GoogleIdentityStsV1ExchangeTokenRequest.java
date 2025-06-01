@@ -69,8 +69,10 @@ public final class GoogleIdentityStsV1ExchangeTokenRequest extends com.google.ap
 
   /**
    * The OAuth 2.0 scopes to include on the resulting access token, formatted as a list of space-
-   * delimited, case-sensitive strings. Required when exchanging an external credential for a Google
-   * access token.
+   * delimited, case-sensitive strings; for example, `https://www.googleapis.com/auth/cloud-
+   * platform`. Required when exchanging an external credential for a Google access token. For a
+   * list of OAuth 2.0 scopes, see [OAuth 2.0 Scopes for Google
+   * APIs](https://developers.google.com/identity/protocols/oauth2/scopes).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -246,8 +248,10 @@ public final class GoogleIdentityStsV1ExchangeTokenRequest extends com.google.ap
 
   /**
    * The OAuth 2.0 scopes to include on the resulting access token, formatted as a list of space-
-   * delimited, case-sensitive strings. Required when exchanging an external credential for a Google
-   * access token.
+   * delimited, case-sensitive strings; for example, `https://www.googleapis.com/auth/cloud-
+   * platform`. Required when exchanging an external credential for a Google access token. For a
+   * list of OAuth 2.0 scopes, see [OAuth 2.0 Scopes for Google
+   * APIs](https://developers.google.com/identity/protocols/oauth2/scopes).
    * @return value or {@code null} for none
    */
   public java.lang.String getScope() {
@@ -256,8 +260,10 @@ public final class GoogleIdentityStsV1ExchangeTokenRequest extends com.google.ap
 
   /**
    * The OAuth 2.0 scopes to include on the resulting access token, formatted as a list of space-
-   * delimited, case-sensitive strings. Required when exchanging an external credential for a Google
-   * access token.
+   * delimited, case-sensitive strings; for example, `https://www.googleapis.com/auth/cloud-
+   * platform`. Required when exchanging an external credential for a Google access token. For a
+   * list of OAuth 2.0 scopes, see [OAuth 2.0 Scopes for Google
+   * APIs](https://developers.google.com/identity/protocols/oauth2/scopes).
    * @param scope scope or {@code null} for none
    */
   public GoogleIdentityStsV1ExchangeTokenRequest setScope(java.lang.String scope) {

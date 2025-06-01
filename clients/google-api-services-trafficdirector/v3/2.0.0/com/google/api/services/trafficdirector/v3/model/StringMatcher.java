@@ -30,8 +30,9 @@ package com.google.api.services.trafficdirector.v3.model;
 public final class StringMatcher extends com.google.api.client.json.GenericJson {
 
   /**
-   * The input string must have the substring specified here. Note: empty contains match is not
-   * allowed, please use regex instead. Examples: * ``abc`` matches the value ``xyz.abc.def``
+   * The input string must have the substring specified here. .. note:: Empty contains match is not
+   * allowed, please use ``safe_regex`` instead. Examples: * ``abc`` matches the value
+   * ``xyz.abc.def``
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,17 +54,17 @@ public final class StringMatcher extends com.google.api.client.json.GenericJson 
   private java.lang.String exact;
 
   /**
-   * If true, indicates the exact/prefix/suffix/contains matching should be case insensitive. This
-   * has no effect for the safe_regex match. For example, the matcher ``data`` will match both input
-   * string ``Data`` and ``data`` if set to true.
+   * If ``true``, indicates the exact/prefix/suffix/contains matching should be case insensitive.
+   * This has no effect for the ``safe_regex`` match. For example, the matcher ``data`` will match
+   * both input string ``Data`` and ``data`` if this option is set to ``true``.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean ignoreCase;
 
   /**
-   * The input string must have the prefix specified here. Note: empty prefix is not allowed, please
-   * use regex instead. Examples: * ``abc`` matches the value ``abc.xyz``
+   * The input string must have the prefix specified here. .. note:: Empty prefix match is not
+   * allowed, please use ``safe_regex`` instead. Examples: * ``abc`` matches the value ``abc.xyz``
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,16 +78,17 @@ public final class StringMatcher extends com.google.api.client.json.GenericJson 
   private RegexMatcher safeRegex;
 
   /**
-   * The input string must have the suffix specified here. Note: empty prefix is not allowed, please
-   * use regex instead. Examples: * ``abc`` matches the value ``xyz.abc``
+   * The input string must have the suffix specified here. .. note:: Empty suffix match is not
+   * allowed, please use ``safe_regex`` instead. Examples: * ``abc`` matches the value ``xyz.abc``
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String suffix;
 
   /**
-   * The input string must have the substring specified here. Note: empty contains match is not
-   * allowed, please use regex instead. Examples: * ``abc`` matches the value ``xyz.abc.def``
+   * The input string must have the substring specified here. .. note:: Empty contains match is not
+   * allowed, please use ``safe_regex`` instead. Examples: * ``abc`` matches the value
+   * ``xyz.abc.def``
    * @return value or {@code null} for none
    */
   public java.lang.String getContains() {
@@ -94,8 +96,9 @@ public final class StringMatcher extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The input string must have the substring specified here. Note: empty contains match is not
-   * allowed, please use regex instead. Examples: * ``abc`` matches the value ``xyz.abc.def``
+   * The input string must have the substring specified here. .. note:: Empty contains match is not
+   * allowed, please use ``safe_regex`` instead. Examples: * ``abc`` matches the value
+   * ``xyz.abc.def``
    * @param contains contains or {@code null} for none
    */
   public StringMatcher setContains(java.lang.String contains) {
@@ -140,9 +143,9 @@ public final class StringMatcher extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * If true, indicates the exact/prefix/suffix/contains matching should be case insensitive. This
-   * has no effect for the safe_regex match. For example, the matcher ``data`` will match both input
-   * string ``Data`` and ``data`` if set to true.
+   * If ``true``, indicates the exact/prefix/suffix/contains matching should be case insensitive.
+   * This has no effect for the ``safe_regex`` match. For example, the matcher ``data`` will match
+   * both input string ``Data`` and ``data`` if this option is set to ``true``.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIgnoreCase() {
@@ -150,9 +153,9 @@ public final class StringMatcher extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * If true, indicates the exact/prefix/suffix/contains matching should be case insensitive. This
-   * has no effect for the safe_regex match. For example, the matcher ``data`` will match both input
-   * string ``Data`` and ``data`` if set to true.
+   * If ``true``, indicates the exact/prefix/suffix/contains matching should be case insensitive.
+   * This has no effect for the ``safe_regex`` match. For example, the matcher ``data`` will match
+   * both input string ``Data`` and ``data`` if this option is set to ``true``.
    * @param ignoreCase ignoreCase or {@code null} for none
    */
   public StringMatcher setIgnoreCase(java.lang.Boolean ignoreCase) {
@@ -161,8 +164,8 @@ public final class StringMatcher extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The input string must have the prefix specified here. Note: empty prefix is not allowed, please
-   * use regex instead. Examples: * ``abc`` matches the value ``abc.xyz``
+   * The input string must have the prefix specified here. .. note:: Empty prefix match is not
+   * allowed, please use ``safe_regex`` instead. Examples: * ``abc`` matches the value ``abc.xyz``
    * @return value or {@code null} for none
    */
   public java.lang.String getPrefix() {
@@ -170,8 +173,8 @@ public final class StringMatcher extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The input string must have the prefix specified here. Note: empty prefix is not allowed, please
-   * use regex instead. Examples: * ``abc`` matches the value ``abc.xyz``
+   * The input string must have the prefix specified here. .. note:: Empty prefix match is not
+   * allowed, please use ``safe_regex`` instead. Examples: * ``abc`` matches the value ``abc.xyz``
    * @param prefix prefix or {@code null} for none
    */
   public StringMatcher setPrefix(java.lang.String prefix) {
@@ -197,8 +200,8 @@ public final class StringMatcher extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The input string must have the suffix specified here. Note: empty prefix is not allowed, please
-   * use regex instead. Examples: * ``abc`` matches the value ``xyz.abc``
+   * The input string must have the suffix specified here. .. note:: Empty suffix match is not
+   * allowed, please use ``safe_regex`` instead. Examples: * ``abc`` matches the value ``xyz.abc``
    * @return value or {@code null} for none
    */
   public java.lang.String getSuffix() {
@@ -206,8 +209,8 @@ public final class StringMatcher extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The input string must have the suffix specified here. Note: empty prefix is not allowed, please
-   * use regex instead. Examples: * ``abc`` matches the value ``xyz.abc``
+   * The input string must have the suffix specified here. .. note:: Empty suffix match is not
+   * allowed, please use ``safe_regex`` instead. Examples: * ``abc`` matches the value ``xyz.abc``
    * @param suffix suffix or {@code null} for none
    */
   public StringMatcher setSuffix(java.lang.String suffix) {

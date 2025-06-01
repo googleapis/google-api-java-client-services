@@ -12288,7 +12288,7 @@ public class APIhub extends com.google.api.client.googleapis.services.json.Abstr
            * of the Plugin's resource name. This field is optional. * If provided, the same will be
            * used. The service will throw an error if the specified id is already used by another
            * Plugin resource in the API hub instance. * If not provided, a system generated id will
-           * be used. This value should be 4-500 characters, overall resource name which will be of
+           * be used. This value should be 4-63 characters, overall resource name which will be of
            * format `projects/{project}/locations/{location}/plugins/{plugin}`, its length is
            * limited to 1000 characters and valid characters are /a-z[0-9]-_/.
            */
@@ -12298,7 +12298,7 @@ public class APIhub extends com.google.api.client.googleapis.services.json.Abstr
           /** Optional. The ID to use for the Plugin resource, which will become the final component of the
          Plugin's resource name. This field is optional. * If provided, the same will be used. The service
          will throw an error if the specified id is already used by another Plugin resource in the API hub
-         instance. * If not provided, a system generated id will be used. This value should be 4-500
+         instance. * If not provided, a system generated id will be used. This value should be 4-63
          characters, overall resource name which will be of format
          `projects/{project}/locations/{location}/plugins/{plugin}`, its length is limited to 1000
          characters and valid characters are /a-z[0-9]-_/.
@@ -12312,7 +12312,7 @@ public class APIhub extends com.google.api.client.googleapis.services.json.Abstr
            * of the Plugin's resource name. This field is optional. * If provided, the same will be
            * used. The service will throw an error if the specified id is already used by another
            * Plugin resource in the API hub instance. * If not provided, a system generated id will
-           * be used. This value should be 4-500 characters, overall resource name which will be of
+           * be used. This value should be 4-63 characters, overall resource name which will be of
            * format `projects/{project}/locations/{location}/plugins/{plugin}`, its length is
            * limited to 1000 characters and valid characters are /a-z[0-9]-_/.
            */
@@ -13603,7 +13603,7 @@ public class APIhub extends com.google.api.client.googleapis.services.json.Abstr
              * component of the plugin instance's resource name. This field is optional. * If
              * provided, the same will be used. The service will throw an error if the specified id
              * is already used by another plugin instance in the plugin resource. * If not provided,
-             * a system generated id will be used. This value should be 4-500 characters, and valid
+             * a system generated id will be used. This value should be 4-63 characters, and valid
              * characters are /a-z[0-9]-_/.
              */
             @com.google.api.client.util.Key
@@ -13612,7 +13612,7 @@ public class APIhub extends com.google.api.client.googleapis.services.json.Abstr
             /** Optional. The ID to use for the plugin instance, which will become the final component of the
            plugin instance's resource name. This field is optional. * If provided, the same will be used. The
            service will throw an error if the specified id is already used by another plugin instance in the
-           plugin resource. * If not provided, a system generated id will be used. This value should be 4-500
+           plugin resource. * If not provided, a system generated id will be used. This value should be 4-63
            characters, and valid characters are /a-z[0-9]-_/.
              */
             public java.lang.String getPluginInstanceId() {
@@ -13624,7 +13624,7 @@ public class APIhub extends com.google.api.client.googleapis.services.json.Abstr
              * component of the plugin instance's resource name. This field is optional. * If
              * provided, the same will be used. The service will throw an error if the specified id
              * is already used by another plugin instance in the plugin resource. * If not provided,
-             * a system generated id will be used. This value should be 4-500 characters, and valid
+             * a system generated id will be used. This value should be 4-63 characters, and valid
              * characters are /a-z[0-9]-_/.
              */
             public Create setPluginInstanceId(java.lang.String pluginInstanceId) {

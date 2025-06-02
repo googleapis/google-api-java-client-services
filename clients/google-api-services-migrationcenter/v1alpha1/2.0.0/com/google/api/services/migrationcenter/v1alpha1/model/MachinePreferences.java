@@ -18,7 +18,7 @@ package com.google.api.services.migrationcenter.v1alpha1.model;
 
 /**
  * The type of machines to consider when calculating virtual machine migration insights and
- * recommendations for GCE. Not all machine types are available in all zones and regions.
+ * recommendations for Compute Engine. Not all machine types are available in all zones and regions.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Migration Center API. For a detailed explanation see:

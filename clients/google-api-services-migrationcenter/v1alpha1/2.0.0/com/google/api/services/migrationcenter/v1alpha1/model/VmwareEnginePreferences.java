@@ -46,8 +46,8 @@ public final class VmwareEnginePreferences extends com.google.api.client.json.Ge
   private java.lang.Double cpuOvercommitRatio;
 
   /**
-   * Optional. Discount percentage for the license type offered to you by Broadcom. Must be between
-   * 0 and 100. Only valid when service_type is set to SERVICE_TYPE_PORTABLE_LICENSE.
+   * Optional. Discount percentage for the license offered to you by Broadcom. Must be between 0 and
+   * 100. Only valid when service_type is set to SERVICE_TYPE_PORTABLE_LICENSE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +68,7 @@ public final class VmwareEnginePreferences extends com.google.api.client.json.Ge
   private java.lang.Double memoryOvercommitRatio;
 
   /**
-   * Optional. VMWare Service Type (Fully Licensed or Portable License).
+   * Optional. GCVE service type (fully licensed or portable license).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,8 +125,8 @@ public final class VmwareEnginePreferences extends com.google.api.client.json.Ge
   }
 
   /**
-   * Optional. Discount percentage for the license type offered to you by Broadcom. Must be between
-   * 0 and 100. Only valid when service_type is set to SERVICE_TYPE_PORTABLE_LICENSE.
+   * Optional. Discount percentage for the license offered to you by Broadcom. Must be between 0 and
+   * 100. Only valid when service_type is set to SERVICE_TYPE_PORTABLE_LICENSE.
    * @return value or {@code null} for none
    */
   public java.lang.Float getLicenseDiscountPercentage() {
@@ -134,8 +134,8 @@ public final class VmwareEnginePreferences extends com.google.api.client.json.Ge
   }
 
   /**
-   * Optional. Discount percentage for the license type offered to you by Broadcom. Must be between
-   * 0 and 100. Only valid when service_type is set to SERVICE_TYPE_PORTABLE_LICENSE.
+   * Optional. Discount percentage for the license offered to you by Broadcom. Must be between 0 and
+   * 100. Only valid when service_type is set to SERVICE_TYPE_PORTABLE_LICENSE.
    * @param licenseDiscountPercentage licenseDiscountPercentage or {@code null} for none
    */
   public VmwareEnginePreferences setLicenseDiscountPercentage(java.lang.Float licenseDiscountPercentage) {
@@ -178,7 +178,7 @@ public final class VmwareEnginePreferences extends com.google.api.client.json.Ge
   }
 
   /**
-   * Optional. VMWare Service Type (Fully Licensed or Portable License).
+   * Optional. GCVE service type (fully licensed or portable license).
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceType() {
@@ -186,7 +186,7 @@ public final class VmwareEnginePreferences extends com.google.api.client.json.Ge
   }
 
   /**
-   * Optional. VMWare Service Type (Fully Licensed or Portable License).
+   * Optional. GCVE service type (fully licensed or portable license).
    * @param serviceType serviceType or {@code null} for none
    */
   public VmwareEnginePreferences setServiceType(java.lang.String serviceType) {

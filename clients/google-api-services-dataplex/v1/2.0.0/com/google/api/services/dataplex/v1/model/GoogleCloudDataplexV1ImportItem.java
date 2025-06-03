@@ -56,6 +56,14 @@ public final class GoogleCloudDataplexV1ImportItem extends com.google.api.client
   private GoogleCloudDataplexV1Entry entry__;
 
   /**
+   * Information about the entry link. User should provide either one of the entry or entry_link.
+   * While providing entry_link, user should not provide update_mask and aspect_keys.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDataplexV1EntryLink entryLink;
+
+  /**
    * The fields to update, in paths that are relative to the Entry resource. Separate each field
    * with a comma.In FULL entry sync mode, Dataplex includes the paths of all of the fields for an
    * entry that can be modified, including aspects. This means that Dataplex replaces the existing
@@ -119,6 +127,25 @@ public final class GoogleCloudDataplexV1ImportItem extends com.google.api.client
    */
   public GoogleCloudDataplexV1ImportItem setEntry(GoogleCloudDataplexV1Entry entry__) {
     this.entry__ = entry__;
+    return this;
+  }
+
+  /**
+   * Information about the entry link. User should provide either one of the entry or entry_link.
+   * While providing entry_link, user should not provide update_mask and aspect_keys.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDataplexV1EntryLink getEntryLink() {
+    return entryLink;
+  }
+
+  /**
+   * Information about the entry link. User should provide either one of the entry or entry_link.
+   * While providing entry_link, user should not provide update_mask and aspect_keys.
+   * @param entryLink entryLink or {@code null} for none
+   */
+  public GoogleCloudDataplexV1ImportItem setEntryLink(GoogleCloudDataplexV1EntryLink entryLink) {
+    this.entryLink = entryLink;
     return this;
   }
 

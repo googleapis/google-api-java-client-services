@@ -55,6 +55,18 @@ public final class GoogleCloudDataplexV1MetadataJobImportJobSpecImportJobScope e
   private java.util.List<java.lang.String> entryGroups;
 
   /**
+   * Optional. The entry link types that are in scope for the import job, specified as relative
+   * resource names in the format
+   * projects/{project_number_or_id}/locations/{location_id}/entryLinkTypes/{entry_link_type_id}.
+   * The job modifies only the entryLinks that belong to these entry link types.If the metadata
+   * import file attempts to create or delete an entry link whose entry link type isn't included in
+   * this list, the import job will skip those entry links.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> entryLinkTypes;
+
+  /**
    * Required. The entry types that are in scope for the import job, specified as relative resource
    * names in the format
    * projects/{project_number_or_id}/locations/{location_id}/entryTypes/{entry_type_id}. The job
@@ -66,6 +78,30 @@ public final class GoogleCloudDataplexV1MetadataJobImportJobSpecImportJobScope e
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> entryTypes;
+
+  /**
+   * Optional. The glossaries that are in scope for the import job, specified as relative resource
+   * names in the format
+   * projects/{project_number_or_id}/locations/{location_id}/glossaries/{glossary_id}.While
+   * importing Business Glossary entries, the user must provide glossaries. While importing entries,
+   * the user does not have to provide glossaries. If the metadata import file attempts to modify
+   * Business Glossary entries whose glossary isn't included in this list, the import job will skip
+   * those entries.The location of a glossary must either match the location of the job, or the
+   * glossary must be global.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> glossaries;
+
+  /**
+   * Optional. Defines the scope of entries that can be referenced in the entry links.Currently,
+   * projects are supported as valid scopes. Format: projects/{project_number_or_id}If the metadata
+   * import file attempts to create an entry link which references an entry that is not in the
+   * scope, the import job will skip that entry link.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> referencedEntryScopes;
 
   /**
    * Optional. The aspect types that are in scope for the import job, specified as relative resource
@@ -124,6 +160,33 @@ public final class GoogleCloudDataplexV1MetadataJobImportJobSpecImportJobScope e
   }
 
   /**
+   * Optional. The entry link types that are in scope for the import job, specified as relative
+   * resource names in the format
+   * projects/{project_number_or_id}/locations/{location_id}/entryLinkTypes/{entry_link_type_id}.
+   * The job modifies only the entryLinks that belong to these entry link types.If the metadata
+   * import file attempts to create or delete an entry link whose entry link type isn't included in
+   * this list, the import job will skip those entry links.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getEntryLinkTypes() {
+    return entryLinkTypes;
+  }
+
+  /**
+   * Optional. The entry link types that are in scope for the import job, specified as relative
+   * resource names in the format
+   * projects/{project_number_or_id}/locations/{location_id}/entryLinkTypes/{entry_link_type_id}.
+   * The job modifies only the entryLinks that belong to these entry link types.If the metadata
+   * import file attempts to create or delete an entry link whose entry link type isn't included in
+   * this list, the import job will skip those entry links.
+   * @param entryLinkTypes entryLinkTypes or {@code null} for none
+   */
+  public GoogleCloudDataplexV1MetadataJobImportJobSpecImportJobScope setEntryLinkTypes(java.util.List<java.lang.String> entryLinkTypes) {
+    this.entryLinkTypes = entryLinkTypes;
+    return this;
+  }
+
+  /**
    * Required. The entry types that are in scope for the import job, specified as relative resource
    * names in the format
    * projects/{project_number_or_id}/locations/{location_id}/entryTypes/{entry_type_id}. The job
@@ -149,6 +212,60 @@ public final class GoogleCloudDataplexV1MetadataJobImportJobSpecImportJobScope e
    */
   public GoogleCloudDataplexV1MetadataJobImportJobSpecImportJobScope setEntryTypes(java.util.List<java.lang.String> entryTypes) {
     this.entryTypes = entryTypes;
+    return this;
+  }
+
+  /**
+   * Optional. The glossaries that are in scope for the import job, specified as relative resource
+   * names in the format
+   * projects/{project_number_or_id}/locations/{location_id}/glossaries/{glossary_id}.While
+   * importing Business Glossary entries, the user must provide glossaries. While importing entries,
+   * the user does not have to provide glossaries. If the metadata import file attempts to modify
+   * Business Glossary entries whose glossary isn't included in this list, the import job will skip
+   * those entries.The location of a glossary must either match the location of the job, or the
+   * glossary must be global.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getGlossaries() {
+    return glossaries;
+  }
+
+  /**
+   * Optional. The glossaries that are in scope for the import job, specified as relative resource
+   * names in the format
+   * projects/{project_number_or_id}/locations/{location_id}/glossaries/{glossary_id}.While
+   * importing Business Glossary entries, the user must provide glossaries. While importing entries,
+   * the user does not have to provide glossaries. If the metadata import file attempts to modify
+   * Business Glossary entries whose glossary isn't included in this list, the import job will skip
+   * those entries.The location of a glossary must either match the location of the job, or the
+   * glossary must be global.
+   * @param glossaries glossaries or {@code null} for none
+   */
+  public GoogleCloudDataplexV1MetadataJobImportJobSpecImportJobScope setGlossaries(java.util.List<java.lang.String> glossaries) {
+    this.glossaries = glossaries;
+    return this;
+  }
+
+  /**
+   * Optional. Defines the scope of entries that can be referenced in the entry links.Currently,
+   * projects are supported as valid scopes. Format: projects/{project_number_or_id}If the metadata
+   * import file attempts to create an entry link which references an entry that is not in the
+   * scope, the import job will skip that entry link.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getReferencedEntryScopes() {
+    return referencedEntryScopes;
+  }
+
+  /**
+   * Optional. Defines the scope of entries that can be referenced in the entry links.Currently,
+   * projects are supported as valid scopes. Format: projects/{project_number_or_id}If the metadata
+   * import file attempts to create an entry link which references an entry that is not in the
+   * scope, the import job will skip that entry link.
+   * @param referencedEntryScopes referencedEntryScopes or {@code null} for none
+   */
+  public GoogleCloudDataplexV1MetadataJobImportJobSpecImportJobScope setReferencedEntryScopes(java.util.List<java.lang.String> referencedEntryScopes) {
+    this.referencedEntryScopes = referencedEntryScopes;
     return this;
   }
 

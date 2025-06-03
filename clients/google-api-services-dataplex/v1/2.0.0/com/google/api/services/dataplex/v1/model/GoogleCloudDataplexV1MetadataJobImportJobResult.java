@@ -37,11 +37,25 @@ public final class GoogleCloudDataplexV1MetadataJobImportJobResult extends com.g
   private java.lang.Long createdEntries;
 
   /**
+   * Output only. The total number of entry links that were successfully created.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long createdEntryLinks;
+
+  /**
    * Output only. The total number of entries that were deleted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long deletedEntries;
+
+  /**
+   * Output only. The total number of entry links that were successfully deleted.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long deletedEntryLinks;
 
   /**
    * Output only. The total number of entries that were recreated.
@@ -56,6 +70,13 @@ public final class GoogleCloudDataplexV1MetadataJobImportJobResult extends com.g
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long unchangedEntries;
+
+  /**
+   * Output only. The total number of entry links that were left unchanged.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long unchangedEntryLinks;
 
   /**
    * Output only. The time when the status was updated.
@@ -89,6 +110,23 @@ public final class GoogleCloudDataplexV1MetadataJobImportJobResult extends com.g
   }
 
   /**
+   * Output only. The total number of entry links that were successfully created.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getCreatedEntryLinks() {
+    return createdEntryLinks;
+  }
+
+  /**
+   * Output only. The total number of entry links that were successfully created.
+   * @param createdEntryLinks createdEntryLinks or {@code null} for none
+   */
+  public GoogleCloudDataplexV1MetadataJobImportJobResult setCreatedEntryLinks(java.lang.Long createdEntryLinks) {
+    this.createdEntryLinks = createdEntryLinks;
+    return this;
+  }
+
+  /**
    * Output only. The total number of entries that were deleted.
    * @return value or {@code null} for none
    */
@@ -102,6 +140,23 @@ public final class GoogleCloudDataplexV1MetadataJobImportJobResult extends com.g
    */
   public GoogleCloudDataplexV1MetadataJobImportJobResult setDeletedEntries(java.lang.Long deletedEntries) {
     this.deletedEntries = deletedEntries;
+    return this;
+  }
+
+  /**
+   * Output only. The total number of entry links that were successfully deleted.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getDeletedEntryLinks() {
+    return deletedEntryLinks;
+  }
+
+  /**
+   * Output only. The total number of entry links that were successfully deleted.
+   * @param deletedEntryLinks deletedEntryLinks or {@code null} for none
+   */
+  public GoogleCloudDataplexV1MetadataJobImportJobResult setDeletedEntryLinks(java.lang.Long deletedEntryLinks) {
+    this.deletedEntryLinks = deletedEntryLinks;
     return this;
   }
 
@@ -136,6 +191,23 @@ public final class GoogleCloudDataplexV1MetadataJobImportJobResult extends com.g
    */
   public GoogleCloudDataplexV1MetadataJobImportJobResult setUnchangedEntries(java.lang.Long unchangedEntries) {
     this.unchangedEntries = unchangedEntries;
+    return this;
+  }
+
+  /**
+   * Output only. The total number of entry links that were left unchanged.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getUnchangedEntryLinks() {
+    return unchangedEntryLinks;
+  }
+
+  /**
+   * Output only. The total number of entry links that were left unchanged.
+   * @param unchangedEntryLinks unchangedEntryLinks or {@code null} for none
+   */
+  public GoogleCloudDataplexV1MetadataJobImportJobResult setUnchangedEntryLinks(java.lang.Long unchangedEntryLinks) {
+    this.unchangedEntryLinks = unchangedEntryLinks;
     return this;
   }
 

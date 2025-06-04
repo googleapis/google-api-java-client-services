@@ -5825,6 +5825,989 @@ public class DeveloperConnect extends com.google.api.client.googleapis.services.
         }
       }
       /**
+       * An accessor for creating requests from the InsightsConfigs collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code DeveloperConnect developerconnect = new DeveloperConnect(...);}
+       *   {@code DeveloperConnect.InsightsConfigs.List request = developerconnect.insightsConfigs().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public InsightsConfigs insightsConfigs() {
+        return new InsightsConfigs();
+      }
+
+      /**
+       * The "insightsConfigs" collection of methods.
+       */
+      public class InsightsConfigs {
+
+        /**
+         * Creates a new InsightsConfig in a given project and location.
+         *
+         * Create a request for the method "insightsConfigs.create".
+         *
+         * This request holds the parameters needed by the developerconnect server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Value for parent.
+         * @param content the {@link com.google.api.services.developerconnect.v1.model.InsightsConfig}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.developerconnect.v1.model.InsightsConfig content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends DeveloperConnectRequest<com.google.api.services.developerconnect.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+parent}/insightsConfigs";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a new InsightsConfig in a given project and location.
+           *
+           * Create a request for the method "insightsConfigs.create".
+           *
+           * This request holds the parameters needed by the the developerconnect server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Value for parent.
+           * @param content the {@link com.google.api.services.developerconnect.v1.model.InsightsConfig}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.developerconnect.v1.model.InsightsConfig content) {
+            super(DeveloperConnect.this, "POST", REST_PATH, content, com.google.api.services.developerconnect.v1.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Value for parent. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Value for parent.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. Value for parent. */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Required. ID of the requesting InsightsConfig. */
+          @com.google.api.client.util.Key
+          private java.lang.String insightsConfigId;
+
+          /** Required. ID of the requesting InsightsConfig.
+           */
+          public java.lang.String getInsightsConfigId() {
+            return insightsConfigId;
+          }
+
+          /** Required. ID of the requesting InsightsConfig. */
+          public Create setInsightsConfigId(java.lang.String insightsConfigId) {
+            this.insightsConfigId = insightsConfigId;
+            return this;
+          }
+
+          /** Optional. If set, validate the request, but do not actually post it. */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. If set, validate the request, but do not actually post it.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /** Optional. If set, validate the request, but do not actually post it. */
+          public Create setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Delete a single Insight.
+         *
+         * Create a request for the method "insightsConfigs.delete".
+         *
+         * This request holds the parameters needed by the developerconnect server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Value for parent.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends DeveloperConnectRequest<com.google.api.services.developerconnect.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/insightsConfigs/[^/]+$");
+
+          /**
+           * Delete a single Insight.
+           *
+           * Create a request for the method "insightsConfigs.delete".
+           *
+           * This request holds the parameters needed by the the developerconnect server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Value for parent.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(DeveloperConnect.this, "DELETE", REST_PATH, null, com.google.api.services.developerconnect.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/insightsConfigs/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Value for parent. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Value for parent.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. Value for parent. */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/insightsConfigs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. This checksum is computed by the server based on the value of other fields,
+           * and may be sent on update and delete requests to ensure the client has an up-to-date
+           * value before proceeding.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String etag;
+
+          /** Optional. This checksum is computed by the server based on the value of other fields, and may be
+         sent on update and delete requests to ensure the client has an up-to-date value before proceeding.
+           */
+          public java.lang.String getEtag() {
+            return etag;
+          }
+
+          /**
+           * Optional. This checksum is computed by the server based on the value of other fields,
+           * and may be sent on update and delete requests to ensure the client has an up-to-date
+           * value before proceeding.
+           */
+          public Delete setEtag(java.lang.String etag) {
+            this.etag = etag;
+            return this;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * after the first request. For example, consider a situation where you make an initial
+           * request and the request times out. If you make the request again with the same request
+           * ID, the server can check if original operation with the same request ID was received,
+           * and if so, will ignore the second request. This prevents clients from accidentally
+           * creating duplicate commitments. The request ID must be a valid UUID with the exception
+           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+         must retry your request, the server will know to ignore the request if it has already been
+         completed. The server will guarantee that for at least 60 minutes after the first request. For
+         example, consider a situation where you make an initial request and the request times out. If you
+         make the request again with the same request ID, the server can check if original operation with
+         the same request ID was received, and if so, will ignore the second request. This prevents clients
+         from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
+         exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * after the first request. For example, consider a situation where you make an initial
+           * request and the request times out. If you make the request again with the same request
+           * ID, the server can check if original operation with the same request ID was received,
+           * and if so, will ignore the second request. This prevents clients from accidentally
+           * creating duplicate commitments. The request ID must be a valid UUID with the exception
+           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public Delete setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          /** Optional. If set, validate the request, but do not actually post it. */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. If set, validate the request, but do not actually post it.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /** Optional. If set, validate the request, but do not actually post it. */
+          public Delete setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets details of a single Insight.
+         *
+         * Create a request for the method "insightsConfigs.get".
+         *
+         * This request holds the parameters needed by the developerconnect server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the resource.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends DeveloperConnectRequest<com.google.api.services.developerconnect.v1.model.InsightsConfig> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/insightsConfigs/[^/]+$");
+
+          /**
+           * Gets details of a single Insight.
+           *
+           * Create a request for the method "insightsConfigs.get".
+           *
+           * This request holds the parameters needed by the the developerconnect server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the resource.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(DeveloperConnect.this, "GET", REST_PATH, null, com.google.api.services.developerconnect.v1.model.InsightsConfig.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/insightsConfigs/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Name of the resource. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the resource.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. Name of the resource. */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/insightsConfigs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists InsightsConfigs in a given project and location.
+         *
+         * Create a request for the method "insightsConfigs.list".
+         *
+         * This request holds the parameters needed by the developerconnect server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Parent value for ListInsightsConfigsRequest.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends DeveloperConnectRequest<com.google.api.services.developerconnect.v1.model.ListInsightsConfigsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/insightsConfigs";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists InsightsConfigs in a given project and location.
+           *
+           * Create a request for the method "insightsConfigs.list".
+           *
+           * This request holds the parameters needed by the the developerconnect server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Parent value for ListInsightsConfigsRequest.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(DeveloperConnect.this, "GET", REST_PATH, null, com.google.api.services.developerconnect.v1.model.ListInsightsConfigsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Parent value for ListInsightsConfigsRequest. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Parent value for ListInsightsConfigsRequest.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. Parent value for ListInsightsConfigsRequest. */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. Filtering results. See https://google.aip.dev/160 for more details. Filter
+           * string, adhering to the rules in https://google.aip.dev/160. List only InsightsConfigs
+           * matching the filter. If filter is empty, all InsightsConfigs are listed.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Filtering results. See https://google.aip.dev/160 for more details. Filter string,
+         adhering to the rules in https://google.aip.dev/160. List only InsightsConfigs matching the filter.
+         If filter is empty, all InsightsConfigs are listed.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. Filtering results. See https://google.aip.dev/160 for more details. Filter
+           * string, adhering to the rules in https://google.aip.dev/160. List only InsightsConfigs
+           * matching the filter. If filter is empty, all InsightsConfigs are listed.
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /** Optional. Hint for how to order the results. */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. Hint for how to order the results.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /** Optional. Hint for how to order the results. */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Optional. Requested page size. Server may return fewer items than requested. If
+           * unspecified, server will pick an appropriate default.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. Requested page size. Server may return fewer items than requested. If unspecified, server
+         will pick an appropriate default.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. Requested page size. Server may return fewer items than requested. If
+           * unspecified, server will pick an appropriate default.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** Optional. A token identifying a page of results the server should return. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A token identifying a page of results the server should return.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** Optional. A token identifying a page of results the server should return. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates the parameters of a single InsightsConfig.
+         *
+         * Create a request for the method "insightsConfigs.patch".
+         *
+         * This request holds the parameters needed by the developerconnect server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Identifier. The name of the InsightsConfig. Format:
+         *        projects/{project}/locations/{location}/insightsConfigs/{insightsConfig}
+         * @param content the {@link com.google.api.services.developerconnect.v1.model.InsightsConfig}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.developerconnect.v1.model.InsightsConfig content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends DeveloperConnectRequest<com.google.api.services.developerconnect.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/insightsConfigs/[^/]+$");
+
+          /**
+           * Updates the parameters of a single InsightsConfig.
+           *
+           * Create a request for the method "insightsConfigs.patch".
+           *
+           * This request holds the parameters needed by the the developerconnect server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Identifier. The name of the InsightsConfig. Format:
+         *        projects/{project}/locations/{location}/insightsConfigs/{insightsConfig}
+           * @param content the {@link com.google.api.services.developerconnect.v1.model.InsightsConfig}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.developerconnect.v1.model.InsightsConfig content) {
+            super(DeveloperConnect.this, "PATCH", REST_PATH, content, com.google.api.services.developerconnect.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/insightsConfigs/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Identifier. The name of the InsightsConfig. Format:
+           * projects/{project}/locations/{location}/insightsConfigs/{insightsConfig}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Identifier. The name of the InsightsConfig. Format:
+         projects/{project}/locations/{location}/insightsConfigs/{insightsConfig}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Identifier. The name of the InsightsConfig. Format:
+           * projects/{project}/locations/{location}/insightsConfigs/{insightsConfig}
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/insightsConfigs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. If set to true, and the insightsConfig is not found a new insightsConfig will
+           * be created. In this situation `update_mask` is ignored. The creation will succeed only
+           * if the input insightsConfig has all the necessary information (e.g a github_config with
+           * both user_oauth_token and installation_id properties).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean allowMissing;
+
+          /** Optional. If set to true, and the insightsConfig is not found a new insightsConfig will be created.
+         In this situation `update_mask` is ignored. The creation will succeed only if the input
+         insightsConfig has all the necessary information (e.g a github_config with both user_oauth_token
+         and installation_id properties).
+           */
+          public java.lang.Boolean getAllowMissing() {
+            return allowMissing;
+          }
+
+          /**
+           * Optional. If set to true, and the insightsConfig is not found a new insightsConfig will
+           * be created. In this situation `update_mask` is ignored. The creation will succeed only
+           * if the input insightsConfig has all the necessary information (e.g a github_config with
+           * both user_oauth_token and installation_id properties).
+           */
+          public Patch setAllowMissing(java.lang.Boolean allowMissing) {
+            this.allowMissing = allowMissing;
+            return this;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * after the first request. For example, consider a situation where you make an initial
+           * request and the request times out. If you make the request again with the same request
+           * ID, the server can check if original operation with the same request ID was received,
+           * and if so, will ignore the second request. This prevents clients from accidentally
+           * creating duplicate commitments. The request ID must be a valid UUID with the exception
+           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+         must retry your request, the server will know to ignore the request if it has already been
+         completed. The server will guarantee that for at least 60 minutes after the first request. For
+         example, consider a situation where you make an initial request and the request times out. If you
+         make the request again with the same request ID, the server can check if original operation with
+         the same request ID was received, and if so, will ignore the second request. This prevents clients
+         from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
+         exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * after the first request. For example, consider a situation where you make an initial
+           * request and the request times out. If you make the request again with the same request
+           * ID, the server can check if original operation with the same request ID was received,
+           * and if so, will ignore the second request. This prevents clients from accidentally
+           * creating duplicate commitments. The request ID must be a valid UUID with the exception
+           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public Patch setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          /** Optional. If set, validate the request, but do not actually post it. */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. If set, validate the request, but do not actually post it.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /** Optional. If set, validate the request, but do not actually post it. */
+          public Patch setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the Operations collection.
        *
        * <p>The typical use is:</p>

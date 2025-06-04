@@ -93,6 +93,23 @@ public final class GoogleCloudAiplatformV1beta1GenerationConfig extends com.goog
   private java.lang.Float presencePenalty;
 
   /**
+   * Optional. Output schema of the generated response. This is an alternative to `response_schema`
+   * that accepts [JSON Schema](https://json-schema.org/). If set, `response_schema` must be
+   * omitted, but `response_mime_type` is required. While the full JSON Schema may be sent, not all
+   * features are supported. Specifically, only the following properties are supported: - `$id` -
+   * `$defs` - `$ref` - `$anchor` - `type` - `format` - `title` - `description` - `enum` (for
+   * strings and numbers) - `items` - `prefixItems` - `minItems` - `maxItems` - `minimum` -
+   * `maximum` - `anyOf` - `oneOf` (interpreted the same as `anyOf`) - `properties` -
+   * `additionalProperties` - `required` The non-standard `propertyOrdering` property may also be
+   * set. Cyclic references are unrolled to a limited degree and, as such, may only be used within
+   * non-required properties. (Nullable properties are not sufficient.) If `$ref` is set on a sub-
+   * schema, no other properties, except for than those starting as a `$`, may be set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Object responseJsonSchema;
+
+  /**
    * Optional. If true, export the logprobs results in response.
    * The value may be {@code null}.
    */
@@ -334,6 +351,43 @@ public final class GoogleCloudAiplatformV1beta1GenerationConfig extends com.goog
    */
   public GoogleCloudAiplatformV1beta1GenerationConfig setPresencePenalty(java.lang.Float presencePenalty) {
     this.presencePenalty = presencePenalty;
+    return this;
+  }
+
+  /**
+   * Optional. Output schema of the generated response. This is an alternative to `response_schema`
+   * that accepts [JSON Schema](https://json-schema.org/). If set, `response_schema` must be
+   * omitted, but `response_mime_type` is required. While the full JSON Schema may be sent, not all
+   * features are supported. Specifically, only the following properties are supported: - `$id` -
+   * `$defs` - `$ref` - `$anchor` - `type` - `format` - `title` - `description` - `enum` (for
+   * strings and numbers) - `items` - `prefixItems` - `minItems` - `maxItems` - `minimum` -
+   * `maximum` - `anyOf` - `oneOf` (interpreted the same as `anyOf`) - `properties` -
+   * `additionalProperties` - `required` The non-standard `propertyOrdering` property may also be
+   * set. Cyclic references are unrolled to a limited degree and, as such, may only be used within
+   * non-required properties. (Nullable properties are not sufficient.) If `$ref` is set on a sub-
+   * schema, no other properties, except for than those starting as a `$`, may be set.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Object getResponseJsonSchema() {
+    return responseJsonSchema;
+  }
+
+  /**
+   * Optional. Output schema of the generated response. This is an alternative to `response_schema`
+   * that accepts [JSON Schema](https://json-schema.org/). If set, `response_schema` must be
+   * omitted, but `response_mime_type` is required. While the full JSON Schema may be sent, not all
+   * features are supported. Specifically, only the following properties are supported: - `$id` -
+   * `$defs` - `$ref` - `$anchor` - `type` - `format` - `title` - `description` - `enum` (for
+   * strings and numbers) - `items` - `prefixItems` - `minItems` - `maxItems` - `minimum` -
+   * `maximum` - `anyOf` - `oneOf` (interpreted the same as `anyOf`) - `properties` -
+   * `additionalProperties` - `required` The non-standard `propertyOrdering` property may also be
+   * set. Cyclic references are unrolled to a limited degree and, as such, may only be used within
+   * non-required properties. (Nullable properties are not sufficient.) If `$ref` is set on a sub-
+   * schema, no other properties, except for than those starting as a `$`, may be set.
+   * @param responseJsonSchema responseJsonSchema or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GenerationConfig setResponseJsonSchema(java.lang.Object responseJsonSchema) {
+    this.responseJsonSchema = responseJsonSchema;
     return this;
   }
 

@@ -37,6 +37,13 @@ public final class GoogleCloudAiplatformV1beta1RagCorpus extends com.google.api.
   private GoogleCloudAiplatformV1beta1CorpusStatus corpusStatus;
 
   /**
+   * Optional. The corpus type config of the RagCorpus.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1RagCorpusCorpusTypeConfig corpusTypeConfig;
+
+  /**
    * Output only. Timestamp when this RagCorpus was created.
    * The value may be {@code null}.
    */
@@ -130,6 +137,23 @@ public final class GoogleCloudAiplatformV1beta1RagCorpus extends com.google.api.
    */
   public GoogleCloudAiplatformV1beta1RagCorpus setCorpusStatus(GoogleCloudAiplatformV1beta1CorpusStatus corpusStatus) {
     this.corpusStatus = corpusStatus;
+    return this;
+  }
+
+  /**
+   * Optional. The corpus type config of the RagCorpus.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RagCorpusCorpusTypeConfig getCorpusTypeConfig() {
+    return corpusTypeConfig;
+  }
+
+  /**
+   * Optional. The corpus type config of the RagCorpus.
+   * @param corpusTypeConfig corpusTypeConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RagCorpus setCorpusTypeConfig(GoogleCloudAiplatformV1beta1RagCorpusCorpusTypeConfig corpusTypeConfig) {
+    this.corpusTypeConfig = corpusTypeConfig;
     return this;
   }
 

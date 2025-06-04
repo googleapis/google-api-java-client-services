@@ -38,7 +38,10 @@ public final class YoutubeAndPartnersSettings extends com.google.api.client.json
   private YoutubeAndPartnersBiddingStrategy biddingStrategy;
 
   /**
-   * The kind of content on which the YouTube and Partners ads will be shown.
+   * The kind of content on which the YouTube and Partners ads will be shown. *Warning*: Starting
+   * **June 12, 2025**, this setting will no longer be editable. This field will eventually be
+   * removed. [Read more about this announced change](/display-
+   * video/api/deprecations#features.li_yt_content_category)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,7 +50,9 @@ public final class YoutubeAndPartnersSettings extends com.google.api.client.json
   /**
    * Output only. The content category which takes effect when serving the line item. When content
    * category is set in both line item and advertiser, the stricter one will take effect when
-   * serving the line item.
+   * serving the line item. *Warning*: Starting **June 12, 2025**, this field will only reflect the
+   * advertiser level setting for new line items. [Read more about this announced change](/display-
+   * video/api/deprecations#features.li_yt_content_category)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -130,7 +135,10 @@ public final class YoutubeAndPartnersSettings extends com.google.api.client.json
   }
 
   /**
-   * The kind of content on which the YouTube and Partners ads will be shown.
+   * The kind of content on which the YouTube and Partners ads will be shown. *Warning*: Starting
+   * **June 12, 2025**, this setting will no longer be editable. This field will eventually be
+   * removed. [Read more about this announced change](/display-
+   * video/api/deprecations#features.li_yt_content_category)
    * @return value or {@code null} for none
    */
   public java.lang.String getContentCategory() {
@@ -138,7 +146,10 @@ public final class YoutubeAndPartnersSettings extends com.google.api.client.json
   }
 
   /**
-   * The kind of content on which the YouTube and Partners ads will be shown.
+   * The kind of content on which the YouTube and Partners ads will be shown. *Warning*: Starting
+   * **June 12, 2025**, this setting will no longer be editable. This field will eventually be
+   * removed. [Read more about this announced change](/display-
+   * video/api/deprecations#features.li_yt_content_category)
    * @param contentCategory contentCategory or {@code null} for none
    */
   public YoutubeAndPartnersSettings setContentCategory(java.lang.String contentCategory) {
@@ -149,7 +160,9 @@ public final class YoutubeAndPartnersSettings extends com.google.api.client.json
   /**
    * Output only. The content category which takes effect when serving the line item. When content
    * category is set in both line item and advertiser, the stricter one will take effect when
-   * serving the line item.
+   * serving the line item. *Warning*: Starting **June 12, 2025**, this field will only reflect the
+   * advertiser level setting for new line items. [Read more about this announced change](/display-
+   * video/api/deprecations#features.li_yt_content_category)
    * @return value or {@code null} for none
    */
   public java.lang.String getEffectiveContentCategory() {
@@ -159,7 +172,9 @@ public final class YoutubeAndPartnersSettings extends com.google.api.client.json
   /**
    * Output only. The content category which takes effect when serving the line item. When content
    * category is set in both line item and advertiser, the stricter one will take effect when
-   * serving the line item.
+   * serving the line item. *Warning*: Starting **June 12, 2025**, this field will only reflect the
+   * advertiser level setting for new line items. [Read more about this announced change](/display-
+   * video/api/deprecations#features.li_yt_content_category)
    * @param effectiveContentCategory effectiveContentCategory or {@code null} for none
    */
   public YoutubeAndPartnersSettings setEffectiveContentCategory(java.lang.String effectiveContentCategory) {

@@ -105,7 +105,12 @@ public final class ApplicationPolicy extends com.google.api.client.json.GenericJ
 
   /**
    * Configuration to enable this app as an extension app, with the capability of interacting with
-   * Android Device Policy offline.This field can be set for at most one app.
+   * Android Device Policy offline.This field can be set for at most one app.The signing key
+   * certificate fingerprint of the app on the device must match one of the entries in
+   * ApplicationPolicy.signingKeyCerts or the signing key certificate fingerprints obtained from
+   * Play Store for the app to be able to communicate with Android Device Policy. If the app is not
+   * on Play Store and ApplicationPolicy.signingKeyCerts is not set, a NonComplianceDetail with
+   * INVALID_VALUE is reported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -385,7 +390,12 @@ public final class ApplicationPolicy extends com.google.api.client.json.GenericJ
 
   /**
    * Configuration to enable this app as an extension app, with the capability of interacting with
-   * Android Device Policy offline.This field can be set for at most one app.
+   * Android Device Policy offline.This field can be set for at most one app.The signing key
+   * certificate fingerprint of the app on the device must match one of the entries in
+   * ApplicationPolicy.signingKeyCerts or the signing key certificate fingerprints obtained from
+   * Play Store for the app to be able to communicate with Android Device Policy. If the app is not
+   * on Play Store and ApplicationPolicy.signingKeyCerts is not set, a NonComplianceDetail with
+   * INVALID_VALUE is reported.
    * @return value or {@code null} for none
    */
   public ExtensionConfig getExtensionConfig() {
@@ -394,7 +404,12 @@ public final class ApplicationPolicy extends com.google.api.client.json.GenericJ
 
   /**
    * Configuration to enable this app as an extension app, with the capability of interacting with
-   * Android Device Policy offline.This field can be set for at most one app.
+   * Android Device Policy offline.This field can be set for at most one app.The signing key
+   * certificate fingerprint of the app on the device must match one of the entries in
+   * ApplicationPolicy.signingKeyCerts or the signing key certificate fingerprints obtained from
+   * Play Store for the app to be able to communicate with Android Device Policy. If the app is not
+   * on Play Store and ApplicationPolicy.signingKeyCerts is not set, a NonComplianceDetail with
+   * INVALID_VALUE is reported.
    * @param extensionConfig extensionConfig or {@code null} for none
    */
   public ApplicationPolicy setExtensionConfig(ExtensionConfig extensionConfig) {

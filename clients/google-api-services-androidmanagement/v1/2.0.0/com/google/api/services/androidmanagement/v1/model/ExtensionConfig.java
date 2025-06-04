@@ -45,13 +45,15 @@ public final class ExtensionConfig extends com.google.api.client.json.GenericJso
   private java.lang.String notificationReceiver;
 
   /**
-   * Hex-encoded SHA-256 hash of the signing certificate of the extension app. Only hexadecimal
-   * string representations of 64 characters are valid.If not specified, the signature for the
-   * corresponding package name is obtained from the Play Store instead.If this list is empty, the
-   * signature of the extension app on the device must match the signature obtained from the Play
-   * Store for the app to be able to communicate with Android Device Policy.If this list is not
-   * empty, the signature of the extension app on the device must match one of the entries in this
-   * list for the app to be able to communicate with Android Device Policy.In production use cases,
+   * Hex-encoded SHA-256 hashes of the signing key certificates of the extension app. Only
+   * hexadecimal string representations of 64 characters are valid.The signing key certificate
+   * fingerprints are always obtained from the Play Store and this field is used to provide
+   * additional signing key certificate fingerprints. However, if the application is not available
+   * on the Play Store, this field needs to be set. A NonComplianceDetail with INVALID_VALUE is
+   * reported if this field is not set when the application is not available on the Play Store.The
+   * signing key certificate fingerprint of the extension app on the device must match one of the
+   * signing key certificate fingerprints obtained from the Play Store or the ones provided in this
+   * field for the app to be able to communicate with Android Device Policy.In production use cases,
    * it is recommended to leave this empty.
    * The value may be {@code null}.
    */
@@ -78,13 +80,15 @@ public final class ExtensionConfig extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Hex-encoded SHA-256 hash of the signing certificate of the extension app. Only hexadecimal
-   * string representations of 64 characters are valid.If not specified, the signature for the
-   * corresponding package name is obtained from the Play Store instead.If this list is empty, the
-   * signature of the extension app on the device must match the signature obtained from the Play
-   * Store for the app to be able to communicate with Android Device Policy.If this list is not
-   * empty, the signature of the extension app on the device must match one of the entries in this
-   * list for the app to be able to communicate with Android Device Policy.In production use cases,
+   * Hex-encoded SHA-256 hashes of the signing key certificates of the extension app. Only
+   * hexadecimal string representations of 64 characters are valid.The signing key certificate
+   * fingerprints are always obtained from the Play Store and this field is used to provide
+   * additional signing key certificate fingerprints. However, if the application is not available
+   * on the Play Store, this field needs to be set. A NonComplianceDetail with INVALID_VALUE is
+   * reported if this field is not set when the application is not available on the Play Store.The
+   * signing key certificate fingerprint of the extension app on the device must match one of the
+   * signing key certificate fingerprints obtained from the Play Store or the ones provided in this
+   * field for the app to be able to communicate with Android Device Policy.In production use cases,
    * it is recommended to leave this empty.
    * @return value or {@code null} for none
    */
@@ -93,13 +97,15 @@ public final class ExtensionConfig extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Hex-encoded SHA-256 hash of the signing certificate of the extension app. Only hexadecimal
-   * string representations of 64 characters are valid.If not specified, the signature for the
-   * corresponding package name is obtained from the Play Store instead.If this list is empty, the
-   * signature of the extension app on the device must match the signature obtained from the Play
-   * Store for the app to be able to communicate with Android Device Policy.If this list is not
-   * empty, the signature of the extension app on the device must match one of the entries in this
-   * list for the app to be able to communicate with Android Device Policy.In production use cases,
+   * Hex-encoded SHA-256 hashes of the signing key certificates of the extension app. Only
+   * hexadecimal string representations of 64 characters are valid.The signing key certificate
+   * fingerprints are always obtained from the Play Store and this field is used to provide
+   * additional signing key certificate fingerprints. However, if the application is not available
+   * on the Play Store, this field needs to be set. A NonComplianceDetail with INVALID_VALUE is
+   * reported if this field is not set when the application is not available on the Play Store.The
+   * signing key certificate fingerprint of the extension app on the device must match one of the
+   * signing key certificate fingerprints obtained from the Play Store or the ones provided in this
+   * field for the app to be able to communicate with Android Device Policy.In production use cases,
    * it is recommended to leave this empty.
    * @param signingKeyFingerprintsSha256 signingKeyFingerprintsSha256 or {@code null} for none
    */

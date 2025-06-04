@@ -2493,8 +2493,9 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
   public class Media {
 
     /**
-     * Download a file attached to a case. Note: HTTP requests must append "?alt=media" to the URL.
-     * EXAMPLES: cURL: ```shell name="projects/some-
+     * Download a file attached to a case. When this endpoint is called, no "response body" will be
+     * returned. Instead, the attachment's blob will be returned. Note: HTTP requests must append
+     * "?alt=media" to the URL. EXAMPLES: cURL: ```shell name="projects/some-
      * project/cases/43594844/attachments/0674M00000WijAnZAJ" curl \ --header "Authorization: Bearer
      * $(gcloud auth print-access-token)" \
      * "https://cloudsupport.googleapis.com/v2/$name:download?alt=media" ``` Python: ```python import
@@ -2527,8 +2528,9 @@ public class CloudSupport extends com.google.api.client.googleapis.services.json
           java.util.regex.Pattern.compile("^[^/]+/[^/]+/cases/[^/]+/attachments/[^/]+$");
 
       /**
-       * Download a file attached to a case. Note: HTTP requests must append "?alt=media" to the URL.
-       * EXAMPLES: cURL: ```shell name="projects/some-
+       * Download a file attached to a case. When this endpoint is called, no "response body" will be
+       * returned. Instead, the attachment's blob will be returned. Note: HTTP requests must append
+       * "?alt=media" to the URL. EXAMPLES: cURL: ```shell name="projects/some-
        * project/cases/43594844/attachments/0674M00000WijAnZAJ" curl \ --header "Authorization: Bearer
        * $(gcloud auth print-access-token)" \
        * "https://cloudsupport.googleapis.com/v2/$name:download?alt=media" ``` Python: ```python import

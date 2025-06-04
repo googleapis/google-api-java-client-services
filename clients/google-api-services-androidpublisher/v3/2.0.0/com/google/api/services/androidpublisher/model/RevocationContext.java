@@ -31,8 +31,8 @@ package com.google.api.services.androidpublisher.model;
 public final class RevocationContext extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Used when users should be refunded the full amount of the latest order of the
-   * subscription.
+   * Optional. Used when users should be refunded the full amount of latest charge on each item in
+   * the subscription.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,8 +54,8 @@ public final class RevocationContext extends com.google.api.client.json.GenericJ
   private RevocationContextProratedRefund proratedRefund;
 
   /**
-   * Optional. Used when users should be refunded the full amount of the latest order of the
-   * subscription.
+   * Optional. Used when users should be refunded the full amount of latest charge on each item in
+   * the subscription.
    * @return value or {@code null} for none
    */
   public RevocationContextFullRefund getFullRefund() {
@@ -63,8 +63,8 @@ public final class RevocationContext extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Used when users should be refunded the full amount of the latest order of the
-   * subscription.
+   * Optional. Used when users should be refunded the full amount of latest charge on each item in
+   * the subscription.
    * @param fullRefund fullRefund or {@code null} for none
    */
   public RevocationContext setFullRefund(RevocationContextFullRefund fullRefund) {

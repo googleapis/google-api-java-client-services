@@ -85,7 +85,7 @@ public final class GoogleCloudAiplatformV1beta1Part extends com.google.api.clien
   private java.lang.String text;
 
   /**
-   * Output only. Indicates if the part is thought from the model.
+   * Optional. Indicates if the part is thought from the model.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -232,7 +232,7 @@ public final class GoogleCloudAiplatformV1beta1Part extends com.google.api.clien
   }
 
   /**
-   * Output only. Indicates if the part is thought from the model.
+   * Optional. Indicates if the part is thought from the model.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getThought() {
@@ -240,7 +240,7 @@ public final class GoogleCloudAiplatformV1beta1Part extends com.google.api.clien
   }
 
   /**
-   * Output only. Indicates if the part is thought from the model.
+   * Optional. Indicates if the part is thought from the model.
    * @param thought thought or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Part setThought(java.lang.Boolean thought) {

@@ -94,6 +94,13 @@ public final class GoogleCloudAiplatformV1PersistentResource extends com.google.
   private java.lang.String network;
 
   /**
+   * Optional. Configuration for PSC-I for PersistentResource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1PscInterfaceConfig pscInterfaceConfig;
+
+  /**
    * Optional. A list of names for the reserved IP ranges under the VPC network that can be used for
    * this persistent resource. If set, we will deploy the persistent resource within the provided IP
    * ranges. Otherwise, the persistent resource is deployed to any IP ranges under the provided VPC
@@ -303,6 +310,23 @@ public final class GoogleCloudAiplatformV1PersistentResource extends com.google.
    */
   public GoogleCloudAiplatformV1PersistentResource setNetwork(java.lang.String network) {
     this.network = network;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for PSC-I for PersistentResource.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1PscInterfaceConfig getPscInterfaceConfig() {
+    return pscInterfaceConfig;
+  }
+
+  /**
+   * Optional. Configuration for PSC-I for PersistentResource.
+   * @param pscInterfaceConfig pscInterfaceConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1PersistentResource setPscInterfaceConfig(GoogleCloudAiplatformV1PscInterfaceConfig pscInterfaceConfig) {
+    this.pscInterfaceConfig = pscInterfaceConfig;
     return this;
   }
 

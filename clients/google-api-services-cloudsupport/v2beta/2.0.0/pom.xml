@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-cloudsupport</artifactId>
-  <version>v2beta-rev20250521-2.0.0</version>
-  <name>Google Cloud Support API v2beta-rev20250521-2.0.0</name>
+  <version>v2beta-rev20250602-2.0.0</version>
+  <name>Google Cloud Support API v2beta-rev20250602-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

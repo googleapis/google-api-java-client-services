@@ -33,8 +33,7 @@ public final class FlightWithEmissions extends com.google.api.client.json.Generi
   /**
    * Optional. Per-passenger emission estimate numbers. Will not be present if emissions could not
    * be computed. For the list of reasons why emissions could not be computed, see
-   * ComputeFlightEmissions. This field uses wtw emissions aka ttw_emissions_grams_per_pax +
-   * wtt_emissions_grams_per_pax.
+   * ComputeFlightEmissions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,8 +49,7 @@ public final class FlightWithEmissions extends com.google.api.client.json.Generi
   /**
    * Optional. Per-passenger emission estimate numbers. Will not be present if emissions could not
    * be computed. For the list of reasons why emissions could not be computed, see
-   * ComputeFlightEmissions. This field uses wtw emissions aka ttw_emissions_grams_per_pax +
-   * wtt_emissions_grams_per_pax.
+   * ComputeFlightEmissions.
    * @return value or {@code null} for none
    */
   public EmissionsGramsPerPax getEmissionsGramsPerPax() {
@@ -61,8 +59,7 @@ public final class FlightWithEmissions extends com.google.api.client.json.Generi
   /**
    * Optional. Per-passenger emission estimate numbers. Will not be present if emissions could not
    * be computed. For the list of reasons why emissions could not be computed, see
-   * ComputeFlightEmissions. This field uses wtw emissions aka ttw_emissions_grams_per_pax +
-   * wtt_emissions_grams_per_pax.
+   * ComputeFlightEmissions.
    * @param emissionsGramsPerPax emissionsGramsPerPax or {@code null} for none
    */
   public FlightWithEmissions setEmissionsGramsPerPax(EmissionsGramsPerPax emissionsGramsPerPax) {

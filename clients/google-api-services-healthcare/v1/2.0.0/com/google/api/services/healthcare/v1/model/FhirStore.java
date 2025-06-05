@@ -46,7 +46,7 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
    * store will not change, references in complex data types will not be parsed. New stores will
    * have this value set to ENABLED after a notification period. Warning: turning on this flag
    * causes processing existing resources to fail if they contain references to non-existent
-   * resources.
+   * resources. Cannot be disabled in R5.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,7 +54,7 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Specifies whether this store has consent enforcement. Not available for DSTU2 FHIR
-   * version due to absence of Consent resources.
+   * version due to absence of Consent resources. Not supported for R5 FHIR version.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -133,7 +133,7 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
    * Deprecated. Use `notification_configs` instead. If non-empty, publish all resource
    * modifications of this FHIR store to this destination. The Pub/Sub message attributes contain a
    * map with a string describing the action that has triggered the notification. For example,
-   * "action":"CreateResource".
+   * "action":"CreateResource". Not supported in R5. Use `notification_configs` instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -214,7 +214,7 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
    * store will not change, references in complex data types will not be parsed. New stores will
    * have this value set to ENABLED after a notification period. Warning: turning on this flag
    * causes processing existing resources to fail if they contain references to non-existent
-   * resources.
+   * resources. Cannot be disabled in R5.
    * @return value or {@code null} for none
    */
   public java.lang.String getComplexDataTypeReferenceParsing() {
@@ -228,7 +228,7 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
    * store will not change, references in complex data types will not be parsed. New stores will
    * have this value set to ENABLED after a notification period. Warning: turning on this flag
    * causes processing existing resources to fail if they contain references to non-existent
-   * resources.
+   * resources. Cannot be disabled in R5.
    * @param complexDataTypeReferenceParsing complexDataTypeReferenceParsing or {@code null} for none
    */
   public FhirStore setComplexDataTypeReferenceParsing(java.lang.String complexDataTypeReferenceParsing) {
@@ -238,7 +238,7 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Specifies whether this store has consent enforcement. Not available for DSTU2 FHIR
-   * version due to absence of Consent resources.
+   * version due to absence of Consent resources. Not supported for R5 FHIR version.
    * @return value or {@code null} for none
    */
   public ConsentConfig getConsentConfig() {
@@ -247,7 +247,7 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Specifies whether this store has consent enforcement. Not available for DSTU2 FHIR
-   * version due to absence of Consent resources.
+   * version due to absence of Consent resources. Not supported for R5 FHIR version.
    * @param consentConfig consentConfig or {@code null} for none
    */
   public FhirStore setConsentConfig(ConsentConfig consentConfig) {
@@ -415,7 +415,7 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
    * Deprecated. Use `notification_configs` instead. If non-empty, publish all resource
    * modifications of this FHIR store to this destination. The Pub/Sub message attributes contain a
    * map with a string describing the action that has triggered the notification. For example,
-   * "action":"CreateResource".
+   * "action":"CreateResource". Not supported in R5. Use `notification_configs` instead.
    * @return value or {@code null} for none
    */
   public NotificationConfig getNotificationConfig() {
@@ -426,7 +426,7 @@ public final class FhirStore extends com.google.api.client.json.GenericJson {
    * Deprecated. Use `notification_configs` instead. If non-empty, publish all resource
    * modifications of this FHIR store to this destination. The Pub/Sub message attributes contain a
    * map with a string describing the action that has triggered the notification. For example,
-   * "action":"CreateResource".
+   * "action":"CreateResource". Not supported in R5. Use `notification_configs` instead.
    * @param notificationConfig notificationConfig or {@code null} for none
    */
   public FhirStore setNotificationConfig(NotificationConfig notificationConfig) {

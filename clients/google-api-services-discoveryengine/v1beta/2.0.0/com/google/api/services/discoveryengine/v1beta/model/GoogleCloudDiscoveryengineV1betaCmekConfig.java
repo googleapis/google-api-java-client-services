@@ -62,7 +62,7 @@ public final class GoogleCloudDiscoveryengineV1betaCmekConfig extends com.google
   /**
    * Required. The name of the CmekConfig of the form
    * `projects/{project}/locations/{location}/cmekConfig` or
-   * `projects/{project}/locations/{location}/cmekConfigs/{cmekConfig}`.
+   * `projects/{project}/locations/{location}/cmekConfigs/{cmek_config}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -164,7 +164,7 @@ public final class GoogleCloudDiscoveryengineV1betaCmekConfig extends com.google
   /**
    * Required. The name of the CmekConfig of the form
    * `projects/{project}/locations/{location}/cmekConfig` or
-   * `projects/{project}/locations/{location}/cmekConfigs/{cmekConfig}`.
+   * `projects/{project}/locations/{location}/cmekConfigs/{cmek_config}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -174,7 +174,7 @@ public final class GoogleCloudDiscoveryengineV1betaCmekConfig extends com.google
   /**
    * Required. The name of the CmekConfig of the form
    * `projects/{project}/locations/{location}/cmekConfig` or
-   * `projects/{project}/locations/{location}/cmekConfigs/{cmekConfig}`.
+   * `projects/{project}/locations/{location}/cmekConfigs/{cmek_config}`.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaCmekConfig setName(java.lang.String name) {

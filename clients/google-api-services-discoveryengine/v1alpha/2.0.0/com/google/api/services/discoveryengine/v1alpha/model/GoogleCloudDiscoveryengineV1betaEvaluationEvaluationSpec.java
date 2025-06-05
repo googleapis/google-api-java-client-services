@@ -30,7 +30,7 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 public final class GoogleCloudDiscoveryengineV1betaEvaluationEvaluationSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The specification of the query set.
+   * Optional. The specification of the query set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,7 +49,7 @@ public final class GoogleCloudDiscoveryengineV1betaEvaluationEvaluationSpec exte
   private GoogleCloudDiscoveryengineV1betaSearchRequest searchRequest;
 
   /**
-   * Required. The specification of the query set.
+   * Optional. The specification of the query set.
    * @return value or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaEvaluationEvaluationSpecQuerySetSpec getQuerySetSpec() {
@@ -57,7 +57,7 @@ public final class GoogleCloudDiscoveryengineV1betaEvaluationEvaluationSpec exte
   }
 
   /**
-   * Required. The specification of the query set.
+   * Optional. The specification of the query set.
    * @param querySetSpec querySetSpec or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaEvaluationEvaluationSpec setQuerySetSpec(GoogleCloudDiscoveryengineV1betaEvaluationEvaluationSpecQuerySetSpec querySetSpec) {

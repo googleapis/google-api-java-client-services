@@ -32,14 +32,6 @@ package com.google.api.services.healthcare.v1beta1.model;
 public final class DeidentifyConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Configures how annotations, meaning that the location and infoType of sensitive information
-   * findings, are created during de-identification. If unspecified, no annotations are created.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private AnnotationConfig annotation;
-
-  /**
    * Configures de-id of application/DICOM content. Deprecated. Use `dicom_tag_config` instead.
    * The value may be {@code null}.
    */
@@ -99,25 +91,6 @@ public final class DeidentifyConfig extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean useRegionalDataProcessing;
-
-  /**
-   * Configures how annotations, meaning that the location and infoType of sensitive information
-   * findings, are created during de-identification. If unspecified, no annotations are created.
-   * @return value or {@code null} for none
-   */
-  public AnnotationConfig getAnnotation() {
-    return annotation;
-  }
-
-  /**
-   * Configures how annotations, meaning that the location and infoType of sensitive information
-   * findings, are created during de-identification. If unspecified, no annotations are created.
-   * @param annotation annotation or {@code null} for none
-   */
-  public DeidentifyConfig setAnnotation(AnnotationConfig annotation) {
-    this.annotation = annotation;
-    return this;
-  }
 
   /**
    * Configures de-id of application/DICOM content. Deprecated. Use `dicom_tag_config` instead.

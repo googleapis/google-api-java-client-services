@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-chat</artifactId>
-  <version>v1-rev20250516-2.0.0</version>
-  <name>Google Chat API v1-rev20250516-2.0.0</name>
+  <version>v1-rev20250529-2.0.0</version>
+  <name>Google Chat API v1-rev20250529-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
@@ -147,7 +147,7 @@
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-gpg-plugin</artifactId>
-            <version>1.6</version>
+            <version>3.2.7</version>
             <executions>
               <execution>
                 <id>sign-artifacts</id>

@@ -57,7 +57,8 @@ public final class DeviceConnectivityManagement extends com.google.api.client.js
   /**
    * Optional. Preferential network service configuration. Setting this field will override
    * preferentialNetworkService. This can be set on both work profiles and fully managed devices on
-   * Android 13 and above.
+   * Android 13 and above. See 5G network slicing
+   * (https://developers.google.com/android/management/5g-network-slicing) guide for more details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -161,7 +162,8 @@ public final class DeviceConnectivityManagement extends com.google.api.client.js
   /**
    * Optional. Preferential network service configuration. Setting this field will override
    * preferentialNetworkService. This can be set on both work profiles and fully managed devices on
-   * Android 13 and above.
+   * Android 13 and above. See 5G network slicing
+   * (https://developers.google.com/android/management/5g-network-slicing) guide for more details.
    * @return value or {@code null} for none
    */
   public PreferentialNetworkServiceSettings getPreferentialNetworkServiceSettings() {
@@ -171,7 +173,8 @@ public final class DeviceConnectivityManagement extends com.google.api.client.js
   /**
    * Optional. Preferential network service configuration. Setting this field will override
    * preferentialNetworkService. This can be set on both work profiles and fully managed devices on
-   * Android 13 and above.
+   * Android 13 and above. See 5G network slicing
+   * (https://developers.google.com/android/management/5g-network-slicing) guide for more details.
    * @param preferentialNetworkServiceSettings preferentialNetworkServiceSettings or {@code null} for none
    */
   public DeviceConnectivityManagement setPreferentialNetworkServiceSettings(PreferentialNetworkServiceSettings preferentialNetworkServiceSettings) {

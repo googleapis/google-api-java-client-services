@@ -269,6 +269,118 @@ public class TravelImpactModel extends com.google.api.client.googleapis.services
         return (ComputeFlightEmissions) super.set(parameterName, value);
       }
     }
+    /**
+     * Retrieves typical flight emissions estimates between two airports, also known as a market. If
+     * there are no estimates available for a certain market, the response will return the market object
+     * with empty emission fields. The request will still be considered successful. Details on how the
+     * typical emissions estimates are computed are on [GitHub](https://github.com/google/travel-impact-
+     * model/blob/main/projects/typical_flight_emissions.md). The request can contain up to 1000
+     * markets. If the request has more than 1000 markets, it will fail with an INVALID_ARGUMENT error.
+     *
+     * Create a request for the method "flights.computeTypicalFlightEmissions".
+     *
+     * This request holds the parameters needed by the travelimpactmodel server.  After setting any
+     * optional parameters, call the {@link ComputeTypicalFlightEmissions#execute()} method to invoke
+     * the remote operation.
+     *
+     * @param content the {@link com.google.api.services.travelimpactmodel.v1.model.ComputeTypicalFlightEmissionsRequest}
+     * @return the request
+     */
+    public ComputeTypicalFlightEmissions computeTypicalFlightEmissions(com.google.api.services.travelimpactmodel.v1.model.ComputeTypicalFlightEmissionsRequest content) throws java.io.IOException {
+      ComputeTypicalFlightEmissions result = new ComputeTypicalFlightEmissions(content);
+      initialize(result);
+      return result;
+    }
+
+    public class ComputeTypicalFlightEmissions extends TravelImpactModelRequest<com.google.api.services.travelimpactmodel.v1.model.ComputeTypicalFlightEmissionsResponse> {
+
+      private static final String REST_PATH = "v1/flights:computeTypicalFlightEmissions";
+
+      /**
+       * Retrieves typical flight emissions estimates between two airports, also known as a market. If
+       * there are no estimates available for a certain market, the response will return the market
+       * object with empty emission fields. The request will still be considered successful. Details on
+       * how the typical emissions estimates are computed are on
+       * [GitHub](https://github.com/google/travel-impact-
+       * model/blob/main/projects/typical_flight_emissions.md). The request can contain up to 1000
+       * markets. If the request has more than 1000 markets, it will fail with an INVALID_ARGUMENT
+       * error.
+       *
+       * Create a request for the method "flights.computeTypicalFlightEmissions".
+       *
+       * This request holds the parameters needed by the the travelimpactmodel server.  After setting
+       * any optional parameters, call the {@link ComputeTypicalFlightEmissions#execute()} method to
+       * invoke the remote operation. <p> {@link ComputeTypicalFlightEmissions#initialize(com.google.api
+       * .client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this
+       * instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.travelimpactmodel.v1.model.ComputeTypicalFlightEmissionsRequest}
+       * @since 1.13
+       */
+      protected ComputeTypicalFlightEmissions(com.google.api.services.travelimpactmodel.v1.model.ComputeTypicalFlightEmissionsRequest content) {
+        super(TravelImpactModel.this, "POST", REST_PATH, content, com.google.api.services.travelimpactmodel.v1.model.ComputeTypicalFlightEmissionsResponse.class);
+      }
+
+      @Override
+      public ComputeTypicalFlightEmissions set$Xgafv(java.lang.String $Xgafv) {
+        return (ComputeTypicalFlightEmissions) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public ComputeTypicalFlightEmissions setAccessToken(java.lang.String accessToken) {
+        return (ComputeTypicalFlightEmissions) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public ComputeTypicalFlightEmissions setAlt(java.lang.String alt) {
+        return (ComputeTypicalFlightEmissions) super.setAlt(alt);
+      }
+
+      @Override
+      public ComputeTypicalFlightEmissions setCallback(java.lang.String callback) {
+        return (ComputeTypicalFlightEmissions) super.setCallback(callback);
+      }
+
+      @Override
+      public ComputeTypicalFlightEmissions setFields(java.lang.String fields) {
+        return (ComputeTypicalFlightEmissions) super.setFields(fields);
+      }
+
+      @Override
+      public ComputeTypicalFlightEmissions setKey(java.lang.String key) {
+        return (ComputeTypicalFlightEmissions) super.setKey(key);
+      }
+
+      @Override
+      public ComputeTypicalFlightEmissions setOauthToken(java.lang.String oauthToken) {
+        return (ComputeTypicalFlightEmissions) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public ComputeTypicalFlightEmissions setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (ComputeTypicalFlightEmissions) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public ComputeTypicalFlightEmissions setQuotaUser(java.lang.String quotaUser) {
+        return (ComputeTypicalFlightEmissions) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public ComputeTypicalFlightEmissions setUploadType(java.lang.String uploadType) {
+        return (ComputeTypicalFlightEmissions) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public ComputeTypicalFlightEmissions setUploadProtocol(java.lang.String uploadProtocol) {
+        return (ComputeTypicalFlightEmissions) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public ComputeTypicalFlightEmissions set(String parameterName, Object value) {
+        return (ComputeTypicalFlightEmissions) super.set(parameterName, value);
+      }
+    }
 
   }
 

@@ -73,7 +73,7 @@ public final class StreamConfig extends com.google.api.client.json.GenericJson {
    * enable_update_create to true. The destination store must have disable_referential_integrity set
    * to true. If a resource cannot be de-identified, errors will be logged to Cloud Logging (see
    * [Viewing error logs in Cloud Logging](https://cloud.google.com/healthcare/docs/how-
-   * tos/logging)).
+   * tos/logging)). Not supported for R5 stores.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -165,7 +165,7 @@ public final class StreamConfig extends com.google.api.client.json.GenericJson {
    * enable_update_create to true. The destination store must have disable_referential_integrity set
    * to true. If a resource cannot be de-identified, errors will be logged to Cloud Logging (see
    * [Viewing error logs in Cloud Logging](https://cloud.google.com/healthcare/docs/how-
-   * tos/logging)).
+   * tos/logging)). Not supported for R5 stores.
    * @return value or {@code null} for none
    */
   public DeidentifiedStoreDestination getDeidentifiedStoreDestination() {
@@ -187,7 +187,7 @@ public final class StreamConfig extends com.google.api.client.json.GenericJson {
    * enable_update_create to true. The destination store must have disable_referential_integrity set
    * to true. If a resource cannot be de-identified, errors will be logged to Cloud Logging (see
    * [Viewing error logs in Cloud Logging](https://cloud.google.com/healthcare/docs/how-
-   * tos/logging)).
+   * tos/logging)). Not supported for R5 stores.
    * @param deidentifiedStoreDestination deidentifiedStoreDestination or {@code null} for none
    */
   public StreamConfig setDeidentifiedStoreDestination(DeidentifiedStoreDestination deidentifiedStoreDestination) {

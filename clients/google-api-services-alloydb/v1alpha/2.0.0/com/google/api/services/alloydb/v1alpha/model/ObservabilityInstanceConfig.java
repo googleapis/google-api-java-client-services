@@ -80,6 +80,13 @@ public final class ObservabilityInstanceConfig extends com.google.api.client.jso
   private java.lang.Boolean trackActiveQueries;
 
   /**
+   * Track client address for an instance. If not set, default value is "off".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean trackClientAddress;
+
+  /**
    * Output only. Track wait event types during query execution for an instance. This flag is turned
    * "on" by default but tracking is enabled only after observability enabled flag is also turned
    * on. This is read-only flag and only modifiable by internal API.
@@ -214,6 +221,23 @@ public final class ObservabilityInstanceConfig extends com.google.api.client.jso
    */
   public ObservabilityInstanceConfig setTrackActiveQueries(java.lang.Boolean trackActiveQueries) {
     this.trackActiveQueries = trackActiveQueries;
+    return this;
+  }
+
+  /**
+   * Track client address for an instance. If not set, default value is "off".
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getTrackClientAddress() {
+    return trackClientAddress;
+  }
+
+  /**
+   * Track client address for an instance. If not set, default value is "off".
+   * @param trackClientAddress trackClientAddress or {@code null} for none
+   */
+  public ObservabilityInstanceConfig setTrackClientAddress(java.lang.Boolean trackClientAddress) {
+    this.trackClientAddress = trackClientAddress;
     return this;
   }
 

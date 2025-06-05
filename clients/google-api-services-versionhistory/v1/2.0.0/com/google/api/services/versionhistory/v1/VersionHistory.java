@@ -25,7 +25,7 @@ package com.google.api.services.versionhistory.v1;
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://developers.chrome.com/versionhistory" target="_blank">API Documentation</a>
+ * <a href="https://developer.chrome.com/docs/web-platform/versionhistory/guide" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>

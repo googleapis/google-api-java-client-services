@@ -1989,7 +1989,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
        *
        * @param name Required. The name of the CmekConfig of the form
        *        `projects/{project}/locations/{location}/cmekConfig` or
-       *        `projects/{project}/locations/{location}/cmekConfigs/{cmekConfig}`.
+       *        `projects/{project}/locations/{location}/cmekConfigs/{cmek_config}`.
        * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCmekConfig}
        * @return the request
        */
@@ -2021,7 +2021,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
          *
          * @param name Required. The name of the CmekConfig of the form
        *        `projects/{project}/locations/{location}/cmekConfig` or
-       *        `projects/{project}/locations/{location}/cmekConfigs/{cmekConfig}`.
+       *        `projects/{project}/locations/{location}/cmekConfigs/{cmek_config}`.
          * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCmekConfig}
          * @since 1.13
          */
@@ -2093,14 +2093,14 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
         /**
          * Required. The name of the CmekConfig of the form
          * `projects/{project}/locations/{location}/cmekConfig` or
-         * `projects/{project}/locations/{location}/cmekConfigs/{cmekConfig}`.
+         * `projects/{project}/locations/{location}/cmekConfigs/{cmek_config}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. The name of the CmekConfig of the form
        `projects/{project}/locations/{location}/cmekConfig` or
-       `projects/{project}/locations/{location}/cmekConfigs/{cmekConfig}`.
+       `projects/{project}/locations/{location}/cmekConfigs/{cmek_config}`.
          */
         public java.lang.String getName() {
           return name;
@@ -2109,7 +2109,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
         /**
          * Required. The name of the CmekConfig of the form
          * `projects/{project}/locations/{location}/cmekConfig` or
-         * `projects/{project}/locations/{location}/cmekConfigs/{cmekConfig}`.
+         * `projects/{project}/locations/{location}/cmekConfigs/{cmek_config}`.
          */
         public UpdateCmekConfig setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -2627,7 +2627,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
          *
          * @param name Required. The name of the CmekConfig of the form
          *        `projects/{project}/locations/{location}/cmekConfig` or
-         *        `projects/{project}/locations/{location}/cmekConfigs/{cmekConfig}`.
+         *        `projects/{project}/locations/{location}/cmekConfigs/{cmek_config}`.
          * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCmekConfig}
          * @return the request
          */
@@ -2659,7 +2659,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            *
            * @param name Required. The name of the CmekConfig of the form
          *        `projects/{project}/locations/{location}/cmekConfig` or
-         *        `projects/{project}/locations/{location}/cmekConfigs/{cmekConfig}`.
+         *        `projects/{project}/locations/{location}/cmekConfigs/{cmek_config}`.
            * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCmekConfig}
            * @since 1.13
            */
@@ -2731,14 +2731,14 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           /**
            * Required. The name of the CmekConfig of the form
            * `projects/{project}/locations/{location}/cmekConfig` or
-           * `projects/{project}/locations/{location}/cmekConfigs/{cmekConfig}`.
+           * `projects/{project}/locations/{location}/cmekConfigs/{cmek_config}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The name of the CmekConfig of the form
          `projects/{project}/locations/{location}/cmekConfig` or
-         `projects/{project}/locations/{location}/cmekConfigs/{cmekConfig}`.
+         `projects/{project}/locations/{location}/cmekConfigs/{cmek_config}`.
            */
           public java.lang.String getName() {
             return name;
@@ -2747,7 +2747,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           /**
            * Required. The name of the CmekConfig of the form
            * `projects/{project}/locations/{location}/cmekConfig` or
-           * `projects/{project}/locations/{location}/cmekConfigs/{cmekConfig}`.
+           * `projects/{project}/locations/{location}/cmekConfigs/{cmek_config}`.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

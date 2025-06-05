@@ -38,13 +38,6 @@ public final class GoogleCloudDiscoveryengineV1BatchUpdateUserLicensesRequest ex
   private java.lang.Boolean deleteUnassignedUserLicenses;
 
   /**
-   * Cloud Storage location for the input content.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudDiscoveryengineV1GcsSource gcsSource;
-
-  /**
    * The inline source for the input content for document embeddings.
    * The value may be {@code null}.
    */
@@ -67,23 +60,6 @@ public final class GoogleCloudDiscoveryengineV1BatchUpdateUserLicensesRequest ex
    */
   public GoogleCloudDiscoveryengineV1BatchUpdateUserLicensesRequest setDeleteUnassignedUserLicenses(java.lang.Boolean deleteUnassignedUserLicenses) {
     this.deleteUnassignedUserLicenses = deleteUnassignedUserLicenses;
-    return this;
-  }
-
-  /**
-   * Cloud Storage location for the input content.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudDiscoveryengineV1GcsSource getGcsSource() {
-    return gcsSource;
-  }
-
-  /**
-   * Cloud Storage location for the input content.
-   * @param gcsSource gcsSource or {@code null} for none
-   */
-  public GoogleCloudDiscoveryengineV1BatchUpdateUserLicensesRequest setGcsSource(GoogleCloudDiscoveryengineV1GcsSource gcsSource) {
-    this.gcsSource = gcsSource;
     return this;
   }
 

@@ -30,7 +30,7 @@ package com.google.api.services.discoveryengine.v1.model;
 public final class GoogleCloudDiscoveryengineV1alphaEvaluationEvaluationSpecQuerySetSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The full resource name of the SampleQuerySet used for the evaluation, in the format
+   * Optional. The full resource name of the SampleQuerySet used for the evaluation, in the format
    * of `projects/{project}/locations/{location}/sampleQuerySets/{sampleQuerySet}`.
    * The value may be {@code null}.
    */
@@ -38,7 +38,7 @@ public final class GoogleCloudDiscoveryengineV1alphaEvaluationEvaluationSpecQuer
   private java.lang.String sampleQuerySet;
 
   /**
-   * Required. The full resource name of the SampleQuerySet used for the evaluation, in the format
+   * Optional. The full resource name of the SampleQuerySet used for the evaluation, in the format
    * of `projects/{project}/locations/{location}/sampleQuerySets/{sampleQuerySet}`.
    * @return value or {@code null} for none
    */
@@ -47,7 +47,7 @@ public final class GoogleCloudDiscoveryengineV1alphaEvaluationEvaluationSpecQuer
   }
 
   /**
-   * Required. The full resource name of the SampleQuerySet used for the evaluation, in the format
+   * Optional. The full resource name of the SampleQuerySet used for the evaluation, in the format
    * of `projects/{project}/locations/{location}/sampleQuerySets/{sampleQuerySet}`.
    * @param sampleQuerySet sampleQuerySet or {@code null} for none
    */

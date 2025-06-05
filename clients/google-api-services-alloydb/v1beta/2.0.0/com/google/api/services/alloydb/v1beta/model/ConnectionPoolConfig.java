@@ -97,6 +97,13 @@ public final class ConnectionPoolConfig extends com.google.api.client.json.Gener
   private java.lang.String poolMode;
 
   /**
+   * Output only. The number of running poolers per instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer poolerCount;
+
+  /**
    * Optional. Deprecated. Use 'flags' instead. The maximum number of seconds queries are allowed to
    * spend waiting for execution. If the query is not assigned to a server during that time, the
    * client is disconnected. 0 disables.
@@ -279,6 +286,23 @@ public final class ConnectionPoolConfig extends com.google.api.client.json.Gener
    */
   public ConnectionPoolConfig setPoolMode(java.lang.String poolMode) {
     this.poolMode = poolMode;
+    return this;
+  }
+
+  /**
+   * Output only. The number of running poolers per instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getPoolerCount() {
+    return poolerCount;
+  }
+
+  /**
+   * Output only. The number of running poolers per instance.
+   * @param poolerCount poolerCount or {@code null} for none
+   */
+  public ConnectionPoolConfig setPoolerCount(java.lang.Integer poolerCount) {
+    this.poolerCount = poolerCount;
     return this;
   }
 

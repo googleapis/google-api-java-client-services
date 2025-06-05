@@ -2295,7 +2295,7 @@ public class Config extends com.google.api.client.googleapis.services.json.Abstr
          * This request holds the parameters needed by the config server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Resource name of the deployment. Format:
+         * @param name Identifier. Resource name of the deployment. Format:
          *        `projects/{project}/locations/{location}/deployments/{deployment}`
          * @param content the {@link com.google.api.services.config.v1.model.Deployment}
          * @return the request
@@ -2323,7 +2323,7 @@ public class Config extends com.google.api.client.googleapis.services.json.Abstr
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Resource name of the deployment. Format:
+           * @param name Identifier. Resource name of the deployment. Format:
          *        `projects/{project}/locations/{location}/deployments/{deployment}`
            * @param content the {@link com.google.api.services.config.v1.model.Deployment}
            * @since 1.13
@@ -2394,13 +2394,13 @@ public class Config extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * Resource name of the deployment. Format:
+           * Identifier. Resource name of the deployment. Format:
            * `projects/{project}/locations/{location}/deployments/{deployment}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Resource name of the deployment. Format:
+          /** Identifier. Resource name of the deployment. Format:
          `projects/{project}/locations/{location}/deployments/{deployment}`
            */
           public java.lang.String getName() {
@@ -2408,7 +2408,7 @@ public class Config extends com.google.api.client.googleapis.services.json.Abstr
           }
 
           /**
-           * Resource name of the deployment. Format:
+           * Identifier. Resource name of the deployment. Format:
            * `projects/{project}/locations/{location}/deployments/{deployment}`
            */
           public Patch setName(java.lang.String name) {

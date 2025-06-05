@@ -105,7 +105,7 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean importExistingResources;
 
   /**
-   * User-defined metadata for the deployment.
+   * Optional. User-defined metadata for the deployment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -127,7 +127,7 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   private java.lang.String lockState;
 
   /**
-   * Resource name of the deployment. Format:
+   * Identifier. Resource name of the deployment. Format:
    * `projects/{project}/locations/{location}/deployments/{deployment}`
    * The value may be {@code null}.
    */
@@ -386,7 +386,7 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * User-defined metadata for the deployment.
+   * Optional. User-defined metadata for the deployment.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -394,7 +394,7 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * User-defined metadata for the deployment.
+   * Optional. User-defined metadata for the deployment.
    * @param labels labels or {@code null} for none
    */
   public Deployment setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -439,7 +439,7 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name of the deployment. Format:
+   * Identifier. Resource name of the deployment. Format:
    * `projects/{project}/locations/{location}/deployments/{deployment}`
    * @return value or {@code null} for none
    */
@@ -448,7 +448,7 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name of the deployment. Format:
+   * Identifier. Resource name of the deployment. Format:
    * `projects/{project}/locations/{location}/deployments/{deployment}`
    * @param name name or {@code null} for none
    */

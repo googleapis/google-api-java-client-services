@@ -214,6 +214,14 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private NamespacedNames selectedApplications;
 
   /**
+   * Output only. If set, the list of labels whose constituent namespaces were included in the
+   * Backup.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ResourceLabels selectedNamespaceLabels;
+
+  /**
    * Output only. If set, the list of namespaces that were included in the Backup.
    * The value may be {@code null}.
    */
@@ -696,6 +704,25 @@ public final class Backup extends com.google.api.client.json.GenericJson {
    */
   public Backup setSelectedApplications(NamespacedNames selectedApplications) {
     this.selectedApplications = selectedApplications;
+    return this;
+  }
+
+  /**
+   * Output only. If set, the list of labels whose constituent namespaces were included in the
+   * Backup.
+   * @return value or {@code null} for none
+   */
+  public ResourceLabels getSelectedNamespaceLabels() {
+    return selectedNamespaceLabels;
+  }
+
+  /**
+   * Output only. If set, the list of labels whose constituent namespaces were included in the
+   * Backup.
+   * @param selectedNamespaceLabels selectedNamespaceLabels or {@code null} for none
+   */
+  public Backup setSelectedNamespaceLabels(ResourceLabels selectedNamespaceLabels) {
+    this.selectedNamespaceLabels = selectedNamespaceLabels;
     return this;
   }
 

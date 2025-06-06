@@ -9601,6 +9601,154 @@ public class ManagedKafka extends com.google.api.client.googleapis.services.json
           public class Mode {
 
             /**
+             * Delete schema mode for a subject.
+             *
+             * Create a request for the method "mode.delete".
+             *
+             * This request holds the parameters needed by the managedkafka server.  After setting any optional
+             * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The resource name of subject to delete the mode for. The format is *
+             *        projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/mode/{subject}
+             *        * projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/contexts/{con
+             *        text}/mode/{subject}
+             * @return the request
+             */
+            public Delete delete(java.lang.String name) throws java.io.IOException {
+              Delete result = new Delete(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Delete extends ManagedKafkaRequest<com.google.api.services.managedkafka.v1.model.SchemaMode> {
+
+              private static final String REST_PATH = "v1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+/mode/.*$");
+
+              /**
+               * Delete schema mode for a subject.
+               *
+               * Create a request for the method "mode.delete".
+               *
+               * This request holds the parameters needed by the the managedkafka server.  After setting any
+               * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The resource name of subject to delete the mode for. The format is *
+             *        projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/mode/{subject}
+             *        * projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/contexts/{con
+             *        text}/mode/{subject}
+               * @since 1.13
+               */
+              protected Delete(java.lang.String name) {
+                super(ManagedKafka.this, "DELETE", REST_PATH, null, com.google.api.services.managedkafka.v1.model.SchemaMode.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+/mode/.*$");
+                }
+              }
+
+              @Override
+              public Delete set$Xgafv(java.lang.String $Xgafv) {
+                return (Delete) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Delete setAccessToken(java.lang.String accessToken) {
+                return (Delete) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Delete setAlt(java.lang.String alt) {
+                return (Delete) super.setAlt(alt);
+              }
+
+              @Override
+              public Delete setCallback(java.lang.String callback) {
+                return (Delete) super.setCallback(callback);
+              }
+
+              @Override
+              public Delete setFields(java.lang.String fields) {
+                return (Delete) super.setFields(fields);
+              }
+
+              @Override
+              public Delete setKey(java.lang.String key) {
+                return (Delete) super.setKey(key);
+              }
+
+              @Override
+              public Delete setOauthToken(java.lang.String oauthToken) {
+                return (Delete) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Delete) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Delete setQuotaUser(java.lang.String quotaUser) {
+                return (Delete) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Delete setUploadType(java.lang.String uploadType) {
+                return (Delete) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Delete) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The resource name of subject to delete the mode for. The format is * proj
+               * ects/{project}/locations/{location}/schemaRegistries/{schema_registry}/mode/{subjec
+               * t} * projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/con
+               * texts/{context}/mode/{subject}
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The resource name of subject to delete the mode for. The format is *
+             projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/mode/{subject} * project
+             s/{project}/locations/{location}/schemaRegistries/{schema_registry}/contexts/{context}/mode/{subjec
+             t}
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The resource name of subject to delete the mode for. The format is * proj
+               * ects/{project}/locations/{location}/schemaRegistries/{schema_registry}/mode/{subjec
+               * t} * projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/con
+               * texts/{context}/mode/{subject}
+               */
+              public Delete setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/contexts/[^/]+/mode/.*$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Delete set(String parameterName, Object value) {
+                return (Delete) super.set(parameterName, value);
+              }
+            }
+            /**
              * Get mode at global level or for a subject.
              *
              * Create a request for the method "mode.get".
@@ -12553,6 +12701,154 @@ public class ManagedKafka extends com.google.api.client.googleapis.services.json
          */
         public class Mode {
 
+          /**
+           * Delete schema mode for a subject.
+           *
+           * Create a request for the method "mode.delete".
+           *
+           * This request holds the parameters needed by the managedkafka server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name of subject to delete the mode for. The format is *
+           *        projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/mode/{subject}
+           *        * projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/contexts/{con
+           *        text}/mode/{subject}
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends ManagedKafkaRequest<com.google.api.services.managedkafka.v1.model.SchemaMode> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/mode/.*$");
+
+            /**
+             * Delete schema mode for a subject.
+             *
+             * Create a request for the method "mode.delete".
+             *
+             * This request holds the parameters needed by the the managedkafka server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name of subject to delete the mode for. The format is *
+           *        projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/mode/{subject}
+           *        * projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/contexts/{con
+           *        text}/mode/{subject}
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(ManagedKafka.this, "DELETE", REST_PATH, null, com.google.api.services.managedkafka.v1.model.SchemaMode.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/mode/.*$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of subject to delete the mode for. The format is * projec
+             * ts/{project}/locations/{location}/schemaRegistries/{schema_registry}/mode/{subject} *
+             * projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/contexts/{
+             * context}/mode/{subject}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of subject to delete the mode for. The format is *
+           projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/mode/{subject} * project
+           s/{project}/locations/{location}/schemaRegistries/{schema_registry}/contexts/{context}/mode/{subjec
+           t}
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name of subject to delete the mode for. The format is * projec
+             * ts/{project}/locations/{location}/schemaRegistries/{schema_registry}/mode/{subject} *
+             * projects/{project}/locations/{location}/schemaRegistries/{schema_registry}/contexts/{
+             * context}/mode/{subject}
+             */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/schemaRegistries/[^/]+/mode/.*$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
           /**
            * Get mode at global level or for a subject.
            *

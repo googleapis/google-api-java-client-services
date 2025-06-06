@@ -90,6 +90,13 @@ public final class GoogleAppsDriveLabelsV2Label extends com.google.api.client.js
   private GoogleAppsDriveLabelsV2LabelDisplayHints displayHints;
 
   /**
+   * Optional. The EnabledAppSettings for this Label.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAppsDriveLabelsV2LabelEnabledAppSettings enabledAppSettings;
+
+  /**
    * List of fields in descending priority order.
    * The value may be {@code null}.
    */
@@ -338,6 +345,23 @@ public final class GoogleAppsDriveLabelsV2Label extends com.google.api.client.js
    */
   public GoogleAppsDriveLabelsV2Label setDisplayHints(GoogleAppsDriveLabelsV2LabelDisplayHints displayHints) {
     this.displayHints = displayHints;
+    return this;
+  }
+
+  /**
+   * Optional. The EnabledAppSettings for this Label.
+   * @return value or {@code null} for none
+   */
+  public GoogleAppsDriveLabelsV2LabelEnabledAppSettings getEnabledAppSettings() {
+    return enabledAppSettings;
+  }
+
+  /**
+   * Optional. The EnabledAppSettings for this Label.
+   * @param enabledAppSettings enabledAppSettings or {@code null} for none
+   */
+  public GoogleAppsDriveLabelsV2Label setEnabledAppSettings(GoogleAppsDriveLabelsV2LabelEnabledAppSettings enabledAppSettings) {
+    this.enabledAppSettings = enabledAppSettings;
     return this;
   }
 

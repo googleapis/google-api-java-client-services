@@ -72,17 +72,17 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Minimum order value for this service. If set, indicates that customers will have to spend at
-   * least this amount. All prices within a service must have the same currency. Cannot be set
-   * together with minimum_order_value_table.
+   * Optional. Minimum order value for this service. If set, indicates that customers will have to
+   * spend at least this amount. All prices within a service must have the same currency. Cannot be
+   * set together with `minimum_order_value_table`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Price minimumOrderValue;
 
   /**
-   * Table of per store minimum order values for the pickup fulfillment type. Cannot be set together
-   * with minimum_order_value.
+   * Optional. Table of per store minimum order values for the pickup fulfillment type. Cannot be
+   * set together with `minimum_order_value`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -111,7 +111,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
   private java.lang.String serviceName;
 
   /**
-   * Type of locations this service ships orders to.
+   * Optional. Type of locations this service ships orders to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -213,9 +213,9 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Minimum order value for this service. If set, indicates that customers will have to spend at
-   * least this amount. All prices within a service must have the same currency. Cannot be set
-   * together with minimum_order_value_table.
+   * Optional. Minimum order value for this service. If set, indicates that customers will have to
+   * spend at least this amount. All prices within a service must have the same currency. Cannot be
+   * set together with `minimum_order_value_table`.
    * @return value or {@code null} for none
    */
   public Price getMinimumOrderValue() {
@@ -223,9 +223,9 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Minimum order value for this service. If set, indicates that customers will have to spend at
-   * least this amount. All prices within a service must have the same currency. Cannot be set
-   * together with minimum_order_value_table.
+   * Optional. Minimum order value for this service. If set, indicates that customers will have to
+   * spend at least this amount. All prices within a service must have the same currency. Cannot be
+   * set together with `minimum_order_value_table`.
    * @param minimumOrderValue minimumOrderValue or {@code null} for none
    */
   public Service setMinimumOrderValue(Price minimumOrderValue) {
@@ -234,8 +234,8 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Table of per store minimum order values for the pickup fulfillment type. Cannot be set together
-   * with minimum_order_value.
+   * Optional. Table of per store minimum order values for the pickup fulfillment type. Cannot be
+   * set together with `minimum_order_value`.
    * @return value or {@code null} for none
    */
   public MinimumOrderValueTable getMinimumOrderValueTable() {
@@ -243,8 +243,8 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Table of per store minimum order values for the pickup fulfillment type. Cannot be set together
-   * with minimum_order_value.
+   * Optional. Table of per store minimum order values for the pickup fulfillment type. Cannot be
+   * set together with `minimum_order_value`.
    * @param minimumOrderValueTable minimumOrderValueTable or {@code null} for none
    */
   public Service setMinimumOrderValueTable(MinimumOrderValueTable minimumOrderValueTable) {
@@ -291,7 +291,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Type of locations this service ships orders to.
+   * Optional. Type of locations this service ships orders to.
    * @return value or {@code null} for none
    */
   public java.lang.String getShipmentType() {
@@ -299,7 +299,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Type of locations this service ships orders to.
+   * Optional. Type of locations this service ships orders to.
    * @param shipmentType shipmentType or {@code null} for none
    */
   public Service setShipmentType(java.lang.String shipmentType) {

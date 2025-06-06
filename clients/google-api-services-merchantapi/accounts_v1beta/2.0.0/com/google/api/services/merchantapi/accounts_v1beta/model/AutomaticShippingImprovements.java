@@ -17,13 +17,14 @@
 package com.google.api.services.merchantapi.accounts_v1beta.model;
 
 /**
- * Not available for MCAs [accounts](https://support.google.com/merchants/answer/188487). By turning
- * on [automatic shipping improvements](https://support.google.com/merchants/answer/10027038), you
- * are allowing Google to improve the accuracy of your delivery times shown to shoppers using
- * Google. More accurate delivery times, especially when faster, typically lead to better conversion
- * rates. Google will improve your estimated delivery times based on various factors: * Delivery
- * address of an order * Current handling time and shipping time settings * Estimated weekdays or
- * business days * Parcel tracking data
+ * Not available for [advanced accounts](https://support.google.com/merchants/answer/188487). By
+ * turning on [automatic shipping
+ * improvements](https://support.google.com/merchants/answer/10027038), you are allowing Google to
+ * improve the accuracy of your delivery times shown to shoppers using Google. More accurate
+ * delivery times, especially when faster, typically lead to better conversion rates. Google will
+ * improve your estimated delivery times based on various factors: * Delivery address of an order *
+ * Current handling time and shipping time settings * Estimated weekdays or business days * Parcel
+ * tracking data
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:

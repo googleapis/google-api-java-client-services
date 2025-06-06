@@ -17,13 +17,13 @@
 package com.google.api.services.merchantapi.accounts_v1beta.model;
 
 /**
- * The `Account` message represents a merchant's account within Shopping Ads. It's the primary
+ * The `Account` message represents a business's account within Shopping Ads. It's the primary
  * entity for managing product data, settings, and interactions with Google's services and external
- * providers. Accounts can operate as standalone entities or be part of a multi-client account (MCA)
- * structure. In an MCA setup the parent account manages multiple sub-accounts. Establishing an
- * account involves configuring attributes like the account name, time zone, and language
- * preferences. The `Account` message is the parent entity for many other resources, for example,
- * `AccountRelationship`, `Homepage`, `BusinessInfo` and so on.
+ * providers. Accounts can operate as standalone entities or be part of a advanced account
+ * structure. In an advanced account setup the parent account manages multiple sub-accounts.
+ * Establishing an account involves configuring attributes like the account name, time zone, and
+ * language preferences. The `Account` message is the parent entity for many other resources, for
+ * example, `AccountRelationship`, `Homepage`, `BusinessInfo` and so on.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:

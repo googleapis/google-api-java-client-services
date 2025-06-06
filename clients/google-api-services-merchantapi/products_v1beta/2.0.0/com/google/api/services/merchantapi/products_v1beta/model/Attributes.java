@@ -75,8 +75,8 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   /**
    * A safeguard in the "Automated Discounts" (https://support.google.com/merchants/answer/10295759)
    * and "Dynamic Promotions" (https://support.google.com/merchants/answer/13949249) projects,
-   * ensuring that discounts on merchants' offers do not fall below this value, thereby preserving
-   * the offer's value and profitability.
+   * ensuring that discounts on business offers do not fall below this value, thereby preserving the
+   * offer's value and profitability.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -332,8 +332,8 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   private Installment installment;
 
   /**
-   * Whether the item is a merchant-defined bundle. A bundle is a custom grouping of different
-   * products sold by a merchant for a single price.
+   * Whether the item is a business-defined sub-API. A sub-API is a custom grouping of different
+   * products sold by a business for a single price.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -363,7 +363,7 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   private java.lang.String link;
 
   /**
-   * Link template for merchant hosted local storefront.
+   * Link template for business hosted local storefront.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -427,7 +427,7 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   private java.lang.String mobileLink;
 
   /**
-   * Link template for merchant hosted local storefront optimized for mobile devices.
+   * Link template for business hosted local storefront optimized for mobile devices.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -442,7 +442,7 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   private java.lang.String mpn;
 
   /**
-   * The number of identical products in a merchant-defined multipack.
+   * The number of identical products in a business-defined multipack.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -830,8 +830,8 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   /**
    * A safeguard in the "Automated Discounts" (https://support.google.com/merchants/answer/10295759)
    * and "Dynamic Promotions" (https://support.google.com/merchants/answer/13949249) projects,
-   * ensuring that discounts on merchants' offers do not fall below this value, thereby preserving
-   * the offer's value and profitability.
+   * ensuring that discounts on business offers do not fall below this value, thereby preserving the
+   * offer's value and profitability.
    * @return value or {@code null} for none
    */
   public Price getAutoPricingMinPrice() {
@@ -841,8 +841,8 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   /**
    * A safeguard in the "Automated Discounts" (https://support.google.com/merchants/answer/10295759)
    * and "Dynamic Promotions" (https://support.google.com/merchants/answer/13949249) projects,
-   * ensuring that discounts on merchants' offers do not fall below this value, thereby preserving
-   * the offer's value and profitability.
+   * ensuring that discounts on business offers do not fall below this value, thereby preserving the
+   * offer's value and profitability.
    * @param autoPricingMinPrice autoPricingMinPrice or {@code null} for none
    */
   public Attributes setAutoPricingMinPrice(Price autoPricingMinPrice) {
@@ -1448,8 +1448,8 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether the item is a merchant-defined bundle. A bundle is a custom grouping of different
-   * products sold by a merchant for a single price.
+   * Whether the item is a business-defined sub-API. A sub-API is a custom grouping of different
+   * products sold by a business for a single price.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsBundle() {
@@ -1457,8 +1457,8 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether the item is a merchant-defined bundle. A bundle is a custom grouping of different
-   * products sold by a merchant for a single price.
+   * Whether the item is a business-defined sub-API. A sub-API is a custom grouping of different
+   * products sold by a business for a single price.
    * @param isBundle isBundle or {@code null} for none
    */
   public Attributes setIsBundle(java.lang.Boolean isBundle) {
@@ -1522,7 +1522,7 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Link template for merchant hosted local storefront.
+   * Link template for business hosted local storefront.
    * @return value or {@code null} for none
    */
   public java.lang.String getLinkTemplate() {
@@ -1530,7 +1530,7 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Link template for merchant hosted local storefront.
+   * Link template for business hosted local storefront.
    * @param linkTemplate linkTemplate or {@code null} for none
    */
   public Attributes setLinkTemplate(java.lang.String linkTemplate) {
@@ -1677,7 +1677,7 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Link template for merchant hosted local storefront optimized for mobile devices.
+   * Link template for business hosted local storefront optimized for mobile devices.
    * @return value or {@code null} for none
    */
   public java.lang.String getMobileLinkTemplate() {
@@ -1685,7 +1685,7 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Link template for merchant hosted local storefront optimized for mobile devices.
+   * Link template for business hosted local storefront optimized for mobile devices.
    * @param mobileLinkTemplate mobileLinkTemplate or {@code null} for none
    */
   public Attributes setMobileLinkTemplate(java.lang.String mobileLinkTemplate) {
@@ -1713,7 +1713,7 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The number of identical products in a merchant-defined multipack.
+   * The number of identical products in a business-defined multipack.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMultipack() {
@@ -1721,7 +1721,7 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The number of identical products in a merchant-defined multipack.
+   * The number of identical products in a business-defined multipack.
    * @param multipack multipack or {@code null} for none
    */
   public Attributes setMultipack(java.lang.Long multipack) {

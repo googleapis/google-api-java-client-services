@@ -337,7 +337,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
        * @param name Required. The name of the state to retrieve. Format:
-       *        `accounts/{account}/lfpMerchantStates/{target_merchant}`
+       *        `accounts/{account}/lfpMerchantStates/{target_merchant}`. For example,
+       *        `accounts/123456/lfpMerchantStates/567890`.
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -364,7 +365,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. The name of the state to retrieve. Format:
-       *        `accounts/{account}/lfpMerchantStates/{target_merchant}`
+       *        `accounts/{account}/lfpMerchantStates/{target_merchant}`. For example,
+       *        `accounts/123456/lfpMerchantStates/567890`.
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -444,13 +446,15 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Required. The name of the state to retrieve. Format:
-         * `accounts/{account}/lfpMerchantStates/{target_merchant}`
+         * `accounts/{account}/lfpMerchantStates/{target_merchant}`. For example,
+         * `accounts/123456/lfpMerchantStates/567890`.
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. The name of the state to retrieve. Format:
-       `accounts/{account}/lfpMerchantStates/{target_merchant}`
+       `accounts/{account}/lfpMerchantStates/{target_merchant}`. For example,
+       `accounts/123456/lfpMerchantStates/567890`.
          */
         public java.lang.String getName() {
           return name;
@@ -458,7 +462,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Required. The name of the state to retrieve. Format:
-         * `accounts/{account}/lfpMerchantStates/{target_merchant}`
+         * `accounts/{account}/lfpMerchantStates/{target_merchant}`. For example,
+         * `accounts/123456/lfpMerchantStates/567890`.
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {

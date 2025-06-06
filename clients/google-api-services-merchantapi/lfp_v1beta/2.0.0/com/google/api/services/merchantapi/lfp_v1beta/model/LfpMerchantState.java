@@ -59,7 +59,8 @@ public final class LfpMerchantState extends com.google.api.client.json.GenericJs
 
   /**
    * Identifier. The name of the `LfpMerchantState` resource. Format:
-   * `accounts/{account}/lfpMerchantStates/{target_merchant}`
+   * `accounts/{account}/lfpMerchantStates/{target_merchant}`. For example,
+   * `accounts/123456/lfpMerchantStates/567890`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -128,7 +129,8 @@ public final class LfpMerchantState extends com.google.api.client.json.GenericJs
 
   /**
    * Identifier. The name of the `LfpMerchantState` resource. Format:
-   * `accounts/{account}/lfpMerchantStates/{target_merchant}`
+   * `accounts/{account}/lfpMerchantStates/{target_merchant}`. For example,
+   * `accounts/123456/lfpMerchantStates/567890`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -137,7 +139,8 @@ public final class LfpMerchantState extends com.google.api.client.json.GenericJs
 
   /**
    * Identifier. The name of the `LfpMerchantState` resource. Format:
-   * `accounts/{account}/lfpMerchantStates/{target_merchant}`
+   * `accounts/{account}/lfpMerchantStates/{target_merchant}`. For example,
+   * `accounts/123456/lfpMerchantStates/567890`.
    * @param name name or {@code null} for none
    */
   public LfpMerchantState setName(java.lang.String name) {

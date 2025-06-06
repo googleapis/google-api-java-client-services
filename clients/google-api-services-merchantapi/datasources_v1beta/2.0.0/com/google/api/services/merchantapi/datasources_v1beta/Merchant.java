@@ -1073,14 +1073,17 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
         /**
          * Required. The list of data source fields to be updated. Fields specified in the update
          * mask without a value specified in the body will be deleted from the data source.
-         * Providing special "*" value for full data source replacement is not supported.
+         * Providing special "*" value for full data source replacement is not supported. For
+         * example, If you insert `updateMask=displayName` in the request, it will only update the
+         * `displayName` leaving all other fields untouched.
          */
         @com.google.api.client.util.Key
         private String updateMask;
 
         /** Required. The list of data source fields to be updated. Fields specified in the update mask without
        a value specified in the body will be deleted from the data source. Providing special "*" value for
-       full data source replacement is not supported.
+       full data source replacement is not supported. For example, If you insert `updateMask=displayName`
+       in the request, it will only update the `displayName` leaving all other fields untouched.
          */
         public String getUpdateMask() {
           return updateMask;
@@ -1089,7 +1092,9 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
         /**
          * Required. The list of data source fields to be updated. Fields specified in the update
          * mask without a value specified in the body will be deleted from the data source.
-         * Providing special "*" value for full data source replacement is not supported.
+         * Providing special "*" value for full data source replacement is not supported. For
+         * example, If you insert `updateMask=displayName` in the request, it will only update the
+         * `displayName` leaving all other fields untouched.
          */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;

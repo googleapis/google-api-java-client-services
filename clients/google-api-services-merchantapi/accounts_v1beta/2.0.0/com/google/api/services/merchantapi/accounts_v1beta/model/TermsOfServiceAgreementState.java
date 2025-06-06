@@ -18,16 +18,21 @@ package com.google.api.services.merchantapi.accounts_v1beta.model;
 
 /**
  * This resource represents the agreement state for a given account and terms of service kind. The
- * state is as follows: * If the merchant has accepted a terms of service, `accepted` will be
- * populated, otherwise it will be empty * If the merchant must sign a terms of service, `required`
+ * state is as follows: * If the business has accepted a terms of service, `accepted` will be
+ * populated, otherwise it will be empty * If the business must sign a terms of service, `required`
  * will be populated, otherwise it will be empty. Note that both `required` and `accepted` can be
  * present. In this case the `accepted` terms of services will have an expiration date set in the
  * `valid_until` field. The `required` terms of services need to be accepted before `valid_until` in
  * order for the account to continue having a valid agreement. When accepting new terms of services
- * we expect 3Ps to display the text associated with the given terms of service agreement (the url
- * to the file containing the text is added in the Required message below as `tos_file_uri`). The
- * actual acceptance of the terms of service is done by calling accept on the `TermsOfService`
- * resource.
+ * we expect third-party providers to display the text associated with the given terms of service
+ * agreement (the url to the file containing the text is added in the Required message below as
+ * `tos_file_uri`). The actual acceptance of the terms of service is done by calling accept on the
+ * `TermsOfService` resource. `valid_until` field. The `required` terms of services need to be
+ * accepted before `valid_until` in order for the account to continue having a valid agreement. When
+ * accepting new terms of services, we expect third-party providers to display the text associated
+ * with the given terms of service agreement (the url to the file containing the text is added in
+ * the Required message below as `tos_file_uri`. The actual acceptance of the terms of service is
+ * done by calling accept on the `TermsOfService` resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:
@@ -49,7 +54,8 @@ public final class TermsOfServiceAgreementState extends com.google.api.client.js
   /**
    * Identifier. The resource name of the terms of service version. Format:
    * `accounts/{account}/termsOfServiceAgreementState/{identifier}` The identifier format is:
-   * `{TermsOfServiceKind}-{country}` For example, an identifier could be: `MERCHANT_CENTER-US`
+   * `{TermsOfServiceKind}-{country}` For example, an identifier could be: `MERCHANT_CENTER-EU` or
+   * `MERCHANT_CENTER-US`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,7 +103,8 @@ public final class TermsOfServiceAgreementState extends com.google.api.client.js
   /**
    * Identifier. The resource name of the terms of service version. Format:
    * `accounts/{account}/termsOfServiceAgreementState/{identifier}` The identifier format is:
-   * `{TermsOfServiceKind}-{country}` For example, an identifier could be: `MERCHANT_CENTER-US`
+   * `{TermsOfServiceKind}-{country}` For example, an identifier could be: `MERCHANT_CENTER-EU` or
+   * `MERCHANT_CENTER-US`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -107,7 +114,8 @@ public final class TermsOfServiceAgreementState extends com.google.api.client.js
   /**
    * Identifier. The resource name of the terms of service version. Format:
    * `accounts/{account}/termsOfServiceAgreementState/{identifier}` The identifier format is:
-   * `{TermsOfServiceKind}-{country}` For example, an identifier could be: `MERCHANT_CENTER-US`
+   * `{TermsOfServiceKind}-{country}` For example, an identifier could be: `MERCHANT_CENTER-EU` or
+   * `MERCHANT_CENTER-US`.
    * @param name name or {@code null} for none
    */
   public TermsOfServiceAgreementState setName(java.lang.String name) {

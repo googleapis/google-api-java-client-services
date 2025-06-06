@@ -87,6 +87,13 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   private TrafficPercentStrategy trafficPercentStrategy;
 
   /**
+   * The TPC universe which the rollout will be rolled out to.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String universe;
+
+  /**
    * Creation time of the rollout. Readonly.
    * @return value or {@code null} for none
    */
@@ -212,6 +219,23 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
    */
   public Rollout setTrafficPercentStrategy(TrafficPercentStrategy trafficPercentStrategy) {
     this.trafficPercentStrategy = trafficPercentStrategy;
+    return this;
+  }
+
+  /**
+   * The TPC universe which the rollout will be rolled out to.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUniverse() {
+    return universe;
+  }
+
+  /**
+   * The TPC universe which the rollout will be rolled out to.
+   * @param universe universe or {@code null} for none
+   */
+  public Rollout setUniverse(java.lang.String universe) {
+    this.universe = universe;
     return this;
   }
 

@@ -66,6 +66,13 @@ public final class AccountUser extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean paymentsManager;
 
   /**
+   * Optional. Whether user has standard read-only access.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean readOnly;
+
+  /**
    * Whether user is a reporting manager. This role is equivalent to the Performance and insights
    * role in Merchant Center.
    * The value may be {@code null}.
@@ -155,6 +162,23 @@ public final class AccountUser extends com.google.api.client.json.GenericJson {
    */
   public AccountUser setPaymentsManager(java.lang.Boolean paymentsManager) {
     this.paymentsManager = paymentsManager;
+    return this;
+  }
+
+  /**
+   * Optional. Whether user has standard read-only access.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getReadOnly() {
+    return readOnly;
+  }
+
+  /**
+   * Optional. Whether user has standard read-only access.
+   * @param readOnly readOnly or {@code null} for none
+   */
+  public AccountUser setReadOnly(java.lang.Boolean readOnly) {
+    this.readOnly = readOnly;
     return this;
   }
 

@@ -37,8 +37,10 @@ public final class SACRealmSACRealmSymantecOptions extends com.google.api.client
   private java.util.List<java.lang.String> availableSymantecSites;
 
   /**
-   * Optional. A secret ID or secret name can be specified, but it will be parsed and stored as
-   * secret URI in the format of "projects/{PROJECT_NUMBER}/secrets/my-secret".
+   * Optional. API Key used to call Symantec APIs on the user's behalf. Required if using
+   * SYMANTEC_CLOUD_SWG. P4SA account needs permissions granted to read this secret. A secret ID,
+   * secret name, or secret URI can be specified, but it will be parsed and stored as secret URI in
+   * the format of "projects/{PROJECT_NUMBER}/secrets/my-secret".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,8 +71,10 @@ public final class SACRealmSACRealmSymantecOptions extends com.google.api.client
   }
 
   /**
-   * Optional. A secret ID or secret name can be specified, but it will be parsed and stored as
-   * secret URI in the format of "projects/{PROJECT_NUMBER}/secrets/my-secret".
+   * Optional. API Key used to call Symantec APIs on the user's behalf. Required if using
+   * SYMANTEC_CLOUD_SWG. P4SA account needs permissions granted to read this secret. A secret ID,
+   * secret name, or secret URI can be specified, but it will be parsed and stored as secret URI in
+   * the format of "projects/{PROJECT_NUMBER}/secrets/my-secret".
    * @return value or {@code null} for none
    */
   public java.lang.String getSecretPath() {
@@ -78,8 +82,10 @@ public final class SACRealmSACRealmSymantecOptions extends com.google.api.client
   }
 
   /**
-   * Optional. A secret ID or secret name can be specified, but it will be parsed and stored as
-   * secret URI in the format of "projects/{PROJECT_NUMBER}/secrets/my-secret".
+   * Optional. API Key used to call Symantec APIs on the user's behalf. Required if using
+   * SYMANTEC_CLOUD_SWG. P4SA account needs permissions granted to read this secret. A secret ID,
+   * secret name, or secret URI can be specified, but it will be parsed and stored as secret URI in
+   * the format of "projects/{PROJECT_NUMBER}/secrets/my-secret".
    * @param secretPath secretPath or {@code null} for none
    */
   public SACRealmSACRealmSymantecOptions setSecretPath(java.lang.String secretPath) {

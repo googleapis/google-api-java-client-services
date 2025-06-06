@@ -30,12 +30,39 @@ package com.google.api.services.networksecurity.v1beta1.model;
 public final class AuthzPolicyAuthzRuleFromRequestSource extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. A list of IPs or CIDRs to match against the source IP of a request. Limited to 5
+   * ip_blocks.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<AuthzPolicyAuthzRuleIpBlock> ipBlocks;
+
+  /**
    * Optional. A list of resources to match against the resource of the source VM of a request.
    * Limited to 5 resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<AuthzPolicyAuthzRuleRequestResource> resources;
+
+  /**
+   * Optional. A list of IPs or CIDRs to match against the source IP of a request. Limited to 5
+   * ip_blocks.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<AuthzPolicyAuthzRuleIpBlock> getIpBlocks() {
+    return ipBlocks;
+  }
+
+  /**
+   * Optional. A list of IPs or CIDRs to match against the source IP of a request. Limited to 5
+   * ip_blocks.
+   * @param ipBlocks ipBlocks or {@code null} for none
+   */
+  public AuthzPolicyAuthzRuleFromRequestSource setIpBlocks(java.util.List<AuthzPolicyAuthzRuleIpBlock> ipBlocks) {
+    this.ipBlocks = ipBlocks;
+    return this;
+  }
 
   /**
    * Optional. A list of resources to match against the resource of the source VM of a request.

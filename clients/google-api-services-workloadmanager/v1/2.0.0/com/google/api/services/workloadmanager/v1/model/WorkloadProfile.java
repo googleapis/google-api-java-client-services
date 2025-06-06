@@ -30,27 +30,6 @@ package com.google.api.services.workloadmanager.v1.model;
 public final class WorkloadProfile extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The application layer
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private Layer application;
-
-  /**
-   * Optional. The ascs layer
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private Layer ascs;
-
-  /**
-   * Optional. The database layer
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private Layer database;
-
-  /**
    * Optional. such as name, description, version. More example can be found in deployment
    * The value may be {@code null}.
    */
@@ -59,7 +38,7 @@ public final class WorkloadProfile extends com.google.api.client.json.GenericJso
 
   /**
    * Identifier. name of resource names have the form
-   * 'projects/{project_id}/workloads/{workload_id}'
+   * 'projects/{project_id}/locations/{location}/workloadProfiles/{workload_id}'
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,69 +59,11 @@ public final class WorkloadProfile extends com.google.api.client.json.GenericJso
   private SapWorkload sapWorkload;
 
   /**
-   * Output only. [output only] the current state if a a workload
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String state;
-
-  /**
    * Required. The type of the workload
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String workloadType;
-
-  /**
-   * Optional. The application layer
-   * @return value or {@code null} for none
-   */
-  public Layer getApplication() {
-    return application;
-  }
-
-  /**
-   * Optional. The application layer
-   * @param application application or {@code null} for none
-   */
-  public WorkloadProfile setApplication(Layer application) {
-    this.application = application;
-    return this;
-  }
-
-  /**
-   * Optional. The ascs layer
-   * @return value or {@code null} for none
-   */
-  public Layer getAscs() {
-    return ascs;
-  }
-
-  /**
-   * Optional. The ascs layer
-   * @param ascs ascs or {@code null} for none
-   */
-  public WorkloadProfile setAscs(Layer ascs) {
-    this.ascs = ascs;
-    return this;
-  }
-
-  /**
-   * Optional. The database layer
-   * @return value or {@code null} for none
-   */
-  public Layer getDatabase() {
-    return database;
-  }
-
-  /**
-   * Optional. The database layer
-   * @param database database or {@code null} for none
-   */
-  public WorkloadProfile setDatabase(Layer database) {
-    this.database = database;
-    return this;
-  }
 
   /**
    * Optional. such as name, description, version. More example can be found in deployment
@@ -163,7 +84,7 @@ public final class WorkloadProfile extends com.google.api.client.json.GenericJso
 
   /**
    * Identifier. name of resource names have the form
-   * 'projects/{project_id}/workloads/{workload_id}'
+   * 'projects/{project_id}/locations/{location}/workloadProfiles/{workload_id}'
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -172,7 +93,7 @@ public final class WorkloadProfile extends com.google.api.client.json.GenericJso
 
   /**
    * Identifier. name of resource names have the form
-   * 'projects/{project_id}/workloads/{workload_id}'
+   * 'projects/{project_id}/locations/{location}/workloadProfiles/{workload_id}'
    * @param name name or {@code null} for none
    */
   public WorkloadProfile setName(java.lang.String name) {
@@ -211,23 +132,6 @@ public final class WorkloadProfile extends com.google.api.client.json.GenericJso
    */
   public WorkloadProfile setSapWorkload(SapWorkload sapWorkload) {
     this.sapWorkload = sapWorkload;
-    return this;
-  }
-
-  /**
-   * Output only. [output only] the current state if a a workload
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getState() {
-    return state;
-  }
-
-  /**
-   * Output only. [output only] the current state if a a workload
-   * @param state state or {@code null} for none
-   */
-  public WorkloadProfile setState(java.lang.String state) {
-    this.state = state;
     return this;
   }
 

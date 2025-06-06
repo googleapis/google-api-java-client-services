@@ -17,7 +17,7 @@
 package com.google.api.services.workloadmanager.v1.model;
 
 /**
- * a vm instance
+ * The reference to public documentation.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Workload Manager API. For a detailed explanation see:
@@ -27,31 +27,24 @@ package com.google.api.services.workloadmanager.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Instance extends com.google.api.client.json.GenericJson {
+public final class AgentStatusReference extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. name of the VM
+   * Output only. The name of the reference.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output only. The location of the VM
+   * Output only. The URL of the reference.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String region;
+  private java.lang.String url;
 
   /**
-   * Output only. The state of the VM
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String status;
-
-  /**
-   * Output only. name of the VM
+   * Output only. The name of the reference.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -59,56 +52,39 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. name of the VM
+   * Output only. The name of the reference.
    * @param name name or {@code null} for none
    */
-  public Instance setName(java.lang.String name) {
+  public AgentStatusReference setName(java.lang.String name) {
     this.name = name;
     return this;
   }
 
   /**
-   * Output only. The location of the VM
+   * Output only. The URL of the reference.
    * @return value or {@code null} for none
    */
-  public java.lang.String getRegion() {
-    return region;
+  public java.lang.String getUrl() {
+    return url;
   }
 
   /**
-   * Output only. The location of the VM
-   * @param region region or {@code null} for none
+   * Output only. The URL of the reference.
+   * @param url url or {@code null} for none
    */
-  public Instance setRegion(java.lang.String region) {
-    this.region = region;
-    return this;
-  }
-
-  /**
-   * Output only. The state of the VM
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getStatus() {
-    return status;
-  }
-
-  /**
-   * Output only. The state of the VM
-   * @param status status or {@code null} for none
-   */
-  public Instance setStatus(java.lang.String status) {
-    this.status = status;
+  public AgentStatusReference setUrl(java.lang.String url) {
+    this.url = url;
     return this;
   }
 
   @Override
-  public Instance set(String fieldName, Object value) {
-    return (Instance) super.set(fieldName, value);
+  public AgentStatusReference set(String fieldName, Object value) {
+    return (AgentStatusReference) super.set(fieldName, value);
   }
 
   @Override
-  public Instance clone() {
-    return (Instance) super.clone();
+  public AgentStatusReference clone() {
+    return (AgentStatusReference) super.clone();
   }
 
 }

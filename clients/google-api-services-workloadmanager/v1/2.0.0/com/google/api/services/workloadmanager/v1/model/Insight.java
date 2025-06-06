@@ -30,6 +30,13 @@ package com.google.api.services.workloadmanager.v1.model;
 public final class Insight extends com.google.api.client.json.GenericJson {
 
   /**
+   * The insights data for the agent status.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AgentStatus agentStatus;
+
+  /**
    * Required. The instance id where the insight is generated from
    * The value may be {@code null}.
    */
@@ -71,6 +78,23 @@ public final class Insight extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private TorsoValidation torsoValidation;
+
+  /**
+   * The insights data for the agent status.
+   * @return value or {@code null} for none
+   */
+  public AgentStatus getAgentStatus() {
+    return agentStatus;
+  }
+
+  /**
+   * The insights data for the agent status.
+   * @param agentStatus agentStatus or {@code null} for none
+   */
+  public Insight setAgentStatus(AgentStatus agentStatus) {
+    this.agentStatus = agentStatus;
+    return this;
+  }
 
   /**
    * Required. The instance id where the insight is generated from

@@ -17,8 +17,10 @@
 package com.google.api.services.dfareporting.model;
 
 /**
- * Contains additional information about cart data. This field may only be used when calling
- * batchinsert; it is not supported by batchupdate.
+ * *Beta:* This feature is currently in beta. Contains additional information about cart data. This
+ * field may only be used when calling batchinsert; it is not supported by batchupdate. Cart data
+ * reporting is only supported in SA360. [Learn
+ * more](https://support.google.com/sa360/topic/13425788)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Campaign Manager 360 API. For a detailed explanation

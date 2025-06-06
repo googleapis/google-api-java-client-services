@@ -32,10 +32,10 @@ package com.google.api.services.servicenetworking.v1beta.model;
 public final class Connection extends com.google.api.client.json.GenericJson {
 
   /**
-   * The name of service consumer's VPC network that's connected with service producer network, in
-   * the following format: `projects/{project}/global/networks/{network}`. `{project}` is a project
-   * number, such as in `12345` that includes the VPC service consumer's VPC network. `{network}` is
-   * the name of the service consumer's VPC network.
+   * Required. The name of service consumer's VPC network that's connected with service producer
+   * network, in the following format: `projects/{project}/global/networks/{network}`. `{project}`
+   * is a project number, such as in `12345` that includes the VPC service consumer's VPC network.
+   * `{network}` is the name of the service consumer's VPC network.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,10 +70,10 @@ public final class Connection extends com.google.api.client.json.GenericJson {
   private java.lang.String service;
 
   /**
-   * The name of service consumer's VPC network that's connected with service producer network, in
-   * the following format: `projects/{project}/global/networks/{network}`. `{project}` is a project
-   * number, such as in `12345` that includes the VPC service consumer's VPC network. `{network}` is
-   * the name of the service consumer's VPC network.
+   * Required. The name of service consumer's VPC network that's connected with service producer
+   * network, in the following format: `projects/{project}/global/networks/{network}`. `{project}`
+   * is a project number, such as in `12345` that includes the VPC service consumer's VPC network.
+   * `{network}` is the name of the service consumer's VPC network.
    * @return value or {@code null} for none
    */
   public java.lang.String getNetwork() {
@@ -81,10 +81,10 @@ public final class Connection extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of service consumer's VPC network that's connected with service producer network, in
-   * the following format: `projects/{project}/global/networks/{network}`. `{project}` is a project
-   * number, such as in `12345` that includes the VPC service consumer's VPC network. `{network}` is
-   * the name of the service consumer's VPC network.
+   * Required. The name of service consumer's VPC network that's connected with service producer
+   * network, in the following format: `projects/{project}/global/networks/{network}`. `{project}`
+   * is a project number, such as in `12345` that includes the VPC service consumer's VPC network.
+   * `{network}` is the name of the service consumer's VPC network.
    * @param network network or {@code null} for none
    */
   public Connection setNetwork(java.lang.String network) {

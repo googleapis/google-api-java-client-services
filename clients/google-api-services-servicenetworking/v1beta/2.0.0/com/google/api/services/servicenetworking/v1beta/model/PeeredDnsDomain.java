@@ -40,9 +40,9 @@ public final class PeeredDnsDomain extends com.google.api.client.json.GenericJso
   private java.lang.String dnsSuffix;
 
   /**
-   * User assigned name for this resource. Must be unique within the consumer network. The name must
-   * be 1-63 characters long, must begin with a letter, end with a letter or digit, and only contain
-   * lowercase letters, digits or dashes.
+   * Required. User assigned name for this resource. Must be unique within the consumer network. The
+   * name must be 1-63 characters long, must begin with a letter, end with a letter or digit, and
+   * only contain lowercase letters, digits or dashes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,9 +68,9 @@ public final class PeeredDnsDomain extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * User assigned name for this resource. Must be unique within the consumer network. The name must
-   * be 1-63 characters long, must begin with a letter, end with a letter or digit, and only contain
-   * lowercase letters, digits or dashes.
+   * Required. User assigned name for this resource. Must be unique within the consumer network. The
+   * name must be 1-63 characters long, must begin with a letter, end with a letter or digit, and
+   * only contain lowercase letters, digits or dashes.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -78,9 +78,9 @@ public final class PeeredDnsDomain extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * User assigned name for this resource. Must be unique within the consumer network. The name must
-   * be 1-63 characters long, must begin with a letter, end with a letter or digit, and only contain
-   * lowercase letters, digits or dashes.
+   * Required. User assigned name for this resource. Must be unique within the consumer network. The
+   * name must be 1-63 characters long, must begin with a letter, end with a letter or digit, and
+   * only contain lowercase letters, digits or dashes.
    * @param name name or {@code null} for none
    */
   public PeeredDnsDomain setName(java.lang.String name) {

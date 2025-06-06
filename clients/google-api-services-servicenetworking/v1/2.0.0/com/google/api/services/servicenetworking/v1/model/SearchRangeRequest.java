@@ -40,8 +40,8 @@ public final class SearchRangeRequest extends com.google.api.client.json.Generic
   private java.lang.Integer ipPrefixLength;
 
   /**
-   * Network name in the consumer project. This network must have been already peered with a shared
-   * VPC network using CreateConnection method. Must be in a form
+   * Required. Network name in the consumer project. This network must have been already peered with
+   * a shared VPC network using CreateConnection method. Must be in a form
    * 'projects/{project}/global/networks/{network}'. {project} is a project number, as in '12345'
    * {network} is network name.
    * The value may be {@code null}.
@@ -71,8 +71,8 @@ public final class SearchRangeRequest extends com.google.api.client.json.Generic
   }
 
   /**
-   * Network name in the consumer project. This network must have been already peered with a shared
-   * VPC network using CreateConnection method. Must be in a form
+   * Required. Network name in the consumer project. This network must have been already peered with
+   * a shared VPC network using CreateConnection method. Must be in a form
    * 'projects/{project}/global/networks/{network}'. {project} is a project number, as in '12345'
    * {network} is network name.
    * @return value or {@code null} for none
@@ -82,8 +82,8 @@ public final class SearchRangeRequest extends com.google.api.client.json.Generic
   }
 
   /**
-   * Network name in the consumer project. This network must have been already peered with a shared
-   * VPC network using CreateConnection method. Must be in a form
+   * Required. Network name in the consumer project. This network must have been already peered with
+   * a shared VPC network using CreateConnection method. Must be in a form
    * 'projects/{project}/global/networks/{network}'. {project} is a project number, as in '12345'
    * {network} is network name.
    * @param network network or {@code null} for none

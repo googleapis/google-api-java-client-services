@@ -1667,6 +1667,148 @@ public class DriveLabels extends com.google.api.client.googleapis.services.json.
       }
     }
     /**
+     * Updates a Label's EabledAppSettings. Enabling a Label in a Workspace Application allows it to be
+     * used in that application. This change is not revisioned, does not require publishing, and takes
+     * effect immediately.
+     *
+     * Create a request for the method "labels.updateLabelEnabledAppSettings".
+     *
+     * This request holds the parameters needed by the drivelabels server.  After setting any optional
+     * parameters, call the {@link UpdateLabelEnabledAppSettings#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param name Required. The resource name of the Label to update. The resource name of the Label to update.
+     * @param content the {@link com.google.api.services.drivelabels.v2.model.GoogleAppsDriveLabelsV2UpdateLabelEnabledAppSettingsRequest}
+     * @return the request
+     */
+    public UpdateLabelEnabledAppSettings updateLabelEnabledAppSettings(java.lang.String name, com.google.api.services.drivelabels.v2.model.GoogleAppsDriveLabelsV2UpdateLabelEnabledAppSettingsRequest content) throws java.io.IOException {
+      UpdateLabelEnabledAppSettings result = new UpdateLabelEnabledAppSettings(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class UpdateLabelEnabledAppSettings extends DriveLabelsRequest<com.google.api.services.drivelabels.v2.model.GoogleAppsDriveLabelsV2Label> {
+
+      private static final String REST_PATH = "v2/{+name}:updateLabelEnabledAppSettings";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^labels/[^/]+$");
+
+      /**
+       * Updates a Label's EabledAppSettings. Enabling a Label in a Workspace Application allows it to
+       * be used in that application. This change is not revisioned, does not require publishing, and
+       * takes effect immediately.
+       *
+       * Create a request for the method "labels.updateLabelEnabledAppSettings".
+       *
+       * This request holds the parameters needed by the the drivelabels server.  After setting any
+       * optional parameters, call the {@link UpdateLabelEnabledAppSettings#execute()} method to invoke
+       * the remote operation. <p> {@link UpdateLabelEnabledAppSettings#initialize(com.google.api.client
+       * .googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+       * immediately after invoking the constructor. </p>
+       *
+       * @param name Required. The resource name of the Label to update. The resource name of the Label to update.
+       * @param content the {@link com.google.api.services.drivelabels.v2.model.GoogleAppsDriveLabelsV2UpdateLabelEnabledAppSettingsRequest}
+       * @since 1.13
+       */
+      protected UpdateLabelEnabledAppSettings(java.lang.String name, com.google.api.services.drivelabels.v2.model.GoogleAppsDriveLabelsV2UpdateLabelEnabledAppSettingsRequest content) {
+        super(DriveLabels.this, "POST", REST_PATH, content, com.google.api.services.drivelabels.v2.model.GoogleAppsDriveLabelsV2Label.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^labels/[^/]+$");
+        }
+      }
+
+      @Override
+      public UpdateLabelEnabledAppSettings set$Xgafv(java.lang.String $Xgafv) {
+        return (UpdateLabelEnabledAppSettings) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public UpdateLabelEnabledAppSettings setAccessToken(java.lang.String accessToken) {
+        return (UpdateLabelEnabledAppSettings) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public UpdateLabelEnabledAppSettings setAlt(java.lang.String alt) {
+        return (UpdateLabelEnabledAppSettings) super.setAlt(alt);
+      }
+
+      @Override
+      public UpdateLabelEnabledAppSettings setCallback(java.lang.String callback) {
+        return (UpdateLabelEnabledAppSettings) super.setCallback(callback);
+      }
+
+      @Override
+      public UpdateLabelEnabledAppSettings setFields(java.lang.String fields) {
+        return (UpdateLabelEnabledAppSettings) super.setFields(fields);
+      }
+
+      @Override
+      public UpdateLabelEnabledAppSettings setKey(java.lang.String key) {
+        return (UpdateLabelEnabledAppSettings) super.setKey(key);
+      }
+
+      @Override
+      public UpdateLabelEnabledAppSettings setOauthToken(java.lang.String oauthToken) {
+        return (UpdateLabelEnabledAppSettings) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public UpdateLabelEnabledAppSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (UpdateLabelEnabledAppSettings) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public UpdateLabelEnabledAppSettings setQuotaUser(java.lang.String quotaUser) {
+        return (UpdateLabelEnabledAppSettings) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public UpdateLabelEnabledAppSettings setUploadType(java.lang.String uploadType) {
+        return (UpdateLabelEnabledAppSettings) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public UpdateLabelEnabledAppSettings setUploadProtocol(java.lang.String uploadProtocol) {
+        return (UpdateLabelEnabledAppSettings) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The resource name of the Label to update. The resource name of the Label to
+       * update.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The resource name of the Label to update. The resource name of the Label to update.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The resource name of the Label to update. The resource name of the Label to
+       * update.
+       */
+      public UpdateLabelEnabledAppSettings setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^labels/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public UpdateLabelEnabledAppSettings set(String parameterName, Object value) {
+        return (UpdateLabelEnabledAppSettings) super.set(parameterName, value);
+      }
+    }
+    /**
      * Updates a Label's permissions. If a permission for the indicated principal doesn't exist, a new
      * Label Permission is created, otherwise the existing permission is updated. Permissions affect the
      * Label resource as a whole, are not revisioned, and do not require publishing.

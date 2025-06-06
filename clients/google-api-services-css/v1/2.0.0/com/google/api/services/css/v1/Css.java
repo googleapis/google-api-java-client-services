@@ -1264,7 +1264,8 @@ public class Css extends com.google.api.client.googleapis.services.json.Abstract
        * This request holds the parameters needed by the css server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The name of the CSS product to retrieve.
+       * @param name Required. The name of the CSS product to retrieve. Format:
+       *        `accounts/{account}/cssProducts/{css_product}`
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -1292,7 +1293,8 @@ public class Css extends com.google.api.client.googleapis.services.json.Abstract
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The name of the CSS product to retrieve.
+         * @param name Required. The name of the CSS product to retrieve. Format:
+       *        `accounts/{account}/cssProducts/{css_product}`
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -1370,17 +1372,24 @@ public class Css extends com.google.api.client.googleapis.services.json.Abstract
           return (Get) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. The name of the CSS product to retrieve. */
+        /**
+         * Required. The name of the CSS product to retrieve. Format:
+         * `accounts/{account}/cssProducts/{css_product}`
+         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The name of the CSS product to retrieve.
+        /** Required. The name of the CSS product to retrieve. Format:
+       `accounts/{account}/cssProducts/{css_product}`
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** Required. The name of the CSS product to retrieve. */
+        /**
+         * Required. The name of the CSS product to retrieve. Format:
+         * `accounts/{account}/cssProducts/{css_product}`
+         */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

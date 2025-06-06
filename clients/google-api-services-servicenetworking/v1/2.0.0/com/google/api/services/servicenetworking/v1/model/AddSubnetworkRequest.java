@@ -137,8 +137,8 @@ public final class AddSubnetworkRequest extends com.google.api.client.json.Gener
   private java.lang.String purpose;
 
   /**
-   * Required. The name of a [region](/compute/docs/regions-zones) for the subnet, such `europe-
-   * west1`.
+   * Required. The name of a [region](https://cloud.google.com/compute/docs/regions-zones) for the
+   * subnet, such `europe-west1`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -195,7 +195,8 @@ public final class AddSubnetworkRequest extends com.google.api.client.json.Gener
 
   /**
    * Required. A name for the new subnet. For information about the naming requirements, see
-   * [subnetwork](/compute/docs/reference/rest/v1/subnetworks) in the Compute API documentation.
+   * [subnetwork](https://cloud.google.com/compute/docs/reference/rest/v1/subnetworks) in the
+   * Compute API documentation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -465,8 +466,8 @@ public final class AddSubnetworkRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. The name of a [region](/compute/docs/regions-zones) for the subnet, such `europe-
-   * west1`.
+   * Required. The name of a [region](https://cloud.google.com/compute/docs/regions-zones) for the
+   * subnet, such `europe-west1`.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegion() {
@@ -474,8 +475,8 @@ public final class AddSubnetworkRequest extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. The name of a [region](/compute/docs/regions-zones) for the subnet, such `europe-
-   * west1`.
+   * Required. The name of a [region](https://cloud.google.com/compute/docs/regions-zones) for the
+   * subnet, such `europe-west1`.
    * @param region region or {@code null} for none
    */
   public AddSubnetworkRequest setRegion(java.lang.String region) {
@@ -598,7 +599,8 @@ public final class AddSubnetworkRequest extends com.google.api.client.json.Gener
 
   /**
    * Required. A name for the new subnet. For information about the naming requirements, see
-   * [subnetwork](/compute/docs/reference/rest/v1/subnetworks) in the Compute API documentation.
+   * [subnetwork](https://cloud.google.com/compute/docs/reference/rest/v1/subnetworks) in the
+   * Compute API documentation.
    * @return value or {@code null} for none
    */
   public java.lang.String getSubnetwork() {
@@ -607,7 +609,8 @@ public final class AddSubnetworkRequest extends com.google.api.client.json.Gener
 
   /**
    * Required. A name for the new subnet. For information about the naming requirements, see
-   * [subnetwork](/compute/docs/reference/rest/v1/subnetworks) in the Compute API documentation.
+   * [subnetwork](https://cloud.google.com/compute/docs/reference/rest/v1/subnetworks) in the
+   * Compute API documentation.
    * @param subnetwork subnetwork or {@code null} for none
    */
   public AddSubnetworkRequest setSubnetwork(java.lang.String subnetwork) {

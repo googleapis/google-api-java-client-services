@@ -31,28 +31,28 @@ package com.google.api.services.servicenetworking.v1beta.model;
 public final class CloudSQLConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Peering service used for peering with the Cloud SQL project.
+   * Required. Peering service used for peering with the Cloud SQL project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String service;
 
   /**
-   * The name of the umbrella network in the Cloud SQL umbrella project.
+   * Required. The name of the umbrella network in the Cloud SQL umbrella project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String umbrellaNetwork;
 
   /**
-   * The project number of the Cloud SQL umbrella project.
+   * Required. The project number of the Cloud SQL umbrella project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long umbrellaProject;
 
   /**
-   * Peering service used for peering with the Cloud SQL project.
+   * Required. Peering service used for peering with the Cloud SQL project.
    * @return value or {@code null} for none
    */
   public java.lang.String getService() {
@@ -60,7 +60,7 @@ public final class CloudSQLConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Peering service used for peering with the Cloud SQL project.
+   * Required. Peering service used for peering with the Cloud SQL project.
    * @param service service or {@code null} for none
    */
   public CloudSQLConfig setService(java.lang.String service) {
@@ -69,7 +69,7 @@ public final class CloudSQLConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The name of the umbrella network in the Cloud SQL umbrella project.
+   * Required. The name of the umbrella network in the Cloud SQL umbrella project.
    * @return value or {@code null} for none
    */
   public java.lang.String getUmbrellaNetwork() {
@@ -77,7 +77,7 @@ public final class CloudSQLConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The name of the umbrella network in the Cloud SQL umbrella project.
+   * Required. The name of the umbrella network in the Cloud SQL umbrella project.
    * @param umbrellaNetwork umbrellaNetwork or {@code null} for none
    */
   public CloudSQLConfig setUmbrellaNetwork(java.lang.String umbrellaNetwork) {
@@ -86,7 +86,7 @@ public final class CloudSQLConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The project number of the Cloud SQL umbrella project.
+   * Required. The project number of the Cloud SQL umbrella project.
    * @return value or {@code null} for none
    */
   public java.lang.Long getUmbrellaProject() {
@@ -94,7 +94,7 @@ public final class CloudSQLConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The project number of the Cloud SQL umbrella project.
+   * Required. The project number of the Cloud SQL umbrella project.
    * @param umbrellaProject umbrellaProject or {@code null} for none
    */
   public CloudSQLConfig setUmbrellaProject(java.lang.Long umbrellaProject) {

@@ -321,13 +321,15 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Required. The primary or supplemental data source from which the product input should be
-         * deleted. Format: `accounts/{account}/dataSources/{datasource}`.
+         * deleted. Format: `accounts/{account}/dataSources/{datasource}`. For example,
+         * `accounts/123456/dataSources/104628`.
          */
         @com.google.api.client.util.Key
         private java.lang.String dataSource;
 
         /** Required. The primary or supplemental data source from which the product input should be deleted.
-       Format: `accounts/{account}/dataSources/{datasource}`.
+       Format: `accounts/{account}/dataSources/{datasource}`. For example,
+       `accounts/123456/dataSources/104628`.
          */
         public java.lang.String getDataSource() {
           return dataSource;
@@ -335,7 +337,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Required. The primary or supplemental data source from which the product input should be
-         * deleted. Format: `accounts/{account}/dataSources/{datasource}`.
+         * deleted. Format: `accounts/{account}/dataSources/{datasource}`. For example,
+         * `accounts/123456/dataSources/104628`.
          */
         public Delete setDataSource(java.lang.String dataSource) {
           this.dataSource = dataSource;
@@ -487,14 +490,16 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          * Required. The primary or supplemental product data source name. If the product already
          * exists and data source provided is different, then the product will be moved to a new
          * data source. Only API data sources are supported. Format:
-         * `accounts/{account}/dataSources/{datasource}`.
+         * `accounts/{account}/dataSources/{datasource}`. For example,
+         * `accounts/123456/dataSources/104628`.
          */
         @com.google.api.client.util.Key
         private java.lang.String dataSource;
 
         /** Required. The primary or supplemental product data source name. If the product already exists and
        data source provided is different, then the product will be moved to a new data source. Only API
-       data sources are supported. Format: `accounts/{account}/dataSources/{datasource}`.
+       data sources are supported. Format: `accounts/{account}/dataSources/{datasource}`. For example,
+       `accounts/123456/dataSources/104628`.
          */
         public java.lang.String getDataSource() {
           return dataSource;
@@ -504,7 +509,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          * Required. The primary or supplemental product data source name. If the product already
          * exists and data source provided is different, then the product will be moved to a new
          * data source. Only API data sources are supported. Format:
-         * `accounts/{account}/dataSources/{datasource}`.
+         * `accounts/{account}/dataSources/{datasource}`. For example,
+         * `accounts/123456/dataSources/104628`.
          */
         public Insert setDataSource(java.lang.String dataSource) {
           this.dataSource = dataSource;
@@ -668,14 +674,15 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
         /**
          * Required. The primary or supplemental product data source where `data_source` name
          * identifies the product input to be updated. Only API data sources are supported. Format:
-         * `accounts/{account}/dataSources/{datasource}`.
+         * `accounts/{account}/dataSources/{datasource}`. For example,
+         * `accounts/123456/dataSources/104628`.
          */
         @com.google.api.client.util.Key
         private java.lang.String dataSource;
 
         /** Required. The primary or supplemental product data source where `data_source` name identifies the
        product input to be updated. Only API data sources are supported. Format:
-       `accounts/{account}/dataSources/{datasource}`.
+       `accounts/{account}/dataSources/{datasource}`. For example, `accounts/123456/dataSources/104628`.
          */
         public java.lang.String getDataSource() {
           return dataSource;
@@ -684,7 +691,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
         /**
          * Required. The primary or supplemental product data source where `data_source` name
          * identifies the product input to be updated. Only API data sources are supported. Format:
-         * `accounts/{account}/dataSources/{datasource}`.
+         * `accounts/{account}/dataSources/{datasource}`. For example,
+         * `accounts/123456/dataSources/104628`.
          */
         public Patch setDataSource(java.lang.String dataSource) {
           this.dataSource = dataSource;
@@ -1058,14 +1066,14 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * The maximum number of products to return. The service may return fewer than this value.
-         * The maximum value is 250; values above 250 will be coerced to 250. If unspecified, the
+         * The maximum value is 1000; values above 1000 will be coerced to 1000. If unspecified, the
          * maximum number of products will be returned.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
         /** The maximum number of products to return. The service may return fewer than this value. The maximum
-       value is 250; values above 250 will be coerced to 250. If unspecified, the maximum number of
+       value is 1000; values above 1000 will be coerced to 1000. If unspecified, the maximum number of
        products will be returned.
          */
         public java.lang.Integer getPageSize() {
@@ -1074,7 +1082,7 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * The maximum number of products to return. The service may return fewer than this value.
-         * The maximum value is 250; values above 250 will be coerced to 250. If unspecified, the
+         * The maximum value is 1000; values above 1000 will be coerced to 1000. If unspecified, the
          * maximum number of products will be returned.
          */
         public List setPageSize(java.lang.Integer pageSize) {

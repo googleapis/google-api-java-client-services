@@ -63,7 +63,7 @@ public final class AutomaticImprovements extends com.google.api.client.json.Gene
   private java.lang.String name;
 
   /**
-   * Not available for MCAs [accounts](https://support.google.com/merchants/answer/188487). By
+   * Not available for [advanced accounts](https://support.google.com/merchants/answer/188487). By
    * turning on [automatic shipping
    * improvements](https://support.google.com/merchants/answer/10027038), you are allowing Google to
    * improve the accuracy of your delivery times shown to shoppers using Google. More accurate
@@ -148,7 +148,7 @@ public final class AutomaticImprovements extends com.google.api.client.json.Gene
   }
 
   /**
-   * Not available for MCAs [accounts](https://support.google.com/merchants/answer/188487). By
+   * Not available for [advanced accounts](https://support.google.com/merchants/answer/188487). By
    * turning on [automatic shipping
    * improvements](https://support.google.com/merchants/answer/10027038), you are allowing Google to
    * improve the accuracy of your delivery times shown to shoppers using Google. More accurate
@@ -163,7 +163,7 @@ public final class AutomaticImprovements extends com.google.api.client.json.Gene
   }
 
   /**
-   * Not available for MCAs [accounts](https://support.google.com/merchants/answer/188487). By
+   * Not available for [advanced accounts](https://support.google.com/merchants/answer/188487). By
    * turning on [automatic shipping
    * improvements](https://support.google.com/merchants/answer/10027038), you are allowing Google to
    * improve the accuracy of your delivery times shown to shoppers using Google. More accurate

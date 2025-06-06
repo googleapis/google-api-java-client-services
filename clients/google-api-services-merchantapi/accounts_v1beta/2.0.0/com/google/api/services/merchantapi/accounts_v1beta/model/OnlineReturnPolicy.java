@@ -31,14 +31,14 @@ package com.google.api.services.merchantapi.accounts_v1beta.model;
 public final class OnlineReturnPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. This field specifies if merchant only accepts defective products for returns.
+   * Optional. This field specifies if business only accepts defective products for returns.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean acceptDefectiveOnly;
 
   /**
-   * Optional. This field specifies if merchant allows customers to exchange products.
+   * Optional. This field specifies if business allows customers to exchange products.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,7 +89,7 @@ public final class OnlineReturnPolicy extends com.google.api.client.json.Generic
   private Policy policy;
 
   /**
-   * Optional. The field specifies the number of days it takes for merchants to process refunds.
+   * Optional. The field specifies the number of days it takes for business to process refunds.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -150,7 +150,7 @@ public final class OnlineReturnPolicy extends com.google.api.client.json.Generic
   private java.util.List<SeasonalOverride> seasonalOverrides;
 
   /**
-   * Optional. This field specifies if merchant only accepts defective products for returns.
+   * Optional. This field specifies if business only accepts defective products for returns.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAcceptDefectiveOnly() {
@@ -158,7 +158,7 @@ public final class OnlineReturnPolicy extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. This field specifies if merchant only accepts defective products for returns.
+   * Optional. This field specifies if business only accepts defective products for returns.
    * @param acceptDefectiveOnly acceptDefectiveOnly or {@code null} for none
    */
   public OnlineReturnPolicy setAcceptDefectiveOnly(java.lang.Boolean acceptDefectiveOnly) {
@@ -167,7 +167,7 @@ public final class OnlineReturnPolicy extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. This field specifies if merchant allows customers to exchange products.
+   * Optional. This field specifies if business allows customers to exchange products.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAcceptExchange() {
@@ -175,7 +175,7 @@ public final class OnlineReturnPolicy extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. This field specifies if merchant allows customers to exchange products.
+   * Optional. This field specifies if business allows customers to exchange products.
    * @param acceptExchange acceptExchange or {@code null} for none
    */
   public OnlineReturnPolicy setAcceptExchange(java.lang.Boolean acceptExchange) {
@@ -287,7 +287,7 @@ public final class OnlineReturnPolicy extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. The field specifies the number of days it takes for merchants to process refunds.
+   * Optional. The field specifies the number of days it takes for business to process refunds.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getProcessRefundDays() {
@@ -295,7 +295,7 @@ public final class OnlineReturnPolicy extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. The field specifies the number of days it takes for merchants to process refunds.
+   * Optional. The field specifies the number of days it takes for business to process refunds.
    * @param processRefundDays processRefundDays or {@code null} for none
    */
   public OnlineReturnPolicy setProcessRefundDays(java.lang.Integer processRefundDays) {

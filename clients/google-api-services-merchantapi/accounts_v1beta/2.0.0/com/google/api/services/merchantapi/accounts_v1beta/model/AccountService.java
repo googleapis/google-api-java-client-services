@@ -18,12 +18,12 @@ package com.google.api.services.merchantapi.accounts_v1beta.model;
 
 /**
  * The `AccountService` message represents a specific service that a provider account offers to a
- * merchant account. `AccountService` defines the permissions and capabilities granted to the
+ * Merchant Center account. `AccountService` defines the permissions and capabilities granted to the
  * provider, allowing for operations such as product management or campaign management. The
  * lifecycle of an `AccountService` involves a proposal phase, where one party suggests the service,
  * and an approval phase, where the other party accepts or rejects it. This handshake mechanism
  * ensures mutual consent before any access is granted. This mechanism safeguards both parties by
- * ensuring that access rights are granted appropriately and that both the merchant and provider are
+ * ensuring that access rights are granted appropriately and that both the business and provider are
  * aware of the services enabled. In scenarios where a user is an admin of both accounts, the
  * approval can happen automatically. The mutability of a service is also managed through
  * `AccountService`. Some services might be immutable, for example, if they were established through
@@ -40,11 +40,11 @@ package com.google.api.services.merchantapi.accounts_v1beta.model;
 public final class AccountService extends com.google.api.client.json.GenericJson {
 
   /**
-   * Service type for account aggregation. This enables the provider, which is a Multi-Client
-   * Account (MCA), to manage multiple sub-accounts (client accounts). Through this service, the MCA
+   * Service type for account aggregation. This enables the provider, which is an advanced account,
+   * to manage multiple sub-accounts (client accounts). Through this service, the advanced account
    * provider can perform administrative and operational tasks across all linked sub-accounts. This
    * is useful for agencies, aggregators, or large retailers that need centralized control over many
-   * merchant accounts.
+   * Merchant Center accounts.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +52,7 @@ public final class AccountService extends com.google.api.client.json.GenericJson
 
   /**
    * Service type for account management. Enables the provider to perform administrative actions on
-   * the merchant's account, such as configuring account settings, managing users, or updating
+   * the business's account, such as configuring account settings, managing users, or updating
    * business information.
    * The value may be {@code null}.
    */
@@ -61,7 +61,7 @@ public final class AccountService extends com.google.api.client.json.GenericJson
 
   /**
    * Service type for managing advertising campaigns. Grants the provider access to create and
-   * manage the merchant's ad campaigns, including setting up campaigns, adjusting bids, and
+   * manage the business's ad campaigns, including setting up campaigns, adjusting bids, and
    * optimizing performance.
    * The value may be {@code null}.
    */
@@ -89,6 +89,14 @@ public final class AccountService extends com.google.api.client.json.GenericJson
   private Handshake handshake;
 
   /**
+   * Service type for local listings management. The business group associated with the external
+   * account id will be used to provide local inventory to this Merchant Center account.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LocalListingManagement localListingManagement;
+
+  /**
    * Output only. Whether the service is mutable (e.g. through Approve / Reject RPCs). A service
    * that was created through another system or API might be immutable.
    * The value may be {@code null}.
@@ -106,8 +114,8 @@ public final class AccountService extends com.google.api.client.json.GenericJson
 
   /**
    * Service type for managing products. This allows the provider to handle product data on behalf
-   * of the merchant, including reading and writing product listings. It's commonly used when the
-   * provider offers inventory management or catalog synchronization services to keep the merchant's
+   * of the business, including reading and writing product listings. It's commonly used when the
+   * provider offers inventory management or catalog synchronization services to keep the business's
    * product information up-to-date across platforms.
    * The value may be {@code null}.
    */
@@ -131,11 +139,11 @@ public final class AccountService extends com.google.api.client.json.GenericJson
   private java.lang.String providerDisplayName;
 
   /**
-   * Service type for account aggregation. This enables the provider, which is a Multi-Client
-   * Account (MCA), to manage multiple sub-accounts (client accounts). Through this service, the MCA
+   * Service type for account aggregation. This enables the provider, which is an advanced account,
+   * to manage multiple sub-accounts (client accounts). Through this service, the advanced account
    * provider can perform administrative and operational tasks across all linked sub-accounts. This
    * is useful for agencies, aggregators, or large retailers that need centralized control over many
-   * merchant accounts.
+   * Merchant Center accounts.
    * @return value or {@code null} for none
    */
   public AccountAggregation getAccountAggregation() {
@@ -143,11 +151,11 @@ public final class AccountService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Service type for account aggregation. This enables the provider, which is a Multi-Client
-   * Account (MCA), to manage multiple sub-accounts (client accounts). Through this service, the MCA
+   * Service type for account aggregation. This enables the provider, which is an advanced account,
+   * to manage multiple sub-accounts (client accounts). Through this service, the advanced account
    * provider can perform administrative and operational tasks across all linked sub-accounts. This
    * is useful for agencies, aggregators, or large retailers that need centralized control over many
-   * merchant accounts.
+   * Merchant Center accounts.
    * @param accountAggregation accountAggregation or {@code null} for none
    */
   public AccountService setAccountAggregation(AccountAggregation accountAggregation) {
@@ -157,7 +165,7 @@ public final class AccountService extends com.google.api.client.json.GenericJson
 
   /**
    * Service type for account management. Enables the provider to perform administrative actions on
-   * the merchant's account, such as configuring account settings, managing users, or updating
+   * the business's account, such as configuring account settings, managing users, or updating
    * business information.
    * @return value or {@code null} for none
    */
@@ -167,7 +175,7 @@ public final class AccountService extends com.google.api.client.json.GenericJson
 
   /**
    * Service type for account management. Enables the provider to perform administrative actions on
-   * the merchant's account, such as configuring account settings, managing users, or updating
+   * the business's account, such as configuring account settings, managing users, or updating
    * business information.
    * @param accountManagement accountManagement or {@code null} for none
    */
@@ -178,7 +186,7 @@ public final class AccountService extends com.google.api.client.json.GenericJson
 
   /**
    * Service type for managing advertising campaigns. Grants the provider access to create and
-   * manage the merchant's ad campaigns, including setting up campaigns, adjusting bids, and
+   * manage the business's ad campaigns, including setting up campaigns, adjusting bids, and
    * optimizing performance.
    * @return value or {@code null} for none
    */
@@ -188,7 +196,7 @@ public final class AccountService extends com.google.api.client.json.GenericJson
 
   /**
    * Service type for managing advertising campaigns. Grants the provider access to create and
-   * manage the merchant's ad campaigns, including setting up campaigns, adjusting bids, and
+   * manage the business's ad campaigns, including setting up campaigns, adjusting bids, and
    * optimizing performance.
    * @param campaignsManagement campaignsManagement or {@code null} for none
    */
@@ -244,6 +252,25 @@ public final class AccountService extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * Service type for local listings management. The business group associated with the external
+   * account id will be used to provide local inventory to this Merchant Center account.
+   * @return value or {@code null} for none
+   */
+  public LocalListingManagement getLocalListingManagement() {
+    return localListingManagement;
+  }
+
+  /**
+   * Service type for local listings management. The business group associated with the external
+   * account id will be used to provide local inventory to this Merchant Center account.
+   * @param localListingManagement localListingManagement or {@code null} for none
+   */
+  public AccountService setLocalListingManagement(LocalListingManagement localListingManagement) {
+    this.localListingManagement = localListingManagement;
+    return this;
+  }
+
+  /**
    * Output only. Whether the service is mutable (e.g. through Approve / Reject RPCs). A service
    * that was created through another system or API might be immutable.
    * @return value or {@code null} for none
@@ -283,8 +310,8 @@ public final class AccountService extends com.google.api.client.json.GenericJson
 
   /**
    * Service type for managing products. This allows the provider to handle product data on behalf
-   * of the merchant, including reading and writing product listings. It's commonly used when the
-   * provider offers inventory management or catalog synchronization services to keep the merchant's
+   * of the business, including reading and writing product listings. It's commonly used when the
+   * provider offers inventory management or catalog synchronization services to keep the business's
    * product information up-to-date across platforms.
    * @return value or {@code null} for none
    */
@@ -294,8 +321,8 @@ public final class AccountService extends com.google.api.client.json.GenericJson
 
   /**
    * Service type for managing products. This allows the provider to handle product data on behalf
-   * of the merchant, including reading and writing product listings. It's commonly used when the
-   * provider offers inventory management or catalog synchronization services to keep the merchant's
+   * of the business, including reading and writing product listings. It's commonly used when the
+   * provider offers inventory management or catalog synchronization services to keep the business's
    * product information up-to-date across platforms.
    * @param productsManagement productsManagement or {@code null} for none
    */

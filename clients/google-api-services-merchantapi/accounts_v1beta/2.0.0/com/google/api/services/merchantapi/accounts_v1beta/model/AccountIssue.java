@@ -17,8 +17,9 @@
 package com.google.api.services.merchantapi.accounts_v1beta.model;
 
 /**
- * An [`AccountIssue`](https://support.google.com/merchants/answer/12153802?sjid=1779843891252641890
- * 8-EU#account).
+ * Issues with your Merchant Center account that can impact all your products. For more information,
+ * see [Account-level issues in Merchant Center](https://support.google.com/merchants/answer/1215380
+ * 2?sjid=17798438912526418908-EU#account).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:
@@ -53,7 +54,9 @@ public final class AccountIssue extends com.google.api.client.json.GenericJson {
   private java.util.List<ImpactedDestination> impactedDestinations;
 
   /**
-   * Identifier. The resource name of the account issue. Format: `accounts/{account}/issues/{id}`
+   * Identifier. The resource name of the account issue. Format: `accounts/{account}/issues/{id}`.
+   * For example, `accounts/123456/issues/misrepresentation-of-self-or-products-unacceptable-
+   * business-practice-policy`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -127,7 +130,9 @@ public final class AccountIssue extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier. The resource name of the account issue. Format: `accounts/{account}/issues/{id}`
+   * Identifier. The resource name of the account issue. Format: `accounts/{account}/issues/{id}`.
+   * For example, `accounts/123456/issues/misrepresentation-of-self-or-products-unacceptable-
+   * business-practice-policy`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -135,7 +140,9 @@ public final class AccountIssue extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier. The resource name of the account issue. Format: `accounts/{account}/issues/{id}`
+   * Identifier. The resource name of the account issue. Format: `accounts/{account}/issues/{id}`.
+   * For example, `accounts/123456/issues/misrepresentation-of-self-or-products-unacceptable-
+   * business-practice-policy`.
    * @param name name or {@code null} for none
    */
   public AccountIssue setName(java.lang.String name) {

@@ -31,7 +31,7 @@ package com.google.api.services.merchantapi.accounts_v1beta.model;
 public final class AutofeedSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Determines whether merchant is eligible for being enrolled into an autofeed.
+   * Output only. Determines whether the business is eligible for being enrolled into an autofeed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +58,7 @@ public final class AutofeedSettings extends com.google.api.client.json.GenericJs
   private java.lang.String name;
 
   /**
-   * Output only. Determines whether merchant is eligible for being enrolled into an autofeed.
+   * Output only. Determines whether the business is eligible for being enrolled into an autofeed.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEligible() {
@@ -66,7 +66,7 @@ public final class AutofeedSettings extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. Determines whether merchant is eligible for being enrolled into an autofeed.
+   * Output only. Determines whether the business is eligible for being enrolled into an autofeed.
    * @param eligible eligible or {@code null} for none
    */
   public AutofeedSettings setEligible(java.lang.Boolean eligible) {

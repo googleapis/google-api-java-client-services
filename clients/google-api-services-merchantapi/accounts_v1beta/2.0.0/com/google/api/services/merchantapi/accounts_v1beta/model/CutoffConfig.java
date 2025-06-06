@@ -37,7 +37,7 @@ public final class CutoffConfig extends com.google.api.client.json.GenericJson {
   private LocalCutoffTime localCutoffTime;
 
   /**
-   * Merchants can opt-out of showing n+1 day local delivery when they have a shipping service
+   * Businesses can opt-out of showing n+1 day local delivery when they have a shipping service
    * configured to n day local delivery. For example, if the shipping service defines same-day
    * delivery, and it's past the cut-off, setting this field to `true` results in the calculated
    * shipping service rate returning `NO_DELIVERY_POST_CUTOFF`. In the same example, setting this
@@ -74,7 +74,7 @@ public final class CutoffConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Merchants can opt-out of showing n+1 day local delivery when they have a shipping service
+   * Businesses can opt-out of showing n+1 day local delivery when they have a shipping service
    * configured to n day local delivery. For example, if the shipping service defines same-day
    * delivery, and it's past the cut-off, setting this field to `true` results in the calculated
    * shipping service rate returning `NO_DELIVERY_POST_CUTOFF`. In the same example, setting this
@@ -87,7 +87,7 @@ public final class CutoffConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Merchants can opt-out of showing n+1 day local delivery when they have a shipping service
+   * Businesses can opt-out of showing n+1 day local delivery when they have a shipping service
    * configured to n day local delivery. For example, if the shipping service defines same-day
    * delivery, and it's past the cut-off, setting this field to `true` results in the calculated
    * shipping service rate returning `NO_DELIVERY_POST_CUTOFF`. In the same example, setting this

@@ -53,7 +53,7 @@ public final class StoreConfig extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> storeCodes;
 
   /**
-   * Indicates whether all stores, or selected stores, listed by this merchant provide local
+   * Indicates whether all stores, or selected stores, listed by this business provide local
    * delivery.
    * The value may be {@code null}.
    */
@@ -114,7 +114,7 @@ public final class StoreConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates whether all stores, or selected stores, listed by this merchant provide local
+   * Indicates whether all stores, or selected stores, listed by this business provide local
    * delivery.
    * @return value or {@code null} for none
    */
@@ -123,7 +123,7 @@ public final class StoreConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates whether all stores, or selected stores, listed by this merchant provide local
+   * Indicates whether all stores, or selected stores, listed by this business provide local
    * delivery.
    * @param storeServiceType storeServiceType or {@code null} for none
    */

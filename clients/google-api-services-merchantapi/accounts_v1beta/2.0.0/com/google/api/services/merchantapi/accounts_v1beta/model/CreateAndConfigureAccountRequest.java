@@ -39,9 +39,9 @@ public final class CreateAndConfigureAccountRequest extends com.google.api.clien
   /**
    * Required. An account service between the account to be created and the provider account is
    * initialized as part of the creation. At least one such service needs to be provided. Currently
-   * exactly one of these needs to be `account_aggregation`, which means you can only create sub
-   * accounts, not standalone account through this method. Additional `account_management` or
-   * `product_management` services may be provided.
+   * exactly one of these needs to be `account_aggregation` and `accounts.createAndConfigure` method
+   * can be used to create a sub-account under an existing advanced account through this method.
+   * Additional `account_management` or `product_management` services may be provided.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,9 +94,9 @@ public final class CreateAndConfigureAccountRequest extends com.google.api.clien
   /**
    * Required. An account service between the account to be created and the provider account is
    * initialized as part of the creation. At least one such service needs to be provided. Currently
-   * exactly one of these needs to be `account_aggregation`, which means you can only create sub
-   * accounts, not standalone account through this method. Additional `account_management` or
-   * `product_management` services may be provided.
+   * exactly one of these needs to be `account_aggregation` and `accounts.createAndConfigure` method
+   * can be used to create a sub-account under an existing advanced account through this method.
+   * Additional `account_management` or `product_management` services may be provided.
    * @return value or {@code null} for none
    */
   public java.util.List<AddAccountService> getService() {
@@ -106,9 +106,9 @@ public final class CreateAndConfigureAccountRequest extends com.google.api.clien
   /**
    * Required. An account service between the account to be created and the provider account is
    * initialized as part of the creation. At least one such service needs to be provided. Currently
-   * exactly one of these needs to be `account_aggregation`, which means you can only create sub
-   * accounts, not standalone account through this method. Additional `account_management` or
-   * `product_management` services may be provided.
+   * exactly one of these needs to be `account_aggregation` and `accounts.createAndConfigure` method
+   * can be used to create a sub-account under an existing advanced account through this method.
+   * Additional `account_management` or `product_management` services may be provided.
    * @param service service or {@code null} for none
    */
   public CreateAndConfigureAccountRequest setService(java.util.List<AddAccountService> service) {

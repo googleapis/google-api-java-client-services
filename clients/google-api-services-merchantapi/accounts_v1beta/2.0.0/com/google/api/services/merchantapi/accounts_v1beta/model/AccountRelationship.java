@@ -19,8 +19,8 @@ package com.google.api.services.merchantapi.accounts_v1beta.model;
 /**
  * The `AccountRelationship` message defines a formal connection between a merchant's account and a
  * service provider's account. This relationship enables the provider to offer specific services to
- * the merchant, such as product management or campaign management. It specifies the access rights
- * and permissions to the merchant's data relevant to those services. Establishing an account
+ * the business, such as product management or campaign management. It specifies the access rights
+ * and permissions to the business's data relevant to those services. Establishing an account
  * relationship involves linking the merchant's account with a provider's account. The provider
  * could be another Google account (like Google Ads or Google My Business) or a third-party platform
  * (such as Shopify or WooCommerce).
@@ -47,7 +47,8 @@ public final class AccountRelationship extends com.google.api.client.json.Generi
 
   /**
    * Identifier. The resource name of the account relationship. Format:
-   * `accounts/{account}/relationships/{relationship}`
+   * `accounts/{account}/relationships/{relationship}`. For example,
+   * `accounts/123456/relationships/567890`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,7 +95,8 @@ public final class AccountRelationship extends com.google.api.client.json.Generi
 
   /**
    * Identifier. The resource name of the account relationship. Format:
-   * `accounts/{account}/relationships/{relationship}`
+   * `accounts/{account}/relationships/{relationship}`. For example,
+   * `accounts/123456/relationships/567890`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -103,7 +105,8 @@ public final class AccountRelationship extends com.google.api.client.json.Generi
 
   /**
    * Identifier. The resource name of the account relationship. Format:
-   * `accounts/{account}/relationships/{relationship}`
+   * `accounts/{account}/relationships/{relationship}`. For example,
+   * `accounts/123456/relationships/567890`.
    * @param name name or {@code null} for none
    */
   public AccountRelationship setName(java.lang.String name) {

@@ -17,9 +17,9 @@
 package com.google.api.services.merchantapi.accounts_v1beta.model;
 
 /**
- * The `Homepage` message represents a merchant's store homepage within the system. A merchant's
+ * The `Homepage` message represents a business's store homepage within the system. A business's
  * homepage is the primary domain where customers interact with their store. The homepage can be
- * claimed and verified as a proof of ownership and allows the merchant to unlock features that
+ * claimed and verified as a proof of ownership and allows the business to unlock features that
  * require a verified website. For more information, see [Understanding online store URL
  * verification](//support.google.com/merchants/answer/176793).
  *

@@ -62,9 +62,9 @@ public final class LoyaltyProgram extends com.google.api.client.json.GenericJson
 
   /**
    * The label of the loyalty program. This is an internal label that uniquely identifies the
-   * relationship between a merchant entity and a loyalty program entity. The label must be provided
+   * relationship between a business entity and a loyalty program entity. The label must be provided
    * so that the system can associate the assets below (for example, price and points) with a
-   * merchant. The corresponding program must be linked to the merchant account.
+   * business. The corresponding program must be linked to the Merchant Center account.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -163,9 +163,9 @@ public final class LoyaltyProgram extends com.google.api.client.json.GenericJson
 
   /**
    * The label of the loyalty program. This is an internal label that uniquely identifies the
-   * relationship between a merchant entity and a loyalty program entity. The label must be provided
+   * relationship between a business entity and a loyalty program entity. The label must be provided
    * so that the system can associate the assets below (for example, price and points) with a
-   * merchant. The corresponding program must be linked to the merchant account.
+   * business. The corresponding program must be linked to the Merchant Center account.
    * @return value or {@code null} for none
    */
   public java.lang.String getProgramLabel() {
@@ -174,9 +174,9 @@ public final class LoyaltyProgram extends com.google.api.client.json.GenericJson
 
   /**
    * The label of the loyalty program. This is an internal label that uniquely identifies the
-   * relationship between a merchant entity and a loyalty program entity. The label must be provided
+   * relationship between a business entity and a loyalty program entity. The label must be provided
    * so that the system can associate the assets below (for example, price and points) with a
-   * merchant. The corresponding program must be linked to the merchant account.
+   * business. The corresponding program must be linked to the Merchant Center account.
    * @param programLabel programLabel or {@code null} for none
    */
   public LoyaltyProgram setProgramLabel(java.lang.String programLabel) {

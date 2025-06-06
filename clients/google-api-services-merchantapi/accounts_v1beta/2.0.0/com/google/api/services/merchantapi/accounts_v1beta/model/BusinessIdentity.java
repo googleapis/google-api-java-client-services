@@ -32,8 +32,8 @@ public final class BusinessIdentity extends com.google.api.client.json.GenericJs
 
   /**
    * Optional. Specifies whether the business identifies itself as being black-owned. This optional
-   * field will only be available for merchants with a business country set to `US`. It is also not
-   * applicable for marketplaces or marketplace sellers.
+   * field will only be available for businesses with the business country set to `US`. It is also
+   * not applicable for marketplaces or marketplace sellers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -41,8 +41,8 @@ public final class BusinessIdentity extends com.google.api.client.json.GenericJs
 
   /**
    * Optional. Specifies whether the business identifies itself as being latino-owned. This optional
-   * field will only be available for merchants with a business country set to `US`. It is also not
-   * applicable for marketplaces or marketplace sellers.
+   * field will only be available for businesses with the business country set to `US`. It is also
+   * not applicable for marketplaces or marketplace sellers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,7 +65,7 @@ public final class BusinessIdentity extends com.google.api.client.json.GenericJs
 
   /**
    * Optional. Specifies whether the business identifies itself as a small business. This optional
-   * field will only be available for merchants with a business country set to `US`. It is also not
+   * field will only be available for businesses with a business country set to `US`. It is also not
    * applicable for marketplaces.
    * The value may be {@code null}.
    */
@@ -74,7 +74,7 @@ public final class BusinessIdentity extends com.google.api.client.json.GenericJs
 
   /**
    * Optional. Specifies whether the business identifies itself as being veteran-owned. This
-   * optional field will only be available for merchants with a business country set to `US`. It is
+   * optional field will only be available for businesses with a business country set to `US`. It is
    * also not applicable for marketplaces or marketplace sellers.
    * The value may be {@code null}.
    */
@@ -83,7 +83,7 @@ public final class BusinessIdentity extends com.google.api.client.json.GenericJs
 
   /**
    * Optional. Specifies whether the business identifies itself as being women-owned. This optional
-   * field will only be available for merchants with a business country set to `US`. It is also not
+   * field will only be available for businesses with a business country set to `US`. It is also not
    * applicable for marketplaces or marketplace sellers.
    * The value may be {@code null}.
    */
@@ -92,8 +92,8 @@ public final class BusinessIdentity extends com.google.api.client.json.GenericJs
 
   /**
    * Optional. Specifies whether the business identifies itself as being black-owned. This optional
-   * field will only be available for merchants with a business country set to `US`. It is also not
-   * applicable for marketplaces or marketplace sellers.
+   * field will only be available for businesses with the business country set to `US`. It is also
+   * not applicable for marketplaces or marketplace sellers.
    * @return value or {@code null} for none
    */
   public IdentityAttribute getBlackOwned() {
@@ -102,8 +102,8 @@ public final class BusinessIdentity extends com.google.api.client.json.GenericJs
 
   /**
    * Optional. Specifies whether the business identifies itself as being black-owned. This optional
-   * field will only be available for merchants with a business country set to `US`. It is also not
-   * applicable for marketplaces or marketplace sellers.
+   * field will only be available for businesses with the business country set to `US`. It is also
+   * not applicable for marketplaces or marketplace sellers.
    * @param blackOwned blackOwned or {@code null} for none
    */
   public BusinessIdentity setBlackOwned(IdentityAttribute blackOwned) {
@@ -113,8 +113,8 @@ public final class BusinessIdentity extends com.google.api.client.json.GenericJs
 
   /**
    * Optional. Specifies whether the business identifies itself as being latino-owned. This optional
-   * field will only be available for merchants with a business country set to `US`. It is also not
-   * applicable for marketplaces or marketplace sellers.
+   * field will only be available for businesses with the business country set to `US`. It is also
+   * not applicable for marketplaces or marketplace sellers.
    * @return value or {@code null} for none
    */
   public IdentityAttribute getLatinoOwned() {
@@ -123,8 +123,8 @@ public final class BusinessIdentity extends com.google.api.client.json.GenericJs
 
   /**
    * Optional. Specifies whether the business identifies itself as being latino-owned. This optional
-   * field will only be available for merchants with a business country set to `US`. It is also not
-   * applicable for marketplaces or marketplace sellers.
+   * field will only be available for businesses with the business country set to `US`. It is also
+   * not applicable for marketplaces or marketplace sellers.
    * @param latinoOwned latinoOwned or {@code null} for none
    */
   public BusinessIdentity setLatinoOwned(IdentityAttribute latinoOwned) {
@@ -170,7 +170,7 @@ public final class BusinessIdentity extends com.google.api.client.json.GenericJs
 
   /**
    * Optional. Specifies whether the business identifies itself as a small business. This optional
-   * field will only be available for merchants with a business country set to `US`. It is also not
+   * field will only be available for businesses with a business country set to `US`. It is also not
    * applicable for marketplaces.
    * @return value or {@code null} for none
    */
@@ -180,7 +180,7 @@ public final class BusinessIdentity extends com.google.api.client.json.GenericJs
 
   /**
    * Optional. Specifies whether the business identifies itself as a small business. This optional
-   * field will only be available for merchants with a business country set to `US`. It is also not
+   * field will only be available for businesses with a business country set to `US`. It is also not
    * applicable for marketplaces.
    * @param smallBusiness smallBusiness or {@code null} for none
    */
@@ -191,7 +191,7 @@ public final class BusinessIdentity extends com.google.api.client.json.GenericJs
 
   /**
    * Optional. Specifies whether the business identifies itself as being veteran-owned. This
-   * optional field will only be available for merchants with a business country set to `US`. It is
+   * optional field will only be available for businesses with a business country set to `US`. It is
    * also not applicable for marketplaces or marketplace sellers.
    * @return value or {@code null} for none
    */
@@ -201,7 +201,7 @@ public final class BusinessIdentity extends com.google.api.client.json.GenericJs
 
   /**
    * Optional. Specifies whether the business identifies itself as being veteran-owned. This
-   * optional field will only be available for merchants with a business country set to `US`. It is
+   * optional field will only be available for businesses with a business country set to `US`. It is
    * also not applicable for marketplaces or marketplace sellers.
    * @param veteranOwned veteranOwned or {@code null} for none
    */
@@ -212,7 +212,7 @@ public final class BusinessIdentity extends com.google.api.client.json.GenericJs
 
   /**
    * Optional. Specifies whether the business identifies itself as being women-owned. This optional
-   * field will only be available for merchants with a business country set to `US`. It is also not
+   * field will only be available for businesses with a business country set to `US`. It is also not
    * applicable for marketplaces or marketplace sellers.
    * @return value or {@code null} for none
    */
@@ -222,7 +222,7 @@ public final class BusinessIdentity extends com.google.api.client.json.GenericJs
 
   /**
    * Optional. Specifies whether the business identifies itself as being women-owned. This optional
-   * field will only be available for merchants with a business country set to `US`. It is also not
+   * field will only be available for businesses with a business country set to `US`. It is also not
    * applicable for marketplaces or marketplace sellers.
    * @param womenOwned womenOwned or {@code null} for none
    */

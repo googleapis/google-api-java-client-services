@@ -38,7 +38,7 @@ public final class ListRegionsResponse extends com.google.api.client.json.Generi
   private java.lang.String nextPageToken;
 
   /**
-   * The regions from the specified merchant.
+   * The regions from the specified business.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +64,7 @@ public final class ListRegionsResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * The regions from the specified merchant.
+   * The regions from the specified business.
    * @return value or {@code null} for none
    */
   public java.util.List<Region> getRegions() {
@@ -72,7 +72,7 @@ public final class ListRegionsResponse extends com.google.api.client.json.Generi
   }
 
   /**
-   * The regions from the specified merchant.
+   * The regions from the specified business.
    * @param regions regions or {@code null} for none
    */
   public ListRegionsResponse setRegions(java.util.List<Region> regions) {

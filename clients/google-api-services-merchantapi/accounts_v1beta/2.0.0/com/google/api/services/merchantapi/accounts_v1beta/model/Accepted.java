@@ -17,7 +17,8 @@
 package com.google.api.services.merchantapi.accounts_v1beta.model;
 
 /**
- * Describes the accepted terms of service.
+ * Describes the [accepted terms of service](/merchant/api/guides/accounts/create-and-
+ * configure#accept_the_merchant_center_terms_of_service).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:
@@ -31,7 +32,7 @@ public final class Accepted extends com.google.api.client.json.GenericJson {
 
   /**
    * The account where the acceptance was recorded. This can be the account itself or, in the case
-   * of subaccounts, the MCA account.
+   * of subaccounts, the advanced account.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,7 +56,7 @@ public final class Accepted extends com.google.api.client.json.GenericJson {
 
   /**
    * The account where the acceptance was recorded. This can be the account itself or, in the case
-   * of subaccounts, the MCA account.
+   * of subaccounts, the advanced account.
    * @return value or {@code null} for none
    */
   public java.lang.String getAcceptedBy() {
@@ -64,7 +65,7 @@ public final class Accepted extends com.google.api.client.json.GenericJson {
 
   /**
    * The account where the acceptance was recorded. This can be the account itself or, in the case
-   * of subaccounts, the MCA account.
+   * of subaccounts, the advanced account.
    * @param acceptedBy acceptedBy or {@code null} for none
    */
   public Accepted setAcceptedBy(java.lang.String acceptedBy) {

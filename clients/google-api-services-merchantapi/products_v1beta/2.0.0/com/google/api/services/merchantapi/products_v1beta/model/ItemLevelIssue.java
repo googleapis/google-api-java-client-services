@@ -79,7 +79,7 @@ public final class ItemLevelIssue extends com.google.api.client.json.GenericJson
   private java.lang.String reportingContext;
 
   /**
-   * Whether the issue can be resolved by the merchant.
+   * Whether the issue can be resolved by the business.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -212,7 +212,7 @@ public final class ItemLevelIssue extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Whether the issue can be resolved by the merchant.
+   * Whether the issue can be resolved by the business.
    * @return value or {@code null} for none
    */
   public java.lang.String getResolution() {
@@ -220,7 +220,7 @@ public final class ItemLevelIssue extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Whether the issue can be resolved by the merchant.
+   * Whether the issue can be resolved by the business.
    * @param resolution resolution or {@code null} for none
    */
   public ItemLevelIssue setResolution(java.lang.String resolution) {

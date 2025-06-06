@@ -81,6 +81,19 @@ public final class Subject extends com.google.api.client.json.GenericJson {
   private java.lang.String province;
 
   /**
+   * This field can be used in place of the named subject fields.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<RelativeDistinguishedName> rdnSequence;
+
+  static {
+    // hack to force ProGuard to consider RelativeDistinguishedName used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(RelativeDistinguishedName.class);
+  }
+
+  /**
    * The street address of the subject.
    * The value may be {@code null}.
    */
@@ -203,6 +216,23 @@ public final class Subject extends com.google.api.client.json.GenericJson {
    */
   public Subject setProvince(java.lang.String province) {
     this.province = province;
+    return this;
+  }
+
+  /**
+   * This field can be used in place of the named subject fields.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<RelativeDistinguishedName> getRdnSequence() {
+    return rdnSequence;
+  }
+
+  /**
+   * This field can be used in place of the named subject fields.
+   * @param rdnSequence rdnSequence or {@code null} for none
+   */
+  public Subject setRdnSequence(java.util.List<RelativeDistinguishedName> rdnSequence) {
+    this.rdnSequence = rdnSequence;
     return this;
   }
 

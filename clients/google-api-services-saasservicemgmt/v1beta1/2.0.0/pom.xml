@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-saasservicemgmt</artifactId>
-  <version>v1beta1-rev20250514-2.0.0</version>
-  <name>SaaS Service Management API v1beta1-rev20250514-2.0.0</name>
+  <version>v1beta1-rev20250528-2.0.0</version>
+  <name>SaaS Runtime API v1beta1-rev20250528-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
@@ -86,8 +86,8 @@
         </executions>
         <configuration>
           <doclint>none</doclint>
-          <doctitle>SaaS Service Management API ${project.version}</doctitle>
-          <windowtitle>SaaS Service Management API ${project.version}</windowtitle>
+          <doctitle>SaaS Runtime API ${project.version}</doctitle>
+          <windowtitle>SaaS Runtime API ${project.version}</windowtitle>
           <links>
             <link>http://docs.oracle.com/javase/7/docs/api</link>
             <link>https://googleapis.dev/java/google-http-client/1.47.0/</link>

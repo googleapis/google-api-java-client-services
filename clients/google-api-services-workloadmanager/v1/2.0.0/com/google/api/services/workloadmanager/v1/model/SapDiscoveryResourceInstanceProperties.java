@@ -72,6 +72,13 @@ public final class SapDiscoveryResourceInstanceProperties extends com.google.api
   private java.lang.Boolean isDrSite;
 
   /**
+   * Optional. The kernel version of the instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SapDiscoveryResourceInstancePropertiesKernelVersion osKernelVersion;
+
+  /**
    * Optional. A virtual hostname of the instance if it has one.
    * The value may be {@code null}.
    */
@@ -177,6 +184,23 @@ public final class SapDiscoveryResourceInstanceProperties extends com.google.api
    */
   public SapDiscoveryResourceInstanceProperties setIsDrSite(java.lang.Boolean isDrSite) {
     this.isDrSite = isDrSite;
+    return this;
+  }
+
+  /**
+   * Optional. The kernel version of the instance.
+   * @return value or {@code null} for none
+   */
+  public SapDiscoveryResourceInstancePropertiesKernelVersion getOsKernelVersion() {
+    return osKernelVersion;
+  }
+
+  /**
+   * Optional. The kernel version of the instance.
+   * @param osKernelVersion osKernelVersion or {@code null} for none
+   */
+  public SapDiscoveryResourceInstanceProperties setOsKernelVersion(SapDiscoveryResourceInstancePropertiesKernelVersion osKernelVersion) {
+    this.osKernelVersion = osKernelVersion;
     return this;
   }
 

@@ -65,11 +65,17 @@ public final class ComponentHealth extends com.google.api.client.json.GenericJso
   private java.lang.String state;
 
   /**
-   * Sub component health.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<ComponentHealth> subComponentHealthes;
+
+  /**
+   * Sub component health.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ComponentHealth> subComponentsHealth;
 
   /**
    * The component of a workload.
@@ -157,7 +163,6 @@ public final class ComponentHealth extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Sub component health.
    * @return value or {@code null} for none
    */
   public java.util.List<ComponentHealth> getSubComponentHealthes() {
@@ -165,11 +170,27 @@ public final class ComponentHealth extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Sub component health.
    * @param subComponentHealthes subComponentHealthes or {@code null} for none
    */
   public ComponentHealth setSubComponentHealthes(java.util.List<ComponentHealth> subComponentHealthes) {
     this.subComponentHealthes = subComponentHealthes;
+    return this;
+  }
+
+  /**
+   * Sub component health.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ComponentHealth> getSubComponentsHealth() {
+    return subComponentsHealth;
+  }
+
+  /**
+   * Sub component health.
+   * @param subComponentsHealth subComponentsHealth or {@code null} for none
+   */
+  public ComponentHealth setSubComponentsHealth(java.util.List<ComponentHealth> subComponentsHealth) {
+    this.subComponentsHealth = subComponentsHealth;
     return this;
   }
 

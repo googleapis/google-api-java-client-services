@@ -44,13 +44,6 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   private java.lang.String machineType;
 
   /**
-   * Optional. Instance role.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String role;
-
-  /**
    * Optional. Instance roles.
    * The value may be {@code null}.
    */
@@ -109,23 +102,6 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
    */
   public InstanceProperties setMachineType(java.lang.String machineType) {
     this.machineType = machineType;
-    return this;
-  }
-
-  /**
-   * Optional. Instance role.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getRole() {
-    return role;
-  }
-
-  /**
-   * Optional. Instance role.
-   * @param role role or {@code null} for none
-   */
-  public InstanceProperties setRole(java.lang.String role) {
-    this.role = role;
     return this;
   }
 

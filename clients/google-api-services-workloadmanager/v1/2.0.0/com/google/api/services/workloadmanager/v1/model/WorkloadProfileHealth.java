@@ -37,11 +37,23 @@ public final class WorkloadProfileHealth extends com.google.api.client.json.Gene
   private String checkTime;
 
   /**
-   * The detailed condition reports of each component.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<ComponentHealth> componentHealthes;
+
+  static {
+    // hack to force ProGuard to consider ComponentHealth used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ComponentHealth.class);
+  }
+
+  /**
+   * The detailed condition reports of each component.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ComponentHealth> componentsHealth;
 
   static {
     // hack to force ProGuard to consider ComponentHealth used, since otherwise it would be stripped out
@@ -74,7 +86,6 @@ public final class WorkloadProfileHealth extends com.google.api.client.json.Gene
   }
 
   /**
-   * The detailed condition reports of each component.
    * @return value or {@code null} for none
    */
   public java.util.List<ComponentHealth> getComponentHealthes() {
@@ -82,11 +93,27 @@ public final class WorkloadProfileHealth extends com.google.api.client.json.Gene
   }
 
   /**
-   * The detailed condition reports of each component.
    * @param componentHealthes componentHealthes or {@code null} for none
    */
   public WorkloadProfileHealth setComponentHealthes(java.util.List<ComponentHealth> componentHealthes) {
     this.componentHealthes = componentHealthes;
+    return this;
+  }
+
+  /**
+   * The detailed condition reports of each component.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ComponentHealth> getComponentsHealth() {
+    return componentsHealth;
+  }
+
+  /**
+   * The detailed condition reports of each component.
+   * @param componentsHealth componentsHealth or {@code null} for none
+   */
+  public WorkloadProfileHealth setComponentsHealth(java.util.List<ComponentHealth> componentsHealth) {
+    this.componentsHealth = componentsHealth;
     return this;
   }
 

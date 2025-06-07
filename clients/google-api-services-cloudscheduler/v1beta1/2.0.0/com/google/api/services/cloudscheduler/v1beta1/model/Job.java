@@ -114,6 +114,13 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private RetryConfig retryConfig;
 
   /**
+   * Output only. Whether or not this Job satisfies the requirements of physical zone separation
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzs;
+
+  /**
    * Required, except when used with UpdateJob. Describes the schedule on which the job will be
    * executed. The schedule can be either of the following types: *
    * [Crontab](https://en.wikipedia.org/wiki/Cron#Overview) * English-like
@@ -365,6 +372,23 @@ public final class Job extends com.google.api.client.json.GenericJson {
    */
   public Job setRetryConfig(RetryConfig retryConfig) {
     this.retryConfig = retryConfig;
+    return this;
+  }
+
+  /**
+   * Output only. Whether or not this Job satisfies the requirements of physical zone separation
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzs() {
+    return satisfiesPzs;
+  }
+
+  /**
+   * Output only. Whether or not this Job satisfies the requirements of physical zone separation
+   * @param satisfiesPzs satisfiesPzs or {@code null} for none
+   */
+  public Job setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
+    this.satisfiesPzs = satisfiesPzs;
     return this;
   }
 

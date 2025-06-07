@@ -173,7 +173,7 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   private java.lang.String stateDetails;
 
   /**
-   * Optional. Custom Performance Total IOPS of the pool If not provided, it will be calculated
+   * Optional. Custom Performance Total IOPS of the pool if not provided, it will be calculated
    * based on the total_throughput_mibps
    * The value may be {@code null}.
    */
@@ -181,7 +181,7 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   private java.lang.Long totalIops;
 
   /**
-   * Optional. Custom Performance Total Throughput of the pool (in MiB/s)
+   * Optional. Custom Performance Total Throughput of the pool (in MiBps)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -553,7 +553,7 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Custom Performance Total IOPS of the pool If not provided, it will be calculated
+   * Optional. Custom Performance Total IOPS of the pool if not provided, it will be calculated
    * based on the total_throughput_mibps
    * @return value or {@code null} for none
    */
@@ -562,7 +562,7 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Custom Performance Total IOPS of the pool If not provided, it will be calculated
+   * Optional. Custom Performance Total IOPS of the pool if not provided, it will be calculated
    * based on the total_throughput_mibps
    * @param totalIops totalIops or {@code null} for none
    */
@@ -572,7 +572,7 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Custom Performance Total Throughput of the pool (in MiB/s)
+   * Optional. Custom Performance Total Throughput of the pool (in MiBps)
    * @return value or {@code null} for none
    */
   public java.lang.Long getTotalThroughputMibps() {
@@ -580,7 +580,7 @@ public final class StoragePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Custom Performance Total Throughput of the pool (in MiB/s)
+   * Optional. Custom Performance Total Throughput of the pool (in MiBps)
    * @param totalThroughputMibps totalThroughputMibps or {@code null} for none
    */
   public StoragePool setTotalThroughputMibps(java.lang.Long totalThroughputMibps) {

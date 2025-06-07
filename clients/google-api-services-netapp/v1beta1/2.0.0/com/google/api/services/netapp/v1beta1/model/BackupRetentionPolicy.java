@@ -37,7 +37,7 @@ public final class BackupRetentionPolicy extends com.google.api.client.json.Gene
   private java.lang.Integer backupMinimumEnforcedRetentionDays;
 
   /**
-   * Optional. Indicates if the daily backups are immutable. Atleast one of daily_backup_immutable,
+   * Optional. Indicates if the daily backups are immutable. At least one of daily_backup_immutable,
    * weekly_backup_immutable, monthly_backup_immutable and manual_backup_immutable must be true.
    * The value may be {@code null}.
    */
@@ -45,15 +45,16 @@ public final class BackupRetentionPolicy extends com.google.api.client.json.Gene
   private java.lang.Boolean dailyBackupImmutable;
 
   /**
-   * Optional. Indicates if the manual backups are immutable. Atleast one of daily_backup_immutable,
-   * weekly_backup_immutable, monthly_backup_immutable and manual_backup_immutable must be true.
+   * Optional. Indicates if the manual backups are immutable. At least one of
+   * daily_backup_immutable, weekly_backup_immutable, monthly_backup_immutable and
+   * manual_backup_immutable must be true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean manualBackupImmutable;
 
   /**
-   * Optional. Indicates if the monthly backups are immutable. Atleast one of
+   * Optional. Indicates if the monthly backups are immutable. At least one of
    * daily_backup_immutable, weekly_backup_immutable, monthly_backup_immutable and
    * manual_backup_immutable must be true.
    * The value may be {@code null}.
@@ -62,8 +63,9 @@ public final class BackupRetentionPolicy extends com.google.api.client.json.Gene
   private java.lang.Boolean monthlyBackupImmutable;
 
   /**
-   * Optional. Indicates if the weekly backups are immutable. Atleast one of daily_backup_immutable,
-   * weekly_backup_immutable, monthly_backup_immutable and manual_backup_immutable must be true.
+   * Optional. Indicates if the weekly backups are immutable. At least one of
+   * daily_backup_immutable, weekly_backup_immutable, monthly_backup_immutable and
+   * manual_backup_immutable must be true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,7 +89,7 @@ public final class BackupRetentionPolicy extends com.google.api.client.json.Gene
   }
 
   /**
-   * Optional. Indicates if the daily backups are immutable. Atleast one of daily_backup_immutable,
+   * Optional. Indicates if the daily backups are immutable. At least one of daily_backup_immutable,
    * weekly_backup_immutable, monthly_backup_immutable and manual_backup_immutable must be true.
    * @return value or {@code null} for none
    */
@@ -96,7 +98,7 @@ public final class BackupRetentionPolicy extends com.google.api.client.json.Gene
   }
 
   /**
-   * Optional. Indicates if the daily backups are immutable. Atleast one of daily_backup_immutable,
+   * Optional. Indicates if the daily backups are immutable. At least one of daily_backup_immutable,
    * weekly_backup_immutable, monthly_backup_immutable and manual_backup_immutable must be true.
    * @param dailyBackupImmutable dailyBackupImmutable or {@code null} for none
    */
@@ -106,8 +108,9 @@ public final class BackupRetentionPolicy extends com.google.api.client.json.Gene
   }
 
   /**
-   * Optional. Indicates if the manual backups are immutable. Atleast one of daily_backup_immutable,
-   * weekly_backup_immutable, monthly_backup_immutable and manual_backup_immutable must be true.
+   * Optional. Indicates if the manual backups are immutable. At least one of
+   * daily_backup_immutable, weekly_backup_immutable, monthly_backup_immutable and
+   * manual_backup_immutable must be true.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getManualBackupImmutable() {
@@ -115,8 +118,9 @@ public final class BackupRetentionPolicy extends com.google.api.client.json.Gene
   }
 
   /**
-   * Optional. Indicates if the manual backups are immutable. Atleast one of daily_backup_immutable,
-   * weekly_backup_immutable, monthly_backup_immutable and manual_backup_immutable must be true.
+   * Optional. Indicates if the manual backups are immutable. At least one of
+   * daily_backup_immutable, weekly_backup_immutable, monthly_backup_immutable and
+   * manual_backup_immutable must be true.
    * @param manualBackupImmutable manualBackupImmutable or {@code null} for none
    */
   public BackupRetentionPolicy setManualBackupImmutable(java.lang.Boolean manualBackupImmutable) {
@@ -125,7 +129,7 @@ public final class BackupRetentionPolicy extends com.google.api.client.json.Gene
   }
 
   /**
-   * Optional. Indicates if the monthly backups are immutable. Atleast one of
+   * Optional. Indicates if the monthly backups are immutable. At least one of
    * daily_backup_immutable, weekly_backup_immutable, monthly_backup_immutable and
    * manual_backup_immutable must be true.
    * @return value or {@code null} for none
@@ -135,7 +139,7 @@ public final class BackupRetentionPolicy extends com.google.api.client.json.Gene
   }
 
   /**
-   * Optional. Indicates if the monthly backups are immutable. Atleast one of
+   * Optional. Indicates if the monthly backups are immutable. At least one of
    * daily_backup_immutable, weekly_backup_immutable, monthly_backup_immutable and
    * manual_backup_immutable must be true.
    * @param monthlyBackupImmutable monthlyBackupImmutable or {@code null} for none
@@ -146,8 +150,9 @@ public final class BackupRetentionPolicy extends com.google.api.client.json.Gene
   }
 
   /**
-   * Optional. Indicates if the weekly backups are immutable. Atleast one of daily_backup_immutable,
-   * weekly_backup_immutable, monthly_backup_immutable and manual_backup_immutable must be true.
+   * Optional. Indicates if the weekly backups are immutable. At least one of
+   * daily_backup_immutable, weekly_backup_immutable, monthly_backup_immutable and
+   * manual_backup_immutable must be true.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getWeeklyBackupImmutable() {
@@ -155,8 +160,9 @@ public final class BackupRetentionPolicy extends com.google.api.client.json.Gene
   }
 
   /**
-   * Optional. Indicates if the weekly backups are immutable. Atleast one of daily_backup_immutable,
-   * weekly_backup_immutable, monthly_backup_immutable and manual_backup_immutable must be true.
+   * Optional. Indicates if the weekly backups are immutable. At least one of
+   * daily_backup_immutable, weekly_backup_immutable, monthly_backup_immutable and
+   * manual_backup_immutable must be true.
    * @param weeklyBackupImmutable weeklyBackupImmutable or {@code null} for none
    */
   public BackupRetentionPolicy setWeeklyBackupImmutable(java.lang.Boolean weeklyBackupImmutable) {

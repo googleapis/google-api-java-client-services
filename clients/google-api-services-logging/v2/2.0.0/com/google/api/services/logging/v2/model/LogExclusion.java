@@ -67,7 +67,7 @@ public final class LogExclusion extends com.google.api.client.json.GenericJson {
   private java.lang.String filter;
 
   /**
-   * Output only. A client-assigned identifier, such as "load-balancer-exclusion". Identifiers are
+   * Optional. A client-assigned identifier, such as "load-balancer-exclusion". Identifiers are
    * limited to 100 characters and can include only letters, digits, underscores, hyphens, and
    * periods. First character has to be alphanumeric.
    * The value may be {@code null}.
@@ -164,7 +164,7 @@ public final class LogExclusion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. A client-assigned identifier, such as "load-balancer-exclusion". Identifiers are
+   * Optional. A client-assigned identifier, such as "load-balancer-exclusion". Identifiers are
    * limited to 100 characters and can include only letters, digits, underscores, hyphens, and
    * periods. First character has to be alphanumeric.
    * @return value or {@code null} for none
@@ -174,7 +174,7 @@ public final class LogExclusion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. A client-assigned identifier, such as "load-balancer-exclusion". Identifiers are
+   * Optional. A client-assigned identifier, such as "load-balancer-exclusion". Identifiers are
    * limited to 100 characters and can include only letters, digits, underscores, hyphens, and
    * periods. First character has to be alphanumeric.
    * @param name name or {@code null} for none

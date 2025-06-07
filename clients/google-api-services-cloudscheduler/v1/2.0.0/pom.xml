@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-cloudscheduler</artifactId>
-  <version>v1-rev20250411-2.0.0</version>
-  <name>Cloud Scheduler API v1-rev20250411-2.0.0</name>
+  <version>v1-rev20250530-2.0.0</version>
+  <name>Cloud Scheduler API v1-rev20250530-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

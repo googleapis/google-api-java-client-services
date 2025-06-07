@@ -39,6 +39,15 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
   private AppHub apphub;
 
   /**
+   * Output only. AppHub application metadata associated with the destination application. This is
+   * only populated if the log represented "edge"-like data (such as for VPC flow logs) with a
+   * source and destination.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AppHub apphubDestination;
+
+  /**
    * Output only. The Error Reporting (https://cloud.google.com/error-reporting) error groups
    * associated with this LogEntry. Error Reporting sets the values for this field during error
    * group creation.For more information, see View error details( https://cloud.google.com/error-
@@ -252,6 +261,27 @@ public final class LogEntry extends com.google.api.client.json.GenericJson {
    */
   public LogEntry setApphub(AppHub apphub) {
     this.apphub = apphub;
+    return this;
+  }
+
+  /**
+   * Output only. AppHub application metadata associated with the destination application. This is
+   * only populated if the log represented "edge"-like data (such as for VPC flow logs) with a
+   * source and destination.
+   * @return value or {@code null} for none
+   */
+  public AppHub getApphubDestination() {
+    return apphubDestination;
+  }
+
+  /**
+   * Output only. AppHub application metadata associated with the destination application. This is
+   * only populated if the log represented "edge"-like data (such as for VPC flow logs) with a
+   * source and destination.
+   * @param apphubDestination apphubDestination or {@code null} for none
+   */
+  public LogEntry setApphubDestination(AppHub apphubDestination) {
+    this.apphubDestination = apphubDestination;
     return this;
   }
 

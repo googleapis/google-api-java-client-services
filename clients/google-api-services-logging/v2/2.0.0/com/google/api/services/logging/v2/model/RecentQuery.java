@@ -45,7 +45,7 @@ public final class RecentQuery extends com.google.api.client.json.GenericJson {
   private LoggingQuery loggingQuery;
 
   /**
-   * Output only. Resource name of the recent query.In the format:
+   * Optional. Resource name of the recent query.In the format:
    * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/recentQueries/[QUERY_ID]" For a list of
    * supported locations, see Supported Regions (https://cloud.google.com/logging/docs/region-
    * support)The QUERY_ID is a system generated alphanumeric ID.
@@ -96,7 +96,7 @@ public final class RecentQuery extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Resource name of the recent query.In the format:
+   * Optional. Resource name of the recent query.In the format:
    * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/recentQueries/[QUERY_ID]" For a list of
    * supported locations, see Supported Regions (https://cloud.google.com/logging/docs/region-
    * support)The QUERY_ID is a system generated alphanumeric ID.
@@ -107,7 +107,7 @@ public final class RecentQuery extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Resource name of the recent query.In the format:
+   * Optional. Resource name of the recent query.In the format:
    * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/recentQueries/[QUERY_ID]" For a list of
    * supported locations, see Supported Regions (https://cloud.google.com/logging/docs/region-
    * support)The QUERY_ID is a system generated alphanumeric ID.

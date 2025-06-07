@@ -76,7 +76,7 @@ public final class LogSink extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Log entries that match any of these exclusion filters will not be exported.If a log
-   * entry is matched by both filter and one of exclusion_filters it will not be exported.
+   * entry is matched by both filter and one of exclusions it will not be exported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -127,7 +127,7 @@ public final class LogSink extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean interceptChildren;
 
   /**
-   * Output only. The client-assigned sink identifier, unique within the project.For example: "my-
+   * Optional. The client-assigned sink identifier, unique within the project.For example: "my-
    * syslog-errors-to-pubsub".Sink identifiers are limited to 100 characters and can include only
    * the following characters: upper and lower-case alphanumeric characters, underscores, hyphens,
    * periods.First character has to be alphanumeric.
@@ -278,7 +278,7 @@ public final class LogSink extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Log entries that match any of these exclusion filters will not be exported.If a log
-   * entry is matched by both filter and one of exclusion_filters it will not be exported.
+   * entry is matched by both filter and one of exclusions it will not be exported.
    * @return value or {@code null} for none
    */
   public java.util.List<LogExclusion> getExclusions() {
@@ -287,7 +287,7 @@ public final class LogSink extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Log entries that match any of these exclusion filters will not be exported.If a log
-   * entry is matched by both filter and one of exclusion_filters it will not be exported.
+   * entry is matched by both filter and one of exclusions it will not be exported.
    * @param exclusions exclusions or {@code null} for none
    */
   public LogSink setExclusions(java.util.List<LogExclusion> exclusions) {
@@ -381,7 +381,7 @@ public final class LogSink extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The client-assigned sink identifier, unique within the project.For example: "my-
+   * Optional. The client-assigned sink identifier, unique within the project.For example: "my-
    * syslog-errors-to-pubsub".Sink identifiers are limited to 100 characters and can include only
    * the following characters: upper and lower-case alphanumeric characters, underscores, hyphens,
    * periods.First character has to be alphanumeric.
@@ -392,7 +392,7 @@ public final class LogSink extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The client-assigned sink identifier, unique within the project.For example: "my-
+   * Optional. The client-assigned sink identifier, unique within the project.For example: "my-
    * syslog-errors-to-pubsub".Sink identifiers are limited to 100 characters and can include only
    * the following characters: upper and lower-case alphanumeric characters, underscores, hyphens,
    * periods.First character has to be alphanumeric.

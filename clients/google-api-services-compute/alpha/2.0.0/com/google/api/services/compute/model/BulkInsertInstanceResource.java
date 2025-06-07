@@ -38,6 +38,13 @@ public final class BulkInsertInstanceResource extends com.google.api.client.json
   private java.lang.Long count;
 
   /**
+   * A flexible specification of machine type of instances to create.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InstanceFlexibilityPolicy instanceFlexibilityPolicy;
+
+  /**
    * The instance properties defining the VM instances to be created. Required if
    * sourceInstanceTemplate is not provided.
    * The value may be {@code null}.
@@ -112,6 +119,23 @@ public final class BulkInsertInstanceResource extends com.google.api.client.json
    */
   public BulkInsertInstanceResource setCount(java.lang.Long count) {
     this.count = count;
+    return this;
+  }
+
+  /**
+   * A flexible specification of machine type of instances to create.
+   * @return value or {@code null} for none
+   */
+  public InstanceFlexibilityPolicy getInstanceFlexibilityPolicy() {
+    return instanceFlexibilityPolicy;
+  }
+
+  /**
+   * A flexible specification of machine type of instances to create.
+   * @param instanceFlexibilityPolicy instanceFlexibilityPolicy or {@code null} for none
+   */
+  public BulkInsertInstanceResource setInstanceFlexibilityPolicy(InstanceFlexibilityPolicy instanceFlexibilityPolicy) {
+    this.instanceFlexibilityPolicy = instanceFlexibilityPolicy;
     return this;
   }
 

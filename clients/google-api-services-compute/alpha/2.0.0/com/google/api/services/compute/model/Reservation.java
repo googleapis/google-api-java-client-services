@@ -83,7 +83,8 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * Indicates if this group of VMs have emergent maintenance enabled.
+   * Indicates whether Compute Engine allows unplanned maintenance for your VMs; for example, to fix
+   * hardware errors.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -123,6 +124,14 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Protection tier for the workload which specifies the workload expectations in the event of
+   * infrastructure failures at data center (e.g. power and/or cooling failures).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String protectionTier;
+
+  /**
    * [Output only] Indicates the reservation mode of the reservation.
    * The value may be {@code null}.
    */
@@ -158,6 +167,13 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean satisfiesPzs;
+
+  /**
+   * The type of maintenance for the reservation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String schedulingType;
 
   /**
    * [Output Only] Server-defined fully-qualified URL for this resource.
@@ -342,7 +358,8 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates if this group of VMs have emergent maintenance enabled.
+   * Indicates whether Compute Engine allows unplanned maintenance for your VMs; for example, to fix
+   * hardware errors.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableEmergentMaintenance() {
@@ -350,7 +367,8 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates if this group of VMs have emergent maintenance enabled.
+   * Indicates whether Compute Engine allows unplanned maintenance for your VMs; for example, to fix
+   * hardware errors.
    * @param enableEmergentMaintenance enableEmergentMaintenance or {@code null} for none
    */
   public Reservation setEnableEmergentMaintenance(java.lang.Boolean enableEmergentMaintenance) {
@@ -433,6 +451,25 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
    */
   public Reservation setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Protection tier for the workload which specifies the workload expectations in the event of
+   * infrastructure failures at data center (e.g. power and/or cooling failures).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProtectionTier() {
+    return protectionTier;
+  }
+
+  /**
+   * Protection tier for the workload which specifies the workload expectations in the event of
+   * infrastructure failures at data center (e.g. power and/or cooling failures).
+   * @param protectionTier protectionTier or {@code null} for none
+   */
+  public Reservation setProtectionTier(java.lang.String protectionTier) {
+    this.protectionTier = protectionTier;
     return this;
   }
 
@@ -522,6 +559,23 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
    */
   public Reservation setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
     this.satisfiesPzs = satisfiesPzs;
+    return this;
+  }
+
+  /**
+   * The type of maintenance for the reservation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSchedulingType() {
+    return schedulingType;
+  }
+
+  /**
+   * The type of maintenance for the reservation.
+   * @param schedulingType schedulingType or {@code null} for none
+   */
+  public Reservation setSchedulingType(java.lang.String schedulingType) {
+    this.schedulingType = schedulingType;
     return this;
   }
 

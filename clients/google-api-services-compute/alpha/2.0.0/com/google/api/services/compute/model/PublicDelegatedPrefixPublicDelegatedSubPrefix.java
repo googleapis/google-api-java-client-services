@@ -58,6 +58,14 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefix extends com.goo
   private java.lang.String ipCidrRange;
 
   /**
+   * [Output Only] The internet access type for IPv6 Public Delegated Sub Prefixes. Inherited from
+   * parent prefix.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ipv6AccessType;
+
+  /**
    * Whether the sub prefix is delegated to create Address resources in the delegatee project.
    * The value may be {@code null}.
    */
@@ -158,6 +166,25 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefix extends com.goo
    */
   public PublicDelegatedPrefixPublicDelegatedSubPrefix setIpCidrRange(java.lang.String ipCidrRange) {
     this.ipCidrRange = ipCidrRange;
+    return this;
+  }
+
+  /**
+   * [Output Only] The internet access type for IPv6 Public Delegated Sub Prefixes. Inherited from
+   * parent prefix.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIpv6AccessType() {
+    return ipv6AccessType;
+  }
+
+  /**
+   * [Output Only] The internet access type for IPv6 Public Delegated Sub Prefixes. Inherited from
+   * parent prefix.
+   * @param ipv6AccessType ipv6AccessType or {@code null} for none
+   */
+  public PublicDelegatedPrefixPublicDelegatedSubPrefix setIpv6AccessType(java.lang.String ipv6AccessType) {
+    this.ipv6AccessType = ipv6AccessType;
     return this;
   }
 

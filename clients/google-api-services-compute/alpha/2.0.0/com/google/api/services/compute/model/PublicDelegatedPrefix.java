@@ -89,6 +89,14 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
   private java.lang.String ipCidrRange;
 
   /**
+   * [Output Only] The internet access type for IPv6 Public Delegated Prefixes. Inherited from
+   * parent prefix.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ipv6AccessType;
+
+  /**
    * If true, the prefix will be live migrated.
    * The value may be {@code null}.
    */
@@ -162,8 +170,8 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
    * [Output Only] The status of the public delegated prefix, which can be one of following values:
    * - `INITIALIZING` The public delegated prefix is being initialized and addresses cannot be
    * created yet. - `READY_TO_ANNOUNCE` The public delegated prefix is a live migration prefix and
-   * is active. - `ANNOUNCED` The public delegated prefix is active. - `DELETING` The public
-   * delegated prefix is being deprovsioned.
+   * is active. - `ANNOUNCED` The public delegated prefix is announced and ready to use. -
+   * `DELETING` The public delegated prefix is being deprovsioned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -339,6 +347,25 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
   }
 
   /**
+   * [Output Only] The internet access type for IPv6 Public Delegated Prefixes. Inherited from
+   * parent prefix.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIpv6AccessType() {
+    return ipv6AccessType;
+  }
+
+  /**
+   * [Output Only] The internet access type for IPv6 Public Delegated Prefixes. Inherited from
+   * parent prefix.
+   * @param ipv6AccessType ipv6AccessType or {@code null} for none
+   */
+  public PublicDelegatedPrefix setIpv6AccessType(java.lang.String ipv6AccessType) {
+    this.ipv6AccessType = ipv6AccessType;
+    return this;
+  }
+
+  /**
    * If true, the prefix will be live migrated.
    * @return value or {@code null} for none
    */
@@ -509,8 +536,8 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
    * [Output Only] The status of the public delegated prefix, which can be one of following values:
    * - `INITIALIZING` The public delegated prefix is being initialized and addresses cannot be
    * created yet. - `READY_TO_ANNOUNCE` The public delegated prefix is a live migration prefix and
-   * is active. - `ANNOUNCED` The public delegated prefix is active. - `DELETING` The public
-   * delegated prefix is being deprovsioned.
+   * is active. - `ANNOUNCED` The public delegated prefix is announced and ready to use. -
+   * `DELETING` The public delegated prefix is being deprovsioned.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -521,8 +548,8 @@ public final class PublicDelegatedPrefix extends com.google.api.client.json.Gene
    * [Output Only] The status of the public delegated prefix, which can be one of following values:
    * - `INITIALIZING` The public delegated prefix is being initialized and addresses cannot be
    * created yet. - `READY_TO_ANNOUNCE` The public delegated prefix is a live migration prefix and
-   * is active. - `ANNOUNCED` The public delegated prefix is active. - `DELETING` The public
-   * delegated prefix is being deprovsioned.
+   * is active. - `ANNOUNCED` The public delegated prefix is announced and ready to use. -
+   * `DELETING` The public delegated prefix is being deprovsioned.
    * @param status status or {@code null} for none
    */
   public PublicDelegatedPrefix setStatus(java.lang.String status) {

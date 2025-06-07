@@ -53,6 +53,13 @@ public final class GoogleCloudDialogflowV2beta1ConversationEvent extends com.goo
   private GoogleCloudDialogflowV2beta1Message newMessagePayload;
 
   /**
+   * Payload of NEW_RECOGNITION_RESULT event.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowV2beta1StreamingRecognitionResult newRecognitionResultPayload;
+
+  /**
    * Required. The type of the event that this notification refers to.
    * The value may be {@code null}.
    */
@@ -111,6 +118,23 @@ public final class GoogleCloudDialogflowV2beta1ConversationEvent extends com.goo
    */
   public GoogleCloudDialogflowV2beta1ConversationEvent setNewMessagePayload(GoogleCloudDialogflowV2beta1Message newMessagePayload) {
     this.newMessagePayload = newMessagePayload;
+    return this;
+  }
+
+  /**
+   * Payload of NEW_RECOGNITION_RESULT event.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1StreamingRecognitionResult getNewRecognitionResultPayload() {
+    return newRecognitionResultPayload;
+  }
+
+  /**
+   * Payload of NEW_RECOGNITION_RESULT event.
+   * @param newRecognitionResultPayload newRecognitionResultPayload or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1ConversationEvent setNewRecognitionResultPayload(GoogleCloudDialogflowV2beta1StreamingRecognitionResult newRecognitionResultPayload) {
+    this.newRecognitionResultPayload = newRecognitionResultPayload;
     return this;
   }
 

@@ -18,7 +18,7 @@ package com.google.api.services.travelimpactmodel.v1.model;
 
 /**
  * Travel Impact Model version. For more information about the model versioning see
- * https://github.com/google/travel-impact-model/#versioning.
+ * [GitHub](https://github.com/google/travel-impact-model/#versioning).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Travel Impact Model API. For a detailed explanation
@@ -42,8 +42,9 @@ public final class ModelVersion extends com.google.api.client.json.GenericJson {
   /**
    * Major versions: Major changes to methodology (e.g. adding new data sources to the model that
    * lead to major output changes). Such changes will be infrequent and announced well in advance.
-   * Might involve API version changes, which will respect guidelines in
-   * https://cloud.google.com/endpoints/docs/openapi/versioning-an-api#backwards-incompatible
+   * Might involve API version changes, which will respect [Google Cloud API
+   * guidelines](https://cloud.google.com/endpoints/docs/openapi/versioning-an-api#backwards-
+   * incompatible)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,8 +88,9 @@ public final class ModelVersion extends com.google.api.client.json.GenericJson {
   /**
    * Major versions: Major changes to methodology (e.g. adding new data sources to the model that
    * lead to major output changes). Such changes will be infrequent and announced well in advance.
-   * Might involve API version changes, which will respect guidelines in
-   * https://cloud.google.com/endpoints/docs/openapi/versioning-an-api#backwards-incompatible
+   * Might involve API version changes, which will respect [Google Cloud API
+   * guidelines](https://cloud.google.com/endpoints/docs/openapi/versioning-an-api#backwards-
+   * incompatible)
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMajor() {
@@ -98,8 +100,9 @@ public final class ModelVersion extends com.google.api.client.json.GenericJson {
   /**
    * Major versions: Major changes to methodology (e.g. adding new data sources to the model that
    * lead to major output changes). Such changes will be infrequent and announced well in advance.
-   * Might involve API version changes, which will respect guidelines in
-   * https://cloud.google.com/endpoints/docs/openapi/versioning-an-api#backwards-incompatible
+   * Might involve API version changes, which will respect [Google Cloud API
+   * guidelines](https://cloud.google.com/endpoints/docs/openapi/versioning-an-api#backwards-
+   * incompatible)
    * @param major major or {@code null} for none
    */
   public ModelVersion setMajor(java.lang.Integer major) {

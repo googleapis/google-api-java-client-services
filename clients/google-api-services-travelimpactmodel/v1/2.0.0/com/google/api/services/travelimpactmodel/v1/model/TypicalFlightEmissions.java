@@ -31,7 +31,10 @@ package com.google.api.services.travelimpactmodel.v1.model;
 public final class TypicalFlightEmissions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Typical flight emissions per passenger for requested market.
+   * Optional. Typical flight emissions per passenger for requested market. Will not be present if a
+   * typical emissions could not be computed. For the list of reasons why typical flight emissions
+   * could not be computed, see [GitHub](https://github.com/google/travel-impact-
+   * model/blob/main/projects/typical_flight_emissions.md#step-7-validate-dataset).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +48,10 @@ public final class TypicalFlightEmissions extends com.google.api.client.json.Gen
   private Market market;
 
   /**
-   * Optional. Typical flight emissions per passenger for requested market.
+   * Optional. Typical flight emissions per passenger for requested market. Will not be present if a
+   * typical emissions could not be computed. For the list of reasons why typical flight emissions
+   * could not be computed, see [GitHub](https://github.com/google/travel-impact-
+   * model/blob/main/projects/typical_flight_emissions.md#step-7-validate-dataset).
    * @return value or {@code null} for none
    */
   public EmissionsGramsPerPax getEmissionsGramsPerPax() {
@@ -53,7 +59,10 @@ public final class TypicalFlightEmissions extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. Typical flight emissions per passenger for requested market.
+   * Optional. Typical flight emissions per passenger for requested market. Will not be present if a
+   * typical emissions could not be computed. For the list of reasons why typical flight emissions
+   * could not be computed, see [GitHub](https://github.com/google/travel-impact-
+   * model/blob/main/projects/typical_flight_emissions.md#step-7-validate-dataset).
    * @param emissionsGramsPerPax emissionsGramsPerPax or {@code null} for none
    */
   public TypicalFlightEmissions setEmissionsGramsPerPax(EmissionsGramsPerPax emissionsGramsPerPax) {

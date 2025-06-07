@@ -20,9 +20,9 @@ package com.google.api.services.dialogflow.v2beta1.model;
  * Indicates that the conversation should be handed off to a human agent. Dialogflow only uses this
  * to determine which conversations were handed off to a human agent for measurement purposes. What
  * else to do with this signal is up to you and your handoff procedures. You may set this, for
- * example: * In the entry fulfillment of a CX Page if entering the page indicates something went
- * extremely wrong in the conversation. * In a webhook response when you determine that the customer
- * issue can only be handled by a human.
+ * example: * In the entry fulfillment of a Dialogflow CX Page if entering the page indicates
+ * something went extremely wrong in the conversation. * In a webhook response when you determine
+ * that the customer issue can only be handled by a human.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:

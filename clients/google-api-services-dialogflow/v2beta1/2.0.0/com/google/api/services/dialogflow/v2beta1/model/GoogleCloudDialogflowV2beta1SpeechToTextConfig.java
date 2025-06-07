@@ -30,16 +30,6 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1SpeechToTextConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Defines the list of other language codes in addition to the one provided by the conversation
-   * profile that may be detected as the language code for the utterances over the conversation. See
-   * [Language Support](https://cloud.google.com/dialogflow/docs/reference/language) for a list of
-   * the currently supported language codes.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> alternativeLanguageCodes;
-
-  /**
    * Audio encoding of the audio content to process.
    * The value may be {@code null}.
    */
@@ -59,7 +49,8 @@ public final class GoogleCloudDialogflowV2beta1SpeechToTextConfig extends com.go
    * The language of the supplied audio. Dialogflow does not do translations. See [Language
    * Support](https://cloud.google.com/dialogflow/docs/reference/language) for a list of the
    * currently supported language codes. Note that queries in the same session do not necessarily
-   * need to specify the same language.
+   * need to specify the same language. If not specified, the default language configured at
+   * ConversationProfile is used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,6 +74,15 @@ public final class GoogleCloudDialogflowV2beta1SpeechToTextConfig extends com.go
   private java.lang.String model;
 
   /**
+   * List of names of Cloud Speech phrase sets that are used for transcription. For phrase set
+   * limitations, please refer to [Cloud Speech API quotas and
+   * limits](https://cloud.google.com/speech-to-text/quotas#content).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> phraseSets;
+
+  /**
    * Sample rate (in Hertz) of the audio content sent in the query. Refer to [Cloud Speech API
    * documentation](https://cloud.google.com/speech-to-text/docs/basics) for more details.
    * The value may be {@code null}.
@@ -102,34 +102,11 @@ public final class GoogleCloudDialogflowV2beta1SpeechToTextConfig extends com.go
   private java.lang.String speechModelVariant;
 
   /**
-   * Use timeout based endpointing, interpreting endpointer sensitivy as seconds of timeout value.
+   * Use timeout based endpointing, interpreting endpointer sensitivity as seconds of timeout value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean useTimeoutBasedEndpointing;
-
-  /**
-   * Defines the list of other language codes in addition to the one provided by the conversation
-   * profile that may be detected as the language code for the utterances over the conversation. See
-   * [Language Support](https://cloud.google.com/dialogflow/docs/reference/language) for a list of
-   * the currently supported language codes.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getAlternativeLanguageCodes() {
-    return alternativeLanguageCodes;
-  }
-
-  /**
-   * Defines the list of other language codes in addition to the one provided by the conversation
-   * profile that may be detected as the language code for the utterances over the conversation. See
-   * [Language Support](https://cloud.google.com/dialogflow/docs/reference/language) for a list of
-   * the currently supported language codes.
-   * @param alternativeLanguageCodes alternativeLanguageCodes or {@code null} for none
-   */
-  public GoogleCloudDialogflowV2beta1SpeechToTextConfig setAlternativeLanguageCodes(java.util.List<java.lang.String> alternativeLanguageCodes) {
-    this.alternativeLanguageCodes = alternativeLanguageCodes;
-    return this;
-  }
 
   /**
    * Audio encoding of the audio content to process.
@@ -173,7 +150,8 @@ public final class GoogleCloudDialogflowV2beta1SpeechToTextConfig extends com.go
    * The language of the supplied audio. Dialogflow does not do translations. See [Language
    * Support](https://cloud.google.com/dialogflow/docs/reference/language) for a list of the
    * currently supported language codes. Note that queries in the same session do not necessarily
-   * need to specify the same language.
+   * need to specify the same language. If not specified, the default language configured at
+   * ConversationProfile is used.
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguageCode() {
@@ -184,7 +162,8 @@ public final class GoogleCloudDialogflowV2beta1SpeechToTextConfig extends com.go
    * The language of the supplied audio. Dialogflow does not do translations. See [Language
    * Support](https://cloud.google.com/dialogflow/docs/reference/language) for a list of the
    * currently supported language codes. Note that queries in the same session do not necessarily
-   * need to specify the same language.
+   * need to specify the same language. If not specified, the default language configured at
+   * ConversationProfile is used.
    * @param languageCode languageCode or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SpeechToTextConfig setLanguageCode(java.lang.String languageCode) {
@@ -226,6 +205,27 @@ public final class GoogleCloudDialogflowV2beta1SpeechToTextConfig extends com.go
    */
   public GoogleCloudDialogflowV2beta1SpeechToTextConfig setModel(java.lang.String model) {
     this.model = model;
+    return this;
+  }
+
+  /**
+   * List of names of Cloud Speech phrase sets that are used for transcription. For phrase set
+   * limitations, please refer to [Cloud Speech API quotas and
+   * limits](https://cloud.google.com/speech-to-text/quotas#content).
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getPhraseSets() {
+    return phraseSets;
+  }
+
+  /**
+   * List of names of Cloud Speech phrase sets that are used for transcription. For phrase set
+   * limitations, please refer to [Cloud Speech API quotas and
+   * limits](https://cloud.google.com/speech-to-text/quotas#content).
+   * @param phraseSets phraseSets or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1SpeechToTextConfig setPhraseSets(java.util.List<java.lang.String> phraseSets) {
+    this.phraseSets = phraseSets;
     return this;
   }
 
@@ -274,7 +274,7 @@ public final class GoogleCloudDialogflowV2beta1SpeechToTextConfig extends com.go
   }
 
   /**
-   * Use timeout based endpointing, interpreting endpointer sensitivy as seconds of timeout value.
+   * Use timeout based endpointing, interpreting endpointer sensitivity as seconds of timeout value.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUseTimeoutBasedEndpointing() {
@@ -282,7 +282,7 @@ public final class GoogleCloudDialogflowV2beta1SpeechToTextConfig extends com.go
   }
 
   /**
-   * Use timeout based endpointing, interpreting endpointer sensitivy as seconds of timeout value.
+   * Use timeout based endpointing, interpreting endpointer sensitivity as seconds of timeout value.
    * @param useTimeoutBasedEndpointing useTimeoutBasedEndpointing or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1SpeechToTextConfig setUseTimeoutBasedEndpointing(java.lang.Boolean useTimeoutBasedEndpointing) {

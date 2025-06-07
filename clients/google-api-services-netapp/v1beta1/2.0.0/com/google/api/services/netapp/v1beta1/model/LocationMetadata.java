@@ -30,6 +30,13 @@ package com.google.api.services.netapp.v1beta1.model;
 public final class LocationMetadata extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Indicates if the location has VCP support.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean hasVcp;
+
+  /**
    * Output only. Supported flex performance in a location.
    * The value may be {@code null}.
    */
@@ -42,6 +49,23 @@ public final class LocationMetadata extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> supportedServiceLevels;
+
+  /**
+   * Output only. Indicates if the location has VCP support.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getHasVcp() {
+    return hasVcp;
+  }
+
+  /**
+   * Output only. Indicates if the location has VCP support.
+   * @param hasVcp hasVcp or {@code null} for none
+   */
+  public LocationMetadata setHasVcp(java.lang.Boolean hasVcp) {
+    this.hasVcp = hasVcp;
+    return this;
+  }
 
   /**
    * Output only. Supported flex performance in a location.

@@ -19,8 +19,9 @@ package com.google.api.services.merchantapi.products_v1beta.model;
 /**
  * This resource represents input data you submit for a product, not the processed product that you
  * see in Merchant Center, in Shopping ads, or across Google surfaces. Product inputs, rules and
- * supplemental data source data are combined to create the processed Product. Required product
- * input attributes to pass data validation checks are primarily defined in the [Products Data
+ * supplemental data source data are combined to create the processed Product. For more information,
+ * see [Manage products](/merchant/api/guides/products/overview). Required product input attributes
+ * to pass data validation checks are primarily defined in the [Products Data
  * Specification](https://support.google.com/merchants/answer/188494). The following attributes are
  * required: feedLabel, contentLanguage and offerId. After inserting, updating, or deleting a
  * product input, it may take several minutes before the processed product can be retrieved. All
@@ -83,8 +84,10 @@ public final class ProductInput extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Immutable. The [feed label](https://developers.google.com/shopping-
-   * content/guides/products/feed-labels) for the product.
+   * Required. Immutable. The label that lets you categorize and identify your products. The maximum
+   * allowed characters are 20, and the supported characters are `A-Z`, `0-9`, hyphen, and
+   * underscore. The feed label must not include any spaces. For more information, see [Using feed
+   * labels](//support.google.com/merchants/answer/14994087).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -213,8 +216,10 @@ public final class ProductInput extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Immutable. The [feed label](https://developers.google.com/shopping-
-   * content/guides/products/feed-labels) for the product.
+   * Required. Immutable. The label that lets you categorize and identify your products. The maximum
+   * allowed characters are 20, and the supported characters are `A-Z`, `0-9`, hyphen, and
+   * underscore. The feed label must not include any spaces. For more information, see [Using feed
+   * labels](//support.google.com/merchants/answer/14994087).
    * @return value or {@code null} for none
    */
   public java.lang.String getFeedLabel() {
@@ -222,8 +227,10 @@ public final class ProductInput extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Immutable. The [feed label](https://developers.google.com/shopping-
-   * content/guides/products/feed-labels) for the product.
+   * Required. Immutable. The label that lets you categorize and identify your products. The maximum
+   * allowed characters are 20, and the supported characters are `A-Z`, `0-9`, hyphen, and
+   * underscore. The feed label must not include any spaces. For more information, see [Using feed
+   * labels](//support.google.com/merchants/answer/14994087).
    * @param feedLabel feedLabel or {@code null} for none
    */
   public ProductInput setFeedLabel(java.lang.String feedLabel) {

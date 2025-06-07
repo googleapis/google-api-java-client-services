@@ -47,8 +47,8 @@ public final class BackupPlanAssociation extends com.google.api.client.json.Gene
   private String createTime;
 
   /**
-   * Output only. Output Only. Resource name of data source which will be used as storage location
-   * for backups taken. Format :
+   * Output only. Resource name of data source which will be used as storage location for backups
+   * taken. Format :
    * projects/{project}/locations/{location}/backupVaults/{backupvault}/dataSources/{datasource}
    * The value may be {@code null}.
    */
@@ -71,7 +71,7 @@ public final class BackupPlanAssociation extends com.google.api.client.json.Gene
   private java.lang.String resource;
 
   /**
-   * Optional. Required. Resource type of workload on which backupplan is applied
+   * Required. Immutable.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -135,8 +135,8 @@ public final class BackupPlanAssociation extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. Output Only. Resource name of data source which will be used as storage location
-   * for backups taken. Format :
+   * Output only. Resource name of data source which will be used as storage location for backups
+   * taken. Format :
    * projects/{project}/locations/{location}/backupVaults/{backupvault}/dataSources/{datasource}
    * @return value or {@code null} for none
    */
@@ -145,8 +145,8 @@ public final class BackupPlanAssociation extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. Output Only. Resource name of data source which will be used as storage location
-   * for backups taken. Format :
+   * Output only. Resource name of data source which will be used as storage location for backups
+   * taken. Format :
    * projects/{project}/locations/{location}/backupVaults/{backupvault}/dataSources/{datasource}
    * @param dataSource dataSource or {@code null} for none
    */
@@ -192,7 +192,7 @@ public final class BackupPlanAssociation extends com.google.api.client.json.Gene
   }
 
   /**
-   * Optional. Required. Resource type of workload on which backupplan is applied
+   * Required. Immutable.
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceType() {
@@ -200,7 +200,7 @@ public final class BackupPlanAssociation extends com.google.api.client.json.Gene
   }
 
   /**
-   * Optional. Required. Resource type of workload on which backupplan is applied
+   * Required. Immutable.
    * @param resourceType resourceType or {@code null} for none
    */
   public BackupPlanAssociation setResourceType(java.lang.String resourceType) {

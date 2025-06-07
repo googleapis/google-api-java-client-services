@@ -45,6 +45,13 @@ public final class GoogleCloudContactcenterinsightsV1ConversationDataSource exte
   private GoogleCloudContactcenterinsightsV1GcsSource gcsSource;
 
   /**
+   * Cloud Storage URI that points to a file that contains the conversation metadata.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String metadataUri;
+
+  /**
    * The source when the conversation comes from Dialogflow.
    * @return value or {@code null} for none
    */
@@ -75,6 +82,23 @@ public final class GoogleCloudContactcenterinsightsV1ConversationDataSource exte
    */
   public GoogleCloudContactcenterinsightsV1ConversationDataSource setGcsSource(GoogleCloudContactcenterinsightsV1GcsSource gcsSource) {
     this.gcsSource = gcsSource;
+    return this;
+  }
+
+  /**
+   * Cloud Storage URI that points to a file that contains the conversation metadata.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMetadataUri() {
+    return metadataUri;
+  }
+
+  /**
+   * Cloud Storage URI that points to a file that contains the conversation metadata.
+   * @param metadataUri metadataUri or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1ConversationDataSource setMetadataUri(java.lang.String metadataUri) {
+    this.metadataUri = metadataUri;
     return this;
   }
 

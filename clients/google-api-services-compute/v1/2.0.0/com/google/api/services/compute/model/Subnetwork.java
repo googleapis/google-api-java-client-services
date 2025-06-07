@@ -182,6 +182,14 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   private java.lang.String network;
 
   /**
+   * Input only. [Input Only] Additional params passed with the request, but not persisted as part
+   * of resource payload.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SubnetworkParams params;
+
+  /**
    * Whether the VMs in this subnet can access Google services without assigned external IP
    * addresses. This field can be both set at resource creation time and updated using
    * setPrivateIpGoogleAccess.
@@ -267,6 +275,22 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
+
+  /**
+   * Output only. [Output Only] The array of external IPv6 network ranges reserved from the
+   * subnetwork's external IPv6 range for system use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> systemReservedExternalIpv6Ranges;
+
+  /**
+   * Output only. [Output Only] The array of internal IPv6 network ranges reserved from the
+   * subnetwork's internal IPv6 range for system use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> systemReservedInternalIpv6Ranges;
 
   /**
    * [Output Only] Creation timestamp in RFC3339 text format.
@@ -656,6 +680,25 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Input only. [Input Only] Additional params passed with the request, but not persisted as part
+   * of resource payload.
+   * @return value or {@code null} for none
+   */
+  public SubnetworkParams getParams() {
+    return params;
+  }
+
+  /**
+   * Input only. [Input Only] Additional params passed with the request, but not persisted as part
+   * of resource payload.
+   * @param params params or {@code null} for none
+   */
+  public Subnetwork setParams(SubnetworkParams params) {
+    this.params = params;
+    return this;
+  }
+
+  /**
    * Whether the VMs in this subnet can access Google services without assigned external IP
    * addresses. This field can be both set at resource creation time and updated using
    * setPrivateIpGoogleAccess.
@@ -856,6 +899,44 @@ public final class Subnetwork extends com.google.api.client.json.GenericJson {
    */
   public Subnetwork setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Output only. [Output Only] The array of external IPv6 network ranges reserved from the
+   * subnetwork's external IPv6 range for system use.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getSystemReservedExternalIpv6Ranges() {
+    return systemReservedExternalIpv6Ranges;
+  }
+
+  /**
+   * Output only. [Output Only] The array of external IPv6 network ranges reserved from the
+   * subnetwork's external IPv6 range for system use.
+   * @param systemReservedExternalIpv6Ranges systemReservedExternalIpv6Ranges or {@code null} for none
+   */
+  public Subnetwork setSystemReservedExternalIpv6Ranges(java.util.List<java.lang.String> systemReservedExternalIpv6Ranges) {
+    this.systemReservedExternalIpv6Ranges = systemReservedExternalIpv6Ranges;
+    return this;
+  }
+
+  /**
+   * Output only. [Output Only] The array of internal IPv6 network ranges reserved from the
+   * subnetwork's internal IPv6 range for system use.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getSystemReservedInternalIpv6Ranges() {
+    return systemReservedInternalIpv6Ranges;
+  }
+
+  /**
+   * Output only. [Output Only] The array of internal IPv6 network ranges reserved from the
+   * subnetwork's internal IPv6 range for system use.
+   * @param systemReservedInternalIpv6Ranges systemReservedInternalIpv6Ranges or {@code null} for none
+   */
+  public Subnetwork setSystemReservedInternalIpv6Ranges(java.util.List<java.lang.String> systemReservedInternalIpv6Ranges) {
+    this.systemReservedInternalIpv6Ranges = systemReservedInternalIpv6Ranges;
     return this;
   }
 

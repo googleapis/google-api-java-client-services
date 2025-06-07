@@ -86,6 +86,13 @@ public final class PublicAdvertisedPrefix extends com.google.api.client.json.Gen
   private java.lang.String ipCidrRange;
 
   /**
+   * The internet access type for IPv6 Public Advertised Prefixes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ipv6AccessType;
+
+  /**
    * [Output Only] Type of the resource. Always compute#publicAdvertisedPrefix for public advertised
    * prefixes.
    * The value may be {@code null}.
@@ -318,6 +325,23 @@ public final class PublicAdvertisedPrefix extends com.google.api.client.json.Gen
    */
   public PublicAdvertisedPrefix setIpCidrRange(java.lang.String ipCidrRange) {
     this.ipCidrRange = ipCidrRange;
+    return this;
+  }
+
+  /**
+   * The internet access type for IPv6 Public Advertised Prefixes.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIpv6AccessType() {
+    return ipv6AccessType;
+  }
+
+  /**
+   * The internet access type for IPv6 Public Advertised Prefixes.
+   * @param ipv6AccessType ipv6AccessType or {@code null} for none
+   */
+  public PublicAdvertisedPrefix setIpv6AccessType(java.lang.String ipv6AccessType) {
+    this.ipv6AccessType = ipv6AccessType;
     return this;
   }
 

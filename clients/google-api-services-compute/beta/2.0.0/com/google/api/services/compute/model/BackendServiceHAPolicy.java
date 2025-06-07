@@ -59,7 +59,7 @@ public final class BackendServiceHAPolicy extends com.google.api.client.json.Gen
    * fastIPMove. - The regional backend service must set the network field, and all NEGs must belong
    * to that network. However, individual NEGs can belong to different subnetworks of that network.
    * - The maximum number of network endpoints across all backends of a backend service with
-   * fastIPMove is 64. - The maximum number of backend services with fastIPMove that can have the
+   * fastIPMove is 32. - The maximum number of backend services with fastIPMove that can have the
    * same network endpoint attached to one of its backends is 64. - The maximum number of backend
    * services with fastIPMove in a VPC in a region is 64. - The network endpoints that are attached
    * to a backend of a backend service with fastIPMove cannot resolve to Gen3+ machines for IPv6. -
@@ -72,6 +72,18 @@ public final class BackendServiceHAPolicy extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private java.lang.String fastIPMove;
+
+  /**
+   * Selects one of the network endpoints attached to the backend NEGs of this service as the active
+   * endpoint (the leader) that receives all traffic. When the leader changes, there is no
+   * connection draining to persist existing connections on the old leader. You are responsible for
+   * selecting a suitable endpoint as the leader. For example, preferring a healthy endpoint over
+   * unhealthy ones. Note that this service does not track backend endpoint health, and selects the
+   * configured leader unconditionally.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BackendServiceHAPolicyLeader leader;
 
   /**
    * Specifies whether fast IP move is enabled, and if so, the mechanism to achieve it. Supported
@@ -103,7 +115,7 @@ public final class BackendServiceHAPolicy extends com.google.api.client.json.Gen
    * fastIPMove. - The regional backend service must set the network field, and all NEGs must belong
    * to that network. However, individual NEGs can belong to different subnetworks of that network.
    * - The maximum number of network endpoints across all backends of a backend service with
-   * fastIPMove is 64. - The maximum number of backend services with fastIPMove that can have the
+   * fastIPMove is 32. - The maximum number of backend services with fastIPMove that can have the
    * same network endpoint attached to one of its backends is 64. - The maximum number of backend
    * services with fastIPMove in a VPC in a region is 64. - The network endpoints that are attached
    * to a backend of a backend service with fastIPMove cannot resolve to Gen3+ machines for IPv6. -
@@ -148,7 +160,7 @@ public final class BackendServiceHAPolicy extends com.google.api.client.json.Gen
    * fastIPMove. - The regional backend service must set the network field, and all NEGs must belong
    * to that network. However, individual NEGs can belong to different subnetworks of that network.
    * - The maximum number of network endpoints across all backends of a backend service with
-   * fastIPMove is 64. - The maximum number of backend services with fastIPMove that can have the
+   * fastIPMove is 32. - The maximum number of backend services with fastIPMove that can have the
    * same network endpoint attached to one of its backends is 64. - The maximum number of backend
    * services with fastIPMove in a VPC in a region is 64. - The network endpoints that are attached
    * to a backend of a backend service with fastIPMove cannot resolve to Gen3+ machines for IPv6. -
@@ -161,6 +173,33 @@ public final class BackendServiceHAPolicy extends com.google.api.client.json.Gen
    */
   public BackendServiceHAPolicy setFastIPMove(java.lang.String fastIPMove) {
     this.fastIPMove = fastIPMove;
+    return this;
+  }
+
+  /**
+   * Selects one of the network endpoints attached to the backend NEGs of this service as the active
+   * endpoint (the leader) that receives all traffic. When the leader changes, there is no
+   * connection draining to persist existing connections on the old leader. You are responsible for
+   * selecting a suitable endpoint as the leader. For example, preferring a healthy endpoint over
+   * unhealthy ones. Note that this service does not track backend endpoint health, and selects the
+   * configured leader unconditionally.
+   * @return value or {@code null} for none
+   */
+  public BackendServiceHAPolicyLeader getLeader() {
+    return leader;
+  }
+
+  /**
+   * Selects one of the network endpoints attached to the backend NEGs of this service as the active
+   * endpoint (the leader) that receives all traffic. When the leader changes, there is no
+   * connection draining to persist existing connections on the old leader. You are responsible for
+   * selecting a suitable endpoint as the leader. For example, preferring a healthy endpoint over
+   * unhealthy ones. Note that this service does not track backend endpoint health, and selects the
+   * configured leader unconditionally.
+   * @param leader leader or {@code null} for none
+   */
+  public BackendServiceHAPolicy setLeader(BackendServiceHAPolicyLeader leader) {
+    this.leader = leader;
     return this;
   }
 

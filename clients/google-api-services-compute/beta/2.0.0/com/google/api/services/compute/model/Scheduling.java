@@ -158,6 +158,14 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   private java.lang.String provisioningModel;
 
   /**
+   * Default is false and there will be 120 seconds between GCE ACPI G2 Soft Off and ACPI G3
+   * Mechanical Off for Standard VMs and 30 seconds for Spot VMs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean skipGuestOsShutdown;
+
+  /**
    * Specifies the timestamp, when the instance will be terminated, in RFC3339 text format. If
    * specified, the instance termination action will be performed at the termination time.
    * The value may be {@code null}.
@@ -466,6 +474,25 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
    */
   public Scheduling setProvisioningModel(java.lang.String provisioningModel) {
     this.provisioningModel = provisioningModel;
+    return this;
+  }
+
+  /**
+   * Default is false and there will be 120 seconds between GCE ACPI G2 Soft Off and ACPI G3
+   * Mechanical Off for Standard VMs and 30 seconds for Spot VMs.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSkipGuestOsShutdown() {
+    return skipGuestOsShutdown;
+  }
+
+  /**
+   * Default is false and there will be 120 seconds between GCE ACPI G2 Soft Off and ACPI G3
+   * Mechanical Off for Standard VMs and 30 seconds for Spot VMs.
+   * @param skipGuestOsShutdown skipGuestOsShutdown or {@code null} for none
+   */
+  public Scheduling setSkipGuestOsShutdown(java.lang.Boolean skipGuestOsShutdown) {
+    this.skipGuestOsShutdown = skipGuestOsShutdown;
     return this;
   }
 

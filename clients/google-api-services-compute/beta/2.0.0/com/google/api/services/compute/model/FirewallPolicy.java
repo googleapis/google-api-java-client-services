@@ -114,6 +114,14 @@ public final class FirewallPolicy extends com.google.api.client.json.GenericJson
   private java.lang.String parent;
 
   /**
+   * The type of the firewall policy. This field can be either VPC_POLICY or RDMA_ROCE_POLICY. Note:
+   * if not specified then VPC_POLICY will be used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String policyType;
+
+  /**
    * [Output Only] URL of the region where the regional firewall policy resides. This field is not
    * applicable to global firewall policies. You must specify this field as part of the HTTP request
    * URL. It is not settable as a field in the request body.
@@ -399,6 +407,25 @@ public final class FirewallPolicy extends com.google.api.client.json.GenericJson
    */
   public FirewallPolicy setParent(java.lang.String parent) {
     this.parent = parent;
+    return this;
+  }
+
+  /**
+   * The type of the firewall policy. This field can be either VPC_POLICY or RDMA_ROCE_POLICY. Note:
+   * if not specified then VPC_POLICY will be used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPolicyType() {
+    return policyType;
+  }
+
+  /**
+   * The type of the firewall policy. This field can be either VPC_POLICY or RDMA_ROCE_POLICY. Note:
+   * if not specified then VPC_POLICY will be used.
+   * @param policyType policyType or {@code null} for none
+   */
+  public FirewallPolicy setPolicyType(java.lang.String policyType) {
+    this.policyType = policyType;
     return this;
   }
 

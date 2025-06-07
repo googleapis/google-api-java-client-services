@@ -51,7 +51,6 @@ public final class GoogleCloudIdentitytoolkitV1IdpConfig extends com.google.api.
   private java.lang.Integer experimentPercent;
 
   /**
-   * Name of the identity provider.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -123,7 +122,6 @@ public final class GoogleCloudIdentitytoolkitV1IdpConfig extends com.google.api.
   }
 
   /**
-   * Name of the identity provider.
    * @return value or {@code null} for none
    */
   public java.lang.String getProvider() {
@@ -131,7 +129,6 @@ public final class GoogleCloudIdentitytoolkitV1IdpConfig extends com.google.api.
   }
 
   /**
-   * Name of the identity provider.
    * @param provider provider or {@code null} for none
    */
   public GoogleCloudIdentitytoolkitV1IdpConfig setProvider(java.lang.String provider) {

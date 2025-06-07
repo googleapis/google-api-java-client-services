@@ -17,7 +17,7 @@
 package com.google.api.services.integrations.v1.model;
 
 /**
- * This cofiguration provides infra configs like rate limit threshold which need to be configurable
+ * This configuration provides infra configs like rate limit threshold which need to be configurable
  * for every connector version
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -39,11 +39,18 @@ public final class GoogleCloudConnectorsV1ConnectorVersionInfraConfig extends co
   private java.lang.Long connectionRatelimitWindowSeconds;
 
   /**
-   * Optional. Indicates whether connector is deployed on GKE/CloudRun
+   * Output only. Indicates whether connector is deployed on GKE/CloudRun
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String deploymentModel;
+
+  /**
+   * Output only. Status of the deployment model migration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String deploymentModelMigrationState;
 
   /**
    * Output only. HPA autoscaling config.
@@ -58,6 +65,13 @@ public final class GoogleCloudConnectorsV1ConnectorVersionInfraConfig extends co
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long internalclientRatelimitThreshold;
+
+  /**
+   * Output only. Max instance request concurrency.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer maxInstanceRequestConcurrency;
 
   /**
    * Output only. Max QPS supported by the connector version before throttling of requests.
@@ -88,6 +102,13 @@ public final class GoogleCloudConnectorsV1ConnectorVersionInfraConfig extends co
   private java.lang.String sharedDeployment;
 
   /**
+   * Output only. Status of the TLS migration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String tlsMigrationState;
+
+  /**
    * Output only. The window used for ratelimiting runtime requests to connections.
    * @return value or {@code null} for none
    */
@@ -105,7 +126,7 @@ public final class GoogleCloudConnectorsV1ConnectorVersionInfraConfig extends co
   }
 
   /**
-   * Optional. Indicates whether connector is deployed on GKE/CloudRun
+   * Output only. Indicates whether connector is deployed on GKE/CloudRun
    * @return value or {@code null} for none
    */
   public java.lang.String getDeploymentModel() {
@@ -113,11 +134,28 @@ public final class GoogleCloudConnectorsV1ConnectorVersionInfraConfig extends co
   }
 
   /**
-   * Optional. Indicates whether connector is deployed on GKE/CloudRun
+   * Output only. Indicates whether connector is deployed on GKE/CloudRun
    * @param deploymentModel deploymentModel or {@code null} for none
    */
   public GoogleCloudConnectorsV1ConnectorVersionInfraConfig setDeploymentModel(java.lang.String deploymentModel) {
     this.deploymentModel = deploymentModel;
+    return this;
+  }
+
+  /**
+   * Output only. Status of the deployment model migration.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDeploymentModelMigrationState() {
+    return deploymentModelMigrationState;
+  }
+
+  /**
+   * Output only. Status of the deployment model migration.
+   * @param deploymentModelMigrationState deploymentModelMigrationState or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1ConnectorVersionInfraConfig setDeploymentModelMigrationState(java.lang.String deploymentModelMigrationState) {
+    this.deploymentModelMigrationState = deploymentModelMigrationState;
     return this;
   }
 
@@ -152,6 +190,23 @@ public final class GoogleCloudConnectorsV1ConnectorVersionInfraConfig extends co
    */
   public GoogleCloudConnectorsV1ConnectorVersionInfraConfig setInternalclientRatelimitThreshold(java.lang.Long internalclientRatelimitThreshold) {
     this.internalclientRatelimitThreshold = internalclientRatelimitThreshold;
+    return this;
+  }
+
+  /**
+   * Output only. Max instance request concurrency.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMaxInstanceRequestConcurrency() {
+    return maxInstanceRequestConcurrency;
+  }
+
+  /**
+   * Output only. Max instance request concurrency.
+   * @param maxInstanceRequestConcurrency maxInstanceRequestConcurrency or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1ConnectorVersionInfraConfig setMaxInstanceRequestConcurrency(java.lang.Integer maxInstanceRequestConcurrency) {
+    this.maxInstanceRequestConcurrency = maxInstanceRequestConcurrency;
     return this;
   }
 
@@ -220,6 +275,23 @@ public final class GoogleCloudConnectorsV1ConnectorVersionInfraConfig extends co
    */
   public GoogleCloudConnectorsV1ConnectorVersionInfraConfig setSharedDeployment(java.lang.String sharedDeployment) {
     this.sharedDeployment = sharedDeployment;
+    return this;
+  }
+
+  /**
+   * Output only. Status of the TLS migration.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTlsMigrationState() {
+    return tlsMigrationState;
+  }
+
+  /**
+   * Output only. Status of the TLS migration.
+   * @param tlsMigrationState tlsMigrationState or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1ConnectorVersionInfraConfig setTlsMigrationState(java.lang.String tlsMigrationState) {
+    this.tlsMigrationState = tlsMigrationState;
     return this;
   }
 

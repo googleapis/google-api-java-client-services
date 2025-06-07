@@ -31,14 +31,16 @@ package com.google.api.services.integrations.v1.model;
 public final class GoogleCloudConnectorsV1Secret extends com.google.api.client.json.GenericJson {
 
   /**
-   * The resource name of the secret version in the format, format as: `projects/secrets/versions`.
+   * Optional. The resource name of the secret version in the format, format as:
+   * `projects/secrets/versions`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String secretVersion;
 
   /**
-   * The resource name of the secret version in the format, format as: `projects/secrets/versions`.
+   * Optional. The resource name of the secret version in the format, format as:
+   * `projects/secrets/versions`.
    * @return value or {@code null} for none
    */
   public java.lang.String getSecretVersion() {
@@ -46,7 +48,8 @@ public final class GoogleCloudConnectorsV1Secret extends com.google.api.client.j
   }
 
   /**
-   * The resource name of the secret version in the format, format as: `projects/secrets/versions`.
+   * Optional. The resource name of the secret version in the format, format as:
+   * `projects/secrets/versions`.
    * @param secretVersion secretVersion or {@code null} for none
    */
   public GoogleCloudConnectorsV1Secret setSecretVersion(java.lang.String secretVersion) {

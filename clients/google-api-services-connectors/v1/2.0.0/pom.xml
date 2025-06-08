@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-connectors</artifactId>
-  <version>v1-rev20250521-2.0.0</version>
-  <name>Connectors API v1-rev20250521-2.0.0</name>
+  <version>v1-rev20250604-2.0.0</version>
+  <name>Connectors API v1-rev20250604-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

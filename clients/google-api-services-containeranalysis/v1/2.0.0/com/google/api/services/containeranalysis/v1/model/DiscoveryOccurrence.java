@@ -81,6 +81,13 @@ public final class DiscoveryOccurrence extends com.google.api.client.json.Generi
   private java.lang.String cpe;
 
   /**
+   * Files that make up the resource described by the occurrence.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<File> files;
+
+  /**
    * The last time this resource was scanned.
    * The value may be {@code null}.
    */
@@ -212,6 +219,23 @@ public final class DiscoveryOccurrence extends com.google.api.client.json.Generi
    */
   public DiscoveryOccurrence setCpe(java.lang.String cpe) {
     this.cpe = cpe;
+    return this;
+  }
+
+  /**
+   * Files that make up the resource described by the occurrence.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<File> getFiles() {
+    return files;
+  }
+
+  /**
+   * Files that make up the resource described by the occurrence.
+   * @param files files or {@code null} for none
+   */
+  public DiscoveryOccurrence setFiles(java.util.List<File> files) {
+    this.files = files;
     return this;
   }
 

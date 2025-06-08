@@ -31,8 +31,8 @@ package com.google.api.services.containeranalysis.v1beta1.model;
 public final class ContaineranalysisGoogleDevtoolsCloudbuildV1DependencyGitSourceRepository extends com.google.api.client.json.GenericJson {
 
   /**
-   * The Developer Connect Git repository link or the url that matches a repository link in the
-   * current project, formatted as `projects/locations/connections/gitRepositoryLink`
+   * The Developer Connect Git repository link formatted as
+   * `projects/locations/connections/gitRepositoryLink`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,8 +46,8 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1DependencyGitSourc
   private java.lang.String url;
 
   /**
-   * The Developer Connect Git repository link or the url that matches a repository link in the
-   * current project, formatted as `projects/locations/connections/gitRepositoryLink`
+   * The Developer Connect Git repository link formatted as
+   * `projects/locations/connections/gitRepositoryLink`
    * @return value or {@code null} for none
    */
   public java.lang.String getDeveloperConnect() {
@@ -55,8 +55,8 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1DependencyGitSourc
   }
 
   /**
-   * The Developer Connect Git repository link or the url that matches a repository link in the
-   * current project, formatted as `projects/locations/connections/gitRepositoryLink`
+   * The Developer Connect Git repository link formatted as
+   * `projects/locations/connections/gitRepositoryLink`
    * @param developerConnect developerConnect or {@code null} for none
    */
   public ContaineranalysisGoogleDevtoolsCloudbuildV1DependencyGitSourceRepository setDeveloperConnect(java.lang.String developerConnect) {

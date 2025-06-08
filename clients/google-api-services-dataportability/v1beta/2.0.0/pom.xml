@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-dataportability</artifactId>
-  <version>v1beta-rev20250305-2.0.0</version>
-  <name>Data Portability API v1beta-rev20250305-2.0.0</name>
+  <version>v1beta-rev20250605-2.0.0</version>
+  <name>Data Portability API v1beta-rev20250605-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

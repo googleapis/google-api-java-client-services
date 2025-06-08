@@ -89,6 +89,9 @@ public class DataPortabilityScopes {
   /** Move a copy of your Starred places list on Maps. */
   public static final String DATAPORTABILITY_MAPS_STARRED_PLACES = "https://www.googleapis.com/auth/dataportability.maps.starred_places";
 
+  /** Move a copy of your vehicle profile on Maps. */
+  public static final String DATAPORTABILITY_MAPS_VEHICLE_PROFILE = "https://www.googleapis.com/auth/dataportability.maps.vehicle_profile";
+
   /** Move a copy of your Maps activity. */
   public static final String DATAPORTABILITY_MYACTIVITY_MAPS = "https://www.googleapis.com/auth/dataportability.myactivity.maps";
 
@@ -250,6 +253,7 @@ public class DataPortabilityScopes {
     set.add(DATAPORTABILITY_MAPS_QUESTIONS_ANSWERS);
     set.add(DATAPORTABILITY_MAPS_REVIEWS);
     set.add(DATAPORTABILITY_MAPS_STARRED_PLACES);
+    set.add(DATAPORTABILITY_MAPS_VEHICLE_PROFILE);
     set.add(DATAPORTABILITY_MYACTIVITY_MAPS);
     set.add(DATAPORTABILITY_MYACTIVITY_MYADCENTER);
     set.add(DATAPORTABILITY_MYACTIVITY_PLAY);

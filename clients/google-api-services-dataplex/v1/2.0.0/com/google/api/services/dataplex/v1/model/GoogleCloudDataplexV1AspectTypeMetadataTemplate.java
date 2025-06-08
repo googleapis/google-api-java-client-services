@@ -98,7 +98,7 @@ public final class GoogleCloudDataplexV1AspectTypeMetadataTemplate extends com.g
 
   /**
    * Required. The datatype of this field. The following values are supported:Primitive types:
-   * string integer boolean double datetime. Must be of the format RFC3339 UTC "Zulu" (Examples:
+   * string int bool double datetime. Must be of the format RFC3339 UTC "Zulu" (Examples:
    * "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z").Complex types: enum array map
    * record
    * The value may be {@code null}.
@@ -284,7 +284,7 @@ public final class GoogleCloudDataplexV1AspectTypeMetadataTemplate extends com.g
 
   /**
    * Required. The datatype of this field. The following values are supported:Primitive types:
-   * string integer boolean double datetime. Must be of the format RFC3339 UTC "Zulu" (Examples:
+   * string int bool double datetime. Must be of the format RFC3339 UTC "Zulu" (Examples:
    * "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z").Complex types: enum array map
    * record
    * @return value or {@code null} for none
@@ -295,7 +295,7 @@ public final class GoogleCloudDataplexV1AspectTypeMetadataTemplate extends com.g
 
   /**
    * Required. The datatype of this field. The following values are supported:Primitive types:
-   * string integer boolean double datetime. Must be of the format RFC3339 UTC "Zulu" (Examples:
+   * string int bool double datetime. Must be of the format RFC3339 UTC "Zulu" (Examples:
    * "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z").Complex types: enum array map
    * record
    * @param type type or {@code null} for none

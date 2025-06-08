@@ -67,6 +67,13 @@ public final class Discovered extends com.google.api.client.json.GenericJson {
   private java.lang.String continuousAnalysis;
 
   /**
+   * Files that make up the resource described by the occurrence.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<File> files;
+
+  /**
    * The last time continuous analysis was done for this resource. Deprecated, do not use.
    * The value may be {@code null}.
    */
@@ -171,6 +178,23 @@ public final class Discovered extends com.google.api.client.json.GenericJson {
    */
   public Discovered setContinuousAnalysis(java.lang.String continuousAnalysis) {
     this.continuousAnalysis = continuousAnalysis;
+    return this;
+  }
+
+  /**
+   * Files that make up the resource described by the occurrence.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<File> getFiles() {
+    return files;
+  }
+
+  /**
+   * Files that make up the resource described by the occurrence.
+   * @param files files or {@code null} for none
+   */
+  public Discovered setFiles(java.util.List<File> files) {
+    this.files = files;
     return this;
   }
 

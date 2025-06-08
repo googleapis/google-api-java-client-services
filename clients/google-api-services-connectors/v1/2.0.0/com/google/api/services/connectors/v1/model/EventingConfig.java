@@ -17,7 +17,7 @@
 package com.google.api.services.connectors.v1.model;
 
 /**
- * Eventing Configuration of a connection next: 18
+ * Eventing Configuration of a connection next: 19
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Connectors API. For a detailed explanation see:
@@ -84,6 +84,14 @@ public final class EventingConfig extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private AuthConfig listenerAuthConfig;
+
+  /**
+   * Optional. List of projects to be allowlisted for the service attachment created in the tenant
+   * project for eventing ingress.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> privateConnectivityAllowlistedProjects;
 
   /**
    * Optional. Private Connectivity Enabled.
@@ -231,6 +239,25 @@ public final class EventingConfig extends com.google.api.client.json.GenericJson
    */
   public EventingConfig setListenerAuthConfig(AuthConfig listenerAuthConfig) {
     this.listenerAuthConfig = listenerAuthConfig;
+    return this;
+  }
+
+  /**
+   * Optional. List of projects to be allowlisted for the service attachment created in the tenant
+   * project for eventing ingress.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getPrivateConnectivityAllowlistedProjects() {
+    return privateConnectivityAllowlistedProjects;
+  }
+
+  /**
+   * Optional. List of projects to be allowlisted for the service attachment created in the tenant
+   * project for eventing ingress.
+   * @param privateConnectivityAllowlistedProjects privateConnectivityAllowlistedProjects or {@code null} for none
+   */
+  public EventingConfig setPrivateConnectivityAllowlistedProjects(java.util.List<java.lang.String> privateConnectivityAllowlistedProjects) {
+    this.privateConnectivityAllowlistedProjects = privateConnectivityAllowlistedProjects;
     return this;
   }
 

@@ -31,12 +31,71 @@ package com.google.api.services.firebasedataconnect.v1.model;
 public final class GraphqlErrorExtensions extends com.google.api.client.json.GenericJson {
 
   /**
+   * Maps to canonical gRPC codes. If not specified, it represents `Code.INTERNAL`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String code;
+
+  /**
+   * More detailed error message to assist debugging. In the backend, only include it in admin
+   * authenticated API like ExecuteGraphql. In the emulator, always include it to assist debugging.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String debugDetails;
+
+  /**
    * The source file name where the error occurred. Included only for `UpdateSchema` and
    * `UpdateConnector`, it corresponds to `File.path` of the provided `Source`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String file;
+
+  /**
+   * Distinguish which schema or connector the error originates from. It should be set on errors
+   * from control plane APIs (e.g. `UpdateSchema`, `UpdateConnector`).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String resource;
+
+  /**
+   * Maps to canonical gRPC codes. If not specified, it represents `Code.INTERNAL`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCode() {
+    return code;
+  }
+
+  /**
+   * Maps to canonical gRPC codes. If not specified, it represents `Code.INTERNAL`.
+   * @param code code or {@code null} for none
+   */
+  public GraphqlErrorExtensions setCode(java.lang.String code) {
+    this.code = code;
+    return this;
+  }
+
+  /**
+   * More detailed error message to assist debugging. In the backend, only include it in admin
+   * authenticated API like ExecuteGraphql. In the emulator, always include it to assist debugging.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDebugDetails() {
+    return debugDetails;
+  }
+
+  /**
+   * More detailed error message to assist debugging. In the backend, only include it in admin
+   * authenticated API like ExecuteGraphql. In the emulator, always include it to assist debugging.
+   * @param debugDetails debugDetails or {@code null} for none
+   */
+  public GraphqlErrorExtensions setDebugDetails(java.lang.String debugDetails) {
+    this.debugDetails = debugDetails;
+    return this;
+  }
 
   /**
    * The source file name where the error occurred. Included only for `UpdateSchema` and
@@ -54,6 +113,25 @@ public final class GraphqlErrorExtensions extends com.google.api.client.json.Gen
    */
   public GraphqlErrorExtensions setFile(java.lang.String file) {
     this.file = file;
+    return this;
+  }
+
+  /**
+   * Distinguish which schema or connector the error originates from. It should be set on errors
+   * from control plane APIs (e.g. `UpdateSchema`, `UpdateConnector`).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getResource() {
+    return resource;
+  }
+
+  /**
+   * Distinguish which schema or connector the error originates from. It should be set on errors
+   * from control plane APIs (e.g. `UpdateSchema`, `UpdateConnector`).
+   * @param resource resource or {@code null} for none
+   */
+  public GraphqlErrorExtensions setResource(java.lang.String resource) {
+    this.resource = resource;
     return this;
   }
 

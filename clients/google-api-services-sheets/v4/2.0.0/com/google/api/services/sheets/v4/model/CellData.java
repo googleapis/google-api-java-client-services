@@ -30,6 +30,18 @@ package com.google.api.services.sheets.v4.model;
 public final class CellData extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Runs of chips applied to subsections of the cell. Properties of a run start at a
+   * specific index in the text and continue until the next run. When reading, all chipped and non-
+   * chipped runs are included. Non-chipped runs will have an empty chip_run.chip. When writing,
+   * only runs with chips are included. Runs containing chips are of length 1 and are represented in
+   * the user-entered text by an “@” placeholder symbol. New runs will overwrite any prior runs.
+   * Writing a new user_entered_value will erase previous runs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ChipRun> chipRuns;
+
+  /**
    * Output only. Information about a data source formula on the cell. The field is set if
    * user_entered_value is a formula referencing some DATA_SOURCE sheet, e.g.
    * `=SUM(DataSheet!Column)`.
@@ -136,6 +148,33 @@ public final class CellData extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private ExtendedValue userEnteredValue;
+
+  /**
+   * Optional. Runs of chips applied to subsections of the cell. Properties of a run start at a
+   * specific index in the text and continue until the next run. When reading, all chipped and non-
+   * chipped runs are included. Non-chipped runs will have an empty chip_run.chip. When writing,
+   * only runs with chips are included. Runs containing chips are of length 1 and are represented in
+   * the user-entered text by an “@” placeholder symbol. New runs will overwrite any prior runs.
+   * Writing a new user_entered_value will erase previous runs.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ChipRun> getChipRuns() {
+    return chipRuns;
+  }
+
+  /**
+   * Optional. Runs of chips applied to subsections of the cell. Properties of a run start at a
+   * specific index in the text and continue until the next run. When reading, all chipped and non-
+   * chipped runs are included. Non-chipped runs will have an empty chip_run.chip. When writing,
+   * only runs with chips are included. Runs containing chips are of length 1 and are represented in
+   * the user-entered text by an “@” placeholder symbol. New runs will overwrite any prior runs.
+   * Writing a new user_entered_value will erase previous runs.
+   * @param chipRuns chipRuns or {@code null} for none
+   */
+  public CellData setChipRuns(java.util.List<ChipRun> chipRuns) {
+    this.chipRuns = chipRuns;
+    return this;
+  }
 
   /**
    * Output only. Information about a data source formula on the cell. The field is set if

@@ -220,6 +220,13 @@ public final class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryRe
   private GoogleAnalyticsAdminV1alphaSKAdNetworkConversionValueSchema skadnetworkConversionValueSchema;
 
   /**
+   * A snapshot of a SubpropertySyncConfig resource in change history.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAnalyticsAdminV1alphaSubpropertySyncConfig subpropertySyncConfig;
+
+  /**
    * A snapshot of an Account resource in change history.
    * @return value or {@code null} for none
    */
@@ -675,6 +682,23 @@ public final class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryRe
    */
   public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource setSkadnetworkConversionValueSchema(GoogleAnalyticsAdminV1alphaSKAdNetworkConversionValueSchema skadnetworkConversionValueSchema) {
     this.skadnetworkConversionValueSchema = skadnetworkConversionValueSchema;
+    return this;
+  }
+
+  /**
+   * A snapshot of a SubpropertySyncConfig resource in change history.
+   * @return value or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaSubpropertySyncConfig getSubpropertySyncConfig() {
+    return subpropertySyncConfig;
+  }
+
+  /**
+   * A snapshot of a SubpropertySyncConfig resource in change history.
+   * @param subpropertySyncConfig subpropertySyncConfig or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource setSubpropertySyncConfig(GoogleAnalyticsAdminV1alphaSubpropertySyncConfig subpropertySyncConfig) {
+    this.subpropertySyncConfig = subpropertySyncConfig;
     return this;
   }
 

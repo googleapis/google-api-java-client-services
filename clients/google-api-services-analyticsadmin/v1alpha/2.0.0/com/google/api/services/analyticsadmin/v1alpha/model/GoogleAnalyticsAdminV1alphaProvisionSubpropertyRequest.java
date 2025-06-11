@@ -31,6 +31,13 @@ package com.google.api.services.analyticsadmin.v1alpha.model;
 public final class GoogleAnalyticsAdminV1alphaProvisionSubpropertyRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The subproperty feature synchronization mode for Custom Dimensions and Metrics
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String customDimensionAndMetricSynchronizationMode;
+
+  /**
    * Required. The subproperty to create.
    * The value may be {@code null}.
    */
@@ -43,6 +50,23 @@ public final class GoogleAnalyticsAdminV1alphaProvisionSubpropertyRequest extend
    */
   @com.google.api.client.util.Key
   private GoogleAnalyticsAdminV1alphaSubpropertyEventFilter subpropertyEventFilter;
+
+  /**
+   * Optional. The subproperty feature synchronization mode for Custom Dimensions and Metrics
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCustomDimensionAndMetricSynchronizationMode() {
+    return customDimensionAndMetricSynchronizationMode;
+  }
+
+  /**
+   * Optional. The subproperty feature synchronization mode for Custom Dimensions and Metrics
+   * @param customDimensionAndMetricSynchronizationMode customDimensionAndMetricSynchronizationMode or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaProvisionSubpropertyRequest setCustomDimensionAndMetricSynchronizationMode(java.lang.String customDimensionAndMetricSynchronizationMode) {
+    this.customDimensionAndMetricSynchronizationMode = customDimensionAndMetricSynchronizationMode;
+    return this;
+  }
 
   /**
    * Required. The subproperty to create.

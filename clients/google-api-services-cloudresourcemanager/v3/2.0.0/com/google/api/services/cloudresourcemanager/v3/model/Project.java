@@ -32,6 +32,15 @@ package com.google.api.services.cloudresourcemanager.v3.model;
 public final class Project extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. If this project is a Management Project, list of capabilities configured on the
+   * parent folder. Note, presence of any capability implies that this is a Management Project.
+   * Example: `folders/123/capabilities/app-management`. OUTPUT ONLY.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> configuredCapabilities;
+
+  /**
    * Output only. Creation time.
    * The value may be {@code null}.
    */
@@ -122,6 +131,27 @@ public final class Project extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Output only. If this project is a Management Project, list of capabilities configured on the
+   * parent folder. Note, presence of any capability implies that this is a Management Project.
+   * Example: `folders/123/capabilities/app-management`. OUTPUT ONLY.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getConfiguredCapabilities() {
+    return configuredCapabilities;
+  }
+
+  /**
+   * Output only. If this project is a Management Project, list of capabilities configured on the
+   * parent folder. Note, presence of any capability implies that this is a Management Project.
+   * Example: `folders/123/capabilities/app-management`. OUTPUT ONLY.
+   * @param configuredCapabilities configuredCapabilities or {@code null} for none
+   */
+  public Project setConfiguredCapabilities(java.util.List<java.lang.String> configuredCapabilities) {
+    this.configuredCapabilities = configuredCapabilities;
+    return this;
+  }
 
   /**
    * Output only. Creation time.

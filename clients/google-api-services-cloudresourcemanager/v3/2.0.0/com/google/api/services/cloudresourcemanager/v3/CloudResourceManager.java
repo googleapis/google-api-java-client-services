@@ -3433,12 +3433,12 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
         }
       }
       /**
-       * Updates tag bindings directly attached to a GCP resource. Update_mask can be kept empty or "*".
+       * Updates tag bindings directly attached to a GCP resource.
        *
-       * Create a request for the method "tagBindingCollections.patch".
+       * Create a request for the method "tagBindingCollections.update".
        *
        * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
-       * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       * optional parameters, call the {@link Update#execute()} method to invoke the remote operation.
        *
        * @param name Identifier. The name of the TagBindingCollection, following the convention:
        *        `locations/{location}/tagBindingCollections/{encoded-full-resource-name}` where the
@@ -3448,13 +3448,13 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
        * @param content the {@link com.google.api.services.cloudresourcemanager.v3.model.TagBindingCollection}
        * @return the request
        */
-      public Patch patch(java.lang.String name, com.google.api.services.cloudresourcemanager.v3.model.TagBindingCollection content) throws java.io.IOException {
-        Patch result = new Patch(name, content);
+      public Update update(java.lang.String name, com.google.api.services.cloudresourcemanager.v3.model.TagBindingCollection content) throws java.io.IOException {
+        Update result = new Update(name, content);
         initialize(result);
         return result;
       }
 
-      public class Patch extends CloudResourceManagerRequest<com.google.api.services.cloudresourcemanager.v3.model.Operation> {
+      public class Update extends CloudResourceManagerRequest<com.google.api.services.cloudresourcemanager.v3.model.Operation> {
 
         private static final String REST_PATH = "v3/{+name}";
 
@@ -3462,14 +3462,14 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
             java.util.regex.Pattern.compile("^locations/[^/]+/tagBindingCollections/[^/]+$");
 
         /**
-         * Updates tag bindings directly attached to a GCP resource. Update_mask can be kept empty or "*".
+         * Updates tag bindings directly attached to a GCP resource.
          *
-         * Create a request for the method "tagBindingCollections.patch".
+         * Create a request for the method "tagBindingCollections.update".
          *
          * This request holds the parameters needed by the the cloudresourcemanager server.  After setting
-         * any optional parameters, call the {@link Patch#execute()} method to invoke the remote
+         * any optional parameters, call the {@link Update#execute()} method to invoke the remote
          * operation. <p> {@link
-         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Identifier. The name of the TagBindingCollection, following the convention:
@@ -3480,8 +3480,8 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
          * @param content the {@link com.google.api.services.cloudresourcemanager.v3.model.TagBindingCollection}
          * @since 1.13
          */
-        protected Patch(java.lang.String name, com.google.api.services.cloudresourcemanager.v3.model.TagBindingCollection content) {
-          super(CloudResourceManager.this, "PATCH", REST_PATH, content, com.google.api.services.cloudresourcemanager.v3.model.Operation.class);
+        protected Update(java.lang.String name, com.google.api.services.cloudresourcemanager.v3.model.TagBindingCollection content) {
+          super(CloudResourceManager.this, "PUT", REST_PATH, content, com.google.api.services.cloudresourcemanager.v3.model.Operation.class);
           this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -3491,58 +3491,58 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
         }
 
         @Override
-        public Patch set$Xgafv(java.lang.String $Xgafv) {
-          return (Patch) super.set$Xgafv($Xgafv);
+        public Update set$Xgafv(java.lang.String $Xgafv) {
+          return (Update) super.set$Xgafv($Xgafv);
         }
 
         @Override
-        public Patch setAccessToken(java.lang.String accessToken) {
-          return (Patch) super.setAccessToken(accessToken);
+        public Update setAccessToken(java.lang.String accessToken) {
+          return (Update) super.setAccessToken(accessToken);
         }
 
         @Override
-        public Patch setAlt(java.lang.String alt) {
-          return (Patch) super.setAlt(alt);
+        public Update setAlt(java.lang.String alt) {
+          return (Update) super.setAlt(alt);
         }
 
         @Override
-        public Patch setCallback(java.lang.String callback) {
-          return (Patch) super.setCallback(callback);
+        public Update setCallback(java.lang.String callback) {
+          return (Update) super.setCallback(callback);
         }
 
         @Override
-        public Patch setFields(java.lang.String fields) {
-          return (Patch) super.setFields(fields);
+        public Update setFields(java.lang.String fields) {
+          return (Update) super.setFields(fields);
         }
 
         @Override
-        public Patch setKey(java.lang.String key) {
-          return (Patch) super.setKey(key);
+        public Update setKey(java.lang.String key) {
+          return (Update) super.setKey(key);
         }
 
         @Override
-        public Patch setOauthToken(java.lang.String oauthToken) {
-          return (Patch) super.setOauthToken(oauthToken);
+        public Update setOauthToken(java.lang.String oauthToken) {
+          return (Update) super.setOauthToken(oauthToken);
         }
 
         @Override
-        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
-          return (Patch) super.setPrettyPrint(prettyPrint);
+        public Update setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Update) super.setPrettyPrint(prettyPrint);
         }
 
         @Override
-        public Patch setQuotaUser(java.lang.String quotaUser) {
-          return (Patch) super.setQuotaUser(quotaUser);
+        public Update setQuotaUser(java.lang.String quotaUser) {
+          return (Update) super.setQuotaUser(quotaUser);
         }
 
         @Override
-        public Patch setUploadType(java.lang.String uploadType) {
-          return (Patch) super.setUploadType(uploadType);
+        public Update setUploadType(java.lang.String uploadType) {
+          return (Update) super.setUploadType(uploadType);
         }
 
         @Override
-        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
-          return (Patch) super.setUploadProtocol(uploadProtocol);
+        public Update setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Update) super.setUploadProtocol(uploadProtocol);
         }
 
         /**
@@ -3571,7 +3571,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
          * are bound to. "locations/global/tagBindingCollections/%2f%2fcloudresourcemanager.googleap
          * is.com%2fprojects%2f123"
          */
-        public Patch setName(java.lang.String name) {
+        public Update setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                 "Parameter name must conform to the pattern " +
@@ -3581,25 +3581,9 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
           return this;
         }
 
-        /** Optional. An update mask to selectively update fields. */
-        @com.google.api.client.util.Key
-        private String updateMask;
-
-        /** Optional. An update mask to selectively update fields.
-         */
-        public String getUpdateMask() {
-          return updateMask;
-        }
-
-        /** Optional. An update mask to selectively update fields. */
-        public Patch setUpdateMask(String updateMask) {
-          this.updateMask = updateMask;
-          return this;
-        }
-
         @Override
-        public Patch set(String parameterName, Object value) {
-          return (Patch) super.set(parameterName, value);
+        public Update set(String parameterName, Object value) {
+          return (Update) super.set(parameterName, value);
         }
       }
 

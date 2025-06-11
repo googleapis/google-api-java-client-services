@@ -56,9 +56,8 @@ public final class GoogleMapsPlacesV1PlaceOpeningHours extends com.google.api.cl
   private java.lang.Boolean openNow;
 
   /**
-   * The periods that this place is open during the week. The periods are in chronological order,
-   * starting with Sunday in the place-local timezone. An empty (but not absent) value indicates a
-   * place that is never open, e.g. because it is closed temporarily for renovations.
+   * NOTE: The ordering of the `periods` array is independent of the ordering of the
+   * `weekday_descriptions` array. Do not assume they will begin on the same day.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,8 +82,11 @@ public final class GoogleMapsPlacesV1PlaceOpeningHours extends com.google.api.cl
 
   /**
    * Localized strings describing the opening hours of this place, one string for each day of the
-   * week. Will be empty if the hours are unknown or could not be converted to localized text.
-   * Example: "Sun: 18:00–06:00"
+   * week. NOTE: The order of the days and the start of the week is determined by the locale
+   * (language and region). The ordering of the `periods` array is independent of the ordering of
+   * the `weekday_descriptions` array. Do not assume they will begin on the same day. Will be empty
+   * if the hours are unknown or could not be converted to localized text. Example: "Sun:
+   * 18:00–06:00"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -152,9 +154,8 @@ public final class GoogleMapsPlacesV1PlaceOpeningHours extends com.google.api.cl
   }
 
   /**
-   * The periods that this place is open during the week. The periods are in chronological order,
-   * starting with Sunday in the place-local timezone. An empty (but not absent) value indicates a
-   * place that is never open, e.g. because it is closed temporarily for renovations.
+   * NOTE: The ordering of the `periods` array is independent of the ordering of the
+   * `weekday_descriptions` array. Do not assume they will begin on the same day.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleMapsPlacesV1PlaceOpeningHoursPeriod> getPeriods() {
@@ -162,9 +163,8 @@ public final class GoogleMapsPlacesV1PlaceOpeningHours extends com.google.api.cl
   }
 
   /**
-   * The periods that this place is open during the week. The periods are in chronological order,
-   * starting with Sunday in the place-local timezone. An empty (but not absent) value indicates a
-   * place that is never open, e.g. because it is closed temporarily for renovations.
+   * NOTE: The ordering of the `periods` array is independent of the ordering of the
+   * `weekday_descriptions` array. Do not assume they will begin on the same day.
    * @param periods periods or {@code null} for none
    */
   public GoogleMapsPlacesV1PlaceOpeningHours setPeriods(java.util.List<GoogleMapsPlacesV1PlaceOpeningHoursPeriod> periods) {
@@ -214,8 +214,11 @@ public final class GoogleMapsPlacesV1PlaceOpeningHours extends com.google.api.cl
 
   /**
    * Localized strings describing the opening hours of this place, one string for each day of the
-   * week. Will be empty if the hours are unknown or could not be converted to localized text.
-   * Example: "Sun: 18:00–06:00"
+   * week. NOTE: The order of the days and the start of the week is determined by the locale
+   * (language and region). The ordering of the `periods` array is independent of the ordering of
+   * the `weekday_descriptions` array. Do not assume they will begin on the same day. Will be empty
+   * if the hours are unknown or could not be converted to localized text. Example: "Sun:
+   * 18:00–06:00"
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getWeekdayDescriptions() {
@@ -224,8 +227,11 @@ public final class GoogleMapsPlacesV1PlaceOpeningHours extends com.google.api.cl
 
   /**
    * Localized strings describing the opening hours of this place, one string for each day of the
-   * week. Will be empty if the hours are unknown or could not be converted to localized text.
-   * Example: "Sun: 18:00–06:00"
+   * week. NOTE: The order of the days and the start of the week is determined by the locale
+   * (language and region). The ordering of the `periods` array is independent of the ordering of
+   * the `weekday_descriptions` array. Do not assume they will begin on the same day. Will be empty
+   * if the hours are unknown or could not be converted to localized text. Example: "Sun:
+   * 18:00–06:00"
    * @param weekdayDescriptions weekdayDescriptions or {@code null} for none
    */
   public GoogleMapsPlacesV1PlaceOpeningHours setWeekdayDescriptions(java.util.List<java.lang.String> weekdayDescriptions) {

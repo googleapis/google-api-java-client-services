@@ -91,6 +91,13 @@ public final class GoogleCloudRetailV2alphaSearchRequest extends com.google.api.
   private java.lang.String entity;
 
   /**
+   * Optional. An ID for the experiment group this search belongs to.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String experimentId;
+
+  /**
    * Facet specifications for faceted search. If empty, no facets are returned. A maximum of 200
    * values are allowed. Otherwise, an INVALID_ARGUMENT error is returned.
    * The value may be {@code null}.
@@ -455,6 +462,23 @@ public final class GoogleCloudRetailV2alphaSearchRequest extends com.google.api.
    */
   public GoogleCloudRetailV2alphaSearchRequest setEntity(java.lang.String entity) {
     this.entity = entity;
+    return this;
+  }
+
+  /**
+   * Optional. An ID for the experiment group this search belongs to.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getExperimentId() {
+    return experimentId;
+  }
+
+  /**
+   * Optional. An ID for the experiment group this search belongs to.
+   * @param experimentId experimentId or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaSearchRequest setExperimentId(java.lang.String experimentId) {
+    this.experimentId = experimentId;
     return this;
   }
 

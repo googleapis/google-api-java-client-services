@@ -49,6 +49,13 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   private GoogleCloudSecuritycenterV2AffectedResources affectedResources;
 
   /**
+   * The AI model associated with the finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudSecuritycenterV2AiModel aiModel;
+
+  /**
    * Represents an application associated with the finding.
    * The value may be {@code null}.
    */
@@ -422,7 +429,7 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   private String muteUpdateTime;
 
   /**
-   * The [relative resource
+   * Identifier. The [relative resource
    * name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the
    * finding. The following list shows some examples: +
    * `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}` + `organizations/{o
@@ -552,6 +559,13 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   private GoogleCloudSecuritycenterV2ToxicCombination toxicCombination;
 
   /**
+   * VertexAi associated with the finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudSecuritycenterV2VertexAi vertexAi;
+
+  /**
    * Represents vulnerability-specific fields like CVE and CVSS scores. CVE stands for Common
    * Vulnerabilities and Exposures (https://cve.mitre.org/about/)
    * The value may be {@code null}.
@@ -592,6 +606,23 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
    */
   public GoogleCloudSecuritycenterV2Finding setAffectedResources(GoogleCloudSecuritycenterV2AffectedResources affectedResources) {
     this.affectedResources = affectedResources;
+    return this;
+  }
+
+  /**
+   * The AI model associated with the finding.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2AiModel getAiModel() {
+    return aiModel;
+  }
+
+  /**
+   * The AI model associated with the finding.
+   * @param aiModel aiModel or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2Finding setAiModel(GoogleCloudSecuritycenterV2AiModel aiModel) {
+    this.aiModel = aiModel;
     return this;
   }
 
@@ -1357,7 +1388,7 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * The [relative resource
+   * Identifier. The [relative resource
    * name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the
    * finding. The following list shows some examples: +
    * `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}` + `organizations/{o
@@ -1373,7 +1404,7 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   }
 
   /**
-   * The [relative resource
+   * Identifier. The [relative resource
    * name](https://cloud.google.com/apis/design/resource_names#relative_resource_name) of the
    * finding. The following list shows some examples: +
    * `organizations/{organization_id}/sources/{source_id}/findings/{finding_id}` + `organizations/{o
@@ -1658,6 +1689,23 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
    */
   public GoogleCloudSecuritycenterV2Finding setToxicCombination(GoogleCloudSecuritycenterV2ToxicCombination toxicCombination) {
     this.toxicCombination = toxicCombination;
+    return this;
+  }
+
+  /**
+   * VertexAi associated with the finding.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2VertexAi getVertexAi() {
+    return vertexAi;
+  }
+
+  /**
+   * VertexAi associated with the finding.
+   * @param vertexAi vertexAi or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2Finding setVertexAi(GoogleCloudSecuritycenterV2VertexAi vertexAi) {
+    this.vertexAi = vertexAi;
     return this;
   }
 

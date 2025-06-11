@@ -49,6 +49,13 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   private AffectedResources affectedResources;
 
   /**
+   * The AI model associated with the finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AiModel aiModel;
+
+  /**
    * Represents an application associated with the finding.
    * The value may be {@code null}.
    */
@@ -536,6 +543,13 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   private ToxicCombination toxicCombination;
 
   /**
+   * VertexAi associated with the finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private VertexAi vertexAi;
+
+  /**
    * Represents vulnerability-specific fields like CVE and CVSS scores. CVE stands for Common
    * Vulnerabilities and Exposures (https://cve.mitre.org/about/)
    * The value may be {@code null}.
@@ -576,6 +590,23 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    */
   public Finding setAffectedResources(AffectedResources affectedResources) {
     this.affectedResources = affectedResources;
+    return this;
+  }
+
+  /**
+   * The AI model associated with the finding.
+   * @return value or {@code null} for none
+   */
+  public AiModel getAiModel() {
+    return aiModel;
+  }
+
+  /**
+   * The AI model associated with the finding.
+   * @param aiModel aiModel or {@code null} for none
+   */
+  public Finding setAiModel(AiModel aiModel) {
+    this.aiModel = aiModel;
     return this;
   }
 
@@ -1622,6 +1653,23 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    */
   public Finding setToxicCombination(ToxicCombination toxicCombination) {
     this.toxicCombination = toxicCombination;
+    return this;
+  }
+
+  /**
+   * VertexAi associated with the finding.
+   * @return value or {@code null} for none
+   */
+  public VertexAi getVertexAi() {
+    return vertexAi;
+  }
+
+  /**
+   * VertexAi associated with the finding.
+   * @param vertexAi vertexAi or {@code null} for none
+   */
+  public Finding setVertexAi(VertexAi vertexAi) {
+    this.vertexAi = vertexAi;
     return this;
   }
 

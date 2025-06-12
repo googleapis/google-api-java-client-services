@@ -30,7 +30,7 @@ package com.google.api.services.discoveryengine.v1beta.model;
 public final class GoogleCloudDiscoveryengineV1betaQuery extends com.google.api.client.json.GenericJson {
 
   /**
-   * Unique Id for the query.
+   * Output only. Unique Id for the query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class GoogleCloudDiscoveryengineV1betaQuery extends com.google.api.
   private java.lang.String text;
 
   /**
-   * Unique Id for the query.
+   * Output only. Unique Id for the query.
    * @return value or {@code null} for none
    */
   public java.lang.String getQueryId() {
@@ -52,7 +52,7 @@ public final class GoogleCloudDiscoveryengineV1betaQuery extends com.google.api.
   }
 
   /**
-   * Unique Id for the query.
+   * Output only. Unique Id for the query.
    * @param queryId queryId or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaQuery setQueryId(java.lang.String queryId) {

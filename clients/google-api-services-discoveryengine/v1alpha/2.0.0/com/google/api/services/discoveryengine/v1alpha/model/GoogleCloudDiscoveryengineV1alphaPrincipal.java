@@ -30,6 +30,13 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 public final class GoogleCloudDiscoveryengineV1alphaPrincipal extends com.google.api.client.json.GenericJson {
 
   /**
+   * For 3P application identities which are not present in the customer identity provider.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String externalEntityId;
+
+  /**
    * Group identifier. For Google Workspace user account, group_id should be the google workspace
    * group email. For non-google identity provider user account, group_id is the mapped group
    * identifier configured during the workforcepool config.
@@ -46,6 +53,23 @@ public final class GoogleCloudDiscoveryengineV1alphaPrincipal extends com.google
    */
   @com.google.api.client.util.Key
   private java.lang.String userId;
+
+  /**
+   * For 3P application identities which are not present in the customer identity provider.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getExternalEntityId() {
+    return externalEntityId;
+  }
+
+  /**
+   * For 3P application identities which are not present in the customer identity provider.
+   * @param externalEntityId externalEntityId or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaPrincipal setExternalEntityId(java.lang.String externalEntityId) {
+    this.externalEntityId = externalEntityId;
+    return this;
+  }
 
   /**
    * Group identifier. For Google Workspace user account, group_id should be the google workspace

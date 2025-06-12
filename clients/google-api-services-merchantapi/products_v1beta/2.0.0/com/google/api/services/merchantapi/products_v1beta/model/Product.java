@@ -88,7 +88,10 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.lang.String dataSource;
 
   /**
-   * Output only. The feed label for the product.
+   * Output only. The feed label lets you categorize and identify your products. The maximum allowed
+   * characters is 20 and the supported characters are`A-Z`, `0-9`, hyphen and underscore. The feed
+   * label must not include any spaces. For more information, see [Using feed
+   * labels](//support.google.com/merchants/answer/14994087)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -244,7 +247,10 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The feed label for the product.
+   * Output only. The feed label lets you categorize and identify your products. The maximum allowed
+   * characters is 20 and the supported characters are`A-Z`, `0-9`, hyphen and underscore. The feed
+   * label must not include any spaces. For more information, see [Using feed
+   * labels](//support.google.com/merchants/answer/14994087)
    * @return value or {@code null} for none
    */
   public java.lang.String getFeedLabel() {
@@ -252,7 +258,10 @@ public final class Product extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The feed label for the product.
+   * Output only. The feed label lets you categorize and identify your products. The maximum allowed
+   * characters is 20 and the supported characters are`A-Z`, `0-9`, hyphen and underscore. The feed
+   * label must not include any spaces. For more information, see [Using feed
+   * labels](//support.google.com/merchants/answer/14994087)
    * @param feedLabel feedLabel or {@code null} for none
    */
   public Product setFeedLabel(java.lang.String feedLabel) {

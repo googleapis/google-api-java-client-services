@@ -555,15 +555,9 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
-     * Lists accounts accessible to the calling user and matching the constraints of the request such as
-     * page size or filters. This is not just listing the sub-accounts of an advanced account, but all
-     * accounts the calling user has access to including other advanced accounts, linked accounts,
-     * standalone accounts and so on. If no filter is provided, then it returns all the accounts the
-     * user has access to. This method is eventually consistent, meaning changes such as creating,
-     * updating an account or a change of relationships between accounts may not show up in the results
-     * immediately. Instead, these changes propagate over a short period, after which the updated
-     * information can match the associated predicates. That means, that searching by account name might
-     * not return a recently changed account even though it satisfies the predicate.
+     * Note: For the `accounts.list` method, quota and limits usage are charged for each user, and not
+     * for the Merchant Center ID or the advanced account ID. To list several sub-accounts, you should
+     * use the `accounts.listSubaccounts` method, which is more suitable for advanced accounts use case.
      *
      * Create a request for the method "accounts.list".
      *
@@ -583,15 +577,10 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
       private static final String REST_PATH = "accounts/v1beta/accounts";
 
       /**
-       * Lists accounts accessible to the calling user and matching the constraints of the request such
-       * as page size or filters. This is not just listing the sub-accounts of an advanced account, but
-       * all accounts the calling user has access to including other advanced accounts, linked accounts,
-       * standalone accounts and so on. If no filter is provided, then it returns all the accounts the
-       * user has access to. This method is eventually consistent, meaning changes such as creating,
-       * updating an account or a change of relationships between accounts may not show up in the
-       * results immediately. Instead, these changes propagate over a short period, after which the
-       * updated information can match the associated predicates. That means, that searching by account
-       * name might not return a recently changed account even though it satisfies the predicate.
+       * Note: For the `accounts.list` method, quota and limits usage are charged for each user, and not
+       * for the Merchant Center ID or the advanced account ID. To list several sub-accounts, you should
+       * use the `accounts.listSubaccounts` method, which is more suitable for advanced accounts use
+       * case.
        *
        * Create a request for the method "accounts.list".
        *
@@ -9287,7 +9276,9 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
         }
       }
       /**
-       * Retrieves the state of the agreement for the application terms of service.
+       * Retrieves the state of the agreement for the application terms of service. Application terms of
+       * service covers permissions related to the usage of data provided through Merchant Center, CSS
+       * Center, Manufacturer Center, and more.
        *
        * Create a request for the method "termsOfServiceAgreementStates.retrieveForApplication".
        *
@@ -9312,7 +9303,9 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
             java.util.regex.Pattern.compile("^accounts/[^/]+$");
 
         /**
-         * Retrieves the state of the agreement for the application terms of service.
+         * Retrieves the state of the agreement for the application terms of service. Application terms of
+         * service covers permissions related to the usage of data provided through Merchant Center, CSS
+         * Center, Manufacturer Center, and more.
          *
          * Create a request for the method "termsOfServiceAgreementStates.retrieveForApplication".
          *

@@ -30,22 +30,22 @@ package com.google.api.services.merchantapi.accounts_v1beta.model;
 public final class Required extends com.google.api.client.json.GenericJson {
 
   /**
-   * The `TermsOfService` that need to be accepted.
+   * Required. The `TermsOfService` that need to be accepted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String termsOfService;
 
   /**
-   * Full URL to the terms of service file. This field is the same as `TermsOfService.file_uri`, it
-   * is added here for convenience only.
+   * Required. Full URL to the terms of service file. This field is the same as
+   * `TermsOfService.file_uri`, it is added here for convenience only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String tosFileUri;
 
   /**
-   * The `TermsOfService` that need to be accepted.
+   * Required. The `TermsOfService` that need to be accepted.
    * @return value or {@code null} for none
    */
   public java.lang.String getTermsOfService() {
@@ -53,7 +53,7 @@ public final class Required extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The `TermsOfService` that need to be accepted.
+   * Required. The `TermsOfService` that need to be accepted.
    * @param termsOfService termsOfService or {@code null} for none
    */
   public Required setTermsOfService(java.lang.String termsOfService) {
@@ -62,8 +62,8 @@ public final class Required extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Full URL to the terms of service file. This field is the same as `TermsOfService.file_uri`, it
-   * is added here for convenience only.
+   * Required. Full URL to the terms of service file. This field is the same as
+   * `TermsOfService.file_uri`, it is added here for convenience only.
    * @return value or {@code null} for none
    */
   public java.lang.String getTosFileUri() {
@@ -71,8 +71,8 @@ public final class Required extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Full URL to the terms of service file. This field is the same as `TermsOfService.file_uri`, it
-   * is added here for convenience only.
+   * Required. Full URL to the terms of service file. This field is the same as
+   * `TermsOfService.file_uri`, it is added here for convenience only.
    * @param tosFileUri tosFileUri or {@code null} for none
    */
   public Required setTosFileUri(java.lang.String tosFileUri) {

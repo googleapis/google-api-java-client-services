@@ -40,6 +40,14 @@ public final class GoogleCloudAiplatformV1beta1Tool extends com.google.api.clien
   private GoogleCloudAiplatformV1beta1ToolCodeExecution codeExecution;
 
   /**
+   * Optional. Tool to support the model interacting directly with the computer. If enabled, it
+   * automatically populates computer-use specific Function Declarations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1ToolComputerUse computerUse;
+
+  /**
    * Optional. Tool to support searching public web data, powered by Vertex AI Search and Sec4
    * compliance.
    * The value may be {@code null}.
@@ -89,6 +97,13 @@ public final class GoogleCloudAiplatformV1beta1Tool extends com.google.api.clien
   private GoogleCloudAiplatformV1beta1Retrieval retrieval;
 
   /**
+   * Optional. Tool to support URL context retrieval.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1UrlContext urlContext;
+
+  /**
    * Optional. CodeExecution tool type. Enables the model to execute code as part of generation.
    * @return value or {@code null} for none
    */
@@ -102,6 +117,25 @@ public final class GoogleCloudAiplatformV1beta1Tool extends com.google.api.clien
    */
   public GoogleCloudAiplatformV1beta1Tool setCodeExecution(GoogleCloudAiplatformV1beta1ToolCodeExecution codeExecution) {
     this.codeExecution = codeExecution;
+    return this;
+  }
+
+  /**
+   * Optional. Tool to support the model interacting directly with the computer. If enabled, it
+   * automatically populates computer-use specific Function Declarations.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ToolComputerUse getComputerUse() {
+    return computerUse;
+  }
+
+  /**
+   * Optional. Tool to support the model interacting directly with the computer. If enabled, it
+   * automatically populates computer-use specific Function Declarations.
+   * @param computerUse computerUse or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Tool setComputerUse(GoogleCloudAiplatformV1beta1ToolComputerUse computerUse) {
+    this.computerUse = computerUse;
     return this;
   }
 
@@ -203,6 +237,23 @@ public final class GoogleCloudAiplatformV1beta1Tool extends com.google.api.clien
    */
   public GoogleCloudAiplatformV1beta1Tool setRetrieval(GoogleCloudAiplatformV1beta1Retrieval retrieval) {
     this.retrieval = retrieval;
+    return this;
+  }
+
+  /**
+   * Optional. Tool to support URL context retrieval.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1UrlContext getUrlContext() {
+    return urlContext;
+  }
+
+  /**
+   * Optional. Tool to support URL context retrieval.
+   * @param urlContext urlContext or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Tool setUrlContext(GoogleCloudAiplatformV1beta1UrlContext urlContext) {
+    this.urlContext = urlContext;
     return this;
   }
 

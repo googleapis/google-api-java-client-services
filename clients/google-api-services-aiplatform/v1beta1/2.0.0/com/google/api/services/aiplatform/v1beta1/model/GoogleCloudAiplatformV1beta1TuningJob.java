@@ -123,6 +123,20 @@ public final class GoogleCloudAiplatformV1beta1TuningJob extends com.google.api.
   private java.lang.String pipelineJob;
 
   /**
+   * Output only. Reserved for future use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzi;
+
+  /**
+   * Output only. Reserved for future use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzs;
+
+  /**
    * The service account that the tuningJob workload runs as. If not specified, the Vertex AI Secure
    * Fine-Tuned Service Agent in the project will be used. See
    * https://cloud.google.com/iam/docs/service-agents#vertex-ai-secure-fine-tuning-service-agent
@@ -402,6 +416,40 @@ public final class GoogleCloudAiplatformV1beta1TuningJob extends com.google.api.
    */
   public GoogleCloudAiplatformV1beta1TuningJob setPipelineJob(java.lang.String pipelineJob) {
     this.pipelineJob = pipelineJob;
+    return this;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzi() {
+    return satisfiesPzi;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @param satisfiesPzi satisfiesPzi or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1TuningJob setSatisfiesPzi(java.lang.Boolean satisfiesPzi) {
+    this.satisfiesPzi = satisfiesPzi;
+    return this;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzs() {
+    return satisfiesPzs;
+  }
+
+  /**
+   * Output only. Reserved for future use.
+   * @param satisfiesPzs satisfiesPzs or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1TuningJob setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
+    this.satisfiesPzs = satisfiesPzs;
     return this;
   }
 

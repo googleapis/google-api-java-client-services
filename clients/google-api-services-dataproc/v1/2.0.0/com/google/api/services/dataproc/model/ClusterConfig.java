@@ -51,6 +51,13 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * Optional. The tier of the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String clusterTier;
+
+  /**
    * Optional. The type of the cluster.
    * The value may be {@code null}.
    */
@@ -216,6 +223,23 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
    */
   public ClusterConfig setAuxiliaryNodeGroups(java.util.List<AuxiliaryNodeGroup> auxiliaryNodeGroups) {
     this.auxiliaryNodeGroups = auxiliaryNodeGroups;
+    return this;
+  }
+
+  /**
+   * Optional. The tier of the cluster.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getClusterTier() {
+    return clusterTier;
+  }
+
+  /**
+   * Optional. The tier of the cluster.
+   * @param clusterTier clusterTier or {@code null} for none
+   */
+  public ClusterConfig setClusterTier(java.lang.String clusterTier) {
+    this.clusterTier = clusterTier;
     return this;
   }
 

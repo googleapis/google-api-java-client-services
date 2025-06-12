@@ -31,7 +31,7 @@ public final class GoogleCloudIdentitytoolkitAdminV2RecaptchaConfig extends com.
 
   /**
    * The reCAPTCHA config for email/password provider, containing the enforcement status. The
-   * email/password provider contains all related user flows protected by reCAPTCHA.
+   * email/password provider contains all email related user flows protected by reCAPTCHA.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,11 +46,28 @@ public final class GoogleCloudIdentitytoolkitAdminV2RecaptchaConfig extends com.
   private java.util.List<GoogleCloudIdentitytoolkitAdminV2RecaptchaManagedRule> managedRules;
 
   /**
-   * Output only. The reCAPTCHA keys.
+   * The reCAPTCHA config for phone provider, containing the enforcement status. The phone provider
+   * contains all SMS related user flows protected by reCAPTCHA.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String phoneEnforcementState;
+
+  /**
+   * The reCAPTCHA keys.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudIdentitytoolkitAdminV2RecaptchaKey> recaptchaKeys;
+
+  /**
+   * The managed rules for the authentication action based on reCAPTCHA toll fraud risk scores. Toll
+   * fraud managed rules will only take effect when the phone_enforcement_state is AUDIT or ENFORCE
+   * and use_sms_toll_fraud_protection is true.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudIdentitytoolkitAdminV2RecaptchaTollFraudManagedRule> tollFraudManagedRules;
 
   /**
    * Whether to use the account defender for reCAPTCHA assessment. Defaults to `false`.
@@ -60,8 +77,24 @@ public final class GoogleCloudIdentitytoolkitAdminV2RecaptchaConfig extends com.
   private java.lang.Boolean useAccountDefender;
 
   /**
+   * Whether to use the rCE bot score for reCAPTCHA phone provider. Can only be true when the
+   * phone_enforcement_state is AUDIT or ENFORCE.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean useSmsBotScore;
+
+  /**
+   * Whether to use the rCE sms toll fraud protection risk score for reCAPTCHA phone provider. Can
+   * only be true when the phone_enforcement_state is AUDIT or ENFORCE.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean useSmsTollFraudProtection;
+
+  /**
    * The reCAPTCHA config for email/password provider, containing the enforcement status. The
-   * email/password provider contains all related user flows protected by reCAPTCHA.
+   * email/password provider contains all email related user flows protected by reCAPTCHA.
    * @return value or {@code null} for none
    */
   public java.lang.String getEmailPasswordEnforcementState() {
@@ -70,7 +103,7 @@ public final class GoogleCloudIdentitytoolkitAdminV2RecaptchaConfig extends com.
 
   /**
    * The reCAPTCHA config for email/password provider, containing the enforcement status. The
-   * email/password provider contains all related user flows protected by reCAPTCHA.
+   * email/password provider contains all email related user flows protected by reCAPTCHA.
    * @param emailPasswordEnforcementState emailPasswordEnforcementState or {@code null} for none
    */
   public GoogleCloudIdentitytoolkitAdminV2RecaptchaConfig setEmailPasswordEnforcementState(java.lang.String emailPasswordEnforcementState) {
@@ -98,7 +131,26 @@ public final class GoogleCloudIdentitytoolkitAdminV2RecaptchaConfig extends com.
   }
 
   /**
-   * Output only. The reCAPTCHA keys.
+   * The reCAPTCHA config for phone provider, containing the enforcement status. The phone provider
+   * contains all SMS related user flows protected by reCAPTCHA.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPhoneEnforcementState() {
+    return phoneEnforcementState;
+  }
+
+  /**
+   * The reCAPTCHA config for phone provider, containing the enforcement status. The phone provider
+   * contains all SMS related user flows protected by reCAPTCHA.
+   * @param phoneEnforcementState phoneEnforcementState or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitAdminV2RecaptchaConfig setPhoneEnforcementState(java.lang.String phoneEnforcementState) {
+    this.phoneEnforcementState = phoneEnforcementState;
+    return this;
+  }
+
+  /**
+   * The reCAPTCHA keys.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudIdentitytoolkitAdminV2RecaptchaKey> getRecaptchaKeys() {
@@ -106,11 +158,32 @@ public final class GoogleCloudIdentitytoolkitAdminV2RecaptchaConfig extends com.
   }
 
   /**
-   * Output only. The reCAPTCHA keys.
+   * The reCAPTCHA keys.
    * @param recaptchaKeys recaptchaKeys or {@code null} for none
    */
   public GoogleCloudIdentitytoolkitAdminV2RecaptchaConfig setRecaptchaKeys(java.util.List<GoogleCloudIdentitytoolkitAdminV2RecaptchaKey> recaptchaKeys) {
     this.recaptchaKeys = recaptchaKeys;
+    return this;
+  }
+
+  /**
+   * The managed rules for the authentication action based on reCAPTCHA toll fraud risk scores. Toll
+   * fraud managed rules will only take effect when the phone_enforcement_state is AUDIT or ENFORCE
+   * and use_sms_toll_fraud_protection is true.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudIdentitytoolkitAdminV2RecaptchaTollFraudManagedRule> getTollFraudManagedRules() {
+    return tollFraudManagedRules;
+  }
+
+  /**
+   * The managed rules for the authentication action based on reCAPTCHA toll fraud risk scores. Toll
+   * fraud managed rules will only take effect when the phone_enforcement_state is AUDIT or ENFORCE
+   * and use_sms_toll_fraud_protection is true.
+   * @param tollFraudManagedRules tollFraudManagedRules or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitAdminV2RecaptchaConfig setTollFraudManagedRules(java.util.List<GoogleCloudIdentitytoolkitAdminV2RecaptchaTollFraudManagedRule> tollFraudManagedRules) {
+    this.tollFraudManagedRules = tollFraudManagedRules;
     return this;
   }
 
@@ -128,6 +201,44 @@ public final class GoogleCloudIdentitytoolkitAdminV2RecaptchaConfig extends com.
    */
   public GoogleCloudIdentitytoolkitAdminV2RecaptchaConfig setUseAccountDefender(java.lang.Boolean useAccountDefender) {
     this.useAccountDefender = useAccountDefender;
+    return this;
+  }
+
+  /**
+   * Whether to use the rCE bot score for reCAPTCHA phone provider. Can only be true when the
+   * phone_enforcement_state is AUDIT or ENFORCE.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getUseSmsBotScore() {
+    return useSmsBotScore;
+  }
+
+  /**
+   * Whether to use the rCE bot score for reCAPTCHA phone provider. Can only be true when the
+   * phone_enforcement_state is AUDIT or ENFORCE.
+   * @param useSmsBotScore useSmsBotScore or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitAdminV2RecaptchaConfig setUseSmsBotScore(java.lang.Boolean useSmsBotScore) {
+    this.useSmsBotScore = useSmsBotScore;
+    return this;
+  }
+
+  /**
+   * Whether to use the rCE sms toll fraud protection risk score for reCAPTCHA phone provider. Can
+   * only be true when the phone_enforcement_state is AUDIT or ENFORCE.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getUseSmsTollFraudProtection() {
+    return useSmsTollFraudProtection;
+  }
+
+  /**
+   * Whether to use the rCE sms toll fraud protection risk score for reCAPTCHA phone provider. Can
+   * only be true when the phone_enforcement_state is AUDIT or ENFORCE.
+   * @param useSmsTollFraudProtection useSmsTollFraudProtection or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitAdminV2RecaptchaConfig setUseSmsTollFraudProtection(java.lang.Boolean useSmsTollFraudProtection) {
+    this.useSmsTollFraudProtection = useSmsTollFraudProtection;
     return this;
   }
 

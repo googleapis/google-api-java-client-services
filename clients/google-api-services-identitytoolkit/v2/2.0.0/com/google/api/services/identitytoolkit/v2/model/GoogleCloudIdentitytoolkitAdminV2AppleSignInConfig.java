@@ -37,6 +37,7 @@ public final class GoogleCloudIdentitytoolkitAdminV2AppleSignInConfig extends co
   private java.util.List<java.lang.String> bundleIds;
 
   /**
+   * Additional config for Apple for code flow.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,6 +61,7 @@ public final class GoogleCloudIdentitytoolkitAdminV2AppleSignInConfig extends co
   }
 
   /**
+   * Additional config for Apple for code flow.
    * @return value or {@code null} for none
    */
   public GoogleCloudIdentitytoolkitAdminV2CodeFlowConfig getCodeFlowConfig() {
@@ -67,6 +69,7 @@ public final class GoogleCloudIdentitytoolkitAdminV2AppleSignInConfig extends co
   }
 
   /**
+   * Additional config for Apple for code flow.
    * @param codeFlowConfig codeFlowConfig or {@code null} for none
    */
   public GoogleCloudIdentitytoolkitAdminV2AppleSignInConfig setCodeFlowConfig(GoogleCloudIdentitytoolkitAdminV2CodeFlowConfig codeFlowConfig) {

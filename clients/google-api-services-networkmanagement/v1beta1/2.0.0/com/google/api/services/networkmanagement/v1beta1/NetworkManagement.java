@@ -5610,10 +5610,10 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
 
         public class QueryOrgVpcFlowLogsConfigs extends NetworkManagementRequest<com.google.api.services.networkmanagement.v1beta1.model.QueryOrgVpcFlowLogsConfigsResponse> {
 
-          private static final String REST_PATH = "v1beta1/{+parent}:queryOrgVpcFlowLogsConfigs";
+          private static final String REST_PATH = "v1beta1/{+parent}/vpcFlowLogsConfigs:queryOrgVpcFlowLogsConfigs";
 
           private final java.util.regex.Pattern PARENT_PATTERN =
-              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/vpcFlowLogsConfigs$");
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
            * QueryOrgVpcFlowLogsConfigs lists Organization resources for a given project.
@@ -5635,7 +5635,7 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/vpcFlowLogsConfigs$");
+                  "^projects/[^/]+/locations/[^/]+$");
             }
           }
 
@@ -5725,7 +5725,7 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
                   "Parameter parent must conform to the pattern " +
-                  "^projects/[^/]+/locations/[^/]+/vpcFlowLogsConfigs$");
+                  "^projects/[^/]+/locations/[^/]+$");
             }
             this.parent = parent;
             return this;

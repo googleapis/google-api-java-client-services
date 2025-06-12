@@ -32,7 +32,7 @@ public final class WorkerConfig extends com.google.api.client.json.GenericJson {
   /**
    * Size of the disk attached to the worker, in GB. See [Worker pool config
    * file](https://cloud.google.com/build/docs/private-pools/worker-pool-config-file-schema).
-   * Specify a value of up to 2000. If `0` is specified, Cloud Build will use a standard disk size.
+   * Specify a value of up to 4000. If `0` is specified, Cloud Build will use a standard disk size.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -50,7 +50,7 @@ public final class WorkerConfig extends com.google.api.client.json.GenericJson {
   /**
    * Size of the disk attached to the worker, in GB. See [Worker pool config
    * file](https://cloud.google.com/build/docs/private-pools/worker-pool-config-file-schema).
-   * Specify a value of up to 2000. If `0` is specified, Cloud Build will use a standard disk size.
+   * Specify a value of up to 4000. If `0` is specified, Cloud Build will use a standard disk size.
    * @return value or {@code null} for none
    */
   public java.lang.Long getDiskSizeGb() {
@@ -60,7 +60,7 @@ public final class WorkerConfig extends com.google.api.client.json.GenericJson {
   /**
    * Size of the disk attached to the worker, in GB. See [Worker pool config
    * file](https://cloud.google.com/build/docs/private-pools/worker-pool-config-file-schema).
-   * Specify a value of up to 2000. If `0` is specified, Cloud Build will use a standard disk size.
+   * Specify a value of up to 4000. If `0` is specified, Cloud Build will use a standard disk size.
    * @param diskSizeGb diskSizeGb or {@code null} for none
    */
   public WorkerConfig setDiskSizeGb(java.lang.Long diskSizeGb) {

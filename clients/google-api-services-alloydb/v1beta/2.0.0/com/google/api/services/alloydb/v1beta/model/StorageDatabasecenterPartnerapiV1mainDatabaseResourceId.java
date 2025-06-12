@@ -44,14 +44,16 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceId exten
   private java.lang.String providerDescription;
 
   /**
-   * Required. The type of resource this ID is identifying. Ex redis.googleapis.com/Instance,
-   * redis.googleapis.com/Cluster, alloydb.googleapis.com/Cluster, alloydb.googleapis.com/Instance,
-   * spanner.googleapis.com/Instance, spanner.googleapis.com/Database,
-   * firestore.googleapis.com/Database, sqladmin.googleapis.com/Instance,
+   * Required. The type of resource this ID is identifying. Ex go/keep-sorted start
+   * alloydb.googleapis.com/Cluster, alloydb.googleapis.com/Instance,
    * bigtableadmin.googleapis.com/Cluster, bigtableadmin.googleapis.com/Instance
+   * compute.googleapis.com/Instance firestore.googleapis.com/Database,
+   * redis.googleapis.com/Instance, redis.googleapis.com/Cluster,
    * oracledatabase.googleapis.com/cloudExadataInfrastructures
    * oracledatabase.googleapis.com/cloudVmClusters oracledatabase.googleapis.com/autonomousDatabases
-   * REQUIRED Please refer go/condor-common-datamodel
+   * spanner.googleapis.com/Instance, spanner.googleapis.com/Database,
+   * sqladmin.googleapis.com/Instance, go/keep-sorted end REQUIRED Please refer go/condor-common-
+   * datamodel
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,14 +102,16 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceId exten
   }
 
   /**
-   * Required. The type of resource this ID is identifying. Ex redis.googleapis.com/Instance,
-   * redis.googleapis.com/Cluster, alloydb.googleapis.com/Cluster, alloydb.googleapis.com/Instance,
-   * spanner.googleapis.com/Instance, spanner.googleapis.com/Database,
-   * firestore.googleapis.com/Database, sqladmin.googleapis.com/Instance,
+   * Required. The type of resource this ID is identifying. Ex go/keep-sorted start
+   * alloydb.googleapis.com/Cluster, alloydb.googleapis.com/Instance,
    * bigtableadmin.googleapis.com/Cluster, bigtableadmin.googleapis.com/Instance
+   * compute.googleapis.com/Instance firestore.googleapis.com/Database,
+   * redis.googleapis.com/Instance, redis.googleapis.com/Cluster,
    * oracledatabase.googleapis.com/cloudExadataInfrastructures
    * oracledatabase.googleapis.com/cloudVmClusters oracledatabase.googleapis.com/autonomousDatabases
-   * REQUIRED Please refer go/condor-common-datamodel
+   * spanner.googleapis.com/Instance, spanner.googleapis.com/Database,
+   * sqladmin.googleapis.com/Instance, go/keep-sorted end REQUIRED Please refer go/condor-common-
+   * datamodel
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceType() {
@@ -115,14 +119,16 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceId exten
   }
 
   /**
-   * Required. The type of resource this ID is identifying. Ex redis.googleapis.com/Instance,
-   * redis.googleapis.com/Cluster, alloydb.googleapis.com/Cluster, alloydb.googleapis.com/Instance,
-   * spanner.googleapis.com/Instance, spanner.googleapis.com/Database,
-   * firestore.googleapis.com/Database, sqladmin.googleapis.com/Instance,
+   * Required. The type of resource this ID is identifying. Ex go/keep-sorted start
+   * alloydb.googleapis.com/Cluster, alloydb.googleapis.com/Instance,
    * bigtableadmin.googleapis.com/Cluster, bigtableadmin.googleapis.com/Instance
+   * compute.googleapis.com/Instance firestore.googleapis.com/Database,
+   * redis.googleapis.com/Instance, redis.googleapis.com/Cluster,
    * oracledatabase.googleapis.com/cloudExadataInfrastructures
    * oracledatabase.googleapis.com/cloudVmClusters oracledatabase.googleapis.com/autonomousDatabases
-   * REQUIRED Please refer go/condor-common-datamodel
+   * spanner.googleapis.com/Instance, spanner.googleapis.com/Database,
+   * sqladmin.googleapis.com/Instance, go/keep-sorted end REQUIRED Please refer go/condor-common-
+   * datamodel
    * @param resourceType resourceType or {@code null} for none
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceId setResourceType(java.lang.String resourceType) {

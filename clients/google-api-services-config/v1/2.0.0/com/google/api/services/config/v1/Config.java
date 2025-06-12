@@ -5490,6 +5490,846 @@ public class Config extends com.google.api.client.googleapis.services.json.Abstr
           }
         }
 
+        /**
+         * An accessor for creating requests from the ResourceChanges collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code Config config = new Config(...);}
+         *   {@code Config.ResourceChanges.List request = config.resourceChanges().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public ResourceChanges resourceChanges() {
+          return new ResourceChanges();
+        }
+
+        /**
+         * The "resourceChanges" collection of methods.
+         */
+        public class ResourceChanges {
+
+          /**
+           * Get a ResourceChange for a given preview.
+           *
+           * Create a request for the method "resourceChanges.get".
+           *
+           * This request holds the parameters needed by the config server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the resource change to retrieve. Format:
+           *        'projects/{project_id}/locations/{location}/previews/{preview}/resourceChanges/{resource_c
+           *        hange}'.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends ConfigRequest<com.google.api.services.config.v1.model.ResourceChange> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/previews/[^/]+/resourceChanges/[^/]+$");
+
+            /**
+             * Get a ResourceChange for a given preview.
+             *
+             * Create a request for the method "resourceChanges.get".
+             *
+             * This request holds the parameters needed by the the config server.  After setting any optional
+             * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+             * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the resource change to retrieve. Format:
+           *        'projects/{project_id}/locations/{location}/previews/{preview}/resourceChanges/{resource_c
+           *        hange}'.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(Config.this, "GET", REST_PATH, null, com.google.api.services.config.v1.model.ResourceChange.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/previews/[^/]+/resourceChanges/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the resource change to retrieve. Format: 'projects/{project_id}
+             * /locations/{location}/previews/{preview}/resourceChanges/{resource_change}'.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the resource change to retrieve. Format:
+           'projects/{project_id}/locations/{location}/previews/{preview}/resourceChanges/{resource_change}'.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the resource change to retrieve. Format: 'projects/{project_id}
+             * /locations/{location}/previews/{preview}/resourceChanges/{resource_change}'.
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/previews/[^/]+/resourceChanges/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists ResourceChanges for a given preview.
+           *
+           * Create a request for the method "resourceChanges.list".
+           *
+           * This request holds the parameters needed by the config server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent in whose context the ResourceChanges are listed. The parent value is in the
+           *        format: 'projects/{project_id}/locations/{location}/previews/{preview}'.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends ConfigRequest<com.google.api.services.config.v1.model.ListResourceChangesResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/resourceChanges";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/previews/[^/]+$");
+
+            /**
+             * Lists ResourceChanges for a given preview.
+             *
+             * Create a request for the method "resourceChanges.list".
+             *
+             * This request holds the parameters needed by the the config server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+             * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent in whose context the ResourceChanges are listed. The parent value is in the
+           *        format: 'projects/{project_id}/locations/{location}/previews/{preview}'.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(Config.this, "GET", REST_PATH, null, com.google.api.services.config.v1.model.ListResourceChangesResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/previews/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent in whose context the ResourceChanges are listed. The parent
+             * value is in the format:
+             * 'projects/{project_id}/locations/{location}/previews/{preview}'.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent in whose context the ResourceChanges are listed. The parent value is in the
+           format: 'projects/{project_id}/locations/{location}/previews/{preview}'.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The parent in whose context the ResourceChanges are listed. The parent
+             * value is in the format:
+             * 'projects/{project_id}/locations/{location}/previews/{preview}'.
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/previews/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Optional. Lists the resource changes that match the filter expression. A filter
+             * expression filters the resource changes listed in the response. The expression must
+             * be of the form '{field} {operator} {value}' where operators: '<', '>', '<=', '>=',
+             * '!=', '=', ':' are supported (colon ':' represents a HAS operator which is roughly
+             * synonymous with equality). {field} can refer to a proto or JSON field, or a synthetic
+             * field. Field names can be camelCase or snake_case. Examples: - Filter by name: name =
+             * "projects/foo/locations/us-central1/previews/dep/resourceChanges/baz
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Optional. Lists the resource changes that match the filter expression. A filter expression filters
+           the resource changes listed in the response. The expression must be of the form '{field} {operator}
+           {value}' where operators: '<', '>', '<=', '>=', '!=', '=', ':' are supported (colon ':' represents
+           a HAS operator which is roughly synonymous with equality). {field} can refer to a proto or JSON
+           field, or a synthetic field. Field names can be camelCase or snake_case. Examples: - Filter by
+           name: name = "projects/foo/locations/us-central1/previews/dep/resourceChanges/baz
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /**
+             * Optional. Lists the resource changes that match the filter expression. A filter
+             * expression filters the resource changes listed in the response. The expression must
+             * be of the form '{field} {operator} {value}' where operators: '<', '>', '<=', '>=',
+             * '!=', '=', ':' are supported (colon ':' represents a HAS operator which is roughly
+             * synonymous with equality). {field} can refer to a proto or JSON field, or a synthetic
+             * field. Field names can be camelCase or snake_case. Examples: - Filter by name: name =
+             * "projects/foo/locations/us-central1/previews/dep/resourceChanges/baz
+             */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /** Optional. Field to use to sort the list. */
+            @com.google.api.client.util.Key
+            private java.lang.String orderBy;
+
+            /** Optional. Field to use to sort the list.
+             */
+            public java.lang.String getOrderBy() {
+              return orderBy;
+            }
+
+            /** Optional. Field to use to sort the list. */
+            public List setOrderBy(java.lang.String orderBy) {
+              this.orderBy = orderBy;
+              return this;
+            }
+
+            /**
+             * Optional. When requesting a page of resource changes, 'page_size' specifies number of
+             * resource changes to return. If unspecified, at most 500 will be returned. The maximum
+             * value is 1000.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. When requesting a page of resource changes, 'page_size' specifies number of resource
+           changes to return. If unspecified, at most 500 will be returned. The maximum value is 1000.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. When requesting a page of resource changes, 'page_size' specifies number of
+             * resource changes to return. If unspecified, at most 500 will be returned. The maximum
+             * value is 1000.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. Token returned by previous call to 'ListResourceChanges' which specifies
+             * the position in the list from where to continue listing the resource changes.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. Token returned by previous call to 'ListResourceChanges' which specifies the position in
+           the list from where to continue listing the resource changes.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. Token returned by previous call to 'ListResourceChanges' which specifies
+             * the position in the list from where to continue listing the resource changes.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
+         * An accessor for creating requests from the ResourceDrifts collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code Config config = new Config(...);}
+         *   {@code Config.ResourceDrifts.List request = config.resourceDrifts().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public ResourceDrifts resourceDrifts() {
+          return new ResourceDrifts();
+        }
+
+        /**
+         * The "resourceDrifts" collection of methods.
+         */
+        public class ResourceDrifts {
+
+          /**
+           * Get a ResourceDrift for a given preview.
+           *
+           * Create a request for the method "resourceDrifts.get".
+           *
+           * This request holds the parameters needed by the config server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the resource drift to retrieve. Format:
+           *        'projects/{project_id}/locations/{location}/previews/{preview}/resourceDrifts/{resource_dr
+           *        ift}'.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends ConfigRequest<com.google.api.services.config.v1.model.ResourceDrift> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/previews/[^/]+/resourceDrifts/[^/]+$");
+
+            /**
+             * Get a ResourceDrift for a given preview.
+             *
+             * Create a request for the method "resourceDrifts.get".
+             *
+             * This request holds the parameters needed by the the config server.  After setting any optional
+             * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+             * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the resource drift to retrieve. Format:
+           *        'projects/{project_id}/locations/{location}/previews/{preview}/resourceDrifts/{resource_dr
+           *        ift}'.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(Config.this, "GET", REST_PATH, null, com.google.api.services.config.v1.model.ResourceDrift.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/previews/[^/]+/resourceDrifts/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the resource drift to retrieve. Format: 'projects/{project_id}/
+             * locations/{location}/previews/{preview}/resourceDrifts/{resource_drift}'.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the resource drift to retrieve. Format:
+           'projects/{project_id}/locations/{location}/previews/{preview}/resourceDrifts/{resource_drift}'.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the resource drift to retrieve. Format: 'projects/{project_id}/
+             * locations/{location}/previews/{preview}/resourceDrifts/{resource_drift}'.
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/previews/[^/]+/resourceDrifts/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * List ResourceDrifts for a given preview.
+           *
+           * Create a request for the method "resourceDrifts.list".
+           *
+           * This request holds the parameters needed by the config server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent in whose context the ResourceDrifts are listed. The parent value is in the
+           *        format: 'projects/{project_id}/locations/{location}/previews/{preview}'.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends ConfigRequest<com.google.api.services.config.v1.model.ListResourceDriftsResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/resourceDrifts";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/previews/[^/]+$");
+
+            /**
+             * List ResourceDrifts for a given preview.
+             *
+             * Create a request for the method "resourceDrifts.list".
+             *
+             * This request holds the parameters needed by the the config server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+             * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent in whose context the ResourceDrifts are listed. The parent value is in the
+           *        format: 'projects/{project_id}/locations/{location}/previews/{preview}'.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(Config.this, "GET", REST_PATH, null, com.google.api.services.config.v1.model.ListResourceDriftsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/previews/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent in whose context the ResourceDrifts are listed. The parent value
+             * is in the format: 'projects/{project_id}/locations/{location}/previews/{preview}'.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent in whose context the ResourceDrifts are listed. The parent value is in the
+           format: 'projects/{project_id}/locations/{location}/previews/{preview}'.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The parent in whose context the ResourceDrifts are listed. The parent value
+             * is in the format: 'projects/{project_id}/locations/{location}/previews/{preview}'.
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/previews/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Optional. Lists the resource drifts that match the filter expression. A filter
+             * expression filters the resource drifts listed in the response. The expression must be
+             * of the form '{field} {operator} {value}' where operators: '<', '>', '<=', '>=', '!=',
+             * '=', ':' are supported (colon ':' represents a HAS operator which is roughly
+             * synonymous with equality). {field} can refer to a proto or JSON field, or a synthetic
+             * field. Field names can be camelCase or snake_case. Examples: - Filter by name: name =
+             * "projects/foo/locations/us-central1/previews/dep/resourceDrifts/baz
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Optional. Lists the resource drifts that match the filter expression. A filter expression filters
+           the resource drifts listed in the response. The expression must be of the form '{field} {operator}
+           {value}' where operators: '<', '>', '<=', '>=', '!=', '=', ':' are supported (colon ':' represents
+           a HAS operator which is roughly synonymous with equality). {field} can refer to a proto or JSON
+           field, or a synthetic field. Field names can be camelCase or snake_case. Examples: - Filter by
+           name: name = "projects/foo/locations/us-central1/previews/dep/resourceDrifts/baz
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /**
+             * Optional. Lists the resource drifts that match the filter expression. A filter
+             * expression filters the resource drifts listed in the response. The expression must be
+             * of the form '{field} {operator} {value}' where operators: '<', '>', '<=', '>=', '!=',
+             * '=', ':' are supported (colon ':' represents a HAS operator which is roughly
+             * synonymous with equality). {field} can refer to a proto or JSON field, or a synthetic
+             * field. Field names can be camelCase or snake_case. Examples: - Filter by name: name =
+             * "projects/foo/locations/us-central1/previews/dep/resourceDrifts/baz
+             */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /** Optional. Field to use to sort the list. */
+            @com.google.api.client.util.Key
+            private java.lang.String orderBy;
+
+            /** Optional. Field to use to sort the list.
+             */
+            public java.lang.String getOrderBy() {
+              return orderBy;
+            }
+
+            /** Optional. Field to use to sort the list. */
+            public List setOrderBy(java.lang.String orderBy) {
+              this.orderBy = orderBy;
+              return this;
+            }
+
+            /**
+             * Optional. When requesting a page of resource drifts, 'page_size' specifies number of
+             * resource drifts to return. If unspecified, at most 500 will be returned. The maximum
+             * value is 1000.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. When requesting a page of resource drifts, 'page_size' specifies number of resource
+           drifts to return. If unspecified, at most 500 will be returned. The maximum value is 1000.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. When requesting a page of resource drifts, 'page_size' specifies number of
+             * resource drifts to return. If unspecified, at most 500 will be returned. The maximum
+             * value is 1000.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. Token returned by previous call to 'ListResourceDrifts' which specifies the
+             * position in the list from where to continue listing the resource drifts.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. Token returned by previous call to 'ListResourceDrifts' which specifies the position in
+           the list from where to continue listing the resource drifts.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. Token returned by previous call to 'ListResourceDrifts' which specifies the
+             * position in the list from where to continue listing the resource drifts.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
       }
       /**
        * An accessor for creating requests from the TerraformVersions collection.

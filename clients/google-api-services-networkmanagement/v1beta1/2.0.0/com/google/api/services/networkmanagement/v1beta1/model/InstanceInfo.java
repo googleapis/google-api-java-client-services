@@ -80,7 +80,8 @@ public final class InstanceInfo extends com.google.api.client.json.GenericJson {
   private java.lang.String pscNetworkAttachmentUri;
 
   /**
-   * Indicates whether the Compute Engine instance is running.
+   * Indicates whether the Compute Engine instance is running. Deprecated: use the `status` field
+   * instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,6 +93,13 @@ public final class InstanceInfo extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String serviceAccount;
+
+  /**
+   * The status of the instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String status;
 
   /**
    * URI of a Compute Engine instance.
@@ -220,7 +228,8 @@ public final class InstanceInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates whether the Compute Engine instance is running.
+   * Indicates whether the Compute Engine instance is running. Deprecated: use the `status` field
+   * instead.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getRunning() {
@@ -228,7 +237,8 @@ public final class InstanceInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates whether the Compute Engine instance is running.
+   * Indicates whether the Compute Engine instance is running. Deprecated: use the `status` field
+   * instead.
    * @param running running or {@code null} for none
    */
   public InstanceInfo setRunning(java.lang.Boolean running) {
@@ -250,6 +260,23 @@ public final class InstanceInfo extends com.google.api.client.json.GenericJson {
    */
   public InstanceInfo setServiceAccount(java.lang.String serviceAccount) {
     this.serviceAccount = serviceAccount;
+    return this;
+  }
+
+  /**
+   * The status of the instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStatus() {
+    return status;
+  }
+
+  /**
+   * The status of the instance.
+   * @param status status or {@code null} for none
+   */
+  public InstanceInfo setStatus(java.lang.String status) {
+    this.status = status;
     return this;
   }
 

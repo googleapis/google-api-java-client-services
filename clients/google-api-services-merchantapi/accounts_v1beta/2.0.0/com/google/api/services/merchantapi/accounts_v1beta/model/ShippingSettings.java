@@ -33,14 +33,15 @@ package com.google.api.services.merchantapi.accounts_v1beta.model;
 public final class ShippingSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. This field is used for avoid async issue. Make sure shipping setting data didn't
-   * change between get call and insert call. The user should do following steps： 1. Set etag field
-   * as empty string for initial shipping setting creation. 2. After initial creation, call get
-   * method to obtain an etag and current shipping setting data before call insert. 3. Modify to
-   * wanted shipping setting information. 4. Call insert method with the wanted shipping setting
-   * information with the etag obtained from step 2. 5. If shipping setting data changed between
-   * step 2 and step 4. Insert request will fail because the etag changes every time the shipping
-   * setting data changes. User should repeate step 2-4 with the new etag.
+   * Required. This field helps avoid async issues. It ensures that the shipping setting data
+   * doesn't change between the `get` call and the `insert` call. The user should follow these
+   * steps: 1. Set the etag field as an empty string for the initial shipping setting creation. 2.
+   * After the initial creation, call the `get` method to obtain an etag and the current shipping
+   * setting data before calling `insert`. 3. Modify the shipping setting information. 4. Call the
+   * `insert` method with the shipping setting information and the etag obtained in step 2. 5. If
+   * the shipping setting data changes between step 2 and step 4, the insert request will fail
+   * because the etag changes every time the shipping setting data changes. In this case, the user
+   * should repeat steps 2-4 with the new etag.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,14 +76,15 @@ public final class ShippingSettings extends com.google.api.client.json.GenericJs
   private java.util.List<Warehouse> warehouses;
 
   /**
-   * Required. This field is used for avoid async issue. Make sure shipping setting data didn't
-   * change between get call and insert call. The user should do following steps： 1. Set etag field
-   * as empty string for initial shipping setting creation. 2. After initial creation, call get
-   * method to obtain an etag and current shipping setting data before call insert. 3. Modify to
-   * wanted shipping setting information. 4. Call insert method with the wanted shipping setting
-   * information with the etag obtained from step 2. 5. If shipping setting data changed between
-   * step 2 and step 4. Insert request will fail because the etag changes every time the shipping
-   * setting data changes. User should repeate step 2-4 with the new etag.
+   * Required. This field helps avoid async issues. It ensures that the shipping setting data
+   * doesn't change between the `get` call and the `insert` call. The user should follow these
+   * steps: 1. Set the etag field as an empty string for the initial shipping setting creation. 2.
+   * After the initial creation, call the `get` method to obtain an etag and the current shipping
+   * setting data before calling `insert`. 3. Modify the shipping setting information. 4. Call the
+   * `insert` method with the shipping setting information and the etag obtained in step 2. 5. If
+   * the shipping setting data changes between step 2 and step 4, the insert request will fail
+   * because the etag changes every time the shipping setting data changes. In this case, the user
+   * should repeat steps 2-4 with the new etag.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -90,14 +92,15 @@ public final class ShippingSettings extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. This field is used for avoid async issue. Make sure shipping setting data didn't
-   * change between get call and insert call. The user should do following steps： 1. Set etag field
-   * as empty string for initial shipping setting creation. 2. After initial creation, call get
-   * method to obtain an etag and current shipping setting data before call insert. 3. Modify to
-   * wanted shipping setting information. 4. Call insert method with the wanted shipping setting
-   * information with the etag obtained from step 2. 5. If shipping setting data changed between
-   * step 2 and step 4. Insert request will fail because the etag changes every time the shipping
-   * setting data changes. User should repeate step 2-4 with the new etag.
+   * Required. This field helps avoid async issues. It ensures that the shipping setting data
+   * doesn't change between the `get` call and the `insert` call. The user should follow these
+   * steps: 1. Set the etag field as an empty string for the initial shipping setting creation. 2.
+   * After the initial creation, call the `get` method to obtain an etag and the current shipping
+   * setting data before calling `insert`. 3. Modify the shipping setting information. 4. Call the
+   * `insert` method with the shipping setting information and the etag obtained in step 2. 5. If
+   * the shipping setting data changes between step 2 and step 4, the insert request will fail
+   * because the etag changes every time the shipping setting data changes. In this case, the user
+   * should repeat steps 2-4 with the new etag.
    * @param etag etag or {@code null} for none
    */
   public ShippingSettings setEtag(java.lang.String etag) {

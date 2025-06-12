@@ -45,7 +45,7 @@ package com.google.api.services.merchantapi.accounts_v1beta.model;
 public final class TermsOfServiceAgreementState extends com.google.api.client.json.GenericJson {
 
   /**
-   * The accepted terms of service of this kind and for the associated region_code
+   * Optional. The accepted terms of service of this kind and for the associated region_code
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,29 +62,29 @@ public final class TermsOfServiceAgreementState extends com.google.api.client.js
   private java.lang.String name;
 
   /**
-   * Region code as defined by https://cldr.unicode.org/. This is the country the current state
-   * applies to.
+   * Required. Region code as defined by https://cldr.unicode.org/. This is the country the current
+   * state applies to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String regionCode;
 
   /**
-   * The required terms of service
+   * Optional. The required terms of service
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Required required;
 
   /**
-   * Terms of Service kind associated with the particular version.
+   * Required. Terms of Service kind associated with the particular version.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String termsOfServiceKind;
 
   /**
-   * The accepted terms of service of this kind and for the associated region_code
+   * Optional. The accepted terms of service of this kind and for the associated region_code
    * @return value or {@code null} for none
    */
   public Accepted getAccepted() {
@@ -92,7 +92,7 @@ public final class TermsOfServiceAgreementState extends com.google.api.client.js
   }
 
   /**
-   * The accepted terms of service of this kind and for the associated region_code
+   * Optional. The accepted terms of service of this kind and for the associated region_code
    * @param accepted accepted or {@code null} for none
    */
   public TermsOfServiceAgreementState setAccepted(Accepted accepted) {
@@ -124,8 +124,8 @@ public final class TermsOfServiceAgreementState extends com.google.api.client.js
   }
 
   /**
-   * Region code as defined by https://cldr.unicode.org/. This is the country the current state
-   * applies to.
+   * Required. Region code as defined by https://cldr.unicode.org/. This is the country the current
+   * state applies to.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegionCode() {
@@ -133,8 +133,8 @@ public final class TermsOfServiceAgreementState extends com.google.api.client.js
   }
 
   /**
-   * Region code as defined by https://cldr.unicode.org/. This is the country the current state
-   * applies to.
+   * Required. Region code as defined by https://cldr.unicode.org/. This is the country the current
+   * state applies to.
    * @param regionCode regionCode or {@code null} for none
    */
   public TermsOfServiceAgreementState setRegionCode(java.lang.String regionCode) {
@@ -143,7 +143,7 @@ public final class TermsOfServiceAgreementState extends com.google.api.client.js
   }
 
   /**
-   * The required terms of service
+   * Optional. The required terms of service
    * @return value or {@code null} for none
    */
   public Required getRequired() {
@@ -151,7 +151,7 @@ public final class TermsOfServiceAgreementState extends com.google.api.client.js
   }
 
   /**
-   * The required terms of service
+   * Optional. The required terms of service
    * @param required required or {@code null} for none
    */
   public TermsOfServiceAgreementState setRequired(Required required) {
@@ -160,7 +160,7 @@ public final class TermsOfServiceAgreementState extends com.google.api.client.js
   }
 
   /**
-   * Terms of Service kind associated with the particular version.
+   * Required. Terms of Service kind associated with the particular version.
    * @return value or {@code null} for none
    */
   public java.lang.String getTermsOfServiceKind() {
@@ -168,7 +168,7 @@ public final class TermsOfServiceAgreementState extends com.google.api.client.js
   }
 
   /**
-   * Terms of Service kind associated with the particular version.
+   * Required. Terms of Service kind associated with the particular version.
    * @param termsOfServiceKind termsOfServiceKind or {@code null} for none
    */
   public TermsOfServiceAgreementState setTermsOfServiceKind(java.lang.String termsOfServiceKind) {

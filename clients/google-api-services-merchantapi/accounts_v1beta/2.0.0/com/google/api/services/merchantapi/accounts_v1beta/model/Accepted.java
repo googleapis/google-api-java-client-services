@@ -31,23 +31,23 @@ package com.google.api.services.merchantapi.accounts_v1beta.model;
 public final class Accepted extends com.google.api.client.json.GenericJson {
 
   /**
-   * The account where the acceptance was recorded. This can be the account itself or, in the case
-   * of subaccounts, the advanced account.
+   * Required. The account where the acceptance was recorded. This can be the account itself or, in
+   * the case of subaccounts, the advanced account.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String acceptedBy;
 
   /**
-   * The accepted termsOfService.
+   * Required. The accepted termsOfService.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String termsOfService;
 
   /**
-   * When set, it states that the accepted `TermsOfService` is only valid until the end of this date
-   * (in UTC). A new one must be accepted before then. The information of the required
+   * Optional. When set, it states that the accepted `TermsOfService` is only valid until the end of
+   * this date (in UTC). A new one must be accepted before then. The information of the required
    * `TermsOfService` is found in the `Required` message.
    * The value may be {@code null}.
    */
@@ -55,8 +55,8 @@ public final class Accepted extends com.google.api.client.json.GenericJson {
   private Date validUntil;
 
   /**
-   * The account where the acceptance was recorded. This can be the account itself or, in the case
-   * of subaccounts, the advanced account.
+   * Required. The account where the acceptance was recorded. This can be the account itself or, in
+   * the case of subaccounts, the advanced account.
    * @return value or {@code null} for none
    */
   public java.lang.String getAcceptedBy() {
@@ -64,8 +64,8 @@ public final class Accepted extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The account where the acceptance was recorded. This can be the account itself or, in the case
-   * of subaccounts, the advanced account.
+   * Required. The account where the acceptance was recorded. This can be the account itself or, in
+   * the case of subaccounts, the advanced account.
    * @param acceptedBy acceptedBy or {@code null} for none
    */
   public Accepted setAcceptedBy(java.lang.String acceptedBy) {
@@ -74,7 +74,7 @@ public final class Accepted extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The accepted termsOfService.
+   * Required. The accepted termsOfService.
    * @return value or {@code null} for none
    */
   public java.lang.String getTermsOfService() {
@@ -82,7 +82,7 @@ public final class Accepted extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The accepted termsOfService.
+   * Required. The accepted termsOfService.
    * @param termsOfService termsOfService or {@code null} for none
    */
   public Accepted setTermsOfService(java.lang.String termsOfService) {
@@ -91,8 +91,8 @@ public final class Accepted extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * When set, it states that the accepted `TermsOfService` is only valid until the end of this date
-   * (in UTC). A new one must be accepted before then. The information of the required
+   * Optional. When set, it states that the accepted `TermsOfService` is only valid until the end of
+   * this date (in UTC). A new one must be accepted before then. The information of the required
    * `TermsOfService` is found in the `Required` message.
    * @return value or {@code null} for none
    */
@@ -101,8 +101,8 @@ public final class Accepted extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * When set, it states that the accepted `TermsOfService` is only valid until the end of this date
-   * (in UTC). A new one must be accepted before then. The information of the required
+   * Optional. When set, it states that the accepted `TermsOfService` is only valid until the end of
+   * this date (in UTC). A new one must be accepted before then. The information of the required
    * `TermsOfService` is found in the `Required` message.
    * @param validUntil validUntil or {@code null} for none
    */

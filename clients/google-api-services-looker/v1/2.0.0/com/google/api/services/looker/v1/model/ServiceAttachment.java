@@ -38,12 +38,20 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
   private java.lang.String connectionStatus;
 
   /**
-   * Required. Fully qualified domain name that will be used in the private DNS record created for
+   * Optional. Fully qualified domain name that will be used in the private DNS record created for
    * the service attachment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String localFqdn;
+
+  /**
+   * Optional. List of fully qualified domain names that will be used in the private DNS record
+   * created for the service attachment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> localFqdns;
 
   /**
    * Required. URI of the service attachment to connect to. Format:
@@ -71,7 +79,7 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. Fully qualified domain name that will be used in the private DNS record created for
+   * Optional. Fully qualified domain name that will be used in the private DNS record created for
    * the service attachment.
    * @return value or {@code null} for none
    */
@@ -80,12 +88,31 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. Fully qualified domain name that will be used in the private DNS record created for
+   * Optional. Fully qualified domain name that will be used in the private DNS record created for
    * the service attachment.
    * @param localFqdn localFqdn or {@code null} for none
    */
   public ServiceAttachment setLocalFqdn(java.lang.String localFqdn) {
     this.localFqdn = localFqdn;
+    return this;
+  }
+
+  /**
+   * Optional. List of fully qualified domain names that will be used in the private DNS record
+   * created for the service attachment.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getLocalFqdns() {
+    return localFqdns;
+  }
+
+  /**
+   * Optional. List of fully qualified domain names that will be used in the private DNS record
+   * created for the service attachment.
+   * @param localFqdns localFqdns or {@code null} for none
+   */
+  public ServiceAttachment setLocalFqdns(java.util.List<java.lang.String> localFqdns) {
+    this.localFqdns = localFqdns;
     return this;
   }
 

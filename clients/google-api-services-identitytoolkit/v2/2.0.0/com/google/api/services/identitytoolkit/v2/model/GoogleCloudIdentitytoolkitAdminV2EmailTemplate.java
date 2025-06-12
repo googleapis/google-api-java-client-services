@@ -20,8 +20,8 @@ package com.google.api.services.identitytoolkit.v2.model;
  * Email template. The subject and body fields can contain the following placeholders which will be
  * replaced with the appropriate values: %LINK% - The link to use to redeem the send OOB code.
  * %EMAIL% - The email where the email is being sent. %NEW_EMAIL% - The new email being set for the
- * account (when applicable). %APP_NAME% - The GCP project's display name. %DISPLAY_NAME% - The
- * user's display name.
+ * account (when applicable). %APP_NAME% - The Google Cloud project's display name. %DISPLAY_NAME% -
+ * The user's display name.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Identity Toolkit API. For a detailed explanation see:

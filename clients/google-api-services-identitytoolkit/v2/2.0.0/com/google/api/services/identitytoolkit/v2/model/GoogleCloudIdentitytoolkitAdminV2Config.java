@@ -58,6 +58,13 @@ public final class GoogleCloudIdentitytoolkitAdminV2Config extends com.google.ap
   private GoogleCloudIdentitytoolkitAdminV2ClientConfig client;
 
   /**
+   * Output only. Default Firebase hosting site name
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String defaultHostingSite;
+
+  /**
    * Configuration for settings related to email privacy and public visibility.
    * The value may be {@code null}.
    */
@@ -71,6 +78,13 @@ public final class GoogleCloudIdentitytoolkitAdminV2Config extends com.google.ap
    */
   @com.google.api.client.util.Key
   private GoogleCloudIdentitytoolkitAdminV2MultiFactorAuthConfig mfa;
+
+  /**
+   * Configuration for settings related to univeral links (iOS) and app links (Android).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudIdentitytoolkitAdminV2MobileLinksConfig mobileLinksConfig;
 
   /**
    * Configuration related to monitoring project activity.
@@ -211,6 +225,23 @@ public final class GoogleCloudIdentitytoolkitAdminV2Config extends com.google.ap
   }
 
   /**
+   * Output only. Default Firebase hosting site name
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDefaultHostingSite() {
+    return defaultHostingSite;
+  }
+
+  /**
+   * Output only. Default Firebase hosting site name
+   * @param defaultHostingSite defaultHostingSite or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitAdminV2Config setDefaultHostingSite(java.lang.String defaultHostingSite) {
+    this.defaultHostingSite = defaultHostingSite;
+    return this;
+  }
+
+  /**
    * Configuration for settings related to email privacy and public visibility.
    * @return value or {@code null} for none
    */
@@ -243,6 +274,23 @@ public final class GoogleCloudIdentitytoolkitAdminV2Config extends com.google.ap
    */
   public GoogleCloudIdentitytoolkitAdminV2Config setMfa(GoogleCloudIdentitytoolkitAdminV2MultiFactorAuthConfig mfa) {
     this.mfa = mfa;
+    return this;
+  }
+
+  /**
+   * Configuration for settings related to univeral links (iOS) and app links (Android).
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitAdminV2MobileLinksConfig getMobileLinksConfig() {
+    return mobileLinksConfig;
+  }
+
+  /**
+   * Configuration for settings related to univeral links (iOS) and app links (Android).
+   * @param mobileLinksConfig mobileLinksConfig or {@code null} for none
+   */
+  public GoogleCloudIdentitytoolkitAdminV2Config setMobileLinksConfig(GoogleCloudIdentitytoolkitAdminV2MobileLinksConfig mobileLinksConfig) {
+    this.mobileLinksConfig = mobileLinksConfig;
     return this;
   }
 

@@ -17,7 +17,7 @@
 package com.google.api.services.beyondcorp.v1alpha.model;
 
 /**
- * Information about a BeyoncCorp SecurityGateway resource.
+ * Information about a BeyondCorp SecurityGateway resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BeyondCorp API. For a detailed explanation see:

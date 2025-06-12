@@ -106,6 +106,13 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
   private java.lang.String etag;
 
   /**
+   * Optional. Configuration options for Cluster HTTP Gateway.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GatewayConfig gatewayConfig;
+
+  /**
    * Optional. [Labels](https://cloud.google.com/workstations/docs/label-resources) that are applied
    * to the workstation cluster and that are also propagated to the underlying Compute Engine
    * resources.
@@ -349,6 +356,23 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
    */
   public WorkstationCluster setEtag(java.lang.String etag) {
     this.etag = etag;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration options for Cluster HTTP Gateway.
+   * @return value or {@code null} for none
+   */
+  public GatewayConfig getGatewayConfig() {
+    return gatewayConfig;
+  }
+
+  /**
+   * Optional. Configuration options for Cluster HTTP Gateway.
+   * @param gatewayConfig gatewayConfig or {@code null} for none
+   */
+  public WorkstationCluster setGatewayConfig(GatewayConfig gatewayConfig) {
+    this.gatewayConfig = gatewayConfig;
     return this;
   }
 

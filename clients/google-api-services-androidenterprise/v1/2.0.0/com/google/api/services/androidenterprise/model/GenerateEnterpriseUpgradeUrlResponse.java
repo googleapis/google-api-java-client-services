@@ -18,7 +18,7 @@ package com.google.api.services.androidenterprise.model;
 
 /**
  * Response message for generating a URL to upgrade an existing managed Google Play Accounts
- * enterprise to a managed Google domain. **Note:** This feature is not generally available.
+ * enterprise to a managed Google domain.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Play EMM API. For a detailed explanation see:

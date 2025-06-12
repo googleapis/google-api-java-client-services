@@ -501,7 +501,8 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
     }
     /**
      * Generates an enterprise upgrade URL to upgrade an existing managed Google Play Accounts
-     * enterprise to a managed Google domain.Note: This feature is not generally available.
+     * enterprise to a managed Google domain. See the guide
+     * (https://developers.google.com/android/management/upgrade-an-enterprise) for more details.
      *
      * Create a request for the method "enterprises.generateEnterpriseUpgradeUrl".
      *
@@ -528,7 +529,8 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
 
       /**
        * Generates an enterprise upgrade URL to upgrade an existing managed Google Play Accounts
-       * enterprise to a managed Google domain.Note: This feature is not generally available.
+       * enterprise to a managed Google domain. See the guide
+       * (https://developers.google.com/android/management/upgrade-an-enterprise) for more details.
        *
        * Create a request for the method "enterprises.generateEnterpriseUpgradeUrl".
        *

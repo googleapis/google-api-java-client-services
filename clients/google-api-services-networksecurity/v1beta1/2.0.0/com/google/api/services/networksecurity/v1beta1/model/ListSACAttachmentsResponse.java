@@ -17,7 +17,7 @@
 package com.google.api.services.networksecurity.v1beta1.model;
 
 /**
- * Message for response to listing SACAttachments
+ * Response for `ListSACAttachments` method.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Security API. For a detailed explanation see:
@@ -37,7 +37,7 @@ public final class ListSACAttachmentsResponse extends com.google.api.client.json
   private java.lang.String nextPageToken;
 
   /**
-   * The list of SACAttachments
+   * The list of SACAttachments.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +68,7 @@ public final class ListSACAttachmentsResponse extends com.google.api.client.json
   }
 
   /**
-   * The list of SACAttachments
+   * The list of SACAttachments.
    * @return value or {@code null} for none
    */
   public java.util.List<SACAttachment> getSacAttachments() {
@@ -76,7 +76,7 @@ public final class ListSACAttachmentsResponse extends com.google.api.client.json
   }
 
   /**
-   * The list of SACAttachments
+   * The list of SACAttachments.
    * @param sacAttachments sacAttachments or {@code null} for none
    */
   public ListSACAttachmentsResponse setSacAttachments(java.util.List<SACAttachment> sacAttachments) {

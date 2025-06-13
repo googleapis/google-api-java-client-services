@@ -23423,7 +23423,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Value for parent.
+         * @param parent Required. The parent, in the form `projects/{project}/locations/{location}`.
          * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.SACAttachment}
          * @return the request
          */
@@ -23451,7 +23451,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Value for parent.
+           * @param parent Required. The parent, in the form `projects/{project}/locations/{location}`.
            * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.SACAttachment}
            * @since 1.13
            */
@@ -23520,17 +23520,17 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             return (Create) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Value for parent. */
+          /** Required. The parent, in the form `projects/{project}/locations/{location}`. */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Value for parent.
+          /** Required. The parent, in the form `projects/{project}/locations/{location}`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. Value for parent. */
+          /** Required. The parent, in the form `projects/{project}/locations/{location}`. */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -23585,22 +23585,31 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. Id of the requesting object If auto-generating Id server-side, remove this
-           * field and sac_attachment_id from the method_signature of Create RPC
+           * Required. ID of the created attachment. The ID must be 1-63 characters long, and comply
+           * with RFC1035. Specifically, it must be 1-63 characters long and match the regular
+           * expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a
+           * lowercase letter, and all following characters must be a dash, lowercase letter, or
+           * digit, except the last character, which cannot be a dash.
            */
           @com.google.api.client.util.Key
           private java.lang.String sacAttachmentId;
 
-          /** Required. Id of the requesting object If auto-generating Id server-side, remove this field and
-         sac_attachment_id from the method_signature of Create RPC
+          /** Required. ID of the created attachment. The ID must be 1-63 characters long, and comply with
+         RFC1035. Specifically, it must be 1-63 characters long and match the regular expression
+         `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all
+         following characters must be a dash, lowercase letter, or digit, except the last character, which
+         cannot be a dash.
            */
           public java.lang.String getSacAttachmentId() {
             return sacAttachmentId;
           }
 
           /**
-           * Required. Id of the requesting object If auto-generating Id server-side, remove this
-           * field and sac_attachment_id from the method_signature of Create RPC
+           * Required. ID of the created attachment. The ID must be 1-63 characters long, and comply
+           * with RFC1035. Specifically, it must be 1-63 characters long and match the regular
+           * expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a
+           * lowercase letter, and all following characters must be a dash, lowercase letter, or
+           * digit, except the last character, which cannot be a dash.
            */
           public Create setSacAttachmentId(java.lang.String sacAttachmentId) {
             this.sacAttachmentId = sacAttachmentId;
@@ -23613,14 +23622,15 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Deletes a single SACAttachment.
+         * Deletes the specified attachment.
          *
          * Create a request for the method "sacAttachments.delete".
          *
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the resource
+         * @param name Required. Name of the resource, in the form
+         *        `projects/{project}/locations/{location}/sacAttachments/{sac_attachment}`.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -23637,7 +23647,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/sacAttachments/[^/]+$");
 
           /**
-           * Deletes a single SACAttachment.
+           * Deletes the specified attachment.
            *
            * Create a request for the method "sacAttachments.delete".
            *
@@ -23647,7 +23657,8 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the resource
+           * @param name Required. Name of the resource, in the form
+         *        `projects/{project}/locations/{location}/sacAttachments/{sac_attachment}`.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -23715,17 +23726,24 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             return (Delete) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Name of the resource */
+          /**
+           * Required. Name of the resource, in the form
+           * `projects/{project}/locations/{location}/sacAttachments/{sac_attachment}`.
+           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the resource
+          /** Required. Name of the resource, in the form
+         `projects/{project}/locations/{location}/sacAttachments/{sac_attachment}`.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. Name of the resource */
+          /**
+           * Required. Name of the resource, in the form
+           * `projects/{project}/locations/{location}/sacAttachments/{sac_attachment}`.
+           */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -23785,14 +23803,15 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Gets details of a single SACAttachment.
+         * Returns the specified attachment.
          *
          * Create a request for the method "sacAttachments.get".
          *
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the resource
+         * @param name Required. Name of the resource, in the form
+         *        `projects/{project}/locations/{location}/sacAttachments/{sac_attachment}`.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -23809,7 +23828,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/sacAttachments/[^/]+$");
 
           /**
-           * Gets details of a single SACAttachment.
+           * Returns the specified attachment.
            *
            * Create a request for the method "sacAttachments.get".
            *
@@ -23818,7 +23837,8 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the resource
+           * @param name Required. Name of the resource, in the form
+         *        `projects/{project}/locations/{location}/sacAttachments/{sac_attachment}`.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -23896,17 +23916,24 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Name of the resource */
+          /**
+           * Required. Name of the resource, in the form
+           * `projects/{project}/locations/{location}/sacAttachments/{sac_attachment}`.
+           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the resource
+          /** Required. Name of the resource, in the form
+         `projects/{project}/locations/{location}/sacAttachments/{sac_attachment}`.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. Name of the resource */
+          /**
+           * Required. Name of the resource, in the form
+           * `projects/{project}/locations/{location}/sacAttachments/{sac_attachment}`.
+           */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -23930,7 +23957,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Parent value for ListSACAttachmentsRequest
+         * @param parent Required. The parent, in the form `projects/{project}/locations/{location}`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -23956,7 +23983,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Parent value for ListSACAttachmentsRequest
+           * @param parent Required. The parent, in the form `projects/{project}/locations/{location}`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -24034,17 +24061,17 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Parent value for ListSACAttachmentsRequest */
+          /** Required. The parent, in the form `projects/{project}/locations/{location}`. */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Parent value for ListSACAttachmentsRequest
+          /** Required. The parent, in the form `projects/{project}/locations/{location}`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. Parent value for ListSACAttachmentsRequest */
+          /** Required. The parent, in the form `projects/{project}/locations/{location}`. */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -24055,33 +24082,33 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             return this;
           }
 
-          /** Optional. Filtering results */
+          /** Optional. An expression that filters the list of results. */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Optional. Filtering results
+          /** Optional. An expression that filters the list of results.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** Optional. Filtering results */
+          /** Optional. An expression that filters the list of results. */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
           }
 
-          /** Optional. Hint for how to order the results */
+          /** Optional. Sort the results by a certain order. */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** Optional. Hint for how to order the results
+          /** Optional. Sort the results by a certain order.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
           }
 
-          /** Optional. Hint for how to order the results */
+          /** Optional. Sort the results by a certain order. */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
             return this;
@@ -24161,7 +24188,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Value for parent.
+         * @param parent Required. The parent, in the form `projects/{project}/locations/global`.
          * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.SACRealm}
          * @return the request
          */
@@ -24189,7 +24216,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Value for parent.
+           * @param parent Required. The parent, in the form `projects/{project}/locations/global`.
            * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.SACRealm}
            * @since 1.13
            */
@@ -24258,17 +24285,17 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             return (Create) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Value for parent. */
+          /** Required. The parent, in the form `projects/{project}/locations/global`. */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Value for parent.
+          /** Required. The parent, in the form `projects/{project}/locations/global`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. Value for parent. */
+          /** Required. The parent, in the form `projects/{project}/locations/global`. */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -24323,22 +24350,31 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. Id of the requesting object If auto-generating Id server-side, remove this
-           * field and sac_realm_id from the method_signature of Create RPC
+           * Required. ID of the created realm. The ID must be 1-63 characters long, and comply with
+           * RFC1035. Specifically, it must be 1-63 characters long and match the regular expression
+           * `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase
+           * letter, and all following characters must be a dash, lowercase letter, or digit, except
+           * the last character, which cannot be a dash.
            */
           @com.google.api.client.util.Key
           private java.lang.String sacRealmId;
 
-          /** Required. Id of the requesting object If auto-generating Id server-side, remove this field and
-         sac_realm_id from the method_signature of Create RPC
+          /** Required. ID of the created realm. The ID must be 1-63 characters long, and comply with RFC1035.
+         Specifically, it must be 1-63 characters long and match the regular expression
+         `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase letter, and all
+         following characters must be a dash, lowercase letter, or digit, except the last character, which
+         cannot be a dash.
            */
           public java.lang.String getSacRealmId() {
             return sacRealmId;
           }
 
           /**
-           * Required. Id of the requesting object If auto-generating Id server-side, remove this
-           * field and sac_realm_id from the method_signature of Create RPC
+           * Required. ID of the created realm. The ID must be 1-63 characters long, and comply with
+           * RFC1035. Specifically, it must be 1-63 characters long and match the regular expression
+           * `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a lowercase
+           * letter, and all following characters must be a dash, lowercase letter, or digit, except
+           * the last character, which cannot be a dash.
            */
           public Create setSacRealmId(java.lang.String sacRealmId) {
             this.sacRealmId = sacRealmId;
@@ -24351,14 +24387,15 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Deletes a single SACRealm.
+         * Deletes the specified realm.
          *
          * Create a request for the method "sacRealms.delete".
          *
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the resource
+         * @param name Required. Name of the resource, in the form
+         *        `projects/{project}/locations/global/sacRealms/{sacRealm}`.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -24375,7 +24412,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/sacRealms/[^/]+$");
 
           /**
-           * Deletes a single SACRealm.
+           * Deletes the specified realm.
            *
            * Create a request for the method "sacRealms.delete".
            *
@@ -24385,7 +24422,8 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the resource
+           * @param name Required. Name of the resource, in the form
+         *        `projects/{project}/locations/global/sacRealms/{sacRealm}`.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -24453,17 +24491,24 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             return (Delete) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Name of the resource */
+          /**
+           * Required. Name of the resource, in the form
+           * `projects/{project}/locations/global/sacRealms/{sacRealm}`.
+           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the resource
+          /** Required. Name of the resource, in the form
+         `projects/{project}/locations/global/sacRealms/{sacRealm}`.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. Name of the resource */
+          /**
+           * Required. Name of the resource, in the form
+           * `projects/{project}/locations/global/sacRealms/{sacRealm}`.
+           */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -24523,14 +24568,15 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Gets details of a single SACRealm.
+         * Returns the specified realm.
          *
          * Create a request for the method "sacRealms.get".
          *
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the resource
+         * @param name Required. Name of the resource, in the form
+         *        `projects/{project}/locations/global/sacRealms/{sacRealm}`.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -24547,7 +24593,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/sacRealms/[^/]+$");
 
           /**
-           * Gets details of a single SACRealm.
+           * Returns the specified realm.
            *
            * Create a request for the method "sacRealms.get".
            *
@@ -24556,7 +24602,8 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the resource
+           * @param name Required. Name of the resource, in the form
+         *        `projects/{project}/locations/global/sacRealms/{sacRealm}`.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -24634,17 +24681,24 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Name of the resource */
+          /**
+           * Required. Name of the resource, in the form
+           * `projects/{project}/locations/global/sacRealms/{sacRealm}`.
+           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the resource
+          /** Required. Name of the resource, in the form
+         `projects/{project}/locations/global/sacRealms/{sacRealm}`.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. Name of the resource */
+          /**
+           * Required. Name of the resource, in the form
+           * `projects/{project}/locations/global/sacRealms/{sacRealm}`.
+           */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -24668,7 +24722,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Parent value for ListSACRealmsRequest
+         * @param parent Required. The parent, in the form `projects/{project}/locations/global`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -24694,7 +24748,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Parent value for ListSACRealmsRequest
+           * @param parent Required. The parent, in the form `projects/{project}/locations/global`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -24772,17 +24826,17 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Parent value for ListSACRealmsRequest */
+          /** Required. The parent, in the form `projects/{project}/locations/global`. */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Parent value for ListSACRealmsRequest
+          /** Required. The parent, in the form `projects/{project}/locations/global`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. Parent value for ListSACRealmsRequest */
+          /** Required. The parent, in the form `projects/{project}/locations/global`. */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -24793,33 +24847,33 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             return this;
           }
 
-          /** Optional. Filtering results */
+          /** Optional. An expression that filters the list of results. */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Optional. Filtering results
+          /** Optional. An expression that filters the list of results.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** Optional. Filtering results */
+          /** Optional. An expression that filters the list of results. */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
           }
 
-          /** Optional. Hint for how to order the results */
+          /** Optional. Sort the results by a certain order. */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** Optional. Hint for how to order the results
+          /** Optional. Sort the results by a certain order.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
           }
 
-          /** Optional. Hint for how to order the results */
+          /** Optional. Sort the results by a certain order. */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
             return this;

@@ -17,7 +17,7 @@
 package com.google.api.services.networksecurity.v1beta1.model;
 
 /**
- * Message for response to listing SACRealms
+ * Response for `ListSACRealms` method.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Security API. For a detailed explanation see:
@@ -37,7 +37,7 @@ public final class ListSACRealmsResponse extends com.google.api.client.json.Gene
   private java.lang.String nextPageToken;
 
   /**
-   * The list of SACRealms
+   * The list of SACRealms.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +68,7 @@ public final class ListSACRealmsResponse extends com.google.api.client.json.Gene
   }
 
   /**
-   * The list of SACRealms
+   * The list of SACRealms.
    * @return value or {@code null} for none
    */
   public java.util.List<SACRealm> getSacRealms() {
@@ -76,7 +76,7 @@ public final class ListSACRealmsResponse extends com.google.api.client.json.Gene
   }
 
   /**
-   * The list of SACRealms
+   * The list of SACRealms.
    * @param sacRealms sacRealms or {@code null} for none
    */
   public ListSACRealmsResponse setSacRealms(java.util.List<SACRealm> sacRealms) {

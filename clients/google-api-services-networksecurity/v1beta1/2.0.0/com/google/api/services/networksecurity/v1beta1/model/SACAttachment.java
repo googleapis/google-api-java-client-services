@@ -17,7 +17,8 @@
 package com.google.api.services.networksecurity.v1beta1.model;
 
 /**
- * Configuration for an attachment within a SAC realm.
+ * Represents a Secure Access Connect (SAC) Attachment resource. A Secure Access Connect attachment
+ * enables NCC Gateway to process traffic with an SSE product.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Security API. For a detailed explanation see:
@@ -30,17 +31,15 @@ package com.google.api.services.networksecurity.v1beta1.model;
 public final class SACAttachment extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. ISO-3166 alpha 2 country code used for localization. Only used for Symantec's API
-   * today, and is optional even for gateways connected to Symantec, since Symantec applies a
-   * default if we don't specify it. Not case-sensitive, since it will be upper-cased when sending
-   * to Symantec API.
+   * Optional. Case-insensitive ISO-3166 alpha-2 country code used for localization. Only valid for
+   * Symantec attachments.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String country;
 
   /**
-   * Output only. [Output only] Timestamp when the attachment was created.
+   * Output only. Timestamp when the attachment was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,58 +61,55 @@ public final class SACAttachment extends com.google.api.client.json.GenericJson 
   private java.lang.String name;
 
   /**
-   * Required. Name of the NCC Gateway which connects to the attachment. ID or full URI can be
-   * specified. Full URI is stored either way，in the form
-   * `projects/{project}/locations/{location}/spokes/{ncc_gateway}`.
+   * Required. NCC Gateway associated with the attachment. This can be input as an ID or a full
+   * resource name. The output always has the form
+   * `projects/{project_number}/locations/{location}/spokes/{ncc_gateway}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nccGateway;
 
   /**
-   * Required. Name of the SAC Realm which owns the attachment. The input can be either an ID for a
-   * full name. The output will always be the full name using project number instead of project ID.
-   * The format is `projects/{project_number}/locations/{location}/sacRealms/{sac_realm}`.
+   * Required. SAC Realm which owns the attachment. This can be input as an ID or a full resource
+   * name. The output always has the form
+   * `projects/{project_number}/locations/{location}/sacRealms/{sac_realm}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sacRealm;
 
   /**
-   * Output only. [Output only] State of the attachment.
+   * Output only. State of the attachment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * Optional. Required iff the associated realm is of type SYMANTEC_CLOUD_SWG.
+   * Optional. Configuration required for Symantec attachments.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SACAttachmentSACAttachmentSymantecOptions symantecOptions;
 
   /**
-   * Optional. tzinfo identifier used for localization. Only used for Symantec's API today, and is
-   * optional even for gateways connected to Symantec, since Symantec applies a default if we don't
-   * specify it. Case sensitive.
+   * Optional. Case-sensitive tzinfo identifier used for localization. Only valid for Symantec
+   * attachments.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String timeZone;
 
   /**
-   * Output only. [Output only] Timestamp when the attachment was last updated.
+   * Output only. Timestamp when the attachment was last updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Optional. ISO-3166 alpha 2 country code used for localization. Only used for Symantec's API
-   * today, and is optional even for gateways connected to Symantec, since Symantec applies a
-   * default if we don't specify it. Not case-sensitive, since it will be upper-cased when sending
-   * to Symantec API.
+   * Optional. Case-insensitive ISO-3166 alpha-2 country code used for localization. Only valid for
+   * Symantec attachments.
    * @return value or {@code null} for none
    */
   public java.lang.String getCountry() {
@@ -121,10 +117,8 @@ public final class SACAttachment extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. ISO-3166 alpha 2 country code used for localization. Only used for Symantec's API
-   * today, and is optional even for gateways connected to Symantec, since Symantec applies a
-   * default if we don't specify it. Not case-sensitive, since it will be upper-cased when sending
-   * to Symantec API.
+   * Optional. Case-insensitive ISO-3166 alpha-2 country code used for localization. Only valid for
+   * Symantec attachments.
    * @param country country or {@code null} for none
    */
   public SACAttachment setCountry(java.lang.String country) {
@@ -133,7 +127,7 @@ public final class SACAttachment extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. [Output only] Timestamp when the attachment was created.
+   * Output only. Timestamp when the attachment was created.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -141,7 +135,7 @@ public final class SACAttachment extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. [Output only] Timestamp when the attachment was created.
+   * Output only. Timestamp when the attachment was created.
    * @param createTime createTime or {@code null} for none
    */
   public SACAttachment setCreateTime(String createTime) {
@@ -186,9 +180,9 @@ public final class SACAttachment extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Required. Name of the NCC Gateway which connects to the attachment. ID or full URI can be
-   * specified. Full URI is stored either way，in the form
-   * `projects/{project}/locations/{location}/spokes/{ncc_gateway}`.
+   * Required. NCC Gateway associated with the attachment. This can be input as an ID or a full
+   * resource name. The output always has the form
+   * `projects/{project_number}/locations/{location}/spokes/{ncc_gateway}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getNccGateway() {
@@ -196,9 +190,9 @@ public final class SACAttachment extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Required. Name of the NCC Gateway which connects to the attachment. ID or full URI can be
-   * specified. Full URI is stored either way，in the form
-   * `projects/{project}/locations/{location}/spokes/{ncc_gateway}`.
+   * Required. NCC Gateway associated with the attachment. This can be input as an ID or a full
+   * resource name. The output always has the form
+   * `projects/{project_number}/locations/{location}/spokes/{ncc_gateway}`.
    * @param nccGateway nccGateway or {@code null} for none
    */
   public SACAttachment setNccGateway(java.lang.String nccGateway) {
@@ -207,9 +201,9 @@ public final class SACAttachment extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Required. Name of the SAC Realm which owns the attachment. The input can be either an ID for a
-   * full name. The output will always be the full name using project number instead of project ID.
-   * The format is `projects/{project_number}/locations/{location}/sacRealms/{sac_realm}`.
+   * Required. SAC Realm which owns the attachment. This can be input as an ID or a full resource
+   * name. The output always has the form
+   * `projects/{project_number}/locations/{location}/sacRealms/{sac_realm}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getSacRealm() {
@@ -217,9 +211,9 @@ public final class SACAttachment extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Required. Name of the SAC Realm which owns the attachment. The input can be either an ID for a
-   * full name. The output will always be the full name using project number instead of project ID.
-   * The format is `projects/{project_number}/locations/{location}/sacRealms/{sac_realm}`.
+   * Required. SAC Realm which owns the attachment. This can be input as an ID or a full resource
+   * name. The output always has the form
+   * `projects/{project_number}/locations/{location}/sacRealms/{sac_realm}`.
    * @param sacRealm sacRealm or {@code null} for none
    */
   public SACAttachment setSacRealm(java.lang.String sacRealm) {
@@ -228,7 +222,7 @@ public final class SACAttachment extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. [Output only] State of the attachment.
+   * Output only. State of the attachment.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -236,7 +230,7 @@ public final class SACAttachment extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. [Output only] State of the attachment.
+   * Output only. State of the attachment.
    * @param state state or {@code null} for none
    */
   public SACAttachment setState(java.lang.String state) {
@@ -245,7 +239,7 @@ public final class SACAttachment extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. Required iff the associated realm is of type SYMANTEC_CLOUD_SWG.
+   * Optional. Configuration required for Symantec attachments.
    * @return value or {@code null} for none
    */
   public SACAttachmentSACAttachmentSymantecOptions getSymantecOptions() {
@@ -253,7 +247,7 @@ public final class SACAttachment extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. Required iff the associated realm is of type SYMANTEC_CLOUD_SWG.
+   * Optional. Configuration required for Symantec attachments.
    * @param symantecOptions symantecOptions or {@code null} for none
    */
   public SACAttachment setSymantecOptions(SACAttachmentSACAttachmentSymantecOptions symantecOptions) {
@@ -262,9 +256,8 @@ public final class SACAttachment extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. tzinfo identifier used for localization. Only used for Symantec's API today, and is
-   * optional even for gateways connected to Symantec, since Symantec applies a default if we don't
-   * specify it. Case sensitive.
+   * Optional. Case-sensitive tzinfo identifier used for localization. Only valid for Symantec
+   * attachments.
    * @return value or {@code null} for none
    */
   public java.lang.String getTimeZone() {
@@ -272,9 +265,8 @@ public final class SACAttachment extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. tzinfo identifier used for localization. Only used for Symantec's API today, and is
-   * optional even for gateways connected to Symantec, since Symantec applies a default if we don't
-   * specify it. Case sensitive.
+   * Optional. Case-sensitive tzinfo identifier used for localization. Only valid for Symantec
+   * attachments.
    * @param timeZone timeZone or {@code null} for none
    */
   public SACAttachment setTimeZone(java.lang.String timeZone) {
@@ -283,7 +275,7 @@ public final class SACAttachment extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. [Output only] Timestamp when the attachment was last updated.
+   * Output only. Timestamp when the attachment was last updated.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -291,7 +283,7 @@ public final class SACAttachment extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. [Output only] Timestamp when the attachment was last updated.
+   * Output only. Timestamp when the attachment was last updated.
    * @param updateTime updateTime or {@code null} for none
    */
   public SACAttachment setUpdateTime(String updateTime) {

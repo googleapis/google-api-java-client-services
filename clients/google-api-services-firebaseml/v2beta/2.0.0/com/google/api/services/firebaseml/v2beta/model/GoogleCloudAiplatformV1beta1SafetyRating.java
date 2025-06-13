@@ -44,6 +44,15 @@ public final class GoogleCloudAiplatformV1beta1SafetyRating extends com.google.a
   private java.lang.String category;
 
   /**
+   * Output only. The overwritten threshold for the safety category of Gemini 2.0 image out. If
+   * minors are detected in the output image, the threshold of each safety category will be
+   * overwritten if user sets a lower threshold.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String overwrittenThreshold;
+
+  /**
    * Output only. Harm probability levels in the content.
    * The value may be {@code null}.
    */
@@ -102,6 +111,27 @@ public final class GoogleCloudAiplatformV1beta1SafetyRating extends com.google.a
    */
   public GoogleCloudAiplatformV1beta1SafetyRating setCategory(java.lang.String category) {
     this.category = category;
+    return this;
+  }
+
+  /**
+   * Output only. The overwritten threshold for the safety category of Gemini 2.0 image out. If
+   * minors are detected in the output image, the threshold of each safety category will be
+   * overwritten if user sets a lower threshold.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOverwrittenThreshold() {
+    return overwrittenThreshold;
+  }
+
+  /**
+   * Output only. The overwritten threshold for the safety category of Gemini 2.0 image out. If
+   * minors are detected in the output image, the threshold of each safety category will be
+   * overwritten if user sets a lower threshold.
+   * @param overwrittenThreshold overwrittenThreshold or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1SafetyRating setOverwrittenThreshold(java.lang.String overwrittenThreshold) {
+    this.overwrittenThreshold = overwrittenThreshold;
     return this;
   }
 

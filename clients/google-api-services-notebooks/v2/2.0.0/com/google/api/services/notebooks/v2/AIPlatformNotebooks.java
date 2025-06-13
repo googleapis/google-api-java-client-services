@@ -1290,9 +1290,7 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
           }
         }
         /**
-         * Gets general backend configurations that might also affect the frontend. Location is required by
-         * CCFE. Although we could bypass it to send location- less request directly to the backend job, we
-         * would need CPE (go/cloud-cpe). Having the location might also be useful depending on the query.
+         * Returns various configuration parameters.
          *
          * Create a request for the method "instances.getConfig".
          *
@@ -1316,10 +1314,7 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Gets general backend configurations that might also affect the frontend. Location is required
-           * by CCFE. Although we could bypass it to send location- less request directly to the backend
-           * job, we would need CPE (go/cloud-cpe). Having the location might also be useful depending on
-           * the query.
+           * Returns various configuration parameters.
            *
            * Create a request for the method "instances.getConfig".
            *

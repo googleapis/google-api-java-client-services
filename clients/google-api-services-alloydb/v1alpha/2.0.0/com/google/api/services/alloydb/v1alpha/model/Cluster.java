@@ -256,9 +256,9 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private SecondaryConfig secondaryConfig;
 
   /**
-   * Output only. AlloyDB per-cluster service agent email. This service account is created per-
-   * cluster per-project, and is different from that of the primary service agent which is created
-   * per-project. The service account naming format is subject to change.
+   * Output only. AlloyDB per-cluster service account. This service account is created per-cluster
+   * per-project, and is different from the per-project service account. The per-cluster service
+   * account naming format is subject to change.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -851,9 +851,9 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. AlloyDB per-cluster service agent email. This service account is created per-
-   * cluster per-project, and is different from that of the primary service agent which is created
-   * per-project. The service account naming format is subject to change.
+   * Output only. AlloyDB per-cluster service account. This service account is created per-cluster
+   * per-project, and is different from the per-project service account. The per-cluster service
+   * account naming format is subject to change.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccountEmail() {
@@ -861,9 +861,9 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. AlloyDB per-cluster service agent email. This service account is created per-
-   * cluster per-project, and is different from that of the primary service agent which is created
-   * per-project. The service account naming format is subject to change.
+   * Output only. AlloyDB per-cluster service account. This service account is created per-cluster
+   * per-project, and is different from the per-project service account. The per-cluster service
+   * account naming format is subject to change.
    * @param serviceAccountEmail serviceAccountEmail or {@code null} for none
    */
   public Cluster setServiceAccountEmail(java.lang.String serviceAccountEmail) {

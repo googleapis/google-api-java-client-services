@@ -53,7 +53,7 @@ public final class GoogleCloudIntegrationsV1alphaAuthConfig extends com.google.a
   private java.lang.String creatorEmail;
 
   /**
-   * Credential type of the encrypted credential.
+   * Required. Credential type of the encrypted credential.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +67,7 @@ public final class GoogleCloudIntegrationsV1alphaAuthConfig extends com.google.a
   private GoogleCloudIntegrationsV1alphaCredential decryptedCredential;
 
   /**
-   * A description of the auth config.
+   * Optional. A description of the auth config.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,8 +88,8 @@ public final class GoogleCloudIntegrationsV1alphaAuthConfig extends com.google.a
   private java.lang.String encryptedCredential;
 
   /**
-   * User can define the time to receive notification after which the auth config becomes invalid.
-   * Support up to 30 days. Support granularity in hours.
+   * Optional. User can define the time to receive notification after which the auth config becomes
+   * invalid. Support up to 30 days. Support granularity in hours.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -112,22 +112,22 @@ public final class GoogleCloudIntegrationsV1alphaAuthConfig extends com.google.a
   private java.lang.String name;
 
   /**
-   * User provided expiry time to override. For the example of Salesforce, username/password
-   * credentials can be valid for 6 months depending on the instance settings.
+   * Optional. User provided expiry time to override. For the example of Salesforce,
+   * username/password credentials can be valid for 6 months depending on the instance settings.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String overrideValidTime;
 
   /**
-   * The reason / details of the current status.
+   * Output only. The reason / details of the current status.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String reason;
 
   /**
-   * The status of the auth config.
+   * Output only. The status of the auth config.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -141,15 +141,15 @@ public final class GoogleCloudIntegrationsV1alphaAuthConfig extends com.google.a
   private String updateTime;
 
   /**
-   * The time until the auth config is valid. Empty or max value is considered the auth config won't
-   * expire.
+   * Optional. The time until the auth config is valid. Empty or max value is considered the auth
+   * config won't expire.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String validTime;
 
   /**
-   * The visibility of the auth config.
+   * Optional. The visibility of the auth config.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -209,7 +209,7 @@ public final class GoogleCloudIntegrationsV1alphaAuthConfig extends com.google.a
   }
 
   /**
-   * Credential type of the encrypted credential.
+   * Required. Credential type of the encrypted credential.
    * @return value or {@code null} for none
    */
   public java.lang.String getCredentialType() {
@@ -217,7 +217,7 @@ public final class GoogleCloudIntegrationsV1alphaAuthConfig extends com.google.a
   }
 
   /**
-   * Credential type of the encrypted credential.
+   * Required. Credential type of the encrypted credential.
    * @param credentialType credentialType or {@code null} for none
    */
   public GoogleCloudIntegrationsV1alphaAuthConfig setCredentialType(java.lang.String credentialType) {
@@ -243,7 +243,7 @@ public final class GoogleCloudIntegrationsV1alphaAuthConfig extends com.google.a
   }
 
   /**
-   * A description of the auth config.
+   * Optional. A description of the auth config.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -251,7 +251,7 @@ public final class GoogleCloudIntegrationsV1alphaAuthConfig extends com.google.a
   }
 
   /**
-   * A description of the auth config.
+   * Optional. A description of the auth config.
    * @param description description or {@code null} for none
    */
   public GoogleCloudIntegrationsV1alphaAuthConfig setDescription(java.lang.String description) {
@@ -322,8 +322,8 @@ public final class GoogleCloudIntegrationsV1alphaAuthConfig extends com.google.a
   }
 
   /**
-   * User can define the time to receive notification after which the auth config becomes invalid.
-   * Support up to 30 days. Support granularity in hours.
+   * Optional. User can define the time to receive notification after which the auth config becomes
+   * invalid. Support up to 30 days. Support granularity in hours.
    * @return value or {@code null} for none
    */
   public java.util.List<String> getExpiryNotificationDuration() {
@@ -331,8 +331,8 @@ public final class GoogleCloudIntegrationsV1alphaAuthConfig extends com.google.a
   }
 
   /**
-   * User can define the time to receive notification after which the auth config becomes invalid.
-   * Support up to 30 days. Support granularity in hours.
+   * Optional. User can define the time to receive notification after which the auth config becomes
+   * invalid. Support up to 30 days. Support granularity in hours.
    * @param expiryNotificationDuration expiryNotificationDuration or {@code null} for none
    */
   public GoogleCloudIntegrationsV1alphaAuthConfig setExpiryNotificationDuration(java.util.List<String> expiryNotificationDuration) {
@@ -379,8 +379,8 @@ public final class GoogleCloudIntegrationsV1alphaAuthConfig extends com.google.a
   }
 
   /**
-   * User provided expiry time to override. For the example of Salesforce, username/password
-   * credentials can be valid for 6 months depending on the instance settings.
+   * Optional. User provided expiry time to override. For the example of Salesforce,
+   * username/password credentials can be valid for 6 months depending on the instance settings.
    * @return value or {@code null} for none
    */
   public String getOverrideValidTime() {
@@ -388,8 +388,8 @@ public final class GoogleCloudIntegrationsV1alphaAuthConfig extends com.google.a
   }
 
   /**
-   * User provided expiry time to override. For the example of Salesforce, username/password
-   * credentials can be valid for 6 months depending on the instance settings.
+   * Optional. User provided expiry time to override. For the example of Salesforce,
+   * username/password credentials can be valid for 6 months depending on the instance settings.
    * @param overrideValidTime overrideValidTime or {@code null} for none
    */
   public GoogleCloudIntegrationsV1alphaAuthConfig setOverrideValidTime(String overrideValidTime) {
@@ -398,7 +398,7 @@ public final class GoogleCloudIntegrationsV1alphaAuthConfig extends com.google.a
   }
 
   /**
-   * The reason / details of the current status.
+   * Output only. The reason / details of the current status.
    * @return value or {@code null} for none
    */
   public java.lang.String getReason() {
@@ -406,7 +406,7 @@ public final class GoogleCloudIntegrationsV1alphaAuthConfig extends com.google.a
   }
 
   /**
-   * The reason / details of the current status.
+   * Output only. The reason / details of the current status.
    * @param reason reason or {@code null} for none
    */
   public GoogleCloudIntegrationsV1alphaAuthConfig setReason(java.lang.String reason) {
@@ -415,7 +415,7 @@ public final class GoogleCloudIntegrationsV1alphaAuthConfig extends com.google.a
   }
 
   /**
-   * The status of the auth config.
+   * Output only. The status of the auth config.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -423,7 +423,7 @@ public final class GoogleCloudIntegrationsV1alphaAuthConfig extends com.google.a
   }
 
   /**
-   * The status of the auth config.
+   * Output only. The status of the auth config.
    * @param state state or {@code null} for none
    */
   public GoogleCloudIntegrationsV1alphaAuthConfig setState(java.lang.String state) {
@@ -449,8 +449,8 @@ public final class GoogleCloudIntegrationsV1alphaAuthConfig extends com.google.a
   }
 
   /**
-   * The time until the auth config is valid. Empty or max value is considered the auth config won't
-   * expire.
+   * Optional. The time until the auth config is valid. Empty or max value is considered the auth
+   * config won't expire.
    * @return value or {@code null} for none
    */
   public String getValidTime() {
@@ -458,8 +458,8 @@ public final class GoogleCloudIntegrationsV1alphaAuthConfig extends com.google.a
   }
 
   /**
-   * The time until the auth config is valid. Empty or max value is considered the auth config won't
-   * expire.
+   * Optional. The time until the auth config is valid. Empty or max value is considered the auth
+   * config won't expire.
    * @param validTime validTime or {@code null} for none
    */
   public GoogleCloudIntegrationsV1alphaAuthConfig setValidTime(String validTime) {
@@ -468,7 +468,7 @@ public final class GoogleCloudIntegrationsV1alphaAuthConfig extends com.google.a
   }
 
   /**
-   * The visibility of the auth config.
+   * Optional. The visibility of the auth config.
    * @return value or {@code null} for none
    */
   public java.lang.String getVisibility() {
@@ -476,7 +476,7 @@ public final class GoogleCloudIntegrationsV1alphaAuthConfig extends com.google.a
   }
 
   /**
-   * The visibility of the auth config.
+   * Optional. The visibility of the auth config.
    * @param visibility visibility or {@code null} for none
    */
   public GoogleCloudIntegrationsV1alphaAuthConfig setVisibility(java.lang.String visibility) {

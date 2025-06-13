@@ -52,7 +52,7 @@ public final class GoogleCloudConnectorsV1ConfigVariable extends com.google.api.
   private java.lang.Long intValue;
 
   /**
-   * Key of the config variable.
+   * Optional. Key of the config variable.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -124,7 +124,7 @@ public final class GoogleCloudConnectorsV1ConfigVariable extends com.google.api.
   }
 
   /**
-   * Key of the config variable.
+   * Optional. Key of the config variable.
    * @return value or {@code null} for none
    */
   public java.lang.String getKey() {
@@ -132,7 +132,7 @@ public final class GoogleCloudConnectorsV1ConfigVariable extends com.google.api.
   }
 
   /**
-   * Key of the config variable.
+   * Optional. Key of the config variable.
    * @param key key or {@code null} for none
    */
   public GoogleCloudConnectorsV1ConfigVariable setKey(java.lang.String key) {

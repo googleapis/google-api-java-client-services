@@ -45,6 +45,22 @@ public final class GoogleCloudIntegrationsV1alphaProvisionClientRequest extends 
   private java.lang.Boolean createSampleWorkflows;
 
   /**
+   * Optional. Indicates if the client should be allowed to make HTTP calls.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableHttpCall;
+
+  /**
+   * Optional. Indicates if the client should be allowed to use managed AI features, i.e. using
+   * Cloud Companion APIs of the tenant project. This will allow the customers to use features like
+   * Troubleshooting, OpenAPI spec enrichment, etc. for free.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableManagedAiFeatures;
+
+  /**
    * Optional. Deprecated. Indicates provision with GMEK or CMEK. This field is deprecated and the
    * provision would always be GMEK if cloud_kms_config is not present in the request.
    * The value may be {@code null}.
@@ -98,6 +114,44 @@ public final class GoogleCloudIntegrationsV1alphaProvisionClientRequest extends 
    */
   public GoogleCloudIntegrationsV1alphaProvisionClientRequest setCreateSampleWorkflows(java.lang.Boolean createSampleWorkflows) {
     this.createSampleWorkflows = createSampleWorkflows;
+    return this;
+  }
+
+  /**
+   * Optional. Indicates if the client should be allowed to make HTTP calls.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableHttpCall() {
+    return enableHttpCall;
+  }
+
+  /**
+   * Optional. Indicates if the client should be allowed to make HTTP calls.
+   * @param enableHttpCall enableHttpCall or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaProvisionClientRequest setEnableHttpCall(java.lang.Boolean enableHttpCall) {
+    this.enableHttpCall = enableHttpCall;
+    return this;
+  }
+
+  /**
+   * Optional. Indicates if the client should be allowed to use managed AI features, i.e. using
+   * Cloud Companion APIs of the tenant project. This will allow the customers to use features like
+   * Troubleshooting, OpenAPI spec enrichment, etc. for free.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableManagedAiFeatures() {
+    return enableManagedAiFeatures;
+  }
+
+  /**
+   * Optional. Indicates if the client should be allowed to use managed AI features, i.e. using
+   * Cloud Companion APIs of the tenant project. This will allow the customers to use features like
+   * Troubleshooting, OpenAPI spec enrichment, etc. for free.
+   * @param enableManagedAiFeatures enableManagedAiFeatures or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaProvisionClientRequest setEnableManagedAiFeatures(java.lang.Boolean enableManagedAiFeatures) {
+    this.enableManagedAiFeatures = enableManagedAiFeatures;
     return this;
   }
 

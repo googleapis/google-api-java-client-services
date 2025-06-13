@@ -31,35 +31,35 @@ package com.google.api.services.integrations.v1.model;
 public final class GoogleCloudConnectorsV1AuthConfigSshPublicKey extends com.google.api.client.json.GenericJson {
 
   /**
-   * Format of SSH Client cert.
+   * Optional. Format of SSH Client cert.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String certType;
 
   /**
-   * SSH Client Cert. It should contain both public and private key.
+   * Optional. SSH Client Cert. It should contain both public and private key.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudConnectorsV1Secret sshClientCert;
 
   /**
-   * Password (passphrase) for ssh client certificate if it has one.
+   * Optional. Password (passphrase) for ssh client certificate if it has one.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudConnectorsV1Secret sshClientCertPass;
 
   /**
-   * The user account used to authenticate.
+   * Optional. The user account used to authenticate.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String username;
 
   /**
-   * Format of SSH Client cert.
+   * Optional. Format of SSH Client cert.
    * @return value or {@code null} for none
    */
   public java.lang.String getCertType() {
@@ -67,7 +67,7 @@ public final class GoogleCloudConnectorsV1AuthConfigSshPublicKey extends com.goo
   }
 
   /**
-   * Format of SSH Client cert.
+   * Optional. Format of SSH Client cert.
    * @param certType certType or {@code null} for none
    */
   public GoogleCloudConnectorsV1AuthConfigSshPublicKey setCertType(java.lang.String certType) {
@@ -76,7 +76,7 @@ public final class GoogleCloudConnectorsV1AuthConfigSshPublicKey extends com.goo
   }
 
   /**
-   * SSH Client Cert. It should contain both public and private key.
+   * Optional. SSH Client Cert. It should contain both public and private key.
    * @return value or {@code null} for none
    */
   public GoogleCloudConnectorsV1Secret getSshClientCert() {
@@ -84,7 +84,7 @@ public final class GoogleCloudConnectorsV1AuthConfigSshPublicKey extends com.goo
   }
 
   /**
-   * SSH Client Cert. It should contain both public and private key.
+   * Optional. SSH Client Cert. It should contain both public and private key.
    * @param sshClientCert sshClientCert or {@code null} for none
    */
   public GoogleCloudConnectorsV1AuthConfigSshPublicKey setSshClientCert(GoogleCloudConnectorsV1Secret sshClientCert) {
@@ -93,7 +93,7 @@ public final class GoogleCloudConnectorsV1AuthConfigSshPublicKey extends com.goo
   }
 
   /**
-   * Password (passphrase) for ssh client certificate if it has one.
+   * Optional. Password (passphrase) for ssh client certificate if it has one.
    * @return value or {@code null} for none
    */
   public GoogleCloudConnectorsV1Secret getSshClientCertPass() {
@@ -101,7 +101,7 @@ public final class GoogleCloudConnectorsV1AuthConfigSshPublicKey extends com.goo
   }
 
   /**
-   * Password (passphrase) for ssh client certificate if it has one.
+   * Optional. Password (passphrase) for ssh client certificate if it has one.
    * @param sshClientCertPass sshClientCertPass or {@code null} for none
    */
   public GoogleCloudConnectorsV1AuthConfigSshPublicKey setSshClientCertPass(GoogleCloudConnectorsV1Secret sshClientCertPass) {
@@ -110,7 +110,7 @@ public final class GoogleCloudConnectorsV1AuthConfigSshPublicKey extends com.goo
   }
 
   /**
-   * The user account used to authenticate.
+   * Optional. The user account used to authenticate.
    * @return value or {@code null} for none
    */
   public java.lang.String getUsername() {
@@ -118,7 +118,7 @@ public final class GoogleCloudConnectorsV1AuthConfigSshPublicKey extends com.goo
   }
 
   /**
-   * The user account used to authenticate.
+   * Optional. The user account used to authenticate.
    * @param username username or {@code null} for none
    */
   public GoogleCloudConnectorsV1AuthConfigSshPublicKey setUsername(java.lang.String username) {

@@ -31,21 +31,21 @@ package com.google.api.services.integrations.v1.model;
 public final class GoogleCloudConnectorsV1NodeConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Maximum number of nodes in the runtime nodes.
+   * Optional. Maximum number of nodes in the runtime nodes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer maxNodeCount;
 
   /**
-   * Minimum number of nodes in the runtime nodes.
+   * Optional. Minimum number of nodes in the runtime nodes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer minNodeCount;
 
   /**
-   * Maximum number of nodes in the runtime nodes.
+   * Optional. Maximum number of nodes in the runtime nodes.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaxNodeCount() {
@@ -53,7 +53,7 @@ public final class GoogleCloudConnectorsV1NodeConfig extends com.google.api.clie
   }
 
   /**
-   * Maximum number of nodes in the runtime nodes.
+   * Optional. Maximum number of nodes in the runtime nodes.
    * @param maxNodeCount maxNodeCount or {@code null} for none
    */
   public GoogleCloudConnectorsV1NodeConfig setMaxNodeCount(java.lang.Integer maxNodeCount) {
@@ -62,7 +62,7 @@ public final class GoogleCloudConnectorsV1NodeConfig extends com.google.api.clie
   }
 
   /**
-   * Minimum number of nodes in the runtime nodes.
+   * Optional. Minimum number of nodes in the runtime nodes.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMinNodeCount() {
@@ -70,7 +70,7 @@ public final class GoogleCloudConnectorsV1NodeConfig extends com.google.api.clie
   }
 
   /**
-   * Minimum number of nodes in the runtime nodes.
+   * Optional. Minimum number of nodes in the runtime nodes.
    * @param minNodeCount minNodeCount or {@code null} for none
    */
   public GoogleCloudConnectorsV1NodeConfig setMinNodeCount(java.lang.Integer minNodeCount) {

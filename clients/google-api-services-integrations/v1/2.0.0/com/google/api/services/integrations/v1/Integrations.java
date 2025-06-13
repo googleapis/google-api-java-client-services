@@ -658,6 +658,146 @@ public class Integrations extends com.google.api.client.googleapis.services.json
     public class Locations {
 
       /**
+       * Generate OpenAPI spec for the requested integrations and api triggers
+       *
+       * Create a request for the method "locations.generateOpenApiSpec".
+       *
+       * This request holds the parameters needed by the integrations server.  After setting any optional
+       * parameters, call the {@link GenerateOpenApiSpec#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Project and location from which the integrations should be fetched. Format:
+       *        projects/{project}/location/{location}
+       * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaGenerateOpenApiSpecRequest}
+       * @return the request
+       */
+      public GenerateOpenApiSpec generateOpenApiSpec(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaGenerateOpenApiSpecRequest content) throws java.io.IOException {
+        GenerateOpenApiSpec result = new GenerateOpenApiSpec(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class GenerateOpenApiSpec extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaGenerateOpenApiSpecResponse> {
+
+        private static final String REST_PATH = "v1/{+name}:generateOpenApiSpec";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+        /**
+         * Generate OpenAPI spec for the requested integrations and api triggers
+         *
+         * Create a request for the method "locations.generateOpenApiSpec".
+         *
+         * This request holds the parameters needed by the the integrations server.  After setting any
+         * optional parameters, call the {@link GenerateOpenApiSpec#execute()} method to invoke the remote
+         * operation. <p> {@link GenerateOpenApiSpec#initialize(com.google.api.client.googleapis.services.
+         * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param name Required. Project and location from which the integrations should be fetched. Format:
+       *        projects/{project}/location/{location}
+         * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaGenerateOpenApiSpecRequest}
+         * @since 1.13
+         */
+        protected GenerateOpenApiSpec(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaGenerateOpenApiSpecRequest content) {
+          super(Integrations.this, "POST", REST_PATH, content, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaGenerateOpenApiSpecResponse.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+        }
+
+        @Override
+        public GenerateOpenApiSpec set$Xgafv(java.lang.String $Xgafv) {
+          return (GenerateOpenApiSpec) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GenerateOpenApiSpec setAccessToken(java.lang.String accessToken) {
+          return (GenerateOpenApiSpec) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GenerateOpenApiSpec setAlt(java.lang.String alt) {
+          return (GenerateOpenApiSpec) super.setAlt(alt);
+        }
+
+        @Override
+        public GenerateOpenApiSpec setCallback(java.lang.String callback) {
+          return (GenerateOpenApiSpec) super.setCallback(callback);
+        }
+
+        @Override
+        public GenerateOpenApiSpec setFields(java.lang.String fields) {
+          return (GenerateOpenApiSpec) super.setFields(fields);
+        }
+
+        @Override
+        public GenerateOpenApiSpec setKey(java.lang.String key) {
+          return (GenerateOpenApiSpec) super.setKey(key);
+        }
+
+        @Override
+        public GenerateOpenApiSpec setOauthToken(java.lang.String oauthToken) {
+          return (GenerateOpenApiSpec) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GenerateOpenApiSpec setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GenerateOpenApiSpec) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GenerateOpenApiSpec setQuotaUser(java.lang.String quotaUser) {
+          return (GenerateOpenApiSpec) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GenerateOpenApiSpec setUploadType(java.lang.String uploadType) {
+          return (GenerateOpenApiSpec) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GenerateOpenApiSpec setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GenerateOpenApiSpec) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Project and location from which the integrations should be fetched. Format:
+         * projects/{project}/location/{location}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Project and location from which the integrations should be fetched. Format:
+       projects/{project}/location/{location}
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. Project and location from which the integrations should be fetched. Format:
+         * projects/{project}/location/{location}
+         */
+        public GenerateOpenApiSpec setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public GenerateOpenApiSpec set(String parameterName, Object value) {
+          return (GenerateOpenApiSpec) super.set(parameterName, value);
+        }
+      }
+      /**
        * Gets the client configuration for the given project and location resource name
        *
        * Create a request for the method "locations.getClients".
@@ -1791,8 +1931,8 @@ public class Integrations extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides
-           * /list-filters.
+           * Filtering as supported in https://developers.google.com/authorized-
+           * buyers/apis/guides/list-filters.
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
@@ -1804,8 +1944,8 @@ public class Integrations extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides
-           * /list-filters.
+           * Filtering as supported in https://developers.google.com/authorized-
+           * buyers/apis/guides/list-filters.
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -2755,8 +2895,8 @@ public class Integrations extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides
-           * /list-filters.
+           * Filtering as supported in https://developers.google.com/authorized-
+           * buyers/apis/guides/list-filters.
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
@@ -2768,8 +2908,8 @@ public class Integrations extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides
-           * /list-filters.
+           * Filtering as supported in https://developers.google.com/authorized-
+           * buyers/apis/guides/list-filters.
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -3280,6 +3420,138 @@ public class Integrations extends com.google.api.client.googleapis.services.json
           }
         }
         /**
+         * Perform post provisioning steps after client is provisioned.
+         *
+         * Create a request for the method "clients.provisionClientPostProcessor".
+         *
+         * This request holds the parameters needed by the integrations server.  After setting any optional
+         * parameters, call the {@link ProvisionClientPostProcessor#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param parent Required. Required: The ID of the GCP Project to be provisioned.
+         * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaProvisionClientPostProcessorRequest}
+         * @return the request
+         */
+        public ProvisionClientPostProcessor provisionClientPostProcessor(java.lang.String parent, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaProvisionClientPostProcessorRequest content) throws java.io.IOException {
+          ProvisionClientPostProcessor result = new ProvisionClientPostProcessor(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class ProvisionClientPostProcessor extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaProvisionClientPostProcessorResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/clients:provisionClientPostProcessor";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Perform post provisioning steps after client is provisioned.
+           *
+           * Create a request for the method "clients.provisionClientPostProcessor".
+           *
+           * This request holds the parameters needed by the the integrations server.  After setting any
+           * optional parameters, call the {@link ProvisionClientPostProcessor#execute()} method to invoke
+           * the remote operation. <p> {@link ProvisionClientPostProcessor#initialize(com.google.api.client.
+           * googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+           * immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Required: The ID of the GCP Project to be provisioned.
+           * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaProvisionClientPostProcessorRequest}
+           * @since 1.13
+           */
+          protected ProvisionClientPostProcessor(java.lang.String parent, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaProvisionClientPostProcessorRequest content) {
+            super(Integrations.this, "POST", REST_PATH, content, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaProvisionClientPostProcessorResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public ProvisionClientPostProcessor set$Xgafv(java.lang.String $Xgafv) {
+            return (ProvisionClientPostProcessor) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ProvisionClientPostProcessor setAccessToken(java.lang.String accessToken) {
+            return (ProvisionClientPostProcessor) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ProvisionClientPostProcessor setAlt(java.lang.String alt) {
+            return (ProvisionClientPostProcessor) super.setAlt(alt);
+          }
+
+          @Override
+          public ProvisionClientPostProcessor setCallback(java.lang.String callback) {
+            return (ProvisionClientPostProcessor) super.setCallback(callback);
+          }
+
+          @Override
+          public ProvisionClientPostProcessor setFields(java.lang.String fields) {
+            return (ProvisionClientPostProcessor) super.setFields(fields);
+          }
+
+          @Override
+          public ProvisionClientPostProcessor setKey(java.lang.String key) {
+            return (ProvisionClientPostProcessor) super.setKey(key);
+          }
+
+          @Override
+          public ProvisionClientPostProcessor setOauthToken(java.lang.String oauthToken) {
+            return (ProvisionClientPostProcessor) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ProvisionClientPostProcessor setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ProvisionClientPostProcessor) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ProvisionClientPostProcessor setQuotaUser(java.lang.String quotaUser) {
+            return (ProvisionClientPostProcessor) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ProvisionClientPostProcessor setUploadType(java.lang.String uploadType) {
+            return (ProvisionClientPostProcessor) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ProvisionClientPostProcessor setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ProvisionClientPostProcessor) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Required: The ID of the GCP Project to be provisioned. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Required: The ID of the GCP Project to be provisioned.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. Required: The ID of the GCP Project to be provisioned. */
+          public ProvisionClientPostProcessor setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public ProvisionClientPostProcessor set(String parameterName, Object value) {
+            return (ProvisionClientPostProcessor) super.set(parameterName, value);
+          }
+        }
+        /**
          * Update run-as service account for provisioned client
          *
          * Create a request for the method "clients.replace".
@@ -3673,6 +3945,137 @@ public class Integrations extends com.google.api.client.googleapis.services.json
             return (SwitchVariableMasking) super.set(parameterName, value);
           }
         }
+        /**
+         * Enable/Disable http call for provisioned client
+         *
+         * Create a request for the method "clients.toggleHttp".
+         *
+         * This request holds the parameters needed by the integrations server.  After setting any optional
+         * parameters, call the {@link ToggleHttp#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Required: The ID of the GCP Project to be provisioned.
+         * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaToggleHttpRequest}
+         * @return the request
+         */
+        public ToggleHttp toggleHttp(java.lang.String parent, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaToggleHttpRequest content) throws java.io.IOException {
+          ToggleHttp result = new ToggleHttp(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class ToggleHttp extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleProtobufEmpty> {
+
+          private static final String REST_PATH = "v1/{+parent}/clients:toggleHttp";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Enable/Disable http call for provisioned client
+           *
+           * Create a request for the method "clients.toggleHttp".
+           *
+           * This request holds the parameters needed by the the integrations server.  After setting any
+           * optional parameters, call the {@link ToggleHttp#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * ToggleHttp#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Required: The ID of the GCP Project to be provisioned.
+           * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaToggleHttpRequest}
+           * @since 1.13
+           */
+          protected ToggleHttp(java.lang.String parent, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaToggleHttpRequest content) {
+            super(Integrations.this, "POST", REST_PATH, content, com.google.api.services.integrations.v1.model.GoogleProtobufEmpty.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public ToggleHttp set$Xgafv(java.lang.String $Xgafv) {
+            return (ToggleHttp) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ToggleHttp setAccessToken(java.lang.String accessToken) {
+            return (ToggleHttp) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ToggleHttp setAlt(java.lang.String alt) {
+            return (ToggleHttp) super.setAlt(alt);
+          }
+
+          @Override
+          public ToggleHttp setCallback(java.lang.String callback) {
+            return (ToggleHttp) super.setCallback(callback);
+          }
+
+          @Override
+          public ToggleHttp setFields(java.lang.String fields) {
+            return (ToggleHttp) super.setFields(fields);
+          }
+
+          @Override
+          public ToggleHttp setKey(java.lang.String key) {
+            return (ToggleHttp) super.setKey(key);
+          }
+
+          @Override
+          public ToggleHttp setOauthToken(java.lang.String oauthToken) {
+            return (ToggleHttp) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ToggleHttp setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ToggleHttp) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ToggleHttp setQuotaUser(java.lang.String quotaUser) {
+            return (ToggleHttp) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ToggleHttp setUploadType(java.lang.String uploadType) {
+            return (ToggleHttp) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ToggleHttp setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ToggleHttp) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Required: The ID of the GCP Project to be provisioned. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Required: The ID of the GCP Project to be provisioned.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. Required: The ID of the GCP Project to be provisioned. */
+          public ToggleHttp setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public ToggleHttp set(String parameterName, Object value) {
+            return (ToggleHttp) super.set(parameterName, value);
+          }
+        }
 
       }
       /**
@@ -3827,6 +4230,1165 @@ public class Integrations extends com.google.api.client.googleapis.services.json
           }
         }
 
+      }
+      /**
+       * An accessor for creating requests from the Collections collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Integrations integrations = new Integrations(...);}
+       *   {@code Integrations.Collections.List request = integrations.collections().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Collections collections() {
+        return new Collections();
+      }
+
+      /**
+       * The "collections" collection of methods.
+       */
+      public class Collections {
+
+        /**
+         * An accessor for creating requests from the Engines collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code Integrations integrations = new Integrations(...);}
+         *   {@code Integrations.Engines.List request = integrations.engines().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Engines engines() {
+          return new Engines();
+        }
+
+        /**
+         * The "engines" collection of methods.
+         */
+        public class Engines {
+
+          /**
+           * An accessor for creating requests from the Assistants collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code Integrations integrations = new Integrations(...);}
+           *   {@code Integrations.Assistants.List request = integrations.assistants().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public Assistants assistants() {
+            return new Assistants();
+          }
+
+          /**
+           * The "assistants" collection of methods.
+           */
+          public class Assistants {
+
+            /**
+             * An accessor for creating requests from the AgentFlows collection.
+             *
+             * <p>The typical use is:</p>
+             * <pre>
+             *   {@code Integrations integrations = new Integrations(...);}
+             *   {@code Integrations.AgentFlows.List request = integrations.agentFlows().list(parameters ...)}
+             * </pre>
+             *
+             * @return the resource collection
+             */
+            public AgentFlows agentFlows() {
+              return new AgentFlows();
+            }
+
+            /**
+             * The "agentFlows" collection of methods.
+             */
+            public class AgentFlows {
+
+              /**
+               * Request to create a new AgentFlow with user-provided flow configuration.
+               *
+               * Create a request for the method "agentFlows.create".
+               *
+               * This request holds the parameters needed by the integrations server.  After setting any optional
+               * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+               *
+               * @param parent Required. Parent resource name where this AgentFlow will be created.
+               * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaAgentFlow}
+               * @return the request
+               */
+              public Create create(java.lang.String parent, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaAgentFlow content) throws java.io.IOException {
+                Create result = new Create(parent, content);
+                initialize(result);
+                return result;
+              }
+
+              public class Create extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaAgentFlow> {
+
+                private static final String REST_PATH = "v1/{+parent}/agentFlows";
+
+                private final java.util.regex.Pattern PARENT_PATTERN =
+                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+$");
+
+                /**
+                 * Request to create a new AgentFlow with user-provided flow configuration.
+                 *
+                 * Create a request for the method "agentFlows.create".
+                 *
+                 * This request holds the parameters needed by the the integrations server.  After setting any
+                 * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+                 * <p> {@link
+                 * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+                 * be called to initialize this instance immediately after invoking the constructor. </p>
+                 *
+                 * @param parent Required. Parent resource name where this AgentFlow will be created.
+                 * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaAgentFlow}
+                 * @since 1.13
+                 */
+                protected Create(java.lang.String parent, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaAgentFlow content) {
+                  super(Integrations.this, "POST", REST_PATH, content, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaAgentFlow.class);
+                  this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                        "Parameter parent must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+$");
+                  }
+                }
+
+                @Override
+                public Create set$Xgafv(java.lang.String $Xgafv) {
+                  return (Create) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public Create setAccessToken(java.lang.String accessToken) {
+                  return (Create) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public Create setAlt(java.lang.String alt) {
+                  return (Create) super.setAlt(alt);
+                }
+
+                @Override
+                public Create setCallback(java.lang.String callback) {
+                  return (Create) super.setCallback(callback);
+                }
+
+                @Override
+                public Create setFields(java.lang.String fields) {
+                  return (Create) super.setFields(fields);
+                }
+
+                @Override
+                public Create setKey(java.lang.String key) {
+                  return (Create) super.setKey(key);
+                }
+
+                @Override
+                public Create setOauthToken(java.lang.String oauthToken) {
+                  return (Create) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (Create) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public Create setQuotaUser(java.lang.String quotaUser) {
+                  return (Create) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public Create setUploadType(java.lang.String uploadType) {
+                  return (Create) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public Create setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (Create) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /** Required. Parent resource name where this AgentFlow will be created. */
+                @com.google.api.client.util.Key
+                private java.lang.String parent;
+
+                /** Required. Parent resource name where this AgentFlow will be created.
+                 */
+                public java.lang.String getParent() {
+                  return parent;
+                }
+
+                /** Required. Parent resource name where this AgentFlow will be created. */
+                public Create setParent(java.lang.String parent) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                        "Parameter parent must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+$");
+                  }
+                  this.parent = parent;
+                  return this;
+                }
+
+                @Override
+                public Create set(String parameterName, Object value) {
+                  return (Create) super.set(parameterName, value);
+                }
+              }
+              /**
+               * Deletes an existing AgentFlow.
+               *
+               * Create a request for the method "agentFlows.delete".
+               *
+               * This request holds the parameters needed by the integrations server.  After setting any optional
+               * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+               *
+               * @param name Required. The resource name of the AgentFlow to delete.
+               * @return the request
+               */
+              public Delete delete(java.lang.String name) throws java.io.IOException {
+                Delete result = new Delete(name);
+                initialize(result);
+                return result;
+              }
+
+              public class Delete extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleProtobufEmpty> {
+
+                private static final String REST_PATH = "v1/{+name}";
+
+                private final java.util.regex.Pattern NAME_PATTERN =
+                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agentFlows/[^/]+$");
+
+                /**
+                 * Deletes an existing AgentFlow.
+                 *
+                 * Create a request for the method "agentFlows.delete".
+                 *
+                 * This request holds the parameters needed by the the integrations server.  After setting any
+                 * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+                 * <p> {@link
+                 * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+                 * be called to initialize this instance immediately after invoking the constructor. </p>
+                 *
+                 * @param name Required. The resource name of the AgentFlow to delete.
+                 * @since 1.13
+                 */
+                protected Delete(java.lang.String name) {
+                  super(Integrations.this, "DELETE", REST_PATH, null, com.google.api.services.integrations.v1.model.GoogleProtobufEmpty.class);
+                  this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agentFlows/[^/]+$");
+                  }
+                }
+
+                @Override
+                public Delete set$Xgafv(java.lang.String $Xgafv) {
+                  return (Delete) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public Delete setAccessToken(java.lang.String accessToken) {
+                  return (Delete) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public Delete setAlt(java.lang.String alt) {
+                  return (Delete) super.setAlt(alt);
+                }
+
+                @Override
+                public Delete setCallback(java.lang.String callback) {
+                  return (Delete) super.setCallback(callback);
+                }
+
+                @Override
+                public Delete setFields(java.lang.String fields) {
+                  return (Delete) super.setFields(fields);
+                }
+
+                @Override
+                public Delete setKey(java.lang.String key) {
+                  return (Delete) super.setKey(key);
+                }
+
+                @Override
+                public Delete setOauthToken(java.lang.String oauthToken) {
+                  return (Delete) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (Delete) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public Delete setQuotaUser(java.lang.String quotaUser) {
+                  return (Delete) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public Delete setUploadType(java.lang.String uploadType) {
+                  return (Delete) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (Delete) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /** Required. The resource name of the AgentFlow to delete. */
+                @com.google.api.client.util.Key
+                private java.lang.String name;
+
+                /** Required. The resource name of the AgentFlow to delete.
+                 */
+                public java.lang.String getName() {
+                  return name;
+                }
+
+                /** Required. The resource name of the AgentFlow to delete. */
+                public Delete setName(java.lang.String name) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agentFlows/[^/]+$");
+                  }
+                  this.name = name;
+                  return this;
+                }
+
+                @Override
+                public Delete set(String parameterName, Object value) {
+                  return (Delete) super.set(parameterName, value);
+                }
+              }
+              /**
+               * Uses Natural Language (NL) to generate an AgentFlow configuration and create a new AgentFlow.
+               *
+               * Create a request for the method "agentFlows.generate".
+               *
+               * This request holds the parameters needed by the integrations server.  After setting any optional
+               * parameters, call the {@link Generate#execute()} method to invoke the remote operation.
+               *
+               * @param parent Required. Parent resource name where this AgentFlow will be created.
+               * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaGenerateAgentFlowRequest}
+               * @return the request
+               */
+              public Generate generate(java.lang.String parent, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaGenerateAgentFlowRequest content) throws java.io.IOException {
+                Generate result = new Generate(parent, content);
+                initialize(result);
+                return result;
+              }
+
+              public class Generate extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaGenerateAgentFlowResponse> {
+
+                private static final String REST_PATH = "v1/{+parent}/agentFlows:generate";
+
+                private final java.util.regex.Pattern PARENT_PATTERN =
+                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+$");
+
+                /**
+                 * Uses Natural Language (NL) to generate an AgentFlow configuration and create a new AgentFlow.
+                 *
+                 * Create a request for the method "agentFlows.generate".
+                 *
+                 * This request holds the parameters needed by the the integrations server.  After setting any
+                 * optional parameters, call the {@link Generate#execute()} method to invoke the remote operation.
+                 * <p> {@link
+                 * Generate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+                 * must be called to initialize this instance immediately after invoking the constructor. </p>
+                 *
+                 * @param parent Required. Parent resource name where this AgentFlow will be created.
+                 * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaGenerateAgentFlowRequest}
+                 * @since 1.13
+                 */
+                protected Generate(java.lang.String parent, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaGenerateAgentFlowRequest content) {
+                  super(Integrations.this, "POST", REST_PATH, content, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaGenerateAgentFlowResponse.class);
+                  this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                        "Parameter parent must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+$");
+                  }
+                }
+
+                @Override
+                public Generate set$Xgafv(java.lang.String $Xgafv) {
+                  return (Generate) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public Generate setAccessToken(java.lang.String accessToken) {
+                  return (Generate) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public Generate setAlt(java.lang.String alt) {
+                  return (Generate) super.setAlt(alt);
+                }
+
+                @Override
+                public Generate setCallback(java.lang.String callback) {
+                  return (Generate) super.setCallback(callback);
+                }
+
+                @Override
+                public Generate setFields(java.lang.String fields) {
+                  return (Generate) super.setFields(fields);
+                }
+
+                @Override
+                public Generate setKey(java.lang.String key) {
+                  return (Generate) super.setKey(key);
+                }
+
+                @Override
+                public Generate setOauthToken(java.lang.String oauthToken) {
+                  return (Generate) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public Generate setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (Generate) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public Generate setQuotaUser(java.lang.String quotaUser) {
+                  return (Generate) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public Generate setUploadType(java.lang.String uploadType) {
+                  return (Generate) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public Generate setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (Generate) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /** Required. Parent resource name where this AgentFlow will be created. */
+                @com.google.api.client.util.Key
+                private java.lang.String parent;
+
+                /** Required. Parent resource name where this AgentFlow will be created.
+                 */
+                public java.lang.String getParent() {
+                  return parent;
+                }
+
+                /** Required. Parent resource name where this AgentFlow will be created. */
+                public Generate setParent(java.lang.String parent) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                        "Parameter parent must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+$");
+                  }
+                  this.parent = parent;
+                  return this;
+                }
+
+                @Override
+                public Generate set(String parameterName, Object value) {
+                  return (Generate) super.set(parameterName, value);
+                }
+              }
+              /**
+               * Uses Natural Language (NL) to generate an AgentFlow configuration and update an existing
+               * AgentFlow.
+               *
+               * Create a request for the method "agentFlows.generateAndUpdate".
+               *
+               * This request holds the parameters needed by the integrations server.  After setting any optional
+               * parameters, call the {@link GenerateAndUpdate#execute()} method to invoke the remote operation.
+               *
+               * @param name Required. The resource name of the AgentFlow to update.
+               * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaGenerateAndUpdateAgentFlowRequest}
+               * @return the request
+               */
+              public GenerateAndUpdate generateAndUpdate(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaGenerateAndUpdateAgentFlowRequest content) throws java.io.IOException {
+                GenerateAndUpdate result = new GenerateAndUpdate(name, content);
+                initialize(result);
+                return result;
+              }
+
+              public class GenerateAndUpdate extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaGenerateAndUpdateAgentFlowResponse> {
+
+                private static final String REST_PATH = "v1/{+name}:generateAndUpdate";
+
+                private final java.util.regex.Pattern NAME_PATTERN =
+                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agentFlows/[^/]+$");
+
+                /**
+                 * Uses Natural Language (NL) to generate an AgentFlow configuration and update an existing
+                 * AgentFlow.
+                 *
+                 * Create a request for the method "agentFlows.generateAndUpdate".
+                 *
+                 * This request holds the parameters needed by the the integrations server.  After setting any
+                 * optional parameters, call the {@link GenerateAndUpdate#execute()} method to invoke the remote
+                 * operation. <p> {@link GenerateAndUpdate#initialize(com.google.api.client.googleapis.services.Ab
+                 * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+                 * invoking the constructor. </p>
+                 *
+                 * @param name Required. The resource name of the AgentFlow to update.
+                 * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaGenerateAndUpdateAgentFlowRequest}
+                 * @since 1.13
+                 */
+                protected GenerateAndUpdate(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaGenerateAndUpdateAgentFlowRequest content) {
+                  super(Integrations.this, "POST", REST_PATH, content, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaGenerateAndUpdateAgentFlowResponse.class);
+                  this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agentFlows/[^/]+$");
+                  }
+                }
+
+                @Override
+                public GenerateAndUpdate set$Xgafv(java.lang.String $Xgafv) {
+                  return (GenerateAndUpdate) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public GenerateAndUpdate setAccessToken(java.lang.String accessToken) {
+                  return (GenerateAndUpdate) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public GenerateAndUpdate setAlt(java.lang.String alt) {
+                  return (GenerateAndUpdate) super.setAlt(alt);
+                }
+
+                @Override
+                public GenerateAndUpdate setCallback(java.lang.String callback) {
+                  return (GenerateAndUpdate) super.setCallback(callback);
+                }
+
+                @Override
+                public GenerateAndUpdate setFields(java.lang.String fields) {
+                  return (GenerateAndUpdate) super.setFields(fields);
+                }
+
+                @Override
+                public GenerateAndUpdate setKey(java.lang.String key) {
+                  return (GenerateAndUpdate) super.setKey(key);
+                }
+
+                @Override
+                public GenerateAndUpdate setOauthToken(java.lang.String oauthToken) {
+                  return (GenerateAndUpdate) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public GenerateAndUpdate setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (GenerateAndUpdate) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public GenerateAndUpdate setQuotaUser(java.lang.String quotaUser) {
+                  return (GenerateAndUpdate) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public GenerateAndUpdate setUploadType(java.lang.String uploadType) {
+                  return (GenerateAndUpdate) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public GenerateAndUpdate setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (GenerateAndUpdate) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /** Required. The resource name of the AgentFlow to update. */
+                @com.google.api.client.util.Key
+                private java.lang.String name;
+
+                /** Required. The resource name of the AgentFlow to update.
+                 */
+                public java.lang.String getName() {
+                  return name;
+                }
+
+                /** Required. The resource name of the AgentFlow to update. */
+                public GenerateAndUpdate setName(java.lang.String name) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agentFlows/[^/]+$");
+                  }
+                  this.name = name;
+                  return this;
+                }
+
+                @Override
+                public GenerateAndUpdate set(String parameterName, Object value) {
+                  return (GenerateAndUpdate) super.set(parameterName, value);
+                }
+              }
+              /**
+               * Gets an existing AgentFlow.
+               *
+               * Create a request for the method "agentFlows.get".
+               *
+               * This request holds the parameters needed by the integrations server.  After setting any optional
+               * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+               *
+               * @param name Required. The resource name of the AgentFlow to get.
+               * @return the request
+               */
+              public Get get(java.lang.String name) throws java.io.IOException {
+                Get result = new Get(name);
+                initialize(result);
+                return result;
+              }
+
+              public class Get extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaAgentFlow> {
+
+                private static final String REST_PATH = "v1/{+name}";
+
+                private final java.util.regex.Pattern NAME_PATTERN =
+                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agentFlows/[^/]+$");
+
+                /**
+                 * Gets an existing AgentFlow.
+                 *
+                 * Create a request for the method "agentFlows.get".
+                 *
+                 * This request holds the parameters needed by the the integrations server.  After setting any
+                 * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+                 * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+                 * must be called to initialize this instance immediately after invoking the constructor. </p>
+                 *
+                 * @param name Required. The resource name of the AgentFlow to get.
+                 * @since 1.13
+                 */
+                protected Get(java.lang.String name) {
+                  super(Integrations.this, "GET", REST_PATH, null, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaAgentFlow.class);
+                  this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agentFlows/[^/]+$");
+                  }
+                }
+
+                @Override
+                public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                  return super.executeUsingHead();
+                }
+
+                @Override
+                public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                  return super.buildHttpRequestUsingHead();
+                }
+
+                @Override
+                public Get set$Xgafv(java.lang.String $Xgafv) {
+                  return (Get) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public Get setAccessToken(java.lang.String accessToken) {
+                  return (Get) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public Get setAlt(java.lang.String alt) {
+                  return (Get) super.setAlt(alt);
+                }
+
+                @Override
+                public Get setCallback(java.lang.String callback) {
+                  return (Get) super.setCallback(callback);
+                }
+
+                @Override
+                public Get setFields(java.lang.String fields) {
+                  return (Get) super.setFields(fields);
+                }
+
+                @Override
+                public Get setKey(java.lang.String key) {
+                  return (Get) super.setKey(key);
+                }
+
+                @Override
+                public Get setOauthToken(java.lang.String oauthToken) {
+                  return (Get) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (Get) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public Get setQuotaUser(java.lang.String quotaUser) {
+                  return (Get) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public Get setUploadType(java.lang.String uploadType) {
+                  return (Get) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public Get setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (Get) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /** Required. The resource name of the AgentFlow to get. */
+                @com.google.api.client.util.Key
+                private java.lang.String name;
+
+                /** Required. The resource name of the AgentFlow to get.
+                 */
+                public java.lang.String getName() {
+                  return name;
+                }
+
+                /** Required. The resource name of the AgentFlow to get. */
+                public Get setName(java.lang.String name) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agentFlows/[^/]+$");
+                  }
+                  this.name = name;
+                  return this;
+                }
+
+                @Override
+                public Get set(String parameterName, Object value) {
+                  return (Get) super.set(parameterName, value);
+                }
+              }
+              /**
+               * Lists all AgentFlows.
+               *
+               * Create a request for the method "agentFlows.list".
+               *
+               * This request holds the parameters needed by the integrations server.  After setting any optional
+               * parameters, call the {@link List#execute()} method to invoke the remote operation.
+               *
+               * @param parent Required. The parent resource where this AgentFlow was created.
+               * @return the request
+               */
+              public List list(java.lang.String parent) throws java.io.IOException {
+                List result = new List(parent);
+                initialize(result);
+                return result;
+              }
+
+              public class List extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaListAgentFlowsResponse> {
+
+                private static final String REST_PATH = "v1/{+parent}/agentFlows";
+
+                private final java.util.regex.Pattern PARENT_PATTERN =
+                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+$");
+
+                /**
+                 * Lists all AgentFlows.
+                 *
+                 * Create a request for the method "agentFlows.list".
+                 *
+                 * This request holds the parameters needed by the the integrations server.  After setting any
+                 * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+                 * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+                 * must be called to initialize this instance immediately after invoking the constructor. </p>
+                 *
+                 * @param parent Required. The parent resource where this AgentFlow was created.
+                 * @since 1.13
+                 */
+                protected List(java.lang.String parent) {
+                  super(Integrations.this, "GET", REST_PATH, null, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaListAgentFlowsResponse.class);
+                  this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                        "Parameter parent must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+$");
+                  }
+                }
+
+                @Override
+                public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                  return super.executeUsingHead();
+                }
+
+                @Override
+                public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                  return super.buildHttpRequestUsingHead();
+                }
+
+                @Override
+                public List set$Xgafv(java.lang.String $Xgafv) {
+                  return (List) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public List setAccessToken(java.lang.String accessToken) {
+                  return (List) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public List setAlt(java.lang.String alt) {
+                  return (List) super.setAlt(alt);
+                }
+
+                @Override
+                public List setCallback(java.lang.String callback) {
+                  return (List) super.setCallback(callback);
+                }
+
+                @Override
+                public List setFields(java.lang.String fields) {
+                  return (List) super.setFields(fields);
+                }
+
+                @Override
+                public List setKey(java.lang.String key) {
+                  return (List) super.setKey(key);
+                }
+
+                @Override
+                public List setOauthToken(java.lang.String oauthToken) {
+                  return (List) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (List) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public List setQuotaUser(java.lang.String quotaUser) {
+                  return (List) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public List setUploadType(java.lang.String uploadType) {
+                  return (List) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public List setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (List) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /** Required. The parent resource where this AgentFlow was created. */
+                @com.google.api.client.util.Key
+                private java.lang.String parent;
+
+                /** Required. The parent resource where this AgentFlow was created.
+                 */
+                public java.lang.String getParent() {
+                  return parent;
+                }
+
+                /** Required. The parent resource where this AgentFlow was created. */
+                public List setParent(java.lang.String parent) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                        "Parameter parent must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+$");
+                  }
+                  this.parent = parent;
+                  return this;
+                }
+
+                /**
+                 * Optional. Standard filter field. Filtering as supported in
+                 * https://developers.google.com/authorized-buyers/apis/guides/list-filters.
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String filter;
+
+                /** Optional. Standard filter field. Filtering as supported in
+               https://developers.google.com/authorized-buyers/apis/guides/list-filters.
+                 */
+                public java.lang.String getFilter() {
+                  return filter;
+                }
+
+                /**
+                 * Optional. Standard filter field. Filtering as supported in
+                 * https://developers.google.com/authorized-buyers/apis/guides/list-filters.
+                 */
+                public List setFilter(java.lang.String filter) {
+                  this.filter = filter;
+                  return this;
+                }
+
+                /**
+                 * Optional. The results would be returned in order specified here. Currently
+                 * supported sort keys are: Descending sort order for "create_time", "update_time".
+                 * Ascending sort order for "agent_flow_id", "display_name".
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String orderBy;
+
+                /** Optional. The results would be returned in order specified here. Currently supported sort keys are:
+               Descending sort order for "create_time", "update_time". Ascending sort order for "agent_flow_id",
+               "display_name".
+                 */
+                public java.lang.String getOrderBy() {
+                  return orderBy;
+                }
+
+                /**
+                 * Optional. The results would be returned in order specified here. Currently
+                 * supported sort keys are: Descending sort order for "create_time", "update_time".
+                 * Ascending sort order for "agent_flow_id", "display_name".
+                 */
+                public List setOrderBy(java.lang.String orderBy) {
+                  this.orderBy = orderBy;
+                  return this;
+                }
+
+                /**
+                 * Optional. The maximum number of AgentFlows to return. The service may return
+                 * fewer than this value. If unspecified, at most 100 AgentFlows will be returned.
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.Integer pageSize;
+
+                /** Optional. The maximum number of AgentFlows to return. The service may return fewer than this value.
+               If unspecified, at most 100 AgentFlows will be returned.
+                 */
+                public java.lang.Integer getPageSize() {
+                  return pageSize;
+                }
+
+                /**
+                 * Optional. The maximum number of AgentFlows to return. The service may return
+                 * fewer than this value. If unspecified, at most 100 AgentFlows will be returned.
+                 */
+                public List setPageSize(java.lang.Integer pageSize) {
+                  this.pageSize = pageSize;
+                  return this;
+                }
+
+                /**
+                 * Optional. A page token, received from a previous `ListAgentFlows` call. Provide
+                 * this to retrieve the subsequent page. When paginating, all other parameters
+                 * provided to `ListAgentFlows` must match the call that provided the page token.
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String pageToken;
+
+                /** Optional. A page token, received from a previous `ListAgentFlows` call. Provide this to retrieve
+               the subsequent page. When paginating, all other parameters provided to `ListAgentFlows` must match
+               the call that provided the page token.
+                 */
+                public java.lang.String getPageToken() {
+                  return pageToken;
+                }
+
+                /**
+                 * Optional. A page token, received from a previous `ListAgentFlows` call. Provide
+                 * this to retrieve the subsequent page. When paginating, all other parameters
+                 * provided to `ListAgentFlows` must match the call that provided the page token.
+                 */
+                public List setPageToken(java.lang.String pageToken) {
+                  this.pageToken = pageToken;
+                  return this;
+                }
+
+                /**
+                 * Optional. The mask which specifies fields that need to be returned in the
+                 * AgentFlow's response.
+                 */
+                @com.google.api.client.util.Key
+                private String readMask;
+
+                /** Optional. The mask which specifies fields that need to be returned in the AgentFlow's response.
+                 */
+                public String getReadMask() {
+                  return readMask;
+                }
+
+                /**
+                 * Optional. The mask which specifies fields that need to be returned in the
+                 * AgentFlow's response.
+                 */
+                public List setReadMask(String readMask) {
+                  this.readMask = readMask;
+                  return this;
+                }
+
+                @Override
+                public List set(String parameterName, Object value) {
+                  return (List) super.set(parameterName, value);
+                }
+              }
+              /**
+               * Updates an existing AgentFlow.
+               *
+               * Create a request for the method "agentFlows.patch".
+               *
+               * This request holds the parameters needed by the integrations server.  After setting any optional
+               * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+               *
+               * @param name Required. Resource name of the agent flow.
+               * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaAgentFlow}
+               * @return the request
+               */
+              public Patch patch(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaAgentFlow content) throws java.io.IOException {
+                Patch result = new Patch(name, content);
+                initialize(result);
+                return result;
+              }
+
+              public class Patch extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaAgentFlow> {
+
+                private static final String REST_PATH = "v1/{+name}";
+
+                private final java.util.regex.Pattern NAME_PATTERN =
+                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agentFlows/[^/]+$");
+
+                /**
+                 * Updates an existing AgentFlow.
+                 *
+                 * Create a request for the method "agentFlows.patch".
+                 *
+                 * This request holds the parameters needed by the the integrations server.  After setting any
+                 * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+                 * <p> {@link
+                 * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+                 * be called to initialize this instance immediately after invoking the constructor. </p>
+                 *
+                 * @param name Required. Resource name of the agent flow.
+                 * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaAgentFlow}
+                 * @since 1.13
+                 */
+                protected Patch(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaAgentFlow content) {
+                  super(Integrations.this, "PATCH", REST_PATH, content, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaAgentFlow.class);
+                  this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agentFlows/[^/]+$");
+                  }
+                }
+
+                @Override
+                public Patch set$Xgafv(java.lang.String $Xgafv) {
+                  return (Patch) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public Patch setAccessToken(java.lang.String accessToken) {
+                  return (Patch) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public Patch setAlt(java.lang.String alt) {
+                  return (Patch) super.setAlt(alt);
+                }
+
+                @Override
+                public Patch setCallback(java.lang.String callback) {
+                  return (Patch) super.setCallback(callback);
+                }
+
+                @Override
+                public Patch setFields(java.lang.String fields) {
+                  return (Patch) super.setFields(fields);
+                }
+
+                @Override
+                public Patch setKey(java.lang.String key) {
+                  return (Patch) super.setKey(key);
+                }
+
+                @Override
+                public Patch setOauthToken(java.lang.String oauthToken) {
+                  return (Patch) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (Patch) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public Patch setQuotaUser(java.lang.String quotaUser) {
+                  return (Patch) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public Patch setUploadType(java.lang.String uploadType) {
+                  return (Patch) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (Patch) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /** Required. Resource name of the agent flow. */
+                @com.google.api.client.util.Key
+                private java.lang.String name;
+
+                /** Required. Resource name of the agent flow.
+                 */
+                public java.lang.String getName() {
+                  return name;
+                }
+
+                /** Required. Resource name of the agent flow. */
+                public Patch setName(java.lang.String name) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                        "Parameter name must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+/agentFlows/[^/]+$");
+                  }
+                  this.name = name;
+                  return this;
+                }
+
+                /**
+                 * Optional. Field mask specifying the fields in the above AgentFlow that have been
+                 * modified and need to be updated.
+                 */
+                @com.google.api.client.util.Key
+                private String updateMask;
+
+                /** Optional. Field mask specifying the fields in the above AgentFlow that have been modified and need
+               to be updated.
+                 */
+                public String getUpdateMask() {
+                  return updateMask;
+                }
+
+                /**
+                 * Optional. Field mask specifying the fields in the above AgentFlow that have been
+                 * modified and need to be updated.
+                 */
+                public Patch setUpdateMask(String updateMask) {
+                  this.updateMask = updateMask;
+                  return this;
+                }
+
+                @Override
+                public Patch set(String parameterName, Object value) {
+                  return (Patch) super.set(parameterName, value);
+                }
+              }
+
+            }
+          }
+        }
       }
       /**
        * An accessor for creating requests from the Connections collection.
@@ -4934,10 +6496,10 @@ public class Integrations extends com.google.api.client.googleapis.services.json
          *
          * @param name Required. The integration resource name. Format:
          *        projects/{gcp_project_id}/locations/{location}/integrations/{integration_id}
-         * @param content the {@link com.google.api.services.integrations.v1.model.GoogleProtobufStruct}
+         * @param content the {@link com.google.api.services.integrations.v1.model.Integrations.Projects.Locations.IntegrationsOperations.ExecuteEvent.ExecuteEventRequestContent}
          * @return the request
          */
-        public ExecuteEvent executeEvent(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleProtobufStruct content) throws java.io.IOException {
+        public ExecuteEvent executeEvent(java.lang.String name, com.google.api.services.integrations.v1.model.Integrations.Projects.Locations.IntegrationsOperations.ExecuteEvent.ExecuteEventRequestContent content) throws java.io.IOException {
           ExecuteEvent result = new ExecuteEvent(name, content);
           initialize(result);
           return result;
@@ -4964,10 +6526,10 @@ public class Integrations extends com.google.api.client.googleapis.services.json
            *
            * @param name Required. The integration resource name. Format:
          *        projects/{gcp_project_id}/locations/{location}/integrations/{integration_id}
-           * @param content the {@link com.google.api.services.integrations.v1.model.GoogleProtobufStruct}
+           * @param content the {@link com.google.api.services.integrations.v1.model.Integrations.Projects.Locations.IntegrationsOperations.ExecuteEvent.ExecuteEventRequestContent}
            * @since 1.13
            */
-          protected ExecuteEvent(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleProtobufStruct content) {
+          protected ExecuteEvent(java.lang.String name, com.google.api.services.integrations.v1.model.Integrations.Projects.Locations.IntegrationsOperations.ExecuteEvent.ExecuteEventRequestContent content) {
             super(Integrations.this, "POST", REST_PATH, content, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaExecuteEventResponse.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
@@ -5464,6 +7026,266 @@ public class Integrations extends com.google.api.client.googleapis.services.json
           }
         }
         /**
+         * Searches and returns the list of integrations in the specified project.
+         *
+         * Create a request for the method "integrations.search".
+         *
+         * This request holds the parameters needed by the integrations server.  After setting any optional
+         * parameters, call the {@link Search#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Project and location from which the integrations should be listed. Format:
+         *        projects/locations/resources/integrations
+         * @return the request
+         */
+        public Search search(java.lang.String parent) throws java.io.IOException {
+          Search result = new Search(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class Search extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaSearchIntegrationsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/integrations:search";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Searches and returns the list of integrations in the specified project.
+           *
+           * Create a request for the method "integrations.search".
+           *
+           * This request holds the parameters needed by the the integrations server.  After setting any
+           * optional parameters, call the {@link Search#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Search#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Project and location from which the integrations should be listed. Format:
+         *        projects/locations/resources/integrations
+           * @since 1.13
+           */
+          protected Search(java.lang.String parent) {
+            super(Integrations.this, "GET", REST_PATH, null, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaSearchIntegrationsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Search set$Xgafv(java.lang.String $Xgafv) {
+            return (Search) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Search setAccessToken(java.lang.String accessToken) {
+            return (Search) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Search setAlt(java.lang.String alt) {
+            return (Search) super.setAlt(alt);
+          }
+
+          @Override
+          public Search setCallback(java.lang.String callback) {
+            return (Search) super.setCallback(callback);
+          }
+
+          @Override
+          public Search setFields(java.lang.String fields) {
+            return (Search) super.setFields(fields);
+          }
+
+          @Override
+          public Search setKey(java.lang.String key) {
+            return (Search) super.setKey(key);
+          }
+
+          @Override
+          public Search setOauthToken(java.lang.String oauthToken) {
+            return (Search) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Search setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Search) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Search setQuotaUser(java.lang.String quotaUser) {
+            return (Search) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Search setUploadType(java.lang.String uploadType) {
+            return (Search) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Search setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Search) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Project and location from which the integrations should be listed. Format:
+           * projects/locations/resources/integrations
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Project and location from which the integrations should be listed. Format:
+         projects/locations/resources/integrations
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. Project and location from which the integrations should be listed. Format:
+           * projects/locations/resources/integrations
+           */
+          public Search setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Optional. Whether to enable natural language query understanding. */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean enableNaturalLanguageQueryUnderstanding;
+
+          /** Optional. Whether to enable natural language query understanding.
+           */
+          public java.lang.Boolean getEnableNaturalLanguageQueryUnderstanding() {
+            return enableNaturalLanguageQueryUnderstanding;
+          }
+
+          /** Optional. Whether to enable natural language query understanding. */
+          public Search setEnableNaturalLanguageQueryUnderstanding(java.lang.Boolean enableNaturalLanguageQueryUnderstanding) {
+            this.enableNaturalLanguageQueryUnderstanding = enableNaturalLanguageQueryUnderstanding;
+            return this;
+          }
+
+          /**
+           * Optional. The pre-filter to be applied to the search. This should follow the
+           * expressions defined in https://cloud.google.com/generative-ai-app-builder/docs/filter-
+           * search-metadata. For example, "status:ANY("ACTIVE")" will return all the resources
+           * whose status contains the "ACTIVE".
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. The pre-filter to be applied to the search. This should follow the expressions defined in
+         https://cloud.google.com/generative-ai-app-builder/docs/filter-search-metadata. For example,
+         "status:ANY("ACTIVE")" will return all the resources whose status contains the "ACTIVE".
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. The pre-filter to be applied to the search. This should follow the
+           * expressions defined in https://cloud.google.com/generative-ai-app-builder/docs/filter-
+           * search-metadata. For example, "status:ANY("ACTIVE")" will return all the resources
+           * whose status contains the "ACTIVE".
+           */
+          public Search setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of results to return. The service may return fewer than
+           * this value. If unspecified, at most 10 results will be returned. The maximum value is
+           * 100; values above 100 will be coerced to 100.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of results to return. The service may return fewer than this value. If
+         unspecified, at most 10 results will be returned. The maximum value is 100; values above 100 will
+         be coerced to 100.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of results to return. The service may return fewer than
+           * this value. If unspecified, at most 10 results will be returned. The maximum value is
+           * 100; values above 100 will be coerced to 100.
+           */
+          public Search setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `SearchIntegrations` call. Provide
+           * this to retrieve the subsequent page. When paginating, all other parameters provided to
+           * `SearchIntegrations` must match the call that provided the page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A page token, received from a previous `SearchIntegrations` call. Provide this to
+         retrieve the subsequent page. When paginating, all other parameters provided to
+         `SearchIntegrations` must match the call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `SearchIntegrations` call. Provide
+           * this to retrieve the subsequent page. When paginating, all other parameters provided to
+           * `SearchIntegrations` must match the call that provided the page token.
+           */
+          public Search setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          /** Required. The user query */
+          @com.google.api.client.util.Key
+          private java.lang.String query;
+
+          /** Required. The user query
+           */
+          public java.lang.String getQuery() {
+            return query;
+          }
+
+          /** Required. The user query */
+          public Search setQuery(java.lang.String query) {
+            this.query = query;
+            return this;
+          }
+
+          @Override
+          public Search set(String parameterName, Object value) {
+            return (Search) super.set(parameterName, value);
+          }
+        }
+        /**
          * Execute the integration in draft state
          *
          * Create a request for the method "integrations.test".
@@ -5614,6 +7436,148 @@ public class Integrations extends com.google.api.client.googleapis.services.json
          */
         public class Executions {
 
+          /**
+           * Cancellation of an execution and associated sub-executions. This will not cancel an IN_PROCESS or
+           * completed(SUCCESSFUL, FAILED or CANCELLED) executions.
+           *
+           * Create a request for the method "executions.cancel".
+           *
+           * This request holds the parameters needed by the integrations server.  After setting any optional
+           * parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The execution resource name. Format: projects/{gcp_project_id}/locations/{location}/produc
+           *        ts/{product}/integrations/{integration_id}/executions/{execution_id}
+           * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaCancelExecutionRequest}
+           * @return the request
+           */
+          public Cancel cancel(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaCancelExecutionRequest content) throws java.io.IOException {
+            Cancel result = new Cancel(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Cancel extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaCancelExecutionResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:cancel";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/integrations/[^/]+/executions/[^/]+$");
+
+            /**
+             * Cancellation of an execution and associated sub-executions. This will not cancel an IN_PROCESS
+             * or completed(SUCCESSFUL, FAILED or CANCELLED) executions.
+             *
+             * Create a request for the method "executions.cancel".
+             *
+             * This request holds the parameters needed by the the integrations server.  After setting any
+             * optional parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The execution resource name. Format: projects/{gcp_project_id}/locations/{location}/produc
+           *        ts/{product}/integrations/{integration_id}/executions/{execution_id}
+             * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaCancelExecutionRequest}
+             * @since 1.13
+             */
+            protected Cancel(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaCancelExecutionRequest content) {
+              super(Integrations.this, "POST", REST_PATH, content, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaCancelExecutionResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/integrations/[^/]+/executions/[^/]+$");
+              }
+            }
+
+            @Override
+            public Cancel set$Xgafv(java.lang.String $Xgafv) {
+              return (Cancel) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Cancel setAccessToken(java.lang.String accessToken) {
+              return (Cancel) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Cancel setAlt(java.lang.String alt) {
+              return (Cancel) super.setAlt(alt);
+            }
+
+            @Override
+            public Cancel setCallback(java.lang.String callback) {
+              return (Cancel) super.setCallback(callback);
+            }
+
+            @Override
+            public Cancel setFields(java.lang.String fields) {
+              return (Cancel) super.setFields(fields);
+            }
+
+            @Override
+            public Cancel setKey(java.lang.String key) {
+              return (Cancel) super.setKey(key);
+            }
+
+            @Override
+            public Cancel setOauthToken(java.lang.String oauthToken) {
+              return (Cancel) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Cancel setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Cancel) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Cancel setQuotaUser(java.lang.String quotaUser) {
+              return (Cancel) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Cancel setUploadType(java.lang.String uploadType) {
+              return (Cancel) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Cancel setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Cancel) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The execution resource name. Format: projects/{gcp_project_id}/locations/{l
+             * ocation}/products/{product}/integrations/{integration_id}/executions/{execution_id}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The execution resource name. Format: projects/{gcp_project_id}/locations/{location}/produ
+           cts/{product}/integrations/{integration_id}/executions/{execution_id}
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The execution resource name. Format: projects/{gcp_project_id}/locations/{l
+             * ocation}/products/{product}/integrations/{integration_id}/executions/{execution_id}
+             */
+            public Cancel setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/integrations/[^/]+/executions/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Cancel set(String parameterName, Object value) {
+              return (Cancel) super.set(parameterName, value);
+            }
+          }
           /**
            * Download the execution.
            *
@@ -6280,13 +8244,13 @@ public class Integrations extends com.google.api.client.googleapis.services.json
 
             /**
              * Optional. The results would be returned in order you specified here. Currently
-             * supporting "last_modified_time" and "create_time".
+             * supporting "create_time".
              */
             @com.google.api.client.util.Key
             private java.lang.String orderBy;
 
             /** Optional. The results would be returned in order you specified here. Currently supporting
-           "last_modified_time" and "create_time".
+           "create_time".
              */
             public java.lang.String getOrderBy() {
               return orderBy;
@@ -6294,7 +8258,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
 
             /**
              * Optional. The results would be returned in order you specified here. Currently
-             * supporting "last_modified_time" and "create_time".
+             * supporting "create_time".
              */
             public List setOrderBy(java.lang.String orderBy) {
               this.orderBy = orderBy;
@@ -6335,14 +8299,21 @@ public class Integrations extends com.google.api.client.googleapis.services.json
 
             /**
              * Optional. View mask for the response data. If set, only the field specified will be
-             * returned as part of the result. If not set, all fields in event execution info will
-             * be filled and returned.
+             * returned as part of the result. If not set, all fields in Execution will be filled
+             * and returned. Supported fields: trigger_id execution_method create_time update_time
+             * execution_details execution_details.state execution_details.execution_snapshots
+             * execution_details.attempt_stats execution_details.event_execution_snapshots_size
+             * request_parameters cloud_logging_details snapshot_number replay_info
              */
             @com.google.api.client.util.Key
             private String readMask;
 
             /** Optional. View mask for the response data. If set, only the field specified will be returned as
-           part of the result. If not set, all fields in event execution info will be filled and returned.
+           part of the result. If not set, all fields in Execution will be filled and returned. Supported
+           fields: trigger_id execution_method create_time update_time execution_details
+           execution_details.state execution_details.execution_snapshots execution_details.attempt_stats
+           execution_details.event_execution_snapshots_size request_parameters cloud_logging_details
+           snapshot_number replay_info
              */
             public String getReadMask() {
               return readMask;
@@ -6350,8 +8321,11 @@ public class Integrations extends com.google.api.client.googleapis.services.json
 
             /**
              * Optional. View mask for the response data. If set, only the field specified will be
-             * returned as part of the result. If not set, all fields in event execution info will
-             * be filled and returned.
+             * returned as part of the result. If not set, all fields in Execution will be filled
+             * and returned. Supported fields: trigger_id execution_method create_time update_time
+             * execution_details execution_details.state execution_details.execution_snapshots
+             * execution_details.attempt_stats execution_details.event_execution_snapshots_size
+             * request_parameters cloud_logging_details snapshot_number replay_info
              */
             public List setReadMask(String readMask) {
               this.readMask = readMask;
@@ -6436,6 +8410,148 @@ public class Integrations extends com.google.api.client.googleapis.services.json
             @Override
             public List set(String parameterName, Object value) {
               return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Re-execute an existing execution, with same request parameters and execution strategy.
+           *
+           * Create a request for the method "executions.replay".
+           *
+           * This request holds the parameters needed by the integrations server.  After setting any optional
+           * parameters, call the {@link Replay#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. Next ID: 6 The execution resource name. Format:
+           *        projects/{gcp_project_id}/locations/{location}/integrations/{integration}/executions/{exec
+           *        ution_id}
+           * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaReplayExecutionRequest}
+           * @return the request
+           */
+          public Replay replay(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaReplayExecutionRequest content) throws java.io.IOException {
+            Replay result = new Replay(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Replay extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaReplayExecutionResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:replay";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/integrations/[^/]+/executions/[^/]+$");
+
+            /**
+             * Re-execute an existing execution, with same request parameters and execution strategy.
+             *
+             * Create a request for the method "executions.replay".
+             *
+             * This request holds the parameters needed by the the integrations server.  After setting any
+             * optional parameters, call the {@link Replay#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Replay#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. Next ID: 6 The execution resource name. Format:
+           *        projects/{gcp_project_id}/locations/{location}/integrations/{integration}/executions/{exec
+           *        ution_id}
+             * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaReplayExecutionRequest}
+             * @since 1.13
+             */
+            protected Replay(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaReplayExecutionRequest content) {
+              super(Integrations.this, "POST", REST_PATH, content, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaReplayExecutionResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/integrations/[^/]+/executions/[^/]+$");
+              }
+            }
+
+            @Override
+            public Replay set$Xgafv(java.lang.String $Xgafv) {
+              return (Replay) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Replay setAccessToken(java.lang.String accessToken) {
+              return (Replay) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Replay setAlt(java.lang.String alt) {
+              return (Replay) super.setAlt(alt);
+            }
+
+            @Override
+            public Replay setCallback(java.lang.String callback) {
+              return (Replay) super.setCallback(callback);
+            }
+
+            @Override
+            public Replay setFields(java.lang.String fields) {
+              return (Replay) super.setFields(fields);
+            }
+
+            @Override
+            public Replay setKey(java.lang.String key) {
+              return (Replay) super.setKey(key);
+            }
+
+            @Override
+            public Replay setOauthToken(java.lang.String oauthToken) {
+              return (Replay) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Replay setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Replay) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Replay setQuotaUser(java.lang.String quotaUser) {
+              return (Replay) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Replay setUploadType(java.lang.String uploadType) {
+              return (Replay) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Replay setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Replay) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Next ID: 6 The execution resource name. Format: projects/{gcp_project_id}/l
+             * ocations/{location}/integrations/{integration}/executions/{execution_id}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Next ID: 6 The execution resource name. Format:
+           projects/{gcp_project_id}/locations/{location}/integrations/{integration}/executions/{execution_id}
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. Next ID: 6 The execution resource name. Format: projects/{gcp_project_id}/l
+             * ocations/{location}/integrations/{integration}/executions/{execution_id}
+             */
+            public Replay setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/integrations/[^/]+/executions/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Replay set(String parameterName, Object value) {
+              return (Replay) super.set(parameterName, value);
             }
           }
 
@@ -7841,8 +9957,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
            *        projects/{project}/locations/{location}/integrations/{integration} Specifically, when
            *        parent equals: 1. projects//locations//integrations/, Meaning: "List versions (with
            *        filter) for a particular integration". 2. projects//locations//integrations/- Meaning:
-           *        "List versions (with filter) for a client within a particular region". 3.
-           *        projects//locations/-/integrations/- Meaning: "List versions (with filter) for a client".
+           *        "List versions (with filter) for a client within a particular region".
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -7872,8 +9987,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
            *        projects/{project}/locations/{location}/integrations/{integration} Specifically, when
            *        parent equals: 1. projects//locations//integrations/, Meaning: "List versions (with
            *        filter) for a particular integration". 2. projects//locations//integrations/- Meaning:
-           *        "List versions (with filter) for a client within a particular region". 3.
-           *        projects//locations/-/integrations/- Meaning: "List versions (with filter) for a client".
+           *        "List versions (with filter) for a client within a particular region".
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -7956,9 +10070,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
              * projects/{project}/locations/{location}/integrations/{integration} Specifically, when
              * parent equals: 1. projects//locations//integrations/, Meaning: "List versions (with
              * filter) for a particular integration". 2. projects//locations//integrations/-
-             * Meaning: "List versions (with filter) for a client within a particular region". 3.
-             * projects//locations/-/integrations/- Meaning: "List versions (with filter) for a
-             * client".
+             * Meaning: "List versions (with filter) for a client within a particular region".
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
@@ -7967,8 +10079,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
            projects/{project}/locations/{location}/integrations/{integration} Specifically, when parent
            equals: 1. projects//locations//integrations/, Meaning: "List versions (with filter) for a
            particular integration". 2. projects//locations//integrations/- Meaning: "List versions (with
-           filter) for a client within a particular region". 3. projects//locations/-/integrations/- Meaning:
-           "List versions (with filter) for a client".
+           filter) for a client within a particular region".
              */
             public java.lang.String getParent() {
               return parent;
@@ -7979,9 +10090,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
              * projects/{project}/locations/{location}/integrations/{integration} Specifically, when
              * parent equals: 1. projects//locations//integrations/, Meaning: "List versions (with
              * filter) for a particular integration". 2. projects//locations//integrations/-
-             * Meaning: "List versions (with filter) for a client within a particular region". 3.
-             * projects//locations/-/integrations/- Meaning: "List versions (with filter) for a
-             * client".
+             * Meaning: "List versions (with filter) for a client within a particular region".
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -8045,15 +10154,15 @@ public class Integrations extends com.google.api.client.googleapis.services.json
 
             /**
              * The results would be returned in order you specified here. Currently supported sort
-             * keys are: Descending sort order for "last_modified_time", "created_time",
-             * "snapshot_number" Ascending sort order for "name".
+             * keys are: Descending sort order for "last\_modified\_time", "created\_time", and
+             * "snapshot\_number". Ascending sort order for `name`.
              */
             @com.google.api.client.util.Key
             private java.lang.String orderBy;
 
             /** The results would be returned in order you specified here. Currently supported sort keys are:
-           Descending sort order for "last_modified_time", "created_time", "snapshot_number" Ascending sort
-           order for "name".
+           Descending sort order for "last\_modified\_time", "created\_time", and "snapshot\_number".
+           Ascending sort order for `name`.
              */
             public java.lang.String getOrderBy() {
               return orderBy;
@@ -8061,8 +10170,8 @@ public class Integrations extends com.google.api.client.googleapis.services.json
 
             /**
              * The results would be returned in order you specified here. Currently supported sort
-             * keys are: Descending sort order for "last_modified_time", "created_time",
-             * "snapshot_number" Ascending sort order for "name".
+             * keys are: Descending sort order for "last\_modified\_time", "created\_time", and
+             * "snapshot\_number". Ascending sort order for `name`.
              */
             public List setOrderBy(java.lang.String orderBy) {
               this.orderBy = orderBy;
@@ -8719,6 +10828,1595 @@ public class Integrations extends com.google.api.client.googleapis.services.json
             }
           }
 
+          /**
+           * An accessor for creating requests from the TestCases collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code Integrations integrations = new Integrations(...);}
+           *   {@code Integrations.TestCases.List request = integrations.testCases().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public TestCases testCases() {
+            return new TestCases();
+          }
+
+          /**
+           * The "testCases" collection of methods.
+           */
+          public class TestCases {
+
+            /**
+             * Creates a new test case
+             *
+             * Create a request for the method "testCases.create".
+             *
+             * This request holds the parameters needed by the integrations server.  After setting any optional
+             * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. The parent resource where this test case will be created. Format:
+             *        projects/{project}/locations/{location}/integrations/{integration}/versions/{integration_v
+             *        ersion}
+             * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaTestCase}
+             * @return the request
+             */
+            public Create create(java.lang.String parent, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaTestCase content) throws java.io.IOException {
+              Create result = new Create(parent, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Create extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaTestCase> {
+
+              private static final String REST_PATH = "v1/{+parent}/testCases";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/integrations/[^/]+/versions/[^/]+$");
+
+              /**
+               * Creates a new test case
+               *
+               * Create a request for the method "testCases.create".
+               *
+               * This request holds the parameters needed by the the integrations server.  After setting any
+               * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. The parent resource where this test case will be created. Format:
+             *        projects/{project}/locations/{location}/integrations/{integration}/versions/{integration_v
+             *        ersion}
+               * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaTestCase}
+               * @since 1.13
+               */
+              protected Create(java.lang.String parent, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaTestCase content) {
+                super(Integrations.this, "POST", REST_PATH, content, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaTestCase.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/integrations/[^/]+/versions/[^/]+$");
+                }
+              }
+
+              @Override
+              public Create set$Xgafv(java.lang.String $Xgafv) {
+                return (Create) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Create setAccessToken(java.lang.String accessToken) {
+                return (Create) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Create setAlt(java.lang.String alt) {
+                return (Create) super.setAlt(alt);
+              }
+
+              @Override
+              public Create setCallback(java.lang.String callback) {
+                return (Create) super.setCallback(callback);
+              }
+
+              @Override
+              public Create setFields(java.lang.String fields) {
+                return (Create) super.setFields(fields);
+              }
+
+              @Override
+              public Create setKey(java.lang.String key) {
+                return (Create) super.setKey(key);
+              }
+
+              @Override
+              public Create setOauthToken(java.lang.String oauthToken) {
+                return (Create) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Create) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Create setQuotaUser(java.lang.String quotaUser) {
+                return (Create) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Create setUploadType(java.lang.String uploadType) {
+                return (Create) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Create setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Create) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The parent resource where this test case will be created. Format: project
+               * s/{project}/locations/{location}/integrations/{integration}/versions/{integration_v
+               * ersion}
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The parent resource where this test case will be created. Format:
+             projects/{project}/locations/{location}/integrations/{integration}/versions/{integration_version}
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. The parent resource where this test case will be created. Format: project
+               * s/{project}/locations/{location}/integrations/{integration}/versions/{integration_v
+               * ersion}
+               */
+              public Create setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/integrations/[^/]+/versions/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /** Required. Required */
+              @com.google.api.client.util.Key
+              private java.lang.String testCaseId;
+
+              /** Required. Required
+               */
+              public java.lang.String getTestCaseId() {
+                return testCaseId;
+              }
+
+              /** Required. Required */
+              public Create setTestCaseId(java.lang.String testCaseId) {
+                this.testCaseId = testCaseId;
+                return this;
+              }
+
+              @Override
+              public Create set(String parameterName, Object value) {
+                return (Create) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Deletes a test case
+             *
+             * Create a request for the method "testCases.delete".
+             *
+             * This request holds the parameters needed by the integrations server.  After setting any optional
+             * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. ID for the test case to be deleted
+             * @return the request
+             */
+            public Delete delete(java.lang.String name) throws java.io.IOException {
+              Delete result = new Delete(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Delete extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleProtobufEmpty> {
+
+              private static final String REST_PATH = "v1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/integrations/[^/]+/versions/[^/]+/testCases/[^/]+$");
+
+              /**
+               * Deletes a test case
+               *
+               * Create a request for the method "testCases.delete".
+               *
+               * This request holds the parameters needed by the the integrations server.  After setting any
+               * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. ID for the test case to be deleted
+               * @since 1.13
+               */
+              protected Delete(java.lang.String name) {
+                super(Integrations.this, "DELETE", REST_PATH, null, com.google.api.services.integrations.v1.model.GoogleProtobufEmpty.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/integrations/[^/]+/versions/[^/]+/testCases/[^/]+$");
+                }
+              }
+
+              @Override
+              public Delete set$Xgafv(java.lang.String $Xgafv) {
+                return (Delete) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Delete setAccessToken(java.lang.String accessToken) {
+                return (Delete) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Delete setAlt(java.lang.String alt) {
+                return (Delete) super.setAlt(alt);
+              }
+
+              @Override
+              public Delete setCallback(java.lang.String callback) {
+                return (Delete) super.setCallback(callback);
+              }
+
+              @Override
+              public Delete setFields(java.lang.String fields) {
+                return (Delete) super.setFields(fields);
+              }
+
+              @Override
+              public Delete setKey(java.lang.String key) {
+                return (Delete) super.setKey(key);
+              }
+
+              @Override
+              public Delete setOauthToken(java.lang.String oauthToken) {
+                return (Delete) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Delete) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Delete setQuotaUser(java.lang.String quotaUser) {
+                return (Delete) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Delete setUploadType(java.lang.String uploadType) {
+                return (Delete) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Delete) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. ID for the test case to be deleted */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. ID for the test case to be deleted
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /** Required. ID for the test case to be deleted */
+              public Delete setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/integrations/[^/]+/versions/[^/]+/testCases/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Delete set(String parameterName, Object value) {
+                return (Delete) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Downloads a test case. Retrieves the `TestCase` for a given `test_case_id` and returns the
+             * response as a string.
+             *
+             * Create a request for the method "testCases.download".
+             *
+             * This request holds the parameters needed by the integrations server.  After setting any optional
+             * parameters, call the {@link Download#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The test case to download. Format: projects/{project}/locations/{location}/integrations/{i
+             *        ntegration}/versions/{integration_version}/testCases/{test_case_id}
+             * @return the request
+             */
+            public Download download(java.lang.String name) throws java.io.IOException {
+              Download result = new Download(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Download extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaDownloadTestCaseResponse> {
+
+              private static final String REST_PATH = "v1/{+name}:download";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/integrations/[^/]+/versions/[^/]+/testCases/[^/]+$");
+
+              /**
+               * Downloads a test case. Retrieves the `TestCase` for a given `test_case_id` and returns the
+               * response as a string.
+               *
+               * Create a request for the method "testCases.download".
+               *
+               * This request holds the parameters needed by the the integrations server.  After setting any
+               * optional parameters, call the {@link Download#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Download#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The test case to download. Format: projects/{project}/locations/{location}/integrations/{i
+             *        ntegration}/versions/{integration_version}/testCases/{test_case_id}
+               * @since 1.13
+               */
+              protected Download(java.lang.String name) {
+                super(Integrations.this, "GET", REST_PATH, null, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaDownloadTestCaseResponse.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/integrations/[^/]+/versions/[^/]+/testCases/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public Download set$Xgafv(java.lang.String $Xgafv) {
+                return (Download) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Download setAccessToken(java.lang.String accessToken) {
+                return (Download) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Download setAlt(java.lang.String alt) {
+                return (Download) super.setAlt(alt);
+              }
+
+              @Override
+              public Download setCallback(java.lang.String callback) {
+                return (Download) super.setCallback(callback);
+              }
+
+              @Override
+              public Download setFields(java.lang.String fields) {
+                return (Download) super.setFields(fields);
+              }
+
+              @Override
+              public Download setKey(java.lang.String key) {
+                return (Download) super.setKey(key);
+              }
+
+              @Override
+              public Download setOauthToken(java.lang.String oauthToken) {
+                return (Download) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Download setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Download) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Download setQuotaUser(java.lang.String quotaUser) {
+                return (Download) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Download setUploadType(java.lang.String uploadType) {
+                return (Download) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Download setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Download) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The test case to download. Format: projects/{project}/locations/{location
+               * }/integrations/{integration}/versions/{integration_version}/testCases/{test_case_id
+               * }
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The test case to download. Format: projects/{project}/locations/{location}/integrations/{
+             integration}/versions/{integration_version}/testCases/{test_case_id}
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The test case to download. Format: projects/{project}/locations/{location
+               * }/integrations/{integration}/versions/{integration_version}/testCases/{test_case_id
+               * }
+               */
+              public Download setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/integrations/[^/]+/versions/[^/]+/testCases/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              /** File format for download request. */
+              @com.google.api.client.util.Key
+              private java.lang.String fileFormat;
+
+              /** File format for download request.
+               */
+              public java.lang.String getFileFormat() {
+                return fileFormat;
+              }
+
+              /** File format for download request. */
+              public Download setFileFormat(java.lang.String fileFormat) {
+                this.fileFormat = fileFormat;
+                return this;
+              }
+
+              @Override
+              public Download set(String parameterName, Object value) {
+                return (Download) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Executes all test cases in an integration version.
+             *
+             * Create a request for the method "testCases.execute".
+             *
+             * This request holds the parameters needed by the integrations server.  After setting any optional
+             * parameters, call the {@link Execute#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. The parent resource whose test cases are executed. Format:
+             *        projects/{project}/locations/{location}/integrations/{integration}/versions/{integration_v
+             *        ersion}
+             * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaExecuteTestCasesRequest}
+             * @return the request
+             */
+            public Execute execute(java.lang.String parent, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaExecuteTestCasesRequest content) throws java.io.IOException {
+              Execute result = new Execute(parent, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Execute extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaExecuteTestCasesResponse> {
+
+              private static final String REST_PATH = "v1/{+parent}/testCases:execute";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/integrations/[^/]+/versions/[^/]+$");
+
+              /**
+               * Executes all test cases in an integration version.
+               *
+               * Create a request for the method "testCases.execute".
+               *
+               * This request holds the parameters needed by the the integrations server.  After setting any
+               * optional parameters, call the {@link Execute#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Execute#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. The parent resource whose test cases are executed. Format:
+             *        projects/{project}/locations/{location}/integrations/{integration}/versions/{integration_v
+             *        ersion}
+               * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaExecuteTestCasesRequest}
+               * @since 1.13
+               */
+              protected Execute(java.lang.String parent, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaExecuteTestCasesRequest content) {
+                super(Integrations.this, "POST", REST_PATH, content, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaExecuteTestCasesResponse.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/integrations/[^/]+/versions/[^/]+$");
+                }
+              }
+
+              @Override
+              public Execute set$Xgafv(java.lang.String $Xgafv) {
+                return (Execute) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Execute setAccessToken(java.lang.String accessToken) {
+                return (Execute) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Execute setAlt(java.lang.String alt) {
+                return (Execute) super.setAlt(alt);
+              }
+
+              @Override
+              public Execute setCallback(java.lang.String callback) {
+                return (Execute) super.setCallback(callback);
+              }
+
+              @Override
+              public Execute setFields(java.lang.String fields) {
+                return (Execute) super.setFields(fields);
+              }
+
+              @Override
+              public Execute setKey(java.lang.String key) {
+                return (Execute) super.setKey(key);
+              }
+
+              @Override
+              public Execute setOauthToken(java.lang.String oauthToken) {
+                return (Execute) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Execute setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Execute) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Execute setQuotaUser(java.lang.String quotaUser) {
+                return (Execute) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Execute setUploadType(java.lang.String uploadType) {
+                return (Execute) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Execute setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Execute) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The parent resource whose test cases are executed. Format: projects/{proj
+               * ect}/locations/{location}/integrations/{integration}/versions/{integration_version}
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The parent resource whose test cases are executed. Format:
+             projects/{project}/locations/{location}/integrations/{integration}/versions/{integration_version}
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. The parent resource whose test cases are executed. Format: projects/{proj
+               * ect}/locations/{location}/integrations/{integration}/versions/{integration_version}
+               */
+              public Execute setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/integrations/[^/]+/versions/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              @Override
+              public Execute set(String parameterName, Object value) {
+                return (Execute) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Executes functional test
+             *
+             * Create a request for the method "testCases.executeTest".
+             *
+             * This request holds the parameters needed by the integrations server.  After setting any optional
+             * parameters, call the {@link ExecuteTest#execute()} method to invoke the remote operation.
+             *
+             * @param testCaseName Required. Test case resource name
+             * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaExecuteTestCaseRequest}
+             * @return the request
+             */
+            public ExecuteTest executeTest(java.lang.String testCaseName, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaExecuteTestCaseRequest content) throws java.io.IOException {
+              ExecuteTest result = new ExecuteTest(testCaseName, content);
+              initialize(result);
+              return result;
+            }
+
+            public class ExecuteTest extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaExecuteTestCaseResponse> {
+
+              private static final String REST_PATH = "v1/{+testCaseName}:executeTest";
+
+              private final java.util.regex.Pattern TEST_CASE_NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/integrations/[^/]+/versions/[^/]+/testCases/[^/]+$");
+
+              /**
+               * Executes functional test
+               *
+               * Create a request for the method "testCases.executeTest".
+               *
+               * This request holds the parameters needed by the the integrations server.  After setting any
+               * optional parameters, call the {@link ExecuteTest#execute()} method to invoke the remote
+               * operation. <p> {@link
+               * ExecuteTest#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param testCaseName Required. Test case resource name
+               * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaExecuteTestCaseRequest}
+               * @since 1.13
+               */
+              protected ExecuteTest(java.lang.String testCaseName, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaExecuteTestCaseRequest content) {
+                super(Integrations.this, "POST", REST_PATH, content, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaExecuteTestCaseResponse.class);
+                this.testCaseName = com.google.api.client.util.Preconditions.checkNotNull(testCaseName, "Required parameter testCaseName must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(TEST_CASE_NAME_PATTERN.matcher(testCaseName).matches(),
+                      "Parameter testCaseName must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/integrations/[^/]+/versions/[^/]+/testCases/[^/]+$");
+                }
+              }
+
+              @Override
+              public ExecuteTest set$Xgafv(java.lang.String $Xgafv) {
+                return (ExecuteTest) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public ExecuteTest setAccessToken(java.lang.String accessToken) {
+                return (ExecuteTest) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public ExecuteTest setAlt(java.lang.String alt) {
+                return (ExecuteTest) super.setAlt(alt);
+              }
+
+              @Override
+              public ExecuteTest setCallback(java.lang.String callback) {
+                return (ExecuteTest) super.setCallback(callback);
+              }
+
+              @Override
+              public ExecuteTest setFields(java.lang.String fields) {
+                return (ExecuteTest) super.setFields(fields);
+              }
+
+              @Override
+              public ExecuteTest setKey(java.lang.String key) {
+                return (ExecuteTest) super.setKey(key);
+              }
+
+              @Override
+              public ExecuteTest setOauthToken(java.lang.String oauthToken) {
+                return (ExecuteTest) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public ExecuteTest setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (ExecuteTest) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public ExecuteTest setQuotaUser(java.lang.String quotaUser) {
+                return (ExecuteTest) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public ExecuteTest setUploadType(java.lang.String uploadType) {
+                return (ExecuteTest) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public ExecuteTest setUploadProtocol(java.lang.String uploadProtocol) {
+                return (ExecuteTest) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. Test case resource name */
+              @com.google.api.client.util.Key
+              private java.lang.String testCaseName;
+
+              /** Required. Test case resource name
+               */
+              public java.lang.String getTestCaseName() {
+                return testCaseName;
+              }
+
+              /** Required. Test case resource name */
+              public ExecuteTest setTestCaseName(java.lang.String testCaseName) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(TEST_CASE_NAME_PATTERN.matcher(testCaseName).matches(),
+                      "Parameter testCaseName must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/integrations/[^/]+/versions/[^/]+/testCases/[^/]+$");
+                }
+                this.testCaseName = testCaseName;
+                return this;
+              }
+
+              @Override
+              public ExecuteTest set(String parameterName, Object value) {
+                return (ExecuteTest) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Get a test case
+             *
+             * Create a request for the method "testCases.get".
+             *
+             * This request holds the parameters needed by the integrations server.  After setting any optional
+             * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The ID of the test case to retrieve
+             * @return the request
+             */
+            public Get get(java.lang.String name) throws java.io.IOException {
+              Get result = new Get(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Get extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaTestCase> {
+
+              private static final String REST_PATH = "v1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/integrations/[^/]+/versions/[^/]+/testCases/[^/]+$");
+
+              /**
+               * Get a test case
+               *
+               * Create a request for the method "testCases.get".
+               *
+               * This request holds the parameters needed by the the integrations server.  After setting any
+               * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+               * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The ID of the test case to retrieve
+               * @since 1.13
+               */
+              protected Get(java.lang.String name) {
+                super(Integrations.this, "GET", REST_PATH, null, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaTestCase.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/integrations/[^/]+/versions/[^/]+/testCases/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public Get set$Xgafv(java.lang.String $Xgafv) {
+                return (Get) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Get setAccessToken(java.lang.String accessToken) {
+                return (Get) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Get setAlt(java.lang.String alt) {
+                return (Get) super.setAlt(alt);
+              }
+
+              @Override
+              public Get setCallback(java.lang.String callback) {
+                return (Get) super.setCallback(callback);
+              }
+
+              @Override
+              public Get setFields(java.lang.String fields) {
+                return (Get) super.setFields(fields);
+              }
+
+              @Override
+              public Get setKey(java.lang.String key) {
+                return (Get) super.setKey(key);
+              }
+
+              @Override
+              public Get setOauthToken(java.lang.String oauthToken) {
+                return (Get) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Get) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Get setQuotaUser(java.lang.String quotaUser) {
+                return (Get) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Get setUploadType(java.lang.String uploadType) {
+                return (Get) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Get setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Get) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. The ID of the test case to retrieve */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The ID of the test case to retrieve
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /** Required. The ID of the test case to retrieve */
+              public Get setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/integrations/[^/]+/versions/[^/]+/testCases/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Get set(String parameterName, Object value) {
+                return (Get) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Lists all the test cases that satisfy the filters.
+             *
+             * Create a request for the method "testCases.list".
+             *
+             * This request holds the parameters needed by the integrations server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. The parent resource where this TestCase was created.
+             * @return the request
+             */
+            public List list(java.lang.String parent) throws java.io.IOException {
+              List result = new List(parent);
+              initialize(result);
+              return result;
+            }
+
+            public class List extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaListTestCasesResponse> {
+
+              private static final String REST_PATH = "v1/{+parent}/testCases";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/integrations/[^/]+/versions/[^/]+$");
+
+              /**
+               * Lists all the test cases that satisfy the filters.
+               *
+               * Create a request for the method "testCases.list".
+               *
+               * This request holds the parameters needed by the the integrations server.  After setting any
+               * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+               * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. The parent resource where this TestCase was created.
+               * @since 1.13
+               */
+              protected List(java.lang.String parent) {
+                super(Integrations.this, "GET", REST_PATH, null, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaListTestCasesResponse.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/integrations/[^/]+/versions/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public List set$Xgafv(java.lang.String $Xgafv) {
+                return (List) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public List setAccessToken(java.lang.String accessToken) {
+                return (List) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public List setAlt(java.lang.String alt) {
+                return (List) super.setAlt(alt);
+              }
+
+              @Override
+              public List setCallback(java.lang.String callback) {
+                return (List) super.setCallback(callback);
+              }
+
+              @Override
+              public List setFields(java.lang.String fields) {
+                return (List) super.setFields(fields);
+              }
+
+              @Override
+              public List setKey(java.lang.String key) {
+                return (List) super.setKey(key);
+              }
+
+              @Override
+              public List setOauthToken(java.lang.String oauthToken) {
+                return (List) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (List) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public List setQuotaUser(java.lang.String quotaUser) {
+                return (List) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public List setUploadType(java.lang.String uploadType) {
+                return (List) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public List setUploadProtocol(java.lang.String uploadProtocol) {
+                return (List) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Required. The parent resource where this TestCase was created. */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The parent resource where this TestCase was created.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /** Required. The parent resource where this TestCase was created. */
+              public List setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/integrations/[^/]+/versions/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /**
+               * Optional. Standard filter field. Filtering as supported in
+               * https://developers.google.com/authorized-buyers/apis/guides/list-filters.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String filter;
+
+              /** Optional. Standard filter field. Filtering as supported in
+             https://developers.google.com/authorized-buyers/apis/guides/list-filters.
+               */
+              public java.lang.String getFilter() {
+                return filter;
+              }
+
+              /**
+               * Optional. Standard filter field. Filtering as supported in
+               * https://developers.google.com/authorized-buyers/apis/guides/list-filters.
+               */
+              public List setFilter(java.lang.String filter) {
+                this.filter = filter;
+                return this;
+              }
+
+              /**
+               * Optional. The results would be returned in order specified here. Currently
+               * supported sort keys are: Descending sort order for "last_modified_time",
+               * "created_time". Ascending sort order for "name".
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String orderBy;
+
+              /** Optional. The results would be returned in order specified here. Currently supported sort keys are:
+             Descending sort order for "last_modified_time", "created_time". Ascending sort order for "name".
+               */
+              public java.lang.String getOrderBy() {
+                return orderBy;
+              }
+
+              /**
+               * Optional. The results would be returned in order specified here. Currently
+               * supported sort keys are: Descending sort order for "last_modified_time",
+               * "created_time". Ascending sort order for "name".
+               */
+              public List setOrderBy(java.lang.String orderBy) {
+                this.orderBy = orderBy;
+                return this;
+              }
+
+              /**
+               * Optional. The maximum number of test cases to return. The service may return fewer
+               * than this value. If unspecified, at most 100 test cases will be returned.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.Integer pageSize;
+
+              /** Optional. The maximum number of test cases to return. The service may return fewer than this value.
+             If unspecified, at most 100 test cases will be returned.
+               */
+              public java.lang.Integer getPageSize() {
+                return pageSize;
+              }
+
+              /**
+               * Optional. The maximum number of test cases to return. The service may return fewer
+               * than this value. If unspecified, at most 100 test cases will be returned.
+               */
+              public List setPageSize(java.lang.Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+              }
+
+              /**
+               * Optional. A page token, received from a previous `ListTestCases` call. Provide this
+               * to retrieve the subsequent page. When paginating, all other parameters provided to
+               * `ListTestCases` must match the call that provided the page token.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String pageToken;
+
+              /** Optional. A page token, received from a previous `ListTestCases` call. Provide this to retrieve the
+             subsequent page. When paginating, all other parameters provided to `ListTestCases` must match the
+             call that provided the page token.
+               */
+              public java.lang.String getPageToken() {
+                return pageToken;
+              }
+
+              /**
+               * Optional. A page token, received from a previous `ListTestCases` call. Provide this
+               * to retrieve the subsequent page. When paginating, all other parameters provided to
+               * `ListTestCases` must match the call that provided the page token.
+               */
+              public List setPageToken(java.lang.String pageToken) {
+                this.pageToken = pageToken;
+                return this;
+              }
+
+              /**
+               * Optional. The mask which specifies fields that need to be returned in the
+               * TestCases's response.
+               */
+              @com.google.api.client.util.Key
+              private String readMask;
+
+              /** Optional. The mask which specifies fields that need to be returned in the TestCases's response.
+               */
+              public String getReadMask() {
+                return readMask;
+              }
+
+              /**
+               * Optional. The mask which specifies fields that need to be returned in the
+               * TestCases's response.
+               */
+              public List setReadMask(String readMask) {
+                this.readMask = readMask;
+                return this;
+              }
+
+              @Override
+              public List set(String parameterName, Object value) {
+                return (List) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Updates a test case
+             *
+             * Create a request for the method "testCases.patch".
+             *
+             * This request holds the parameters needed by the integrations server.  After setting any optional
+             * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+             *
+             * @param name Output only. Auto-generated primary key.
+             * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaTestCase}
+             * @return the request
+             */
+            public Patch patch(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaTestCase content) throws java.io.IOException {
+              Patch result = new Patch(name, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Patch extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaTestCase> {
+
+              private static final String REST_PATH = "v1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/integrations/[^/]+/versions/[^/]+/testCases/[^/]+$");
+
+              /**
+               * Updates a test case
+               *
+               * Create a request for the method "testCases.patch".
+               *
+               * This request holds the parameters needed by the the integrations server.  After setting any
+               * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Output only. Auto-generated primary key.
+               * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaTestCase}
+               * @since 1.13
+               */
+              protected Patch(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaTestCase content) {
+                super(Integrations.this, "PATCH", REST_PATH, content, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaTestCase.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/integrations/[^/]+/versions/[^/]+/testCases/[^/]+$");
+                }
+              }
+
+              @Override
+              public Patch set$Xgafv(java.lang.String $Xgafv) {
+                return (Patch) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Patch setAccessToken(java.lang.String accessToken) {
+                return (Patch) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Patch setAlt(java.lang.String alt) {
+                return (Patch) super.setAlt(alt);
+              }
+
+              @Override
+              public Patch setCallback(java.lang.String callback) {
+                return (Patch) super.setCallback(callback);
+              }
+
+              @Override
+              public Patch setFields(java.lang.String fields) {
+                return (Patch) super.setFields(fields);
+              }
+
+              @Override
+              public Patch setKey(java.lang.String key) {
+                return (Patch) super.setKey(key);
+              }
+
+              @Override
+              public Patch setOauthToken(java.lang.String oauthToken) {
+                return (Patch) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Patch) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Patch setQuotaUser(java.lang.String quotaUser) {
+                return (Patch) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Patch setUploadType(java.lang.String uploadType) {
+                return (Patch) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Patch) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /** Output only. Auto-generated primary key. */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Output only. Auto-generated primary key.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /** Output only. Auto-generated primary key. */
+              public Patch setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/integrations/[^/]+/versions/[^/]+/testCases/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              /**
+               * Optional. Field mask specifying the fields in the above integration that have been
+               * modified and need to be updated.
+               */
+              @com.google.api.client.util.Key
+              private String updateMask;
+
+              /** Optional. Field mask specifying the fields in the above integration that have been modified and
+             need to be updated.
+               */
+              public String getUpdateMask() {
+                return updateMask;
+              }
+
+              /**
+               * Optional. Field mask specifying the fields in the above integration that have been
+               * modified and need to be updated.
+               */
+              public Patch setUpdateMask(String updateMask) {
+                this.updateMask = updateMask;
+                return this;
+              }
+
+              @Override
+              public Patch set(String parameterName, Object value) {
+                return (Patch) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Clear the lock fields and assign them to current user
+             *
+             * Create a request for the method "testCases.takeoverEditLock".
+             *
+             * This request holds the parameters needed by the integrations server.  After setting any optional
+             * parameters, call the {@link TakeoverEditLock#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The ID of test case to takeover edit lock. Format: projects/{project}/locations/{location}
+             *        /integrations/{integration}/versions/{integration_version}/testCases/{test_case_id}
+             * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaTakeoverTestCaseEditLockRequest}
+             * @return the request
+             */
+            public TakeoverEditLock takeoverEditLock(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaTakeoverTestCaseEditLockRequest content) throws java.io.IOException {
+              TakeoverEditLock result = new TakeoverEditLock(name, content);
+              initialize(result);
+              return result;
+            }
+
+            public class TakeoverEditLock extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaTestCase> {
+
+              private static final String REST_PATH = "v1/{+name}:takeoverEditLock";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/integrations/[^/]+/versions/[^/]+/testCases/[^/]+$");
+
+              /**
+               * Clear the lock fields and assign them to current user
+               *
+               * Create a request for the method "testCases.takeoverEditLock".
+               *
+               * This request holds the parameters needed by the the integrations server.  After setting any
+               * optional parameters, call the {@link TakeoverEditLock#execute()} method to invoke the remote
+               * operation. <p> {@link TakeoverEditLock#initialize(com.google.api.client.googleapis.services.Abs
+               * tractGoogleClientRequest)} must be called to initialize this instance immediately after
+               * invoking the constructor. </p>
+               *
+               * @param name Required. The ID of test case to takeover edit lock. Format: projects/{project}/locations/{location}
+             *        /integrations/{integration}/versions/{integration_version}/testCases/{test_case_id}
+               * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaTakeoverTestCaseEditLockRequest}
+               * @since 1.13
+               */
+              protected TakeoverEditLock(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaTakeoverTestCaseEditLockRequest content) {
+                super(Integrations.this, "POST", REST_PATH, content, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaTestCase.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/integrations/[^/]+/versions/[^/]+/testCases/[^/]+$");
+                }
+              }
+
+              @Override
+              public TakeoverEditLock set$Xgafv(java.lang.String $Xgafv) {
+                return (TakeoverEditLock) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public TakeoverEditLock setAccessToken(java.lang.String accessToken) {
+                return (TakeoverEditLock) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public TakeoverEditLock setAlt(java.lang.String alt) {
+                return (TakeoverEditLock) super.setAlt(alt);
+              }
+
+              @Override
+              public TakeoverEditLock setCallback(java.lang.String callback) {
+                return (TakeoverEditLock) super.setCallback(callback);
+              }
+
+              @Override
+              public TakeoverEditLock setFields(java.lang.String fields) {
+                return (TakeoverEditLock) super.setFields(fields);
+              }
+
+              @Override
+              public TakeoverEditLock setKey(java.lang.String key) {
+                return (TakeoverEditLock) super.setKey(key);
+              }
+
+              @Override
+              public TakeoverEditLock setOauthToken(java.lang.String oauthToken) {
+                return (TakeoverEditLock) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public TakeoverEditLock setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (TakeoverEditLock) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public TakeoverEditLock setQuotaUser(java.lang.String quotaUser) {
+                return (TakeoverEditLock) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public TakeoverEditLock setUploadType(java.lang.String uploadType) {
+                return (TakeoverEditLock) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public TakeoverEditLock setUploadProtocol(java.lang.String uploadProtocol) {
+                return (TakeoverEditLock) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The ID of test case to takeover edit lock. Format: projects/{project}/loc
+               * ations/{location}/integrations/{integration}/versions/{integration_version}/testCas
+               * es/{test_case_id}
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The ID of test case to takeover edit lock. Format: projects/{project}/locations/{location
+             }/integrations/{integration}/versions/{integration_version}/testCases/{test_case_id}
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The ID of test case to takeover edit lock. Format: projects/{project}/loc
+               * ations/{location}/integrations/{integration}/versions/{integration_version}/testCas
+               * es/{test_case_id}
+               */
+              public TakeoverEditLock setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/integrations/[^/]+/versions/[^/]+/testCases/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public TakeoverEditLock set(String parameterName, Object value) {
+                return (TakeoverEditLock) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Uploads a test case. The content can be a previously downloaded test case. Performs the same
+             * function as CreateTestCase, but accepts input in a string format, which holds the complete
+             * representation of the TestCase content.
+             *
+             * Create a request for the method "testCases.upload".
+             *
+             * This request holds the parameters needed by the integrations server.  After setting any optional
+             * parameters, call the {@link Upload#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. The test case to upload. Format:
+             *        projects/{project}/locations/{location}/integrations/{integration}/versions/{integration_v
+             *        ersion}
+             * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaUploadTestCaseRequest}
+             * @return the request
+             */
+            public Upload upload(java.lang.String parent, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaUploadTestCaseRequest content) throws java.io.IOException {
+              Upload result = new Upload(parent, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Upload extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaUploadTestCaseResponse> {
+
+              private static final String REST_PATH = "v1/{+parent}/testCases:upload";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/integrations/[^/]+/versions/[^/]+$");
+
+              /**
+               * Uploads a test case. The content can be a previously downloaded test case. Performs the same
+               * function as CreateTestCase, but accepts input in a string format, which holds the complete
+               * representation of the TestCase content.
+               *
+               * Create a request for the method "testCases.upload".
+               *
+               * This request holds the parameters needed by the the integrations server.  After setting any
+               * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Upload#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. The test case to upload. Format:
+             *        projects/{project}/locations/{location}/integrations/{integration}/versions/{integration_v
+             *        ersion}
+               * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaUploadTestCaseRequest}
+               * @since 1.13
+               */
+              protected Upload(java.lang.String parent, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaUploadTestCaseRequest content) {
+                super(Integrations.this, "POST", REST_PATH, content, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaUploadTestCaseResponse.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/integrations/[^/]+/versions/[^/]+$");
+                }
+              }
+
+              @Override
+              public Upload set$Xgafv(java.lang.String $Xgafv) {
+                return (Upload) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Upload setAccessToken(java.lang.String accessToken) {
+                return (Upload) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Upload setAlt(java.lang.String alt) {
+                return (Upload) super.setAlt(alt);
+              }
+
+              @Override
+              public Upload setCallback(java.lang.String callback) {
+                return (Upload) super.setCallback(callback);
+              }
+
+              @Override
+              public Upload setFields(java.lang.String fields) {
+                return (Upload) super.setFields(fields);
+              }
+
+              @Override
+              public Upload setKey(java.lang.String key) {
+                return (Upload) super.setKey(key);
+              }
+
+              @Override
+              public Upload setOauthToken(java.lang.String oauthToken) {
+                return (Upload) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Upload setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Upload) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Upload setQuotaUser(java.lang.String quotaUser) {
+                return (Upload) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Upload setUploadType(java.lang.String uploadType) {
+                return (Upload) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Upload setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Upload) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The test case to upload. Format: projects/{project}/locations/{location}/
+               * integrations/{integration}/versions/{integration_version}
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The test case to upload. Format:
+             projects/{project}/locations/{location}/integrations/{integration}/versions/{integration_version}
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. The test case to upload. Format: projects/{project}/locations/{location}/
+               * integrations/{integration}/versions/{integration_version}
+               */
+              public Upload setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/integrations/[^/]+/versions/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              @Override
+              public Upload set(String parameterName, Object value) {
+                return (Upload) super.set(parameterName, value);
+              }
+            }
+
+          }
         }
       }
       /**
@@ -9452,8 +13150,8 @@ public class Integrations extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides
-             * /list-filters.
+             * Filtering as supported in https://developers.google.com/authorized-
+             * buyers/apis/guides/list-filters.
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
@@ -9465,8 +13163,8 @@ public class Integrations extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides
-             * /list-filters.
+             * Filtering as supported in https://developers.google.com/authorized-
+             * buyers/apis/guides/list-filters.
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
@@ -10418,8 +14116,8 @@ public class Integrations extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides
-             * /list-filters.
+             * Filtering as supported in https://developers.google.com/authorized-
+             * buyers/apis/guides/list-filters.
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
@@ -10431,8 +14129,8 @@ public class Integrations extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides
-             * /list-filters.
+             * Filtering as supported in https://developers.google.com/authorized-
+             * buyers/apis/guides/list-filters.
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
@@ -11494,148 +15192,6 @@ public class Integrations extends com.google.api.client.googleapis.services.json
           public class Executions {
 
             /**
-             * Cancellation of an execution
-             *
-             * Create a request for the method "executions.cancel".
-             *
-             * This request holds the parameters needed by the integrations server.  After setting any optional
-             * parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
-             *
-             * @param name Required. The execution resource name. Format: projects/{gcp_project_id}/locations/{location}/produc
-             *        ts/{product}/integrations/{integration_id}/executions/{execution_id}
-             * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaCancelExecutionRequest}
-             * @return the request
-             */
-            public Cancel cancel(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaCancelExecutionRequest content) throws java.io.IOException {
-              Cancel result = new Cancel(name, content);
-              initialize(result);
-              return result;
-            }
-
-            public class Cancel extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaCancelExecutionResponse> {
-
-              private static final String REST_PATH = "v1/{+name}:cancel";
-
-              private final java.util.regex.Pattern NAME_PATTERN =
-                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/products/[^/]+/integrations/[^/]+/executions/[^/]+$");
-
-              /**
-               * Cancellation of an execution
-               *
-               * Create a request for the method "executions.cancel".
-               *
-               * This request holds the parameters needed by the the integrations server.  After setting any
-               * optional parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
-               * <p> {@link
-               * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-               * be called to initialize this instance immediately after invoking the constructor. </p>
-               *
-               * @param name Required. The execution resource name. Format: projects/{gcp_project_id}/locations/{location}/produc
-             *        ts/{product}/integrations/{integration_id}/executions/{execution_id}
-               * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaCancelExecutionRequest}
-               * @since 1.13
-               */
-              protected Cancel(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaCancelExecutionRequest content) {
-                super(Integrations.this, "POST", REST_PATH, content, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaCancelExecutionResponse.class);
-                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-                if (!getSuppressPatternChecks()) {
-                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                      "Parameter name must conform to the pattern " +
-                      "^projects/[^/]+/locations/[^/]+/products/[^/]+/integrations/[^/]+/executions/[^/]+$");
-                }
-              }
-
-              @Override
-              public Cancel set$Xgafv(java.lang.String $Xgafv) {
-                return (Cancel) super.set$Xgafv($Xgafv);
-              }
-
-              @Override
-              public Cancel setAccessToken(java.lang.String accessToken) {
-                return (Cancel) super.setAccessToken(accessToken);
-              }
-
-              @Override
-              public Cancel setAlt(java.lang.String alt) {
-                return (Cancel) super.setAlt(alt);
-              }
-
-              @Override
-              public Cancel setCallback(java.lang.String callback) {
-                return (Cancel) super.setCallback(callback);
-              }
-
-              @Override
-              public Cancel setFields(java.lang.String fields) {
-                return (Cancel) super.setFields(fields);
-              }
-
-              @Override
-              public Cancel setKey(java.lang.String key) {
-                return (Cancel) super.setKey(key);
-              }
-
-              @Override
-              public Cancel setOauthToken(java.lang.String oauthToken) {
-                return (Cancel) super.setOauthToken(oauthToken);
-              }
-
-              @Override
-              public Cancel setPrettyPrint(java.lang.Boolean prettyPrint) {
-                return (Cancel) super.setPrettyPrint(prettyPrint);
-              }
-
-              @Override
-              public Cancel setQuotaUser(java.lang.String quotaUser) {
-                return (Cancel) super.setQuotaUser(quotaUser);
-              }
-
-              @Override
-              public Cancel setUploadType(java.lang.String uploadType) {
-                return (Cancel) super.setUploadType(uploadType);
-              }
-
-              @Override
-              public Cancel setUploadProtocol(java.lang.String uploadProtocol) {
-                return (Cancel) super.setUploadProtocol(uploadProtocol);
-              }
-
-              /**
-               * Required. The execution resource name. Format: projects/{gcp_project_id}/locations/
-               * {location}/products/{product}/integrations/{integration_id}/executions/{execution_i
-               * d}
-               */
-              @com.google.api.client.util.Key
-              private java.lang.String name;
-
-              /** Required. The execution resource name. Format: projects/{gcp_project_id}/locations/{location}/produ
-             cts/{product}/integrations/{integration_id}/executions/{execution_id}
-               */
-              public java.lang.String getName() {
-                return name;
-              }
-
-              /**
-               * Required. The execution resource name. Format: projects/{gcp_project_id}/locations/
-               * {location}/products/{product}/integrations/{integration_id}/executions/{execution_i
-               * d}
-               */
-              public Cancel setName(java.lang.String name) {
-                if (!getSuppressPatternChecks()) {
-                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                      "Parameter name must conform to the pattern " +
-                      "^projects/[^/]+/locations/[^/]+/products/[^/]+/integrations/[^/]+/executions/[^/]+$");
-                }
-                this.name = name;
-                return this;
-              }
-
-              @Override
-              public Cancel set(String parameterName, Object value) {
-                return (Cancel) super.set(parameterName, value);
-              }
-            }
-            /**
              * Download the execution.
              *
              * Create a request for the method "executions.download".
@@ -12305,13 +15861,13 @@ public class Integrations extends com.google.api.client.googleapis.services.json
 
               /**
                * Optional. The results would be returned in order you specified here. Currently
-               * supporting "last_modified_time" and "create_time".
+               * supporting "create_time".
                */
               @com.google.api.client.util.Key
               private java.lang.String orderBy;
 
               /** Optional. The results would be returned in order you specified here. Currently supporting
-             "last_modified_time" and "create_time".
+             "create_time".
                */
               public java.lang.String getOrderBy() {
                 return orderBy;
@@ -12319,7 +15875,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
 
               /**
                * Optional. The results would be returned in order you specified here. Currently
-               * supporting "last_modified_time" and "create_time".
+               * supporting "create_time".
                */
               public List setOrderBy(java.lang.String orderBy) {
                 this.orderBy = orderBy;
@@ -12360,14 +15916,21 @@ public class Integrations extends com.google.api.client.googleapis.services.json
 
               /**
                * Optional. View mask for the response data. If set, only the field specified will be
-               * returned as part of the result. If not set, all fields in event execution info will
-               * be filled and returned.
+               * returned as part of the result. If not set, all fields in Execution will be filled
+               * and returned. Supported fields: trigger_id execution_method create_time update_time
+               * execution_details execution_details.state execution_details.execution_snapshots
+               * execution_details.attempt_stats execution_details.event_execution_snapshots_size
+               * request_parameters cloud_logging_details snapshot_number replay_info
                */
               @com.google.api.client.util.Key
               private String readMask;
 
               /** Optional. View mask for the response data. If set, only the field specified will be returned as
-             part of the result. If not set, all fields in event execution info will be filled and returned.
+             part of the result. If not set, all fields in Execution will be filled and returned. Supported
+             fields: trigger_id execution_method create_time update_time execution_details
+             execution_details.state execution_details.execution_snapshots execution_details.attempt_stats
+             execution_details.event_execution_snapshots_size request_parameters cloud_logging_details
+             snapshot_number replay_info
                */
               public String getReadMask() {
                 return readMask;
@@ -12375,8 +15938,11 @@ public class Integrations extends com.google.api.client.googleapis.services.json
 
               /**
                * Optional. View mask for the response data. If set, only the field specified will be
-               * returned as part of the result. If not set, all fields in event execution info will
-               * be filled and returned.
+               * returned as part of the result. If not set, all fields in Execution will be filled
+               * and returned. Supported fields: trigger_id execution_method create_time update_time
+               * execution_details execution_details.state execution_details.execution_snapshots
+               * execution_details.attempt_stats execution_details.event_execution_snapshots_size
+               * request_parameters cloud_logging_details snapshot_number replay_info
                */
               public List setReadMask(String readMask) {
                 this.readMask = readMask;
@@ -13693,8 +17259,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
              *        projects/{project}/locations/{location}/integrations/{integration} Specifically, when
              *        parent equals: 1. projects//locations//integrations/, Meaning: "List versions (with
              *        filter) for a particular integration". 2. projects//locations//integrations/- Meaning:
-             *        "List versions (with filter) for a client within a particular region". 3.
-             *        projects//locations/-/integrations/- Meaning: "List versions (with filter) for a client".
+             *        "List versions (with filter) for a client within a particular region".
              * @return the request
              */
             public List list(java.lang.String parent) throws java.io.IOException {
@@ -13724,8 +17289,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
              *        projects/{project}/locations/{location}/integrations/{integration} Specifically, when
              *        parent equals: 1. projects//locations//integrations/, Meaning: "List versions (with
              *        filter) for a particular integration". 2. projects//locations//integrations/- Meaning:
-             *        "List versions (with filter) for a client within a particular region". 3.
-             *        projects//locations/-/integrations/- Meaning: "List versions (with filter) for a client".
+             *        "List versions (with filter) for a client within a particular region".
                * @since 1.13
                */
               protected List(java.lang.String parent) {
@@ -13808,9 +17372,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
                * projects/{project}/locations/{location}/integrations/{integration} Specifically,
                * when parent equals: 1. projects//locations//integrations/, Meaning: "List versions
                * (with filter) for a particular integration". 2. projects//locations//integrations/-
-               * Meaning: "List versions (with filter) for a client within a particular region". 3.
-               * projects//locations/-/integrations/- Meaning: "List versions (with filter) for a
-               * client".
+               * Meaning: "List versions (with filter) for a client within a particular region".
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
@@ -13819,8 +17381,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
              projects/{project}/locations/{location}/integrations/{integration} Specifically, when parent
              equals: 1. projects//locations//integrations/, Meaning: "List versions (with filter) for a
              particular integration". 2. projects//locations//integrations/- Meaning: "List versions (with
-             filter) for a client within a particular region". 3. projects//locations/-/integrations/- Meaning:
-             "List versions (with filter) for a client".
+             filter) for a client within a particular region".
                */
               public java.lang.String getParent() {
                 return parent;
@@ -13831,9 +17392,7 @@ public class Integrations extends com.google.api.client.googleapis.services.json
                * projects/{project}/locations/{location}/integrations/{integration} Specifically,
                * when parent equals: 1. projects//locations//integrations/, Meaning: "List versions
                * (with filter) for a particular integration". 2. projects//locations//integrations/-
-               * Meaning: "List versions (with filter) for a client within a particular region". 3.
-               * projects//locations/-/integrations/- Meaning: "List versions (with filter) for a
-               * client".
+               * Meaning: "List versions (with filter) for a client within a particular region".
                */
               public List setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -13899,15 +17458,15 @@ public class Integrations extends com.google.api.client.googleapis.services.json
 
               /**
                * The results would be returned in order you specified here. Currently supported sort
-               * keys are: Descending sort order for "last_modified_time", "created_time",
-               * "snapshot_number" Ascending sort order for "name".
+               * keys are: Descending sort order for "last\_modified\_time", "created\_time", and
+               * "snapshot\_number". Ascending sort order for `name`.
                */
               @com.google.api.client.util.Key
               private java.lang.String orderBy;
 
               /** The results would be returned in order you specified here. Currently supported sort keys are:
-             Descending sort order for "last_modified_time", "created_time", "snapshot_number" Ascending sort
-             order for "name".
+             Descending sort order for "last\_modified\_time", "created\_time", and "snapshot\_number".
+             Ascending sort order for `name`.
                */
               public java.lang.String getOrderBy() {
                 return orderBy;
@@ -13915,8 +17474,8 @@ public class Integrations extends com.google.api.client.googleapis.services.json
 
               /**
                * The results would be returned in order you specified here. Currently supported sort
-               * keys are: Descending sort order for "last_modified_time", "created_time",
-               * "snapshot_number" Ascending sort order for "name".
+               * keys are: Descending sort order for "last\_modified\_time", "created\_time", and
+               * "snapshot\_number". Ascending sort order for `name`.
                */
               public List setOrderBy(java.lang.String orderBy) {
                 this.orderBy = orderBy;
@@ -15285,8 +18844,8 @@ public class Integrations extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides
-             * /list-filters.
+             * Filtering as supported in https://developers.google.com/authorized-
+             * buyers/apis/guides/list-filters.
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
@@ -15298,8 +18857,8 @@ public class Integrations extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides
-             * /list-filters.
+             * Filtering as supported in https://developers.google.com/authorized-
+             * buyers/apis/guides/list-filters.
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
@@ -16886,8 +20445,8 @@ public class Integrations extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides
-           * /list-filters.
+           * Filtering as supported in https://developers.google.com/authorized-
+           * buyers/apis/guides/list-filters.
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
@@ -16899,8 +20458,8 @@ public class Integrations extends com.google.api.client.googleapis.services.json
           }
 
           /**
-           * Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides
-           * /list-filters.
+           * Filtering as supported in https://developers.google.com/authorized-
+           * buyers/apis/guides/list-filters.
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -17684,8 +21243,8 @@ public class Integrations extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides
-             * /list-filters.
+             * Filtering as supported in https://developers.google.com/authorized-
+             * buyers/apis/guides/list-filters.
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
@@ -17697,8 +21256,8 @@ public class Integrations extends com.google.api.client.googleapis.services.json
             }
 
             /**
-             * Filtering as supported in https://developers.google.com/authorized-buyers/apis/guides
-             * /list-filters.
+             * Filtering as supported in https://developers.google.com/authorized-
+             * buyers/apis/guides/list-filters.
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
@@ -17931,6 +21490,1912 @@ public class Integrations extends com.google.api.client.googleapis.services.json
           }
 
         }
+      }
+      /**
+       * An accessor for creating requests from the Templates collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Integrations integrations = new Integrations(...);}
+       *   {@code Integrations.Templates.List request = integrations.templates().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Templates templates() {
+        return new Templates();
+      }
+
+      /**
+       * The "templates" collection of methods.
+       */
+      public class Templates {
+
+        /**
+         * Creates a new template
+         *
+         * Create a request for the method "templates.create".
+         *
+         * This request holds the parameters needed by the integrations server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. "projects/{project}/locations/{location}" format.
+         * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaTemplate}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaTemplate content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaTemplate> {
+
+          private static final String REST_PATH = "v1/{+parent}/templates";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a new template
+           *
+           * Create a request for the method "templates.create".
+           *
+           * This request holds the parameters needed by the the integrations server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. "projects/{project}/locations/{location}" format.
+           * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaTemplate}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaTemplate content) {
+            super(Integrations.this, "POST", REST_PATH, content, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaTemplate.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. "projects/{project}/locations/{location}" format. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. "projects/{project}/locations/{location}" format.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. "projects/{project}/locations/{location}" format. */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a template
+         *
+         * Create a request for the method "templates.delete".
+         *
+         * This request holds the parameters needed by the integrations server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name that is associated with the Template.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleProtobufEmpty> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/templates/[^/]+$");
+
+          /**
+           * Deletes a template
+           *
+           * Create a request for the method "templates.delete".
+           *
+           * This request holds the parameters needed by the the integrations server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name that is associated with the Template.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(Integrations.this, "DELETE", REST_PATH, null, com.google.api.services.integrations.v1.model.GoogleProtobufEmpty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/templates/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name that is associated with the Template. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name that is associated with the Template.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name that is associated with the Template. */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/templates/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Downloads a template. Retrieves the `Template` and returns the response as a string.
+         *
+         * Create a request for the method "templates.download".
+         *
+         * This request holds the parameters needed by the integrations server.  After setting any optional
+         * parameters, call the {@link Download#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The template to download. Format:
+         *        projects/{project}/locations/{location}/template/{template_id}
+         * @return the request
+         */
+        public Download download(java.lang.String name) throws java.io.IOException {
+          Download result = new Download(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Download extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaDownloadTemplateResponse> {
+
+          private static final String REST_PATH = "v1/{+name}:download";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/templates/[^/]+$");
+
+          /**
+           * Downloads a template. Retrieves the `Template` and returns the response as a string.
+           *
+           * Create a request for the method "templates.download".
+           *
+           * This request holds the parameters needed by the the integrations server.  After setting any
+           * optional parameters, call the {@link Download#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Download#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The template to download. Format:
+         *        projects/{project}/locations/{location}/template/{template_id}
+           * @since 1.13
+           */
+          protected Download(java.lang.String name) {
+            super(Integrations.this, "GET", REST_PATH, null, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaDownloadTemplateResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/templates/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Download set$Xgafv(java.lang.String $Xgafv) {
+            return (Download) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Download setAccessToken(java.lang.String accessToken) {
+            return (Download) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Download setAlt(java.lang.String alt) {
+            return (Download) super.setAlt(alt);
+          }
+
+          @Override
+          public Download setCallback(java.lang.String callback) {
+            return (Download) super.setCallback(callback);
+          }
+
+          @Override
+          public Download setFields(java.lang.String fields) {
+            return (Download) super.setFields(fields);
+          }
+
+          @Override
+          public Download setKey(java.lang.String key) {
+            return (Download) super.setKey(key);
+          }
+
+          @Override
+          public Download setOauthToken(java.lang.String oauthToken) {
+            return (Download) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Download setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Download) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Download setQuotaUser(java.lang.String quotaUser) {
+            return (Download) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Download setUploadType(java.lang.String uploadType) {
+            return (Download) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Download setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Download) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The template to download. Format:
+           * projects/{project}/locations/{location}/template/{template_id}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The template to download. Format:
+         projects/{project}/locations/{location}/template/{template_id}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The template to download. Format:
+           * projects/{project}/locations/{location}/template/{template_id}
+           */
+          public Download setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/templates/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** Required. File format for download request. */
+          @com.google.api.client.util.Key
+          private java.lang.String fileFormat;
+
+          /** Required. File format for download request.
+           */
+          public java.lang.String getFileFormat() {
+            return fileFormat;
+          }
+
+          /** Required. File format for download request. */
+          public Download setFileFormat(java.lang.String fileFormat) {
+            this.fileFormat = fileFormat;
+            return this;
+          }
+
+          @Override
+          public Download set(String parameterName, Object value) {
+            return (Download) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Get a template in the specified project.
+         *
+         * Create a request for the method "templates.get".
+         *
+         * This request holds the parameters needed by the integrations server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The template to retrieve. Format:
+         *        projects/{project}/locations/{location}/templates/{template}
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaTemplate> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/templates/[^/]+$");
+
+          /**
+           * Get a template in the specified project.
+           *
+           * Create a request for the method "templates.get".
+           *
+           * This request holds the parameters needed by the the integrations server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The template to retrieve. Format:
+         *        projects/{project}/locations/{location}/templates/{template}
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Integrations.this, "GET", REST_PATH, null, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaTemplate.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/templates/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The template to retrieve. Format:
+           * projects/{project}/locations/{location}/templates/{template}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The template to retrieve. Format:
+         projects/{project}/locations/{location}/templates/{template}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The template to retrieve. Format:
+           * projects/{project}/locations/{location}/templates/{template}
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/templates/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Import the template to an existing integration. This api would keep track of usage_count and
+         * last_used_time. PERMISSION_DENIED would be thrown if template is not accessible by client.
+         *
+         * Create a request for the method "templates.import".
+         *
+         * This request holds the parameters needed by the integrations server.  After setting any optional
+         * parameters, call the {@link IntegrationsImport#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name that is associated with the Template.
+         * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaImportTemplateRequest}
+         * @return the request
+         */
+        public IntegrationsImport integrationsImport(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaImportTemplateRequest content) throws java.io.IOException {
+          IntegrationsImport result = new IntegrationsImport(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class IntegrationsImport extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaImportTemplateResponse> {
+
+          private static final String REST_PATH = "v1/{+name}:import";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/templates/[^/]+$");
+
+          /**
+           * Import the template to an existing integration. This api would keep track of usage_count and
+           * last_used_time. PERMISSION_DENIED would be thrown if template is not accessible by client.
+           *
+           * Create a request for the method "templates.import".
+           *
+           * This request holds the parameters needed by the the integrations server.  After setting any
+           * optional parameters, call the {@link IntegrationsImport#execute()} method to invoke the remote
+           * operation. <p> {@link IntegrationsImport#initialize(com.google.api.client.googleapis.services.A
+           * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param name Required. The name that is associated with the Template.
+           * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaImportTemplateRequest}
+           * @since 1.13
+           */
+          protected IntegrationsImport(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaImportTemplateRequest content) {
+            super(Integrations.this, "POST", REST_PATH, content, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaImportTemplateResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/templates/[^/]+$");
+            }
+          }
+
+          @Override
+          public IntegrationsImport set$Xgafv(java.lang.String $Xgafv) {
+            return (IntegrationsImport) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public IntegrationsImport setAccessToken(java.lang.String accessToken) {
+            return (IntegrationsImport) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public IntegrationsImport setAlt(java.lang.String alt) {
+            return (IntegrationsImport) super.setAlt(alt);
+          }
+
+          @Override
+          public IntegrationsImport setCallback(java.lang.String callback) {
+            return (IntegrationsImport) super.setCallback(callback);
+          }
+
+          @Override
+          public IntegrationsImport setFields(java.lang.String fields) {
+            return (IntegrationsImport) super.setFields(fields);
+          }
+
+          @Override
+          public IntegrationsImport setKey(java.lang.String key) {
+            return (IntegrationsImport) super.setKey(key);
+          }
+
+          @Override
+          public IntegrationsImport setOauthToken(java.lang.String oauthToken) {
+            return (IntegrationsImport) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public IntegrationsImport setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (IntegrationsImport) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public IntegrationsImport setQuotaUser(java.lang.String quotaUser) {
+            return (IntegrationsImport) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public IntegrationsImport setUploadType(java.lang.String uploadType) {
+            return (IntegrationsImport) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public IntegrationsImport setUploadProtocol(java.lang.String uploadProtocol) {
+            return (IntegrationsImport) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name that is associated with the Template. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name that is associated with the Template.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name that is associated with the Template. */
+          public IntegrationsImport setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/templates/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public IntegrationsImport set(String parameterName, Object value) {
+            return (IntegrationsImport) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists all templates matching the filter.
+         *
+         * Create a request for the method "templates.list".
+         *
+         * This request holds the parameters needed by the integrations server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The client, which owns this collection of Templates.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaListTemplatesResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/templates";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists all templates matching the filter.
+           *
+           * Create a request for the method "templates.list".
+           *
+           * This request holds the parameters needed by the the integrations server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The client, which owns this collection of Templates.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Integrations.this, "GET", REST_PATH, null, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaListTemplatesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The client, which owns this collection of Templates. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The client, which owns this collection of Templates.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The client, which owns this collection of Templates. */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. Standard filter field to filter templates. client_id filter won't be
+           * supported and will restrict to templates belonging to the current client only. Return
+           * all templates of the current client if the filter is empty. Also supports operators
+           * like AND, OR, NOT For example, "status=\"ACTIVE\"
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Standard filter field to filter templates. client_id filter won't be supported and will
+         restrict to templates belonging to the current client only. Return all templates of the current
+         client if the filter is empty. Also supports operators like AND, OR, NOT For example,
+         "status=\"ACTIVE\"
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. Standard filter field to filter templates. client_id filter won't be
+           * supported and will restrict to templates belonging to the current client only. Return
+           * all templates of the current client if the filter is empty. Also supports operators
+           * like AND, OR, NOT For example, "status=\"ACTIVE\"
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /** Optional. The results would be returned in the order you specified here. */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. The results would be returned in the order you specified here.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /** Optional. The results would be returned in the order you specified here. */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Optional. The size of the response entries. If unspecified, defaults to 100. The
+           * maximum value is 1000; values above 1000 will be coerced to 1000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The size of the response entries. If unspecified, defaults to 100. The maximum value is
+         1000; values above 1000 will be coerced to 1000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The size of the response entries. If unspecified, defaults to 100. The
+           * maximum value is 1000; values above 1000 will be coerced to 1000.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** Optional. The token returned in the previous response. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. The token returned in the previous response.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** Optional. The token returned in the previous response. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          /**
+           * Optional. The mask which specifies fields that need to be returned in the template's
+           * response.
+           */
+          @com.google.api.client.util.Key
+          private String readMask;
+
+          /** Optional. The mask which specifies fields that need to be returned in the template's response.
+           */
+          public String getReadMask() {
+            return readMask;
+          }
+
+          /**
+           * Optional. The mask which specifies fields that need to be returned in the template's
+           * response.
+           */
+          public List setReadMask(String readMask) {
+            this.readMask = readMask;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates the template by given id.
+         *
+         * Create a request for the method "templates.patch".
+         *
+         * This request holds the parameters needed by the integrations server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Identifier. Resource name of the template.
+         * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaTemplate}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaTemplate content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaTemplate> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/templates/[^/]+$");
+
+          /**
+           * Updates the template by given id.
+           *
+           * Create a request for the method "templates.patch".
+           *
+           * This request holds the parameters needed by the the integrations server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Identifier. Resource name of the template.
+           * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaTemplate}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaTemplate content) {
+            super(Integrations.this, "PATCH", REST_PATH, content, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaTemplate.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/templates/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Identifier. Resource name of the template. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Identifier. Resource name of the template.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Identifier. Resource name of the template. */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/templates/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Required. Field mask specifying the fields in the above template that have been
+           * modified and must be updated.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Required. Field mask specifying the fields in the above template that have been modified and must
+         be updated.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Required. Field mask specifying the fields in the above template that have been
+           * modified and must be updated.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Search templates based on user query and filters. This api would query the templates and return a
+         * list of templates based on the user filter.
+         *
+         * Create a request for the method "templates.search".
+         *
+         * This request holds the parameters needed by the integrations server.  After setting any optional
+         * parameters, call the {@link Search#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The client, which owns this collection of Templates.
+         * @return the request
+         */
+        public Search search(java.lang.String parent) throws java.io.IOException {
+          Search result = new Search(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class Search extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaSearchTemplatesResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/templates:search";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Search templates based on user query and filters. This api would query the templates and return
+           * a list of templates based on the user filter.
+           *
+           * Create a request for the method "templates.search".
+           *
+           * This request holds the parameters needed by the the integrations server.  After setting any
+           * optional parameters, call the {@link Search#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Search#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The client, which owns this collection of Templates.
+           * @since 1.13
+           */
+          protected Search(java.lang.String parent) {
+            super(Integrations.this, "GET", REST_PATH, null, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaSearchTemplatesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Search set$Xgafv(java.lang.String $Xgafv) {
+            return (Search) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Search setAccessToken(java.lang.String accessToken) {
+            return (Search) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Search setAlt(java.lang.String alt) {
+            return (Search) super.setAlt(alt);
+          }
+
+          @Override
+          public Search setCallback(java.lang.String callback) {
+            return (Search) super.setCallback(callback);
+          }
+
+          @Override
+          public Search setFields(java.lang.String fields) {
+            return (Search) super.setFields(fields);
+          }
+
+          @Override
+          public Search setKey(java.lang.String key) {
+            return (Search) super.setKey(key);
+          }
+
+          @Override
+          public Search setOauthToken(java.lang.String oauthToken) {
+            return (Search) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Search setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Search) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Search setQuotaUser(java.lang.String quotaUser) {
+            return (Search) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Search setUploadType(java.lang.String uploadType) {
+            return (Search) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Search setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Search) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The client, which owns this collection of Templates. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The client, which owns this collection of Templates.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The client, which owns this collection of Templates. */
+          public Search setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. Standard filter field to filter templates. client_id filter won't be
+           * supported and will restrict to templates belonging to the current client only. Return
+           * all templates of the current client if the filter is empty. Also supports operators
+           * like AND, OR, NOT For example, "status=\"ACTIVE\"
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Standard filter field to filter templates. client_id filter won't be supported and will
+         restrict to templates belonging to the current client only. Return all templates of the current
+         client if the filter is empty. Also supports operators like AND, OR, NOT For example,
+         "status=\"ACTIVE\"
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. Standard filter field to filter templates. client_id filter won't be
+           * supported and will restrict to templates belonging to the current client only. Return
+           * all templates of the current client if the filter is empty. Also supports operators
+           * like AND, OR, NOT For example, "status=\"ACTIVE\"
+           */
+          public Search setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /** Optional. The results would be returned in the order you specified here. */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. The results would be returned in the order you specified here.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /** Optional. The results would be returned in the order you specified here. */
+          public Search setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Optional. The size of the response entries. If unspecified, defaults to 100. The
+           * maximum value is 1000; values above 1000 will be coerced to 1000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The size of the response entries. If unspecified, defaults to 100. The maximum value is
+         1000; values above 1000 will be coerced to 1000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The size of the response entries. If unspecified, defaults to 100. The
+           * maximum value is 1000; values above 1000 will be coerced to 1000.
+           */
+          public Search setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** Optional. The token returned in the previous response. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. The token returned in the previous response.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** Optional. The token returned in the previous response. */
+          public Search setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          /**
+           * Optional. The mask which specifies fields that need to be returned in the template's
+           * response.
+           */
+          @com.google.api.client.util.Key
+          private String readMask;
+
+          /** Optional. The mask which specifies fields that need to be returned in the template's response.
+           */
+          public String getReadMask() {
+            return readMask;
+          }
+
+          /**
+           * Optional. The mask which specifies fields that need to be returned in the template's
+           * response.
+           */
+          public Search setReadMask(String readMask) {
+            this.readMask = readMask;
+            return this;
+          }
+
+          @Override
+          public Search set(String parameterName, Object value) {
+            return (Search) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Share a template with other clients. Only the template owner can share the templates with other
+         * projects. PERMISSION_DENIED would be thrown if the request is not from the owner.
+         *
+         * Create a request for the method "templates.share".
+         *
+         * This request holds the parameters needed by the integrations server.  After setting any optional
+         * parameters, call the {@link Share#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name that is associated with the Template.
+         * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaShareTemplateRequest}
+         * @return the request
+         */
+        public Share share(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaShareTemplateRequest content) throws java.io.IOException {
+          Share result = new Share(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Share extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleProtobufEmpty> {
+
+          private static final String REST_PATH = "v1/{+name}:share";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/templates/[^/]+$");
+
+          /**
+           * Share a template with other clients. Only the template owner can share the templates with other
+           * projects. PERMISSION_DENIED would be thrown if the request is not from the owner.
+           *
+           * Create a request for the method "templates.share".
+           *
+           * This request holds the parameters needed by the the integrations server.  After setting any
+           * optional parameters, call the {@link Share#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Share#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name that is associated with the Template.
+           * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaShareTemplateRequest}
+           * @since 1.13
+           */
+          protected Share(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaShareTemplateRequest content) {
+            super(Integrations.this, "POST", REST_PATH, content, com.google.api.services.integrations.v1.model.GoogleProtobufEmpty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/templates/[^/]+$");
+            }
+          }
+
+          @Override
+          public Share set$Xgafv(java.lang.String $Xgafv) {
+            return (Share) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Share setAccessToken(java.lang.String accessToken) {
+            return (Share) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Share setAlt(java.lang.String alt) {
+            return (Share) super.setAlt(alt);
+          }
+
+          @Override
+          public Share setCallback(java.lang.String callback) {
+            return (Share) super.setCallback(callback);
+          }
+
+          @Override
+          public Share setFields(java.lang.String fields) {
+            return (Share) super.setFields(fields);
+          }
+
+          @Override
+          public Share setKey(java.lang.String key) {
+            return (Share) super.setKey(key);
+          }
+
+          @Override
+          public Share setOauthToken(java.lang.String oauthToken) {
+            return (Share) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Share setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Share) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Share setQuotaUser(java.lang.String quotaUser) {
+            return (Share) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Share setUploadType(java.lang.String uploadType) {
+            return (Share) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Share setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Share) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name that is associated with the Template. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name that is associated with the Template.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name that is associated with the Template. */
+          public Share setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/templates/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Share set(String parameterName, Object value) {
+            return (Share) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Unshare a template from given clients. Owner of the template can unshare template with clients.
+         * Shared client can only unshare the template from itself. PERMISSION_DENIED would be thrown if
+         * request is not from owner or for unsharing itself.
+         *
+         * Create a request for the method "templates.unshare".
+         *
+         * This request holds the parameters needed by the integrations server.  After setting any optional
+         * parameters, call the {@link Unshare#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name that is associated with the Template.
+         * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaUnshareTemplateRequest}
+         * @return the request
+         */
+        public Unshare unshare(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaUnshareTemplateRequest content) throws java.io.IOException {
+          Unshare result = new Unshare(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Unshare extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleProtobufEmpty> {
+
+          private static final String REST_PATH = "v1/{+name}:unshare";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/templates/[^/]+$");
+
+          /**
+           * Unshare a template from given clients. Owner of the template can unshare template with clients.
+           * Shared client can only unshare the template from itself. PERMISSION_DENIED would be thrown if
+           * request is not from owner or for unsharing itself.
+           *
+           * Create a request for the method "templates.unshare".
+           *
+           * This request holds the parameters needed by the the integrations server.  After setting any
+           * optional parameters, call the {@link Unshare#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Unshare#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name that is associated with the Template.
+           * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaUnshareTemplateRequest}
+           * @since 1.13
+           */
+          protected Unshare(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaUnshareTemplateRequest content) {
+            super(Integrations.this, "POST", REST_PATH, content, com.google.api.services.integrations.v1.model.GoogleProtobufEmpty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/templates/[^/]+$");
+            }
+          }
+
+          @Override
+          public Unshare set$Xgafv(java.lang.String $Xgafv) {
+            return (Unshare) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Unshare setAccessToken(java.lang.String accessToken) {
+            return (Unshare) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Unshare setAlt(java.lang.String alt) {
+            return (Unshare) super.setAlt(alt);
+          }
+
+          @Override
+          public Unshare setCallback(java.lang.String callback) {
+            return (Unshare) super.setCallback(callback);
+          }
+
+          @Override
+          public Unshare setFields(java.lang.String fields) {
+            return (Unshare) super.setFields(fields);
+          }
+
+          @Override
+          public Unshare setKey(java.lang.String key) {
+            return (Unshare) super.setKey(key);
+          }
+
+          @Override
+          public Unshare setOauthToken(java.lang.String oauthToken) {
+            return (Unshare) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Unshare setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Unshare) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Unshare setQuotaUser(java.lang.String quotaUser) {
+            return (Unshare) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Unshare setUploadType(java.lang.String uploadType) {
+            return (Unshare) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Unshare setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Unshare) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name that is associated with the Template. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name that is associated with the Template.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name that is associated with the Template. */
+          public Unshare setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/templates/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Unshare set(String parameterName, Object value) {
+            return (Unshare) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Uploads a template. The content can be a previously downloaded template. Performs the same
+         * function as CreateTemplate, but accepts input in a string format, which holds the complete
+         * representation of the Template content.
+         *
+         * Create a request for the method "templates.upload".
+         *
+         * This request holds the parameters needed by the integrations server.  After setting any optional
+         * parameters, call the {@link Upload#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The template to upload. Format: projects/{project}/locations/{location}
+         * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaUploadTemplateRequest}
+         * @return the request
+         */
+        public Upload upload(java.lang.String parent, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaUploadTemplateRequest content) throws java.io.IOException {
+          Upload result = new Upload(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Upload extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaUploadTemplateResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/templates:upload";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Uploads a template. The content can be a previously downloaded template. Performs the same
+           * function as CreateTemplate, but accepts input in a string format, which holds the complete
+           * representation of the Template content.
+           *
+           * Create a request for the method "templates.upload".
+           *
+           * This request holds the parameters needed by the the integrations server.  After setting any
+           * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Upload#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The template to upload. Format: projects/{project}/locations/{location}
+           * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaUploadTemplateRequest}
+           * @since 1.13
+           */
+          protected Upload(java.lang.String parent, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaUploadTemplateRequest content) {
+            super(Integrations.this, "POST", REST_PATH, content, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaUploadTemplateResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Upload set$Xgafv(java.lang.String $Xgafv) {
+            return (Upload) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Upload setAccessToken(java.lang.String accessToken) {
+            return (Upload) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Upload setAlt(java.lang.String alt) {
+            return (Upload) super.setAlt(alt);
+          }
+
+          @Override
+          public Upload setCallback(java.lang.String callback) {
+            return (Upload) super.setCallback(callback);
+          }
+
+          @Override
+          public Upload setFields(java.lang.String fields) {
+            return (Upload) super.setFields(fields);
+          }
+
+          @Override
+          public Upload setKey(java.lang.String key) {
+            return (Upload) super.setKey(key);
+          }
+
+          @Override
+          public Upload setOauthToken(java.lang.String oauthToken) {
+            return (Upload) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Upload setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Upload) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Upload setQuotaUser(java.lang.String quotaUser) {
+            return (Upload) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Upload setUploadType(java.lang.String uploadType) {
+            return (Upload) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Upload setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Upload) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The template to upload. Format: projects/{project}/locations/{location} */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The template to upload. Format: projects/{project}/locations/{location}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The template to upload. Format: projects/{project}/locations/{location} */
+          public Upload setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Upload set(String parameterName, Object value) {
+            return (Upload) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Use the template to create integration. This api would keep track of usage_count and
+         * last_used_time. PERMISSION_DENIED would be thrown if template is not accessible by client.
+         *
+         * Create a request for the method "templates.use".
+         *
+         * This request holds the parameters needed by the integrations server.  After setting any optional
+         * parameters, call the {@link Use#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name that is associated with the Template.
+         * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaUseTemplateRequest}
+         * @return the request
+         */
+        public Use use(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaUseTemplateRequest content) throws java.io.IOException {
+          Use result = new Use(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Use extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaUseTemplateResponse> {
+
+          private static final String REST_PATH = "v1/{+name}:use";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/templates/[^/]+$");
+
+          /**
+           * Use the template to create integration. This api would keep track of usage_count and
+           * last_used_time. PERMISSION_DENIED would be thrown if template is not accessible by client.
+           *
+           * Create a request for the method "templates.use".
+           *
+           * This request holds the parameters needed by the the integrations server.  After setting any
+           * optional parameters, call the {@link Use#execute()} method to invoke the remote operation. <p>
+           * {@link Use#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name that is associated with the Template.
+           * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaUseTemplateRequest}
+           * @since 1.13
+           */
+          protected Use(java.lang.String name, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaUseTemplateRequest content) {
+            super(Integrations.this, "POST", REST_PATH, content, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaUseTemplateResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/templates/[^/]+$");
+            }
+          }
+
+          @Override
+          public Use set$Xgafv(java.lang.String $Xgafv) {
+            return (Use) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Use setAccessToken(java.lang.String accessToken) {
+            return (Use) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Use setAlt(java.lang.String alt) {
+            return (Use) super.setAlt(alt);
+          }
+
+          @Override
+          public Use setCallback(java.lang.String callback) {
+            return (Use) super.setCallback(callback);
+          }
+
+          @Override
+          public Use setFields(java.lang.String fields) {
+            return (Use) super.setFields(fields);
+          }
+
+          @Override
+          public Use setKey(java.lang.String key) {
+            return (Use) super.setKey(key);
+          }
+
+          @Override
+          public Use setOauthToken(java.lang.String oauthToken) {
+            return (Use) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Use setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Use) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Use setQuotaUser(java.lang.String quotaUser) {
+            return (Use) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Use setUploadType(java.lang.String uploadType) {
+            return (Use) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Use setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Use) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name that is associated with the Template. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name that is associated with the Template.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name that is associated with the Template. */
+          public Use setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/templates/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Use set(String parameterName, Object value) {
+            return (Use) super.set(parameterName, value);
+          }
+        }
+
       }
     }
   }

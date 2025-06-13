@@ -31,6 +31,13 @@ package com.google.api.services.integrations.v1.model;
 public final class GoogleCloudIntegrationsV1alphaIntegrationVersion extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Cloud KMS resource name for the CMEK encryption key.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String cloudKmsKey;
+
+  /**
    * Optional. Cloud Logging details for the integration version
    * The value may be {@code null}.
    */
@@ -176,9 +183,9 @@ public final class GoogleCloudIntegrationsV1alphaIntegrationVersion extends com.
   private java.lang.String runAsServiceAccount;
 
   /**
-   * Optional. An increasing sequence that is set when a new snapshot is created. The last created
-   * snapshot can be identified by [workflow_name, org_id latest(snapshot_number)]. However, last
-   * created snapshot need not be same as the HEAD. So users should always use "HEAD" tag to
+   * Output only. An increasing sequence that is set when a new snapshot is created. The last
+   * created snapshot can be identified by [workflow_name, org_id latest(snapshot_number)]. However,
+   * last created snapshot need not be same as the HEAD. So users should always use "HEAD" tag to
    * identify the head.
    * The value may be {@code null}.
    */
@@ -264,6 +271,23 @@ public final class GoogleCloudIntegrationsV1alphaIntegrationVersion extends com.
    */
   @com.google.api.client.util.Key
   private java.lang.String userLabel;
+
+  /**
+   * Optional. Cloud KMS resource name for the CMEK encryption key.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCloudKmsKey() {
+    return cloudKmsKey;
+  }
+
+  /**
+   * Optional. Cloud KMS resource name for the CMEK encryption key.
+   * @param cloudKmsKey cloudKmsKey or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaIntegrationVersion setCloudKmsKey(java.lang.String cloudKmsKey) {
+    this.cloudKmsKey = cloudKmsKey;
+    return this;
+  }
 
   /**
    * Optional. Cloud Logging details for the integration version
@@ -568,9 +592,9 @@ public final class GoogleCloudIntegrationsV1alphaIntegrationVersion extends com.
   }
 
   /**
-   * Optional. An increasing sequence that is set when a new snapshot is created. The last created
-   * snapshot can be identified by [workflow_name, org_id latest(snapshot_number)]. However, last
-   * created snapshot need not be same as the HEAD. So users should always use "HEAD" tag to
+   * Output only. An increasing sequence that is set when a new snapshot is created. The last
+   * created snapshot can be identified by [workflow_name, org_id latest(snapshot_number)]. However,
+   * last created snapshot need not be same as the HEAD. So users should always use "HEAD" tag to
    * identify the head.
    * @return value or {@code null} for none
    */
@@ -579,9 +603,9 @@ public final class GoogleCloudIntegrationsV1alphaIntegrationVersion extends com.
   }
 
   /**
-   * Optional. An increasing sequence that is set when a new snapshot is created. The last created
-   * snapshot can be identified by [workflow_name, org_id latest(snapshot_number)]. However, last
-   * created snapshot need not be same as the HEAD. So users should always use "HEAD" tag to
+   * Output only. An increasing sequence that is set when a new snapshot is created. The last
+   * created snapshot can be identified by [workflow_name, org_id latest(snapshot_number)]. However,
+   * last created snapshot need not be same as the HEAD. So users should always use "HEAD" tag to
    * identify the head.
    * @param snapshotNumber snapshotNumber or {@code null} for none
    */

@@ -31,14 +31,21 @@ package com.google.api.services.integrations.v1.model;
 public final class GoogleCloudConnectorsV1LogConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Enabled represents whether logging is enabled or not for a connection.
+   * Optional. Enabled represents whether logging is enabled or not for a connection.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enabled;
 
   /**
-   * Enabled represents whether logging is enabled or not for a connection.
+   * Optional. Log configuration level.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String level;
+
+  /**
+   * Optional. Enabled represents whether logging is enabled or not for a connection.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnabled() {
@@ -46,11 +53,28 @@ public final class GoogleCloudConnectorsV1LogConfig extends com.google.api.clien
   }
 
   /**
-   * Enabled represents whether logging is enabled or not for a connection.
+   * Optional. Enabled represents whether logging is enabled or not for a connection.
    * @param enabled enabled or {@code null} for none
    */
   public GoogleCloudConnectorsV1LogConfig setEnabled(java.lang.Boolean enabled) {
     this.enabled = enabled;
+    return this;
+  }
+
+  /**
+   * Optional. Log configuration level.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLevel() {
+    return level;
+  }
+
+  /**
+   * Optional. Log configuration level.
+   * @param level level or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1LogConfig setLevel(java.lang.String level) {
+    this.level = level;
     return this;
   }
 

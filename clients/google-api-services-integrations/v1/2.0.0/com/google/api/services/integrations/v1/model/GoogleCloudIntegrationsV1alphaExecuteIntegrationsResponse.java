@@ -75,6 +75,13 @@ public final class GoogleCloudIntegrationsV1alphaExecuteIntegrationsResponse ext
   }
 
   /**
+   * Optional. OUTPUT parameters from integration execution.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, GoogleCloudIntegrationsV1alphaValueType> parameters;
+
+  /**
    * Details for the integration that were executed.
    * @return value or {@code null} for none
    */
@@ -162,6 +169,23 @@ public final class GoogleCloudIntegrationsV1alphaExecuteIntegrationsResponse ext
    */
   public GoogleCloudIntegrationsV1alphaExecuteIntegrationsResponse setParameterEntries(java.util.List<EnterpriseCrmFrontendsEventbusProtoParameterEntry> parameterEntries) {
     this.parameterEntries = parameterEntries;
+    return this;
+  }
+
+  /**
+   * Optional. OUTPUT parameters from integration execution.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, GoogleCloudIntegrationsV1alphaValueType> getParameters() {
+    return parameters;
+  }
+
+  /**
+   * Optional. OUTPUT parameters from integration execution.
+   * @param parameters parameters or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaExecuteIntegrationsResponse setParameters(java.util.Map<String, GoogleCloudIntegrationsV1alphaValueType> parameters) {
+    this.parameters = parameters;
     return this;
   }
 

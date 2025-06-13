@@ -31,6 +31,13 @@ package com.google.api.services.integrations.v1.model;
 public final class EnterpriseCrmEventbusProtoExternalTraffic extends com.google.api.client.json.GenericJson {
 
   /**
+   * Indicates the client enables internal IP feature, this is applicable for internal clients only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableInternalIp;
+
+  /**
    * User’s GCP project id the traffic is referring to.
    * The value may be {@code null}.
    */
@@ -52,13 +59,34 @@ public final class EnterpriseCrmEventbusProtoExternalTraffic extends com.google.
   private java.lang.String location;
 
   /**
-   * LINT.ThenChange(//depot/google3/enterprise/crm/eventbus/proto/product.proto:product, //depot/go
-   * ogle3/java/com/google/enterprise/crm/integrationplatform/api/utils/ConverterUtils.java:source_t
-   * o_product)
+   * Enqueue the execution request due to quota issue
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean retryRequestForQuota;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String source;
+
+  /**
+   * Indicates the client enables internal IP feature, this is applicable for internal clients only.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableInternalIp() {
+    return enableInternalIp;
+  }
+
+  /**
+   * Indicates the client enables internal IP feature, this is applicable for internal clients only.
+   * @param enableInternalIp enableInternalIp or {@code null} for none
+   */
+  public EnterpriseCrmEventbusProtoExternalTraffic setEnableInternalIp(java.lang.Boolean enableInternalIp) {
+    this.enableInternalIp = enableInternalIp;
+    return this;
+  }
 
   /**
    * User’s GCP project id the traffic is referring to.
@@ -112,9 +140,23 @@ public final class EnterpriseCrmEventbusProtoExternalTraffic extends com.google.
   }
 
   /**
-   * LINT.ThenChange(//depot/google3/enterprise/crm/eventbus/proto/product.proto:product, //depot/go
-   * ogle3/java/com/google/enterprise/crm/integrationplatform/api/utils/ConverterUtils.java:source_t
-   * o_product)
+   * Enqueue the execution request due to quota issue
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getRetryRequestForQuota() {
+    return retryRequestForQuota;
+  }
+
+  /**
+   * Enqueue the execution request due to quota issue
+   * @param retryRequestForQuota retryRequestForQuota or {@code null} for none
+   */
+  public EnterpriseCrmEventbusProtoExternalTraffic setRetryRequestForQuota(java.lang.Boolean retryRequestForQuota) {
+    this.retryRequestForQuota = retryRequestForQuota;
+    return this;
+  }
+
+  /**
    * @return value or {@code null} for none
    */
   public java.lang.String getSource() {
@@ -122,9 +164,6 @@ public final class EnterpriseCrmEventbusProtoExternalTraffic extends com.google.
   }
 
   /**
-   * LINT.ThenChange(//depot/google3/enterprise/crm/eventbus/proto/product.proto:product, //depot/go
-   * ogle3/java/com/google/enterprise/crm/integrationplatform/api/utils/ConverterUtils.java:source_t
-   * o_product)
    * @param source source or {@code null} for none
    */
   public EnterpriseCrmEventbusProtoExternalTraffic setSource(java.lang.String source) {

@@ -70,6 +70,13 @@ public final class GoogleCloudIntegrationsV1alphaTriggerConfig extends com.googl
   private java.lang.String errorCatcherId;
 
   /**
+   * Optional. List of input variables for the api trigger.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudIntegrationsV1alphaTriggerConfigVariables inputVariables;
+
+  /**
    * Optional. The user created label for a particular trigger.
    * The value may be {@code null}.
    */
@@ -82,6 +89,13 @@ public final class GoogleCloudIntegrationsV1alphaTriggerConfig extends com.googl
    */
   @com.google.api.client.util.Key
   private java.lang.String nextTasksExecutionPolicy;
+
+  /**
+   * Optional. List of output variables for the api trigger.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudIntegrationsV1alphaTriggerConfigVariables outputVariables;
 
   /**
    * Optional. Informs the front-end application where to draw this error catcher config on the UI.
@@ -124,7 +138,10 @@ public final class GoogleCloudIntegrationsV1alphaTriggerConfig extends com.googl
   private java.lang.String trigger;
 
   /**
-   * Optional. The backend trigger ID.
+   * Optional. Auto-generated trigger ID. The ID is based on the properties that you define in the
+   * trigger config. For example, for an API trigger, the trigger ID follows the format:
+   * api_trigger/TRIGGER_NAME Where trigger config has properties with value {"Trigger name":
+   * TRIGGER_NAME}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -223,6 +240,23 @@ public final class GoogleCloudIntegrationsV1alphaTriggerConfig extends com.googl
   }
 
   /**
+   * Optional. List of input variables for the api trigger.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaTriggerConfigVariables getInputVariables() {
+    return inputVariables;
+  }
+
+  /**
+   * Optional. List of input variables for the api trigger.
+   * @param inputVariables inputVariables or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaTriggerConfig setInputVariables(GoogleCloudIntegrationsV1alphaTriggerConfigVariables inputVariables) {
+    this.inputVariables = inputVariables;
+    return this;
+  }
+
+  /**
    * Optional. The user created label for a particular trigger.
    * @return value or {@code null} for none
    */
@@ -253,6 +287,23 @@ public final class GoogleCloudIntegrationsV1alphaTriggerConfig extends com.googl
    */
   public GoogleCloudIntegrationsV1alphaTriggerConfig setNextTasksExecutionPolicy(java.lang.String nextTasksExecutionPolicy) {
     this.nextTasksExecutionPolicy = nextTasksExecutionPolicy;
+    return this;
+  }
+
+  /**
+   * Optional. List of output variables for the api trigger.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaTriggerConfigVariables getOutputVariables() {
+    return outputVariables;
+  }
+
+  /**
+   * Optional. List of output variables for the api trigger.
+   * @param outputVariables outputVariables or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaTriggerConfig setOutputVariables(GoogleCloudIntegrationsV1alphaTriggerConfigVariables outputVariables) {
+    this.outputVariables = outputVariables;
     return this;
   }
 
@@ -337,7 +388,10 @@ public final class GoogleCloudIntegrationsV1alphaTriggerConfig extends com.googl
   }
 
   /**
-   * Optional. The backend trigger ID.
+   * Optional. Auto-generated trigger ID. The ID is based on the properties that you define in the
+   * trigger config. For example, for an API trigger, the trigger ID follows the format:
+   * api_trigger/TRIGGER_NAME Where trigger config has properties with value {"Trigger name":
+   * TRIGGER_NAME}
    * @return value or {@code null} for none
    */
   public java.lang.String getTriggerId() {
@@ -345,7 +399,10 @@ public final class GoogleCloudIntegrationsV1alphaTriggerConfig extends com.googl
   }
 
   /**
-   * Optional. The backend trigger ID.
+   * Optional. Auto-generated trigger ID. The ID is based on the properties that you define in the
+   * trigger config. For example, for an API trigger, the trigger ID follows the format:
+   * api_trigger/TRIGGER_NAME Where trigger config has properties with value {"Trigger name":
+   * TRIGGER_NAME}
    * @param triggerId triggerId or {@code null} for none
    */
   public GoogleCloudIntegrationsV1alphaTriggerConfig setTriggerId(java.lang.String triggerId) {

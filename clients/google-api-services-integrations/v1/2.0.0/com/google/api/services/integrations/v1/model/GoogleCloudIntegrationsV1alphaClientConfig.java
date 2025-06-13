@@ -66,6 +66,29 @@ public final class GoogleCloudIntegrationsV1alphaClientConfig extends com.google
   private java.lang.String description;
 
   /**
+   * Optional. Indicates the client enables making HTTP call.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableHttpCall;
+
+  /**
+   * Optional. Indicates the client enables internal IP feature, this is applicable for internal
+   * clients only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableInternalIp;
+
+  /**
+   * Optional. Indicates if the Cloud Companion APIs will be used in the tenant project, i.e. if
+   * customer can use the managed AI features for free.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableManagedAiFeatures;
+
+  /**
    * Optional. True if variable masking feature should be turned on for this region
    * The value may be {@code null}.
    */
@@ -198,6 +221,61 @@ public final class GoogleCloudIntegrationsV1alphaClientConfig extends com.google
    */
   public GoogleCloudIntegrationsV1alphaClientConfig setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Optional. Indicates the client enables making HTTP call.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableHttpCall() {
+    return enableHttpCall;
+  }
+
+  /**
+   * Optional. Indicates the client enables making HTTP call.
+   * @param enableHttpCall enableHttpCall or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaClientConfig setEnableHttpCall(java.lang.Boolean enableHttpCall) {
+    this.enableHttpCall = enableHttpCall;
+    return this;
+  }
+
+  /**
+   * Optional. Indicates the client enables internal IP feature, this is applicable for internal
+   * clients only.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableInternalIp() {
+    return enableInternalIp;
+  }
+
+  /**
+   * Optional. Indicates the client enables internal IP feature, this is applicable for internal
+   * clients only.
+   * @param enableInternalIp enableInternalIp or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaClientConfig setEnableInternalIp(java.lang.Boolean enableInternalIp) {
+    this.enableInternalIp = enableInternalIp;
+    return this;
+  }
+
+  /**
+   * Optional. Indicates if the Cloud Companion APIs will be used in the tenant project, i.e. if
+   * customer can use the managed AI features for free.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableManagedAiFeatures() {
+    return enableManagedAiFeatures;
+  }
+
+  /**
+   * Optional. Indicates if the Cloud Companion APIs will be used in the tenant project, i.e. if
+   * customer can use the managed AI features for free.
+   * @param enableManagedAiFeatures enableManagedAiFeatures or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaClientConfig setEnableManagedAiFeatures(java.lang.Boolean enableManagedAiFeatures) {
+    this.enableManagedAiFeatures = enableManagedAiFeatures;
     return this;
   }
 

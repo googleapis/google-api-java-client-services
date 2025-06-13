@@ -56,6 +56,13 @@ public final class GoogleCloudIntegrationsV1alphaIntegrationParameter extends co
   private GoogleCloudIntegrationsV1alphaValueType defaultValue;
 
   /**
+   * Optional. Description of the parameter.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String description;
+
+  /**
    * The name (without prefix) to be displayed in the UI for this parameter. E.g. if the key is
    * "foo.bar.myName", then the name would be "myName".
    * The value may be {@code null}.
@@ -164,6 +171,23 @@ public final class GoogleCloudIntegrationsV1alphaIntegrationParameter extends co
    */
   public GoogleCloudIntegrationsV1alphaIntegrationParameter setDefaultValue(GoogleCloudIntegrationsV1alphaValueType defaultValue) {
     this.defaultValue = defaultValue;
+    return this;
+  }
+
+  /**
+   * Optional. Description of the parameter.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDescription() {
+    return description;
+  }
+
+  /**
+   * Optional. Description of the parameter.
+   * @param description description or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaIntegrationParameter setDescription(java.lang.String description) {
+    this.description = description;
     return this;
   }
 

@@ -52,14 +52,14 @@ public final class GoogleCloudIntegrationsV1alphaSfdcInstance extends com.google
   private String deleteTime;
 
   /**
-   * A description of the sfdc instance.
+   * Optional. A description of the sfdc instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * User selected unique name/alias to easily reference an instance.
+   * Optional. User selected unique name/alias to easily reference an instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,8 +74,8 @@ public final class GoogleCloudIntegrationsV1alphaSfdcInstance extends com.google
   private java.lang.String name;
 
   /**
-   * URL used for API calls after authentication (the login authority is configured within the
-   * referenced AuthConfig).
+   * Optional. URL used for API calls after authentication (the login authority is configured within
+   * the referenced AuthConfig).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -147,7 +147,7 @@ public final class GoogleCloudIntegrationsV1alphaSfdcInstance extends com.google
   }
 
   /**
-   * A description of the sfdc instance.
+   * Optional. A description of the sfdc instance.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -155,7 +155,7 @@ public final class GoogleCloudIntegrationsV1alphaSfdcInstance extends com.google
   }
 
   /**
-   * A description of the sfdc instance.
+   * Optional. A description of the sfdc instance.
    * @param description description or {@code null} for none
    */
   public GoogleCloudIntegrationsV1alphaSfdcInstance setDescription(java.lang.String description) {
@@ -164,7 +164,7 @@ public final class GoogleCloudIntegrationsV1alphaSfdcInstance extends com.google
   }
 
   /**
-   * User selected unique name/alias to easily reference an instance.
+   * Optional. User selected unique name/alias to easily reference an instance.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -172,7 +172,7 @@ public final class GoogleCloudIntegrationsV1alphaSfdcInstance extends com.google
   }
 
   /**
-   * User selected unique name/alias to easily reference an instance.
+   * Optional. User selected unique name/alias to easily reference an instance.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudIntegrationsV1alphaSfdcInstance setDisplayName(java.lang.String displayName) {
@@ -200,8 +200,8 @@ public final class GoogleCloudIntegrationsV1alphaSfdcInstance extends com.google
   }
 
   /**
-   * URL used for API calls after authentication (the login authority is configured within the
-   * referenced AuthConfig).
+   * Optional. URL used for API calls after authentication (the login authority is configured within
+   * the referenced AuthConfig).
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAuthority() {
@@ -209,8 +209,8 @@ public final class GoogleCloudIntegrationsV1alphaSfdcInstance extends com.google
   }
 
   /**
-   * URL used for API calls after authentication (the login authority is configured within the
-   * referenced AuthConfig).
+   * Optional. URL used for API calls after authentication (the login authority is configured within
+   * the referenced AuthConfig).
    * @param serviceAuthority serviceAuthority or {@code null} for none
    */
   public GoogleCloudIntegrationsV1alphaSfdcInstance setServiceAuthority(java.lang.String serviceAuthority) {

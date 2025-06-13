@@ -31,7 +31,7 @@ package com.google.api.services.integrations.v1.model;
 public final class GoogleCloudIntegrationsV1alphaSfdcChannel extends com.google.api.client.json.GenericJson {
 
   /**
-   * The Channel topic defined by salesforce once an channel is opened
+   * Required. The Channel topic defined by salesforce once an channel is opened
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,30 +52,30 @@ public final class GoogleCloudIntegrationsV1alphaSfdcChannel extends com.google.
   private String deleteTime;
 
   /**
-   * The description for this channel
+   * Optional. The description for this channel
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Client level unique name/alias to easily reference a channel.
+   * Optional. Client level unique name/alias to easily reference a channel.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Indicated if a channel has any active integrations referencing it. Set to false when the
-   * channel is created, and set to true if there is any integration published with the channel
-   * configured in it.
+   * Output only. Indicated if a channel has any active integrations referencing it. Set to false
+   * when the channel is created, and set to true if there is any integration published with the
+   * channel configured in it.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean isActive;
 
   /**
-   * Last sfdc messsage replay id for channel
+   * Output only. Last sfdc messsage replay id for channel
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,7 +97,7 @@ public final class GoogleCloudIntegrationsV1alphaSfdcChannel extends com.google.
   private String updateTime;
 
   /**
-   * The Channel topic defined by salesforce once an channel is opened
+   * Required. The Channel topic defined by salesforce once an channel is opened
    * @return value or {@code null} for none
    */
   public java.lang.String getChannelTopic() {
@@ -105,7 +105,7 @@ public final class GoogleCloudIntegrationsV1alphaSfdcChannel extends com.google.
   }
 
   /**
-   * The Channel topic defined by salesforce once an channel is opened
+   * Required. The Channel topic defined by salesforce once an channel is opened
    * @param channelTopic channelTopic or {@code null} for none
    */
   public GoogleCloudIntegrationsV1alphaSfdcChannel setChannelTopic(java.lang.String channelTopic) {
@@ -148,7 +148,7 @@ public final class GoogleCloudIntegrationsV1alphaSfdcChannel extends com.google.
   }
 
   /**
-   * The description for this channel
+   * Optional. The description for this channel
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -156,7 +156,7 @@ public final class GoogleCloudIntegrationsV1alphaSfdcChannel extends com.google.
   }
 
   /**
-   * The description for this channel
+   * Optional. The description for this channel
    * @param description description or {@code null} for none
    */
   public GoogleCloudIntegrationsV1alphaSfdcChannel setDescription(java.lang.String description) {
@@ -165,7 +165,7 @@ public final class GoogleCloudIntegrationsV1alphaSfdcChannel extends com.google.
   }
 
   /**
-   * Client level unique name/alias to easily reference a channel.
+   * Optional. Client level unique name/alias to easily reference a channel.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -173,7 +173,7 @@ public final class GoogleCloudIntegrationsV1alphaSfdcChannel extends com.google.
   }
 
   /**
-   * Client level unique name/alias to easily reference a channel.
+   * Optional. Client level unique name/alias to easily reference a channel.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudIntegrationsV1alphaSfdcChannel setDisplayName(java.lang.String displayName) {
@@ -182,9 +182,9 @@ public final class GoogleCloudIntegrationsV1alphaSfdcChannel extends com.google.
   }
 
   /**
-   * Indicated if a channel has any active integrations referencing it. Set to false when the
-   * channel is created, and set to true if there is any integration published with the channel
-   * configured in it.
+   * Output only. Indicated if a channel has any active integrations referencing it. Set to false
+   * when the channel is created, and set to true if there is any integration published with the
+   * channel configured in it.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsActive() {
@@ -192,9 +192,9 @@ public final class GoogleCloudIntegrationsV1alphaSfdcChannel extends com.google.
   }
 
   /**
-   * Indicated if a channel has any active integrations referencing it. Set to false when the
-   * channel is created, and set to true if there is any integration published with the channel
-   * configured in it.
+   * Output only. Indicated if a channel has any active integrations referencing it. Set to false
+   * when the channel is created, and set to true if there is any integration published with the
+   * channel configured in it.
    * @param isActive isActive or {@code null} for none
    */
   public GoogleCloudIntegrationsV1alphaSfdcChannel setIsActive(java.lang.Boolean isActive) {
@@ -203,7 +203,7 @@ public final class GoogleCloudIntegrationsV1alphaSfdcChannel extends com.google.
   }
 
   /**
-   * Last sfdc messsage replay id for channel
+   * Output only. Last sfdc messsage replay id for channel
    * @return value or {@code null} for none
    */
   public java.lang.String getLastReplayId() {
@@ -211,7 +211,7 @@ public final class GoogleCloudIntegrationsV1alphaSfdcChannel extends com.google.
   }
 
   /**
-   * Last sfdc messsage replay id for channel
+   * Output only. Last sfdc messsage replay id for channel
    * @param lastReplayId lastReplayId or {@code null} for none
    */
   public GoogleCloudIntegrationsV1alphaSfdcChannel setLastReplayId(java.lang.String lastReplayId) {

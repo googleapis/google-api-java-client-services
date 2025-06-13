@@ -45,6 +45,13 @@ public final class GoogleCloudIntegrationsV1alphaCreateCloudFunctionRequest exte
   private java.lang.String functionRegion;
 
   /**
+   * Optional. The api version of CF to be created
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String gcfApiVersion;
+
+  /**
    * Indicates the id of the GCP project that the function will be created in.
    * The value may be {@code null}.
    */
@@ -82,6 +89,23 @@ public final class GoogleCloudIntegrationsV1alphaCreateCloudFunctionRequest exte
    */
   public GoogleCloudIntegrationsV1alphaCreateCloudFunctionRequest setFunctionRegion(java.lang.String functionRegion) {
     this.functionRegion = functionRegion;
+    return this;
+  }
+
+  /**
+   * Optional. The api version of CF to be created
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGcfApiVersion() {
+    return gcfApiVersion;
+  }
+
+  /**
+   * Optional. The api version of CF to be created
+   * @param gcfApiVersion gcfApiVersion or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaCreateCloudFunctionRequest setGcfApiVersion(java.lang.String gcfApiVersion) {
+    this.gcfApiVersion = gcfApiVersion;
     return this;
   }
 

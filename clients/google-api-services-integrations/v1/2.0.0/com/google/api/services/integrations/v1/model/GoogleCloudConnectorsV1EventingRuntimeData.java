@@ -61,6 +61,13 @@ public final class GoogleCloudConnectorsV1EventingRuntimeData extends com.google
   private GoogleCloudConnectorsV1EventingRuntimeDataWebhookData webhookData;
 
   /**
+   * Output only. Webhook subscriptions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudConnectorsV1EventingRuntimeDataWebhookSubscriptions webhookSubscriptions;
+
+  /**
    * Output only. Events listener endpoint. The value will populated after provisioning the events
    * listener.
    * @return value or {@code null} for none
@@ -129,6 +136,23 @@ public final class GoogleCloudConnectorsV1EventingRuntimeData extends com.google
    */
   public GoogleCloudConnectorsV1EventingRuntimeData setWebhookData(GoogleCloudConnectorsV1EventingRuntimeDataWebhookData webhookData) {
     this.webhookData = webhookData;
+    return this;
+  }
+
+  /**
+   * Output only. Webhook subscriptions.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1EventingRuntimeDataWebhookSubscriptions getWebhookSubscriptions() {
+    return webhookSubscriptions;
+  }
+
+  /**
+   * Output only. Webhook subscriptions.
+   * @param webhookSubscriptions webhookSubscriptions or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1EventingRuntimeData setWebhookSubscriptions(GoogleCloudConnectorsV1EventingRuntimeDataWebhookSubscriptions webhookSubscriptions) {
+    this.webhookSubscriptions = webhookSubscriptions;
     return this;
   }
 

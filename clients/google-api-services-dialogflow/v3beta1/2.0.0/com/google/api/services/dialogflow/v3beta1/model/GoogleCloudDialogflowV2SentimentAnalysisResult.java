@@ -19,11 +19,10 @@ package com.google.api.services.dialogflow.v3beta1.model;
 /**
  * The result of sentiment analysis. Sentiment analysis inspects user input and identifies the
  * prevailing subjective opinion, especially to determine a user's attitude as positive, negative,
- * or neutral. For Participants.DetectIntent, it needs to be configured in
- * DetectIntentRequest.query_params. For Participants.StreamingDetectIntent, it needs to be
- * configured in StreamingDetectIntentRequest.query_params. And for Participants.AnalyzeContent and
- * Participants.StreamingAnalyzeContent, it needs to be configured in
- * ConversationProfile.human_agent_assistant_config
+ * or neutral. For DetectIntent, it needs to be configured in DetectIntentRequest.query_params. For
+ * StreamingDetectIntent, it needs to be configured in StreamingDetectIntentRequest.query_params.
+ * And for Participants.AnalyzeContent and Participants.StreamingAnalyzeContent, it needs to be
+ * configured in ConversationProfile.human_agent_assistant_config
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:

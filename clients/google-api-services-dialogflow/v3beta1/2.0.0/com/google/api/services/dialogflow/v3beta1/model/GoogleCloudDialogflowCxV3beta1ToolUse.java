@@ -37,6 +37,20 @@ public final class GoogleCloudDialogflowCxV3beta1ToolUse extends com.google.api.
   private java.lang.String action;
 
   /**
+   * Optional. Data store tool trace.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3beta1ToolUseDataStoreToolTrace dataStoreToolTrace;
+
+  /**
+   * Output only. The display name of the tool.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String displayName;
+
+  /**
    * Optional. A list of input parameters for the action.
    * The value may be {@code null}.
    */
@@ -58,6 +72,13 @@ public final class GoogleCloudDialogflowCxV3beta1ToolUse extends com.google.api.
   private java.lang.String tool;
 
   /**
+   * Optional. Webhook tool trace.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3beta1ToolUseWebhookToolTrace webhookToolTrace;
+
+  /**
    * Optional. Name of the action to be called during the tool use.
    * @return value or {@code null} for none
    */
@@ -71,6 +92,40 @@ public final class GoogleCloudDialogflowCxV3beta1ToolUse extends com.google.api.
    */
   public GoogleCloudDialogflowCxV3beta1ToolUse setAction(java.lang.String action) {
     this.action = action;
+    return this;
+  }
+
+  /**
+   * Optional. Data store tool trace.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1ToolUseDataStoreToolTrace getDataStoreToolTrace() {
+    return dataStoreToolTrace;
+  }
+
+  /**
+   * Optional. Data store tool trace.
+   * @param dataStoreToolTrace dataStoreToolTrace or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1ToolUse setDataStoreToolTrace(GoogleCloudDialogflowCxV3beta1ToolUseDataStoreToolTrace dataStoreToolTrace) {
+    this.dataStoreToolTrace = dataStoreToolTrace;
+    return this;
+  }
+
+  /**
+   * Output only. The display name of the tool.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDisplayName() {
+    return displayName;
+  }
+
+  /**
+   * Output only. The display name of the tool.
+   * @param displayName displayName or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1ToolUse setDisplayName(java.lang.String displayName) {
+    this.displayName = displayName;
     return this;
   }
 
@@ -122,6 +177,23 @@ public final class GoogleCloudDialogflowCxV3beta1ToolUse extends com.google.api.
    */
   public GoogleCloudDialogflowCxV3beta1ToolUse setTool(java.lang.String tool) {
     this.tool = tool;
+    return this;
+  }
+
+  /**
+   * Optional. Webhook tool trace.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1ToolUseWebhookToolTrace getWebhookToolTrace() {
+    return webhookToolTrace;
+  }
+
+  /**
+   * Optional. Webhook tool trace.
+   * @param webhookToolTrace webhookToolTrace or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1ToolUse setWebhookToolTrace(GoogleCloudDialogflowCxV3beta1ToolUseWebhookToolTrace webhookToolTrace) {
+    this.webhookToolTrace = webhookToolTrace;
     return this;
   }
 

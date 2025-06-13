@@ -37,7 +37,8 @@ public final class GoogleCloudDialogflowCxV3beta1ToolAuthenticationOAuthConfig e
   private java.lang.String clientId;
 
   /**
-   * Required. The client secret from the OAuth provider.
+   * Optional. The client secret from the OAuth provider. If the `secret_version_for_client_secret`
+   * field is set, this field will be ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,6 +50,22 @@ public final class GoogleCloudDialogflowCxV3beta1ToolAuthenticationOAuthConfig e
    */
   @com.google.api.client.util.Key
   private java.lang.String oauthGrantType;
+
+  /**
+   * Optional. The OAuth scopes to grant.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> scopes;
+
+  /**
+   * Optional. The name of the SecretManager secret version resource storing the client secret. If
+   * this field is set, the `client_secret` field will be ignored. Format:
+   * `projects/{project}/secrets/{secret}/versions/{version}`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String secretVersionForClientSecret;
 
   /**
    * Required. The token endpoint in the OAuth provider to exchange for an access token.
@@ -75,7 +92,8 @@ public final class GoogleCloudDialogflowCxV3beta1ToolAuthenticationOAuthConfig e
   }
 
   /**
-   * Required. The client secret from the OAuth provider.
+   * Optional. The client secret from the OAuth provider. If the `secret_version_for_client_secret`
+   * field is set, this field will be ignored.
    * @return value or {@code null} for none
    */
   public java.lang.String getClientSecret() {
@@ -83,7 +101,8 @@ public final class GoogleCloudDialogflowCxV3beta1ToolAuthenticationOAuthConfig e
   }
 
   /**
-   * Required. The client secret from the OAuth provider.
+   * Optional. The client secret from the OAuth provider. If the `secret_version_for_client_secret`
+   * field is set, this field will be ignored.
    * @param clientSecret clientSecret or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1ToolAuthenticationOAuthConfig setClientSecret(java.lang.String clientSecret) {
@@ -105,6 +124,44 @@ public final class GoogleCloudDialogflowCxV3beta1ToolAuthenticationOAuthConfig e
    */
   public GoogleCloudDialogflowCxV3beta1ToolAuthenticationOAuthConfig setOauthGrantType(java.lang.String oauthGrantType) {
     this.oauthGrantType = oauthGrantType;
+    return this;
+  }
+
+  /**
+   * Optional. The OAuth scopes to grant.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getScopes() {
+    return scopes;
+  }
+
+  /**
+   * Optional. The OAuth scopes to grant.
+   * @param scopes scopes or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1ToolAuthenticationOAuthConfig setScopes(java.util.List<java.lang.String> scopes) {
+    this.scopes = scopes;
+    return this;
+  }
+
+  /**
+   * Optional. The name of the SecretManager secret version resource storing the client secret. If
+   * this field is set, the `client_secret` field will be ignored. Format:
+   * `projects/{project}/secrets/{secret}/versions/{version}`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSecretVersionForClientSecret() {
+    return secretVersionForClientSecret;
+  }
+
+  /**
+   * Optional. The name of the SecretManager secret version resource storing the client secret. If
+   * this field is set, the `client_secret` field will be ignored. Format:
+   * `projects/{project}/secrets/{secret}/versions/{version}`
+   * @param secretVersionForClientSecret secretVersionForClientSecret or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1ToolAuthenticationOAuthConfig setSecretVersionForClientSecret(java.lang.String secretVersionForClientSecret) {
+    this.secretVersionForClientSecret = secretVersionForClientSecret;
     return this;
   }
 

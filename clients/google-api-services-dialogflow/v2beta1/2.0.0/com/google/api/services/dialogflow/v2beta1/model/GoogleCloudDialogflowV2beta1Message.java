@@ -81,7 +81,15 @@ public final class GoogleCloudDialogflowV2beta1Message extends com.google.api.cl
   private java.lang.String participantRole;
 
   /**
-   * Optional. The time when the message was sent.
+   * Optional. Automated agent responses.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDialogflowV2beta1ResponseMessage> responseMessages;
+
+  /**
+   * Optional. The time when the message was sent. For voice messages, this is the time when an
+   * utterance started.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -218,7 +226,25 @@ public final class GoogleCloudDialogflowV2beta1Message extends com.google.api.cl
   }
 
   /**
-   * Optional. The time when the message was sent.
+   * Optional. Automated agent responses.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDialogflowV2beta1ResponseMessage> getResponseMessages() {
+    return responseMessages;
+  }
+
+  /**
+   * Optional. Automated agent responses.
+   * @param responseMessages responseMessages or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1Message setResponseMessages(java.util.List<GoogleCloudDialogflowV2beta1ResponseMessage> responseMessages) {
+    this.responseMessages = responseMessages;
+    return this;
+  }
+
+  /**
+   * Optional. The time when the message was sent. For voice messages, this is the time when an
+   * utterance started.
    * @return value or {@code null} for none
    */
   public String getSendTime() {
@@ -226,7 +252,8 @@ public final class GoogleCloudDialogflowV2beta1Message extends com.google.api.cl
   }
 
   /**
-   * Optional. The time when the message was sent.
+   * Optional. The time when the message was sent. For voice messages, this is the time when an
+   * utterance started.
    * @param sendTime sendTime or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Message setSendTime(String sendTime) {

@@ -25,8 +25,9 @@ package com.google.api.services.dialogflow.v2.model;
  * created when there's a human agent assistant suggestion generated. A typical workflow for
  * customers provide feedback to an answer is: 1. For human agent assistant, customers get
  * suggestion via ListSuggestions API. Together with the answers, AnswerRecord.name are returned to
- * the customers. 2. The customer uses the AnswerRecord.name to call the UpdateAnswerRecord method
- * to send feedback about a specific answer that they believe is wrong.
+ * the customers. 2. The customer uses the AnswerRecord.name to call the
+ * AnswerRecords.UpdateAnswerRecord method to send feedback about a specific answer that they
+ * believe is wrong.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:

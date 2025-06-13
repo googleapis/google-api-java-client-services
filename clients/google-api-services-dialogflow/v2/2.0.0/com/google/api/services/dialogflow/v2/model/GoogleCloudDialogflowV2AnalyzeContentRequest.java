@@ -37,6 +37,13 @@ public final class GoogleCloudDialogflowV2AnalyzeContentRequest extends com.goog
   private GoogleCloudDialogflowV2AssistQueryParameters assistQueryParams;
 
   /**
+   * The natural language speech audio to be processed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowV2AudioInput audioInput;
+
+  /**
    * Additional parameters to be put into Dialogflow CX session parameters. To remove a parameter
    * from the session, clients should explicitly set the parameter value to null. Note: this field
    * should only be used if you are connecting to a Dialogflow CX agent.
@@ -104,6 +111,23 @@ public final class GoogleCloudDialogflowV2AnalyzeContentRequest extends com.goog
    */
   public GoogleCloudDialogflowV2AnalyzeContentRequest setAssistQueryParams(GoogleCloudDialogflowV2AssistQueryParameters assistQueryParams) {
     this.assistQueryParams = assistQueryParams;
+    return this;
+  }
+
+  /**
+   * The natural language speech audio to be processed.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2AudioInput getAudioInput() {
+    return audioInput;
+  }
+
+  /**
+   * The natural language speech audio to be processed.
+   * @param audioInput audioInput or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2AnalyzeContentRequest setAudioInput(GoogleCloudDialogflowV2AudioInput audioInput) {
+    this.audioInput = audioInput;
     return this;
   }
 

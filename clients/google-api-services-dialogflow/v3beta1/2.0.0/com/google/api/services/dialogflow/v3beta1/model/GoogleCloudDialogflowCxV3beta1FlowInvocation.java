@@ -17,7 +17,8 @@
 package com.google.api.services.dialogflow.v3beta1.model;
 
 /**
- * Stores metadata of the invocation of a CX flow. Next Id: 7
+ * Stores metadata of the invocation of a child CX flow. Flow invocation actions enter the child
+ * flow.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:
@@ -28,6 +29,13 @@ package com.google.api.services.dialogflow.v3beta1.model;
  */
 @SuppressWarnings("javadoc")
 public final class GoogleCloudDialogflowCxV3beta1FlowInvocation extends com.google.api.client.json.GenericJson {
+
+  /**
+   * Output only. The display name of the flow.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String displayName;
 
   /**
    * Required. The unique identifier of the flow. Format: `projects//locations//agents/`.
@@ -56,6 +64,23 @@ public final class GoogleCloudDialogflowCxV3beta1FlowInvocation extends com.goog
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> outputActionParameters;
+
+  /**
+   * Output only. The display name of the flow.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDisplayName() {
+    return displayName;
+  }
+
+  /**
+   * Output only. The display name of the flow.
+   * @param displayName displayName or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1FlowInvocation setDisplayName(java.lang.String displayName) {
+    this.displayName = displayName;
+    return this;
+  }
 
   /**
    * Required. The unique identifier of the flow. Format: `projects//locations//agents/`.

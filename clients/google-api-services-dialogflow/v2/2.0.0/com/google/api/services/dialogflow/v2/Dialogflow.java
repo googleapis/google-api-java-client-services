@@ -13136,15 +13136,21 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * Optional. Filters to restrict results to specific answer records. Marked deprecated as it
-         * hasn't been, and isn't currently, supported. For more information about filtering, see
+         * Optional. Filters to restrict results to specific answer records. The expression has the
+         * following syntax: [AND ] ... The following fields and operators are supported: *
+         * conversation_id with equals(=) operator Examples: * `conversation_id=bar` matches answer
+         * records in the `projects/foo/locations/global/conversations/bar` conversation (assuming
+         * the parent is `projects/foo/locations/global`). For more information about filtering, see
          * [API Filtering](https://aip.dev/160).
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Optional. Filters to restrict results to specific answer records. Marked deprecated as it hasn't
-       been, and isn't currently, supported. For more information about filtering, see [API
+        /** Optional. Filters to restrict results to specific answer records. The expression has the following
+       syntax: [AND ] ... The following fields and operators are supported: * conversation_id with
+       equals(=) operator Examples: * `conversation_id=bar` matches answer records in the
+       `projects/foo/locations/global/conversations/bar` conversation (assuming the parent is
+       `projects/foo/locations/global`). For more information about filtering, see [API
        Filtering](https://aip.dev/160).
          */
         public java.lang.String getFilter() {
@@ -13152,8 +13158,11 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * Optional. Filters to restrict results to specific answer records. Marked deprecated as it
-         * hasn't been, and isn't currently, supported. For more information about filtering, see
+         * Optional. Filters to restrict results to specific answer records. The expression has the
+         * following syntax: [AND ] ... The following fields and operators are supported: *
+         * conversation_id with equals(=) operator Examples: * `conversation_id=bar` matches answer
+         * records in the `projects/foo/locations/global/conversations/bar` conversation (assuming
+         * the parent is `projects/foo/locations/global`). For more information about filtering, see
          * [API Filtering](https://aip.dev/160).
          */
         public List setFilter(java.lang.String filter) {
@@ -15287,8 +15296,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * Creates a conversation profile in the specified project. ConversationProfile.CreateTime and
-       * ConversationProfile.UpdateTime aren't populated in the response. You can retrieve them via
+       * Creates a conversation profile in the specified project. ConversationProfile.create_time and
+       * ConversationProfile.update_time aren't populated in the response. You can retrieve them via
        * GetConversationProfile API.
        *
        * Create a request for the method "conversationProfiles.create".
@@ -15314,8 +15323,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Creates a conversation profile in the specified project. ConversationProfile.CreateTime and
-         * ConversationProfile.UpdateTime aren't populated in the response. You can retrieve them via
+         * Creates a conversation profile in the specified project. ConversationProfile.create_time and
+         * ConversationProfile.update_time aren't populated in the response. You can retrieve them via
          * GetConversationProfile API.
          *
          * Create a request for the method "conversationProfiles.create".
@@ -15893,8 +15902,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * Updates the specified conversation profile. ConversationProfile.CreateTime and
-       * ConversationProfile.UpdateTime aren't populated in the response. You can retrieve them via
+       * Updates the specified conversation profile. ConversationProfile.create_time and
+       * ConversationProfile.update_time aren't populated in the response. You can retrieve them via
        * GetConversationProfile API.
        *
        * Create a request for the method "conversationProfiles.patch".
@@ -15921,8 +15930,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^projects/[^/]+/conversationProfiles/[^/]+$");
 
         /**
-         * Updates the specified conversation profile. ConversationProfile.CreateTime and
-         * ConversationProfile.UpdateTime aren't populated in the response. You can retrieve them via
+         * Updates the specified conversation profile. ConversationProfile.create_time and
+         * ConversationProfile.update_time aren't populated in the response. You can retrieve them via
          * GetConversationProfile API.
          *
          * Create a request for the method "conversationProfiles.patch".
@@ -16525,8 +16534,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
         /**
          * Optional. Identifier of the conversation. Generally it's auto generated by Google. Only
          * set it if you cannot wait for the response to return a auto-generated one to you. The
-         * conversation ID must be compliant with the regression fomula `a-zA-Z*` with the
-         * characters length in range of [3,64]. If the field is provided, the caller is resposible
+         * conversation ID must be compliant with the regression formula `a-zA-Z*` with the
+         * characters length in range of [3,64]. If the field is provided, the caller is responsible
          * for 1. the uniqueness of the ID, otherwise the request will be rejected. 2. the
          * consistency for whether to use custom ID or not under a project to better ensure
          * uniqueness.
@@ -16536,8 +16545,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
         /** Optional. Identifier of the conversation. Generally it's auto generated by Google. Only set it if
        you cannot wait for the response to return a auto-generated one to you. The conversation ID must be
-       compliant with the regression fomula `a-zA-Z*` with the characters length in range of [3,64]. If
-       the field is provided, the caller is resposible for 1. the uniqueness of the ID, otherwise the
+       compliant with the regression formula `a-zA-Z*` with the characters length in range of [3,64]. If
+       the field is provided, the caller is responsible for 1. the uniqueness of the ID, otherwise the
        request will be rejected. 2. the consistency for whether to use custom ID or not under a project to
        better ensure uniqueness.
          */
@@ -16548,8 +16557,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
         /**
          * Optional. Identifier of the conversation. Generally it's auto generated by Google. Only
          * set it if you cannot wait for the response to return a auto-generated one to you. The
-         * conversation ID must be compliant with the regression fomula `a-zA-Z*` with the
-         * characters length in range of [3,64]. If the field is provided, the caller is resposible
+         * conversation ID must be compliant with the regression formula `a-zA-Z*` with the
+         * characters length in range of [3,64]. If the field is provided, the caller is responsible
          * for 1. the uniqueness of the ID, otherwise the request will be rejected. 2. the
          * consistency for whether to use custom ID or not under a project to better ensure
          * uniqueness.
@@ -18560,6 +18569,155 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
       public class Suggestions {
 
         /**
+         * Generates all the suggestions using generators configured in the conversation profile. A
+         * generator is used only if its trigger event is matched.
+         *
+         * Create a request for the method "suggestions.generate".
+         *
+         * This request holds the parameters needed by the dialogflow server.  After setting any optional
+         * parameters, call the {@link Generate#execute()} method to invoke the remote operation.
+         *
+         * @param conversation Required. The conversation for which the suggestions are generated. Format:
+         *        `projects//locations//conversations/`. The conversation must be created with a
+         *        conversation profile which has generators configured in it to be able to get suggestions.
+         * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2GenerateSuggestionsRequest}
+         * @return the request
+         */
+        public Generate generate(java.lang.String conversation, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2GenerateSuggestionsRequest content) throws java.io.IOException {
+          Generate result = new Generate(conversation, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Generate extends DialogflowRequest<com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2GenerateSuggestionsResponse> {
+
+          private static final String REST_PATH = "v2/{+conversation}/suggestions:generate";
+
+          private final java.util.regex.Pattern CONVERSATION_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/conversations/[^/]+$");
+
+          /**
+           * Generates all the suggestions using generators configured in the conversation profile. A
+           * generator is used only if its trigger event is matched.
+           *
+           * Create a request for the method "suggestions.generate".
+           *
+           * This request holds the parameters needed by the the dialogflow server.  After setting any
+           * optional parameters, call the {@link Generate#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Generate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param conversation Required. The conversation for which the suggestions are generated. Format:
+         *        `projects//locations//conversations/`. The conversation must be created with a
+         *        conversation profile which has generators configured in it to be able to get suggestions.
+           * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2GenerateSuggestionsRequest}
+           * @since 1.13
+           */
+          protected Generate(java.lang.String conversation, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2GenerateSuggestionsRequest content) {
+            super(Dialogflow.this, "POST", REST_PATH, content, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2GenerateSuggestionsResponse.class);
+            this.conversation = com.google.api.client.util.Preconditions.checkNotNull(conversation, "Required parameter conversation must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CONVERSATION_PATTERN.matcher(conversation).matches(),
+                  "Parameter conversation must conform to the pattern " +
+                  "^projects/[^/]+/conversations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Generate set$Xgafv(java.lang.String $Xgafv) {
+            return (Generate) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Generate setAccessToken(java.lang.String accessToken) {
+            return (Generate) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Generate setAlt(java.lang.String alt) {
+            return (Generate) super.setAlt(alt);
+          }
+
+          @Override
+          public Generate setCallback(java.lang.String callback) {
+            return (Generate) super.setCallback(callback);
+          }
+
+          @Override
+          public Generate setFields(java.lang.String fields) {
+            return (Generate) super.setFields(fields);
+          }
+
+          @Override
+          public Generate setKey(java.lang.String key) {
+            return (Generate) super.setKey(key);
+          }
+
+          @Override
+          public Generate setOauthToken(java.lang.String oauthToken) {
+            return (Generate) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Generate setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Generate) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Generate setQuotaUser(java.lang.String quotaUser) {
+            return (Generate) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Generate setUploadType(java.lang.String uploadType) {
+            return (Generate) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Generate setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Generate) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The conversation for which the suggestions are generated. Format:
+           * `projects//locations//conversations/`. The conversation must be created with a
+           * conversation profile which has generators configured in it to be able to get
+           * suggestions.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String conversation;
+
+          /** Required. The conversation for which the suggestions are generated. Format:
+         `projects//locations//conversations/`. The conversation must be created with a conversation profile
+         which has generators configured in it to be able to get suggestions.
+           */
+          public java.lang.String getConversation() {
+            return conversation;
+          }
+
+          /**
+           * Required. The conversation for which the suggestions are generated. Format:
+           * `projects//locations//conversations/`. The conversation must be created with a
+           * conversation profile which has generators configured in it to be able to get
+           * suggestions.
+           */
+          public Generate setConversation(java.lang.String conversation) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CONVERSATION_PATTERN.matcher(conversation).matches(),
+                  "Parameter conversation must conform to the pattern " +
+                  "^projects/[^/]+/conversations/[^/]+$");
+            }
+            this.conversation = conversation;
+            return this;
+          }
+
+          @Override
+          public Generate set(String parameterName, Object value) {
+            return (Generate) super.set(parameterName, value);
+          }
+        }
+        /**
          * Get answers for the given query based on knowledge documents.
          *
          * Create a request for the method "suggestions.searchKnowledge".
@@ -18994,9 +19152,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
         /**
          * Optional. The ID to use for the generator, which will become the final component of the
-         * generator's resource name. The generator ID must be compliant with the regression fomula
+         * generator's resource name. The generator ID must be compliant with the regression formula
          * `a-zA-Z*` with the characters length in range of [3,64]. If the field is not provided, an
-         * Id will be auto-generated. If the field is provided, the caller is resposible for 1. the
+         * Id will be auto-generated. If the field is provided, the caller is responsible for 1. the
          * uniqueness of the ID, otherwise the request will be rejected. 2. the consistency for
          * whether to use custom ID or not under a project to better ensure uniqueness.
          */
@@ -19004,9 +19162,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
         private java.lang.String generatorId;
 
         /** Optional. The ID to use for the generator, which will become the final component of the generator's
-       resource name. The generator ID must be compliant with the regression fomula `a-zA-Z*` with the
+       resource name. The generator ID must be compliant with the regression formula `a-zA-Z*` with the
        characters length in range of [3,64]. If the field is not provided, an Id will be auto-generated.
-       If the field is provided, the caller is resposible for 1. the uniqueness of the ID, otherwise the
+       If the field is provided, the caller is responsible for 1. the uniqueness of the ID, otherwise the
        request will be rejected. 2. the consistency for whether to use custom ID or not under a project to
        better ensure uniqueness.
          */
@@ -19016,9 +19174,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
         /**
          * Optional. The ID to use for the generator, which will become the final component of the
-         * generator's resource name. The generator ID must be compliant with the regression fomula
+         * generator's resource name. The generator ID must be compliant with the regression formula
          * `a-zA-Z*` with the characters length in range of [3,64]. If the field is not provided, an
-         * Id will be auto-generated. If the field is provided, the caller is resposible for 1. the
+         * Id will be auto-generated. If the field is provided, the caller is responsible for 1. the
          * uniqueness of the ID, otherwise the request will be rejected. 2. the consistency for
          * whether to use custom ID or not under a project to better ensure uniqueness.
          */
@@ -21798,6 +21956,145 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
+       * Gets location-level encryption key specification.
+       *
+       * Create a request for the method "locations.getEncryptionSpec".
+       *
+       * This request holds the parameters needed by the dialogflow server.  After setting any optional
+       * parameters, call the {@link GetEncryptionSpec#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the encryption spec resource to get.
+       * @return the request
+       */
+      public GetEncryptionSpec getEncryptionSpec(java.lang.String name) throws java.io.IOException {
+        GetEncryptionSpec result = new GetEncryptionSpec(name);
+        initialize(result);
+        return result;
+      }
+
+      public class GetEncryptionSpec extends DialogflowRequest<com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2EncryptionSpec> {
+
+        private static final String REST_PATH = "v2/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/encryptionSpec$");
+
+        /**
+         * Gets location-level encryption key specification.
+         *
+         * Create a request for the method "locations.getEncryptionSpec".
+         *
+         * This request holds the parameters needed by the the dialogflow server.  After setting any
+         * optional parameters, call the {@link GetEncryptionSpec#execute()} method to invoke the remote
+         * operation. <p> {@link GetEncryptionSpec#initialize(com.google.api.client.googleapis.services.Ab
+         * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param name Required. The name of the encryption spec resource to get.
+         * @since 1.13
+         */
+        protected GetEncryptionSpec(java.lang.String name) {
+          super(Dialogflow.this, "GET", REST_PATH, null, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2EncryptionSpec.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/encryptionSpec$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public GetEncryptionSpec set$Xgafv(java.lang.String $Xgafv) {
+          return (GetEncryptionSpec) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GetEncryptionSpec setAccessToken(java.lang.String accessToken) {
+          return (GetEncryptionSpec) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GetEncryptionSpec setAlt(java.lang.String alt) {
+          return (GetEncryptionSpec) super.setAlt(alt);
+        }
+
+        @Override
+        public GetEncryptionSpec setCallback(java.lang.String callback) {
+          return (GetEncryptionSpec) super.setCallback(callback);
+        }
+
+        @Override
+        public GetEncryptionSpec setFields(java.lang.String fields) {
+          return (GetEncryptionSpec) super.setFields(fields);
+        }
+
+        @Override
+        public GetEncryptionSpec setKey(java.lang.String key) {
+          return (GetEncryptionSpec) super.setKey(key);
+        }
+
+        @Override
+        public GetEncryptionSpec setOauthToken(java.lang.String oauthToken) {
+          return (GetEncryptionSpec) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetEncryptionSpec setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetEncryptionSpec) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetEncryptionSpec setQuotaUser(java.lang.String quotaUser) {
+          return (GetEncryptionSpec) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetEncryptionSpec setUploadType(java.lang.String uploadType) {
+          return (GetEncryptionSpec) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GetEncryptionSpec setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GetEncryptionSpec) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The name of the encryption spec resource to get. */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the encryption spec resource to get.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Required. The name of the encryption spec resource to get. */
+        public GetEncryptionSpec setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+/encryptionSpec$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public GetEncryptionSpec set(String parameterName, Object value) {
+          return (GetEncryptionSpec) super.set(parameterName, value);
+        }
+      }
+      /**
        * Lists information about the supported locations for this service.
        *
        * Create a request for the method "locations.list".
@@ -21927,6 +22224,29 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                 "^projects/[^/]+$");
           }
           this.name = name;
+          return this;
+        }
+
+        /**
+         * Optional. A list of extra location types that should be used as conditions for
+         * controlling the visibility of the locations.
+         */
+        @com.google.api.client.util.Key
+        private java.util.List<java.lang.String> extraLocationTypes;
+
+        /** Optional. A list of extra location types that should be used as conditions for controlling the
+       visibility of the locations.
+         */
+        public java.util.List<java.lang.String> getExtraLocationTypes() {
+          return extraLocationTypes;
+        }
+
+        /**
+         * Optional. A list of extra location types that should be used as conditions for
+         * controlling the visibility of the locations.
+         */
+        public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
+          this.extraLocationTypes = extraLocationTypes;
           return this;
         }
 
@@ -32863,15 +33183,21 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * Optional. Filters to restrict results to specific answer records. Marked deprecated as
-           * it hasn't been, and isn't currently, supported. For more information about filtering,
-           * see [API Filtering](https://aip.dev/160).
+           * Optional. Filters to restrict results to specific answer records. The expression has
+           * the following syntax: [AND ] ... The following fields and operators are supported: *
+           * conversation_id with equals(=) operator Examples: * `conversation_id=bar` matches
+           * answer records in the `projects/foo/locations/global/conversations/bar` conversation
+           * (assuming the parent is `projects/foo/locations/global`). For more information about
+           * filtering, see [API Filtering](https://aip.dev/160).
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Optional. Filters to restrict results to specific answer records. Marked deprecated as it hasn't
-         been, and isn't currently, supported. For more information about filtering, see [API
+          /** Optional. Filters to restrict results to specific answer records. The expression has the following
+         syntax: [AND ] ... The following fields and operators are supported: * conversation_id with
+         equals(=) operator Examples: * `conversation_id=bar` matches answer records in the
+         `projects/foo/locations/global/conversations/bar` conversation (assuming the parent is
+         `projects/foo/locations/global`). For more information about filtering, see [API
          Filtering](https://aip.dev/160).
            */
           public java.lang.String getFilter() {
@@ -32879,9 +33205,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * Optional. Filters to restrict results to specific answer records. Marked deprecated as
-           * it hasn't been, and isn't currently, supported. For more information about filtering,
-           * see [API Filtering](https://aip.dev/160).
+           * Optional. Filters to restrict results to specific answer records. The expression has
+           * the following syntax: [AND ] ... The following fields and operators are supported: *
+           * conversation_id with equals(=) operator Examples: * `conversation_id=bar` matches
+           * answer records in the `projects/foo/locations/global/conversations/bar` conversation
+           * (assuming the parent is `projects/foo/locations/global`). For more information about
+           * filtering, see [API Filtering](https://aip.dev/160).
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -35447,8 +35776,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Creates a conversation profile in the specified project. ConversationProfile.CreateTime and
-         * ConversationProfile.UpdateTime aren't populated in the response. You can retrieve them via
+         * Creates a conversation profile in the specified project. ConversationProfile.create_time and
+         * ConversationProfile.update_time aren't populated in the response. You can retrieve them via
          * GetConversationProfile API.
          *
          * Create a request for the method "conversationProfiles.create".
@@ -35474,8 +35803,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Creates a conversation profile in the specified project. ConversationProfile.CreateTime and
-           * ConversationProfile.UpdateTime aren't populated in the response. You can retrieve them via
+           * Creates a conversation profile in the specified project. ConversationProfile.create_time and
+           * ConversationProfile.update_time aren't populated in the response. You can retrieve them via
            * GetConversationProfile API.
            *
            * Create a request for the method "conversationProfiles.create".
@@ -36055,8 +36384,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Updates the specified conversation profile. ConversationProfile.CreateTime and
-         * ConversationProfile.UpdateTime aren't populated in the response. You can retrieve them via
+         * Updates the specified conversation profile. ConversationProfile.create_time and
+         * ConversationProfile.update_time aren't populated in the response. You can retrieve them via
          * GetConversationProfile API.
          *
          * Create a request for the method "conversationProfiles.patch".
@@ -36083,8 +36412,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/conversationProfiles/[^/]+$");
 
           /**
-           * Updates the specified conversation profile. ConversationProfile.CreateTime and
-           * ConversationProfile.UpdateTime aren't populated in the response. You can retrieve them via
+           * Updates the specified conversation profile. ConversationProfile.create_time and
+           * ConversationProfile.update_time aren't populated in the response. You can retrieve them via
            * GetConversationProfile API.
            *
            * Create a request for the method "conversationProfiles.patch".
@@ -36687,9 +37016,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           /**
            * Optional. Identifier of the conversation. Generally it's auto generated by Google. Only
            * set it if you cannot wait for the response to return a auto-generated one to you. The
-           * conversation ID must be compliant with the regression fomula `a-zA-Z*` with the
+           * conversation ID must be compliant with the regression formula `a-zA-Z*` with the
            * characters length in range of [3,64]. If the field is provided, the caller is
-           * resposible for 1. the uniqueness of the ID, otherwise the request will be rejected. 2.
+           * responsible for 1. the uniqueness of the ID, otherwise the request will be rejected. 2.
            * the consistency for whether to use custom ID or not under a project to better ensure
            * uniqueness.
            */
@@ -36698,8 +37027,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
           /** Optional. Identifier of the conversation. Generally it's auto generated by Google. Only set it if
          you cannot wait for the response to return a auto-generated one to you. The conversation ID must be
-         compliant with the regression fomula `a-zA-Z*` with the characters length in range of [3,64]. If
-         the field is provided, the caller is resposible for 1. the uniqueness of the ID, otherwise the
+         compliant with the regression formula `a-zA-Z*` with the characters length in range of [3,64]. If
+         the field is provided, the caller is responsible for 1. the uniqueness of the ID, otherwise the
          request will be rejected. 2. the consistency for whether to use custom ID or not under a project to
          better ensure uniqueness.
            */
@@ -36710,9 +37039,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           /**
            * Optional. Identifier of the conversation. Generally it's auto generated by Google. Only
            * set it if you cannot wait for the response to return a auto-generated one to you. The
-           * conversation ID must be compliant with the regression fomula `a-zA-Z*` with the
+           * conversation ID must be compliant with the regression formula `a-zA-Z*` with the
            * characters length in range of [3,64]. If the field is provided, the caller is
-           * resposible for 1. the uniqueness of the ID, otherwise the request will be rejected. 2.
+           * responsible for 1. the uniqueness of the ID, otherwise the request will be rejected. 2.
            * the consistency for whether to use custom ID or not under a project to better ensure
            * uniqueness.
            */
@@ -36866,6 +37195,147 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           @Override
           public Get set(String parameterName, Object value) {
             return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Data ingestion API. Ingests context references for an existing conversation.
+         *
+         * Create a request for the method "conversations.ingestContextReferences".
+         *
+         * This request holds the parameters needed by the dialogflow server.  After setting any optional
+         * parameters, call the {@link IngestContextReferences#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param conversation Required. Resource identifier of the conversation to ingest context information for. Format:
+         *        `projects//locations//conversations/`.
+         * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2IngestContextReferencesRequest}
+         * @return the request
+         */
+        public IngestContextReferences ingestContextReferences(java.lang.String conversation, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2IngestContextReferencesRequest content) throws java.io.IOException {
+          IngestContextReferences result = new IngestContextReferences(conversation, content);
+          initialize(result);
+          return result;
+        }
+
+        public class IngestContextReferences extends DialogflowRequest<com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2IngestContextReferencesResponse> {
+
+          private static final String REST_PATH = "v2/{+conversation}:ingestContextReferences";
+
+          private final java.util.regex.Pattern CONVERSATION_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/conversations/[^/]+$");
+
+          /**
+           * Data ingestion API. Ingests context references for an existing conversation.
+           *
+           * Create a request for the method "conversations.ingestContextReferences".
+           *
+           * This request holds the parameters needed by the the dialogflow server.  After setting any
+           * optional parameters, call the {@link IngestContextReferences#execute()} method to invoke the
+           * remote operation. <p> {@link IngestContextReferences#initialize(com.google.api.client.googleapi
+           * s.services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+           * after invoking the constructor. </p>
+           *
+           * @param conversation Required. Resource identifier of the conversation to ingest context information for. Format:
+         *        `projects//locations//conversations/`.
+           * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2IngestContextReferencesRequest}
+           * @since 1.13
+           */
+          protected IngestContextReferences(java.lang.String conversation, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2IngestContextReferencesRequest content) {
+            super(Dialogflow.this, "POST", REST_PATH, content, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2IngestContextReferencesResponse.class);
+            this.conversation = com.google.api.client.util.Preconditions.checkNotNull(conversation, "Required parameter conversation must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CONVERSATION_PATTERN.matcher(conversation).matches(),
+                  "Parameter conversation must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/conversations/[^/]+$");
+            }
+          }
+
+          @Override
+          public IngestContextReferences set$Xgafv(java.lang.String $Xgafv) {
+            return (IngestContextReferences) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public IngestContextReferences setAccessToken(java.lang.String accessToken) {
+            return (IngestContextReferences) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public IngestContextReferences setAlt(java.lang.String alt) {
+            return (IngestContextReferences) super.setAlt(alt);
+          }
+
+          @Override
+          public IngestContextReferences setCallback(java.lang.String callback) {
+            return (IngestContextReferences) super.setCallback(callback);
+          }
+
+          @Override
+          public IngestContextReferences setFields(java.lang.String fields) {
+            return (IngestContextReferences) super.setFields(fields);
+          }
+
+          @Override
+          public IngestContextReferences setKey(java.lang.String key) {
+            return (IngestContextReferences) super.setKey(key);
+          }
+
+          @Override
+          public IngestContextReferences setOauthToken(java.lang.String oauthToken) {
+            return (IngestContextReferences) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public IngestContextReferences setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (IngestContextReferences) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public IngestContextReferences setQuotaUser(java.lang.String quotaUser) {
+            return (IngestContextReferences) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public IngestContextReferences setUploadType(java.lang.String uploadType) {
+            return (IngestContextReferences) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public IngestContextReferences setUploadProtocol(java.lang.String uploadProtocol) {
+            return (IngestContextReferences) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Resource identifier of the conversation to ingest context information for.
+           * Format: `projects//locations//conversations/`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String conversation;
+
+          /** Required. Resource identifier of the conversation to ingest context information for. Format:
+         `projects//locations//conversations/`.
+           */
+          public java.lang.String getConversation() {
+            return conversation;
+          }
+
+          /**
+           * Required. Resource identifier of the conversation to ingest context information for.
+           * Format: `projects//locations//conversations/`.
+           */
+          public IngestContextReferences setConversation(java.lang.String conversation) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CONVERSATION_PATTERN.matcher(conversation).matches(),
+                  "Parameter conversation must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/conversations/[^/]+$");
+            }
+            this.conversation = conversation;
+            return this;
+          }
+
+          @Override
+          public IngestContextReferences set(String parameterName, Object value) {
+            return (IngestContextReferences) super.set(parameterName, value);
           }
         }
         /**
@@ -38722,6 +39192,155 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
         public class Suggestions {
 
           /**
+           * Generates all the suggestions using generators configured in the conversation profile. A
+           * generator is used only if its trigger event is matched.
+           *
+           * Create a request for the method "suggestions.generate".
+           *
+           * This request holds the parameters needed by the dialogflow server.  After setting any optional
+           * parameters, call the {@link Generate#execute()} method to invoke the remote operation.
+           *
+           * @param conversation Required. The conversation for which the suggestions are generated. Format:
+           *        `projects//locations//conversations/`. The conversation must be created with a
+           *        conversation profile which has generators configured in it to be able to get suggestions.
+           * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2GenerateSuggestionsRequest}
+           * @return the request
+           */
+          public Generate generate(java.lang.String conversation, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2GenerateSuggestionsRequest content) throws java.io.IOException {
+            Generate result = new Generate(conversation, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Generate extends DialogflowRequest<com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2GenerateSuggestionsResponse> {
+
+            private static final String REST_PATH = "v2/{+conversation}/suggestions:generate";
+
+            private final java.util.regex.Pattern CONVERSATION_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/conversations/[^/]+$");
+
+            /**
+             * Generates all the suggestions using generators configured in the conversation profile. A
+             * generator is used only if its trigger event is matched.
+             *
+             * Create a request for the method "suggestions.generate".
+             *
+             * This request holds the parameters needed by the the dialogflow server.  After setting any
+             * optional parameters, call the {@link Generate#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Generate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param conversation Required. The conversation for which the suggestions are generated. Format:
+           *        `projects//locations//conversations/`. The conversation must be created with a
+           *        conversation profile which has generators configured in it to be able to get suggestions.
+             * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2GenerateSuggestionsRequest}
+             * @since 1.13
+             */
+            protected Generate(java.lang.String conversation, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2GenerateSuggestionsRequest content) {
+              super(Dialogflow.this, "POST", REST_PATH, content, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2GenerateSuggestionsResponse.class);
+              this.conversation = com.google.api.client.util.Preconditions.checkNotNull(conversation, "Required parameter conversation must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(CONVERSATION_PATTERN.matcher(conversation).matches(),
+                    "Parameter conversation must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/conversations/[^/]+$");
+              }
+            }
+
+            @Override
+            public Generate set$Xgafv(java.lang.String $Xgafv) {
+              return (Generate) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Generate setAccessToken(java.lang.String accessToken) {
+              return (Generate) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Generate setAlt(java.lang.String alt) {
+              return (Generate) super.setAlt(alt);
+            }
+
+            @Override
+            public Generate setCallback(java.lang.String callback) {
+              return (Generate) super.setCallback(callback);
+            }
+
+            @Override
+            public Generate setFields(java.lang.String fields) {
+              return (Generate) super.setFields(fields);
+            }
+
+            @Override
+            public Generate setKey(java.lang.String key) {
+              return (Generate) super.setKey(key);
+            }
+
+            @Override
+            public Generate setOauthToken(java.lang.String oauthToken) {
+              return (Generate) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Generate setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Generate) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Generate setQuotaUser(java.lang.String quotaUser) {
+              return (Generate) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Generate setUploadType(java.lang.String uploadType) {
+              return (Generate) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Generate setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Generate) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The conversation for which the suggestions are generated. Format:
+             * `projects//locations//conversations/`. The conversation must be created with a
+             * conversation profile which has generators configured in it to be able to get
+             * suggestions.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String conversation;
+
+            /** Required. The conversation for which the suggestions are generated. Format:
+           `projects//locations//conversations/`. The conversation must be created with a conversation profile
+           which has generators configured in it to be able to get suggestions.
+             */
+            public java.lang.String getConversation() {
+              return conversation;
+            }
+
+            /**
+             * Required. The conversation for which the suggestions are generated. Format:
+             * `projects//locations//conversations/`. The conversation must be created with a
+             * conversation profile which has generators configured in it to be able to get
+             * suggestions.
+             */
+            public Generate setConversation(java.lang.String conversation) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(CONVERSATION_PATTERN.matcher(conversation).matches(),
+                    "Parameter conversation must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/conversations/[^/]+$");
+              }
+              this.conversation = conversation;
+              return this;
+            }
+
+            @Override
+            public Generate set(String parameterName, Object value) {
+              return (Generate) super.set(parameterName, value);
+            }
+          }
+          /**
            * Get answers for the given query based on knowledge documents.
            *
            * Create a request for the method "suggestions.searchKnowledge".
@@ -39005,6 +39624,174 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
+       * An accessor for creating requests from the EncryptionSpec collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Dialogflow dialogflow = new Dialogflow(...);}
+       *   {@code Dialogflow.EncryptionSpec.List request = dialogflow.encryptionSpec().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public EncryptionSpec encryptionSpec() {
+        return new EncryptionSpec();
+      }
+
+      /**
+       * The "encryptionSpec" collection of methods.
+       */
+      public class EncryptionSpec {
+
+        /**
+         * Initializes a location-level encryption key specification. An error will be thrown if the
+         * location has resources already created before the initialization. Once the encryption
+         * specification is initialized at a location, it is immutable and all newly created resources under
+         * the location will be encrypted with the existing specification.
+         *
+         * Create a request for the method "encryptionSpec.initialize".
+         *
+         * This request holds the parameters needed by the dialogflow server.  After setting any optional
+         * parameters, call the {@link Initialize#execute()} method to invoke the remote operation.
+         *
+         * @param name Immutable. The resource name of the encryption key specification resource. Format:
+         *        projects/{project}/locations/{location}/encryptionSpec
+         * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2InitializeEncryptionSpecRequest}
+         * @return the request
+         */
+        public Initialize initialize(java.lang.String name, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2InitializeEncryptionSpecRequest content) throws java.io.IOException {
+          Initialize result = new Initialize(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Initialize extends DialogflowRequest<com.google.api.services.dialogflow.v2.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v2/{+name}:initialize";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/encryptionSpec$");
+
+          /**
+           * Initializes a location-level encryption key specification. An error will be thrown if the
+           * location has resources already created before the initialization. Once the encryption
+           * specification is initialized at a location, it is immutable and all newly created resources
+           * under the location will be encrypted with the existing specification.
+           *
+           * Create a request for the method "encryptionSpec.initialize".
+           *
+           * This request holds the parameters needed by the the dialogflow server.  After setting any
+           * optional parameters, call the {@link Initialize#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Initialize#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Immutable. The resource name of the encryption key specification resource. Format:
+         *        projects/{project}/locations/{location}/encryptionSpec
+           * @param content the {@link com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2InitializeEncryptionSpecRequest}
+           * @since 1.13
+           */
+          protected Initialize(java.lang.String name, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2InitializeEncryptionSpecRequest content) {
+            super(Dialogflow.this, "POST", REST_PATH, content, com.google.api.services.dialogflow.v2.model.GoogleLongrunningOperation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/encryptionSpec$");
+            }
+          }
+
+          @Override
+          public Initialize set$Xgafv(java.lang.String $Xgafv) {
+            return (Initialize) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Initialize setAccessToken(java.lang.String accessToken) {
+            return (Initialize) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Initialize setAlt(java.lang.String alt) {
+            return (Initialize) super.setAlt(alt);
+          }
+
+          @Override
+          public Initialize setCallback(java.lang.String callback) {
+            return (Initialize) super.setCallback(callback);
+          }
+
+          @Override
+          public Initialize setFields(java.lang.String fields) {
+            return (Initialize) super.setFields(fields);
+          }
+
+          @Override
+          public Initialize setKey(java.lang.String key) {
+            return (Initialize) super.setKey(key);
+          }
+
+          @Override
+          public Initialize setOauthToken(java.lang.String oauthToken) {
+            return (Initialize) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Initialize setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Initialize) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Initialize setQuotaUser(java.lang.String quotaUser) {
+            return (Initialize) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Initialize setUploadType(java.lang.String uploadType) {
+            return (Initialize) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Initialize setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Initialize) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Immutable. The resource name of the encryption key specification resource. Format:
+           * projects/{project}/locations/{location}/encryptionSpec
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Immutable. The resource name of the encryption key specification resource. Format:
+         projects/{project}/locations/{location}/encryptionSpec
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Immutable. The resource name of the encryption key specification resource. Format:
+           * projects/{project}/locations/{location}/encryptionSpec
+           */
+          public Initialize setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/encryptionSpec$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Initialize set(String parameterName, Object value) {
+            return (Initialize) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the Generators collection.
        *
        * <p>The typical use is:</p>
@@ -39157,9 +39944,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           /**
            * Optional. The ID to use for the generator, which will become the final component of the
            * generator's resource name. The generator ID must be compliant with the regression
-           * fomula `a-zA-Z*` with the characters length in range of [3,64]. If the field is not
+           * formula `a-zA-Z*` with the characters length in range of [3,64]. If the field is not
            * provided, an Id will be auto-generated. If the field is provided, the caller is
-           * resposible for 1. the uniqueness of the ID, otherwise the request will be rejected. 2.
+           * responsible for 1. the uniqueness of the ID, otherwise the request will be rejected. 2.
            * the consistency for whether to use custom ID or not under a project to better ensure
            * uniqueness.
            */
@@ -39167,9 +39954,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           private java.lang.String generatorId;
 
           /** Optional. The ID to use for the generator, which will become the final component of the generator's
-         resource name. The generator ID must be compliant with the regression fomula `a-zA-Z*` with the
+         resource name. The generator ID must be compliant with the regression formula `a-zA-Z*` with the
          characters length in range of [3,64]. If the field is not provided, an Id will be auto-generated.
-         If the field is provided, the caller is resposible for 1. the uniqueness of the ID, otherwise the
+         If the field is provided, the caller is responsible for 1. the uniqueness of the ID, otherwise the
          request will be rejected. 2. the consistency for whether to use custom ID or not under a project to
          better ensure uniqueness.
            */
@@ -39180,9 +39967,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
           /**
            * Optional. The ID to use for the generator, which will become the final component of the
            * generator's resource name. The generator ID must be compliant with the regression
-           * fomula `a-zA-Z*` with the characters length in range of [3,64]. If the field is not
+           * formula `a-zA-Z*` with the characters length in range of [3,64]. If the field is not
            * provided, an Id will be auto-generated. If the field is provided, the caller is
-           * resposible for 1. the uniqueness of the ID, otherwise the request will be rejected. 2.
+           * responsible for 1. the uniqueness of the ID, otherwise the request will be rejected. 2.
            * the consistency for whether to use custom ID or not under a project to better ensure
            * uniqueness.
            */
@@ -39339,7 +40126,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the dialogflow server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The generator resource name to retrieve. Format: `projects//locations/`/generators/`
+         * @param name Required. The generator resource name to retrieve. Format: `projects//locations//generators/`
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -39365,7 +40152,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The generator resource name to retrieve. Format: `projects//locations/`/generators/`
+           * @param name Required. The generator resource name to retrieve. Format: `projects//locations//generators/`
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -39445,12 +40232,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Required. The generator resource name to retrieve. Format:
-           * `projects//locations/`/generators/`
+           * `projects//locations//generators/`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The generator resource name to retrieve. Format: `projects//locations/`/generators/`
+          /** Required. The generator resource name to retrieve. Format: `projects//locations//generators/`
            */
           public java.lang.String getName() {
             return name;
@@ -39458,7 +40245,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
           /**
            * Required. The generator resource name to retrieve. Format:
-           * `projects//locations/`/generators/`
+           * `projects//locations//generators/`
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -41990,7 +42777,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
          * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
          * methods to check whether the cancellation succeeded or whether the operation completed despite
          * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
-         * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+         * operation with an Operation.error value with a google.rpc.Status.code of `1`, corresponding to
          * `Code.CANCELLED`.
          *
          * Create a request for the method "operations.cancel".
@@ -42020,7 +42807,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
            * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
            * methods to check whether the cancellation succeeded or whether the operation completed despite
            * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
-           * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+           * operation with an Operation.error value with a google.rpc.Status.code of `1`, corresponding to
            * `Code.CANCELLED`.
            *
            * Create a request for the method "operations.cancel".
@@ -42950,7 +43737,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
        * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
        * methods to check whether the cancellation succeeded or whether the operation completed despite
        * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
-       * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+       * operation with an Operation.error value with a google.rpc.Status.code of `1`, corresponding to
        * `Code.CANCELLED`.
        *
        * Create a request for the method "operations.cancel".
@@ -42980,7 +43767,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
          * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
          * methods to check whether the cancellation succeeded or whether the operation completed despite
          * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
-         * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+         * operation with an Operation.error value with a google.rpc.Status.code of `1`, corresponding to
          * `Code.CANCELLED`.
          *
          * Create a request for the method "operations.cancel".

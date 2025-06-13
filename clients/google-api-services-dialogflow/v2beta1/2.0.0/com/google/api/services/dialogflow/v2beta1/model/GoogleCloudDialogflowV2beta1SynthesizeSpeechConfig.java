@@ -47,6 +47,19 @@ public final class GoogleCloudDialogflowV2beta1SynthesizeSpeechConfig extends co
   private java.lang.Double pitch;
 
   /**
+   * Optional. The custom pronunciations for the synthesized audio.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDialogflowV2beta1CustomPronunciationParams> pronunciations;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudDialogflowV2beta1CustomPronunciationParams used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudDialogflowV2beta1CustomPronunciationParams.class);
+  }
+
+  /**
    * Optional. Speaking rate/speed, in the range [0.25, 4.0]. 1.0 is the normal native speed
    * supported by the specific voice. 2.0 is twice as fast, and 0.5 is half as fast. If unset(0.0),
    * defaults to the native 1.0 speed. Any other values < 0.25 or > 4.0 will return an error.
@@ -111,6 +124,23 @@ public final class GoogleCloudDialogflowV2beta1SynthesizeSpeechConfig extends co
    */
   public GoogleCloudDialogflowV2beta1SynthesizeSpeechConfig setPitch(java.lang.Double pitch) {
     this.pitch = pitch;
+    return this;
+  }
+
+  /**
+   * Optional. The custom pronunciations for the synthesized audio.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDialogflowV2beta1CustomPronunciationParams> getPronunciations() {
+    return pronunciations;
+  }
+
+  /**
+   * Optional. The custom pronunciations for the synthesized audio.
+   * @param pronunciations pronunciations or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1SynthesizeSpeechConfig setPronunciations(java.util.List<GoogleCloudDialogflowV2beta1CustomPronunciationParams> pronunciations) {
+    this.pronunciations = pronunciations;
     return this;
   }
 

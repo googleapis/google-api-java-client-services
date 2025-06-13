@@ -50,8 +50,8 @@ public final class GoogleCloudDialogflowCxV3beta1TestCaseResult extends com.goog
   private java.lang.String environment;
 
   /**
-   * The resource name for the test case result. Format: `projects//locations//agents//testCases/
-   * /results/`.
+   * The resource name for the test case result. Format:
+   * `projects//locations//agents//testCases//results/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -106,8 +106,8 @@ public final class GoogleCloudDialogflowCxV3beta1TestCaseResult extends com.goog
   }
 
   /**
-   * The resource name for the test case result. Format: `projects//locations//agents//testCases/
-   * /results/`.
+   * The resource name for the test case result. Format:
+   * `projects//locations//agents//testCases//results/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -115,8 +115,8 @@ public final class GoogleCloudDialogflowCxV3beta1TestCaseResult extends com.goog
   }
 
   /**
-   * The resource name for the test case result. Format: `projects//locations//agents//testCases/
-   * /results/`.
+   * The resource name for the test case result. Format:
+   * `projects//locations//agents//testCases//results/`.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1TestCaseResult setName(java.lang.String name) {

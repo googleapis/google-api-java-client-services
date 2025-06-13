@@ -46,6 +46,24 @@ public final class GoogleCloudDialogflowV2beta1SearchKnowledgeRequest extends co
   private java.lang.String conversationProfile;
 
   /**
+   * Optional. Information about the end-user to improve the relevance and accuracy of generative
+   * answers. This will be interpreted and used by a language model, so, for good results, the data
+   * should be self-descriptive, and in a simple structure. Example: ```json { "subscription plan":
+   * "Business Premium Plus", "devices owned": [ {"model": "Google Pixel 7"}, {"model": "Google
+   * Pixel Tablet"} ] } ```
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Object> endUserMetadata;
+
+  /**
+   * Optional. Whether to search the query exactly without query rewrite.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean exactSearch;
+
+  /**
    * Optional. The name of the latest conversation message when the request is triggered. Format:
    * `projects//locations//conversations//messages/`.
    * The value may be {@code null}.
@@ -69,7 +87,21 @@ public final class GoogleCloudDialogflowV2beta1SearchKnowledgeRequest extends co
   private GoogleCloudDialogflowV2beta1TextInput query;
 
   /**
-   * Optional. The ID of the search session. The session_id can be combined with Dialogflow V3 Agent
+   * Optional. The source of the query in the request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String querySource;
+
+  /**
+   * Optional. Configuration specific to search queries with data stores.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowV2beta1SearchKnowledgeRequestSearchConfig searchConfig;
+
+  /**
+   * Required. The ID of the search session. The session_id can be combined with Dialogflow V3 Agent
    * ID retrieved from conversation profile or on its own to identify a search session. The search
    * history of the same session will impact the search result. It's up to the API caller to choose
    * an appropriate `Session ID`. It can be a random number or some type of session identifiers
@@ -114,6 +146,48 @@ public final class GoogleCloudDialogflowV2beta1SearchKnowledgeRequest extends co
    */
   public GoogleCloudDialogflowV2beta1SearchKnowledgeRequest setConversationProfile(java.lang.String conversationProfile) {
     this.conversationProfile = conversationProfile;
+    return this;
+  }
+
+  /**
+   * Optional. Information about the end-user to improve the relevance and accuracy of generative
+   * answers. This will be interpreted and used by a language model, so, for good results, the data
+   * should be self-descriptive, and in a simple structure. Example: ```json { "subscription plan":
+   * "Business Premium Plus", "devices owned": [ {"model": "Google Pixel 7"}, {"model": "Google
+   * Pixel Tablet"} ] } ```
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Object> getEndUserMetadata() {
+    return endUserMetadata;
+  }
+
+  /**
+   * Optional. Information about the end-user to improve the relevance and accuracy of generative
+   * answers. This will be interpreted and used by a language model, so, for good results, the data
+   * should be self-descriptive, and in a simple structure. Example: ```json { "subscription plan":
+   * "Business Premium Plus", "devices owned": [ {"model": "Google Pixel 7"}, {"model": "Google
+   * Pixel Tablet"} ] } ```
+   * @param endUserMetadata endUserMetadata or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1SearchKnowledgeRequest setEndUserMetadata(java.util.Map<String, java.lang.Object> endUserMetadata) {
+    this.endUserMetadata = endUserMetadata;
+    return this;
+  }
+
+  /**
+   * Optional. Whether to search the query exactly without query rewrite.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getExactSearch() {
+    return exactSearch;
+  }
+
+  /**
+   * Optional. Whether to search the query exactly without query rewrite.
+   * @param exactSearch exactSearch or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1SearchKnowledgeRequest setExactSearch(java.lang.Boolean exactSearch) {
+    this.exactSearch = exactSearch;
     return this;
   }
 
@@ -173,7 +247,41 @@ public final class GoogleCloudDialogflowV2beta1SearchKnowledgeRequest extends co
   }
 
   /**
-   * Optional. The ID of the search session. The session_id can be combined with Dialogflow V3 Agent
+   * Optional. The source of the query in the request.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getQuerySource() {
+    return querySource;
+  }
+
+  /**
+   * Optional. The source of the query in the request.
+   * @param querySource querySource or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1SearchKnowledgeRequest setQuerySource(java.lang.String querySource) {
+    this.querySource = querySource;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration specific to search queries with data stores.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1SearchKnowledgeRequestSearchConfig getSearchConfig() {
+    return searchConfig;
+  }
+
+  /**
+   * Optional. Configuration specific to search queries with data stores.
+   * @param searchConfig searchConfig or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1SearchKnowledgeRequest setSearchConfig(GoogleCloudDialogflowV2beta1SearchKnowledgeRequestSearchConfig searchConfig) {
+    this.searchConfig = searchConfig;
+    return this;
+  }
+
+  /**
+   * Required. The ID of the search session. The session_id can be combined with Dialogflow V3 Agent
    * ID retrieved from conversation profile or on its own to identify a search session. The search
    * history of the same session will impact the search result. It's up to the API caller to choose
    * an appropriate `Session ID`. It can be a random number or some type of session identifiers
@@ -185,7 +293,7 @@ public final class GoogleCloudDialogflowV2beta1SearchKnowledgeRequest extends co
   }
 
   /**
-   * Optional. The ID of the search session. The session_id can be combined with Dialogflow V3 Agent
+   * Required. The ID of the search session. The session_id can be combined with Dialogflow V3 Agent
    * ID retrieved from conversation profile or on its own to identify a search session. The search
    * history of the same session will impact the search result. It's up to the API caller to choose
    * an appropriate `Session ID`. It can be a random number or some type of session identifiers

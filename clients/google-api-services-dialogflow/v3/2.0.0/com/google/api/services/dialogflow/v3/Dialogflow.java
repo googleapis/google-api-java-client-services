@@ -445,6 +445,29 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
+         * Optional. A list of extra location types that should be used as conditions for
+         * controlling the visibility of the locations.
+         */
+        @com.google.api.client.util.Key
+        private java.util.List<java.lang.String> extraLocationTypes;
+
+        /** Optional. A list of extra location types that should be used as conditions for controlling the
+       visibility of the locations.
+         */
+        public java.util.List<java.lang.String> getExtraLocationTypes() {
+          return extraLocationTypes;
+        }
+
+        /**
+         * Optional. A list of extra location types that should be used as conditions for
+         * controlling the visibility of the locations.
+         */
+        public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
+          this.extraLocationTypes = extraLocationTypes;
+          return this;
+        }
+
+        /**
          * A filter to narrow down results to a preferred subset. The filtering language accepts
          * strings like `"displayName=tokyo"`, and is documented in more detail in
          * [AIP-160](https://google.aip.dev/160).
@@ -4114,8 +4137,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link DeployFlow#execute()} method to invoke the remote operation.
            *
-           * @param environment Required. The environment to deploy the flow to. Format: `projects//locations//agents//
-           *        environments/`.
+           * @param environment Required. The environment to deploy the flow to. Format:
+           *        `projects//locations//agents//environments/`.
            * @param content the {@link com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3DeployFlowRequest}
            * @return the request
            */
@@ -4146,8 +4169,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * DeployFlow#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param environment Required. The environment to deploy the flow to. Format: `projects//locations//agents//
-           *        environments/`.
+             * @param environment Required. The environment to deploy the flow to. Format:
+           *        `projects//locations//agents//environments/`.
              * @param content the {@link com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3DeployFlowRequest}
              * @since 1.13
              */
@@ -4218,13 +4241,13 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
             /**
              * Required. The environment to deploy the flow to. Format:
-             * `projects//locations//agents// environments/`.
+             * `projects//locations//agents//environments/`.
              */
             @com.google.api.client.util.Key
             private java.lang.String environment;
 
-            /** Required. The environment to deploy the flow to. Format: `projects//locations//agents//
-           environments/`.
+            /** Required. The environment to deploy the flow to. Format:
+           `projects//locations//agents//environments/`.
              */
             public java.lang.String getEnvironment() {
               return environment;
@@ -4232,7 +4255,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
             /**
              * Required. The environment to deploy the flow to. Format:
-             * `projects//locations//agents// environments/`.
+             * `projects//locations//agents//environments/`.
              */
             public DeployFlow setEnvironment(java.lang.String environment) {
               if (!getSuppressPatternChecks()) {
@@ -5087,8 +5110,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * This request holds the parameters needed by the dialogflow server.  After setting any optional
              * parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The environment to list results for. Format: `projects//locations//agents//
-             *        environments/`.
+             * @param parent Required. The environment to list results for. Format: `projects//locations//agents//environments/`.
              * @return the request
              */
             public List list(java.lang.String parent) throws java.io.IOException {
@@ -5114,8 +5136,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The environment to list results for. Format: `projects//locations//agents//
-             *        environments/`.
+               * @param parent Required. The environment to list results for. Format: `projects//locations//agents//environments/`.
                * @since 1.13
                */
               protected List(java.lang.String parent) {
@@ -5195,13 +5216,13 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
               /**
                * Required. The environment to list results for. Format:
-               * `projects//locations//agents// environments/`.
+               * `projects//locations//agents//environments/`.
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. The environment to list results for. Format: `projects//locations//agents//
-             environments/`.
+              /** Required. The environment to list results for. Format:
+             `projects//locations//agents//environments/`.
                */
               public java.lang.String getParent() {
                 return parent;
@@ -5209,7 +5230,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
               /**
                * Required. The environment to list results for. Format:
-               * `projects//locations//agents// environments/`.
+               * `projects//locations//agents//environments/`.
                */
               public List setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -6258,7 +6279,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * This request holds the parameters needed by the dialogflow server.  After setting any optional
              * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
              *
-             * @param name The name of the experiment. Format: projects//locations//agents//environments//experiments/..
+             * @param name The name of the experiment. Format: projects//locations//agents//environments//experiments/.
              * @param content the {@link com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3Experiment}
              * @return the request
              */
@@ -6286,7 +6307,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name The name of the experiment. Format: projects//locations//agents//environments//experiments/..
+               * @param name The name of the experiment. Format: projects//locations//agents//environments//experiments/.
                * @param content the {@link com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3Experiment}
                * @since 1.13
                */
@@ -6357,12 +6378,12 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
               /**
                * The name of the experiment. Format:
-               * projects//locations//agents//environments//experiments/..
+               * projects//locations//agents//environments//experiments/.
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** The name of the experiment. Format: projects//locations//agents//environments//experiments/..
+              /** The name of the experiment. Format: projects//locations//agents//environments//experiments/.
                */
               public java.lang.String getName() {
                 return name;
@@ -6370,7 +6391,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
               /**
                * The name of the experiment. Format:
-               * projects//locations//agents//environments//experiments/..
+               * projects//locations//agents//environments//experiments/.
                */
               public Patch setName(java.lang.String name) {
                 if (!getSuppressPatternChecks()) {
@@ -12038,8 +12059,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * parameters, call the {@link CompareVersions#execute()} method to invoke the remote operation.
              *
              * @param baseVersion Required. Name of the base flow version to compare with the target version. Use version ID `0` to
-             *        indicate the draft version of the specified flow. Format: `projects//locations//agents/
-             *        /flows//versions/`.
+             *        indicate the draft version of the specified flow. Format:
+             *        `projects//locations//agents//flows//versions/`.
              * @param content the {@link com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3CompareVersionsRequest}
              * @return the request
              */
@@ -12068,8 +12089,8 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                * the constructor. </p>
                *
                * @param baseVersion Required. Name of the base flow version to compare with the target version. Use version ID `0` to
-             *        indicate the draft version of the specified flow. Format: `projects//locations//agents/
-             *        /flows//versions/`.
+             *        indicate the draft version of the specified flow. Format:
+             *        `projects//locations//agents//flows//versions/`.
                * @param content the {@link com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3CompareVersionsRequest}
                * @since 1.13
                */
@@ -12141,14 +12162,14 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               /**
                * Required. Name of the base flow version to compare with the target version. Use
                * version ID `0` to indicate the draft version of the specified flow. Format:
-               * `projects//locations//agents/ /flows//versions/`.
+               * `projects//locations//agents//flows//versions/`.
                */
               @com.google.api.client.util.Key
               private java.lang.String baseVersion;
 
               /** Required. Name of the base flow version to compare with the target version. Use version ID `0` to
-             indicate the draft version of the specified flow. Format: `projects//locations//agents/
-             /flows//versions/`.
+             indicate the draft version of the specified flow. Format:
+             `projects//locations//agents//flows//versions/`.
                */
               public java.lang.String getBaseVersion() {
                 return baseVersion;
@@ -12157,7 +12178,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               /**
                * Required. Name of the base flow version to compare with the target version. Use
                * version ID `0` to indicate the draft version of the specified flow. Format:
-               * `projects//locations//agents/ /flows//versions/`.
+               * `projects//locations//agents//flows//versions/`.
                */
               public CompareVersions setBaseVersion(java.lang.String baseVersion) {
                 if (!getSuppressPatternChecks()) {
@@ -15203,6 +15224,2638 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
         }
         /**
+         * An accessor for creating requests from the Playbooks collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code Dialogflow dialogflow = new Dialogflow(...);}
+         *   {@code Dialogflow.Playbooks.List request = dialogflow.playbooks().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Playbooks playbooks() {
+          return new Playbooks();
+        }
+
+        /**
+         * The "playbooks" collection of methods.
+         */
+        public class Playbooks {
+
+          /**
+           * Creates a playbook in a specified agent.
+           *
+           * Create a request for the method "playbooks.create".
+           *
+           * This request holds the parameters needed by the dialogflow server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The agent to create a playbook for. Format: `projects//locations//agents/`.
+           * @param content the {@link com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3Playbook}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3Playbook content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends DialogflowRequest<com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3Playbook> {
+
+            private static final String REST_PATH = "v3/{+parent}/playbooks";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
+
+            /**
+             * Creates a playbook in a specified agent.
+             *
+             * Create a request for the method "playbooks.create".
+             *
+             * This request holds the parameters needed by the the dialogflow server.  After setting any
+             * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The agent to create a playbook for. Format: `projects//locations//agents/`.
+             * @param content the {@link com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3Playbook}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3Playbook content) {
+              super(Dialogflow.this, "POST", REST_PATH, content, com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3Playbook.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The agent to create a playbook for. Format: `projects//locations//agents/`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The agent to create a playbook for. Format: `projects//locations//agents/`.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The agent to create a playbook for. Format: `projects//locations//agents/`.
+             */
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes a specified playbook.
+           *
+           * Create a request for the method "playbooks.delete".
+           *
+           * This request holds the parameters needed by the dialogflow server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the playbook to delete. Format: `projects//locations//agents//playbooks/`.
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends DialogflowRequest<com.google.api.services.dialogflow.v3.model.GoogleProtobufEmpty> {
+
+            private static final String REST_PATH = "v3/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/playbooks/[^/]+$");
+
+            /**
+             * Deletes a specified playbook.
+             *
+             * Create a request for the method "playbooks.delete".
+             *
+             * This request holds the parameters needed by the the dialogflow server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the playbook to delete. Format: `projects//locations//agents//playbooks/`.
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(Dialogflow.this, "DELETE", REST_PATH, null, com.google.api.services.dialogflow.v3.model.GoogleProtobufEmpty.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/agents/[^/]+/playbooks/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the playbook to delete. Format:
+             * `projects//locations//agents//playbooks/`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the playbook to delete. Format: `projects//locations//agents//playbooks/`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the playbook to delete. Format:
+             * `projects//locations//agents//playbooks/`.
+             */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/agents/[^/]+/playbooks/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Exports the specified playbook to a binary file. Note that resources (e.g. examples, tools) that
+           * the playbook references will also be exported.
+           *
+           * Create a request for the method "playbooks.export".
+           *
+           * This request holds the parameters needed by the dialogflow server.  After setting any optional
+           * parameters, call the {@link Export#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the playbook to export. Format: `projects//locations//agents//playbooks/`.
+           * @param content the {@link com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3ExportPlaybookRequest}
+           * @return the request
+           */
+          public Export export(java.lang.String name, com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3ExportPlaybookRequest content) throws java.io.IOException {
+            Export result = new Export(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Export extends DialogflowRequest<com.google.api.services.dialogflow.v3.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v3/{+name}:export";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/playbooks/[^/]+$");
+
+            /**
+             * Exports the specified playbook to a binary file. Note that resources (e.g. examples, tools)
+             * that the playbook references will also be exported.
+             *
+             * Create a request for the method "playbooks.export".
+             *
+             * This request holds the parameters needed by the the dialogflow server.  After setting any
+             * optional parameters, call the {@link Export#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Export#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the playbook to export. Format: `projects//locations//agents//playbooks/`.
+             * @param content the {@link com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3ExportPlaybookRequest}
+             * @since 1.13
+             */
+            protected Export(java.lang.String name, com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3ExportPlaybookRequest content) {
+              super(Dialogflow.this, "POST", REST_PATH, content, com.google.api.services.dialogflow.v3.model.GoogleLongrunningOperation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/agents/[^/]+/playbooks/[^/]+$");
+              }
+            }
+
+            @Override
+            public Export set$Xgafv(java.lang.String $Xgafv) {
+              return (Export) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Export setAccessToken(java.lang.String accessToken) {
+              return (Export) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Export setAlt(java.lang.String alt) {
+              return (Export) super.setAlt(alt);
+            }
+
+            @Override
+            public Export setCallback(java.lang.String callback) {
+              return (Export) super.setCallback(callback);
+            }
+
+            @Override
+            public Export setFields(java.lang.String fields) {
+              return (Export) super.setFields(fields);
+            }
+
+            @Override
+            public Export setKey(java.lang.String key) {
+              return (Export) super.setKey(key);
+            }
+
+            @Override
+            public Export setOauthToken(java.lang.String oauthToken) {
+              return (Export) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Export setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Export) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Export setQuotaUser(java.lang.String quotaUser) {
+              return (Export) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Export setUploadType(java.lang.String uploadType) {
+              return (Export) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Export setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Export) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the playbook to export. Format:
+             * `projects//locations//agents//playbooks/`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the playbook to export. Format: `projects//locations//agents//playbooks/`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the playbook to export. Format:
+             * `projects//locations//agents//playbooks/`.
+             */
+            public Export setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/agents/[^/]+/playbooks/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Export set(String parameterName, Object value) {
+              return (Export) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Retrieves the specified Playbook.
+           *
+           * Create a request for the method "playbooks.get".
+           *
+           * This request holds the parameters needed by the dialogflow server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the playbook. Format: `projects//locations//agents//playbooks/`.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends DialogflowRequest<com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3Playbook> {
+
+            private static final String REST_PATH = "v3/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/playbooks/[^/]+$");
+
+            /**
+             * Retrieves the specified Playbook.
+             *
+             * Create a request for the method "playbooks.get".
+             *
+             * This request holds the parameters needed by the the dialogflow server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the playbook. Format: `projects//locations//agents//playbooks/`.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(Dialogflow.this, "GET", REST_PATH, null, com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3Playbook.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/agents/[^/]+/playbooks/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the playbook. Format:
+             * `projects//locations//agents//playbooks/`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the playbook. Format: `projects//locations//agents//playbooks/`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the playbook. Format:
+             * `projects//locations//agents//playbooks/`.
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/agents/[^/]+/playbooks/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Imports the specified playbook to the specified agent from a binary file.
+           *
+           * Create a request for the method "playbooks.import".
+           *
+           * This request holds the parameters needed by the dialogflow server.  After setting any optional
+           * parameters, call the {@link DialogflowImport#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The agent to import the playbook into. Format: `projects//locations//agents/`.
+           * @param content the {@link com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3ImportPlaybookRequest}
+           * @return the request
+           */
+          public DialogflowImport dialogflowImport(java.lang.String parent, com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3ImportPlaybookRequest content) throws java.io.IOException {
+            DialogflowImport result = new DialogflowImport(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class DialogflowImport extends DialogflowRequest<com.google.api.services.dialogflow.v3.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v3/{+parent}/playbooks:import";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
+
+            /**
+             * Imports the specified playbook to the specified agent from a binary file.
+             *
+             * Create a request for the method "playbooks.import".
+             *
+             * This request holds the parameters needed by the the dialogflow server.  After setting any
+             * optional parameters, call the {@link DialogflowImport#execute()} method to invoke the remote
+             * operation. <p> {@link DialogflowImport#initialize(com.google.api.client.googleapis.services.Abs
+             * tractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param parent Required. The agent to import the playbook into. Format: `projects//locations//agents/`.
+             * @param content the {@link com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3ImportPlaybookRequest}
+             * @since 1.13
+             */
+            protected DialogflowImport(java.lang.String parent, com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3ImportPlaybookRequest content) {
+              super(Dialogflow.this, "POST", REST_PATH, content, com.google.api.services.dialogflow.v3.model.GoogleLongrunningOperation.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
+              }
+            }
+
+            @Override
+            public DialogflowImport set$Xgafv(java.lang.String $Xgafv) {
+              return (DialogflowImport) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public DialogflowImport setAccessToken(java.lang.String accessToken) {
+              return (DialogflowImport) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public DialogflowImport setAlt(java.lang.String alt) {
+              return (DialogflowImport) super.setAlt(alt);
+            }
+
+            @Override
+            public DialogflowImport setCallback(java.lang.String callback) {
+              return (DialogflowImport) super.setCallback(callback);
+            }
+
+            @Override
+            public DialogflowImport setFields(java.lang.String fields) {
+              return (DialogflowImport) super.setFields(fields);
+            }
+
+            @Override
+            public DialogflowImport setKey(java.lang.String key) {
+              return (DialogflowImport) super.setKey(key);
+            }
+
+            @Override
+            public DialogflowImport setOauthToken(java.lang.String oauthToken) {
+              return (DialogflowImport) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public DialogflowImport setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (DialogflowImport) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public DialogflowImport setQuotaUser(java.lang.String quotaUser) {
+              return (DialogflowImport) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public DialogflowImport setUploadType(java.lang.String uploadType) {
+              return (DialogflowImport) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public DialogflowImport setUploadProtocol(java.lang.String uploadProtocol) {
+              return (DialogflowImport) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The agent to import the playbook into. Format:
+             * `projects//locations//agents/`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The agent to import the playbook into. Format: `projects//locations//agents/`.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The agent to import the playbook into. Format:
+             * `projects//locations//agents/`.
+             */
+            public DialogflowImport setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public DialogflowImport set(String parameterName, Object value) {
+              return (DialogflowImport) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Returns a list of playbooks in the specified agent.
+           *
+           * Create a request for the method "playbooks.list".
+           *
+           * This request holds the parameters needed by the dialogflow server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The agent to list playbooks from. Format: `projects//locations//agents/`.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends DialogflowRequest<com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3ListPlaybooksResponse> {
+
+            private static final String REST_PATH = "v3/{+parent}/playbooks";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
+
+            /**
+             * Returns a list of playbooks in the specified agent.
+             *
+             * Create a request for the method "playbooks.list".
+             *
+             * This request holds the parameters needed by the the dialogflow server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The agent to list playbooks from. Format: `projects//locations//agents/`.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(Dialogflow.this, "GET", REST_PATH, null, com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3ListPlaybooksResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The agent to list playbooks from. Format: `projects//locations//agents/`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The agent to list playbooks from. Format: `projects//locations//agents/`.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The agent to list playbooks from. Format: `projects//locations//agents/`.
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * The maximum number of items to return in a single page. By default 100 and at most
+             * 1000.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** The maximum number of items to return in a single page. By default 100 and at most 1000.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * The maximum number of items to return in a single page. By default 100 and at most
+             * 1000.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /** The next_page_token value returned from a previous list request. */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** The next_page_token value returned from a previous list request.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /** The next_page_token value returned from a previous list request. */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Updates the specified Playbook.
+           *
+           * Create a request for the method "playbooks.patch".
+           *
+           * This request holds the parameters needed by the dialogflow server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           *
+           * @param name The unique identifier of the playbook. Format: `projects//locations//agents//playbooks/`.
+           * @param content the {@link com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3Playbook}
+           * @return the request
+           */
+          public Patch patch(java.lang.String name, com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3Playbook content) throws java.io.IOException {
+            Patch result = new Patch(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Patch extends DialogflowRequest<com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3Playbook> {
+
+            private static final String REST_PATH = "v3/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/playbooks/[^/]+$");
+
+            /**
+             * Updates the specified Playbook.
+             *
+             * Create a request for the method "playbooks.patch".
+             *
+             * This request holds the parameters needed by the the dialogflow server.  After setting any
+             * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name The unique identifier of the playbook. Format: `projects//locations//agents//playbooks/`.
+             * @param content the {@link com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3Playbook}
+             * @since 1.13
+             */
+            protected Patch(java.lang.String name, com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3Playbook content) {
+              super(Dialogflow.this, "PATCH", REST_PATH, content, com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3Playbook.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/agents/[^/]+/playbooks/[^/]+$");
+              }
+            }
+
+            @Override
+            public Patch set$Xgafv(java.lang.String $Xgafv) {
+              return (Patch) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Patch setAccessToken(java.lang.String accessToken) {
+              return (Patch) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Patch setAlt(java.lang.String alt) {
+              return (Patch) super.setAlt(alt);
+            }
+
+            @Override
+            public Patch setCallback(java.lang.String callback) {
+              return (Patch) super.setCallback(callback);
+            }
+
+            @Override
+            public Patch setFields(java.lang.String fields) {
+              return (Patch) super.setFields(fields);
+            }
+
+            @Override
+            public Patch setKey(java.lang.String key) {
+              return (Patch) super.setKey(key);
+            }
+
+            @Override
+            public Patch setOauthToken(java.lang.String oauthToken) {
+              return (Patch) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Patch) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Patch setQuotaUser(java.lang.String quotaUser) {
+              return (Patch) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Patch setUploadType(java.lang.String uploadType) {
+              return (Patch) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Patch) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * The unique identifier of the playbook. Format:
+             * `projects//locations//agents//playbooks/`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** The unique identifier of the playbook. Format: `projects//locations//agents//playbooks/`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * The unique identifier of the playbook. Format:
+             * `projects//locations//agents//playbooks/`.
+             */
+            public Patch setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/agents/[^/]+/playbooks/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * The mask to control which fields get updated. If the mask is not present, all fields
+             * will be updated.
+             */
+            @com.google.api.client.util.Key
+            private String updateMask;
+
+            /** The mask to control which fields get updated. If the mask is not present, all fields will be
+           updated.
+             */
+            public String getUpdateMask() {
+              return updateMask;
+            }
+
+            /**
+             * The mask to control which fields get updated. If the mask is not present, all fields
+             * will be updated.
+             */
+            public Patch setUpdateMask(String updateMask) {
+              this.updateMask = updateMask;
+              return this;
+            }
+
+            @Override
+            public Patch set(String parameterName, Object value) {
+              return (Patch) super.set(parameterName, value);
+            }
+          }
+
+          /**
+           * An accessor for creating requests from the Examples collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code Dialogflow dialogflow = new Dialogflow(...);}
+           *   {@code Dialogflow.Examples.List request = dialogflow.examples().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public Examples examples() {
+            return new Examples();
+          }
+
+          /**
+           * The "examples" collection of methods.
+           */
+          public class Examples {
+
+            /**
+             * Creates an example in the specified playbook.
+             *
+             * Create a request for the method "examples.create".
+             *
+             * This request holds the parameters needed by the dialogflow server.  After setting any optional
+             * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. The playbook to create an example for. Format: `projects//locations//agents//playbooks/`.
+             * @param content the {@link com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3Example}
+             * @return the request
+             */
+            public Create create(java.lang.String parent, com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3Example content) throws java.io.IOException {
+              Create result = new Create(parent, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Create extends DialogflowRequest<com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3Example> {
+
+              private static final String REST_PATH = "v3/{+parent}/examples";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/playbooks/[^/]+$");
+
+              /**
+               * Creates an example in the specified playbook.
+               *
+               * Create a request for the method "examples.create".
+               *
+               * This request holds the parameters needed by the the dialogflow server.  After setting any
+               * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. The playbook to create an example for. Format: `projects//locations//agents//playbooks/`.
+               * @param content the {@link com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3Example}
+               * @since 1.13
+               */
+              protected Create(java.lang.String parent, com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3Example content) {
+                super(Dialogflow.this, "POST", REST_PATH, content, com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3Example.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/agents/[^/]+/playbooks/[^/]+$");
+                }
+              }
+
+              @Override
+              public Create set$Xgafv(java.lang.String $Xgafv) {
+                return (Create) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Create setAccessToken(java.lang.String accessToken) {
+                return (Create) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Create setAlt(java.lang.String alt) {
+                return (Create) super.setAlt(alt);
+              }
+
+              @Override
+              public Create setCallback(java.lang.String callback) {
+                return (Create) super.setCallback(callback);
+              }
+
+              @Override
+              public Create setFields(java.lang.String fields) {
+                return (Create) super.setFields(fields);
+              }
+
+              @Override
+              public Create setKey(java.lang.String key) {
+                return (Create) super.setKey(key);
+              }
+
+              @Override
+              public Create setOauthToken(java.lang.String oauthToken) {
+                return (Create) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Create) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Create setQuotaUser(java.lang.String quotaUser) {
+                return (Create) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Create setUploadType(java.lang.String uploadType) {
+                return (Create) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Create setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Create) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The playbook to create an example for. Format:
+               * `projects//locations//agents//playbooks/`.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The playbook to create an example for. Format: `projects//locations//agents//playbooks/`.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. The playbook to create an example for. Format:
+               * `projects//locations//agents//playbooks/`.
+               */
+              public Create setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/agents/[^/]+/playbooks/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              @Override
+              public Create set(String parameterName, Object value) {
+                return (Create) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Deletes the specified example.
+             *
+             * Create a request for the method "examples.delete".
+             *
+             * This request holds the parameters needed by the dialogflow server.  After setting any optional
+             * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The name of the example to delete. Format:
+             *        `projects//locations//agents//playbooks//examples/`.
+             * @return the request
+             */
+            public Delete delete(java.lang.String name) throws java.io.IOException {
+              Delete result = new Delete(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Delete extends DialogflowRequest<com.google.api.services.dialogflow.v3.model.GoogleProtobufEmpty> {
+
+              private static final String REST_PATH = "v3/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/playbooks/[^/]+/examples/[^/]+$");
+
+              /**
+               * Deletes the specified example.
+               *
+               * Create a request for the method "examples.delete".
+               *
+               * This request holds the parameters needed by the the dialogflow server.  After setting any
+               * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The name of the example to delete. Format:
+             *        `projects//locations//agents//playbooks//examples/`.
+               * @since 1.13
+               */
+              protected Delete(java.lang.String name) {
+                super(Dialogflow.this, "DELETE", REST_PATH, null, com.google.api.services.dialogflow.v3.model.GoogleProtobufEmpty.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/agents/[^/]+/playbooks/[^/]+/examples/[^/]+$");
+                }
+              }
+
+              @Override
+              public Delete set$Xgafv(java.lang.String $Xgafv) {
+                return (Delete) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Delete setAccessToken(java.lang.String accessToken) {
+                return (Delete) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Delete setAlt(java.lang.String alt) {
+                return (Delete) super.setAlt(alt);
+              }
+
+              @Override
+              public Delete setCallback(java.lang.String callback) {
+                return (Delete) super.setCallback(callback);
+              }
+
+              @Override
+              public Delete setFields(java.lang.String fields) {
+                return (Delete) super.setFields(fields);
+              }
+
+              @Override
+              public Delete setKey(java.lang.String key) {
+                return (Delete) super.setKey(key);
+              }
+
+              @Override
+              public Delete setOauthToken(java.lang.String oauthToken) {
+                return (Delete) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Delete) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Delete setQuotaUser(java.lang.String quotaUser) {
+                return (Delete) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Delete setUploadType(java.lang.String uploadType) {
+                return (Delete) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Delete) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The name of the example to delete. Format:
+               * `projects//locations//agents//playbooks//examples/`.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The name of the example to delete. Format:
+             `projects//locations//agents//playbooks//examples/`.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The name of the example to delete. Format:
+               * `projects//locations//agents//playbooks//examples/`.
+               */
+              public Delete setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/agents/[^/]+/playbooks/[^/]+/examples/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Delete set(String parameterName, Object value) {
+                return (Delete) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Retrieves the specified example.
+             *
+             * Create a request for the method "examples.get".
+             *
+             * This request holds the parameters needed by the dialogflow server.  After setting any optional
+             * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The name of the example. Format: `projects//locations//agents//playbooks//examples/`.
+             * @return the request
+             */
+            public Get get(java.lang.String name) throws java.io.IOException {
+              Get result = new Get(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Get extends DialogflowRequest<com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3Example> {
+
+              private static final String REST_PATH = "v3/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/playbooks/[^/]+/examples/[^/]+$");
+
+              /**
+               * Retrieves the specified example.
+               *
+               * Create a request for the method "examples.get".
+               *
+               * This request holds the parameters needed by the the dialogflow server.  After setting any
+               * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+               * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The name of the example. Format: `projects//locations//agents//playbooks//examples/`.
+               * @since 1.13
+               */
+              protected Get(java.lang.String name) {
+                super(Dialogflow.this, "GET", REST_PATH, null, com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3Example.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/agents/[^/]+/playbooks/[^/]+/examples/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public Get set$Xgafv(java.lang.String $Xgafv) {
+                return (Get) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Get setAccessToken(java.lang.String accessToken) {
+                return (Get) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Get setAlt(java.lang.String alt) {
+                return (Get) super.setAlt(alt);
+              }
+
+              @Override
+              public Get setCallback(java.lang.String callback) {
+                return (Get) super.setCallback(callback);
+              }
+
+              @Override
+              public Get setFields(java.lang.String fields) {
+                return (Get) super.setFields(fields);
+              }
+
+              @Override
+              public Get setKey(java.lang.String key) {
+                return (Get) super.setKey(key);
+              }
+
+              @Override
+              public Get setOauthToken(java.lang.String oauthToken) {
+                return (Get) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Get) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Get setQuotaUser(java.lang.String quotaUser) {
+                return (Get) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Get setUploadType(java.lang.String uploadType) {
+                return (Get) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Get setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Get) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The name of the example. Format:
+               * `projects//locations//agents//playbooks//examples/`.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The name of the example. Format: `projects//locations//agents//playbooks//examples/`.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The name of the example. Format:
+               * `projects//locations//agents//playbooks//examples/`.
+               */
+              public Get setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/agents/[^/]+/playbooks/[^/]+/examples/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Get set(String parameterName, Object value) {
+                return (Get) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Returns a list of examples in the specified playbook.
+             *
+             * Create a request for the method "examples.list".
+             *
+             * This request holds the parameters needed by the dialogflow server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. The playbook to list the examples from. Format: `projects//locations//agents//playbooks/`.
+             * @return the request
+             */
+            public List list(java.lang.String parent) throws java.io.IOException {
+              List result = new List(parent);
+              initialize(result);
+              return result;
+            }
+
+            public class List extends DialogflowRequest<com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3ListExamplesResponse> {
+
+              private static final String REST_PATH = "v3/{+parent}/examples";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/playbooks/[^/]+$");
+
+              /**
+               * Returns a list of examples in the specified playbook.
+               *
+               * Create a request for the method "examples.list".
+               *
+               * This request holds the parameters needed by the the dialogflow server.  After setting any
+               * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+               * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. The playbook to list the examples from. Format: `projects//locations//agents//playbooks/`.
+               * @since 1.13
+               */
+              protected List(java.lang.String parent) {
+                super(Dialogflow.this, "GET", REST_PATH, null, com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3ListExamplesResponse.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/agents/[^/]+/playbooks/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public List set$Xgafv(java.lang.String $Xgafv) {
+                return (List) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public List setAccessToken(java.lang.String accessToken) {
+                return (List) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public List setAlt(java.lang.String alt) {
+                return (List) super.setAlt(alt);
+              }
+
+              @Override
+              public List setCallback(java.lang.String callback) {
+                return (List) super.setCallback(callback);
+              }
+
+              @Override
+              public List setFields(java.lang.String fields) {
+                return (List) super.setFields(fields);
+              }
+
+              @Override
+              public List setKey(java.lang.String key) {
+                return (List) super.setKey(key);
+              }
+
+              @Override
+              public List setOauthToken(java.lang.String oauthToken) {
+                return (List) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (List) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public List setQuotaUser(java.lang.String quotaUser) {
+                return (List) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public List setUploadType(java.lang.String uploadType) {
+                return (List) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public List setUploadProtocol(java.lang.String uploadProtocol) {
+                return (List) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The playbook to list the examples from. Format:
+               * `projects//locations//agents//playbooks/`.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The playbook to list the examples from. Format:
+             `projects//locations//agents//playbooks/`.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. The playbook to list the examples from. Format:
+               * `projects//locations//agents//playbooks/`.
+               */
+              public List setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/agents/[^/]+/playbooks/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /**
+               * Optional. The language to list examples for. If not specified, list all examples
+               * under the playbook. Note: languages must be enabled in the agent before they can be
+               * used.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String languageCode;
+
+              /** Optional. The language to list examples for. If not specified, list all examples under the
+             playbook. Note: languages must be enabled in the agent before they can be used.
+               */
+              public java.lang.String getLanguageCode() {
+                return languageCode;
+              }
+
+              /**
+               * Optional. The language to list examples for. If not specified, list all examples
+               * under the playbook. Note: languages must be enabled in the agent before they can be
+               * used.
+               */
+              public List setLanguageCode(java.lang.String languageCode) {
+                this.languageCode = languageCode;
+                return this;
+              }
+
+              /**
+               * Optional. The maximum number of items to return in a single page. By default 100
+               * and at most 1000.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.Integer pageSize;
+
+              /** Optional. The maximum number of items to return in a single page. By default 100 and at most 1000.
+               */
+              public java.lang.Integer getPageSize() {
+                return pageSize;
+              }
+
+              /**
+               * Optional. The maximum number of items to return in a single page. By default 100
+               * and at most 1000.
+               */
+              public List setPageSize(java.lang.Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+              }
+
+              /** Optional. The next_page_token value returned from a previous list request. */
+              @com.google.api.client.util.Key
+              private java.lang.String pageToken;
+
+              /** Optional. The next_page_token value returned from a previous list request.
+               */
+              public java.lang.String getPageToken() {
+                return pageToken;
+              }
+
+              /** Optional. The next_page_token value returned from a previous list request. */
+              public List setPageToken(java.lang.String pageToken) {
+                this.pageToken = pageToken;
+                return this;
+              }
+
+              @Override
+              public List set(String parameterName, Object value) {
+                return (List) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Update the specified example.
+             *
+             * Create a request for the method "examples.patch".
+             *
+             * This request holds the parameters needed by the dialogflow server.  After setting any optional
+             * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+             *
+             * @param name The unique identifier of the playbook example. Format:
+             *        `projects//locations//agents//playbooks//examples/`.
+             * @param content the {@link com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3Example}
+             * @return the request
+             */
+            public Patch patch(java.lang.String name, com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3Example content) throws java.io.IOException {
+              Patch result = new Patch(name, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Patch extends DialogflowRequest<com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3Example> {
+
+              private static final String REST_PATH = "v3/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/playbooks/[^/]+/examples/[^/]+$");
+
+              /**
+               * Update the specified example.
+               *
+               * Create a request for the method "examples.patch".
+               *
+               * This request holds the parameters needed by the the dialogflow server.  After setting any
+               * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name The unique identifier of the playbook example. Format:
+             *        `projects//locations//agents//playbooks//examples/`.
+               * @param content the {@link com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3Example}
+               * @since 1.13
+               */
+              protected Patch(java.lang.String name, com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3Example content) {
+                super(Dialogflow.this, "PATCH", REST_PATH, content, com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3Example.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/agents/[^/]+/playbooks/[^/]+/examples/[^/]+$");
+                }
+              }
+
+              @Override
+              public Patch set$Xgafv(java.lang.String $Xgafv) {
+                return (Patch) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Patch setAccessToken(java.lang.String accessToken) {
+                return (Patch) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Patch setAlt(java.lang.String alt) {
+                return (Patch) super.setAlt(alt);
+              }
+
+              @Override
+              public Patch setCallback(java.lang.String callback) {
+                return (Patch) super.setCallback(callback);
+              }
+
+              @Override
+              public Patch setFields(java.lang.String fields) {
+                return (Patch) super.setFields(fields);
+              }
+
+              @Override
+              public Patch setKey(java.lang.String key) {
+                return (Patch) super.setKey(key);
+              }
+
+              @Override
+              public Patch setOauthToken(java.lang.String oauthToken) {
+                return (Patch) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Patch) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Patch setQuotaUser(java.lang.String quotaUser) {
+                return (Patch) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Patch setUploadType(java.lang.String uploadType) {
+                return (Patch) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Patch) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * The unique identifier of the playbook example. Format:
+               * `projects//locations//agents//playbooks//examples/`.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** The unique identifier of the playbook example. Format:
+             `projects//locations//agents//playbooks//examples/`.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * The unique identifier of the playbook example. Format:
+               * `projects//locations//agents//playbooks//examples/`.
+               */
+              public Patch setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/agents/[^/]+/playbooks/[^/]+/examples/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              /**
+               * Optional. The mask to control which fields get updated. If the mask is not present,
+               * all fields will be updated.
+               */
+              @com.google.api.client.util.Key
+              private String updateMask;
+
+              /** Optional. The mask to control which fields get updated. If the mask is not present, all fields will
+             be updated.
+               */
+              public String getUpdateMask() {
+                return updateMask;
+              }
+
+              /**
+               * Optional. The mask to control which fields get updated. If the mask is not present,
+               * all fields will be updated.
+               */
+              public Patch setUpdateMask(String updateMask) {
+                this.updateMask = updateMask;
+                return this;
+              }
+
+              @Override
+              public Patch set(String parameterName, Object value) {
+                return (Patch) super.set(parameterName, value);
+              }
+            }
+
+          }
+          /**
+           * An accessor for creating requests from the Versions collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code Dialogflow dialogflow = new Dialogflow(...);}
+           *   {@code Dialogflow.Versions.List request = dialogflow.versions().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public Versions versions() {
+            return new Versions();
+          }
+
+          /**
+           * The "versions" collection of methods.
+           */
+          public class Versions {
+
+            /**
+             * Creates a version for the specified Playbook.
+             *
+             * Create a request for the method "versions.create".
+             *
+             * This request holds the parameters needed by the dialogflow server.  After setting any optional
+             * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. The playbook to create a version for. Format: `projects//locations//agents//playbooks/`.
+             * @param content the {@link com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3PlaybookVersion}
+             * @return the request
+             */
+            public Create create(java.lang.String parent, com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3PlaybookVersion content) throws java.io.IOException {
+              Create result = new Create(parent, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Create extends DialogflowRequest<com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3PlaybookVersion> {
+
+              private static final String REST_PATH = "v3/{+parent}/versions";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/playbooks/[^/]+$");
+
+              /**
+               * Creates a version for the specified Playbook.
+               *
+               * Create a request for the method "versions.create".
+               *
+               * This request holds the parameters needed by the the dialogflow server.  After setting any
+               * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. The playbook to create a version for. Format: `projects//locations//agents//playbooks/`.
+               * @param content the {@link com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3PlaybookVersion}
+               * @since 1.13
+               */
+              protected Create(java.lang.String parent, com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3PlaybookVersion content) {
+                super(Dialogflow.this, "POST", REST_PATH, content, com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3PlaybookVersion.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/agents/[^/]+/playbooks/[^/]+$");
+                }
+              }
+
+              @Override
+              public Create set$Xgafv(java.lang.String $Xgafv) {
+                return (Create) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Create setAccessToken(java.lang.String accessToken) {
+                return (Create) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Create setAlt(java.lang.String alt) {
+                return (Create) super.setAlt(alt);
+              }
+
+              @Override
+              public Create setCallback(java.lang.String callback) {
+                return (Create) super.setCallback(callback);
+              }
+
+              @Override
+              public Create setFields(java.lang.String fields) {
+                return (Create) super.setFields(fields);
+              }
+
+              @Override
+              public Create setKey(java.lang.String key) {
+                return (Create) super.setKey(key);
+              }
+
+              @Override
+              public Create setOauthToken(java.lang.String oauthToken) {
+                return (Create) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Create) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Create setQuotaUser(java.lang.String quotaUser) {
+                return (Create) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Create setUploadType(java.lang.String uploadType) {
+                return (Create) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Create setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Create) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The playbook to create a version for. Format:
+               * `projects//locations//agents//playbooks/`.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The playbook to create a version for. Format: `projects//locations//agents//playbooks/`.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. The playbook to create a version for. Format:
+               * `projects//locations//agents//playbooks/`.
+               */
+              public Create setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/agents/[^/]+/playbooks/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              @Override
+              public Create set(String parameterName, Object value) {
+                return (Create) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Deletes the specified version of the Playbook.
+             *
+             * Create a request for the method "versions.delete".
+             *
+             * This request holds the parameters needed by the dialogflow server.  After setting any optional
+             * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The name of the playbook version to delete. Format:
+             *        `projects//locations//agents//playbooks//versions/`.
+             * @return the request
+             */
+            public Delete delete(java.lang.String name) throws java.io.IOException {
+              Delete result = new Delete(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Delete extends DialogflowRequest<com.google.api.services.dialogflow.v3.model.GoogleProtobufEmpty> {
+
+              private static final String REST_PATH = "v3/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/playbooks/[^/]+/versions/[^/]+$");
+
+              /**
+               * Deletes the specified version of the Playbook.
+               *
+               * Create a request for the method "versions.delete".
+               *
+               * This request holds the parameters needed by the the dialogflow server.  After setting any
+               * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The name of the playbook version to delete. Format:
+             *        `projects//locations//agents//playbooks//versions/`.
+               * @since 1.13
+               */
+              protected Delete(java.lang.String name) {
+                super(Dialogflow.this, "DELETE", REST_PATH, null, com.google.api.services.dialogflow.v3.model.GoogleProtobufEmpty.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/agents/[^/]+/playbooks/[^/]+/versions/[^/]+$");
+                }
+              }
+
+              @Override
+              public Delete set$Xgafv(java.lang.String $Xgafv) {
+                return (Delete) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Delete setAccessToken(java.lang.String accessToken) {
+                return (Delete) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Delete setAlt(java.lang.String alt) {
+                return (Delete) super.setAlt(alt);
+              }
+
+              @Override
+              public Delete setCallback(java.lang.String callback) {
+                return (Delete) super.setCallback(callback);
+              }
+
+              @Override
+              public Delete setFields(java.lang.String fields) {
+                return (Delete) super.setFields(fields);
+              }
+
+              @Override
+              public Delete setKey(java.lang.String key) {
+                return (Delete) super.setKey(key);
+              }
+
+              @Override
+              public Delete setOauthToken(java.lang.String oauthToken) {
+                return (Delete) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Delete) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Delete setQuotaUser(java.lang.String quotaUser) {
+                return (Delete) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Delete setUploadType(java.lang.String uploadType) {
+                return (Delete) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Delete) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The name of the playbook version to delete. Format:
+               * `projects//locations//agents//playbooks//versions/`.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The name of the playbook version to delete. Format:
+             `projects//locations//agents//playbooks//versions/`.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The name of the playbook version to delete. Format:
+               * `projects//locations//agents//playbooks//versions/`.
+               */
+              public Delete setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/agents/[^/]+/playbooks/[^/]+/versions/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Delete set(String parameterName, Object value) {
+                return (Delete) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Retrieves the specified version of the Playbook.
+             *
+             * Create a request for the method "versions.get".
+             *
+             * This request holds the parameters needed by the dialogflow server.  After setting any optional
+             * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The name of the playbook version. Format:
+             *        `projects//locations//agents//playbooks//versions/`.
+             * @return the request
+             */
+            public Get get(java.lang.String name) throws java.io.IOException {
+              Get result = new Get(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Get extends DialogflowRequest<com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3PlaybookVersion> {
+
+              private static final String REST_PATH = "v3/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/playbooks/[^/]+/versions/[^/]+$");
+
+              /**
+               * Retrieves the specified version of the Playbook.
+               *
+               * Create a request for the method "versions.get".
+               *
+               * This request holds the parameters needed by the the dialogflow server.  After setting any
+               * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+               * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The name of the playbook version. Format:
+             *        `projects//locations//agents//playbooks//versions/`.
+               * @since 1.13
+               */
+              protected Get(java.lang.String name) {
+                super(Dialogflow.this, "GET", REST_PATH, null, com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3PlaybookVersion.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/agents/[^/]+/playbooks/[^/]+/versions/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public Get set$Xgafv(java.lang.String $Xgafv) {
+                return (Get) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Get setAccessToken(java.lang.String accessToken) {
+                return (Get) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Get setAlt(java.lang.String alt) {
+                return (Get) super.setAlt(alt);
+              }
+
+              @Override
+              public Get setCallback(java.lang.String callback) {
+                return (Get) super.setCallback(callback);
+              }
+
+              @Override
+              public Get setFields(java.lang.String fields) {
+                return (Get) super.setFields(fields);
+              }
+
+              @Override
+              public Get setKey(java.lang.String key) {
+                return (Get) super.setKey(key);
+              }
+
+              @Override
+              public Get setOauthToken(java.lang.String oauthToken) {
+                return (Get) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Get) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Get setQuotaUser(java.lang.String quotaUser) {
+                return (Get) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Get setUploadType(java.lang.String uploadType) {
+                return (Get) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Get setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Get) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The name of the playbook version. Format:
+               * `projects//locations//agents//playbooks//versions/`.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The name of the playbook version. Format:
+             `projects//locations//agents//playbooks//versions/`.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The name of the playbook version. Format:
+               * `projects//locations//agents//playbooks//versions/`.
+               */
+              public Get setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/agents/[^/]+/playbooks/[^/]+/versions/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Get set(String parameterName, Object value) {
+                return (Get) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Lists versions for the specified Playbook.
+             *
+             * Create a request for the method "versions.list".
+             *
+             * This request holds the parameters needed by the dialogflow server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. The playbook to list versions for. Format: `projects//locations//agents//playbooks/`.
+             * @return the request
+             */
+            public List list(java.lang.String parent) throws java.io.IOException {
+              List result = new List(parent);
+              initialize(result);
+              return result;
+            }
+
+            public class List extends DialogflowRequest<com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3ListPlaybookVersionsResponse> {
+
+              private static final String REST_PATH = "v3/{+parent}/versions";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/playbooks/[^/]+$");
+
+              /**
+               * Lists versions for the specified Playbook.
+               *
+               * Create a request for the method "versions.list".
+               *
+               * This request holds the parameters needed by the the dialogflow server.  After setting any
+               * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+               * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. The playbook to list versions for. Format: `projects//locations//agents//playbooks/`.
+               * @since 1.13
+               */
+              protected List(java.lang.String parent) {
+                super(Dialogflow.this, "GET", REST_PATH, null, com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3ListPlaybookVersionsResponse.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/agents/[^/]+/playbooks/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public List set$Xgafv(java.lang.String $Xgafv) {
+                return (List) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public List setAccessToken(java.lang.String accessToken) {
+                return (List) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public List setAlt(java.lang.String alt) {
+                return (List) super.setAlt(alt);
+              }
+
+              @Override
+              public List setCallback(java.lang.String callback) {
+                return (List) super.setCallback(callback);
+              }
+
+              @Override
+              public List setFields(java.lang.String fields) {
+                return (List) super.setFields(fields);
+              }
+
+              @Override
+              public List setKey(java.lang.String key) {
+                return (List) super.setKey(key);
+              }
+
+              @Override
+              public List setOauthToken(java.lang.String oauthToken) {
+                return (List) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (List) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public List setQuotaUser(java.lang.String quotaUser) {
+                return (List) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public List setUploadType(java.lang.String uploadType) {
+                return (List) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public List setUploadProtocol(java.lang.String uploadProtocol) {
+                return (List) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The playbook to list versions for. Format:
+               * `projects//locations//agents//playbooks/`.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The playbook to list versions for. Format: `projects//locations//agents//playbooks/`.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. The playbook to list versions for. Format:
+               * `projects//locations//agents//playbooks/`.
+               */
+              public List setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/agents/[^/]+/playbooks/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /**
+               * Optional. The maximum number of items to return in a single page. By default 100
+               * and at most 1000.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.Integer pageSize;
+
+              /** Optional. The maximum number of items to return in a single page. By default 100 and at most 1000.
+               */
+              public java.lang.Integer getPageSize() {
+                return pageSize;
+              }
+
+              /**
+               * Optional. The maximum number of items to return in a single page. By default 100
+               * and at most 1000.
+               */
+              public List setPageSize(java.lang.Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+              }
+
+              /** Optional. The next_page_token value returned from a previous list request. */
+              @com.google.api.client.util.Key
+              private java.lang.String pageToken;
+
+              /** Optional. The next_page_token value returned from a previous list request.
+               */
+              public java.lang.String getPageToken() {
+                return pageToken;
+              }
+
+              /** Optional. The next_page_token value returned from a previous list request. */
+              public List setPageToken(java.lang.String pageToken) {
+                this.pageToken = pageToken;
+                return this;
+              }
+
+              @Override
+              public List set(String parameterName, Object value) {
+                return (List) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Retrieves the specified version of the Playbook and stores it as the current playbook draft,
+             * returning the playbook with resources updated.
+             *
+             * Create a request for the method "versions.restore".
+             *
+             * This request holds the parameters needed by the dialogflow server.  After setting any optional
+             * parameters, call the {@link Restore#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The name of the playbook version. Format:
+             *        `projects//locations//agents//playbooks//versions/`.
+             * @param content the {@link com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3RestorePlaybookVersionRequest}
+             * @return the request
+             */
+            public Restore restore(java.lang.String name, com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3RestorePlaybookVersionRequest content) throws java.io.IOException {
+              Restore result = new Restore(name, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Restore extends DialogflowRequest<com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3RestorePlaybookVersionResponse> {
+
+              private static final String REST_PATH = "v3/{+name}:restore";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/playbooks/[^/]+/versions/[^/]+$");
+
+              /**
+               * Retrieves the specified version of the Playbook and stores it as the current playbook draft,
+               * returning the playbook with resources updated.
+               *
+               * Create a request for the method "versions.restore".
+               *
+               * This request holds the parameters needed by the the dialogflow server.  After setting any
+               * optional parameters, call the {@link Restore#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Restore#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The name of the playbook version. Format:
+             *        `projects//locations//agents//playbooks//versions/`.
+               * @param content the {@link com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3RestorePlaybookVersionRequest}
+               * @since 1.13
+               */
+              protected Restore(java.lang.String name, com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3RestorePlaybookVersionRequest content) {
+                super(Dialogflow.this, "POST", REST_PATH, content, com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3RestorePlaybookVersionResponse.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/agents/[^/]+/playbooks/[^/]+/versions/[^/]+$");
+                }
+              }
+
+              @Override
+              public Restore set$Xgafv(java.lang.String $Xgafv) {
+                return (Restore) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Restore setAccessToken(java.lang.String accessToken) {
+                return (Restore) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Restore setAlt(java.lang.String alt) {
+                return (Restore) super.setAlt(alt);
+              }
+
+              @Override
+              public Restore setCallback(java.lang.String callback) {
+                return (Restore) super.setCallback(callback);
+              }
+
+              @Override
+              public Restore setFields(java.lang.String fields) {
+                return (Restore) super.setFields(fields);
+              }
+
+              @Override
+              public Restore setKey(java.lang.String key) {
+                return (Restore) super.setKey(key);
+              }
+
+              @Override
+              public Restore setOauthToken(java.lang.String oauthToken) {
+                return (Restore) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Restore setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Restore) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Restore setQuotaUser(java.lang.String quotaUser) {
+                return (Restore) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Restore setUploadType(java.lang.String uploadType) {
+                return (Restore) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Restore setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Restore) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The name of the playbook version. Format:
+               * `projects//locations//agents//playbooks//versions/`.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The name of the playbook version. Format:
+             `projects//locations//agents//playbooks//versions/`.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The name of the playbook version. Format:
+               * `projects//locations//agents//playbooks//versions/`.
+               */
+              public Restore setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/agents/[^/]+/playbooks/[^/]+/versions/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Restore set(String parameterName, Object value) {
+                return (Restore) super.set(parameterName, value);
+              }
+            }
+
+          }
+        }
+        /**
          * An accessor for creating requests from the Sessions collection.
          *
          * <p>The typical use is:</p>
@@ -17072,7 +19725,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link BatchRun#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. Agent name. Format: `projects//locations//agents/ `.
+           * @param parent Required. Agent name. Format: `projects//locations//agents/`.
            * @param content the {@link com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3BatchRunTestCasesRequest}
            * @return the request
            */
@@ -17103,7 +19756,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * BatchRun#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. Agent name. Format: `projects//locations//agents/ `.
+             * @param parent Required. Agent name. Format: `projects//locations//agents/`.
              * @param content the {@link com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3BatchRunTestCasesRequest}
              * @since 1.13
              */
@@ -17172,17 +19825,17 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               return (BatchRun) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Required. Agent name. Format: `projects//locations//agents/ `. */
+            /** Required. Agent name. Format: `projects//locations//agents/`. */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. Agent name. Format: `projects//locations//agents/ `.
+            /** Required. Agent name. Format: `projects//locations//agents/`.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /** Required. Agent name. Format: `projects//locations//agents/ `. */
+            /** Required. Agent name. Format: `projects//locations//agents/`. */
             public BatchRun setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -18139,7 +20792,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
            * @param name The unique identifier of the test case. TestCases.CreateTestCase will populate the name
-           *        automatically. Otherwise use format: `projects//locations//agents/ /testCases/`.
+           *        automatically. Otherwise use format: `projects//locations//agents//testCases/`.
            * @param content the {@link com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3TestCase}
            * @return the request
            */
@@ -18168,7 +20821,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param name The unique identifier of the test case. TestCases.CreateTestCase will populate the name
-           *        automatically. Otherwise use format: `projects//locations//agents/ /testCases/`.
+           *        automatically. Otherwise use format: `projects//locations//agents//testCases/`.
              * @param content the {@link com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3TestCase}
              * @since 1.13
              */
@@ -18239,13 +20892,13 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
             /**
              * The unique identifier of the test case. TestCases.CreateTestCase will populate the
-             * name automatically. Otherwise use format: `projects//locations//agents/ /testCases/`.
+             * name automatically. Otherwise use format: `projects//locations//agents//testCases/`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** The unique identifier of the test case. TestCases.CreateTestCase will populate the name
-           automatically. Otherwise use format: `projects//locations//agents/ /testCases/`.
+           automatically. Otherwise use format: `projects//locations//agents//testCases/`.
              */
             public java.lang.String getName() {
               return name;
@@ -18253,7 +20906,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
 
             /**
              * The unique identifier of the test case. TestCases.CreateTestCase will populate the
-             * name automatically. Otherwise use format: `projects//locations//agents/ /testCases/`.
+             * name automatically. Otherwise use format: `projects//locations//agents//testCases/`.
              */
             public Patch setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -18304,7 +20957,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the dialogflow server.  After setting any optional
            * parameters, call the {@link Run#execute()} method to invoke the remote operation.
            *
-           * @param name Required. Format of test case name to run: `projects//locations/ /agents//testCases/`.
+           * @param name Required. Format of test case name to run: `projects//locations//agents//testCases/`.
            * @param content the {@link com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3RunTestCaseRequest}
            * @return the request
            */
@@ -18334,7 +20987,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * {@link Run#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. Format of test case name to run: `projects//locations/ /agents//testCases/`.
+             * @param name Required. Format of test case name to run: `projects//locations//agents//testCases/`.
              * @param content the {@link com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3RunTestCaseRequest}
              * @since 1.13
              */
@@ -18404,21 +21057,19 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
             }
 
             /**
-             * Required. Format of test case name to run: `projects//locations/
-             * /agents//testCases/`.
+             * Required. Format of test case name to run: `projects//locations//agents//testCases/`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. Format of test case name to run: `projects//locations/ /agents//testCases/`.
+            /** Required. Format of test case name to run: `projects//locations//agents//testCases/`.
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. Format of test case name to run: `projects//locations/
-             * /agents//testCases/`.
+             * Required. Format of test case name to run: `projects//locations//agents//testCases/`.
              */
             public Run setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -18609,7 +21260,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
              * This request holds the parameters needed by the dialogflow server.  After setting any optional
              * parameters, call the {@link List#execute()} method to invoke the remote operation.
              *
-             * @param parent Required. The test case to list results for. Format: `projects//locations//agents// testCases/`.
+             * @param parent Required. The test case to list results for. Format: `projects//locations//agents//testCases/`.
              *        Specify a `-` as a wildcard for TestCase ID to list results across multiple test cases.
              * @return the request
              */
@@ -18637,7 +21288,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
                * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
                * must be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param parent Required. The test case to list results for. Format: `projects//locations//agents// testCases/`.
+               * @param parent Required. The test case to list results for. Format: `projects//locations//agents//testCases/`.
              *        Specify a `-` as a wildcard for TestCase ID to list results across multiple test cases.
                * @since 1.13
                */
@@ -18717,14 +21368,14 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               }
 
               /**
-               * Required. The test case to list results for. Format: `projects//locations//agents//
-               * testCases/`. Specify a `-` as a wildcard for TestCase ID to list results across
-               * multiple test cases.
+               * Required. The test case to list results for. Format:
+               * `projects//locations//agents//testCases/`. Specify a `-` as a wildcard for TestCase
+               * ID to list results across multiple test cases.
                */
               @com.google.api.client.util.Key
               private java.lang.String parent;
 
-              /** Required. The test case to list results for. Format: `projects//locations//agents// testCases/`.
+              /** Required. The test case to list results for. Format: `projects//locations//agents//testCases/`.
              Specify a `-` as a wildcard for TestCase ID to list results across multiple test cases.
                */
               public java.lang.String getParent() {
@@ -18732,9 +21383,9 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               }
 
               /**
-               * Required. The test case to list results for. Format: `projects//locations//agents//
-               * testCases/`. Specify a `-` as a wildcard for TestCase ID to list results across
-               * multiple test cases.
+               * Required. The test case to list results for. Format:
+               * `projects//locations//agents//testCases/`. Specify a `-` as a wildcard for TestCase
+               * ID to list results across multiple test cases.
                */
               public List setParent(java.lang.String parent) {
                 if (!getSuppressPatternChecks()) {
@@ -18835,6 +21486,1592 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
               @Override
               public List set(String parameterName, Object value) {
                 return (List) super.set(parameterName, value);
+              }
+            }
+
+          }
+        }
+        /**
+         * An accessor for creating requests from the Tools collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code Dialogflow dialogflow = new Dialogflow(...);}
+         *   {@code Dialogflow.Tools.List request = dialogflow.tools().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Tools tools() {
+          return new Tools();
+        }
+
+        /**
+         * The "tools" collection of methods.
+         */
+        public class Tools {
+
+          /**
+           * Creates a Tool in the specified agent.
+           *
+           * Create a request for the method "tools.create".
+           *
+           * This request holds the parameters needed by the dialogflow server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The agent to create a Tool for. Format: `projects//locations//agents/`.
+           * @param content the {@link com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3Tool}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3Tool content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends DialogflowRequest<com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3Tool> {
+
+            private static final String REST_PATH = "v3/{+parent}/tools";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
+
+            /**
+             * Creates a Tool in the specified agent.
+             *
+             * Create a request for the method "tools.create".
+             *
+             * This request holds the parameters needed by the the dialogflow server.  After setting any
+             * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The agent to create a Tool for. Format: `projects//locations//agents/`.
+             * @param content the {@link com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3Tool}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3Tool content) {
+              super(Dialogflow.this, "POST", REST_PATH, content, com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3Tool.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The agent to create a Tool for. Format: `projects//locations//agents/`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The agent to create a Tool for. Format: `projects//locations//agents/`.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The agent to create a Tool for. Format: `projects//locations//agents/`.
+             */
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes a specified Tool.
+           *
+           * Create a request for the method "tools.delete".
+           *
+           * This request holds the parameters needed by the dialogflow server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the Tool to be deleted. Format: `projects//locations//agents//tools/`.
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends DialogflowRequest<com.google.api.services.dialogflow.v3.model.GoogleProtobufEmpty> {
+
+            private static final String REST_PATH = "v3/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/tools/[^/]+$");
+
+            /**
+             * Deletes a specified Tool.
+             *
+             * Create a request for the method "tools.delete".
+             *
+             * This request holds the parameters needed by the the dialogflow server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the Tool to be deleted. Format: `projects//locations//agents//tools/`.
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(Dialogflow.this, "DELETE", REST_PATH, null, com.google.api.services.dialogflow.v3.model.GoogleProtobufEmpty.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/agents/[^/]+/tools/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the Tool to be deleted. Format:
+             * `projects//locations//agents//tools/`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the Tool to be deleted. Format: `projects//locations//agents//tools/`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the Tool to be deleted. Format:
+             * `projects//locations//agents//tools/`.
+             */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/agents/[^/]+/tools/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * This field has no effect for Tools not being used. For Tools that are used: * If
+             * `force` is set to false, an error will be returned with message indicating the
+             * referenced resources. * If `force` is set to true, Dialogflow will remove the tool,
+             * as well as any references to the tool.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Boolean force;
+
+            /** This field has no effect for Tools not being used. For Tools that are used: * If `force` is set to
+           false, an error will be returned with message indicating the referenced resources. * If `force` is
+           set to true, Dialogflow will remove the tool, as well as any references to the tool.
+             */
+            public java.lang.Boolean getForce() {
+              return force;
+            }
+
+            /**
+             * This field has no effect for Tools not being used. For Tools that are used: * If
+             * `force` is set to false, an error will be returned with message indicating the
+             * referenced resources. * If `force` is set to true, Dialogflow will remove the tool,
+             * as well as any references to the tool.
+             */
+            public Delete setForce(java.lang.Boolean force) {
+              this.force = force;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Retrieves the specified Tool.
+           *
+           * Create a request for the method "tools.get".
+           *
+           * This request holds the parameters needed by the dialogflow server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the Tool. Format: `projects//locations//agents//tools/`.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends DialogflowRequest<com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3Tool> {
+
+            private static final String REST_PATH = "v3/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/tools/[^/]+$");
+
+            /**
+             * Retrieves the specified Tool.
+             *
+             * Create a request for the method "tools.get".
+             *
+             * This request holds the parameters needed by the the dialogflow server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the Tool. Format: `projects//locations//agents//tools/`.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(Dialogflow.this, "GET", REST_PATH, null, com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3Tool.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/agents/[^/]+/tools/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The name of the Tool. Format: `projects//locations//agents//tools/`. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the Tool. Format: `projects//locations//agents//tools/`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. The name of the Tool. Format: `projects//locations//agents//tools/`. */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/agents/[^/]+/tools/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Returns a list of Tools in the specified agent.
+           *
+           * Create a request for the method "tools.list".
+           *
+           * This request holds the parameters needed by the dialogflow server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The agent to list the Tools from. Format: `projects//locations//agents/`.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends DialogflowRequest<com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3ListToolsResponse> {
+
+            private static final String REST_PATH = "v3/{+parent}/tools";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
+
+            /**
+             * Returns a list of Tools in the specified agent.
+             *
+             * Create a request for the method "tools.list".
+             *
+             * This request holds the parameters needed by the the dialogflow server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The agent to list the Tools from. Format: `projects//locations//agents/`.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(Dialogflow.this, "GET", REST_PATH, null, com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3ListToolsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The agent to list the Tools from. Format: `projects//locations//agents/`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The agent to list the Tools from. Format: `projects//locations//agents/`.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The agent to list the Tools from. Format: `projects//locations//agents/`.
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * The maximum number of items to return in a single page. By default 100 and at most
+             * 1000.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** The maximum number of items to return in a single page. By default 100 and at most 1000.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * The maximum number of items to return in a single page. By default 100 and at most
+             * 1000.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /** The next_page_token value returned from a previous list request. */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** The next_page_token value returned from a previous list request.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /** The next_page_token value returned from a previous list request. */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Update the specified Tool.
+           *
+           * Create a request for the method "tools.patch".
+           *
+           * This request holds the parameters needed by the dialogflow server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           *
+           * @param name The unique identifier of the Tool. Format: `projects//locations//agents//tools/`.
+           * @param content the {@link com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3Tool}
+           * @return the request
+           */
+          public Patch patch(java.lang.String name, com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3Tool content) throws java.io.IOException {
+            Patch result = new Patch(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Patch extends DialogflowRequest<com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3Tool> {
+
+            private static final String REST_PATH = "v3/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/tools/[^/]+$");
+
+            /**
+             * Update the specified Tool.
+             *
+             * Create a request for the method "tools.patch".
+             *
+             * This request holds the parameters needed by the the dialogflow server.  After setting any
+             * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name The unique identifier of the Tool. Format: `projects//locations//agents//tools/`.
+             * @param content the {@link com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3Tool}
+             * @since 1.13
+             */
+            protected Patch(java.lang.String name, com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3Tool content) {
+              super(Dialogflow.this, "PATCH", REST_PATH, content, com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3Tool.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/agents/[^/]+/tools/[^/]+$");
+              }
+            }
+
+            @Override
+            public Patch set$Xgafv(java.lang.String $Xgafv) {
+              return (Patch) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Patch setAccessToken(java.lang.String accessToken) {
+              return (Patch) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Patch setAlt(java.lang.String alt) {
+              return (Patch) super.setAlt(alt);
+            }
+
+            @Override
+            public Patch setCallback(java.lang.String callback) {
+              return (Patch) super.setCallback(callback);
+            }
+
+            @Override
+            public Patch setFields(java.lang.String fields) {
+              return (Patch) super.setFields(fields);
+            }
+
+            @Override
+            public Patch setKey(java.lang.String key) {
+              return (Patch) super.setKey(key);
+            }
+
+            @Override
+            public Patch setOauthToken(java.lang.String oauthToken) {
+              return (Patch) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Patch) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Patch setQuotaUser(java.lang.String quotaUser) {
+              return (Patch) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Patch setUploadType(java.lang.String uploadType) {
+              return (Patch) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Patch) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * The unique identifier of the Tool. Format: `projects//locations//agents//tools/`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** The unique identifier of the Tool. Format: `projects//locations//agents//tools/`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * The unique identifier of the Tool. Format: `projects//locations//agents//tools/`.
+             */
+            public Patch setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/agents/[^/]+/tools/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * The mask to control which fields get updated. If the mask is not present, all fields
+             * will be updated.
+             */
+            @com.google.api.client.util.Key
+            private String updateMask;
+
+            /** The mask to control which fields get updated. If the mask is not present, all fields will be
+           updated.
+             */
+            public String getUpdateMask() {
+              return updateMask;
+            }
+
+            /**
+             * The mask to control which fields get updated. If the mask is not present, all fields
+             * will be updated.
+             */
+            public Patch setUpdateMask(String updateMask) {
+              this.updateMask = updateMask;
+              return this;
+            }
+
+            @Override
+            public Patch set(String parameterName, Object value) {
+              return (Patch) super.set(parameterName, value);
+            }
+          }
+
+          /**
+           * An accessor for creating requests from the Versions collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code Dialogflow dialogflow = new Dialogflow(...);}
+           *   {@code Dialogflow.Versions.List request = dialogflow.versions().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public Versions versions() {
+            return new Versions();
+          }
+
+          /**
+           * The "versions" collection of methods.
+           */
+          public class Versions {
+
+            /**
+             * Creates a version for the specified Tool.
+             *
+             * Create a request for the method "versions.create".
+             *
+             * This request holds the parameters needed by the dialogflow server.  After setting any optional
+             * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. The tool to create a version for. Format: `projects//locations//agents//tools/`.
+             * @param content the {@link com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3ToolVersion}
+             * @return the request
+             */
+            public Create create(java.lang.String parent, com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3ToolVersion content) throws java.io.IOException {
+              Create result = new Create(parent, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Create extends DialogflowRequest<com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3ToolVersion> {
+
+              private static final String REST_PATH = "v3/{+parent}/versions";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/tools/[^/]+$");
+
+              /**
+               * Creates a version for the specified Tool.
+               *
+               * Create a request for the method "versions.create".
+               *
+               * This request holds the parameters needed by the the dialogflow server.  After setting any
+               * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. The tool to create a version for. Format: `projects//locations//agents//tools/`.
+               * @param content the {@link com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3ToolVersion}
+               * @since 1.13
+               */
+              protected Create(java.lang.String parent, com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3ToolVersion content) {
+                super(Dialogflow.this, "POST", REST_PATH, content, com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3ToolVersion.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/agents/[^/]+/tools/[^/]+$");
+                }
+              }
+
+              @Override
+              public Create set$Xgafv(java.lang.String $Xgafv) {
+                return (Create) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Create setAccessToken(java.lang.String accessToken) {
+                return (Create) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Create setAlt(java.lang.String alt) {
+                return (Create) super.setAlt(alt);
+              }
+
+              @Override
+              public Create setCallback(java.lang.String callback) {
+                return (Create) super.setCallback(callback);
+              }
+
+              @Override
+              public Create setFields(java.lang.String fields) {
+                return (Create) super.setFields(fields);
+              }
+
+              @Override
+              public Create setKey(java.lang.String key) {
+                return (Create) super.setKey(key);
+              }
+
+              @Override
+              public Create setOauthToken(java.lang.String oauthToken) {
+                return (Create) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Create) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Create setQuotaUser(java.lang.String quotaUser) {
+                return (Create) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Create setUploadType(java.lang.String uploadType) {
+                return (Create) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Create setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Create) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The tool to create a version for. Format:
+               * `projects//locations//agents//tools/`.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The tool to create a version for. Format: `projects//locations//agents//tools/`.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. The tool to create a version for. Format:
+               * `projects//locations//agents//tools/`.
+               */
+              public Create setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/agents/[^/]+/tools/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              @Override
+              public Create set(String parameterName, Object value) {
+                return (Create) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Deletes the specified version of the Tool.
+             *
+             * Create a request for the method "versions.delete".
+             *
+             * This request holds the parameters needed by the dialogflow server.  After setting any optional
+             * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The name of the tool version to delete. Format:
+             *        `projects//locations//agents//tools//versions/`.
+             * @return the request
+             */
+            public Delete delete(java.lang.String name) throws java.io.IOException {
+              Delete result = new Delete(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Delete extends DialogflowRequest<com.google.api.services.dialogflow.v3.model.GoogleProtobufEmpty> {
+
+              private static final String REST_PATH = "v3/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/tools/[^/]+/versions/[^/]+$");
+
+              /**
+               * Deletes the specified version of the Tool.
+               *
+               * Create a request for the method "versions.delete".
+               *
+               * This request holds the parameters needed by the the dialogflow server.  After setting any
+               * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The name of the tool version to delete. Format:
+             *        `projects//locations//agents//tools//versions/`.
+               * @since 1.13
+               */
+              protected Delete(java.lang.String name) {
+                super(Dialogflow.this, "DELETE", REST_PATH, null, com.google.api.services.dialogflow.v3.model.GoogleProtobufEmpty.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/agents/[^/]+/tools/[^/]+/versions/[^/]+$");
+                }
+              }
+
+              @Override
+              public Delete set$Xgafv(java.lang.String $Xgafv) {
+                return (Delete) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Delete setAccessToken(java.lang.String accessToken) {
+                return (Delete) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Delete setAlt(java.lang.String alt) {
+                return (Delete) super.setAlt(alt);
+              }
+
+              @Override
+              public Delete setCallback(java.lang.String callback) {
+                return (Delete) super.setCallback(callback);
+              }
+
+              @Override
+              public Delete setFields(java.lang.String fields) {
+                return (Delete) super.setFields(fields);
+              }
+
+              @Override
+              public Delete setKey(java.lang.String key) {
+                return (Delete) super.setKey(key);
+              }
+
+              @Override
+              public Delete setOauthToken(java.lang.String oauthToken) {
+                return (Delete) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Delete) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Delete setQuotaUser(java.lang.String quotaUser) {
+                return (Delete) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Delete setUploadType(java.lang.String uploadType) {
+                return (Delete) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Delete) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The name of the tool version to delete. Format:
+               * `projects//locations//agents//tools//versions/`.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The name of the tool version to delete. Format:
+             `projects//locations//agents//tools//versions/`.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The name of the tool version to delete. Format:
+               * `projects//locations//agents//tools//versions/`.
+               */
+              public Delete setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/agents/[^/]+/tools/[^/]+/versions/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              /**
+               * Optional. This field has no effect for Tools not being used. For Tools that are
+               * used: * If `force` is set to false, an error will be returned with message
+               * indicating the referenced resources. * If `force` is set to true, Dialogflow will
+               * remove the tool, as well as any references to the tool.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.Boolean force;
+
+              /** Optional. This field has no effect for Tools not being used. For Tools that are used: * If `force`
+             is set to false, an error will be returned with message indicating the referenced resources. * If
+             `force` is set to true, Dialogflow will remove the tool, as well as any references to the tool.
+               */
+              public java.lang.Boolean getForce() {
+                return force;
+              }
+
+              /**
+               * Optional. This field has no effect for Tools not being used. For Tools that are
+               * used: * If `force` is set to false, an error will be returned with message
+               * indicating the referenced resources. * If `force` is set to true, Dialogflow will
+               * remove the tool, as well as any references to the tool.
+               */
+              public Delete setForce(java.lang.Boolean force) {
+                this.force = force;
+                return this;
+              }
+
+              @Override
+              public Delete set(String parameterName, Object value) {
+                return (Delete) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Retrieves the specified version of the Tool.
+             *
+             * Create a request for the method "versions.get".
+             *
+             * This request holds the parameters needed by the dialogflow server.  After setting any optional
+             * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The name of the tool version. Format: `projects//locations//agents//tools//versions/`.
+             * @return the request
+             */
+            public Get get(java.lang.String name) throws java.io.IOException {
+              Get result = new Get(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Get extends DialogflowRequest<com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3ToolVersion> {
+
+              private static final String REST_PATH = "v3/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/tools/[^/]+/versions/[^/]+$");
+
+              /**
+               * Retrieves the specified version of the Tool.
+               *
+               * Create a request for the method "versions.get".
+               *
+               * This request holds the parameters needed by the the dialogflow server.  After setting any
+               * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+               * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The name of the tool version. Format: `projects//locations//agents//tools//versions/`.
+               * @since 1.13
+               */
+              protected Get(java.lang.String name) {
+                super(Dialogflow.this, "GET", REST_PATH, null, com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3ToolVersion.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/agents/[^/]+/tools/[^/]+/versions/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public Get set$Xgafv(java.lang.String $Xgafv) {
+                return (Get) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Get setAccessToken(java.lang.String accessToken) {
+                return (Get) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Get setAlt(java.lang.String alt) {
+                return (Get) super.setAlt(alt);
+              }
+
+              @Override
+              public Get setCallback(java.lang.String callback) {
+                return (Get) super.setCallback(callback);
+              }
+
+              @Override
+              public Get setFields(java.lang.String fields) {
+                return (Get) super.setFields(fields);
+              }
+
+              @Override
+              public Get setKey(java.lang.String key) {
+                return (Get) super.setKey(key);
+              }
+
+              @Override
+              public Get setOauthToken(java.lang.String oauthToken) {
+                return (Get) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Get) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Get setQuotaUser(java.lang.String quotaUser) {
+                return (Get) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Get setUploadType(java.lang.String uploadType) {
+                return (Get) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Get setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Get) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The name of the tool version. Format:
+               * `projects//locations//agents//tools//versions/`.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The name of the tool version. Format: `projects//locations//agents//tools//versions/`.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The name of the tool version. Format:
+               * `projects//locations//agents//tools//versions/`.
+               */
+              public Get setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/agents/[^/]+/tools/[^/]+/versions/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Get set(String parameterName, Object value) {
+                return (Get) super.set(parameterName, value);
+              }
+            }
+            /**
+             * List versions of the specified Tool.
+             *
+             * Create a request for the method "versions.list".
+             *
+             * This request holds the parameters needed by the dialogflow server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. The parent of the tool versions. Format: `projects//locations//agents//tools/`.
+             * @return the request
+             */
+            public List list(java.lang.String parent) throws java.io.IOException {
+              List result = new List(parent);
+              initialize(result);
+              return result;
+            }
+
+            public class List extends DialogflowRequest<com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3ListToolVersionsResponse> {
+
+              private static final String REST_PATH = "v3/{+parent}/versions";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/tools/[^/]+$");
+
+              /**
+               * List versions of the specified Tool.
+               *
+               * Create a request for the method "versions.list".
+               *
+               * This request holds the parameters needed by the the dialogflow server.  After setting any
+               * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+               * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. The parent of the tool versions. Format: `projects//locations//agents//tools/`.
+               * @since 1.13
+               */
+              protected List(java.lang.String parent) {
+                super(Dialogflow.this, "GET", REST_PATH, null, com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3ListToolVersionsResponse.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/agents/[^/]+/tools/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public List set$Xgafv(java.lang.String $Xgafv) {
+                return (List) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public List setAccessToken(java.lang.String accessToken) {
+                return (List) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public List setAlt(java.lang.String alt) {
+                return (List) super.setAlt(alt);
+              }
+
+              @Override
+              public List setCallback(java.lang.String callback) {
+                return (List) super.setCallback(callback);
+              }
+
+              @Override
+              public List setFields(java.lang.String fields) {
+                return (List) super.setFields(fields);
+              }
+
+              @Override
+              public List setKey(java.lang.String key) {
+                return (List) super.setKey(key);
+              }
+
+              @Override
+              public List setOauthToken(java.lang.String oauthToken) {
+                return (List) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (List) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public List setQuotaUser(java.lang.String quotaUser) {
+                return (List) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public List setUploadType(java.lang.String uploadType) {
+                return (List) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public List setUploadProtocol(java.lang.String uploadProtocol) {
+                return (List) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The parent of the tool versions. Format:
+               * `projects//locations//agents//tools/`.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The parent of the tool versions. Format: `projects//locations//agents//tools/`.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. The parent of the tool versions. Format:
+               * `projects//locations//agents//tools/`.
+               */
+              public List setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/agents/[^/]+/tools/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /**
+               * Optional. The maximum number of items to return in a single page. By default 100
+               * and at most 1000.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.Integer pageSize;
+
+              /** Optional. The maximum number of items to return in a single page. By default 100 and at most 1000.
+               */
+              public java.lang.Integer getPageSize() {
+                return pageSize;
+              }
+
+              /**
+               * Optional. The maximum number of items to return in a single page. By default 100
+               * and at most 1000.
+               */
+              public List setPageSize(java.lang.Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+              }
+
+              /** Optional. The next_page_token value returned from a previous list request. */
+              @com.google.api.client.util.Key
+              private java.lang.String pageToken;
+
+              /** Optional. The next_page_token value returned from a previous list request.
+               */
+              public java.lang.String getPageToken() {
+                return pageToken;
+              }
+
+              /** Optional. The next_page_token value returned from a previous list request. */
+              public List setPageToken(java.lang.String pageToken) {
+                this.pageToken = pageToken;
+                return this;
+              }
+
+              @Override
+              public List set(String parameterName, Object value) {
+                return (List) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Retrieves the specified version of the Tool and stores it as the current tool draft, returning
+             * the tool with resources updated.
+             *
+             * Create a request for the method "versions.restore".
+             *
+             * This request holds the parameters needed by the dialogflow server.  After setting any optional
+             * parameters, call the {@link Restore#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The name of the tool version. Format: `projects//locations//agents//tools//versions/`.
+             * @param content the {@link com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3RestoreToolVersionRequest}
+             * @return the request
+             */
+            public Restore restore(java.lang.String name, com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3RestoreToolVersionRequest content) throws java.io.IOException {
+              Restore result = new Restore(name, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Restore extends DialogflowRequest<com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3RestoreToolVersionResponse> {
+
+              private static final String REST_PATH = "v3/{+name}:restore";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+/tools/[^/]+/versions/[^/]+$");
+
+              /**
+               * Retrieves the specified version of the Tool and stores it as the current tool draft, returning
+               * the tool with resources updated.
+               *
+               * Create a request for the method "versions.restore".
+               *
+               * This request holds the parameters needed by the the dialogflow server.  After setting any
+               * optional parameters, call the {@link Restore#execute()} method to invoke the remote operation.
+               * <p> {@link
+               * Restore#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The name of the tool version. Format: `projects//locations//agents//tools//versions/`.
+               * @param content the {@link com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3RestoreToolVersionRequest}
+               * @since 1.13
+               */
+              protected Restore(java.lang.String name, com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3RestoreToolVersionRequest content) {
+                super(Dialogflow.this, "POST", REST_PATH, content, com.google.api.services.dialogflow.v3.model.GoogleCloudDialogflowCxV3RestoreToolVersionResponse.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/agents/[^/]+/tools/[^/]+/versions/[^/]+$");
+                }
+              }
+
+              @Override
+              public Restore set$Xgafv(java.lang.String $Xgafv) {
+                return (Restore) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Restore setAccessToken(java.lang.String accessToken) {
+                return (Restore) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Restore setAlt(java.lang.String alt) {
+                return (Restore) super.setAlt(alt);
+              }
+
+              @Override
+              public Restore setCallback(java.lang.String callback) {
+                return (Restore) super.setCallback(callback);
+              }
+
+              @Override
+              public Restore setFields(java.lang.String fields) {
+                return (Restore) super.setFields(fields);
+              }
+
+              @Override
+              public Restore setKey(java.lang.String key) {
+                return (Restore) super.setKey(key);
+              }
+
+              @Override
+              public Restore setOauthToken(java.lang.String oauthToken) {
+                return (Restore) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Restore setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Restore) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Restore setQuotaUser(java.lang.String quotaUser) {
+                return (Restore) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Restore setUploadType(java.lang.String uploadType) {
+                return (Restore) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Restore setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Restore) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The name of the tool version. Format:
+               * `projects//locations//agents//tools//versions/`.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The name of the tool version. Format: `projects//locations//agents//tools//versions/`.
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The name of the tool version. Format:
+               * `projects//locations//agents//tools//versions/`.
+               */
+              public Restore setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/agents/[^/]+/tools/[^/]+/versions/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Restore set(String parameterName, Object value) {
+                return (Restore) super.set(parameterName, value);
               }
             }
 
@@ -20673,7 +24910,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
          * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
          * methods to check whether the cancellation succeeded or whether the operation completed despite
          * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
-         * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+         * operation with an Operation.error value with a google.rpc.Status.code of `1`, corresponding to
          * `Code.CANCELLED`.
          *
          * Create a request for the method "operations.cancel".
@@ -20703,7 +24940,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
            * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
            * methods to check whether the cancellation succeeded or whether the operation completed despite
            * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
-           * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+           * operation with an Operation.error value with a google.rpc.Status.code of `1`, corresponding to
            * `Code.CANCELLED`.
            *
            * Create a request for the method "operations.cancel".
@@ -21956,7 +26193,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
        * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
        * methods to check whether the cancellation succeeded or whether the operation completed despite
        * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
-       * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+       * operation with an Operation.error value with a google.rpc.Status.code of `1`, corresponding to
        * `Code.CANCELLED`.
        *
        * Create a request for the method "operations.cancel".
@@ -21986,7 +26223,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
          * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
          * methods to check whether the cancellation succeeded or whether the operation completed despite
          * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
-         * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+         * operation with an Operation.error value with a google.rpc.Status.code of `1`, corresponding to
          * `Code.CANCELLED`.
          *
          * Create a request for the method "operations.cancel".

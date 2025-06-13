@@ -47,6 +47,15 @@ public final class GoogleCloudDialogflowCxV3DataStoreConnection extends com.goog
   private java.lang.String dataStoreType;
 
   /**
+   * The document processing mode for the data store connection. Should only be set for PUBLIC_WEB
+   * and UNSTRUCTURED data stores. If not set it is considered as DOCUMENTS, as this is the legacy
+   * mode.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String documentProcessingMode;
+
+  /**
    * The full name of the referenced data store. Formats:
    * `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}`
    * `projects/{project}/locations/{location}/dataStores/{data_store}`
@@ -81,6 +90,27 @@ public final class GoogleCloudDialogflowCxV3DataStoreConnection extends com.goog
    */
   public GoogleCloudDialogflowCxV3DataStoreConnection setDataStoreType(java.lang.String dataStoreType) {
     this.dataStoreType = dataStoreType;
+    return this;
+  }
+
+  /**
+   * The document processing mode for the data store connection. Should only be set for PUBLIC_WEB
+   * and UNSTRUCTURED data stores. If not set it is considered as DOCUMENTS, as this is the legacy
+   * mode.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDocumentProcessingMode() {
+    return documentProcessingMode;
+  }
+
+  /**
+   * The document processing mode for the data store connection. Should only be set for PUBLIC_WEB
+   * and UNSTRUCTURED data stores. If not set it is considered as DOCUMENTS, as this is the legacy
+   * mode.
+   * @param documentProcessingMode documentProcessingMode or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3DataStoreConnection setDocumentProcessingMode(java.lang.String documentProcessingMode) {
+    this.documentProcessingMode = documentProcessingMode;
     return this;
   }
 

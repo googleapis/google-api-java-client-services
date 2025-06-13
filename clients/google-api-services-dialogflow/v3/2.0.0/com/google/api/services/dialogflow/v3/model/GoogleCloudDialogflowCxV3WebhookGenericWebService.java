@@ -88,6 +88,24 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebService extends com
   private java.util.Map<String, java.lang.String> requestHeaders;
 
   /**
+   * Optional. The SecretManager secret version resource storing the username:password pair for HTTP
+   * Basic authentication. Format: `projects/{project}/secrets/{secret}/versions/{version}`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String secretVersionForUsernamePassword;
+
+  /**
+   * Optional. The HTTP request headers to send together with webhook requests. Header values are
+   * stored in SecretManager secret versions. When the same header name is specified in both
+   * `request_headers` and `secret_versions_for_request_headers`, the value in
+   * `secret_versions_for_request_headers` will be used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, GoogleCloudDialogflowCxV3WebhookGenericWebServiceSecretVersionHeaderValue> secretVersionsForRequestHeaders;
+
+  /**
    * Optional. Indicate the auth token type generated from the [Diglogflow service
    * agent](https://cloud.google.com/iam/docs/service-agents#dialogflow-service-agent). The
    * generated token is sent in the Authorization header.
@@ -251,6 +269,48 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebService extends com
    */
   public GoogleCloudDialogflowCxV3WebhookGenericWebService setRequestHeaders(java.util.Map<String, java.lang.String> requestHeaders) {
     this.requestHeaders = requestHeaders;
+    return this;
+  }
+
+  /**
+   * Optional. The SecretManager secret version resource storing the username:password pair for HTTP
+   * Basic authentication. Format: `projects/{project}/secrets/{secret}/versions/{version}`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSecretVersionForUsernamePassword() {
+    return secretVersionForUsernamePassword;
+  }
+
+  /**
+   * Optional. The SecretManager secret version resource storing the username:password pair for HTTP
+   * Basic authentication. Format: `projects/{project}/secrets/{secret}/versions/{version}`
+   * @param secretVersionForUsernamePassword secretVersionForUsernamePassword or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3WebhookGenericWebService setSecretVersionForUsernamePassword(java.lang.String secretVersionForUsernamePassword) {
+    this.secretVersionForUsernamePassword = secretVersionForUsernamePassword;
+    return this;
+  }
+
+  /**
+   * Optional. The HTTP request headers to send together with webhook requests. Header values are
+   * stored in SecretManager secret versions. When the same header name is specified in both
+   * `request_headers` and `secret_versions_for_request_headers`, the value in
+   * `secret_versions_for_request_headers` will be used.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, GoogleCloudDialogflowCxV3WebhookGenericWebServiceSecretVersionHeaderValue> getSecretVersionsForRequestHeaders() {
+    return secretVersionsForRequestHeaders;
+  }
+
+  /**
+   * Optional. The HTTP request headers to send together with webhook requests. Header values are
+   * stored in SecretManager secret versions. When the same header name is specified in both
+   * `request_headers` and `secret_versions_for_request_headers`, the value in
+   * `secret_versions_for_request_headers` will be used.
+   * @param secretVersionsForRequestHeaders secretVersionsForRequestHeaders or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3WebhookGenericWebService setSecretVersionsForRequestHeaders(java.util.Map<String, GoogleCloudDialogflowCxV3WebhookGenericWebServiceSecretVersionHeaderValue> secretVersionsForRequestHeaders) {
+    this.secretVersionsForRequestHeaders = secretVersionsForRequestHeaders;
     return this;
   }
 

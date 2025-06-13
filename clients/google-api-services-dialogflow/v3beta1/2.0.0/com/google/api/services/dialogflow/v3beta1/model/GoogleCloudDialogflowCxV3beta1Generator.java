@@ -48,6 +48,13 @@ public final class GoogleCloudDialogflowCxV3beta1Generator extends com.google.ap
   private GoogleCloudDialogflowCxV3beta1LlmModelSettings llmModelSettings;
 
   /**
+   * Parameters passed to the LLM to configure its behavior.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3beta1GeneratorModelParameter modelParameter;
+
+  /**
    * The unique identifier of the generator. Must be set for the Generators.UpdateGenerator method.
    * Generators.CreateGenerate populates the name automatically. Format:
    * `projects//locations//agents//generators/`.
@@ -105,6 +112,23 @@ public final class GoogleCloudDialogflowCxV3beta1Generator extends com.google.ap
    */
   public GoogleCloudDialogflowCxV3beta1Generator setLlmModelSettings(GoogleCloudDialogflowCxV3beta1LlmModelSettings llmModelSettings) {
     this.llmModelSettings = llmModelSettings;
+    return this;
+  }
+
+  /**
+   * Parameters passed to the LLM to configure its behavior.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1GeneratorModelParameter getModelParameter() {
+    return modelParameter;
+  }
+
+  /**
+   * Parameters passed to the LLM to configure its behavior.
+   * @param modelParameter modelParameter or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1Generator setModelParameter(GoogleCloudDialogflowCxV3beta1GeneratorModelParameter modelParameter) {
+    this.modelParameter = modelParameter;
     return this;
   }
 

@@ -30,14 +30,14 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowCxV3DeployFlowRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The flow version to deploy. Format: `projects//locations//agents// flows//versions/`.
+   * Required. The flow version to deploy. Format: `projects//locations//agents//flows//versions/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String flowVersion;
 
   /**
-   * Required. The flow version to deploy. Format: `projects//locations//agents// flows//versions/`.
+   * Required. The flow version to deploy. Format: `projects//locations//agents//flows//versions/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getFlowVersion() {
@@ -45,7 +45,7 @@ public final class GoogleCloudDialogflowCxV3DeployFlowRequest extends com.google
   }
 
   /**
-   * Required. The flow version to deploy. Format: `projects//locations//agents// flows//versions/`.
+   * Required. The flow version to deploy. Format: `projects//locations//agents//flows//versions/`.
    * @param flowVersion flowVersion or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3DeployFlowRequest setFlowVersion(java.lang.String flowVersion) {

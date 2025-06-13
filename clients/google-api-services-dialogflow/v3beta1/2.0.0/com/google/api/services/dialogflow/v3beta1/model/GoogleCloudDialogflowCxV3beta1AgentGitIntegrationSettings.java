@@ -30,11 +30,35 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1AgentGitIntegrationSettings extends com.google.api.client.json.GenericJson {
 
   /**
+   * Git connection settings.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3beta1AgentGitIntegrationSettingsGitConnectionSettings gitConnectionSettings;
+
+  /**
    * GitHub settings.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1AgentGitIntegrationSettingsGithubSettings githubSettings;
+
+  /**
+   * Git connection settings.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1AgentGitIntegrationSettingsGitConnectionSettings getGitConnectionSettings() {
+    return gitConnectionSettings;
+  }
+
+  /**
+   * Git connection settings.
+   * @param gitConnectionSettings gitConnectionSettings or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1AgentGitIntegrationSettings setGitConnectionSettings(GoogleCloudDialogflowCxV3beta1AgentGitIntegrationSettingsGitConnectionSettings gitConnectionSettings) {
+    this.gitConnectionSettings = gitConnectionSettings;
+    return this;
+  }
 
   /**
    * GitHub settings.

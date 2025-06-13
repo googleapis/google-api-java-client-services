@@ -32,6 +32,13 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1Tool extends com.google.api.client.json.GenericJson {
 
   /**
+   * Integration connectors tool specification.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3beta1ToolConnectorTool connectorSpec;
+
+  /**
    * Data store search tool specification.
    * The value may be {@code null}.
    */
@@ -86,6 +93,23 @@ public final class GoogleCloudDialogflowCxV3beta1Tool extends com.google.api.cli
    */
   @com.google.api.client.util.Key
   private java.lang.String toolType;
+
+  /**
+   * Integration connectors tool specification.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1ToolConnectorTool getConnectorSpec() {
+    return connectorSpec;
+  }
+
+  /**
+   * Integration connectors tool specification.
+   * @param connectorSpec connectorSpec or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1Tool setConnectorSpec(GoogleCloudDialogflowCxV3beta1ToolConnectorTool connectorSpec) {
+    this.connectorSpec = connectorSpec;
+    return this;
+  }
 
   /**
    * Data store search tool specification.

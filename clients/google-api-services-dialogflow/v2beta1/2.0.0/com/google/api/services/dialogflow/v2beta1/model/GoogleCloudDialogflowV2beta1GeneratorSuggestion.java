@@ -30,11 +30,42 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1GeneratorSuggestion extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Free form suggestion.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowV2beta1FreeFormSuggestion freeFormSuggestion;
+
+  /**
    * Optional. Suggested summary.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2beta1SummarySuggestion summarySuggestion;
+
+  /**
+   * Optional. List of request and response for tool calls executed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDialogflowV2beta1GeneratorSuggestionToolCallInfo> toolCallInfo;
+
+  /**
+   * Optional. Free form suggestion.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1FreeFormSuggestion getFreeFormSuggestion() {
+    return freeFormSuggestion;
+  }
+
+  /**
+   * Optional. Free form suggestion.
+   * @param freeFormSuggestion freeFormSuggestion or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1GeneratorSuggestion setFreeFormSuggestion(GoogleCloudDialogflowV2beta1FreeFormSuggestion freeFormSuggestion) {
+    this.freeFormSuggestion = freeFormSuggestion;
+    return this;
+  }
 
   /**
    * Optional. Suggested summary.
@@ -50,6 +81,23 @@ public final class GoogleCloudDialogflowV2beta1GeneratorSuggestion extends com.g
    */
   public GoogleCloudDialogflowV2beta1GeneratorSuggestion setSummarySuggestion(GoogleCloudDialogflowV2beta1SummarySuggestion summarySuggestion) {
     this.summarySuggestion = summarySuggestion;
+    return this;
+  }
+
+  /**
+   * Optional. List of request and response for tool calls executed.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDialogflowV2beta1GeneratorSuggestionToolCallInfo> getToolCallInfo() {
+    return toolCallInfo;
+  }
+
+  /**
+   * Optional. List of request and response for tool calls executed.
+   * @param toolCallInfo toolCallInfo or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1GeneratorSuggestion setToolCallInfo(java.util.List<GoogleCloudDialogflowV2beta1GeneratorSuggestionToolCallInfo> toolCallInfo) {
+    this.toolCallInfo = toolCallInfo;
     return this;
   }
 

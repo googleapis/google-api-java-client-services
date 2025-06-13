@@ -74,6 +74,20 @@ public final class GoogleCloudDialogflowV2ConversationModel extends com.google.a
   private java.lang.String name;
 
   /**
+   * Output only. A read only boolean field reflecting Zone Isolation status of the model.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzi;
+
+  /**
+   * Output only. A read only boolean field reflecting Zone Separation status of the model.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzs;
+
+  /**
    * Metadata for smart reply models.
    * The value may be {@code null}.
    */
@@ -191,6 +205,40 @@ public final class GoogleCloudDialogflowV2ConversationModel extends com.google.a
    */
   public GoogleCloudDialogflowV2ConversationModel setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. A read only boolean field reflecting Zone Isolation status of the model.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzi() {
+    return satisfiesPzi;
+  }
+
+  /**
+   * Output only. A read only boolean field reflecting Zone Isolation status of the model.
+   * @param satisfiesPzi satisfiesPzi or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2ConversationModel setSatisfiesPzi(java.lang.Boolean satisfiesPzi) {
+    this.satisfiesPzi = satisfiesPzi;
+    return this;
+  }
+
+  /**
+   * Output only. A read only boolean field reflecting Zone Separation status of the model.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzs() {
+    return satisfiesPzs;
+  }
+
+  /**
+   * Output only. A read only boolean field reflecting Zone Separation status of the model.
+   * @param satisfiesPzs satisfiesPzs or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2ConversationModel setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
+    this.satisfiesPzs = satisfiesPzs;
     return this;
   }
 

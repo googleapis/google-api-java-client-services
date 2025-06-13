@@ -30,6 +30,13 @@ package com.google.api.services.dialogflow.v3.model;
 public final class GoogleCloudDialogflowV2KnowledgeAssistAnswerKnowledgeAnswerGenerativeSourceSnippet extends com.google.api.client.json.GenericJson {
 
   /**
+   * Metadata of the document.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Object> metadata;
+
+  /**
    * Text taken from that URI.
    * The value may be {@code null}.
    */
@@ -49,6 +56,23 @@ public final class GoogleCloudDialogflowV2KnowledgeAssistAnswerKnowledgeAnswerGe
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
+
+  /**
+   * Metadata of the document.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Object> getMetadata() {
+    return metadata;
+  }
+
+  /**
+   * Metadata of the document.
+   * @param metadata metadata or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2KnowledgeAssistAnswerKnowledgeAnswerGenerativeSourceSnippet setMetadata(java.util.Map<String, java.lang.Object> metadata) {
+    this.metadata = metadata;
+    return this;
+  }
 
   /**
    * Text taken from that URI.

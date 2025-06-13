@@ -45,6 +45,13 @@ public final class GoogleCloudDialogflowCxV3beta1BoostSpecConditionBoostSpec ext
   private java.lang.Float boost;
 
   /**
+   * Optional. Complex specification for custom ranking based on customer defined attribute value.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3beta1BoostSpecConditionBoostSpecBoostControlSpec boostControlSpec;
+
+  /**
    * Optional. An expression which specifies a boost condition. The syntax and supported fields are
    * the same as a filter expression. Examples: * To boost documents with document ID "doc_1" or
    * "doc_2", and color "Red" or "Blue": * (id: ANY("doc_1", "doc_2")) AND (color:
@@ -84,6 +91,23 @@ public final class GoogleCloudDialogflowCxV3beta1BoostSpecConditionBoostSpec ext
    */
   public GoogleCloudDialogflowCxV3beta1BoostSpecConditionBoostSpec setBoost(java.lang.Float boost) {
     this.boost = boost;
+    return this;
+  }
+
+  /**
+   * Optional. Complex specification for custom ranking based on customer defined attribute value.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1BoostSpecConditionBoostSpecBoostControlSpec getBoostControlSpec() {
+    return boostControlSpec;
+  }
+
+  /**
+   * Optional. Complex specification for custom ranking based on customer defined attribute value.
+   * @param boostControlSpec boostControlSpec or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1BoostSpecConditionBoostSpec setBoostControlSpec(GoogleCloudDialogflowCxV3beta1BoostSpecConditionBoostSpecBoostControlSpec boostControlSpec) {
+    this.boostControlSpec = boostControlSpec;
     return this;
   }
 

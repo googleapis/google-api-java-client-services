@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowCxV3BoostSpec extends com.google.api.cli
 
   /**
    * Optional. Condition boost specifications. If a document matches multiple conditions in the
-   * specifictions, boost scores from these specifications are all applied and combined in a non-
+   * specifications, boost scores from these specifications are all applied and combined in a non-
    * linear way. Maximum number of specifications is 20.
    * The value may be {@code null}.
    */
@@ -42,7 +42,7 @@ public final class GoogleCloudDialogflowCxV3BoostSpec extends com.google.api.cli
 
   /**
    * Optional. Condition boost specifications. If a document matches multiple conditions in the
-   * specifictions, boost scores from these specifications are all applied and combined in a non-
+   * specifications, boost scores from these specifications are all applied and combined in a non-
    * linear way. Maximum number of specifications is 20.
    * @return value or {@code null} for none
    */
@@ -52,7 +52,7 @@ public final class GoogleCloudDialogflowCxV3BoostSpec extends com.google.api.cli
 
   /**
    * Optional. Condition boost specifications. If a document matches multiple conditions in the
-   * specifictions, boost scores from these specifications are all applied and combined in a non-
+   * specifications, boost scores from these specifications are all applied and combined in a non-
    * linear way. Maximum number of specifications is 20.
    * @param conditionBoostSpecs conditionBoostSpecs or {@code null} for none
    */

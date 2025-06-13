@@ -32,6 +32,13 @@ package com.google.api.services.dialogflow.v3beta1.model;
 public final class GoogleCloudDialogflowCxV3beta1ConversationInteraction extends com.google.api.client.json.GenericJson {
 
   /**
+   * Answer feedback for the final response.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3beta1AnswerFeedback answerFeedback;
+
+  /**
    * The time that the interaction was created.
    * The value may be {@code null}.
    */
@@ -82,6 +89,31 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationInteraction extends
    */
   @com.google.api.client.util.Key
   private java.lang.String responseUtterances;
+
+  /**
+   * Metrics associated with different processing steps. Names and number of steps depend on the
+   * request and can change without a notice.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDialogflowCxV3beta1ConversationInteractionStepMetrics> stepMetrics;
+
+  /**
+   * Answer feedback for the final response.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1AnswerFeedback getAnswerFeedback() {
+    return answerFeedback;
+  }
+
+  /**
+   * Answer feedback for the final response.
+   * @param answerFeedback answerFeedback or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1ConversationInteraction setAnswerFeedback(GoogleCloudDialogflowCxV3beta1AnswerFeedback answerFeedback) {
+    this.answerFeedback = answerFeedback;
+    return this;
+  }
 
   /**
    * The time that the interaction was created.
@@ -205,6 +237,25 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationInteraction extends
    */
   public GoogleCloudDialogflowCxV3beta1ConversationInteraction setResponseUtterances(java.lang.String responseUtterances) {
     this.responseUtterances = responseUtterances;
+    return this;
+  }
+
+  /**
+   * Metrics associated with different processing steps. Names and number of steps depend on the
+   * request and can change without a notice.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDialogflowCxV3beta1ConversationInteractionStepMetrics> getStepMetrics() {
+    return stepMetrics;
+  }
+
+  /**
+   * Metrics associated with different processing steps. Names and number of steps depend on the
+   * request and can change without a notice.
+   * @param stepMetrics stepMetrics or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1ConversationInteraction setStepMetrics(java.util.List<GoogleCloudDialogflowCxV3beta1ConversationInteractionStepMetrics> stepMetrics) {
+    this.stepMetrics = stepMetrics;
     return this;
   }
 

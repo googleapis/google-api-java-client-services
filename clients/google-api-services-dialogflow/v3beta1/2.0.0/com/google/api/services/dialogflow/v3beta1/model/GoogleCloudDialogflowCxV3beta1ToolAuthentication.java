@@ -37,6 +37,13 @@ public final class GoogleCloudDialogflowCxV3beta1ToolAuthentication extends com.
   private GoogleCloudDialogflowCxV3beta1ToolAuthenticationApiKeyConfig apiKeyConfig;
 
   /**
+   * Config for bearer token auth.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3beta1ToolAuthenticationBearerTokenConfig bearerTokenConfig;
+
+  /**
    * Config for OAuth.
    * The value may be {@code null}.
    */
@@ -65,6 +72,23 @@ public final class GoogleCloudDialogflowCxV3beta1ToolAuthentication extends com.
    */
   public GoogleCloudDialogflowCxV3beta1ToolAuthentication setApiKeyConfig(GoogleCloudDialogflowCxV3beta1ToolAuthenticationApiKeyConfig apiKeyConfig) {
     this.apiKeyConfig = apiKeyConfig;
+    return this;
+  }
+
+  /**
+   * Config for bearer token auth.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1ToolAuthenticationBearerTokenConfig getBearerTokenConfig() {
+    return bearerTokenConfig;
+  }
+
+  /**
+   * Config for bearer token auth.
+   * @param bearerTokenConfig bearerTokenConfig or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1ToolAuthentication setBearerTokenConfig(GoogleCloudDialogflowCxV3beta1ToolAuthenticationBearerTokenConfig bearerTokenConfig) {
+    this.bearerTokenConfig = bearerTokenConfig;
     return this;
   }
 

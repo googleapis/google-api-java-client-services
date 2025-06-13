@@ -37,14 +37,14 @@ public final class GoogleCloudDialogflowV2EvaluationConfig extends com.google.ap
   private java.util.List<GoogleCloudDialogflowV2InputDataset> datasets;
 
   /**
-   * Configuration for smart compose model evalution.
+   * Configuration for smart compose model evaluation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2EvaluationConfigSmartComposeConfig smartComposeConfig;
 
   /**
-   * Configuration for smart reply model evalution.
+   * Configuration for smart reply model evaluation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +68,7 @@ public final class GoogleCloudDialogflowV2EvaluationConfig extends com.google.ap
   }
 
   /**
-   * Configuration for smart compose model evalution.
+   * Configuration for smart compose model evaluation.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2EvaluationConfigSmartComposeConfig getSmartComposeConfig() {
@@ -76,7 +76,7 @@ public final class GoogleCloudDialogflowV2EvaluationConfig extends com.google.ap
   }
 
   /**
-   * Configuration for smart compose model evalution.
+   * Configuration for smart compose model evaluation.
    * @param smartComposeConfig smartComposeConfig or {@code null} for none
    */
   public GoogleCloudDialogflowV2EvaluationConfig setSmartComposeConfig(GoogleCloudDialogflowV2EvaluationConfigSmartComposeConfig smartComposeConfig) {
@@ -85,7 +85,7 @@ public final class GoogleCloudDialogflowV2EvaluationConfig extends com.google.ap
   }
 
   /**
-   * Configuration for smart reply model evalution.
+   * Configuration for smart reply model evaluation.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2EvaluationConfigSmartReplyConfig getSmartReplyConfig() {
@@ -93,7 +93,7 @@ public final class GoogleCloudDialogflowV2EvaluationConfig extends com.google.ap
   }
 
   /**
-   * Configuration for smart reply model evalution.
+   * Configuration for smart reply model evaluation.
    * @param smartReplyConfig smartReplyConfig or {@code null} for none
    */
   public GoogleCloudDialogflowV2EvaluationConfig setSmartReplyConfig(GoogleCloudDialogflowV2EvaluationConfigSmartReplyConfig smartReplyConfig) {

@@ -17,7 +17,7 @@
 package com.google.api.services.dialogflow.v3.model;
 
 /**
- * Metadata for a ConversationProfile.SetSuggestionFeatureConfig operation.
+ * Metadata for a ConversationProfiles.SetSuggestionFeatureConfig operation.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Dialogflow API. For a detailed explanation see:

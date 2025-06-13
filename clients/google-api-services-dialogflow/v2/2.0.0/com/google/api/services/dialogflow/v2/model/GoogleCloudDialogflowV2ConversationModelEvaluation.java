@@ -58,7 +58,7 @@ public final class GoogleCloudDialogflowV2ConversationModelEvaluation extends co
   private java.lang.String name;
 
   /**
-   * Output only. Human eval template in csv format. It tooks real-world conversations provided
+   * Output only. Human eval template in csv format. It takes real-world conversations provided
    * through input dataset, generates example suggestions for customer to verify quality of the
    * model. For Smart Reply, the generated csv file contains columns of Context,
    * (Suggestions,Q1,Q2)*3, Actual reply. Context contains at most 10 latest messages in the
@@ -149,7 +149,7 @@ public final class GoogleCloudDialogflowV2ConversationModelEvaluation extends co
   }
 
   /**
-   * Output only. Human eval template in csv format. It tooks real-world conversations provided
+   * Output only. Human eval template in csv format. It takes real-world conversations provided
    * through input dataset, generates example suggestions for customer to verify quality of the
    * model. For Smart Reply, the generated csv file contains columns of Context,
    * (Suggestions,Q1,Q2)*3, Actual reply. Context contains at most 10 latest messages in the
@@ -166,7 +166,7 @@ public final class GoogleCloudDialogflowV2ConversationModelEvaluation extends co
   }
 
   /**
-   * Output only. Human eval template in csv format. It tooks real-world conversations provided
+   * Output only. Human eval template in csv format. It takes real-world conversations provided
    * through input dataset, generates example suggestions for customer to verify quality of the
    * model. For Smart Reply, the generated csv file contains columns of Context,
    * (Suggestions,Q1,Q2)*3, Actual reply. Context contains at most 10 latest messages in the

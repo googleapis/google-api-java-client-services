@@ -651,7 +651,7 @@ public class Datalineage extends com.google.api.client.googleapis.services.json.
          * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
          * methods to check whether the cancellation succeeded or whether the operation completed despite
          * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
-         * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+         * operation with an Operation.error value with a google.rpc.Status.code of `1`, corresponding to
          * `Code.CANCELLED`.
          *
          * Create a request for the method "operations.cancel".
@@ -682,7 +682,7 @@ public class Datalineage extends com.google.api.client.googleapis.services.json.
            * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
            * methods to check whether the cancellation succeeded or whether the operation completed despite
            * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
-           * operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to
+           * operation with an Operation.error value with a google.rpc.Status.code of `1`, corresponding to
            * `Code.CANCELLED`.
            *
            * Create a request for the method "operations.cancel".
@@ -3712,6 +3712,11 @@ public class Datalineage extends com.google.api.client.googleapis.services.json.
     public Builder setGoogleClientRequestInitializer(
         com.google.api.client.googleapis.services.GoogleClientRequestInitializer googleClientRequestInitializer) {
       return (Builder) super.setGoogleClientRequestInitializer(googleClientRequestInitializer);
+    }
+
+    @Override
+    public Builder setUniverseDomain(String universeDomain) {
+      return (Builder) super.setUniverseDomain(universeDomain);
     }
   }
 }

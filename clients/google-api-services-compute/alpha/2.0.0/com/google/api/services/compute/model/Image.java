@@ -194,6 +194,14 @@ public final class Image extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Input only. [Input Only] Additional params passed with the request, but not persisted as part
+   * of resource payload.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ImageParams params;
+
+  /**
    * The parameters of the raw disk image.
    * The value may be {@code null}.
    */
@@ -768,6 +776,25 @@ public final class Image extends com.google.api.client.json.GenericJson {
    */
   public Image setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Input only. [Input Only] Additional params passed with the request, but not persisted as part
+   * of resource payload.
+   * @return value or {@code null} for none
+   */
+  public ImageParams getParams() {
+    return params;
+  }
+
+  /**
+   * Input only. [Input Only] Additional params passed with the request, but not persisted as part
+   * of resource payload.
+   * @param params params or {@code null} for none
+   */
+  public Image setParams(ImageParams params) {
+    this.params = params;
     return this;
   }
 

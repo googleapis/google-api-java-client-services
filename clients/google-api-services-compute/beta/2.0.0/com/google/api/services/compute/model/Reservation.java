@@ -83,6 +83,14 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
+   * Indicates whether Compute Engine allows unplanned maintenance for your VMs; for example, to fix
+   * hardware errors.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableEmergentMaintenance;
+
+  /**
    * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * The value may be {@code null}.
    */
@@ -324,6 +332,25 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
    */
   public Reservation setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Indicates whether Compute Engine allows unplanned maintenance for your VMs; for example, to fix
+   * hardware errors.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableEmergentMaintenance() {
+    return enableEmergentMaintenance;
+  }
+
+  /**
+   * Indicates whether Compute Engine allows unplanned maintenance for your VMs; for example, to fix
+   * hardware errors.
+   * @param enableEmergentMaintenance enableEmergentMaintenance or {@code null} for none
+   */
+  public Reservation setEnableEmergentMaintenance(java.lang.Boolean enableEmergentMaintenance) {
+    this.enableEmergentMaintenance = enableEmergentMaintenance;
     return this;
   }
 

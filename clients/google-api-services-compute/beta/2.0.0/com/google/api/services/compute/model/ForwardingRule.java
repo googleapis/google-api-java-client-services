@@ -386,6 +386,13 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   private java.lang.String selfLink;
 
   /**
+   * [Output Only] Server-defined URL for this resource with the resource id.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String selfLinkWithId;
+
+  /**
    * Service Directory resources to register this forwarding rule with. Currently, only supports a
    * single Service Directory resource.
    * The value may be {@code null}.
@@ -1317,6 +1324,23 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    */
   public ForwardingRule setSelfLink(java.lang.String selfLink) {
     this.selfLink = selfLink;
+    return this;
+  }
+
+  /**
+   * [Output Only] Server-defined URL for this resource with the resource id.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSelfLinkWithId() {
+    return selfLinkWithId;
+  }
+
+  /**
+   * [Output Only] Server-defined URL for this resource with the resource id.
+   * @param selfLinkWithId selfLinkWithId or {@code null} for none
+   */
+  public ForwardingRule setSelfLinkWithId(java.lang.String selfLinkWithId) {
+    this.selfLinkWithId = selfLinkWithId;
     return this;
   }
 

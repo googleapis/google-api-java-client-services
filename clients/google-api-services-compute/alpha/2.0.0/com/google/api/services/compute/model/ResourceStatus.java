@@ -41,6 +41,21 @@ public final class ResourceStatus extends com.google.api.client.json.GenericJson
   private java.util.List<ResourceStatusAcceleratorStatus> acceleratorStatus;
 
   /**
+   * [Output Only] The full resource name of the reservation that this instance is consuming from.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String consumedReservation;
+
+  /**
+   * [Output Only] The full resource name of the reservation block that this instance is consuming
+   * from.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String consumedReservationBlock;
+
+  /**
    * [Output Only] Effective metadata is a field that consolidates project, zonal instance settings,
    * and instance-level predefined metadata keys to provide the overridden value for those metadata
    * keys at the instance level.
@@ -119,6 +134,42 @@ public final class ResourceStatus extends com.google.api.client.json.GenericJson
    */
   public ResourceStatus setAcceleratorStatus(java.util.List<ResourceStatusAcceleratorStatus> acceleratorStatus) {
     this.acceleratorStatus = acceleratorStatus;
+    return this;
+  }
+
+  /**
+   * [Output Only] The full resource name of the reservation that this instance is consuming from.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getConsumedReservation() {
+    return consumedReservation;
+  }
+
+  /**
+   * [Output Only] The full resource name of the reservation that this instance is consuming from.
+   * @param consumedReservation consumedReservation or {@code null} for none
+   */
+  public ResourceStatus setConsumedReservation(java.lang.String consumedReservation) {
+    this.consumedReservation = consumedReservation;
+    return this;
+  }
+
+  /**
+   * [Output Only] The full resource name of the reservation block that this instance is consuming
+   * from.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getConsumedReservationBlock() {
+    return consumedReservationBlock;
+  }
+
+  /**
+   * [Output Only] The full resource name of the reservation block that this instance is consuming
+   * from.
+   * @param consumedReservationBlock consumedReservationBlock or {@code null} for none
+   */
+  public ResourceStatus setConsumedReservationBlock(java.lang.String consumedReservationBlock) {
+    this.consumedReservationBlock = consumedReservationBlock;
     return this;
   }
 

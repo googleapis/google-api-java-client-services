@@ -190,7 +190,8 @@ public final class InterconnectAttachmentGroupsCreateMembersInterconnectAttachme
 
   /**
    * Maximum Transmission Unit (MTU), in bytes, of packets passing through this interconnect
-   * attachment. Only 1440 and 1500 are allowed. If not specified, the value will default to 1440.
+   * attachment. Valid values are 1440, 1460, 1500, or 8896. If not specified, the value will
+   * default to 1440.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -205,11 +206,12 @@ public final class InterconnectAttachmentGroupsCreateMembersInterconnectAttachme
   private java.lang.Boolean multicastEnabled;
 
   /**
-   * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
-   * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
-   * character must be a lowercase letter, and all following characters must be a dash, lowercase
-   * letter, or digit, except the last character, which cannot be a dash.
+   * Name of the resource. Provided by the client when the resource is created. Must be set on
+   * either the template_attachment or on each specific attachment. If set, the name must be 1-63
+   * characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long
+   * and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character
+   * must be a lowercase letter, and all following characters must be a dash, lowercase letter, or
+   * digit, except the last character, which cannot be a dash.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -660,7 +662,8 @@ public final class InterconnectAttachmentGroupsCreateMembersInterconnectAttachme
 
   /**
    * Maximum Transmission Unit (MTU), in bytes, of packets passing through this interconnect
-   * attachment. Only 1440 and 1500 are allowed. If not specified, the value will default to 1440.
+   * attachment. Valid values are 1440, 1460, 1500, or 8896. If not specified, the value will
+   * default to 1440.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMtu() {
@@ -669,7 +672,8 @@ public final class InterconnectAttachmentGroupsCreateMembersInterconnectAttachme
 
   /**
    * Maximum Transmission Unit (MTU), in bytes, of packets passing through this interconnect
-   * attachment. Only 1440 and 1500 are allowed. If not specified, the value will default to 1440.
+   * attachment. Valid values are 1440, 1460, 1500, or 8896. If not specified, the value will
+   * default to 1440.
    * @param mtu mtu or {@code null} for none
    */
   public InterconnectAttachmentGroupsCreateMembersInterconnectAttachmentInput setMtu(java.lang.Integer mtu) {
@@ -697,11 +701,12 @@ public final class InterconnectAttachmentGroupsCreateMembersInterconnectAttachme
   }
 
   /**
-   * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
-   * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
-   * character must be a lowercase letter, and all following characters must be a dash, lowercase
-   * letter, or digit, except the last character, which cannot be a dash.
+   * Name of the resource. Provided by the client when the resource is created. Must be set on
+   * either the template_attachment or on each specific attachment. If set, the name must be 1-63
+   * characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long
+   * and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character
+   * must be a lowercase letter, and all following characters must be a dash, lowercase letter, or
+   * digit, except the last character, which cannot be a dash.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -709,11 +714,12 @@ public final class InterconnectAttachmentGroupsCreateMembersInterconnectAttachme
   }
 
   /**
-   * Name of the resource. Provided by the client when the resource is created. The name must be
-   * 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters
-   * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
-   * character must be a lowercase letter, and all following characters must be a dash, lowercase
-   * letter, or digit, except the last character, which cannot be a dash.
+   * Name of the resource. Provided by the client when the resource is created. Must be set on
+   * either the template_attachment or on each specific attachment. If set, the name must be 1-63
+   * characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long
+   * and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character
+   * must be a lowercase letter, and all following characters must be a dash, lowercase letter, or
+   * digit, except the last character, which cannot be a dash.
    * @param name name or {@code null} for none
    */
   public InterconnectAttachmentGroupsCreateMembersInterconnectAttachmentInput setName(java.lang.String name) {

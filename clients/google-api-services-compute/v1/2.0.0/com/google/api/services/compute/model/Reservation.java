@@ -53,6 +53,22 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   private java.lang.String creationTimestamp;
 
   /**
+   * Duration time relative to reservation creation when Compute Engine will automatically delete
+   * this resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Duration deleteAfterDuration;
+
+  /**
+   * Absolute time in future when the reservation will be auto-deleted by Compute Engine. Timestamp
+   * is represented in RFC3339 text format.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String deleteAtTime;
+
+  /**
    * Specifies the deployment strategy for this reservation.
    * The value may be {@code null}.
    */
@@ -65,6 +81,14 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
+
+  /**
+   * Indicates whether Compute Engine allows unplanned maintenance for your VMs; for example, to fix
+   * hardware errors.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableEmergentMaintenance;
 
   /**
    * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
@@ -233,6 +257,44 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Duration time relative to reservation creation when Compute Engine will automatically delete
+   * this resource.
+   * @return value or {@code null} for none
+   */
+  public Duration getDeleteAfterDuration() {
+    return deleteAfterDuration;
+  }
+
+  /**
+   * Duration time relative to reservation creation when Compute Engine will automatically delete
+   * this resource.
+   * @param deleteAfterDuration deleteAfterDuration or {@code null} for none
+   */
+  public Reservation setDeleteAfterDuration(Duration deleteAfterDuration) {
+    this.deleteAfterDuration = deleteAfterDuration;
+    return this;
+  }
+
+  /**
+   * Absolute time in future when the reservation will be auto-deleted by Compute Engine. Timestamp
+   * is represented in RFC3339 text format.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDeleteAtTime() {
+    return deleteAtTime;
+  }
+
+  /**
+   * Absolute time in future when the reservation will be auto-deleted by Compute Engine. Timestamp
+   * is represented in RFC3339 text format.
+   * @param deleteAtTime deleteAtTime or {@code null} for none
+   */
+  public Reservation setDeleteAtTime(java.lang.String deleteAtTime) {
+    this.deleteAtTime = deleteAtTime;
+    return this;
+  }
+
+  /**
    * Specifies the deployment strategy for this reservation.
    * @return value or {@code null} for none
    */
@@ -263,6 +325,25 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
    */
   public Reservation setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Indicates whether Compute Engine allows unplanned maintenance for your VMs; for example, to fix
+   * hardware errors.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableEmergentMaintenance() {
+    return enableEmergentMaintenance;
+  }
+
+  /**
+   * Indicates whether Compute Engine allows unplanned maintenance for your VMs; for example, to fix
+   * hardware errors.
+   * @param enableEmergentMaintenance enableEmergentMaintenance or {@code null} for none
+   */
+  public Reservation setEnableEmergentMaintenance(java.lang.Boolean enableEmergentMaintenance) {
+    this.enableEmergentMaintenance = enableEmergentMaintenance;
     return this;
   }
 

@@ -87,6 +87,13 @@ public final class WireGroup extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * [Output Only] Indicates whether there are wire changes yet to be processed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean reconciling;
+
+  /**
    * [Output Only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
@@ -259,6 +266,23 @@ public final class WireGroup extends com.google.api.client.json.GenericJson {
    */
   public WireGroup setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * [Output Only] Indicates whether there are wire changes yet to be processed.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getReconciling() {
+    return reconciling;
+  }
+
+  /**
+   * [Output Only] Indicates whether there are wire changes yet to be processed.
+   * @param reconciling reconciling or {@code null} for none
+   */
+  public WireGroup setReconciling(java.lang.Boolean reconciling) {
+    this.reconciling = reconciling;
     return this;
   }
 

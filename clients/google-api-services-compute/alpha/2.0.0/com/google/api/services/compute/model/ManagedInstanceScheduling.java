@@ -30,16 +30,16 @@ package com.google.api.services.compute.model;
 public final class ManagedInstanceScheduling extends com.google.api.client.json.GenericJson {
 
   /**
-   * [Output Only] The timestamp when the MIG will automatically terminate the instance. The value
-   * is in RFC3339 text format.
+   * [Output Only] The timestamp at which the managed instance will be terminated. This is in
+   * RFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String terminationTimestamp;
 
   /**
-   * [Output Only] The timestamp when the MIG will automatically terminate the instance. The value
-   * is in RFC3339 text format.
+   * [Output Only] The timestamp at which the managed instance will be terminated. This is in
+   * RFC3339 text format.
    * @return value or {@code null} for none
    */
   public String getTerminationTimestamp() {
@@ -47,8 +47,8 @@ public final class ManagedInstanceScheduling extends com.google.api.client.json.
   }
 
   /**
-   * [Output Only] The timestamp when the MIG will automatically terminate the instance. The value
-   * is in RFC3339 text format.
+   * [Output Only] The timestamp at which the managed instance will be terminated. This is in
+   * RFC3339 text format.
    * @param terminationTimestamp terminationTimestamp or {@code null} for none
    */
   public ManagedInstanceScheduling setTerminationTimestamp(String terminationTimestamp) {

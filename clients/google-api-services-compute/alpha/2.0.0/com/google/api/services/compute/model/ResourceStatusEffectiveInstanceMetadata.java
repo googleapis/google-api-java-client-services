@@ -30,6 +30,34 @@ package com.google.api.services.compute.model;
 public final class ResourceStatusEffectiveInstanceMetadata extends com.google.api.client.json.GenericJson {
 
   /**
+   * Effective block-project-ssh-keys value at Instance level.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean blockProjectSshKeysMetadataValue;
+
+  /**
+   * Effective enable-guest-attributes value at Instance level.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableGuestAttributesMetadataValue;
+
+  /**
+   * Effective enable-os-inventory value at Instance level.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableOsInventoryMetadataValue;
+
+  /**
+   * Effective enable-osconfig value at Instance level.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableOsconfigMetadataValue;
+
+  /**
    * Effective enable-oslogin value at Instance level.
    * The value may be {@code null}.
    */
@@ -37,11 +65,93 @@ public final class ResourceStatusEffectiveInstanceMetadata extends com.google.ap
   private java.lang.Boolean enableOsloginMetadataValue;
 
   /**
+   * Effective serial-port-enable value at Instance level.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean serialPortEnableMetadataValue;
+
+  /**
+   * Effective serial-port-logging-enable value at Instance level.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean serialPortLoggingEnableMetadataValue;
+
+  /**
    * Effective VM DNS setting at Instance level.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String vmDnsSettingMetadataValue;
+
+  /**
+   * Effective block-project-ssh-keys value at Instance level.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getBlockProjectSshKeysMetadataValue() {
+    return blockProjectSshKeysMetadataValue;
+  }
+
+  /**
+   * Effective block-project-ssh-keys value at Instance level.
+   * @param blockProjectSshKeysMetadataValue blockProjectSshKeysMetadataValue or {@code null} for none
+   */
+  public ResourceStatusEffectiveInstanceMetadata setBlockProjectSshKeysMetadataValue(java.lang.Boolean blockProjectSshKeysMetadataValue) {
+    this.blockProjectSshKeysMetadataValue = blockProjectSshKeysMetadataValue;
+    return this;
+  }
+
+  /**
+   * Effective enable-guest-attributes value at Instance level.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableGuestAttributesMetadataValue() {
+    return enableGuestAttributesMetadataValue;
+  }
+
+  /**
+   * Effective enable-guest-attributes value at Instance level.
+   * @param enableGuestAttributesMetadataValue enableGuestAttributesMetadataValue or {@code null} for none
+   */
+  public ResourceStatusEffectiveInstanceMetadata setEnableGuestAttributesMetadataValue(java.lang.Boolean enableGuestAttributesMetadataValue) {
+    this.enableGuestAttributesMetadataValue = enableGuestAttributesMetadataValue;
+    return this;
+  }
+
+  /**
+   * Effective enable-os-inventory value at Instance level.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableOsInventoryMetadataValue() {
+    return enableOsInventoryMetadataValue;
+  }
+
+  /**
+   * Effective enable-os-inventory value at Instance level.
+   * @param enableOsInventoryMetadataValue enableOsInventoryMetadataValue or {@code null} for none
+   */
+  public ResourceStatusEffectiveInstanceMetadata setEnableOsInventoryMetadataValue(java.lang.Boolean enableOsInventoryMetadataValue) {
+    this.enableOsInventoryMetadataValue = enableOsInventoryMetadataValue;
+    return this;
+  }
+
+  /**
+   * Effective enable-osconfig value at Instance level.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableOsconfigMetadataValue() {
+    return enableOsconfigMetadataValue;
+  }
+
+  /**
+   * Effective enable-osconfig value at Instance level.
+   * @param enableOsconfigMetadataValue enableOsconfigMetadataValue or {@code null} for none
+   */
+  public ResourceStatusEffectiveInstanceMetadata setEnableOsconfigMetadataValue(java.lang.Boolean enableOsconfigMetadataValue) {
+    this.enableOsconfigMetadataValue = enableOsconfigMetadataValue;
+    return this;
+  }
 
   /**
    * Effective enable-oslogin value at Instance level.
@@ -57,6 +167,40 @@ public final class ResourceStatusEffectiveInstanceMetadata extends com.google.ap
    */
   public ResourceStatusEffectiveInstanceMetadata setEnableOsloginMetadataValue(java.lang.Boolean enableOsloginMetadataValue) {
     this.enableOsloginMetadataValue = enableOsloginMetadataValue;
+    return this;
+  }
+
+  /**
+   * Effective serial-port-enable value at Instance level.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSerialPortEnableMetadataValue() {
+    return serialPortEnableMetadataValue;
+  }
+
+  /**
+   * Effective serial-port-enable value at Instance level.
+   * @param serialPortEnableMetadataValue serialPortEnableMetadataValue or {@code null} for none
+   */
+  public ResourceStatusEffectiveInstanceMetadata setSerialPortEnableMetadataValue(java.lang.Boolean serialPortEnableMetadataValue) {
+    this.serialPortEnableMetadataValue = serialPortEnableMetadataValue;
+    return this;
+  }
+
+  /**
+   * Effective serial-port-logging-enable value at Instance level.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSerialPortLoggingEnableMetadataValue() {
+    return serialPortLoggingEnableMetadataValue;
+  }
+
+  /**
+   * Effective serial-port-logging-enable value at Instance level.
+   * @param serialPortLoggingEnableMetadataValue serialPortLoggingEnableMetadataValue or {@code null} for none
+   */
+  public ResourceStatusEffectiveInstanceMetadata setSerialPortLoggingEnableMetadataValue(java.lang.Boolean serialPortLoggingEnableMetadataValue) {
+    this.serialPortLoggingEnableMetadataValue = serialPortLoggingEnableMetadataValue;
     return this;
   }
 

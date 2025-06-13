@@ -56,8 +56,8 @@ public final class AndroidConfig extends com.google.api.client.json.GenericJson 
   private java.util.Map<String, java.lang.String> data;
 
   /**
-   * If set to true, messages will be allowed to be delivered to the app while the device is in
-   * direct boot mode. See [Support Direct Boot
+   * Optional. If set to true, messages will be allowed to be delivered to the app while the device
+   * is in direct boot mode. See [Support Direct Boot
    * mode](https://developer.android.com/training/articles/direct-boot).
    * The value may be {@code null}.
    */
@@ -93,6 +93,17 @@ public final class AndroidConfig extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.String restrictedPackageName;
+
+  /**
+   * Optional. If set to true, messages will be allowed to be delivered to the app while the device
+   * is connected over a restricted satellite network. This should only be enabled for messages that
+   * can be handled over a restricted satellite network and only for apps that are allowed to work
+   * over a restricted satellite network. Note that the ability of the app to connect to a
+   * restricted satellite network is dependent on the carrier's settings and the device model.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean restrictedSatelliteOk;
 
   /**
    * How long (in seconds) the message should be kept in FCM storage if the device is offline. The
@@ -166,8 +177,8 @@ public final class AndroidConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * If set to true, messages will be allowed to be delivered to the app while the device is in
-   * direct boot mode. See [Support Direct Boot
+   * Optional. If set to true, messages will be allowed to be delivered to the app while the device
+   * is in direct boot mode. See [Support Direct Boot
    * mode](https://developer.android.com/training/articles/direct-boot).
    * @return value or {@code null} for none
    */
@@ -176,8 +187,8 @@ public final class AndroidConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * If set to true, messages will be allowed to be delivered to the app while the device is in
-   * direct boot mode. See [Support Direct Boot
+   * Optional. If set to true, messages will be allowed to be delivered to the app while the device
+   * is in direct boot mode. See [Support Direct Boot
    * mode](https://developer.android.com/training/articles/direct-boot).
    * @param directBootOk directBootOk or {@code null} for none
    */
@@ -255,6 +266,31 @@ public final class AndroidConfig extends com.google.api.client.json.GenericJson 
    */
   public AndroidConfig setRestrictedPackageName(java.lang.String restrictedPackageName) {
     this.restrictedPackageName = restrictedPackageName;
+    return this;
+  }
+
+  /**
+   * Optional. If set to true, messages will be allowed to be delivered to the app while the device
+   * is connected over a restricted satellite network. This should only be enabled for messages that
+   * can be handled over a restricted satellite network and only for apps that are allowed to work
+   * over a restricted satellite network. Note that the ability of the app to connect to a
+   * restricted satellite network is dependent on the carrier's settings and the device model.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getRestrictedSatelliteOk() {
+    return restrictedSatelliteOk;
+  }
+
+  /**
+   * Optional. If set to true, messages will be allowed to be delivered to the app while the device
+   * is connected over a restricted satellite network. This should only be enabled for messages that
+   * can be handled over a restricted satellite network and only for apps that are allowed to work
+   * over a restricted satellite network. Note that the ability of the app to connect to a
+   * restricted satellite network is dependent on the carrier's settings and the device model.
+   * @param restrictedSatelliteOk restrictedSatelliteOk or {@code null} for none
+   */
+  public AndroidConfig setRestrictedSatelliteOk(java.lang.Boolean restrictedSatelliteOk) {
+    this.restrictedSatelliteOk = restrictedSatelliteOk;
     return this;
   }
 

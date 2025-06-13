@@ -17,7 +17,7 @@
 package com.google.api.services.networksecurity.v1beta1.model;
 
 /**
- * Fields specific to realms using SYMANTEC_CLOUD_SWG.
+ * Fields specific to realms using Symantec Cloud SWG.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Security API. For a detailed explanation see:
@@ -30,31 +30,31 @@ package com.google.api.services.networksecurity.v1beta1.model;
 public final class SACRealmSACRealmSymantecOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Symantec site IDs that the user can choose to connect to.
+   * Output only. Symantec site IDs which the user can choose to connect to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> availableSymantecSites;
 
   /**
-   * Optional. API Key used to call Symantec APIs on the user's behalf. Required if using
-   * SYMANTEC_CLOUD_SWG. P4SA account needs permissions granted to read this secret. A secret ID,
-   * secret name, or secret URI can be specified, but it will be parsed and stored as secret URI in
-   * the format of "projects/{PROJECT_NUMBER}/secrets/my-secret".
+   * Optional. API Key used to call Symantec APIs on the user's behalf. Required if using Symantec
+   * Cloud SWG. P4SA account needs permissions granted to read this secret. A secret ID, secret
+   * name, or secret URI can be specified, but it will be parsed and stored as a secret URI in the
+   * form `projects/{project_number}/secrets/my-secret`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String secretPath;
 
   /**
-   * Output only. [Output only] Connection status to Symantec API.
+   * Output only. Connection status to Symantec API.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String symantecConnectionState;
 
   /**
-   * Output only. Symantec site IDs that the user can choose to connect to.
+   * Output only. Symantec site IDs which the user can choose to connect to.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAvailableSymantecSites() {
@@ -62,7 +62,7 @@ public final class SACRealmSACRealmSymantecOptions extends com.google.api.client
   }
 
   /**
-   * Output only. Symantec site IDs that the user can choose to connect to.
+   * Output only. Symantec site IDs which the user can choose to connect to.
    * @param availableSymantecSites availableSymantecSites or {@code null} for none
    */
   public SACRealmSACRealmSymantecOptions setAvailableSymantecSites(java.util.List<java.lang.String> availableSymantecSites) {
@@ -71,10 +71,10 @@ public final class SACRealmSACRealmSymantecOptions extends com.google.api.client
   }
 
   /**
-   * Optional. API Key used to call Symantec APIs on the user's behalf. Required if using
-   * SYMANTEC_CLOUD_SWG. P4SA account needs permissions granted to read this secret. A secret ID,
-   * secret name, or secret URI can be specified, but it will be parsed and stored as secret URI in
-   * the format of "projects/{PROJECT_NUMBER}/secrets/my-secret".
+   * Optional. API Key used to call Symantec APIs on the user's behalf. Required if using Symantec
+   * Cloud SWG. P4SA account needs permissions granted to read this secret. A secret ID, secret
+   * name, or secret URI can be specified, but it will be parsed and stored as a secret URI in the
+   * form `projects/{project_number}/secrets/my-secret`.
    * @return value or {@code null} for none
    */
   public java.lang.String getSecretPath() {
@@ -82,10 +82,10 @@ public final class SACRealmSACRealmSymantecOptions extends com.google.api.client
   }
 
   /**
-   * Optional. API Key used to call Symantec APIs on the user's behalf. Required if using
-   * SYMANTEC_CLOUD_SWG. P4SA account needs permissions granted to read this secret. A secret ID,
-   * secret name, or secret URI can be specified, but it will be parsed and stored as secret URI in
-   * the format of "projects/{PROJECT_NUMBER}/secrets/my-secret".
+   * Optional. API Key used to call Symantec APIs on the user's behalf. Required if using Symantec
+   * Cloud SWG. P4SA account needs permissions granted to read this secret. A secret ID, secret
+   * name, or secret URI can be specified, but it will be parsed and stored as a secret URI in the
+   * form `projects/{project_number}/secrets/my-secret`.
    * @param secretPath secretPath or {@code null} for none
    */
   public SACRealmSACRealmSymantecOptions setSecretPath(java.lang.String secretPath) {
@@ -94,7 +94,7 @@ public final class SACRealmSACRealmSymantecOptions extends com.google.api.client
   }
 
   /**
-   * Output only. [Output only] Connection status to Symantec API.
+   * Output only. Connection status to Symantec API.
    * @return value or {@code null} for none
    */
   public java.lang.String getSymantecConnectionState() {
@@ -102,7 +102,7 @@ public final class SACRealmSACRealmSymantecOptions extends com.google.api.client
   }
 
   /**
-   * Output only. [Output only] Connection status to Symantec API.
+   * Output only. Connection status to Symantec API.
    * @param symantecConnectionState symantecConnectionState or {@code null} for none
    */
   public SACRealmSACRealmSymantecOptions setSymantecConnectionState(java.lang.String symantecConnectionState) {

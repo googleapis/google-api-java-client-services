@@ -17,7 +17,7 @@
 package com.google.api.services.networksecurity.v1beta1.model;
 
 /**
- * Key to be shared with SSE service provider to establish global handshake
+ * Key to be shared with SSE service provider to establish global handshake.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Security API. For a detailed explanation see:
@@ -30,21 +30,23 @@ package com.google.api.services.networksecurity.v1beta1.model;
 public final class SACRealmPairingKey extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Timestamp in UTC of when this resource is considered expired.
+   * Output only. Timestamp in UTC of when this resource is considered expired. It expires 7 days
+   * after creation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String expireTime;
 
   /**
-   * Output only. The name of the key. It expires 7 days after creation.
+   * Output only. Key value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String key;
 
   /**
-   * Output only. Timestamp in UTC of when this resource is considered expired.
+   * Output only. Timestamp in UTC of when this resource is considered expired. It expires 7 days
+   * after creation.
    * @return value or {@code null} for none
    */
   public String getExpireTime() {
@@ -52,7 +54,8 @@ public final class SACRealmPairingKey extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. Timestamp in UTC of when this resource is considered expired.
+   * Output only. Timestamp in UTC of when this resource is considered expired. It expires 7 days
+   * after creation.
    * @param expireTime expireTime or {@code null} for none
    */
   public SACRealmPairingKey setExpireTime(String expireTime) {
@@ -61,7 +64,7 @@ public final class SACRealmPairingKey extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. The name of the key. It expires 7 days after creation.
+   * Output only. Key value.
    * @return value or {@code null} for none
    */
   public java.lang.String getKey() {
@@ -69,7 +72,7 @@ public final class SACRealmPairingKey extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. The name of the key. It expires 7 days after creation.
+   * Output only. Key value.
    * @param key key or {@code null} for none
    */
   public SACRealmPairingKey setKey(java.lang.String key) {

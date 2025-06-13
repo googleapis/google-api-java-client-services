@@ -17,7 +17,8 @@
 package com.google.api.services.networksecurity.v1beta1.model;
 
 /**
- * Message describing SACRealm object
+ * Represents a Secure Access Connect (SAC) Realm resource. A Secure Access Connect realm
+ * establishes a connection between your Google Cloud project and an SSE service.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Security API. For a detailed explanation see:
@@ -30,65 +31,64 @@ package com.google.api.services.networksecurity.v1beta1.model;
 public final class SACRealm extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. [Output only] Create time stamp
+   * Output only. Timestamp when the realm was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * Optional. Labels as key value pairs
+   * Optional. Optional list of labels applied to the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Identifier. Resource name. It matches the pattern
-   * `projects/{project}/locations/{location}/sacRealms/{sacRealm}`
+   * Identifier. Resource name, in the form
+   * `projects/{project}/locations/global/sacRealms/{sacRealm}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output only. [Output only] Key to be shared with SSE service provider to establish global
-   * handshake
+   * Output only. Key to be shared with SSE service provider during pairing.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SACRealmPairingKey pairingKey;
 
   /**
-   * Immutable. SSE service provider
+   * Immutable. SSE service provider associated with the realm.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String securityService;
 
   /**
-   * Output only. [Output only] State of the realm
+   * Output only. State of the realm.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * Optional. Required only if using SYMANTEC_CLOUD_SWG.
+   * Optional. Configuration required for Symantec realms.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SACRealmSACRealmSymantecOptions symantecOptions;
 
   /**
-   * Output only. [Output only] Update time stamp
+   * Output only. Timestamp when the realm was last updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Output only. [Output only] Create time stamp
+   * Output only. Timestamp when the realm was created.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -96,7 +96,7 @@ public final class SACRealm extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] Create time stamp
+   * Output only. Timestamp when the realm was created.
    * @param createTime createTime or {@code null} for none
    */
   public SACRealm setCreateTime(String createTime) {
@@ -105,7 +105,7 @@ public final class SACRealm extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Labels as key value pairs
+   * Optional. Optional list of labels applied to the resource.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -113,7 +113,7 @@ public final class SACRealm extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Labels as key value pairs
+   * Optional. Optional list of labels applied to the resource.
    * @param labels labels or {@code null} for none
    */
   public SACRealm setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -122,8 +122,8 @@ public final class SACRealm extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier. Resource name. It matches the pattern
-   * `projects/{project}/locations/{location}/sacRealms/{sacRealm}`
+   * Identifier. Resource name, in the form
+   * `projects/{project}/locations/global/sacRealms/{sacRealm}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -131,8 +131,8 @@ public final class SACRealm extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier. Resource name. It matches the pattern
-   * `projects/{project}/locations/{location}/sacRealms/{sacRealm}`
+   * Identifier. Resource name, in the form
+   * `projects/{project}/locations/global/sacRealms/{sacRealm}`.
    * @param name name or {@code null} for none
    */
   public SACRealm setName(java.lang.String name) {
@@ -141,8 +141,7 @@ public final class SACRealm extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] Key to be shared with SSE service provider to establish global
-   * handshake
+   * Output only. Key to be shared with SSE service provider during pairing.
    * @return value or {@code null} for none
    */
   public SACRealmPairingKey getPairingKey() {
@@ -150,8 +149,7 @@ public final class SACRealm extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] Key to be shared with SSE service provider to establish global
-   * handshake
+   * Output only. Key to be shared with SSE service provider during pairing.
    * @param pairingKey pairingKey or {@code null} for none
    */
   public SACRealm setPairingKey(SACRealmPairingKey pairingKey) {
@@ -160,7 +158,7 @@ public final class SACRealm extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. SSE service provider
+   * Immutable. SSE service provider associated with the realm.
    * @return value or {@code null} for none
    */
   public java.lang.String getSecurityService() {
@@ -168,7 +166,7 @@ public final class SACRealm extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. SSE service provider
+   * Immutable. SSE service provider associated with the realm.
    * @param securityService securityService or {@code null} for none
    */
   public SACRealm setSecurityService(java.lang.String securityService) {
@@ -177,7 +175,7 @@ public final class SACRealm extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] State of the realm
+   * Output only. State of the realm.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -185,7 +183,7 @@ public final class SACRealm extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] State of the realm
+   * Output only. State of the realm.
    * @param state state or {@code null} for none
    */
   public SACRealm setState(java.lang.String state) {
@@ -194,7 +192,7 @@ public final class SACRealm extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Required only if using SYMANTEC_CLOUD_SWG.
+   * Optional. Configuration required for Symantec realms.
    * @return value or {@code null} for none
    */
   public SACRealmSACRealmSymantecOptions getSymantecOptions() {
@@ -202,7 +200,7 @@ public final class SACRealm extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Required only if using SYMANTEC_CLOUD_SWG.
+   * Optional. Configuration required for Symantec realms.
    * @param symantecOptions symantecOptions or {@code null} for none
    */
   public SACRealm setSymantecOptions(SACRealmSACRealmSymantecOptions symantecOptions) {
@@ -211,7 +209,7 @@ public final class SACRealm extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] Update time stamp
+   * Output only. Timestamp when the realm was last updated.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -219,7 +217,7 @@ public final class SACRealm extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] Update time stamp
+   * Output only. Timestamp when the realm was last updated.
    * @param updateTime updateTime or {@code null} for none
    */
   public SACRealm setUpdateTime(String updateTime) {

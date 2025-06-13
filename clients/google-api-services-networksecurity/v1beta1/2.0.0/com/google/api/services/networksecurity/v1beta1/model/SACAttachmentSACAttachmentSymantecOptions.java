@@ -17,7 +17,7 @@
 package com.google.api.services.networksecurity.v1beta1.model;
 
 /**
- * Fields specific to SSEGWs connecting to Symantec Cloud SWG.
+ * Fields specific to attachments associated with Symantec Cloud SWG.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Security API. For a detailed explanation see:
@@ -30,26 +30,23 @@ package com.google.api.services.networksecurity.v1beta1.model;
 public final class SACAttachmentSACAttachmentSymantecOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Immutable. Name to be used for when creating a Location on the customer's behalf in Symantec's
-   * Location API. Required iff sac_realm uses SYMANTEC_CLOUD_SWG. Not to be confused with GCP
-   * locations.
+   * Immutable. Name to be used when creating a location on the customer's behalf in Symantec's
+   * Location API. Not to be confused with GCP locations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String symantecLocationName;
 
   /**
-   * Immutable. Symantec data center identifier that this Attachment will connect to. Required iff
-   * sac_realm uses SYMANTEC_CLOUD_SWG.
+   * Immutable. Symantec data center identifier that this attachment will connect to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String symantecSite;
 
   /**
-   * Immutable. Name to be used for when creating a Location on the customer's behalf in Symantec's
-   * Location API. Required iff sac_realm uses SYMANTEC_CLOUD_SWG. Not to be confused with GCP
-   * locations.
+   * Immutable. Name to be used when creating a location on the customer's behalf in Symantec's
+   * Location API. Not to be confused with GCP locations.
    * @return value or {@code null} for none
    */
   public java.lang.String getSymantecLocationName() {
@@ -57,9 +54,8 @@ public final class SACAttachmentSACAttachmentSymantecOptions extends com.google.
   }
 
   /**
-   * Immutable. Name to be used for when creating a Location on the customer's behalf in Symantec's
-   * Location API. Required iff sac_realm uses SYMANTEC_CLOUD_SWG. Not to be confused with GCP
-   * locations.
+   * Immutable. Name to be used when creating a location on the customer's behalf in Symantec's
+   * Location API. Not to be confused with GCP locations.
    * @param symantecLocationName symantecLocationName or {@code null} for none
    */
   public SACAttachmentSACAttachmentSymantecOptions setSymantecLocationName(java.lang.String symantecLocationName) {
@@ -68,8 +64,7 @@ public final class SACAttachmentSACAttachmentSymantecOptions extends com.google.
   }
 
   /**
-   * Immutable. Symantec data center identifier that this Attachment will connect to. Required iff
-   * sac_realm uses SYMANTEC_CLOUD_SWG.
+   * Immutable. Symantec data center identifier that this attachment will connect to.
    * @return value or {@code null} for none
    */
   public java.lang.String getSymantecSite() {
@@ -77,8 +72,7 @@ public final class SACAttachmentSACAttachmentSymantecOptions extends com.google.
   }
 
   /**
-   * Immutable. Symantec data center identifier that this Attachment will connect to. Required iff
-   * sac_realm uses SYMANTEC_CLOUD_SWG.
+   * Immutable. Symantec data center identifier that this attachment will connect to.
    * @param symantecSite symantecSite or {@code null} for none
    */
   public SACAttachmentSACAttachmentSymantecOptions setSymantecSite(java.lang.String symantecSite) {

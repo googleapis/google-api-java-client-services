@@ -9917,6 +9917,40 @@ public class GKEOnPrem extends com.google.api.client.googleapis.services.json.Ab
             return this;
           }
 
+          /**
+           * Optional. If set to true, the unenrollment of a vmware admin cluster resource will
+           * succeed even if errors occur during unenrollment. This parameter can be used when you
+           * want to unenroll admin cluster resource and the on-prem admin cluster is disconnected /
+           * unreachable. WARNING: Using this parameter when your admin cluster still exists may
+           * result in a deleted GCP admin cluster but existing resourcelink in on-prem admin
+           * cluster and membership.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean ignoreErrors;
+
+          /** Optional. If set to true, the unenrollment of a vmware admin cluster resource will succeed even if
+         errors occur during unenrollment. This parameter can be used when you want to unenroll admin
+         cluster resource and the on-prem admin cluster is disconnected / unreachable. WARNING: Using this
+         parameter when your admin cluster still exists may result in a deleted GCP admin cluster but
+         existing resourcelink in on-prem admin cluster and membership.
+           */
+          public java.lang.Boolean getIgnoreErrors() {
+            return ignoreErrors;
+          }
+
+          /**
+           * Optional. If set to true, the unenrollment of a vmware admin cluster resource will
+           * succeed even if errors occur during unenrollment. This parameter can be used when you
+           * want to unenroll admin cluster resource and the on-prem admin cluster is disconnected /
+           * unreachable. WARNING: Using this parameter when your admin cluster still exists may
+           * result in a deleted GCP admin cluster but existing resourcelink in on-prem admin
+           * cluster and membership.
+           */
+          public Unenroll setIgnoreErrors(java.lang.Boolean ignoreErrors) {
+            this.ignoreErrors = ignoreErrors;
+            return this;
+          }
+
           /** Validate the request without actually doing any updates. */
           @com.google.api.client.util.Key
           private java.lang.Boolean validateOnly;

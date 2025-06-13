@@ -40,6 +40,23 @@ public final class GCPBackupPlanInfo extends com.google.api.client.json.GenericJ
   private java.lang.String backupPlan;
 
   /**
+   * The user friendly id of the backup plan revision which triggered this backup in case of
+   * scheduled backup or used for on demand backup.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String backupPlanRevisionId;
+
+  /**
+   * Resource name of the backup plan revision which triggered this backup in case of scheduled
+   * backup or used for on demand backup. Format:
+   * projects/{project}/locations/{location}/backupPlans/{backupPlanId}/revisions/{revisionId}
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String backupPlanRevisionName;
+
+  /**
    * The rule id of the backup plan which triggered this backup in case of scheduled backup or used
    * for
    * The value may be {@code null}.
@@ -63,6 +80,46 @@ public final class GCPBackupPlanInfo extends com.google.api.client.json.GenericJ
    */
   public GCPBackupPlanInfo setBackupPlan(java.lang.String backupPlan) {
     this.backupPlan = backupPlan;
+    return this;
+  }
+
+  /**
+   * The user friendly id of the backup plan revision which triggered this backup in case of
+   * scheduled backup or used for on demand backup.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBackupPlanRevisionId() {
+    return backupPlanRevisionId;
+  }
+
+  /**
+   * The user friendly id of the backup plan revision which triggered this backup in case of
+   * scheduled backup or used for on demand backup.
+   * @param backupPlanRevisionId backupPlanRevisionId or {@code null} for none
+   */
+  public GCPBackupPlanInfo setBackupPlanRevisionId(java.lang.String backupPlanRevisionId) {
+    this.backupPlanRevisionId = backupPlanRevisionId;
+    return this;
+  }
+
+  /**
+   * Resource name of the backup plan revision which triggered this backup in case of scheduled
+   * backup or used for on demand backup. Format:
+   * projects/{project}/locations/{location}/backupPlans/{backupPlanId}/revisions/{revisionId}
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBackupPlanRevisionName() {
+    return backupPlanRevisionName;
+  }
+
+  /**
+   * Resource name of the backup plan revision which triggered this backup in case of scheduled
+   * backup or used for on demand backup. Format:
+   * projects/{project}/locations/{location}/backupPlans/{backupPlanId}/revisions/{revisionId}
+   * @param backupPlanRevisionName backupPlanRevisionName or {@code null} for none
+   */
+  public GCPBackupPlanInfo setBackupPlanRevisionName(java.lang.String backupPlanRevisionName) {
+    this.backupPlanRevisionName = backupPlanRevisionName;
     return this;
   }
 

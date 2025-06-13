@@ -32,6 +32,13 @@ package com.google.api.services.backupdr.v1.model;
 public final class DataSource extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. This field is set to true if the backup is blocked by vault access restriction.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean backupBlockedByVaultAccessRestriction;
+
+  /**
    * Output only. Details of how the resource is configured for backup.
    * The value may be {@code null}.
    */
@@ -120,6 +127,23 @@ public final class DataSource extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Output only. This field is set to true if the backup is blocked by vault access restriction.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getBackupBlockedByVaultAccessRestriction() {
+    return backupBlockedByVaultAccessRestriction;
+  }
+
+  /**
+   * Output only. This field is set to true if the backup is blocked by vault access restriction.
+   * @param backupBlockedByVaultAccessRestriction backupBlockedByVaultAccessRestriction or {@code null} for none
+   */
+  public DataSource setBackupBlockedByVaultAccessRestriction(java.lang.Boolean backupBlockedByVaultAccessRestriction) {
+    this.backupBlockedByVaultAccessRestriction = backupBlockedByVaultAccessRestriction;
+    return this;
+  }
 
   /**
    * Output only. Details of how the resource is configured for backup.

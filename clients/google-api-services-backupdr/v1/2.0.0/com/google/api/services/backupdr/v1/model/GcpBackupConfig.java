@@ -53,6 +53,20 @@ public final class GcpBackupConfig extends com.google.api.client.json.GenericJso
   private java.lang.String backupPlanDescription;
 
   /**
+   * The user friendly id of the backup plan revision. E.g. v0, v1 etc.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String backupPlanRevisionId;
+
+  /**
+   * The name of the backup plan revision.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String backupPlanRevisionName;
+
+  /**
    * The names of the backup plan rules which point to this backupvault
    * The value may be {@code null}.
    */
@@ -107,6 +121,40 @@ public final class GcpBackupConfig extends com.google.api.client.json.GenericJso
    */
   public GcpBackupConfig setBackupPlanDescription(java.lang.String backupPlanDescription) {
     this.backupPlanDescription = backupPlanDescription;
+    return this;
+  }
+
+  /**
+   * The user friendly id of the backup plan revision. E.g. v0, v1 etc.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBackupPlanRevisionId() {
+    return backupPlanRevisionId;
+  }
+
+  /**
+   * The user friendly id of the backup plan revision. E.g. v0, v1 etc.
+   * @param backupPlanRevisionId backupPlanRevisionId or {@code null} for none
+   */
+  public GcpBackupConfig setBackupPlanRevisionId(java.lang.String backupPlanRevisionId) {
+    this.backupPlanRevisionId = backupPlanRevisionId;
+    return this;
+  }
+
+  /**
+   * The name of the backup plan revision.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBackupPlanRevisionName() {
+    return backupPlanRevisionName;
+  }
+
+  /**
+   * The name of the backup plan revision.
+   * @param backupPlanRevisionName backupPlanRevisionName or {@code null} for none
+   */
+  public GcpBackupConfig setBackupPlanRevisionName(java.lang.String backupPlanRevisionName) {
+    this.backupPlanRevisionName = backupPlanRevisionName;
     return this;
   }
 

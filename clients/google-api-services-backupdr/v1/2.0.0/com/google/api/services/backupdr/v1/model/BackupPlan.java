@@ -98,13 +98,27 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Required. The resource type to which the `BackupPlan` will be applied. Examples include,
-   * "compute.googleapis.com/Instance", "sqladmin.googleapis.com/Instance" and
-   * "storage.googleapis.com/Bucket".
+   * Required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceType;
+
+  /**
+   * Output only. The user friendly revision ID of the `BackupPlanRevision`. Example: v0, v1, v2,
+   * etc.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String revisionId;
+
+  /**
+   * Output only. The resource id of the `BackupPlanRevision`. Format:
+   * `projects/{project}/locations/{location}/backupPlans/{backup_plan}/revisions/{revision_id}`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String revisionName;
 
   /**
    * Output only. The `State` for the `BackupPlan`.
@@ -112,6 +126,13 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
+
+  /**
+   * Output only. All resource types to which backupPlan can be applied.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> supportedResourceTypes;
 
   /**
    * Output only. When the `BackupPlan` was last updated.
@@ -275,9 +296,7 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The resource type to which the `BackupPlan` will be applied. Examples include,
-   * "compute.googleapis.com/Instance", "sqladmin.googleapis.com/Instance" and
-   * "storage.googleapis.com/Bucket".
+   * Required.
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceType() {
@@ -285,13 +304,49 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The resource type to which the `BackupPlan` will be applied. Examples include,
-   * "compute.googleapis.com/Instance", "sqladmin.googleapis.com/Instance" and
-   * "storage.googleapis.com/Bucket".
+   * Required.
    * @param resourceType resourceType or {@code null} for none
    */
   public BackupPlan setResourceType(java.lang.String resourceType) {
     this.resourceType = resourceType;
+    return this;
+  }
+
+  /**
+   * Output only. The user friendly revision ID of the `BackupPlanRevision`. Example: v0, v1, v2,
+   * etc.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRevisionId() {
+    return revisionId;
+  }
+
+  /**
+   * Output only. The user friendly revision ID of the `BackupPlanRevision`. Example: v0, v1, v2,
+   * etc.
+   * @param revisionId revisionId or {@code null} for none
+   */
+  public BackupPlan setRevisionId(java.lang.String revisionId) {
+    this.revisionId = revisionId;
+    return this;
+  }
+
+  /**
+   * Output only. The resource id of the `BackupPlanRevision`. Format:
+   * `projects/{project}/locations/{location}/backupPlans/{backup_plan}/revisions/{revision_id}`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRevisionName() {
+    return revisionName;
+  }
+
+  /**
+   * Output only. The resource id of the `BackupPlanRevision`. Format:
+   * `projects/{project}/locations/{location}/backupPlans/{backup_plan}/revisions/{revision_id}`
+   * @param revisionName revisionName or {@code null} for none
+   */
+  public BackupPlan setRevisionName(java.lang.String revisionName) {
+    this.revisionName = revisionName;
     return this;
   }
 
@@ -309,6 +364,23 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
    */
   public BackupPlan setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Output only. All resource types to which backupPlan can be applied.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getSupportedResourceTypes() {
+    return supportedResourceTypes;
+  }
+
+  /**
+   * Output only. All resource types to which backupPlan can be applied.
+   * @param supportedResourceTypes supportedResourceTypes or {@code null} for none
+   */
+  public BackupPlan setSupportedResourceTypes(java.util.List<java.lang.String> supportedResourceTypes) {
+    this.supportedResourceTypes = supportedResourceTypes;
     return this;
   }
 

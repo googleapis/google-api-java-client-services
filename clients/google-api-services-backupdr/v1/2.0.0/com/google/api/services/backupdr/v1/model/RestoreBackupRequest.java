@@ -45,6 +45,27 @@ public final class RestoreBackupRequest extends com.google.api.client.json.Gener
   private ComputeInstanceTargetEnvironment computeInstanceTargetEnvironment;
 
   /**
+   * Disk properties to be overridden during restore.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DiskRestoreProperties diskRestoreProperties;
+
+  /**
+   * Disk target environment to be used during restore.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DiskTargetEnvironment diskTargetEnvironment;
+
+  /**
+   * Region disk target environment to be used during restore.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RegionDiskTargetEnvironment regionDiskTargetEnvironment;
+
+  /**
    * Optional. An optional request ID to identify requests. Specify a unique request ID so that if
    * you must retry your request, the server will know to ignore the request if it has already been
    * completed. The server will guarantee that for at least 60 minutes after the first request. For
@@ -89,6 +110,57 @@ public final class RestoreBackupRequest extends com.google.api.client.json.Gener
    */
   public RestoreBackupRequest setComputeInstanceTargetEnvironment(ComputeInstanceTargetEnvironment computeInstanceTargetEnvironment) {
     this.computeInstanceTargetEnvironment = computeInstanceTargetEnvironment;
+    return this;
+  }
+
+  /**
+   * Disk properties to be overridden during restore.
+   * @return value or {@code null} for none
+   */
+  public DiskRestoreProperties getDiskRestoreProperties() {
+    return diskRestoreProperties;
+  }
+
+  /**
+   * Disk properties to be overridden during restore.
+   * @param diskRestoreProperties diskRestoreProperties or {@code null} for none
+   */
+  public RestoreBackupRequest setDiskRestoreProperties(DiskRestoreProperties diskRestoreProperties) {
+    this.diskRestoreProperties = diskRestoreProperties;
+    return this;
+  }
+
+  /**
+   * Disk target environment to be used during restore.
+   * @return value or {@code null} for none
+   */
+  public DiskTargetEnvironment getDiskTargetEnvironment() {
+    return diskTargetEnvironment;
+  }
+
+  /**
+   * Disk target environment to be used during restore.
+   * @param diskTargetEnvironment diskTargetEnvironment or {@code null} for none
+   */
+  public RestoreBackupRequest setDiskTargetEnvironment(DiskTargetEnvironment diskTargetEnvironment) {
+    this.diskTargetEnvironment = diskTargetEnvironment;
+    return this;
+  }
+
+  /**
+   * Region disk target environment to be used during restore.
+   * @return value or {@code null} for none
+   */
+  public RegionDiskTargetEnvironment getRegionDiskTargetEnvironment() {
+    return regionDiskTargetEnvironment;
+  }
+
+  /**
+   * Region disk target environment to be used during restore.
+   * @param regionDiskTargetEnvironment regionDiskTargetEnvironment or {@code null} for none
+   */
+  public RestoreBackupRequest setRegionDiskTargetEnvironment(RegionDiskTargetEnvironment regionDiskTargetEnvironment) {
+    this.regionDiskTargetEnvironment = regionDiskTargetEnvironment;
     return this;
   }
 

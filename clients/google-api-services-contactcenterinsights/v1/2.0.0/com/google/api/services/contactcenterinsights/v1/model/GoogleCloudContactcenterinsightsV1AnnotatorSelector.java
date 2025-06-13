@@ -51,6 +51,13 @@ public final class GoogleCloudContactcenterinsightsV1AnnotatorSelector extends c
   private java.util.List<java.lang.String> phraseMatchers;
 
   /**
+   * Configuration for the QA annotator.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudContactcenterinsightsV1AnnotatorSelectorQaConfig qaConfig;
+
+  /**
    * Whether to run the entity annotator.
    * The value may be {@code null}.
    */
@@ -85,6 +92,13 @@ public final class GoogleCloudContactcenterinsightsV1AnnotatorSelector extends c
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean runPhraseMatcherAnnotator;
+
+  /**
+   * Whether to run the QA annotator.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean runQaAnnotator;
 
   /**
    * Whether to run the sentiment annotator.
@@ -157,6 +171,23 @@ public final class GoogleCloudContactcenterinsightsV1AnnotatorSelector extends c
    */
   public GoogleCloudContactcenterinsightsV1AnnotatorSelector setPhraseMatchers(java.util.List<java.lang.String> phraseMatchers) {
     this.phraseMatchers = phraseMatchers;
+    return this;
+  }
+
+  /**
+   * Configuration for the QA annotator.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1AnnotatorSelectorQaConfig getQaConfig() {
+    return qaConfig;
+  }
+
+  /**
+   * Configuration for the QA annotator.
+   * @param qaConfig qaConfig or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1AnnotatorSelector setQaConfig(GoogleCloudContactcenterinsightsV1AnnotatorSelectorQaConfig qaConfig) {
+    this.qaConfig = qaConfig;
     return this;
   }
 
@@ -244,6 +275,23 @@ public final class GoogleCloudContactcenterinsightsV1AnnotatorSelector extends c
    */
   public GoogleCloudContactcenterinsightsV1AnnotatorSelector setRunPhraseMatcherAnnotator(java.lang.Boolean runPhraseMatcherAnnotator) {
     this.runPhraseMatcherAnnotator = runPhraseMatcherAnnotator;
+    return this;
+  }
+
+  /**
+   * Whether to run the QA annotator.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getRunQaAnnotator() {
+    return runQaAnnotator;
+  }
+
+  /**
+   * Whether to run the QA annotator.
+   * @param runQaAnnotator runQaAnnotator or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1AnnotatorSelector setRunQaAnnotator(java.lang.Boolean runQaAnnotator) {
+    this.runQaAnnotator = runQaAnnotator;
     return this;
   }
 

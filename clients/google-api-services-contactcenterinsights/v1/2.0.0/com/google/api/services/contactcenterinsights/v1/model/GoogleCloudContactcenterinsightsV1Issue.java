@@ -38,6 +38,13 @@ public final class GoogleCloudContactcenterinsightsV1Issue extends com.google.ap
   private String createTime;
 
   /**
+   * Representative description of the issue.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String displayDescription;
+
+  /**
    * The representative name for the issue.
    * The value may be {@code null}.
    */
@@ -80,6 +87,23 @@ public final class GoogleCloudContactcenterinsightsV1Issue extends com.google.ap
    */
   public GoogleCloudContactcenterinsightsV1Issue setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Representative description of the issue.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDisplayDescription() {
+    return displayDescription;
+  }
+
+  /**
+   * Representative description of the issue.
+   * @param displayDescription displayDescription or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1Issue setDisplayDescription(java.lang.String displayDescription) {
+    this.displayDescription = displayDescription;
     return this;
   }
 

@@ -191,6 +191,14 @@ public final class Route extends com.google.api.client.json.GenericJson {
   private java.lang.String nextHopVpnTunnel;
 
   /**
+   * Input only. [Input Only] Additional params passed with the request, but not persisted as part
+   * of resource payload.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RouteParams params;
+
+  /**
    * The priority of this route. Priority is used to break ties in cases where there is more than
    * one matching route of equal prefix length. In cases where multiple routes have equal prefix
    * length, the one with the lowest-numbered priority value wins. The default value is `1000`. The
@@ -617,6 +625,25 @@ public final class Route extends com.google.api.client.json.GenericJson {
    */
   public Route setNextHopVpnTunnel(java.lang.String nextHopVpnTunnel) {
     this.nextHopVpnTunnel = nextHopVpnTunnel;
+    return this;
+  }
+
+  /**
+   * Input only. [Input Only] Additional params passed with the request, but not persisted as part
+   * of resource payload.
+   * @return value or {@code null} for none
+   */
+  public RouteParams getParams() {
+    return params;
+  }
+
+  /**
+   * Input only. [Input Only] Additional params passed with the request, but not persisted as part
+   * of resource payload.
+   * @param params params or {@code null} for none
+   */
+  public Route setParams(RouteParams params) {
+    this.params = params;
     return this;
   }
 

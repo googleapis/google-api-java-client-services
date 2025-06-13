@@ -223,8 +223,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String machineType;
 
   /**
-   * The metadata key/value pairs assigned to this instance. This includes custom metadata and
-   * predefined keys.
+   * The metadata key/value pairs assigned to this instance. This includes metadata keys that were
+   * explicitly defined for the instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -908,8 +908,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The metadata key/value pairs assigned to this instance. This includes custom metadata and
-   * predefined keys.
+   * The metadata key/value pairs assigned to this instance. This includes metadata keys that were
+   * explicitly defined for the instance.
    * @return value or {@code null} for none
    */
   public Metadata getMetadata() {
@@ -917,8 +917,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The metadata key/value pairs assigned to this instance. This includes custom metadata and
-   * predefined keys.
+   * The metadata key/value pairs assigned to this instance. This includes metadata keys that were
+   * explicitly defined for the instance.
    * @param metadata metadata or {@code null} for none
    */
   public Instance setMetadata(Metadata metadata) {

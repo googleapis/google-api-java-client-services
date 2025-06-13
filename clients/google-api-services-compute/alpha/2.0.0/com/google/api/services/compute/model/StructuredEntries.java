@@ -35,14 +35,14 @@ public final class StructuredEntries extends com.google.api.client.json.GenericJ
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.Map<String, java.lang.Object> entries;
+  private java.util.Map<String, Any> entries;
 
   /**
    * Map of a partner metadata that belong to the same subdomain. It accepts any value including
    * google.protobuf.Struct.
    * @return value or {@code null} for none
    */
-  public java.util.Map<String, java.lang.Object> getEntries() {
+  public java.util.Map<String, Any> getEntries() {
     return entries;
   }
 
@@ -51,7 +51,7 @@ public final class StructuredEntries extends com.google.api.client.json.GenericJ
    * google.protobuf.Struct.
    * @param entries entries or {@code null} for none
    */
-  public StructuredEntries setEntries(java.util.Map<String, java.lang.Object> entries) {
+  public StructuredEntries setEntries(java.util.Map<String, Any> entries) {
     this.entries = entries;
     return this;
   }

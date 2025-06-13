@@ -54,6 +54,14 @@ public final class FirewallPolicyRuleMatcher extends com.google.api.client.json.
   private java.util.List<java.lang.String> destIpRanges;
 
   /**
+   * Network type of the traffic destination. Allowed values are: - UNSPECIFIED - INTERNET -
+   * NON_INTERNET
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String destNetworkType;
+
+  /**
    * Region codes whose IP addresses will be used to match for destination of traffic. Should be
    * specified as 2 letter country code defined as per ISO 3166 alpha-2 country codes. ex."US"
    * Maximum number of dest region codes allowed is 5000.
@@ -99,6 +107,21 @@ public final class FirewallPolicyRuleMatcher extends com.google.api.client.json.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> srcIpRanges;
+
+  /**
+   * Network type of the traffic source. Allowed values are: - UNSPECIFIED - INTERNET - INTRA_VPC -
+   * NON_INTERNET - VPC_NETWORKS
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String srcNetworkType;
+
+  /**
+   * Networks of the traffic source. It can be either a full or partial url.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> srcNetworks;
 
   /**
    * Region codes whose IP addresses will be used to match for source of traffic. Should be
@@ -178,6 +201,25 @@ public final class FirewallPolicyRuleMatcher extends com.google.api.client.json.
    */
   public FirewallPolicyRuleMatcher setDestIpRanges(java.util.List<java.lang.String> destIpRanges) {
     this.destIpRanges = destIpRanges;
+    return this;
+  }
+
+  /**
+   * Network type of the traffic destination. Allowed values are: - UNSPECIFIED - INTERNET -
+   * NON_INTERNET
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDestNetworkType() {
+    return destNetworkType;
+  }
+
+  /**
+   * Network type of the traffic destination. Allowed values are: - UNSPECIFIED - INTERNET -
+   * NON_INTERNET
+   * @param destNetworkType destNetworkType or {@code null} for none
+   */
+  public FirewallPolicyRuleMatcher setDestNetworkType(java.lang.String destNetworkType) {
+    this.destNetworkType = destNetworkType;
     return this;
   }
 
@@ -290,6 +332,42 @@ public final class FirewallPolicyRuleMatcher extends com.google.api.client.json.
    */
   public FirewallPolicyRuleMatcher setSrcIpRanges(java.util.List<java.lang.String> srcIpRanges) {
     this.srcIpRanges = srcIpRanges;
+    return this;
+  }
+
+  /**
+   * Network type of the traffic source. Allowed values are: - UNSPECIFIED - INTERNET - INTRA_VPC -
+   * NON_INTERNET - VPC_NETWORKS
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSrcNetworkType() {
+    return srcNetworkType;
+  }
+
+  /**
+   * Network type of the traffic source. Allowed values are: - UNSPECIFIED - INTERNET - INTRA_VPC -
+   * NON_INTERNET - VPC_NETWORKS
+   * @param srcNetworkType srcNetworkType or {@code null} for none
+   */
+  public FirewallPolicyRuleMatcher setSrcNetworkType(java.lang.String srcNetworkType) {
+    this.srcNetworkType = srcNetworkType;
+    return this;
+  }
+
+  /**
+   * Networks of the traffic source. It can be either a full or partial url.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getSrcNetworks() {
+    return srcNetworks;
+  }
+
+  /**
+   * Networks of the traffic source. It can be either a full or partial url.
+   * @param srcNetworks srcNetworks or {@code null} for none
+   */
+  public FirewallPolicyRuleMatcher setSrcNetworks(java.util.List<java.lang.String> srcNetworks) {
+    this.srcNetworks = srcNetworks;
     return this;
   }
 

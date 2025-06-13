@@ -439,6 +439,43 @@ public final class Disk extends com.google.api.client.json.GenericJson {
   private java.lang.String sourceInstantSnapshotId;
 
   /**
+   * The machine image to create the disk from. You can provide this as a partial or full URL to the
+   * resource. For example, the following are valid values: -
+   * https://www.googleapis.com/compute/v1/projects/project /global/machineImages/machineImage -
+   * projects/project/global/machineImages/machineImage - global/machineImages/machineImage
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceMachineImage;
+
+  /**
+   * Input only. The device name of a disk within a given machine image. The source_machine_image
+   * must be specified.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceMachineImageDiskDeviceName;
+
+  /**
+   * The customer-supplied encryption key of the source machine image. Required if the source
+   * machine image is protected by a customer-supplied encryption key.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CustomerEncryptionKey sourceMachineImageEncryptionKey;
+
+  /**
+   * [Output Only] The unique ID of the machine image used to create this disk. This value
+   * identifies the exact machine image that was used to create this persistent disk. For example,
+   * if you created the persistent disk from a machine image that was later deleted and recreated
+   * under the same name, the source machine image ID would identify the exact version of the
+   * machine image that was used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceMachineImageId;
+
+  /**
    * The source snapshot used to create this disk. You can provide this as a partial or full URL to
    * the resource. For example, the following are valid values: -
    * https://www.googleapis.com/compute/v1/projects/project /global/snapshots/snapshot -
@@ -1515,6 +1552,92 @@ public final class Disk extends com.google.api.client.json.GenericJson {
    */
   public Disk setSourceInstantSnapshotId(java.lang.String sourceInstantSnapshotId) {
     this.sourceInstantSnapshotId = sourceInstantSnapshotId;
+    return this;
+  }
+
+  /**
+   * The machine image to create the disk from. You can provide this as a partial or full URL to the
+   * resource. For example, the following are valid values: -
+   * https://www.googleapis.com/compute/v1/projects/project /global/machineImages/machineImage -
+   * projects/project/global/machineImages/machineImage - global/machineImages/machineImage
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceMachineImage() {
+    return sourceMachineImage;
+  }
+
+  /**
+   * The machine image to create the disk from. You can provide this as a partial or full URL to the
+   * resource. For example, the following are valid values: -
+   * https://www.googleapis.com/compute/v1/projects/project /global/machineImages/machineImage -
+   * projects/project/global/machineImages/machineImage - global/machineImages/machineImage
+   * @param sourceMachineImage sourceMachineImage or {@code null} for none
+   */
+  public Disk setSourceMachineImage(java.lang.String sourceMachineImage) {
+    this.sourceMachineImage = sourceMachineImage;
+    return this;
+  }
+
+  /**
+   * Input only. The device name of a disk within a given machine image. The source_machine_image
+   * must be specified.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceMachineImageDiskDeviceName() {
+    return sourceMachineImageDiskDeviceName;
+  }
+
+  /**
+   * Input only. The device name of a disk within a given machine image. The source_machine_image
+   * must be specified.
+   * @param sourceMachineImageDiskDeviceName sourceMachineImageDiskDeviceName or {@code null} for none
+   */
+  public Disk setSourceMachineImageDiskDeviceName(java.lang.String sourceMachineImageDiskDeviceName) {
+    this.sourceMachineImageDiskDeviceName = sourceMachineImageDiskDeviceName;
+    return this;
+  }
+
+  /**
+   * The customer-supplied encryption key of the source machine image. Required if the source
+   * machine image is protected by a customer-supplied encryption key.
+   * @return value or {@code null} for none
+   */
+  public CustomerEncryptionKey getSourceMachineImageEncryptionKey() {
+    return sourceMachineImageEncryptionKey;
+  }
+
+  /**
+   * The customer-supplied encryption key of the source machine image. Required if the source
+   * machine image is protected by a customer-supplied encryption key.
+   * @param sourceMachineImageEncryptionKey sourceMachineImageEncryptionKey or {@code null} for none
+   */
+  public Disk setSourceMachineImageEncryptionKey(CustomerEncryptionKey sourceMachineImageEncryptionKey) {
+    this.sourceMachineImageEncryptionKey = sourceMachineImageEncryptionKey;
+    return this;
+  }
+
+  /**
+   * [Output Only] The unique ID of the machine image used to create this disk. This value
+   * identifies the exact machine image that was used to create this persistent disk. For example,
+   * if you created the persistent disk from a machine image that was later deleted and recreated
+   * under the same name, the source machine image ID would identify the exact version of the
+   * machine image that was used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceMachineImageId() {
+    return sourceMachineImageId;
+  }
+
+  /**
+   * [Output Only] The unique ID of the machine image used to create this disk. This value
+   * identifies the exact machine image that was used to create this persistent disk. For example,
+   * if you created the persistent disk from a machine image that was later deleted and recreated
+   * under the same name, the source machine image ID would identify the exact version of the
+   * machine image that was used.
+   * @param sourceMachineImageId sourceMachineImageId or {@code null} for none
+   */
+  public Disk setSourceMachineImageId(java.lang.String sourceMachineImageId) {
+    this.sourceMachineImageId = sourceMachineImageId;
     return this;
   }
 

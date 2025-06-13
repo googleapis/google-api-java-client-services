@@ -124,6 +124,15 @@ public final class BackendBucket extends com.google.api.client.json.GenericJson 
   private java.lang.String name;
 
   /**
+   * [Output Only] URL of the region where the regional backend bucket resides. This field is not
+   * applicable to global backend buckets. You must specify this field as part of the HTTP request
+   * URL. It is not settable as a field in the request body.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String region;
+
+  /**
    * [Output Only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
@@ -363,6 +372,27 @@ public final class BackendBucket extends com.google.api.client.json.GenericJson 
    */
   public BackendBucket setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * [Output Only] URL of the region where the regional backend bucket resides. This field is not
+   * applicable to global backend buckets. You must specify this field as part of the HTTP request
+   * URL. It is not settable as a field in the request body.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRegion() {
+    return region;
+  }
+
+  /**
+   * [Output Only] URL of the region where the regional backend bucket resides. This field is not
+   * applicable to global backend buckets. You must specify this field as part of the HTTP request
+   * URL. It is not settable as a field in the request body.
+   * @param region region or {@code null} for none
+   */
+  public BackendBucket setRegion(java.lang.String region) {
+    this.region = region;
     return this;
   }
 

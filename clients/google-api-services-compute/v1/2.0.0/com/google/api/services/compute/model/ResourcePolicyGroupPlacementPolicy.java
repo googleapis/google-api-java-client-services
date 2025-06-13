@@ -46,6 +46,13 @@ public final class ResourcePolicyGroupPlacementPolicy extends com.google.api.cli
   private java.lang.String collocation;
 
   /**
+   * Specifies the shape of the GPU slice, in slice based GPU families eg. A4X.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String gpuTopology;
+
+  /**
    * Number of VMs in this placement group. Google does not recommend that you use this field unless
    * you use a compact policy and you want your policy to work only if it contains this exact number
    * of VMs.
@@ -87,6 +94,23 @@ public final class ResourcePolicyGroupPlacementPolicy extends com.google.api.cli
    */
   public ResourcePolicyGroupPlacementPolicy setCollocation(java.lang.String collocation) {
     this.collocation = collocation;
+    return this;
+  }
+
+  /**
+   * Specifies the shape of the GPU slice, in slice based GPU families eg. A4X.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGpuTopology() {
+    return gpuTopology;
+  }
+
+  /**
+   * Specifies the shape of the GPU slice, in slice based GPU families eg. A4X.
+   * @param gpuTopology gpuTopology or {@code null} for none
+   */
+  public ResourcePolicyGroupPlacementPolicy setGpuTopology(java.lang.String gpuTopology) {
+    this.gpuTopology = gpuTopology;
     return this;
   }
 

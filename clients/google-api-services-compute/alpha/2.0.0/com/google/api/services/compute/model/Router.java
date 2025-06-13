@@ -132,6 +132,14 @@ public final class Router extends com.google.api.client.json.GenericJson {
   private java.lang.String network;
 
   /**
+   * Input only. [Input Only] Additional params passed with the request, but not persisted as part
+   * of resource payload.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RouterParams params;
+
+  /**
    * [Output Only] URI of the region where the router resides. You must specify this field as part
    * of the HTTP request URL. It is not settable as a field in the request body.
    * The value may be {@code null}.
@@ -391,6 +399,25 @@ public final class Router extends com.google.api.client.json.GenericJson {
    */
   public Router setNetwork(java.lang.String network) {
     this.network = network;
+    return this;
+  }
+
+  /**
+   * Input only. [Input Only] Additional params passed with the request, but not persisted as part
+   * of resource payload.
+   * @return value or {@code null} for none
+   */
+  public RouterParams getParams() {
+    return params;
+  }
+
+  /**
+   * Input only. [Input Only] Additional params passed with the request, but not persisted as part
+   * of resource payload.
+   * @param params params or {@code null} for none
+   */
+  public Router setParams(RouterParams params) {
+    this.params = params;
     return this;
   }
 

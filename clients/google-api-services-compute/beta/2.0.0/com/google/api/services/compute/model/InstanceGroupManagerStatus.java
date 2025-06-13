@@ -44,6 +44,13 @@ public final class InstanceGroupManagerStatus extends com.google.api.client.json
   private java.lang.String autoscaler;
 
   /**
+   * [Output Only] The status of bulk instance operation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InstanceGroupManagerStatusBulkInstanceOperation bulkInstanceOperation;
+
+  /**
    * [Output Only] A bit indicating whether the managed instance group is in a stable state. A
    * stable state means that: none of the instances in the managed instance group is currently
    * undergoing any type of change (for example, creation, restart, or deletion); no future changes
@@ -100,6 +107,23 @@ public final class InstanceGroupManagerStatus extends com.google.api.client.json
    */
   public InstanceGroupManagerStatus setAutoscaler(java.lang.String autoscaler) {
     this.autoscaler = autoscaler;
+    return this;
+  }
+
+  /**
+   * [Output Only] The status of bulk instance operation.
+   * @return value or {@code null} for none
+   */
+  public InstanceGroupManagerStatusBulkInstanceOperation getBulkInstanceOperation() {
+    return bulkInstanceOperation;
+  }
+
+  /**
+   * [Output Only] The status of bulk instance operation.
+   * @param bulkInstanceOperation bulkInstanceOperation or {@code null} for none
+   */
+  public InstanceGroupManagerStatus setBulkInstanceOperation(InstanceGroupManagerStatusBulkInstanceOperation bulkInstanceOperation) {
+    this.bulkInstanceOperation = bulkInstanceOperation;
     return this;
   }
 

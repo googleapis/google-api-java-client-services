@@ -69,11 +69,31 @@ public final class UsableSubnetworksAggregatedList extends com.google.api.client
   private java.lang.String nextPageToken;
 
   /**
+   * [Output Only] Informational warning messages for failures encountered from scopes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<SubnetworksScopedWarning> scopedWarnings;
+
+  static {
+    // hack to force ProGuard to consider SubnetworksScopedWarning used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(SubnetworksScopedWarning.class);
+  }
+
+  /**
    * [Output Only] Server-defined URL for this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
+
+  /**
+   * [Output Only] Unreachable resources.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> unreachables;
 
   /**
    * [Output Only] Informational warning message.
@@ -161,6 +181,23 @@ public final class UsableSubnetworksAggregatedList extends com.google.api.client
   }
 
   /**
+   * [Output Only] Informational warning messages for failures encountered from scopes.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<SubnetworksScopedWarning> getScopedWarnings() {
+    return scopedWarnings;
+  }
+
+  /**
+   * [Output Only] Informational warning messages for failures encountered from scopes.
+   * @param scopedWarnings scopedWarnings or {@code null} for none
+   */
+  public UsableSubnetworksAggregatedList setScopedWarnings(java.util.List<SubnetworksScopedWarning> scopedWarnings) {
+    this.scopedWarnings = scopedWarnings;
+    return this;
+  }
+
+  /**
    * [Output Only] Server-defined URL for this resource.
    * @return value or {@code null} for none
    */
@@ -174,6 +211,23 @@ public final class UsableSubnetworksAggregatedList extends com.google.api.client
    */
   public UsableSubnetworksAggregatedList setSelfLink(java.lang.String selfLink) {
     this.selfLink = selfLink;
+    return this;
+  }
+
+  /**
+   * [Output Only] Unreachable resources.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getUnreachables() {
+    return unreachables;
+  }
+
+  /**
+   * [Output Only] Unreachable resources.
+   * @param unreachables unreachables or {@code null} for none
+   */
+  public UsableSubnetworksAggregatedList setUnreachables(java.util.List<java.lang.String> unreachables) {
+    this.unreachables = unreachables;
     return this;
   }
 

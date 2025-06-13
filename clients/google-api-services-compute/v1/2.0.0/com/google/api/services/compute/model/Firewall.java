@@ -143,6 +143,14 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
   private java.lang.String network;
 
   /**
+   * Input only. [Input Only] Additional params passed with the request, but not persisted as part
+   * of resource payload.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private FirewallParams params;
+
+  /**
    * Priority for this rule. This is an integer between `0` and `65535`, both inclusive. The default
    * value is `1000`. Relative priorities determine which rule takes effect if multiple rules apply.
    * Lower values indicate higher priority. For example, a rule with priority `0` has higher
@@ -455,6 +463,25 @@ public final class Firewall extends com.google.api.client.json.GenericJson {
    */
   public Firewall setNetwork(java.lang.String network) {
     this.network = network;
+    return this;
+  }
+
+  /**
+   * Input only. [Input Only] Additional params passed with the request, but not persisted as part
+   * of resource payload.
+   * @return value or {@code null} for none
+   */
+  public FirewallParams getParams() {
+    return params;
+  }
+
+  /**
+   * Input only. [Input Only] Additional params passed with the request, but not persisted as part
+   * of resource payload.
+   * @param params params or {@code null} for none
+   */
+  public Firewall setParams(FirewallParams params) {
+    this.params = params;
     return this;
   }
 

@@ -118,11 +118,26 @@ public final class Router extends com.google.api.client.json.GenericJson {
   private java.util.List<RouterNat> nats;
 
   /**
+   * URI of the ncc_gateway to which this router associated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String nccGateway;
+
+  /**
    * URI of the network to which this router belongs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String network;
+
+  /**
+   * Input only. [Input Only] Additional params passed with the request, but not persisted as part
+   * of resource payload.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RouterParams params;
 
   /**
    * [Output Only] URI of the region where the router resides. You must specify this field as part
@@ -347,6 +362,23 @@ public final class Router extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * URI of the ncc_gateway to which this router associated.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNccGateway() {
+    return nccGateway;
+  }
+
+  /**
+   * URI of the ncc_gateway to which this router associated.
+   * @param nccGateway nccGateway or {@code null} for none
+   */
+  public Router setNccGateway(java.lang.String nccGateway) {
+    this.nccGateway = nccGateway;
+    return this;
+  }
+
+  /**
    * URI of the network to which this router belongs.
    * @return value or {@code null} for none
    */
@@ -360,6 +392,25 @@ public final class Router extends com.google.api.client.json.GenericJson {
    */
   public Router setNetwork(java.lang.String network) {
     this.network = network;
+    return this;
+  }
+
+  /**
+   * Input only. [Input Only] Additional params passed with the request, but not persisted as part
+   * of resource payload.
+   * @return value or {@code null} for none
+   */
+  public RouterParams getParams() {
+    return params;
+  }
+
+  /**
+   * Input only. [Input Only] Additional params passed with the request, but not persisted as part
+   * of resource payload.
+   * @param params params or {@code null} for none
+   */
+  public Router setParams(RouterParams params) {
+    this.params = params;
     return this;
   }
 

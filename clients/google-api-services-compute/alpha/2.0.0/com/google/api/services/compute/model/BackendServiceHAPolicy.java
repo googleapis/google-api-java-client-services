@@ -59,7 +59,7 @@ public final class BackendServiceHAPolicy extends com.google.api.client.json.Gen
    * fastIPMove. - The regional backend service must set the network field, and all NEGs must belong
    * to that network. However, individual NEGs can belong to different subnetworks of that network.
    * - The maximum number of network endpoints across all backends of a backend service with
-   * fastIPMove is 64. - The maximum number of backend services with fastIPMove that can have the
+   * fastIPMove is 32. - The maximum number of backend services with fastIPMove that can have the
    * same network endpoint attached to one of its backends is 64. - The maximum number of backend
    * services with fastIPMove in a VPC in a region is 64. - The network endpoints that are attached
    * to a backend of a backend service with fastIPMove cannot resolve to Gen3+ machines for IPv6. -
@@ -115,7 +115,7 @@ public final class BackendServiceHAPolicy extends com.google.api.client.json.Gen
    * fastIPMove. - The regional backend service must set the network field, and all NEGs must belong
    * to that network. However, individual NEGs can belong to different subnetworks of that network.
    * - The maximum number of network endpoints across all backends of a backend service with
-   * fastIPMove is 64. - The maximum number of backend services with fastIPMove that can have the
+   * fastIPMove is 32. - The maximum number of backend services with fastIPMove that can have the
    * same network endpoint attached to one of its backends is 64. - The maximum number of backend
    * services with fastIPMove in a VPC in a region is 64. - The network endpoints that are attached
    * to a backend of a backend service with fastIPMove cannot resolve to Gen3+ machines for IPv6. -
@@ -160,7 +160,7 @@ public final class BackendServiceHAPolicy extends com.google.api.client.json.Gen
    * fastIPMove. - The regional backend service must set the network field, and all NEGs must belong
    * to that network. However, individual NEGs can belong to different subnetworks of that network.
    * - The maximum number of network endpoints across all backends of a backend service with
-   * fastIPMove is 64. - The maximum number of backend services with fastIPMove that can have the
+   * fastIPMove is 32. - The maximum number of backend services with fastIPMove that can have the
    * same network endpoint attached to one of its backends is 64. - The maximum number of backend
    * services with fastIPMove in a VPC in a region is 64. - The network endpoints that are attached
    * to a backend of a backend service with fastIPMove cannot resolve to Gen3+ machines for IPv6. -

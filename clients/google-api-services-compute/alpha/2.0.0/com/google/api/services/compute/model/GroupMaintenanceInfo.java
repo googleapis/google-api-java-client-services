@@ -30,6 +30,20 @@ package com.google.api.services.compute.model;
 public final class GroupMaintenanceInfo extends com.google.api.client.json.GenericJson {
 
   /**
+   * Describes number of instances that have ongoing maintenance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer instanceMaintenanceOngoingCount;
+
+  /**
+   * Describes number of instances that have pending maintenance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer instanceMaintenancePendingCount;
+
+  /**
    * Progress for ongoing maintenance for this group of VMs/hosts. Describes number of hosts in the
    * block that have ongoing maintenance.
    * The value may be {@code null}.
@@ -53,11 +67,63 @@ public final class GroupMaintenanceInfo extends com.google.api.client.json.Gener
   private java.lang.String schedulingType;
 
   /**
+   * Describes number of subblock Infrastructure that has ongoing maintenance. Here, Subblock
+   * Infrastructure Maintenance pertains to upstream hardware contained in the Subblock that is
+   * necessary for a VM Family(e.g. NVLink Domains). Not all VM Families will support this field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer subblockInfraMaintenanceOngoingCount;
+
+  /**
+   * Describes number of subblock Infrastructure that has pending maintenance. Here, Subblock
+   * Infrastructure Maintenance pertains to upstream hardware contained in the Subblock that is
+   * necessary for a VM Family (e.g. NVLink Domains). Not all VM Families will support this field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer subblockInfraMaintenancePendingCount;
+
+  /**
    * Maintenance information on this group of VMs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private UpcomingMaintenance upcomingGroupMaintenance;
+
+  /**
+   * Describes number of instances that have ongoing maintenance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getInstanceMaintenanceOngoingCount() {
+    return instanceMaintenanceOngoingCount;
+  }
+
+  /**
+   * Describes number of instances that have ongoing maintenance.
+   * @param instanceMaintenanceOngoingCount instanceMaintenanceOngoingCount or {@code null} for none
+   */
+  public GroupMaintenanceInfo setInstanceMaintenanceOngoingCount(java.lang.Integer instanceMaintenanceOngoingCount) {
+    this.instanceMaintenanceOngoingCount = instanceMaintenanceOngoingCount;
+    return this;
+  }
+
+  /**
+   * Describes number of instances that have pending maintenance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getInstanceMaintenancePendingCount() {
+    return instanceMaintenancePendingCount;
+  }
+
+  /**
+   * Describes number of instances that have pending maintenance.
+   * @param instanceMaintenancePendingCount instanceMaintenancePendingCount or {@code null} for none
+   */
+  public GroupMaintenanceInfo setInstanceMaintenancePendingCount(java.lang.Integer instanceMaintenancePendingCount) {
+    this.instanceMaintenancePendingCount = instanceMaintenancePendingCount;
+    return this;
+  }
 
   /**
    * Progress for ongoing maintenance for this group of VMs/hosts. Describes number of hosts in the
@@ -111,6 +177,48 @@ public final class GroupMaintenanceInfo extends com.google.api.client.json.Gener
    */
   public GroupMaintenanceInfo setSchedulingType(java.lang.String schedulingType) {
     this.schedulingType = schedulingType;
+    return this;
+  }
+
+  /**
+   * Describes number of subblock Infrastructure that has ongoing maintenance. Here, Subblock
+   * Infrastructure Maintenance pertains to upstream hardware contained in the Subblock that is
+   * necessary for a VM Family(e.g. NVLink Domains). Not all VM Families will support this field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getSubblockInfraMaintenanceOngoingCount() {
+    return subblockInfraMaintenanceOngoingCount;
+  }
+
+  /**
+   * Describes number of subblock Infrastructure that has ongoing maintenance. Here, Subblock
+   * Infrastructure Maintenance pertains to upstream hardware contained in the Subblock that is
+   * necessary for a VM Family(e.g. NVLink Domains). Not all VM Families will support this field.
+   * @param subblockInfraMaintenanceOngoingCount subblockInfraMaintenanceOngoingCount or {@code null} for none
+   */
+  public GroupMaintenanceInfo setSubblockInfraMaintenanceOngoingCount(java.lang.Integer subblockInfraMaintenanceOngoingCount) {
+    this.subblockInfraMaintenanceOngoingCount = subblockInfraMaintenanceOngoingCount;
+    return this;
+  }
+
+  /**
+   * Describes number of subblock Infrastructure that has pending maintenance. Here, Subblock
+   * Infrastructure Maintenance pertains to upstream hardware contained in the Subblock that is
+   * necessary for a VM Family (e.g. NVLink Domains). Not all VM Families will support this field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getSubblockInfraMaintenancePendingCount() {
+    return subblockInfraMaintenancePendingCount;
+  }
+
+  /**
+   * Describes number of subblock Infrastructure that has pending maintenance. Here, Subblock
+   * Infrastructure Maintenance pertains to upstream hardware contained in the Subblock that is
+   * necessary for a VM Family (e.g. NVLink Domains). Not all VM Families will support this field.
+   * @param subblockInfraMaintenancePendingCount subblockInfraMaintenancePendingCount or {@code null} for none
+   */
+  public GroupMaintenanceInfo setSubblockInfraMaintenancePendingCount(java.lang.Integer subblockInfraMaintenancePendingCount) {
+    this.subblockInfraMaintenancePendingCount = subblockInfraMaintenancePendingCount;
     return this;
   }
 

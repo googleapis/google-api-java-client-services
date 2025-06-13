@@ -33,10 +33,11 @@ public final class BackupRule extends com.google.api.client.json.GenericJson {
   /**
    * Required. Configures the duration for which backup data will be kept. It is defined in “days”.
    * The value should be greater than or equal to minimum enforced retention of the backup vault.
-   * Minimum value is 1 and maximum value is 90 for hourly backups. Minimum value is 1 and maximum
-   * value is 90 for daily backups. Minimum value is 7 and maximum value is 186 for weekly backups.
-   * Minimum value is 30 and maximum value is 732 for monthly backups. Minimum value is 30 and
-   * maximum value is 36159 for yearly backups.
+   * Minimum value is 1 and maximum value is 36159 for custom retention on-demand backup. Minimum
+   * value is 1 and maximum value is 90 for hourly backups. Minimum value is 1 and maximum value is
+   * 186 for daily backups. Minimum value is 7 and maximum value is 366 for weekly backups. Minimum
+   * value is 30 and maximum value is 732 for monthly backups. Minimum value is 365 and maximum
+   * value is 36159 for yearly backups.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +53,7 @@ public final class BackupRule extends com.google.api.client.json.GenericJson {
   private java.lang.String ruleId;
 
   /**
-   * Required. Defines a schedule that runs within the confines of a defined window of time.
+   * Optional. Defines a schedule that runs within the confines of a defined window of time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,10 +62,11 @@ public final class BackupRule extends com.google.api.client.json.GenericJson {
   /**
    * Required. Configures the duration for which backup data will be kept. It is defined in “days”.
    * The value should be greater than or equal to minimum enforced retention of the backup vault.
-   * Minimum value is 1 and maximum value is 90 for hourly backups. Minimum value is 1 and maximum
-   * value is 90 for daily backups. Minimum value is 7 and maximum value is 186 for weekly backups.
-   * Minimum value is 30 and maximum value is 732 for monthly backups. Minimum value is 30 and
-   * maximum value is 36159 for yearly backups.
+   * Minimum value is 1 and maximum value is 36159 for custom retention on-demand backup. Minimum
+   * value is 1 and maximum value is 90 for hourly backups. Minimum value is 1 and maximum value is
+   * 186 for daily backups. Minimum value is 7 and maximum value is 366 for weekly backups. Minimum
+   * value is 30 and maximum value is 732 for monthly backups. Minimum value is 365 and maximum
+   * value is 36159 for yearly backups.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getBackupRetentionDays() {
@@ -74,10 +76,11 @@ public final class BackupRule extends com.google.api.client.json.GenericJson {
   /**
    * Required. Configures the duration for which backup data will be kept. It is defined in “days”.
    * The value should be greater than or equal to minimum enforced retention of the backup vault.
-   * Minimum value is 1 and maximum value is 90 for hourly backups. Minimum value is 1 and maximum
-   * value is 90 for daily backups. Minimum value is 7 and maximum value is 186 for weekly backups.
-   * Minimum value is 30 and maximum value is 732 for monthly backups. Minimum value is 30 and
-   * maximum value is 36159 for yearly backups.
+   * Minimum value is 1 and maximum value is 36159 for custom retention on-demand backup. Minimum
+   * value is 1 and maximum value is 90 for hourly backups. Minimum value is 1 and maximum value is
+   * 186 for daily backups. Minimum value is 7 and maximum value is 366 for weekly backups. Minimum
+   * value is 30 and maximum value is 732 for monthly backups. Minimum value is 365 and maximum
+   * value is 36159 for yearly backups.
    * @param backupRetentionDays backupRetentionDays or {@code null} for none
    */
   public BackupRule setBackupRetentionDays(java.lang.Integer backupRetentionDays) {
@@ -107,7 +110,7 @@ public final class BackupRule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Defines a schedule that runs within the confines of a defined window of time.
+   * Optional. Defines a schedule that runs within the confines of a defined window of time.
    * @return value or {@code null} for none
    */
   public StandardSchedule getStandardSchedule() {
@@ -115,7 +118,7 @@ public final class BackupRule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Defines a schedule that runs within the confines of a defined window of time.
+   * Optional. Defines a schedule that runs within the confines of a defined window of time.
    * @param standardSchedule standardSchedule or {@code null} for none
    */
   public BackupRule setStandardSchedule(StandardSchedule standardSchedule) {

@@ -31,7 +31,7 @@ package com.google.api.services.backupdr.v1.model;
 public final class RuleConfigInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Output Only. google.rpc.Status object to store the last backup error.
+   * Output only. google.rpc.Status object to store the last backup error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,14 +52,14 @@ public final class RuleConfigInfo extends com.google.api.client.json.GenericJson
   private String lastSuccessfulBackupConsistencyTime;
 
   /**
-   * Output only. Output Only. Backup Rule id fetched from backup plan.
+   * Output only. Backup Rule id fetched from backup plan.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ruleId;
 
   /**
-   * Output only. Output Only. google.rpc.Status object to store the last backup error.
+   * Output only. google.rpc.Status object to store the last backup error.
    * @return value or {@code null} for none
    */
   public Status getLastBackupError() {
@@ -67,7 +67,7 @@ public final class RuleConfigInfo extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. Output Only. google.rpc.Status object to store the last backup error.
+   * Output only. google.rpc.Status object to store the last backup error.
    * @param lastBackupError lastBackupError or {@code null} for none
    */
   public RuleConfigInfo setLastBackupError(Status lastBackupError) {
@@ -110,7 +110,7 @@ public final class RuleConfigInfo extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. Output Only. Backup Rule id fetched from backup plan.
+   * Output only. Backup Rule id fetched from backup plan.
    * @return value or {@code null} for none
    */
   public java.lang.String getRuleId() {
@@ -118,7 +118,7 @@ public final class RuleConfigInfo extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Output only. Output Only. Backup Rule id fetched from backup plan.
+   * Output only. Backup Rule id fetched from backup plan.
    * @param ruleId ruleId or {@code null} for none
    */
   public RuleConfigInfo setRuleId(java.lang.String ruleId) {

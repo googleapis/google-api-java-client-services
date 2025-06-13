@@ -38,6 +38,13 @@ public final class GoogleCloudContactcenterinsightsV1ExportInsightsDataRequest e
   private GoogleCloudContactcenterinsightsV1ExportInsightsDataRequestBigQueryDestination bigQueryDestination;
 
   /**
+   * Optional. Version of the export schema.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String exportSchemaVersion;
+
+  /**
    * A filter to reduce results to a specific subset. Useful for exporting conversations with
    * specific properties.
    * The value may be {@code null}.
@@ -81,6 +88,23 @@ public final class GoogleCloudContactcenterinsightsV1ExportInsightsDataRequest e
    */
   public GoogleCloudContactcenterinsightsV1ExportInsightsDataRequest setBigQueryDestination(GoogleCloudContactcenterinsightsV1ExportInsightsDataRequestBigQueryDestination bigQueryDestination) {
     this.bigQueryDestination = bigQueryDestination;
+    return this;
+  }
+
+  /**
+   * Optional. Version of the export schema.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getExportSchemaVersion() {
+    return exportSchemaVersion;
+  }
+
+  /**
+   * Optional. Version of the export schema.
+   * @param exportSchemaVersion exportSchemaVersion or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1ExportInsightsDataRequest setExportSchemaVersion(java.lang.String exportSchemaVersion) {
+    this.exportSchemaVersion = exportSchemaVersion;
     return this;
   }
 

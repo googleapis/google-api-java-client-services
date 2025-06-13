@@ -38,6 +38,13 @@ public final class GoogleCloudContactcenterinsightsV1ConversationQualityMetadata
   private java.lang.String agentId;
 
   /**
+   * The agent type, e.g. HUMAN_AGENT.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String agentType;
+
+  /**
    * The agent's name.
    * The value may be {@code null}.
    */
@@ -52,11 +59,26 @@ public final class GoogleCloudContactcenterinsightsV1ConversationQualityMetadata
   private java.lang.String dispositionCode;
 
   /**
-   * A user-specified string representing the agent's team.
+   * The agent's location.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String location;
+
+  /**
+   * A user-specified string representing the agent's team. Deprecated in favor of the `teams`
+   * field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String team;
+
+  /**
+   * User-specified strings representing the agent's teams.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> teams;
 
   /**
    * A user-specified string representing the agent.
@@ -72,6 +94,23 @@ public final class GoogleCloudContactcenterinsightsV1ConversationQualityMetadata
    */
   public GoogleCloudContactcenterinsightsV1ConversationQualityMetadataAgentInfo setAgentId(java.lang.String agentId) {
     this.agentId = agentId;
+    return this;
+  }
+
+  /**
+   * The agent type, e.g. HUMAN_AGENT.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAgentType() {
+    return agentType;
+  }
+
+  /**
+   * The agent type, e.g. HUMAN_AGENT.
+   * @param agentType agentType or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1ConversationQualityMetadataAgentInfo setAgentType(java.lang.String agentType) {
+    this.agentType = agentType;
     return this;
   }
 
@@ -110,7 +149,25 @@ public final class GoogleCloudContactcenterinsightsV1ConversationQualityMetadata
   }
 
   /**
-   * A user-specified string representing the agent's team.
+   * The agent's location.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLocation() {
+    return location;
+  }
+
+  /**
+   * The agent's location.
+   * @param location location or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1ConversationQualityMetadataAgentInfo setLocation(java.lang.String location) {
+    this.location = location;
+    return this;
+  }
+
+  /**
+   * A user-specified string representing the agent's team. Deprecated in favor of the `teams`
+   * field.
    * @return value or {@code null} for none
    */
   public java.lang.String getTeam() {
@@ -118,11 +175,29 @@ public final class GoogleCloudContactcenterinsightsV1ConversationQualityMetadata
   }
 
   /**
-   * A user-specified string representing the agent's team.
+   * A user-specified string representing the agent's team. Deprecated in favor of the `teams`
+   * field.
    * @param team team or {@code null} for none
    */
   public GoogleCloudContactcenterinsightsV1ConversationQualityMetadataAgentInfo setTeam(java.lang.String team) {
     this.team = team;
+    return this;
+  }
+
+  /**
+   * User-specified strings representing the agent's teams.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getTeams() {
+    return teams;
+  }
+
+  /**
+   * User-specified strings representing the agent's teams.
+   * @param teams teams or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1ConversationQualityMetadataAgentInfo setTeams(java.util.List<java.lang.String> teams) {
+    this.teams = teams;
     return this;
   }
 

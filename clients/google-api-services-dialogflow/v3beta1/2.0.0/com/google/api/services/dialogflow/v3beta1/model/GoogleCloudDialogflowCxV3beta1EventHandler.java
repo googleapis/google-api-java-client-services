@@ -62,6 +62,13 @@ public final class GoogleCloudDialogflowCxV3beta1EventHandler extends com.google
   private java.lang.String targetPage;
 
   /**
+   * The target playbook to transition to. Format: `projects//locations//agents//playbooks/`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String targetPlaybook;
+
+  /**
    * The fulfillment to call when the event occurs. Handling webhook errors with a fulfillment
    * enabled with webhook could cause infinite loop. It is invalid to specify such fulfillment for a
    * handler handling webhooks.
@@ -135,6 +142,23 @@ public final class GoogleCloudDialogflowCxV3beta1EventHandler extends com.google
    */
   public GoogleCloudDialogflowCxV3beta1EventHandler setTargetPage(java.lang.String targetPage) {
     this.targetPage = targetPage;
+    return this;
+  }
+
+  /**
+   * The target playbook to transition to. Format: `projects//locations//agents//playbooks/`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTargetPlaybook() {
+    return targetPlaybook;
+  }
+
+  /**
+   * The target playbook to transition to. Format: `projects//locations//agents//playbooks/`.
+   * @param targetPlaybook targetPlaybook or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1EventHandler setTargetPlaybook(java.lang.String targetPlaybook) {
+    this.targetPlaybook = targetPlaybook;
     return this;
   }
 

@@ -37,11 +37,60 @@ public final class GoogleCloudDialogflowCxV3beta1Action extends com.google.api.c
   private GoogleCloudDialogflowCxV3beta1AgentUtterance agentUtterance;
 
   /**
+   * Output only. Timestamp of the completion of the agent action.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String completeTime;
+
+  /**
+   * Output only. The display name of the action.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String displayName;
+
+  /**
+   * Optional. The agent received an event from the customer or a system event is emitted.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3beta1Event event;
+
+  /**
    * Optional. Action performed on behalf of the agent by invoking a CX flow.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1FlowInvocation flowInvocation;
+
+  /**
+   * Optional. Output only. The state machine update in flows.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3beta1ActionFlowStateUpdate flowStateUpdate;
+
+  /**
+   * Optional. Action performed on behalf of the agent by transitioning to a target CX flow.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3beta1FlowTransition flowTransition;
+
+  /**
+   * Optional. Output only. Intent Match in flows.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3beta1ActionIntentMatch intentMatch;
+
+  /**
+   * Optional. Output only. LLM call performed by the agent.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3beta1LlmCall llmCall;
 
   /**
    * Optional. Action performed on behalf of the agent by invoking a child playbook.
@@ -51,11 +100,53 @@ public final class GoogleCloudDialogflowCxV3beta1Action extends com.google.api.c
   private GoogleCloudDialogflowCxV3beta1PlaybookInvocation playbookInvocation;
 
   /**
+   * Optional. Action performed on behalf of the agent by transitioning to a target playbook.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3beta1PlaybookTransition playbookTransition;
+
+  /**
+   * Output only. Timestamp of the start of the agent action.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String startTime;
+
+  /**
+   * Optional. Output only. The status of the action.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3beta1Status status;
+
+  /**
+   * Optional. Speech-to-text action performed by the agent.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3beta1ActionSTT stt;
+
+  /**
+   * Optional. The detailed tracing information for sub execution steps of the action.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDialogflowCxV3beta1Span> subExecutionSteps;
+
+  /**
    * Optional. Action performed on behalf of the agent by calling a plugin tool.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowCxV3beta1ToolUse toolUse;
+
+  /**
+   * Optional. Text-to-speech action performed by the agent.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3beta1ActionTTS tts;
 
   /**
    * Optional. Agent obtained a message from the customer.
@@ -82,6 +173,57 @@ public final class GoogleCloudDialogflowCxV3beta1Action extends com.google.api.c
   }
 
   /**
+   * Output only. Timestamp of the completion of the agent action.
+   * @return value or {@code null} for none
+   */
+  public String getCompleteTime() {
+    return completeTime;
+  }
+
+  /**
+   * Output only. Timestamp of the completion of the agent action.
+   * @param completeTime completeTime or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1Action setCompleteTime(String completeTime) {
+    this.completeTime = completeTime;
+    return this;
+  }
+
+  /**
+   * Output only. The display name of the action.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDisplayName() {
+    return displayName;
+  }
+
+  /**
+   * Output only. The display name of the action.
+   * @param displayName displayName or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1Action setDisplayName(java.lang.String displayName) {
+    this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Optional. The agent received an event from the customer or a system event is emitted.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1Event getEvent() {
+    return event;
+  }
+
+  /**
+   * Optional. The agent received an event from the customer or a system event is emitted.
+   * @param event event or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1Action setEvent(GoogleCloudDialogflowCxV3beta1Event event) {
+    this.event = event;
+    return this;
+  }
+
+  /**
    * Optional. Action performed on behalf of the agent by invoking a CX flow.
    * @return value or {@code null} for none
    */
@@ -95,6 +237,74 @@ public final class GoogleCloudDialogflowCxV3beta1Action extends com.google.api.c
    */
   public GoogleCloudDialogflowCxV3beta1Action setFlowInvocation(GoogleCloudDialogflowCxV3beta1FlowInvocation flowInvocation) {
     this.flowInvocation = flowInvocation;
+    return this;
+  }
+
+  /**
+   * Optional. Output only. The state machine update in flows.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1ActionFlowStateUpdate getFlowStateUpdate() {
+    return flowStateUpdate;
+  }
+
+  /**
+   * Optional. Output only. The state machine update in flows.
+   * @param flowStateUpdate flowStateUpdate or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1Action setFlowStateUpdate(GoogleCloudDialogflowCxV3beta1ActionFlowStateUpdate flowStateUpdate) {
+    this.flowStateUpdate = flowStateUpdate;
+    return this;
+  }
+
+  /**
+   * Optional. Action performed on behalf of the agent by transitioning to a target CX flow.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1FlowTransition getFlowTransition() {
+    return flowTransition;
+  }
+
+  /**
+   * Optional. Action performed on behalf of the agent by transitioning to a target CX flow.
+   * @param flowTransition flowTransition or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1Action setFlowTransition(GoogleCloudDialogflowCxV3beta1FlowTransition flowTransition) {
+    this.flowTransition = flowTransition;
+    return this;
+  }
+
+  /**
+   * Optional. Output only. Intent Match in flows.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1ActionIntentMatch getIntentMatch() {
+    return intentMatch;
+  }
+
+  /**
+   * Optional. Output only. Intent Match in flows.
+   * @param intentMatch intentMatch or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1Action setIntentMatch(GoogleCloudDialogflowCxV3beta1ActionIntentMatch intentMatch) {
+    this.intentMatch = intentMatch;
+    return this;
+  }
+
+  /**
+   * Optional. Output only. LLM call performed by the agent.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1LlmCall getLlmCall() {
+    return llmCall;
+  }
+
+  /**
+   * Optional. Output only. LLM call performed by the agent.
+   * @param llmCall llmCall or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1Action setLlmCall(GoogleCloudDialogflowCxV3beta1LlmCall llmCall) {
+    this.llmCall = llmCall;
     return this;
   }
 
@@ -116,6 +326,91 @@ public final class GoogleCloudDialogflowCxV3beta1Action extends com.google.api.c
   }
 
   /**
+   * Optional. Action performed on behalf of the agent by transitioning to a target playbook.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1PlaybookTransition getPlaybookTransition() {
+    return playbookTransition;
+  }
+
+  /**
+   * Optional. Action performed on behalf of the agent by transitioning to a target playbook.
+   * @param playbookTransition playbookTransition or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1Action setPlaybookTransition(GoogleCloudDialogflowCxV3beta1PlaybookTransition playbookTransition) {
+    this.playbookTransition = playbookTransition;
+    return this;
+  }
+
+  /**
+   * Output only. Timestamp of the start of the agent action.
+   * @return value or {@code null} for none
+   */
+  public String getStartTime() {
+    return startTime;
+  }
+
+  /**
+   * Output only. Timestamp of the start of the agent action.
+   * @param startTime startTime or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1Action setStartTime(String startTime) {
+    this.startTime = startTime;
+    return this;
+  }
+
+  /**
+   * Optional. Output only. The status of the action.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1Status getStatus() {
+    return status;
+  }
+
+  /**
+   * Optional. Output only. The status of the action.
+   * @param status status or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1Action setStatus(GoogleCloudDialogflowCxV3beta1Status status) {
+    this.status = status;
+    return this;
+  }
+
+  /**
+   * Optional. Speech-to-text action performed by the agent.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1ActionSTT getStt() {
+    return stt;
+  }
+
+  /**
+   * Optional. Speech-to-text action performed by the agent.
+   * @param stt stt or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1Action setStt(GoogleCloudDialogflowCxV3beta1ActionSTT stt) {
+    this.stt = stt;
+    return this;
+  }
+
+  /**
+   * Optional. The detailed tracing information for sub execution steps of the action.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDialogflowCxV3beta1Span> getSubExecutionSteps() {
+    return subExecutionSteps;
+  }
+
+  /**
+   * Optional. The detailed tracing information for sub execution steps of the action.
+   * @param subExecutionSteps subExecutionSteps or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1Action setSubExecutionSteps(java.util.List<GoogleCloudDialogflowCxV3beta1Span> subExecutionSteps) {
+    this.subExecutionSteps = subExecutionSteps;
+    return this;
+  }
+
+  /**
    * Optional. Action performed on behalf of the agent by calling a plugin tool.
    * @return value or {@code null} for none
    */
@@ -129,6 +424,23 @@ public final class GoogleCloudDialogflowCxV3beta1Action extends com.google.api.c
    */
   public GoogleCloudDialogflowCxV3beta1Action setToolUse(GoogleCloudDialogflowCxV3beta1ToolUse toolUse) {
     this.toolUse = toolUse;
+    return this;
+  }
+
+  /**
+   * Optional. Text-to-speech action performed by the agent.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1ActionTTS getTts() {
+    return tts;
+  }
+
+  /**
+   * Optional. Text-to-speech action performed by the agent.
+   * @param tts tts or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1Action setTts(GoogleCloudDialogflowCxV3beta1ActionTTS tts) {
+    this.tts = tts;
     return this;
   }
 

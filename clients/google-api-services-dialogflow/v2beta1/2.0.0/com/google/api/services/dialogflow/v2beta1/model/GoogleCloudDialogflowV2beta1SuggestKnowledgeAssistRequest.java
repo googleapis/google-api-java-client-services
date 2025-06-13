@@ -48,7 +48,7 @@ public final class GoogleCloudDialogflowV2beta1SuggestKnowledgeAssistRequest ext
 
   /**
    * Optional. The previously suggested query for the given conversation. This helps identify
-   * whether the next suggestion we generate is resonably different from the previous one. This is
+   * whether the next suggestion we generate is reasonably different from the previous one. This is
    * useful to avoid similar suggestions within the conversation.
    * The value may be {@code null}.
    */
@@ -97,7 +97,7 @@ public final class GoogleCloudDialogflowV2beta1SuggestKnowledgeAssistRequest ext
 
   /**
    * Optional. The previously suggested query for the given conversation. This helps identify
-   * whether the next suggestion we generate is resonably different from the previous one. This is
+   * whether the next suggestion we generate is reasonably different from the previous one. This is
    * useful to avoid similar suggestions within the conversation.
    * @return value or {@code null} for none
    */
@@ -107,7 +107,7 @@ public final class GoogleCloudDialogflowV2beta1SuggestKnowledgeAssistRequest ext
 
   /**
    * Optional. The previously suggested query for the given conversation. This helps identify
-   * whether the next suggestion we generate is resonably different from the previous one. This is
+   * whether the next suggestion we generate is reasonably different from the previous one. This is
    * useful to avoid similar suggestions within the conversation.
    * @param previousSuggestedQuery previousSuggestedQuery or {@code null} for none
    */

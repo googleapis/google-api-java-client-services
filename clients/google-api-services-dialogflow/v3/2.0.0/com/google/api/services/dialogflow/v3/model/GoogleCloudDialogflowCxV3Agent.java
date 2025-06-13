@@ -58,6 +58,13 @@ public final class GoogleCloudDialogflowCxV3Agent extends com.google.api.client.
   private java.lang.String avatarUri;
 
   /**
+   * Optional. Settings for custom client certificates.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3AgentClientCertificateSettings clientCertificateSettings;
+
+  /**
    * Required. Immutable. The default language of the agent as a language tag. See [Language
    * Support](https://cloud.google.com/dialogflow/cx/docs/reference/language) for a list of the
    * currently supported language codes. This field cannot be set by the Agents.UpdateAgent method.
@@ -142,6 +149,21 @@ public final class GoogleCloudDialogflowCxV3Agent extends com.google.api.client.
   private GoogleCloudDialogflowCxV3AgentPersonalizationSettings personalizationSettings;
 
   /**
+   * Optional. Output only. A read only boolean field reflecting Zone Isolation status of the agent.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzi;
+
+  /**
+   * Optional. Output only. A read only boolean field reflecting Zone Separation status of the
+   * agent.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzs;
+
+  /**
    * Name of the SecuritySettings reference for the agent. Format:
    * `projects//locations//securitySettings/`.
    * The value may be {@code null}.
@@ -157,13 +179,24 @@ public final class GoogleCloudDialogflowCxV3Agent extends com.google.api.client.
   private GoogleCloudDialogflowCxV3SpeechToTextSettings speechToTextSettings;
 
   /**
-   * Immutable. Name of the start flow in this agent. A start flow will be automatically created
-   * when the agent is created, and can only be deleted by deleting the agent. Format:
-   * `projects//locations//agents//flows/`.
+   * Name of the start flow in this agent. A start flow will be automatically created when the agent
+   * is created, and can only be deleted by deleting the agent. Format:
+   * `projects//locations//agents//flows/`. Currently only the default start flow with id
+   * "00000000-0000-0000-0000-000000000000" is allowed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String startFlow;
+
+  /**
+   * Name of the start playbook in this agent. A start playbook will be automatically created when
+   * the agent is created, and can only be deleted by deleting the agent. Format:
+   * `projects//locations//agents//playbooks/`. Currently only the default playbook with id
+   * "00000000-0000-0000-0000-000000000000" is allowed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String startPlaybook;
 
   /**
    * The list of all languages supported by the agent (except for the `default_language_code`).
@@ -241,6 +274,23 @@ public final class GoogleCloudDialogflowCxV3Agent extends com.google.api.client.
    */
   public GoogleCloudDialogflowCxV3Agent setAvatarUri(java.lang.String avatarUri) {
     this.avatarUri = avatarUri;
+    return this;
+  }
+
+  /**
+   * Optional. Settings for custom client certificates.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3AgentClientCertificateSettings getClientCertificateSettings() {
+    return clientCertificateSettings;
+  }
+
+  /**
+   * Optional. Settings for custom client certificates.
+   * @param clientCertificateSettings clientCertificateSettings or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3Agent setClientCertificateSettings(GoogleCloudDialogflowCxV3AgentClientCertificateSettings clientCertificateSettings) {
+    this.clientCertificateSettings = clientCertificateSettings;
     return this;
   }
 
@@ -446,6 +496,42 @@ public final class GoogleCloudDialogflowCxV3Agent extends com.google.api.client.
   }
 
   /**
+   * Optional. Output only. A read only boolean field reflecting Zone Isolation status of the agent.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzi() {
+    return satisfiesPzi;
+  }
+
+  /**
+   * Optional. Output only. A read only boolean field reflecting Zone Isolation status of the agent.
+   * @param satisfiesPzi satisfiesPzi or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3Agent setSatisfiesPzi(java.lang.Boolean satisfiesPzi) {
+    this.satisfiesPzi = satisfiesPzi;
+    return this;
+  }
+
+  /**
+   * Optional. Output only. A read only boolean field reflecting Zone Separation status of the
+   * agent.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzs() {
+    return satisfiesPzs;
+  }
+
+  /**
+   * Optional. Output only. A read only boolean field reflecting Zone Separation status of the
+   * agent.
+   * @param satisfiesPzs satisfiesPzs or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3Agent setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
+    this.satisfiesPzs = satisfiesPzs;
+    return this;
+  }
+
+  /**
    * Name of the SecuritySettings reference for the agent. Format:
    * `projects//locations//securitySettings/`.
    * @return value or {@code null} for none
@@ -482,9 +568,10 @@ public final class GoogleCloudDialogflowCxV3Agent extends com.google.api.client.
   }
 
   /**
-   * Immutable. Name of the start flow in this agent. A start flow will be automatically created
-   * when the agent is created, and can only be deleted by deleting the agent. Format:
-   * `projects//locations//agents//flows/`.
+   * Name of the start flow in this agent. A start flow will be automatically created when the agent
+   * is created, and can only be deleted by deleting the agent. Format:
+   * `projects//locations//agents//flows/`. Currently only the default start flow with id
+   * "00000000-0000-0000-0000-000000000000" is allowed.
    * @return value or {@code null} for none
    */
   public java.lang.String getStartFlow() {
@@ -492,13 +579,37 @@ public final class GoogleCloudDialogflowCxV3Agent extends com.google.api.client.
   }
 
   /**
-   * Immutable. Name of the start flow in this agent. A start flow will be automatically created
-   * when the agent is created, and can only be deleted by deleting the agent. Format:
-   * `projects//locations//agents//flows/`.
+   * Name of the start flow in this agent. A start flow will be automatically created when the agent
+   * is created, and can only be deleted by deleting the agent. Format:
+   * `projects//locations//agents//flows/`. Currently only the default start flow with id
+   * "00000000-0000-0000-0000-000000000000" is allowed.
    * @param startFlow startFlow or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3Agent setStartFlow(java.lang.String startFlow) {
     this.startFlow = startFlow;
+    return this;
+  }
+
+  /**
+   * Name of the start playbook in this agent. A start playbook will be automatically created when
+   * the agent is created, and can only be deleted by deleting the agent. Format:
+   * `projects//locations//agents//playbooks/`. Currently only the default playbook with id
+   * "00000000-0000-0000-0000-000000000000" is allowed.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStartPlaybook() {
+    return startPlaybook;
+  }
+
+  /**
+   * Name of the start playbook in this agent. A start playbook will be automatically created when
+   * the agent is created, and can only be deleted by deleting the agent. Format:
+   * `projects//locations//agents//playbooks/`. Currently only the default playbook with id
+   * "00000000-0000-0000-0000-000000000000" is allowed.
+   * @param startPlaybook startPlaybook or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3Agent setStartPlaybook(java.lang.String startPlaybook) {
+    this.startPlaybook = startPlaybook;
     return this;
   }
 

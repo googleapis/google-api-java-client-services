@@ -98,6 +98,16 @@ public final class GoogleCloudDialogflowV2ConversationProfile extends com.google
   private GoogleCloudDialogflowV2NotificationConfig newMessageEventNotificationConfig;
 
   /**
+   * Optional. Configuration for publishing transcription intermediate results. Event will be sent
+   * in format of ConversationEvent. If configured, the following information will be populated as
+   * ConversationEvent Pub/Sub message attributes: - "participant_id" - "participant_role" -
+   * "message_id"
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowV2NotificationConfig newRecognitionResultNotificationConfig;
+
+  /**
    * Configuration for publishing conversation lifecycle events.
    * The value may be {@code null}.
    */
@@ -304,6 +314,29 @@ public final class GoogleCloudDialogflowV2ConversationProfile extends com.google
    */
   public GoogleCloudDialogflowV2ConversationProfile setNewMessageEventNotificationConfig(GoogleCloudDialogflowV2NotificationConfig newMessageEventNotificationConfig) {
     this.newMessageEventNotificationConfig = newMessageEventNotificationConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for publishing transcription intermediate results. Event will be sent
+   * in format of ConversationEvent. If configured, the following information will be populated as
+   * ConversationEvent Pub/Sub message attributes: - "participant_id" - "participant_role" -
+   * "message_id"
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2NotificationConfig getNewRecognitionResultNotificationConfig() {
+    return newRecognitionResultNotificationConfig;
+  }
+
+  /**
+   * Optional. Configuration for publishing transcription intermediate results. Event will be sent
+   * in format of ConversationEvent. If configured, the following information will be populated as
+   * ConversationEvent Pub/Sub message attributes: - "participant_id" - "participant_role" -
+   * "message_id"
+   * @param newRecognitionResultNotificationConfig newRecognitionResultNotificationConfig or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2ConversationProfile setNewRecognitionResultNotificationConfig(GoogleCloudDialogflowV2NotificationConfig newRecognitionResultNotificationConfig) {
+    this.newRecognitionResultNotificationConfig = newRecognitionResultNotificationConfig;
     return this;
   }
 

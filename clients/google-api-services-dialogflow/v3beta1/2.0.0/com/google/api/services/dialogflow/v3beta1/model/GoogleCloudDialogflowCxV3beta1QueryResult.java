@@ -66,8 +66,7 @@ public final class GoogleCloudDialogflowCxV3beta1QueryResult extends com.google.
 
   /**
    * Optional. Data store connection feature output signals. Filled only when data stores are
-   * involved in serving the query and DetectIntentRequest.populate
-   * data_store_connection_quality_signals is set to true in the request.
+   * involved in serving the query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -325,8 +324,7 @@ public final class GoogleCloudDialogflowCxV3beta1QueryResult extends com.google.
 
   /**
    * Optional. Data store connection feature output signals. Filled only when data stores are
-   * involved in serving the query and DetectIntentRequest.populate
-   * data_store_connection_quality_signals is set to true in the request.
+   * involved in serving the query.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignals getDataStoreConnectionSignals() {
@@ -335,8 +333,7 @@ public final class GoogleCloudDialogflowCxV3beta1QueryResult extends com.google.
 
   /**
    * Optional. Data store connection feature output signals. Filled only when data stores are
-   * involved in serving the query and DetectIntentRequest.populate
-   * data_store_connection_quality_signals is set to true in the request.
+   * involved in serving the query.
    * @param dataStoreConnectionSignals dataStoreConnectionSignals or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1QueryResult setDataStoreConnectionSignals(GoogleCloudDialogflowCxV3beta1DataStoreConnectionSignals dataStoreConnectionSignals) {

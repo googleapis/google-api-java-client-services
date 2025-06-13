@@ -30,6 +30,21 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1GenerateStatelessSuggestionRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. A section of ingested context information. The key is the name of the context
+   * reference and the value contains the contents of the context reference. The key is used to
+   * incorporate ingested context references to enhance the generator.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, GoogleCloudDialogflowV2beta1ConversationContextReference> contextReferences;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudDialogflowV2beta1ConversationContextReference used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudDialogflowV2beta1ConversationContextReference.class);
+  }
+
+  /**
    * Optional. Context of the conversation, including transcripts.
    * The value may be {@code null}.
    */
@@ -52,12 +67,43 @@ public final class GoogleCloudDialogflowV2beta1GenerateStatelessSuggestionReques
   private java.lang.String generatorName;
 
   /**
+   * Optional. Name of the CX SecuritySettings which is used to redact generated response. If this
+   * field is empty, try to fetch v2 security_settings, which is a project level setting. If this
+   * field is empty and no v2 security_settings set up in this project, no redaction will be done.
+   * Format: `projects//locations//securitySettings/`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String securitySettings;
+
+  /**
    * Optional. A list of trigger events. Generator will be triggered only if it's trigger event is
    * included here.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> triggerEvents;
+
+  /**
+   * Optional. A section of ingested context information. The key is the name of the context
+   * reference and the value contains the contents of the context reference. The key is used to
+   * incorporate ingested context references to enhance the generator.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, GoogleCloudDialogflowV2beta1ConversationContextReference> getContextReferences() {
+    return contextReferences;
+  }
+
+  /**
+   * Optional. A section of ingested context information. The key is the name of the context
+   * reference and the value contains the contents of the context reference. The key is used to
+   * incorporate ingested context references to enhance the generator.
+   * @param contextReferences contextReferences or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1GenerateStatelessSuggestionRequest setContextReferences(java.util.Map<String, GoogleCloudDialogflowV2beta1ConversationContextReference> contextReferences) {
+    this.contextReferences = contextReferences;
+    return this;
+  }
 
   /**
    * Optional. Context of the conversation, including transcripts.
@@ -109,6 +155,29 @@ public final class GoogleCloudDialogflowV2beta1GenerateStatelessSuggestionReques
    */
   public GoogleCloudDialogflowV2beta1GenerateStatelessSuggestionRequest setGeneratorName(java.lang.String generatorName) {
     this.generatorName = generatorName;
+    return this;
+  }
+
+  /**
+   * Optional. Name of the CX SecuritySettings which is used to redact generated response. If this
+   * field is empty, try to fetch v2 security_settings, which is a project level setting. If this
+   * field is empty and no v2 security_settings set up in this project, no redaction will be done.
+   * Format: `projects//locations//securitySettings/`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSecuritySettings() {
+    return securitySettings;
+  }
+
+  /**
+   * Optional. Name of the CX SecuritySettings which is used to redact generated response. If this
+   * field is empty, try to fetch v2 security_settings, which is a project level setting. If this
+   * field is empty and no v2 security_settings set up in this project, no redaction will be done.
+   * Format: `projects//locations//securitySettings/`.
+   * @param securitySettings securitySettings or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1GenerateStatelessSuggestionRequest setSecuritySettings(java.lang.String securitySettings) {
+    this.securitySettings = securitySettings;
     return this;
   }
 

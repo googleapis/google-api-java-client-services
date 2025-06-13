@@ -48,11 +48,25 @@ public final class GoogleCloudDialogflowCxV3beta1Playbook extends com.google.api
   private java.lang.String displayName;
 
   /**
-   * Required. High level description of the goal the playbook intend to accomplish.
+   * Required. High level description of the goal the playbook intend to accomplish. A goal should
+   * be concise since it's visible to other playbooks that may reference this playbook.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String goal;
+
+  /**
+   * Optional. A list of registered handlers to execute based on the specified triggers.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDialogflowCxV3beta1Handler> handlers;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudDialogflowCxV3beta1Handler used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudDialogflowCxV3beta1Handler.class);
+  }
 
   /**
    * Optional. Defined structured input parameters for this playbook.
@@ -102,6 +116,13 @@ public final class GoogleCloudDialogflowCxV3beta1Playbook extends com.google.api
   }
 
   /**
+   * Optional. Type of the playbook.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String playbookType;
+
+  /**
    * Output only. The resource name of flows referenced by the current playbook in the instructions.
    * The value may be {@code null}.
    */
@@ -124,6 +145,13 @@ public final class GoogleCloudDialogflowCxV3beta1Playbook extends com.google.api
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> referencedTools;
+
+  /**
+   * Optional. Playbook level Settings for speech to text detection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowCxV3beta1AdvancedSettingsSpeechSettings speechSettings;
 
   /**
    * Output only. Estimated number of tokes current playbook takes when sent to the LLM.
@@ -174,7 +202,8 @@ public final class GoogleCloudDialogflowCxV3beta1Playbook extends com.google.api
   }
 
   /**
-   * Required. High level description of the goal the playbook intend to accomplish.
+   * Required. High level description of the goal the playbook intend to accomplish. A goal should
+   * be concise since it's visible to other playbooks that may reference this playbook.
    * @return value or {@code null} for none
    */
   public java.lang.String getGoal() {
@@ -182,11 +211,29 @@ public final class GoogleCloudDialogflowCxV3beta1Playbook extends com.google.api
   }
 
   /**
-   * Required. High level description of the goal the playbook intend to accomplish.
+   * Required. High level description of the goal the playbook intend to accomplish. A goal should
+   * be concise since it's visible to other playbooks that may reference this playbook.
    * @param goal goal or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3beta1Playbook setGoal(java.lang.String goal) {
     this.goal = goal;
+    return this;
+  }
+
+  /**
+   * Optional. A list of registered handlers to execute based on the specified triggers.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDialogflowCxV3beta1Handler> getHandlers() {
+    return handlers;
+  }
+
+  /**
+   * Optional. A list of registered handlers to execute based on the specified triggers.
+   * @param handlers handlers or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1Playbook setHandlers(java.util.List<GoogleCloudDialogflowCxV3beta1Handler> handlers) {
+    this.handlers = handlers;
     return this;
   }
 
@@ -276,6 +323,23 @@ public final class GoogleCloudDialogflowCxV3beta1Playbook extends com.google.api
   }
 
   /**
+   * Optional. Type of the playbook.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPlaybookType() {
+    return playbookType;
+  }
+
+  /**
+   * Optional. Type of the playbook.
+   * @param playbookType playbookType or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1Playbook setPlaybookType(java.lang.String playbookType) {
+    this.playbookType = playbookType;
+    return this;
+  }
+
+  /**
    * Output only. The resource name of flows referenced by the current playbook in the instructions.
    * @return value or {@code null} for none
    */
@@ -329,6 +393,23 @@ public final class GoogleCloudDialogflowCxV3beta1Playbook extends com.google.api
    */
   public GoogleCloudDialogflowCxV3beta1Playbook setReferencedTools(java.util.List<java.lang.String> referencedTools) {
     this.referencedTools = referencedTools;
+    return this;
+  }
+
+  /**
+   * Optional. Playbook level Settings for speech to text detection.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1AdvancedSettingsSpeechSettings getSpeechSettings() {
+    return speechSettings;
+  }
+
+  /**
+   * Optional. Playbook level Settings for speech to text detection.
+   * @param speechSettings speechSettings or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1Playbook setSpeechSettings(GoogleCloudDialogflowCxV3beta1AdvancedSettingsSpeechSettings speechSettings) {
+    this.speechSettings = speechSettings;
     return this;
   }
 

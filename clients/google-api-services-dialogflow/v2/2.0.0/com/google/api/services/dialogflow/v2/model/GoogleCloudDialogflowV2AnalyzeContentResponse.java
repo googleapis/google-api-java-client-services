@@ -30,10 +30,9 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2AnalyzeContentResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Only set if a Dialogflow automated agent has responded. Note that:
-   * AutomatedAgentReply.detect_intent_response.output_audio and
-   * AutomatedAgentReply.detect_intent_response.output_audio_config are always empty, use
-   * reply_audio instead.
+   * Only set if a Dialogflow automated agent has responded. Note that in
+   * AutomatedAgentReply.DetectIntentResponse, Sessions.DetectIntentResponse.output_audio and
+   * Sessions.DetectIntentResponse.output_audio_config are always empty, use reply_audio instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,10 +95,9 @@ public final class GoogleCloudDialogflowV2AnalyzeContentResponse extends com.goo
   private java.lang.String replyText;
 
   /**
-   * Only set if a Dialogflow automated agent has responded. Note that:
-   * AutomatedAgentReply.detect_intent_response.output_audio and
-   * AutomatedAgentReply.detect_intent_response.output_audio_config are always empty, use
-   * reply_audio instead.
+   * Only set if a Dialogflow automated agent has responded. Note that in
+   * AutomatedAgentReply.DetectIntentResponse, Sessions.DetectIntentResponse.output_audio and
+   * Sessions.DetectIntentResponse.output_audio_config are always empty, use reply_audio instead.
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2AutomatedAgentReply getAutomatedAgentReply() {
@@ -107,10 +105,9 @@ public final class GoogleCloudDialogflowV2AnalyzeContentResponse extends com.goo
   }
 
   /**
-   * Only set if a Dialogflow automated agent has responded. Note that:
-   * AutomatedAgentReply.detect_intent_response.output_audio and
-   * AutomatedAgentReply.detect_intent_response.output_audio_config are always empty, use
-   * reply_audio instead.
+   * Only set if a Dialogflow automated agent has responded. Note that in
+   * AutomatedAgentReply.DetectIntentResponse, Sessions.DetectIntentResponse.output_audio and
+   * Sessions.DetectIntentResponse.output_audio_config are always empty, use reply_audio instead.
    * @param automatedAgentReply automatedAgentReply or {@code null} for none
    */
   public GoogleCloudDialogflowV2AnalyzeContentResponse setAutomatedAgentReply(GoogleCloudDialogflowV2AutomatedAgentReply automatedAgentReply) {

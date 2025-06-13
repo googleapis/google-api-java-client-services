@@ -81,7 +81,8 @@ public final class GoogleCloudDialogflowV2Message extends com.google.api.client.
   private java.lang.String participantRole;
 
   /**
-   * Optional. The time when the message was sent.
+   * Optional. The time when the message was sent. For voice messages, this is the time when an
+   * utterance started.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -218,7 +219,8 @@ public final class GoogleCloudDialogflowV2Message extends com.google.api.client.
   }
 
   /**
-   * Optional. The time when the message was sent.
+   * Optional. The time when the message was sent. For voice messages, this is the time when an
+   * utterance started.
    * @return value or {@code null} for none
    */
   public String getSendTime() {
@@ -226,7 +228,8 @@ public final class GoogleCloudDialogflowV2Message extends com.google.api.client.
   }
 
   /**
-   * Optional. The time when the message was sent.
+   * Optional. The time when the message was sent. For voice messages, this is the time when an
+   * utterance started.
    * @param sendTime sendTime or {@code null} for none
    */
   public GoogleCloudDialogflowV2Message setSendTime(String sendTime) {

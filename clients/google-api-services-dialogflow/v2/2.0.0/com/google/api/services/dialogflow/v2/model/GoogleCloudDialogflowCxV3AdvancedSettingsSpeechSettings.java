@@ -53,7 +53,7 @@ public final class GoogleCloudDialogflowCxV3AdvancedSettingsSpeechSettings exten
   private String noSpeechTimeout;
 
   /**
-   * Use timeout based endpointing, interpreting endpointer sensitivy as seconds of timeout value.
+   * Use timeout based endpointing, interpreting endpointer sensitivity as seconds of timeout value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -115,7 +115,7 @@ public final class GoogleCloudDialogflowCxV3AdvancedSettingsSpeechSettings exten
   }
 
   /**
-   * Use timeout based endpointing, interpreting endpointer sensitivy as seconds of timeout value.
+   * Use timeout based endpointing, interpreting endpointer sensitivity as seconds of timeout value.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUseTimeoutBasedEndpointing() {
@@ -123,7 +123,7 @@ public final class GoogleCloudDialogflowCxV3AdvancedSettingsSpeechSettings exten
   }
 
   /**
-   * Use timeout based endpointing, interpreting endpointer sensitivy as seconds of timeout value.
+   * Use timeout based endpointing, interpreting endpointer sensitivity as seconds of timeout value.
    * @param useTimeoutBasedEndpointing useTimeoutBasedEndpointing or {@code null} for none
    */
   public GoogleCloudDialogflowCxV3AdvancedSettingsSpeechSettings setUseTimeoutBasedEndpointing(java.lang.Boolean useTimeoutBasedEndpointing) {

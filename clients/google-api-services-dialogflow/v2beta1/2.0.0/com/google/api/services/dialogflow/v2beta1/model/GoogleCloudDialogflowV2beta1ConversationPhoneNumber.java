@@ -31,11 +31,35 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1ConversationPhoneNumber extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Desired country code for the phone number.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer countryCode;
+
+  /**
    * Output only. The phone number to connect to this conversation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String phoneNumber;
+
+  /**
+   * Output only. Desired country code for the phone number.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getCountryCode() {
+    return countryCode;
+  }
+
+  /**
+   * Output only. Desired country code for the phone number.
+   * @param countryCode countryCode or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1ConversationPhoneNumber setCountryCode(java.lang.Integer countryCode) {
+    this.countryCode = countryCode;
+    return this;
+  }
 
   /**
    * Output only. The phone number to connect to this conversation.

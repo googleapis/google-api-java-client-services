@@ -79,7 +79,8 @@ public final class GoogleCloudDialogflowV2beta1InputAudioConfig extends com.goog
    * Required. The language of the supplied audio. Dialogflow does not do translations. See
    * [Language Support](https://cloud.google.com/dialogflow/docs/reference/language) for a list of
    * the currently supported language codes. Note that queries in the same session do not
-   * necessarily need to specify the same language.
+   * necessarily need to specify the same language. If not set, the language is inferred from the
+   * ConversationProfile.stt_config.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -120,6 +121,13 @@ public final class GoogleCloudDialogflowV2beta1InputAudioConfig extends com.goog
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> phraseHints;
+
+  /**
+   * A collection of phrase set resources to use for speech adaptation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> phraseSets;
 
   /**
    * Required. Sample rate (in Hertz) of the audio content sent in the query. Refer to [Cloud Speech
@@ -265,7 +273,8 @@ public final class GoogleCloudDialogflowV2beta1InputAudioConfig extends com.goog
    * Required. The language of the supplied audio. Dialogflow does not do translations. See
    * [Language Support](https://cloud.google.com/dialogflow/docs/reference/language) for a list of
    * the currently supported language codes. Note that queries in the same session do not
-   * necessarily need to specify the same language.
+   * necessarily need to specify the same language. If not set, the language is inferred from the
+   * ConversationProfile.stt_config.
    * @return value or {@code null} for none
    */
   public java.lang.String getLanguageCode() {
@@ -276,7 +285,8 @@ public final class GoogleCloudDialogflowV2beta1InputAudioConfig extends com.goog
    * Required. The language of the supplied audio. Dialogflow does not do translations. See
    * [Language Support](https://cloud.google.com/dialogflow/docs/reference/language) for a list of
    * the currently supported language codes. Note that queries in the same session do not
-   * necessarily need to specify the same language.
+   * necessarily need to specify the same language. If not set, the language is inferred from the
+   * ConversationProfile.stt_config.
    * @param languageCode languageCode or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1InputAudioConfig setLanguageCode(java.lang.String languageCode) {
@@ -365,6 +375,23 @@ public final class GoogleCloudDialogflowV2beta1InputAudioConfig extends com.goog
    */
   public GoogleCloudDialogflowV2beta1InputAudioConfig setPhraseHints(java.util.List<java.lang.String> phraseHints) {
     this.phraseHints = phraseHints;
+    return this;
+  }
+
+  /**
+   * A collection of phrase set resources to use for speech adaptation.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getPhraseSets() {
+    return phraseSets;
+  }
+
+  /**
+   * A collection of phrase set resources to use for speech adaptation.
+   * @param phraseSets phraseSets or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1InputAudioConfig setPhraseSets(java.util.List<java.lang.String> phraseSets) {
+    this.phraseSets = phraseSets;
     return this;
   }
 

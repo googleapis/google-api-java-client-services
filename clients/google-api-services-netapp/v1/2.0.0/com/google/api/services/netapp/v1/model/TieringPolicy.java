@@ -38,6 +38,14 @@ public final class TieringPolicy extends com.google.api.client.json.GenericJson 
   private java.lang.Integer coolingThresholdDays;
 
   /**
+   * Optional. Flag indicating that the hot tier bypass mode is enabled. Default is false. This is
+   * only applicable to Flex service level.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean hotTierBypassModeEnabled;
+
+  /**
    * Optional. Flag indicating if the volume has tiering policy enable/pause. Default is PAUSED.
    * The value may be {@code null}.
    */
@@ -60,6 +68,25 @@ public final class TieringPolicy extends com.google.api.client.json.GenericJson 
    */
   public TieringPolicy setCoolingThresholdDays(java.lang.Integer coolingThresholdDays) {
     this.coolingThresholdDays = coolingThresholdDays;
+    return this;
+  }
+
+  /**
+   * Optional. Flag indicating that the hot tier bypass mode is enabled. Default is false. This is
+   * only applicable to Flex service level.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getHotTierBypassModeEnabled() {
+    return hotTierBypassModeEnabled;
+  }
+
+  /**
+   * Optional. Flag indicating that the hot tier bypass mode is enabled. Default is false. This is
+   * only applicable to Flex service level.
+   * @param hotTierBypassModeEnabled hotTierBypassModeEnabled or {@code null} for none
+   */
+  public TieringPolicy setHotTierBypassModeEnabled(java.lang.Boolean hotTierBypassModeEnabled) {
+    this.hotTierBypassModeEnabled = hotTierBypassModeEnabled;
     return this;
   }
 

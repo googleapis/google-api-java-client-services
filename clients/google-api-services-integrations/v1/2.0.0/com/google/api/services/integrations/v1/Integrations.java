@@ -22749,6 +22749,22 @@ public class Integrations extends com.google.api.client.googleapis.services.json
             return this;
           }
 
+          /** Optional. Whether to enable natural language query understanding. */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean enableNaturalLanguageQueryUnderstanding;
+
+          /** Optional. Whether to enable natural language query understanding.
+           */
+          public java.lang.Boolean getEnableNaturalLanguageQueryUnderstanding() {
+            return enableNaturalLanguageQueryUnderstanding;
+          }
+
+          /** Optional. Whether to enable natural language query understanding. */
+          public Search setEnableNaturalLanguageQueryUnderstanding(java.lang.Boolean enableNaturalLanguageQueryUnderstanding) {
+            this.enableNaturalLanguageQueryUnderstanding = enableNaturalLanguageQueryUnderstanding;
+            return this;
+          }
+
           /**
            * Optional. Standard filter field to filter templates. client_id filter won't be
            * supported and will restrict to templates belonging to the current client only. Return
@@ -22830,6 +22846,22 @@ public class Integrations extends com.google.api.client.googleapis.services.json
           /** Optional. The token returned in the previous response. */
           public Search setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
+            return this;
+          }
+
+          /** Optional. The search query that will be passed to Vertex search service. */
+          @com.google.api.client.util.Key
+          private java.lang.String query;
+
+          /** Optional. The search query that will be passed to Vertex search service.
+           */
+          public java.lang.String getQuery() {
+            return query;
+          }
+
+          /** Optional. The search query that will be passed to Vertex search service. */
+          public Search setQuery(java.lang.String query) {
+            this.query = query;
             return this;
           }
 

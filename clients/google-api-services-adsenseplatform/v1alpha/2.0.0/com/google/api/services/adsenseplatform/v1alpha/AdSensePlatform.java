@@ -549,6 +549,155 @@ public class AdSensePlatform extends com.google.api.client.googleapis.services.j
         public class Sites {
 
           /**
+           * Gets a Platform Child Site for a specified Platform Child Account and site.
+           *
+           * Create a request for the method "sites.get".
+           *
+           * This request holds the parameters needed by the adsenseplatform server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the platform child site to retrieve. Format:
+           *        accounts/{account}/platforms/{platform}/childAccounts/{child_account}/sites/{platform_chil
+           *        d_site}
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends AdSensePlatformRequest<com.google.api.services.adsenseplatform.v1alpha.model.PlatformChildSite> {
+
+            private static final String REST_PATH = "v1alpha/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^accounts/[^/]+/platforms/[^/]+/childAccounts/[^/]+/sites/[^/]+$");
+
+            /**
+             * Gets a Platform Child Site for a specified Platform Child Account and site.
+             *
+             * Create a request for the method "sites.get".
+             *
+             * This request holds the parameters needed by the the adsenseplatform server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the platform child site to retrieve. Format:
+           *        accounts/{account}/platforms/{platform}/childAccounts/{child_account}/sites/{platform_chil
+           *        d_site}
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(AdSensePlatform.this, "GET", REST_PATH, null, com.google.api.services.adsenseplatform.v1alpha.model.PlatformChildSite.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^accounts/[^/]+/platforms/[^/]+/childAccounts/[^/]+/sites/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the platform child site to retrieve. Format: accounts/{account}
+             * /platforms/{platform}/childAccounts/{child_account}/sites/{platform_child_site}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the platform child site to retrieve. Format:
+           accounts/{account}/platforms/{platform}/childAccounts/{child_account}/sites/{platform_child_site}
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the platform child site to retrieve. Format: accounts/{account}
+             * /platforms/{platform}/childAccounts/{child_account}/sites/{platform_child_site}
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^accounts/[^/]+/platforms/[^/]+/childAccounts/[^/]+/sites/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
            * Lists Platform Child Sites for a specified Platform Child Account.
            *
            * Create a request for the method "sites.list".
@@ -937,6 +1086,153 @@ public class AdSensePlatform extends com.google.api.client.googleapis.services.j
        */
       public class Groups {
 
+        /**
+         * Gets a Platform Group for a specified Platform and group.
+         *
+         * Create a request for the method "groups.get".
+         *
+         * This request holds the parameters needed by the adsenseplatform server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the platform group to retrieve. Format:
+         *        accounts/{account}/platforms/{platform}/groups/{group}
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends AdSensePlatformRequest<com.google.api.services.adsenseplatform.v1alpha.model.PlatformGroup> {
+
+          private static final String REST_PATH = "v1alpha/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/platforms/[^/]+/groups/[^/]+$");
+
+          /**
+           * Gets a Platform Group for a specified Platform and group.
+           *
+           * Create a request for the method "groups.get".
+           *
+           * This request holds the parameters needed by the the adsenseplatform server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the platform group to retrieve. Format:
+         *        accounts/{account}/platforms/{platform}/groups/{group}
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(AdSensePlatform.this, "GET", REST_PATH, null, com.google.api.services.adsenseplatform.v1alpha.model.PlatformGroup.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^accounts/[^/]+/platforms/[^/]+/groups/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the platform group to retrieve. Format:
+           * accounts/{account}/platforms/{platform}/groups/{group}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the platform group to retrieve. Format:
+         accounts/{account}/platforms/{platform}/groups/{group}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the platform group to retrieve. Format:
+           * accounts/{account}/platforms/{platform}/groups/{group}
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^accounts/[^/]+/platforms/[^/]+/groups/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
         /**
          * Lists Platform Groups for a specified Platform.
          *

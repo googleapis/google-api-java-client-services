@@ -2805,7 +2805,9 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
     public class GbpAccounts {
 
       /**
-       * Link the specified merchant to a GBP account for all countries.
+       * Link the specified merchant to a GBP account for all countries. To run this method, you must have
+       * admin access to the Merchant Center account. If you don't have admin access, the request fails
+       * with the error message `User is not an administrator of account {ACCOUNT_ID}`.
        *
        * Create a request for the method "gbpAccounts.linkGbpAccount".
        *
@@ -2831,7 +2833,9 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
             java.util.regex.Pattern.compile("^accounts/[^/]+$");
 
         /**
-         * Link the specified merchant to a GBP account for all countries.
+         * Link the specified merchant to a GBP account for all countries. To run this method, you must
+         * have admin access to the Merchant Center account. If you don't have admin access, the request
+         * fails with the error message `User is not an administrator of account {ACCOUNT_ID}`.
          *
          * Create a request for the method "gbpAccounts.linkGbpAccount".
          *

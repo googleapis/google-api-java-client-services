@@ -31,6 +31,15 @@ package com.google.api.services.firebaseappdistribution.v1alpha.model;
 public final class GoogleFirebaseAppdistroV1alphaDeviceInteraction extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. A text entry action, that enters text into a particular text field, clearing any
+   * existing text in the field. Unlike `text_input` this action does not require any other actions
+   * such as a tap to be performed before it can enter the text.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleFirebaseAppdistroV1alphaDeviceInteractionEnterText enterText;
+
+  /**
    * Output only. Key code for a key event action.
    * The value may be {@code null}.
    */
@@ -60,7 +69,9 @@ public final class GoogleFirebaseAppdistroV1alphaDeviceInteraction extends com.g
   private AndroidxCrawlerOutputPoint tap;
 
   /**
-   * Output only. Text entered for a text entry action.
+   * Output only. A text input action, that types some text into whatever field is currently
+   * focused, if any. Unlike `enter_text` this action requires that the field be brought into focus
+   * first, for example by emitting a tap action before this one.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,6 +83,27 @@ public final class GoogleFirebaseAppdistroV1alphaDeviceInteraction extends com.g
    */
   @com.google.api.client.util.Key
   private GoogleFirebaseAppdistroV1alphaDeviceInteractionWait wait;
+
+  /**
+   * Output only. A text entry action, that enters text into a particular text field, clearing any
+   * existing text in the field. Unlike `text_input` this action does not require any other actions
+   * such as a tap to be performed before it can enter the text.
+   * @return value or {@code null} for none
+   */
+  public GoogleFirebaseAppdistroV1alphaDeviceInteractionEnterText getEnterText() {
+    return enterText;
+  }
+
+  /**
+   * Output only. A text entry action, that enters text into a particular text field, clearing any
+   * existing text in the field. Unlike `text_input` this action does not require any other actions
+   * such as a tap to be performed before it can enter the text.
+   * @param enterText enterText or {@code null} for none
+   */
+  public GoogleFirebaseAppdistroV1alphaDeviceInteraction setEnterText(GoogleFirebaseAppdistroV1alphaDeviceInteractionEnterText enterText) {
+    this.enterText = enterText;
+    return this;
+  }
 
   /**
    * Output only. Key code for a key event action.
@@ -144,7 +176,9 @@ public final class GoogleFirebaseAppdistroV1alphaDeviceInteraction extends com.g
   }
 
   /**
-   * Output only. Text entered for a text entry action.
+   * Output only. A text input action, that types some text into whatever field is currently
+   * focused, if any. Unlike `enter_text` this action requires that the field be brought into focus
+   * first, for example by emitting a tap action before this one.
    * @return value or {@code null} for none
    */
   public java.lang.String getTextInput() {
@@ -152,7 +186,9 @@ public final class GoogleFirebaseAppdistroV1alphaDeviceInteraction extends com.g
   }
 
   /**
-   * Output only. Text entered for a text entry action.
+   * Output only. A text input action, that types some text into whatever field is currently
+   * focused, if any. Unlike `enter_text` this action requires that the field be brought into focus
+   * first, for example by emitting a tap action before this one.
    * @param textInput textInput or {@code null} for none
    */
   public GoogleFirebaseAppdistroV1alphaDeviceInteraction setTextInput(java.lang.String textInput) {

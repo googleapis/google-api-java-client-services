@@ -31,6 +31,14 @@ package com.google.api.services.networkmanagement.v1.model;
 public final class CloudRunRevisionEndpoint extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The URI of the Cloud Run service that the revision belongs to. The format is:
+   * projects/{project}/locations/{location}/services/{service}
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceUri;
+
+  /**
    * A [Cloud Run](https://cloud.google.com/run)
    * [revision](https://cloud.google.com/run/docs/reference/rest/v1/namespaces.revisions/get) URI.
    * The format is: projects/{project}/locations/{location}/revisions/{revision}
@@ -38,6 +46,25 @@ public final class CloudRunRevisionEndpoint extends com.google.api.client.json.G
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
+
+  /**
+   * Output only. The URI of the Cloud Run service that the revision belongs to. The format is:
+   * projects/{project}/locations/{location}/services/{service}
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceUri() {
+    return serviceUri;
+  }
+
+  /**
+   * Output only. The URI of the Cloud Run service that the revision belongs to. The format is:
+   * projects/{project}/locations/{location}/services/{service}
+   * @param serviceUri serviceUri or {@code null} for none
+   */
+  public CloudRunRevisionEndpoint setServiceUri(java.lang.String serviceUri) {
+    this.serviceUri = serviceUri;
+    return this;
+  }
 
   /**
    * A [Cloud Run](https://cloud.google.com/run)

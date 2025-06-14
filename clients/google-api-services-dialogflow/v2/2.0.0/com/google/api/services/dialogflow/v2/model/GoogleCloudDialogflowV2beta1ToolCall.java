@@ -30,7 +30,7 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2beta1ToolCall extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The name of the tool's action associated with this call.
+   * Optional. The name of the tool's action associated with this call.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,14 +51,14 @@ public final class GoogleCloudDialogflowV2beta1ToolCall extends com.google.api.c
   private java.util.Map<String, java.lang.Object> inputParameters;
 
   /**
-   * Required. The tool associated with this call. Format: `projects//locations//tools/`.
+   * Optional. The tool associated with this call. Format: `projects//locations//tools/`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String tool;
 
   /**
-   * Required. The name of the tool's action associated with this call.
+   * Optional. The name of the tool's action associated with this call.
    * @return value or {@code null} for none
    */
   public java.lang.String getAction() {
@@ -66,7 +66,7 @@ public final class GoogleCloudDialogflowV2beta1ToolCall extends com.google.api.c
   }
 
   /**
-   * Required. The name of the tool's action associated with this call.
+   * Optional. The name of the tool's action associated with this call.
    * @param action action or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ToolCall setAction(java.lang.String action) {
@@ -109,7 +109,7 @@ public final class GoogleCloudDialogflowV2beta1ToolCall extends com.google.api.c
   }
 
   /**
-   * Required. The tool associated with this call. Format: `projects//locations//tools/`.
+   * Optional. The tool associated with this call. Format: `projects//locations//tools/`.
    * @return value or {@code null} for none
    */
   public java.lang.String getTool() {
@@ -117,7 +117,7 @@ public final class GoogleCloudDialogflowV2beta1ToolCall extends com.google.api.c
   }
 
   /**
-   * Required. The tool associated with this call. Format: `projects//locations//tools/`.
+   * Optional. The tool associated with this call. Format: `projects//locations//tools/`.
    * @param tool tool or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1ToolCall setTool(java.lang.String tool) {

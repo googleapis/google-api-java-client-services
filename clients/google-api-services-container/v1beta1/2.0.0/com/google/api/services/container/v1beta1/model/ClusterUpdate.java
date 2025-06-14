@@ -40,6 +40,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private AdditionalPodRangesConfig additionalPodRangesConfig;
 
   /**
+   * The desired config for additional subnetworks attached to the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DesiredAdditionalIPRangesConfig desiredAdditionalIpRangesConfig;
+
+  /**
    * Configurations for the various addons available to run in the cluster.
    * The value may be {@code null}.
    */
@@ -59,6 +66,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private AuthenticatorGroupsConfig desiredAuthenticatorGroupsConfig;
+
+  /**
+   * AutoIpamConfig contains all information related to Auto IPAM
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AutoIpamConfig desiredAutoIpamConfig;
 
   /**
    * WorkloadPolicyConfig is the configuration related to GCW workload policy
@@ -270,10 +284,10 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
 
   /**
    * The desired list of Google Compute Engine
-   * [zones](https://cloud.google.com/compute/docs/zones#available) in which the cluster's nodes
-   * should be located. This list must always include the cluster's primary zone. Warning: changing
-   * cluster locations will update the locations of all node pools and will result in nodes being
-   * added and/or removed.
+   * [zones](https://{$universe.dns_names.final_documentation_domain}/compute/docs/zones#available)
+   * in which the cluster's nodes should be located. This list must always include the cluster's
+   * primary zone. Warning: changing cluster locations will update the locations of all node pools
+   * and will result in nodes being added and/or removed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -555,6 +569,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private TpuConfig desiredTpuConfig;
 
   /**
+   * The desired user managed keys config for the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private UserManagedKeysConfig desiredUserManagedKeysConfig;
+
+  /**
    * Cluster-level Vertical Pod Autoscaling configuration.
    * The value may be {@code null}.
    */
@@ -598,6 +619,13 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private java.lang.String etag;
 
   /**
+   * Configuration for GKE auto upgrade.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GkeAutoUpgradeConfig gkeAutoUpgradeConfig;
+
+  /**
    * The desired private cluster configuration. Has no effect. Use desired_private_cluster_config
    * instead.
    * The value may be {@code null}.
@@ -614,7 +642,8 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   private AdditionalPodRangesConfig removedAdditionalPodRangesConfig;
 
   /**
-   * The Custom keys configuration for the cluster.
+   * The Custom keys configuration for the cluster. This field is deprecated. Use
+   * ClusterUpdate.desired_user_managed_keys_config instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -636,6 +665,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setAdditionalPodRangesConfig(AdditionalPodRangesConfig additionalPodRangesConfig) {
     this.additionalPodRangesConfig = additionalPodRangesConfig;
+    return this;
+  }
+
+  /**
+   * The desired config for additional subnetworks attached to the cluster.
+   * @return value or {@code null} for none
+   */
+  public DesiredAdditionalIPRangesConfig getDesiredAdditionalIpRangesConfig() {
+    return desiredAdditionalIpRangesConfig;
+  }
+
+  /**
+   * The desired config for additional subnetworks attached to the cluster.
+   * @param desiredAdditionalIpRangesConfig desiredAdditionalIpRangesConfig or {@code null} for none
+   */
+  public ClusterUpdate setDesiredAdditionalIpRangesConfig(DesiredAdditionalIPRangesConfig desiredAdditionalIpRangesConfig) {
+    this.desiredAdditionalIpRangesConfig = desiredAdditionalIpRangesConfig;
     return this;
   }
 
@@ -687,6 +733,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
    */
   public ClusterUpdate setDesiredAuthenticatorGroupsConfig(AuthenticatorGroupsConfig desiredAuthenticatorGroupsConfig) {
     this.desiredAuthenticatorGroupsConfig = desiredAuthenticatorGroupsConfig;
+    return this;
+  }
+
+  /**
+   * AutoIpamConfig contains all information related to Auto IPAM
+   * @return value or {@code null} for none
+   */
+  public AutoIpamConfig getDesiredAutoIpamConfig() {
+    return desiredAutoIpamConfig;
+  }
+
+  /**
+   * AutoIpamConfig contains all information related to Auto IPAM
+   * @param desiredAutoIpamConfig desiredAutoIpamConfig or {@code null} for none
+   */
+  public ClusterUpdate setDesiredAutoIpamConfig(AutoIpamConfig desiredAutoIpamConfig) {
+    this.desiredAutoIpamConfig = desiredAutoIpamConfig;
     return this;
   }
 
@@ -1195,10 +1258,10 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
 
   /**
    * The desired list of Google Compute Engine
-   * [zones](https://cloud.google.com/compute/docs/zones#available) in which the cluster's nodes
-   * should be located. This list must always include the cluster's primary zone. Warning: changing
-   * cluster locations will update the locations of all node pools and will result in nodes being
-   * added and/or removed.
+   * [zones](https://{$universe.dns_names.final_documentation_domain}/compute/docs/zones#available)
+   * in which the cluster's nodes should be located. This list must always include the cluster's
+   * primary zone. Warning: changing cluster locations will update the locations of all node pools
+   * and will result in nodes being added and/or removed.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDesiredLocations() {
@@ -1207,10 +1270,10 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
 
   /**
    * The desired list of Google Compute Engine
-   * [zones](https://cloud.google.com/compute/docs/zones#available) in which the cluster's nodes
-   * should be located. This list must always include the cluster's primary zone. Warning: changing
-   * cluster locations will update the locations of all node pools and will result in nodes being
-   * added and/or removed.
+   * [zones](https://{$universe.dns_names.final_documentation_domain}/compute/docs/zones#available)
+   * in which the cluster's nodes should be located. This list must always include the cluster's
+   * primary zone. Warning: changing cluster locations will update the locations of all node pools
+   * and will result in nodes being added and/or removed.
    * @param desiredLocations desiredLocations or {@code null} for none
    */
   public ClusterUpdate setDesiredLocations(java.util.List<java.lang.String> desiredLocations) {
@@ -1871,6 +1934,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * The desired user managed keys config for the cluster.
+   * @return value or {@code null} for none
+   */
+  public UserManagedKeysConfig getDesiredUserManagedKeysConfig() {
+    return desiredUserManagedKeysConfig;
+  }
+
+  /**
+   * The desired user managed keys config for the cluster.
+   * @param desiredUserManagedKeysConfig desiredUserManagedKeysConfig or {@code null} for none
+   */
+  public ClusterUpdate setDesiredUserManagedKeysConfig(UserManagedKeysConfig desiredUserManagedKeysConfig) {
+    this.desiredUserManagedKeysConfig = desiredUserManagedKeysConfig;
+    return this;
+  }
+
+  /**
    * Cluster-level Vertical Pod Autoscaling configuration.
    * @return value or {@code null} for none
    */
@@ -1975,6 +2055,23 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * Configuration for GKE auto upgrade.
+   * @return value or {@code null} for none
+   */
+  public GkeAutoUpgradeConfig getGkeAutoUpgradeConfig() {
+    return gkeAutoUpgradeConfig;
+  }
+
+  /**
+   * Configuration for GKE auto upgrade.
+   * @param gkeAutoUpgradeConfig gkeAutoUpgradeConfig or {@code null} for none
+   */
+  public ClusterUpdate setGkeAutoUpgradeConfig(GkeAutoUpgradeConfig gkeAutoUpgradeConfig) {
+    this.gkeAutoUpgradeConfig = gkeAutoUpgradeConfig;
+    return this;
+  }
+
+  /**
    * The desired private cluster configuration. Has no effect. Use desired_private_cluster_config
    * instead.
    * @return value or {@code null} for none
@@ -2013,7 +2110,8 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The Custom keys configuration for the cluster.
+   * The Custom keys configuration for the cluster. This field is deprecated. Use
+   * ClusterUpdate.desired_user_managed_keys_config instead.
    * @return value or {@code null} for none
    */
   public UserManagedKeysConfig getUserManagedKeysConfig() {
@@ -2021,7 +2119,8 @@ public final class ClusterUpdate extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The Custom keys configuration for the cluster.
+   * The Custom keys configuration for the cluster. This field is deprecated. Use
+   * ClusterUpdate.desired_user_managed_keys_config instead.
    * @param userManagedKeysConfig userManagedKeysConfig or {@code null} for none
    */
   public ClusterUpdate setUserManagedKeysConfig(UserManagedKeysConfig userManagedKeysConfig) {

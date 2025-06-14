@@ -18,8 +18,9 @@ package com.google.api.services.container.v1beta1.model;
 
 /**
  * Specifies the NodeAffinity key, values, and affinity operator according to [shared sole tenant
- * node group affinities](https://cloud.google.com/compute/docs/nodes/sole-tenant-
- * nodes#node_affinity_and_anti-affinity).
+ * node group
+ * affinities](https://{$universe.dns_names.final_documentation_domain}/compute/docs/nodes/sole-
+ * tenant-nodes#node_affinity_and_anti-affinity).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Kubernetes Engine API. For a detailed explanation

@@ -32,8 +32,8 @@ package com.google.api.services.container.v1beta1.model;
 public final class SetLabelsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Deprecated. The name of the cluster. This field has been deprecated and replaced by
-   * the name field.
+   * Deprecated. The name of the cluster. This field has been deprecated and replaced by the name
+   * field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,9 +59,10 @@ public final class SetLabelsRequest extends com.google.api.client.json.GenericJs
   private java.lang.String name;
 
   /**
-   * Required. Deprecated. The Google Developers Console [project ID or project
-   * number](https://cloud.google.com/resource-manager/docs/creating-managing-projects). This field
-   * has been deprecated and replaced by the name field.
+   * Deprecated. The Google Developers Console [project ID or project
+   * number](https://{$universe.dns_names.final_documentation_domain}/resource-
+   * manager/docs/creating-managing-projects). This field has been deprecated and replaced by the
+   * name field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,17 +76,17 @@ public final class SetLabelsRequest extends com.google.api.client.json.GenericJs
   private java.util.Map<String, java.lang.String> resourceLabels;
 
   /**
-   * Required. Deprecated. The name of the Google Compute Engine
-   * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides.
-   * This field has been deprecated and replaced by the name field.
+   * Deprecated. The name of the Google Compute Engine
+   * [zone](https://{$universe.dns_names.final_documentation_domain}/compute/docs/zones#available)
+   * in which the cluster resides. This field has been deprecated and replaced by the name field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String zone;
 
   /**
-   * Required. Deprecated. The name of the cluster. This field has been deprecated and replaced by
-   * the name field.
+   * Deprecated. The name of the cluster. This field has been deprecated and replaced by the name
+   * field.
    * @return value or {@code null} for none
    */
   public java.lang.String getClusterId() {
@@ -93,8 +94,8 @@ public final class SetLabelsRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. Deprecated. The name of the cluster. This field has been deprecated and replaced by
-   * the name field.
+   * Deprecated. The name of the cluster. This field has been deprecated and replaced by the name
+   * field.
    * @param clusterId clusterId or {@code null} for none
    */
   public SetLabelsRequest setClusterId(java.lang.String clusterId) {
@@ -147,9 +148,10 @@ public final class SetLabelsRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. Deprecated. The Google Developers Console [project ID or project
-   * number](https://cloud.google.com/resource-manager/docs/creating-managing-projects). This field
-   * has been deprecated and replaced by the name field.
+   * Deprecated. The Google Developers Console [project ID or project
+   * number](https://{$universe.dns_names.final_documentation_domain}/resource-
+   * manager/docs/creating-managing-projects). This field has been deprecated and replaced by the
+   * name field.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -157,9 +159,10 @@ public final class SetLabelsRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. Deprecated. The Google Developers Console [project ID or project
-   * number](https://cloud.google.com/resource-manager/docs/creating-managing-projects). This field
-   * has been deprecated and replaced by the name field.
+   * Deprecated. The Google Developers Console [project ID or project
+   * number](https://{$universe.dns_names.final_documentation_domain}/resource-
+   * manager/docs/creating-managing-projects). This field has been deprecated and replaced by the
+   * name field.
    * @param projectId projectId or {@code null} for none
    */
   public SetLabelsRequest setProjectId(java.lang.String projectId) {
@@ -185,9 +188,9 @@ public final class SetLabelsRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. Deprecated. The name of the Google Compute Engine
-   * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides.
-   * This field has been deprecated and replaced by the name field.
+   * Deprecated. The name of the Google Compute Engine
+   * [zone](https://{$universe.dns_names.final_documentation_domain}/compute/docs/zones#available)
+   * in which the cluster resides. This field has been deprecated and replaced by the name field.
    * @return value or {@code null} for none
    */
   public java.lang.String getZone() {
@@ -195,9 +198,9 @@ public final class SetLabelsRequest extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. Deprecated. The name of the Google Compute Engine
-   * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides.
-   * This field has been deprecated and replaced by the name field.
+   * Deprecated. The name of the Google Compute Engine
+   * [zone](https://{$universe.dns_names.final_documentation_domain}/compute/docs/zones#available)
+   * in which the cluster resides. This field has been deprecated and replaced by the name field.
    * @param zone zone or {@code null} for none
    */
   public SetLabelsRequest setZone(java.lang.String zone) {

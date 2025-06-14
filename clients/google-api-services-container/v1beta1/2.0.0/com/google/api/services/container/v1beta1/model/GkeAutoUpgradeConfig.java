@@ -17,8 +17,7 @@
 package com.google.api.services.container.v1beta1.model;
 
 /**
- * GCPSecretManagerCertificateConfig configures a secret from [Google Secret
- * Manager](https://{$universe.dns_names.final_documentation_domain}/secret-manager).
+ * GkeAutoUpgradeConfig is the configuration for GKE auto upgrades.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Kubernetes Engine API. For a detailed explanation
@@ -29,43 +28,40 @@ package com.google.api.services.container.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GCPSecretManagerCertificateConfig extends com.google.api.client.json.GenericJson {
+public final class GkeAutoUpgradeConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Secret URI, in the form "projects/$PROJECT_ID/secrets/$SECRET_NAME/versions/$VERSION". Version
-   * can be fixed (e.g. "2") or "latest"
+   * PatchMode specifies how auto upgrade patch builds should be selected.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String secretUri;
+  private java.lang.String patchMode;
 
   /**
-   * Secret URI, in the form "projects/$PROJECT_ID/secrets/$SECRET_NAME/versions/$VERSION". Version
-   * can be fixed (e.g. "2") or "latest"
+   * PatchMode specifies how auto upgrade patch builds should be selected.
    * @return value or {@code null} for none
    */
-  public java.lang.String getSecretUri() {
-    return secretUri;
+  public java.lang.String getPatchMode() {
+    return patchMode;
   }
 
   /**
-   * Secret URI, in the form "projects/$PROJECT_ID/secrets/$SECRET_NAME/versions/$VERSION". Version
-   * can be fixed (e.g. "2") or "latest"
-   * @param secretUri secretUri or {@code null} for none
+   * PatchMode specifies how auto upgrade patch builds should be selected.
+   * @param patchMode patchMode or {@code null} for none
    */
-  public GCPSecretManagerCertificateConfig setSecretUri(java.lang.String secretUri) {
-    this.secretUri = secretUri;
+  public GkeAutoUpgradeConfig setPatchMode(java.lang.String patchMode) {
+    this.patchMode = patchMode;
     return this;
   }
 
   @Override
-  public GCPSecretManagerCertificateConfig set(String fieldName, Object value) {
-    return (GCPSecretManagerCertificateConfig) super.set(fieldName, value);
+  public GkeAutoUpgradeConfig set(String fieldName, Object value) {
+    return (GkeAutoUpgradeConfig) super.set(fieldName, value);
   }
 
   @Override
-  public GCPSecretManagerCertificateConfig clone() {
-    return (GCPSecretManagerCertificateConfig) super.clone();
+  public GkeAutoUpgradeConfig clone() {
+    return (GkeAutoUpgradeConfig) super.clone();
   }
 
 }

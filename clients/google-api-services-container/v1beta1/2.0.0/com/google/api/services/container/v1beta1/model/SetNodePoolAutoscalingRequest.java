@@ -38,8 +38,8 @@ public final class SetNodePoolAutoscalingRequest extends com.google.api.client.j
   private NodePoolAutoscaling autoscaling;
 
   /**
-   * Required. Deprecated. The name of the cluster to upgrade. This field has been deprecated and
-   * replaced by the name field.
+   * Deprecated. The name of the cluster to upgrade. This field has been deprecated and replaced by
+   * the name field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,26 +54,27 @@ public final class SetNodePoolAutoscalingRequest extends com.google.api.client.j
   private java.lang.String name;
 
   /**
-   * Required. Deprecated. The name of the node pool to upgrade. This field has been deprecated and
-   * replaced by the name field.
+   * Deprecated. The name of the node pool to upgrade. This field has been deprecated and replaced
+   * by the name field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nodePoolId;
 
   /**
-   * Required. Deprecated. The Google Developers Console [project ID or project
-   * number](https://cloud.google.com/resource-manager/docs/creating-managing-projects). This field
-   * has been deprecated and replaced by the name field.
+   * Deprecated. The Google Developers Console [project ID or project
+   * number](https://{$universe.dns_names.final_documentation_domain}/resource-
+   * manager/docs/creating-managing-projects). This field has been deprecated and replaced by the
+   * name field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String projectId;
 
   /**
-   * Required. Deprecated. The name of the Google Compute Engine
-   * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides.
-   * This field has been deprecated and replaced by the name field.
+   * Deprecated. The name of the Google Compute Engine
+   * [zone](https://{$universe.dns_names.final_documentation_domain}/compute/docs/zones#available)
+   * in which the cluster resides. This field has been deprecated and replaced by the name field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,8 +98,8 @@ public final class SetNodePoolAutoscalingRequest extends com.google.api.client.j
   }
 
   /**
-   * Required. Deprecated. The name of the cluster to upgrade. This field has been deprecated and
-   * replaced by the name field.
+   * Deprecated. The name of the cluster to upgrade. This field has been deprecated and replaced by
+   * the name field.
    * @return value or {@code null} for none
    */
   public java.lang.String getClusterId() {
@@ -106,8 +107,8 @@ public final class SetNodePoolAutoscalingRequest extends com.google.api.client.j
   }
 
   /**
-   * Required. Deprecated. The name of the cluster to upgrade. This field has been deprecated and
-   * replaced by the name field.
+   * Deprecated. The name of the cluster to upgrade. This field has been deprecated and replaced by
+   * the name field.
    * @param clusterId clusterId or {@code null} for none
    */
   public SetNodePoolAutoscalingRequest setClusterId(java.lang.String clusterId) {
@@ -135,8 +136,8 @@ public final class SetNodePoolAutoscalingRequest extends com.google.api.client.j
   }
 
   /**
-   * Required. Deprecated. The name of the node pool to upgrade. This field has been deprecated and
-   * replaced by the name field.
+   * Deprecated. The name of the node pool to upgrade. This field has been deprecated and replaced
+   * by the name field.
    * @return value or {@code null} for none
    */
   public java.lang.String getNodePoolId() {
@@ -144,8 +145,8 @@ public final class SetNodePoolAutoscalingRequest extends com.google.api.client.j
   }
 
   /**
-   * Required. Deprecated. The name of the node pool to upgrade. This field has been deprecated and
-   * replaced by the name field.
+   * Deprecated. The name of the node pool to upgrade. This field has been deprecated and replaced
+   * by the name field.
    * @param nodePoolId nodePoolId or {@code null} for none
    */
   public SetNodePoolAutoscalingRequest setNodePoolId(java.lang.String nodePoolId) {
@@ -154,9 +155,10 @@ public final class SetNodePoolAutoscalingRequest extends com.google.api.client.j
   }
 
   /**
-   * Required. Deprecated. The Google Developers Console [project ID or project
-   * number](https://cloud.google.com/resource-manager/docs/creating-managing-projects). This field
-   * has been deprecated and replaced by the name field.
+   * Deprecated. The Google Developers Console [project ID or project
+   * number](https://{$universe.dns_names.final_documentation_domain}/resource-
+   * manager/docs/creating-managing-projects). This field has been deprecated and replaced by the
+   * name field.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -164,9 +166,10 @@ public final class SetNodePoolAutoscalingRequest extends com.google.api.client.j
   }
 
   /**
-   * Required. Deprecated. The Google Developers Console [project ID or project
-   * number](https://cloud.google.com/resource-manager/docs/creating-managing-projects). This field
-   * has been deprecated and replaced by the name field.
+   * Deprecated. The Google Developers Console [project ID or project
+   * number](https://{$universe.dns_names.final_documentation_domain}/resource-
+   * manager/docs/creating-managing-projects). This field has been deprecated and replaced by the
+   * name field.
    * @param projectId projectId or {@code null} for none
    */
   public SetNodePoolAutoscalingRequest setProjectId(java.lang.String projectId) {
@@ -175,9 +178,9 @@ public final class SetNodePoolAutoscalingRequest extends com.google.api.client.j
   }
 
   /**
-   * Required. Deprecated. The name of the Google Compute Engine
-   * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides.
-   * This field has been deprecated and replaced by the name field.
+   * Deprecated. The name of the Google Compute Engine
+   * [zone](https://{$universe.dns_names.final_documentation_domain}/compute/docs/zones#available)
+   * in which the cluster resides. This field has been deprecated and replaced by the name field.
    * @return value or {@code null} for none
    */
   public java.lang.String getZone() {
@@ -185,9 +188,9 @@ public final class SetNodePoolAutoscalingRequest extends com.google.api.client.j
   }
 
   /**
-   * Required. Deprecated. The name of the Google Compute Engine
-   * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides.
-   * This field has been deprecated and replaced by the name field.
+   * Deprecated. The name of the Google Compute Engine
+   * [zone](https://{$universe.dns_names.final_documentation_domain}/compute/docs/zones#available)
+   * in which the cluster resides. This field has been deprecated and replaced by the name field.
    * @param zone zone or {@code null} for none
    */
   public SetNodePoolAutoscalingRequest setZone(java.lang.String zone) {

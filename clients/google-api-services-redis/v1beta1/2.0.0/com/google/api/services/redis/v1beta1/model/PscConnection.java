@@ -61,7 +61,7 @@ public final class PscConnection extends com.google.api.client.json.GenericJson 
   private java.lang.String network;
 
   /**
-   * Output only. The port number of the exposed discovery endpoint.
+   * Output only. port will only be set for Primary/Reader or Discovery endpoint.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -171,7 +171,7 @@ public final class PscConnection extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The port number of the exposed discovery endpoint.
+   * Output only. port will only be set for Primary/Reader or Discovery endpoint.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPort() {
@@ -179,7 +179,7 @@ public final class PscConnection extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The port number of the exposed discovery endpoint.
+   * Output only. port will only be set for Primary/Reader or Discovery endpoint.
    * @param port port or {@code null} for none
    */
   public PscConnection setPort(java.lang.Integer port) {

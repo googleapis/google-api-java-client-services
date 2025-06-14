@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-assuredworkloads</artifactId>
-  <version>v1beta1-rev20250529-2.0.0</version>
-  <name>Assured Workloads API v1beta1-rev20250529-2.0.0</name>
+  <version>v1beta1-rev20250605-2.0.0</version>
+  <name>Assured Workloads API v1beta1-rev20250605-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

@@ -46,6 +46,28 @@ public final class Reader extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Output only. The SwG publication id that the reader's subscription linking was originating
+   * from.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String originatingPublicationId;
+
+  /**
+   * Output only. The publisher provided id of the reader.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ppid;
+
+  /**
+   * Output only. The SwG publication id that the reader has linked their subscription to.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String publicationId;
+
+  /**
    * Output only. Time the publication reader was created and associated with a Google user.
    * @return value or {@code null} for none
    */
@@ -78,6 +100,59 @@ public final class Reader extends com.google.api.client.json.GenericJson {
    */
   public Reader setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. The SwG publication id that the reader's subscription linking was originating
+   * from.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOriginatingPublicationId() {
+    return originatingPublicationId;
+  }
+
+  /**
+   * Output only. The SwG publication id that the reader's subscription linking was originating
+   * from.
+   * @param originatingPublicationId originatingPublicationId or {@code null} for none
+   */
+  public Reader setOriginatingPublicationId(java.lang.String originatingPublicationId) {
+    this.originatingPublicationId = originatingPublicationId;
+    return this;
+  }
+
+  /**
+   * Output only. The publisher provided id of the reader.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPpid() {
+    return ppid;
+  }
+
+  /**
+   * Output only. The publisher provided id of the reader.
+   * @param ppid ppid or {@code null} for none
+   */
+  public Reader setPpid(java.lang.String ppid) {
+    this.ppid = ppid;
+    return this;
+  }
+
+  /**
+   * Output only. The SwG publication id that the reader has linked their subscription to.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPublicationId() {
+    return publicationId;
+  }
+
+  /**
+   * Output only. The SwG publication id that the reader has linked their subscription to.
+   * @param publicationId publicationId or {@code null} for none
+   */
+  public Reader setPublicationId(java.lang.String publicationId) {
+    this.publicationId = publicationId;
     return this;
   }
 

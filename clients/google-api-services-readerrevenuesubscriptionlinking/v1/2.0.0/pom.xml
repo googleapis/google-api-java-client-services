@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-readerrevenuesubscriptionlinking</artifactId>
-  <version>v1-rev20241015-2.0.0</version>
-  <name>Reader Revenue Subscription Linking API v1-rev20241015-2.0.0</name>
+  <version>v1-rev20250611-2.0.0</version>
+  <name>Reader Revenue Subscription Linking API v1-rev20250611-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

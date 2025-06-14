@@ -157,7 +157,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.Integer currentNodeCount;
 
   /**
-   * Output only. Deprecated, use [NodePool.version](https://cloud.google.com/kubernetes-
+   * Output only. Deprecated, use
+   * [NodePool.version](https://{$universe.dns_names.final_documentation_domain}/kubernetes-
    * engine/docs/reference/rest/v1beta1/projects.locations.clusters.nodePools) instead. The current
    * version of the node software components. If they are currently at multiple versions because
    * they're in the process of being upgraded, this reflects the minimum version of all nodes.
@@ -254,6 +255,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private Fleet fleet;
 
   /**
+   * Configuration for GKE auto upgrades.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GkeAutoUpgradeConfig gkeAutoUpgradeConfig;
+
+  /**
    * Output only. Unique id for the cluster.
    * The value may be {@code null}.
    */
@@ -283,12 +291,12 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
 
   /**
    * The number of nodes to create in this cluster. You must ensure that your Compute Engine
-   * [resource quota](https://cloud.google.com/compute/quotas) is sufficient for this number of
-   * instances. You must also have available firewall and routes quota. For requests, this field
-   * should only be used in lieu of a "node_pool" object, since this configuration (along with the
-   * "node_config") will be used to create a "NodePool" object with an auto-generated name. Do not
-   * use this and a node_pool at the same time. This field is deprecated, use
-   * node_pool.initial_node_count instead.
+   * [resource quota](https://{$universe.dns_names.final_documentation_domain}/compute/quotas) is
+   * sufficient for this number of instances. You must also have available firewall and routes
+   * quota. For requests, this field should only be used in lieu of a "node_pool" object, since this
+   * configuration (along with the "node_config") will be used to create a "NodePool" object with an
+   * auto-generated name. Do not use this and a node_pool at the same time. This field is
+   * deprecated, use node_pool.initial_node_count instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -324,9 +332,10 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The name of the Google Compute Engine
-   * [zone](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) or
-   * [region](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) in which
-   * the cluster resides.
+   * [zone](https://{$universe.dns_names.final_documentation_domain}/compute/docs/regions-
+   * zones/regions-zones#available) or
+   * [region](https://{$universe.dns_names.final_documentation_domain}/compute/docs/regions-
+   * zones/regions-zones#available) in which the cluster resides.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -334,12 +343,12 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
 
   /**
    * The list of Google Compute Engine
-   * [zones](https://cloud.google.com/compute/docs/zones#available) in which the cluster's nodes
-   * should be located. This field provides a default value if
-   * [NodePool.Locations](https://cloud.google.com/kubernetes-
+   * [zones](https://{$universe.dns_names.final_documentation_domain}/compute/docs/zones#available)
+   * in which the cluster's nodes should be located. This field provides a default value if
+   * [NodePool.Locations](https://{$universe.dns_names.final_documentation_domain}/kubernetes-
    * engine/docs/reference/rest/v1/projects.locations.clusters.nodePools#NodePool.FIELDS.locations)
    * are not specified during node pool creation. Warning: changing cluster locations will update
-   * the [NodePool.Locations](https://cloud.google.com/kubernetes-
+   * the [NodePool.Locations](https://{$universe.dns_names.final_documentation_domain}/kubernetes-
    * engine/docs/reference/rest/v1/projects.locations.clusters.nodePools#NodePool.FIELDS.locations)
    * of all node pools and will result in nodes being added and/or removed.
    * The value may be {@code null}.
@@ -443,8 +452,9 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * The name of the Google Compute Engine [network](https://cloud.google.com/compute/docs/networks-
-   * and-firewalls#networks) to which the cluster is connected. If left unspecified, the `default`
+   * The name of the Google Compute Engine
+   * [network](https://{$universe.dns_names.final_documentation_domain}/compute/docs/networks-and-
+   * firewalls#networks) to which the cluster is connected. If left unspecified, the `default`
    * network will be used. On output this shows the network ID instead of the name.
    * The value may be {@code null}.
    */
@@ -667,8 +677,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of the Google Compute Engine
-   * [subnetwork](https://cloud.google.com/compute/docs/subnetworks) to which the cluster is
-   * connected. On output this shows the subnetwork ID instead of the name.
+   * [subnetwork](https://{$universe.dns_names.final_documentation_domain}/compute/docs/subnetworks)
+   * to which the cluster is connected. On output this shows the subnetwork ID instead of the name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -729,8 +739,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The name of the Google Compute Engine
-   * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides.
-   * This field is deprecated, use location instead.
+   * [zone](https://{$universe.dns_names.final_documentation_domain}/compute/docs/zones#available)
+   * in which the cluster resides. This field is deprecated, use location instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1040,7 +1050,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Deprecated, use [NodePool.version](https://cloud.google.com/kubernetes-
+   * Output only. Deprecated, use
+   * [NodePool.version](https://{$universe.dns_names.final_documentation_domain}/kubernetes-
    * engine/docs/reference/rest/v1beta1/projects.locations.clusters.nodePools) instead. The current
    * version of the node software components. If they are currently at multiple versions because
    * they're in the process of being upgraded, this reflects the minimum version of all nodes.
@@ -1051,7 +1062,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Deprecated, use [NodePool.version](https://cloud.google.com/kubernetes-
+   * Output only. Deprecated, use
+   * [NodePool.version](https://{$universe.dns_names.final_documentation_domain}/kubernetes-
    * engine/docs/reference/rest/v1beta1/projects.locations.clusters.nodePools) instead. The current
    * version of the node software components. If they are currently at multiple versions because
    * they're in the process of being upgraded, this reflects the minimum version of all nodes.
@@ -1270,6 +1282,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Configuration for GKE auto upgrades.
+   * @return value or {@code null} for none
+   */
+  public GkeAutoUpgradeConfig getGkeAutoUpgradeConfig() {
+    return gkeAutoUpgradeConfig;
+  }
+
+  /**
+   * Configuration for GKE auto upgrades.
+   * @param gkeAutoUpgradeConfig gkeAutoUpgradeConfig or {@code null} for none
+   */
+  public Cluster setGkeAutoUpgradeConfig(GkeAutoUpgradeConfig gkeAutoUpgradeConfig) {
+    this.gkeAutoUpgradeConfig = gkeAutoUpgradeConfig;
+    return this;
+  }
+
+  /**
    * Output only. Unique id for the cluster.
    * @return value or {@code null} for none
    */
@@ -1336,12 +1365,12 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
 
   /**
    * The number of nodes to create in this cluster. You must ensure that your Compute Engine
-   * [resource quota](https://cloud.google.com/compute/quotas) is sufficient for this number of
-   * instances. You must also have available firewall and routes quota. For requests, this field
-   * should only be used in lieu of a "node_pool" object, since this configuration (along with the
-   * "node_config") will be used to create a "NodePool" object with an auto-generated name. Do not
-   * use this and a node_pool at the same time. This field is deprecated, use
-   * node_pool.initial_node_count instead.
+   * [resource quota](https://{$universe.dns_names.final_documentation_domain}/compute/quotas) is
+   * sufficient for this number of instances. You must also have available firewall and routes
+   * quota. For requests, this field should only be used in lieu of a "node_pool" object, since this
+   * configuration (along with the "node_config") will be used to create a "NodePool" object with an
+   * auto-generated name. Do not use this and a node_pool at the same time. This field is
+   * deprecated, use node_pool.initial_node_count instead.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getInitialNodeCount() {
@@ -1350,12 +1379,12 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
 
   /**
    * The number of nodes to create in this cluster. You must ensure that your Compute Engine
-   * [resource quota](https://cloud.google.com/compute/quotas) is sufficient for this number of
-   * instances. You must also have available firewall and routes quota. For requests, this field
-   * should only be used in lieu of a "node_pool" object, since this configuration (along with the
-   * "node_config") will be used to create a "NodePool" object with an auto-generated name. Do not
-   * use this and a node_pool at the same time. This field is deprecated, use
-   * node_pool.initial_node_count instead.
+   * [resource quota](https://{$universe.dns_names.final_documentation_domain}/compute/quotas) is
+   * sufficient for this number of instances. You must also have available firewall and routes
+   * quota. For requests, this field should only be used in lieu of a "node_pool" object, since this
+   * configuration (along with the "node_config") will be used to create a "NodePool" object with an
+   * auto-generated name. Do not use this and a node_pool at the same time. This field is
+   * deprecated, use node_pool.initial_node_count instead.
    * @param initialNodeCount initialNodeCount or {@code null} for none
    */
   public Cluster setInitialNodeCount(java.lang.Integer initialNodeCount) {
@@ -1433,9 +1462,10 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The name of the Google Compute Engine
-   * [zone](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) or
-   * [region](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) in which
-   * the cluster resides.
+   * [zone](https://{$universe.dns_names.final_documentation_domain}/compute/docs/regions-
+   * zones/regions-zones#available) or
+   * [region](https://{$universe.dns_names.final_documentation_domain}/compute/docs/regions-
+   * zones/regions-zones#available) in which the cluster resides.
    * @return value or {@code null} for none
    */
   public java.lang.String getLocation() {
@@ -1444,9 +1474,10 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The name of the Google Compute Engine
-   * [zone](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) or
-   * [region](https://cloud.google.com/compute/docs/regions-zones/regions-zones#available) in which
-   * the cluster resides.
+   * [zone](https://{$universe.dns_names.final_documentation_domain}/compute/docs/regions-
+   * zones/regions-zones#available) or
+   * [region](https://{$universe.dns_names.final_documentation_domain}/compute/docs/regions-
+   * zones/regions-zones#available) in which the cluster resides.
    * @param location location or {@code null} for none
    */
   public Cluster setLocation(java.lang.String location) {
@@ -1456,12 +1487,12 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
 
   /**
    * The list of Google Compute Engine
-   * [zones](https://cloud.google.com/compute/docs/zones#available) in which the cluster's nodes
-   * should be located. This field provides a default value if
-   * [NodePool.Locations](https://cloud.google.com/kubernetes-
+   * [zones](https://{$universe.dns_names.final_documentation_domain}/compute/docs/zones#available)
+   * in which the cluster's nodes should be located. This field provides a default value if
+   * [NodePool.Locations](https://{$universe.dns_names.final_documentation_domain}/kubernetes-
    * engine/docs/reference/rest/v1/projects.locations.clusters.nodePools#NodePool.FIELDS.locations)
    * are not specified during node pool creation. Warning: changing cluster locations will update
-   * the [NodePool.Locations](https://cloud.google.com/kubernetes-
+   * the [NodePool.Locations](https://{$universe.dns_names.final_documentation_domain}/kubernetes-
    * engine/docs/reference/rest/v1/projects.locations.clusters.nodePools#NodePool.FIELDS.locations)
    * of all node pools and will result in nodes being added and/or removed.
    * @return value or {@code null} for none
@@ -1472,12 +1503,12 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
 
   /**
    * The list of Google Compute Engine
-   * [zones](https://cloud.google.com/compute/docs/zones#available) in which the cluster's nodes
-   * should be located. This field provides a default value if
-   * [NodePool.Locations](https://cloud.google.com/kubernetes-
+   * [zones](https://{$universe.dns_names.final_documentation_domain}/compute/docs/zones#available)
+   * in which the cluster's nodes should be located. This field provides a default value if
+   * [NodePool.Locations](https://{$universe.dns_names.final_documentation_domain}/kubernetes-
    * engine/docs/reference/rest/v1/projects.locations.clusters.nodePools#NodePool.FIELDS.locations)
    * are not specified during node pool creation. Warning: changing cluster locations will update
-   * the [NodePool.Locations](https://cloud.google.com/kubernetes-
+   * the [NodePool.Locations](https://{$universe.dns_names.final_documentation_domain}/kubernetes-
    * engine/docs/reference/rest/v1/projects.locations.clusters.nodePools#NodePool.FIELDS.locations)
    * of all node pools and will result in nodes being added and/or removed.
    * @param locations locations or {@code null} for none
@@ -1711,8 +1742,9 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the Google Compute Engine [network](https://cloud.google.com/compute/docs/networks-
-   * and-firewalls#networks) to which the cluster is connected. If left unspecified, the `default`
+   * The name of the Google Compute Engine
+   * [network](https://{$universe.dns_names.final_documentation_domain}/compute/docs/networks-and-
+   * firewalls#networks) to which the cluster is connected. If left unspecified, the `default`
    * network will be used. On output this shows the network ID instead of the name.
    * @return value or {@code null} for none
    */
@@ -1721,8 +1753,9 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the Google Compute Engine [network](https://cloud.google.com/compute/docs/networks-
-   * and-firewalls#networks) to which the cluster is connected. If left unspecified, the `default`
+   * The name of the Google Compute Engine
+   * [network](https://{$universe.dns_names.final_documentation_domain}/compute/docs/networks-and-
+   * firewalls#networks) to which the cluster is connected. If left unspecified, the `default`
    * network will be used. On output this shows the network ID instead of the name.
    * @param network network or {@code null} for none
    */
@@ -2242,8 +2275,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of the Google Compute Engine
-   * [subnetwork](https://cloud.google.com/compute/docs/subnetworks) to which the cluster is
-   * connected. On output this shows the subnetwork ID instead of the name.
+   * [subnetwork](https://{$universe.dns_names.final_documentation_domain}/compute/docs/subnetworks)
+   * to which the cluster is connected. On output this shows the subnetwork ID instead of the name.
    * @return value or {@code null} for none
    */
   public java.lang.String getSubnetwork() {
@@ -2252,8 +2285,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of the Google Compute Engine
-   * [subnetwork](https://cloud.google.com/compute/docs/subnetworks) to which the cluster is
-   * connected. On output this shows the subnetwork ID instead of the name.
+   * [subnetwork](https://{$universe.dns_names.final_documentation_domain}/compute/docs/subnetworks)
+   * to which the cluster is connected. On output this shows the subnetwork ID instead of the name.
    * @param subnetwork subnetwork or {@code null} for none
    */
   public Cluster setSubnetwork(java.lang.String subnetwork) {
@@ -2390,8 +2423,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The name of the Google Compute Engine
-   * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides.
-   * This field is deprecated, use location instead.
+   * [zone](https://{$universe.dns_names.final_documentation_domain}/compute/docs/zones#available)
+   * in which the cluster resides. This field is deprecated, use location instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getZone() {
@@ -2400,8 +2433,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The name of the Google Compute Engine
-   * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides.
-   * This field is deprecated, use location instead.
+   * [zone](https://{$universe.dns_names.final_documentation_domain}/compute/docs/zones#available)
+   * in which the cluster resides. This field is deprecated, use location instead.
    * @param zone zone or {@code null} for none
    */
   public Cluster setZone(java.lang.String zone) {

@@ -35,7 +35,8 @@ public final class AutoprovisioningNodePoolDefaults extends com.google.api.clien
    * node pool. This should be of the form
    * projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For
    * more information about protecting resources with Cloud KMS Keys please see:
-   * https://cloud.google.com/compute/docs/disks/customer-managed-encryption
+   * https://{$universe.dns_names.final_documentation_domain}/compute/docs/disks/customer-managed-
+   * encryption
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,8 +59,9 @@ public final class AutoprovisioningNodePoolDefaults extends com.google.api.clien
   private java.lang.String diskType;
 
   /**
-   * The image type to use for NAP created node. Please see https://cloud.google.com/kubernetes-
-   * engine/docs/concepts/node-images for available image types.
+   * The image type to use for NAP created node. Please see
+   * https://{$universe.dns_names.final_documentation_domain}/kubernetes-engine/docs/concepts/node-
+   * images for available image types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,11 +85,10 @@ public final class AutoprovisioningNodePoolDefaults extends com.google.api.clien
    * Deprecated. Minimum CPU platform to be used for NAP created node pools. The instance may be
    * scheduled on the specified or newer CPU platform. Applicable values are the friendly names of
    * CPU platforms, such as minCpuPlatform: Intel Haswell or minCpuPlatform: Intel Sandy Bridge. For
-   * more information, read [how to specify min CPU
-   * platform](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform). This field
-   * is deprecated, min_cpu_platform should be specified using `cloud.google.com/requested-min-cpu-
-   * platform` label selector on the pod. To unset the min cpu platform field pass "automatic" as
-   * field value.
+   * more information, read [how to specify min CPU platform](https://{$universe.dns_names.final_doc
+   * umentation_domain}/compute/docs/instances/specify-min-cpu-platform). This field is deprecated,
+   * min_cpu_platform should be specified using `cloud.google.com/requested-min-cpu-platform` label
+   * selector on the pod. To unset the min cpu platform field pass "automatic" as field value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,9 +100,9 @@ public final class AutoprovisioningNodePoolDefaults extends com.google.api.clien
    * included: * `https://www.googleapis.com/auth/compute` is required for mounting persistent
    * storage on your nodes. * `https://www.googleapis.com/auth/devstorage.read_only` is required for
    * communicating with **gcr.io** (the [Google Container
-   * Registry](https://cloud.google.com/container-registry/)). If unspecified, no scopes are added,
-   * unless Cloud Logging or Cloud Monitoring are enabled, in which case their required scopes will
-   * be added.
+   * Registry](https://{$universe.dns_names.final_documentation_domain}/container-registry/)). If
+   * unspecified, no scopes are added, unless Cloud Logging or Cloud Monitoring are enabled, in
+   * which case their required scopes will be added.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -135,7 +136,8 @@ public final class AutoprovisioningNodePoolDefaults extends com.google.api.clien
    * node pool. This should be of the form
    * projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For
    * more information about protecting resources with Cloud KMS Keys please see:
-   * https://cloud.google.com/compute/docs/disks/customer-managed-encryption
+   * https://{$universe.dns_names.final_documentation_domain}/compute/docs/disks/customer-managed-
+   * encryption
    * @return value or {@code null} for none
    */
   public java.lang.String getBootDiskKmsKey() {
@@ -147,7 +149,8 @@ public final class AutoprovisioningNodePoolDefaults extends com.google.api.clien
    * node pool. This should be of the form
    * projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For
    * more information about protecting resources with Cloud KMS Keys please see:
-   * https://cloud.google.com/compute/docs/disks/customer-managed-encryption
+   * https://{$universe.dns_names.final_documentation_domain}/compute/docs/disks/customer-managed-
+   * encryption
    * @param bootDiskKmsKey bootDiskKmsKey or {@code null} for none
    */
   public AutoprovisioningNodePoolDefaults setBootDiskKmsKey(java.lang.String bootDiskKmsKey) {
@@ -194,8 +197,9 @@ public final class AutoprovisioningNodePoolDefaults extends com.google.api.clien
   }
 
   /**
-   * The image type to use for NAP created node. Please see https://cloud.google.com/kubernetes-
-   * engine/docs/concepts/node-images for available image types.
+   * The image type to use for NAP created node. Please see
+   * https://{$universe.dns_names.final_documentation_domain}/kubernetes-engine/docs/concepts/node-
+   * images for available image types.
    * @return value or {@code null} for none
    */
   public java.lang.String getImageType() {
@@ -203,8 +207,9 @@ public final class AutoprovisioningNodePoolDefaults extends com.google.api.clien
   }
 
   /**
-   * The image type to use for NAP created node. Please see https://cloud.google.com/kubernetes-
-   * engine/docs/concepts/node-images for available image types.
+   * The image type to use for NAP created node. Please see
+   * https://{$universe.dns_names.final_documentation_domain}/kubernetes-engine/docs/concepts/node-
+   * images for available image types.
    * @param imageType imageType or {@code null} for none
    */
   public AutoprovisioningNodePoolDefaults setImageType(java.lang.String imageType) {
@@ -250,11 +255,10 @@ public final class AutoprovisioningNodePoolDefaults extends com.google.api.clien
    * Deprecated. Minimum CPU platform to be used for NAP created node pools. The instance may be
    * scheduled on the specified or newer CPU platform. Applicable values are the friendly names of
    * CPU platforms, such as minCpuPlatform: Intel Haswell or minCpuPlatform: Intel Sandy Bridge. For
-   * more information, read [how to specify min CPU
-   * platform](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform). This field
-   * is deprecated, min_cpu_platform should be specified using `cloud.google.com/requested-min-cpu-
-   * platform` label selector on the pod. To unset the min cpu platform field pass "automatic" as
-   * field value.
+   * more information, read [how to specify min CPU platform](https://{$universe.dns_names.final_doc
+   * umentation_domain}/compute/docs/instances/specify-min-cpu-platform). This field is deprecated,
+   * min_cpu_platform should be specified using `cloud.google.com/requested-min-cpu-platform` label
+   * selector on the pod. To unset the min cpu platform field pass "automatic" as field value.
    * @return value or {@code null} for none
    */
   public java.lang.String getMinCpuPlatform() {
@@ -265,11 +269,10 @@ public final class AutoprovisioningNodePoolDefaults extends com.google.api.clien
    * Deprecated. Minimum CPU platform to be used for NAP created node pools. The instance may be
    * scheduled on the specified or newer CPU platform. Applicable values are the friendly names of
    * CPU platforms, such as minCpuPlatform: Intel Haswell or minCpuPlatform: Intel Sandy Bridge. For
-   * more information, read [how to specify min CPU
-   * platform](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform). This field
-   * is deprecated, min_cpu_platform should be specified using `cloud.google.com/requested-min-cpu-
-   * platform` label selector on the pod. To unset the min cpu platform field pass "automatic" as
-   * field value.
+   * more information, read [how to specify min CPU platform](https://{$universe.dns_names.final_doc
+   * umentation_domain}/compute/docs/instances/specify-min-cpu-platform). This field is deprecated,
+   * min_cpu_platform should be specified using `cloud.google.com/requested-min-cpu-platform` label
+   * selector on the pod. To unset the min cpu platform field pass "automatic" as field value.
    * @param minCpuPlatform minCpuPlatform or {@code null} for none
    */
   public AutoprovisioningNodePoolDefaults setMinCpuPlatform(java.lang.String minCpuPlatform) {
@@ -283,9 +286,9 @@ public final class AutoprovisioningNodePoolDefaults extends com.google.api.clien
    * included: * `https://www.googleapis.com/auth/compute` is required for mounting persistent
    * storage on your nodes. * `https://www.googleapis.com/auth/devstorage.read_only` is required for
    * communicating with **gcr.io** (the [Google Container
-   * Registry](https://cloud.google.com/container-registry/)). If unspecified, no scopes are added,
-   * unless Cloud Logging or Cloud Monitoring are enabled, in which case their required scopes will
-   * be added.
+   * Registry](https://{$universe.dns_names.final_documentation_domain}/container-registry/)). If
+   * unspecified, no scopes are added, unless Cloud Logging or Cloud Monitoring are enabled, in
+   * which case their required scopes will be added.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getOauthScopes() {
@@ -298,9 +301,9 @@ public final class AutoprovisioningNodePoolDefaults extends com.google.api.clien
    * included: * `https://www.googleapis.com/auth/compute` is required for mounting persistent
    * storage on your nodes. * `https://www.googleapis.com/auth/devstorage.read_only` is required for
    * communicating with **gcr.io** (the [Google Container
-   * Registry](https://cloud.google.com/container-registry/)). If unspecified, no scopes are added,
-   * unless Cloud Logging or Cloud Monitoring are enabled, in which case their required scopes will
-   * be added.
+   * Registry](https://{$universe.dns_names.final_documentation_domain}/container-registry/)). If
+   * unspecified, no scopes are added, unless Cloud Logging or Cloud Monitoring are enabled, in
+   * which case their required scopes will be added.
    * @param oauthScopes oauthScopes or {@code null} for none
    */
   public AutoprovisioningNodePoolDefaults setOauthScopes(java.util.List<java.lang.String> oauthScopes) {

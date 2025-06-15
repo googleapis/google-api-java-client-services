@@ -31,6 +31,22 @@ package com.google.api.services.container.model;
 public final class IPAllocationPolicy extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The additional IP ranges that are added to the cluster. These IP ranges can be
+   * used by new node pools to allocate node and pod IPs automatically. Each
+   * AdditionalIPRangesConfig corresponds to a single subnetwork. Once a range is removed it will
+   * not show up in IPAllocationPolicy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<AdditionalIPRangesConfig> additionalIpRangesConfigs;
+
+  static {
+    // hack to force ProGuard to consider AdditionalIPRangesConfig used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(AdditionalIPRangesConfig.class);
+  }
+
+  /**
    * Output only. The additional pod ranges that are added to the cluster. These pod ranges can be
    * used by new node pools to allocate pod IPs automatically. Once the range is removed it will not
    * show up in IPAllocationPolicy.
@@ -38,6 +54,13 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
    */
   @com.google.api.client.util.Key
   private AdditionalPodRangesConfig additionalPodRangesConfig;
+
+  /**
+   * Optional. AutoIpamConfig contains all information related to Auto IPAM
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AutoIpamConfig autoIpamConfig;
 
   /**
    * This field is deprecated, use cluster_ipv4_cidr_block.
@@ -215,6 +238,29 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
   private java.lang.Boolean useRoutes;
 
   /**
+   * Output only. The additional IP ranges that are added to the cluster. These IP ranges can be
+   * used by new node pools to allocate node and pod IPs automatically. Each
+   * AdditionalIPRangesConfig corresponds to a single subnetwork. Once a range is removed it will
+   * not show up in IPAllocationPolicy.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<AdditionalIPRangesConfig> getAdditionalIpRangesConfigs() {
+    return additionalIpRangesConfigs;
+  }
+
+  /**
+   * Output only. The additional IP ranges that are added to the cluster. These IP ranges can be
+   * used by new node pools to allocate node and pod IPs automatically. Each
+   * AdditionalIPRangesConfig corresponds to a single subnetwork. Once a range is removed it will
+   * not show up in IPAllocationPolicy.
+   * @param additionalIpRangesConfigs additionalIpRangesConfigs or {@code null} for none
+   */
+  public IPAllocationPolicy setAdditionalIpRangesConfigs(java.util.List<AdditionalIPRangesConfig> additionalIpRangesConfigs) {
+    this.additionalIpRangesConfigs = additionalIpRangesConfigs;
+    return this;
+  }
+
+  /**
    * Output only. The additional pod ranges that are added to the cluster. These pod ranges can be
    * used by new node pools to allocate pod IPs automatically. Once the range is removed it will not
    * show up in IPAllocationPolicy.
@@ -232,6 +278,23 @@ public final class IPAllocationPolicy extends com.google.api.client.json.Generic
    */
   public IPAllocationPolicy setAdditionalPodRangesConfig(AdditionalPodRangesConfig additionalPodRangesConfig) {
     this.additionalPodRangesConfig = additionalPodRangesConfig;
+    return this;
+  }
+
+  /**
+   * Optional. AutoIpamConfig contains all information related to Auto IPAM
+   * @return value or {@code null} for none
+   */
+  public AutoIpamConfig getAutoIpamConfig() {
+    return autoIpamConfig;
+  }
+
+  /**
+   * Optional. AutoIpamConfig contains all information related to Auto IPAM
+   * @param autoIpamConfig autoIpamConfig or {@code null} for none
+   */
+  public IPAllocationPolicy setAutoIpamConfig(AutoIpamConfig autoIpamConfig) {
+    this.autoIpamConfig = autoIpamConfig;
     return this;
   }
 

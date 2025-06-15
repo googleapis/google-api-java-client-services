@@ -31,6 +31,30 @@ package com.google.api.services.container.model;
 @SuppressWarnings("javadoc")
 public final class AnonymousAuthenticationConfig extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Defines the mode of limiting anonymous access in the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String mode;
+
+  /**
+   * Defines the mode of limiting anonymous access in the cluster.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMode() {
+    return mode;
+  }
+
+  /**
+   * Defines the mode of limiting anonymous access in the cluster.
+   * @param mode mode or {@code null} for none
+   */
+  public AnonymousAuthenticationConfig setMode(java.lang.String mode) {
+    this.mode = mode;
+    return this;
+  }
+
   @Override
   public AnonymousAuthenticationConfig set(String fieldName, Object value) {
     return (AnonymousAuthenticationConfig) super.set(fieldName, value);

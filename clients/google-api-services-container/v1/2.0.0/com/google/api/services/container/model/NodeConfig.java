@@ -33,7 +33,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * A list of hardware accelerators to be attached to each node. See
-   * https://cloud.google.com/compute/docs/gpus for more information about support for GPUs.
+   * https://{$universe.dns_names.final_documentation_domain}/compute/docs/gpus for more information
+   * about support for GPUs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,7 +58,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * node pool. This should be of the form
    * projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For
    * more information about protecting resources with Cloud KMS Keys please see:
-   * https://cloud.google.com/compute/docs/disks/customer-managed-encryption
+   * https://{$universe.dns_names.final_documentation_domain}/compute/docs/disks/customer-managed-
+   * encryption
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -147,8 +149,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * The image type to use for this node. Note that for a given image type, the latest version of it
-   * will be used. Please see https://cloud.google.com/kubernetes-engine/docs/concepts/node-images
-   * for available image types.
+   * will be used. Please see https://{$universe.dns_names.final_documentation_domain}/kubernetes-
+   * engine/docs/concepts/node-images for available image types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -190,7 +192,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   /**
    * The number of local SSD disks to be attached to the node. The limit for this value is dependent
    * upon the maximum number of disks available on a machine per zone. See:
-   * https://cloud.google.com/compute/docs/disks/local-ssd for more information.
+   * https://{$universe.dns_names.final_documentation_domain}/compute/docs/disks/local-ssd for more
+   * information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -212,8 +215,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of a Google Compute Engine [machine
-   * type](https://cloud.google.com/compute/docs/machine-types) If unspecified, the default machine
-   * type is `e2-medium`.
+   * type](https://{$universe.dns_names.final_documentation_domain}/compute/docs/machine-types) If
+   * unspecified, the default machine type is `e2-medium`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -247,8 +250,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * Minimum CPU platform to be used by this instance. The instance may be scheduled on the
    * specified or newer CPU platform. Applicable values are the friendly names of CPU platforms,
    * such as `minCpuPlatform: "Intel Haswell"` or `minCpuPlatform: "Intel Sandy Bridge"`. For more
-   * information, read [how to specify min CPU
-   * platform](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform)
+   * information, read [how to specify min CPU platform](https://{$universe.dns_names.final_document
+   * ation_domain}/compute/docs/instances/specify-min-cpu-platform)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -257,7 +260,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   /**
    * Setting this field will assign instances of this pool to run on the specified node group. This
    * is useful for running workloads on [sole tenant
-   * nodes](https://cloud.google.com/compute/docs/nodes/sole-tenant-nodes).
+   * nodes](https://{$universe.dns_names.final_documentation_domain}/compute/docs/nodes/sole-tenant-
+   * nodes).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -269,9 +273,9 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * included: * `https://www.googleapis.com/auth/compute` is required for mounting persistent
    * storage on your nodes. * `https://www.googleapis.com/auth/devstorage.read_only` is required for
    * communicating with **gcr.io** (the [Google Container
-   * Registry](https://cloud.google.com/container-registry/)). If unspecified, no scopes are added,
-   * unless Cloud Logging or Cloud Monitoring are enabled, in which case their required scopes will
-   * be added.
+   * Registry](https://{$universe.dns_names.final_documentation_domain}/container-registry/)). If
+   * unspecified, no scopes are added, unless Cloud Logging or Cloud Monitoring are enabled, in
+   * which case their required scopes will be added.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -279,17 +283,17 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Whether the nodes are created as preemptible VM instances. See:
-   * https://cloud.google.com/compute/docs/instances/preemptible for more information about
-   * preemptible VM instances.
+   * https://{$universe.dns_names.final_documentation_domain}/compute/docs/instances/preemptible for
+   * more information about preemptible VM instances.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean preemptible;
 
   /**
-   * The optional reservation affinity. Setting this field will apply the specified [Zonal Compute
-   * Reservation](https://cloud.google.com/compute/docs/instances/reserving-zonal-resources) to this
-   * node pool.
+   * The optional reservation affinity. Setting this field will apply the specified [Zonal Compute R
+   * eservation](https://{$universe.dns_names.final_documentation_domain}/compute/docs/instances/res
+   * erving-zonal-resources) to this node pool.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -401,7 +405,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * A list of hardware accelerators to be attached to each node. See
-   * https://cloud.google.com/compute/docs/gpus for more information about support for GPUs.
+   * https://{$universe.dns_names.final_documentation_domain}/compute/docs/gpus for more information
+   * about support for GPUs.
    * @return value or {@code null} for none
    */
   public java.util.List<AcceleratorConfig> getAccelerators() {
@@ -410,7 +415,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * A list of hardware accelerators to be attached to each node. See
-   * https://cloud.google.com/compute/docs/gpus for more information about support for GPUs.
+   * https://{$universe.dns_names.final_documentation_domain}/compute/docs/gpus for more information
+   * about support for GPUs.
    * @param accelerators accelerators or {@code null} for none
    */
   public NodeConfig setAccelerators(java.util.List<AcceleratorConfig> accelerators) {
@@ -440,7 +446,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * node pool. This should be of the form
    * projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For
    * more information about protecting resources with Cloud KMS Keys please see:
-   * https://cloud.google.com/compute/docs/disks/customer-managed-encryption
+   * https://{$universe.dns_names.final_documentation_domain}/compute/docs/disks/customer-managed-
+   * encryption
    * @return value or {@code null} for none
    */
   public java.lang.String getBootDiskKmsKey() {
@@ -452,7 +459,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * node pool. This should be of the form
    * projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For
    * more information about protecting resources with Cloud KMS Keys please see:
-   * https://cloud.google.com/compute/docs/disks/customer-managed-encryption
+   * https://{$universe.dns_names.final_documentation_domain}/compute/docs/disks/customer-managed-
+   * encryption
    * @param bootDiskKmsKey bootDiskKmsKey or {@code null} for none
    */
   public NodeConfig setBootDiskKmsKey(java.lang.String bootDiskKmsKey) {
@@ -659,8 +667,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * The image type to use for this node. Note that for a given image type, the latest version of it
-   * will be used. Please see https://cloud.google.com/kubernetes-engine/docs/concepts/node-images
-   * for available image types.
+   * will be used. Please see https://{$universe.dns_names.final_documentation_domain}/kubernetes-
+   * engine/docs/concepts/node-images for available image types.
    * @return value or {@code null} for none
    */
   public java.lang.String getImageType() {
@@ -669,8 +677,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * The image type to use for this node. Note that for a given image type, the latest version of it
-   * will be used. Please see https://cloud.google.com/kubernetes-engine/docs/concepts/node-images
-   * for available image types.
+   * will be used. Please see https://{$universe.dns_names.final_documentation_domain}/kubernetes-
+   * engine/docs/concepts/node-images for available image types.
    * @param imageType imageType or {@code null} for none
    */
   public NodeConfig setImageType(java.lang.String imageType) {
@@ -759,7 +767,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   /**
    * The number of local SSD disks to be attached to the node. The limit for this value is dependent
    * upon the maximum number of disks available on a machine per zone. See:
-   * https://cloud.google.com/compute/docs/disks/local-ssd for more information.
+   * https://{$universe.dns_names.final_documentation_domain}/compute/docs/disks/local-ssd for more
+   * information.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getLocalSsdCount() {
@@ -769,7 +778,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   /**
    * The number of local SSD disks to be attached to the node. The limit for this value is dependent
    * upon the maximum number of disks available on a machine per zone. See:
-   * https://cloud.google.com/compute/docs/disks/local-ssd for more information.
+   * https://{$universe.dns_names.final_documentation_domain}/compute/docs/disks/local-ssd for more
+   * information.
    * @param localSsdCount localSsdCount or {@code null} for none
    */
   public NodeConfig setLocalSsdCount(java.lang.Integer localSsdCount) {
@@ -813,8 +823,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of a Google Compute Engine [machine
-   * type](https://cloud.google.com/compute/docs/machine-types) If unspecified, the default machine
-   * type is `e2-medium`.
+   * type](https://{$universe.dns_names.final_documentation_domain}/compute/docs/machine-types) If
+   * unspecified, the default machine type is `e2-medium`.
    * @return value or {@code null} for none
    */
   public java.lang.String getMachineType() {
@@ -823,8 +833,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * The name of a Google Compute Engine [machine
-   * type](https://cloud.google.com/compute/docs/machine-types) If unspecified, the default machine
-   * type is `e2-medium`.
+   * type](https://{$universe.dns_names.final_documentation_domain}/compute/docs/machine-types) If
+   * unspecified, the default machine type is `e2-medium`.
    * @param machineType machineType or {@code null} for none
    */
   public NodeConfig setMachineType(java.lang.String machineType) {
@@ -890,8 +900,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * Minimum CPU platform to be used by this instance. The instance may be scheduled on the
    * specified or newer CPU platform. Applicable values are the friendly names of CPU platforms,
    * such as `minCpuPlatform: "Intel Haswell"` or `minCpuPlatform: "Intel Sandy Bridge"`. For more
-   * information, read [how to specify min CPU
-   * platform](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform)
+   * information, read [how to specify min CPU platform](https://{$universe.dns_names.final_document
+   * ation_domain}/compute/docs/instances/specify-min-cpu-platform)
    * @return value or {@code null} for none
    */
   public java.lang.String getMinCpuPlatform() {
@@ -902,8 +912,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * Minimum CPU platform to be used by this instance. The instance may be scheduled on the
    * specified or newer CPU platform. Applicable values are the friendly names of CPU platforms,
    * such as `minCpuPlatform: "Intel Haswell"` or `minCpuPlatform: "Intel Sandy Bridge"`. For more
-   * information, read [how to specify min CPU
-   * platform](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform)
+   * information, read [how to specify min CPU platform](https://{$universe.dns_names.final_document
+   * ation_domain}/compute/docs/instances/specify-min-cpu-platform)
    * @param minCpuPlatform minCpuPlatform or {@code null} for none
    */
   public NodeConfig setMinCpuPlatform(java.lang.String minCpuPlatform) {
@@ -914,7 +924,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   /**
    * Setting this field will assign instances of this pool to run on the specified node group. This
    * is useful for running workloads on [sole tenant
-   * nodes](https://cloud.google.com/compute/docs/nodes/sole-tenant-nodes).
+   * nodes](https://{$universe.dns_names.final_documentation_domain}/compute/docs/nodes/sole-tenant-
+   * nodes).
    * @return value or {@code null} for none
    */
   public java.lang.String getNodeGroup() {
@@ -924,7 +935,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   /**
    * Setting this field will assign instances of this pool to run on the specified node group. This
    * is useful for running workloads on [sole tenant
-   * nodes](https://cloud.google.com/compute/docs/nodes/sole-tenant-nodes).
+   * nodes](https://{$universe.dns_names.final_documentation_domain}/compute/docs/nodes/sole-tenant-
+   * nodes).
    * @param nodeGroup nodeGroup or {@code null} for none
    */
   public NodeConfig setNodeGroup(java.lang.String nodeGroup) {
@@ -938,9 +950,9 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * included: * `https://www.googleapis.com/auth/compute` is required for mounting persistent
    * storage on your nodes. * `https://www.googleapis.com/auth/devstorage.read_only` is required for
    * communicating with **gcr.io** (the [Google Container
-   * Registry](https://cloud.google.com/container-registry/)). If unspecified, no scopes are added,
-   * unless Cloud Logging or Cloud Monitoring are enabled, in which case their required scopes will
-   * be added.
+   * Registry](https://{$universe.dns_names.final_documentation_domain}/container-registry/)). If
+   * unspecified, no scopes are added, unless Cloud Logging or Cloud Monitoring are enabled, in
+   * which case their required scopes will be added.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getOauthScopes() {
@@ -953,9 +965,9 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    * included: * `https://www.googleapis.com/auth/compute` is required for mounting persistent
    * storage on your nodes. * `https://www.googleapis.com/auth/devstorage.read_only` is required for
    * communicating with **gcr.io** (the [Google Container
-   * Registry](https://cloud.google.com/container-registry/)). If unspecified, no scopes are added,
-   * unless Cloud Logging or Cloud Monitoring are enabled, in which case their required scopes will
-   * be added.
+   * Registry](https://{$universe.dns_names.final_documentation_domain}/container-registry/)). If
+   * unspecified, no scopes are added, unless Cloud Logging or Cloud Monitoring are enabled, in
+   * which case their required scopes will be added.
    * @param oauthScopes oauthScopes or {@code null} for none
    */
   public NodeConfig setOauthScopes(java.util.List<java.lang.String> oauthScopes) {
@@ -965,8 +977,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Whether the nodes are created as preemptible VM instances. See:
-   * https://cloud.google.com/compute/docs/instances/preemptible for more information about
-   * preemptible VM instances.
+   * https://{$universe.dns_names.final_documentation_domain}/compute/docs/instances/preemptible for
+   * more information about preemptible VM instances.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPreemptible() {
@@ -975,8 +987,8 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Whether the nodes are created as preemptible VM instances. See:
-   * https://cloud.google.com/compute/docs/instances/preemptible for more information about
-   * preemptible VM instances.
+   * https://{$universe.dns_names.final_documentation_domain}/compute/docs/instances/preemptible for
+   * more information about preemptible VM instances.
    * @param preemptible preemptible or {@code null} for none
    */
   public NodeConfig setPreemptible(java.lang.Boolean preemptible) {
@@ -985,9 +997,9 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The optional reservation affinity. Setting this field will apply the specified [Zonal Compute
-   * Reservation](https://cloud.google.com/compute/docs/instances/reserving-zonal-resources) to this
-   * node pool.
+   * The optional reservation affinity. Setting this field will apply the specified [Zonal Compute R
+   * eservation](https://{$universe.dns_names.final_documentation_domain}/compute/docs/instances/res
+   * erving-zonal-resources) to this node pool.
    * @return value or {@code null} for none
    */
   public ReservationAffinity getReservationAffinity() {
@@ -995,9 +1007,9 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The optional reservation affinity. Setting this field will apply the specified [Zonal Compute
-   * Reservation](https://cloud.google.com/compute/docs/instances/reserving-zonal-resources) to this
-   * node pool.
+   * The optional reservation affinity. Setting this field will apply the specified [Zonal Compute R
+   * eservation](https://{$universe.dns_names.final_documentation_domain}/compute/docs/instances/res
+   * erving-zonal-resources) to this node pool.
    * @param reservationAffinity reservationAffinity or {@code null} for none
    */
   public NodeConfig setReservationAffinity(ReservationAffinity reservationAffinity) {

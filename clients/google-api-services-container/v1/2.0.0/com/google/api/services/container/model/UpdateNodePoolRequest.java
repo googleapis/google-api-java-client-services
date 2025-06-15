@@ -32,7 +32,8 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
 
   /**
    * A list of hardware accelerators to be attached to each node. See
-   * https://cloud.google.com/compute/docs/gpus for more information about support for GPUs.
+   * https://{$universe.dns_names.final_documentation_domain}/compute/docs/gpus for more information
+   * about support for GPUs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -123,7 +124,8 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
 
   /**
    * Required. The desired image type for the node pool. Please see
-   * https://cloud.google.com/kubernetes-engine/docs/concepts/node-images for available image types.
+   * https://{$universe.dns_names.final_documentation_domain}/kubernetes-engine/docs/concepts/node-
+   * images for available image types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -154,10 +156,10 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
 
   /**
    * The desired list of Google Compute Engine
-   * [zones](https://cloud.google.com/compute/docs/zones#available) in which the node pool's nodes
-   * should be located. Changing the locations for a node pool will result in nodes being either
-   * created or removed from the node pool, depending on whether locations are being added or
-   * removed.
+   * [zones](https://{$universe.dns_names.final_documentation_domain}/compute/docs/zones#available)
+   * in which the node pool's nodes should be located. Changing the locations for a node pool will
+   * result in nodes being either created or removed from the node pool, depending on whether
+   * locations are being added or removed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -172,9 +174,9 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
 
   /**
    * Optional. The desired [Google Compute Engine machine
-   * type](https://cloud.google.com/compute/docs/machine-types) for nodes in the node pool.
-   * Initiates an upgrade operation that migrates the nodes in the node pool to the specified
-   * machine type.
+   * type](https://{$universe.dns_names.final_documentation_domain}/compute/docs/machine-types) for
+   * nodes in the node pool. Initiates an upgrade operation that migrates the nodes in the node pool
+   * to the specified machine type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -224,8 +226,9 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
 
   /**
    * Deprecated. The Google Developers Console [project ID or project
-   * number](https://cloud.google.com/resource-manager/docs/creating-managing-projects). This field
-   * has been deprecated and replaced by the name field.
+   * number](https://{$universe.dns_names.final_documentation_domain}/resource-
+   * manager/docs/creating-managing-projects). This field has been deprecated and replaced by the
+   * name field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -304,8 +307,8 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
 
   /**
    * Deprecated. The name of the Google Compute Engine
-   * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides.
-   * This field has been deprecated and replaced by the name field.
+   * [zone](https://{$universe.dns_names.final_documentation_domain}/compute/docs/zones#available)
+   * in which the cluster resides. This field has been deprecated and replaced by the name field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -313,7 +316,8 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
 
   /**
    * A list of hardware accelerators to be attached to each node. See
-   * https://cloud.google.com/compute/docs/gpus for more information about support for GPUs.
+   * https://{$universe.dns_names.final_documentation_domain}/compute/docs/gpus for more information
+   * about support for GPUs.
    * @return value or {@code null} for none
    */
   public java.util.List<AcceleratorConfig> getAccelerators() {
@@ -322,7 +326,8 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
 
   /**
    * A list of hardware accelerators to be attached to each node. See
-   * https://cloud.google.com/compute/docs/gpus for more information about support for GPUs.
+   * https://{$universe.dns_names.final_documentation_domain}/compute/docs/gpus for more information
+   * about support for GPUs.
    * @param accelerators accelerators or {@code null} for none
    */
   public UpdateNodePoolRequest setAccelerators(java.util.List<AcceleratorConfig> accelerators) {
@@ -516,7 +521,8 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
 
   /**
    * Required. The desired image type for the node pool. Please see
-   * https://cloud.google.com/kubernetes-engine/docs/concepts/node-images for available image types.
+   * https://{$universe.dns_names.final_documentation_domain}/kubernetes-engine/docs/concepts/node-
+   * images for available image types.
    * @return value or {@code null} for none
    */
   public java.lang.String getImageType() {
@@ -525,7 +531,8 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
 
   /**
    * Required. The desired image type for the node pool. Please see
-   * https://cloud.google.com/kubernetes-engine/docs/concepts/node-images for available image types.
+   * https://{$universe.dns_names.final_documentation_domain}/kubernetes-engine/docs/concepts/node-
+   * images for available image types.
    * @param imageType imageType or {@code null} for none
    */
   public UpdateNodePoolRequest setImageType(java.lang.String imageType) {
@@ -590,10 +597,10 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
 
   /**
    * The desired list of Google Compute Engine
-   * [zones](https://cloud.google.com/compute/docs/zones#available) in which the node pool's nodes
-   * should be located. Changing the locations for a node pool will result in nodes being either
-   * created or removed from the node pool, depending on whether locations are being added or
-   * removed.
+   * [zones](https://{$universe.dns_names.final_documentation_domain}/compute/docs/zones#available)
+   * in which the node pool's nodes should be located. Changing the locations for a node pool will
+   * result in nodes being either created or removed from the node pool, depending on whether
+   * locations are being added or removed.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getLocations() {
@@ -602,10 +609,10 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
 
   /**
    * The desired list of Google Compute Engine
-   * [zones](https://cloud.google.com/compute/docs/zones#available) in which the node pool's nodes
-   * should be located. Changing the locations for a node pool will result in nodes being either
-   * created or removed from the node pool, depending on whether locations are being added or
-   * removed.
+   * [zones](https://{$universe.dns_names.final_documentation_domain}/compute/docs/zones#available)
+   * in which the node pool's nodes should be located. Changing the locations for a node pool will
+   * result in nodes being either created or removed from the node pool, depending on whether
+   * locations are being added or removed.
    * @param locations locations or {@code null} for none
    */
   public UpdateNodePoolRequest setLocations(java.util.List<java.lang.String> locations) {
@@ -632,9 +639,9 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
 
   /**
    * Optional. The desired [Google Compute Engine machine
-   * type](https://cloud.google.com/compute/docs/machine-types) for nodes in the node pool.
-   * Initiates an upgrade operation that migrates the nodes in the node pool to the specified
-   * machine type.
+   * type](https://{$universe.dns_names.final_documentation_domain}/compute/docs/machine-types) for
+   * nodes in the node pool. Initiates an upgrade operation that migrates the nodes in the node pool
+   * to the specified machine type.
    * @return value or {@code null} for none
    */
   public java.lang.String getMachineType() {
@@ -643,9 +650,9 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
 
   /**
    * Optional. The desired [Google Compute Engine machine
-   * type](https://cloud.google.com/compute/docs/machine-types) for nodes in the node pool.
-   * Initiates an upgrade operation that migrates the nodes in the node pool to the specified
-   * machine type.
+   * type](https://{$universe.dns_names.final_documentation_domain}/compute/docs/machine-types) for
+   * nodes in the node pool. Initiates an upgrade operation that migrates the nodes in the node pool
+   * to the specified machine type.
    * @param machineType machineType or {@code null} for none
    */
   public UpdateNodePoolRequest setMachineType(java.lang.String machineType) {
@@ -754,8 +761,9 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
 
   /**
    * Deprecated. The Google Developers Console [project ID or project
-   * number](https://cloud.google.com/resource-manager/docs/creating-managing-projects). This field
-   * has been deprecated and replaced by the name field.
+   * number](https://{$universe.dns_names.final_documentation_domain}/resource-
+   * manager/docs/creating-managing-projects). This field has been deprecated and replaced by the
+   * name field.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -764,8 +772,9 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
 
   /**
    * Deprecated. The Google Developers Console [project ID or project
-   * number](https://cloud.google.com/resource-manager/docs/creating-managing-projects). This field
-   * has been deprecated and replaced by the name field.
+   * number](https://{$universe.dns_names.final_documentation_domain}/resource-
+   * manager/docs/creating-managing-projects). This field has been deprecated and replaced by the
+   * name field.
    * @param projectId projectId or {@code null} for none
    */
   public UpdateNodePoolRequest setProjectId(java.lang.String projectId) {
@@ -944,8 +953,8 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
 
   /**
    * Deprecated. The name of the Google Compute Engine
-   * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides.
-   * This field has been deprecated and replaced by the name field.
+   * [zone](https://{$universe.dns_names.final_documentation_domain}/compute/docs/zones#available)
+   * in which the cluster resides. This field has been deprecated and replaced by the name field.
    * @return value or {@code null} for none
    */
   public java.lang.String getZone() {
@@ -954,8 +963,8 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
 
   /**
    * Deprecated. The name of the Google Compute Engine
-   * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides.
-   * This field has been deprecated and replaced by the name field.
+   * [zone](https://{$universe.dns_names.final_documentation_domain}/compute/docs/zones#available)
+   * in which the cluster resides. This field has been deprecated and replaced by the name field.
    * @param zone zone or {@code null} for none
    */
   public UpdateNodePoolRequest setZone(java.lang.String zone) {

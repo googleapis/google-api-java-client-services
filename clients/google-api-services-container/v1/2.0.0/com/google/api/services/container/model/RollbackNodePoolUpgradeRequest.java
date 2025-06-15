@@ -57,8 +57,9 @@ public final class RollbackNodePoolUpgradeRequest extends com.google.api.client.
 
   /**
    * Deprecated. The Google Developers Console [project ID or project
-   * number](https://cloud.google.com/resource-manager/docs/creating-managing-projects). This field
-   * has been deprecated and replaced by the name field.
+   * number](https://{$universe.dns_names.final_documentation_domain}/resource-
+   * manager/docs/creating-managing-projects). This field has been deprecated and replaced by the
+   * name field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,8 +74,8 @@ public final class RollbackNodePoolUpgradeRequest extends com.google.api.client.
 
   /**
    * Deprecated. The name of the Google Compute Engine
-   * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides.
-   * This field has been deprecated and replaced by the name field.
+   * [zone](https://{$universe.dns_names.final_documentation_domain}/compute/docs/zones#available)
+   * in which the cluster resides. This field has been deprecated and replaced by the name field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -139,8 +140,9 @@ public final class RollbackNodePoolUpgradeRequest extends com.google.api.client.
 
   /**
    * Deprecated. The Google Developers Console [project ID or project
-   * number](https://cloud.google.com/resource-manager/docs/creating-managing-projects). This field
-   * has been deprecated and replaced by the name field.
+   * number](https://{$universe.dns_names.final_documentation_domain}/resource-
+   * manager/docs/creating-managing-projects). This field has been deprecated and replaced by the
+   * name field.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -149,8 +151,9 @@ public final class RollbackNodePoolUpgradeRequest extends com.google.api.client.
 
   /**
    * Deprecated. The Google Developers Console [project ID or project
-   * number](https://cloud.google.com/resource-manager/docs/creating-managing-projects). This field
-   * has been deprecated and replaced by the name field.
+   * number](https://{$universe.dns_names.final_documentation_domain}/resource-
+   * manager/docs/creating-managing-projects). This field has been deprecated and replaced by the
+   * name field.
    * @param projectId projectId or {@code null} for none
    */
   public RollbackNodePoolUpgradeRequest setProjectId(java.lang.String projectId) {
@@ -177,8 +180,8 @@ public final class RollbackNodePoolUpgradeRequest extends com.google.api.client.
 
   /**
    * Deprecated. The name of the Google Compute Engine
-   * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides.
-   * This field has been deprecated and replaced by the name field.
+   * [zone](https://{$universe.dns_names.final_documentation_domain}/compute/docs/zones#available)
+   * in which the cluster resides. This field has been deprecated and replaced by the name field.
    * @return value or {@code null} for none
    */
   public java.lang.String getZone() {
@@ -187,8 +190,8 @@ public final class RollbackNodePoolUpgradeRequest extends com.google.api.client.
 
   /**
    * Deprecated. The name of the Google Compute Engine
-   * [zone](https://cloud.google.com/compute/docs/zones#available) in which the cluster resides.
-   * This field has been deprecated and replaced by the name field.
+   * [zone](https://{$universe.dns_names.final_documentation_domain}/compute/docs/zones#available)
+   * in which the cluster resides. This field has been deprecated and replaced by the name field.
    * @param zone zone or {@code null} for none
    */
   public RollbackNodePoolUpgradeRequest setZone(java.lang.String zone) {

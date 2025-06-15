@@ -18,7 +18,7 @@ package com.google.api.services.container.model;
 
 /**
  * GCPSecretManagerCertificateConfig configures a secret from [Google Secret
- * Manager](https://cloud.google.com/secret-manager).
+ * Manager](https://{$universe.dns_names.final_documentation_domain}/secret-manager).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Kubernetes Engine API. For a detailed explanation

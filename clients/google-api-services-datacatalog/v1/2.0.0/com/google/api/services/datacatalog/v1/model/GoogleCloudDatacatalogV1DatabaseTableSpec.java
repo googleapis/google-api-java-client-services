@@ -38,8 +38,8 @@ public final class GoogleCloudDatacatalogV1DatabaseTableSpec extends com.google.
   private GoogleCloudDatacatalogV1DatabaseTableSpecDatabaseViewSpec databaseViewSpec;
 
   /**
-   * Output only. Fields specific to a Dataplex table and present only in the Dataplex table
-   * entries.
+   * Output only. Fields specific to a Dataplex Universal Catalog table and present only in the
+   * Dataplex Universal Catalog table entries.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,8 +70,8 @@ public final class GoogleCloudDatacatalogV1DatabaseTableSpec extends com.google.
   }
 
   /**
-   * Output only. Fields specific to a Dataplex table and present only in the Dataplex table
-   * entries.
+   * Output only. Fields specific to a Dataplex Universal Catalog table and present only in the
+   * Dataplex Universal Catalog table entries.
    * @return value or {@code null} for none
    */
   public GoogleCloudDatacatalogV1DataplexTableSpec getDataplexTable() {
@@ -79,8 +79,8 @@ public final class GoogleCloudDatacatalogV1DatabaseTableSpec extends com.google.
   }
 
   /**
-   * Output only. Fields specific to a Dataplex table and present only in the Dataplex table
-   * entries.
+   * Output only. Fields specific to a Dataplex Universal Catalog table and present only in the
+   * Dataplex Universal Catalog table entries.
    * @param dataplexTable dataplexTable or {@code null} for none
    */
   public GoogleCloudDatacatalogV1DatabaseTableSpec setDataplexTable(GoogleCloudDatacatalogV1DataplexTableSpec dataplexTable) {

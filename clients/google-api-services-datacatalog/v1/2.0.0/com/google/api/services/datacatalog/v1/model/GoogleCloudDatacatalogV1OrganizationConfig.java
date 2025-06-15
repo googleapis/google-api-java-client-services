@@ -17,8 +17,9 @@
 package com.google.api.services.datacatalog.v1.model;
 
 /**
- * The configuration related to the migration from Data Catalog to Dataplex that has been applied to
- * an organization and any projects under it. It is the response message for RetrieveConfig.
+ * The configuration related to the migration from Data Catalog to Dataplex Universal Catalog that
+ * has been applied to an organization and any projects under it. It is the response message for
+ * RetrieveConfig.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud Data Catalog API. For a detailed

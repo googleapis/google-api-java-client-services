@@ -17,8 +17,8 @@
 package com.google.api.services.datacatalog.v1.model;
 
 /**
- * The configuration related to the migration to Dataplex applied to an organization or project. It
- * is the response message for SetConfig and RetrieveEffectiveConfig.
+ * The configuration related to the migration to Dataplex Universal Catalog applied to an
+ * organization or project. It is the response message for SetConfig and RetrieveEffectiveConfig.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud Data Catalog API. For a detailed
@@ -32,14 +32,14 @@ package com.google.api.services.datacatalog.v1.model;
 public final class GoogleCloudDatacatalogV1MigrationConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Opt-in status for the UI switch to Dataplex.
+   * Opt-in status for the UI switch to Dataplex Universal Catalog.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String catalogUiExperience;
 
   /**
-   * Opt-in status for the migration of Tag Templates to Dataplex.
+   * Opt-in status for the migration of Tag Templates to Dataplex Universal Catalog.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,7 +54,7 @@ public final class GoogleCloudDatacatalogV1MigrationConfig extends com.google.ap
   private String templateMigrationEnabledTime;
 
   /**
-   * Opt-in status for the UI switch to Dataplex.
+   * Opt-in status for the UI switch to Dataplex Universal Catalog.
    * @return value or {@code null} for none
    */
   public java.lang.String getCatalogUiExperience() {
@@ -62,7 +62,7 @@ public final class GoogleCloudDatacatalogV1MigrationConfig extends com.google.ap
   }
 
   /**
-   * Opt-in status for the UI switch to Dataplex.
+   * Opt-in status for the UI switch to Dataplex Universal Catalog.
    * @param catalogUiExperience catalogUiExperience or {@code null} for none
    */
   public GoogleCloudDatacatalogV1MigrationConfig setCatalogUiExperience(java.lang.String catalogUiExperience) {
@@ -71,7 +71,7 @@ public final class GoogleCloudDatacatalogV1MigrationConfig extends com.google.ap
   }
 
   /**
-   * Opt-in status for the migration of Tag Templates to Dataplex.
+   * Opt-in status for the migration of Tag Templates to Dataplex Universal Catalog.
    * @return value or {@code null} for none
    */
   public java.lang.String getTagTemplateMigration() {
@@ -79,7 +79,7 @@ public final class GoogleCloudDatacatalogV1MigrationConfig extends com.google.ap
   }
 
   /**
-   * Opt-in status for the migration of Tag Templates to Dataplex.
+   * Opt-in status for the migration of Tag Templates to Dataplex Universal Catalog.
    * @param tagTemplateMigration tagTemplateMigration or {@code null} for none
    */
   public GoogleCloudDatacatalogV1MigrationConfig setTagTemplateMigration(java.lang.String tagTemplateMigration) {

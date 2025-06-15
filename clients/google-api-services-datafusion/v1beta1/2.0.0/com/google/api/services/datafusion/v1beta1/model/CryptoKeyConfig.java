@@ -32,16 +32,16 @@ package com.google.api.services.datafusion.v1beta1.model;
 public final class CryptoKeyConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * The name of the key which is used to encrypt/decrypt customer data. For key in Cloud KMS, the
-   * key should be in the format of `projects/locations/keyRings/cryptoKeys`.
+   * Optional. The name of the key which is used to encrypt/decrypt customer data. For key in Cloud
+   * KMS, the key should be in the format of `projects/locations/keyRings/cryptoKeys`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String keyReference;
 
   /**
-   * The name of the key which is used to encrypt/decrypt customer data. For key in Cloud KMS, the
-   * key should be in the format of `projects/locations/keyRings/cryptoKeys`.
+   * Optional. The name of the key which is used to encrypt/decrypt customer data. For key in Cloud
+   * KMS, the key should be in the format of `projects/locations/keyRings/cryptoKeys`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKeyReference() {
@@ -49,8 +49,8 @@ public final class CryptoKeyConfig extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The name of the key which is used to encrypt/decrypt customer data. For key in Cloud KMS, the
-   * key should be in the format of `projects/locations/keyRings/cryptoKeys`.
+   * Optional. The name of the key which is used to encrypt/decrypt customer data. For key in Cloud
+   * KMS, the key should be in the format of `projects/locations/keyRings/cryptoKeys`.
    * @param keyReference keyReference or {@code null} for none
    */
   public CryptoKeyConfig setKeyReference(java.lang.String keyReference) {

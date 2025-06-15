@@ -854,6 +854,26 @@ public class DataFusion extends com.google.api.client.googleapis.services.json.A
             return this;
           }
 
+          /**
+           * Optional. If set to true, any nested resources from this instance will also be deleted.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean force;
+
+          /** Optional. If set to true, any nested resources from this instance will also be deleted.
+           */
+          public java.lang.Boolean getForce() {
+            return force;
+          }
+
+          /**
+           * Optional. If set to true, any nested resources from this instance will also be deleted.
+           */
+          public Delete setForce(java.lang.Boolean force) {
+            this.force = force;
+            return this;
+          }
+
           @Override
           public Delete set(String parameterName, Object value) {
             return (Delete) super.set(parameterName, value);

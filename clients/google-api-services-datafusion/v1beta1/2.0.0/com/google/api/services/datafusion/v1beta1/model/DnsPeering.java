@@ -46,7 +46,7 @@ public final class DnsPeering extends com.google.api.client.json.GenericJson {
   private java.lang.String domain;
 
   /**
-   * Required. The resource name of the dns peering zone. Format:
+   * Identifier. The resource name of the dns peering zone. Format:
    * projects/{project}/locations/{location}/instances/{instance}/dnsPeerings/{dns_peering}
    * The value may be {@code null}.
    */
@@ -102,7 +102,7 @@ public final class DnsPeering extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The resource name of the dns peering zone. Format:
+   * Identifier. The resource name of the dns peering zone. Format:
    * projects/{project}/locations/{location}/instances/{instance}/dnsPeerings/{dns_peering}
    * @return value or {@code null} for none
    */
@@ -111,7 +111,7 @@ public final class DnsPeering extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The resource name of the dns peering zone. Format:
+   * Identifier. The resource name of the dns peering zone. Format:
    * projects/{project}/locations/{location}/instances/{instance}/dnsPeerings/{dns_peering}
    * @param name name or {@code null} for none
    */

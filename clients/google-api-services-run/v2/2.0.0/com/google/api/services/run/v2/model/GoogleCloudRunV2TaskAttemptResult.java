@@ -32,7 +32,7 @@ public final class GoogleCloudRunV2TaskAttemptResult extends com.google.api.clie
   /**
    * Output only. The exit code of this attempt. This may be unset if the container was unable to
    * exit cleanly with a code due to some other failure. See status field for possible failure
-   * details.
+   * details. At most one of exit_code or term_signal will be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,9 +46,17 @@ public final class GoogleCloudRunV2TaskAttemptResult extends com.google.api.clie
   private GoogleRpcStatus status;
 
   /**
+   * Output only. Termination signal of the container. This is set to non-zero if the container is
+   * terminated by the system. At most one of exit_code or term_signal will be set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer termSignal;
+
+  /**
    * Output only. The exit code of this attempt. This may be unset if the container was unable to
    * exit cleanly with a code due to some other failure. See status field for possible failure
-   * details.
+   * details. At most one of exit_code or term_signal will be set.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getExitCode() {
@@ -58,7 +66,7 @@ public final class GoogleCloudRunV2TaskAttemptResult extends com.google.api.clie
   /**
    * Output only. The exit code of this attempt. This may be unset if the container was unable to
    * exit cleanly with a code due to some other failure. See status field for possible failure
-   * details.
+   * details. At most one of exit_code or term_signal will be set.
    * @param exitCode exitCode or {@code null} for none
    */
   public GoogleCloudRunV2TaskAttemptResult setExitCode(java.lang.Integer exitCode) {
@@ -80,6 +88,25 @@ public final class GoogleCloudRunV2TaskAttemptResult extends com.google.api.clie
    */
   public GoogleCloudRunV2TaskAttemptResult setStatus(GoogleRpcStatus status) {
     this.status = status;
+    return this;
+  }
+
+  /**
+   * Output only. Termination signal of the container. This is set to non-zero if the container is
+   * terminated by the system. At most one of exit_code or term_signal will be set.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getTermSignal() {
+    return termSignal;
+  }
+
+  /**
+   * Output only. Termination signal of the container. This is set to non-zero if the container is
+   * terminated by the system. At most one of exit_code or term_signal will be set.
+   * @param termSignal termSignal or {@code null} for none
+   */
+  public GoogleCloudRunV2TaskAttemptResult setTermSignal(java.lang.Integer termSignal) {
+    this.termSignal = termSignal;
     return this;
   }
 

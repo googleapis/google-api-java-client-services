@@ -30,8 +30,8 @@ package com.google.api.services.run.v1.model;
 public final class GoogleDevtoolsCloudbuildV1GitSourceRepository extends com.google.api.client.json.GenericJson {
 
   /**
-   * The Developer Connect Git repository link or the url that matches a repository link in the
-   * current project, formatted as `projects/locations/connections/gitRepositoryLink`
+   * The Developer Connect Git repository link formatted as
+   * `projects/locations/connections/gitRepositoryLink`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,8 +45,8 @@ public final class GoogleDevtoolsCloudbuildV1GitSourceRepository extends com.goo
   private java.lang.String url;
 
   /**
-   * The Developer Connect Git repository link or the url that matches a repository link in the
-   * current project, formatted as `projects/locations/connections/gitRepositoryLink`
+   * The Developer Connect Git repository link formatted as
+   * `projects/locations/connections/gitRepositoryLink`
    * @return value or {@code null} for none
    */
   public java.lang.String getDeveloperConnect() {
@@ -54,8 +54,8 @@ public final class GoogleDevtoolsCloudbuildV1GitSourceRepository extends com.goo
   }
 
   /**
-   * The Developer Connect Git repository link or the url that matches a repository link in the
-   * current project, formatted as `projects/locations/connections/gitRepositoryLink`
+   * The Developer Connect Git repository link formatted as
+   * `projects/locations/connections/gitRepositoryLink`
    * @param developerConnect developerConnect or {@code null} for none
    */
   public GoogleDevtoolsCloudbuildV1GitSourceRepository setDeveloperConnect(java.lang.String developerConnect) {

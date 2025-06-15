@@ -125,13 +125,6 @@ public final class GoogleCloudRunV2WorkerPoolRevisionTemplate extends com.google
   private GoogleCloudRunV2ServiceMesh serviceMesh;
 
   /**
-   * Optional. Enable session affinity.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean sessionAffinity;
-
-  /**
    * Optional. A list of Volumes to make available to containers.
    * The value may be {@code null}.
    */
@@ -355,23 +348,6 @@ public final class GoogleCloudRunV2WorkerPoolRevisionTemplate extends com.google
    */
   public GoogleCloudRunV2WorkerPoolRevisionTemplate setServiceMesh(GoogleCloudRunV2ServiceMesh serviceMesh) {
     this.serviceMesh = serviceMesh;
-    return this;
-  }
-
-  /**
-   * Optional. Enable session affinity.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getSessionAffinity() {
-    return sessionAffinity;
-  }
-
-  /**
-   * Optional. Enable session affinity.
-   * @param sessionAffinity sessionAffinity or {@code null} for none
-   */
-  public GoogleCloudRunV2WorkerPoolRevisionTemplate setSessionAffinity(java.lang.Boolean sessionAffinity) {
-    this.sessionAffinity = sessionAffinity;
     return this;
   }
 

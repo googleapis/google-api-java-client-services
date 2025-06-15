@@ -32,6 +32,7 @@ public final class TaskAttemptResult extends com.google.api.client.json.GenericJ
   /**
    * Optional. The exit code of this attempt. This may be unset if the container was unable to exit
    * cleanly with a code due to some other failure. See status field for possible failure details.
+   * At most one of exit_code or term_signal will be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,8 +46,17 @@ public final class TaskAttemptResult extends com.google.api.client.json.GenericJ
   private GoogleRpcStatus status;
 
   /**
+   * Optional. Termination signal of the container. This is set to non-zero if the container is
+   * terminated by the system. At most one of exit_code or term_signal will be set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer termSignal;
+
+  /**
    * Optional. The exit code of this attempt. This may be unset if the container was unable to exit
    * cleanly with a code due to some other failure. See status field for possible failure details.
+   * At most one of exit_code or term_signal will be set.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getExitCode() {
@@ -56,6 +66,7 @@ public final class TaskAttemptResult extends com.google.api.client.json.GenericJ
   /**
    * Optional. The exit code of this attempt. This may be unset if the container was unable to exit
    * cleanly with a code due to some other failure. See status field for possible failure details.
+   * At most one of exit_code or term_signal will be set.
    * @param exitCode exitCode or {@code null} for none
    */
   public TaskAttemptResult setExitCode(java.lang.Integer exitCode) {
@@ -77,6 +88,25 @@ public final class TaskAttemptResult extends com.google.api.client.json.GenericJ
    */
   public TaskAttemptResult setStatus(GoogleRpcStatus status) {
     this.status = status;
+    return this;
+  }
+
+  /**
+   * Optional. Termination signal of the container. This is set to non-zero if the container is
+   * terminated by the system. At most one of exit_code or term_signal will be set.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getTermSignal() {
+    return termSignal;
+  }
+
+  /**
+   * Optional. Termination signal of the container. This is set to non-zero if the container is
+   * terminated by the system. At most one of exit_code or term_signal will be set.
+   * @param termSignal termSignal or {@code null} for none
+   */
+  public TaskAttemptResult setTermSignal(java.lang.Integer termSignal) {
+    this.termSignal = termSignal;
     return this;
   }
 

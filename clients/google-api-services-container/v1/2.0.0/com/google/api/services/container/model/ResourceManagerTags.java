@@ -19,8 +19,9 @@ package com.google.api.services.container.model;
 /**
  * A map of resource manager tag keys and values to be attached to the nodes for managing Compute
  * Engine firewalls using Network Firewall Policies. Tags must be according to specifications in
- * https://cloud.google.com/vpc/docs/tags-firewalls-overview#specifications. A maximum of 5 tag key-
- * value pairs can be specified. Existing tags will be replaced with new values.
+ * https://{$universe.dns_names.final_documentation_domain}/vpc/docs/tags-firewalls-
+ * overview#specifications. A maximum of 5 tag key-value pairs can be specified. Existing tags will
+ * be replaced with new values.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Kubernetes Engine API. For a detailed explanation

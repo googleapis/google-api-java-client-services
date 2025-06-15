@@ -17,8 +17,7 @@
 package com.google.api.services.container.model;
 
 /**
- * Collection of [GCP labels](https://{$universe.dns_names.final_documentation_domain}/resource-
- * manager/docs/creating-managing-labels).
+ * AutoIpamConfig contains all information related to Auto IPAM
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Kubernetes Engine API. For a detailed explanation
@@ -29,40 +28,16 @@ package com.google.api.services.container.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ResourceLabels extends com.google.api.client.json.GenericJson {
+public final class AutoIpamConfig extends com.google.api.client.json.GenericJson {
 
-  /**
-   * Map of node label keys and node label values.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.Map<String, java.lang.String> labels;
-
-  /**
-   * Map of node label keys and node label values.
-   * @return value or {@code null} for none
-   */
-  public java.util.Map<String, java.lang.String> getLabels() {
-    return labels;
-  }
-
-  /**
-   * Map of node label keys and node label values.
-   * @param labels labels or {@code null} for none
-   */
-  public ResourceLabels setLabels(java.util.Map<String, java.lang.String> labels) {
-    this.labels = labels;
-    return this;
+  @Override
+  public AutoIpamConfig set(String fieldName, Object value) {
+    return (AutoIpamConfig) super.set(fieldName, value);
   }
 
   @Override
-  public ResourceLabels set(String fieldName, Object value) {
-    return (ResourceLabels) super.set(fieldName, value);
-  }
-
-  @Override
-  public ResourceLabels clone() {
-    return (ResourceLabels) super.clone();
+  public AutoIpamConfig clone() {
+    return (AutoIpamConfig) super.clone();
   }
 
 }

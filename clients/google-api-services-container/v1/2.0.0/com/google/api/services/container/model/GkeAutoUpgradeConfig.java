@@ -17,8 +17,7 @@
 package com.google.api.services.container.model;
 
 /**
- * Collection of [GCP labels](https://{$universe.dns_names.final_documentation_domain}/resource-
- * manager/docs/creating-managing-labels).
+ * GkeAutoUpgradeConfig is the configuration for GKE auto upgrades.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Kubernetes Engine API. For a detailed explanation
@@ -29,40 +28,40 @@ package com.google.api.services.container.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ResourceLabels extends com.google.api.client.json.GenericJson {
+public final class GkeAutoUpgradeConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Map of node label keys and node label values.
+   * PatchMode specifies how auto upgrade patch builds should be selected.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.Map<String, java.lang.String> labels;
+  private java.lang.String patchMode;
 
   /**
-   * Map of node label keys and node label values.
+   * PatchMode specifies how auto upgrade patch builds should be selected.
    * @return value or {@code null} for none
    */
-  public java.util.Map<String, java.lang.String> getLabels() {
-    return labels;
+  public java.lang.String getPatchMode() {
+    return patchMode;
   }
 
   /**
-   * Map of node label keys and node label values.
-   * @param labels labels or {@code null} for none
+   * PatchMode specifies how auto upgrade patch builds should be selected.
+   * @param patchMode patchMode or {@code null} for none
    */
-  public ResourceLabels setLabels(java.util.Map<String, java.lang.String> labels) {
-    this.labels = labels;
+  public GkeAutoUpgradeConfig setPatchMode(java.lang.String patchMode) {
+    this.patchMode = patchMode;
     return this;
   }
 
   @Override
-  public ResourceLabels set(String fieldName, Object value) {
-    return (ResourceLabels) super.set(fieldName, value);
+  public GkeAutoUpgradeConfig set(String fieldName, Object value) {
+    return (GkeAutoUpgradeConfig) super.set(fieldName, value);
   }
 
   @Override
-  public ResourceLabels clone() {
-    return (ResourceLabels) super.clone();
+  public GkeAutoUpgradeConfig clone() {
+    return (GkeAutoUpgradeConfig) super.clone();
   }
 
 }

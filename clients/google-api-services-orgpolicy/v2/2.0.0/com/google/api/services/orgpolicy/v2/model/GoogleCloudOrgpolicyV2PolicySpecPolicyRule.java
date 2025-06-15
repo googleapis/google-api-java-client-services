@@ -62,7 +62,8 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRule extends com.google
 
   /**
    * If `true`, then the policy is enforced. If `false`, then any configuration is acceptable. This
-   * field can be set only in policies for boolean constraints.
+   * field can be set in policies for boolean constraints, custom constraints and managed
+   * constraints.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -157,7 +158,8 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRule extends com.google
 
   /**
    * If `true`, then the policy is enforced. If `false`, then any configuration is acceptable. This
-   * field can be set only in policies for boolean constraints.
+   * field can be set in policies for boolean constraints, custom constraints and managed
+   * constraints.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnforce() {
@@ -166,7 +168,8 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRule extends com.google
 
   /**
    * If `true`, then the policy is enforced. If `false`, then any configuration is acceptable. This
-   * field can be set only in policies for boolean constraints.
+   * field can be set in policies for boolean constraints, custom constraints and managed
+   * constraints.
    * @param enforce enforce or {@code null} for none
    */
   public GoogleCloudOrgpolicyV2PolicySpecPolicyRule setEnforce(java.lang.Boolean enforce) {

@@ -17,7 +17,7 @@
 package com.google.api.services.datacatalog.v1.model;
 
 /**
- * Common Dataplex fields.
+ * Common Dataplex Universal Catalog fields.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud Data Catalog API. For a detailed
@@ -31,8 +31,8 @@ package com.google.api.services.datacatalog.v1.model;
 public final class GoogleCloudDatacatalogV1DataplexSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * Fully qualified resource name of an asset in Dataplex, to which the underlying data source
-   * (Cloud Storage bucket or BigQuery dataset) of the entity is attached.
+   * Fully qualified resource name of an asset in Dataplex Universal Catalog, to which the
+   * underlying data source (Cloud Storage bucket or BigQuery dataset) of the entity is attached.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,15 +54,15 @@ public final class GoogleCloudDatacatalogV1DataplexSpec extends com.google.api.c
 
   /**
    * Project ID of the underlying Cloud Storage or BigQuery data. Note that this may not be the same
-   * project as the correspondingly Dataplex lake / zone / asset.
+   * project as the corresponding Dataplex Universal Catalog lake / zone / asset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String projectId;
 
   /**
-   * Fully qualified resource name of an asset in Dataplex, to which the underlying data source
-   * (Cloud Storage bucket or BigQuery dataset) of the entity is attached.
+   * Fully qualified resource name of an asset in Dataplex Universal Catalog, to which the
+   * underlying data source (Cloud Storage bucket or BigQuery dataset) of the entity is attached.
    * @return value or {@code null} for none
    */
   public java.lang.String getAsset() {
@@ -70,8 +70,8 @@ public final class GoogleCloudDatacatalogV1DataplexSpec extends com.google.api.c
   }
 
   /**
-   * Fully qualified resource name of an asset in Dataplex, to which the underlying data source
-   * (Cloud Storage bucket or BigQuery dataset) of the entity is attached.
+   * Fully qualified resource name of an asset in Dataplex Universal Catalog, to which the
+   * underlying data source (Cloud Storage bucket or BigQuery dataset) of the entity is attached.
    * @param asset asset or {@code null} for none
    */
   public GoogleCloudDatacatalogV1DataplexSpec setAsset(java.lang.String asset) {
@@ -115,7 +115,7 @@ public final class GoogleCloudDatacatalogV1DataplexSpec extends com.google.api.c
 
   /**
    * Project ID of the underlying Cloud Storage or BigQuery data. Note that this may not be the same
-   * project as the correspondingly Dataplex lake / zone / asset.
+   * project as the corresponding Dataplex Universal Catalog lake / zone / asset.
    * @return value or {@code null} for none
    */
   public java.lang.String getProjectId() {
@@ -124,7 +124,7 @@ public final class GoogleCloudDatacatalogV1DataplexSpec extends com.google.api.c
 
   /**
    * Project ID of the underlying Cloud Storage or BigQuery data. Note that this may not be the same
-   * project as the correspondingly Dataplex lake / zone / asset.
+   * project as the corresponding Dataplex Universal Catalog lake / zone / asset.
    * @param projectId projectId or {@code null} for none
    */
   public GoogleCloudDatacatalogV1DataplexSpec setProjectId(java.lang.String projectId) {

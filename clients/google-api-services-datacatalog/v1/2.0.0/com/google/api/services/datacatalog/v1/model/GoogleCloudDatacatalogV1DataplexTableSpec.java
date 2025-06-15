@@ -17,7 +17,7 @@
 package com.google.api.services.datacatalog.v1.model;
 
 /**
- * Entry specification for a Dataplex table.
+ * Entry specification for a Dataplex Universal Catalog table.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud Data Catalog API. For a detailed
@@ -31,15 +31,15 @@ package com.google.api.services.datacatalog.v1.model;
 public final class GoogleCloudDatacatalogV1DataplexTableSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * Common Dataplex fields.
+   * Common Dataplex Universal Catalog fields.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDatacatalogV1DataplexSpec dataplexSpec;
 
   /**
-   * List of external tables registered by Dataplex in other systems based on the same underlying
-   * data. External tables allow to query this data in those systems.
+   * List of external tables registered by Dataplex Universal Catalog in other systems based on the
+   * same underlying data. External tables allow to query this data in those systems.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,7 +59,7 @@ public final class GoogleCloudDatacatalogV1DataplexTableSpec extends com.google.
   private java.lang.Boolean userManaged;
 
   /**
-   * Common Dataplex fields.
+   * Common Dataplex Universal Catalog fields.
    * @return value or {@code null} for none
    */
   public GoogleCloudDatacatalogV1DataplexSpec getDataplexSpec() {
@@ -67,7 +67,7 @@ public final class GoogleCloudDatacatalogV1DataplexTableSpec extends com.google.
   }
 
   /**
-   * Common Dataplex fields.
+   * Common Dataplex Universal Catalog fields.
    * @param dataplexSpec dataplexSpec or {@code null} for none
    */
   public GoogleCloudDatacatalogV1DataplexTableSpec setDataplexSpec(GoogleCloudDatacatalogV1DataplexSpec dataplexSpec) {
@@ -76,8 +76,8 @@ public final class GoogleCloudDatacatalogV1DataplexTableSpec extends com.google.
   }
 
   /**
-   * List of external tables registered by Dataplex in other systems based on the same underlying
-   * data. External tables allow to query this data in those systems.
+   * List of external tables registered by Dataplex Universal Catalog in other systems based on the
+   * same underlying data. External tables allow to query this data in those systems.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDatacatalogV1DataplexExternalTable> getExternalTables() {
@@ -85,8 +85,8 @@ public final class GoogleCloudDatacatalogV1DataplexTableSpec extends com.google.
   }
 
   /**
-   * List of external tables registered by Dataplex in other systems based on the same underlying
-   * data. External tables allow to query this data in those systems.
+   * List of external tables registered by Dataplex Universal Catalog in other systems based on the
+   * same underlying data. External tables allow to query this data in those systems.
    * @param externalTables externalTables or {@code null} for none
    */
   public GoogleCloudDatacatalogV1DataplexTableSpec setExternalTables(java.util.List<GoogleCloudDatacatalogV1DataplexExternalTable> externalTables) {

@@ -31,21 +31,21 @@ package com.google.api.services.datacatalog.v1.model;
 public final class GoogleCloudDatacatalogV1SetConfigRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Opt-in status for the UI switch to Dataplex.
+   * Opt-in status for the UI switch to Dataplex Universal Catalog.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String catalogUiExperience;
 
   /**
-   * Opt-in status for the migration of Tag Templates to Dataplex.
+   * Opt-in status for the migration of Tag Templates to Dataplex Universal Catalog.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String tagTemplateMigration;
 
   /**
-   * Opt-in status for the UI switch to Dataplex.
+   * Opt-in status for the UI switch to Dataplex Universal Catalog.
    * @return value or {@code null} for none
    */
   public java.lang.String getCatalogUiExperience() {
@@ -53,7 +53,7 @@ public final class GoogleCloudDatacatalogV1SetConfigRequest extends com.google.a
   }
 
   /**
-   * Opt-in status for the UI switch to Dataplex.
+   * Opt-in status for the UI switch to Dataplex Universal Catalog.
    * @param catalogUiExperience catalogUiExperience or {@code null} for none
    */
   public GoogleCloudDatacatalogV1SetConfigRequest setCatalogUiExperience(java.lang.String catalogUiExperience) {
@@ -62,7 +62,7 @@ public final class GoogleCloudDatacatalogV1SetConfigRequest extends com.google.a
   }
 
   /**
-   * Opt-in status for the migration of Tag Templates to Dataplex.
+   * Opt-in status for the migration of Tag Templates to Dataplex Universal Catalog.
    * @return value or {@code null} for none
    */
   public java.lang.String getTagTemplateMigration() {
@@ -70,7 +70,7 @@ public final class GoogleCloudDatacatalogV1SetConfigRequest extends com.google.a
   }
 
   /**
-   * Opt-in status for the migration of Tag Templates to Dataplex.
+   * Opt-in status for the migration of Tag Templates to Dataplex Universal Catalog.
    * @param tagTemplateMigration tagTemplateMigration or {@code null} for none
    */
   public GoogleCloudDatacatalogV1SetConfigRequest setTagTemplateMigration(java.lang.String tagTemplateMigration) {

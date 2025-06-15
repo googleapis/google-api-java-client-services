@@ -17,7 +17,7 @@
 package com.google.api.services.datacatalog.v1.model;
 
 /**
- * Entry specyfication for a Dataplex fileset.
+ * Entry specification for a Dataplex Universal Catalog fileset.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud Data Catalog API. For a detailed
@@ -31,14 +31,14 @@ package com.google.api.services.datacatalog.v1.model;
 public final class GoogleCloudDatacatalogV1DataplexFilesetSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * Common Dataplex fields.
+   * Common Dataplex Universal Catalog fields.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDatacatalogV1DataplexSpec dataplexSpec;
 
   /**
-   * Common Dataplex fields.
+   * Common Dataplex Universal Catalog fields.
    * @return value or {@code null} for none
    */
   public GoogleCloudDatacatalogV1DataplexSpec getDataplexSpec() {
@@ -46,7 +46,7 @@ public final class GoogleCloudDatacatalogV1DataplexFilesetSpec extends com.googl
   }
 
   /**
-   * Common Dataplex fields.
+   * Common Dataplex Universal Catalog fields.
    * @param dataplexSpec dataplexSpec or {@code null} for none
    */
   public GoogleCloudDatacatalogV1DataplexFilesetSpec setDataplexSpec(GoogleCloudDatacatalogV1DataplexSpec dataplexSpec) {

@@ -17,10 +17,11 @@
 package com.google.api.services.datacatalog.v1.model;
 
 /**
- * External table registered by Dataplex. Dataplex publishes data discovered from an asset into
- * multiple other systems (BigQuery, DPMS) in form of tables. We call them "external tables".
- * External tables are also synced into the Data Catalog. This message contains pointers to those
- * external tables (fully qualified name, resource name et cetera) within the Data Catalog.
+ * External table registered by Dataplex Universal Catalog. Dataplex Universal Catalog publishes
+ * data discovered from an asset into multiple other systems (BigQuery, DPMS) in form of tables. We
+ * call them "external tables". External tables are also synced into the Data Catalog. This message
+ * contains pointers to those external tables (fully qualified name, resource name et cetera) within
+ * the Data Catalog.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud Data Catalog API. For a detailed

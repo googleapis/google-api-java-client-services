@@ -604,8 +604,9 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
     public class Locations {
 
       /**
-       * Retrieves the configuration related to the migration from Data Catalog to Dataplex for a specific
-       * organization, including all the projects under it which have a separate configuration set.
+       * Retrieves the configuration related to the migration from Data Catalog to Dataplex Universal
+       * Catalog for a specific organization, including all the projects under it which have a separate
+       * configuration set.
        *
        * Create a request for the method "locations.retrieveConfig".
        *
@@ -629,9 +630,9 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
             java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
 
         /**
-         * Retrieves the configuration related to the migration from Data Catalog to Dataplex for a
-         * specific organization, including all the projects under it which have a separate configuration
-         * set.
+         * Retrieves the configuration related to the migration from Data Catalog to Dataplex Universal
+         * Catalog for a specific organization, including all the projects under it which have a separate
+         * configuration set.
          *
          * Create a request for the method "locations.retrieveConfig".
          *
@@ -746,10 +747,10 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
         }
       }
       /**
-       * Retrieves the effective configuration related to the migration from Data Catalog to Dataplex for
-       * a specific organization or project. If there is no specific configuration set for the resource,
-       * the setting is checked hierarchicahlly through the ancestors of the resource, starting from the
-       * resource itself.
+       * Retrieves the effective configuration related to the migration from Data Catalog to Dataplex
+       * Universal Catalog for a specific organization or project. If there is no specific configuration
+       * set for the resource, the setting is checked hierarchicahlly through the ancestors of the
+       * resource, starting from the resource itself.
        *
        * Create a request for the method "locations.retrieveEffectiveConfig".
        *
@@ -775,9 +776,9 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
 
         /**
          * Retrieves the effective configuration related to the migration from Data Catalog to Dataplex
-         * for a specific organization or project. If there is no specific configuration set for the
-         * resource, the setting is checked hierarchicahlly through the ancestors of the resource,
-         * starting from the resource itself.
+         * Universal Catalog for a specific organization or project. If there is no specific configuration
+         * set for the resource, the setting is checked hierarchicahlly through the ancestors of the
+         * resource, starting from the resource itself.
          *
          * Create a request for the method "locations.retrieveEffectiveConfig".
          *
@@ -892,7 +893,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
         }
       }
       /**
-       * Sets the configuration related to the migration to Dataplex for an organization or project.
+       * Sets the configuration related to the migration to Dataplex Universal Catalog for an organization
+       * or project.
        *
        * Create a request for the method "locations.setConfig".
        *
@@ -917,7 +919,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
             java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
 
         /**
-         * Sets the configuration related to the migration to Dataplex for an organization or project.
+         * Sets the configuration related to the migration to Dataplex Universal Catalog for an
+         * organization or project.
          *
          * Create a request for the method "locations.setConfig".
          *
@@ -1067,10 +1070,10 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
     public class Locations {
 
       /**
-       * Retrieves the effective configuration related to the migration from Data Catalog to Dataplex for
-       * a specific organization or project. If there is no specific configuration set for the resource,
-       * the setting is checked hierarchicahlly through the ancestors of the resource, starting from the
-       * resource itself.
+       * Retrieves the effective configuration related to the migration from Data Catalog to Dataplex
+       * Universal Catalog for a specific organization or project. If there is no specific configuration
+       * set for the resource, the setting is checked hierarchicahlly through the ancestors of the
+       * resource, starting from the resource itself.
        *
        * Create a request for the method "locations.retrieveEffectiveConfig".
        *
@@ -1096,9 +1099,9 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
 
         /**
          * Retrieves the effective configuration related to the migration from Data Catalog to Dataplex
-         * for a specific organization or project. If there is no specific configuration set for the
-         * resource, the setting is checked hierarchicahlly through the ancestors of the resource,
-         * starting from the resource itself.
+         * Universal Catalog for a specific organization or project. If there is no specific configuration
+         * set for the resource, the setting is checked hierarchicahlly through the ancestors of the
+         * resource, starting from the resource itself.
          *
          * Create a request for the method "locations.retrieveEffectiveConfig".
          *
@@ -1213,7 +1216,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
         }
       }
       /**
-       * Sets the configuration related to the migration to Dataplex for an organization or project.
+       * Sets the configuration related to the migration to Dataplex Universal Catalog for an organization
+       * or project.
        *
        * Create a request for the method "locations.setConfig".
        *
@@ -1238,7 +1242,8 @@ public class DataCatalog extends com.google.api.client.googleapis.services.json.
             java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
         /**
-         * Sets the configuration related to the migration to Dataplex for an organization or project.
+         * Sets the configuration related to the migration to Dataplex Universal Catalog for an
+         * organization or project.
          *
          * Create a request for the method "locations.setConfig".
          *

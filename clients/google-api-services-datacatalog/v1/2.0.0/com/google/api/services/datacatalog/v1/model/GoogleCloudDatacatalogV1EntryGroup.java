@@ -64,7 +64,7 @@ public final class GoogleCloudDatacatalogV1EntryGroup extends com.google.api.cli
 
   /**
    * Optional. When set to [true], it means DataCatalog EntryGroup was transferred to Dataplex
-   * Catalog Service. It makes EntryGroup and its Entries to be read-only in DataCatalog. However,
+   * Universal Catalog. It makes EntryGroup and its Entries to be read-only in DataCatalog. However,
    * new Tags on EntryGroup and its Entries can be created. After setting the flag to [true] it
    * cannot be unset.
    * The value may be {@code null}.
@@ -148,7 +148,7 @@ public final class GoogleCloudDatacatalogV1EntryGroup extends com.google.api.cli
 
   /**
    * Optional. When set to [true], it means DataCatalog EntryGroup was transferred to Dataplex
-   * Catalog Service. It makes EntryGroup and its Entries to be read-only in DataCatalog. However,
+   * Universal Catalog. It makes EntryGroup and its Entries to be read-only in DataCatalog. However,
    * new Tags on EntryGroup and its Entries can be created. After setting the flag to [true] it
    * cannot be unset.
    * @return value or {@code null} for none
@@ -159,7 +159,7 @@ public final class GoogleCloudDatacatalogV1EntryGroup extends com.google.api.cli
 
   /**
    * Optional. When set to [true], it means DataCatalog EntryGroup was transferred to Dataplex
-   * Catalog Service. It makes EntryGroup and its Entries to be read-only in DataCatalog. However,
+   * Universal Catalog. It makes EntryGroup and its Entries to be read-only in DataCatalog. However,
    * new Tags on EntryGroup and its Entries can be created. After setting the flag to [true] it
    * cannot be unset.
    * @param transferredToDataplex transferredToDataplex or {@code null} for none

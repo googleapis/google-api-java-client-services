@@ -31,14 +31,16 @@ package com.google.api.services.datacatalog.v1.model;
 public final class GoogleCloudDatacatalogV1FilesetSpec extends com.google.api.client.json.GenericJson {
 
   /**
-   * Fields specific to a Dataplex fileset and present only in the Dataplex fileset entries.
+   * Fields specific to a Dataplex Universal Catalog fileset and present only in the Dataplex
+   * Universal Catalog fileset entries.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudDatacatalogV1DataplexFilesetSpec dataplexFileset;
 
   /**
-   * Fields specific to a Dataplex fileset and present only in the Dataplex fileset entries.
+   * Fields specific to a Dataplex Universal Catalog fileset and present only in the Dataplex
+   * Universal Catalog fileset entries.
    * @return value or {@code null} for none
    */
   public GoogleCloudDatacatalogV1DataplexFilesetSpec getDataplexFileset() {
@@ -46,7 +48,8 @@ public final class GoogleCloudDatacatalogV1FilesetSpec extends com.google.api.cl
   }
 
   /**
-   * Fields specific to a Dataplex fileset and present only in the Dataplex fileset entries.
+   * Fields specific to a Dataplex Universal Catalog fileset and present only in the Dataplex
+   * Universal Catalog fileset entries.
    * @param dataplexFileset dataplexFileset or {@code null} for none
    */
   public GoogleCloudDatacatalogV1FilesetSpec setDataplexFileset(GoogleCloudDatacatalogV1DataplexFilesetSpec dataplexFileset) {

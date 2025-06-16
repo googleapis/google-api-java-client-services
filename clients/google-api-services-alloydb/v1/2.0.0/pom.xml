@@ -14,6 +14,16 @@
 
   <inceptionYear>2011</inceptionYear>
 
+  <developers>
+    <developer>
+      <id>GoogleAPIs</id>
+      <name>GoogleAPIs</name>
+      <email>googleapis@googlegroups.com</email>
+      <organization>Google LLC</organization>
+      <organizationUrl>https://www.google.com</organizationUrl>
+    </developer>
+  </developers>
+
   <organization>
     <name>Google</name>
     <url>http://www.google.com/</url>

@@ -14,6 +14,16 @@
 
   <inceptionYear>2011</inceptionYear>
 
+  <developers>
+    <developer>
+      <id>GoogleAPIs</id>
+      <name>GoogleAPIs</name>
+      <email>googleapis@googlegroups.com</email>
+      <organization>{{ api.ownerName }}</organization>{% if api.ownerDomain == "google.com" %}
+      <organizationUrl>https://www.google.com</organizationUrl>{% endif %}
+    </developer>
+  </developers>
+
   <organization>
     <name>{{ api.ownerName }}</name>{% if api.ownerDomain == "google.com" %}
     <url>http://www.google.com/</url>{% endif %}

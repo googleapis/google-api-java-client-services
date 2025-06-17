@@ -13085,17 +13085,17 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
           return this;
         }
 
-        /** Optional. Maximum number of app IDs to return. Defaults to 10000. */
+        /** Optional. Maximum number of app IDs to return. Defaults to 1000. */
         @com.google.api.client.util.Key
         private java.lang.Long rows;
 
-        /** Optional. Maximum number of app IDs to return. Defaults to 10000.
+        /** Optional. Maximum number of app IDs to return. Defaults to 1000.
          */
         public java.lang.Long getRows() {
           return rows;
         }
 
-        /** Optional. Maximum number of app IDs to return. Defaults to 10000. */
+        /** Optional. Maximum number of app IDs to return. Defaults to 1000. */
         public List setRows(java.lang.Long rows) {
           this.rows = rows;
           return this;

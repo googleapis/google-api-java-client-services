@@ -200,6 +200,14 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
   private java.lang.String name;
 
   /**
+   * Optional. Flag that specifies if internet egress is restricted for VPC Service Controls. Valid
+   * only when runtime_type is `CLOUD` and disable_vpc_peering is `true`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean networkEgressRestricted;
+
+  /**
    * Optional. Configuration for the Portals settings.
    * The value may be {@code null}.
    */
@@ -694,6 +702,25 @@ public final class GoogleCloudApigeeV1Organization extends com.google.api.client
    */
   public GoogleCloudApigeeV1Organization setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. Flag that specifies if internet egress is restricted for VPC Service Controls. Valid
+   * only when runtime_type is `CLOUD` and disable_vpc_peering is `true`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getNetworkEgressRestricted() {
+    return networkEgressRestricted;
+  }
+
+  /**
+   * Optional. Flag that specifies if internet egress is restricted for VPC Service Controls. Valid
+   * only when runtime_type is `CLOUD` and disable_vpc_peering is `true`.
+   * @param networkEgressRestricted networkEgressRestricted or {@code null} for none
+   */
+  public GoogleCloudApigeeV1Organization setNetworkEgressRestricted(java.lang.Boolean networkEgressRestricted) {
+    this.networkEgressRestricted = networkEgressRestricted;
     return this;
   }
 

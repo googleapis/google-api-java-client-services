@@ -8,11 +8,21 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-mybusinessbusinessinformation</artifactId>
-  <version>v1-rev20250319-2.0.0</version>
-  <name>My Business Business Information API v1-rev20250319-2.0.0</name>
+  <version>v1-rev20250615-2.0.0</version>
+  <name>My Business Business Information API v1-rev20250615-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
+
+  <developers>
+    <developer>
+      <id>GoogleAPIs</id>
+      <name>GoogleAPIs</name>
+      <email>googleapis@googlegroups.com</email>
+      <organization>Google</organization>
+      <organizationUrl>https://www.google.com</organizationUrl>
+    </developer>
+  </developers>
 
   <organization>
     <name>Google</name>
@@ -42,17 +52,6 @@
         <configuration>
           <source>1.7</source>
           <target>1.7</target>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.sonatype.plugins</groupId>
-        <artifactId>nexus-staging-maven-plugin</artifactId>
-        <version>1.6.8</version>
-        <extensions>true</extensions>
-        <configuration>
-          <serverId>ossrh</serverId>
-          <nexusUrl>https://google.oss.sonatype.org/</nexusUrl>
-          <autoReleaseAfterClose>true</autoReleaseAfterClose>
         </configuration>
       </plugin>
       <plugin>
@@ -134,6 +133,55 @@
   </properties>
 
   <profiles>
+    <profile>
+          <!-- By default, we release artifacts to Sonatype, which requires
+              nexus-staging-maven-plugin. -->
+          <id>release-sonatype</id>
+          <activation>
+            <property>
+              <!-- Only when we use the release-gcp-artifact-registry profile,
+              which comes with artifact-registry-url property, this profile is
+              turned off. -->
+              <name>!artifact-registry-url</name>
+            </property>
+          </activation>
+          <build>
+            <plugins>
+              <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <version>1.6.13</version>
+                <extensions>true</extensions>
+                <configuration>
+                  <serverId>sonatype-nexus-staging</serverId>
+                  <nexusUrl>https://google.oss.sonatype.org/</nexusUrl>
+                  <autoReleaseAfterClose>false</autoReleaseAfterClose>
+                </configuration>
+              </plugin>
+            </plugins>
+          </build>
+    </profile>
+    <profile>
+          <!-- Optionally, we can publish the artifacts to GCP Artifact Registry specifying
+              this release-gcp-artifact-registry profile:
+              mvn deploy -P=release-gcp-artifact-registry -P=-release-sonatype \
+                  -Dartifact-registry-url=artifactregistry://us-maven.pkg.dev/...
+              -->
+          <id>release-gcp-artifact-registry</id>
+          <properties>
+            <artifact-registry-url>artifactregistry://please-define-artifact-registry-url-property</artifact-registry-url>
+          </properties>
+          <distributionManagement>
+            <repository>
+              <id>gcp-artifact-registry-repository</id>
+              <url>${artifact-registry-url}</url>
+            </repository>
+            <snapshotRepository>
+              <id>gcp-artifact-registry-repository</id>
+              <url>${artifact-registry-url}</url>
+            </snapshotRepository>
+          </distributionManagement>
+    </profile>
     <profile>
       <id>release-sign-artifacts</id>
       <activation>

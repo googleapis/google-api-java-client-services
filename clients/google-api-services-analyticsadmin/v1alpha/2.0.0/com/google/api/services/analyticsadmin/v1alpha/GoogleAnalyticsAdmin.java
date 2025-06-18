@@ -26049,7 +26049,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
     public class SubpropertySyncConfigs {
 
       /**
-       * Lookup for a single Subproperty Sync Config.
+       * Lookup for a single `SubpropertySyncConfig`.
        *
        * Create a request for the method "subpropertySyncConfigs.get".
        *
@@ -26075,7 +26075,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
             java.util.regex.Pattern.compile("^properties/[^/]+/subpropertySyncConfigs/[^/]+$");
 
         /**
-         * Lookup for a single Subproperty Sync Config.
+         * Lookup for a single `SubpropertySyncConfig`.
          *
          * Create a request for the method "subpropertySyncConfigs.get".
          *
@@ -26201,7 +26201,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
         }
       }
       /**
-       * List all Subproperty Sync Configs on a property.
+       * List all `SubpropertySyncConfig` resources for a property.
        *
        * Create a request for the method "subpropertySyncConfigs.list".
        *
@@ -26225,7 +26225,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
             java.util.regex.Pattern.compile("^properties/[^/]+$");
 
         /**
-         * List all Subproperty Sync Configs on a property.
+         * List all `SubpropertySyncConfig` resources for a property.
          *
          * Create a request for the method "subpropertySyncConfigs.list".
          *
@@ -26397,7 +26397,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
         }
       }
       /**
-       * Updates a Subproperty Sync Config.
+       * Updates a `SubpropertySyncConfig`.
        *
        * Create a request for the method "subpropertySyncConfigs.patch".
        *
@@ -26424,7 +26424,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
             java.util.regex.Pattern.compile("^properties/[^/]+/subpropertySyncConfigs/[^/]+$");
 
         /**
-         * Updates a Subproperty Sync Config.
+         * Updates a `SubpropertySyncConfig`.
          *
          * Create a request for the method "subpropertySyncConfigs.patch".
          *

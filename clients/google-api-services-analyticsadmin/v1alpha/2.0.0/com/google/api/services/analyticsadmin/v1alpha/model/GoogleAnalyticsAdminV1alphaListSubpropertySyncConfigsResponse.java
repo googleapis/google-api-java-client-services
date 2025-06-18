@@ -39,7 +39,7 @@ public final class GoogleAnalyticsAdminV1alphaListSubpropertySyncConfigsResponse
   private java.lang.String nextPageToken;
 
   /**
-   * List of Subproperty Sync Configs.
+   * List of `SubpropertySyncConfig` resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,7 +65,7 @@ public final class GoogleAnalyticsAdminV1alphaListSubpropertySyncConfigsResponse
   }
 
   /**
-   * List of Subproperty Sync Configs.
+   * List of `SubpropertySyncConfig` resources.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleAnalyticsAdminV1alphaSubpropertySyncConfig> getSubpropertySyncConfigs() {
@@ -73,7 +73,7 @@ public final class GoogleAnalyticsAdminV1alphaListSubpropertySyncConfigsResponse
   }
 
   /**
-   * List of Subproperty Sync Configs.
+   * List of `SubpropertySyncConfig` resources.
    * @param subpropertySyncConfigs subpropertySyncConfigs or {@code null} for none
    */
   public GoogleAnalyticsAdminV1alphaListSubpropertySyncConfigsResponse setSubpropertySyncConfigs(java.util.List<GoogleAnalyticsAdminV1alphaSubpropertySyncConfig> subpropertySyncConfigs) {

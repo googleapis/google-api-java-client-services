@@ -69,7 +69,7 @@ public final class GoogleCloudChannelV1RepricingConfig extends com.google.api.cl
   private GoogleTypeDate effectiveInvoiceMonth;
 
   /**
-   * Applies the repricing configuration at the entitlement level. Note: If a
+   * Required. Applies the repricing configuration at the entitlement level. Note: If a
    * ChannelPartnerRepricingConfig using RepricingConfig.EntitlementGranularity becomes effective,
    * then no existing or future RepricingConfig.ChannelPartnerGranularity will apply to the
    * RepricingConfig.EntitlementGranularity.entitlement. This is the recommended value for both
@@ -166,7 +166,7 @@ public final class GoogleCloudChannelV1RepricingConfig extends com.google.api.cl
   }
 
   /**
-   * Applies the repricing configuration at the entitlement level. Note: If a
+   * Required. Applies the repricing configuration at the entitlement level. Note: If a
    * ChannelPartnerRepricingConfig using RepricingConfig.EntitlementGranularity becomes effective,
    * then no existing or future RepricingConfig.ChannelPartnerGranularity will apply to the
    * RepricingConfig.EntitlementGranularity.entitlement. This is the recommended value for both
@@ -178,7 +178,7 @@ public final class GoogleCloudChannelV1RepricingConfig extends com.google.api.cl
   }
 
   /**
-   * Applies the repricing configuration at the entitlement level. Note: If a
+   * Required. Applies the repricing configuration at the entitlement level. Note: If a
    * ChannelPartnerRepricingConfig using RepricingConfig.EntitlementGranularity becomes effective,
    * then no existing or future RepricingConfig.ChannelPartnerGranularity will apply to the
    * RepricingConfig.EntitlementGranularity.entitlement. This is the recommended value for both

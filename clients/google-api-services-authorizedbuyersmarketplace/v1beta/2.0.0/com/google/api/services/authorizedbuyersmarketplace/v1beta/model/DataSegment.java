@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.authorizedbuyersmarketplace.v1alpha.model;
+package com.google.api.services.authorizedbuyersmarketplace.v1beta.model;
 
 /**
  * Defines an identifier for a segment of inventory that can be targeted by curators or media

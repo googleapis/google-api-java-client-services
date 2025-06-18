@@ -31,8 +31,8 @@ package com.google.api.services.addressvalidation.v1.model;
 public final class GoogleMapsAddressvalidationV1Verdict extends com.google.api.client.json.GenericJson {
 
   /**
-   * The address is considered complete if there are no unresolved tokens, no unexpected or missing
-   * address components. If unset, indicates that the value is `false`. See
+   * The post-processed address is considered complete if there are no unresolved tokens, no
+   * unexpected or missing address components. If unset, indicates that the value is `false`. See
    * `missing_component_types`, `unresolved_tokens` or `unexpected` fields for more details.
    * The value may be {@code null}.
    */
@@ -68,6 +68,14 @@ public final class GoogleMapsAddressvalidationV1Verdict extends com.google.api.c
   private java.lang.Boolean hasReplacedComponents;
 
   /**
+   * At least one address component was spell-corrected, see
+   * [google.maps.addressvalidation.v1.Address.address_components] for details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean hasSpellCorrectedComponents;
+
+  /**
    * At least one address component cannot be categorized or validated, see
    * [google.maps.addressvalidation.v1.Address.address_components] for details.
    * The value may be {@code null}.
@@ -81,25 +89,41 @@ public final class GoogleMapsAddressvalidationV1Verdict extends com.google.api.c
    * below. For example, if the input address includes a specific apartment number, then the
    * `input_granularity` here will be `SUB_PREMISE`. If we cannot match the apartment number in the
    * databases or the apartment number is invalid, the `validation_granularity` will likely be
-   * `PREMISE` or worse.
+   * `PREMISE` or more coarse.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String inputGranularity;
 
   /**
-   * The granularity level that the API can fully **validate** the address to. For example, an
-   * `validation_granularity` of `PREMISE` indicates all address components at the level of
-   * `PREMISE` or more coarse can be validated. Per address component validation result can be found
-   * in [google.maps.addressvalidation.v1.Address.address_components].
+   * Preview: This feature is in Preview (pre-GA). Pre-GA products and features might have limited
+   * support, and changes to pre-GA products and features might not be compatible with other pre-GA
+   * versions. Pre-GA Offerings are covered by the [Google Maps Platform Service Specific
+   * Terms](https://cloud.google.com/maps-platform/terms/maps-service-terms). For more information,
+   * see the [launch stage descriptions](https://developers.google.com/maps/launch-stages). Offers
+   * an interpretive summary of the API response, intended to assist in determining a potential
+   * subsequent action to take. This field is derived from other fields in the API response and
+   * should not be considered as a guarantee of address accuracy or deliverability. See [Build your
+   * validation logic](https://developers.google.com/maps/documentation/address-validation/build-
+   * validation-logic) for more details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String possibleNextAction;
+
+  /**
+   * The level of granularity for the post-processed address that the API can fully validate. For
+   * example, a `validation_granularity` of `PREMISE` indicates all address components at the level
+   * of `PREMISE` or more coarse can be validated. Per address component validation result can be
+   * found in [google.maps.addressvalidation.v1.Address.address_components].
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String validationGranularity;
 
   /**
-   * The address is considered complete if there are no unresolved tokens, no unexpected or missing
-   * address components. If unset, indicates that the value is `false`. See
+   * The post-processed address is considered complete if there are no unresolved tokens, no
+   * unexpected or missing address components. If unset, indicates that the value is `false`. See
    * `missing_component_types`, `unresolved_tokens` or `unexpected` fields for more details.
    * @return value or {@code null} for none
    */
@@ -108,8 +132,8 @@ public final class GoogleMapsAddressvalidationV1Verdict extends com.google.api.c
   }
 
   /**
-   * The address is considered complete if there are no unresolved tokens, no unexpected or missing
-   * address components. If unset, indicates that the value is `false`. See
+   * The post-processed address is considered complete if there are no unresolved tokens, no
+   * unexpected or missing address components. If unset, indicates that the value is `false`. See
    * `missing_component_types`, `unresolved_tokens` or `unexpected` fields for more details.
    * @param addressComplete addressComplete or {@code null} for none
    */
@@ -184,6 +208,25 @@ public final class GoogleMapsAddressvalidationV1Verdict extends com.google.api.c
   }
 
   /**
+   * At least one address component was spell-corrected, see
+   * [google.maps.addressvalidation.v1.Address.address_components] for details.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getHasSpellCorrectedComponents() {
+    return hasSpellCorrectedComponents;
+  }
+
+  /**
+   * At least one address component was spell-corrected, see
+   * [google.maps.addressvalidation.v1.Address.address_components] for details.
+   * @param hasSpellCorrectedComponents hasSpellCorrectedComponents or {@code null} for none
+   */
+  public GoogleMapsAddressvalidationV1Verdict setHasSpellCorrectedComponents(java.lang.Boolean hasSpellCorrectedComponents) {
+    this.hasSpellCorrectedComponents = hasSpellCorrectedComponents;
+    return this;
+  }
+
+  /**
    * At least one address component cannot be categorized or validated, see
    * [google.maps.addressvalidation.v1.Address.address_components] for details.
    * @return value or {@code null} for none
@@ -208,7 +251,7 @@ public final class GoogleMapsAddressvalidationV1Verdict extends com.google.api.c
    * below. For example, if the input address includes a specific apartment number, then the
    * `input_granularity` here will be `SUB_PREMISE`. If we cannot match the apartment number in the
    * databases or the apartment number is invalid, the `validation_granularity` will likely be
-   * `PREMISE` or worse.
+   * `PREMISE` or more coarse.
    * @return value or {@code null} for none
    */
   public java.lang.String getInputGranularity() {
@@ -221,7 +264,7 @@ public final class GoogleMapsAddressvalidationV1Verdict extends com.google.api.c
    * below. For example, if the input address includes a specific apartment number, then the
    * `input_granularity` here will be `SUB_PREMISE`. If we cannot match the apartment number in the
    * databases or the apartment number is invalid, the `validation_granularity` will likely be
-   * `PREMISE` or worse.
+   * `PREMISE` or more coarse.
    * @param inputGranularity inputGranularity or {@code null} for none
    */
   public GoogleMapsAddressvalidationV1Verdict setInputGranularity(java.lang.String inputGranularity) {
@@ -230,10 +273,45 @@ public final class GoogleMapsAddressvalidationV1Verdict extends com.google.api.c
   }
 
   /**
-   * The granularity level that the API can fully **validate** the address to. For example, an
-   * `validation_granularity` of `PREMISE` indicates all address components at the level of
-   * `PREMISE` or more coarse can be validated. Per address component validation result can be found
-   * in [google.maps.addressvalidation.v1.Address.address_components].
+   * Preview: This feature is in Preview (pre-GA). Pre-GA products and features might have limited
+   * support, and changes to pre-GA products and features might not be compatible with other pre-GA
+   * versions. Pre-GA Offerings are covered by the [Google Maps Platform Service Specific
+   * Terms](https://cloud.google.com/maps-platform/terms/maps-service-terms). For more information,
+   * see the [launch stage descriptions](https://developers.google.com/maps/launch-stages). Offers
+   * an interpretive summary of the API response, intended to assist in determining a potential
+   * subsequent action to take. This field is derived from other fields in the API response and
+   * should not be considered as a guarantee of address accuracy or deliverability. See [Build your
+   * validation logic](https://developers.google.com/maps/documentation/address-validation/build-
+   * validation-logic) for more details.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPossibleNextAction() {
+    return possibleNextAction;
+  }
+
+  /**
+   * Preview: This feature is in Preview (pre-GA). Pre-GA products and features might have limited
+   * support, and changes to pre-GA products and features might not be compatible with other pre-GA
+   * versions. Pre-GA Offerings are covered by the [Google Maps Platform Service Specific
+   * Terms](https://cloud.google.com/maps-platform/terms/maps-service-terms). For more information,
+   * see the [launch stage descriptions](https://developers.google.com/maps/launch-stages). Offers
+   * an interpretive summary of the API response, intended to assist in determining a potential
+   * subsequent action to take. This field is derived from other fields in the API response and
+   * should not be considered as a guarantee of address accuracy or deliverability. See [Build your
+   * validation logic](https://developers.google.com/maps/documentation/address-validation/build-
+   * validation-logic) for more details.
+   * @param possibleNextAction possibleNextAction or {@code null} for none
+   */
+  public GoogleMapsAddressvalidationV1Verdict setPossibleNextAction(java.lang.String possibleNextAction) {
+    this.possibleNextAction = possibleNextAction;
+    return this;
+  }
+
+  /**
+   * The level of granularity for the post-processed address that the API can fully validate. For
+   * example, a `validation_granularity` of `PREMISE` indicates all address components at the level
+   * of `PREMISE` or more coarse can be validated. Per address component validation result can be
+   * found in [google.maps.addressvalidation.v1.Address.address_components].
    * @return value or {@code null} for none
    */
   public java.lang.String getValidationGranularity() {
@@ -241,10 +319,10 @@ public final class GoogleMapsAddressvalidationV1Verdict extends com.google.api.c
   }
 
   /**
-   * The granularity level that the API can fully **validate** the address to. For example, an
-   * `validation_granularity` of `PREMISE` indicates all address components at the level of
-   * `PREMISE` or more coarse can be validated. Per address component validation result can be found
-   * in [google.maps.addressvalidation.v1.Address.address_components].
+   * The level of granularity for the post-processed address that the API can fully validate. For
+   * example, a `validation_granularity` of `PREMISE` indicates all address components at the level
+   * of `PREMISE` or more coarse can be validated. Per address component validation result can be
+   * found in [google.maps.addressvalidation.v1.Address.address_components].
    * @param validationGranularity validationGranularity or {@code null} for none
    */
   public GoogleMapsAddressvalidationV1Verdict setValidationGranularity(java.lang.String validationGranularity) {

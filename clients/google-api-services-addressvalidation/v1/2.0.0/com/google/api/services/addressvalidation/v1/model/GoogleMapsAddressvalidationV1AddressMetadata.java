@@ -17,8 +17,8 @@
 package com.google.api.services.addressvalidation.v1.model;
 
 /**
- * The metadata for the address. `metadata` is not guaranteed to be fully populated for every
- * address sent to the Address Validation API.
+ * The metadata for the post-processed address. `metadata` is not guaranteed to be fully populated
+ * for every address sent to the Address Validation API.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Address Validation API. For a detailed explanation

@@ -2065,6 +2065,155 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
           }
         }
         /**
+         * Returns the conversational search customization config for a given catalog.
+         *
+         * Create a request for the method "catalogs.getConversationalSearchCustomizationConfig".
+         *
+         * This request holds the parameters needed by the retail server.  After setting any optional
+         * parameters, call the {@link GetConversationalSearchCustomizationConfig#execute()} method to
+         * invoke the remote operation.
+         *
+         * @param name Required. Resource name of the parent catalog. Format:
+         *        projects/{project}/locations/{location}/catalogs/{catalog}
+         * @return the request
+         */
+        public GetConversationalSearchCustomizationConfig getConversationalSearchCustomizationConfig(java.lang.String name) throws java.io.IOException {
+          GetConversationalSearchCustomizationConfig result = new GetConversationalSearchCustomizationConfig(name);
+          initialize(result);
+          return result;
+        }
+
+        public class GetConversationalSearchCustomizationConfig extends CloudRetailRequest<com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaConversationalSearchCustomizationConfig> {
+
+          private static final String REST_PATH = "v2alpha/{+name}/conversationalSearchCustomizationConfig";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+
+          /**
+           * Returns the conversational search customization config for a given catalog.
+           *
+           * Create a request for the method "catalogs.getConversationalSearchCustomizationConfig".
+           *
+           * This request holds the parameters needed by the the retail server.  After setting any optional
+           * parameters, call the {@link GetConversationalSearchCustomizationConfig#execute()} method to
+           * invoke the remote operation. <p> {@link GetConversationalSearchCustomizationConfig#initialize(c
+           * om.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to
+           * initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Resource name of the parent catalog. Format:
+         *        projects/{project}/locations/{location}/catalogs/{catalog}
+           * @since 1.13
+           */
+          protected GetConversationalSearchCustomizationConfig(java.lang.String name) {
+            super(CloudRetail.this, "GET", REST_PATH, null, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaConversationalSearchCustomizationConfig.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public GetConversationalSearchCustomizationConfig set$Xgafv(java.lang.String $Xgafv) {
+            return (GetConversationalSearchCustomizationConfig) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GetConversationalSearchCustomizationConfig setAccessToken(java.lang.String accessToken) {
+            return (GetConversationalSearchCustomizationConfig) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GetConversationalSearchCustomizationConfig setAlt(java.lang.String alt) {
+            return (GetConversationalSearchCustomizationConfig) super.setAlt(alt);
+          }
+
+          @Override
+          public GetConversationalSearchCustomizationConfig setCallback(java.lang.String callback) {
+            return (GetConversationalSearchCustomizationConfig) super.setCallback(callback);
+          }
+
+          @Override
+          public GetConversationalSearchCustomizationConfig setFields(java.lang.String fields) {
+            return (GetConversationalSearchCustomizationConfig) super.setFields(fields);
+          }
+
+          @Override
+          public GetConversationalSearchCustomizationConfig setKey(java.lang.String key) {
+            return (GetConversationalSearchCustomizationConfig) super.setKey(key);
+          }
+
+          @Override
+          public GetConversationalSearchCustomizationConfig setOauthToken(java.lang.String oauthToken) {
+            return (GetConversationalSearchCustomizationConfig) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GetConversationalSearchCustomizationConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GetConversationalSearchCustomizationConfig) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GetConversationalSearchCustomizationConfig setQuotaUser(java.lang.String quotaUser) {
+            return (GetConversationalSearchCustomizationConfig) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GetConversationalSearchCustomizationConfig setUploadType(java.lang.String uploadType) {
+            return (GetConversationalSearchCustomizationConfig) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GetConversationalSearchCustomizationConfig setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GetConversationalSearchCustomizationConfig) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Resource name of the parent catalog. Format:
+           * projects/{project}/locations/{location}/catalogs/{catalog}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Resource name of the parent catalog. Format:
+         projects/{project}/locations/{location}/catalogs/{catalog}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Resource name of the parent catalog. Format:
+           * projects/{project}/locations/{location}/catalogs/{catalog}
+           */
+          public GetConversationalSearchCustomizationConfig setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public GetConversationalSearchCustomizationConfig set(String parameterName, Object value) {
+            return (GetConversationalSearchCustomizationConfig) super.set(parameterName, value);
+          }
+        }
+        /**
          * Get which branch is currently default branch set by CatalogService.SetDefaultBranch method under
          * a specified parent catalog.
          *
@@ -3226,6 +3375,172 @@ public class CloudRetail extends com.google.api.client.googleapis.services.json.
           @Override
           public UpdateCompletionConfig set(String parameterName, Object value) {
             return (UpdateCompletionConfig) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates the conversational search customization config for a given catalog.
+         *
+         * Create a request for the method "catalogs.updateConversationalSearchCustomizationConfig".
+         *
+         * This request holds the parameters needed by the retail server.  After setting any optional
+         * parameters, call the {@link UpdateConversationalSearchCustomizationConfig#execute()} method to
+         * invoke the remote operation.
+         *
+         * @param catalog Required. Resource name of the catalog. Format:
+         *        projects/{project}/locations/{location}/catalogs/{catalog}
+         * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaConversationalSearchCustomizationConfig}
+         * @return the request
+         */
+        public UpdateConversationalSearchCustomizationConfig updateConversationalSearchCustomizationConfig(java.lang.String catalog, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaConversationalSearchCustomizationConfig content) throws java.io.IOException {
+          UpdateConversationalSearchCustomizationConfig result = new UpdateConversationalSearchCustomizationConfig(catalog, content);
+          initialize(result);
+          return result;
+        }
+
+        public class UpdateConversationalSearchCustomizationConfig extends CloudRetailRequest<com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaConversationalSearchCustomizationConfig> {
+
+          private static final String REST_PATH = "v2alpha/{+catalog}/conversationalSearchCustomizationConfig";
+
+          private final java.util.regex.Pattern CATALOG_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+
+          /**
+           * Updates the conversational search customization config for a given catalog.
+           *
+           * Create a request for the method "catalogs.updateConversationalSearchCustomizationConfig".
+           *
+           * This request holds the parameters needed by the the retail server.  After setting any optional
+           * parameters, call the {@link UpdateConversationalSearchCustomizationConfig#execute()} method to
+           * invoke the remote operation. <p> {@link UpdateConversationalSearchCustomizationConfig#initializ
+           * e(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to
+           * initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param catalog Required. Resource name of the catalog. Format:
+         *        projects/{project}/locations/{location}/catalogs/{catalog}
+           * @param content the {@link com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaConversationalSearchCustomizationConfig}
+           * @since 1.13
+           */
+          protected UpdateConversationalSearchCustomizationConfig(java.lang.String catalog, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaConversationalSearchCustomizationConfig content) {
+            super(CloudRetail.this, "PATCH", REST_PATH, content, com.google.api.services.retail.v2alpha.model.GoogleCloudRetailV2alphaConversationalSearchCustomizationConfig.class);
+            this.catalog = com.google.api.client.util.Preconditions.checkNotNull(catalog, "Required parameter catalog must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CATALOG_PATTERN.matcher(catalog).matches(),
+                  "Parameter catalog must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+            }
+          }
+
+          @Override
+          public UpdateConversationalSearchCustomizationConfig set$Xgafv(java.lang.String $Xgafv) {
+            return (UpdateConversationalSearchCustomizationConfig) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public UpdateConversationalSearchCustomizationConfig setAccessToken(java.lang.String accessToken) {
+            return (UpdateConversationalSearchCustomizationConfig) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public UpdateConversationalSearchCustomizationConfig setAlt(java.lang.String alt) {
+            return (UpdateConversationalSearchCustomizationConfig) super.setAlt(alt);
+          }
+
+          @Override
+          public UpdateConversationalSearchCustomizationConfig setCallback(java.lang.String callback) {
+            return (UpdateConversationalSearchCustomizationConfig) super.setCallback(callback);
+          }
+
+          @Override
+          public UpdateConversationalSearchCustomizationConfig setFields(java.lang.String fields) {
+            return (UpdateConversationalSearchCustomizationConfig) super.setFields(fields);
+          }
+
+          @Override
+          public UpdateConversationalSearchCustomizationConfig setKey(java.lang.String key) {
+            return (UpdateConversationalSearchCustomizationConfig) super.setKey(key);
+          }
+
+          @Override
+          public UpdateConversationalSearchCustomizationConfig setOauthToken(java.lang.String oauthToken) {
+            return (UpdateConversationalSearchCustomizationConfig) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public UpdateConversationalSearchCustomizationConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (UpdateConversationalSearchCustomizationConfig) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public UpdateConversationalSearchCustomizationConfig setQuotaUser(java.lang.String quotaUser) {
+            return (UpdateConversationalSearchCustomizationConfig) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public UpdateConversationalSearchCustomizationConfig setUploadType(java.lang.String uploadType) {
+            return (UpdateConversationalSearchCustomizationConfig) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public UpdateConversationalSearchCustomizationConfig setUploadProtocol(java.lang.String uploadProtocol) {
+            return (UpdateConversationalSearchCustomizationConfig) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Resource name of the catalog. Format:
+           * projects/{project}/locations/{location}/catalogs/{catalog}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String catalog;
+
+          /** Required. Resource name of the catalog. Format:
+         projects/{project}/locations/{location}/catalogs/{catalog}
+           */
+          public java.lang.String getCatalog() {
+            return catalog;
+          }
+
+          /**
+           * Required. Resource name of the catalog. Format:
+           * projects/{project}/locations/{location}/catalogs/{catalog}
+           */
+          public UpdateConversationalSearchCustomizationConfig setCatalog(java.lang.String catalog) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CATALOG_PATTERN.matcher(catalog).matches(),
+                  "Parameter catalog must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/catalogs/[^/]+$");
+            }
+            this.catalog = catalog;
+            return this;
+          }
+
+          /**
+           * Optional. Indicates which fields in the provided
+           * ConversationalSearchCustomizationConfig to update. If not set or empty, all supported
+           * fields are updated.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Optional. Indicates which fields in the provided ConversationalSearchCustomizationConfig to update.
+         If not set or empty, all supported fields are updated.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Optional. Indicates which fields in the provided
+           * ConversationalSearchCustomizationConfig to update. If not set or empty, all supported
+           * fields are updated.
+           */
+          public UpdateConversationalSearchCustomizationConfig setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public UpdateConversationalSearchCustomizationConfig set(String parameterName, Object value) {
+            return (UpdateConversationalSearchCustomizationConfig) super.set(parameterName, value);
           }
         }
         /**

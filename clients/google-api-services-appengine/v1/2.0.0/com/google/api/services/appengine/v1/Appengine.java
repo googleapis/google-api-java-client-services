@@ -8154,6 +8154,189 @@ public class Appengine extends com.google.api.client.googleapis.services.json.Ab
         public class DomainMappings {
 
           /**
+           * Maps a domain to an application. A user must be authorized to administer a domain in order to map
+           * it to an application. For a list of available authorized domains, see
+           * AuthorizedDomains.ListAuthorizedDomains.
+           *
+           * Create a request for the method "domainMappings.create".
+           *
+           * This request holds the parameters needed by the appengine server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param projectsId Part of `parent`. Name of the parent Application resource. Example: apps/myapp.
+           * @param locationsId Part of `parent`. See documentation of `projectsId`.
+           * @param applicationsId Part of `parent`. See documentation of `projectsId`.
+           * @param content the {@link com.google.api.services.appengine.v1.model.DomainMapping}
+           * @return the request
+           */
+          public Create create(java.lang.String projectsId, java.lang.String locationsId, java.lang.String applicationsId, com.google.api.services.appengine.v1.model.DomainMapping content) throws java.io.IOException {
+            Create result = new Create(projectsId, locationsId, applicationsId, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends AppengineRequest<com.google.api.services.appengine.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/projects/{projectsId}/locations/{locationsId}/applications/{applicationsId}/domainMappings";
+
+            /**
+             * Maps a domain to an application. A user must be authorized to administer a domain in order to
+             * map it to an application. For a list of available authorized domains, see
+             * AuthorizedDomains.ListAuthorizedDomains.
+             *
+             * Create a request for the method "domainMappings.create".
+             *
+             * This request holds the parameters needed by the the appengine server.  After setting any
+             * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param projectsId Part of `parent`. Name of the parent Application resource. Example: apps/myapp.
+             * @param locationsId Part of `parent`. See documentation of `projectsId`.
+             * @param applicationsId Part of `parent`. See documentation of `projectsId`.
+             * @param content the {@link com.google.api.services.appengine.v1.model.DomainMapping}
+             * @since 1.13
+             */
+            protected Create(java.lang.String projectsId, java.lang.String locationsId, java.lang.String applicationsId, com.google.api.services.appengine.v1.model.DomainMapping content) {
+              super(Appengine.this, "POST", REST_PATH, content, com.google.api.services.appengine.v1.model.Operation.class);
+              this.projectsId = com.google.api.client.util.Preconditions.checkNotNull(projectsId, "Required parameter projectsId must be specified.");
+              this.locationsId = com.google.api.client.util.Preconditions.checkNotNull(locationsId, "Required parameter locationsId must be specified.");
+              this.applicationsId = com.google.api.client.util.Preconditions.checkNotNull(applicationsId, "Required parameter applicationsId must be specified.");
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Part of `parent`. Name of the parent Application resource. Example: apps/myapp. */
+            @com.google.api.client.util.Key
+            private java.lang.String projectsId;
+
+            /** Part of `parent`. Name of the parent Application resource. Example: apps/myapp.
+             */
+            public java.lang.String getProjectsId() {
+              return projectsId;
+            }
+
+            /** Part of `parent`. Name of the parent Application resource. Example: apps/myapp. */
+            public Create setProjectsId(java.lang.String projectsId) {
+              this.projectsId = projectsId;
+              return this;
+            }
+
+            /** Part of `parent`. See documentation of `projectsId`. */
+            @com.google.api.client.util.Key
+            private java.lang.String locationsId;
+
+            /** Part of `parent`. See documentation of `projectsId`.
+             */
+            public java.lang.String getLocationsId() {
+              return locationsId;
+            }
+
+            /** Part of `parent`. See documentation of `projectsId`. */
+            public Create setLocationsId(java.lang.String locationsId) {
+              this.locationsId = locationsId;
+              return this;
+            }
+
+            /** Part of `parent`. See documentation of `projectsId`. */
+            @com.google.api.client.util.Key
+            private java.lang.String applicationsId;
+
+            /** Part of `parent`. See documentation of `projectsId`.
+             */
+            public java.lang.String getApplicationsId() {
+              return applicationsId;
+            }
+
+            /** Part of `parent`. See documentation of `projectsId`. */
+            public Create setApplicationsId(java.lang.String applicationsId) {
+              this.applicationsId = applicationsId;
+              return this;
+            }
+
+            /**
+             * Whether the domain creation should override any existing mappings for this domain. By
+             * default, overrides are rejected.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String overrideStrategy;
+
+            /** Whether the domain creation should override any existing mappings for this domain. By default,
+           overrides are rejected.
+             */
+            public java.lang.String getOverrideStrategy() {
+              return overrideStrategy;
+            }
+
+            /**
+             * Whether the domain creation should override any existing mappings for this domain. By
+             * default, overrides are rejected.
+             */
+            public Create setOverrideStrategy(java.lang.String overrideStrategy) {
+              this.overrideStrategy = overrideStrategy;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
            * Gets the specified domain mapping.
            *
            * Create a request for the method "domainMappings.get".

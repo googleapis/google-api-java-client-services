@@ -3662,8 +3662,9 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
        * setting any optional parameters, call the {@link Activate#execute()} method to invoke the remote
        * operation.
        *
-       * @param name Required. Name of data segment to activate. Format:
-       *        `buyers/{accountId}/dataSegments/{curatorDataSegmentId}`
+       * @param name Required. Name of data segment to activate. v1alpha format:
+       *        `buyers/{accountId}/dataSegments/{curatorDataSegmentId}` v1beta format:
+       *        `curators/{accountId}/dataSegments/{curatorDataSegmentId}`
        * @param content the {@link com.google.api.services.authorizedbuyersmarketplace.v1alpha.model.ActivateDataSegmentRequest}
        * @return the request
        */
@@ -3691,8 +3692,9 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
          * Activate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Name of data segment to activate. Format:
-       *        `buyers/{accountId}/dataSegments/{curatorDataSegmentId}`
+         * @param name Required. Name of data segment to activate. v1alpha format:
+       *        `buyers/{accountId}/dataSegments/{curatorDataSegmentId}` v1beta format:
+       *        `curators/{accountId}/dataSegments/{curatorDataSegmentId}`
          * @param content the {@link com.google.api.services.authorizedbuyersmarketplace.v1alpha.model.ActivateDataSegmentRequest}
          * @since 1.13
          */
@@ -3762,22 +3764,25 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
         }
 
         /**
-         * Required. Name of data segment to activate. Format:
-         * `buyers/{accountId}/dataSegments/{curatorDataSegmentId}`
+         * Required. Name of data segment to activate. v1alpha format:
+         * `buyers/{accountId}/dataSegments/{curatorDataSegmentId}` v1beta format:
+         * `curators/{accountId}/dataSegments/{curatorDataSegmentId}`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. Name of data segment to activate. Format:
-       `buyers/{accountId}/dataSegments/{curatorDataSegmentId}`
+        /** Required. Name of data segment to activate. v1alpha format:
+       `buyers/{accountId}/dataSegments/{curatorDataSegmentId}` v1beta format:
+       `curators/{accountId}/dataSegments/{curatorDataSegmentId}`
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Required. Name of data segment to activate. Format:
-         * `buyers/{accountId}/dataSegments/{curatorDataSegmentId}`
+         * Required. Name of data segment to activate. v1alpha format:
+         * `buyers/{accountId}/dataSegments/{curatorDataSegmentId}` v1beta format:
+         * `curators/{accountId}/dataSegments/{curatorDataSegmentId}`
          */
         public Activate setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -3805,7 +3810,8 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
        * setting any optional parameters, call the {@link Create#execute()} method to invoke the remote
        * operation.
        *
-       * @param parent Required. The parent resource where this data segment will be created. Format: `buyers/{accountId}`
+       * @param parent Required. The parent resource where this data segment will be created. v1alpha format:
+       *        `buyers/{accountId}` v1beta format: `curators/{accountId}`
        * @param content the {@link com.google.api.services.authorizedbuyersmarketplace.v1alpha.model.DataSegment}
        * @return the request
        */
@@ -3835,7 +3841,8 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent resource where this data segment will be created. Format: `buyers/{accountId}`
+         * @param parent Required. The parent resource where this data segment will be created. v1alpha format:
+       *        `buyers/{accountId}` v1beta format: `curators/{accountId}`
          * @param content the {@link com.google.api.services.authorizedbuyersmarketplace.v1alpha.model.DataSegment}
          * @since 1.13
          */
@@ -3905,21 +3912,22 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
         }
 
         /**
-         * Required. The parent resource where this data segment will be created. Format:
-         * `buyers/{accountId}`
+         * Required. The parent resource where this data segment will be created. v1alpha format:
+         * `buyers/{accountId}` v1beta format: `curators/{accountId}`
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent resource where this data segment will be created. Format: `buyers/{accountId}`
+        /** Required. The parent resource where this data segment will be created. v1alpha format:
+       `buyers/{accountId}` v1beta format: `curators/{accountId}`
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The parent resource where this data segment will be created. Format:
-         * `buyers/{accountId}`
+         * Required. The parent resource where this data segment will be created. v1alpha format:
+         * `buyers/{accountId}` v1beta format: `curators/{accountId}`
          */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -3945,8 +3953,9 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
        * setting any optional parameters, call the {@link Deactivate#execute()} method to invoke the
        * remote operation.
        *
-       * @param name Required. Name of data segment to deactivate. Format:
-       *        `buyers/{accountId}/dataSegments/{curatorDataSegmentId}`
+       * @param name Required. Name of data segment to deactivate. v1alpha format:
+       *        `buyers/{accountId}/dataSegments/{curatorDataSegmentId}` v1beta format:
+       *        `curators/{accountId}/dataSegments/{curatorDataSegmentId}`
        * @param content the {@link com.google.api.services.authorizedbuyersmarketplace.v1alpha.model.DeactivateDataSegmentRequest}
        * @return the request
        */
@@ -3974,8 +3983,9 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
          * Deactivate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Name of data segment to deactivate. Format:
-       *        `buyers/{accountId}/dataSegments/{curatorDataSegmentId}`
+         * @param name Required. Name of data segment to deactivate. v1alpha format:
+       *        `buyers/{accountId}/dataSegments/{curatorDataSegmentId}` v1beta format:
+       *        `curators/{accountId}/dataSegments/{curatorDataSegmentId}`
          * @param content the {@link com.google.api.services.authorizedbuyersmarketplace.v1alpha.model.DeactivateDataSegmentRequest}
          * @since 1.13
          */
@@ -4045,22 +4055,25 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
         }
 
         /**
-         * Required. Name of data segment to deactivate. Format:
-         * `buyers/{accountId}/dataSegments/{curatorDataSegmentId}`
+         * Required. Name of data segment to deactivate. v1alpha format:
+         * `buyers/{accountId}/dataSegments/{curatorDataSegmentId}` v1beta format:
+         * `curators/{accountId}/dataSegments/{curatorDataSegmentId}`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. Name of data segment to deactivate. Format:
-       `buyers/{accountId}/dataSegments/{curatorDataSegmentId}`
+        /** Required. Name of data segment to deactivate. v1alpha format:
+       `buyers/{accountId}/dataSegments/{curatorDataSegmentId}` v1beta format:
+       `curators/{accountId}/dataSegments/{curatorDataSegmentId}`
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Required. Name of data segment to deactivate. Format:
-         * `buyers/{accountId}/dataSegments/{curatorDataSegmentId}`
+         * Required. Name of data segment to deactivate. v1alpha format:
+         * `buyers/{accountId}/dataSegments/{curatorDataSegmentId}` v1beta format:
+         * `curators/{accountId}/dataSegments/{curatorDataSegmentId}`
          */
         public Deactivate setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -4086,8 +4099,9 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
        * setting any optional parameters, call the {@link Get#execute()} method to invoke the remote
        * operation.
        *
-       * @param name Required. Name of data segment to get. Format:
-       *        `buyers/{accountId}/dataSegments/{curatorDataSegmentId}`
+       * @param name Required. Name of data segment to get. v1alpha format:
+       *        `buyers/{accountId}/dataSegments/{curatorDataSegmentId}` v1beta format:
+       *        `curators/{accountId}/dataSegments/{curatorDataSegmentId}`
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -4114,8 +4128,9 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
          * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Name of data segment to get. Format:
-       *        `buyers/{accountId}/dataSegments/{curatorDataSegmentId}`
+         * @param name Required. Name of data segment to get. v1alpha format:
+       *        `buyers/{accountId}/dataSegments/{curatorDataSegmentId}` v1beta format:
+       *        `curators/{accountId}/dataSegments/{curatorDataSegmentId}`
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -4194,22 +4209,25 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
         }
 
         /**
-         * Required. Name of data segment to get. Format:
-         * `buyers/{accountId}/dataSegments/{curatorDataSegmentId}`
+         * Required. Name of data segment to get. v1alpha format:
+         * `buyers/{accountId}/dataSegments/{curatorDataSegmentId}` v1beta format:
+         * `curators/{accountId}/dataSegments/{curatorDataSegmentId}`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. Name of data segment to get. Format:
-       `buyers/{accountId}/dataSegments/{curatorDataSegmentId}`
+        /** Required. Name of data segment to get. v1alpha format:
+       `buyers/{accountId}/dataSegments/{curatorDataSegmentId}` v1beta format:
+       `curators/{accountId}/dataSegments/{curatorDataSegmentId}`
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Required. Name of data segment to get. Format:
-         * `buyers/{accountId}/dataSegments/{curatorDataSegmentId}`
+         * Required. Name of data segment to get. v1alpha format:
+         * `buyers/{accountId}/dataSegments/{curatorDataSegmentId}` v1beta format:
+         * `curators/{accountId}/dataSegments/{curatorDataSegmentId}`
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -4235,7 +4253,8 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
        * setting any optional parameters, call the {@link List#execute()} method to invoke the remote
        * operation.
        *
-       * @param parent Required. Name of the parent buyer that can access the data segment. Format: `buyers/{accountId}`
+       * @param parent Required. Name of the parent curator that can access the data segment. v1alpha format:
+       *        `buyers/{accountId}` v1beta format: `curators/{accountId}`
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -4262,7 +4281,8 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. Name of the parent buyer that can access the data segment. Format: `buyers/{accountId}`
+         * @param parent Required. Name of the parent curator that can access the data segment. v1alpha format:
+       *        `buyers/{accountId}` v1beta format: `curators/{accountId}`
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -4341,21 +4361,22 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
         }
 
         /**
-         * Required. Name of the parent buyer that can access the data segment. Format:
-         * `buyers/{accountId}`
+         * Required. Name of the parent curator that can access the data segment. v1alpha format:
+         * `buyers/{accountId}` v1beta format: `curators/{accountId}`
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. Name of the parent buyer that can access the data segment. Format: `buyers/{accountId}`
+        /** Required. Name of the parent curator that can access the data segment. v1alpha format:
+       `buyers/{accountId}` v1beta format: `curators/{accountId}`
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. Name of the parent buyer that can access the data segment. Format:
-         * `buyers/{accountId}`
+         * Required. Name of the parent curator that can access the data segment. v1alpha format:
+         * `buyers/{accountId}` v1beta format: `curators/{accountId}`
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
@@ -4421,8 +4442,9 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
        * operation.
        *
        * @param name Immutable. Identifier. The unique identifier for the data segment. Account ID corresponds to the
-       *        account ID that created the segment. Format:
-       *        `buyers/{accountId}/dataSegments/{curatorDataSegmentId}`
+       *        account ID that created the segment. v1alpha format:
+       *        `buyers/{accountId}/dataSegments/{curatorDataSegmentId}` v1beta format:
+       *        `curators/{curatorAccountId}/dataSegments/{curatorDataSegmentId}`
        * @param content the {@link com.google.api.services.authorizedbuyersmarketplace.v1alpha.model.DataSegment}
        * @return the request
        */
@@ -4451,8 +4473,9 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Immutable. Identifier. The unique identifier for the data segment. Account ID corresponds to the
-       *        account ID that created the segment. Format:
-       *        `buyers/{accountId}/dataSegments/{curatorDataSegmentId}`
+       *        account ID that created the segment. v1alpha format:
+       *        `buyers/{accountId}/dataSegments/{curatorDataSegmentId}` v1beta format:
+       *        `curators/{curatorAccountId}/dataSegments/{curatorDataSegmentId}`
          * @param content the {@link com.google.api.services.authorizedbuyersmarketplace.v1alpha.model.DataSegment}
          * @since 1.13
          */
@@ -4523,15 +4546,17 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
 
         /**
          * Immutable. Identifier. The unique identifier for the data segment. Account ID corresponds
-         * to the account ID that created the segment. Format:
-         * `buyers/{accountId}/dataSegments/{curatorDataSegmentId}`
+         * to the account ID that created the segment. v1alpha format:
+         * `buyers/{accountId}/dataSegments/{curatorDataSegmentId}` v1beta format:
+         * `curators/{curatorAccountId}/dataSegments/{curatorDataSegmentId}`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Immutable. Identifier. The unique identifier for the data segment. Account ID corresponds to the
-       account ID that created the segment. Format:
-       `buyers/{accountId}/dataSegments/{curatorDataSegmentId}`
+       account ID that created the segment. v1alpha format:
+       `buyers/{accountId}/dataSegments/{curatorDataSegmentId}` v1beta format:
+       `curators/{curatorAccountId}/dataSegments/{curatorDataSegmentId}`
          */
         public java.lang.String getName() {
           return name;
@@ -4539,8 +4564,9 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
 
         /**
          * Immutable. Identifier. The unique identifier for the data segment. Account ID corresponds
-         * to the account ID that created the segment. Format:
-         * `buyers/{accountId}/dataSegments/{curatorDataSegmentId}`
+         * to the account ID that created the segment. v1alpha format:
+         * `buyers/{accountId}/dataSegments/{curatorDataSegmentId}` v1beta format:
+         * `curators/{curatorAccountId}/dataSegments/{curatorDataSegmentId}`
          */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {

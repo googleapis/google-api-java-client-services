@@ -32,16 +32,16 @@ package com.google.api.services.analyticsadmin.v1alpha.model;
 public final class GoogleAnalyticsAdminV1alphaSubpropertySyncConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Immutable. Resource name of the Subproperty that these settings apply to.
+   * Output only. Immutable. Resource name of the subproperty that these settings apply to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String applyToProperty;
 
   /**
-   * Required. Specifies the Custom Dimension / Metric synchronization mode for the Subproperty. If
+   * Required. Specifies the Custom Dimension / Metric synchronization mode for the subproperty. If
    * set to ALL, Custom Dimension / Metric synchronization will be immediately enabled. Local
-   * configuration of Custom Dimensions / Metrics will not be allowed on the Subproperty so long as
+   * configuration of Custom Dimensions / Metrics will not be allowed on the subproperty so long as
    * the synchronization mode is set to ALL. If set to NONE, Custom Dimensions / Metric
    * synchronization is disabled. Custom Dimensions / Metrics must be configured explicitly on the
    * Subproperty.
@@ -60,7 +60,7 @@ public final class GoogleAnalyticsAdminV1alphaSubpropertySyncConfig extends com.
   private java.lang.String name;
 
   /**
-   * Output only. Immutable. Resource name of the Subproperty that these settings apply to.
+   * Output only. Immutable. Resource name of the subproperty that these settings apply to.
    * @return value or {@code null} for none
    */
   public java.lang.String getApplyToProperty() {
@@ -68,7 +68,7 @@ public final class GoogleAnalyticsAdminV1alphaSubpropertySyncConfig extends com.
   }
 
   /**
-   * Output only. Immutable. Resource name of the Subproperty that these settings apply to.
+   * Output only. Immutable. Resource name of the subproperty that these settings apply to.
    * @param applyToProperty applyToProperty or {@code null} for none
    */
   public GoogleAnalyticsAdminV1alphaSubpropertySyncConfig setApplyToProperty(java.lang.String applyToProperty) {
@@ -77,9 +77,9 @@ public final class GoogleAnalyticsAdminV1alphaSubpropertySyncConfig extends com.
   }
 
   /**
-   * Required. Specifies the Custom Dimension / Metric synchronization mode for the Subproperty. If
+   * Required. Specifies the Custom Dimension / Metric synchronization mode for the subproperty. If
    * set to ALL, Custom Dimension / Metric synchronization will be immediately enabled. Local
-   * configuration of Custom Dimensions / Metrics will not be allowed on the Subproperty so long as
+   * configuration of Custom Dimensions / Metrics will not be allowed on the subproperty so long as
    * the synchronization mode is set to ALL. If set to NONE, Custom Dimensions / Metric
    * synchronization is disabled. Custom Dimensions / Metrics must be configured explicitly on the
    * Subproperty.
@@ -90,9 +90,9 @@ public final class GoogleAnalyticsAdminV1alphaSubpropertySyncConfig extends com.
   }
 
   /**
-   * Required. Specifies the Custom Dimension / Metric synchronization mode for the Subproperty. If
+   * Required. Specifies the Custom Dimension / Metric synchronization mode for the subproperty. If
    * set to ALL, Custom Dimension / Metric synchronization will be immediately enabled. Local
-   * configuration of Custom Dimensions / Metrics will not be allowed on the Subproperty so long as
+   * configuration of Custom Dimensions / Metrics will not be allowed on the subproperty so long as
    * the synchronization mode is set to ALL. If set to NONE, Custom Dimensions / Metric
    * synchronization is disabled. Custom Dimensions / Metrics must be configured explicitly on the
    * Subproperty.

@@ -30,8 +30,8 @@ package com.google.api.services.networkservices.v1beta1.model;
 public final class GatewayRouteView extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Identifier. Full path name of the GatewayRouteView resource. Format: projects/{pro
-   * ject_number}/locations/{location}/gateways/{gateway_name}/routeViews/{route_view_name}
+   * Output only. Identifier. Full path name of the GatewayRouteView resource. Format:
+   * projects/{project_number}/locations/{location}/gateways/{gateway}/routeViews/{route_view}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,8 +66,8 @@ public final class GatewayRouteView extends com.google.api.client.json.GenericJs
   private java.lang.String routeType;
 
   /**
-   * Output only. Identifier. Full path name of the GatewayRouteView resource. Format: projects/{pro
-   * ject_number}/locations/{location}/gateways/{gateway_name}/routeViews/{route_view_name}
+   * Output only. Identifier. Full path name of the GatewayRouteView resource. Format:
+   * projects/{project_number}/locations/{location}/gateways/{gateway}/routeViews/{route_view}
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -75,8 +75,8 @@ public final class GatewayRouteView extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. Identifier. Full path name of the GatewayRouteView resource. Format: projects/{pro
-   * ject_number}/locations/{location}/gateways/{gateway_name}/routeViews/{route_view_name}
+   * Output only. Identifier. Full path name of the GatewayRouteView resource. Format:
+   * projects/{project_number}/locations/{location}/gateways/{gateway}/routeViews/{route_view}
    * @param name name or {@code null} for none
    */
   public GatewayRouteView setName(java.lang.String name) {

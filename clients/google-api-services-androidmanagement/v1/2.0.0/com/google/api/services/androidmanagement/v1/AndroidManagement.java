@@ -4193,6 +4193,147 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
         }
       }
       /**
+       * Updates or creates applications in a policy.
+       *
+       * Create a request for the method "policies.modifyPolicyApplications".
+       *
+       * This request holds the parameters needed by the androidmanagement server.  After setting any
+       * optional parameters, call the {@link ModifyPolicyApplications#execute()} method to invoke the
+       * remote operation.
+       *
+       * @param name Required. The name of the Policy containing the ApplicationPolicy objects to be updated, in the form
+       *        enterprises/{enterpriseId}/policies/{policyId}.
+       * @param content the {@link com.google.api.services.androidmanagement.v1.model.ModifyPolicyApplicationsRequest}
+       * @return the request
+       */
+      public ModifyPolicyApplications modifyPolicyApplications(java.lang.String name, com.google.api.services.androidmanagement.v1.model.ModifyPolicyApplicationsRequest content) throws java.io.IOException {
+        ModifyPolicyApplications result = new ModifyPolicyApplications(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class ModifyPolicyApplications extends AndroidManagementRequest<com.google.api.services.androidmanagement.v1.model.ModifyPolicyApplicationsResponse> {
+
+        private static final String REST_PATH = "v1/{+name}:modifyPolicyApplications";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^enterprises/[^/]+/policies/[^/]+$");
+
+        /**
+         * Updates or creates applications in a policy.
+         *
+         * Create a request for the method "policies.modifyPolicyApplications".
+         *
+         * This request holds the parameters needed by the the androidmanagement server.  After setting
+         * any optional parameters, call the {@link ModifyPolicyApplications#execute()} method to invoke
+         * the remote operation. <p> {@link ModifyPolicyApplications#initialize(com.google.api.client.goog
+         * leapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+         * immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the Policy containing the ApplicationPolicy objects to be updated, in the form
+       *        enterprises/{enterpriseId}/policies/{policyId}.
+         * @param content the {@link com.google.api.services.androidmanagement.v1.model.ModifyPolicyApplicationsRequest}
+         * @since 1.13
+         */
+        protected ModifyPolicyApplications(java.lang.String name, com.google.api.services.androidmanagement.v1.model.ModifyPolicyApplicationsRequest content) {
+          super(AndroidManagement.this, "POST", REST_PATH, content, com.google.api.services.androidmanagement.v1.model.ModifyPolicyApplicationsResponse.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^enterprises/[^/]+/policies/[^/]+$");
+          }
+        }
+
+        @Override
+        public ModifyPolicyApplications set$Xgafv(java.lang.String $Xgafv) {
+          return (ModifyPolicyApplications) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public ModifyPolicyApplications setAccessToken(java.lang.String accessToken) {
+          return (ModifyPolicyApplications) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public ModifyPolicyApplications setAlt(java.lang.String alt) {
+          return (ModifyPolicyApplications) super.setAlt(alt);
+        }
+
+        @Override
+        public ModifyPolicyApplications setCallback(java.lang.String callback) {
+          return (ModifyPolicyApplications) super.setCallback(callback);
+        }
+
+        @Override
+        public ModifyPolicyApplications setFields(java.lang.String fields) {
+          return (ModifyPolicyApplications) super.setFields(fields);
+        }
+
+        @Override
+        public ModifyPolicyApplications setKey(java.lang.String key) {
+          return (ModifyPolicyApplications) super.setKey(key);
+        }
+
+        @Override
+        public ModifyPolicyApplications setOauthToken(java.lang.String oauthToken) {
+          return (ModifyPolicyApplications) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public ModifyPolicyApplications setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (ModifyPolicyApplications) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public ModifyPolicyApplications setQuotaUser(java.lang.String quotaUser) {
+          return (ModifyPolicyApplications) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public ModifyPolicyApplications setUploadType(java.lang.String uploadType) {
+          return (ModifyPolicyApplications) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public ModifyPolicyApplications setUploadProtocol(java.lang.String uploadProtocol) {
+          return (ModifyPolicyApplications) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the Policy containing the ApplicationPolicy objects to be updated,
+         * in the form enterprises/{enterpriseId}/policies/{policyId}.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the Policy containing the ApplicationPolicy objects to be updated, in the
+       form enterprises/{enterpriseId}/policies/{policyId}.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the Policy containing the ApplicationPolicy objects to be updated,
+         * in the form enterprises/{enterpriseId}/policies/{policyId}.
+         */
+        public ModifyPolicyApplications setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^enterprises/[^/]+/policies/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public ModifyPolicyApplications set(String parameterName, Object value) {
+          return (ModifyPolicyApplications) super.set(parameterName, value);
+        }
+      }
+      /**
        * Updates or creates a policy.
        *
        * Create a request for the method "policies.patch".
@@ -4343,6 +4484,147 @@ public class AndroidManagement extends com.google.api.client.googleapis.services
         @Override
         public Patch set(String parameterName, Object value) {
           return (Patch) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Removes applications in a policy.
+       *
+       * Create a request for the method "policies.removePolicyApplications".
+       *
+       * This request holds the parameters needed by the androidmanagement server.  After setting any
+       * optional parameters, call the {@link RemovePolicyApplications#execute()} method to invoke the
+       * remote operation.
+       *
+       * @param name Required. The name of the policy containing the ApplicationPolicy objects to be removed, in the form
+       *        enterprises/{enterpriseId}/policies/{policyId}.
+       * @param content the {@link com.google.api.services.androidmanagement.v1.model.RemovePolicyApplicationsRequest}
+       * @return the request
+       */
+      public RemovePolicyApplications removePolicyApplications(java.lang.String name, com.google.api.services.androidmanagement.v1.model.RemovePolicyApplicationsRequest content) throws java.io.IOException {
+        RemovePolicyApplications result = new RemovePolicyApplications(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class RemovePolicyApplications extends AndroidManagementRequest<com.google.api.services.androidmanagement.v1.model.RemovePolicyApplicationsResponse> {
+
+        private static final String REST_PATH = "v1/{+name}:removePolicyApplications";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^enterprises/[^/]+/policies/[^/]+$");
+
+        /**
+         * Removes applications in a policy.
+         *
+         * Create a request for the method "policies.removePolicyApplications".
+         *
+         * This request holds the parameters needed by the the androidmanagement server.  After setting
+         * any optional parameters, call the {@link RemovePolicyApplications#execute()} method to invoke
+         * the remote operation. <p> {@link RemovePolicyApplications#initialize(com.google.api.client.goog
+         * leapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+         * immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the policy containing the ApplicationPolicy objects to be removed, in the form
+       *        enterprises/{enterpriseId}/policies/{policyId}.
+         * @param content the {@link com.google.api.services.androidmanagement.v1.model.RemovePolicyApplicationsRequest}
+         * @since 1.13
+         */
+        protected RemovePolicyApplications(java.lang.String name, com.google.api.services.androidmanagement.v1.model.RemovePolicyApplicationsRequest content) {
+          super(AndroidManagement.this, "POST", REST_PATH, content, com.google.api.services.androidmanagement.v1.model.RemovePolicyApplicationsResponse.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^enterprises/[^/]+/policies/[^/]+$");
+          }
+        }
+
+        @Override
+        public RemovePolicyApplications set$Xgafv(java.lang.String $Xgafv) {
+          return (RemovePolicyApplications) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public RemovePolicyApplications setAccessToken(java.lang.String accessToken) {
+          return (RemovePolicyApplications) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public RemovePolicyApplications setAlt(java.lang.String alt) {
+          return (RemovePolicyApplications) super.setAlt(alt);
+        }
+
+        @Override
+        public RemovePolicyApplications setCallback(java.lang.String callback) {
+          return (RemovePolicyApplications) super.setCallback(callback);
+        }
+
+        @Override
+        public RemovePolicyApplications setFields(java.lang.String fields) {
+          return (RemovePolicyApplications) super.setFields(fields);
+        }
+
+        @Override
+        public RemovePolicyApplications setKey(java.lang.String key) {
+          return (RemovePolicyApplications) super.setKey(key);
+        }
+
+        @Override
+        public RemovePolicyApplications setOauthToken(java.lang.String oauthToken) {
+          return (RemovePolicyApplications) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public RemovePolicyApplications setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (RemovePolicyApplications) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public RemovePolicyApplications setQuotaUser(java.lang.String quotaUser) {
+          return (RemovePolicyApplications) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public RemovePolicyApplications setUploadType(java.lang.String uploadType) {
+          return (RemovePolicyApplications) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public RemovePolicyApplications setUploadProtocol(java.lang.String uploadProtocol) {
+          return (RemovePolicyApplications) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the policy containing the ApplicationPolicy objects to be removed,
+         * in the form enterprises/{enterpriseId}/policies/{policyId}.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the policy containing the ApplicationPolicy objects to be removed, in the
+       form enterprises/{enterpriseId}/policies/{policyId}.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the policy containing the ApplicationPolicy objects to be removed,
+         * in the form enterprises/{enterpriseId}/policies/{policyId}.
+         */
+        public RemovePolicyApplications setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^enterprises/[^/]+/policies/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public RemovePolicyApplications set(String parameterName, Object value) {
+          return (RemovePolicyApplications) super.set(parameterName, value);
         }
       }
 

@@ -31,14 +31,14 @@ package com.google.api.services.securitycenter.v1beta2.model;
 public final class GoogleCloudSecuritycenterV2Pipeline extends com.google.api.client.json.GenericJson {
 
   /**
-   * The user defined display name of pipeline, e.g. plants-classification
+   * The user-defined display name of pipeline, e.g. plants-classification
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Resource name of pipeline, e.g.
+   * Resource name of the pipeline, e.g.
    * projects/{project}/locations/{location}/trainingPipelines/5253428229225578496
    * The value may be {@code null}.
    */
@@ -46,7 +46,7 @@ public final class GoogleCloudSecuritycenterV2Pipeline extends com.google.api.cl
   private java.lang.String name;
 
   /**
-   * The user defined display name of pipeline, e.g. plants-classification
+   * The user-defined display name of pipeline, e.g. plants-classification
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -54,7 +54,7 @@ public final class GoogleCloudSecuritycenterV2Pipeline extends com.google.api.cl
   }
 
   /**
-   * The user defined display name of pipeline, e.g. plants-classification
+   * The user-defined display name of pipeline, e.g. plants-classification
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Pipeline setDisplayName(java.lang.String displayName) {
@@ -63,7 +63,7 @@ public final class GoogleCloudSecuritycenterV2Pipeline extends com.google.api.cl
   }
 
   /**
-   * Resource name of pipeline, e.g.
+   * Resource name of the pipeline, e.g.
    * projects/{project}/locations/{location}/trainingPipelines/5253428229225578496
    * @return value or {@code null} for none
    */
@@ -72,7 +72,7 @@ public final class GoogleCloudSecuritycenterV2Pipeline extends com.google.api.cl
   }
 
   /**
-   * Resource name of pipeline, e.g.
+   * Resource name of the pipeline, e.g.
    * projects/{project}/locations/{location}/trainingPipelines/5253428229225578496
    * @param name name or {@code null} for none
    */

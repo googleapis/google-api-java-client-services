@@ -176,6 +176,17 @@ public final class GoogleCloudAiplatformV1ModelContainerSpec extends com.google.
   private java.lang.String imageUri;
 
   /**
+   * Immutable. Invoke route prefix for the custom container. "" is the only supported value right
+   * now. By setting this field, any non-root route on this model will be accessible with
+   * [PredictionService.Invoke] eg: "/invoke/foo/bar". Only one of `predict_route` or
+   * `invoke_route_prefix` can be set, and we default to using `predict_route` if this field is not
+   * set. If this field is set, the Model can only be deployed to dedicated endpoint.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String invokeRoutePrefix;
+
+  /**
    * Immutable. Specification for Kubernetes liveness probe.
    * The value may be {@code null}.
    */
@@ -528,6 +539,31 @@ public final class GoogleCloudAiplatformV1ModelContainerSpec extends com.google.
    */
   public GoogleCloudAiplatformV1ModelContainerSpec setImageUri(java.lang.String imageUri) {
     this.imageUri = imageUri;
+    return this;
+  }
+
+  /**
+   * Immutable. Invoke route prefix for the custom container. "" is the only supported value right
+   * now. By setting this field, any non-root route on this model will be accessible with
+   * [PredictionService.Invoke] eg: "/invoke/foo/bar". Only one of `predict_route` or
+   * `invoke_route_prefix` can be set, and we default to using `predict_route` if this field is not
+   * set. If this field is set, the Model can only be deployed to dedicated endpoint.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getInvokeRoutePrefix() {
+    return invokeRoutePrefix;
+  }
+
+  /**
+   * Immutable. Invoke route prefix for the custom container. "" is the only supported value right
+   * now. By setting this field, any non-root route on this model will be accessible with
+   * [PredictionService.Invoke] eg: "/invoke/foo/bar". Only one of `predict_route` or
+   * `invoke_route_prefix` can be set, and we default to using `predict_route` if this field is not
+   * set. If this field is set, the Model can only be deployed to dedicated endpoint.
+   * @param invokeRoutePrefix invokeRoutePrefix or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1ModelContainerSpec setInvokeRoutePrefix(java.lang.String invokeRoutePrefix) {
+    this.invokeRoutePrefix = invokeRoutePrefix;
     return this;
   }
 

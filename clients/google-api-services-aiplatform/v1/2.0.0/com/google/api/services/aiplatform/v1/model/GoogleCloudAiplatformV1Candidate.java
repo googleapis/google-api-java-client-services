@@ -96,6 +96,13 @@ public final class GoogleCloudAiplatformV1Candidate extends com.google.api.clien
   private java.util.List<GoogleCloudAiplatformV1SafetyRating> safetyRatings;
 
   /**
+   * Output only. Metadata related to url context retrieval tool.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1UrlContextMetadata urlContextMetadata;
+
+  /**
    * Output only. Average log probability score of the candidate.
    * @return value or {@code null} for none
    */
@@ -251,6 +258,23 @@ public final class GoogleCloudAiplatformV1Candidate extends com.google.api.clien
    */
   public GoogleCloudAiplatformV1Candidate setSafetyRatings(java.util.List<GoogleCloudAiplatformV1SafetyRating> safetyRatings) {
     this.safetyRatings = safetyRatings;
+    return this;
+  }
+
+  /**
+   * Output only. Metadata related to url context retrieval tool.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1UrlContextMetadata getUrlContextMetadata() {
+    return urlContextMetadata;
+  }
+
+  /**
+   * Output only. Metadata related to url context retrieval tool.
+   * @param urlContextMetadata urlContextMetadata or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1Candidate setUrlContextMetadata(GoogleCloudAiplatformV1UrlContextMetadata urlContextMetadata) {
+    this.urlContextMetadata = urlContextMetadata;
     return this;
   }
 

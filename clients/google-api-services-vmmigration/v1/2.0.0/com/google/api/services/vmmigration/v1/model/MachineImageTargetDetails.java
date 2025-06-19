@@ -75,7 +75,7 @@ public final class MachineImageTargetDetails extends com.google.api.client.json.
 
   /**
    * Optional. The network interfaces to create with the instance created by the machine image.
-   * Internal and external IP addresses are ignored for machine image import.
+   * Internal and external IP addresses, and network tiers are ignored for machine image import.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -240,7 +240,7 @@ public final class MachineImageTargetDetails extends com.google.api.client.json.
 
   /**
    * Optional. The network interfaces to create with the instance created by the machine image.
-   * Internal and external IP addresses are ignored for machine image import.
+   * Internal and external IP addresses, and network tiers are ignored for machine image import.
    * @return value or {@code null} for none
    */
   public java.util.List<NetworkInterface> getNetworkInterfaces() {
@@ -249,7 +249,7 @@ public final class MachineImageTargetDetails extends com.google.api.client.json.
 
   /**
    * Optional. The network interfaces to create with the instance created by the machine image.
-   * Internal and external IP addresses are ignored for machine image import.
+   * Internal and external IP addresses, and network tiers are ignored for machine image import.
    * @param networkInterfaces networkInterfaces or {@code null} for none
    */
   public MachineImageTargetDetails setNetworkInterfaces(java.util.List<NetworkInterface> networkInterfaces) {

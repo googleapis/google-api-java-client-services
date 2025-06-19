@@ -46,6 +46,14 @@ public final class ListNotesResponse extends com.google.api.client.json.GenericJ
   private java.util.List<Note> notes;
 
   /**
+   * Unordered list. Unreachable regions. Populated for requests from the global region when
+   * `return_partial_success` is set. Format: projects//locations/
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> unreachable;
+
+  /**
    * The next pagination token in the list response. It should be used as `page_token` for the
    * following request. An empty value means no more results.
    * @return value or {@code null} for none
@@ -78,6 +86,25 @@ public final class ListNotesResponse extends com.google.api.client.json.GenericJ
    */
   public ListNotesResponse setNotes(java.util.List<Note> notes) {
     this.notes = notes;
+    return this;
+  }
+
+  /**
+   * Unordered list. Unreachable regions. Populated for requests from the global region when
+   * `return_partial_success` is set. Format: projects//locations/
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getUnreachable() {
+    return unreachable;
+  }
+
+  /**
+   * Unordered list. Unreachable regions. Populated for requests from the global region when
+   * `return_partial_success` is set. Format: projects//locations/
+   * @param unreachable unreachable or {@code null} for none
+   */
+  public ListNotesResponse setUnreachable(java.util.List<java.lang.String> unreachable) {
+    this.unreachable = unreachable;
     return this;
   }
 

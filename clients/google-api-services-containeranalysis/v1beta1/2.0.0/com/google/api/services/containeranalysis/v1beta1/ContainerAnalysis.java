@@ -1115,6 +1115,31 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
             return this;
           }
 
+          /**
+           * If set, the request will return all reachable Notes and report all unreachable regions
+           * in the `unreachable` field in the response. Only applicable for requests in the global
+           * region.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean returnPartialSuccess;
+
+          /** If set, the request will return all reachable Notes and report all unreachable regions in the
+         `unreachable` field in the response. Only applicable for requests in the global region.
+           */
+          public java.lang.Boolean getReturnPartialSuccess() {
+            return returnPartialSuccess;
+          }
+
+          /**
+           * If set, the request will return all reachable Notes and report all unreachable regions
+           * in the `unreachable` field in the response. Only applicable for requests in the global
+           * region.
+           */
+          public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
+            this.returnPartialSuccess = returnPartialSuccess;
+            return this;
+          }
+
           @Override
           public List set(String parameterName, Object value) {
             return (List) super.set(parameterName, value);
@@ -2852,6 +2877,32 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
             return this;
           }
 
+          /**
+           * If set, the request will return all reachable occurrence summaries and report all
+           * unreachable regions in the `unreachable` field in the response. Only applicable for
+           * requests in the global region.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean returnPartialSuccess;
+
+          /** If set, the request will return all reachable occurrence summaries and report all unreachable
+         regions in the `unreachable` field in the response. Only applicable for requests in the global
+         region.
+           */
+          public java.lang.Boolean getReturnPartialSuccess() {
+            return returnPartialSuccess;
+          }
+
+          /**
+           * If set, the request will return all reachable occurrence summaries and report all
+           * unreachable regions in the `unreachable` field in the response. Only applicable for
+           * requests in the global region.
+           */
+          public GetVulnerabilitySummary setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
+            this.returnPartialSuccess = returnPartialSuccess;
+            return this;
+          }
+
           @Override
           public GetVulnerabilitySummary set(String parameterName, Object value) {
             return (GetVulnerabilitySummary) super.set(parameterName, value);
@@ -3049,6 +3100,31 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
           /** Token to provide to skip to a particular spot in the list. */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
+            return this;
+          }
+
+          /**
+           * If set, the request will return all reachable Occurrences and report all unreachable
+           * regions in the `unreachable` field in the response. Only applicable for requests in the
+           * global region.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean returnPartialSuccess;
+
+          /** If set, the request will return all reachable Occurrences and report all unreachable regions in the
+         `unreachable` field in the response. Only applicable for requests in the global region.
+           */
+          public java.lang.Boolean getReturnPartialSuccess() {
+            return returnPartialSuccess;
+          }
+
+          /**
+           * If set, the request will return all reachable Occurrences and report all unreachable
+           * regions in the `unreachable` field in the response. Only applicable for requests in the
+           * global region.
+           */
+          public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
+            this.returnPartialSuccess = returnPartialSuccess;
             return this;
           }
 
@@ -4761,6 +4837,31 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
         /** Token to provide to skip to a particular spot in the list. */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
+          return this;
+        }
+
+        /**
+         * If set, the request will return all reachable Notes and report all unreachable regions in
+         * the `unreachable` field in the response. Only applicable for requests in the global
+         * region.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean returnPartialSuccess;
+
+        /** If set, the request will return all reachable Notes and report all unreachable regions in the
+       `unreachable` field in the response. Only applicable for requests in the global region.
+         */
+        public java.lang.Boolean getReturnPartialSuccess() {
+          return returnPartialSuccess;
+        }
+
+        /**
+         * If set, the request will return all reachable Notes and report all unreachable regions in
+         * the `unreachable` field in the response. Only applicable for requests in the global
+         * region.
+         */
+        public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
+          this.returnPartialSuccess = returnPartialSuccess;
           return this;
         }
 
@@ -6501,6 +6602,32 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
           return this;
         }
 
+        /**
+         * If set, the request will return all reachable occurrence summaries and report all
+         * unreachable regions in the `unreachable` field in the response. Only applicable for
+         * requests in the global region.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean returnPartialSuccess;
+
+        /** If set, the request will return all reachable occurrence summaries and report all unreachable
+       regions in the `unreachable` field in the response. Only applicable for requests in the global
+       region.
+         */
+        public java.lang.Boolean getReturnPartialSuccess() {
+          return returnPartialSuccess;
+        }
+
+        /**
+         * If set, the request will return all reachable occurrence summaries and report all
+         * unreachable regions in the `unreachable` field in the response. Only applicable for
+         * requests in the global region.
+         */
+        public GetVulnerabilitySummary setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
+          this.returnPartialSuccess = returnPartialSuccess;
+          return this;
+        }
+
         @Override
         public GetVulnerabilitySummary set(String parameterName, Object value) {
           return (GetVulnerabilitySummary) super.set(parameterName, value);
@@ -6698,6 +6825,31 @@ public class ContainerAnalysis extends com.google.api.client.googleapis.services
         /** Token to provide to skip to a particular spot in the list. */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
+          return this;
+        }
+
+        /**
+         * If set, the request will return all reachable Occurrences and report all unreachable
+         * regions in the `unreachable` field in the response. Only applicable for requests in the
+         * global region.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean returnPartialSuccess;
+
+        /** If set, the request will return all reachable Occurrences and report all unreachable regions in the
+       `unreachable` field in the response. Only applicable for requests in the global region.
+         */
+        public java.lang.Boolean getReturnPartialSuccess() {
+          return returnPartialSuccess;
+        }
+
+        /**
+         * If set, the request will return all reachable Occurrences and report all unreachable
+         * regions in the `unreachable` field in the response. Only applicable for requests in the
+         * global region.
+         */
+        public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
+          this.returnPartialSuccess = returnPartialSuccess;
           return this;
         }
 

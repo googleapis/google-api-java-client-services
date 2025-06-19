@@ -126,9 +126,9 @@ public final class GoogleCloudAiplatformV1DeployedModel extends com.google.api.c
   private java.lang.String id;
 
   /**
-   * Required. The resource name of the Model that this is the deployment of. Note that the Model
-   * may be in a different location than the DeployedModel's Endpoint. The resource name may contain
-   * version id or version alias to specify the version. Example:
+   * The resource name of the Model that this is the deployment of. Note that the Model may be in a
+   * different location than the DeployedModel's Endpoint. The resource name may contain version id
+   * or version alias to specify the version. Example:
    * `projects/{project}/locations/{location}/models/{model}@2` or
    * `projects/{project}/locations/{location}/models/{model}@golden` if no version is specified, the
    * default version will be deployed.
@@ -419,9 +419,9 @@ public final class GoogleCloudAiplatformV1DeployedModel extends com.google.api.c
   }
 
   /**
-   * Required. The resource name of the Model that this is the deployment of. Note that the Model
-   * may be in a different location than the DeployedModel's Endpoint. The resource name may contain
-   * version id or version alias to specify the version. Example:
+   * The resource name of the Model that this is the deployment of. Note that the Model may be in a
+   * different location than the DeployedModel's Endpoint. The resource name may contain version id
+   * or version alias to specify the version. Example:
    * `projects/{project}/locations/{location}/models/{model}@2` or
    * `projects/{project}/locations/{location}/models/{model}@golden` if no version is specified, the
    * default version will be deployed.
@@ -432,9 +432,9 @@ public final class GoogleCloudAiplatformV1DeployedModel extends com.google.api.c
   }
 
   /**
-   * Required. The resource name of the Model that this is the deployment of. Note that the Model
-   * may be in a different location than the DeployedModel's Endpoint. The resource name may contain
-   * version id or version alias to specify the version. Example:
+   * The resource name of the Model that this is the deployment of. Note that the Model may be in a
+   * different location than the DeployedModel's Endpoint. The resource name may contain version id
+   * or version alias to specify the version. Example:
    * `projects/{project}/locations/{location}/models/{model}@2` or
    * `projects/{project}/locations/{location}/models/{model}@golden` if no version is specified, the
    * default version will be deployed.

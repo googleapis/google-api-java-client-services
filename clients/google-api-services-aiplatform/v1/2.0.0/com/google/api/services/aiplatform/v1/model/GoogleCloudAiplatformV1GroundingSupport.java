@@ -30,8 +30,9 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1GroundingSupport extends com.google.api.client.json.GenericJson {
 
   /**
-   * Confidence score of the support references. Ranges from 0 to 1. 1 is the most confident. This
-   * list must have the same size as the grounding_chunk_indices.
+   * Confidence score of the support references. Ranges from 0 to 1. 1 is the most confident. For
+   * Gemini 2.0 and before, this list must have the same size as the grounding_chunk_indices. For
+   * Gemini 2.5 and after, this list will be empty and should be ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,8 +55,9 @@ public final class GoogleCloudAiplatformV1GroundingSupport extends com.google.ap
   private GoogleCloudAiplatformV1Segment segment;
 
   /**
-   * Confidence score of the support references. Ranges from 0 to 1. 1 is the most confident. This
-   * list must have the same size as the grounding_chunk_indices.
+   * Confidence score of the support references. Ranges from 0 to 1. 1 is the most confident. For
+   * Gemini 2.0 and before, this list must have the same size as the grounding_chunk_indices. For
+   * Gemini 2.5 and after, this list will be empty and should be ignored.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.Float> getConfidenceScores() {
@@ -63,8 +65,9 @@ public final class GoogleCloudAiplatformV1GroundingSupport extends com.google.ap
   }
 
   /**
-   * Confidence score of the support references. Ranges from 0 to 1. 1 is the most confident. This
-   * list must have the same size as the grounding_chunk_indices.
+   * Confidence score of the support references. Ranges from 0 to 1. 1 is the most confident. For
+   * Gemini 2.0 and before, this list must have the same size as the grounding_chunk_indices. For
+   * Gemini 2.5 and after, this list will be empty and should be ignored.
    * @param confidenceScores confidenceScores or {@code null} for none
    */
   public GoogleCloudAiplatformV1GroundingSupport setConfidenceScores(java.util.List<java.lang.Float> confidenceScores) {

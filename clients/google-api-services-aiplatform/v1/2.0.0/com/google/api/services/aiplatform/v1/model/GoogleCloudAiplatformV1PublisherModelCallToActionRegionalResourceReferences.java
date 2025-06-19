@@ -59,6 +59,13 @@ public final class GoogleCloudAiplatformV1PublisherModelCallToActionRegionalReso
   private java.lang.String resourceUseCase;
 
   /**
+   * Optional. For notebook resource, whether the notebook supports Workbench.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean supportsWorkbench;
+
+  /**
    * Required.
    * The value may be {@code null}.
    */
@@ -130,6 +137,23 @@ public final class GoogleCloudAiplatformV1PublisherModelCallToActionRegionalReso
    */
   public GoogleCloudAiplatformV1PublisherModelCallToActionRegionalResourceReferences setResourceUseCase(java.lang.String resourceUseCase) {
     this.resourceUseCase = resourceUseCase;
+    return this;
+  }
+
+  /**
+   * Optional. For notebook resource, whether the notebook supports Workbench.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSupportsWorkbench() {
+    return supportsWorkbench;
+  }
+
+  /**
+   * Optional. For notebook resource, whether the notebook supports Workbench.
+   * @param supportsWorkbench supportsWorkbench or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1PublisherModelCallToActionRegionalResourceReferences setSupportsWorkbench(java.lang.Boolean supportsWorkbench) {
+    this.supportsWorkbench = supportsWorkbench;
     return this;
   }
 

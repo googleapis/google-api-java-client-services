@@ -31,7 +31,7 @@ public final class MeshRouteView extends com.google.api.client.json.GenericJson 
 
   /**
    * Output only. Identifier. Full path name of the MeshRouteView resource. Format:
-   * projects/{project_number}/locations/{location}/meshes/{mesh_name}/routeViews/{route_view_name}
+   * projects/{project_number}/locations/{location}/meshes/{mesh}/routeViews/{route_view}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +67,7 @@ public final class MeshRouteView extends com.google.api.client.json.GenericJson 
 
   /**
    * Output only. Identifier. Full path name of the MeshRouteView resource. Format:
-   * projects/{project_number}/locations/{location}/meshes/{mesh_name}/routeViews/{route_view_name}
+   * projects/{project_number}/locations/{location}/meshes/{mesh}/routeViews/{route_view}
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -76,7 +76,7 @@ public final class MeshRouteView extends com.google.api.client.json.GenericJson 
 
   /**
    * Output only. Identifier. Full path name of the MeshRouteView resource. Format:
-   * projects/{project_number}/locations/{location}/meshes/{mesh_name}/routeViews/{route_view_name}
+   * projects/{project_number}/locations/{location}/meshes/{mesh}/routeViews/{route_view}
    * @param name name or {@code null} for none
    */
   public MeshRouteView setName(java.lang.String name) {

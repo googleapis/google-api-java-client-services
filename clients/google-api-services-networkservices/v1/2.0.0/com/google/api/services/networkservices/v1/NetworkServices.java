@@ -4757,8 +4757,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
            * @param name Required. Name of the GatewayRouteView resource. Formats:
-           *        projects/{project_number}/locations/{location}/gateways/{gateway_name}/routeViews/{route_v
-           *        iew_name}
+           *        projects/{project_number}/locations/{location}/gateways/{gateway}/routeViews/{route_view}
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -4785,8 +4784,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param name Required. Name of the GatewayRouteView resource. Formats:
-           *        projects/{project_number}/locations/{location}/gateways/{gateway_name}/routeViews/{route_v
-           *        iew_name}
+           *        projects/{project_number}/locations/{location}/gateways/{gateway}/routeViews/{route_view}
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -4866,13 +4864,13 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
             /**
              * Required. Name of the GatewayRouteView resource. Formats: projects/{project_number}/l
-             * ocations/{location}/gateways/{gateway_name}/routeViews/{route_view_name}
+             * ocations/{location}/gateways/{gateway}/routeViews/{route_view}
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Required. Name of the GatewayRouteView resource. Formats:
-           projects/{project_number}/locations/{location}/gateways/{gateway_name}/routeViews/{route_view_name}
+           projects/{project_number}/locations/{location}/gateways/{gateway}/routeViews/{route_view}
              */
             public java.lang.String getName() {
               return name;
@@ -4880,7 +4878,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
             /**
              * Required. Name of the GatewayRouteView resource. Formats: projects/{project_number}/l
-             * ocations/{location}/gateways/{gateway_name}/routeViews/{route_view_name}
+             * ocations/{location}/gateways/{gateway}/routeViews/{route_view}
              */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -4906,7 +4904,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
            * @param parent Required. The Gateway to which a Route is associated. Formats:
-           *        projects/{project_number}/locations/{location}/gateways/{gateway_name}
+           *        projects/{project_number}/locations/{location}/gateways/{gateway}
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -4933,7 +4931,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param parent Required. The Gateway to which a Route is associated. Formats:
-           *        projects/{project_number}/locations/{location}/gateways/{gateway_name}
+           *        projects/{project_number}/locations/{location}/gateways/{gateway}
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -5013,13 +5011,13 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
             /**
              * Required. The Gateway to which a Route is associated. Formats:
-             * projects/{project_number}/locations/{location}/gateways/{gateway_name}
+             * projects/{project_number}/locations/{location}/gateways/{gateway}
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. The Gateway to which a Route is associated. Formats:
-           projects/{project_number}/locations/{location}/gateways/{gateway_name}
+           projects/{project_number}/locations/{location}/gateways/{gateway}
              */
             public java.lang.String getParent() {
               return parent;
@@ -5027,7 +5025,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
             /**
              * Required. The Gateway to which a Route is associated. Formats:
-             * projects/{project_number}/locations/{location}/gateways/{gateway_name}
+             * projects/{project_number}/locations/{location}/gateways/{gateway}
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -9582,8 +9580,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
            * @param name Required. Name of the MeshRouteView resource. Format:
-           *        projects/{project_number}/locations/{location}/meshes/{mesh_name}/routeViews/{route_view_n
-           *        ame}
+           *        projects/{project_number}/locations/{location}/meshes/{mesh}/routeViews/{route_view}
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -9610,8 +9607,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param name Required. Name of the MeshRouteView resource. Format:
-           *        projects/{project_number}/locations/{location}/meshes/{mesh_name}/routeViews/{route_view_n
-           *        ame}
+           *        projects/{project_number}/locations/{location}/meshes/{mesh}/routeViews/{route_view}
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -9690,22 +9686,22 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Required. Name of the MeshRouteView resource. Format: projects/{project_number}/locat
-             * ions/{location}/meshes/{mesh_name}/routeViews/{route_view_name}
+             * Required. Name of the MeshRouteView resource. Format:
+             * projects/{project_number}/locations/{location}/meshes/{mesh}/routeViews/{route_view}
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Required. Name of the MeshRouteView resource. Format:
-           projects/{project_number}/locations/{location}/meshes/{mesh_name}/routeViews/{route_view_name}
+           projects/{project_number}/locations/{location}/meshes/{mesh}/routeViews/{route_view}
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. Name of the MeshRouteView resource. Format: projects/{project_number}/locat
-             * ions/{location}/meshes/{mesh_name}/routeViews/{route_view_name}
+             * Required. Name of the MeshRouteView resource. Format:
+             * projects/{project_number}/locations/{location}/meshes/{mesh}/routeViews/{route_view}
              */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -9731,7 +9727,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
            * @param parent Required. The Mesh to which a Route is associated. Format:
-           *        projects/{project_number}/locations/{location}/meshes/{mesh_name}
+           *        projects/{project_number}/locations/{location}/meshes/{mesh}
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -9758,7 +9754,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param parent Required. The Mesh to which a Route is associated. Format:
-           *        projects/{project_number}/locations/{location}/meshes/{mesh_name}
+           *        projects/{project_number}/locations/{location}/meshes/{mesh}
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -9838,13 +9834,13 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
             /**
              * Required. The Mesh to which a Route is associated. Format:
-             * projects/{project_number}/locations/{location}/meshes/{mesh_name}
+             * projects/{project_number}/locations/{location}/meshes/{mesh}
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. The Mesh to which a Route is associated. Format:
-           projects/{project_number}/locations/{location}/meshes/{mesh_name}
+           projects/{project_number}/locations/{location}/meshes/{mesh}
              */
             public java.lang.String getParent() {
               return parent;
@@ -9852,7 +9848,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
             /**
              * Required. The Mesh to which a Route is associated. Format:
-             * projects/{project_number}/locations/{location}/meshes/{mesh_name}
+             * projects/{project_number}/locations/{location}/meshes/{mesh}
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {

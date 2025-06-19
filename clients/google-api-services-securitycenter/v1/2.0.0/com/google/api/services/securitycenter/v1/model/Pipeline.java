@@ -38,7 +38,7 @@ public final class Pipeline extends com.google.api.client.json.GenericJson {
   private java.lang.String displayName;
 
   /**
-   * Resource name of pipeline, e.g.
+   * Resource name of the pipeline, e.g.
    * projects/{project}/locations/{location}/trainingPipelines/5253428229225578496
    * The value may be {@code null}.
    */
@@ -63,7 +63,7 @@ public final class Pipeline extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name of pipeline, e.g.
+   * Resource name of the pipeline, e.g.
    * projects/{project}/locations/{location}/trainingPipelines/5253428229225578496
    * @return value or {@code null} for none
    */
@@ -72,7 +72,7 @@ public final class Pipeline extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name of pipeline, e.g.
+   * Resource name of the pipeline, e.g.
    * projects/{project}/locations/{location}/trainingPipelines/5253428229225578496
    * @param name name or {@code null} for none
    */

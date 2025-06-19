@@ -38,7 +38,7 @@ public final class GoogleCloudSecuritycenterV2Dataset extends com.google.api.cli
   private java.lang.String displayName;
 
   /**
-   * Resource name of dataset, e.g.
+   * Resource name of the dataset, e.g.
    * projects/{project}/locations/{location}/datasets/2094040236064505856
    * The value may be {@code null}.
    */
@@ -46,7 +46,7 @@ public final class GoogleCloudSecuritycenterV2Dataset extends com.google.api.cli
   private java.lang.String name;
 
   /**
-   * Data source, such as BigQuery source URI, e.g. bq://scc-nexus-test.AIPPtest.gsod
+   * Data source, such as a BigQuery source URI, e.g. bq://scc-nexus-test.AIPPtest.gsod
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,7 +70,7 @@ public final class GoogleCloudSecuritycenterV2Dataset extends com.google.api.cli
   }
 
   /**
-   * Resource name of dataset, e.g.
+   * Resource name of the dataset, e.g.
    * projects/{project}/locations/{location}/datasets/2094040236064505856
    * @return value or {@code null} for none
    */
@@ -79,7 +79,7 @@ public final class GoogleCloudSecuritycenterV2Dataset extends com.google.api.cli
   }
 
   /**
-   * Resource name of dataset, e.g.
+   * Resource name of the dataset, e.g.
    * projects/{project}/locations/{location}/datasets/2094040236064505856
    * @param name name or {@code null} for none
    */
@@ -89,7 +89,7 @@ public final class GoogleCloudSecuritycenterV2Dataset extends com.google.api.cli
   }
 
   /**
-   * Data source, such as BigQuery source URI, e.g. bq://scc-nexus-test.AIPPtest.gsod
+   * Data source, such as a BigQuery source URI, e.g. bq://scc-nexus-test.AIPPtest.gsod
    * @return value or {@code null} for none
    */
   public java.lang.String getSource() {
@@ -97,7 +97,7 @@ public final class GoogleCloudSecuritycenterV2Dataset extends com.google.api.cli
   }
 
   /**
-   * Data source, such as BigQuery source URI, e.g. bq://scc-nexus-test.AIPPtest.gsod
+   * Data source, such as a BigQuery source URI, e.g. bq://scc-nexus-test.AIPPtest.gsod
    * @param source source or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Dataset setSource(java.lang.String source) {

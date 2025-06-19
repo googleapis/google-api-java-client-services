@@ -38,7 +38,7 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   private java.lang.String displayName;
 
   /**
-   * Resource name of dataset, e.g.
+   * Resource name of the dataset, e.g.
    * projects/{project}/locations/{location}/datasets/2094040236064505856
    * The value may be {@code null}.
    */
@@ -70,7 +70,7 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name of dataset, e.g.
+   * Resource name of the dataset, e.g.
    * projects/{project}/locations/{location}/datasets/2094040236064505856
    * @return value or {@code null} for none
    */
@@ -79,7 +79,7 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Resource name of dataset, e.g.
+   * Resource name of the dataset, e.g.
    * projects/{project}/locations/{location}/datasets/2094040236064505856
    * @param name name or {@code null} for none
    */

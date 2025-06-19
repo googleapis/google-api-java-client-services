@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.securitycenter.v1beta1.model;
+package com.google.api.services.securitycenter.v1beta2.model;
 
 /**
- * Vertex AI training pipeline associated with the finding.
+ * The LRO metadata for a ExportFindings request.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed
@@ -28,67 +28,64 @@ package com.google.api.services.securitycenter.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Pipeline extends com.google.api.client.json.GenericJson {
+public final class ExportFindingsMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * The user defined display name of pipeline, e.g. plants-classification
+   * Required. The destination big query dataset to export findings to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String displayName;
+  private BigQueryDestination bigQueryDestination;
 
   /**
-   * Resource name of the pipeline, e.g.
-   * projects/{project}/locations/{location}/trainingPipelines/5253428229225578496
+   * Optional. Timestamp at which export was started
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String name;
+  private String exportStartTime;
 
   /**
-   * The user defined display name of pipeline, e.g. plants-classification
+   * Required. The destination big query dataset to export findings to.
    * @return value or {@code null} for none
    */
-  public java.lang.String getDisplayName() {
-    return displayName;
+  public BigQueryDestination getBigQueryDestination() {
+    return bigQueryDestination;
   }
 
   /**
-   * The user defined display name of pipeline, e.g. plants-classification
-   * @param displayName displayName or {@code null} for none
+   * Required. The destination big query dataset to export findings to.
+   * @param bigQueryDestination bigQueryDestination or {@code null} for none
    */
-  public Pipeline setDisplayName(java.lang.String displayName) {
-    this.displayName = displayName;
+  public ExportFindingsMetadata setBigQueryDestination(BigQueryDestination bigQueryDestination) {
+    this.bigQueryDestination = bigQueryDestination;
     return this;
   }
 
   /**
-   * Resource name of the pipeline, e.g.
-   * projects/{project}/locations/{location}/trainingPipelines/5253428229225578496
+   * Optional. Timestamp at which export was started
    * @return value or {@code null} for none
    */
-  public java.lang.String getName() {
-    return name;
+  public String getExportStartTime() {
+    return exportStartTime;
   }
 
   /**
-   * Resource name of the pipeline, e.g.
-   * projects/{project}/locations/{location}/trainingPipelines/5253428229225578496
-   * @param name name or {@code null} for none
+   * Optional. Timestamp at which export was started
+   * @param exportStartTime exportStartTime or {@code null} for none
    */
-  public Pipeline setName(java.lang.String name) {
-    this.name = name;
+  public ExportFindingsMetadata setExportStartTime(String exportStartTime) {
+    this.exportStartTime = exportStartTime;
     return this;
   }
 
   @Override
-  public Pipeline set(String fieldName, Object value) {
-    return (Pipeline) super.set(fieldName, value);
+  public ExportFindingsMetadata set(String fieldName, Object value) {
+    return (ExportFindingsMetadata) super.set(fieldName, value);
   }
 
   @Override
-  public Pipeline clone() {
-    return (Pipeline) super.clone();
+  public ExportFindingsMetadata clone() {
+    return (ExportFindingsMetadata) super.clone();
   }
 
 }

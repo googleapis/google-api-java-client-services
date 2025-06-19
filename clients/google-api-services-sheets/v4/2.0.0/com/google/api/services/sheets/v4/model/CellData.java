@@ -32,10 +32,10 @@ public final class CellData extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Runs of chips applied to subsections of the cell. Properties of a run start at a
    * specific index in the text and continue until the next run. When reading, all chipped and non-
-   * chipped runs are included. Non-chipped runs will have an empty chip_run.chip. When writing,
-   * only runs with chips are included. Runs containing chips are of length 1 and are represented in
-   * the user-entered text by an “@” placeholder symbol. New runs will overwrite any prior runs.
-   * Writing a new user_entered_value will erase previous runs.
+   * chipped runs are included. Non-chipped runs will have an empty Chip. When writing, only runs
+   * with chips are included. Runs containing chips are of length 1 and are represented in the user-
+   * entered text by an “@” placeholder symbol. New runs will overwrite any prior runs. Writing a
+   * new user_entered_value will erase previous runs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -152,10 +152,10 @@ public final class CellData extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Runs of chips applied to subsections of the cell. Properties of a run start at a
    * specific index in the text and continue until the next run. When reading, all chipped and non-
-   * chipped runs are included. Non-chipped runs will have an empty chip_run.chip. When writing,
-   * only runs with chips are included. Runs containing chips are of length 1 and are represented in
-   * the user-entered text by an “@” placeholder symbol. New runs will overwrite any prior runs.
-   * Writing a new user_entered_value will erase previous runs.
+   * chipped runs are included. Non-chipped runs will have an empty Chip. When writing, only runs
+   * with chips are included. Runs containing chips are of length 1 and are represented in the user-
+   * entered text by an “@” placeholder symbol. New runs will overwrite any prior runs. Writing a
+   * new user_entered_value will erase previous runs.
    * @return value or {@code null} for none
    */
   public java.util.List<ChipRun> getChipRuns() {
@@ -165,10 +165,10 @@ public final class CellData extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Runs of chips applied to subsections of the cell. Properties of a run start at a
    * specific index in the text and continue until the next run. When reading, all chipped and non-
-   * chipped runs are included. Non-chipped runs will have an empty chip_run.chip. When writing,
-   * only runs with chips are included. Runs containing chips are of length 1 and are represented in
-   * the user-entered text by an “@” placeholder symbol. New runs will overwrite any prior runs.
-   * Writing a new user_entered_value will erase previous runs.
+   * chipped runs are included. Non-chipped runs will have an empty Chip. When writing, only runs
+   * with chips are included. Runs containing chips are of length 1 and are represented in the user-
+   * entered text by an “@” placeholder symbol. New runs will overwrite any prior runs. Writing a
+   * new user_entered_value will erase previous runs.
    * @param chipRuns chipRuns or {@code null} for none
    */
   public CellData setChipRuns(java.util.List<ChipRun> chipRuns) {

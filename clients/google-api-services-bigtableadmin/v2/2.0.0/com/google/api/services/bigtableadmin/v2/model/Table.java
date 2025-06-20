@@ -154,6 +154,17 @@ public final class Table extends com.google.api.client.json.GenericJson {
   private TableStats stats;
 
   /**
+   * Rules to specify what data is stored in each storage tier. Different tiers store data
+   * differently, providing different trade-offs between cost and performance. Different parts of a
+   * table can be stored separately on different tiers. If a config is specified, tiered storage is
+   * enabled for this table. Otherwise, tiered storage is disabled. Only SSD instances can configure
+   * tiered storage.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TieredStorageConfig tieredStorageConfig;
+
+  /**
    * If specified, automated backups are enabled for this table. Otherwise, automated backups are
    * disabled.
    * @return value or {@code null} for none
@@ -400,6 +411,31 @@ public final class Table extends com.google.api.client.json.GenericJson {
    */
   public Table setStats(TableStats stats) {
     this.stats = stats;
+    return this;
+  }
+
+  /**
+   * Rules to specify what data is stored in each storage tier. Different tiers store data
+   * differently, providing different trade-offs between cost and performance. Different parts of a
+   * table can be stored separately on different tiers. If a config is specified, tiered storage is
+   * enabled for this table. Otherwise, tiered storage is disabled. Only SSD instances can configure
+   * tiered storage.
+   * @return value or {@code null} for none
+   */
+  public TieredStorageConfig getTieredStorageConfig() {
+    return tieredStorageConfig;
+  }
+
+  /**
+   * Rules to specify what data is stored in each storage tier. Different tiers store data
+   * differently, providing different trade-offs between cost and performance. Different parts of a
+   * table can be stored separately on different tiers. If a config is specified, tiered storage is
+   * enabled for this table. Otherwise, tiered storage is disabled. Only SSD instances can configure
+   * tiered storage.
+   * @param tieredStorageConfig tieredStorageConfig or {@code null} for none
+   */
+  public Table setTieredStorageConfig(TieredStorageConfig tieredStorageConfig) {
+    this.tieredStorageConfig = tieredStorageConfig;
     return this;
   }
 

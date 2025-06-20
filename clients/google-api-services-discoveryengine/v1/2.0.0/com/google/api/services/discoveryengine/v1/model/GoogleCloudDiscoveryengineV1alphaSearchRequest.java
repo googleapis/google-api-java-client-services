@@ -276,8 +276,10 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
    * conversion rate adjustment as a rank use predicted Click-through rate (pCTR) to gauge the
    * relevance and attractiveness of a search result from a user's perspective. A higher pCTR
    * suggests that the result is more likely to satisfy the user's query and intent, making it a
-   * valuable signal for ranking. * `freshness_rank`: freshness adjustment as a rank * `base_rank`:
-   * the default rank of the result
+   * valuable signal for ranking. * `freshness_rank`: freshness adjustment as a rank *
+   * `topicality_rank`: topicality adjustment as a rank. Uses proprietary Google model to determine
+   * the keyword-based overlap between the query and the document. * `base_rank`: the default rank
+   * of the result
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -943,8 +945,10 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
    * conversion rate adjustment as a rank use predicted Click-through rate (pCTR) to gauge the
    * relevance and attractiveness of a search result from a user's perspective. A higher pCTR
    * suggests that the result is more likely to satisfy the user's query and intent, making it a
-   * valuable signal for ranking. * `freshness_rank`: freshness adjustment as a rank * `base_rank`:
-   * the default rank of the result
+   * valuable signal for ranking. * `freshness_rank`: freshness adjustment as a rank *
+   * `topicality_rank`: topicality adjustment as a rank. Uses proprietary Google model to determine
+   * the keyword-based overlap between the query and the document. * `base_rank`: the default rank
+   * of the result
    * @return value or {@code null} for none
    */
   public java.lang.String getRankingExpression() {
@@ -989,8 +993,10 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
    * conversion rate adjustment as a rank use predicted Click-through rate (pCTR) to gauge the
    * relevance and attractiveness of a search result from a user's perspective. A higher pCTR
    * suggests that the result is more likely to satisfy the user's query and intent, making it a
-   * valuable signal for ranking. * `freshness_rank`: freshness adjustment as a rank * `base_rank`:
-   * the default rank of the result
+   * valuable signal for ranking. * `freshness_rank`: freshness adjustment as a rank *
+   * `topicality_rank`: topicality adjustment as a rank. Uses proprietary Google model to determine
+   * the keyword-based overlap between the query and the document. * `base_rank`: the default rank
+   * of the result
    * @param rankingExpression rankingExpression or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaSearchRequest setRankingExpression(java.lang.String rankingExpression) {

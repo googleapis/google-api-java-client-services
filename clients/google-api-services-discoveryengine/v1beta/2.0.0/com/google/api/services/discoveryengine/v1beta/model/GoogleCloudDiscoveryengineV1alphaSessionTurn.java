@@ -55,6 +55,15 @@ public final class GoogleCloudDiscoveryengineV1alphaSessionTurn extends com.goog
   private GoogleCloudDiscoveryengineV1alphaQuery query;
 
   /**
+   * Optional. Represents metadata related to the query config, for example LLM model and version
+   * used, model parameters (temperature, grounding parameters, etc.). The prefix "google." is
+   * reserved for Google-developed functionality.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> queryConfig;
+
+  /**
    * Optional. The resource name of the answer to the user query. Only set if the answer generation
    * (/answer API call) happened in this turn.
    * @return value or {@code null} for none
@@ -110,6 +119,27 @@ public final class GoogleCloudDiscoveryengineV1alphaSessionTurn extends com.goog
    */
   public GoogleCloudDiscoveryengineV1alphaSessionTurn setQuery(GoogleCloudDiscoveryengineV1alphaQuery query) {
     this.query = query;
+    return this;
+  }
+
+  /**
+   * Optional. Represents metadata related to the query config, for example LLM model and version
+   * used, model parameters (temperature, grounding parameters, etc.). The prefix "google." is
+   * reserved for Google-developed functionality.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getQueryConfig() {
+    return queryConfig;
+  }
+
+  /**
+   * Optional. Represents metadata related to the query config, for example LLM model and version
+   * used, model parameters (temperature, grounding parameters, etc.). The prefix "google." is
+   * reserved for Google-developed functionality.
+   * @param queryConfig queryConfig or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaSessionTurn setQueryConfig(java.util.Map<String, java.lang.String> queryConfig) {
+    this.queryConfig = queryConfig;
     return this;
   }
 

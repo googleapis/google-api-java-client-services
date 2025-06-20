@@ -17,7 +17,11 @@
 package com.google.api.services.gmail.model;
 
 /**
- * Metadata for hardware keys.
+ * Metadata for hardware keys. If [hardware key
+ * encryption](https://support.google.com/a/answer/14153163) is set up for the Google Workspace
+ * organization, users can optionally store their private key on their smart card and use it to sign
+ * and decrypt email messages in Gmail by inserting their smart card into a reader attached to their
+ * Windows device.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Gmail API. For a detailed explanation see:

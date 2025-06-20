@@ -6522,7 +6522,15 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
           /**
            * Creates and configures a client-side encryption identity that's authorized to send mail from the
            * user account. Google publishes the S/MIME certificate to a shared domain-wide directory so that
-           * people within a Google Workspace organization can encrypt and send mail to the identity.
+           * people within a Google Workspace organization can encrypt and send mail to the identity. For
+           * administrators managing identities and keypairs for users in their organization, requests require
+           * authorization with a [service
+           * account](https://developers.google.com/identity/protocols/OAuth2ServiceAccount) that has [domain-
+           * wide delegation authority](https://developers.google.com/identity/protocols/OAuth2ServiceAccount#
+           * delegatingauthority) to impersonate users with the
+           * `https://www.googleapis.com/auth/gmail.settings.basic` scope. For users managing their own
+           * identities and keypairs, requests require [hardware key
+           * encryption](https://support.google.com/a/answer/14153163) turned on and configured.
            *
            * Create a request for the method "identities.create".
            *
@@ -6549,6 +6557,14 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
              * Creates and configures a client-side encryption identity that's authorized to send mail from
              * the user account. Google publishes the S/MIME certificate to a shared domain-wide directory so
              * that people within a Google Workspace organization can encrypt and send mail to the identity.
+             * For administrators managing identities and keypairs for users in their organization, requests
+             * require authorization with a [service
+             * account](https://developers.google.com/identity/protocols/OAuth2ServiceAccount) that has
+             * [domain-wide delegation authority](https://developers.google.com/identity/protocols/OAuth2Servi
+             * ceAccount#delegatingauthority) to impersonate users with the
+             * `https://www.googleapis.com/auth/gmail.settings.basic` scope. For users managing their own
+             * identities and keypairs, requests require [hardware key
+             * encryption](https://support.google.com/a/answer/14153163) turned on and configured.
              *
              * Create a request for the method "identities.create".
              *
@@ -6654,7 +6670,15 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
           /**
            * Deletes a client-side encryption identity. The authenticated user can no longer use the identity
            * to send encrypted messages. You cannot restore the identity after you delete it. Instead, use the
-           * CreateCseIdentity method to create another identity with the same configuration.
+           * CreateCseIdentity method to create another identity with the same configuration. For
+           * administrators managing identities and keypairs for users in their organization, requests require
+           * authorization with a [service
+           * account](https://developers.google.com/identity/protocols/OAuth2ServiceAccount) that has [domain-
+           * wide delegation authority](https://developers.google.com/identity/protocols/OAuth2ServiceAccount#
+           * delegatingauthority) to impersonate users with the
+           * `https://www.googleapis.com/auth/gmail.settings.basic` scope. For users managing their own
+           * identities and keypairs, requests require [hardware key
+           * encryption](https://support.google.com/a/answer/14153163) turned on and configured.
            *
            * Create a request for the method "identities.delete".
            *
@@ -6682,7 +6706,14 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
              * Deletes a client-side encryption identity. The authenticated user can no longer use the
              * identity to send encrypted messages. You cannot restore the identity after you delete it.
              * Instead, use the CreateCseIdentity method to create another identity with the same
-             * configuration.
+             * configuration. For administrators managing identities and keypairs for users in their
+             * organization, requests require authorization with a [service
+             * account](https://developers.google.com/identity/protocols/OAuth2ServiceAccount) that has
+             * [domain-wide delegation authority](https://developers.google.com/identity/protocols/OAuth2Servi
+             * ceAccount#delegatingauthority) to impersonate users with the
+             * `https://www.googleapis.com/auth/gmail.settings.basic` scope. For users managing their own
+             * identities and keypairs, requests require [hardware key
+             * encryption](https://support.google.com/a/answer/14153163) turned on and configured.
              *
              * Create a request for the method "identities.delete".
              *
@@ -6811,7 +6842,14 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
             }
           }
           /**
-           * Retrieves a client-side encryption identity configuration.
+           * Retrieves a client-side encryption identity configuration. For administrators managing identities
+           * and keypairs for users in their organization, requests require authorization with a [service
+           * account](https://developers.google.com/identity/protocols/OAuth2ServiceAccount) that has [domain-
+           * wide delegation authority](https://developers.google.com/identity/protocols/OAuth2ServiceAccount#
+           * delegatingauthority) to impersonate users with the
+           * `https://www.googleapis.com/auth/gmail.settings.basic` scope. For users managing their own
+           * identities and keypairs, requests require [hardware key
+           * encryption](https://support.google.com/a/answer/14153163) turned on and configured.
            *
            * Create a request for the method "identities.get".
            *
@@ -6836,7 +6874,14 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
             private static final String REST_PATH = "gmail/v1/users/{userId}/settings/cse/identities/{cseEmailAddress}";
 
             /**
-             * Retrieves a client-side encryption identity configuration.
+             * Retrieves a client-side encryption identity configuration. For administrators managing
+             * identities and keypairs for users in their organization, requests require authorization with a
+             * [service account](https://developers.google.com/identity/protocols/OAuth2ServiceAccount) that
+             * has [domain-wide delegation authority](https://developers.google.com/identity/protocols/OAuth2S
+             * erviceAccount#delegatingauthority) to impersonate users with the
+             * `https://www.googleapis.com/auth/gmail.settings.basic` scope. For users managing their own
+             * identities and keypairs, requests require [hardware key
+             * encryption](https://support.google.com/a/answer/14153163) turned on and configured.
              *
              * Create a request for the method "identities.get".
              *
@@ -6975,7 +7020,14 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
             }
           }
           /**
-           * Lists the client-side encrypted identities for an authenticated user.
+           * Lists the client-side encrypted identities for an authenticated user. For administrators managing
+           * identities and keypairs for users in their organization, requests require authorization with a
+           * [service account](https://developers.google.com/identity/protocols/OAuth2ServiceAccount) that has
+           * [domain-wide delegation authority](https://developers.google.com/identity/protocols/OAuth2Service
+           * Account#delegatingauthority) to impersonate users with the
+           * `https://www.googleapis.com/auth/gmail.settings.basic` scope. For users managing their own
+           * identities and keypairs, requests require [hardware key
+           * encryption](https://support.google.com/a/answer/14153163) turned on and configured.
            *
            * Create a request for the method "identities.list".
            *
@@ -6998,7 +7050,15 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
             private static final String REST_PATH = "gmail/v1/users/{userId}/settings/cse/identities";
 
             /**
-             * Lists the client-side encrypted identities for an authenticated user.
+             * Lists the client-side encrypted identities for an authenticated user. For administrators
+             * managing identities and keypairs for users in their organization, requests require
+             * authorization with a [service
+             * account](https://developers.google.com/identity/protocols/OAuth2ServiceAccount) that has
+             * [domain-wide delegation authority](https://developers.google.com/identity/protocols/OAuth2Servi
+             * ceAccount#delegatingauthority) to impersonate users with the
+             * `https://www.googleapis.com/auth/gmail.settings.basic` scope. For users managing their own
+             * identities and keypairs, requests require [hardware key
+             * encryption](https://support.google.com/a/answer/14153163) turned on and configured.
              *
              * Create a request for the method "identities.list".
              *
@@ -7159,7 +7219,14 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
           /**
            * Associates a different key pair with an existing client-side encryption identity. The updated key
            * pair must validate against Google's [S/MIME certificate
-           * profiles](https://support.google.com/a/answer/7300887).
+           * profiles](https://support.google.com/a/answer/7300887). For administrators managing identities
+           * and keypairs for users in their organization, requests require authorization with a [service
+           * account](https://developers.google.com/identity/protocols/OAuth2ServiceAccount) that has [domain-
+           * wide delegation authority](https://developers.google.com/identity/protocols/OAuth2ServiceAccount#
+           * delegatingauthority) to impersonate users with the
+           * `https://www.googleapis.com/auth/gmail.settings.basic` scope. For users managing their own
+           * identities and keypairs, requests require [hardware key
+           * encryption](https://support.google.com/a/answer/14153163) turned on and configured.
            *
            * Create a request for the method "identities.patch".
            *
@@ -7186,7 +7253,14 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
             /**
              * Associates a different key pair with an existing client-side encryption identity. The updated
              * key pair must validate against Google's [S/MIME certificate
-             * profiles](https://support.google.com/a/answer/7300887).
+             * profiles](https://support.google.com/a/answer/7300887). For administrators managing identities
+             * and keypairs for users in their organization, requests require authorization with a [service
+             * account](https://developers.google.com/identity/protocols/OAuth2ServiceAccount) that has
+             * [domain-wide delegation authority](https://developers.google.com/identity/protocols/OAuth2Servi
+             * ceAccount#delegatingauthority) to impersonate users with the
+             * `https://www.googleapis.com/auth/gmail.settings.basic` scope. For users managing their own
+             * identities and keypairs, requests require [hardware key
+             * encryption](https://support.google.com/a/answer/14153163) turned on and configured.
              *
              * Create a request for the method "identities.patch".
              *
@@ -7331,7 +7405,14 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
 
           /**
            * Creates and uploads a client-side encryption S/MIME public key certificate chain and private key
-           * metadata for the authenticated user.
+           * metadata for the authenticated user. For administrators managing identities and keypairs for
+           * users in their organization, requests require authorization with a [service
+           * account](https://developers.google.com/identity/protocols/OAuth2ServiceAccount) that has [domain-
+           * wide delegation authority](https://developers.google.com/identity/protocols/OAuth2ServiceAccount#
+           * delegatingauthority) to impersonate users with the
+           * `https://www.googleapis.com/auth/gmail.settings.basic` scope. For users managing their own
+           * identities and keypairs, requests require [hardware key
+           * encryption](https://support.google.com/a/answer/14153163) turned on and configured.
            *
            * Create a request for the method "keypairs.create".
            *
@@ -7356,7 +7437,14 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
 
             /**
              * Creates and uploads a client-side encryption S/MIME public key certificate chain and private
-             * key metadata for the authenticated user.
+             * key metadata for the authenticated user. For administrators managing identities and keypairs
+             * for users in their organization, requests require authorization with a [service
+             * account](https://developers.google.com/identity/protocols/OAuth2ServiceAccount) that has
+             * [domain-wide delegation authority](https://developers.google.com/identity/protocols/OAuth2Servi
+             * ceAccount#delegatingauthority) to impersonate users with the
+             * `https://www.googleapis.com/auth/gmail.settings.basic` scope. For users managing their own
+             * identities and keypairs, requests require [hardware key
+             * encryption](https://support.google.com/a/answer/14153163) turned on and configured.
              *
              * Create a request for the method "keypairs.create".
              *
@@ -7463,7 +7551,14 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
            * Turns off a client-side encryption key pair. The authenticated user can no longer use the key
            * pair to decrypt incoming CSE message texts or sign outgoing CSE mail. To regain access, use the
            * EnableCseKeyPair to turn on the key pair. After 30 days, you can permanently delete the key pair
-           * by using the ObliterateCseKeyPair method.
+           * by using the ObliterateCseKeyPair method. For administrators managing identities and keypairs for
+           * users in their organization, requests require authorization with a [service
+           * account](https://developers.google.com/identity/protocols/OAuth2ServiceAccount) that has [domain-
+           * wide delegation authority](https://developers.google.com/identity/protocols/OAuth2ServiceAccount#
+           * delegatingauthority) to impersonate users with the
+           * `https://www.googleapis.com/auth/gmail.settings.basic` scope. For users managing their own
+           * identities and keypairs, requests require [hardware key
+           * encryption](https://support.google.com/a/answer/14153163) turned on and configured.
            *
            * Create a request for the method "keypairs.disable".
            *
@@ -7491,7 +7586,14 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
              * Turns off a client-side encryption key pair. The authenticated user can no longer use the key
              * pair to decrypt incoming CSE message texts or sign outgoing CSE mail. To regain access, use the
              * EnableCseKeyPair to turn on the key pair. After 30 days, you can permanently delete the key
-             * pair by using the ObliterateCseKeyPair method.
+             * pair by using the ObliterateCseKeyPair method. For administrators managing identities and
+             * keypairs for users in their organization, requests require authorization with a [service
+             * account](https://developers.google.com/identity/protocols/OAuth2ServiceAccount) that has
+             * [domain-wide delegation authority](https://developers.google.com/identity/protocols/OAuth2Servi
+             * ceAccount#delegatingauthority) to impersonate users with the
+             * `https://www.googleapis.com/auth/gmail.settings.basic` scope. For users managing their own
+             * identities and keypairs, requests require [hardware key
+             * encryption](https://support.google.com/a/answer/14153163) turned on and configured.
              *
              * Create a request for the method "keypairs.disable".
              *
@@ -7615,7 +7717,14 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
           }
           /**
            * Turns on a client-side encryption key pair that was turned off. The key pair becomes active again
-           * for any associated client-side encryption identities.
+           * for any associated client-side encryption identities. For administrators managing identities and
+           * keypairs for users in their organization, requests require authorization with a [service
+           * account](https://developers.google.com/identity/protocols/OAuth2ServiceAccount) that has [domain-
+           * wide delegation authority](https://developers.google.com/identity/protocols/OAuth2ServiceAccount#
+           * delegatingauthority) to impersonate users with the
+           * `https://www.googleapis.com/auth/gmail.settings.basic` scope. For users managing their own
+           * identities and keypairs, requests require [hardware key
+           * encryption](https://support.google.com/a/answer/14153163) turned on and configured.
            *
            * Create a request for the method "keypairs.enable".
            *
@@ -7641,7 +7750,14 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
 
             /**
              * Turns on a client-side encryption key pair that was turned off. The key pair becomes active
-             * again for any associated client-side encryption identities.
+             * again for any associated client-side encryption identities. For administrators managing
+             * identities and keypairs for users in their organization, requests require authorization with a
+             * [service account](https://developers.google.com/identity/protocols/OAuth2ServiceAccount) that
+             * has [domain-wide delegation authority](https://developers.google.com/identity/protocols/OAuth2S
+             * erviceAccount#delegatingauthority) to impersonate users with the
+             * `https://www.googleapis.com/auth/gmail.settings.basic` scope. For users managing their own
+             * identities and keypairs, requests require [hardware key
+             * encryption](https://support.google.com/a/answer/14153163) turned on and configured.
              *
              * Create a request for the method "keypairs.enable".
              *
@@ -7763,7 +7879,14 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
             }
           }
           /**
-           * Retrieves an existing client-side encryption key pair.
+           * Retrieves an existing client-side encryption key pair. For administrators managing identities and
+           * keypairs for users in their organization, requests require authorization with a [service
+           * account](https://developers.google.com/identity/protocols/OAuth2ServiceAccount) that has [domain-
+           * wide delegation authority](https://developers.google.com/identity/protocols/OAuth2ServiceAccount#
+           * delegatingauthority) to impersonate users with the
+           * `https://www.googleapis.com/auth/gmail.settings.basic` scope. For users managing their own
+           * identities and keypairs, requests require [hardware key
+           * encryption](https://support.google.com/a/answer/14153163) turned on and configured.
            *
            * Create a request for the method "keypairs.get".
            *
@@ -7787,7 +7910,14 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
             private static final String REST_PATH = "gmail/v1/users/{userId}/settings/cse/keypairs/{keyPairId}";
 
             /**
-             * Retrieves an existing client-side encryption key pair.
+             * Retrieves an existing client-side encryption key pair. For administrators managing identities
+             * and keypairs for users in their organization, requests require authorization with a [service
+             * account](https://developers.google.com/identity/protocols/OAuth2ServiceAccount) that has
+             * [domain-wide delegation authority](https://developers.google.com/identity/protocols/OAuth2Servi
+             * ceAccount#delegatingauthority) to impersonate users with the
+             * `https://www.googleapis.com/auth/gmail.settings.basic` scope. For users managing their own
+             * identities and keypairs, requests require [hardware key
+             * encryption](https://support.google.com/a/answer/14153163) turned on and configured.
              *
              * Create a request for the method "keypairs.get".
              *
@@ -7918,7 +8048,14 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
             }
           }
           /**
-           * Lists client-side encryption key pairs for an authenticated user.
+           * Lists client-side encryption key pairs for an authenticated user. For administrators managing
+           * identities and keypairs for users in their organization, requests require authorization with a
+           * [service account](https://developers.google.com/identity/protocols/OAuth2ServiceAccount) that has
+           * [domain-wide delegation authority](https://developers.google.com/identity/protocols/OAuth2Service
+           * Account#delegatingauthority) to impersonate users with the
+           * `https://www.googleapis.com/auth/gmail.settings.basic` scope. For users managing their own
+           * identities and keypairs, requests require [hardware key
+           * encryption](https://support.google.com/a/answer/14153163) turned on and configured.
            *
            * Create a request for the method "keypairs.list".
            *
@@ -7941,7 +8078,14 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
             private static final String REST_PATH = "gmail/v1/users/{userId}/settings/cse/keypairs";
 
             /**
-             * Lists client-side encryption key pairs for an authenticated user.
+             * Lists client-side encryption key pairs for an authenticated user. For administrators managing
+             * identities and keypairs for users in their organization, requests require authorization with a
+             * [service account](https://developers.google.com/identity/protocols/OAuth2ServiceAccount) that
+             * has [domain-wide delegation authority](https://developers.google.com/identity/protocols/OAuth2S
+             * erviceAccount#delegatingauthority) to impersonate users with the
+             * `https://www.googleapis.com/auth/gmail.settings.basic` scope. For users managing their own
+             * identities and keypairs, requests require [hardware key
+             * encryption](https://support.google.com/a/answer/14153163) turned on and configured.
              *
              * Create a request for the method "keypairs.list".
              *
@@ -8104,7 +8248,14 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
            * delete key pairs that have been turned off for more than 30 days. To turn off a key pair, use the
            * DisableCseKeyPair method. Gmail can't restore or decrypt any messages that were encrypted by an
            * obliterated key. Authenticated users and Google Workspace administrators lose access to reading
-           * the encrypted messages.
+           * the encrypted messages. For administrators managing identities and keypairs for users in their
+           * organization, requests require authorization with a [service
+           * account](https://developers.google.com/identity/protocols/OAuth2ServiceAccount) that has [domain-
+           * wide delegation authority](https://developers.google.com/identity/protocols/OAuth2ServiceAccount#
+           * delegatingauthority) to impersonate users with the
+           * `https://www.googleapis.com/auth/gmail.settings.basic` scope. For users managing their own
+           * identities and keypairs, requests require [hardware key
+           * encryption](https://support.google.com/a/answer/14153163) turned on and configured.
            *
            * Create a request for the method "keypairs.obliterate".
            *
@@ -8133,7 +8284,14 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
              * delete key pairs that have been turned off for more than 30 days. To turn off a key pair, use
              * the DisableCseKeyPair method. Gmail can't restore or decrypt any messages that were encrypted
              * by an obliterated key. Authenticated users and Google Workspace administrators lose access to
-             * reading the encrypted messages.
+             * reading the encrypted messages. For administrators managing identities and keypairs for users
+             * in their organization, requests require authorization with a [service
+             * account](https://developers.google.com/identity/protocols/OAuth2ServiceAccount) that has
+             * [domain-wide delegation authority](https://developers.google.com/identity/protocols/OAuth2Servi
+             * ceAccount#delegatingauthority) to impersonate users with the
+             * `https://www.googleapis.com/auth/gmail.settings.basic` scope. For users managing their own
+             * identities and keypairs, requests require [hardware key
+             * encryption](https://support.google.com/a/answer/14153163) turned on and configured.
              *
              * Create a request for the method "keypairs.obliterate".
              *

@@ -19,7 +19,14 @@ package com.google.api.services.gmail.model;
 /**
  * The client-side encryption (CSE) configuration for the email address of an authenticated user.
  * Gmail uses CSE configurations to save drafts of client-side encrypted email messages, and to sign
- * and send encrypted email messages.
+ * and send encrypted email messages. For administrators managing identities and keypairs for users
+ * in their organization, requests require authorization with a [service
+ * account](https://developers.google.com/identity/protocols/OAuth2ServiceAccount) that has [domain-
+ * wide delegation authority](https://developers.google.com/identity/protocols/OAuth2ServiceAccount#
+ * delegatingauthority) to impersonate users with the
+ * `https://www.googleapis.com/auth/gmail.settings.basic` scope. For users managing their own
+ * identities and keypairs, requests require [hardware key
+ * encryption](https://support.google.com/a/answer/14153163) turned on and configured.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Gmail API. For a detailed explanation see:

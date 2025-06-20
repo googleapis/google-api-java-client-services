@@ -21,7 +21,14 @@ package com.google.api.services.gmail.model;
  * chain, and metadata for its paired private key. Gmail uses the key pair to complete the following
  * tasks: - Sign outgoing client-side encrypted messages. - Save and reopen drafts of client-side
  * encrypted messages. - Save and reopen sent messages. - Decrypt incoming or archived S/MIME
- * messages.
+ * messages. For administrators managing identities and keypairs for users in their organization,
+ * requests require authorization with a [service
+ * account](https://developers.google.com/identity/protocols/OAuth2ServiceAccount) that has [domain-
+ * wide delegation authority](https://developers.google.com/identity/protocols/OAuth2ServiceAccount#
+ * delegatingauthority) to impersonate users with the
+ * `https://www.googleapis.com/auth/gmail.settings.basic` scope. For users managing their own
+ * identities and keypairs, requests require [hardware key
+ * encryption](https://support.google.com/a/answer/14153163) turned on and configured.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Gmail API. For a detailed explanation see:

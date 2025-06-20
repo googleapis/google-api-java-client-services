@@ -351,10 +351,13 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
         }
       }
       /**
-       * Uploads a product input to your Merchant Center account. If an input with the same
-       * contentLanguage, offerId, and dataSource already exists, this method replaces that entry. After
-       * inserting, updating, or deleting a product input, it may take several minutes before the
-       * processed product can be retrieved.
+       * [Uploads a product input to your Merchant Center
+       * account](/merchant/api/guides/products/overview#upload-product-input). You must have a products
+       * data source to be able to insert a product. The unique identifier of the data source is passed as
+       * a query parameter in the request URL. If an input with the same contentLanguage, offerId, and
+       * dataSource already exists, this method replaces that entry. After inserting, updating, or
+       * deleting a product input, it may take several minutes before the processed product can be
+       * retrieved.
        *
        * Create a request for the method "productInputs.insert".
        *
@@ -379,10 +382,13 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
             java.util.regex.Pattern.compile("^accounts/[^/]+$");
 
         /**
-         * Uploads a product input to your Merchant Center account. If an input with the same
-         * contentLanguage, offerId, and dataSource already exists, this method replaces that entry. After
-         * inserting, updating, or deleting a product input, it may take several minutes before the
-         * processed product can be retrieved.
+         * [Uploads a product input to your Merchant Center
+         * account](/merchant/api/guides/products/overview#upload-product-input). You must have a products
+         * data source to be able to insert a product. The unique identifier of the data source is passed
+         * as a query parameter in the request URL. If an input with the same contentLanguage, offerId,
+         * and dataSource already exists, this method replaces that entry. After inserting, updating, or
+         * deleting a product input, it may take several minutes before the processed product can be
+         * retrieved.
          *
          * Create a request for the method "productInputs.insert".
          *

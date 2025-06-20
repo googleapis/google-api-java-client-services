@@ -65,7 +65,7 @@ public final class ProductStatusChangeMessage extends com.google.api.client.json
   private String eventTime;
 
   /**
-   * Optional. The product expiration time. This field will not bet set if the notification is sent
+   * Optional. The product expiration time. This field will not be set if the notification is sent
    * for a product deletion event.
    * The value may be {@code null}.
    */
@@ -172,7 +172,7 @@ public final class ProductStatusChangeMessage extends com.google.api.client.json
   }
 
   /**
-   * Optional. The product expiration time. This field will not bet set if the notification is sent
+   * Optional. The product expiration time. This field will not be set if the notification is sent
    * for a product deletion event.
    * @return value or {@code null} for none
    */
@@ -181,7 +181,7 @@ public final class ProductStatusChangeMessage extends com.google.api.client.json
   }
 
   /**
-   * Optional. The product expiration time. This field will not bet set if the notification is sent
+   * Optional. The product expiration time. This field will not be set if the notification is sent
    * for a product deletion event.
    * @param expirationTime expirationTime or {@code null} for none
    */

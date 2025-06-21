@@ -59,6 +59,13 @@ public final class GoogleCloudDialogflowCxV3beta1Fulfillment extends com.google.
   private java.lang.Boolean enableGenerativeFallback;
 
   /**
+   * A list of Generators to be called during this fulfillment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDialogflowCxV3beta1FulfillmentGeneratorSettings> generators;
+
+  /**
    * The list of rich message responses to present to the user.
    * The value may be {@code null}.
    */
@@ -154,6 +161,23 @@ public final class GoogleCloudDialogflowCxV3beta1Fulfillment extends com.google.
    */
   public GoogleCloudDialogflowCxV3beta1Fulfillment setEnableGenerativeFallback(java.lang.Boolean enableGenerativeFallback) {
     this.enableGenerativeFallback = enableGenerativeFallback;
+    return this;
+  }
+
+  /**
+   * A list of Generators to be called during this fulfillment.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDialogflowCxV3beta1FulfillmentGeneratorSettings> getGenerators() {
+    return generators;
+  }
+
+  /**
+   * A list of Generators to be called during this fulfillment.
+   * @param generators generators or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3beta1Fulfillment setGenerators(java.util.List<GoogleCloudDialogflowCxV3beta1FulfillmentGeneratorSettings> generators) {
+    this.generators = generators;
     return this;
   }
 

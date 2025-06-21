@@ -2287,25 +2287,29 @@ public class APIhub extends com.google.api.client.googleapis.services.json.Abstr
            * id/locations/test-location-id/ attributes/user-defined-attribute-id.json_values.values`
            * - The allowed value of the user defined JSON attribute associated with the Resource.
            * Allowed comparison operator is `:`. Here user-defined-attribute-json is a placeholder
-           * that can be replaced with any user defined JSON attribute name. Expressions are
-           * combined with either `AND` logic operator or `OR` logical operator but not both of them
-           * together i.e. only one of the `AND` or `OR` operator can be used throughout the filter
-           * string and both the operators cannot be used together. No other logical operators are
-           * supported. At most three filter fields are allowed in the filter string and if provided
-           * more than that then `INVALID_ARGUMENT` error is returned by the API. Here are a few
-           * examples: * `owner.email = \"apihub@google.com\"` - - The owner team email is
-           * _apihub@google.com_. * `owner.email = \"apihub@google.com\" AND create_time <
-           * \"2021-08-15T14:50:00Z\" AND create_time > \"2021-08-10T12:00:00Z\"` - The owner team
-           * email is _apihub@google.com_ and the api was created before _2021-08-15 14:50:00 UTC_
-           * and after _2021-08-10 12:00:00 UTC_. * `owner.email = \"apihub@google.com\" OR
-           * team.enum_values.values.id: apihub-team-id` - The filter string specifies the APIs
-           * where the owner team email is _apihub@google.com_ or the id of the allowed value
-           * associated with the team attribute is _apihub-team-id_. * `owner.email =
-           * \"apihub@google.com\" OR team.enum_values.values.display_name: ApiHub Team` - The
-           * filter string specifies the APIs where the owner team email is _apihub@google.com_ or
-           * the display name of the allowed value associated with the team attribute is `ApiHub
-           * Team`. * `owner.email = \"apihub@google.com\" AND attributes.projects/test-project-
-           * id/locations/test-location-id/
+           * that can be replaced with any user defined JSON attribute name. A filter function is
+           * also supported in the filter string. The filter function is `id(name)`. The `id(name)`
+           * function returns the id of the resource name. For example, `id(name) = \"api-1\"` is
+           * equivalent to `name = \"projects/test-project-id/locations/test-location-
+           * id/apis/api-1\"` provided the parent is `projects/test-project-id/locations/test-
+           * location-id`. Expressions are combined with either `AND` logic operator or `OR` logical
+           * operator but not both of them together i.e. only one of the `AND` or `OR` operator can
+           * be used throughout the filter string and both the operators cannot be used together. No
+           * other logical operators are supported. At most three filter fields are allowed in the
+           * filter string and if provided more than that then `INVALID_ARGUMENT` error is returned
+           * by the API. Here are a few examples: * `owner.email = \"apihub@google.com\"` - - The
+           * owner team email is _apihub@google.com_. * `owner.email = \"apihub@google.com\" AND
+           * create_time < \"2021-08-15T14:50:00Z\" AND create_time > \"2021-08-10T12:00:00Z\"` -
+           * The owner team email is _apihub@google.com_ and the api was created before _2021-08-15
+           * 14:50:00 UTC_ and after _2021-08-10 12:00:00 UTC_. * `owner.email =
+           * \"apihub@google.com\" OR team.enum_values.values.id: apihub-team-id` - The filter
+           * string specifies the APIs where the owner team email is _apihub@google.com_ or the id
+           * of the allowed value associated with the team attribute is _apihub-team-id_. *
+           * `owner.email = \"apihub@google.com\" OR team.enum_values.values.display_name: ApiHub
+           * Team` - The filter string specifies the APIs where the owner team email is
+           * _apihub@google.com_ or the display name of the allowed value associated with the team
+           * attribute is `ApiHub Team`. * `owner.email = \"apihub@google.com\" AND
+           * attributes.projects/test-project-id/locations/test-location-id/
            * attributes/17650f90-4a29-4971-b3c0-d5532da3764b.enum_values.values.id: test_enum_id AND
            * attributes.projects/test-project-id/locations/test-location-id/
            * attributes/1765\0f90-4a29-5431-b3d0-d5532da3764c.string_values.values:
@@ -2358,14 +2362,18 @@ public class APIhub extends com.google.api.client.googleapis.services.json.Abstr
          attribute name. * `attributes.projects/test-project-id/locations/test-location-id/ attributes/user-
          defined-attribute-id.json_values.values` - The allowed value of the user defined JSON attribute
          associated with the Resource. Allowed comparison operator is `:`. Here user-defined-attribute-json
-         is a placeholder that can be replaced with any user defined JSON attribute name. Expressions are
-         combined with either `AND` logic operator or `OR` logical operator but not both of them together
-         i.e. only one of the `AND` or `OR` operator can be used throughout the filter string and both the
-         operators cannot be used together. No other logical operators are supported. At most three filter
-         fields are allowed in the filter string and if provided more than that then `INVALID_ARGUMENT`
-         error is returned by the API. Here are a few examples: * `owner.email = \"apihub@google.com\"` - -
-         The owner team email is _apihub@google.com_. * `owner.email = \"apihub@google.com\" AND create_time
-         < \"2021-08-15T14:50:00Z\" AND create_time > \"2021-08-10T12:00:00Z\"` - The owner team email is
+         is a placeholder that can be replaced with any user defined JSON attribute name. A filter function
+         is also supported in the filter string. The filter function is `id(name)`. The `id(name)` function
+         returns the id of the resource name. For example, `id(name) = \"api-1\"` is equivalent to `name =
+         \"projects/test-project-id/locations/test-location-id/apis/api-1\"` provided the parent is
+         `projects/test-project-id/locations/test-location-id`. Expressions are combined with either `AND`
+         logic operator or `OR` logical operator but not both of them together i.e. only one of the `AND` or
+         `OR` operator can be used throughout the filter string and both the operators cannot be used
+         together. No other logical operators are supported. At most three filter fields are allowed in the
+         filter string and if provided more than that then `INVALID_ARGUMENT` error is returned by the API.
+         Here are a few examples: * `owner.email = \"apihub@google.com\"` - - The owner team email is
+         _apihub@google.com_. * `owner.email = \"apihub@google.com\" AND create_time <
+         \"2021-08-15T14:50:00Z\" AND create_time > \"2021-08-10T12:00:00Z\"` - The owner team email is
          _apihub@google.com_ and the api was created before _2021-08-15 14:50:00 UTC_ and after _2021-08-10
          12:00:00 UTC_. * `owner.email = \"apihub@google.com\" OR team.enum_values.values.id: apihub-team-
          id` - The filter string specifies the APIs where the owner team email is _apihub@google.com_ or the
@@ -2432,25 +2440,29 @@ public class APIhub extends com.google.api.client.googleapis.services.json.Abstr
            * id/locations/test-location-id/ attributes/user-defined-attribute-id.json_values.values`
            * - The allowed value of the user defined JSON attribute associated with the Resource.
            * Allowed comparison operator is `:`. Here user-defined-attribute-json is a placeholder
-           * that can be replaced with any user defined JSON attribute name. Expressions are
-           * combined with either `AND` logic operator or `OR` logical operator but not both of them
-           * together i.e. only one of the `AND` or `OR` operator can be used throughout the filter
-           * string and both the operators cannot be used together. No other logical operators are
-           * supported. At most three filter fields are allowed in the filter string and if provided
-           * more than that then `INVALID_ARGUMENT` error is returned by the API. Here are a few
-           * examples: * `owner.email = \"apihub@google.com\"` - - The owner team email is
-           * _apihub@google.com_. * `owner.email = \"apihub@google.com\" AND create_time <
-           * \"2021-08-15T14:50:00Z\" AND create_time > \"2021-08-10T12:00:00Z\"` - The owner team
-           * email is _apihub@google.com_ and the api was created before _2021-08-15 14:50:00 UTC_
-           * and after _2021-08-10 12:00:00 UTC_. * `owner.email = \"apihub@google.com\" OR
-           * team.enum_values.values.id: apihub-team-id` - The filter string specifies the APIs
-           * where the owner team email is _apihub@google.com_ or the id of the allowed value
-           * associated with the team attribute is _apihub-team-id_. * `owner.email =
-           * \"apihub@google.com\" OR team.enum_values.values.display_name: ApiHub Team` - The
-           * filter string specifies the APIs where the owner team email is _apihub@google.com_ or
-           * the display name of the allowed value associated with the team attribute is `ApiHub
-           * Team`. * `owner.email = \"apihub@google.com\" AND attributes.projects/test-project-
-           * id/locations/test-location-id/
+           * that can be replaced with any user defined JSON attribute name. A filter function is
+           * also supported in the filter string. The filter function is `id(name)`. The `id(name)`
+           * function returns the id of the resource name. For example, `id(name) = \"api-1\"` is
+           * equivalent to `name = \"projects/test-project-id/locations/test-location-
+           * id/apis/api-1\"` provided the parent is `projects/test-project-id/locations/test-
+           * location-id`. Expressions are combined with either `AND` logic operator or `OR` logical
+           * operator but not both of them together i.e. only one of the `AND` or `OR` operator can
+           * be used throughout the filter string and both the operators cannot be used together. No
+           * other logical operators are supported. At most three filter fields are allowed in the
+           * filter string and if provided more than that then `INVALID_ARGUMENT` error is returned
+           * by the API. Here are a few examples: * `owner.email = \"apihub@google.com\"` - - The
+           * owner team email is _apihub@google.com_. * `owner.email = \"apihub@google.com\" AND
+           * create_time < \"2021-08-15T14:50:00Z\" AND create_time > \"2021-08-10T12:00:00Z\"` -
+           * The owner team email is _apihub@google.com_ and the api was created before _2021-08-15
+           * 14:50:00 UTC_ and after _2021-08-10 12:00:00 UTC_. * `owner.email =
+           * \"apihub@google.com\" OR team.enum_values.values.id: apihub-team-id` - The filter
+           * string specifies the APIs where the owner team email is _apihub@google.com_ or the id
+           * of the allowed value associated with the team attribute is _apihub-team-id_. *
+           * `owner.email = \"apihub@google.com\" OR team.enum_values.values.display_name: ApiHub
+           * Team` - The filter string specifies the APIs where the owner team email is
+           * _apihub@google.com_ or the display name of the allowed value associated with the team
+           * attribute is `ApiHub Team`. * `owner.email = \"apihub@google.com\" AND
+           * attributes.projects/test-project-id/locations/test-location-id/
            * attributes/17650f90-4a29-4971-b3c0-d5532da3764b.enum_values.values.id: test_enum_id AND
            * attributes.projects/test-project-id/locations/test-location-id/
            * attributes/1765\0f90-4a29-5431-b3d0-d5532da3764c.string_values.values:
@@ -9697,19 +9709,23 @@ public class APIhub extends com.google.api.client.googleapis.services.json.Abstr
            * attributes/user-defined-attribute-id.json_values.values` - The allowed value of the
            * user defined JSON attribute associated with the Resource. Allowed comparison operator
            * is `:`. Here user-defined-attribute-json is a placeholder that can be replaced with any
-           * user defined JSON attribute name. Expressions are combined with either `AND` logic
-           * operator or `OR` logical operator but not both of them together i.e. only one of the
-           * `AND` or `OR` operator can be used throughout the filter string and both the operators
-           * cannot be used together. No other logical operators are supported. At most three filter
-           * fields are allowed in the filter string and if provided more than that then
-           * `INVALID_ARGUMENT` error is returned by the API. Here are a few examples: *
-           * `environment.enum_values.values.id: staging-id` - The allowed value id of the
-           * environment attribute associated with the Deployment is _staging-id_. *
-           * `environment.enum_values.values.display_name: \"Staging Deployment\"` - The allowed
-           * value display name of the environment attribute associated with the Deployment is
-           * `Staging Deployment`. * `environment.enum_values.values.id: production-id AND
-           * create_time < \"2021-08-15T14:50:00Z\" AND create_time > \"2021-08-10T12:00:00Z\"` -
-           * The allowed value id of the environment attribute associated with the Deployment is
+           * user defined JSON attribute name. A filter function is also supported in the filter
+           * string. The filter function is `id(name)`. The `id(name)` function returns the id of
+           * the resource name. For example, `id(name) = \"deployment-1\"` is equivalent to `name =
+           * \"projects/test-project-id/locations/test-location-id/deployments/deployment-1\"`
+           * provided the parent is `projects/test-project-id/locations/test-location-id`.
+           * Expressions are combined with either `AND` logic operator or `OR` logical operator but
+           * not both of them together i.e. only one of the `AND` or `OR` operator can be used
+           * throughout the filter string and both the operators cannot be used together. No other
+           * logical operators are supported. At most three filter fields are allowed in the filter
+           * string and if provided more than that then `INVALID_ARGUMENT` error is returned by the
+           * API. Here are a few examples: * `environment.enum_values.values.id: staging-id` - The
+           * allowed value id of the environment attribute associated with the Deployment is
+           * _staging-id_. * `environment.enum_values.values.display_name: \"Staging Deployment\"` -
+           * The allowed value display name of the environment attribute associated with the
+           * Deployment is `Staging Deployment`. * `environment.enum_values.values.id: production-id
+           * AND create_time < \"2021-08-15T14:50:00Z\" AND create_time > \"2021-08-10T12:00:00Z\"`
+           * - The allowed value id of the environment attribute associated with the Deployment is
            * _production-id_ and Deployment was created before _2021-08-15 14:50:00 UTC_ and after
            * _2021-08-10 12:00:00 UTC_. * `environment.enum_values.values.id: production-id OR
            * slo.string_values.values: \"99.99%\"` - The allowed value id of the environment
@@ -9756,23 +9772,27 @@ public class APIhub extends com.google.api.client.googleapis.services.json.Abstr
          attribute name. * `attributes.projects/test-project-id/locations/test-location-id/ attributes/user-
          defined-attribute-id.json_values.values` - The allowed value of the user defined JSON attribute
          associated with the Resource. Allowed comparison operator is `:`. Here user-defined-attribute-json
-         is a placeholder that can be replaced with any user defined JSON attribute name. Expressions are
-         combined with either `AND` logic operator or `OR` logical operator but not both of them together
-         i.e. only one of the `AND` or `OR` operator can be used throughout the filter string and both the
-         operators cannot be used together. No other logical operators are supported. At most three filter
-         fields are allowed in the filter string and if provided more than that then `INVALID_ARGUMENT`
-         error is returned by the API. Here are a few examples: * `environment.enum_values.values.id:
-         staging-id` - The allowed value id of the environment attribute associated with the Deployment is
-         _staging-id_. * `environment.enum_values.values.display_name: \"Staging Deployment\"` - The allowed
-         value display name of the environment attribute associated with the Deployment is `Staging
-         Deployment`. * `environment.enum_values.values.id: production-id AND create_time <
-         \"2021-08-15T14:50:00Z\" AND create_time > \"2021-08-10T12:00:00Z\"` - The allowed value id of the
-         environment attribute associated with the Deployment is _production-id_ and Deployment was created
-         before _2021-08-15 14:50:00 UTC_ and after _2021-08-10 12:00:00 UTC_. *
-         `environment.enum_values.values.id: production-id OR slo.string_values.values: \"99.99%\"` - The
-         allowed value id of the environment attribute Deployment is _production-id_ or string value of the
-         slo attribute is _99.99%_. * `environment.enum_values.values.id: staging-id AND
-         attributes.projects/test-project-id/locations/test-location-id/
+         is a placeholder that can be replaced with any user defined JSON attribute name. A filter function
+         is also supported in the filter string. The filter function is `id(name)`. The `id(name)` function
+         returns the id of the resource name. For example, `id(name) = \"deployment-1\"` is equivalent to
+         `name = \"projects/test-project-id/locations/test-location-id/deployments/deployment-1\"` provided
+         the parent is `projects/test-project-id/locations/test-location-id`. Expressions are combined with
+         either `AND` logic operator or `OR` logical operator but not both of them together i.e. only one of
+         the `AND` or `OR` operator can be used throughout the filter string and both the operators cannot
+         be used together. No other logical operators are supported. At most three filter fields are allowed
+         in the filter string and if provided more than that then `INVALID_ARGUMENT` error is returned by
+         the API. Here are a few examples: * `environment.enum_values.values.id: staging-id` - The allowed
+         value id of the environment attribute associated with the Deployment is _staging-id_. *
+         `environment.enum_values.values.display_name: \"Staging Deployment\"` - The allowed value display
+         name of the environment attribute associated with the Deployment is `Staging Deployment`. *
+         `environment.enum_values.values.id: production-id AND create_time < \"2021-08-15T14:50:00Z\" AND
+         create_time > \"2021-08-10T12:00:00Z\"` - The allowed value id of the environment attribute
+         associated with the Deployment is _production-id_ and Deployment was created before _2021-08-15
+         14:50:00 UTC_ and after _2021-08-10 12:00:00 UTC_. * `environment.enum_values.values.id:
+         production-id OR slo.string_values.values: \"99.99%\"` - The allowed value id of the environment
+         attribute Deployment is _production-id_ or string value of the slo attribute is _99.99%_. *
+         `environment.enum_values.values.id: staging-id AND attributes.projects/test-project-
+         id/locations/test-location-id/
          attributes/17650f90-4a29-4971-b3c0-d5532da3764b.string_values.values: test` - The filter string
          specifies that the allowed value id of the environment attribute associated with the Deployment is
          _staging-id_ and the value of the user defined attribute of type string is _test_.
@@ -9820,19 +9840,23 @@ public class APIhub extends com.google.api.client.googleapis.services.json.Abstr
            * attributes/user-defined-attribute-id.json_values.values` - The allowed value of the
            * user defined JSON attribute associated with the Resource. Allowed comparison operator
            * is `:`. Here user-defined-attribute-json is a placeholder that can be replaced with any
-           * user defined JSON attribute name. Expressions are combined with either `AND` logic
-           * operator or `OR` logical operator but not both of them together i.e. only one of the
-           * `AND` or `OR` operator can be used throughout the filter string and both the operators
-           * cannot be used together. No other logical operators are supported. At most three filter
-           * fields are allowed in the filter string and if provided more than that then
-           * `INVALID_ARGUMENT` error is returned by the API. Here are a few examples: *
-           * `environment.enum_values.values.id: staging-id` - The allowed value id of the
-           * environment attribute associated with the Deployment is _staging-id_. *
-           * `environment.enum_values.values.display_name: \"Staging Deployment\"` - The allowed
-           * value display name of the environment attribute associated with the Deployment is
-           * `Staging Deployment`. * `environment.enum_values.values.id: production-id AND
-           * create_time < \"2021-08-15T14:50:00Z\" AND create_time > \"2021-08-10T12:00:00Z\"` -
-           * The allowed value id of the environment attribute associated with the Deployment is
+           * user defined JSON attribute name. A filter function is also supported in the filter
+           * string. The filter function is `id(name)`. The `id(name)` function returns the id of
+           * the resource name. For example, `id(name) = \"deployment-1\"` is equivalent to `name =
+           * \"projects/test-project-id/locations/test-location-id/deployments/deployment-1\"`
+           * provided the parent is `projects/test-project-id/locations/test-location-id`.
+           * Expressions are combined with either `AND` logic operator or `OR` logical operator but
+           * not both of them together i.e. only one of the `AND` or `OR` operator can be used
+           * throughout the filter string and both the operators cannot be used together. No other
+           * logical operators are supported. At most three filter fields are allowed in the filter
+           * string and if provided more than that then `INVALID_ARGUMENT` error is returned by the
+           * API. Here are a few examples: * `environment.enum_values.values.id: staging-id` - The
+           * allowed value id of the environment attribute associated with the Deployment is
+           * _staging-id_. * `environment.enum_values.values.display_name: \"Staging Deployment\"` -
+           * The allowed value display name of the environment attribute associated with the
+           * Deployment is `Staging Deployment`. * `environment.enum_values.values.id: production-id
+           * AND create_time < \"2021-08-15T14:50:00Z\" AND create_time > \"2021-08-10T12:00:00Z\"`
+           * - The allowed value id of the environment attribute associated with the Deployment is
            * _production-id_ and Deployment was created before _2021-08-15 14:50:00 UTC_ and after
            * _2021-08-10 12:00:00 UTC_. * `environment.enum_values.values.id: production-id OR
            * slo.string_values.values: \"99.99%\"` - The allowed value id of the environment
@@ -9911,8 +9935,8 @@ public class APIhub extends com.google.api.client.googleapis.services.json.Abstr
         /**
          * Update a deployment resource in the API hub. The following fields in the deployment resource can
          * be updated: * display_name * description * documentation * deployment_type * resource_uri *
-         * endpoints * slo * environment * attributes The update_mask should be used to specify the fields
-         * being updated.
+         * endpoints * slo * environment * attributes * source_project * source_environment * management_url
+         * * source_uri The update_mask should be used to specify the fields being updated.
          *
          * Create a request for the method "deployments.patch".
          *
@@ -9940,8 +9964,8 @@ public class APIhub extends com.google.api.client.googleapis.services.json.Abstr
           /**
            * Update a deployment resource in the API hub. The following fields in the deployment resource
            * can be updated: * display_name * description * documentation * deployment_type * resource_uri *
-           * endpoints * slo * environment * attributes The update_mask should be used to specify the fields
-           * being updated.
+           * endpoints * slo * environment * attributes * source_project * source_environment *
+           * management_url * source_uri The update_mask should be used to specify the fields being updated.
            *
            * Create a request for the method "deployments.patch".
            *
@@ -14496,13 +14520,19 @@ public class APIhub extends com.google.api.client.googleapis.services.json.Abstr
              * filtering. The value must be a string. The comparison operator must be one of: `<`,
              * `>` or `=`. Filters are not case sensitive. The following fields in the
              * `PluginInstances` are eligible for filtering: * `state` - The state of the Plugin
-             * Instance. Allowed comparison operators: `=`. Expressions are combined with either
-             * `AND` logic operator or `OR` logical operator but not both of them together i.e. only
-             * one of the `AND` or `OR` operator can be used throughout the filter string and both
-             * the operators cannot be used together. No other logical operators are supported. At
-             * most three filter fields are allowed in the filter string and if provided more than
-             * that then `INVALID_ARGUMENT` error is returned by the API. Here are a few examples: *
-             * `state = ENABLED` - The plugin instance is in enabled state.
+             * Instance. Allowed comparison operators: `=`. A filter function is also supported in
+             * the filter string. The filter function is `id(name)`. The `id(name)` function returns
+             * the id of the resource name. For example, `id(name) = \"plugin-instance-1\"` is
+             * equivalent to `name = \"projects/test-project-id/locations/test-location-
+             * id/plugins/plugin-1/instances/plugin-instance-1\"` provided the parent is
+             * `projects/test-project-id/locations/test-location-id/plugins/plugin-1`. Expressions
+             * are combined with either `AND` logic operator or `OR` logical operator but not both
+             * of them together i.e. only one of the `AND` or `OR` operator can be used throughout
+             * the filter string and both the operators cannot be used together. No other logical
+             * operators are supported. At most three filter fields are allowed in the filter string
+             * and if provided more than that then `INVALID_ARGUMENT` error is returned by the API.
+             * Here are a few examples: * `state = ENABLED` - The plugin instance is in enabled
+             * state.
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
@@ -14511,12 +14541,17 @@ public class APIhub extends com.google.api.client.googleapis.services.json.Abstr
            a field name, a comparison operator, and a value for filtering. The value must be a string. The
            comparison operator must be one of: `<`, `>` or `=`. Filters are not case sensitive. The following
            fields in the `PluginInstances` are eligible for filtering: * `state` - The state of the Plugin
-           Instance. Allowed comparison operators: `=`. Expressions are combined with either `AND` logic
-           operator or `OR` logical operator but not both of them together i.e. only one of the `AND` or `OR`
-           operator can be used throughout the filter string and both the operators cannot be used together.
-           No other logical operators are supported. At most three filter fields are allowed in the filter
-           string and if provided more than that then `INVALID_ARGUMENT` error is returned by the API. Here
-           are a few examples: * `state = ENABLED` - The plugin instance is in enabled state.
+           Instance. Allowed comparison operators: `=`. A filter function is also supported in the filter
+           string. The filter function is `id(name)`. The `id(name)` function returns the id of the resource
+           name. For example, `id(name) = \"plugin-instance-1\"` is equivalent to `name = \"projects/test-
+           project-id/locations/test-location-id/plugins/plugin-1/instances/plugin-instance-1\"` provided the
+           parent is `projects/test-project-id/locations/test-location-id/plugins/plugin-1`. Expressions are
+           combined with either `AND` logic operator or `OR` logical operator but not both of them together
+           i.e. only one of the `AND` or `OR` operator can be used throughout the filter string and both the
+           operators cannot be used together. No other logical operators are supported. At most three filter
+           fields are allowed in the filter string and if provided more than that then `INVALID_ARGUMENT`
+           error is returned by the API. Here are a few examples: * `state = ENABLED` - The plugin instance is
+           in enabled state.
              */
             public java.lang.String getFilter() {
               return filter;
@@ -14528,13 +14563,19 @@ public class APIhub extends com.google.api.client.googleapis.services.json.Abstr
              * filtering. The value must be a string. The comparison operator must be one of: `<`,
              * `>` or `=`. Filters are not case sensitive. The following fields in the
              * `PluginInstances` are eligible for filtering: * `state` - The state of the Plugin
-             * Instance. Allowed comparison operators: `=`. Expressions are combined with either
-             * `AND` logic operator or `OR` logical operator but not both of them together i.e. only
-             * one of the `AND` or `OR` operator can be used throughout the filter string and both
-             * the operators cannot be used together. No other logical operators are supported. At
-             * most three filter fields are allowed in the filter string and if provided more than
-             * that then `INVALID_ARGUMENT` error is returned by the API. Here are a few examples: *
-             * `state = ENABLED` - The plugin instance is in enabled state.
+             * Instance. Allowed comparison operators: `=`. A filter function is also supported in
+             * the filter string. The filter function is `id(name)`. The `id(name)` function returns
+             * the id of the resource name. For example, `id(name) = \"plugin-instance-1\"` is
+             * equivalent to `name = \"projects/test-project-id/locations/test-location-
+             * id/plugins/plugin-1/instances/plugin-instance-1\"` provided the parent is
+             * `projects/test-project-id/locations/test-location-id/plugins/plugin-1`. Expressions
+             * are combined with either `AND` logic operator or `OR` logical operator but not both
+             * of them together i.e. only one of the `AND` or `OR` operator can be used throughout
+             * the filter string and both the operators cannot be used together. No other logical
+             * operators are supported. At most three filter fields are allowed in the filter string
+             * and if provided more than that then `INVALID_ARGUMENT` error is returned by the API.
+             * Here are a few examples: * `state = ENABLED` - The plugin instance is in enabled
+             * state.
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;

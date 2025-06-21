@@ -30,16 +30,6 @@ package com.google.api.services.healthcare.v1beta1.model;
 public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestination extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Setting this field will enable BigQuery's Change Data Capture (CDC) on the
-   * destination tables. Set this field if you want to only keep the latest version of each
-   * instance. Updates and deletes to an existing' instance will overwrite the corresponding row.
-   * See https://cloud.google.com/bigquery/docs/change-data-capture for details.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudHealthcareV1beta1DicomChangeDataCaptureConfig changeDataCaptureConfig;
-
-  /**
    * Use `write_disposition` instead. If `write_disposition` is specified, this parameter is
    * ignored. force=false is equivalent to write_disposition=WRITE_EMPTY and force=true is
    * equivalent to write_disposition=WRITE_TRUNCATE.
@@ -63,29 +53,6 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestination extends 
    */
   @com.google.api.client.util.Key
   private java.lang.String writeDisposition;
-
-  /**
-   * Optional. Setting this field will enable BigQuery's Change Data Capture (CDC) on the
-   * destination tables. Set this field if you want to only keep the latest version of each
-   * instance. Updates and deletes to an existing' instance will overwrite the corresponding row.
-   * See https://cloud.google.com/bigquery/docs/change-data-capture for details.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudHealthcareV1beta1DicomChangeDataCaptureConfig getChangeDataCaptureConfig() {
-    return changeDataCaptureConfig;
-  }
-
-  /**
-   * Optional. Setting this field will enable BigQuery's Change Data Capture (CDC) on the
-   * destination tables. Set this field if you want to only keep the latest version of each
-   * instance. Updates and deletes to an existing' instance will overwrite the corresponding row.
-   * See https://cloud.google.com/bigquery/docs/change-data-capture for details.
-   * @param changeDataCaptureConfig changeDataCaptureConfig or {@code null} for none
-   */
-  public GoogleCloudHealthcareV1beta1DicomBigQueryDestination setChangeDataCaptureConfig(GoogleCloudHealthcareV1beta1DicomChangeDataCaptureConfig changeDataCaptureConfig) {
-    this.changeDataCaptureConfig = changeDataCaptureConfig;
-    return this;
-  }
 
   /**
    * Use `write_disposition` instead. If `write_disposition` is specified, this parameter is

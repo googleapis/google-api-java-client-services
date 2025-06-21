@@ -32,7 +32,7 @@ public final class SearchGoogleLocationsRequest extends com.google.api.client.js
 
   /**
    * Location to search for. If provided, will find locations which match the provided location
-   * details.
+   * details, which must include a value for the title.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,7 +56,7 @@ public final class SearchGoogleLocationsRequest extends com.google.api.client.js
 
   /**
    * Location to search for. If provided, will find locations which match the provided location
-   * details.
+   * details, which must include a value for the title.
    * @return value or {@code null} for none
    */
   public Location getLocation() {
@@ -65,7 +65,7 @@ public final class SearchGoogleLocationsRequest extends com.google.api.client.js
 
   /**
    * Location to search for. If provided, will find locations which match the provided location
-   * details.
+   * details, which must include a value for the title.
    * @param location location or {@code null} for none
    */
   public SearchGoogleLocationsRequest setLocation(Location location) {

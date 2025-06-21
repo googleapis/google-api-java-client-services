@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-gkehub</artifactId>
-  <version>v2beta-rev20250516-2.0.0</version>
-  <name>GKE Hub API v2beta-rev20250516-2.0.0</name>
+  <version>v2beta-rev20250612-2.0.0</version>
+  <name>GKE Hub API v2beta-rev20250612-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

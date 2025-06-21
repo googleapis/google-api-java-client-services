@@ -50,7 +50,7 @@ public final class ConfigManagementDeploymentOverride extends com.google.api.cli
   private java.lang.String deploymentName;
 
   /**
-   * Required. The namespace of the deployment resource to be overridden..
+   * Required. The namespace of the deployment resource to be overridden.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,7 +91,7 @@ public final class ConfigManagementDeploymentOverride extends com.google.api.cli
   }
 
   /**
-   * Required. The namespace of the deployment resource to be overridden..
+   * Required. The namespace of the deployment resource to be overridden.
    * @return value or {@code null} for none
    */
   public java.lang.String getDeploymentNamespace() {
@@ -99,7 +99,7 @@ public final class ConfigManagementDeploymentOverride extends com.google.api.cli
   }
 
   /**
-   * Required. The namespace of the deployment resource to be overridden..
+   * Required. The namespace of the deployment resource to be overridden.
    * @param deploymentNamespace deploymentNamespace or {@code null} for none
    */
   public ConfigManagementDeploymentOverride setDeploymentNamespace(java.lang.String deploymentNamespace) {

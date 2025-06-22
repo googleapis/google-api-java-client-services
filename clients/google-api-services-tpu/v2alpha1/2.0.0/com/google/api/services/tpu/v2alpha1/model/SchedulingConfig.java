@@ -44,6 +44,13 @@ public final class SchedulingConfig extends com.google.api.client.json.GenericJs
   private java.lang.String provisioningModel;
 
   /**
+   * Optional. Name of the reservation in which the node should be provisioned.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String reservationName;
+
+  /**
    * Whether the node is created under a reservation.
    * The value may be {@code null}.
    */
@@ -95,6 +102,23 @@ public final class SchedulingConfig extends com.google.api.client.json.GenericJs
    */
   public SchedulingConfig setProvisioningModel(java.lang.String provisioningModel) {
     this.provisioningModel = provisioningModel;
+    return this;
+  }
+
+  /**
+   * Optional. Name of the reservation in which the node should be provisioned.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getReservationName() {
+    return reservationName;
+  }
+
+  /**
+   * Optional. Name of the reservation in which the node should be provisioned.
+   * @param reservationName reservationName or {@code null} for none
+   */
+  public SchedulingConfig setReservationName(java.lang.String reservationName) {
+    this.reservationName = reservationName;
     return this;
   }
 

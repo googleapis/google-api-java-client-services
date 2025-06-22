@@ -26,6 +26,7 @@ package com.google.api.services.dataplex.v1.model;
  * (https://cloud.google.com/dataplex/docs/data-profiling-overview). Data discovery: scans data in
  * Cloud Storage buckets to extract and then catalog metadata. For more information, see Discover
  * and catalog Cloud Storage data (https://cloud.google.com/bigquery/docs/automatic-discovery).
+ * LINT.IfChange
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataplex API. For a detailed explanation see:

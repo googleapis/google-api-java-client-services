@@ -3062,17 +3062,24 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           return this;
         }
 
-        /** Optional. Internal only. */
+        /**
+         * Optional. Specifies whether the search should understand the meaning and intent behind
+         * the query, rather than just matching keywords.
+         */
         @com.google.api.client.util.Key
         private java.lang.Boolean semanticSearch;
 
-        /** Optional. Internal only.
+        /** Optional. Specifies whether the search should understand the meaning and intent behind the query,
+       rather than just matching keywords.
          */
         public java.lang.Boolean getSemanticSearch() {
           return semanticSearch;
         }
 
-        /** Optional. Internal only. */
+        /**
+         * Optional. Specifies whether the search should understand the meaning and intent behind
+         * the query, rather than just matching keywords.
+         */
         public SearchEntries setSemanticSearch(java.lang.Boolean semanticSearch) {
           this.semanticSearch = semanticSearch;
           return this;

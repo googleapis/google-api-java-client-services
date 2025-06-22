@@ -45,8 +45,8 @@ public final class GoogleCloudDataplexV1DataQualityRule extends com.google.api.c
 
   /**
    * Required. The dimension a rule belongs to. Results are also aggregated at the dimension level.
-   * Supported dimensions are "COMPLETENESS", "ACCURACY", "CONSISTENCY", "VALIDITY", "UNIQUENESS",
-   * "FRESHNESS", "VOLUME"
+   * Custom dimension name is supported with all uppercase letters and maximum length of 30
+   * characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -187,8 +187,8 @@ public final class GoogleCloudDataplexV1DataQualityRule extends com.google.api.c
 
   /**
    * Required. The dimension a rule belongs to. Results are also aggregated at the dimension level.
-   * Supported dimensions are "COMPLETENESS", "ACCURACY", "CONSISTENCY", "VALIDITY", "UNIQUENESS",
-   * "FRESHNESS", "VOLUME"
+   * Custom dimension name is supported with all uppercase letters and maximum length of 30
+   * characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDimension() {
@@ -197,8 +197,8 @@ public final class GoogleCloudDataplexV1DataQualityRule extends com.google.api.c
 
   /**
    * Required. The dimension a rule belongs to. Results are also aggregated at the dimension level.
-   * Supported dimensions are "COMPLETENESS", "ACCURACY", "CONSISTENCY", "VALIDITY", "UNIQUENESS",
-   * "FRESHNESS", "VOLUME"
+   * Custom dimension name is supported with all uppercase letters and maximum length of 30
+   * characters.
    * @param dimension dimension or {@code null} for none
    */
   public GoogleCloudDataplexV1DataQualityRule setDimension(java.lang.String dimension) {

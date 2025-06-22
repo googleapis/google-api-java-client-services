@@ -40,8 +40,9 @@ public final class GoogleCloudDataplexV1DataSource extends com.google.api.client
 
   /**
    * Immutable. The service-qualified full resource name of the cloud resource for a DataScan job to
-   * scan against. The field could be: BigQuery table of type "TABLE" for
-   * DataProfileScan/DataQualityScan Format:
+   * scan against. The field could eitherbe: Cloud Storage bucket for DataDiscoveryScan Format:
+   * //storage.googleapis.com/projects/PROJECT_ID/buckets/BUCKET_ID or BigQuery table of type
+   * "TABLE" for DataProfileScan/DataQualityScan Format:
    * //bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID/tables/TABLE_ID
    * The value may be {@code null}.
    */
@@ -71,8 +72,9 @@ public final class GoogleCloudDataplexV1DataSource extends com.google.api.client
 
   /**
    * Immutable. The service-qualified full resource name of the cloud resource for a DataScan job to
-   * scan against. The field could be: BigQuery table of type "TABLE" for
-   * DataProfileScan/DataQualityScan Format:
+   * scan against. The field could eitherbe: Cloud Storage bucket for DataDiscoveryScan Format:
+   * //storage.googleapis.com/projects/PROJECT_ID/buckets/BUCKET_ID or BigQuery table of type
+   * "TABLE" for DataProfileScan/DataQualityScan Format:
    * //bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID/tables/TABLE_ID
    * @return value or {@code null} for none
    */
@@ -82,8 +84,9 @@ public final class GoogleCloudDataplexV1DataSource extends com.google.api.client
 
   /**
    * Immutable. The service-qualified full resource name of the cloud resource for a DataScan job to
-   * scan against. The field could be: BigQuery table of type "TABLE" for
-   * DataProfileScan/DataQualityScan Format:
+   * scan against. The field could eitherbe: Cloud Storage bucket for DataDiscoveryScan Format:
+   * //storage.googleapis.com/projects/PROJECT_ID/buckets/BUCKET_ID or BigQuery table of type
+   * "TABLE" for DataProfileScan/DataQualityScan Format:
    * //bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID/tables/TABLE_ID
    * @param resource resource or {@code null} for none
    */

@@ -226,6 +226,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.Integer shardCount;
 
   /**
+   * Optional. Input only. Simulate a maintenance event.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean simulateMaintenanceEvent;
+
+  /**
    * Output only. Redis memory size in GB for the entire cluster rounded up to the next integer.
    * The value may be {@code null}.
    */
@@ -735,6 +742,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setShardCount(java.lang.Integer shardCount) {
     this.shardCount = shardCount;
+    return this;
+  }
+
+  /**
+   * Optional. Input only. Simulate a maintenance event.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSimulateMaintenanceEvent() {
+    return simulateMaintenanceEvent;
+  }
+
+  /**
+   * Optional. Input only. Simulate a maintenance event.
+   * @param simulateMaintenanceEvent simulateMaintenanceEvent or {@code null} for none
+   */
+  public Cluster setSimulateMaintenanceEvent(java.lang.Boolean simulateMaintenanceEvent) {
+    this.simulateMaintenanceEvent = simulateMaintenanceEvent;
     return this;
   }
 

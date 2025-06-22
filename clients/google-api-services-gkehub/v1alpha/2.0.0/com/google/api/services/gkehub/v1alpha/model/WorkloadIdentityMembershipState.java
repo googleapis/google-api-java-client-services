@@ -30,14 +30,14 @@ package com.google.api.services.gkehub.v1alpha.model;
 public final class WorkloadIdentityMembershipState extends com.google.api.client.json.GenericJson {
 
   /**
-   * Deprecated, will erase after code is changed to use the new field.
+   * Deprecated, this field will be erased after code is changed to use the new field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Deprecated, will erase after code is changed to use the new field.
+   * Deprecated, this field will be erased after code is changed to use the new field.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -45,7 +45,7 @@ public final class WorkloadIdentityMembershipState extends com.google.api.client
   }
 
   /**
-   * Deprecated, will erase after code is changed to use the new field.
+   * Deprecated, this field will be erased after code is changed to use the new field.
    * @param description description or {@code null} for none
    */
   public WorkloadIdentityMembershipState setDescription(java.lang.String description) {

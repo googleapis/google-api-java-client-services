@@ -45,6 +45,13 @@ public final class GoogleCloudDialogflowV2UndeployConversationModelOperationMeta
   private String createTime;
 
   /**
+   * The time when the operation finished.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String doneTime;
+
+  /**
    * The resource name of the conversation model. Format: `projects//conversationModels/`
    * @return value or {@code null} for none
    */
@@ -77,6 +84,23 @@ public final class GoogleCloudDialogflowV2UndeployConversationModelOperationMeta
    */
   public GoogleCloudDialogflowV2UndeployConversationModelOperationMetadata setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * The time when the operation finished.
+   * @return value or {@code null} for none
+   */
+  public String getDoneTime() {
+    return doneTime;
+  }
+
+  /**
+   * The time when the operation finished.
+   * @param doneTime doneTime or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2UndeployConversationModelOperationMetadata setDoneTime(String doneTime) {
+    this.doneTime = doneTime;
     return this;
   }
 

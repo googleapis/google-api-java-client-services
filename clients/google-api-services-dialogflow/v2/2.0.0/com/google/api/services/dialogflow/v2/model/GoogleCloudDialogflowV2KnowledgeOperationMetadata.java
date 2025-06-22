@@ -30,6 +30,13 @@ package com.google.api.services.dialogflow.v2.model;
 public final class GoogleCloudDialogflowV2KnowledgeOperationMetadata extends com.google.api.client.json.GenericJson {
 
   /**
+   * The time when the operation finished.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String doneTime;
+
+  /**
    * Metadata for the Export Data Operation such as the destination of export.
    * The value may be {@code null}.
    */
@@ -49,6 +56,23 @@ public final class GoogleCloudDialogflowV2KnowledgeOperationMetadata extends com
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
+
+  /**
+   * The time when the operation finished.
+   * @return value or {@code null} for none
+   */
+  public String getDoneTime() {
+    return doneTime;
+  }
+
+  /**
+   * The time when the operation finished.
+   * @param doneTime doneTime or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2KnowledgeOperationMetadata setDoneTime(String doneTime) {
+    this.doneTime = doneTime;
+    return this;
+  }
 
   /**
    * Metadata for the Export Data Operation such as the destination of export.

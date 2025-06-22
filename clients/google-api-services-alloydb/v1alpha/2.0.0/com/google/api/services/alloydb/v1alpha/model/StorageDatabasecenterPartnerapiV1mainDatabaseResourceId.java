@@ -49,8 +49,8 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceId exten
    * bigtableadmin.googleapis.com/Cluster, bigtableadmin.googleapis.com/Instance
    * compute.googleapis.com/Instance firestore.googleapis.com/Database,
    * redis.googleapis.com/Instance, redis.googleapis.com/Cluster,
-   * oracledatabase.googleapis.com/cloudExadataInfrastructures
-   * oracledatabase.googleapis.com/cloudVmClusters oracledatabase.googleapis.com/autonomousDatabases
+   * oracledatabase.googleapis.com/CloudExadataInfrastructure
+   * oracledatabase.googleapis.com/CloudVmCluster oracledatabase.googleapis.com/AutonomousDatabase
    * spanner.googleapis.com/Instance, spanner.googleapis.com/Database,
    * sqladmin.googleapis.com/Instance, go/keep-sorted end REQUIRED Please refer go/condor-common-
    * datamodel
@@ -107,8 +107,8 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceId exten
    * bigtableadmin.googleapis.com/Cluster, bigtableadmin.googleapis.com/Instance
    * compute.googleapis.com/Instance firestore.googleapis.com/Database,
    * redis.googleapis.com/Instance, redis.googleapis.com/Cluster,
-   * oracledatabase.googleapis.com/cloudExadataInfrastructures
-   * oracledatabase.googleapis.com/cloudVmClusters oracledatabase.googleapis.com/autonomousDatabases
+   * oracledatabase.googleapis.com/CloudExadataInfrastructure
+   * oracledatabase.googleapis.com/CloudVmCluster oracledatabase.googleapis.com/AutonomousDatabase
    * spanner.googleapis.com/Instance, spanner.googleapis.com/Database,
    * sqladmin.googleapis.com/Instance, go/keep-sorted end REQUIRED Please refer go/condor-common-
    * datamodel
@@ -124,8 +124,8 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceId exten
    * bigtableadmin.googleapis.com/Cluster, bigtableadmin.googleapis.com/Instance
    * compute.googleapis.com/Instance firestore.googleapis.com/Database,
    * redis.googleapis.com/Instance, redis.googleapis.com/Cluster,
-   * oracledatabase.googleapis.com/cloudExadataInfrastructures
-   * oracledatabase.googleapis.com/cloudVmClusters oracledatabase.googleapis.com/autonomousDatabases
+   * oracledatabase.googleapis.com/CloudExadataInfrastructure
+   * oracledatabase.googleapis.com/CloudVmCluster oracledatabase.googleapis.com/AutonomousDatabase
    * spanner.googleapis.com/Instance, spanner.googleapis.com/Database,
    * sqladmin.googleapis.com/Instance, go/keep-sorted end REQUIRED Please refer go/condor-common-
    * datamodel

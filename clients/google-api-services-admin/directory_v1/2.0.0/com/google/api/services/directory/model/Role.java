@@ -250,9 +250,8 @@ public final class Role extends com.google.api.client.json.GenericJson {
     private java.lang.String privilegeName;
 
     /**
-     * The obfuscated ID of the service this privilege is for. This value is returned with [`Privilege
-     * s.list()`](https://developers.google.com/workspace/admin/directory/v1/reference/privileges/list
-     * ).
+     * The obfuscated ID of the service this privilege is for. This value is returned with
+     * [`Privileges.list()`](/admin-sdk/directory/v1/reference/privileges/list).
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -276,9 +275,8 @@ public final class Role extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The obfuscated ID of the service this privilege is for. This value is returned with [`Privilege
-     * s.list()`](https://developers.google.com/workspace/admin/directory/v1/reference/privileges/list
-     * ).
+     * The obfuscated ID of the service this privilege is for. This value is returned with
+     * [`Privileges.list()`](/admin-sdk/directory/v1/reference/privileges/list).
      * @return value or {@code null} for none
      */
     public java.lang.String getServiceId() {
@@ -286,9 +284,8 @@ public final class Role extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * The obfuscated ID of the service this privilege is for. This value is returned with [`Privilege
-     * s.list()`](https://developers.google.com/workspace/admin/directory/v1/reference/privileges/list
-     * ).
+     * The obfuscated ID of the service this privilege is for. This value is returned with
+     * [`Privileges.list()`](/admin-sdk/directory/v1/reference/privileges/list).
      * @param serviceId serviceId or {@code null} for none
      */
     public RolePrivileges setServiceId(java.lang.String serviceId) {

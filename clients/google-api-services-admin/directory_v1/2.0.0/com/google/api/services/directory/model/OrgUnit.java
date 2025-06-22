@@ -19,8 +19,8 @@ package com.google.api.services.directory.model;
 /**
  * Managing your account's organizational units allows you to configure your users' access to
  * services and custom settings. For more information about common organizational unit tasks, see
- * the [Developer's Guide](https://developers.google.com/workspace/admin/directory/v1/guides/manage-
- * org-units.html). The customer's organizational unit hierarchy is limited to 35 levels of depth.
+ * the [Developer's Guide](/admin-sdk/directory/v1/guides/manage-org-units.html). The customer's
+ * organizational unit hierarchy is limited to 35 levels of depth.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Admin SDK API. For a detailed explanation see:
@@ -84,9 +84,8 @@ public final class OrgUnit extends com.google.api.client.json.GenericJson {
    * Workspace services the user has access to. If the user is moved to a new organization, the
    * user's access changes. For more information about organization structures, see the
    * [administration help center](https://support.google.com/a/answer/4352075). For more information
-   * about moving a user to a different organization, see [Update a
-   * user](https://developers.google.com/workspace/admin/directory/v1/guides/manage-
-   * users.html#update_user).
+   * about moving a user to a different organization, see [Update a user](/admin-
+   * sdk/directory/v1/guides/manage-users.html#update_user).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -220,9 +219,8 @@ public final class OrgUnit extends com.google.api.client.json.GenericJson {
    * Workspace services the user has access to. If the user is moved to a new organization, the
    * user's access changes. For more information about organization structures, see the
    * [administration help center](https://support.google.com/a/answer/4352075). For more information
-   * about moving a user to a different organization, see [Update a
-   * user](https://developers.google.com/workspace/admin/directory/v1/guides/manage-
-   * users.html#update_user).
+   * about moving a user to a different organization, see [Update a user](/admin-
+   * sdk/directory/v1/guides/manage-users.html#update_user).
    * @return value or {@code null} for none
    */
   public java.lang.String getOrgUnitPath() {
@@ -238,9 +236,8 @@ public final class OrgUnit extends com.google.api.client.json.GenericJson {
    * Workspace services the user has access to. If the user is moved to a new organization, the
    * user's access changes. For more information about organization structures, see the
    * [administration help center](https://support.google.com/a/answer/4352075). For more information
-   * about moving a user to a different organization, see [Update a
-   * user](https://developers.google.com/workspace/admin/directory/v1/guides/manage-
-   * users.html#update_user).
+   * about moving a user to a different organization, see [Update a user](/admin-
+   * sdk/directory/v1/guides/manage-users.html#update_user).
    * @param orgUnitPath orgUnitPath or {@code null} for none
    */
   public OrgUnit setOrgUnitPath(java.lang.String orgUnitPath) {

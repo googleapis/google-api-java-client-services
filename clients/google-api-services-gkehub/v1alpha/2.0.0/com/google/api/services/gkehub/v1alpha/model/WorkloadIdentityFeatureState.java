@@ -37,7 +37,7 @@ public final class WorkloadIdentityFeatureState extends com.google.api.client.js
   private java.util.Map<String, WorkloadIdentityNamespaceStateDetail> namespaceStateDetails;
 
   /**
-   * Deprecated, will erase after code is changed to use the new field.
+   * Deprecated, this field will be erased after code is changed to use the new field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,7 +82,7 @@ public final class WorkloadIdentityFeatureState extends com.google.api.client.js
   }
 
   /**
-   * Deprecated, will erase after code is changed to use the new field.
+   * Deprecated, this field will be erased after code is changed to use the new field.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getNamespaceStates() {
@@ -90,7 +90,7 @@ public final class WorkloadIdentityFeatureState extends com.google.api.client.js
   }
 
   /**
-   * Deprecated, will erase after code is changed to use the new field.
+   * Deprecated, this field will be erased after code is changed to use the new field.
    * @param namespaceStates namespaceStates or {@code null} for none
    */
   public WorkloadIdentityFeatureState setNamespaceStates(java.util.Map<String, java.lang.String> namespaceStates) {

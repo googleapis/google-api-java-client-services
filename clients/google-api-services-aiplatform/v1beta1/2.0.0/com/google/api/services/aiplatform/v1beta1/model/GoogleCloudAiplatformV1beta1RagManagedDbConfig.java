@@ -45,6 +45,20 @@ public final class GoogleCloudAiplatformV1beta1RagManagedDbConfig extends com.go
   private GoogleCloudAiplatformV1beta1RagManagedDbConfigEnterprise enterprise;
 
   /**
+   * Sets the RagManagedDb to the Scaled tier.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1RagManagedDbConfigScaled scaled;
+
+  /**
+   * Sets the RagManagedDb to the Unprovisioned tier.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1RagManagedDbConfigUnprovisioned unprovisioned;
+
+  /**
    * Sets the RagManagedDb to the Basic tier.
    * @return value or {@code null} for none
    */
@@ -77,6 +91,40 @@ public final class GoogleCloudAiplatformV1beta1RagManagedDbConfig extends com.go
    */
   public GoogleCloudAiplatformV1beta1RagManagedDbConfig setEnterprise(GoogleCloudAiplatformV1beta1RagManagedDbConfigEnterprise enterprise) {
     this.enterprise = enterprise;
+    return this;
+  }
+
+  /**
+   * Sets the RagManagedDb to the Scaled tier.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RagManagedDbConfigScaled getScaled() {
+    return scaled;
+  }
+
+  /**
+   * Sets the RagManagedDb to the Scaled tier.
+   * @param scaled scaled or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RagManagedDbConfig setScaled(GoogleCloudAiplatformV1beta1RagManagedDbConfigScaled scaled) {
+    this.scaled = scaled;
+    return this;
+  }
+
+  /**
+   * Sets the RagManagedDb to the Unprovisioned tier.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RagManagedDbConfigUnprovisioned getUnprovisioned() {
+    return unprovisioned;
+  }
+
+  /**
+   * Sets the RagManagedDb to the Unprovisioned tier.
+   * @param unprovisioned unprovisioned or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RagManagedDbConfig setUnprovisioned(GoogleCloudAiplatformV1beta1RagManagedDbConfigUnprovisioned unprovisioned) {
+    this.unprovisioned = unprovisioned;
     return this;
   }
 

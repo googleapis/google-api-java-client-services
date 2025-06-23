@@ -131,6 +131,13 @@ public final class GoogleCloudAiplatformV1beta1RagFile extends com.google.api.cl
   private String updateTime;
 
   /**
+   * Output only. The metadata for metadata search. The user_metadata Needs to be in JSON format.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String userMetadata;
+
+  /**
    * Output only. Timestamp when this RagFile was created.
    * @return value or {@code null} for none
    */
@@ -371,6 +378,23 @@ public final class GoogleCloudAiplatformV1beta1RagFile extends com.google.api.cl
    */
   public GoogleCloudAiplatformV1beta1RagFile setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
+    return this;
+  }
+
+  /**
+   * Output only. The metadata for metadata search. The user_metadata Needs to be in JSON format.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUserMetadata() {
+    return userMetadata;
+  }
+
+  /**
+   * Output only. The metadata for metadata search. The user_metadata Needs to be in JSON format.
+   * @param userMetadata userMetadata or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RagFile setUserMetadata(java.lang.String userMetadata) {
+    this.userMetadata = userMetadata;
     return this;
   }
 

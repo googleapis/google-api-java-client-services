@@ -31,6 +31,13 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1ReasoningEngine extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Configuration for how Agent Engine sub-resources should manage context.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1ReasoningEngineContextSpec contextSpec;
+
+  /**
    * Output only. Timestamp when this ReasoningEngine was created.
    * The value may be {@code null}.
    */
@@ -80,6 +87,23 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngine extends com.googl
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Optional. Configuration for how Agent Engine sub-resources should manage context.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ReasoningEngineContextSpec getContextSpec() {
+    return contextSpec;
+  }
+
+  /**
+   * Optional. Configuration for how Agent Engine sub-resources should manage context.
+   * @param contextSpec contextSpec or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ReasoningEngine setContextSpec(GoogleCloudAiplatformV1beta1ReasoningEngineContextSpec contextSpec) {
+    this.contextSpec = contextSpec;
+    return this;
+  }
 
   /**
    * Output only. Timestamp when this ReasoningEngine was created.

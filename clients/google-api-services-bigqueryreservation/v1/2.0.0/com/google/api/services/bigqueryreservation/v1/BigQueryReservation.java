@@ -20,7 +20,7 @@ package com.google.api.services.bigqueryreservation.v1;
  * Service definition for BigQueryReservation (v1).
  *
  * <p>
- * A service to modify your BigQuery flat-rate reservations.
+ * A service to modify your BigQuery reservations.
  * </p>
  *
  * <p>

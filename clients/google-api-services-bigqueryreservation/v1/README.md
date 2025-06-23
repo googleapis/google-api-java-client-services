@@ -1,6 +1,6 @@
 # BigQuery Reservation API Client Library for Java
 
-A service to modify your BigQuery flat-rate reservations.
+A service to modify your BigQuery reservations.
 
 This page contains information about getting started with the BigQuery Reservation API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-bigqueryreservation</artifactId>
-      <version>v1-rev20250518-2.0.0</version>
+      <version>v1-rev20250611-2.0.0</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  implementation 'com.google.apis:google-api-services-bigqueryreservation:v1-rev20250518-2.0.0'
+  implementation 'com.google.apis:google-api-services-bigqueryreservation:v1-rev20250611-2.0.0'
 }
 ```
 

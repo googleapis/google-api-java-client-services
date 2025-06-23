@@ -37,6 +37,22 @@ public final class GoogleCloudAiplatformV1beta1UploadRagFileConfig extends com.g
   private GoogleCloudAiplatformV1beta1RagFileChunkingConfig ragFileChunkingConfig;
 
   /**
+   * Specifies the metadata config for RagFiles. Including paths for metadata schema and metadata.
+   * Alteratively, inline metadata schema and metadata can be provided.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1RagFileMetadataConfig ragFileMetadataConfig;
+
+  /**
+   * Optional. Specifies the parsing config for RagFiles. RAG will use the default parser if this
+   * field is not set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1RagFileParsingConfig ragFileParsingConfig;
+
+  /**
    * Specifies the transformation config for RagFiles.
    * The value may be {@code null}.
    */
@@ -57,6 +73,44 @@ public final class GoogleCloudAiplatformV1beta1UploadRagFileConfig extends com.g
    */
   public GoogleCloudAiplatformV1beta1UploadRagFileConfig setRagFileChunkingConfig(GoogleCloudAiplatformV1beta1RagFileChunkingConfig ragFileChunkingConfig) {
     this.ragFileChunkingConfig = ragFileChunkingConfig;
+    return this;
+  }
+
+  /**
+   * Specifies the metadata config for RagFiles. Including paths for metadata schema and metadata.
+   * Alteratively, inline metadata schema and metadata can be provided.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RagFileMetadataConfig getRagFileMetadataConfig() {
+    return ragFileMetadataConfig;
+  }
+
+  /**
+   * Specifies the metadata config for RagFiles. Including paths for metadata schema and metadata.
+   * Alteratively, inline metadata schema and metadata can be provided.
+   * @param ragFileMetadataConfig ragFileMetadataConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1UploadRagFileConfig setRagFileMetadataConfig(GoogleCloudAiplatformV1beta1RagFileMetadataConfig ragFileMetadataConfig) {
+    this.ragFileMetadataConfig = ragFileMetadataConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies the parsing config for RagFiles. RAG will use the default parser if this
+   * field is not set.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RagFileParsingConfig getRagFileParsingConfig() {
+    return ragFileParsingConfig;
+  }
+
+  /**
+   * Optional. Specifies the parsing config for RagFiles. RAG will use the default parser if this
+   * field is not set.
+   * @param ragFileParsingConfig ragFileParsingConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1UploadRagFileConfig setRagFileParsingConfig(GoogleCloudAiplatformV1beta1RagFileParsingConfig ragFileParsingConfig) {
+    this.ragFileParsingConfig = ragFileParsingConfig;
     return this;
   }
 

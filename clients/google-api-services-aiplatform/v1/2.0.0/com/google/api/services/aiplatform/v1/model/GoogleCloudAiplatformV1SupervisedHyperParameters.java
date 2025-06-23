@@ -45,7 +45,8 @@ public final class GoogleCloudAiplatformV1SupervisedHyperParameters extends com.
   private java.lang.Long epochCount;
 
   /**
-   * Optional. Multiplier for adjusting the default learning rate.
+   * Optional. Multiplier for adjusting the default learning rate. Mutually exclusive with
+   * `learning_rate`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,7 +89,8 @@ public final class GoogleCloudAiplatformV1SupervisedHyperParameters extends com.
   }
 
   /**
-   * Optional. Multiplier for adjusting the default learning rate.
+   * Optional. Multiplier for adjusting the default learning rate. Mutually exclusive with
+   * `learning_rate`.
    * @return value or {@code null} for none
    */
   public java.lang.Double getLearningRateMultiplier() {
@@ -96,7 +98,8 @@ public final class GoogleCloudAiplatformV1SupervisedHyperParameters extends com.
   }
 
   /**
-   * Optional. Multiplier for adjusting the default learning rate.
+   * Optional. Multiplier for adjusting the default learning rate. Mutually exclusive with
+   * `learning_rate`.
    * @param learningRateMultiplier learningRateMultiplier or {@code null} for none
    */
   public GoogleCloudAiplatformV1SupervisedHyperParameters setLearningRateMultiplier(java.lang.Double learningRateMultiplier) {

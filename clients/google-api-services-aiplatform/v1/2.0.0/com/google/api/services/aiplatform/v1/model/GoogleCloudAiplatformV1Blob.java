@@ -38,8 +38,9 @@ public final class GoogleCloudAiplatformV1Blob extends com.google.api.client.jso
 
   /**
    * Optional. Display name of the blob. Used to provide a label or filename to distinguish blobs.
-   * This field is only returned in PromptMessage for prompt management. It is not currently used in
-   * the Gemini GenerateContent calls.
+   * This field is only returned in PromptMessage for prompt management. It is currently used in the
+   * Gemini GenerateContent calls only when server side tools (code_execution, google_search, and
+   * url_context) are enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,8 +100,9 @@ public final class GoogleCloudAiplatformV1Blob extends com.google.api.client.jso
 
   /**
    * Optional. Display name of the blob. Used to provide a label or filename to distinguish blobs.
-   * This field is only returned in PromptMessage for prompt management. It is not currently used in
-   * the Gemini GenerateContent calls.
+   * This field is only returned in PromptMessage for prompt management. It is currently used in the
+   * Gemini GenerateContent calls only when server side tools (code_execution, google_search, and
+   * url_context) are enabled.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -109,8 +111,9 @@ public final class GoogleCloudAiplatformV1Blob extends com.google.api.client.jso
 
   /**
    * Optional. Display name of the blob. Used to provide a label or filename to distinguish blobs.
-   * This field is only returned in PromptMessage for prompt management. It is not currently used in
-   * the Gemini GenerateContent calls.
+   * This field is only returned in PromptMessage for prompt management. It is currently used in the
+   * Gemini GenerateContent calls only when server side tools (code_execution, google_search, and
+   * url_context) are enabled.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudAiplatformV1Blob setDisplayName(java.lang.String displayName) {

@@ -59,6 +59,15 @@ public final class GoogleCloudAiplatformV1RagCorpus extends com.google.api.clien
   private java.lang.String displayName;
 
   /**
+   * Optional. Immutable. The CMEK key name used to encrypt at-rest data related to this Corpus.
+   * Only applicable to RagManagedDb option for Vector DB. This field can only be set at corpus
+   * creation time, and cannot be updated or deleted.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1EncryptionSpec encryptionSpec;
+
+  /**
    * Output only. The resource name of the RagCorpus.
    * The value may be {@code null}.
    */
@@ -153,6 +162,27 @@ public final class GoogleCloudAiplatformV1RagCorpus extends com.google.api.clien
    */
   public GoogleCloudAiplatformV1RagCorpus setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Optional. Immutable. The CMEK key name used to encrypt at-rest data related to this Corpus.
+   * Only applicable to RagManagedDb option for Vector DB. This field can only be set at corpus
+   * creation time, and cannot be updated or deleted.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1EncryptionSpec getEncryptionSpec() {
+    return encryptionSpec;
+  }
+
+  /**
+   * Optional. Immutable. The CMEK key name used to encrypt at-rest data related to this Corpus.
+   * Only applicable to RagManagedDb option for Vector DB. This field can only be set at corpus
+   * creation time, and cannot be updated or deleted.
+   * @param encryptionSpec encryptionSpec or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1RagCorpus setEncryptionSpec(GoogleCloudAiplatformV1EncryptionSpec encryptionSpec) {
+    this.encryptionSpec = encryptionSpec;
     return this;
   }
 

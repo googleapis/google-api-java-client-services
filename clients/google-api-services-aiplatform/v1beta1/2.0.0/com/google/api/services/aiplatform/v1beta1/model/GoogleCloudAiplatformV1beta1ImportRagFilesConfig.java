@@ -116,6 +116,13 @@ public final class GoogleCloudAiplatformV1beta1ImportRagFilesConfig extends com.
   private GoogleCloudAiplatformV1beta1RagFileChunkingConfig ragFileChunkingConfig;
 
   /**
+   * Specifies the metadata config for RagFiles. Including paths for metadata schema and metadata.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1RagFileMetadataConfig ragFileMetadataConfig;
+
+  /**
    * Optional. Specifies the parsing config for RagFiles. RAG will use the default parser if this
    * field is not set.
    * The value may be {@code null}.
@@ -353,6 +360,23 @@ public final class GoogleCloudAiplatformV1beta1ImportRagFilesConfig extends com.
    */
   public GoogleCloudAiplatformV1beta1ImportRagFilesConfig setRagFileChunkingConfig(GoogleCloudAiplatformV1beta1RagFileChunkingConfig ragFileChunkingConfig) {
     this.ragFileChunkingConfig = ragFileChunkingConfig;
+    return this;
+  }
+
+  /**
+   * Specifies the metadata config for RagFiles. Including paths for metadata schema and metadata.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RagFileMetadataConfig getRagFileMetadataConfig() {
+    return ragFileMetadataConfig;
+  }
+
+  /**
+   * Specifies the metadata config for RagFiles. Including paths for metadata schema and metadata.
+   * @param ragFileMetadataConfig ragFileMetadataConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ImportRagFilesConfig setRagFileMetadataConfig(GoogleCloudAiplatformV1beta1RagFileMetadataConfig ragFileMetadataConfig) {
+    this.ragFileMetadataConfig = ragFileMetadataConfig;
     return this;
   }
 

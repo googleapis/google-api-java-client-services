@@ -18,8 +18,7 @@ package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
  * Enterprise tier offers production grade performance along with autoscaling functionality. It is
- * suitable for customers with large amounts of data or performance sensitive workloads. NOTE: This
- * is the default tier if not explicitly chosen.
+ * suitable for customers with large amounts of data or performance sensitive workloads.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:

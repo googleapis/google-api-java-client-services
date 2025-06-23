@@ -76,6 +76,13 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSi
   private java.lang.String externalUri;
 
   /**
+   * This is used to identify the location of the resource. Example: "us-central1"
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String location;
+
+  /**
    * Required. The name of the signal, ex: PUBLIC_SQL_INSTANCE, SQL_LOG_ERROR_VERBOSITY etc.
    * The value may be {@code null}.
    */
@@ -235,6 +242,23 @@ public final class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSi
    */
   public StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData setExternalUri(java.lang.String externalUri) {
     this.externalUri = externalUri;
+    return this;
+  }
+
+  /**
+   * This is used to identify the location of the resource. Example: "us-central1"
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLocation() {
+    return location;
+  }
+
+  /**
+   * This is used to identify the location of the resource. Example: "us-central1"
+   * @param location location or {@code null} for none
+   */
+  public StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData setLocation(java.lang.String location) {
+    this.location = location;
     return this;
   }
 

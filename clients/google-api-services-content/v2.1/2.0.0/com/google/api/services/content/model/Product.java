@@ -491,6 +491,13 @@ public final class Product extends com.google.api.client.json.GenericJson {
   private java.lang.Long maxHandlingTime;
 
   /**
+   * Maximum retail price (MRP) of the item. Applicable to India only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Price maximumRetailPrice;
+
+  /**
    * The energy efficiency class as defined in EU directive 2010/30/EU.
    * The value may be {@code null}.
    */
@@ -1860,6 +1867,23 @@ public final class Product extends com.google.api.client.json.GenericJson {
    */
   public Product setMaxHandlingTime(java.lang.Long maxHandlingTime) {
     this.maxHandlingTime = maxHandlingTime;
+    return this;
+  }
+
+  /**
+   * Maximum retail price (MRP) of the item. Applicable to India only.
+   * @return value or {@code null} for none
+   */
+  public Price getMaximumRetailPrice() {
+    return maximumRetailPrice;
+  }
+
+  /**
+   * Maximum retail price (MRP) of the item. Applicable to India only.
+   * @param maximumRetailPrice maximumRetailPrice or {@code null} for none
+   */
+  public Product setMaximumRetailPrice(Price maximumRetailPrice) {
+    this.maximumRetailPrice = maximumRetailPrice;
     return this;
   }
 

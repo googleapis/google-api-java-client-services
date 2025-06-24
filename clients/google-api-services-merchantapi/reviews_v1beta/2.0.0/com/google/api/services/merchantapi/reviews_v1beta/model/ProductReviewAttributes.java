@@ -68,7 +68,8 @@ public final class ProductReviewAttributes extends com.google.api.client.json.Ge
   private java.util.List<java.lang.String> cons;
 
   /**
-   * Required. The content of the review.
+   * Optional. The content of the review. If empty, the content might still get populated from pros
+   * and cons.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -342,7 +343,8 @@ public final class ProductReviewAttributes extends com.google.api.client.json.Ge
   }
 
   /**
-   * Required. The content of the review.
+   * Optional. The content of the review. If empty, the content might still get populated from pros
+   * and cons.
    * @return value or {@code null} for none
    */
   public java.lang.String getContent() {
@@ -350,7 +352,8 @@ public final class ProductReviewAttributes extends com.google.api.client.json.Ge
   }
 
   /**
-   * Required. The content of the review.
+   * Optional. The content of the review. If empty, the content might still get populated from pros
+   * and cons.
    * @param content content or {@code null} for none
    */
   public ProductReviewAttributes setContent(java.lang.String content) {

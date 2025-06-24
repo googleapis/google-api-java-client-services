@@ -868,25 +868,27 @@ public class AdSensePlatform extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Optional. A page token, received from a previous `ListPlatformChildren` call. Provide
-             * this to retrieve the subsequent page. When paginating, all other parameters provided
-             * to `ListPlatformChildren` must match the call that provided the page token.
+             * Optional. A page token, received from a previous `ListPlatformChildSites` call.
+             * Provide this to retrieve the subsequent page. When paginating, all other parameters
+             * provided to `ListPlatformChildSites` must match the call that provided the page
+             * token.
              */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
-            /** Optional. A page token, received from a previous `ListPlatformChildren` call. Provide this to
+            /** Optional. A page token, received from a previous `ListPlatformChildSites` call. Provide this to
            retrieve the subsequent page. When paginating, all other parameters provided to
-           `ListPlatformChildren` must match the call that provided the page token.
+           `ListPlatformChildSites` must match the call that provided the page token.
              */
             public java.lang.String getPageToken() {
               return pageToken;
             }
 
             /**
-             * Optional. A page token, received from a previous `ListPlatformChildren` call. Provide
-             * this to retrieve the subsequent page. When paginating, all other parameters provided
-             * to `ListPlatformChildren` must match the call that provided the page token.
+             * Optional. A page token, received from a previous `ListPlatformChildSites` call.
+             * Provide this to retrieve the subsequent page. When paginating, all other parameters
+             * provided to `ListPlatformChildSites` must match the call that provided the page
+             * token.
              */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;

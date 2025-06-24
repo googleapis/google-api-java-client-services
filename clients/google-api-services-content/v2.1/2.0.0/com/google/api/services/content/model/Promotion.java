@@ -67,6 +67,14 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   private java.lang.String couponValueType;
 
   /**
+   * The custom redemption restriction for the promotion. If the `redemption_restriction` field is
+   * set to `CUSTOM`, this field must be set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String customRedemptionRestriction;
+
+  /**
    * Free gift description for the promotion.
    * The value may be {@code null}.
    */
@@ -159,6 +167,14 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String longTitle;
+
+  /**
+   * The maximum monetary discount a customer can receive for the promotion. This field is only
+   * supported with the `Percent off` coupon value type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PriceAmount maxDiscountAmount;
 
   /**
    * Minimum purchase amount for the promotion.
@@ -298,6 +314,13 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> redemptionChannel;
 
   /**
+   * The redemption restriction for the promotion.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String redemptionRestriction;
+
+  /**
    * Shipping service names for the promotion.
    * The value may be {@code null}.
    */
@@ -411,6 +434,25 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
    */
   public Promotion setCouponValueType(java.lang.String couponValueType) {
     this.couponValueType = couponValueType;
+    return this;
+  }
+
+  /**
+   * The custom redemption restriction for the promotion. If the `redemption_restriction` field is
+   * set to `CUSTOM`, this field must be set.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCustomRedemptionRestriction() {
+    return customRedemptionRestriction;
+  }
+
+  /**
+   * The custom redemption restriction for the promotion. If the `redemption_restriction` field is
+   * set to `CUSTOM`, this field must be set.
+   * @param customRedemptionRestriction customRedemptionRestriction or {@code null} for none
+   */
+  public Promotion setCustomRedemptionRestriction(java.lang.String customRedemptionRestriction) {
+    this.customRedemptionRestriction = customRedemptionRestriction;
     return this;
   }
 
@@ -638,6 +680,25 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
    */
   public Promotion setLongTitle(java.lang.String longTitle) {
     this.longTitle = longTitle;
+    return this;
+  }
+
+  /**
+   * The maximum monetary discount a customer can receive for the promotion. This field is only
+   * supported with the `Percent off` coupon value type.
+   * @return value or {@code null} for none
+   */
+  public PriceAmount getMaxDiscountAmount() {
+    return maxDiscountAmount;
+  }
+
+  /**
+   * The maximum monetary discount a customer can receive for the promotion. This field is only
+   * supported with the `Percent off` coupon value type.
+   * @param maxDiscountAmount maxDiscountAmount or {@code null} for none
+   */
+  public Promotion setMaxDiscountAmount(PriceAmount maxDiscountAmount) {
+    this.maxDiscountAmount = maxDiscountAmount;
     return this;
   }
 
@@ -969,6 +1030,23 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
    */
   public Promotion setRedemptionChannel(java.util.List<java.lang.String> redemptionChannel) {
     this.redemptionChannel = redemptionChannel;
+    return this;
+  }
+
+  /**
+   * The redemption restriction for the promotion.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRedemptionRestriction() {
+    return redemptionRestriction;
+  }
+
+  /**
+   * The redemption restriction for the promotion.
+   * @param redemptionRestriction redemptionRestriction or {@code null} for none
+   */
+  public Promotion setRedemptionRestriction(java.lang.String redemptionRestriction) {
+    this.redemptionRestriction = redemptionRestriction;
     return this;
   }
 

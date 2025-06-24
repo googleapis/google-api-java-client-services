@@ -25,7 +25,7 @@ package com.google.api.services.merchantapi.ordertracking_v1beta;
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://developers.devsite.corp.google.com/merchant/api" target="_blank">API Documentation</a>
+ * <a href="https://developers.google.com/merchant/api" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>

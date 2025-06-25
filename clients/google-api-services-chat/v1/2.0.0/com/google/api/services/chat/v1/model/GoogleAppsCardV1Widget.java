@@ -78,7 +78,7 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
    * Displays a widget that lets users input a date, time, or date and time. For example, the
    * following JSON creates a date time picker to schedule an appointment: ``` "dateTimePicker": {
    * "name": "appointment_time", "label": "Book your appointment at:", "type": "DATE_AND_TIME",
-   * "valueMsEpoch": "796435200000" } ```
+   * "valueMsEpoch": 796435200000 } ```
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -275,7 +275,7 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
    * Displays a widget that lets users input a date, time, or date and time. For example, the
    * following JSON creates a date time picker to schedule an appointment: ``` "dateTimePicker": {
    * "name": "appointment_time", "label": "Book your appointment at:", "type": "DATE_AND_TIME",
-   * "valueMsEpoch": "796435200000" } ```
+   * "valueMsEpoch": 796435200000 } ```
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1DateTimePicker getDateTimePicker() {
@@ -286,7 +286,7 @@ public final class GoogleAppsCardV1Widget extends com.google.api.client.json.Gen
    * Displays a widget that lets users input a date, time, or date and time. For example, the
    * following JSON creates a date time picker to schedule an appointment: ``` "dateTimePicker": {
    * "name": "appointment_time", "label": "Book your appointment at:", "type": "DATE_AND_TIME",
-   * "valueMsEpoch": "796435200000" } ```
+   * "valueMsEpoch": 796435200000 } ```
    * @param dateTimePicker dateTimePicker or {@code null} for none
    */
   public GoogleAppsCardV1Widget setDateTimePicker(GoogleAppsCardV1DateTimePicker dateTimePicker) {

@@ -25,7 +25,7 @@ package com.google.api.services.merchantapi.accounts_v1beta;
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://developers.devsite.corp.google.com/merchant/api" target="_blank">API Documentation</a>
+ * <a href="https://developers.google.com/merchant/api" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>
@@ -716,25 +716,25 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Optional. A page token, received from a previous `ListAccounts` call. Provide this to
-       * retrieve the subsequent page. When paginating, all other parameters provided to
-       * `ListAccounts` must match the call that provided the page token.
+       * Optional. A page token, received from a previous `accounts.list` call. Provide this to
+       * retrieve the subsequent page. When paginating, all other parameters provided in the
+       * `accounts.list` request must match the call that provided the page token.
        */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
-      /** Optional. A page token, received from a previous `ListAccounts` call. Provide this to retrieve the
-     subsequent page. When paginating, all other parameters provided to `ListAccounts` must match the
-     call that provided the page token.
+      /** Optional. A page token, received from a previous `accounts.list` call. Provide this to retrieve the
+     subsequent page. When paginating, all other parameters provided in the `accounts.list` request must
+     match the call that provided the page token.
        */
       public java.lang.String getPageToken() {
         return pageToken;
       }
 
       /**
-       * Optional. A page token, received from a previous `ListAccounts` call. Provide this to
-       * retrieve the subsequent page. When paginating, all other parameters provided to
-       * `ListAccounts` must match the call that provided the page token.
+       * Optional. A page token, received from a previous `accounts.list` call. Provide this to
+       * retrieve the subsequent page. When paginating, all other parameters provided in the
+       * `accounts.list` request must match the call that provided the page token.
        */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
@@ -747,8 +747,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
-     * List all sub-accounts for a given multi client account. This is a convenience wrapper for the
-     * more powerful `ListAccounts` method. This method will produce the same results as calling
+     * List all sub-accounts for a given advanced account. This is a convenience wrapper for the more
+     * powerful `accounts.list` method. This method will produce the same results as calling
      * `ListsAccounts` with the following filter: `relationship(providerId={parent} AND
      * service(type="ACCOUNT_AGGREGATION"))`
      *
@@ -774,8 +774,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
           java.util.regex.Pattern.compile("^accounts/[^/]+$");
 
       /**
-       * List all sub-accounts for a given multi client account. This is a convenience wrapper for the
-       * more powerful `ListAccounts` method. This method will produce the same results as calling
+       * List all sub-accounts for a given advanced account. This is a convenience wrapper for the more
+       * powerful `accounts.list` method. This method will produce the same results as calling
        * `ListsAccounts` with the following filter: `relationship(providerId={parent} AND
        * service(type="ACCOUNT_AGGREGATION"))`
        *
@@ -913,25 +913,25 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
-       * Optional. A page token, received from a previous `ListAccounts` call. Provide this to
-       * retrieve the subsequent page. When paginating, all other parameters provided to
-       * `ListAccounts` must match the call that provided the page token.
+       * Optional. A page token, received from a previous `accounts.list` call. Provide this to
+       * retrieve the subsequent page. When paginating, all other parameters provided in the
+       * `accounts.list` request must match the call that provided the page token.
        */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
-      /** Optional. A page token, received from a previous `ListAccounts` call. Provide this to retrieve the
-     subsequent page. When paginating, all other parameters provided to `ListAccounts` must match the
-     call that provided the page token.
+      /** Optional. A page token, received from a previous `accounts.list` call. Provide this to retrieve the
+     subsequent page. When paginating, all other parameters provided in the `accounts.list` request must
+     match the call that provided the page token.
        */
       public java.lang.String getPageToken() {
         return pageToken;
       }
 
       /**
-       * Optional. A page token, received from a previous `ListAccounts` call. Provide this to
-       * retrieve the subsequent page. When paginating, all other parameters provided to
-       * `ListAccounts` must match the call that provided the page token.
+       * Optional. A page token, received from a previous `accounts.list` call. Provide this to
+       * retrieve the subsequent page. When paginating, all other parameters provided in the
+       * `accounts.list` request must match the call that provided the page token.
        */
       public ListSubaccounts setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;

@@ -51,10 +51,10 @@ public final class ApnSetting extends com.google.api.client.json.GenericJson {
   /**
    * Required. Usage categories for the APN. Policy will be rejected if this field is empty or
    * contains APN_TYPE_UNSPECIFIED or duplicates. Multiple APN types can be set on fully managed
-   * devices. ENTERPRISE is the only allowed APN type on work profiles. A nonComplianceDetail with
+   * devices. ENTERPRISE is the only allowed APN type on work profiles. A NonComplianceDetail with
    * MANAGEMENT_MODE is reported for any other value on work profiles. APN types that are not
    * supported on the device or management mode will be ignored. If this results in the empty list,
-   * the APN setting will be ignored, because apnTypes is a required field. A nonComplianceDetail
+   * the APN setting will be ignored, because apnTypes is a required field. A NonComplianceDetail
    * with INVALID_VALUE is reported if none of the APN types are supported on the device or
    * management mode.
    * The value may be {@code null}.
@@ -111,7 +111,7 @@ public final class ApnSetting extends com.google.api.client.json.GenericJson {
   /**
    * Optional. The default MTU (Maximum Transmission Unit) size in bytes of the IPv4 routes brought
    * up by this APN setting. A value of 0 (default) means not set and negative values are rejected.
-   * Supported on Android 13 and above. A nonComplianceDetail with API_LEVEL is reported if the
+   * Supported on Android 13 and above. A NonComplianceDetail with API_LEVEL is reported if the
    * Android version is less than 13.
    * The value may be {@code null}.
    */
@@ -121,7 +121,7 @@ public final class ApnSetting extends com.google.api.client.json.GenericJson {
   /**
    * Optional. The MTU (Maximum Transmission Unit) size of the IPv6 mobile interface to which the
    * APN connected. A value of 0 (default) means not set and negative values are rejected. Supported
-   * on Android 13 and above. A nonComplianceDetail with API_LEVEL is reported if the Android
+   * on Android 13 and above. A NonComplianceDetail with API_LEVEL is reported if the Android
    * version is less than 13.
    * The value may be {@code null}.
    */
@@ -233,10 +233,10 @@ public final class ApnSetting extends com.google.api.client.json.GenericJson {
   /**
    * Required. Usage categories for the APN. Policy will be rejected if this field is empty or
    * contains APN_TYPE_UNSPECIFIED or duplicates. Multiple APN types can be set on fully managed
-   * devices. ENTERPRISE is the only allowed APN type on work profiles. A nonComplianceDetail with
+   * devices. ENTERPRISE is the only allowed APN type on work profiles. A NonComplianceDetail with
    * MANAGEMENT_MODE is reported for any other value on work profiles. APN types that are not
    * supported on the device or management mode will be ignored. If this results in the empty list,
-   * the APN setting will be ignored, because apnTypes is a required field. A nonComplianceDetail
+   * the APN setting will be ignored, because apnTypes is a required field. A NonComplianceDetail
    * with INVALID_VALUE is reported if none of the APN types are supported on the device or
    * management mode.
    * @return value or {@code null} for none
@@ -248,10 +248,10 @@ public final class ApnSetting extends com.google.api.client.json.GenericJson {
   /**
    * Required. Usage categories for the APN. Policy will be rejected if this field is empty or
    * contains APN_TYPE_UNSPECIFIED or duplicates. Multiple APN types can be set on fully managed
-   * devices. ENTERPRISE is the only allowed APN type on work profiles. A nonComplianceDetail with
+   * devices. ENTERPRISE is the only allowed APN type on work profiles. A NonComplianceDetail with
    * MANAGEMENT_MODE is reported for any other value on work profiles. APN types that are not
    * supported on the device or management mode will be ignored. If this results in the empty list,
-   * the APN setting will be ignored, because apnTypes is a required field. A nonComplianceDetail
+   * the APN setting will be ignored, because apnTypes is a required field. A NonComplianceDetail
    * with INVALID_VALUE is reported if none of the APN types are supported on the device or
    * management mode.
    * @param apnTypes apnTypes or {@code null} for none
@@ -374,7 +374,7 @@ public final class ApnSetting extends com.google.api.client.json.GenericJson {
   /**
    * Optional. The default MTU (Maximum Transmission Unit) size in bytes of the IPv4 routes brought
    * up by this APN setting. A value of 0 (default) means not set and negative values are rejected.
-   * Supported on Android 13 and above. A nonComplianceDetail with API_LEVEL is reported if the
+   * Supported on Android 13 and above. A NonComplianceDetail with API_LEVEL is reported if the
    * Android version is less than 13.
    * @return value or {@code null} for none
    */
@@ -385,7 +385,7 @@ public final class ApnSetting extends com.google.api.client.json.GenericJson {
   /**
    * Optional. The default MTU (Maximum Transmission Unit) size in bytes of the IPv4 routes brought
    * up by this APN setting. A value of 0 (default) means not set and negative values are rejected.
-   * Supported on Android 13 and above. A nonComplianceDetail with API_LEVEL is reported if the
+   * Supported on Android 13 and above. A NonComplianceDetail with API_LEVEL is reported if the
    * Android version is less than 13.
    * @param mtuV4 mtuV4 or {@code null} for none
    */
@@ -397,7 +397,7 @@ public final class ApnSetting extends com.google.api.client.json.GenericJson {
   /**
    * Optional. The MTU (Maximum Transmission Unit) size of the IPv6 mobile interface to which the
    * APN connected. A value of 0 (default) means not set and negative values are rejected. Supported
-   * on Android 13 and above. A nonComplianceDetail with API_LEVEL is reported if the Android
+   * on Android 13 and above. A NonComplianceDetail with API_LEVEL is reported if the Android
    * version is less than 13.
    * @return value or {@code null} for none
    */
@@ -408,7 +408,7 @@ public final class ApnSetting extends com.google.api.client.json.GenericJson {
   /**
    * Optional. The MTU (Maximum Transmission Unit) size of the IPv6 mobile interface to which the
    * APN connected. A value of 0 (default) means not set and negative values are rejected. Supported
-   * on Android 13 and above. A nonComplianceDetail with API_LEVEL is reported if the Android
+   * on Android 13 and above. A NonComplianceDetail with API_LEVEL is reported if the Android
    * version is less than 13.
    * @param mtuV6 mtuV6 or {@code null} for none
    */

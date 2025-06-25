@@ -38,8 +38,8 @@ public final class ApnPolicy extends com.google.api.client.json.GenericJson {
    * proxyPort, mmsProxyAddress, mmsProxyPort, mmsc, mvnoType, protocol, roamingProtocol. If some of
    * the APN settings result in non-compliance of INVALID_VALUE , they will be ignored. This can be
    * set on fully managed devices on Android 10 and above. This can also be set on work profiles on
-   * Android 13 and above and only with ApnSetting's with ENTERPRISE APN type. A nonComplianceDetail
-   * with API_LEVEL is reported if the Android version is less than 10. A nonComplianceDetail with
+   * Android 13 and above and only with ApnSetting's with ENTERPRISE APN type. A NonComplianceDetail
+   * with API_LEVEL is reported if the Android version is less than 10. A NonComplianceDetail with
    * MANAGEMENT_MODE is reported for work profiles on Android versions less than 13.
    * The value may be {@code null}.
    */
@@ -62,8 +62,8 @@ public final class ApnPolicy extends com.google.api.client.json.GenericJson {
    * proxyPort, mmsProxyAddress, mmsProxyPort, mmsc, mvnoType, protocol, roamingProtocol. If some of
    * the APN settings result in non-compliance of INVALID_VALUE , they will be ignored. This can be
    * set on fully managed devices on Android 10 and above. This can also be set on work profiles on
-   * Android 13 and above and only with ApnSetting's with ENTERPRISE APN type. A nonComplianceDetail
-   * with API_LEVEL is reported if the Android version is less than 10. A nonComplianceDetail with
+   * Android 13 and above and only with ApnSetting's with ENTERPRISE APN type. A NonComplianceDetail
+   * with API_LEVEL is reported if the Android version is less than 10. A NonComplianceDetail with
    * MANAGEMENT_MODE is reported for work profiles on Android versions less than 13.
    * @return value or {@code null} for none
    */
@@ -78,8 +78,8 @@ public final class ApnPolicy extends com.google.api.client.json.GenericJson {
    * proxyPort, mmsProxyAddress, mmsProxyPort, mmsc, mvnoType, protocol, roamingProtocol. If some of
    * the APN settings result in non-compliance of INVALID_VALUE , they will be ignored. This can be
    * set on fully managed devices on Android 10 and above. This can also be set on work profiles on
-   * Android 13 and above and only with ApnSetting's with ENTERPRISE APN type. A nonComplianceDetail
-   * with API_LEVEL is reported if the Android version is less than 10. A nonComplianceDetail with
+   * Android 13 and above and only with ApnSetting's with ENTERPRISE APN type. A NonComplianceDetail
+   * with API_LEVEL is reported if the Android version is less than 10. A NonComplianceDetail with
    * MANAGEMENT_MODE is reported for work profiles on Android versions less than 13.
    * @param apnSettings apnSettings or {@code null} for none
    */

@@ -18,7 +18,7 @@ package com.google.api.services.androidmanagement.v1.model;
 
 /**
  * Controls the data from the work profile that can be accessed from the personal profile and vice
- * versa. A nonComplianceDetail with MANAGEMENT_MODE is reported if the device does not have a work
+ * versa. A NonComplianceDetail with MANAGEMENT_MODE is reported if the device does not have a work
  * profile.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -56,7 +56,7 @@ public final class CrossProfilePolicies extends com.google.api.client.json.Gener
    * blocklist. SHOW_WORK_CONTACTS_IN_PERSONAL_PROFILE_DISALLOWED. In this case, these exemptions
    * act as an allowlist. SHOW_WORK_CONTACTS_IN_PERSONAL_PROFILE_DISALLOWED_EXCEPT_SYSTEM. In this
    * case, these exemptions act as an allowlist, in addition to the already allowlisted system
-   * apps.Supported on Android 14 and above. A nonComplianceDetail with API_LEVEL is reported if the
+   * apps.Supported on Android 14 and above. A NonComplianceDetail with API_LEVEL is reported if the
    * Android version is less than 14.
    * The value may be {@code null}.
    */
@@ -127,7 +127,7 @@ public final class CrossProfilePolicies extends com.google.api.client.json.Gener
    * blocklist. SHOW_WORK_CONTACTS_IN_PERSONAL_PROFILE_DISALLOWED. In this case, these exemptions
    * act as an allowlist. SHOW_WORK_CONTACTS_IN_PERSONAL_PROFILE_DISALLOWED_EXCEPT_SYSTEM. In this
    * case, these exemptions act as an allowlist, in addition to the already allowlisted system
-   * apps.Supported on Android 14 and above. A nonComplianceDetail with API_LEVEL is reported if the
+   * apps.Supported on Android 14 and above. A NonComplianceDetail with API_LEVEL is reported if the
    * Android version is less than 14.
    * @return value or {@code null} for none
    */
@@ -142,7 +142,7 @@ public final class CrossProfilePolicies extends com.google.api.client.json.Gener
    * blocklist. SHOW_WORK_CONTACTS_IN_PERSONAL_PROFILE_DISALLOWED. In this case, these exemptions
    * act as an allowlist. SHOW_WORK_CONTACTS_IN_PERSONAL_PROFILE_DISALLOWED_EXCEPT_SYSTEM. In this
    * case, these exemptions act as an allowlist, in addition to the already allowlisted system
-   * apps.Supported on Android 14 and above. A nonComplianceDetail with API_LEVEL is reported if the
+   * apps.Supported on Android 14 and above. A NonComplianceDetail with API_LEVEL is reported if the
    * Android version is less than 14.
    * @param exemptionsToShowWorkContactsInPersonalProfile exemptionsToShowWorkContactsInPersonalProfile or {@code null} for none
    */

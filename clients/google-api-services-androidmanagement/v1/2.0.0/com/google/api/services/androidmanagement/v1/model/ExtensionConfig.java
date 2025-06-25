@@ -49,7 +49,7 @@ public final class ExtensionConfig extends com.google.api.client.json.GenericJso
    * hexadecimal string representations of 64 characters are valid.The signing key certificate
    * fingerprints are always obtained from the Play Store and this field is used to provide
    * additional signing key certificate fingerprints. However, if the application is not available
-   * on the Play Store, this field needs to be set. A nonComplianceDetail with INVALID_VALUE is
+   * on the Play Store, this field needs to be set. A NonComplianceDetail with INVALID_VALUE is
    * reported if this field is not set when the application is not available on the Play Store.The
    * signing key certificate fingerprint of the extension app on the device must match one of the
    * signing key certificate fingerprints obtained from the Play Store or the ones provided in this
@@ -84,7 +84,7 @@ public final class ExtensionConfig extends com.google.api.client.json.GenericJso
    * hexadecimal string representations of 64 characters are valid.The signing key certificate
    * fingerprints are always obtained from the Play Store and this field is used to provide
    * additional signing key certificate fingerprints. However, if the application is not available
-   * on the Play Store, this field needs to be set. A nonComplianceDetail with INVALID_VALUE is
+   * on the Play Store, this field needs to be set. A NonComplianceDetail with INVALID_VALUE is
    * reported if this field is not set when the application is not available on the Play Store.The
    * signing key certificate fingerprint of the extension app on the device must match one of the
    * signing key certificate fingerprints obtained from the Play Store or the ones provided in this
@@ -101,7 +101,7 @@ public final class ExtensionConfig extends com.google.api.client.json.GenericJso
    * hexadecimal string representations of 64 characters are valid.The signing key certificate
    * fingerprints are always obtained from the Play Store and this field is used to provide
    * additional signing key certificate fingerprints. However, if the application is not available
-   * on the Play Store, this field needs to be set. A nonComplianceDetail with INVALID_VALUE is
+   * on the Play Store, this field needs to be set. A NonComplianceDetail with INVALID_VALUE is
    * reported if this field is not set when the application is not available on the Play Store.The
    * signing key certificate fingerprint of the extension app on the device must match one of the
    * signing key certificate fingerprints obtained from the Play Store or the ones provided in this

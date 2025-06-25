@@ -48,6 +48,14 @@ public final class GoogleCloudDiscoveryengineV1alphaDataConnector extends com.go
   private GoogleCloudDiscoveryengineV1alphaActionConfig actionConfig;
 
   /**
+   * Output only. State of the action connector. This reflects whether the action connector is
+   * initializing, active or has encountered errors.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String actionState;
+
+  /**
    * Optional. The connector level alert config.
    * The value may be {@code null}.
    */
@@ -170,7 +178,8 @@ public final class GoogleCloudDiscoveryengineV1alphaDataConnector extends com.go
   /**
    * Optional. The refresh interval specifically for incremental data syncs. If unset, incremental
    * syncs will use the default from env, set to 3hrs. The minimum is 30 minutes and maximum is 7
-   * days. Applicable to only 3P connectors.
+   * days. Applicable to only 3P connectors. When the refresh interval is set to the same value as
+   * the incremental refresh interval, incremental sync will be disabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -178,7 +187,9 @@ public final class GoogleCloudDiscoveryengineV1alphaDataConnector extends com.go
 
   /**
    * Optional. Indicates whether incremental syncs are paused for this connector. This is
-   * independent of auto_run_disabled. Applicable to only 3P connectors.
+   * independent of auto_run_disabled. Applicable to only 3P connectors. When the refresh interval
+   * is set to the same value as the incremental refresh interval, incremental sync will be
+   * disabled, i.e. set to true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -280,7 +291,8 @@ public final class GoogleCloudDiscoveryengineV1alphaDataConnector extends com.go
   /**
    * Required. The refresh interval for data sync. If duration is set to 0, the data will be synced
    * in real time. The streaming feature is not supported yet. The minimum is 30 minutes and maximum
-   * is 7 days.
+   * is 7 days. When the refresh interval is set to the same value as the incremental refresh
+   * interval, incremental sync will be disabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -354,6 +366,25 @@ public final class GoogleCloudDiscoveryengineV1alphaDataConnector extends com.go
    */
   public GoogleCloudDiscoveryengineV1alphaDataConnector setActionConfig(GoogleCloudDiscoveryengineV1alphaActionConfig actionConfig) {
     this.actionConfig = actionConfig;
+    return this;
+  }
+
+  /**
+   * Output only. State of the action connector. This reflects whether the action connector is
+   * initializing, active or has encountered errors.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getActionState() {
+    return actionState;
+  }
+
+  /**
+   * Output only. State of the action connector. This reflects whether the action connector is
+   * initializing, active or has encountered errors.
+   * @param actionState actionState or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaDataConnector setActionState(java.lang.String actionState) {
+    this.actionState = actionState;
     return this;
   }
 
@@ -633,7 +664,8 @@ public final class GoogleCloudDiscoveryengineV1alphaDataConnector extends com.go
   /**
    * Optional. The refresh interval specifically for incremental data syncs. If unset, incremental
    * syncs will use the default from env, set to 3hrs. The minimum is 30 minutes and maximum is 7
-   * days. Applicable to only 3P connectors.
+   * days. Applicable to only 3P connectors. When the refresh interval is set to the same value as
+   * the incremental refresh interval, incremental sync will be disabled.
    * @return value or {@code null} for none
    */
   public String getIncrementalRefreshInterval() {
@@ -643,7 +675,8 @@ public final class GoogleCloudDiscoveryengineV1alphaDataConnector extends com.go
   /**
    * Optional. The refresh interval specifically for incremental data syncs. If unset, incremental
    * syncs will use the default from env, set to 3hrs. The minimum is 30 minutes and maximum is 7
-   * days. Applicable to only 3P connectors.
+   * days. Applicable to only 3P connectors. When the refresh interval is set to the same value as
+   * the incremental refresh interval, incremental sync will be disabled.
    * @param incrementalRefreshInterval incrementalRefreshInterval or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaDataConnector setIncrementalRefreshInterval(String incrementalRefreshInterval) {
@@ -653,7 +686,9 @@ public final class GoogleCloudDiscoveryengineV1alphaDataConnector extends com.go
 
   /**
    * Optional. Indicates whether incremental syncs are paused for this connector. This is
-   * independent of auto_run_disabled. Applicable to only 3P connectors.
+   * independent of auto_run_disabled. Applicable to only 3P connectors. When the refresh interval
+   * is set to the same value as the incremental refresh interval, incremental sync will be
+   * disabled, i.e. set to true.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIncrementalSyncDisabled() {
@@ -662,7 +697,9 @@ public final class GoogleCloudDiscoveryengineV1alphaDataConnector extends com.go
 
   /**
    * Optional. Indicates whether incremental syncs are paused for this connector. This is
-   * independent of auto_run_disabled. Applicable to only 3P connectors.
+   * independent of auto_run_disabled. Applicable to only 3P connectors. When the refresh interval
+   * is set to the same value as the incremental refresh interval, incremental sync will be
+   * disabled, i.e. set to true.
    * @param incrementalSyncDisabled incrementalSyncDisabled or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaDataConnector setIncrementalSyncDisabled(java.lang.Boolean incrementalSyncDisabled) {
@@ -886,7 +923,8 @@ public final class GoogleCloudDiscoveryengineV1alphaDataConnector extends com.go
   /**
    * Required. The refresh interval for data sync. If duration is set to 0, the data will be synced
    * in real time. The streaming feature is not supported yet. The minimum is 30 minutes and maximum
-   * is 7 days.
+   * is 7 days. When the refresh interval is set to the same value as the incremental refresh
+   * interval, incremental sync will be disabled.
    * @return value or {@code null} for none
    */
   public String getRefreshInterval() {
@@ -896,7 +934,8 @@ public final class GoogleCloudDiscoveryengineV1alphaDataConnector extends com.go
   /**
    * Required. The refresh interval for data sync. If duration is set to 0, the data will be synced
    * in real time. The streaming feature is not supported yet. The minimum is 30 minutes and maximum
-   * is 7 days.
+   * is 7 days. When the refresh interval is set to the same value as the incremental refresh
+   * interval, incremental sync will be disabled.
    * @param refreshInterval refreshInterval or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaDataConnector setRefreshInterval(String refreshInterval) {

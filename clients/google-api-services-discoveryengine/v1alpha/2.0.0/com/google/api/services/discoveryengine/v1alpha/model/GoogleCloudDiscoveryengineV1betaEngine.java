@@ -88,7 +88,8 @@ public final class GoogleCloudDiscoveryengineV1betaEngine extends com.google.api
    * Optional. Feature config for the engine to opt in or opt out of features. Supported keys: *
    * `*`: all features, if it's present, all other feature state settings are ignored. * `agent-
    * gallery` * `no-code-agent-builder` * `prompt-gallery` * `model-selector` * `notebook-lm` *
-   * `people-search` * `people-search-org-chart` * `bi-directional-audio` * `feedback`
+   * `people-search` * `people-search-org-chart` * `bi-directional-audio` * `feedback` * `session-
+   * sharing`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -278,7 +279,8 @@ public final class GoogleCloudDiscoveryengineV1betaEngine extends com.google.api
    * Optional. Feature config for the engine to opt in or opt out of features. Supported keys: *
    * `*`: all features, if it's present, all other feature state settings are ignored. * `agent-
    * gallery` * `no-code-agent-builder` * `prompt-gallery` * `model-selector` * `notebook-lm` *
-   * `people-search` * `people-search-org-chart` * `bi-directional-audio` * `feedback`
+   * `people-search` * `people-search-org-chart` * `bi-directional-audio` * `feedback` * `session-
+   * sharing`
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getFeatures() {
@@ -289,7 +291,8 @@ public final class GoogleCloudDiscoveryengineV1betaEngine extends com.google.api
    * Optional. Feature config for the engine to opt in or opt out of features. Supported keys: *
    * `*`: all features, if it's present, all other feature state settings are ignored. * `agent-
    * gallery` * `no-code-agent-builder` * `prompt-gallery` * `model-selector` * `notebook-lm` *
-   * `people-search` * `people-search-org-chart` * `bi-directional-audio` * `feedback`
+   * `people-search` * `people-search-org-chart` * `bi-directional-audio` * `feedback` * `session-
+   * sharing`
    * @param features features or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaEngine setFeatures(java.util.Map<String, java.lang.String> features) {

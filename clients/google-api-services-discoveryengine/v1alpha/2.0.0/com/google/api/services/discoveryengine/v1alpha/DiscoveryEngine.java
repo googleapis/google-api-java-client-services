@@ -3783,20 +3783,21 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * Indicates which fields in the provided DataConnector to update. Supported field paths
            * include: - refresh_interval - params - auto_run_disabled - action_config -
            * action_config.action_params - action_config.service_name - destination_configs -
-           * blocking_reasons - sync_mode Note: Support for these fields may vary depending on the
-           * connector type. For example, not all connectors support `destination_configs`. If an
-           * unsupported or unknown field path is provided, the request will return an
-           * INVALID_ARGUMENT error.
+           * blocking_reasons - sync_mode - incremental_sync_disabled - incremental_refresh_interval
+           * Note: Support for these fields may vary depending on the connector type. For example,
+           * not all connectors support `destination_configs`. If an unsupported or unknown field
+           * path is provided, the request will return an INVALID_ARGUMENT error.
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
           /** Indicates which fields in the provided DataConnector to update. Supported field paths include: -
          refresh_interval - params - auto_run_disabled - action_config - action_config.action_params -
-         action_config.service_name - destination_configs - blocking_reasons - sync_mode Note: Support for
-         these fields may vary depending on the connector type. For example, not all connectors support
-         `destination_configs`. If an unsupported or unknown field path is provided, the request will return
-         an INVALID_ARGUMENT error.
+         action_config.service_name - destination_configs - blocking_reasons - sync_mode -
+         incremental_sync_disabled - incremental_refresh_interval Note: Support for these fields may vary
+         depending on the connector type. For example, not all connectors support `destination_configs`. If
+         an unsupported or unknown field path is provided, the request will return an INVALID_ARGUMENT
+         error.
            */
           public String getUpdateMask() {
             return updateMask;
@@ -3806,10 +3807,10 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
            * Indicates which fields in the provided DataConnector to update. Supported field paths
            * include: - refresh_interval - params - auto_run_disabled - action_config -
            * action_config.action_params - action_config.service_name - destination_configs -
-           * blocking_reasons - sync_mode Note: Support for these fields may vary depending on the
-           * connector type. For example, not all connectors support `destination_configs`. If an
-           * unsupported or unknown field path is provided, the request will return an
-           * INVALID_ARGUMENT error.
+           * blocking_reasons - sync_mode - incremental_sync_disabled - incremental_refresh_interval
+           * Note: Support for these fields may vary depending on the connector type. For example,
+           * not all connectors support `destination_configs`. If an unsupported or unknown field
+           * path is provided, the request will return an INVALID_ARGUMENT error.
            */
           public UpdateDataConnector setUpdateMask(String updateMask) {
             this.updateMask = updateMask;

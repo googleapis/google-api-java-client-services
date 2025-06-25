@@ -25,7 +25,7 @@ package com.google.api.services.areainsights.v1;
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://g3doc.corp.google.com/geo/platform/area_insights/README.md?cl=head" target="_blank">API Documentation</a>
+ * <a href="https://developers.google.com/maps/documentation/places-aggregate/overview" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>

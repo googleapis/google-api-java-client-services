@@ -31,6 +31,22 @@ package com.google.api.services.travelimpactmodel.v1.model;
 public final class FlightWithEmissions extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The significance of contrails warming impact compared to the total CO2e emissions
+   * impact.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String contrailsImpactBucket;
+
+  /**
+   * Optional. Metadata about the EASA Flight Emissions Label. Only set when the emissions data
+   * source is EASA.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EasaLabelMetadata easaLabelMetadata;
+
+  /**
    * Optional. Per-passenger emission estimate numbers. Will not be present if emissions could not
    * be computed. For the list of reasons why emissions could not be computed, see
    * ComputeFlightEmissions.
@@ -45,6 +61,51 @@ public final class FlightWithEmissions extends com.google.api.client.json.Generi
    */
   @com.google.api.client.util.Key
   private Flight flight;
+
+  /**
+   * Optional. The source of the emissions data.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String source;
+
+  /**
+   * Optional. The significance of contrails warming impact compared to the total CO2e emissions
+   * impact.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getContrailsImpactBucket() {
+    return contrailsImpactBucket;
+  }
+
+  /**
+   * Optional. The significance of contrails warming impact compared to the total CO2e emissions
+   * impact.
+   * @param contrailsImpactBucket contrailsImpactBucket or {@code null} for none
+   */
+  public FlightWithEmissions setContrailsImpactBucket(java.lang.String contrailsImpactBucket) {
+    this.contrailsImpactBucket = contrailsImpactBucket;
+    return this;
+  }
+
+  /**
+   * Optional. Metadata about the EASA Flight Emissions Label. Only set when the emissions data
+   * source is EASA.
+   * @return value or {@code null} for none
+   */
+  public EasaLabelMetadata getEasaLabelMetadata() {
+    return easaLabelMetadata;
+  }
+
+  /**
+   * Optional. Metadata about the EASA Flight Emissions Label. Only set when the emissions data
+   * source is EASA.
+   * @param easaLabelMetadata easaLabelMetadata or {@code null} for none
+   */
+  public FlightWithEmissions setEasaLabelMetadata(EasaLabelMetadata easaLabelMetadata) {
+    this.easaLabelMetadata = easaLabelMetadata;
+    return this;
+  }
 
   /**
    * Optional. Per-passenger emission estimate numbers. Will not be present if emissions could not
@@ -81,6 +142,23 @@ public final class FlightWithEmissions extends com.google.api.client.json.Generi
    */
   public FlightWithEmissions setFlight(Flight flight) {
     this.flight = flight;
+    return this;
+  }
+
+  /**
+   * Optional. The source of the emissions data.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSource() {
+    return source;
+  }
+
+  /**
+   * Optional. The source of the emissions data.
+   * @param source source or {@code null} for none
+   */
+  public FlightWithEmissions setSource(java.lang.String source) {
+    this.source = source;
     return this;
   }
 

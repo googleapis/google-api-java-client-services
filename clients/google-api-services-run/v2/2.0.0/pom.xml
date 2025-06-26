@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-run</artifactId>
-  <version>v2-rev20250606-2.0.0</version>
-  <name>Cloud Run Admin API v2-rev20250606-2.0.0</name>
+  <version>v2-rev20250620-2.0.0</version>
+  <name>Cloud Run Admin API v2-rev20250620-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

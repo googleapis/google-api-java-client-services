@@ -230,6 +230,13 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
   private java.lang.String launchStage;
 
   /**
+   * Optional. Settings for multi-region deployment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRunV2MultiRegionSettings multiRegionSettings;
+
+  /**
    * The fully qualified name of this Service. In CreateServiceRequest, this field is ignored, and
    * instead composed from CreateServiceRequest.parent and CreateServiceRequest.service_id. Format:
    * projects/{project}/locations/{location}/services/{service_id}
@@ -800,6 +807,23 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
    */
   public GoogleCloudRunV2Service setLaunchStage(java.lang.String launchStage) {
     this.launchStage = launchStage;
+    return this;
+  }
+
+  /**
+   * Optional. Settings for multi-region deployment.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRunV2MultiRegionSettings getMultiRegionSettings() {
+    return multiRegionSettings;
+  }
+
+  /**
+   * Optional. Settings for multi-region deployment.
+   * @param multiRegionSettings multiRegionSettings or {@code null} for none
+   */
+  public GoogleCloudRunV2Service setMultiRegionSettings(GoogleCloudRunV2MultiRegionSettings multiRegionSettings) {
+    this.multiRegionSettings = multiRegionSettings;
     return this;
   }
 

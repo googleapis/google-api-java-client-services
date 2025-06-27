@@ -1209,6 +1209,153 @@ public class Contactcenterinsights extends com.google.api.client.googleapis.serv
         }
       }
       /**
+       * Generates a summary of predefined performance metrics for a set of conversations. Conversations
+       * can be specified by specifying a time window and an agent id, for now. The summary includes a
+       * comparison of metrics computed for conversations in the previous time period, and also a
+       * comparison with peers in the same time period.
+       *
+       * Create a request for the method "locations.queryPerformanceOverview".
+       *
+       * This request holds the parameters needed by the contactcenterinsights server.  After setting any
+       * optional parameters, call the {@link QueryPerformanceOverview#execute()} method to invoke the
+       * remote operation.
+       *
+       * @param parent Required. The parent resource of the conversations to derive performance stats from.
+       *        "projects/{project}/locations/{location}"
+       * @param content the {@link com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1QueryPerformanceOverviewRequest}
+       * @return the request
+       */
+      public QueryPerformanceOverview queryPerformanceOverview(java.lang.String parent, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1QueryPerformanceOverviewRequest content) throws java.io.IOException {
+        QueryPerformanceOverview result = new QueryPerformanceOverview(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class QueryPerformanceOverview extends ContactcenterinsightsRequest<com.google.api.services.contactcenterinsights.v1.model.GoogleLongrunningOperation> {
+
+        private static final String REST_PATH = "v1/{+parent}:queryPerformanceOverview";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+        /**
+         * Generates a summary of predefined performance metrics for a set of conversations. Conversations
+         * can be specified by specifying a time window and an agent id, for now. The summary includes a
+         * comparison of metrics computed for conversations in the previous time period, and also a
+         * comparison with peers in the same time period.
+         *
+         * Create a request for the method "locations.queryPerformanceOverview".
+         *
+         * This request holds the parameters needed by the the contactcenterinsights server.  After
+         * setting any optional parameters, call the {@link QueryPerformanceOverview#execute()} method to
+         * invoke the remote operation. <p> {@link QueryPerformanceOverview#initialize(com.google.api.clie
+         * nt.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+         * immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The parent resource of the conversations to derive performance stats from.
+       *        "projects/{project}/locations/{location}"
+         * @param content the {@link com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1QueryPerformanceOverviewRequest}
+         * @since 1.13
+         */
+        protected QueryPerformanceOverview(java.lang.String parent, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1QueryPerformanceOverviewRequest content) {
+          super(Contactcenterinsights.this, "POST", REST_PATH, content, com.google.api.services.contactcenterinsights.v1.model.GoogleLongrunningOperation.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+        }
+
+        @Override
+        public QueryPerformanceOverview set$Xgafv(java.lang.String $Xgafv) {
+          return (QueryPerformanceOverview) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public QueryPerformanceOverview setAccessToken(java.lang.String accessToken) {
+          return (QueryPerformanceOverview) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public QueryPerformanceOverview setAlt(java.lang.String alt) {
+          return (QueryPerformanceOverview) super.setAlt(alt);
+        }
+
+        @Override
+        public QueryPerformanceOverview setCallback(java.lang.String callback) {
+          return (QueryPerformanceOverview) super.setCallback(callback);
+        }
+
+        @Override
+        public QueryPerformanceOverview setFields(java.lang.String fields) {
+          return (QueryPerformanceOverview) super.setFields(fields);
+        }
+
+        @Override
+        public QueryPerformanceOverview setKey(java.lang.String key) {
+          return (QueryPerformanceOverview) super.setKey(key);
+        }
+
+        @Override
+        public QueryPerformanceOverview setOauthToken(java.lang.String oauthToken) {
+          return (QueryPerformanceOverview) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public QueryPerformanceOverview setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (QueryPerformanceOverview) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public QueryPerformanceOverview setQuotaUser(java.lang.String quotaUser) {
+          return (QueryPerformanceOverview) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public QueryPerformanceOverview setUploadType(java.lang.String uploadType) {
+          return (QueryPerformanceOverview) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public QueryPerformanceOverview setUploadProtocol(java.lang.String uploadProtocol) {
+          return (QueryPerformanceOverview) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The parent resource of the conversations to derive performance stats from.
+         * "projects/{project}/locations/{location}"
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The parent resource of the conversations to derive performance stats from.
+       "projects/{project}/locations/{location}"
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The parent resource of the conversations to derive performance stats from.
+         * "projects/{project}/locations/{location}"
+         */
+        public QueryPerformanceOverview setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public QueryPerformanceOverview set(String parameterName, Object value) {
+          return (QueryPerformanceOverview) super.set(parameterName, value);
+        }
+      }
+      /**
        * Updates project-level settings.
        *
        * Create a request for the method "locations.updateSettings".
@@ -4828,6 +4975,153 @@ public class Contactcenterinsights extends com.google.api.client.googleapis.serv
             @Override
             public QueryMetrics set(String parameterName, Object value) {
               return (QueryMetrics) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Generates a summary of predefined performance metrics for a set of conversations. Conversations
+           * can be specified by specifying a time window and an agent id, for now. The summary includes a
+           * comparison of metrics computed for conversations in the previous time period, and also a
+           * comparison with peers in the same time period.
+           *
+           * Create a request for the method "authorizedViews.queryPerformanceOverview".
+           *
+           * This request holds the parameters needed by the contactcenterinsights server.  After setting any
+           * optional parameters, call the {@link QueryPerformanceOverview#execute()} method to invoke the
+           * remote operation.
+           *
+           * @param parent Required. The parent resource of the conversations to derive performance stats from.
+           *        "projects/{project}/locations/{location}"
+           * @param content the {@link com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1QueryPerformanceOverviewRequest}
+           * @return the request
+           */
+          public QueryPerformanceOverview queryPerformanceOverview(java.lang.String parent, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1QueryPerformanceOverviewRequest content) throws java.io.IOException {
+            QueryPerformanceOverview result = new QueryPerformanceOverview(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class QueryPerformanceOverview extends ContactcenterinsightsRequest<com.google.api.services.contactcenterinsights.v1.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v1/{+parent}:queryPerformanceOverview";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/authorizedViewSets/[^/]+/authorizedViews/[^/]+$");
+
+            /**
+             * Generates a summary of predefined performance metrics for a set of conversations. Conversations
+             * can be specified by specifying a time window and an agent id, for now. The summary includes a
+             * comparison of metrics computed for conversations in the previous time period, and also a
+             * comparison with peers in the same time period.
+             *
+             * Create a request for the method "authorizedViews.queryPerformanceOverview".
+             *
+             * This request holds the parameters needed by the the contactcenterinsights server.  After
+             * setting any optional parameters, call the {@link QueryPerformanceOverview#execute()} method to
+             * invoke the remote operation. <p> {@link QueryPerformanceOverview#initialize(com.google.api.clie
+             * nt.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+             * immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent resource of the conversations to derive performance stats from.
+           *        "projects/{project}/locations/{location}"
+             * @param content the {@link com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1QueryPerformanceOverviewRequest}
+             * @since 1.13
+             */
+            protected QueryPerformanceOverview(java.lang.String parent, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1QueryPerformanceOverviewRequest content) {
+              super(Contactcenterinsights.this, "POST", REST_PATH, content, com.google.api.services.contactcenterinsights.v1.model.GoogleLongrunningOperation.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/authorizedViewSets/[^/]+/authorizedViews/[^/]+$");
+              }
+            }
+
+            @Override
+            public QueryPerformanceOverview set$Xgafv(java.lang.String $Xgafv) {
+              return (QueryPerformanceOverview) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public QueryPerformanceOverview setAccessToken(java.lang.String accessToken) {
+              return (QueryPerformanceOverview) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public QueryPerformanceOverview setAlt(java.lang.String alt) {
+              return (QueryPerformanceOverview) super.setAlt(alt);
+            }
+
+            @Override
+            public QueryPerformanceOverview setCallback(java.lang.String callback) {
+              return (QueryPerformanceOverview) super.setCallback(callback);
+            }
+
+            @Override
+            public QueryPerformanceOverview setFields(java.lang.String fields) {
+              return (QueryPerformanceOverview) super.setFields(fields);
+            }
+
+            @Override
+            public QueryPerformanceOverview setKey(java.lang.String key) {
+              return (QueryPerformanceOverview) super.setKey(key);
+            }
+
+            @Override
+            public QueryPerformanceOverview setOauthToken(java.lang.String oauthToken) {
+              return (QueryPerformanceOverview) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public QueryPerformanceOverview setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (QueryPerformanceOverview) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public QueryPerformanceOverview setQuotaUser(java.lang.String quotaUser) {
+              return (QueryPerformanceOverview) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public QueryPerformanceOverview setUploadType(java.lang.String uploadType) {
+              return (QueryPerformanceOverview) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public QueryPerformanceOverview setUploadProtocol(java.lang.String uploadProtocol) {
+              return (QueryPerformanceOverview) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent resource of the conversations to derive performance stats from.
+             * "projects/{project}/locations/{location}"
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent resource of the conversations to derive performance stats from.
+           "projects/{project}/locations/{location}"
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The parent resource of the conversations to derive performance stats from.
+             * "projects/{project}/locations/{location}"
+             */
+            public QueryPerformanceOverview setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/authorizedViewSets/[^/]+/authorizedViews/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public QueryPerformanceOverview set(String parameterName, Object value) {
+              return (QueryPerformanceOverview) super.set(parameterName, value);
             }
           }
           /**
@@ -21504,6 +21798,801 @@ public class Contactcenterinsights extends com.google.api.client.googleapis.serv
           }
 
           /** The list of fields to be updated. */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the QaQuestionTags collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Contactcenterinsights contactcenterinsights = new Contactcenterinsights(...);}
+       *   {@code Contactcenterinsights.QaQuestionTags.List request = contactcenterinsights.qaQuestionTags().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public QaQuestionTags qaQuestionTags() {
+        return new QaQuestionTags();
+      }
+
+      /**
+       * The "qaQuestionTags" collection of methods.
+       */
+      public class QaQuestionTags {
+
+        /**
+         * Creates a QaQuestionTag.
+         *
+         * Create a request for the method "qaQuestionTags.create".
+         *
+         * This request holds the parameters needed by the contactcenterinsights server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource of the QaQuestionTag.
+         * @param content the {@link com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1QaQuestionTag}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1QaQuestionTag content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends ContactcenterinsightsRequest<com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1QaQuestionTag> {
+
+          private static final String REST_PATH = "v1/{+parent}/qaQuestionTags";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a QaQuestionTag.
+           *
+           * Create a request for the method "qaQuestionTags.create".
+           *
+           * This request holds the parameters needed by the the contactcenterinsights server.  After
+           * setting any optional parameters, call the {@link Create#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource of the QaQuestionTag.
+           * @param content the {@link com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1QaQuestionTag}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1QaQuestionTag content) {
+            super(Contactcenterinsights.this, "POST", REST_PATH, content, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1QaQuestionTag.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The parent resource of the QaQuestionTag. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource of the QaQuestionTag.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The parent resource of the QaQuestionTag. */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. A unique ID for the new QaQuestionTag. This ID will become the final
+           * component of the QaQuestionTag's resource name. If no ID is specified, a server-
+           * generated ID will be used. This value should be 4-64 characters and must match the
+           * regular expression `^[a-z0-9-]{4,64}$`. Valid characters are `a-z-`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String qaQuestionTagId;
+
+          /** Optional. A unique ID for the new QaQuestionTag. This ID will become the final component of the
+         QaQuestionTag's resource name. If no ID is specified, a server-generated ID will be used. This
+         value should be 4-64 characters and must match the regular expression `^[a-z0-9-]{4,64}$`. Valid
+         characters are `a-z-`.
+           */
+          public java.lang.String getQaQuestionTagId() {
+            return qaQuestionTagId;
+          }
+
+          /**
+           * Optional. A unique ID for the new QaQuestionTag. This ID will become the final
+           * component of the QaQuestionTag's resource name. If no ID is specified, a server-
+           * generated ID will be used. This value should be 4-64 characters and must match the
+           * regular expression `^[a-z0-9-]{4,64}$`. Valid characters are `a-z-`.
+           */
+          public Create setQaQuestionTagId(java.lang.String qaQuestionTagId) {
+            this.qaQuestionTagId = qaQuestionTagId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a QaQuestionTag.
+         *
+         * Create a request for the method "qaQuestionTags.delete".
+         *
+         * This request holds the parameters needed by the contactcenterinsights server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the QaQuestionTag to delete.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends ContactcenterinsightsRequest<com.google.api.services.contactcenterinsights.v1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/qaQuestionTags/[^/]+$");
+
+          /**
+           * Deletes a QaQuestionTag.
+           *
+           * Create a request for the method "qaQuestionTags.delete".
+           *
+           * This request holds the parameters needed by the the contactcenterinsights server.  After
+           * setting any optional parameters, call the {@link Delete#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the QaQuestionTag to delete.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(Contactcenterinsights.this, "DELETE", REST_PATH, null, com.google.api.services.contactcenterinsights.v1.model.GoogleLongrunningOperation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/qaQuestionTags/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the QaQuestionTag to delete. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the QaQuestionTag to delete.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name of the QaQuestionTag to delete. */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/qaQuestionTags/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets a QaQuestionTag.
+         *
+         * Create a request for the method "qaQuestionTags.get".
+         *
+         * This request holds the parameters needed by the contactcenterinsights server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the QaQuestionTag to get.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends ContactcenterinsightsRequest<com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1QaQuestionTag> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/qaQuestionTags/[^/]+$");
+
+          /**
+           * Gets a QaQuestionTag.
+           *
+           * Create a request for the method "qaQuestionTags.get".
+           *
+           * This request holds the parameters needed by the the contactcenterinsights server.  After
+           * setting any optional parameters, call the {@link Get#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the QaQuestionTag to get.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Contactcenterinsights.this, "GET", REST_PATH, null, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1QaQuestionTag.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/qaQuestionTags/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the QaQuestionTag to get. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the QaQuestionTag to get.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name of the QaQuestionTag to get. */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/qaQuestionTags/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists the question tags.
+         *
+         * Create a request for the method "qaQuestionTags.list".
+         *
+         * This request holds the parameters needed by the contactcenterinsights server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource of the QaQuestionTags.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends ContactcenterinsightsRequest<com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1ListQaQuestionTagsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/qaQuestionTags";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists the question tags.
+           *
+           * Create a request for the method "qaQuestionTags.list".
+           *
+           * This request holds the parameters needed by the the contactcenterinsights server.  After
+           * setting any optional parameters, call the {@link List#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource of the QaQuestionTags.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Contactcenterinsights.this, "GET", REST_PATH, null, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1ListQaQuestionTagsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The parent resource of the QaQuestionTags. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource of the QaQuestionTags.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The parent resource of the QaQuestionTags. */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. A filter to reduce results to a specific subset. Supports disjunctions (OR)
+           * and conjunctions (AND). Supported fields include the following: * `project_id` - id of
+           * the project to list tags for * `qa_scorecard_revision_id` - id of the scorecard
+           * revision to list tags for * `qa_question_id - id of the question to list tags for`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. A filter to reduce results to a specific subset. Supports disjunctions (OR) and
+         conjunctions (AND). Supported fields include the following: * `project_id` - id of the project to
+         list tags for * `qa_scorecard_revision_id` - id of the scorecard revision to list tags for *
+         `qa_question_id - id of the question to list tags for`
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. A filter to reduce results to a specific subset. Supports disjunctions (OR)
+           * and conjunctions (AND). Supported fields include the following: * `project_id` - id of
+           * the project to list tags for * `qa_scorecard_revision_id` - id of the scorecard
+           * revision to list tags for * `qa_question_id - id of the question to list tags for`
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates a QaQuestionTag.
+         *
+         * Create a request for the method "qaQuestionTags.patch".
+         *
+         * This request holds the parameters needed by the contactcenterinsights server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Identifier. Resource name for the QaQuestionTag Format
+         *        projects/{project}/locations/{location}/qaQuestionTags/{qa_question_tag} In the above
+         *        format, the last segment, i.e., qa_question_tag, is a server-generated ID corresponding to
+         *        the tag resource.
+         * @param content the {@link com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1QaQuestionTag}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1QaQuestionTag content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends ContactcenterinsightsRequest<com.google.api.services.contactcenterinsights.v1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/qaQuestionTags/[^/]+$");
+
+          /**
+           * Updates a QaQuestionTag.
+           *
+           * Create a request for the method "qaQuestionTags.patch".
+           *
+           * This request holds the parameters needed by the the contactcenterinsights server.  After
+           * setting any optional parameters, call the {@link Patch#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Identifier. Resource name for the QaQuestionTag Format
+         *        projects/{project}/locations/{location}/qaQuestionTags/{qa_question_tag} In the above
+         *        format, the last segment, i.e., qa_question_tag, is a server-generated ID corresponding to
+         *        the tag resource.
+           * @param content the {@link com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1QaQuestionTag}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1QaQuestionTag content) {
+            super(Contactcenterinsights.this, "PATCH", REST_PATH, content, com.google.api.services.contactcenterinsights.v1.model.GoogleLongrunningOperation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/qaQuestionTags/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Identifier. Resource name for the QaQuestionTag Format
+           * projects/{project}/locations/{location}/qaQuestionTags/{qa_question_tag} In the above
+           * format, the last segment, i.e., qa_question_tag, is a server-generated ID corresponding
+           * to the tag resource.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Identifier. Resource name for the QaQuestionTag Format
+         projects/{project}/locations/{location}/qaQuestionTags/{qa_question_tag} In the above format, the
+         last segment, i.e., qa_question_tag, is a server-generated ID corresponding to the tag resource.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Identifier. Resource name for the QaQuestionTag Format
+           * projects/{project}/locations/{location}/qaQuestionTags/{qa_question_tag} In the above
+           * format, the last segment, i.e., qa_question_tag, is a server-generated ID corresponding
+           * to the tag resource.
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/qaQuestionTags/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. The list of fields to be updated. All possible fields can be updated by
+           * passing `*`, or a subset of the following updateable fields can be provided: *
+           * `qa_question_tag_name` - the name of the tag * `qa_question_ids` - the list of
+           * questions the tag applies to
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Optional. The list of fields to be updated. All possible fields can be updated by passing `*`, or a
+         subset of the following updateable fields can be provided: * `qa_question_tag_name` - the name of
+         the tag * `qa_question_ids` - the list of questions the tag applies to
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Optional. The list of fields to be updated. All possible fields can be updated by
+           * passing `*`, or a subset of the following updateable fields can be provided: *
+           * `qa_question_tag_name` - the name of the tag * `qa_question_ids` - the list of
+           * questions the tag applies to
+           */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
             return this;

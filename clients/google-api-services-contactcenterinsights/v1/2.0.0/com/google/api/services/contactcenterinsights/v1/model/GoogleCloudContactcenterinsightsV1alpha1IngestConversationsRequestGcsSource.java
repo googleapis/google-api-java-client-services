@@ -31,6 +31,17 @@ package com.google.api.services.contactcenterinsights.v1.model;
 public final class GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRequestGcsSource extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The Cloud Storage path to the conversation audio file if already transcribed. Note
+   * that: [1] Don't set this field if the audio is not transcribed. [2] Audio files and transcript
+   * files must be in separate buckets / folders. [3] A source file and its corresponding audio file
+   * must share the same name to be properly ingested, E.g.
+   * `gs://bucket/transcript/conversation1.json` and `gs://bucket/audio/conversation1.mp3`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String audioBucketUri;
+
+  /**
    * Optional. Specifies the type of the objects in `bucket_uri`.
    * The value may be {@code null}.
    */
@@ -56,13 +67,38 @@ public final class GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRe
   /**
    * Optional. The Cloud Storage path to the conversation metadata. Note that: [1] Metadata files
    * are expected to be in JSON format. [2] Metadata and source files (transcripts or audio) must be
-   * in separate buckets. [3] A source file and its corresponding metadata file must share the same
-   * name to be properly ingested, E.g. `gs://bucket/audio/conversation1.mp3` and
+   * in separate buckets / folders. [3] A source file and its corresponding metadata file must share
+   * the same name to be properly ingested, E.g. `gs://bucket/audio/conversation1.mp3` and
    * `gs://bucket/metadata/conversation1.json`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String metadataBucketUri;
+
+  /**
+   * Optional. The Cloud Storage path to the conversation audio file if already transcribed. Note
+   * that: [1] Don't set this field if the audio is not transcribed. [2] Audio files and transcript
+   * files must be in separate buckets / folders. [3] A source file and its corresponding audio file
+   * must share the same name to be properly ingested, E.g.
+   * `gs://bucket/transcript/conversation1.json` and `gs://bucket/audio/conversation1.mp3`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAudioBucketUri() {
+    return audioBucketUri;
+  }
+
+  /**
+   * Optional. The Cloud Storage path to the conversation audio file if already transcribed. Note
+   * that: [1] Don't set this field if the audio is not transcribed. [2] Audio files and transcript
+   * files must be in separate buckets / folders. [3] A source file and its corresponding audio file
+   * must share the same name to be properly ingested, E.g.
+   * `gs://bucket/transcript/conversation1.json` and `gs://bucket/audio/conversation1.mp3`.
+   * @param audioBucketUri audioBucketUri or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRequestGcsSource setAudioBucketUri(java.lang.String audioBucketUri) {
+    this.audioBucketUri = audioBucketUri;
+    return this;
+  }
 
   /**
    * Optional. Specifies the type of the objects in `bucket_uri`.
@@ -122,8 +158,8 @@ public final class GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRe
   /**
    * Optional. The Cloud Storage path to the conversation metadata. Note that: [1] Metadata files
    * are expected to be in JSON format. [2] Metadata and source files (transcripts or audio) must be
-   * in separate buckets. [3] A source file and its corresponding metadata file must share the same
-   * name to be properly ingested, E.g. `gs://bucket/audio/conversation1.mp3` and
+   * in separate buckets / folders. [3] A source file and its corresponding metadata file must share
+   * the same name to be properly ingested, E.g. `gs://bucket/audio/conversation1.mp3` and
    * `gs://bucket/metadata/conversation1.json`.
    * @return value or {@code null} for none
    */
@@ -134,8 +170,8 @@ public final class GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRe
   /**
    * Optional. The Cloud Storage path to the conversation metadata. Note that: [1] Metadata files
    * are expected to be in JSON format. [2] Metadata and source files (transcripts or audio) must be
-   * in separate buckets. [3] A source file and its corresponding metadata file must share the same
-   * name to be properly ingested, E.g. `gs://bucket/audio/conversation1.mp3` and
+   * in separate buckets / folders. [3] A source file and its corresponding metadata file must share
+   * the same name to be properly ingested, E.g. `gs://bucket/audio/conversation1.mp3` and
    * `gs://bucket/metadata/conversation1.json`.
    * @param metadataBucketUri metadataBucketUri or {@code null} for none
    */

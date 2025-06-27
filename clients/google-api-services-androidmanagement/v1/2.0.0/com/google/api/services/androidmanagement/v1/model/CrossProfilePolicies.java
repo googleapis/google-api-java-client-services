@@ -33,6 +33,14 @@ package com.google.api.services.androidmanagement.v1.model;
 public final class CrossProfilePolicies extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Controls whether personal profile apps can invoke app functions exposed by apps in
+   * the work profile.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String crossProfileAppFunctions;
+
+  /**
    * Whether text copied from one profile (personal or work) can be pasted in the other profile.
    * The value may be {@code null}.
    */
@@ -79,6 +87,25 @@ public final class CrossProfilePolicies extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private java.lang.String workProfileWidgetsDefault;
+
+  /**
+   * Optional. Controls whether personal profile apps can invoke app functions exposed by apps in
+   * the work profile.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCrossProfileAppFunctions() {
+    return crossProfileAppFunctions;
+  }
+
+  /**
+   * Optional. Controls whether personal profile apps can invoke app functions exposed by apps in
+   * the work profile.
+   * @param crossProfileAppFunctions crossProfileAppFunctions or {@code null} for none
+   */
+  public CrossProfilePolicies setCrossProfileAppFunctions(java.lang.String crossProfileAppFunctions) {
+    this.crossProfileAppFunctions = crossProfileAppFunctions;
+    return this;
+  }
 
   /**
    * Whether text copied from one profile (personal or work) can be pasted in the other profile.

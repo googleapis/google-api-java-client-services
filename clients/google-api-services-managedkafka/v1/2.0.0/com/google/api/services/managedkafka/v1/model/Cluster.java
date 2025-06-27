@@ -95,6 +95,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
+   * Optional. TLS configuration for the Kafka cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TlsConfig tlsConfig;
+
+  /**
    * Output only. The time when the cluster was last updated.
    * The value may be {@code null}.
    */
@@ -253,6 +260,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Optional. TLS configuration for the Kafka cluster.
+   * @return value or {@code null} for none
+   */
+  public TlsConfig getTlsConfig() {
+    return tlsConfig;
+  }
+
+  /**
+   * Optional. TLS configuration for the Kafka cluster.
+   * @param tlsConfig tlsConfig or {@code null} for none
+   */
+  public Cluster setTlsConfig(TlsConfig tlsConfig) {
+    this.tlsConfig = tlsConfig;
     return this;
   }
 

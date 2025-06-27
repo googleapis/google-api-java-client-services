@@ -68,6 +68,18 @@ public final class ComputeEngineTargetDetails extends com.google.api.client.json
   private ComputeScheduling computeScheduling;
 
   /**
+   * Optional. Additional replica zones of the target regional disks. If this list is not empty a
+   * regional disk will be created. The first supported zone would be the one stated in the zone
+   * field. The rest are taken from this list. Please refer to the [regional disk creation
+   * API](https://cloud.google.com/compute/docs/regions-zones/global-regional-zonal-resources) for
+   * further details about regional vs zonal disks. If not specified, a zonal disk will be created
+   * in the same zone the VM is created.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> diskReplicaZones;
+
+  /**
    * The disk type to use in the VM.
    * The value may be {@code null}.
    */
@@ -273,6 +285,33 @@ public final class ComputeEngineTargetDetails extends com.google.api.client.json
    */
   public ComputeEngineTargetDetails setComputeScheduling(ComputeScheduling computeScheduling) {
     this.computeScheduling = computeScheduling;
+    return this;
+  }
+
+  /**
+   * Optional. Additional replica zones of the target regional disks. If this list is not empty a
+   * regional disk will be created. The first supported zone would be the one stated in the zone
+   * field. The rest are taken from this list. Please refer to the [regional disk creation
+   * API](https://cloud.google.com/compute/docs/regions-zones/global-regional-zonal-resources) for
+   * further details about regional vs zonal disks. If not specified, a zonal disk will be created
+   * in the same zone the VM is created.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getDiskReplicaZones() {
+    return diskReplicaZones;
+  }
+
+  /**
+   * Optional. Additional replica zones of the target regional disks. If this list is not empty a
+   * regional disk will be created. The first supported zone would be the one stated in the zone
+   * field. The rest are taken from this list. Please refer to the [regional disk creation
+   * API](https://cloud.google.com/compute/docs/regions-zones/global-regional-zonal-resources) for
+   * further details about regional vs zonal disks. If not specified, a zonal disk will be created
+   * in the same zone the VM is created.
+   * @param diskReplicaZones diskReplicaZones or {@code null} for none
+   */
+  public ComputeEngineTargetDetails setDiskReplicaZones(java.util.List<java.lang.String> diskReplicaZones) {
+    this.diskReplicaZones = diskReplicaZones;
     return this;
   }
 

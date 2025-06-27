@@ -208,7 +208,8 @@ public final class ApplicationPolicy extends com.google.api.client.json.GenericJ
 
   /**
    * Optional. Specifies whether user control is permitted for the app. User control includes user
-   * actions like force-stopping and clearing app data. Supported on Android 11 and above.
+   * actions like force-stopping and clearing app data. Certain types of apps have special
+   * treatment, see USER_CONTROL_SETTINGS_UNSPECIFIED and USER_CONTROL_ALLOWED for more details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -629,7 +630,8 @@ public final class ApplicationPolicy extends com.google.api.client.json.GenericJ
 
   /**
    * Optional. Specifies whether user control is permitted for the app. User control includes user
-   * actions like force-stopping and clearing app data. Supported on Android 11 and above.
+   * actions like force-stopping and clearing app data. Certain types of apps have special
+   * treatment, see USER_CONTROL_SETTINGS_UNSPECIFIED and USER_CONTROL_ALLOWED for more details.
    * @return value or {@code null} for none
    */
   public java.lang.String getUserControlSettings() {
@@ -638,7 +640,8 @@ public final class ApplicationPolicy extends com.google.api.client.json.GenericJ
 
   /**
    * Optional. Specifies whether user control is permitted for the app. User control includes user
-   * actions like force-stopping and clearing app data. Supported on Android 11 and above.
+   * actions like force-stopping and clearing app data. Certain types of apps have special
+   * treatment, see USER_CONTROL_SETTINGS_UNSPECIFIED and USER_CONTROL_ALLOWED for more details.
    * @param userControlSettings userControlSettings or {@code null} for none
    */
   public ApplicationPolicy setUserControlSettings(java.lang.String userControlSettings) {

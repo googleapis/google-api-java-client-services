@@ -87,6 +87,14 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.lang.String appAutoUpdatePolicy;
 
   /**
+   * Optional. Controls whether apps on the device for fully managed devices or in the work profile
+   * for devices with work profiles are allowed to expose app functions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String appFunctions;
+
+  /**
    * Policy applied to apps. This can have at most 3,000 elements.
    * The value may be {@code null}.
    */
@@ -981,6 +989,25 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    */
   public Policy setAppAutoUpdatePolicy(java.lang.String appAutoUpdatePolicy) {
     this.appAutoUpdatePolicy = appAutoUpdatePolicy;
+    return this;
+  }
+
+  /**
+   * Optional. Controls whether apps on the device for fully managed devices or in the work profile
+   * for devices with work profiles are allowed to expose app functions.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAppFunctions() {
+    return appFunctions;
+  }
+
+  /**
+   * Optional. Controls whether apps on the device for fully managed devices or in the work profile
+   * for devices with work profiles are allowed to expose app functions.
+   * @param appFunctions appFunctions or {@code null} for none
+   */
+  public Policy setAppFunctions(java.lang.String appFunctions) {
+    this.appFunctions = appFunctions;
     return this;
   }
 

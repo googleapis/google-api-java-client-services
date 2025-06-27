@@ -59,8 +59,9 @@ public final class UsageReport extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Parameter value pairs for various applications. For the Entity Usage Report
-   * parameters and values, see [the Entity Usage parameters reference](/admin-
-   * sdk/reports/v1/reference/usage-ref-appendix-a/entities).
+   * parameters and values, see [the Entity Usage parameters
+   * reference](https://developers.google.com/workspace/admin/reports/v1/reference/usage-ref-
+   * appendix-a/entities).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -142,8 +143,9 @@ public final class UsageReport extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Parameter value pairs for various applications. For the Entity Usage Report
-   * parameters and values, see [the Entity Usage parameters reference](/admin-
-   * sdk/reports/v1/reference/usage-ref-appendix-a/entities).
+   * parameters and values, see [the Entity Usage parameters
+   * reference](https://developers.google.com/workspace/admin/reports/v1/reference/usage-ref-
+   * appendix-a/entities).
    * @return value or {@code null} for none
    */
   public java.util.List<Parameters> getParameters() {
@@ -152,8 +154,9 @@ public final class UsageReport extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Parameter value pairs for various applications. For the Entity Usage Report
-   * parameters and values, see [the Entity Usage parameters reference](/admin-
-   * sdk/reports/v1/reference/usage-ref-appendix-a/entities).
+   * parameters and values, see [the Entity Usage parameters
+   * reference](https://developers.google.com/workspace/admin/reports/v1/reference/usage-ref-
+   * appendix-a/entities).
    * @param parameters parameters or {@code null} for none
    */
   public UsageReport setParameters(java.util.List<Parameters> parameters) {

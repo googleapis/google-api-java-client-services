@@ -19,8 +19,8 @@ package com.google.api.services.directory.model;
 /**
  * You can use schemas to add custom fields to user profiles. You can use these fields to store
  * information such as the projects your users work on, their physical locations, their hire dates,
- * or whatever else fits your business needs. For more information, see [Custom User Fields](/admin-
- * sdk/directory/v1/guides/manage-schemas).
+ * or whatever else fits your business needs. For more information, see [Custom User
+ * Fields](https://developers.google.com/workspace/admin/directory/v1/guides/manage-schemas).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Admin SDK API. For a detailed explanation see:
@@ -99,8 +99,9 @@ public final class SchemaFieldSpec extends com.google.api.client.json.GenericJso
 
   /**
    * Specifies who can view values of this field. See [Retrieve users as a non-
-   * administrator](/admin-sdk/directory/v1/guides/manage-users#retrieve_users_non_admin) for more
-   * information. Note: It may take up to 24 hours for changes to this field to be reflected.
+   * administrator](https://developers.google.com/workspace/admin/directory/v1/guides/manage-
+   * users#retrieve_users_non_admin) for more information. Note: It may take up to 24 hours for
+   * changes to this field to be reflected.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -292,8 +293,9 @@ public final class SchemaFieldSpec extends com.google.api.client.json.GenericJso
 
   /**
    * Specifies who can view values of this field. See [Retrieve users as a non-
-   * administrator](/admin-sdk/directory/v1/guides/manage-users#retrieve_users_non_admin) for more
-   * information. Note: It may take up to 24 hours for changes to this field to be reflected.
+   * administrator](https://developers.google.com/workspace/admin/directory/v1/guides/manage-
+   * users#retrieve_users_non_admin) for more information. Note: It may take up to 24 hours for
+   * changes to this field to be reflected.
    * @return value or {@code null} for none
    */
   public java.lang.String getReadAccessType() {
@@ -302,8 +304,9 @@ public final class SchemaFieldSpec extends com.google.api.client.json.GenericJso
 
   /**
    * Specifies who can view values of this field. See [Retrieve users as a non-
-   * administrator](/admin-sdk/directory/v1/guides/manage-users#retrieve_users_non_admin) for more
-   * information. Note: It may take up to 24 hours for changes to this field to be reflected.
+   * administrator](https://developers.google.com/workspace/admin/directory/v1/guides/manage-
+   * users#retrieve_users_non_admin) for more information. Note: It may take up to 24 hours for
+   * changes to this field to be reflected.
    * @param readAccessType readAccessType or {@code null} for none
    */
   public SchemaFieldSpec setReadAccessType(java.lang.String readAccessType) {

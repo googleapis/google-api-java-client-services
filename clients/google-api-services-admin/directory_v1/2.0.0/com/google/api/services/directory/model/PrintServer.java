@@ -68,8 +68,8 @@ public final class PrintServer extends com.google.api.client.json.GenericJson {
   /**
    * ID of the organization unit (OU) that owns this print server. This value can only be set when
    * the print server is initially created. If it's not populated, the print server is placed under
-   * the root OU. The `org_unit_id` can be retrieved using the [Directory API](/admin-
-   * sdk/directory/reference/rest/v1/orgunits).
+   * the root OU. The `org_unit_id` can be retrieved using the [Directory
+   * API](https://developers.google.com/workspace/admin/directory/reference/rest/v1/orgunits).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -172,8 +172,8 @@ public final class PrintServer extends com.google.api.client.json.GenericJson {
   /**
    * ID of the organization unit (OU) that owns this print server. This value can only be set when
    * the print server is initially created. If it's not populated, the print server is placed under
-   * the root OU. The `org_unit_id` can be retrieved using the [Directory API](/admin-
-   * sdk/directory/reference/rest/v1/orgunits).
+   * the root OU. The `org_unit_id` can be retrieved using the [Directory
+   * API](https://developers.google.com/workspace/admin/directory/reference/rest/v1/orgunits).
    * @return value or {@code null} for none
    */
   public java.lang.String getOrgUnitId() {
@@ -183,8 +183,8 @@ public final class PrintServer extends com.google.api.client.json.GenericJson {
   /**
    * ID of the organization unit (OU) that owns this print server. This value can only be set when
    * the print server is initially created. If it's not populated, the print server is placed under
-   * the root OU. The `org_unit_id` can be retrieved using the [Directory API](/admin-
-   * sdk/directory/reference/rest/v1/orgunits).
+   * the root OU. The `org_unit_id` can be retrieved using the [Directory
+   * API](https://developers.google.com/workspace/admin/directory/reference/rest/v1/orgunits).
    * @param orgUnitId orgUnitId or {@code null} for none
    */
   public PrintServer setOrgUnitId(java.lang.String orgUnitId) {

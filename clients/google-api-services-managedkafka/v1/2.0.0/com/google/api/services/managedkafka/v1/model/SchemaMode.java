@@ -18,11 +18,11 @@ package com.google.api.services.managedkafka.v1.model;
 
 /**
  * SchemaMode represents the mode of a schema registry or a specific subject. Four modes are
- * supported: * NONE: This is the default mode for a subject and essentially means that the subject
- * does not have any mode set. This means the subject will follow the schema registry's mode. *
- * READONLY: The schema registry is in read-only mode. * READWRITE: The schema registry is in read-
- * write mode, which allows limited write operations on the schema. * IMPORT: The schema registry is
- * in import mode, which allows more editing operations on the schema for data importing purposes.
+ * supported: * NONE: deprecated. This was the default mode for a subject, but now the default is
+ * unset (which means use the global schema registry setting) * READONLY: The schema registry is in
+ * read-only mode. * READWRITE: The schema registry is in read-write mode, which allows limited
+ * write operations on the schema. * IMPORT: The schema registry is in import mode, which allows
+ * more editing operations on the schema for data importing purposes.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Managed Service for Apache Kafka API. For a detailed
@@ -36,7 +36,7 @@ package com.google.api.services.managedkafka.v1.model;
 public final class SchemaMode extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The mode type of a schema registry (READWRITE by default) or of a subject (NONE by
+   * Required. The mode type of a schema registry (READWRITE by default) or of a subject (unset by
    * default, which means use the global schema registry setting).
    * The value may be {@code null}.
    */
@@ -44,7 +44,7 @@ public final class SchemaMode extends com.google.api.client.json.GenericJson {
   private java.lang.String mode;
 
   /**
-   * Required. The mode type of a schema registry (READWRITE by default) or of a subject (NONE by
+   * Required. The mode type of a schema registry (READWRITE by default) or of a subject (unset by
    * default, which means use the global schema registry setting).
    * @return value or {@code null} for none
    */
@@ -53,7 +53,7 @@ public final class SchemaMode extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The mode type of a schema registry (READWRITE by default) or of a subject (NONE by
+   * Required. The mode type of a schema registry (READWRITE by default) or of a subject (unset by
    * default, which means use the global schema registry setting).
    * @param mode mode or {@code null} for none
    */

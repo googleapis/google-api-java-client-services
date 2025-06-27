@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-metastore</artifactId>
-  <version>v1beta-rev20250514-2.0.0</version>
-  <name>Dataproc Metastore API v1beta-rev20250514-2.0.0</name>
+  <version>v1beta-rev20250622-2.0.0</version>
+  <name>Dataproc Metastore API v1beta-rev20250622-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

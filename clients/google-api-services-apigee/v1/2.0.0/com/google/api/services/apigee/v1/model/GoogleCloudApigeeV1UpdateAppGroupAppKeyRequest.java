@@ -47,7 +47,9 @@ public final class GoogleCloudApigeeV1UpdateAppGroupAppKeyRequest extends com.go
   private java.util.List<java.lang.String> apiProducts;
 
   /**
-   * Note that only Scopes and Attributes of the AppGroupAppKey can be amended.
+   * Note that only Scopes and Attributes of the AppGroupAppKey can be amended. Scopes and
+   * Attributes mentioned in the request will be inserted and the existing scopes and attributes
+   * will be removed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,7 +96,9 @@ public final class GoogleCloudApigeeV1UpdateAppGroupAppKeyRequest extends com.go
   }
 
   /**
-   * Note that only Scopes and Attributes of the AppGroupAppKey can be amended.
+   * Note that only Scopes and Attributes of the AppGroupAppKey can be amended. Scopes and
+   * Attributes mentioned in the request will be inserted and the existing scopes and attributes
+   * will be removed.
    * @return value or {@code null} for none
    */
   public GoogleCloudApigeeV1AppGroupAppKey getAppGroupAppKey() {
@@ -102,7 +106,9 @@ public final class GoogleCloudApigeeV1UpdateAppGroupAppKeyRequest extends com.go
   }
 
   /**
-   * Note that only Scopes and Attributes of the AppGroupAppKey can be amended.
+   * Note that only Scopes and Attributes of the AppGroupAppKey can be amended. Scopes and
+   * Attributes mentioned in the request will be inserted and the existing scopes and attributes
+   * will be removed.
    * @param appGroupAppKey appGroupAppKey or {@code null} for none
    */
   public GoogleCloudApigeeV1UpdateAppGroupAppKeyRequest setAppGroupAppKey(GoogleCloudApigeeV1AppGroupAppKey appGroupAppKey) {

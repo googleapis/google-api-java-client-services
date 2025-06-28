@@ -143,6 +143,14 @@ public final class Pipeline extends com.google.api.client.json.GenericJson {
   private GoogleCloudEventarcV1PipelineRetryPolicy retryPolicy;
 
   /**
+   * Output only. Whether or not this Pipeline satisfies the requirements of physical zone
+   * separation
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzs;
+
+  /**
    * Output only. Server-assigned unique identifier for the Pipeline. The value is a UUID4 string
    * and guaranteed to remain unchanged until the resource is deleted.
    * The value may be {@code null}.
@@ -394,6 +402,25 @@ public final class Pipeline extends com.google.api.client.json.GenericJson {
    */
   public Pipeline setRetryPolicy(GoogleCloudEventarcV1PipelineRetryPolicy retryPolicy) {
     this.retryPolicy = retryPolicy;
+    return this;
+  }
+
+  /**
+   * Output only. Whether or not this Pipeline satisfies the requirements of physical zone
+   * separation
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzs() {
+    return satisfiesPzs;
+  }
+
+  /**
+   * Output only. Whether or not this Pipeline satisfies the requirements of physical zone
+   * separation
+   * @param satisfiesPzs satisfiesPzs or {@code null} for none
+   */
+  public Pipeline setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
+    this.satisfiesPzs = satisfiesPzs;
     return this;
   }
 

@@ -4489,6 +4489,160 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
       }
     }
     /**
+     * Returns the singleton data retention settings for this property.
+     *
+     * Create a request for the method "properties.getReportingIdentitySettings".
+     *
+     * This request holds the parameters needed by the analyticsadmin server.  After setting any
+     * optional parameters, call the {@link GetReportingIdentitySettings#execute()} method to invoke the
+     * remote operation.
+     *
+     * @param name Required. The name of the settings to lookup. Format:
+     *        properties/{property}/reportingIdentitySettings Example:
+     *        "properties/1000/reportingIdentitySettings"
+     * @return the request
+     */
+    public GetReportingIdentitySettings getReportingIdentitySettings(java.lang.String name) throws java.io.IOException {
+      GetReportingIdentitySettings result = new GetReportingIdentitySettings(name);
+      initialize(result);
+      return result;
+    }
+
+    public class GetReportingIdentitySettings extends GoogleAnalyticsAdminRequest<com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaReportingIdentitySettings> {
+
+      private static final String REST_PATH = "v1alpha/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^properties/[^/]+/reportingIdentitySettings$");
+
+      /**
+       * Returns the singleton data retention settings for this property.
+       *
+       * Create a request for the method "properties.getReportingIdentitySettings".
+       *
+       * This request holds the parameters needed by the the analyticsadmin server.  After setting any
+       * optional parameters, call the {@link GetReportingIdentitySettings#execute()} method to invoke
+       * the remote operation. <p> {@link GetReportingIdentitySettings#initialize(com.google.api.client.
+       * googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+       * immediately after invoking the constructor. </p>
+       *
+       * @param name Required. The name of the settings to lookup. Format:
+     *        properties/{property}/reportingIdentitySettings Example:
+     *        "properties/1000/reportingIdentitySettings"
+       * @since 1.13
+       */
+      protected GetReportingIdentitySettings(java.lang.String name) {
+        super(GoogleAnalyticsAdmin.this, "GET", REST_PATH, null, com.google.api.services.analyticsadmin.v1alpha.model.GoogleAnalyticsAdminV1alphaReportingIdentitySettings.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^properties/[^/]+/reportingIdentitySettings$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetReportingIdentitySettings set$Xgafv(java.lang.String $Xgafv) {
+        return (GetReportingIdentitySettings) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetReportingIdentitySettings setAccessToken(java.lang.String accessToken) {
+        return (GetReportingIdentitySettings) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetReportingIdentitySettings setAlt(java.lang.String alt) {
+        return (GetReportingIdentitySettings) super.setAlt(alt);
+      }
+
+      @Override
+      public GetReportingIdentitySettings setCallback(java.lang.String callback) {
+        return (GetReportingIdentitySettings) super.setCallback(callback);
+      }
+
+      @Override
+      public GetReportingIdentitySettings setFields(java.lang.String fields) {
+        return (GetReportingIdentitySettings) super.setFields(fields);
+      }
+
+      @Override
+      public GetReportingIdentitySettings setKey(java.lang.String key) {
+        return (GetReportingIdentitySettings) super.setKey(key);
+      }
+
+      @Override
+      public GetReportingIdentitySettings setOauthToken(java.lang.String oauthToken) {
+        return (GetReportingIdentitySettings) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetReportingIdentitySettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetReportingIdentitySettings) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetReportingIdentitySettings setQuotaUser(java.lang.String quotaUser) {
+        return (GetReportingIdentitySettings) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetReportingIdentitySettings setUploadType(java.lang.String uploadType) {
+        return (GetReportingIdentitySettings) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetReportingIdentitySettings setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetReportingIdentitySettings) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The name of the settings to lookup. Format:
+       * properties/{property}/reportingIdentitySettings Example:
+       * "properties/1000/reportingIdentitySettings"
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The name of the settings to lookup. Format:
+     properties/{property}/reportingIdentitySettings Example:
+     "properties/1000/reportingIdentitySettings"
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The name of the settings to lookup. Format:
+       * properties/{property}/reportingIdentitySettings Example:
+       * "properties/1000/reportingIdentitySettings"
+       */
+      public GetReportingIdentitySettings setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^properties/[^/]+/reportingIdentitySettings$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public GetReportingIdentitySettings set(String parameterName, Object value) {
+        return (GetReportingIdentitySettings) super.set(parameterName, value);
+      }
+    }
+    /**
      * Returns child Properties under the specified parent Account. Properties will be excluded if the
      * caller does not have access. Soft-deleted (ie: "trashed") properties are excluded by default.
      * Returns an empty list if no relevant properties are found.

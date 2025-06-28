@@ -206,6 +206,13 @@ public final class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryRe
   private GoogleAnalyticsAdminV1alphaReportingDataAnnotation reportingDataAnnotation;
 
   /**
+   * A snapshot of a ReportingIdentitySettings resource in change history.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAnalyticsAdminV1alphaReportingIdentitySettings reportingIdentitySettings;
+
+  /**
    * A snapshot of a SearchAds360Link resource in change history.
    * The value may be {@code null}.
    */
@@ -648,6 +655,23 @@ public final class GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryRe
    */
   public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource setReportingDataAnnotation(GoogleAnalyticsAdminV1alphaReportingDataAnnotation reportingDataAnnotation) {
     this.reportingDataAnnotation = reportingDataAnnotation;
+    return this;
+  }
+
+  /**
+   * A snapshot of a ReportingIdentitySettings resource in change history.
+   * @return value or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaReportingIdentitySettings getReportingIdentitySettings() {
+    return reportingIdentitySettings;
+  }
+
+  /**
+   * A snapshot of a ReportingIdentitySettings resource in change history.
+   * @param reportingIdentitySettings reportingIdentitySettings or {@code null} for none
+   */
+  public GoogleAnalyticsAdminV1alphaChangeHistoryChangeChangeHistoryResource setReportingIdentitySettings(GoogleAnalyticsAdminV1alphaReportingIdentitySettings reportingIdentitySettings) {
+    this.reportingIdentitySettings = reportingIdentitySettings;
     return this;
   }
 

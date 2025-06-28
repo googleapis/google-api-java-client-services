@@ -94,8 +94,7 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. If not set, jobs are always required. If set, the query request will follow the
-   * behavior described JobCreationMode. [Preview](https://cloud.google.com/products/#product-
-   * launch-stages)
+   * behavior described JobCreationMode.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -401,8 +400,7 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. If not set, jobs are always required. If set, the query request will follow the
-   * behavior described JobCreationMode. [Preview](https://cloud.google.com/products/#product-
-   * launch-stages)
+   * behavior described JobCreationMode.
    * @return value or {@code null} for none
    */
   public java.lang.String getJobCreationMode() {
@@ -411,8 +409,7 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. If not set, jobs are always required. If set, the query request will follow the
-   * behavior described JobCreationMode. [Preview](https://cloud.google.com/products/#product-
-   * launch-stages)
+   * behavior described JobCreationMode.
    * @param jobCreationMode jobCreationMode or {@code null} for none
    */
   public QueryRequest setJobCreationMode(java.lang.String jobCreationMode) {

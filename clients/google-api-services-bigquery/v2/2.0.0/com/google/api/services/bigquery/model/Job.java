@@ -52,7 +52,6 @@ public final class Job extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The reason why a Job was created.
-   * [Preview](https://cloud.google.com/products/#product-launch-stages)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -163,7 +162,6 @@ public final class Job extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The reason why a Job was created.
-   * [Preview](https://cloud.google.com/products/#product-launch-stages)
    * @return value or {@code null} for none
    */
   public JobCreationReason getJobCreationReason() {
@@ -172,7 +170,6 @@ public final class Job extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The reason why a Job was created.
-   * [Preview](https://cloud.google.com/products/#product-launch-stages)
    * @param jobCreationReason jobCreationReason or {@code null} for none
    */
   public Job setJobCreationReason(JobCreationReason jobCreationReason) {

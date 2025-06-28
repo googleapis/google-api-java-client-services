@@ -94,6 +94,15 @@ public final class Routine extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
+   * Optional. Options for the runtime of the external system executing the routine. This field is
+   * only applicable for Python UDFs. [Preview](https://cloud.google.com/products/#product-launch-
+   * stages)
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ExternalRuntimeOptions externalRuntimeOptions;
+
+  /**
    * Optional. If language = "JAVASCRIPT", this field stores the path of the imported JAVASCRIPT
    * libraries.
    * The value may be {@code null}.
@@ -114,6 +123,14 @@ public final class Routine extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long lastModifiedTime;
+
+  /**
+   * Optional. Options for Python UDF. [Preview](https://cloud.google.com/products/#product-launch-
+   * stages)
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PythonOptions pythonOptions;
 
   /**
    * Optional. Remote function specific options.
@@ -330,6 +347,27 @@ public final class Routine extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Options for the runtime of the external system executing the routine. This field is
+   * only applicable for Python UDFs. [Preview](https://cloud.google.com/products/#product-launch-
+   * stages)
+   * @return value or {@code null} for none
+   */
+  public ExternalRuntimeOptions getExternalRuntimeOptions() {
+    return externalRuntimeOptions;
+  }
+
+  /**
+   * Optional. Options for the runtime of the external system executing the routine. This field is
+   * only applicable for Python UDFs. [Preview](https://cloud.google.com/products/#product-launch-
+   * stages)
+   * @param externalRuntimeOptions externalRuntimeOptions or {@code null} for none
+   */
+  public Routine setExternalRuntimeOptions(ExternalRuntimeOptions externalRuntimeOptions) {
+    this.externalRuntimeOptions = externalRuntimeOptions;
+    return this;
+  }
+
+  /**
    * Optional. If language = "JAVASCRIPT", this field stores the path of the imported JAVASCRIPT
    * libraries.
    * @return value or {@code null} for none
@@ -379,6 +417,25 @@ public final class Routine extends com.google.api.client.json.GenericJson {
    */
   public Routine setLastModifiedTime(java.lang.Long lastModifiedTime) {
     this.lastModifiedTime = lastModifiedTime;
+    return this;
+  }
+
+  /**
+   * Optional. Options for Python UDF. [Preview](https://cloud.google.com/products/#product-launch-
+   * stages)
+   * @return value or {@code null} for none
+   */
+  public PythonOptions getPythonOptions() {
+    return pythonOptions;
+  }
+
+  /**
+   * Optional. Options for Python UDF. [Preview](https://cloud.google.com/products/#product-launch-
+   * stages)
+   * @param pythonOptions pythonOptions or {@code null} for none
+   */
+  public Routine setPythonOptions(PythonOptions pythonOptions) {
+    this.pythonOptions = pythonOptions;
     return this;
   }
 

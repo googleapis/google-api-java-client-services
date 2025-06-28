@@ -322,6 +322,150 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
         }
       }
       /**
+       * Creates a new database by cloning an existing one. The new database must be in the same cloud
+       * region or multi-region location as the existing database. This behaves similar to
+       * FirestoreAdmin.CreateDatabase except instead of creating a new empty database, a new database is
+       * created with the database type, index configuration, and documents from an existing database. The
+       * long-running operation can be used to track the progress of the clone, with the Operation's
+       * metadata field type being the CloneDatabaseMetadata. The response type is the Database if the
+       * clone was successful. The new database is not readable or writeable until the LRO has completed.
+       *
+       * Create a request for the method "databases.clone".
+       *
+       * This request holds the parameters needed by the firestore server.  After setting any optional
+       * parameters, call the {@link Clone#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The project to clone the database in. Format is `projects/{project_id}`.
+       * @param content the {@link com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1CloneDatabaseRequest}
+       * @return the request
+       */
+      public Clone clone(java.lang.String parent, com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1CloneDatabaseRequest content) throws java.io.IOException {
+        Clone result = new Clone(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Clone extends FirestoreRequest<com.google.api.services.firestore.v1.model.GoogleLongrunningOperation> {
+
+        private static final String REST_PATH = "v1/{+parent}/databases:clone";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+        /**
+         * Creates a new database by cloning an existing one. The new database must be in the same cloud
+         * region or multi-region location as the existing database. This behaves similar to
+         * FirestoreAdmin.CreateDatabase except instead of creating a new empty database, a new database
+         * is created with the database type, index configuration, and documents from an existing
+         * database. The long-running operation can be used to track the progress of the clone, with the
+         * Operation's metadata field type being the CloneDatabaseMetadata. The response type is the
+         * Database if the clone was successful. The new database is not readable or writeable until the
+         * LRO has completed.
+         *
+         * Create a request for the method "databases.clone".
+         *
+         * This request holds the parameters needed by the the firestore server.  After setting any
+         * optional parameters, call the {@link Clone#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Clone#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The project to clone the database in. Format is `projects/{project_id}`.
+         * @param content the {@link com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1CloneDatabaseRequest}
+         * @since 1.13
+         */
+        protected Clone(java.lang.String parent, com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1CloneDatabaseRequest content) {
+          super(Firestore.this, "POST", REST_PATH, content, com.google.api.services.firestore.v1.model.GoogleLongrunningOperation.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+        }
+
+        @Override
+        public Clone set$Xgafv(java.lang.String $Xgafv) {
+          return (Clone) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Clone setAccessToken(java.lang.String accessToken) {
+          return (Clone) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Clone setAlt(java.lang.String alt) {
+          return (Clone) super.setAlt(alt);
+        }
+
+        @Override
+        public Clone setCallback(java.lang.String callback) {
+          return (Clone) super.setCallback(callback);
+        }
+
+        @Override
+        public Clone setFields(java.lang.String fields) {
+          return (Clone) super.setFields(fields);
+        }
+
+        @Override
+        public Clone setKey(java.lang.String key) {
+          return (Clone) super.setKey(key);
+        }
+
+        @Override
+        public Clone setOauthToken(java.lang.String oauthToken) {
+          return (Clone) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Clone setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Clone) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Clone setQuotaUser(java.lang.String quotaUser) {
+          return (Clone) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Clone setUploadType(java.lang.String uploadType) {
+          return (Clone) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Clone setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Clone) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The project to clone the database in. Format is `projects/{project_id}`. */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The project to clone the database in. Format is `projects/{project_id}`.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /** Required. The project to clone the database in. Format is `projects/{project_id}`. */
+        public Clone setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Clone set(String parameterName, Object value) {
+          return (Clone) super.set(parameterName, value);
+        }
+      }
+      /**
        * Create a database.
        *
        * Create a request for the method "databases.create".

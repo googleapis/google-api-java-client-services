@@ -34,7 +34,7 @@ public final class BgpRouteAsPath extends com.google.api.client.json.GenericJson
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<java.lang.Long> asns;
+  private java.util.List<java.lang.Integer> asns;
 
   /**
    * [Output only] Type of AS-PATH segment (SEQUENCE or SET)
@@ -47,7 +47,7 @@ public final class BgpRouteAsPath extends com.google.api.client.json.GenericJson
    * [Output only] ASNs in the path segment. When type is SEQUENCE, these are ordered.
    * @return value or {@code null} for none
    */
-  public java.util.List<java.lang.Long> getAsns() {
+  public java.util.List<java.lang.Integer> getAsns() {
     return asns;
   }
 
@@ -55,7 +55,7 @@ public final class BgpRouteAsPath extends com.google.api.client.json.GenericJson
    * [Output only] ASNs in the path segment. When type is SEQUENCE, these are ordered.
    * @param asns asns or {@code null} for none
    */
-  public BgpRouteAsPath setAsns(java.util.List<java.lang.Long> asns) {
+  public BgpRouteAsPath setAsns(java.util.List<java.lang.Integer> asns) {
     this.asns = asns;
     return this;
   }

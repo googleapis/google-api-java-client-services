@@ -129,6 +129,16 @@ public final class NodeNetworkConfig extends com.google.api.client.json.GenericJ
   private java.lang.String podRange;
 
   /**
+   * Output only. The subnetwork path for the node pool. Format:
+   * projects/{project}/regions/{region}/subnetworks/{subnetwork} If the cluster is associated with
+   * multiple subnetworks, the subnetwork for the node pool is picked based on the IP utilization
+   * during node pool creation and is immutable.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String subnetwork;
+
+  /**
    * We specify the additional node networks for this node pool using this list. Each node network
    * corresponds to an additional interface
    * @return value or {@code null} for none
@@ -324,6 +334,29 @@ public final class NodeNetworkConfig extends com.google.api.client.json.GenericJ
    */
   public NodeNetworkConfig setPodRange(java.lang.String podRange) {
     this.podRange = podRange;
+    return this;
+  }
+
+  /**
+   * Output only. The subnetwork path for the node pool. Format:
+   * projects/{project}/regions/{region}/subnetworks/{subnetwork} If the cluster is associated with
+   * multiple subnetworks, the subnetwork for the node pool is picked based on the IP utilization
+   * during node pool creation and is immutable.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSubnetwork() {
+    return subnetwork;
+  }
+
+  /**
+   * Output only. The subnetwork path for the node pool. Format:
+   * projects/{project}/regions/{region}/subnetworks/{subnetwork} If the cluster is associated with
+   * multiple subnetworks, the subnetwork for the node pool is picked based on the IP utilization
+   * during node pool creation and is immutable.
+   * @param subnetwork subnetwork or {@code null} for none
+   */
+  public NodeNetworkConfig setSubnetwork(java.lang.String subnetwork) {
+    this.subnetwork = subnetwork;
     return this;
   }
 

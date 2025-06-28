@@ -164,6 +164,15 @@ public final class NodeKubeletConfig extends com.google.api.client.json.GenericJ
   private java.lang.Long podPidsLimit;
 
   /**
+   * Optional. Defines whether to enable single process OOM killer. If true, will prevent the
+   * memory.oom.group flag from being set for container cgroups in cgroups v2. This causes processes
+   * in the container to be OOM killed individually instead of as a group.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean singleProcessOomKill;
+
+  /**
    * Optional. Controls Topology Manager configuration on the node. For more information, see:
    * https://kubernetes.io/docs/tasks/administer-cluster/topology-manager/
    * The value may be {@code null}.
@@ -473,6 +482,27 @@ public final class NodeKubeletConfig extends com.google.api.client.json.GenericJ
    */
   public NodeKubeletConfig setPodPidsLimit(java.lang.Long podPidsLimit) {
     this.podPidsLimit = podPidsLimit;
+    return this;
+  }
+
+  /**
+   * Optional. Defines whether to enable single process OOM killer. If true, will prevent the
+   * memory.oom.group flag from being set for container cgroups in cgroups v2. This causes processes
+   * in the container to be OOM killed individually instead of as a group.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSingleProcessOomKill() {
+    return singleProcessOomKill;
+  }
+
+  /**
+   * Optional. Defines whether to enable single process OOM killer. If true, will prevent the
+   * memory.oom.group flag from being set for container cgroups in cgroups v2. This causes processes
+   * in the container to be OOM killed individually instead of as a group.
+   * @param singleProcessOomKill singleProcessOomKill or {@code null} for none
+   */
+  public NodeKubeletConfig setSingleProcessOomKill(java.lang.Boolean singleProcessOomKill) {
+    this.singleProcessOomKill = singleProcessOomKill;
     return this;
   }
 

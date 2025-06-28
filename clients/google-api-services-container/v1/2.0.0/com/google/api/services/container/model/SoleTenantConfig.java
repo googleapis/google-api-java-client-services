@@ -32,6 +32,15 @@ package com.google.api.services.container.model;
 public final class SoleTenantConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The minimum number of virtual CPUs this instance will consume when running on a sole-
+   * tenant node. This field can only be set if the node pool is created in a shared sole-tenant
+   * node group.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer minNodeCpus;
+
+  /**
    * NodeAffinities used to match to a shared sole tenant node group.
    * The value may be {@code null}.
    */
@@ -42,6 +51,27 @@ public final class SoleTenantConfig extends com.google.api.client.json.GenericJs
     // hack to force ProGuard to consider NodeAffinity used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(NodeAffinity.class);
+  }
+
+  /**
+   * Optional. The minimum number of virtual CPUs this instance will consume when running on a sole-
+   * tenant node. This field can only be set if the node pool is created in a shared sole-tenant
+   * node group.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMinNodeCpus() {
+    return minNodeCpus;
+  }
+
+  /**
+   * Optional. The minimum number of virtual CPUs this instance will consume when running on a sole-
+   * tenant node. This field can only be set if the node pool is created in a shared sole-tenant
+   * node group.
+   * @param minNodeCpus minNodeCpus or {@code null} for none
+   */
+  public SoleTenantConfig setMinNodeCpus(java.lang.Integer minNodeCpus) {
+    this.minNodeCpus = minNodeCpus;
+    return this;
   }
 
   /**

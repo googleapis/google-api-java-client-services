@@ -32,7 +32,9 @@ public final class ThirdPartyMeasurementConfigs extends com.google.api.client.js
 
   /**
    * Optional. The third-party vendors measuring brand lift. The following third-party vendors are
-   * applicable: * `THIRD_PARTY_VENDOR_DYNATA` * `THIRD_PARTY_VENDOR_KANTAR`
+   * applicable: * `THIRD_PARTY_VENDOR_DYNATA` * `THIRD_PARTY_VENDOR_KANTAR` *
+   * `THIRD_PARTY_VENDOR_KANTAR_MILLWARD_BROWN` * `THIRD_PARTY_VENDOR_GOOGLE_INTERNAL` *
+   * `THIRD_PARTY_VENDOR_INTAGE` * `THIRD_PARTY_VENDOR_NIELSEN` * `THIRD_PARTY_VENDOR_MACROMILL`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -41,7 +43,8 @@ public final class ThirdPartyMeasurementConfigs extends com.google.api.client.js
   /**
    * Optional. The third-party vendors measuring brand safety. The following third-party vendors are
    * applicable: * `THIRD_PARTY_VENDOR_ZERF` * `THIRD_PARTY_VENDOR_DOUBLE_VERIFY` *
-   * `THIRD_PARTY_VENDOR_INTEGRAL_AD_SCIENCE`
+   * `THIRD_PARTY_VENDOR_INTEGRAL_AD_SCIENCE` * `THIRD_PARTY_VENDOR_GOOGLE_INTERNAL` *
+   * `THIRD_PARTY_VENDOR_ZEFR`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,7 +53,10 @@ public final class ThirdPartyMeasurementConfigs extends com.google.api.client.js
   /**
    * Optional. The third-party vendors measuring reach. The following third-party vendors are
    * applicable: * `THIRD_PARTY_VENDOR_NIELSEN` * `THIRD_PARTY_VENDOR_COMSCORE` *
-   * `THIRD_PARTY_VENDOR_KANTAR`
+   * `THIRD_PARTY_VENDOR_KANTAR` * `THIRD_PARTY_VENDOR_GOOGLE_INTERNAL` *
+   * `THIRD_PARTY_VENDOR_KANTAR_MILLWARD_BROWN` * `THIRD_PARTY_VENDOR_VIDEO_RESEARCH` *
+   * `THIRD_PARTY_VENDOR_MEDIA_SCOPE` * `THIRD_PARTY_VENDOR_AUDIENCE_PROJECT` *
+   * `THIRD_PARTY_VENDOR_VIDEO_AMP` * `THIRD_PARTY_VENDOR_ISPOT_TV`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,7 +66,8 @@ public final class ThirdPartyMeasurementConfigs extends com.google.api.client.js
    * Optional. The third-party vendors measuring viewability. The following third-party vendors are
    * applicable: * `THIRD_PARTY_VENDOR_MOAT` * `THIRD_PARTY_VENDOR_DOUBLE_VERIFY` *
    * `THIRD_PARTY_VENDOR_INTEGRAL_AD_SCIENCE` * `THIRD_PARTY_VENDOR_COMSCORE` *
-   * `THIRD_PARTY_VENDOR_TELEMETRY` * `THIRD_PARTY_VENDOR_MEETRICS`
+   * `THIRD_PARTY_VENDOR_TELEMETRY` * `THIRD_PARTY_VENDOR_MEETRICS` *
+   * `THIRD_PARTY_VENDOR_GOOGLE_INTERNAL`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +75,9 @@ public final class ThirdPartyMeasurementConfigs extends com.google.api.client.js
 
   /**
    * Optional. The third-party vendors measuring brand lift. The following third-party vendors are
-   * applicable: * `THIRD_PARTY_VENDOR_DYNATA` * `THIRD_PARTY_VENDOR_KANTAR`
+   * applicable: * `THIRD_PARTY_VENDOR_DYNATA` * `THIRD_PARTY_VENDOR_KANTAR` *
+   * `THIRD_PARTY_VENDOR_KANTAR_MILLWARD_BROWN` * `THIRD_PARTY_VENDOR_GOOGLE_INTERNAL` *
+   * `THIRD_PARTY_VENDOR_INTAGE` * `THIRD_PARTY_VENDOR_NIELSEN` * `THIRD_PARTY_VENDOR_MACROMILL`
    * @return value or {@code null} for none
    */
   public java.util.List<ThirdPartyVendorConfig> getBrandLiftVendorConfigs() {
@@ -77,7 +86,9 @@ public final class ThirdPartyMeasurementConfigs extends com.google.api.client.js
 
   /**
    * Optional. The third-party vendors measuring brand lift. The following third-party vendors are
-   * applicable: * `THIRD_PARTY_VENDOR_DYNATA` * `THIRD_PARTY_VENDOR_KANTAR`
+   * applicable: * `THIRD_PARTY_VENDOR_DYNATA` * `THIRD_PARTY_VENDOR_KANTAR` *
+   * `THIRD_PARTY_VENDOR_KANTAR_MILLWARD_BROWN` * `THIRD_PARTY_VENDOR_GOOGLE_INTERNAL` *
+   * `THIRD_PARTY_VENDOR_INTAGE` * `THIRD_PARTY_VENDOR_NIELSEN` * `THIRD_PARTY_VENDOR_MACROMILL`
    * @param brandLiftVendorConfigs brandLiftVendorConfigs or {@code null} for none
    */
   public ThirdPartyMeasurementConfigs setBrandLiftVendorConfigs(java.util.List<ThirdPartyVendorConfig> brandLiftVendorConfigs) {
@@ -88,7 +99,8 @@ public final class ThirdPartyMeasurementConfigs extends com.google.api.client.js
   /**
    * Optional. The third-party vendors measuring brand safety. The following third-party vendors are
    * applicable: * `THIRD_PARTY_VENDOR_ZERF` * `THIRD_PARTY_VENDOR_DOUBLE_VERIFY` *
-   * `THIRD_PARTY_VENDOR_INTEGRAL_AD_SCIENCE`
+   * `THIRD_PARTY_VENDOR_INTEGRAL_AD_SCIENCE` * `THIRD_PARTY_VENDOR_GOOGLE_INTERNAL` *
+   * `THIRD_PARTY_VENDOR_ZEFR`
    * @return value or {@code null} for none
    */
   public java.util.List<ThirdPartyVendorConfig> getBrandSafetyVendorConfigs() {
@@ -98,7 +110,8 @@ public final class ThirdPartyMeasurementConfigs extends com.google.api.client.js
   /**
    * Optional. The third-party vendors measuring brand safety. The following third-party vendors are
    * applicable: * `THIRD_PARTY_VENDOR_ZERF` * `THIRD_PARTY_VENDOR_DOUBLE_VERIFY` *
-   * `THIRD_PARTY_VENDOR_INTEGRAL_AD_SCIENCE`
+   * `THIRD_PARTY_VENDOR_INTEGRAL_AD_SCIENCE` * `THIRD_PARTY_VENDOR_GOOGLE_INTERNAL` *
+   * `THIRD_PARTY_VENDOR_ZEFR`
    * @param brandSafetyVendorConfigs brandSafetyVendorConfigs or {@code null} for none
    */
   public ThirdPartyMeasurementConfigs setBrandSafetyVendorConfigs(java.util.List<ThirdPartyVendorConfig> brandSafetyVendorConfigs) {
@@ -109,7 +122,10 @@ public final class ThirdPartyMeasurementConfigs extends com.google.api.client.js
   /**
    * Optional. The third-party vendors measuring reach. The following third-party vendors are
    * applicable: * `THIRD_PARTY_VENDOR_NIELSEN` * `THIRD_PARTY_VENDOR_COMSCORE` *
-   * `THIRD_PARTY_VENDOR_KANTAR`
+   * `THIRD_PARTY_VENDOR_KANTAR` * `THIRD_PARTY_VENDOR_GOOGLE_INTERNAL` *
+   * `THIRD_PARTY_VENDOR_KANTAR_MILLWARD_BROWN` * `THIRD_PARTY_VENDOR_VIDEO_RESEARCH` *
+   * `THIRD_PARTY_VENDOR_MEDIA_SCOPE` * `THIRD_PARTY_VENDOR_AUDIENCE_PROJECT` *
+   * `THIRD_PARTY_VENDOR_VIDEO_AMP` * `THIRD_PARTY_VENDOR_ISPOT_TV`
    * @return value or {@code null} for none
    */
   public java.util.List<ThirdPartyVendorConfig> getReachVendorConfigs() {
@@ -119,7 +135,10 @@ public final class ThirdPartyMeasurementConfigs extends com.google.api.client.js
   /**
    * Optional. The third-party vendors measuring reach. The following third-party vendors are
    * applicable: * `THIRD_PARTY_VENDOR_NIELSEN` * `THIRD_PARTY_VENDOR_COMSCORE` *
-   * `THIRD_PARTY_VENDOR_KANTAR`
+   * `THIRD_PARTY_VENDOR_KANTAR` * `THIRD_PARTY_VENDOR_GOOGLE_INTERNAL` *
+   * `THIRD_PARTY_VENDOR_KANTAR_MILLWARD_BROWN` * `THIRD_PARTY_VENDOR_VIDEO_RESEARCH` *
+   * `THIRD_PARTY_VENDOR_MEDIA_SCOPE` * `THIRD_PARTY_VENDOR_AUDIENCE_PROJECT` *
+   * `THIRD_PARTY_VENDOR_VIDEO_AMP` * `THIRD_PARTY_VENDOR_ISPOT_TV`
    * @param reachVendorConfigs reachVendorConfigs or {@code null} for none
    */
   public ThirdPartyMeasurementConfigs setReachVendorConfigs(java.util.List<ThirdPartyVendorConfig> reachVendorConfigs) {
@@ -131,7 +150,8 @@ public final class ThirdPartyMeasurementConfigs extends com.google.api.client.js
    * Optional. The third-party vendors measuring viewability. The following third-party vendors are
    * applicable: * `THIRD_PARTY_VENDOR_MOAT` * `THIRD_PARTY_VENDOR_DOUBLE_VERIFY` *
    * `THIRD_PARTY_VENDOR_INTEGRAL_AD_SCIENCE` * `THIRD_PARTY_VENDOR_COMSCORE` *
-   * `THIRD_PARTY_VENDOR_TELEMETRY` * `THIRD_PARTY_VENDOR_MEETRICS`
+   * `THIRD_PARTY_VENDOR_TELEMETRY` * `THIRD_PARTY_VENDOR_MEETRICS` *
+   * `THIRD_PARTY_VENDOR_GOOGLE_INTERNAL`
    * @return value or {@code null} for none
    */
   public java.util.List<ThirdPartyVendorConfig> getViewabilityVendorConfigs() {
@@ -142,7 +162,8 @@ public final class ThirdPartyMeasurementConfigs extends com.google.api.client.js
    * Optional. The third-party vendors measuring viewability. The following third-party vendors are
    * applicable: * `THIRD_PARTY_VENDOR_MOAT` * `THIRD_PARTY_VENDOR_DOUBLE_VERIFY` *
    * `THIRD_PARTY_VENDOR_INTEGRAL_AD_SCIENCE` * `THIRD_PARTY_VENDOR_COMSCORE` *
-   * `THIRD_PARTY_VENDOR_TELEMETRY` * `THIRD_PARTY_VENDOR_MEETRICS`
+   * `THIRD_PARTY_VENDOR_TELEMETRY` * `THIRD_PARTY_VENDOR_MEETRICS` *
+   * `THIRD_PARTY_VENDOR_GOOGLE_INTERNAL`
    * @param viewabilityVendorConfigs viewabilityVendorConfigs or {@code null} for none
    */
   public ThirdPartyMeasurementConfigs setViewabilityVendorConfigs(java.util.List<ThirdPartyVendorConfig> viewabilityVendorConfigs) {

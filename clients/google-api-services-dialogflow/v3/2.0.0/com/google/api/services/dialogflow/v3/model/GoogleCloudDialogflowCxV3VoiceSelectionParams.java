@@ -39,6 +39,13 @@ public final class GoogleCloudDialogflowCxV3VoiceSelectionParams extends com.goo
   private java.lang.String name;
 
   /**
+   * Optional. The name of the second voice (non-English) if language detection is supported.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String secondLanguageModel;
+
+  /**
    * Optional. The preferred gender of the voice. If not set, the service will choose a voice based
    * on the other parameters such as language_code and name. Note that this is only a preference,
    * not requirement. If a voice of the appropriate gender is not available, the synthesizer
@@ -66,6 +73,23 @@ public final class GoogleCloudDialogflowCxV3VoiceSelectionParams extends com.goo
    */
   public GoogleCloudDialogflowCxV3VoiceSelectionParams setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. The name of the second voice (non-English) if language detection is supported.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSecondLanguageModel() {
+    return secondLanguageModel;
+  }
+
+  /**
+   * Optional. The name of the second voice (non-English) if language detection is supported.
+   * @param secondLanguageModel secondLanguageModel or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3VoiceSelectionParams setSecondLanguageModel(java.lang.String secondLanguageModel) {
+    this.secondLanguageModel = secondLanguageModel;
     return this;
   }
 

@@ -47,7 +47,7 @@ public final class Listing extends com.google.api.client.json.GenericJson {
   private BigQueryDatasetSource bigqueryDataset;
 
   /**
-   * Optional. Categories of the listing. Up to two categories are allowed.
+   * Optional. Categories of the listing. Up to five categories are allowed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -213,7 +213,7 @@ public final class Listing extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Categories of the listing. Up to two categories are allowed.
+   * Optional. Categories of the listing. Up to five categories are allowed.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getCategories() {
@@ -221,7 +221,7 @@ public final class Listing extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Categories of the listing. Up to two categories are allowed.
+   * Optional. Categories of the listing. Up to five categories are allowed.
    * @param categories categories or {@code null} for none
    */
   public Listing setCategories(java.util.List<java.lang.String> categories) {

@@ -19,9 +19,8 @@ package com.google.api.services.directory.model;
 /**
  * Google Workspace Mobile Management includes Android, [Google
  * Sync](https://support.google.com/a/answer/135937), and iOS devices. For more information about
- * common group mobile device API tasks, see the [Developer's
- * Guide](https://developers.google.com/workspace/admin/directory/v1/guides/manage-mobile-
- * devices.html).
+ * common group mobile device API tasks, see the [Developer's Guide](/admin-
+ * sdk/directory/v1/guides/manage-mobile-devices.html).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Admin SDK API. For a detailed explanation see:
@@ -123,10 +122,9 @@ public final class MobileDevice extends com.google.api.client.json.GenericJson {
 
   /**
    * The list of the owner's email addresses. If your application needs the current list of user
-   * emails, use the [get](https://developers.google.com/workspace/admin/directory/v1/reference/mobi
-   * ledevices/get.html) method. For additional information, see the [retrieve a
-   * user](https://developers.google.com/workspace/admin/directory/v1/guides/manage-users#get_user)
-   * method.
+   * emails, use the [get](/admin-sdk/directory/v1/reference/mobiledevices/get.html) method. For
+   * additional information, see the [retrieve a user](/admin-sdk/directory/v1/guides/manage-
+   * users#get_user) method.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -222,11 +220,9 @@ public final class MobileDevice extends com.google.api.client.json.GenericJson {
   private java.lang.String meid;
 
   /**
-   * The mobile device's model name, for example Nexus S. This property can be [updated](https://dev
-   * elopers.google.com/workspace/admin/directory/v1/reference/mobiledevices/update.html). For more
-   * information, see the [Developer's
-   * Guide](https://developers.google.com/workspace/admin/directory/v1/guides/manage-
-   * mobile=devices#update_mobile_device).
+   * The mobile device's model name, for example Nexus S. This property can be [updated](/admin-
+   * sdk/directory/v1/reference/mobiledevices/update.html). For more information, see the
+   * [Developer's Guide](/admin-sdk/directory/v1/guides/manage-mobile=devices#update_mobile_device).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -234,11 +230,9 @@ public final class MobileDevice extends com.google.api.client.json.GenericJson {
 
   /**
    * The list of the owner's user names. If your application needs the current list of device owner
-   * names, use the [get](https://developers.google.com/workspace/admin/directory/v1/reference/mobil
-   * edevices/get.html) method. For more information about retrieving mobile device user
-   * information, see the [Developer's
-   * Guide](https://developers.google.com/workspace/admin/directory/v1/guides/manage-
-   * users#get_user).
+   * names, use the [get](/admin-sdk/directory/v1/reference/mobiledevices/get.html) method. For more
+   * information about retrieving mobile device user information, see the [Developer's
+   * Guide](/admin-sdk/directory/v1/guides/manage-users#get_user).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -253,9 +247,8 @@ public final class MobileDevice extends com.google.api.client.json.GenericJson {
 
   /**
    * The mobile device's operating system, for example IOS 4.3 or Android 2.3.5. This property can
-   * be [updated](https://developers.google.com/workspace/admin/directory/v1/reference/mobiledevices
-   * /update.html). For more information, see the [Developer's
-   * Guide](https://developers.google.com/workspace/admin/directory/v1/guides/manage-mobile-
+   * be [updated](/admin-sdk/directory/v1/reference/mobiledevices/update.html). For more
+   * information, see the [Developer's Guide](/admin-sdk/directory/v1/guides/manage-mobile-
    * devices#update_mobile_device).
    * The value may be {@code null}.
    */
@@ -333,11 +326,9 @@ public final class MobileDevice extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean unknownSourcesStatus;
 
   /**
-   * Gives information about the device such as `os` version. This property can be [updated](https:/
-   * /developers.google.com/workspace/admin/directory/v1/reference/mobiledevices/update.html). For
-   * more information, see the [Developer's
-   * Guide](https://developers.google.com/workspace/admin/directory/v1/guides/manage-mobile-
-   * devices#update_mobile_device).
+   * Gives information about the device such as `os` version. This property can be [updated](/admin-
+   * sdk/directory/v1/reference/mobiledevices/update.html). For more information, see the
+   * [Developer's Guide](/admin-sdk/directory/v1/guides/manage-mobile-devices#update_mobile_device).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -549,10 +540,9 @@ public final class MobileDevice extends com.google.api.client.json.GenericJson {
 
   /**
    * The list of the owner's email addresses. If your application needs the current list of user
-   * emails, use the [get](https://developers.google.com/workspace/admin/directory/v1/reference/mobi
-   * ledevices/get.html) method. For additional information, see the [retrieve a
-   * user](https://developers.google.com/workspace/admin/directory/v1/guides/manage-users#get_user)
-   * method.
+   * emails, use the [get](/admin-sdk/directory/v1/reference/mobiledevices/get.html) method. For
+   * additional information, see the [retrieve a user](/admin-sdk/directory/v1/guides/manage-
+   * users#get_user) method.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getEmail() {
@@ -561,10 +551,9 @@ public final class MobileDevice extends com.google.api.client.json.GenericJson {
 
   /**
    * The list of the owner's email addresses. If your application needs the current list of user
-   * emails, use the [get](https://developers.google.com/workspace/admin/directory/v1/reference/mobi
-   * ledevices/get.html) method. For additional information, see the [retrieve a
-   * user](https://developers.google.com/workspace/admin/directory/v1/guides/manage-users#get_user)
-   * method.
+   * emails, use the [get](/admin-sdk/directory/v1/reference/mobiledevices/get.html) method. For
+   * additional information, see the [retrieve a user](/admin-sdk/directory/v1/guides/manage-
+   * users#get_user) method.
    * @param email email or {@code null} for none
    */
   public MobileDevice setEmail(java.util.List<java.lang.String> email) {
@@ -787,11 +776,9 @@ public final class MobileDevice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The mobile device's model name, for example Nexus S. This property can be [updated](https://dev
-   * elopers.google.com/workspace/admin/directory/v1/reference/mobiledevices/update.html). For more
-   * information, see the [Developer's
-   * Guide](https://developers.google.com/workspace/admin/directory/v1/guides/manage-
-   * mobile=devices#update_mobile_device).
+   * The mobile device's model name, for example Nexus S. This property can be [updated](/admin-
+   * sdk/directory/v1/reference/mobiledevices/update.html). For more information, see the
+   * [Developer's Guide](/admin-sdk/directory/v1/guides/manage-mobile=devices#update_mobile_device).
    * @return value or {@code null} for none
    */
   public java.lang.String getModel() {
@@ -799,11 +786,9 @@ public final class MobileDevice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The mobile device's model name, for example Nexus S. This property can be [updated](https://dev
-   * elopers.google.com/workspace/admin/directory/v1/reference/mobiledevices/update.html). For more
-   * information, see the [Developer's
-   * Guide](https://developers.google.com/workspace/admin/directory/v1/guides/manage-
-   * mobile=devices#update_mobile_device).
+   * The mobile device's model name, for example Nexus S. This property can be [updated](/admin-
+   * sdk/directory/v1/reference/mobiledevices/update.html). For more information, see the
+   * [Developer's Guide](/admin-sdk/directory/v1/guides/manage-mobile=devices#update_mobile_device).
    * @param model model or {@code null} for none
    */
   public MobileDevice setModel(java.lang.String model) {
@@ -813,11 +798,9 @@ public final class MobileDevice extends com.google.api.client.json.GenericJson {
 
   /**
    * The list of the owner's user names. If your application needs the current list of device owner
-   * names, use the [get](https://developers.google.com/workspace/admin/directory/v1/reference/mobil
-   * edevices/get.html) method. For more information about retrieving mobile device user
-   * information, see the [Developer's
-   * Guide](https://developers.google.com/workspace/admin/directory/v1/guides/manage-
-   * users#get_user).
+   * names, use the [get](/admin-sdk/directory/v1/reference/mobiledevices/get.html) method. For more
+   * information about retrieving mobile device user information, see the [Developer's
+   * Guide](/admin-sdk/directory/v1/guides/manage-users#get_user).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getName() {
@@ -826,11 +809,9 @@ public final class MobileDevice extends com.google.api.client.json.GenericJson {
 
   /**
    * The list of the owner's user names. If your application needs the current list of device owner
-   * names, use the [get](https://developers.google.com/workspace/admin/directory/v1/reference/mobil
-   * edevices/get.html) method. For more information about retrieving mobile device user
-   * information, see the [Developer's
-   * Guide](https://developers.google.com/workspace/admin/directory/v1/guides/manage-
-   * users#get_user).
+   * names, use the [get](/admin-sdk/directory/v1/reference/mobiledevices/get.html) method. For more
+   * information about retrieving mobile device user information, see the [Developer's
+   * Guide](/admin-sdk/directory/v1/guides/manage-users#get_user).
    * @param name name or {@code null} for none
    */
   public MobileDevice setName(java.util.List<java.lang.String> name) {
@@ -857,9 +838,8 @@ public final class MobileDevice extends com.google.api.client.json.GenericJson {
 
   /**
    * The mobile device's operating system, for example IOS 4.3 or Android 2.3.5. This property can
-   * be [updated](https://developers.google.com/workspace/admin/directory/v1/reference/mobiledevices
-   * /update.html). For more information, see the [Developer's
-   * Guide](https://developers.google.com/workspace/admin/directory/v1/guides/manage-mobile-
+   * be [updated](/admin-sdk/directory/v1/reference/mobiledevices/update.html). For more
+   * information, see the [Developer's Guide](/admin-sdk/directory/v1/guides/manage-mobile-
    * devices#update_mobile_device).
    * @return value or {@code null} for none
    */
@@ -869,9 +849,8 @@ public final class MobileDevice extends com.google.api.client.json.GenericJson {
 
   /**
    * The mobile device's operating system, for example IOS 4.3 or Android 2.3.5. This property can
-   * be [updated](https://developers.google.com/workspace/admin/directory/v1/reference/mobiledevices
-   * /update.html). For more information, see the [Developer's
-   * Guide](https://developers.google.com/workspace/admin/directory/v1/guides/manage-mobile-
+   * be [updated](/admin-sdk/directory/v1/reference/mobiledevices/update.html). For more
+   * information, see the [Developer's Guide](/admin-sdk/directory/v1/guides/manage-mobile-
    * devices#update_mobile_device).
    * @param os os or {@code null} for none
    */
@@ -1051,11 +1030,9 @@ public final class MobileDevice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Gives information about the device such as `os` version. This property can be [updated](https:/
-   * /developers.google.com/workspace/admin/directory/v1/reference/mobiledevices/update.html). For
-   * more information, see the [Developer's
-   * Guide](https://developers.google.com/workspace/admin/directory/v1/guides/manage-mobile-
-   * devices#update_mobile_device).
+   * Gives information about the device such as `os` version. This property can be [updated](/admin-
+   * sdk/directory/v1/reference/mobiledevices/update.html). For more information, see the
+   * [Developer's Guide](/admin-sdk/directory/v1/guides/manage-mobile-devices#update_mobile_device).
    * @return value or {@code null} for none
    */
   public java.lang.String getUserAgent() {
@@ -1063,11 +1040,9 @@ public final class MobileDevice extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Gives information about the device such as `os` version. This property can be [updated](https:/
-   * /developers.google.com/workspace/admin/directory/v1/reference/mobiledevices/update.html). For
-   * more information, see the [Developer's
-   * Guide](https://developers.google.com/workspace/admin/directory/v1/guides/manage-mobile-
-   * devices#update_mobile_device).
+   * Gives information about the device such as `os` version. This property can be [updated](/admin-
+   * sdk/directory/v1/reference/mobiledevices/update.html). For more information, see the
+   * [Developer's Guide](/admin-sdk/directory/v1/guides/manage-mobile-devices#update_mobile_device).
    * @param userAgent userAgent or {@code null} for none
    */
   public MobileDevice setUserAgent(java.lang.String userAgent) {

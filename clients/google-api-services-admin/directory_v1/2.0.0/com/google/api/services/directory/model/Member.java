@@ -19,8 +19,7 @@ package com.google.api.services.directory.model;
 /**
  * A Google Groups member can be a user or another group. This member can be inside or outside of
  * your account's domains. For more information about common group member tasks, see the
- * [Developer's Guide](https://developers.google.com/workspace/admin/directory/v1/guides/manage-
- * group-members).
+ * [Developer's Guide](/admin-sdk/directory/v1/guides/manage-group-members).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Admin SDK API. For a detailed explanation see:

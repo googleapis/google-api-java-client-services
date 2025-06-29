@@ -19,12 +19,12 @@ package com.google.api.services.directory.model;
 /**
  * Google Groups provide your users the ability to send messages to groups of people using the
  * group's email address. For more information about common tasks, see the [Developer's
- * Guide](https://developers.google.com/workspace/admin/directory/v1/guides/manage-groups). For
+ * Guide](https://developers.google.com/admin-sdk/directory/v1/guides/manage-groups). For
  * information about other types of groups, see the [Cloud Identity Groups API
  * documentation](https://cloud.google.com/identity/docs/groups). Note: The user calling the API (or
  * being impersonated by a service account) must have an assigned
- * [role](https://developers.google.com/workspace/admin/directory/v1/guides/manage-roles) that
- * includes Admin API Groups permissions, such as Super Admin or Groups Admin.
+ * [role](https://developers.google.com/admin-sdk/directory/v1/guides/manage-roles) that includes
+ * Admin API Groups permissions, such as Super Admin or Groups Admin.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Admin SDK API. For a detailed explanation see:

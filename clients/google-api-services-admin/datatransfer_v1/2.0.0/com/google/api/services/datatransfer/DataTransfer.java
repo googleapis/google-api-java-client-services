@@ -589,9 +589,8 @@ public class DataTransfer extends com.google.api.client.googleapis.services.json
       }
     }
     /**
-     * Inserts a data transfer request. See the [Transfer
-     * parameters](https://developers.google.com/workspace/admin/data-transfer/v1/parameters) reference
-     * for specific application requirements.
+     * Inserts a data transfer request. See the [Transfer parameters](/admin-sdk/data-
+     * transfer/v1/parameters) reference for specific application requirements.
      *
      * Create a request for the method "transfers.insert".
      *
@@ -612,9 +611,8 @@ public class DataTransfer extends com.google.api.client.googleapis.services.json
       private static final String REST_PATH = "admin/datatransfer/v1/transfers";
 
       /**
-       * Inserts a data transfer request. See the [Transfer
-       * parameters](https://developers.google.com/workspace/admin/data-transfer/v1/parameters)
-       * reference for specific application requirements.
+       * Inserts a data transfer request. See the [Transfer parameters](/admin-sdk/data-
+       * transfer/v1/parameters) reference for specific application requirements.
        *
        * Create a request for the method "transfers.insert".
        *

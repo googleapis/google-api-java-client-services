@@ -3154,6 +3154,137 @@ public class Integrations extends com.google.api.client.googleapis.services.json
       public class Clients {
 
         /**
+         * Updates the client customer configuration for the given project and location resource name
+         *
+         * Create a request for the method "clients.changeConfig".
+         *
+         * This request holds the parameters needed by the integrations server.  After setting any optional
+         * parameters, call the {@link ChangeConfig#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Required: Format - projects/{project}/locations/{location}
+         * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaChangeCustomerConfigRequest}
+         * @return the request
+         */
+        public ChangeConfig changeConfig(java.lang.String parent, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaChangeCustomerConfigRequest content) throws java.io.IOException {
+          ChangeConfig result = new ChangeConfig(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class ChangeConfig extends IntegrationsRequest<com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaChangeCustomerConfigResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/clients:changeConfig";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Updates the client customer configuration for the given project and location resource name
+           *
+           * Create a request for the method "clients.changeConfig".
+           *
+           * This request holds the parameters needed by the the integrations server.  After setting any
+           * optional parameters, call the {@link ChangeConfig#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * ChangeConfig#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Required: Format - projects/{project}/locations/{location}
+           * @param content the {@link com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaChangeCustomerConfigRequest}
+           * @since 1.13
+           */
+          protected ChangeConfig(java.lang.String parent, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaChangeCustomerConfigRequest content) {
+            super(Integrations.this, "POST", REST_PATH, content, com.google.api.services.integrations.v1.model.GoogleCloudIntegrationsV1alphaChangeCustomerConfigResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public ChangeConfig set$Xgafv(java.lang.String $Xgafv) {
+            return (ChangeConfig) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ChangeConfig setAccessToken(java.lang.String accessToken) {
+            return (ChangeConfig) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ChangeConfig setAlt(java.lang.String alt) {
+            return (ChangeConfig) super.setAlt(alt);
+          }
+
+          @Override
+          public ChangeConfig setCallback(java.lang.String callback) {
+            return (ChangeConfig) super.setCallback(callback);
+          }
+
+          @Override
+          public ChangeConfig setFields(java.lang.String fields) {
+            return (ChangeConfig) super.setFields(fields);
+          }
+
+          @Override
+          public ChangeConfig setKey(java.lang.String key) {
+            return (ChangeConfig) super.setKey(key);
+          }
+
+          @Override
+          public ChangeConfig setOauthToken(java.lang.String oauthToken) {
+            return (ChangeConfig) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ChangeConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ChangeConfig) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ChangeConfig setQuotaUser(java.lang.String quotaUser) {
+            return (ChangeConfig) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ChangeConfig setUploadType(java.lang.String uploadType) {
+            return (ChangeConfig) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ChangeConfig setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ChangeConfig) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Required: Format - projects/{project}/locations/{location} */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Required: Format - projects/{project}/locations/{location}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. Required: Format - projects/{project}/locations/{location} */
+          public ChangeConfig setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public ChangeConfig set(String parameterName, Object value) {
+            return (ChangeConfig) super.set(parameterName, value);
+          }
+        }
+        /**
          * Perform the deprovisioning steps to disable a user GCP project to use IP and purge all related
          * data in a wipeout-compliant way.
          *

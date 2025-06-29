@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-beyondcorp</artifactId>
-  <version>v1alpha-rev20250604-2.0.0</version>
-  <name>BeyondCorp API v1alpha-rev20250604-2.0.0</name>
+  <version>v1alpha-rev20250616-2.0.0</version>
+  <name>BeyondCorp API v1alpha-rev20250616-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

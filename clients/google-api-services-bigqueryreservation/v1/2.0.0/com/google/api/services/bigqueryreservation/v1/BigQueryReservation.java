@@ -2087,6 +2087,653 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
 
       }
       /**
+       * An accessor for creating requests from the ReservationGroups collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code BigQueryReservation bigqueryreservation = new BigQueryReservation(...);}
+       *   {@code BigQueryReservation.ReservationGroups.List request = bigqueryreservation.reservationGroups().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public ReservationGroups reservationGroups() {
+        return new ReservationGroups();
+      }
+
+      /**
+       * The "reservationGroups" collection of methods.
+       */
+      public class ReservationGroups {
+
+        /**
+         * Creates a new reservation group.
+         *
+         * Create a request for the method "reservationGroups.create".
+         *
+         * This request holds the parameters needed by the bigqueryreservation server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Project, location. E.g., `projects/myproject/locations/US`
+         * @param content the {@link com.google.api.services.bigqueryreservation.v1.model.ReservationGroup}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.bigqueryreservation.v1.model.ReservationGroup content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends BigQueryReservationRequest<com.google.api.services.bigqueryreservation.v1.model.ReservationGroup> {
+
+          private static final String REST_PATH = "v1/{+parent}/reservationGroups";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a new reservation group.
+           *
+           * Create a request for the method "reservationGroups.create".
+           *
+           * This request holds the parameters needed by the the bigqueryreservation server.  After setting
+           * any optional parameters, call the {@link Create#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Project, location. E.g., `projects/myproject/locations/US`
+           * @param content the {@link com.google.api.services.bigqueryreservation.v1.model.ReservationGroup}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.bigqueryreservation.v1.model.ReservationGroup content) {
+            super(BigQueryReservation.this, "POST", REST_PATH, content, com.google.api.services.bigqueryreservation.v1.model.ReservationGroup.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Project, location. E.g., `projects/myproject/locations/US` */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Project, location. E.g., `projects/myproject/locations/US`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. Project, location. E.g., `projects/myproject/locations/US` */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Required. The reservation group ID. It must only contain lower case alphanumeric
+           * characters or dashes. It must start with a letter and must not end with a dash. Its
+           * maximum length is 64 characters.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String reservationGroupId;
+
+          /** Required. The reservation group ID. It must only contain lower case alphanumeric characters or
+         dashes. It must start with a letter and must not end with a dash. Its maximum length is 64
+         characters.
+           */
+          public java.lang.String getReservationGroupId() {
+            return reservationGroupId;
+          }
+
+          /**
+           * Required. The reservation group ID. It must only contain lower case alphanumeric
+           * characters or dashes. It must start with a letter and must not end with a dash. Its
+           * maximum length is 64 characters.
+           */
+          public Create setReservationGroupId(java.lang.String reservationGroupId) {
+            this.reservationGroupId = reservationGroupId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a reservation. Returns `google.rpc.Code.FAILED_PRECONDITION` when reservation has
+         * assignments.
+         *
+         * Create a request for the method "reservationGroups.delete".
+         *
+         * This request holds the parameters needed by the bigqueryreservation server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Resource name of the reservation group to retrieve. E.g.,
+         *        `projects/myproject/locations/US/reservationGroups/team1-prod`
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends BigQueryReservationRequest<com.google.api.services.bigqueryreservation.v1.model.Empty> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/reservationGroups/[^/]+$");
+
+          /**
+           * Deletes a reservation. Returns `google.rpc.Code.FAILED_PRECONDITION` when reservation has
+           * assignments.
+           *
+           * Create a request for the method "reservationGroups.delete".
+           *
+           * This request holds the parameters needed by the the bigqueryreservation server.  After setting
+           * any optional parameters, call the {@link Delete#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Resource name of the reservation group to retrieve. E.g.,
+         *        `projects/myproject/locations/US/reservationGroups/team1-prod`
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(BigQueryReservation.this, "DELETE", REST_PATH, null, com.google.api.services.bigqueryreservation.v1.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/reservationGroups/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Resource name of the reservation group to retrieve. E.g.,
+           * `projects/myproject/locations/US/reservationGroups/team1-prod`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Resource name of the reservation group to retrieve. E.g.,
+         `projects/myproject/locations/US/reservationGroups/team1-prod`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Resource name of the reservation group to retrieve. E.g.,
+           * `projects/myproject/locations/US/reservationGroups/team1-prod`
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/reservationGroups/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Returns information about the reservation group.
+         *
+         * Create a request for the method "reservationGroups.get".
+         *
+         * This request holds the parameters needed by the bigqueryreservation server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Resource name of the reservation group to retrieve. E.g.,
+         *        `projects/myproject/locations/US/reservationGroups/team1-prod`
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends BigQueryReservationRequest<com.google.api.services.bigqueryreservation.v1.model.ReservationGroup> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/reservationGroups/[^/]+$");
+
+          /**
+           * Returns information about the reservation group.
+           *
+           * Create a request for the method "reservationGroups.get".
+           *
+           * This request holds the parameters needed by the the bigqueryreservation server.  After setting
+           * any optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Resource name of the reservation group to retrieve. E.g.,
+         *        `projects/myproject/locations/US/reservationGroups/team1-prod`
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(BigQueryReservation.this, "GET", REST_PATH, null, com.google.api.services.bigqueryreservation.v1.model.ReservationGroup.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/reservationGroups/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Resource name of the reservation group to retrieve. E.g.,
+           * `projects/myproject/locations/US/reservationGroups/team1-prod`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Resource name of the reservation group to retrieve. E.g.,
+         `projects/myproject/locations/US/reservationGroups/team1-prod`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Resource name of the reservation group to retrieve. E.g.,
+           * `projects/myproject/locations/US/reservationGroups/team1-prod`
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/reservationGroups/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists all the reservation groups for the project in the specified location.
+         *
+         * Create a request for the method "reservationGroups.list".
+         *
+         * This request holds the parameters needed by the bigqueryreservation server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource name containing project and location, e.g.:
+         *        `projects/myproject/locations/US`
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends BigQueryReservationRequest<com.google.api.services.bigqueryreservation.v1.model.ListReservationGroupsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/reservationGroups";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists all the reservation groups for the project in the specified location.
+           *
+           * Create a request for the method "reservationGroups.list".
+           *
+           * This request holds the parameters needed by the the bigqueryreservation server.  After setting
+           * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource name containing project and location, e.g.:
+         *        `projects/myproject/locations/US`
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(BigQueryReservation.this, "GET", REST_PATH, null, com.google.api.services.bigqueryreservation.v1.model.ListReservationGroupsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent resource name containing project and location, e.g.:
+           * `projects/myproject/locations/US`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource name containing project and location, e.g.:
+         `projects/myproject/locations/US`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent resource name containing project and location, e.g.:
+           * `projects/myproject/locations/US`
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** The maximum number of items to return per page. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The maximum number of items to return per page.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** The maximum number of items to return per page. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** The next_page_token value returned from a previous List request, if any. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** The next_page_token value returned from a previous List request, if any.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** The next_page_token value returned from a previous List request, if any. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the Reservations collection.
        *
        * <p>The typical use is:</p>

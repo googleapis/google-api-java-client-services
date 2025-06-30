@@ -132,7 +132,8 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
    * extensions/docs/reference/rest/v1beta1/projects.locations.wasmPlugins) in the format:
    * `projects/{project}/locations/{location}/wasmPlugins/{plugin}` or `//networkservices.googleapis
    * .com/projects/{project}/locations/{location}/wasmPlugins/{wasmPlugin}`. Plugin extensions are
-   * currently supported for the `LbTrafficExtension` and the `LbRouteExtension` resources.
+   * currently supported for the `LbTrafficExtension`, the `LbRouteExtension`, and the
+   * `LbEdgeExtension` resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -140,8 +141,10 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
 
   /**
    * Optional. A set of events during request or response processing for which this extension is
-   * called. This field is required for the `LbTrafficExtension` resource. It is optional for the
-   * `LbRouteExtension` resource. If unspecified `REQUEST_HEADERS` event is assumed as supported.
+   * called. For the `LbTrafficExtension` resource, this field is required. For the
+   * `LbRouteExtension` resource, this field is optional. If unspecified, `REQUEST_HEADERS` event is
+   * assumed as supported. For the `LbEdgeExtension` resource, this field is required and must only
+   * contain `REQUEST_HEADERS` event.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -375,7 +378,8 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
    * extensions/docs/reference/rest/v1beta1/projects.locations.wasmPlugins) in the format:
    * `projects/{project}/locations/{location}/wasmPlugins/{plugin}` or `//networkservices.googleapis
    * .com/projects/{project}/locations/{location}/wasmPlugins/{wasmPlugin}`. Plugin extensions are
-   * currently supported for the `LbTrafficExtension` and the `LbRouteExtension` resources.
+   * currently supported for the `LbTrafficExtension`, the `LbRouteExtension`, and the
+   * `LbEdgeExtension` resources.
    * @return value or {@code null} for none
    */
   public java.lang.String getService() {
@@ -393,7 +397,8 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
    * extensions/docs/reference/rest/v1beta1/projects.locations.wasmPlugins) in the format:
    * `projects/{project}/locations/{location}/wasmPlugins/{plugin}` or `//networkservices.googleapis
    * .com/projects/{project}/locations/{location}/wasmPlugins/{wasmPlugin}`. Plugin extensions are
-   * currently supported for the `LbTrafficExtension` and the `LbRouteExtension` resources.
+   * currently supported for the `LbTrafficExtension`, the `LbRouteExtension`, and the
+   * `LbEdgeExtension` resources.
    * @param service service or {@code null} for none
    */
   public ExtensionChainExtension setService(java.lang.String service) {
@@ -403,8 +408,10 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
 
   /**
    * Optional. A set of events during request or response processing for which this extension is
-   * called. This field is required for the `LbTrafficExtension` resource. It is optional for the
-   * `LbRouteExtension` resource. If unspecified `REQUEST_HEADERS` event is assumed as supported.
+   * called. For the `LbTrafficExtension` resource, this field is required. For the
+   * `LbRouteExtension` resource, this field is optional. If unspecified, `REQUEST_HEADERS` event is
+   * assumed as supported. For the `LbEdgeExtension` resource, this field is required and must only
+   * contain `REQUEST_HEADERS` event.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSupportedEvents() {
@@ -413,8 +420,10 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
 
   /**
    * Optional. A set of events during request or response processing for which this extension is
-   * called. This field is required for the `LbTrafficExtension` resource. It is optional for the
-   * `LbRouteExtension` resource. If unspecified `REQUEST_HEADERS` event is assumed as supported.
+   * called. For the `LbTrafficExtension` resource, this field is required. For the
+   * `LbRouteExtension` resource, this field is optional. If unspecified, `REQUEST_HEADERS` event is
+   * assumed as supported. For the `LbEdgeExtension` resource, this field is required and must only
+   * contain `REQUEST_HEADERS` event.
    * @param supportedEvents supportedEvents or {@code null} for none
    */
   public ExtensionChainExtension setSupportedEvents(java.util.List<java.lang.String> supportedEvents) {

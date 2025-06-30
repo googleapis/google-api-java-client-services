@@ -73,7 +73,7 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The labels associated with this reservation. You can use these to organize and group
-   * your reservations. You can set this property when inserting or updating a reservation.
+   * your reservations. You can set this property when you create or update a reservation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -161,6 +161,16 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private ReplicationStatus replicationStatus;
+
+  /**
+   * Optional. The reservation group that this reservation belongs to. You can set this property
+   * when you create or update a reservation. Reservations do not need to belong to a reservation
+   * group. Format: projects/{project}/locations/{location}/reservationGroups/{reservation_group} or
+   * just {reservation_group}
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String reservationGroup;
 
   /**
    * Optional. The scaling mode for the reservation. If the field is present but max_slots is not
@@ -301,7 +311,7 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The labels associated with this reservation. You can use these to organize and group
-   * your reservations. You can set this property when inserting or updating a reservation.
+   * your reservations. You can set this property when you create or update a reservation.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -310,7 +320,7 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The labels associated with this reservation. You can use these to organize and group
-   * your reservations. You can set this property when inserting or updating a reservation.
+   * your reservations. You can set this property when you create or update a reservation.
    * @param labels labels or {@code null} for none
    */
   public Reservation setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -499,6 +509,29 @@ public final class Reservation extends com.google.api.client.json.GenericJson {
    */
   public Reservation setReplicationStatus(ReplicationStatus replicationStatus) {
     this.replicationStatus = replicationStatus;
+    return this;
+  }
+
+  /**
+   * Optional. The reservation group that this reservation belongs to. You can set this property
+   * when you create or update a reservation. Reservations do not need to belong to a reservation
+   * group. Format: projects/{project}/locations/{location}/reservationGroups/{reservation_group} or
+   * just {reservation_group}
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getReservationGroup() {
+    return reservationGroup;
+  }
+
+  /**
+   * Optional. The reservation group that this reservation belongs to. You can set this property
+   * when you create or update a reservation. Reservations do not need to belong to a reservation
+   * group. Format: projects/{project}/locations/{location}/reservationGroups/{reservation_group} or
+   * just {reservation_group}
+   * @param reservationGroup reservationGroup or {@code null} for none
+   */
+  public Reservation setReservationGroup(java.lang.String reservationGroup) {
+    this.reservationGroup = reservationGroup;
     return this;
   }
 

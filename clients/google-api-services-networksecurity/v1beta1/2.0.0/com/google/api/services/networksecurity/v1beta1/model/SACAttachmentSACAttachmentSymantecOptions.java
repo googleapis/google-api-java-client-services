@@ -31,7 +31,7 @@ public final class SACAttachmentSACAttachmentSymantecOptions extends com.google.
 
   /**
    * Immutable. Name to be used when creating a location on the customer's behalf in Symantec's
-   * Location API. Not to be confused with GCP locations.
+   * Location API. Not to be confused with Google Cloud locations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +46,7 @@ public final class SACAttachmentSACAttachmentSymantecOptions extends com.google.
 
   /**
    * Immutable. Name to be used when creating a location on the customer's behalf in Symantec's
-   * Location API. Not to be confused with GCP locations.
+   * Location API. Not to be confused with Google Cloud locations.
    * @return value or {@code null} for none
    */
   public java.lang.String getSymantecLocationName() {
@@ -55,7 +55,7 @@ public final class SACAttachmentSACAttachmentSymantecOptions extends com.google.
 
   /**
    * Immutable. Name to be used when creating a location on the customer's behalf in Symantec's
-   * Location API. Not to be confused with GCP locations.
+   * Location API. Not to be confused with Google Cloud locations.
    * @param symantecLocationName symantecLocationName or {@code null} for none
    */
   public SACAttachmentSACAttachmentSymantecOptions setSymantecLocationName(java.lang.String symantecLocationName) {

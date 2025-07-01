@@ -82,6 +82,13 @@ public final class ReservationSubBlock extends com.google.api.client.json.Generi
   private ReservationSubBlockPhysicalTopology physicalTopology;
 
   /**
+   * Maintenance information for this reservation subBlock.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GroupMaintenanceInfo reservationSubBlockMaintenance;
+
+  /**
    * [Output Only] Server-defined fully-qualified URL for this resource.
    * The value may be {@code null}.
    */
@@ -231,6 +238,23 @@ public final class ReservationSubBlock extends com.google.api.client.json.Generi
    */
   public ReservationSubBlock setPhysicalTopology(ReservationSubBlockPhysicalTopology physicalTopology) {
     this.physicalTopology = physicalTopology;
+    return this;
+  }
+
+  /**
+   * Maintenance information for this reservation subBlock.
+   * @return value or {@code null} for none
+   */
+  public GroupMaintenanceInfo getReservationSubBlockMaintenance() {
+    return reservationSubBlockMaintenance;
+  }
+
+  /**
+   * Maintenance information for this reservation subBlock.
+   * @param reservationSubBlockMaintenance reservationSubBlockMaintenance or {@code null} for none
+   */
+  public ReservationSubBlock setReservationSubBlockMaintenance(GroupMaintenanceInfo reservationSubBlockMaintenance) {
+    this.reservationSubBlockMaintenance = reservationSubBlockMaintenance;
     return this;
   }
 

@@ -17,7 +17,7 @@
 package com.google.api.services.networksecurity.v1beta1.model;
 
 /**
- * Represents a Secure Access Connect (SAC) Attachment resource. A Secure Access Connect attachment
+ * Represents a Secure Access Connect (SAC) attachment resource. A Secure Access Connect attachment
  * enables NCC Gateway to process traffic with an SSE product.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

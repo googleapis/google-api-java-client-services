@@ -17,7 +17,7 @@
 package com.google.api.services.networksecurity.v1beta1.model;
 
 /**
- * Represents a Secure Access Connect (SAC) Realm resource. A Secure Access Connect realm
+ * Represents a Secure Access Connect (SAC) realm resource. A Secure Access Connect realm
  * establishes a connection between your Google Cloud project and an SSE service.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

@@ -535,6 +535,14 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   private java.lang.Integer timeoutSec;
 
   /**
+   * Configuration for Backend Authenticated TLS and mTLS. May only be specified when the backend
+   * protocol is SSL, HTTPS or HTTP2.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BackendServiceTlsSettings tlsSettings;
+
+  /**
    * [Output Only] List of resources referencing given backend service.
    * The value may be {@code null}.
    */
@@ -1697,6 +1705,25 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    */
   public BackendService setTimeoutSec(java.lang.Integer timeoutSec) {
     this.timeoutSec = timeoutSec;
+    return this;
+  }
+
+  /**
+   * Configuration for Backend Authenticated TLS and mTLS. May only be specified when the backend
+   * protocol is SSL, HTTPS or HTTP2.
+   * @return value or {@code null} for none
+   */
+  public BackendServiceTlsSettings getTlsSettings() {
+    return tlsSettings;
+  }
+
+  /**
+   * Configuration for Backend Authenticated TLS and mTLS. May only be specified when the backend
+   * protocol is SSL, HTTPS or HTTP2.
+   * @param tlsSettings tlsSettings or {@code null} for none
+   */
+  public BackendService setTlsSettings(BackendServiceTlsSettings tlsSettings) {
+    this.tlsSettings = tlsSettings;
     return this;
   }
 

@@ -38,8 +38,7 @@ public final class GoogleCloudAiplatformV1beta1GenerationConfigThinkingConfig ex
   private java.lang.Boolean includeThoughts;
 
   /**
-   * Optional. Indicates the thinking budget in tokens. This is only applied when enable_thinking is
-   * true.
+   * Optional. Indicates the thinking budget in tokens.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,8 +64,7 @@ public final class GoogleCloudAiplatformV1beta1GenerationConfigThinkingConfig ex
   }
 
   /**
-   * Optional. Indicates the thinking budget in tokens. This is only applied when enable_thinking is
-   * true.
+   * Optional. Indicates the thinking budget in tokens.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getThinkingBudget() {
@@ -74,8 +72,7 @@ public final class GoogleCloudAiplatformV1beta1GenerationConfigThinkingConfig ex
   }
 
   /**
-   * Optional. Indicates the thinking budget in tokens. This is only applied when enable_thinking is
-   * true.
+   * Optional. Indicates the thinking budget in tokens.
    * @param thinkingBudget thinkingBudget or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1GenerationConfigThinkingConfig setThinkingBudget(java.lang.Integer thinkingBudget) {

@@ -45,6 +45,13 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigCollectionCompon
   private java.lang.String dataSource;
 
   /**
+   * Output only. The display name of the data source.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String dataSourceDisplayName;
+
+  /**
    * For the data store collection, list of the children data stores.
    * The value may be {@code null}.
    */
@@ -107,6 +114,23 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigCollectionCompon
    */
   public GoogleCloudDiscoveryengineV1alphaWidgetConfigCollectionComponent setDataSource(java.lang.String dataSource) {
     this.dataSource = dataSource;
+    return this;
+  }
+
+  /**
+   * Output only. The display name of the data source.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDataSourceDisplayName() {
+    return dataSourceDisplayName;
+  }
+
+  /**
+   * Output only. The display name of the data source.
+   * @param dataSourceDisplayName dataSourceDisplayName or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaWidgetConfigCollectionComponent setDataSourceDisplayName(java.lang.String dataSourceDisplayName) {
+    this.dataSourceDisplayName = dataSourceDisplayName;
     return this;
   }
 

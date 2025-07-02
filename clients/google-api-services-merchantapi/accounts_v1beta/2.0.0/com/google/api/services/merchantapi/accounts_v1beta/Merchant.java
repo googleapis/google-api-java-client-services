@@ -6685,6 +6685,612 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
         }
       }
 
+      /**
+       * An accessor for creating requests from the CheckoutSettings collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Merchant merchantapi = new Merchant(...);}
+       *   {@code Merchant.CheckoutSettings.List request = merchantapi.checkoutSettings().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public CheckoutSettings checkoutSettings() {
+        return new CheckoutSettings();
+      }
+
+      /**
+       * The "checkoutSettings" collection of methods.
+       */
+      public class CheckoutSettings {
+
+        /**
+         * Creates `CheckoutSettings` for the given merchant.
+         *
+         * Create a request for the method "checkoutSettings.create".
+         *
+         * This request holds the parameters needed by the merchantapi server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The merchant account for which the `CheckoutSettings` will be created.
+         * @param content the {@link com.google.api.services.merchantapi.accounts_v1beta.model.CheckoutSettings}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.merchantapi.accounts_v1beta.model.CheckoutSettings content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends MerchantRequest<com.google.api.services.merchantapi.accounts_v1beta.model.CheckoutSettings> {
+
+          private static final String REST_PATH = "accounts/v1beta/{+parent}/checkoutSettings";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/programs/[^/]+$");
+
+          /**
+           * Creates `CheckoutSettings` for the given merchant.
+           *
+           * Create a request for the method "checkoutSettings.create".
+           *
+           * This request holds the parameters needed by the the merchantapi server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The merchant account for which the `CheckoutSettings` will be created.
+           * @param content the {@link com.google.api.services.merchantapi.accounts_v1beta.model.CheckoutSettings}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.merchantapi.accounts_v1beta.model.CheckoutSettings content) {
+            super(Merchant.this, "POST", REST_PATH, content, com.google.api.services.merchantapi.accounts_v1beta.model.CheckoutSettings.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accounts/[^/]+/programs/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The merchant account for which the `CheckoutSettings` will be created. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The merchant account for which the `CheckoutSettings` will be created.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The merchant account for which the `CheckoutSettings` will be created. */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accounts/[^/]+/programs/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes `CheckoutSettings` and unenrolls merchant from `Checkout` program.
+         *
+         * Create a request for the method "checkoutSettings.deleteCheckoutSettings".
+         *
+         * This request holds the parameters needed by the merchantapi server.  After setting any optional
+         * parameters, call the {@link DeleteCheckoutSettings#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param name Required. The name/identifier of the merchant account. Format:
+         *        `accounts/{account}/programs/{program}/checkoutSettings`
+         * @return the request
+         */
+        public DeleteCheckoutSettings deleteCheckoutSettings(java.lang.String name) throws java.io.IOException {
+          DeleteCheckoutSettings result = new DeleteCheckoutSettings(name);
+          initialize(result);
+          return result;
+        }
+
+        public class DeleteCheckoutSettings extends MerchantRequest<com.google.api.services.merchantapi.accounts_v1beta.model.Empty> {
+
+          private static final String REST_PATH = "accounts/v1beta/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/programs/[^/]+/checkoutSettings$");
+
+          /**
+           * Deletes `CheckoutSettings` and unenrolls merchant from `Checkout` program.
+           *
+           * Create a request for the method "checkoutSettings.deleteCheckoutSettings".
+           *
+           * This request holds the parameters needed by the the merchantapi server.  After setting any
+           * optional parameters, call the {@link DeleteCheckoutSettings#execute()} method to invoke the
+           * remote operation. <p> {@link DeleteCheckoutSettings#initialize(com.google.api.client.googleapis
+           * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+           * after invoking the constructor. </p>
+           *
+           * @param name Required. The name/identifier of the merchant account. Format:
+         *        `accounts/{account}/programs/{program}/checkoutSettings`
+           * @since 1.13
+           */
+          protected DeleteCheckoutSettings(java.lang.String name) {
+            super(Merchant.this, "DELETE", REST_PATH, null, com.google.api.services.merchantapi.accounts_v1beta.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^accounts/[^/]+/programs/[^/]+/checkoutSettings$");
+            }
+          }
+
+          @Override
+          public DeleteCheckoutSettings set$Xgafv(java.lang.String $Xgafv) {
+            return (DeleteCheckoutSettings) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public DeleteCheckoutSettings setAccessToken(java.lang.String accessToken) {
+            return (DeleteCheckoutSettings) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public DeleteCheckoutSettings setAlt(java.lang.String alt) {
+            return (DeleteCheckoutSettings) super.setAlt(alt);
+          }
+
+          @Override
+          public DeleteCheckoutSettings setCallback(java.lang.String callback) {
+            return (DeleteCheckoutSettings) super.setCallback(callback);
+          }
+
+          @Override
+          public DeleteCheckoutSettings setFields(java.lang.String fields) {
+            return (DeleteCheckoutSettings) super.setFields(fields);
+          }
+
+          @Override
+          public DeleteCheckoutSettings setKey(java.lang.String key) {
+            return (DeleteCheckoutSettings) super.setKey(key);
+          }
+
+          @Override
+          public DeleteCheckoutSettings setOauthToken(java.lang.String oauthToken) {
+            return (DeleteCheckoutSettings) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public DeleteCheckoutSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (DeleteCheckoutSettings) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public DeleteCheckoutSettings setQuotaUser(java.lang.String quotaUser) {
+            return (DeleteCheckoutSettings) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public DeleteCheckoutSettings setUploadType(java.lang.String uploadType) {
+            return (DeleteCheckoutSettings) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public DeleteCheckoutSettings setUploadProtocol(java.lang.String uploadProtocol) {
+            return (DeleteCheckoutSettings) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name/identifier of the merchant account. Format:
+           * `accounts/{account}/programs/{program}/checkoutSettings`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name/identifier of the merchant account. Format:
+         `accounts/{account}/programs/{program}/checkoutSettings`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name/identifier of the merchant account. Format:
+           * `accounts/{account}/programs/{program}/checkoutSettings`
+           */
+          public DeleteCheckoutSettings setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^accounts/[^/]+/programs/[^/]+/checkoutSettings$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public DeleteCheckoutSettings set(String parameterName, Object value) {
+            return (DeleteCheckoutSettings) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets `CheckoutSettings` for the given merchant. This includes information about review state,
+         * enrollment state and URL settings.
+         *
+         * Create a request for the method "checkoutSettings.getCheckoutSettings".
+         *
+         * This request holds the parameters needed by the merchantapi server.  After setting any optional
+         * parameters, call the {@link GetCheckoutSettings#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name/identifier of the merchant account. Format:
+         *        `accounts/{account}/programs/{program}/checkoutSettings`
+         * @return the request
+         */
+        public GetCheckoutSettings getCheckoutSettings(java.lang.String name) throws java.io.IOException {
+          GetCheckoutSettings result = new GetCheckoutSettings(name);
+          initialize(result);
+          return result;
+        }
+
+        public class GetCheckoutSettings extends MerchantRequest<com.google.api.services.merchantapi.accounts_v1beta.model.CheckoutSettings> {
+
+          private static final String REST_PATH = "accounts/v1beta/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/programs/[^/]+/checkoutSettings$");
+
+          /**
+           * Gets `CheckoutSettings` for the given merchant. This includes information about review state,
+           * enrollment state and URL settings.
+           *
+           * Create a request for the method "checkoutSettings.getCheckoutSettings".
+           *
+           * This request holds the parameters needed by the the merchantapi server.  After setting any
+           * optional parameters, call the {@link GetCheckoutSettings#execute()} method to invoke the remote
+           * operation. <p> {@link GetCheckoutSettings#initialize(com.google.api.client.googleapis.services.
+           * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param name Required. The name/identifier of the merchant account. Format:
+         *        `accounts/{account}/programs/{program}/checkoutSettings`
+           * @since 1.13
+           */
+          protected GetCheckoutSettings(java.lang.String name) {
+            super(Merchant.this, "GET", REST_PATH, null, com.google.api.services.merchantapi.accounts_v1beta.model.CheckoutSettings.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^accounts/[^/]+/programs/[^/]+/checkoutSettings$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public GetCheckoutSettings set$Xgafv(java.lang.String $Xgafv) {
+            return (GetCheckoutSettings) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GetCheckoutSettings setAccessToken(java.lang.String accessToken) {
+            return (GetCheckoutSettings) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GetCheckoutSettings setAlt(java.lang.String alt) {
+            return (GetCheckoutSettings) super.setAlt(alt);
+          }
+
+          @Override
+          public GetCheckoutSettings setCallback(java.lang.String callback) {
+            return (GetCheckoutSettings) super.setCallback(callback);
+          }
+
+          @Override
+          public GetCheckoutSettings setFields(java.lang.String fields) {
+            return (GetCheckoutSettings) super.setFields(fields);
+          }
+
+          @Override
+          public GetCheckoutSettings setKey(java.lang.String key) {
+            return (GetCheckoutSettings) super.setKey(key);
+          }
+
+          @Override
+          public GetCheckoutSettings setOauthToken(java.lang.String oauthToken) {
+            return (GetCheckoutSettings) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GetCheckoutSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GetCheckoutSettings) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GetCheckoutSettings setQuotaUser(java.lang.String quotaUser) {
+            return (GetCheckoutSettings) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GetCheckoutSettings setUploadType(java.lang.String uploadType) {
+            return (GetCheckoutSettings) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GetCheckoutSettings setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GetCheckoutSettings) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name/identifier of the merchant account. Format:
+           * `accounts/{account}/programs/{program}/checkoutSettings`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name/identifier of the merchant account. Format:
+         `accounts/{account}/programs/{program}/checkoutSettings`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name/identifier of the merchant account. Format:
+           * `accounts/{account}/programs/{program}/checkoutSettings`
+           */
+          public GetCheckoutSettings setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^accounts/[^/]+/programs/[^/]+/checkoutSettings$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public GetCheckoutSettings set(String parameterName, Object value) {
+            return (GetCheckoutSettings) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates `CheckoutSettings` for the given merchant.
+         *
+         * Create a request for the method "checkoutSettings.updateCheckoutSettings".
+         *
+         * This request holds the parameters needed by the merchantapi server.  After setting any optional
+         * parameters, call the {@link UpdateCheckoutSettings#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param name Identifier. The resource name of the program configuration settings. Format:
+         *        `accounts/{account}/programs/{program}/checkoutSettings`
+         * @param content the {@link com.google.api.services.merchantapi.accounts_v1beta.model.CheckoutSettings}
+         * @return the request
+         */
+        public UpdateCheckoutSettings updateCheckoutSettings(java.lang.String name, com.google.api.services.merchantapi.accounts_v1beta.model.CheckoutSettings content) throws java.io.IOException {
+          UpdateCheckoutSettings result = new UpdateCheckoutSettings(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class UpdateCheckoutSettings extends MerchantRequest<com.google.api.services.merchantapi.accounts_v1beta.model.CheckoutSettings> {
+
+          private static final String REST_PATH = "accounts/v1beta/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^accounts/[^/]+/programs/[^/]+/checkoutSettings$");
+
+          /**
+           * Updates `CheckoutSettings` for the given merchant.
+           *
+           * Create a request for the method "checkoutSettings.updateCheckoutSettings".
+           *
+           * This request holds the parameters needed by the the merchantapi server.  After setting any
+           * optional parameters, call the {@link UpdateCheckoutSettings#execute()} method to invoke the
+           * remote operation. <p> {@link UpdateCheckoutSettings#initialize(com.google.api.client.googleapis
+           * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+           * after invoking the constructor. </p>
+           *
+           * @param name Identifier. The resource name of the program configuration settings. Format:
+         *        `accounts/{account}/programs/{program}/checkoutSettings`
+           * @param content the {@link com.google.api.services.merchantapi.accounts_v1beta.model.CheckoutSettings}
+           * @since 1.13
+           */
+          protected UpdateCheckoutSettings(java.lang.String name, com.google.api.services.merchantapi.accounts_v1beta.model.CheckoutSettings content) {
+            super(Merchant.this, "PATCH", REST_PATH, content, com.google.api.services.merchantapi.accounts_v1beta.model.CheckoutSettings.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^accounts/[^/]+/programs/[^/]+/checkoutSettings$");
+            }
+          }
+
+          @Override
+          public UpdateCheckoutSettings set$Xgafv(java.lang.String $Xgafv) {
+            return (UpdateCheckoutSettings) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public UpdateCheckoutSettings setAccessToken(java.lang.String accessToken) {
+            return (UpdateCheckoutSettings) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public UpdateCheckoutSettings setAlt(java.lang.String alt) {
+            return (UpdateCheckoutSettings) super.setAlt(alt);
+          }
+
+          @Override
+          public UpdateCheckoutSettings setCallback(java.lang.String callback) {
+            return (UpdateCheckoutSettings) super.setCallback(callback);
+          }
+
+          @Override
+          public UpdateCheckoutSettings setFields(java.lang.String fields) {
+            return (UpdateCheckoutSettings) super.setFields(fields);
+          }
+
+          @Override
+          public UpdateCheckoutSettings setKey(java.lang.String key) {
+            return (UpdateCheckoutSettings) super.setKey(key);
+          }
+
+          @Override
+          public UpdateCheckoutSettings setOauthToken(java.lang.String oauthToken) {
+            return (UpdateCheckoutSettings) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public UpdateCheckoutSettings setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (UpdateCheckoutSettings) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public UpdateCheckoutSettings setQuotaUser(java.lang.String quotaUser) {
+            return (UpdateCheckoutSettings) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public UpdateCheckoutSettings setUploadType(java.lang.String uploadType) {
+            return (UpdateCheckoutSettings) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public UpdateCheckoutSettings setUploadProtocol(java.lang.String uploadProtocol) {
+            return (UpdateCheckoutSettings) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Identifier. The resource name of the program configuration settings. Format:
+           * `accounts/{account}/programs/{program}/checkoutSettings`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Identifier. The resource name of the program configuration settings. Format:
+         `accounts/{account}/programs/{program}/checkoutSettings`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Identifier. The resource name of the program configuration settings. Format:
+           * `accounts/{account}/programs/{program}/checkoutSettings`
+           */
+          public UpdateCheckoutSettings setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^accounts/[^/]+/programs/[^/]+/checkoutSettings$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Required. List of fields being updated. The following fields are supported (in both
+           * `snake_case` and `lowerCamelCase`): - `eligible_destinations` - `uri_settings`
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Required. List of fields being updated. The following fields are supported (in both `snake_case`
+         and `lowerCamelCase`): - `eligible_destinations` - `uri_settings`
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Required. List of fields being updated. The following fields are supported (in both
+           * `snake_case` and `lowerCamelCase`): - `eligible_destinations` - `uri_settings`
+           */
+          public UpdateCheckoutSettings setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public UpdateCheckoutSettings set(String parameterName, Object value) {
+            return (UpdateCheckoutSettings) super.set(parameterName, value);
+          }
+        }
+
+      }
     }
     /**
      * An accessor for creating requests from the Regions collection.

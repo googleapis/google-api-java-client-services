@@ -151,8 +151,6 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   private Price minimumPurchaseAmount;
 
   /**
-   * Optional. [Minimum purchase quantity](https://support.google.com/merchants/answer/13838182?ref_
-   * topic=13773355&sjid=17642868584668136159-NC) for the promotion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -564,8 +562,6 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. [Minimum purchase quantity](https://support.google.com/merchants/answer/13838182?ref_
-   * topic=13773355&sjid=17642868584668136159-NC) for the promotion.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMinimumPurchaseQuantity() {
@@ -573,8 +569,6 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. [Minimum purchase quantity](https://support.google.com/merchants/answer/13838182?ref_
-   * topic=13773355&sjid=17642868584668136159-NC) for the promotion.
    * @param minimumPurchaseQuantity minimumPurchaseQuantity or {@code null} for none
    */
   public Attributes setMinimumPurchaseQuantity(java.lang.Long minimumPurchaseQuantity) {

@@ -56,6 +56,12 @@ public final class GoogleMapsPlacesV1PlaceOpeningHours extends com.google.api.cl
   private java.lang.Boolean openNow;
 
   /**
+   * The periods that this place is open during the week. The periods are in chronological order, in
+   * the place-local timezone. An empty (but not absent) value indicates a place that is never open,
+   * e.g. because it is closed temporarily for renovations. The starting day of `periods` is NOT
+   * fixed and should not be assumed to be Sunday. The API determines the start day based on a
+   * variety of factors. For example, for a 24/7 business, the first period may begin on the day of
+   * the request. For other businesses, it might be the first day of the week that they are open.
    * NOTE: The ordering of the `periods` array is independent of the ordering of the
    * `weekday_descriptions` array. Do not assume they will begin on the same day.
    * The value may be {@code null}.
@@ -154,6 +160,12 @@ public final class GoogleMapsPlacesV1PlaceOpeningHours extends com.google.api.cl
   }
 
   /**
+   * The periods that this place is open during the week. The periods are in chronological order, in
+   * the place-local timezone. An empty (but not absent) value indicates a place that is never open,
+   * e.g. because it is closed temporarily for renovations. The starting day of `periods` is NOT
+   * fixed and should not be assumed to be Sunday. The API determines the start day based on a
+   * variety of factors. For example, for a 24/7 business, the first period may begin on the day of
+   * the request. For other businesses, it might be the first day of the week that they are open.
    * NOTE: The ordering of the `periods` array is independent of the ordering of the
    * `weekday_descriptions` array. Do not assume they will begin on the same day.
    * @return value or {@code null} for none
@@ -163,6 +175,12 @@ public final class GoogleMapsPlacesV1PlaceOpeningHours extends com.google.api.cl
   }
 
   /**
+   * The periods that this place is open during the week. The periods are in chronological order, in
+   * the place-local timezone. An empty (but not absent) value indicates a place that is never open,
+   * e.g. because it is closed temporarily for renovations. The starting day of `periods` is NOT
+   * fixed and should not be assumed to be Sunday. The API determines the start day based on a
+   * variety of factors. For example, for a 24/7 business, the first period may begin on the day of
+   * the request. For other businesses, it might be the first day of the week that they are open.
    * NOTE: The ordering of the `periods` array is independent of the ordering of the
    * `weekday_descriptions` array. Do not assume they will begin on the same day.
    * @param periods periods or {@code null} for none

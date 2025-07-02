@@ -362,10 +362,12 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   private GoogleMapsPlacesV1PriceRange priceRange;
 
   /**
-   * The primary type of the given result. This type must one of the Places API supported types. For
-   * example, "restaurant", "cafe", "airport", etc. A place can only have a single primary type. For
-   * the complete list of possible values, see Table A and Table B at
-   * https://developers.google.com/maps/documentation/places/web-service/place-types
+   * The primary type of the given result. This type must be one of the Places API supported types.
+   * For example, "restaurant", "cafe", "airport", etc. A place can only have a single primary type.
+   * For the complete list of possible values, see Table A and Table B at
+   * https://developers.google.com/maps/documentation/places/web-service/place-types. The primary
+   * type may be missing if the place's primary type is not a supported type. When a primary type is
+   * present, it is always one of the types in the `types` field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -374,7 +376,8 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   /**
    * The display name of the primary type, localized to the request language if applicable. For the
    * complete list of possible values, see Table A and Table B at
-   * https://developers.google.com/maps/documentation/places/web-service/place-types
+   * https://developers.google.com/maps/documentation/places/web-service/place-types. The primary
+   * type may be missing if the place's primary type is not a supported type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1374,10 +1377,12 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * The primary type of the given result. This type must one of the Places API supported types. For
-   * example, "restaurant", "cafe", "airport", etc. A place can only have a single primary type. For
-   * the complete list of possible values, see Table A and Table B at
-   * https://developers.google.com/maps/documentation/places/web-service/place-types
+   * The primary type of the given result. This type must be one of the Places API supported types.
+   * For example, "restaurant", "cafe", "airport", etc. A place can only have a single primary type.
+   * For the complete list of possible values, see Table A and Table B at
+   * https://developers.google.com/maps/documentation/places/web-service/place-types. The primary
+   * type may be missing if the place's primary type is not a supported type. When a primary type is
+   * present, it is always one of the types in the `types` field.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrimaryType() {
@@ -1385,10 +1390,12 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   }
 
   /**
-   * The primary type of the given result. This type must one of the Places API supported types. For
-   * example, "restaurant", "cafe", "airport", etc. A place can only have a single primary type. For
-   * the complete list of possible values, see Table A and Table B at
-   * https://developers.google.com/maps/documentation/places/web-service/place-types
+   * The primary type of the given result. This type must be one of the Places API supported types.
+   * For example, "restaurant", "cafe", "airport", etc. A place can only have a single primary type.
+   * For the complete list of possible values, see Table A and Table B at
+   * https://developers.google.com/maps/documentation/places/web-service/place-types. The primary
+   * type may be missing if the place's primary type is not a supported type. When a primary type is
+   * present, it is always one of the types in the `types` field.
    * @param primaryType primaryType or {@code null} for none
    */
   public GoogleMapsPlacesV1Place setPrimaryType(java.lang.String primaryType) {
@@ -1399,7 +1406,8 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   /**
    * The display name of the primary type, localized to the request language if applicable. For the
    * complete list of possible values, see Table A and Table B at
-   * https://developers.google.com/maps/documentation/places/web-service/place-types
+   * https://developers.google.com/maps/documentation/places/web-service/place-types. The primary
+   * type may be missing if the place's primary type is not a supported type.
    * @return value or {@code null} for none
    */
   public GoogleTypeLocalizedText getPrimaryTypeDisplayName() {
@@ -1409,7 +1417,8 @@ public final class GoogleMapsPlacesV1Place extends com.google.api.client.json.Ge
   /**
    * The display name of the primary type, localized to the request language if applicable. For the
    * complete list of possible values, see Table A and Table B at
-   * https://developers.google.com/maps/documentation/places/web-service/place-types
+   * https://developers.google.com/maps/documentation/places/web-service/place-types. The primary
+   * type may be missing if the place's primary type is not a supported type.
    * @param primaryTypeDisplayName primaryTypeDisplayName or {@code null} for none
    */
   public GoogleMapsPlacesV1Place setPrimaryTypeDisplayName(GoogleTypeLocalizedText primaryTypeDisplayName) {

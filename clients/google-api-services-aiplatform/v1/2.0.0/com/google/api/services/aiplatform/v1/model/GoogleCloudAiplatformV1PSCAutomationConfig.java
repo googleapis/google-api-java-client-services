@@ -17,7 +17,7 @@
 package com.google.api.services.aiplatform.v1.model;
 
 /**
- * PSC config that is used to automatically create forwarding rule via ServiceConnectionMap.
+ * PSC config that is used to automatically create PSC endpoints in the user projects.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -53,9 +53,8 @@ public final class GoogleCloudAiplatformV1PSCAutomationConfig extends com.google
   /**
    * Required. The full name of the Google Compute Engine
    * [network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks).
-   * [Format](https://cloud.google.com/compute/docs/reference/rest/v1/networks/insert):
-   * `projects/{project}/global/networks/{network}`. Where {project} is a project number, as in
-   * '12345', and {network} is network name.
+   * [Format](https://cloud.google.com/compute/docs/reference/rest/v1/networks/get):
+   * `projects/{project}/global/networks/{network}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -129,9 +128,8 @@ public final class GoogleCloudAiplatformV1PSCAutomationConfig extends com.google
   /**
    * Required. The full name of the Google Compute Engine
    * [network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks).
-   * [Format](https://cloud.google.com/compute/docs/reference/rest/v1/networks/insert):
-   * `projects/{project}/global/networks/{network}`. Where {project} is a project number, as in
-   * '12345', and {network} is network name.
+   * [Format](https://cloud.google.com/compute/docs/reference/rest/v1/networks/get):
+   * `projects/{project}/global/networks/{network}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getNetwork() {
@@ -141,9 +139,8 @@ public final class GoogleCloudAiplatformV1PSCAutomationConfig extends com.google
   /**
    * Required. The full name of the Google Compute Engine
    * [network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks).
-   * [Format](https://cloud.google.com/compute/docs/reference/rest/v1/networks/insert):
-   * `projects/{project}/global/networks/{network}`. Where {project} is a project number, as in
-   * '12345', and {network} is network name.
+   * [Format](https://cloud.google.com/compute/docs/reference/rest/v1/networks/get):
+   * `projects/{project}/global/networks/{network}`.
    * @param network network or {@code null} for none
    */
   public GoogleCloudAiplatformV1PSCAutomationConfig setNetwork(java.lang.String network) {

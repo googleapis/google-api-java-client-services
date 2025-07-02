@@ -31,6 +31,13 @@ package com.google.api.services.retail.v2beta.model;
 public final class GoogleCloudRetailV2betaIntentClassificationConfigExample extends com.google.api.client.json.GenericJson {
 
   /**
+   * Required. Whether the example is classified positively.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean classifiedPositive;
+
+  /**
    * Optional. The intent_type must match one of the predefined intent types defined at
    * https://cloud.google.com/retail/docs/reference/rpc/google.cloud.retail.v2alpha#querytype
    * The value may be {@code null}.
@@ -52,6 +59,23 @@ public final class GoogleCloudRetailV2betaIntentClassificationConfigExample exte
    */
   @com.google.api.client.util.Key
   private java.lang.String reason;
+
+  /**
+   * Required. Whether the example is classified positively.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getClassifiedPositive() {
+    return classifiedPositive;
+  }
+
+  /**
+   * Required. Whether the example is classified positively.
+   * @param classifiedPositive classifiedPositive or {@code null} for none
+   */
+  public GoogleCloudRetailV2betaIntentClassificationConfigExample setClassifiedPositive(java.lang.Boolean classifiedPositive) {
+    this.classifiedPositive = classifiedPositive;
+    return this;
+  }
 
   /**
    * Optional. The intent_type must match one of the predefined intent types defined at

@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-iam</artifactId>
-  <version>v1-rev20250619-2.0.0</version>
-  <name>Identity and Access Management (IAM) API v1-rev20250619-2.0.0</name>
+  <version>v1-rev20250627-2.0.0</version>
+  <name>Identity and Access Management (IAM) API v1-rev20250627-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

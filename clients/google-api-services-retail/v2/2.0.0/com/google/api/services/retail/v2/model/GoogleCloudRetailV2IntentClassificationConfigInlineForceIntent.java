@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.retail.v2alpha.model;
+package com.google.api.services.retail.v2.model;
 
 /**
- * An example for intent classification.
+ * An inline force intent classification configuration.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI Search for commerce API. For a detailed
@@ -28,14 +28,7 @@ package com.google.api.services.retail.v2alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudRetailV2alphaIntentClassificationConfigExample extends com.google.api.client.json.GenericJson {
-
-  /**
-   * Required. Whether the example is classified positively.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean classifiedPositive;
+public final class GoogleCloudRetailV2IntentClassificationConfigInlineForceIntent extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The intent_type must match one of the predefined intent types defined at
@@ -46,36 +39,18 @@ public final class GoogleCloudRetailV2alphaIntentClassificationConfigExample ext
   private java.lang.String intentType;
 
   /**
-   * Required. Example query.
+   * Optional. The operation to perform for the query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String operation;
+
+  /**
+   * Optional. A example query.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String query;
-
-  /**
-   * Optional. The reason for the intent classification. This is used to explain the intent
-   * classification decision.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String reason;
-
-  /**
-   * Required. Whether the example is classified positively.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getClassifiedPositive() {
-    return classifiedPositive;
-  }
-
-  /**
-   * Required. Whether the example is classified positively.
-   * @param classifiedPositive classifiedPositive or {@code null} for none
-   */
-  public GoogleCloudRetailV2alphaIntentClassificationConfigExample setClassifiedPositive(java.lang.Boolean classifiedPositive) {
-    this.classifiedPositive = classifiedPositive;
-    return this;
-  }
 
   /**
    * Optional. The intent_type must match one of the predefined intent types defined at
@@ -91,13 +66,30 @@ public final class GoogleCloudRetailV2alphaIntentClassificationConfigExample ext
    * https://cloud.google.com/retail/docs/reference/rpc/google.cloud.retail.v2alpha#querytype
    * @param intentType intentType or {@code null} for none
    */
-  public GoogleCloudRetailV2alphaIntentClassificationConfigExample setIntentType(java.lang.String intentType) {
+  public GoogleCloudRetailV2IntentClassificationConfigInlineForceIntent setIntentType(java.lang.String intentType) {
     this.intentType = intentType;
     return this;
   }
 
   /**
-   * Required. Example query.
+   * Optional. The operation to perform for the query.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOperation() {
+    return operation;
+  }
+
+  /**
+   * Optional. The operation to perform for the query.
+   * @param operation operation or {@code null} for none
+   */
+  public GoogleCloudRetailV2IntentClassificationConfigInlineForceIntent setOperation(java.lang.String operation) {
+    this.operation = operation;
+    return this;
+  }
+
+  /**
+   * Optional. A example query.
    * @return value or {@code null} for none
    */
   public java.lang.String getQuery() {
@@ -105,41 +97,22 @@ public final class GoogleCloudRetailV2alphaIntentClassificationConfigExample ext
   }
 
   /**
-   * Required. Example query.
+   * Optional. A example query.
    * @param query query or {@code null} for none
    */
-  public GoogleCloudRetailV2alphaIntentClassificationConfigExample setQuery(java.lang.String query) {
+  public GoogleCloudRetailV2IntentClassificationConfigInlineForceIntent setQuery(java.lang.String query) {
     this.query = query;
     return this;
   }
 
-  /**
-   * Optional. The reason for the intent classification. This is used to explain the intent
-   * classification decision.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getReason() {
-    return reason;
-  }
-
-  /**
-   * Optional. The reason for the intent classification. This is used to explain the intent
-   * classification decision.
-   * @param reason reason or {@code null} for none
-   */
-  public GoogleCloudRetailV2alphaIntentClassificationConfigExample setReason(java.lang.String reason) {
-    this.reason = reason;
-    return this;
+  @Override
+  public GoogleCloudRetailV2IntentClassificationConfigInlineForceIntent set(String fieldName, Object value) {
+    return (GoogleCloudRetailV2IntentClassificationConfigInlineForceIntent) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudRetailV2alphaIntentClassificationConfigExample set(String fieldName, Object value) {
-    return (GoogleCloudRetailV2alphaIntentClassificationConfigExample) super.set(fieldName, value);
-  }
-
-  @Override
-  public GoogleCloudRetailV2alphaIntentClassificationConfigExample clone() {
-    return (GoogleCloudRetailV2alphaIntentClassificationConfigExample) super.clone();
+  public GoogleCloudRetailV2IntentClassificationConfigInlineForceIntent clone() {
+    return (GoogleCloudRetailV2IntentClassificationConfigInlineForceIntent) super.clone();
   }
 
 }

@@ -16642,6 +16642,180 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
     }
     /**
+     * An accessor for creating requests from the Productsv2 collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code AndroidPublisher androidpublisher = new AndroidPublisher(...);}
+     *   {@code AndroidPublisher.Productsv2.List request = androidpublisher.productsv2().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Productsv2 productsv2() {
+      return new Productsv2();
+    }
+
+    /**
+     * The "productsv2" collection of methods.
+     */
+    public class Productsv2 {
+
+      /**
+       * Checks the purchase and consumption status of an inapp item.
+       *
+       * Create a request for the method "productsv2.getproductpurchasev2".
+       *
+       * This request holds the parameters needed by the androidpublisher server.  After setting any
+       * optional parameters, call the {@link Getproductpurchasev2#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param packageName The package name of the application the inapp product was sold in (for example, 'com.some.thing').
+       * @param token The token provided to the user's device when the inapp product was purchased.
+       * @return the request
+       */
+      public Getproductpurchasev2 getproductpurchasev2(java.lang.String packageName, java.lang.String token) throws java.io.IOException {
+        Getproductpurchasev2 result = new Getproductpurchasev2(packageName, token);
+        initialize(result);
+        return result;
+      }
+
+      public class Getproductpurchasev2 extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.ProductPurchaseV2> {
+
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/purchases/productsv2/tokens/{token}";
+
+        /**
+         * Checks the purchase and consumption status of an inapp item.
+         *
+         * Create a request for the method "productsv2.getproductpurchasev2".
+         *
+         * This request holds the parameters needed by the the androidpublisher server.  After setting any
+         * optional parameters, call the {@link Getproductpurchasev2#execute()} method to invoke the
+         * remote operation. <p> {@link Getproductpurchasev2#initialize(com.google.api.client.googleapis.s
+         * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+         * after invoking the constructor. </p>
+         *
+         * @param packageName The package name of the application the inapp product was sold in (for example, 'com.some.thing').
+         * @param token The token provided to the user's device when the inapp product was purchased.
+         * @since 1.13
+         */
+        protected Getproductpurchasev2(java.lang.String packageName, java.lang.String token) {
+          super(AndroidPublisher.this, "GET", REST_PATH, null, com.google.api.services.androidpublisher.model.ProductPurchaseV2.class);
+          this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+          this.token = com.google.api.client.util.Preconditions.checkNotNull(token, "Required parameter token must be specified.");
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Getproductpurchasev2 set$Xgafv(java.lang.String $Xgafv) {
+          return (Getproductpurchasev2) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Getproductpurchasev2 setAccessToken(java.lang.String accessToken) {
+          return (Getproductpurchasev2) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Getproductpurchasev2 setAlt(java.lang.String alt) {
+          return (Getproductpurchasev2) super.setAlt(alt);
+        }
+
+        @Override
+        public Getproductpurchasev2 setCallback(java.lang.String callback) {
+          return (Getproductpurchasev2) super.setCallback(callback);
+        }
+
+        @Override
+        public Getproductpurchasev2 setFields(java.lang.String fields) {
+          return (Getproductpurchasev2) super.setFields(fields);
+        }
+
+        @Override
+        public Getproductpurchasev2 setKey(java.lang.String key) {
+          return (Getproductpurchasev2) super.setKey(key);
+        }
+
+        @Override
+        public Getproductpurchasev2 setOauthToken(java.lang.String oauthToken) {
+          return (Getproductpurchasev2) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Getproductpurchasev2 setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Getproductpurchasev2) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Getproductpurchasev2 setQuotaUser(java.lang.String quotaUser) {
+          return (Getproductpurchasev2) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Getproductpurchasev2 setUploadType(java.lang.String uploadType) {
+          return (Getproductpurchasev2) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Getproductpurchasev2 setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Getproductpurchasev2) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * The package name of the application the inapp product was sold in (for example,
+         * 'com.some.thing').
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String packageName;
+
+        /** The package name of the application the inapp product was sold in (for example, 'com.some.thing').
+         */
+        public java.lang.String getPackageName() {
+          return packageName;
+        }
+
+        /**
+         * The package name of the application the inapp product was sold in (for example,
+         * 'com.some.thing').
+         */
+        public Getproductpurchasev2 setPackageName(java.lang.String packageName) {
+          this.packageName = packageName;
+          return this;
+        }
+
+        /** The token provided to the user's device when the inapp product was purchased. */
+        @com.google.api.client.util.Key
+        private java.lang.String token;
+
+        /** The token provided to the user's device when the inapp product was purchased.
+         */
+        public java.lang.String getToken() {
+          return token;
+        }
+
+        /** The token provided to the user's device when the inapp product was purchased. */
+        public Getproductpurchasev2 setToken(java.lang.String token) {
+          this.token = token;
+          return this;
+        }
+
+        @Override
+        public Getproductpurchasev2 set(String parameterName, Object value) {
+          return (Getproductpurchasev2) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
      * An accessor for creating requests from the Subscriptions collection.
      *
      * <p>The typical use is:</p>

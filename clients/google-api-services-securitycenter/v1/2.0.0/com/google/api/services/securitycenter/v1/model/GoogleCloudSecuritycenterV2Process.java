@@ -116,6 +116,14 @@ public final class GoogleCloudSecuritycenterV2Process extends com.google.api.cli
   private GoogleCloudSecuritycenterV2File script;
 
   /**
+   * The ID of the user that executed the process. E.g. If this is the root user this will always be
+   * 0.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long userId;
+
+  /**
    * Process arguments as JSON encoded strings.
    * @return value or {@code null} for none
    */
@@ -288,6 +296,25 @@ public final class GoogleCloudSecuritycenterV2Process extends com.google.api.cli
    */
   public GoogleCloudSecuritycenterV2Process setScript(GoogleCloudSecuritycenterV2File script) {
     this.script = script;
+    return this;
+  }
+
+  /**
+   * The ID of the user that executed the process. E.g. If this is the root user this will always be
+   * 0.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getUserId() {
+    return userId;
+  }
+
+  /**
+   * The ID of the user that executed the process. E.g. If this is the root user this will always be
+   * 0.
+   * @param userId userId or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2Process setUserId(java.lang.Long userId) {
+    this.userId = userId;
     return this;
   }
 

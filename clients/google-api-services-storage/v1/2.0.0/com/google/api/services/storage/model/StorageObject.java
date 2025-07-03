@@ -90,6 +90,15 @@ public final class StorageObject extends com.google.api.client.json.GenericJson 
   private java.lang.String contentType;
 
   /**
+   * User-defined or system-defined object contexts. Each object context is a key-payload pair,
+   * where the key provides the identification and the payload holds the associated value and
+   * additional metadata.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Contexts contexts;
+
+  /**
    * CRC32c checksum, as described in RFC 4960, Appendix B; encoded using base64 in big-endian byte
    * order. For more information about using the CRC32c checksum, see [Data Validation and Change
    * Detection](https://cloud.google.com/storage/docs/data-validation).
@@ -460,6 +469,27 @@ public final class StorageObject extends com.google.api.client.json.GenericJson 
    */
   public StorageObject setContentType(java.lang.String contentType) {
     this.contentType = contentType;
+    return this;
+  }
+
+  /**
+   * User-defined or system-defined object contexts. Each object context is a key-payload pair,
+   * where the key provides the identification and the payload holds the associated value and
+   * additional metadata.
+   * @return value or {@code null} for none
+   */
+  public Contexts getContexts() {
+    return contexts;
+  }
+
+  /**
+   * User-defined or system-defined object contexts. Each object context is a key-payload pair,
+   * where the key provides the identification and the payload holds the associated value and
+   * additional metadata.
+   * @param contexts contexts or {@code null} for none
+   */
+  public StorageObject setContexts(Contexts contexts) {
+    this.contexts = contexts;
     return this;
   }
 
@@ -1022,6 +1052,49 @@ public final class StorageObject extends com.google.api.client.json.GenericJson 
   @Override
   public StorageObject clone() {
     return (StorageObject) super.clone();
+  }
+
+  /**
+   * User-defined or system-defined object contexts. Each object context is a key-payload pair, where
+   * the key provides the identification and the payload holds the associated value and additional
+   * metadata.
+   */
+  public static final class Contexts extends com.google.api.client.json.GenericJson {
+
+    /**
+     * User-defined object contexts.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.util.Map<String, ObjectCustomContextPayload> custom;
+
+    /**
+     * User-defined object contexts.
+     * @return value or {@code null} for none
+     */
+    public java.util.Map<String, ObjectCustomContextPayload> getCustom() {
+      return custom;
+    }
+
+    /**
+     * User-defined object contexts.
+     * @param custom custom or {@code null} for none
+     */
+    public Contexts setCustom(java.util.Map<String, ObjectCustomContextPayload> custom) {
+      this.custom = custom;
+      return this;
+    }
+
+    @Override
+    public Contexts set(String fieldName, Object value) {
+      return (Contexts) super.set(fieldName, value);
+    }
+
+    @Override
+    public Contexts clone() {
+      return (Contexts) super.clone();
+    }
+
   }
 
   /**

@@ -11126,6 +11126,29 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       }
 
       /**
+       * Filter the returned objects. Currently only supported for the contexts field. If delimiter
+       * is set, the returned prefixes are exempt from this filter.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String filter;
+
+      /** Filter the returned objects. Currently only supported for the contexts field. If delimiter is set,
+     the returned prefixes are exempt from this filter.
+       */
+      public java.lang.String getFilter() {
+        return filter;
+      }
+
+      /**
+       * Filter the returned objects. Currently only supported for the contexts field. If delimiter
+       * is set, the returned prefixes are exempt from this filter.
+       */
+      public List setFilter(java.lang.String filter) {
+        this.filter = filter;
+        return this;
+      }
+
+      /**
        * Only applicable if delimiter is set to '/'. If true, will also include folders and managed
        * folders (besides objects) in the returned prefixes.
        */

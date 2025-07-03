@@ -1148,8 +1148,8 @@ public class WorkspaceEvents extends com.google.api.client.googleapis.services.j
        * can update one of the following fields in a subscription: * `expire_time`: The timestamp
        * when the subscription expires. * `ttl`: The time-to-live (TTL) or duration of the
        * subscription. * `event_types`: The list of event types to receive about the target
-       * resource. To fully replace the subscription (the equivalent of `PUT`), use `*`. Any omitted
-       * fields are updated with empty values.
+       * resource. When using the `*` wildcard (equivalent to `PUT`), omitted fields are set to
+       * empty values and rejected if they're invalid.
        */
       @com.google.api.client.util.Key
       private String updateMask;
@@ -1157,8 +1157,9 @@ public class WorkspaceEvents extends com.google.api.client.googleapis.services.j
       /** Optional. The field to update. If omitted, updates any fields included in the request. You can
      update one of the following fields in a subscription: * `expire_time`: The timestamp when the
      subscription expires. * `ttl`: The time-to-live (TTL) or duration of the subscription. *
-     `event_types`: The list of event types to receive about the target resource. To fully replace the
-     subscription (the equivalent of `PUT`), use `*`. Any omitted fields are updated with empty values.
+     `event_types`: The list of event types to receive about the target resource. When using the `*`
+     wildcard (equivalent to `PUT`), omitted fields are set to empty values and rejected if they're
+     invalid.
        */
       public String getUpdateMask() {
         return updateMask;
@@ -1169,8 +1170,8 @@ public class WorkspaceEvents extends com.google.api.client.googleapis.services.j
        * can update one of the following fields in a subscription: * `expire_time`: The timestamp
        * when the subscription expires. * `ttl`: The time-to-live (TTL) or duration of the
        * subscription. * `event_types`: The list of event types to receive about the target
-       * resource. To fully replace the subscription (the equivalent of `PUT`), use `*`. Any omitted
-       * fields are updated with empty values.
+       * resource. When using the `*` wildcard (equivalent to `PUT`), omitted fields are set to
+       * empty values and rejected if they're invalid.
        */
       public Patch setUpdateMask(String updateMask) {
         this.updateMask = updateMask;

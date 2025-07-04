@@ -37,7 +37,7 @@ public final class GoogleCloudContactcenterinsightsV1AuthorizedView extends com.
    * permission (read/write) could be applied to the subset of conversations. If conversation_filter
    * is empty, there is no restriction on the conversations that the AuthorizedView can access.
    * Having *authorizedViews.get* access to the AuthorizedView means having the same read/write
-   * access to the Conversations (as well as metadata/annotations liked to the conversation) that
+   * access to the Conversations (as well as metadata/annotations linked to the conversation) that
    * this AuthorizedView has.
    * The value may be {@code null}.
    */
@@ -78,7 +78,7 @@ public final class GoogleCloudContactcenterinsightsV1AuthorizedView extends com.
    * permission (read/write) could be applied to the subset of conversations. If conversation_filter
    * is empty, there is no restriction on the conversations that the AuthorizedView can access.
    * Having *authorizedViews.get* access to the AuthorizedView means having the same read/write
-   * access to the Conversations (as well as metadata/annotations liked to the conversation) that
+   * access to the Conversations (as well as metadata/annotations linked to the conversation) that
    * this AuthorizedView has.
    * @return value or {@code null} for none
    */
@@ -91,7 +91,7 @@ public final class GoogleCloudContactcenterinsightsV1AuthorizedView extends com.
    * permission (read/write) could be applied to the subset of conversations. If conversation_filter
    * is empty, there is no restriction on the conversations that the AuthorizedView can access.
    * Having *authorizedViews.get* access to the AuthorizedView means having the same read/write
-   * access to the Conversations (as well as metadata/annotations liked to the conversation) that
+   * access to the Conversations (as well as metadata/annotations linked to the conversation) that
    * this AuthorizedView has.
    * @param conversationFilter conversationFilter or {@code null} for none
    */

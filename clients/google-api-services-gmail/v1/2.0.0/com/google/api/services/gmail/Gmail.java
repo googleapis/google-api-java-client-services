@@ -4056,7 +4056,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         }
       }
       /**
-       * Lists the messages in the user's mailbox.
+       * Lists the messages in the user's mailbox. For example usage, see [List Gmail
+       * messages](https://developers.google.com/workspace/gmail/api/guides/list-messages).
        *
        * Create a request for the method "messages.list".
        *
@@ -4078,7 +4079,8 @@ public class Gmail extends com.google.api.client.googleapis.services.json.Abstra
         private static final String REST_PATH = "gmail/v1/users/{userId}/messages";
 
         /**
-         * Lists the messages in the user's mailbox.
+         * Lists the messages in the user's mailbox. For example usage, see [List Gmail
+         * messages](https://developers.google.com/workspace/gmail/api/guides/list-messages).
          *
          * Create a request for the method "messages.list".
          *

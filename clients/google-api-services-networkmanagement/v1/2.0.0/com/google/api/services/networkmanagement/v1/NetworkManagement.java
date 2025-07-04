@@ -3800,7 +3800,7 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
         /**
          * Creates a new `VpcFlowLogsConfig`. If a configuration with the exact same settings already exists
          * (even if the ID is different), the creation fails. Notes: 1. Creating a configuration with
-         * state=DISABLED will fail 2. The following fields are not considered as `settings` for the purpose
+         * `state=DISABLED` will fail 2. The following fields are not considered as settings for the purpose
          * of the check mentioned above, therefore - creating another configuration with the same fields but
          * different values for the following fields will fail as well: * name * create_time * update_time *
          * labels * description
@@ -3810,9 +3810,9 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
          * This request holds the parameters needed by the networkmanagement server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource of the VPC Flow Logs configuration to create:
-         *        `projects/{project_id}/locations/global`
-         *        `organizations/{organization_id}/locations/global`
+         * @param parent Required. The parent resource of the VpcFlowLogsConfig to create, in one of the following formats: -
+         *        For project-level resources: `projects/{project_id}/locations/global` - For organization-
+         *        level resources: `organizations/{organization_id}/locations/global`
          * @param content the {@link com.google.api.services.networkmanagement.v1.model.VpcFlowLogsConfig}
          * @return the request
          */
@@ -3832,7 +3832,7 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
           /**
            * Creates a new `VpcFlowLogsConfig`. If a configuration with the exact same settings already
            * exists (even if the ID is different), the creation fails. Notes: 1. Creating a configuration
-           * with state=DISABLED will fail 2. The following fields are not considered as `settings` for the
+           * with `state=DISABLED` will fail 2. The following fields are not considered as settings for the
            * purpose of the check mentioned above, therefore - creating another configuration with the same
            * fields but different values for the following fields will fail as well: * name * create_time *
            * update_time * labels * description
@@ -3845,9 +3845,9 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource of the VPC Flow Logs configuration to create:
-         *        `projects/{project_id}/locations/global`
-         *        `organizations/{organization_id}/locations/global`
+           * @param parent Required. The parent resource of the VpcFlowLogsConfig to create, in one of the following formats: -
+         *        For project-level resources: `projects/{project_id}/locations/global` - For organization-
+         *        level resources: `organizations/{organization_id}/locations/global`
            * @param content the {@link com.google.api.services.networkmanagement.v1.model.VpcFlowLogsConfig}
            * @since 1.13
            */
@@ -3917,23 +3917,26 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
           }
 
           /**
-           * Required. The parent resource of the VPC Flow Logs configuration to create:
-           * `projects/{project_id}/locations/global`
+           * Required. The parent resource of the VpcFlowLogsConfig to create, in one of the
+           * following formats: - For project-level resources:
+           * `projects/{project_id}/locations/global` - For organization-level resources:
            * `organizations/{organization_id}/locations/global`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource of the VPC Flow Logs configuration to create:
-         `projects/{project_id}/locations/global` `organizations/{organization_id}/locations/global`
+          /** Required. The parent resource of the VpcFlowLogsConfig to create, in one of the following formats:
+         - For project-level resources: `projects/{project_id}/locations/global` - For organization-level
+         resources: `organizations/{organization_id}/locations/global`
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The parent resource of the VPC Flow Logs configuration to create:
-           * `projects/{project_id}/locations/global`
+           * Required. The parent resource of the VpcFlowLogsConfig to create, in one of the
+           * following formats: - For project-level resources:
+           * `projects/{project_id}/locations/global` - For organization-level resources:
            * `organizations/{organization_id}/locations/global`
            */
           public Create setParent(java.lang.String parent) {
@@ -3975,9 +3978,11 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
          * This request holds the parameters needed by the networkmanagement server.  After setting any
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. `VpcFlowLogsConfig` resource name using one of the form:
-         *        `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config} `organiz
-         *        ations/{organization_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config}`
+         * @param name Required. The resource name of the VpcFlowLogsConfig, in one of the following formats: - For a
+         *        project-level resource:
+         *        `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}` -
+         *        For an organization-level resource: `organizations/{organization_id}/locations/global/vpcF
+         *        lowLogsConfigs/{vpc_flow_logs_config_id}`
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -4004,9 +4009,11 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. `VpcFlowLogsConfig` resource name using one of the form:
-         *        `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config} `organiz
-         *        ations/{organization_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config}`
+           * @param name Required. The resource name of the VpcFlowLogsConfig, in one of the following formats: - For a
+         *        project-level resource:
+         *        `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}` -
+         *        For an organization-level resource: `organizations/{organization_id}/locations/global/vpcF
+         *        lowLogsConfigs/{vpc_flow_logs_config_id}`
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -4075,25 +4082,31 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
           }
 
           /**
-           * Required. `VpcFlowLogsConfig` resource name using one of the form:
-           * `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config} `orga
-           * nizations/{organization_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config}`
+           * Required. The resource name of the VpcFlowLogsConfig, in one of the following formats:
+           * - For a project-level resource:
+           * `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}` -
+           * For an organization-level resource: `organizations/{organization_id}/locations/global/v
+           * pcFlowLogsConfigs/{vpc_flow_logs_config_id}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. `VpcFlowLogsConfig` resource name using one of the form:
-         `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config}
-         `organizations/{organization_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config}`
+          /** Required. The resource name of the VpcFlowLogsConfig, in one of the following formats: - For a
+         project-level resource:
+         `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}` - For an
+         organization-level resource:
+         `organizations/{organization_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. `VpcFlowLogsConfig` resource name using one of the form:
-           * `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config} `orga
-           * nizations/{organization_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config}`
+           * Required. The resource name of the VpcFlowLogsConfig, in one of the following formats:
+           * - For a project-level resource:
+           * `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}` -
+           * For an organization-level resource: `organizations/{organization_id}/locations/global/v
+           * pcFlowLogsConfigs/{vpc_flow_logs_config_id}`
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -4118,9 +4131,11 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
          * This request holds the parameters needed by the networkmanagement server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. `VpcFlowLogsConfig` resource name using the form:
-         *        `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config}` `organi
-         *        zations/{organization_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config}`
+         * @param name Required. The resource name of the VpcFlowLogsConfig, in one of the following formats: - For
+         *        project-level resources:
+         *        `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}` -
+         *        For organization-level resources: `organizations/{organization_id}/locations/global/vpcFlo
+         *        wLogsConfigs/{vpc_flow_logs_config_id}`
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -4147,9 +4162,11 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. `VpcFlowLogsConfig` resource name using the form:
-         *        `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config}` `organi
-         *        zations/{organization_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config}`
+           * @param name Required. The resource name of the VpcFlowLogsConfig, in one of the following formats: - For
+         *        project-level resources:
+         *        `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}` -
+         *        For organization-level resources: `organizations/{organization_id}/locations/global/vpcFlo
+         *        wLogsConfigs/{vpc_flow_logs_config_id}`
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -4228,27 +4245,31 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
           }
 
           /**
-           * Required. `VpcFlowLogsConfig` resource name using the form:
-           * `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config}` `org
-           * anizations/{organization_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config}
-           * `
+           * Required. The resource name of the VpcFlowLogsConfig, in one of the following formats:
+           * - For project-level resources:
+           * `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}` -
+           * For organization-level resources: `organizations/{organization_id}/locations/global/vpc
+           * FlowLogsConfigs/{vpc_flow_logs_config_id}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. `VpcFlowLogsConfig` resource name using the form:
-         `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config}`
-         `organizations/{organization_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config}`
+          /** Required. The resource name of the VpcFlowLogsConfig, in one of the following formats: - For
+         project-level resources:
+         `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}` - For
+         organization-level resources:
+         `organizations/{organization_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. `VpcFlowLogsConfig` resource name using the form:
-           * `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config}` `org
-           * anizations/{organization_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config}
-           * `
+           * Required. The resource name of the VpcFlowLogsConfig, in one of the following formats:
+           * - For project-level resources:
+           * `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}` -
+           * For organization-level resources: `organizations/{organization_id}/locations/global/vpc
+           * FlowLogsConfigs/{vpc_flow_logs_config_id}`
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -4273,8 +4294,9 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
          * This request holds the parameters needed by the networkmanagement server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource of the VpcFlowLogsConfig: `projects/{project_id}/locations/global`
-         *        `organizations/{organization_id}/locations/global`
+         * @param parent Required. The parent resource of the VpcFlowLogsConfig, in one of the following formats: - For
+         *        project-level resourcs: `projects/{project_id}/locations/global` - For organization-level
+         *        resources: `organizations/{organization_id}/locations/global`
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -4301,8 +4323,9 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource of the VpcFlowLogsConfig: `projects/{project_id}/locations/global`
-         *        `organizations/{organization_id}/locations/global`
+           * @param parent Required. The parent resource of the VpcFlowLogsConfig, in one of the following formats: - For
+         *        project-level resourcs: `projects/{project_id}/locations/global` - For organization-level
+         *        resources: `organizations/{organization_id}/locations/global`
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -4381,24 +4404,25 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
           }
 
           /**
-           * Required. The parent resource of the VpcFlowLogsConfig:
-           * `projects/{project_id}/locations/global`
-           * `organizations/{organization_id}/locations/global`
+           * Required. The parent resource of the VpcFlowLogsConfig, in one of the following
+           * formats: - For project-level resourcs: `projects/{project_id}/locations/global` - For
+           * organization-level resources: `organizations/{organization_id}/locations/global`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource of the VpcFlowLogsConfig: `projects/{project_id}/locations/global`
-         `organizations/{organization_id}/locations/global`
+          /** Required. The parent resource of the VpcFlowLogsConfig, in one of the following formats: - For
+         project-level resourcs: `projects/{project_id}/locations/global` - For organization-level
+         resources: `organizations/{organization_id}/locations/global`
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The parent resource of the VpcFlowLogsConfig:
-           * `projects/{project_id}/locations/global`
-           * `organizations/{organization_id}/locations/global`
+           * Required. The parent resource of the VpcFlowLogsConfig, in one of the following
+           * formats: - For project-level resourcs: `projects/{project_id}/locations/global` - For
+           * organization-level resources: `organizations/{organization_id}/locations/global`
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -4494,7 +4518,7 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
         /**
          * Updates an existing `VpcFlowLogsConfig`. If a configuration with the exact same settings already
          * exists (even if the ID is different), the creation fails. Notes: 1. Updating a configuration with
-         * state=DISABLED will fail. 2. The following fields are not considered as `settings` for the
+         * `state=DISABLED` will fail. 2. The following fields are not considered as settings for the
          * purpose of the check mentioned above, therefore - updating another configuration with the same
          * fields but different values for the following fields will fail as well: * name * create_time *
          * update_time * labels * description
@@ -4504,10 +4528,11 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
          * This request holds the parameters needed by the networkmanagement server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Identifier. Unique name of the configuration using one of the forms:
-         *        `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}` `org
-         *        anizations/{organization_number}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config
-         *        _id}`
+         * @param name Identifier. Unique name of the configuration. The name can have one of the following forms: - For
+         *        project-level configurations:
+         *        `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}` -
+         *        For organization-level configurations: `organizations/{organization_id}/locations/global/v
+         *        pcFlowLogsConfigs/{vpc_flow_logs_config_id}`
          * @param content the {@link com.google.api.services.networkmanagement.v1.model.VpcFlowLogsConfig}
          * @return the request
          */
@@ -4527,8 +4552,8 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
           /**
            * Updates an existing `VpcFlowLogsConfig`. If a configuration with the exact same settings
            * already exists (even if the ID is different), the creation fails. Notes: 1. Updating a
-           * configuration with state=DISABLED will fail. 2. The following fields are not considered as
-           * `settings` for the purpose of the check mentioned above, therefore - updating another
+           * configuration with `state=DISABLED` will fail. 2. The following fields are not considered as
+           * settings for the purpose of the check mentioned above, therefore - updating another
            * configuration with the same fields but different values for the following fields will fail as
            * well: * name * create_time * update_time * labels * description
            *
@@ -4540,10 +4565,11 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Identifier. Unique name of the configuration using one of the forms:
-         *        `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}` `org
-         *        anizations/{organization_number}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config
-         *        _id}`
+           * @param name Identifier. Unique name of the configuration. The name can have one of the following forms: - For
+         *        project-level configurations:
+         *        `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}` -
+         *        For organization-level configurations: `organizations/{organization_id}/locations/global/v
+         *        pcFlowLogsConfigs/{vpc_flow_logs_config_id}`
            * @param content the {@link com.google.api.services.networkmanagement.v1.model.VpcFlowLogsConfig}
            * @since 1.13
            */
@@ -4613,27 +4639,31 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
           }
 
           /**
-           * Identifier. Unique name of the configuration using one of the forms:
-           * `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}` `
-           * organizations/{organization_number}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_
-           * config_id}`
+           * Identifier. Unique name of the configuration. The name can have one of the following
+           * forms: - For project-level configurations:
+           * `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}` -
+           * For organization-level configurations: `organizations/{organization_id}/locations/globa
+           * l/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Identifier. Unique name of the configuration using one of the forms:
-         `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
-         `organizations/{organization_number}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
+          /** Identifier. Unique name of the configuration. The name can have one of the following forms: - For
+         project-level configurations:
+         `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}` - For
+         organization-level configurations:
+         `organizations/{organization_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Identifier. Unique name of the configuration using one of the forms:
-           * `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}` `
-           * organizations/{organization_number}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_
-           * config_id}`
+           * Identifier. Unique name of the configuration. The name can have one of the following
+           * forms: - For project-level configurations:
+           * `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}` -
+           * For organization-level configurations: `organizations/{organization_id}/locations/globa
+           * l/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -4647,11 +4677,18 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
 
           /**
            * Required. Mask of fields to update. At least one path must be supplied in this field.
+           * For example, to change the state of the configuration to ENABLED, specify `update_mask`
+           * = `"state"`, and the `vpc_flow_logs_config` would be: `vpc_flow_logs_config = { name =
+           * "projects/my-project/locations/global/vpcFlowLogsConfigs/my-config" state = "ENABLED"
+           * }`
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** Required. Mask of fields to update. At least one path must be supplied in this field.
+          /** Required. Mask of fields to update. At least one path must be supplied in this field. For example,
+         to change the state of the configuration to ENABLED, specify `update_mask` = `"state"`, and the
+         `vpc_flow_logs_config` would be: `vpc_flow_logs_config = { name = "projects/my-
+         project/locations/global/vpcFlowLogsConfigs/my-config" state = "ENABLED" }`
            */
           public String getUpdateMask() {
             return updateMask;
@@ -4659,6 +4696,10 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
 
           /**
            * Required. Mask of fields to update. At least one path must be supplied in this field.
+           * For example, to change the state of the configuration to ENABLED, specify `update_mask`
+           * = `"state"`, and the `vpc_flow_logs_config` would be: `vpc_flow_logs_config = { name =
+           * "projects/my-project/locations/global/vpcFlowLogsConfigs/my-config" state = "ENABLED"
+           * }`
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;

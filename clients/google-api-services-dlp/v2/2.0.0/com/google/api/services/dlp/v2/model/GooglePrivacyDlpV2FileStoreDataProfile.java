@@ -70,6 +70,19 @@ public final class GooglePrivacyDlpV2FileStoreDataProfile extends com.google.api
   private java.util.List<java.lang.String> dataStorageLocations;
 
   /**
+   * Domains associated with the profile.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GooglePrivacyDlpV2Domain> domains;
+
+  static {
+    // hack to force ProGuard to consider GooglePrivacyDlpV2Domain used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GooglePrivacyDlpV2Domain.class);
+  }
+
+  /**
    * FileClusterSummary per each cluster.
    * The value may be {@code null}.
    */
@@ -321,6 +334,23 @@ public final class GooglePrivacyDlpV2FileStoreDataProfile extends com.google.api
    */
   public GooglePrivacyDlpV2FileStoreDataProfile setDataStorageLocations(java.util.List<java.lang.String> dataStorageLocations) {
     this.dataStorageLocations = dataStorageLocations;
+    return this;
+  }
+
+  /**
+   * Domains associated with the profile.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GooglePrivacyDlpV2Domain> getDomains() {
+    return domains;
+  }
+
+  /**
+   * Domains associated with the profile.
+   * @param domains domains or {@code null} for none
+   */
+  public GooglePrivacyDlpV2FileStoreDataProfile setDomains(java.util.List<GooglePrivacyDlpV2Domain> domains) {
+    this.domains = domains;
     return this;
   }
 

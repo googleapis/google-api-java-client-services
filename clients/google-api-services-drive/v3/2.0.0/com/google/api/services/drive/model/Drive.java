@@ -532,6 +532,14 @@ public final class Drive extends com.google.api.client.json.GenericJson {
     private java.lang.Boolean canChangeDomainUsersOnlyRestriction;
 
     /**
+     * Output only. Whether the current user can change organizer-applied download restrictions of
+     * this shared drive.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.Boolean canChangeDownloadRestriction;
+
+    /**
      * Output only. Whether the current user can change the background of this shared drive.
      * The value may be {@code null}.
      */
@@ -707,6 +715,25 @@ public final class Drive extends com.google.api.client.json.GenericJson {
      */
     public Capabilities setCanChangeDomainUsersOnlyRestriction(java.lang.Boolean canChangeDomainUsersOnlyRestriction) {
       this.canChangeDomainUsersOnlyRestriction = canChangeDomainUsersOnlyRestriction;
+      return this;
+    }
+
+    /**
+     * Output only. Whether the current user can change organizer-applied download restrictions of
+     * this shared drive.
+     * @return value or {@code null} for none
+     */
+    public java.lang.Boolean getCanChangeDownloadRestriction() {
+      return canChangeDownloadRestriction;
+    }
+
+    /**
+     * Output only. Whether the current user can change organizer-applied download restrictions of
+     * this shared drive.
+     * @param canChangeDownloadRestriction canChangeDownloadRestriction or {@code null} for none
+     */
+    public Capabilities setCanChangeDownloadRestriction(java.lang.Boolean canChangeDownloadRestriction) {
+      this.canChangeDownloadRestriction = canChangeDownloadRestriction;
       return this;
     }
 

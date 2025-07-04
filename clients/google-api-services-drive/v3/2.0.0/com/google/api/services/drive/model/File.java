@@ -93,6 +93,13 @@ public final class File extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
+   * Download restrictions applied on the file.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DownloadRestrictionsMetadata downloadRestrictions;
+
+  /**
    * Output only. ID of the shared drive the file resides in. Only populated for items in shared
    * drives.
    * The value may be {@code null}.
@@ -663,6 +670,23 @@ public final class File extends com.google.api.client.json.GenericJson {
    */
   public File setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Download restrictions applied on the file.
+   * @return value or {@code null} for none
+   */
+  public DownloadRestrictionsMetadata getDownloadRestrictions() {
+    return downloadRestrictions;
+  }
+
+  /**
+   * Download restrictions applied on the file.
+   * @param downloadRestrictions downloadRestrictions or {@code null} for none
+   */
+  public File setDownloadRestrictions(DownloadRestrictionsMetadata downloadRestrictions) {
+    this.downloadRestrictions = downloadRestrictions;
     return this;
   }
 
@@ -1774,6 +1798,14 @@ public final class File extends com.google.api.client.json.GenericJson {
     private java.lang.Boolean canChangeCopyRequiresWriterPermission;
 
     /**
+     * Output only. Whether the current user can change the owner-applied download restrictions of the
+     * file.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.Boolean canChangeItemDownloadRestriction;
+
+    /**
      * Output only. Whether the current user can change the securityUpdateEnabled field on link share
      * metadata.
      * The value may be {@code null}.
@@ -2158,6 +2190,25 @@ public final class File extends com.google.api.client.json.GenericJson {
      */
     public Capabilities setCanChangeCopyRequiresWriterPermission(java.lang.Boolean canChangeCopyRequiresWriterPermission) {
       this.canChangeCopyRequiresWriterPermission = canChangeCopyRequiresWriterPermission;
+      return this;
+    }
+
+    /**
+     * Output only. Whether the current user can change the owner-applied download restrictions of the
+     * file.
+     * @return value or {@code null} for none
+     */
+    public java.lang.Boolean getCanChangeItemDownloadRestriction() {
+      return canChangeItemDownloadRestriction;
+    }
+
+    /**
+     * Output only. Whether the current user can change the owner-applied download restrictions of the
+     * file.
+     * @param canChangeItemDownloadRestriction canChangeItemDownloadRestriction or {@code null} for none
+     */
+    public Capabilities setCanChangeItemDownloadRestriction(java.lang.Boolean canChangeItemDownloadRestriction) {
+      this.canChangeItemDownloadRestriction = canChangeItemDownloadRestriction;
       return this;
     }
 

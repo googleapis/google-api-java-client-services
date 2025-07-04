@@ -81,6 +81,19 @@ public final class GooglePrivacyDlpV2TableDataProfile extends com.google.api.cli
   private java.lang.String datasetProjectId;
 
   /**
+   * Domains associated with the profile.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GooglePrivacyDlpV2Domain> domains;
+
+  static {
+    // hack to force ProGuard to consider GooglePrivacyDlpV2Domain used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GooglePrivacyDlpV2Domain.class);
+  }
+
+  /**
    * How the table is encrypted.
    * The value may be {@code null}.
    */
@@ -228,7 +241,8 @@ public final class GooglePrivacyDlpV2TableDataProfile extends com.google.api.cli
   private GooglePrivacyDlpV2SensitivityScore sensitivityScore;
 
   /**
-   * State of a profile.
+   * State of a profile. This will always be set to DONE when the table data profile is written to
+   * another service like BigQuery or Pub/Sub.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -375,6 +389,23 @@ public final class GooglePrivacyDlpV2TableDataProfile extends com.google.api.cli
    */
   public GooglePrivacyDlpV2TableDataProfile setDatasetProjectId(java.lang.String datasetProjectId) {
     this.datasetProjectId = datasetProjectId;
+    return this;
+  }
+
+  /**
+   * Domains associated with the profile.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GooglePrivacyDlpV2Domain> getDomains() {
+    return domains;
+  }
+
+  /**
+   * Domains associated with the profile.
+   * @param domains domains or {@code null} for none
+   */
+  public GooglePrivacyDlpV2TableDataProfile setDomains(java.util.List<GooglePrivacyDlpV2Domain> domains) {
+    this.domains = domains;
     return this;
   }
 
@@ -691,7 +722,8 @@ public final class GooglePrivacyDlpV2TableDataProfile extends com.google.api.cli
   }
 
   /**
-   * State of a profile.
+   * State of a profile. This will always be set to DONE when the table data profile is written to
+   * another service like BigQuery or Pub/Sub.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -699,7 +731,8 @@ public final class GooglePrivacyDlpV2TableDataProfile extends com.google.api.cli
   }
 
   /**
-   * State of a profile.
+   * State of a profile. This will always be set to DONE when the table data profile is written to
+   * another service like BigQuery or Pub/Sub.
    * @param state state or {@code null} for none
    */
   public GooglePrivacyDlpV2TableDataProfile setState(java.lang.String state) {

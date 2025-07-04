@@ -38,7 +38,11 @@ public final class ExtensionConfig extends com.google.api.client.json.GenericJso
 
   /**
    * Fully qualified class name of the receiver service class for Android Device Policy to notify
-   * the extension app of any local command status updates.
+   * the extension app of any local command status updates. The service must be exported in the
+   * extension app's AndroidManifest.xml and extend NotificationReceiverService (https://developers.
+   * google.com/android/management/reference/amapi/com/google/android/managementapi/notification/Not
+   * ificationReceiverService) (see Integrate with the AMAPI SDK
+   * (https://developers.google.com/android/management/sdk-integration) guide for more details).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +66,11 @@ public final class ExtensionConfig extends com.google.api.client.json.GenericJso
 
   /**
    * Fully qualified class name of the receiver service class for Android Device Policy to notify
-   * the extension app of any local command status updates.
+   * the extension app of any local command status updates. The service must be exported in the
+   * extension app's AndroidManifest.xml and extend NotificationReceiverService (https://developers.
+   * google.com/android/management/reference/amapi/com/google/android/managementapi/notification/Not
+   * ificationReceiverService) (see Integrate with the AMAPI SDK
+   * (https://developers.google.com/android/management/sdk-integration) guide for more details).
    * @return value or {@code null} for none
    */
   public java.lang.String getNotificationReceiver() {
@@ -71,7 +79,11 @@ public final class ExtensionConfig extends com.google.api.client.json.GenericJso
 
   /**
    * Fully qualified class name of the receiver service class for Android Device Policy to notify
-   * the extension app of any local command status updates.
+   * the extension app of any local command status updates. The service must be exported in the
+   * extension app's AndroidManifest.xml and extend NotificationReceiverService (https://developers.
+   * google.com/android/management/reference/amapi/com/google/android/managementapi/notification/Not
+   * ificationReceiverService) (see Integrate with the AMAPI SDK
+   * (https://developers.google.com/android/management/sdk-integration) guide for more details).
    * @param notificationReceiver notificationReceiver or {@code null} for none
    */
   public ExtensionConfig setNotificationReceiver(java.lang.String notificationReceiver) {

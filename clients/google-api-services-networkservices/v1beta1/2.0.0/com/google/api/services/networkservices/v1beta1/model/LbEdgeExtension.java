@@ -17,8 +17,8 @@
 package com.google.api.services.networkservices.v1beta1.model;
 
 /**
- * `LbEdgeExtension` is a resource that lets the extension service influence the Backend Service
- * selection or Cloud CDN cache keys by modifying the request headers.
+ * `LbEdgeExtension` is a resource that lets the extension service influence the selection of
+ * backend services and Cloud CDN cache keys by modifying request headers.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Services API. For a detailed explanation see:

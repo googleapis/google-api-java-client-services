@@ -90,6 +90,15 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
+   * Optional. Required for CloudSQL resource_type Configures how long logs will be stored. It is
+   * defined in “days”. This value should be greater than or equal to minimum enforced log retention
+   * duration of the backup vault.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long logRetentionDays;
+
+  /**
    * Output only. Identifier. The resource name of the `BackupPlan`. Format:
    * `projects/{project}/locations/{location}/backupPlans/{backup_plan}`
    * The value may be {@code null}.
@@ -273,6 +282,27 @@ public final class BackupPlan extends com.google.api.client.json.GenericJson {
    */
   public BackupPlan setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
+    return this;
+  }
+
+  /**
+   * Optional. Required for CloudSQL resource_type Configures how long logs will be stored. It is
+   * defined in “days”. This value should be greater than or equal to minimum enforced log retention
+   * duration of the backup vault.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getLogRetentionDays() {
+    return logRetentionDays;
+  }
+
+  /**
+   * Optional. Required for CloudSQL resource_type Configures how long logs will be stored. It is
+   * defined in “days”. This value should be greater than or equal to minimum enforced log retention
+   * duration of the backup vault.
+   * @param logRetentionDays logRetentionDays or {@code null} for none
+   */
+  public BackupPlan setLogRetentionDays(java.lang.Long logRetentionDays) {
+    this.logRetentionDays = logRetentionDays;
     return this;
   }
 

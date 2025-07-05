@@ -31,6 +31,13 @@ package com.google.api.services.backupdr.v1.model;
 public final class InitializeServiceRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The configuration for initializing a Cloud SQL instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CloudSqlInstanceInitializationConfig cloudSqlInstanceInitializationConfig;
+
+  /**
    * Optional. An optional request ID to identify requests. Specify a unique request ID so that if
    * you must retry your request, the server will know to ignore the request if it has already been
    * completed. The server will guarantee that for at least 60 minutes since the first request. For
@@ -51,6 +58,23 @@ public final class InitializeServiceRequest extends com.google.api.client.json.G
    */
   @com.google.api.client.util.Key
   private java.lang.String resourceType;
+
+  /**
+   * Optional. The configuration for initializing a Cloud SQL instance.
+   * @return value or {@code null} for none
+   */
+  public CloudSqlInstanceInitializationConfig getCloudSqlInstanceInitializationConfig() {
+    return cloudSqlInstanceInitializationConfig;
+  }
+
+  /**
+   * Optional. The configuration for initializing a Cloud SQL instance.
+   * @param cloudSqlInstanceInitializationConfig cloudSqlInstanceInitializationConfig or {@code null} for none
+   */
+  public InitializeServiceRequest setCloudSqlInstanceInitializationConfig(CloudSqlInstanceInitializationConfig cloudSqlInstanceInitializationConfig) {
+    this.cloudSqlInstanceInitializationConfig = cloudSqlInstanceInitializationConfig;
+    return this;
+  }
 
   /**
    * Optional. An optional request ID to identify requests. Specify a unique request ID so that if

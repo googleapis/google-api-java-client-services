@@ -32,6 +32,14 @@ package com.google.api.services.backupdr.v1.model;
 public final class DataSourceGcpResource extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. CloudSqlInstanceDataSourceProperties has a subset of Cloud SQL Instance properties
+   * that are useful at the Datasource level.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CloudSqlInstanceDataSourceProperties cloudSqlInstanceDatasourceProperties;
+
+  /**
    * ComputeInstanceDataSourceProperties has a subset of Compute Instance properties that are useful
    * at the Datasource level.
    * The value may be {@code null}.
@@ -68,6 +76,25 @@ public final class DataSourceGcpResource extends com.google.api.client.json.Gene
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * Output only. CloudSqlInstanceDataSourceProperties has a subset of Cloud SQL Instance properties
+   * that are useful at the Datasource level.
+   * @return value or {@code null} for none
+   */
+  public CloudSqlInstanceDataSourceProperties getCloudSqlInstanceDatasourceProperties() {
+    return cloudSqlInstanceDatasourceProperties;
+  }
+
+  /**
+   * Output only. CloudSqlInstanceDataSourceProperties has a subset of Cloud SQL Instance properties
+   * that are useful at the Datasource level.
+   * @param cloudSqlInstanceDatasourceProperties cloudSqlInstanceDatasourceProperties or {@code null} for none
+   */
+  public DataSourceGcpResource setCloudSqlInstanceDatasourceProperties(CloudSqlInstanceDataSourceProperties cloudSqlInstanceDatasourceProperties) {
+    this.cloudSqlInstanceDatasourceProperties = cloudSqlInstanceDatasourceProperties;
+    return this;
+  }
 
   /**
    * ComputeInstanceDataSourceProperties has a subset of Compute Instance properties that are useful

@@ -52,6 +52,13 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private java.lang.String backupType;
 
   /**
+   * Output only. Cloud SQL specific backup properties.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CloudSqlInstanceBackupProperties cloudSqlInstanceBackupProperties;
+
+  /**
    * Output only. Compute Engine specific backup properties.
    * The value may be {@code null}.
    */
@@ -222,6 +229,23 @@ public final class Backup extends com.google.api.client.json.GenericJson {
    */
   public Backup setBackupType(java.lang.String backupType) {
     this.backupType = backupType;
+    return this;
+  }
+
+  /**
+   * Output only. Cloud SQL specific backup properties.
+   * @return value or {@code null} for none
+   */
+  public CloudSqlInstanceBackupProperties getCloudSqlInstanceBackupProperties() {
+    return cloudSqlInstanceBackupProperties;
+  }
+
+  /**
+   * Output only. Cloud SQL specific backup properties.
+   * @param cloudSqlInstanceBackupProperties cloudSqlInstanceBackupProperties or {@code null} for none
+   */
+  public Backup setCloudSqlInstanceBackupProperties(CloudSqlInstanceBackupProperties cloudSqlInstanceBackupProperties) {
+    this.cloudSqlInstanceBackupProperties = cloudSqlInstanceBackupProperties;
     return this;
   }
 

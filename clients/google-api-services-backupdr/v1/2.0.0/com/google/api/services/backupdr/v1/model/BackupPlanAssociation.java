@@ -56,6 +56,13 @@ public final class BackupPlanAssociation extends com.google.api.client.json.Gene
   private java.lang.String backupPlanRevisionName;
 
   /**
+   * Output only. Cloud SQL instance's backup plan association properties.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CloudSqlInstanceBackupPlanAssociationProperties cloudSqlInstanceBackupPlanAssociationProperties;
+
+  /**
    * Output only. The time when the instance was created.
    * The value may be {@code null}.
    */
@@ -171,6 +178,23 @@ public final class BackupPlanAssociation extends com.google.api.client.json.Gene
    */
   public BackupPlanAssociation setBackupPlanRevisionName(java.lang.String backupPlanRevisionName) {
     this.backupPlanRevisionName = backupPlanRevisionName;
+    return this;
+  }
+
+  /**
+   * Output only. Cloud SQL instance's backup plan association properties.
+   * @return value or {@code null} for none
+   */
+  public CloudSqlInstanceBackupPlanAssociationProperties getCloudSqlInstanceBackupPlanAssociationProperties() {
+    return cloudSqlInstanceBackupPlanAssociationProperties;
+  }
+
+  /**
+   * Output only. Cloud SQL instance's backup plan association properties.
+   * @param cloudSqlInstanceBackupPlanAssociationProperties cloudSqlInstanceBackupPlanAssociationProperties or {@code null} for none
+   */
+  public BackupPlanAssociation setCloudSqlInstanceBackupPlanAssociationProperties(CloudSqlInstanceBackupPlanAssociationProperties cloudSqlInstanceBackupPlanAssociationProperties) {
+    this.cloudSqlInstanceBackupPlanAssociationProperties = cloudSqlInstanceBackupPlanAssociationProperties;
     return this;
   }
 

@@ -10547,6 +10547,26 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
             return this;
           }
 
+          /**
+           * Optional. For PSC Interface only - get the tenant project before creating the resource.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. For PSC Interface only - get the tenant project before creating the resource.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /**
+           * Optional. For PSC Interface only - get the tenant project before creating the resource.
+           */
+          public Create setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
           @Override
           public Create set(String parameterName, Object value) {
             return (Create) super.set(parameterName, value);

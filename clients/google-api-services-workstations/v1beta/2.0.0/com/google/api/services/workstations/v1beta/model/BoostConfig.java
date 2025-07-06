@@ -104,6 +104,22 @@ public final class BoostConfig extends com.google.api.client.json.GenericJson {
   private java.lang.Integer poolSize;
 
   /**
+   * Optional. [ReservationAffinity](https://cloud.google.com/compute/docs/instances/reserving-
+   * zonal-resources) specifies a reservation that can be consumed to create boost VM instances. If
+   * SPECIFIC_RESERVATION is specified, Cloud Workstations will only create VMs in the zone where
+   * the reservation is located. This would affect availability since the service will no longer be
+   * resilient to zonal outages. If ANY_RESERVATION is specified, creating reservations in both
+   * zones that the config creates VMs in will ensure higher availability. **Important
+   * Considerations for Reservation Affinity:** * This feature is intended for advanced users and
+   * requires familiarity with Google Compute Engine reservations. * Using reservations incurs
+   * charges, regardless of utilization. * The resources in the pool will consume the specified
+   * reservation. Take this into account when setting the pool size.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ReservationAffinity reservationAffinity;
+
+  /**
    * Optional. A list of the type and count of accelerator cards attached to the boost instance.
    * Defaults to `none`.
    * @return value or {@code null} for none
@@ -244,6 +260,41 @@ public final class BoostConfig extends com.google.api.client.json.GenericJson {
    */
   public BoostConfig setPoolSize(java.lang.Integer poolSize) {
     this.poolSize = poolSize;
+    return this;
+  }
+
+  /**
+   * Optional. [ReservationAffinity](https://cloud.google.com/compute/docs/instances/reserving-
+   * zonal-resources) specifies a reservation that can be consumed to create boost VM instances. If
+   * SPECIFIC_RESERVATION is specified, Cloud Workstations will only create VMs in the zone where
+   * the reservation is located. This would affect availability since the service will no longer be
+   * resilient to zonal outages. If ANY_RESERVATION is specified, creating reservations in both
+   * zones that the config creates VMs in will ensure higher availability. **Important
+   * Considerations for Reservation Affinity:** * This feature is intended for advanced users and
+   * requires familiarity with Google Compute Engine reservations. * Using reservations incurs
+   * charges, regardless of utilization. * The resources in the pool will consume the specified
+   * reservation. Take this into account when setting the pool size.
+   * @return value or {@code null} for none
+   */
+  public ReservationAffinity getReservationAffinity() {
+    return reservationAffinity;
+  }
+
+  /**
+   * Optional. [ReservationAffinity](https://cloud.google.com/compute/docs/instances/reserving-
+   * zonal-resources) specifies a reservation that can be consumed to create boost VM instances. If
+   * SPECIFIC_RESERVATION is specified, Cloud Workstations will only create VMs in the zone where
+   * the reservation is located. This would affect availability since the service will no longer be
+   * resilient to zonal outages. If ANY_RESERVATION is specified, creating reservations in both
+   * zones that the config creates VMs in will ensure higher availability. **Important
+   * Considerations for Reservation Affinity:** * This feature is intended for advanced users and
+   * requires familiarity with Google Compute Engine reservations. * Using reservations incurs
+   * charges, regardless of utilization. * The resources in the pool will consume the specified
+   * reservation. Take this into account when setting the pool size.
+   * @param reservationAffinity reservationAffinity or {@code null} for none
+   */
+  public BoostConfig setReservationAffinity(ReservationAffinity reservationAffinity) {
+    this.reservationAffinity = reservationAffinity;
     return this;
   }
 

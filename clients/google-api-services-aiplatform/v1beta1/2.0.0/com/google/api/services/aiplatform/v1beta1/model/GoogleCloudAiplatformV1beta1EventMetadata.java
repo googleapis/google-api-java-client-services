@@ -39,6 +39,13 @@ public final class GoogleCloudAiplatformV1beta1EventMetadata extends com.google.
   private java.lang.String branch;
 
   /**
+   * The custom metadata of the LlmResponse.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Object> customMetadata;
+
+  /**
    * Optional. Metadata returned to client when grounding is enabled.
    * The value may be {@code null}.
    */
@@ -95,6 +102,23 @@ public final class GoogleCloudAiplatformV1beta1EventMetadata extends com.google.
    */
   public GoogleCloudAiplatformV1beta1EventMetadata setBranch(java.lang.String branch) {
     this.branch = branch;
+    return this;
+  }
+
+  /**
+   * The custom metadata of the LlmResponse.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Object> getCustomMetadata() {
+    return customMetadata;
+  }
+
+  /**
+   * The custom metadata of the LlmResponse.
+   * @param customMetadata customMetadata or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EventMetadata setCustomMetadata(java.util.Map<String, java.lang.Object> customMetadata) {
+    this.customMetadata = customMetadata;
     return this;
   }
 

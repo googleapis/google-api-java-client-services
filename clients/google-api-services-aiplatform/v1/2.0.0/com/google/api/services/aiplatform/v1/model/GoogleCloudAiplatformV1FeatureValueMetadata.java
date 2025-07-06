@@ -32,8 +32,8 @@ public final class GoogleCloudAiplatformV1FeatureValueMetadata extends com.googl
   /**
    * Feature generation timestamp. Typically, it is provided by user at feature ingestion time. If
    * not, feature store will use the system timestamp when the data is ingested into feature store.
-   * For streaming ingestion, the time, aligned by days, must be no older than five years (1825
-   * days) and no later than one year (366 days) in the future.
+   * Legacy Feature Store: For streaming ingestion, the time, aligned by days, must be no older than
+   * five years (1825 days) and no later than one year (366 days) in the future.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -42,8 +42,8 @@ public final class GoogleCloudAiplatformV1FeatureValueMetadata extends com.googl
   /**
    * Feature generation timestamp. Typically, it is provided by user at feature ingestion time. If
    * not, feature store will use the system timestamp when the data is ingested into feature store.
-   * For streaming ingestion, the time, aligned by days, must be no older than five years (1825
-   * days) and no later than one year (366 days) in the future.
+   * Legacy Feature Store: For streaming ingestion, the time, aligned by days, must be no older than
+   * five years (1825 days) and no later than one year (366 days) in the future.
    * @return value or {@code null} for none
    */
   public String getGenerateTime() {
@@ -53,8 +53,8 @@ public final class GoogleCloudAiplatformV1FeatureValueMetadata extends com.googl
   /**
    * Feature generation timestamp. Typically, it is provided by user at feature ingestion time. If
    * not, feature store will use the system timestamp when the data is ingested into feature store.
-   * For streaming ingestion, the time, aligned by days, must be no older than five years (1825
-   * days) and no later than one year (366 days) in the future.
+   * Legacy Feature Store: For streaming ingestion, the time, aligned by days, must be no older than
+   * five years (1825 days) and no later than one year (366 days) in the future.
    * @param generateTime generateTime or {@code null} for none
    */
   public GoogleCloudAiplatformV1FeatureValueMetadata setGenerateTime(String generateTime) {

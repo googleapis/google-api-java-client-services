@@ -31,8 +31,7 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngineContextSpecMemoryB
 
   /**
    * Required. The model used to generate embeddings to lookup similar memories. Format:
-   * `projects/{project}/locations/{location}/publishers/google/models/{model}` or
-   * `projects/{project}/locations/{location}/endpoints/{endpoint}`.
+   * `projects/{project}/locations/{location}/publishers/google/models/{model}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,8 +39,7 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngineContextSpecMemoryB
 
   /**
    * Required. The model used to generate embeddings to lookup similar memories. Format:
-   * `projects/{project}/locations/{location}/publishers/google/models/{model}` or
-   * `projects/{project}/locations/{location}/endpoints/{endpoint}`.
+   * `projects/{project}/locations/{location}/publishers/google/models/{model}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getEmbeddingModel() {
@@ -50,8 +48,7 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngineContextSpecMemoryB
 
   /**
    * Required. The model used to generate embeddings to lookup similar memories. Format:
-   * `projects/{project}/locations/{location}/publishers/google/models/{model}` or
-   * `projects/{project}/locations/{location}/endpoints/{endpoint}`.
+   * `projects/{project}/locations/{location}/publishers/google/models/{model}`.
    * @param embeddingModel embeddingModel or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ReasoningEngineContextSpecMemoryBankConfigSimilaritySearchConfig setEmbeddingModel(java.lang.String embeddingModel) {

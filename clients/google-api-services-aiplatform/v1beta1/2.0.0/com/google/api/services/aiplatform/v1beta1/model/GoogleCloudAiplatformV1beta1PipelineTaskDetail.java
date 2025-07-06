@@ -124,6 +124,17 @@ public final class GoogleCloudAiplatformV1beta1PipelineTaskDetail extends com.go
   private java.lang.String taskName;
 
   /**
+   * Output only. The unique name of a task. This field is used by rerun pipeline job. Console UI
+   * and Vertex AI SDK will support triggering pipeline job reruns. The name is constructed by
+   * concatenating all the parent tasks name with the task name. For example, if a task named
+   * "child_task" has a parent task named "parent_task_1" and parent task 1 has a parent task named
+   * "parent_task_2", the task unique name will be "parent_task_2.parent_task_1.child_task".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String taskUniqueName;
+
+  /**
    * Output only. Task create time.
    * @return value or {@code null} for none
    */
@@ -347,6 +358,31 @@ public final class GoogleCloudAiplatformV1beta1PipelineTaskDetail extends com.go
    */
   public GoogleCloudAiplatformV1beta1PipelineTaskDetail setTaskName(java.lang.String taskName) {
     this.taskName = taskName;
+    return this;
+  }
+
+  /**
+   * Output only. The unique name of a task. This field is used by rerun pipeline job. Console UI
+   * and Vertex AI SDK will support triggering pipeline job reruns. The name is constructed by
+   * concatenating all the parent tasks name with the task name. For example, if a task named
+   * "child_task" has a parent task named "parent_task_1" and parent task 1 has a parent task named
+   * "parent_task_2", the task unique name will be "parent_task_2.parent_task_1.child_task".
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTaskUniqueName() {
+    return taskUniqueName;
+  }
+
+  /**
+   * Output only. The unique name of a task. This field is used by rerun pipeline job. Console UI
+   * and Vertex AI SDK will support triggering pipeline job reruns. The name is constructed by
+   * concatenating all the parent tasks name with the task name. For example, if a task named
+   * "child_task" has a parent task named "parent_task_1" and parent task 1 has a parent task named
+   * "parent_task_2", the task unique name will be "parent_task_2.parent_task_1.child_task".
+   * @param taskUniqueName taskUniqueName or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1PipelineTaskDetail setTaskUniqueName(java.lang.String taskUniqueName) {
+    this.taskUniqueName = taskUniqueName;
     return this;
   }
 

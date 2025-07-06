@@ -55,6 +55,14 @@ public final class GoogleCloudAiplatformV1beta1DedicatedResources extends com.go
   }
 
   /**
+   * Optional. Immutable. If set, use DWS resource to schedule the deployment workload. reference:
+   * (https://cloud.google.com/blog/products/compute/introducing-dynamic-workload-scheduler)
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1FlexStart flexStart;
+
+  /**
    * Required. Immutable. The specification of a single machine being used.
    * The value may be {@code null}.
    */
@@ -141,6 +149,25 @@ public final class GoogleCloudAiplatformV1beta1DedicatedResources extends com.go
    */
   public GoogleCloudAiplatformV1beta1DedicatedResources setAutoscalingMetricSpecs(java.util.List<GoogleCloudAiplatformV1beta1AutoscalingMetricSpec> autoscalingMetricSpecs) {
     this.autoscalingMetricSpecs = autoscalingMetricSpecs;
+    return this;
+  }
+
+  /**
+   * Optional. Immutable. If set, use DWS resource to schedule the deployment workload. reference:
+   * (https://cloud.google.com/blog/products/compute/introducing-dynamic-workload-scheduler)
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1FlexStart getFlexStart() {
+    return flexStart;
+  }
+
+  /**
+   * Optional. Immutable. If set, use DWS resource to schedule the deployment workload. reference:
+   * (https://cloud.google.com/blog/products/compute/introducing-dynamic-workload-scheduler)
+   * @param flexStart flexStart or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1DedicatedResources setFlexStart(GoogleCloudAiplatformV1beta1FlexStart flexStart) {
+    this.flexStart = flexStart;
     return this;
   }
 

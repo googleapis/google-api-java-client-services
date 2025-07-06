@@ -17,7 +17,8 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Configuration for how to generate memories.
+ * FlexStart is used to schedule the deployment workload on DWS resource. It contains the max
+ * duration of the deployment.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Vertex AI API. For a detailed explanation see:
@@ -27,43 +28,43 @@ package com.google.api.services.aiplatform.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudAiplatformV1beta1ReasoningEngineContextSpecMemoryBankConfigGenerationConfig extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1beta1FlexStart extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The model used to generate memories. Format:
-   * `projects/{project}/locations/{location}/publishers/google/models/{model}`.
+   * The max duration of the deployment is max_runtime_duration. The deployment will be terminated
+   * after the duration. The max_runtime_duration can be set up to 7 days.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String model;
+  private String maxRuntimeDuration;
 
   /**
-   * Required. The model used to generate memories. Format:
-   * `projects/{project}/locations/{location}/publishers/google/models/{model}`.
+   * The max duration of the deployment is max_runtime_duration. The deployment will be terminated
+   * after the duration. The max_runtime_duration can be set up to 7 days.
    * @return value or {@code null} for none
    */
-  public java.lang.String getModel() {
-    return model;
+  public String getMaxRuntimeDuration() {
+    return maxRuntimeDuration;
   }
 
   /**
-   * Required. The model used to generate memories. Format:
-   * `projects/{project}/locations/{location}/publishers/google/models/{model}`.
-   * @param model model or {@code null} for none
+   * The max duration of the deployment is max_runtime_duration. The deployment will be terminated
+   * after the duration. The max_runtime_duration can be set up to 7 days.
+   * @param maxRuntimeDuration maxRuntimeDuration or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1ReasoningEngineContextSpecMemoryBankConfigGenerationConfig setModel(java.lang.String model) {
-    this.model = model;
+  public GoogleCloudAiplatformV1beta1FlexStart setMaxRuntimeDuration(String maxRuntimeDuration) {
+    this.maxRuntimeDuration = maxRuntimeDuration;
     return this;
   }
 
   @Override
-  public GoogleCloudAiplatformV1beta1ReasoningEngineContextSpecMemoryBankConfigGenerationConfig set(String fieldName, Object value) {
-    return (GoogleCloudAiplatformV1beta1ReasoningEngineContextSpecMemoryBankConfigGenerationConfig) super.set(fieldName, value);
+  public GoogleCloudAiplatformV1beta1FlexStart set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1beta1FlexStart) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudAiplatformV1beta1ReasoningEngineContextSpecMemoryBankConfigGenerationConfig clone() {
-    return (GoogleCloudAiplatformV1beta1ReasoningEngineContextSpecMemoryBankConfigGenerationConfig) super.clone();
+  public GoogleCloudAiplatformV1beta1FlexStart clone() {
+    return (GoogleCloudAiplatformV1beta1FlexStart) super.clone();
   }
 
 }

@@ -38,6 +38,14 @@ public final class SourceHierarchyDatasets extends com.google.api.client.json.Ge
   private DatasetTemplate datasetTemplate;
 
   /**
+   * Optional. The project id of the BigQuery dataset. If not specified, the project will be
+   * inferred from the stream resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String projectId;
+
+  /**
    * The dataset template to use for dynamic dataset creation.
    * @return value or {@code null} for none
    */
@@ -51,6 +59,25 @@ public final class SourceHierarchyDatasets extends com.google.api.client.json.Ge
    */
   public SourceHierarchyDatasets setDatasetTemplate(DatasetTemplate datasetTemplate) {
     this.datasetTemplate = datasetTemplate;
+    return this;
+  }
+
+  /**
+   * Optional. The project id of the BigQuery dataset. If not specified, the project will be
+   * inferred from the stream resource.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProjectId() {
+    return projectId;
+  }
+
+  /**
+   * Optional. The project id of the BigQuery dataset. If not specified, the project will be
+   * inferred from the stream resource.
+   * @param projectId projectId or {@code null} for none
+   */
+  public SourceHierarchyDatasets setProjectId(java.lang.String projectId) {
+    this.projectId = projectId;
     return this;
   }
 

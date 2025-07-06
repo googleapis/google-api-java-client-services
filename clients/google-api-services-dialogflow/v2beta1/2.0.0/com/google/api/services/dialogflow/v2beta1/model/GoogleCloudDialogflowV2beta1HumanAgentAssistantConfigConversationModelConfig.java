@@ -31,8 +31,8 @@ package com.google.api.services.dialogflow.v2beta1.model;
 public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationModelConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Version of current baseline model. It will be ignored if model is set. Valid versions are:
-   * Article Suggestion baseline model: - 0.9 - 1.0 (default) Summarization baseline model: - 1.0
+   * Version of current baseline model. It will be ignored if model is set. Valid versions are: -
+   * Article Suggestion baseline model: - 0.9 - 1.0 (default) - Summarization baseline model: - 1.0
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,8 +46,8 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversa
   private java.lang.String model;
 
   /**
-   * Version of current baseline model. It will be ignored if model is set. Valid versions are:
-   * Article Suggestion baseline model: - 0.9 - 1.0 (default) Summarization baseline model: - 1.0
+   * Version of current baseline model. It will be ignored if model is set. Valid versions are: -
+   * Article Suggestion baseline model: - 0.9 - 1.0 (default) - Summarization baseline model: - 1.0
    * @return value or {@code null} for none
    */
   public java.lang.String getBaselineModelVersion() {
@@ -55,8 +55,8 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversa
   }
 
   /**
-   * Version of current baseline model. It will be ignored if model is set. Valid versions are:
-   * Article Suggestion baseline model: - 0.9 - 1.0 (default) Summarization baseline model: - 1.0
+   * Version of current baseline model. It will be ignored if model is set. Valid versions are: -
+   * Article Suggestion baseline model: - 0.9 - 1.0 (default) - Summarization baseline model: - 1.0
    * @param baselineModelVersion baselineModelVersion or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationModelConfig setBaselineModelVersion(java.lang.String baselineModelVersion) {

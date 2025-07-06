@@ -92,6 +92,15 @@ public final class GoogleCloudApihubV1PluginInstance extends com.google.api.clie
   private java.lang.String name;
 
   /**
+   * Optional. The source project id of the plugin instance. This will be the id of runtime project
+   * in case of gcp based plugins and org id in case of non gcp based plugins. This is a required
+   * field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceProjectId;
+
+  /**
    * Output only. The current state of the plugin instance (e.g., enabled, disabled, provisioning).
    * The value may be {@code null}.
    */
@@ -233,6 +242,27 @@ public final class GoogleCloudApihubV1PluginInstance extends com.google.api.clie
    */
   public GoogleCloudApihubV1PluginInstance setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. The source project id of the plugin instance. This will be the id of runtime project
+   * in case of gcp based plugins and org id in case of non gcp based plugins. This is a required
+   * field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceProjectId() {
+    return sourceProjectId;
+  }
+
+  /**
+   * Optional. The source project id of the plugin instance. This will be the id of runtime project
+   * in case of gcp based plugins and org id in case of non gcp based plugins. This is a required
+   * field.
+   * @param sourceProjectId sourceProjectId or {@code null} for none
+   */
+  public GoogleCloudApihubV1PluginInstance setSourceProjectId(java.lang.String sourceProjectId) {
+    this.sourceProjectId = sourceProjectId;
     return this;
   }
 

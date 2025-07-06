@@ -72,6 +72,13 @@ public final class GoogleCloudApihubV1Plugin extends com.google.api.client.json.
   private GoogleCloudApihubV1Documentation documentation;
 
   /**
+   * Optional. The type of the gateway.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String gatewayType;
+
+  /**
    * Optional. This field is optional. It is used to notify the plugin hosting service for any
    * lifecycle changes of the plugin instance and trigger execution of plugin instance actions in
    * case of API hub managed actions. This field should be provided if the plugin instance lifecycle
@@ -235,6 +242,23 @@ public final class GoogleCloudApihubV1Plugin extends com.google.api.client.json.
    */
   public GoogleCloudApihubV1Plugin setDocumentation(GoogleCloudApihubV1Documentation documentation) {
     this.documentation = documentation;
+    return this;
+  }
+
+  /**
+   * Optional. The type of the gateway.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGatewayType() {
+    return gatewayType;
+  }
+
+  /**
+   * Optional. The type of the gateway.
+   * @param gatewayType gatewayType or {@code null} for none
+   */
+  public GoogleCloudApihubV1Plugin setGatewayType(java.lang.String gatewayType) {
+    this.gatewayType = gatewayType;
     return this;
   }
 

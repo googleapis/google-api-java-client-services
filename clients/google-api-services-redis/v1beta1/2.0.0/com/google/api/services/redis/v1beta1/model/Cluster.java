@@ -31,6 +31,15 @@ package com.google.api.services.redis.v1beta1.model;
 public final class Cluster extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Immutable. Allows customers to specify if they are okay with deploying a multi-zone
+   * cluster in less than 3 zones. Once set, if there is a zonal outage during the cluster creation,
+   * the cluster will only be deployed in 2 zones, and stay within the 2 zones for its lifecycle.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean allowFewerZonesDeployment;
+
+  /**
    * Optional. If true, cluster endpoints that are created and registered by customers can be
    * deleted asynchronously. That is, such a cluster endpoint can be de-registered before the
    * forwarding rules in the cluster endpoint are deleted.
@@ -276,6 +285,27 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private ZoneDistributionConfig zoneDistributionConfig;
+
+  /**
+   * Optional. Immutable. Allows customers to specify if they are okay with deploying a multi-zone
+   * cluster in less than 3 zones. Once set, if there is a zonal outage during the cluster creation,
+   * the cluster will only be deployed in 2 zones, and stay within the 2 zones for its lifecycle.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAllowFewerZonesDeployment() {
+    return allowFewerZonesDeployment;
+  }
+
+  /**
+   * Optional. Immutable. Allows customers to specify if they are okay with deploying a multi-zone
+   * cluster in less than 3 zones. Once set, if there is a zonal outage during the cluster creation,
+   * the cluster will only be deployed in 2 zones, and stay within the 2 zones for its lifecycle.
+   * @param allowFewerZonesDeployment allowFewerZonesDeployment or {@code null} for none
+   */
+  public Cluster setAllowFewerZonesDeployment(java.lang.Boolean allowFewerZonesDeployment) {
+    this.allowFewerZonesDeployment = allowFewerZonesDeployment;
+    return this;
+  }
 
   /**
    * Optional. If true, cluster endpoints that are created and registered by customers can be

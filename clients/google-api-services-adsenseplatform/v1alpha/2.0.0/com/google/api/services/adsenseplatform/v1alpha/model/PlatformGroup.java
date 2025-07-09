@@ -30,7 +30,7 @@ package com.google.api.services.adsenseplatform.v1alpha.model;
 public final class PlatformGroup extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Description of the PlatformGroup.
+   * Required. Description of the PlatformGroup.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,14 +44,14 @@ public final class PlatformGroup extends com.google.api.client.json.GenericJson 
   private java.lang.String name;
 
   /**
-   * The revenue share of the PlatformGroup, in millipercent (e.g. 15000 = 15%).
+   * Output only. The revenue share of the PlatformGroup, in millipercent (e.g. 15000 = 15%).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Decimal revshareMillipercent;
 
   /**
-   * Output only. Description of the PlatformGroup.
+   * Required. Description of the PlatformGroup.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -59,7 +59,7 @@ public final class PlatformGroup extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. Description of the PlatformGroup.
+   * Required. Description of the PlatformGroup.
    * @param description description or {@code null} for none
    */
   public PlatformGroup setDescription(java.lang.String description) {
@@ -85,7 +85,7 @@ public final class PlatformGroup extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The revenue share of the PlatformGroup, in millipercent (e.g. 15000 = 15%).
+   * Output only. The revenue share of the PlatformGroup, in millipercent (e.g. 15000 = 15%).
    * @return value or {@code null} for none
    */
   public Decimal getRevshareMillipercent() {
@@ -93,7 +93,7 @@ public final class PlatformGroup extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The revenue share of the PlatformGroup, in millipercent (e.g. 15000 = 15%).
+   * Output only. The revenue share of the PlatformGroup, in millipercent (e.g. 15000 = 15%).
    * @param revshareMillipercent revshareMillipercent or {@code null} for none
    */
   public PlatformGroup setRevshareMillipercent(Decimal revshareMillipercent) {

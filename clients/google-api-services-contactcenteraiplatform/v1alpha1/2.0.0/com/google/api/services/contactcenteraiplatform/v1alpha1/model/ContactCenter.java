@@ -138,6 +138,13 @@ public final class ContactCenter extends com.google.api.client.json.GenericJson 
   private java.util.List<java.lang.String> privateComponents;
 
   /**
+   * Output only. UJET release version, unique for each new release.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String releaseVersion;
+
+  /**
    * Optional. Params that sets up Google as IdP.
    * The value may be {@code null}.
    */
@@ -428,6 +435,23 @@ public final class ContactCenter extends com.google.api.client.json.GenericJson 
    */
   public ContactCenter setPrivateComponents(java.util.List<java.lang.String> privateComponents) {
     this.privateComponents = privateComponents;
+    return this;
+  }
+
+  /**
+   * Output only. UJET release version, unique for each new release.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getReleaseVersion() {
+    return releaseVersion;
+  }
+
+  /**
+   * Output only. UJET release version, unique for each new release.
+   * @param releaseVersion releaseVersion or {@code null} for none
+   */
+  public ContactCenter setReleaseVersion(java.lang.String releaseVersion) {
+    this.releaseVersion = releaseVersion;
     return this;
   }
 

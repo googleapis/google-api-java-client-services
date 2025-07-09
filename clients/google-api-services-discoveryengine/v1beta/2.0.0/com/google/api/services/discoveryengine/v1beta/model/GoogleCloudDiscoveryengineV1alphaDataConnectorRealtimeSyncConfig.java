@@ -37,6 +37,13 @@ public final class GoogleCloudDiscoveryengineV1alphaDataConnectorRealtimeSyncCon
   private java.lang.String realtimeSyncSecret;
 
   /**
+   * Optional. Streaming error details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1alphaDataConnectorRealtimeSyncConfigStreamingError streamingError;
+
+  /**
    * Optional. Webhook url for the connector to specify additional params for realtime sync.
    * The value may be {@code null}.
    */
@@ -57,6 +64,23 @@ public final class GoogleCloudDiscoveryengineV1alphaDataConnectorRealtimeSyncCon
    */
   public GoogleCloudDiscoveryengineV1alphaDataConnectorRealtimeSyncConfig setRealtimeSyncSecret(java.lang.String realtimeSyncSecret) {
     this.realtimeSyncSecret = realtimeSyncSecret;
+    return this;
+  }
+
+  /**
+   * Optional. Streaming error details.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaDataConnectorRealtimeSyncConfigStreamingError getStreamingError() {
+    return streamingError;
+  }
+
+  /**
+   * Optional. Streaming error details.
+   * @param streamingError streamingError or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaDataConnectorRealtimeSyncConfig setStreamingError(GoogleCloudDiscoveryengineV1alphaDataConnectorRealtimeSyncConfigStreamingError streamingError) {
+    this.streamingError = streamingError;
     return this;
   }
 

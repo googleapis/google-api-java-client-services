@@ -273,7 +273,7 @@ public final class GoogleCloudRetailV2alphaSearchRequest extends com.google.api.
   /**
    * Optional. The user attributes that could be used for personalization of search results. *
    * Populate at most 100 key-value pairs per query. * Only supports string keys and repeated string
-   * values. * Duplcate keys are not allowed within a single query. Example: user_attributes: [ {
+   * values. * Duplicate keys are not allowed within a single query. Example: user_attributes: [ {
    * key: "pets" value { values: "dog" values: "cat" } }, { key: "state" value { values: "CA" } } ]
    * The value may be {@code null}.
    */
@@ -885,7 +885,7 @@ public final class GoogleCloudRetailV2alphaSearchRequest extends com.google.api.
   /**
    * Optional. The user attributes that could be used for personalization of search results. *
    * Populate at most 100 key-value pairs per query. * Only supports string keys and repeated string
-   * values. * Duplcate keys are not allowed within a single query. Example: user_attributes: [ {
+   * values. * Duplicate keys are not allowed within a single query. Example: user_attributes: [ {
    * key: "pets" value { values: "dog" values: "cat" } }, { key: "state" value { values: "CA" } } ]
    * @return value or {@code null} for none
    */
@@ -896,7 +896,7 @@ public final class GoogleCloudRetailV2alphaSearchRequest extends com.google.api.
   /**
    * Optional. The user attributes that could be used for personalization of search results. *
    * Populate at most 100 key-value pairs per query. * Only supports string keys and repeated string
-   * values. * Duplcate keys are not allowed within a single query. Example: user_attributes: [ {
+   * values. * Duplicate keys are not allowed within a single query. Example: user_attributes: [ {
    * key: "pets" value { values: "dog" values: "cat" } }, { key: "state" value { values: "CA" } } ]
    * @param userAttributes userAttributes or {@code null} for none
    */

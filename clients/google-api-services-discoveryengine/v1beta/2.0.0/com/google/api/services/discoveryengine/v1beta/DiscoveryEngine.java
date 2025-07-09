@@ -12052,13 +12052,13 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * A filter to apply on the list results. The supported features are: user_pseudo_id,
-               * state. Example: "user_pseudo_id = some_id"
+               * state, starred. Examples: "user_pseudo_id = some_id" "starred = true"
                */
               @com.google.api.client.util.Key
               private java.lang.String filter;
 
-              /** A filter to apply on the list results. The supported features are: user_pseudo_id, state. Example:
-             "user_pseudo_id = some_id"
+              /** A filter to apply on the list results. The supported features are: user_pseudo_id, state, starred.
+             Examples: "user_pseudo_id = some_id" "starred = true"
                */
               public java.lang.String getFilter() {
                 return filter;
@@ -12066,7 +12066,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * A filter to apply on the list results. The supported features are: user_pseudo_id,
-               * state. Example: "user_pseudo_id = some_id"
+               * state, starred. Examples: "user_pseudo_id = some_id" "starred = true"
                */
               public List setFilter(java.lang.String filter) {
                 this.filter = filter;
@@ -22308,13 +22308,13 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * A filter to apply on the list results. The supported features are: user_pseudo_id,
-               * state. Example: "user_pseudo_id = some_id"
+               * state, starred. Examples: "user_pseudo_id = some_id" "starred = true"
                */
               @com.google.api.client.util.Key
               private java.lang.String filter;
 
-              /** A filter to apply on the list results. The supported features are: user_pseudo_id, state. Example:
-             "user_pseudo_id = some_id"
+              /** A filter to apply on the list results. The supported features are: user_pseudo_id, state, starred.
+             Examples: "user_pseudo_id = some_id" "starred = true"
                */
               public java.lang.String getFilter() {
                 return filter;
@@ -22322,7 +22322,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * A filter to apply on the list results. The supported features are: user_pseudo_id,
-               * state. Example: "user_pseudo_id = some_id"
+               * state, starred. Examples: "user_pseudo_id = some_id" "starred = true"
                */
               public List setFilter(java.lang.String filter) {
                 this.filter = filter;
@@ -32357,13 +32357,13 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
             /**
              * A filter to apply on the list results. The supported features are: user_pseudo_id,
-             * state. Example: "user_pseudo_id = some_id"
+             * state, starred. Examples: "user_pseudo_id = some_id" "starred = true"
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
-            /** A filter to apply on the list results. The supported features are: user_pseudo_id, state. Example:
-           "user_pseudo_id = some_id"
+            /** A filter to apply on the list results. The supported features are: user_pseudo_id, state, starred.
+           Examples: "user_pseudo_id = some_id" "starred = true"
              */
             public java.lang.String getFilter() {
               return filter;
@@ -32371,7 +32371,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
             /**
              * A filter to apply on the list results. The supported features are: user_pseudo_id,
-             * state. Example: "user_pseudo_id = some_id"
+             * state, starred. Examples: "user_pseudo_id = some_id" "starred = true"
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;

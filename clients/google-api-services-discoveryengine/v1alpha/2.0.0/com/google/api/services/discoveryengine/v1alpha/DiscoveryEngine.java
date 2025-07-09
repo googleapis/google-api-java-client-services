@@ -3844,6 +3844,146 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
         public class DataConnector {
 
           /**
+           * Uses the per-user refresh token minted with AcquireAndStoreRefreshToken to generate and return a
+           * new access token and its details. Takes the access token from cache if available. Rotates the
+           * stored refresh token if needed. Uses the end user identity to return the user specific access
+           * token. Does *not* return the credentials configured by the administrator. Used by Agentspace
+           * action execution and Agentspace UI.
+           *
+           * Create a request for the method "dataConnector.acquireAccessToken".
+           *
+           * This request holds the parameters needed by the discoveryengine server.  After setting any
+           * optional parameters, call the {@link AcquireAccessToken#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param name Required. The resource name of the connector for which a token is queried.
+           * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAcquireAccessTokenRequest}
+           * @return the request
+           */
+          public AcquireAccessToken acquireAccessToken(java.lang.String name, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAcquireAccessTokenRequest content) throws java.io.IOException {
+            AcquireAccessToken result = new AcquireAccessToken(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class AcquireAccessToken extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAcquireAccessTokenResponse> {
+
+            private static final String REST_PATH = "v1alpha/{+name}:acquireAccessToken";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataConnector$");
+
+            /**
+             * Uses the per-user refresh token minted with AcquireAndStoreRefreshToken to generate and return
+             * a new access token and its details. Takes the access token from cache if available. Rotates the
+             * stored refresh token if needed. Uses the end user identity to return the user specific access
+             * token. Does *not* return the credentials configured by the administrator. Used by Agentspace
+             * action execution and Agentspace UI.
+             *
+             * Create a request for the method "dataConnector.acquireAccessToken".
+             *
+             * This request holds the parameters needed by the the discoveryengine server.  After setting any
+             * optional parameters, call the {@link AcquireAccessToken#execute()} method to invoke the remote
+             * operation. <p> {@link AcquireAccessToken#initialize(com.google.api.client.googleapis.services.A
+             * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param name Required. The resource name of the connector for which a token is queried.
+             * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAcquireAccessTokenRequest}
+             * @since 1.13
+             */
+            protected AcquireAccessToken(java.lang.String name, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAcquireAccessTokenRequest content) {
+              super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaAcquireAccessTokenResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataConnector$");
+              }
+            }
+
+            @Override
+            public AcquireAccessToken set$Xgafv(java.lang.String $Xgafv) {
+              return (AcquireAccessToken) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public AcquireAccessToken setAccessToken(java.lang.String accessToken) {
+              return (AcquireAccessToken) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public AcquireAccessToken setAlt(java.lang.String alt) {
+              return (AcquireAccessToken) super.setAlt(alt);
+            }
+
+            @Override
+            public AcquireAccessToken setCallback(java.lang.String callback) {
+              return (AcquireAccessToken) super.setCallback(callback);
+            }
+
+            @Override
+            public AcquireAccessToken setFields(java.lang.String fields) {
+              return (AcquireAccessToken) super.setFields(fields);
+            }
+
+            @Override
+            public AcquireAccessToken setKey(java.lang.String key) {
+              return (AcquireAccessToken) super.setKey(key);
+            }
+
+            @Override
+            public AcquireAccessToken setOauthToken(java.lang.String oauthToken) {
+              return (AcquireAccessToken) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public AcquireAccessToken setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (AcquireAccessToken) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public AcquireAccessToken setQuotaUser(java.lang.String quotaUser) {
+              return (AcquireAccessToken) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public AcquireAccessToken setUploadType(java.lang.String uploadType) {
+              return (AcquireAccessToken) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public AcquireAccessToken setUploadProtocol(java.lang.String uploadProtocol) {
+              return (AcquireAccessToken) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The resource name of the connector for which a token is queried. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of the connector for which a token is queried.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. The resource name of the connector for which a token is queried. */
+            public AcquireAccessToken setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/collections/[^/]+/dataConnector$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public AcquireAccessToken set(String parameterName, Object value) {
+              return (AcquireAccessToken) super.set(parameterName, value);
+            }
+          }
+          /**
            * Get the secret for the associated connector.
            *
            * Create a request for the method "dataConnector.getConnectorSecret".
@@ -15592,13 +15732,13 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * A filter to apply on the list results. The supported features are: user_pseudo_id,
-               * state. Example: "user_pseudo_id = some_id"
+               * state, starred. Examples: "user_pseudo_id = some_id" "starred = true"
                */
               @com.google.api.client.util.Key
               private java.lang.String filter;
 
-              /** A filter to apply on the list results. The supported features are: user_pseudo_id, state. Example:
-             "user_pseudo_id = some_id"
+              /** A filter to apply on the list results. The supported features are: user_pseudo_id, state, starred.
+             Examples: "user_pseudo_id = some_id" "starred = true"
                */
               public java.lang.String getFilter() {
                 return filter;
@@ -15606,7 +15746,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * A filter to apply on the list results. The supported features are: user_pseudo_id,
-               * state. Example: "user_pseudo_id = some_id"
+               * state, starred. Examples: "user_pseudo_id = some_id" "starred = true"
                */
               public List setFilter(java.lang.String filter) {
                 this.filter = filter;
@@ -20514,6 +20654,29 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                */
               public Get setAcceptCache(java.lang.Boolean acceptCache) {
                 this.acceptCache = acceptCache;
+                return this;
+              }
+
+              /**
+               * Optional. Whether to turn off collection_components in WidgetConfig to reduce
+               * latency and data transmission.
+               */
+              @com.google.api.client.util.Key("getWidgetConfigRequestOption.turnOffCollectionComponents")
+              private java.lang.Boolean getWidgetConfigRequestOptionTurnOffCollectionComponents;
+
+              /** Optional. Whether to turn off collection_components in WidgetConfig to reduce latency and data
+             transmission.
+               */
+              public java.lang.Boolean getGetWidgetConfigRequestOptionTurnOffCollectionComponents() {
+                return getWidgetConfigRequestOptionTurnOffCollectionComponents;
+              }
+
+              /**
+               * Optional. Whether to turn off collection_components in WidgetConfig to reduce
+               * latency and data transmission.
+               */
+              public Get setGetWidgetConfigRequestOptionTurnOffCollectionComponents(java.lang.Boolean getWidgetConfigRequestOptionTurnOffCollectionComponents) {
+                this.getWidgetConfigRequestOptionTurnOffCollectionComponents = getWidgetConfigRequestOptionTurnOffCollectionComponents;
                 return this;
               }
 
@@ -26340,13 +26503,13 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * A filter to apply on the list results. The supported features are: user_pseudo_id,
-               * state. Example: "user_pseudo_id = some_id"
+               * state, starred. Examples: "user_pseudo_id = some_id" "starred = true"
                */
               @com.google.api.client.util.Key
               private java.lang.String filter;
 
-              /** A filter to apply on the list results. The supported features are: user_pseudo_id, state. Example:
-             "user_pseudo_id = some_id"
+              /** A filter to apply on the list results. The supported features are: user_pseudo_id, state, starred.
+             Examples: "user_pseudo_id = some_id" "starred = true"
                */
               public java.lang.String getFilter() {
                 return filter;
@@ -26354,7 +26517,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
               /**
                * A filter to apply on the list results. The supported features are: user_pseudo_id,
-               * state. Example: "user_pseudo_id = some_id"
+               * state, starred. Examples: "user_pseudo_id = some_id" "starred = true"
                */
               public List setFilter(java.lang.String filter) {
                 this.filter = filter;
@@ -26972,6 +27135,29 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                */
               public Get setAcceptCache(java.lang.Boolean acceptCache) {
                 this.acceptCache = acceptCache;
+                return this;
+              }
+
+              /**
+               * Optional. Whether to turn off collection_components in WidgetConfig to reduce
+               * latency and data transmission.
+               */
+              @com.google.api.client.util.Key("getWidgetConfigRequestOption.turnOffCollectionComponents")
+              private java.lang.Boolean getWidgetConfigRequestOptionTurnOffCollectionComponents;
+
+              /** Optional. Whether to turn off collection_components in WidgetConfig to reduce latency and data
+             transmission.
+               */
+              public java.lang.Boolean getGetWidgetConfigRequestOptionTurnOffCollectionComponents() {
+                return getWidgetConfigRequestOptionTurnOffCollectionComponents;
+              }
+
+              /**
+               * Optional. Whether to turn off collection_components in WidgetConfig to reduce
+               * latency and data transmission.
+               */
+              public Get setGetWidgetConfigRequestOptionTurnOffCollectionComponents(java.lang.Boolean getWidgetConfigRequestOptionTurnOffCollectionComponents) {
+                this.getWidgetConfigRequestOptionTurnOffCollectionComponents = getWidgetConfigRequestOptionTurnOffCollectionComponents;
                 return this;
               }
 
@@ -37525,13 +37711,13 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
             /**
              * A filter to apply on the list results. The supported features are: user_pseudo_id,
-             * state. Example: "user_pseudo_id = some_id"
+             * state, starred. Examples: "user_pseudo_id = some_id" "starred = true"
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
-            /** A filter to apply on the list results. The supported features are: user_pseudo_id, state. Example:
-           "user_pseudo_id = some_id"
+            /** A filter to apply on the list results. The supported features are: user_pseudo_id, state, starred.
+           Examples: "user_pseudo_id = some_id" "starred = true"
              */
             public java.lang.String getFilter() {
               return filter;
@@ -37539,7 +37725,7 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
             /**
              * A filter to apply on the list results. The supported features are: user_pseudo_id,
-             * state. Example: "user_pseudo_id = some_id"
+             * state, starred. Examples: "user_pseudo_id = some_id" "starred = true"
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
@@ -41100,6 +41286,29 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
              */
             public Get setAcceptCache(java.lang.Boolean acceptCache) {
               this.acceptCache = acceptCache;
+              return this;
+            }
+
+            /**
+             * Optional. Whether to turn off collection_components in WidgetConfig to reduce latency
+             * and data transmission.
+             */
+            @com.google.api.client.util.Key("getWidgetConfigRequestOption.turnOffCollectionComponents")
+            private java.lang.Boolean getWidgetConfigRequestOptionTurnOffCollectionComponents;
+
+            /** Optional. Whether to turn off collection_components in WidgetConfig to reduce latency and data
+           transmission.
+             */
+            public java.lang.Boolean getGetWidgetConfigRequestOptionTurnOffCollectionComponents() {
+              return getWidgetConfigRequestOptionTurnOffCollectionComponents;
+            }
+
+            /**
+             * Optional. Whether to turn off collection_components in WidgetConfig to reduce latency
+             * and data transmission.
+             */
+            public Get setGetWidgetConfigRequestOptionTurnOffCollectionComponents(java.lang.Boolean getWidgetConfigRequestOptionTurnOffCollectionComponents) {
+              this.getWidgetConfigRequestOptionTurnOffCollectionComponents = getWidgetConfigRequestOptionTurnOffCollectionComponents;
               return this;
             }
 

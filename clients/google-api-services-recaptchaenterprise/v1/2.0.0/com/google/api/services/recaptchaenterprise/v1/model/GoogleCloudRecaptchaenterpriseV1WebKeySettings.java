@@ -56,12 +56,19 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettings extends com.go
 
   /**
    * Optional. Settings for the frequency and difficulty at which this key triggers captcha
-   * challenges. This should only be specified for IntegrationTypes CHECKBOX and INVISIBLE and
-   * SCORE_AND_CHALLENGE.
+   * challenges. This should only be specified for `IntegrationType` CHECKBOX, INVISIBLE or
+   * POLICY_BASED_CHALLENGE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String challengeSecurityPreference;
+
+  /**
+   * Optional. Challenge settings.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRecaptchaenterpriseV1WebKeySettingsChallengeSettings challengeSettings;
 
   /**
    * Required. Describes how this key is integrated with the website.
@@ -129,8 +136,8 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettings extends com.go
 
   /**
    * Optional. Settings for the frequency and difficulty at which this key triggers captcha
-   * challenges. This should only be specified for IntegrationTypes CHECKBOX and INVISIBLE and
-   * SCORE_AND_CHALLENGE.
+   * challenges. This should only be specified for `IntegrationType` CHECKBOX, INVISIBLE or
+   * POLICY_BASED_CHALLENGE.
    * @return value or {@code null} for none
    */
   public java.lang.String getChallengeSecurityPreference() {
@@ -139,12 +146,29 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettings extends com.go
 
   /**
    * Optional. Settings for the frequency and difficulty at which this key triggers captcha
-   * challenges. This should only be specified for IntegrationTypes CHECKBOX and INVISIBLE and
-   * SCORE_AND_CHALLENGE.
+   * challenges. This should only be specified for `IntegrationType` CHECKBOX, INVISIBLE or
+   * POLICY_BASED_CHALLENGE.
    * @param challengeSecurityPreference challengeSecurityPreference or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1WebKeySettings setChallengeSecurityPreference(java.lang.String challengeSecurityPreference) {
     this.challengeSecurityPreference = challengeSecurityPreference;
+    return this;
+  }
+
+  /**
+   * Optional. Challenge settings.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRecaptchaenterpriseV1WebKeySettingsChallengeSettings getChallengeSettings() {
+    return challengeSettings;
+  }
+
+  /**
+   * Optional. Challenge settings.
+   * @param challengeSettings challengeSettings or {@code null} for none
+   */
+  public GoogleCloudRecaptchaenterpriseV1WebKeySettings setChallengeSettings(GoogleCloudRecaptchaenterpriseV1WebKeySettingsChallengeSettings challengeSettings) {
+    this.challengeSettings = challengeSettings;
     return this;
   }
 

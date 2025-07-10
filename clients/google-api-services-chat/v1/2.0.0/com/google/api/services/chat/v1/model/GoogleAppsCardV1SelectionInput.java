@@ -47,6 +47,15 @@ public final class GoogleAppsCardV1SelectionInput extends com.google.api.client.
   private GoogleAppsCardV1Action externalDataSource;
 
   /**
+   * Optional. Text that appears below the selection input field meant to assist users by prompting
+   * them to enter a certain value. This text is always visible. Only supported by Google Workspace
+   * Workflows, but not Google Chat API or Google Workspace Add-ons.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String hintText;
+
+  /**
    * An array of selectable items. For example, an array of radio buttons or checkboxes. Supports up
    * to 100 items.
    * The value may be {@code null}.
@@ -132,6 +141,27 @@ public final class GoogleAppsCardV1SelectionInput extends com.google.api.client.
    */
   public GoogleAppsCardV1SelectionInput setExternalDataSource(GoogleAppsCardV1Action externalDataSource) {
     this.externalDataSource = externalDataSource;
+    return this;
+  }
+
+  /**
+   * Optional. Text that appears below the selection input field meant to assist users by prompting
+   * them to enter a certain value. This text is always visible. Only supported by Google Workspace
+   * Workflows, but not Google Chat API or Google Workspace Add-ons.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getHintText() {
+    return hintText;
+  }
+
+  /**
+   * Optional. Text that appears below the selection input field meant to assist users by prompting
+   * them to enter a certain value. This text is always visible. Only supported by Google Workspace
+   * Workflows, but not Google Chat API or Google Workspace Add-ons.
+   * @param hintText hintText or {@code null} for none
+   */
+  public GoogleAppsCardV1SelectionInput setHintText(java.lang.String hintText) {
+    this.hintText = hintText;
     return this;
   }
 

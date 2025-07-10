@@ -17,8 +17,8 @@
 package com.google.api.services.securitycenter.v1.model;
 
 /**
- * GCP metadata associated with the resource, only applicable if the finding's cloud provider is
- * Google Cloud Platform.
+ * Google Cloud metadata associated with the resource. Only applicable if the finding's cloud
+ * provider is Google Cloud.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Command Center API. For a detailed

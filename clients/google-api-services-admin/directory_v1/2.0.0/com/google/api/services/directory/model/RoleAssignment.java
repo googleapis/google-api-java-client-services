@@ -62,9 +62,8 @@ public final class RoleAssignment extends com.google.api.client.json.GenericJson
    * Currently, the condition strings have to be verbatim and they only work with the following
    * [pre-built administrator roles](https://support.google.com/a/answer/2405986): - Groups Editor -
    * Groups Reader The condition follows [Cloud IAM condition
-   * syntax](https://cloud.google.com/iam/docs/conditions-overview). Additional conditions related
-   * to Locked Groups are available under Open Beta. - To make the `RoleAssignment` not applicable
-   * to [Locked Groups](https://cloud.google.com/identity/docs/groups#group_types):
+   * syntax](https://cloud.google.com/iam/docs/conditions-overview). - To make the `RoleAssignment`
+   * not applicable to [Locked Groups](https://cloud.google.com/identity/docs/groups#group_types):
    * `!api.getAttribute('cloudidentity.googleapis.com/groups.labels', []).hasAny(['groups.locked'])
    * && resource.type == 'cloudidentity.googleapis.com/Group'` This condition can also be used in
    * conjunction with a Security-related condition.
@@ -172,9 +171,8 @@ public final class RoleAssignment extends com.google.api.client.json.GenericJson
    * Currently, the condition strings have to be verbatim and they only work with the following
    * [pre-built administrator roles](https://support.google.com/a/answer/2405986): - Groups Editor -
    * Groups Reader The condition follows [Cloud IAM condition
-   * syntax](https://cloud.google.com/iam/docs/conditions-overview). Additional conditions related
-   * to Locked Groups are available under Open Beta. - To make the `RoleAssignment` not applicable
-   * to [Locked Groups](https://cloud.google.com/identity/docs/groups#group_types):
+   * syntax](https://cloud.google.com/iam/docs/conditions-overview). - To make the `RoleAssignment`
+   * not applicable to [Locked Groups](https://cloud.google.com/identity/docs/groups#group_types):
    * `!api.getAttribute('cloudidentity.googleapis.com/groups.labels', []).hasAny(['groups.locked'])
    * && resource.type == 'cloudidentity.googleapis.com/Group'` This condition can also be used in
    * conjunction with a Security-related condition.
@@ -200,9 +198,8 @@ public final class RoleAssignment extends com.google.api.client.json.GenericJson
    * Currently, the condition strings have to be verbatim and they only work with the following
    * [pre-built administrator roles](https://support.google.com/a/answer/2405986): - Groups Editor -
    * Groups Reader The condition follows [Cloud IAM condition
-   * syntax](https://cloud.google.com/iam/docs/conditions-overview). Additional conditions related
-   * to Locked Groups are available under Open Beta. - To make the `RoleAssignment` not applicable
-   * to [Locked Groups](https://cloud.google.com/identity/docs/groups#group_types):
+   * syntax](https://cloud.google.com/iam/docs/conditions-overview). - To make the `RoleAssignment`
+   * not applicable to [Locked Groups](https://cloud.google.com/identity/docs/groups#group_types):
    * `!api.getAttribute('cloudidentity.googleapis.com/groups.labels', []).hasAny(['groups.locked'])
    * && resource.type == 'cloudidentity.googleapis.com/Group'` This condition can also be used in
    * conjunction with a Security-related condition.

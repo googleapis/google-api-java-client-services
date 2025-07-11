@@ -728,15 +728,15 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
   public class Chromeosdevices {
 
     /**
-     * Use [BatchChangeChromeOsDeviceStatus](/admin-
-     * sdk/directory/reference/rest/v1/customer.devices.chromeos/batchChangeStatus) instead. Takes an
-     * action that affects a Chrome OS Device. This includes deprovisioning, disabling, and re-enabling
-     * devices. *Warning:* * Deprovisioning a device will stop device policy syncing and remove device-
-     * level printers. After a device is deprovisioned, it must be wiped before it can be re-enrolled. *
-     * Lost or stolen devices should use the disable action. * Re-enabling a disabled device will
-     * consume a device license. If you do not have sufficient licenses available when completing the
-     * re-enable action, you will receive an error. For more information about deprovisioning and
-     * disabling devices, visit the [help center](https://support.google.com/chrome/a/answer/3523633).
+     * Use [BatchChangeChromeOsDeviceStatus](https://developers.google.com/workspace/admin/directory/ref
+     * erence/rest/v1/customer.devices.chromeos/batchChangeStatus) instead. Takes an action that affects
+     * a Chrome OS Device. This includes deprovisioning, disabling, and re-enabling devices. *Warning:*
+     * * Deprovisioning a device will stop device policy syncing and remove device-level printers. After
+     * a device is deprovisioned, it must be wiped before it can be re-enrolled. * Lost or stolen
+     * devices should use the disable action. * Re-enabling a disabled device will consume a device
+     * license. If you do not have sufficient licenses available when completing the re-enable action,
+     * you will receive an error. For more information about deprovisioning and disabling devices, visit
+     * the [help center](https://support.google.com/chrome/a/answer/3523633).
      *
      * Create a request for the method "chromeosdevices.action".
      *
@@ -745,9 +745,11 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      *
      * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
      *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
-     *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
-     * @param resourceId The unique ID of the device. The `resourceId`s are returned in the response from the
-     *        [chromeosdevices.list](/admin-sdk/directory/v1/reference/chromeosdevices/list) method.
+     *        also returned as part of the [Users
+     *        resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
+     * @param resourceId The unique ID of the device. The `resourceId`s are returned in the response from the [chromeosdevice
+     *        s.list](https://developers.google.com/workspace/admin/directory/v1/reference/chromeosdevic
+     *        es/list) method.
      * @param content the {@link com.google.api.services.directory.model.ChromeOsDeviceAction}
      * @return the request
      */
@@ -762,16 +764,15 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       private static final String REST_PATH = "admin/directory/v1/customer/{customerId}/devices/chromeos/{resourceId}/action";
 
       /**
-       * Use [BatchChangeChromeOsDeviceStatus](/admin-
-       * sdk/directory/reference/rest/v1/customer.devices.chromeos/batchChangeStatus) instead. Takes an
-       * action that affects a Chrome OS Device. This includes deprovisioning, disabling, and re-
-       * enabling devices. *Warning:* * Deprovisioning a device will stop device policy syncing and
-       * remove device-level printers. After a device is deprovisioned, it must be wiped before it can
-       * be re-enrolled. * Lost or stolen devices should use the disable action. * Re-enabling a
-       * disabled device will consume a device license. If you do not have sufficient licenses available
-       * when completing the re-enable action, you will receive an error. For more information about
-       * deprovisioning and disabling devices, visit the [help
-       * center](https://support.google.com/chrome/a/answer/3523633).
+       * Use [BatchChangeChromeOsDeviceStatus](https://developers.google.com/workspace/admin/directory/r
+       * eference/rest/v1/customer.devices.chromeos/batchChangeStatus) instead. Takes an action that
+       * affects a Chrome OS Device. This includes deprovisioning, disabling, and re-enabling devices.
+       * *Warning:* * Deprovisioning a device will stop device policy syncing and remove device-level
+       * printers. After a device is deprovisioned, it must be wiped before it can be re-enrolled. *
+       * Lost or stolen devices should use the disable action. * Re-enabling a disabled device will
+       * consume a device license. If you do not have sufficient licenses available when completing the
+       * re-enable action, you will receive an error. For more information about deprovisioning and
+       * disabling devices, visit the [help center](https://support.google.com/chrome/a/answer/3523633).
        *
        * Create a request for the method "chromeosdevices.action".
        *
@@ -782,9 +783,11 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        *
        * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
      *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
-     *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
-       * @param resourceId The unique ID of the device. The `resourceId`s are returned in the response from the
-     *        [chromeosdevices.list](/admin-sdk/directory/v1/reference/chromeosdevices/list) method.
+     *        also returned as part of the [Users
+     *        resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
+       * @param resourceId The unique ID of the device. The `resourceId`s are returned in the response from the [chromeosdevice
+     *        s.list](https://developers.google.com/workspace/admin/directory/v1/reference/chromeosdevic
+     *        es/list) method.
        * @param content the {@link com.google.api.services.directory.model.ChromeOsDeviceAction}
        * @since 1.13
        */
@@ -852,15 +855,16 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       /**
        * The unique ID for the customer's Google Workspace account. As an account administrator, you
        * can also use the `my_customer` alias to represent your account's `customerId`. The
-       * `customerId` is also returned as part of the [Users resource](/admin-
-       * sdk/directory/v1/reference/users).
+       * `customerId` is also returned as part of the [Users
+       * resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
       /** The unique ID for the customer's Google Workspace account. As an account administrator, you can
      also use the `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+     returned as part of the [Users
+     resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
        */
       public java.lang.String getCustomerId() {
         return customerId;
@@ -869,8 +873,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       /**
        * The unique ID for the customer's Google Workspace account. As an account administrator, you
        * can also use the `my_customer` alias to represent your account's `customerId`. The
-       * `customerId` is also returned as part of the [Users resource](/admin-
-       * sdk/directory/v1/reference/users).
+       * `customerId` is also returned as part of the [Users
+       * resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
        */
       public Action setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
@@ -878,22 +882,25 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * The unique ID of the device. The `resourceId`s are returned in the response from the
-       * [chromeosdevices.list](/admin-sdk/directory/v1/reference/chromeosdevices/list) method.
+       * The unique ID of the device. The `resourceId`s are returned in the response from the [chrom
+       * eosdevices.list](https://developers.google.com/workspace/admin/directory/v1/reference/chrom
+       * eosdevices/list) method.
        */
       @com.google.api.client.util.Key
       private java.lang.String resourceId;
 
-      /** The unique ID of the device. The `resourceId`s are returned in the response from the
-     [chromeosdevices.list](/admin-sdk/directory/v1/reference/chromeosdevices/list) method.
+      /** The unique ID of the device. The `resourceId`s are returned in the response from the [chromeosdevic
+     es.list](https://developers.google.com/workspace/admin/directory/v1/reference/chromeosdevices/list)
+     method.
        */
       public java.lang.String getResourceId() {
         return resourceId;
       }
 
       /**
-       * The unique ID of the device. The `resourceId`s are returned in the response from the
-       * [chromeosdevices.list](/admin-sdk/directory/v1/reference/chromeosdevices/list) method.
+       * The unique ID of the device. The `resourceId`s are returned in the response from the [chrom
+       * eosdevices.list](https://developers.google.com/workspace/admin/directory/v1/reference/chrom
+       * eosdevices/list) method.
        */
       public Action setResourceId(java.lang.String resourceId) {
         this.resourceId = resourceId;
@@ -915,9 +922,11 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      *
      * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
      *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
-     *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
-     * @param deviceId The unique ID of the device. The `deviceId`s are returned in the response from the
-     *        [chromeosdevices.list](/admin-sdk/directory/v1/reference/chromeosdevices/list) method.
+     *        also returned as part of the [Users
+     *        resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
+     * @param deviceId The unique ID of the device. The `deviceId`s are returned in the response from the [chromeosdevices.
+     *        list](https://developers.google.com/workspace/admin/directory/v1/reference/chromeosdevices
+     *        /list) method.
      * @return the request
      */
     public Get get(java.lang.String customerId, java.lang.String deviceId) throws java.io.IOException {
@@ -942,9 +951,11 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        *
        * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
      *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
-     *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
-       * @param deviceId The unique ID of the device. The `deviceId`s are returned in the response from the
-     *        [chromeosdevices.list](/admin-sdk/directory/v1/reference/chromeosdevices/list) method.
+     *        also returned as part of the [Users
+     *        resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
+       * @param deviceId The unique ID of the device. The `deviceId`s are returned in the response from the [chromeosdevices.
+     *        list](https://developers.google.com/workspace/admin/directory/v1/reference/chromeosdevices
+     *        /list) method.
        * @since 1.13
        */
       protected Get(java.lang.String customerId, java.lang.String deviceId) {
@@ -1021,15 +1032,16 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       /**
        * The unique ID for the customer's Google Workspace account. As an account administrator, you
        * can also use the `my_customer` alias to represent your account's `customerId`. The
-       * `customerId` is also returned as part of the [Users resource](/admin-
-       * sdk/directory/v1/reference/users).
+       * `customerId` is also returned as part of the [Users
+       * resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
       /** The unique ID for the customer's Google Workspace account. As an account administrator, you can
      also use the `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+     returned as part of the [Users
+     resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
        */
       public java.lang.String getCustomerId() {
         return customerId;
@@ -1038,8 +1050,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       /**
        * The unique ID for the customer's Google Workspace account. As an account administrator, you
        * can also use the `my_customer` alias to represent your account's `customerId`. The
-       * `customerId` is also returned as part of the [Users resource](/admin-
-       * sdk/directory/v1/reference/users).
+       * `customerId` is also returned as part of the [Users
+       * resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
        */
       public Get setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
@@ -1047,22 +1059,25 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * The unique ID of the device. The `deviceId`s are returned in the response from the
-       * [chromeosdevices.list](/admin-sdk/directory/v1/reference/chromeosdevices/list) method.
+       * The unique ID of the device. The `deviceId`s are returned in the response from the [chromeo
+       * sdevices.list](https://developers.google.com/workspace/admin/directory/v1/reference/chromeo
+       * sdevices/list) method.
        */
       @com.google.api.client.util.Key
       private java.lang.String deviceId;
 
-      /** The unique ID of the device. The `deviceId`s are returned in the response from the
-     [chromeosdevices.list](/admin-sdk/directory/v1/reference/chromeosdevices/list) method.
+      /** The unique ID of the device. The `deviceId`s are returned in the response from the [chromeosdevices
+     .list](https://developers.google.com/workspace/admin/directory/v1/reference/chromeosdevices/list)
+     method.
        */
       public java.lang.String getDeviceId() {
         return deviceId;
       }
 
       /**
-       * The unique ID of the device. The `deviceId`s are returned in the response from the
-       * [chromeosdevices.list](/admin-sdk/directory/v1/reference/chromeosdevices/list) method.
+       * The unique ID of the device. The `deviceId`s are returned in the response from the [chromeo
+       * sdevices.list](https://developers.google.com/workspace/admin/directory/v1/reference/chromeo
+       * sdevices/list) method.
        */
       public Get setDeviceId(java.lang.String deviceId) {
         this.deviceId = deviceId;
@@ -1100,7 +1115,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      *
      * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
      *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
-     *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+     *        also returned as part of the [Users
+     *        resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
      * @return the request
      */
     public List list(java.lang.String customerId) throws java.io.IOException {
@@ -1125,7 +1141,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        *
        * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
      *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
-     *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+     *        also returned as part of the [Users
+     *        resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
        * @since 1.13
        */
       protected List(java.lang.String customerId) {
@@ -1201,15 +1218,16 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       /**
        * The unique ID for the customer's Google Workspace account. As an account administrator, you
        * can also use the `my_customer` alias to represent your account's `customerId`. The
-       * `customerId` is also returned as part of the [Users resource](/admin-
-       * sdk/directory/v1/reference/users).
+       * `customerId` is also returned as part of the [Users
+       * resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
       /** The unique ID for the customer's Google Workspace account. As an account administrator, you can
      also use the `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+     returned as part of the [Users
+     resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
        */
       public java.lang.String getCustomerId() {
         return customerId;
@@ -1218,8 +1236,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       /**
        * The unique ID for the customer's Google Workspace account. As an account administrator, you
        * can also use the `my_customer` alias to represent your account's `customerId`. The
-       * `customerId` is also returned as part of the [Users resource](/admin-
-       * sdk/directory/v1/reference/users).
+       * `customerId` is also returned as part of the [Users
+       * resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
        */
       public List setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
@@ -1339,22 +1357,22 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * Search string in the format given at https://developers.google.com/admin-
-       * sdk/directory/v1/list-query-operators
+       * Search string in the format given at
+       * https://developers.google.com/workspace/admin/directory/v1/list-query-operators
        */
       @com.google.api.client.util.Key
       private java.lang.String query;
 
-      /** Search string in the format given at https://developers.google.com/admin-sdk/directory/v1/list-
-     query-operators
+      /** Search string in the format given at
+     https://developers.google.com/workspace/admin/directory/v1/list-query-operators
        */
       public java.lang.String getQuery() {
         return query;
       }
 
       /**
-       * Search string in the format given at https://developers.google.com/admin-
-       * sdk/directory/v1/list-query-operators
+       * Search string in the format given at
+       * https://developers.google.com/workspace/admin/directory/v1/list-query-operators
        */
       public List setQuery(java.lang.String query) {
         this.query = query;
@@ -1530,8 +1548,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
     }
     /**
      * Updates a device's updatable properties, such as `annotatedUser`, `annotatedLocation`, `notes`,
-     * `orgUnitPath`, or `annotatedAssetId`. This method supports [patch semantics](/admin-
-     * sdk/directory/v1/guides/performance#patch).
+     * `orgUnitPath`, or `annotatedAssetId`. This method supports [patch
+     * semantics](https://developers.google.com/workspace/admin/directory/v1/guides/performance#patch).
      *
      * Create a request for the method "chromeosdevices.patch".
      *
@@ -1540,9 +1558,11 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      *
      * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
      *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
-     *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
-     * @param deviceId The unique ID of the device. The `deviceId`s are returned in the response from the
-     *        [chromeosdevices.list](/admin-sdk/v1/reference/chromeosdevices/list) method.
+     *        also returned as part of the [Users
+     *        resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
+     * @param deviceId The unique ID of the device. The `deviceId`s are returned in the response from the [chromeosdevices.
+     *        list](https://developers.google.com/workspace/admin/v1/reference/chromeosdevices/list)
+     *        method.
      * @param content the {@link com.google.api.services.directory.model.ChromeOsDevice}
      * @return the request
      */
@@ -1558,8 +1578,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
 
       /**
        * Updates a device's updatable properties, such as `annotatedUser`, `annotatedLocation`, `notes`,
-       * `orgUnitPath`, or `annotatedAssetId`. This method supports [patch semantics](/admin-
-       * sdk/directory/v1/guides/performance#patch).
+       * `orgUnitPath`, or `annotatedAssetId`. This method supports [patch semantics](https://developers
+       * .google.com/workspace/admin/directory/v1/guides/performance#patch).
        *
        * Create a request for the method "chromeosdevices.patch".
        *
@@ -1570,9 +1590,11 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        *
        * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
      *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
-     *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
-       * @param deviceId The unique ID of the device. The `deviceId`s are returned in the response from the
-     *        [chromeosdevices.list](/admin-sdk/v1/reference/chromeosdevices/list) method.
+     *        also returned as part of the [Users
+     *        resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
+       * @param deviceId The unique ID of the device. The `deviceId`s are returned in the response from the [chromeosdevices.
+     *        list](https://developers.google.com/workspace/admin/v1/reference/chromeosdevices/list)
+     *        method.
        * @param content the {@link com.google.api.services.directory.model.ChromeOsDevice}
        * @since 1.13
        */
@@ -1640,15 +1662,16 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       /**
        * The unique ID for the customer's Google Workspace account. As an account administrator, you
        * can also use the `my_customer` alias to represent your account's `customerId`. The
-       * `customerId` is also returned as part of the [Users resource](/admin-
-       * sdk/directory/v1/reference/users).
+       * `customerId` is also returned as part of the [Users
+       * resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
       /** The unique ID for the customer's Google Workspace account. As an account administrator, you can
      also use the `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+     returned as part of the [Users
+     resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
        */
       public java.lang.String getCustomerId() {
         return customerId;
@@ -1657,8 +1680,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       /**
        * The unique ID for the customer's Google Workspace account. As an account administrator, you
        * can also use the `my_customer` alias to represent your account's `customerId`. The
-       * `customerId` is also returned as part of the [Users resource](/admin-
-       * sdk/directory/v1/reference/users).
+       * `customerId` is also returned as part of the [Users
+       * resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
        */
       public Patch setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
@@ -1666,22 +1689,24 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * The unique ID of the device. The `deviceId`s are returned in the response from the
-       * [chromeosdevices.list](/admin-sdk/v1/reference/chromeosdevices/list) method.
+       * The unique ID of the device. The `deviceId`s are returned in the response from the [chromeo
+       * sdevices.list](https://developers.google.com/workspace/admin/v1/reference/chromeosdevices/l
+       * ist) method.
        */
       @com.google.api.client.util.Key
       private java.lang.String deviceId;
 
-      /** The unique ID of the device. The `deviceId`s are returned in the response from the
-     [chromeosdevices.list](/admin-sdk/v1/reference/chromeosdevices/list) method.
+      /** The unique ID of the device. The `deviceId`s are returned in the response from the [chromeosdevices
+     .list](https://developers.google.com/workspace/admin/v1/reference/chromeosdevices/list) method.
        */
       public java.lang.String getDeviceId() {
         return deviceId;
       }
 
       /**
-       * The unique ID of the device. The `deviceId`s are returned in the response from the
-       * [chromeosdevices.list](/admin-sdk/v1/reference/chromeosdevices/list) method.
+       * The unique ID of the device. The `deviceId`s are returned in the response from the [chromeo
+       * sdevices.list](https://developers.google.com/workspace/admin/v1/reference/chromeosdevices/l
+       * ist) method.
        */
       public Patch setDeviceId(java.lang.String deviceId) {
         this.deviceId = deviceId;
@@ -1720,9 +1745,11 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      *
      * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
      *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
-     *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
-     * @param deviceId The unique ID of the device. The `deviceId`s are returned in the response from the
-     *        [chromeosdevices.list](/admin-sdk/v1/reference/chromeosdevices/list) method.
+     *        also returned as part of the [Users
+     *        resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
+     * @param deviceId The unique ID of the device. The `deviceId`s are returned in the response from the [chromeosdevices.
+     *        list](https://developers.google.com/workspace/admin/v1/reference/chromeosdevices/list)
+     *        method.
      * @param content the {@link com.google.api.services.directory.model.ChromeOsDevice}
      * @return the request
      */
@@ -1749,9 +1776,11 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        *
        * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
      *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
-     *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
-       * @param deviceId The unique ID of the device. The `deviceId`s are returned in the response from the
-     *        [chromeosdevices.list](/admin-sdk/v1/reference/chromeosdevices/list) method.
+     *        also returned as part of the [Users
+     *        resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
+       * @param deviceId The unique ID of the device. The `deviceId`s are returned in the response from the [chromeosdevices.
+     *        list](https://developers.google.com/workspace/admin/v1/reference/chromeosdevices/list)
+     *        method.
        * @param content the {@link com.google.api.services.directory.model.ChromeOsDevice}
        * @since 1.13
        */
@@ -1819,15 +1848,16 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       /**
        * The unique ID for the customer's Google Workspace account. As an account administrator, you
        * can also use the `my_customer` alias to represent your account's `customerId`. The
-       * `customerId` is also returned as part of the [Users resource](/admin-
-       * sdk/directory/v1/reference/users).
+       * `customerId` is also returned as part of the [Users
+       * resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
       /** The unique ID for the customer's Google Workspace account. As an account administrator, you can
      also use the `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+     returned as part of the [Users
+     resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
        */
       public java.lang.String getCustomerId() {
         return customerId;
@@ -1836,8 +1866,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       /**
        * The unique ID for the customer's Google Workspace account. As an account administrator, you
        * can also use the `my_customer` alias to represent your account's `customerId`. The
-       * `customerId` is also returned as part of the [Users resource](/admin-
-       * sdk/directory/v1/reference/users).
+       * `customerId` is also returned as part of the [Users
+       * resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
        */
       public Update setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
@@ -1845,22 +1875,24 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * The unique ID of the device. The `deviceId`s are returned in the response from the
-       * [chromeosdevices.list](/admin-sdk/v1/reference/chromeosdevices/list) method.
+       * The unique ID of the device. The `deviceId`s are returned in the response from the [chromeo
+       * sdevices.list](https://developers.google.com/workspace/admin/v1/reference/chromeosdevices/l
+       * ist) method.
        */
       @com.google.api.client.util.Key
       private java.lang.String deviceId;
 
-      /** The unique ID of the device. The `deviceId`s are returned in the response from the
-     [chromeosdevices.list](/admin-sdk/v1/reference/chromeosdevices/list) method.
+      /** The unique ID of the device. The `deviceId`s are returned in the response from the [chromeosdevices
+     .list](https://developers.google.com/workspace/admin/v1/reference/chromeosdevices/list) method.
        */
       public java.lang.String getDeviceId() {
         return deviceId;
       }
 
       /**
-       * The unique ID of the device. The `deviceId`s are returned in the response from the
-       * [chromeosdevices.list](/admin-sdk/v1/reference/chromeosdevices/list) method.
+       * The unique ID of the device. The `deviceId`s are returned in the response from the [chromeo
+       * sdevices.list](https://developers.google.com/workspace/admin/v1/reference/chromeosdevices/l
+       * ist) method.
        */
       public Update setDeviceId(java.lang.String deviceId) {
         this.deviceId = deviceId;
@@ -2829,9 +2861,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
          * parameters, call the {@link BatchCreatePrintServers#execute()} method to invoke the remote
          * operation.
          *
-         * @param parent Required. The [unique ID](https://developers.google.com/admin-
-         *        sdk/directory/reference/rest/v1/customers) of the customer's Google Workspace account.
-         *        Format: `customers/{id}`
+         * @param parent Required. The [unique
+         *        ID](https://developers.google.com/workspace/admin/directory/reference/rest/v1/customers)
+         *        of the customer's Google Workspace account. Format: `customers/{id}`
          * @param content the {@link com.google.api.services.directory.model.BatchCreatePrintServersRequest}
          * @return the request
          */
@@ -2859,9 +2891,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
            * ces.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param parent Required. The [unique ID](https://developers.google.com/admin-
-         *        sdk/directory/reference/rest/v1/customers) of the customer's Google Workspace account.
-         *        Format: `customers/{id}`
+           * @param parent Required. The [unique
+         *        ID](https://developers.google.com/workspace/admin/directory/reference/rest/v1/customers)
+         *        of the customer's Google Workspace account. Format: `customers/{id}`
            * @param content the {@link com.google.api.services.directory.model.BatchCreatePrintServersRequest}
            * @since 1.13
            */
@@ -2931,25 +2963,25 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. The [unique ID](https://developers.google.com/admin-
-           * sdk/directory/reference/rest/v1/customers) of the customer's Google Workspace account.
-           * Format: `customers/{id}`
+           * Required. The [unique ID](https://developers.google.com/workspace/admin/directory/refer
+           * ence/rest/v1/customers) of the customer's Google Workspace account. Format:
+           * `customers/{id}`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The [unique ID](https://developers.google.com/admin-
-         sdk/directory/reference/rest/v1/customers) of the customer's Google Workspace account. Format:
-         `customers/{id}`
+          /** Required. The [unique
+         ID](https://developers.google.com/workspace/admin/directory/reference/rest/v1/customers) of the
+         customer's Google Workspace account. Format: `customers/{id}`
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The [unique ID](https://developers.google.com/admin-
-           * sdk/directory/reference/rest/v1/customers) of the customer's Google Workspace account.
-           * Format: `customers/{id}`
+           * Required. The [unique ID](https://developers.google.com/workspace/admin/directory/refer
+           * ence/rest/v1/customers) of the customer's Google Workspace account. Format:
+           * `customers/{id}`
            */
           public BatchCreatePrintServers setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -2975,9 +3007,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
          * parameters, call the {@link BatchDeletePrintServers#execute()} method to invoke the remote
          * operation.
          *
-         * @param parent Required. The [unique ID](https://developers.google.com/admin-
-         *        sdk/directory/reference/rest/v1/customers) of the customer's Google Workspace account.
-         *        Format: `customers/{customer.id}`
+         * @param parent Required. The [unique
+         *        ID](https://developers.google.com/workspace/admin/directory/reference/rest/v1/customers)
+         *        of the customer's Google Workspace account. Format: `customers/{customer.id}`
          * @param content the {@link com.google.api.services.directory.model.BatchDeletePrintServersRequest}
          * @return the request
          */
@@ -3005,9 +3037,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
            * ces.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param parent Required. The [unique ID](https://developers.google.com/admin-
-         *        sdk/directory/reference/rest/v1/customers) of the customer's Google Workspace account.
-         *        Format: `customers/{customer.id}`
+           * @param parent Required. The [unique
+         *        ID](https://developers.google.com/workspace/admin/directory/reference/rest/v1/customers)
+         *        of the customer's Google Workspace account. Format: `customers/{customer.id}`
            * @param content the {@link com.google.api.services.directory.model.BatchDeletePrintServersRequest}
            * @since 1.13
            */
@@ -3077,25 +3109,25 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. The [unique ID](https://developers.google.com/admin-
-           * sdk/directory/reference/rest/v1/customers) of the customer's Google Workspace account.
-           * Format: `customers/{customer.id}`
+           * Required. The [unique ID](https://developers.google.com/workspace/admin/directory/refer
+           * ence/rest/v1/customers) of the customer's Google Workspace account. Format:
+           * `customers/{customer.id}`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The [unique ID](https://developers.google.com/admin-
-         sdk/directory/reference/rest/v1/customers) of the customer's Google Workspace account. Format:
-         `customers/{customer.id}`
+          /** Required. The [unique
+         ID](https://developers.google.com/workspace/admin/directory/reference/rest/v1/customers) of the
+         customer's Google Workspace account. Format: `customers/{customer.id}`
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The [unique ID](https://developers.google.com/admin-
-           * sdk/directory/reference/rest/v1/customers) of the customer's Google Workspace account.
-           * Format: `customers/{customer.id}`
+           * Required. The [unique ID](https://developers.google.com/workspace/admin/directory/refer
+           * ence/rest/v1/customers) of the customer's Google Workspace account. Format:
+           * `customers/{customer.id}`
            */
           public BatchDeletePrintServers setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -3120,9 +3152,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the admin server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The [unique ID](https://developers.google.com/admin-
-         *        sdk/directory/reference/rest/v1/customers) of the customer's Google Workspace account.
-         *        Format: `customers/{id}`
+         * @param parent Required. The [unique
+         *        ID](https://developers.google.com/workspace/admin/directory/reference/rest/v1/customers)
+         *        of the customer's Google Workspace account. Format: `customers/{id}`
          * @param content the {@link com.google.api.services.directory.model.PrintServer}
          * @return the request
          */
@@ -3149,9 +3181,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The [unique ID](https://developers.google.com/admin-
-         *        sdk/directory/reference/rest/v1/customers) of the customer's Google Workspace account.
-         *        Format: `customers/{id}`
+           * @param parent Required. The [unique
+         *        ID](https://developers.google.com/workspace/admin/directory/reference/rest/v1/customers)
+         *        of the customer's Google Workspace account. Format: `customers/{id}`
            * @param content the {@link com.google.api.services.directory.model.PrintServer}
            * @since 1.13
            */
@@ -3221,25 +3253,25 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. The [unique ID](https://developers.google.com/admin-
-           * sdk/directory/reference/rest/v1/customers) of the customer's Google Workspace account.
-           * Format: `customers/{id}`
+           * Required. The [unique ID](https://developers.google.com/workspace/admin/directory/refer
+           * ence/rest/v1/customers) of the customer's Google Workspace account. Format:
+           * `customers/{id}`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The [unique ID](https://developers.google.com/admin-
-         sdk/directory/reference/rest/v1/customers) of the customer's Google Workspace account. Format:
-         `customers/{id}`
+          /** Required. The [unique
+         ID](https://developers.google.com/workspace/admin/directory/reference/rest/v1/customers) of the
+         customer's Google Workspace account. Format: `customers/{id}`
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The [unique ID](https://developers.google.com/admin-
-           * sdk/directory/reference/rest/v1/customers) of the customer's Google Workspace account.
-           * Format: `customers/{id}`
+           * Required. The [unique ID](https://developers.google.com/workspace/admin/directory/refer
+           * ence/rest/v1/customers) of the customer's Google Workspace account. Format:
+           * `customers/{id}`
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -3401,9 +3433,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the admin server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The [unique ID](https://developers.google.com/admin-
-         *        sdk/directory/reference/rest/v1/customers) of the customer's Google Workspace account.
-         *        Format: `customers/{id}`
+         * @param name Required. The [unique
+         *        ID](https://developers.google.com/workspace/admin/directory/reference/rest/v1/customers)
+         *        of the customer's Google Workspace account. Format: `customers/{id}`
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -3429,9 +3461,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
            * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The [unique ID](https://developers.google.com/admin-
-         *        sdk/directory/reference/rest/v1/customers) of the customer's Google Workspace account.
-         *        Format: `customers/{id}`
+           * @param name Required. The [unique
+         *        ID](https://developers.google.com/workspace/admin/directory/reference/rest/v1/customers)
+         *        of the customer's Google Workspace account. Format: `customers/{id}`
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -3510,25 +3542,25 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. The [unique ID](https://developers.google.com/admin-
-           * sdk/directory/reference/rest/v1/customers) of the customer's Google Workspace account.
-           * Format: `customers/{id}`
+           * Required. The [unique ID](https://developers.google.com/workspace/admin/directory/refer
+           * ence/rest/v1/customers) of the customer's Google Workspace account. Format:
+           * `customers/{id}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The [unique ID](https://developers.google.com/admin-
-         sdk/directory/reference/rest/v1/customers) of the customer's Google Workspace account. Format:
-         `customers/{id}`
+          /** Required. The [unique
+         ID](https://developers.google.com/workspace/admin/directory/reference/rest/v1/customers) of the
+         customer's Google Workspace account. Format: `customers/{id}`
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. The [unique ID](https://developers.google.com/admin-
-           * sdk/directory/reference/rest/v1/customers) of the customer's Google Workspace account.
-           * Format: `customers/{id}`
+           * Required. The [unique ID](https://developers.google.com/workspace/admin/directory/refer
+           * ence/rest/v1/customers) of the customer's Google Workspace account. Format:
+           * `customers/{id}`
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -3553,9 +3585,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
          * This request holds the parameters needed by the admin server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The [unique ID](https://developers.google.com/admin-
-         *        sdk/directory/reference/rest/v1/customers) of the customer's Google Workspace account.
-         *        Format: `customers/{id}`
+         * @param parent Required. The [unique
+         *        ID](https://developers.google.com/workspace/admin/directory/reference/rest/v1/customers)
+         *        of the customer's Google Workspace account. Format: `customers/{id}`
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -3581,9 +3613,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The [unique ID](https://developers.google.com/admin-
-         *        sdk/directory/reference/rest/v1/customers) of the customer's Google Workspace account.
-         *        Format: `customers/{id}`
+           * @param parent Required. The [unique
+         *        ID](https://developers.google.com/workspace/admin/directory/reference/rest/v1/customers)
+         *        of the customer's Google Workspace account. Format: `customers/{id}`
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -3662,25 +3694,25 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Required. The [unique ID](https://developers.google.com/admin-
-           * sdk/directory/reference/rest/v1/customers) of the customer's Google Workspace account.
-           * Format: `customers/{id}`
+           * Required. The [unique ID](https://developers.google.com/workspace/admin/directory/refer
+           * ence/rest/v1/customers) of the customer's Google Workspace account. Format:
+           * `customers/{id}`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The [unique ID](https://developers.google.com/admin-
-         sdk/directory/reference/rest/v1/customers) of the customer's Google Workspace account. Format:
-         `customers/{id}`
+          /** Required. The [unique
+         ID](https://developers.google.com/workspace/admin/directory/reference/rest/v1/customers) of the
+         customer's Google Workspace account. Format: `customers/{id}`
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The [unique ID](https://developers.google.com/admin-
-           * sdk/directory/reference/rest/v1/customers) of the customer's Google Workspace account.
-           * Format: `customers/{id}`
+           * Required. The [unique ID](https://developers.google.com/workspace/admin/directory/refer
+           * ence/rest/v1/customers) of the customer's Google Workspace account. Format:
+           * `customers/{id}`
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -5511,8 +5543,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * @param customer The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
      *        fetch all groups for a customer, use this field instead of `domain`. You can also use the
      *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     *        returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You
-     *        must provide either the `customer` or the `domain` parameter.
+     *        returned as part of the
+     *        [Users](https://developers.google.com/workspace/admin/directory/v1/reference/users)
+     *        resource. You must provide either the `customer` or the `domain` parameter.
      * @param domainAliasName Name of domain alias to be retrieved.
      * @return the request
      */
@@ -5539,8 +5572,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * @param customer The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
      *        fetch all groups for a customer, use this field instead of `domain`. You can also use the
      *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     *        returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You
-     *        must provide either the `customer` or the `domain` parameter.
+     *        returned as part of the
+     *        [Users](https://developers.google.com/workspace/admin/directory/v1/reference/users)
+     *        resource. You must provide either the `customer` or the `domain` parameter.
        * @param domainAliasName Name of domain alias to be retrieved.
        * @since 1.13
        */
@@ -5619,8 +5653,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * The unique ID for the customer's Google Workspace account. In case of a multi-domain
        * account, to fetch all groups for a customer, use this field instead of `domain`. You can
        * also use the `my_customer` alias to represent your account's `customerId`. The `customerId`
-       * is also returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource.
-       * You must provide either the `customer` or the `domain` parameter.
+       * is also returned as part of the
+       * [Users](https://developers.google.com/workspace/admin/directory/v1/reference/users)
+       * resource. You must provide either the `customer` or the `domain` parameter.
        */
       @com.google.api.client.util.Key
       private java.lang.String customer;
@@ -5628,8 +5663,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       /** The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
      fetch all groups for a customer, use this field instead of `domain`. You can also use the
      `my_customer` alias to represent your account's `customerId`. The `customerId` is also returned as
-     part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You must provide either the
-     `customer` or the `domain` parameter.
+     part of the [Users](https://developers.google.com/workspace/admin/directory/v1/reference/users)
+     resource. You must provide either the `customer` or the `domain` parameter.
        */
       public java.lang.String getCustomer() {
         return customer;
@@ -5639,8 +5674,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * The unique ID for the customer's Google Workspace account. In case of a multi-domain
        * account, to fetch all groups for a customer, use this field instead of `domain`. You can
        * also use the `my_customer` alias to represent your account's `customerId`. The `customerId`
-       * is also returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource.
-       * You must provide either the `customer` or the `domain` parameter.
+       * is also returned as part of the
+       * [Users](https://developers.google.com/workspace/admin/directory/v1/reference/users)
+       * resource. You must provide either the `customer` or the `domain` parameter.
        */
       public Get setCustomer(java.lang.String customer) {
         this.customer = customer;
@@ -5796,8 +5832,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * @param customer The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
      *        fetch all groups for a customer, use this field instead of `domain`. You can also use the
      *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     *        returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You
-     *        must provide either the `customer` or the `domain` parameter.
+     *        returned as part of the
+     *        [Users](https://developers.google.com/workspace/admin/directory/v1/reference/users)
+     *        resource. You must provide either the `customer` or the `domain` parameter.
      * @return the request
      */
     public List list(java.lang.String customer) throws java.io.IOException {
@@ -5823,8 +5860,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * @param customer The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
      *        fetch all groups for a customer, use this field instead of `domain`. You can also use the
      *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     *        returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You
-     *        must provide either the `customer` or the `domain` parameter.
+     *        returned as part of the
+     *        [Users](https://developers.google.com/workspace/admin/directory/v1/reference/users)
+     *        resource. You must provide either the `customer` or the `domain` parameter.
        * @since 1.13
        */
       protected List(java.lang.String customer) {
@@ -5901,8 +5939,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * The unique ID for the customer's Google Workspace account. In case of a multi-domain
        * account, to fetch all groups for a customer, use this field instead of `domain`. You can
        * also use the `my_customer` alias to represent your account's `customerId`. The `customerId`
-       * is also returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource.
-       * You must provide either the `customer` or the `domain` parameter.
+       * is also returned as part of the
+       * [Users](https://developers.google.com/workspace/admin/directory/v1/reference/users)
+       * resource. You must provide either the `customer` or the `domain` parameter.
        */
       @com.google.api.client.util.Key
       private java.lang.String customer;
@@ -5910,8 +5949,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       /** The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
      fetch all groups for a customer, use this field instead of `domain`. You can also use the
      `my_customer` alias to represent your account's `customerId`. The `customerId` is also returned as
-     part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You must provide either the
-     `customer` or the `domain` parameter.
+     part of the [Users](https://developers.google.com/workspace/admin/directory/v1/reference/users)
+     resource. You must provide either the `customer` or the `domain` parameter.
        */
       public java.lang.String getCustomer() {
         return customer;
@@ -5921,8 +5960,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * The unique ID for the customer's Google Workspace account. In case of a multi-domain
        * account, to fetch all groups for a customer, use this field instead of `domain`. You can
        * also use the `my_customer` alias to represent your account's `customerId`. The `customerId`
-       * is also returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource.
-       * You must provide either the `customer` or the `domain` parameter.
+       * is also returned as part of the
+       * [Users](https://developers.google.com/workspace/admin/directory/v1/reference/users)
+       * resource. You must provide either the `customer` or the `domain` parameter.
        */
       public List setCustomer(java.lang.String customer) {
         this.customer = customer;
@@ -6118,8 +6158,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * @param customer The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
      *        fetch all groups for a customer, use this field instead of `domain`. You can also use the
      *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     *        returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You
-     *        must provide either the `customer` or the `domain` parameter.
+     *        returned as part of the
+     *        [Users](https://developers.google.com/workspace/admin/directory/v1/reference/users)
+     *        resource. You must provide either the `customer` or the `domain` parameter.
      * @param domainName Name of domain to be retrieved
      * @return the request
      */
@@ -6146,8 +6187,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * @param customer The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
      *        fetch all groups for a customer, use this field instead of `domain`. You can also use the
      *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     *        returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You
-     *        must provide either the `customer` or the `domain` parameter.
+     *        returned as part of the
+     *        [Users](https://developers.google.com/workspace/admin/directory/v1/reference/users)
+     *        resource. You must provide either the `customer` or the `domain` parameter.
        * @param domainName Name of domain to be retrieved
        * @since 1.13
        */
@@ -6226,8 +6268,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * The unique ID for the customer's Google Workspace account. In case of a multi-domain
        * account, to fetch all groups for a customer, use this field instead of `domain`. You can
        * also use the `my_customer` alias to represent your account's `customerId`. The `customerId`
-       * is also returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource.
-       * You must provide either the `customer` or the `domain` parameter.
+       * is also returned as part of the
+       * [Users](https://developers.google.com/workspace/admin/directory/v1/reference/users)
+       * resource. You must provide either the `customer` or the `domain` parameter.
        */
       @com.google.api.client.util.Key
       private java.lang.String customer;
@@ -6235,8 +6278,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       /** The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
      fetch all groups for a customer, use this field instead of `domain`. You can also use the
      `my_customer` alias to represent your account's `customerId`. The `customerId` is also returned as
-     part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You must provide either the
-     `customer` or the `domain` parameter.
+     part of the [Users](https://developers.google.com/workspace/admin/directory/v1/reference/users)
+     resource. You must provide either the `customer` or the `domain` parameter.
        */
       public java.lang.String getCustomer() {
         return customer;
@@ -6246,8 +6289,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * The unique ID for the customer's Google Workspace account. In case of a multi-domain
        * account, to fetch all groups for a customer, use this field instead of `domain`. You can
        * also use the `my_customer` alias to represent your account's `customerId`. The `customerId`
-       * is also returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource.
-       * You must provide either the `customer` or the `domain` parameter.
+       * is also returned as part of the
+       * [Users](https://developers.google.com/workspace/admin/directory/v1/reference/users)
+       * resource. You must provide either the `customer` or the `domain` parameter.
        */
       public Get setCustomer(java.lang.String customer) {
         this.customer = customer;
@@ -6405,8 +6449,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * @param customer The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
      *        fetch all groups for a customer, use this field instead of `domain`. You can also use the
      *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     *        returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You
-     *        must provide either the `customer` or the `domain` parameter.
+     *        returned as part of the
+     *        [Users](https://developers.google.com/workspace/admin/directory/v1/reference/users)
+     *        resource. You must provide either the `customer` or the `domain` parameter.
      * @return the request
      */
     public List list(java.lang.String customer) throws java.io.IOException {
@@ -6432,8 +6477,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * @param customer The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
      *        fetch all groups for a customer, use this field instead of `domain`. You can also use the
      *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     *        returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You
-     *        must provide either the `customer` or the `domain` parameter.
+     *        returned as part of the
+     *        [Users](https://developers.google.com/workspace/admin/directory/v1/reference/users)
+     *        resource. You must provide either the `customer` or the `domain` parameter.
        * @since 1.13
        */
       protected List(java.lang.String customer) {
@@ -6510,8 +6556,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * The unique ID for the customer's Google Workspace account. In case of a multi-domain
        * account, to fetch all groups for a customer, use this field instead of `domain`. You can
        * also use the `my_customer` alias to represent your account's `customerId`. The `customerId`
-       * is also returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource.
-       * You must provide either the `customer` or the `domain` parameter.
+       * is also returned as part of the
+       * [Users](https://developers.google.com/workspace/admin/directory/v1/reference/users)
+       * resource. You must provide either the `customer` or the `domain` parameter.
        */
       @com.google.api.client.util.Key
       private java.lang.String customer;
@@ -6519,8 +6566,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       /** The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
      fetch all groups for a customer, use this field instead of `domain`. You can also use the
      `my_customer` alias to represent your account's `customerId`. The `customerId` is also returned as
-     part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You must provide either the
-     `customer` or the `domain` parameter.
+     part of the [Users](https://developers.google.com/workspace/admin/directory/v1/reference/users)
+     resource. You must provide either the `customer` or the `domain` parameter.
        */
       public java.lang.String getCustomer() {
         return customer;
@@ -6530,8 +6577,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * The unique ID for the customer's Google Workspace account. In case of a multi-domain
        * account, to fetch all groups for a customer, use this field instead of `domain`. You can
        * also use the `my_customer` alias to represent your account's `customerId`. The `customerId`
-       * is also returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource.
-       * You must provide either the `customer` or the `domain` parameter.
+       * is also returned as part of the
+       * [Users](https://developers.google.com/workspace/admin/directory/v1/reference/users)
+       * resource. You must provide either the `customer` or the `domain` parameter.
        */
       public List setCustomer(java.lang.String customer) {
         this.customer = customer;
@@ -7029,8 +7077,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * The unique ID for the customer's Google Workspace account. In case of a multi-domain
        * account, to fetch all groups for a customer, use this field instead of `domain`. You can
        * also use the `my_customer` alias to represent your account's `customerId`. The `customerId`
-       * is also returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource.
-       * You must provide either the `customer` or the `domain` parameter.
+       * is also returned as part of the
+       * [Users](https://developers.google.com/workspace/admin/directory/v1/reference/users)
+       * resource. You must provide either the `customer` or the `domain` parameter.
        */
       @com.google.api.client.util.Key
       private java.lang.String customer;
@@ -7038,8 +7087,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       /** The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
      fetch all groups for a customer, use this field instead of `domain`. You can also use the
      `my_customer` alias to represent your account's `customerId`. The `customerId` is also returned as
-     part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You must provide either the
-     `customer` or the `domain` parameter.
+     part of the [Users](https://developers.google.com/workspace/admin/directory/v1/reference/users)
+     resource. You must provide either the `customer` or the `domain` parameter.
        */
       public java.lang.String getCustomer() {
         return customer;
@@ -7049,8 +7098,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * The unique ID for the customer's Google Workspace account. In case of a multi-domain
        * account, to fetch all groups for a customer, use this field instead of `domain`. You can
        * also use the `my_customer` alias to represent your account's `customerId`. The `customerId`
-       * is also returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource.
-       * You must provide either the `customer` or the `domain` parameter.
+       * is also returned as part of the
+       * [Users](https://developers.google.com/workspace/admin/directory/v1/reference/users)
+       * resource. You must provide either the `customer` or the `domain` parameter.
        */
       public List setCustomer(java.lang.String customer) {
         this.customer = customer;
@@ -7205,8 +7255,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
     }
     /**
-     * Updates a group's properties. This method supports [patch semantics](/admin-
-     * sdk/directory/v1/guides/performance#patch).
+     * Updates a group's properties. This method supports [patch
+     * semantics](https://developers.google.com/workspace/admin/directory/v1/guides/performance#patch).
      *
      * Create a request for the method "groups.patch".
      *
@@ -7229,8 +7279,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       private static final String REST_PATH = "admin/directory/v1/groups/{groupKey}";
 
       /**
-       * Updates a group's properties. This method supports [patch semantics](/admin-
-       * sdk/directory/v1/guides/performance#patch).
+       * Updates a group's properties. This method supports [patch semantics](https://developers.google.
+       * com/workspace/admin/directory/v1/guides/performance#patch).
        *
        * Create a request for the method "groups.patch".
        *
@@ -8525,8 +8575,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
     }
     /**
      * Retrieves a paginated list of all members in a group. This method times out after 60 minutes. For
-     * more information, see [Troubleshoot error codes](https://developers.google.com/admin-
-     * sdk/directory/v1/guides/troubleshoot-error-codes).
+     * more information, see [Troubleshoot error
+     * codes](https://developers.google.com/workspace/admin/directory/v1/guides/troubleshoot-error-
+     * codes).
      *
      * Create a request for the method "members.list".
      *
@@ -8549,8 +8600,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
 
       /**
        * Retrieves a paginated list of all members in a group. This method times out after 60 minutes.
-       * For more information, see [Troubleshoot error codes](https://developers.google.com/admin-
-       * sdk/directory/v1/guides/troubleshoot-error-codes).
+       * For more information, see [Troubleshoot error
+       * codes](https://developers.google.com/workspace/admin/directory/v1/guides/troubleshoot-error-
+       * codes).
        *
        * Create a request for the method "members.list".
        *
@@ -8734,7 +8786,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
     }
     /**
      * Updates the membership properties of a user in the specified group. This method supports [patch
-     * semantics](/admin-sdk/directory/v1/guides/performance#patch).
+     * semantics](https://developers.google.com/workspace/admin/directory/v1/guides/performance#patch).
      *
      * Create a request for the method "members.patch".
      *
@@ -8760,7 +8812,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
 
       /**
        * Updates the membership properties of a user in the specified group. This method supports [patch
-       * semantics](/admin-sdk/directory/v1/guides/performance#patch).
+       * semantics](https://developers.google.com/workspace/admin/directory/v1/guides/performance#patch)
+       * .
        *
        * Create a request for the method "members.patch".
        *
@@ -9079,7 +9132,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      *
      * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
      *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
-     *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+     *        also returned as part of the [Users
+     *        resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
      * @param resourceId The unique ID the API service uses to identify the mobile device.
      * @param content the {@link com.google.api.services.directory.model.MobileDeviceAction}
      * @return the request
@@ -9106,7 +9160,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        *
        * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
      *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
-     *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+     *        also returned as part of the [Users
+     *        resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
        * @param resourceId The unique ID the API service uses to identify the mobile device.
        * @param content the {@link com.google.api.services.directory.model.MobileDeviceAction}
        * @since 1.13
@@ -9175,15 +9230,16 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       /**
        * The unique ID for the customer's Google Workspace account. As an account administrator, you
        * can also use the `my_customer` alias to represent your account's `customerId`. The
-       * `customerId` is also returned as part of the [Users resource](/admin-
-       * sdk/directory/v1/reference/users).
+       * `customerId` is also returned as part of the [Users
+       * resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
       /** The unique ID for the customer's Google Workspace account. As an account administrator, you can
      also use the `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+     returned as part of the [Users
+     resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
        */
       public java.lang.String getCustomerId() {
         return customerId;
@@ -9192,8 +9248,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       /**
        * The unique ID for the customer's Google Workspace account. As an account administrator, you
        * can also use the `my_customer` alias to represent your account's `customerId`. The
-       * `customerId` is also returned as part of the [Users resource](/admin-
-       * sdk/directory/v1/reference/users).
+       * `customerId` is also returned as part of the [Users
+       * resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
        */
       public Action setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
@@ -9231,7 +9287,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      *
      * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
      *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
-     *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+     *        also returned as part of the [Users
+     *        resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
      * @param resourceId The unique ID the API service uses to identify the mobile device.
      * @return the request
      */
@@ -9257,7 +9314,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        *
        * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
      *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
-     *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+     *        also returned as part of the [Users
+     *        resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
        * @param resourceId The unique ID the API service uses to identify the mobile device.
        * @since 1.13
        */
@@ -9325,15 +9383,16 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       /**
        * The unique ID for the customer's Google Workspace account. As an account administrator, you
        * can also use the `my_customer` alias to represent your account's `customerId`. The
-       * `customerId` is also returned as part of the [Users resource](/admin-
-       * sdk/directory/v1/reference/users).
+       * `customerId` is also returned as part of the [Users
+       * resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
       /** The unique ID for the customer's Google Workspace account. As an account administrator, you can
      also use the `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+     returned as part of the [Users
+     resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
        */
       public java.lang.String getCustomerId() {
         return customerId;
@@ -9342,8 +9401,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       /**
        * The unique ID for the customer's Google Workspace account. As an account administrator, you
        * can also use the `my_customer` alias to represent your account's `customerId`. The
-       * `customerId` is also returned as part of the [Users resource](/admin-
-       * sdk/directory/v1/reference/users).
+       * `customerId` is also returned as part of the [Users
+       * resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
        */
       public Delete setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
@@ -9381,7 +9440,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      *
      * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
      *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
-     *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+     *        also returned as part of the [Users
+     *        resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
      * @param resourceId The unique ID the API service uses to identify the mobile device.
      * @return the request
      */
@@ -9407,7 +9467,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        *
        * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
      *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
-     *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+     *        also returned as part of the [Users
+     *        resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
        * @param resourceId The unique ID the API service uses to identify the mobile device.
        * @since 1.13
        */
@@ -9485,15 +9546,16 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       /**
        * The unique ID for the customer's Google Workspace account. As an account administrator, you
        * can also use the `my_customer` alias to represent your account's `customerId`. The
-       * `customerId` is also returned as part of the [Users resource](/admin-
-       * sdk/directory/v1/reference/users).
+       * `customerId` is also returned as part of the [Users
+       * resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
       /** The unique ID for the customer's Google Workspace account. As an account administrator, you can
      also use the `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+     returned as part of the [Users
+     resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
        */
       public java.lang.String getCustomerId() {
         return customerId;
@@ -9502,8 +9564,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       /**
        * The unique ID for the customer's Google Workspace account. As an account administrator, you
        * can also use the `my_customer` alias to represent your account's `customerId`. The
-       * `customerId` is also returned as part of the [Users resource](/admin-
-       * sdk/directory/v1/reference/users).
+       * `customerId` is also returned as part of the [Users
+       * resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
        */
       public Get setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
@@ -9552,7 +9614,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * that includes company-owned devices, use the Cloud Identity [Devices
      * API](https://cloud.google.com/identity/docs/concepts/overview-devices) instead. This method times
      * out after 60 minutes. For more information, see [Troubleshoot error
-     * codes](https://developers.google.com/admin-sdk/directory/v1/guides/troubleshoot-error-codes).
+     * codes](https://developers.google.com/workspace/admin/directory/v1/guides/troubleshoot-error-
+     * codes).
      *
      * Create a request for the method "mobiledevices.list".
      *
@@ -9561,7 +9624,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      *
      * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
      *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
-     *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+     *        also returned as part of the [Users
+     *        resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
      * @return the request
      */
     public List list(java.lang.String customerId) throws java.io.IOException {
@@ -9579,7 +9643,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * that includes company-owned devices, use the Cloud Identity [Devices
        * API](https://cloud.google.com/identity/docs/concepts/overview-devices) instead. This method
        * times out after 60 minutes. For more information, see [Troubleshoot error
-       * codes](https://developers.google.com/admin-sdk/directory/v1/guides/troubleshoot-error-codes).
+       * codes](https://developers.google.com/workspace/admin/directory/v1/guides/troubleshoot-error-
+       * codes).
        *
        * Create a request for the method "mobiledevices.list".
        *
@@ -9590,7 +9655,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        *
        * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
      *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
-     *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+     *        also returned as part of the [Users
+     *        resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
        * @since 1.13
        */
       protected List(java.lang.String customerId) {
@@ -9666,15 +9732,16 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       /**
        * The unique ID for the customer's Google Workspace account. As an account administrator, you
        * can also use the `my_customer` alias to represent your account's `customerId`. The
-       * `customerId` is also returned as part of the [Users resource](/admin-
-       * sdk/directory/v1/reference/users).
+       * `customerId` is also returned as part of the [Users
+       * resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
       /** The unique ID for the customer's Google Workspace account. As an account administrator, you can
      also use the `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+     returned as part of the [Users
+     resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
        */
       public java.lang.String getCustomerId() {
         return customerId;
@@ -9683,8 +9750,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       /**
        * The unique ID for the customer's Google Workspace account. As an account administrator, you
        * can also use the `my_customer` alias to represent your account's `customerId`. The
-       * `customerId` is also returned as part of the [Users resource](/admin-
-       * sdk/directory/v1/reference/users).
+       * `customerId` is also returned as part of the [Users
+       * resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
        */
       public List setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
@@ -9757,22 +9824,22 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * Search string in the format given at https://developers.google.com/admin-
-       * sdk/directory/v1/search-operators
+       * Search string in the format given at
+       * https://developers.google.com/workspace/admin/directory/v1/search-operators
        */
       @com.google.api.client.util.Key
       private java.lang.String query;
 
-      /** Search string in the format given at https://developers.google.com/admin-sdk/directory/v1/search-
-     operators
+      /** Search string in the format given at
+     https://developers.google.com/workspace/admin/directory/v1/search-operators
        */
       public java.lang.String getQuery() {
         return query;
       }
 
       /**
-       * Search string in the format given at https://developers.google.com/admin-
-       * sdk/directory/v1/search-operators
+       * Search string in the format given at
+       * https://developers.google.com/workspace/admin/directory/v1/search-operators
        */
       public List setQuery(java.lang.String query) {
         this.query = query;
@@ -9840,7 +9907,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      *
      * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
      *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
-     *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+     *        also returned as part of the [Users
+     *        resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
      * @param orgUnitPath The full path of the organizational unit (minus the leading `/`) or its unique ID.
      * @return the request
      */
@@ -9869,7 +9937,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        *
        * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
      *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
-     *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+     *        also returned as part of the [Users
+     *        resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
        * @param orgUnitPath The full path of the organizational unit (minus the leading `/`) or its unique ID.
        * @since 1.13
        */
@@ -9942,15 +10011,16 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       /**
        * The unique ID for the customer's Google Workspace account. As an account administrator, you
        * can also use the `my_customer` alias to represent your account's `customerId`. The
-       * `customerId` is also returned as part of the [Users resource](/admin-
-       * sdk/directory/v1/reference/users).
+       * `customerId` is also returned as part of the [Users
+       * resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
       /** The unique ID for the customer's Google Workspace account. As an account administrator, you can
      also use the `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+     returned as part of the [Users
+     resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
        */
       public java.lang.String getCustomerId() {
         return customerId;
@@ -9959,8 +10029,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       /**
        * The unique ID for the customer's Google Workspace account. As an account administrator, you
        * can also use the `my_customer` alias to represent your account's `customerId`. The
-       * `customerId` is also returned as part of the [Users resource](/admin-
-       * sdk/directory/v1/reference/users).
+       * `customerId` is also returned as part of the [Users
+       * resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
        */
       public Delete setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
@@ -10003,7 +10073,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      *
      * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
      *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
-     *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+     *        also returned as part of the [Users
+     *        resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
      * @param orgUnitPath The full path of the organizational unit (minus the leading `/`) or its unique ID.
      * @return the request
      */
@@ -10032,7 +10103,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        *
        * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
      *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
-     *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+     *        also returned as part of the [Users
+     *        resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
        * @param orgUnitPath The full path of the organizational unit (minus the leading `/`) or its unique ID.
        * @since 1.13
        */
@@ -10115,15 +10187,16 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       /**
        * The unique ID for the customer's Google Workspace account. As an account administrator, you
        * can also use the `my_customer` alias to represent your account's `customerId`. The
-       * `customerId` is also returned as part of the [Users resource](/admin-
-       * sdk/directory/v1/reference/users).
+       * `customerId` is also returned as part of the [Users
+       * resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
       /** The unique ID for the customer's Google Workspace account. As an account administrator, you can
      also use the `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+     returned as part of the [Users
+     resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
        */
       public java.lang.String getCustomerId() {
         return customerId;
@@ -10132,8 +10205,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       /**
        * The unique ID for the customer's Google Workspace account. As an account administrator, you
        * can also use the `my_customer` alias to represent your account's `customerId`. The
-       * `customerId` is also returned as part of the [Users resource](/admin-
-       * sdk/directory/v1/reference/users).
+       * `customerId` is also returned as part of the [Users
+       * resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
        */
       public Get setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
@@ -10176,7 +10249,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      *
      * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
      *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
-     *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+     *        also returned as part of the [Users
+     *        resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
      * @param content the {@link com.google.api.services.directory.model.OrgUnit}
      * @return the request
      */
@@ -10202,7 +10276,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        *
        * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
      *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
-     *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+     *        also returned as part of the [Users
+     *        resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
        * @param content the {@link com.google.api.services.directory.model.OrgUnit}
        * @since 1.13
        */
@@ -10271,15 +10346,16 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       /**
        * The unique ID for the customer's Google Workspace account. As an account administrator, you
        * can also use the `my_customer` alias to represent your account's `customerId`. The
-       * `customerId` is also returned as part of the [Users resource](/admin-
-       * sdk/directory/v1/reference/users).
+       * `customerId` is also returned as part of the [Users
+       * resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
       /** The unique ID for the customer's Google Workspace account. As an account administrator, you can
      also use the `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+     returned as part of the [Users
+     resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
        */
       public java.lang.String getCustomerId() {
         return customerId;
@@ -10288,8 +10364,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       /**
        * The unique ID for the customer's Google Workspace account. As an account administrator, you
        * can also use the `my_customer` alias to represent your account's `customerId`. The
-       * `customerId` is also returned as part of the [Users resource](/admin-
-       * sdk/directory/v1/reference/users).
+       * `customerId` is also returned as part of the [Users
+       * resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
        */
       public Insert setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
@@ -10311,7 +10387,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      *
      * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
      *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
-     *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+     *        also returned as part of the [Users
+     *        resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
      * @return the request
      */
     public List list(java.lang.String customerId) throws java.io.IOException {
@@ -10336,7 +10413,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        *
        * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
      *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
-     *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+     *        also returned as part of the [Users
+     *        resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
        * @since 1.13
        */
       protected List(java.lang.String customerId) {
@@ -10412,15 +10490,16 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       /**
        * The unique ID for the customer's Google Workspace account. As an account administrator, you
        * can also use the `my_customer` alias to represent your account's `customerId`. The
-       * `customerId` is also returned as part of the [Users resource](/admin-
-       * sdk/directory/v1/reference/users).
+       * `customerId` is also returned as part of the [Users
+       * resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
       /** The unique ID for the customer's Google Workspace account. As an account administrator, you can
      also use the `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+     returned as part of the [Users
+     resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
        */
       public java.lang.String getCustomerId() {
         return customerId;
@@ -10429,8 +10508,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       /**
        * The unique ID for the customer's Google Workspace account. As an account administrator, you
        * can also use the `my_customer` alias to represent your account's `customerId`. The
-       * `customerId` is also returned as part of the [Users resource](/admin-
-       * sdk/directory/v1/reference/users).
+       * `customerId` is also returned as part of the [Users
+       * resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
        */
       public List setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
@@ -10482,8 +10561,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
     }
     /**
-     * Updates an organizational unit. This method supports [patch semantics](/admin-
-     * sdk/directory/v1/guides/performance#patch)
+     * Updates an organizational unit. This method supports [patch
+     * semantics](https://developers.google.com/workspace/admin/directory/v1/guides/performance#patch)
      *
      * Create a request for the method "orgunits.patch".
      *
@@ -10492,7 +10571,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      *
      * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
      *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
-     *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+     *        also returned as part of the [Users
+     *        resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
      * @param orgUnitPath The full path of the organizational unit (minus the leading `/`) or its unique ID.
      * @param content the {@link com.google.api.services.directory.model.OrgUnit}
      * @return the request
@@ -10511,8 +10591,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
           java.util.regex.Pattern.compile("^.*$");
 
       /**
-       * Updates an organizational unit. This method supports [patch semantics](/admin-
-       * sdk/directory/v1/guides/performance#patch)
+       * Updates an organizational unit. This method supports [patch
+       * semantics](https://developers.google.com/workspace/admin/directory/v1/guides/performance#patch)
        *
        * Create a request for the method "orgunits.patch".
        *
@@ -10523,7 +10603,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        *
        * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
      *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
-     *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+     *        also returned as part of the [Users
+     *        resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
        * @param orgUnitPath The full path of the organizational unit (minus the leading `/`) or its unique ID.
        * @param content the {@link com.google.api.services.directory.model.OrgUnit}
        * @since 1.13
@@ -10597,15 +10678,16 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       /**
        * The unique ID for the customer's Google Workspace account. As an account administrator, you
        * can also use the `my_customer` alias to represent your account's `customerId`. The
-       * `customerId` is also returned as part of the [Users resource](/admin-
-       * sdk/directory/v1/reference/users).
+       * `customerId` is also returned as part of the [Users
+       * resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
       /** The unique ID for the customer's Google Workspace account. As an account administrator, you can
      also use the `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+     returned as part of the [Users
+     resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
        */
       public java.lang.String getCustomerId() {
         return customerId;
@@ -10614,8 +10696,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       /**
        * The unique ID for the customer's Google Workspace account. As an account administrator, you
        * can also use the `my_customer` alias to represent your account's `customerId`. The
-       * `customerId` is also returned as part of the [Users resource](/admin-
-       * sdk/directory/v1/reference/users).
+       * `customerId` is also returned as part of the [Users
+       * resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
        */
       public Patch setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
@@ -10658,7 +10740,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      *
      * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
      *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
-     *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+     *        also returned as part of the [Users
+     *        resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
      * @param orgUnitPath The full path of the organizational unit (minus the leading `/`) or its unique ID.
      * @param content the {@link com.google.api.services.directory.model.OrgUnit}
      * @return the request
@@ -10688,7 +10771,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        *
        * @param customerId The unique ID for the customer's Google Workspace account. As an account administrator, you can also
      *        use the `my_customer` alias to represent your account's `customerId`. The `customerId` is
-     *        also returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+     *        also returned as part of the [Users
+     *        resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
        * @param orgUnitPath The full path of the organizational unit (minus the leading `/`) or its unique ID.
        * @param content the {@link com.google.api.services.directory.model.OrgUnit}
        * @since 1.13
@@ -10762,15 +10846,16 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       /**
        * The unique ID for the customer's Google Workspace account. As an account administrator, you
        * can also use the `my_customer` alias to represent your account's `customerId`. The
-       * `customerId` is also returned as part of the [Users resource](/admin-
-       * sdk/directory/v1/reference/users).
+       * `customerId` is also returned as part of the [Users
+       * resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
 
       /** The unique ID for the customer's Google Workspace account. As an account administrator, you can
      also use the `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     returned as part of the [Users resource](/admin-sdk/directory/v1/reference/users).
+     returned as part of the [Users
+     resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
        */
       public java.lang.String getCustomerId() {
         return customerId;
@@ -10779,8 +10864,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       /**
        * The unique ID for the customer's Google Workspace account. As an account administrator, you
        * can also use the `my_customer` alias to represent your account's `customerId`. The
-       * `customerId` is also returned as part of the [Users resource](/admin-
-       * sdk/directory/v1/reference/users).
+       * `customerId` is also returned as part of the [Users
+       * resource](https://developers.google.com/workspace/admin/directory/v1/reference/users).
        */
       public Update setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
@@ -10847,8 +10932,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * @param customer The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
      *        fetch all groups for a customer, use this field instead of `domain`. You can also use the
      *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     *        returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You
-     *        must provide either the `customer` or the `domain` parameter.
+     *        returned as part of the
+     *        [Users](https://developers.google.com/workspace/admin/directory/v1/reference/users)
+     *        resource. You must provide either the `customer` or the `domain` parameter.
      * @return the request
      */
     public List list(java.lang.String customer) throws java.io.IOException {
@@ -10874,8 +10960,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * @param customer The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
      *        fetch all groups for a customer, use this field instead of `domain`. You can also use the
      *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     *        returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You
-     *        must provide either the `customer` or the `domain` parameter.
+     *        returned as part of the
+     *        [Users](https://developers.google.com/workspace/admin/directory/v1/reference/users)
+     *        resource. You must provide either the `customer` or the `domain` parameter.
        * @since 1.13
        */
       protected List(java.lang.String customer) {
@@ -10952,8 +11039,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * The unique ID for the customer's Google Workspace account. In case of a multi-domain
        * account, to fetch all groups for a customer, use this field instead of `domain`. You can
        * also use the `my_customer` alias to represent your account's `customerId`. The `customerId`
-       * is also returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource.
-       * You must provide either the `customer` or the `domain` parameter.
+       * is also returned as part of the
+       * [Users](https://developers.google.com/workspace/admin/directory/v1/reference/users)
+       * resource. You must provide either the `customer` or the `domain` parameter.
        */
       @com.google.api.client.util.Key
       private java.lang.String customer;
@@ -10961,8 +11049,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       /** The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
      fetch all groups for a customer, use this field instead of `domain`. You can also use the
      `my_customer` alias to represent your account's `customerId`. The `customerId` is also returned as
-     part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You must provide either the
-     `customer` or the `domain` parameter.
+     part of the [Users](https://developers.google.com/workspace/admin/directory/v1/reference/users)
+     resource. You must provide either the `customer` or the `domain` parameter.
        */
       public java.lang.String getCustomer() {
         return customer;
@@ -10972,8 +11060,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * The unique ID for the customer's Google Workspace account. In case of a multi-domain
        * account, to fetch all groups for a customer, use this field instead of `domain`. You can
        * also use the `my_customer` alias to represent your account's `customerId`. The `customerId`
-       * is also returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource.
-       * You must provide either the `customer` or the `domain` parameter.
+       * is also returned as part of the
+       * [Users](https://developers.google.com/workspace/admin/directory/v1/reference/users)
+       * resource. You must provide either the `customer` or the `domain` parameter.
        */
       public List setCustomer(java.lang.String customer) {
         this.customer = customer;
@@ -14156,8 +14245,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * @param customer The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
      *        fetch all groups for a customer, use this field instead of `domain`. You can also use the
      *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     *        returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You
-     *        must provide either the `customer` or the `domain` parameter.
+     *        returned as part of the
+     *        [Users](https://developers.google.com/workspace/admin/directory/v1/reference/users)
+     *        resource. You must provide either the `customer` or the `domain` parameter.
      * @param roleAssignmentId Immutable ID of the role assignment.
      * @return the request
      */
@@ -14184,8 +14274,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * @param customer The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
      *        fetch all groups for a customer, use this field instead of `domain`. You can also use the
      *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     *        returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You
-     *        must provide either the `customer` or the `domain` parameter.
+     *        returned as part of the
+     *        [Users](https://developers.google.com/workspace/admin/directory/v1/reference/users)
+     *        resource. You must provide either the `customer` or the `domain` parameter.
        * @param roleAssignmentId Immutable ID of the role assignment.
        * @since 1.13
        */
@@ -14264,8 +14355,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * The unique ID for the customer's Google Workspace account. In case of a multi-domain
        * account, to fetch all groups for a customer, use this field instead of `domain`. You can
        * also use the `my_customer` alias to represent your account's `customerId`. The `customerId`
-       * is also returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource.
-       * You must provide either the `customer` or the `domain` parameter.
+       * is also returned as part of the
+       * [Users](https://developers.google.com/workspace/admin/directory/v1/reference/users)
+       * resource. You must provide either the `customer` or the `domain` parameter.
        */
       @com.google.api.client.util.Key
       private java.lang.String customer;
@@ -14273,8 +14365,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       /** The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
      fetch all groups for a customer, use this field instead of `domain`. You can also use the
      `my_customer` alias to represent your account's `customerId`. The `customerId` is also returned as
-     part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You must provide either the
-     `customer` or the `domain` parameter.
+     part of the [Users](https://developers.google.com/workspace/admin/directory/v1/reference/users)
+     resource. You must provide either the `customer` or the `domain` parameter.
        */
       public java.lang.String getCustomer() {
         return customer;
@@ -14284,8 +14376,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * The unique ID for the customer's Google Workspace account. In case of a multi-domain
        * account, to fetch all groups for a customer, use this field instead of `domain`. You can
        * also use the `my_customer` alias to represent your account's `customerId`. The `customerId`
-       * is also returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource.
-       * You must provide either the `customer` or the `domain` parameter.
+       * is also returned as part of the
+       * [Users](https://developers.google.com/workspace/admin/directory/v1/reference/users)
+       * resource. You must provide either the `customer` or the `domain` parameter.
        */
       public Get setCustomer(java.lang.String customer) {
         this.customer = customer;
@@ -14441,8 +14534,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * @param customer The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
      *        fetch all groups for a customer, use this field instead of `domain`. You can also use the
      *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     *        returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You
-     *        must provide either the `customer` or the `domain` parameter.
+     *        returned as part of the
+     *        [Users](https://developers.google.com/workspace/admin/directory/v1/reference/users)
+     *        resource. You must provide either the `customer` or the `domain` parameter.
      * @return the request
      */
     public List list(java.lang.String customer) throws java.io.IOException {
@@ -14468,8 +14562,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * @param customer The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
      *        fetch all groups for a customer, use this field instead of `domain`. You can also use the
      *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     *        returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You
-     *        must provide either the `customer` or the `domain` parameter.
+     *        returned as part of the
+     *        [Users](https://developers.google.com/workspace/admin/directory/v1/reference/users)
+     *        resource. You must provide either the `customer` or the `domain` parameter.
        * @since 1.13
        */
       protected List(java.lang.String customer) {
@@ -14546,8 +14641,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * The unique ID for the customer's Google Workspace account. In case of a multi-domain
        * account, to fetch all groups for a customer, use this field instead of `domain`. You can
        * also use the `my_customer` alias to represent your account's `customerId`. The `customerId`
-       * is also returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource.
-       * You must provide either the `customer` or the `domain` parameter.
+       * is also returned as part of the
+       * [Users](https://developers.google.com/workspace/admin/directory/v1/reference/users)
+       * resource. You must provide either the `customer` or the `domain` parameter.
        */
       @com.google.api.client.util.Key
       private java.lang.String customer;
@@ -14555,8 +14651,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       /** The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
      fetch all groups for a customer, use this field instead of `domain`. You can also use the
      `my_customer` alias to represent your account's `customerId`. The `customerId` is also returned as
-     part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You must provide either the
-     `customer` or the `domain` parameter.
+     part of the [Users](https://developers.google.com/workspace/admin/directory/v1/reference/users)
+     resource. You must provide either the `customer` or the `domain` parameter.
        */
       public java.lang.String getCustomer() {
         return customer;
@@ -14566,8 +14662,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * The unique ID for the customer's Google Workspace account. In case of a multi-domain
        * account, to fetch all groups for a customer, use this field instead of `domain`. You can
        * also use the `my_customer` alias to represent your account's `customerId`. The `customerId`
-       * is also returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource.
-       * You must provide either the `customer` or the `domain` parameter.
+       * is also returned as part of the
+       * [Users](https://developers.google.com/workspace/admin/directory/v1/reference/users)
+       * resource. You must provide either the `customer` or the `domain` parameter.
        */
       public List setCustomer(java.lang.String customer) {
         this.customer = customer;
@@ -14853,8 +14950,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * @param customer The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
      *        fetch all groups for a customer, use this field instead of `domain`. You can also use the
      *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     *        returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You
-     *        must provide either the `customer` or the `domain` parameter.
+     *        returned as part of the
+     *        [Users](https://developers.google.com/workspace/admin/directory/v1/reference/users)
+     *        resource. You must provide either the `customer` or the `domain` parameter.
      * @param roleId Immutable ID of the role.
      * @return the request
      */
@@ -14881,8 +14979,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * @param customer The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
      *        fetch all groups for a customer, use this field instead of `domain`. You can also use the
      *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     *        returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You
-     *        must provide either the `customer` or the `domain` parameter.
+     *        returned as part of the
+     *        [Users](https://developers.google.com/workspace/admin/directory/v1/reference/users)
+     *        resource. You must provide either the `customer` or the `domain` parameter.
        * @param roleId Immutable ID of the role.
        * @since 1.13
        */
@@ -14961,8 +15060,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * The unique ID for the customer's Google Workspace account. In case of a multi-domain
        * account, to fetch all groups for a customer, use this field instead of `domain`. You can
        * also use the `my_customer` alias to represent your account's `customerId`. The `customerId`
-       * is also returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource.
-       * You must provide either the `customer` or the `domain` parameter.
+       * is also returned as part of the
+       * [Users](https://developers.google.com/workspace/admin/directory/v1/reference/users)
+       * resource. You must provide either the `customer` or the `domain` parameter.
        */
       @com.google.api.client.util.Key
       private java.lang.String customer;
@@ -14970,8 +15070,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       /** The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
      fetch all groups for a customer, use this field instead of `domain`. You can also use the
      `my_customer` alias to represent your account's `customerId`. The `customerId` is also returned as
-     part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You must provide either the
-     `customer` or the `domain` parameter.
+     part of the [Users](https://developers.google.com/workspace/admin/directory/v1/reference/users)
+     resource. You must provide either the `customer` or the `domain` parameter.
        */
       public java.lang.String getCustomer() {
         return customer;
@@ -14981,8 +15081,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * The unique ID for the customer's Google Workspace account. In case of a multi-domain
        * account, to fetch all groups for a customer, use this field instead of `domain`. You can
        * also use the `my_customer` alias to represent your account's `customerId`. The `customerId`
-       * is also returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource.
-       * You must provide either the `customer` or the `domain` parameter.
+       * is also returned as part of the
+       * [Users](https://developers.google.com/workspace/admin/directory/v1/reference/users)
+       * resource. You must provide either the `customer` or the `domain` parameter.
        */
       public Get setCustomer(java.lang.String customer) {
         this.customer = customer;
@@ -15140,8 +15241,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * @param customer The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
      *        fetch all groups for a customer, use this field instead of `domain`. You can also use the
      *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     *        returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You
-     *        must provide either the `customer` or the `domain` parameter.
+     *        returned as part of the
+     *        [Users](https://developers.google.com/workspace/admin/directory/v1/reference/users)
+     *        resource. You must provide either the `customer` or the `domain` parameter.
      * @return the request
      */
     public List list(java.lang.String customer) throws java.io.IOException {
@@ -15167,8 +15269,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * @param customer The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
      *        fetch all groups for a customer, use this field instead of `domain`. You can also use the
      *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     *        returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You
-     *        must provide either the `customer` or the `domain` parameter.
+     *        returned as part of the
+     *        [Users](https://developers.google.com/workspace/admin/directory/v1/reference/users)
+     *        resource. You must provide either the `customer` or the `domain` parameter.
        * @since 1.13
        */
       protected List(java.lang.String customer) {
@@ -15245,8 +15348,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * The unique ID for the customer's Google Workspace account. In case of a multi-domain
        * account, to fetch all groups for a customer, use this field instead of `domain`. You can
        * also use the `my_customer` alias to represent your account's `customerId`. The `customerId`
-       * is also returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource.
-       * You must provide either the `customer` or the `domain` parameter.
+       * is also returned as part of the
+       * [Users](https://developers.google.com/workspace/admin/directory/v1/reference/users)
+       * resource. You must provide either the `customer` or the `domain` parameter.
        */
       @com.google.api.client.util.Key
       private java.lang.String customer;
@@ -15254,8 +15358,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       /** The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
      fetch all groups for a customer, use this field instead of `domain`. You can also use the
      `my_customer` alias to represent your account's `customerId`. The `customerId` is also returned as
-     part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You must provide either the
-     `customer` or the `domain` parameter.
+     part of the [Users](https://developers.google.com/workspace/admin/directory/v1/reference/users)
+     resource. You must provide either the `customer` or the `domain` parameter.
        */
       public java.lang.String getCustomer() {
         return customer;
@@ -15265,8 +15369,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * The unique ID for the customer's Google Workspace account. In case of a multi-domain
        * account, to fetch all groups for a customer, use this field instead of `domain`. You can
        * also use the `my_customer` alias to represent your account's `customerId`. The `customerId`
-       * is also returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource.
-       * You must provide either the `customer` or the `domain` parameter.
+       * is also returned as part of the
+       * [Users](https://developers.google.com/workspace/admin/directory/v1/reference/users)
+       * resource. You must provide either the `customer` or the `domain` parameter.
        */
       public List setCustomer(java.lang.String customer) {
         this.customer = customer;
@@ -15752,8 +15857,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * @param customerId The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
      *        fetch all groups for a customer, use this field instead of `domain`. You can also use the
      *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     *        returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You
-     *        must provide either the `customer` or the `domain` parameter.
+     *        returned as part of the
+     *        [Users](https://developers.google.com/workspace/admin/directory/v1/reference/users)
+     *        resource. You must provide either the `customer` or the `domain` parameter.
      * @param schemaKey Name or immutable ID of the schema.
      * @return the request
      */
@@ -15780,8 +15886,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * @param customerId The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
      *        fetch all groups for a customer, use this field instead of `domain`. You can also use the
      *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     *        returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You
-     *        must provide either the `customer` or the `domain` parameter.
+     *        returned as part of the
+     *        [Users](https://developers.google.com/workspace/admin/directory/v1/reference/users)
+     *        resource. You must provide either the `customer` or the `domain` parameter.
        * @param schemaKey Name or immutable ID of the schema.
        * @since 1.13
        */
@@ -15860,8 +15967,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * The unique ID for the customer's Google Workspace account. In case of a multi-domain
        * account, to fetch all groups for a customer, use this field instead of `domain`. You can
        * also use the `my_customer` alias to represent your account's `customerId`. The `customerId`
-       * is also returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource.
-       * You must provide either the `customer` or the `domain` parameter.
+       * is also returned as part of the
+       * [Users](https://developers.google.com/workspace/admin/directory/v1/reference/users)
+       * resource. You must provide either the `customer` or the `domain` parameter.
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
@@ -15869,8 +15977,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       /** The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
      fetch all groups for a customer, use this field instead of `domain`. You can also use the
      `my_customer` alias to represent your account's `customerId`. The `customerId` is also returned as
-     part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You must provide either the
-     `customer` or the `domain` parameter.
+     part of the [Users](https://developers.google.com/workspace/admin/directory/v1/reference/users)
+     resource. You must provide either the `customer` or the `domain` parameter.
        */
       public java.lang.String getCustomerId() {
         return customerId;
@@ -15880,8 +15988,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * The unique ID for the customer's Google Workspace account. In case of a multi-domain
        * account, to fetch all groups for a customer, use this field instead of `domain`. You can
        * also use the `my_customer` alias to represent your account's `customerId`. The `customerId`
-       * is also returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource.
-       * You must provide either the `customer` or the `domain` parameter.
+       * is also returned as part of the
+       * [Users](https://developers.google.com/workspace/admin/directory/v1/reference/users)
+       * resource. You must provide either the `customer` or the `domain` parameter.
        */
       public Get setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
@@ -16041,8 +16150,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * @param customerId The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
      *        fetch all groups for a customer, use this field instead of `domain`. You can also use the
      *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     *        returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You
-     *        must provide either the `customer` or the `domain` parameter.
+     *        returned as part of the
+     *        [Users](https://developers.google.com/workspace/admin/directory/v1/reference/users)
+     *        resource. You must provide either the `customer` or the `domain` parameter.
      * @return the request
      */
     public List list(java.lang.String customerId) throws java.io.IOException {
@@ -16068,8 +16178,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * @param customerId The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
      *        fetch all groups for a customer, use this field instead of `domain`. You can also use the
      *        `my_customer` alias to represent your account's `customerId`. The `customerId` is also
-     *        returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You
-     *        must provide either the `customer` or the `domain` parameter.
+     *        returned as part of the
+     *        [Users](https://developers.google.com/workspace/admin/directory/v1/reference/users)
+     *        resource. You must provide either the `customer` or the `domain` parameter.
        * @since 1.13
        */
       protected List(java.lang.String customerId) {
@@ -16146,8 +16257,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * The unique ID for the customer's Google Workspace account. In case of a multi-domain
        * account, to fetch all groups for a customer, use this field instead of `domain`. You can
        * also use the `my_customer` alias to represent your account's `customerId`. The `customerId`
-       * is also returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource.
-       * You must provide either the `customer` or the `domain` parameter.
+       * is also returned as part of the
+       * [Users](https://developers.google.com/workspace/admin/directory/v1/reference/users)
+       * resource. You must provide either the `customer` or the `domain` parameter.
        */
       @com.google.api.client.util.Key
       private java.lang.String customerId;
@@ -16155,8 +16267,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       /** The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
      fetch all groups for a customer, use this field instead of `domain`. You can also use the
      `my_customer` alias to represent your account's `customerId`. The `customerId` is also returned as
-     part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You must provide either the
-     `customer` or the `domain` parameter.
+     part of the [Users](https://developers.google.com/workspace/admin/directory/v1/reference/users)
+     resource. You must provide either the `customer` or the `domain` parameter.
        */
       public java.lang.String getCustomerId() {
         return customerId;
@@ -16166,8 +16278,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * The unique ID for the customer's Google Workspace account. In case of a multi-domain
        * account, to fetch all groups for a customer, use this field instead of `domain`. You can
        * also use the `my_customer` alias to represent your account's `customerId`. The `customerId`
-       * is also returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource.
-       * You must provide either the `customer` or the `domain` parameter.
+       * is also returned as part of the
+       * [Users](https://developers.google.com/workspace/admin/directory/v1/reference/users)
+       * resource. You must provide either the `customer` or the `domain` parameter.
        */
       public List setCustomerId(java.lang.String customerId) {
         this.customerId = customerId;
@@ -17369,14 +17482,16 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
 
       /**
        * Whether to fetch the administrator-only or domain-wide public view of the user. For more
-       * information, see [Retrieve a user as a non-administrator](/admin-
-       * sdk/directory/v1/guides/manage-users#retrieve_users_non_admin).
+       * information, see [Retrieve a user as a non-
+       * administrator](https://developers.google.com/workspace/admin/directory/v1/guides/manage-
+       * users#retrieve_users_non_admin).
        */
       @com.google.api.client.util.Key
       private java.lang.String viewType;
 
       /** Whether to fetch the administrator-only or domain-wide public view of the user. For more
-     information, see [Retrieve a user as a non-administrator](/admin-sdk/directory/v1/guides/manage-
+     information, see [Retrieve a user as a non-
+     administrator](https://developers.google.com/workspace/admin/directory/v1/guides/manage-
      users#retrieve_users_non_admin). [default: admin_view]
        */
       public java.lang.String getViewType() {
@@ -17385,8 +17500,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
 
       /**
        * Whether to fetch the administrator-only or domain-wide public view of the user. For more
-       * information, see [Retrieve a user as a non-administrator](/admin-
-       * sdk/directory/v1/guides/manage-users#retrieve_users_non_admin).
+       * information, see [Retrieve a user as a non-
+       * administrator](https://developers.google.com/workspace/admin/directory/v1/guides/manage-
+       * users#retrieve_users_non_admin).
        */
       public Get setViewType(java.lang.String viewType) {
         this.viewType = viewType;
@@ -17665,8 +17781,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * The unique ID for the customer's Google Workspace account. In case of a multi-domain
        * account, to fetch all users for a customer, use this field instead of `domain`. You can
        * also use the `my_customer` alias to represent your account's `customerId`. The `customerId`
-       * is also returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource.
-       * You must provide either the `customer` or the `domain` parameter.
+       * is also returned as part of the
+       * [Users](https://developers.google.com/workspace/admin/directory/v1/reference/users)
+       * resource. You must provide either the `customer` or the `domain` parameter.
        */
       @com.google.api.client.util.Key
       private java.lang.String customer;
@@ -17674,8 +17791,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       /** The unique ID for the customer's Google Workspace account. In case of a multi-domain account, to
      fetch all users for a customer, use this field instead of `domain`. You can also use the
      `my_customer` alias to represent your account's `customerId`. The `customerId` is also returned as
-     part of the [Users](/admin-sdk/directory/v1/reference/users) resource. You must provide either the
-     `customer` or the `domain` parameter.
+     part of the [Users](https://developers.google.com/workspace/admin/directory/v1/reference/users)
+     resource. You must provide either the `customer` or the `domain` parameter.
        */
       public java.lang.String getCustomer() {
         return customer;
@@ -17685,8 +17802,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * The unique ID for the customer's Google Workspace account. In case of a multi-domain
        * account, to fetch all users for a customer, use this field instead of `domain`. You can
        * also use the `my_customer` alias to represent your account's `customerId`. The `customerId`
-       * is also returned as part of the [Users](/admin-sdk/directory/v1/reference/users) resource.
-       * You must provide either the `customer` or the `domain` parameter.
+       * is also returned as part of the
+       * [Users](https://developers.google.com/workspace/admin/directory/v1/reference/users)
+       * resource. You must provide either the `customer` or the `domain` parameter.
        */
       public List setCustomer(java.lang.String customer) {
         this.customer = customer;
@@ -17801,13 +17919,14 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
 
       /**
        * Query string for searching user fields. For more information on constructing user queries,
-       * see [Search for Users](/admin-sdk/directory/v1/guides/search-users).
+       * see [Search for
+       * Users](https://developers.google.com/workspace/admin/directory/v1/guides/search-users).
        */
       @com.google.api.client.util.Key
       private java.lang.String query;
 
       /** Query string for searching user fields. For more information on constructing user queries, see
-     [Search for Users](/admin-sdk/directory/v1/guides/search-users).
+     [Search for Users](https://developers.google.com/workspace/admin/directory/v1/guides/search-users).
        */
       public java.lang.String getQuery() {
         return query;
@@ -17815,7 +17934,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
 
       /**
        * Query string for searching user fields. For more information on constructing user queries,
-       * see [Search for Users](/admin-sdk/directory/v1/guides/search-users).
+       * see [Search for
+       * Users](https://developers.google.com/workspace/admin/directory/v1/guides/search-users).
        */
       public List setQuery(java.lang.String query) {
         this.query = query;
@@ -17856,14 +17976,16 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
 
       /**
        * Whether to fetch the administrator-only or domain-wide public view of the user. For more
-       * information, see [Retrieve a user as a non-administrator](/admin-
-       * sdk/directory/v1/guides/manage-users#retrieve_users_non_admin).
+       * information, see [Retrieve a user as a non-
+       * administrator](https://developers.google.com/workspace/admin/directory/v1/guides/manage-
+       * users#retrieve_users_non_admin).
        */
       @com.google.api.client.util.Key
       private java.lang.String viewType;
 
       /** Whether to fetch the administrator-only or domain-wide public view of the user. For more
-     information, see [Retrieve a user as a non-administrator](/admin-sdk/directory/v1/guides/manage-
+     information, see [Retrieve a user as a non-
+     administrator](https://developers.google.com/workspace/admin/directory/v1/guides/manage-
      users#retrieve_users_non_admin). [default: admin_view]
        */
       public java.lang.String getViewType() {
@@ -17872,8 +17994,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
 
       /**
        * Whether to fetch the administrator-only or domain-wide public view of the user. For more
-       * information, see [Retrieve a user as a non-administrator](/admin-
-       * sdk/directory/v1/guides/manage-users#retrieve_users_non_admin).
+       * information, see [Retrieve a user as a non-
+       * administrator](https://developers.google.com/workspace/admin/directory/v1/guides/manage-
+       * users#retrieve_users_non_admin).
        */
       public List setViewType(java.lang.String viewType) {
         this.viewType = viewType;
@@ -18015,10 +18138,10 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
     /**
      * Updates a user using patch semantics. The update method should be used instead, because it also
      * supports patch semantics and has better performance. If you're mapping an external identity to a
-     * Google identity, use the [`update`](https://developers.google.com/admin-
-     * sdk/directory/v1/reference/users/update) method instead of the `patch` method. This method is
-     * unable to clear fields that contain repeated objects (`addresses`, `phones`, etc). Use the update
-     * method instead.
+     * Google identity, use the
+     * [`update`](https://developers.google.com/workspace/admin/directory/v1/reference/users/update)
+     * method instead of the `patch` method. This method is unable to clear fields that contain repeated
+     * objects (`addresses`, `phones`, etc). Use the update method instead.
      *
      * Create a request for the method "users.patch".
      *
@@ -18043,10 +18166,10 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       /**
        * Updates a user using patch semantics. The update method should be used instead, because it also
        * supports patch semantics and has better performance. If you're mapping an external identity to
-       * a Google identity, use the [`update`](https://developers.google.com/admin-
-       * sdk/directory/v1/reference/users/update) method instead of the `patch` method. This method is
-       * unable to clear fields that contain repeated objects (`addresses`, `phones`, etc). Use the
-       * update method instead.
+       * a Google identity, use the
+       * [`update`](https://developers.google.com/workspace/admin/directory/v1/reference/users/update)
+       * method instead of the `patch` method. This method is unable to clear fields that contain
+       * repeated objects (`addresses`, `phones`, etc). Use the update method instead.
        *
        * Create a request for the method "users.patch".
        *
@@ -18398,8 +18521,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * fields you wish to update. Fields that are not present in the request will be preserved, and
      * fields set to `null` will be cleared. For repeating fields that contain arrays, individual items
      * in the array can't be patched piecemeal; they must be supplied in the request body with the
-     * desired values for all items. See the [user accounts guide](https://developers.google.com/admin-
-     * sdk/directory/v1/guides/manage-users#update_user) for more information.
+     * desired values for all items. See the [user accounts
+     * guide](https://developers.google.com/workspace/admin/directory/v1/guides/manage-
+     * users#update_user) for more information.
      *
      * Create a request for the method "users.update".
      *
@@ -18427,8 +18551,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * fields set to `null` will be cleared. For repeating fields that contain arrays, individual
        * items in the array can't be patched piecemeal; they must be supplied in the request body with
        * the desired values for all items. See the [user accounts
-       * guide](https://developers.google.com/admin-sdk/directory/v1/guides/manage-users#update_user)
-       * for more information.
+       * guide](https://developers.google.com/workspace/admin/directory/v1/guides/manage-
+       * users#update_user) for more information.
        *
        * Create a request for the method "users.update".
        *
@@ -18829,14 +18953,16 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
 
       /**
        * Whether to fetch the administrator-only or domain-wide public view of the user. For more
-       * information, see [Retrieve a user as a non-administrator](/admin-
-       * sdk/directory/v1/guides/manage-users#retrieve_users_non_admin).
+       * information, see [Retrieve a user as a non-
+       * administrator](https://developers.google.com/workspace/admin/directory/v1/guides/manage-
+       * users#retrieve_users_non_admin).
        */
       @com.google.api.client.util.Key
       private java.lang.String viewType;
 
       /** Whether to fetch the administrator-only or domain-wide public view of the user. For more
-     information, see [Retrieve a user as a non-administrator](/admin-sdk/directory/v1/guides/manage-
+     information, see [Retrieve a user as a non-
+     administrator](https://developers.google.com/workspace/admin/directory/v1/guides/manage-
      users#retrieve_users_non_admin). [default: admin_view]
        */
       public java.lang.String getViewType() {
@@ -18845,8 +18971,9 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
 
       /**
        * Whether to fetch the administrator-only or domain-wide public view of the user. For more
-       * information, see [Retrieve a user as a non-administrator](/admin-
-       * sdk/directory/v1/guides/manage-users#retrieve_users_non_admin).
+       * information, see [Retrieve a user as a non-
+       * administrator](https://developers.google.com/workspace/admin/directory/v1/guides/manage-
+       * users#retrieve_users_non_admin).
        */
       public Watch setViewType(java.lang.String viewType) {
         this.viewType = viewType;
@@ -19712,8 +19839,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         }
       }
       /**
-       * Adds a photo for the user. This method supports [patch semantics](/admin-
-       * sdk/directory/v1/guides/performance#patch).
+       * Adds a photo for the user. This method supports [patch
+       * semantics](https://developers.google.com/workspace/admin/directory/v1/guides/performance#patch).
        *
        * Create a request for the method "photos.patch".
        *
@@ -19736,8 +19863,8 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
         private static final String REST_PATH = "admin/directory/v1/users/{userKey}/photos/thumbnail";
 
         /**
-         * Adds a photo for the user. This method supports [patch semantics](/admin-
-         * sdk/directory/v1/guides/performance#patch).
+         * Adds a photo for the user. This method supports [patch semantics](https://developers.google.com
+         * /workspace/admin/directory/v1/guides/performance#patch).
          *
          * Create a request for the method "photos.patch".
          *

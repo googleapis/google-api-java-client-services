@@ -1179,34 +1179,38 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
       }
 
       /**
-       * Comma separated group ids (obfuscated) on which user activities are filtered, i.e. the
-       * response will contain activities for only those users that are a part of at least one of
-       * the group ids mentioned here. Format: "id:abc123,id:xyz456" *Important:* To filter by
-       * groups, you must explicitly add the groups to your filtering groups allowlist. For more
-       * information about adding groups to filtering groups allowlist, see [Filter results by
-       * Google Group](https://support.google.com/a/answer/11482175)
+       * `Deprecated`. This field is deprecated and is no longer supported. Comma separated group
+       * ids (obfuscated) on which user activities are filtered, i.e. the response will contain
+       * activities for only those users that are a part of at least one of the group ids mentioned
+       * here. Format: "id:abc123,id:xyz456" *Important:* To filter by groups, you must explicitly
+       * add the groups to your filtering groups allowlist. For more information about adding groups
+       * to filtering groups allowlist, see [Filter results by Google
+       * Group](https://support.google.com/a/answer/11482175)
        */
       @com.google.api.client.util.Key
       private java.lang.String groupIdFilter;
 
-      /** Comma separated group ids (obfuscated) on which user activities are filtered, i.e. the response
-     will contain activities for only those users that are a part of at least one of the group ids
-     mentioned here. Format: "id:abc123,id:xyz456" *Important:* To filter by groups, you must explicitly
-     add the groups to your filtering groups allowlist. For more information about adding groups to
-     filtering groups allowlist, see [Filter results by Google
-     Group](https://support.google.com/a/answer/11482175)
+      /**` Deprecated`. This field is deprecated and is no longer supported. Comma separated group ids
+    ` (obfuscated) on which user activities are filtered, i.e. the response will contain activities for
+    ` only those users that are a part of at least one of the group ids mentioned here. Format:
+    ` "id:abc123,id:xyz456" *Important:* To filter by groups, you must explicitly add the groups to your
+    ` filtering groups allowlist. For more information about adding groups to filtering groups
+    ` allowlist, see [Filter results by Google Group](https://support.google.com/a/answer/11482175)
+    `
+
        */
       public java.lang.String getGroupIdFilter() {
         return groupIdFilter;
       }
 
       /**
-       * Comma separated group ids (obfuscated) on which user activities are filtered, i.e. the
-       * response will contain activities for only those users that are a part of at least one of
-       * the group ids mentioned here. Format: "id:abc123,id:xyz456" *Important:* To filter by
-       * groups, you must explicitly add the groups to your filtering groups allowlist. For more
-       * information about adding groups to filtering groups allowlist, see [Filter results by
-       * Google Group](https://support.google.com/a/answer/11482175)
+       * `Deprecated`. This field is deprecated and is no longer supported. Comma separated group
+       * ids (obfuscated) on which user activities are filtered, i.e. the response will contain
+       * activities for only those users that are a part of at least one of the group ids mentioned
+       * here. Format: "id:abc123,id:xyz456" *Important:* To filter by groups, you must explicitly
+       * add the groups to your filtering groups allowlist. For more information about adding groups
+       * to filtering groups allowlist, see [Filter results by Google
+       * Group](https://support.google.com/a/answer/11482175)
        */
       public Watch setGroupIdFilter(java.lang.String groupIdFilter) {
         if (!getSuppressPatternChecks()) {

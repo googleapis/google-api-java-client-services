@@ -38,7 +38,8 @@ public final class Application extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
-   * The application's ID. Retrievable by using the [`applications.list()`](/admin-sdk/data-
+   * The application's ID. Retrievable by using the
+   * [`applications.list()`](https://developers.google.com/workspace/admin/data-
    * transfer/reference/rest/v1/applications/list) method.
    * The value may be {@code null}.
    */
@@ -85,7 +86,8 @@ public final class Application extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The application's ID. Retrievable by using the [`applications.list()`](/admin-sdk/data-
+   * The application's ID. Retrievable by using the
+   * [`applications.list()`](https://developers.google.com/workspace/admin/data-
    * transfer/reference/rest/v1/applications/list) method.
    * @return value or {@code null} for none
    */
@@ -94,7 +96,8 @@ public final class Application extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The application's ID. Retrievable by using the [`applications.list()`](/admin-sdk/data-
+   * The application's ID. Retrievable by using the
+   * [`applications.list()`](https://developers.google.com/workspace/admin/data-
    * transfer/reference/rest/v1/applications/list) method.
    * @param id id or {@code null} for none
    */

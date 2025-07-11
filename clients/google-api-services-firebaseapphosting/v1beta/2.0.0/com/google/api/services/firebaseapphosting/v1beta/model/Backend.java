@@ -129,6 +129,14 @@ public final class Backend extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean reconciling;
 
   /**
+   * Optional. A field that, if true, indicates that incoming request logs are disabled for this
+   * backend. Incoming request logs are enabled by default.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean requestLogsDisabled;
+
+  /**
    * Required. The name of the service account used for Cloud Build and Cloud Run. Should have the
    * role roles/firebaseapphosting.computeRunner or equivalent permissions.
    * The value may be {@code null}.
@@ -398,6 +406,25 @@ public final class Backend extends com.google.api.client.json.GenericJson {
    */
   public Backend setReconciling(java.lang.Boolean reconciling) {
     this.reconciling = reconciling;
+    return this;
+  }
+
+  /**
+   * Optional. A field that, if true, indicates that incoming request logs are disabled for this
+   * backend. Incoming request logs are enabled by default.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getRequestLogsDisabled() {
+    return requestLogsDisabled;
+  }
+
+  /**
+   * Optional. A field that, if true, indicates that incoming request logs are disabled for this
+   * backend. Incoming request logs are enabled by default.
+   * @param requestLogsDisabled requestLogsDisabled or {@code null} for none
+   */
+  public Backend setRequestLogsDisabled(java.lang.Boolean requestLogsDisabled) {
+    this.requestLogsDisabled = requestLogsDisabled;
     return this;
   }
 

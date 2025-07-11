@@ -74,6 +74,13 @@ public final class GoogleChromeManagementV1ChromeAppInfo extends com.google.api.
   private java.lang.Boolean kioskEnabled;
 
   /**
+   * Output only. The version of this extension's manifest.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long manifestVersion;
+
+  /**
    * Output only. The minimum number of users using this app.
    * The value may be {@code null}.
    */
@@ -214,6 +221,23 @@ public final class GoogleChromeManagementV1ChromeAppInfo extends com.google.api.
    */
   public GoogleChromeManagementV1ChromeAppInfo setKioskEnabled(java.lang.Boolean kioskEnabled) {
     this.kioskEnabled = kioskEnabled;
+    return this;
+  }
+
+  /**
+   * Output only. The version of this extension's manifest.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getManifestVersion() {
+    return manifestVersion;
+  }
+
+  /**
+   * Output only. The version of this extension's manifest.
+   * @param manifestVersion manifestVersion or {@code null} for none
+   */
+  public GoogleChromeManagementV1ChromeAppInfo setManifestVersion(java.lang.Long manifestVersion) {
+    this.manifestVersion = manifestVersion;
     return this;
   }
 

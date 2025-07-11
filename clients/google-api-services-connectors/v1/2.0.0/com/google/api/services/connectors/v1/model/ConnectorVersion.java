@@ -213,6 +213,13 @@ public final class ConnectorVersion extends com.google.api.client.json.GenericJs
   private String updateTime;
 
   /**
+   * Output only. VPCSC config for the connector.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private VpcscConfig vpcscConfig;
+
+  /**
    * Output only. List of auth configs supported by the Connector Version.
    * @return value or {@code null} for none
    */
@@ -623,6 +630,23 @@ public final class ConnectorVersion extends com.google.api.client.json.GenericJs
    */
   public ConnectorVersion setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
+    return this;
+  }
+
+  /**
+   * Output only. VPCSC config for the connector.
+   * @return value or {@code null} for none
+   */
+  public VpcscConfig getVpcscConfig() {
+    return vpcscConfig;
+  }
+
+  /**
+   * Output only. VPCSC config for the connector.
+   * @param vpcscConfig vpcscConfig or {@code null} for none
+   */
+  public ConnectorVersion setVpcscConfig(VpcscConfig vpcscConfig) {
+    this.vpcscConfig = vpcscConfig;
     return this;
   }
 

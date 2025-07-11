@@ -81,6 +81,13 @@ public final class Activity extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
+   * Network information of the user doing the action.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ActivityNetworkInfo networkInfo;
+
+  /**
    * This is the domain that is affected by the report's event. For example domain of Admin console
    * or the Drive application's document owner.
    * The value may be {@code null}.
@@ -200,6 +207,23 @@ public final class Activity extends com.google.api.client.json.GenericJson {
    */
   public Activity setKind(java.lang.String kind) {
     this.kind = kind;
+    return this;
+  }
+
+  /**
+   * Network information of the user doing the action.
+   * @return value or {@code null} for none
+   */
+  public ActivityNetworkInfo getNetworkInfo() {
+    return networkInfo;
+  }
+
+  /**
+   * Network information of the user doing the action.
+   * @param networkInfo networkInfo or {@code null} for none
+   */
+  public Activity setNetworkInfo(ActivityNetworkInfo networkInfo) {
+    this.networkInfo = networkInfo;
     return this;
   }
 

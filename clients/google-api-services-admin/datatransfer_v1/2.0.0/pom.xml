@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-admin-datatransfer</artifactId>
-  <version>datatransfer_v1-rev20250626-2.0.0</version>
-  <name>Admin SDK API datatransfer_v1-rev20250626-2.0.0</name>
+  <version>datatransfer_v1-rev20250707-2.0.0</version>
+  <name>Admin SDK API datatransfer_v1-rev20250707-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

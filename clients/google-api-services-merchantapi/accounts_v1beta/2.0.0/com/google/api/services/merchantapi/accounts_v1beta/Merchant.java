@@ -555,6 +555,146 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
+     * Retrieves a developer registration for a merchant.
+     *
+     * Create a request for the method "accounts.getDeveloperRegistration".
+     *
+     * This request holds the parameters needed by the merchantapi server.  After setting any optional
+     * parameters, call the {@link GetDeveloperRegistration#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param name Required. The `name` (ID) of the developer registration.
+     * @return the request
+     */
+    public GetDeveloperRegistration getDeveloperRegistration(java.lang.String name) throws java.io.IOException {
+      GetDeveloperRegistration result = new GetDeveloperRegistration(name);
+      initialize(result);
+      return result;
+    }
+
+    public class GetDeveloperRegistration extends MerchantRequest<com.google.api.services.merchantapi.accounts_v1beta.model.DeveloperRegistration> {
+
+      private static final String REST_PATH = "accounts/v1beta/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^accounts/[^/]+/developerRegistration$");
+
+      /**
+       * Retrieves a developer registration for a merchant.
+       *
+       * Create a request for the method "accounts.getDeveloperRegistration".
+       *
+       * This request holds the parameters needed by the the merchantapi server.  After setting any
+       * optional parameters, call the {@link GetDeveloperRegistration#execute()} method to invoke the
+       * remote operation. <p> {@link GetDeveloperRegistration#initialize(com.google.api.client.googleap
+       * is.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+       * immediately after invoking the constructor. </p>
+       *
+       * @param name Required. The `name` (ID) of the developer registration.
+       * @since 1.13
+       */
+      protected GetDeveloperRegistration(java.lang.String name) {
+        super(Merchant.this, "GET", REST_PATH, null, com.google.api.services.merchantapi.accounts_v1beta.model.DeveloperRegistration.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^accounts/[^/]+/developerRegistration$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetDeveloperRegistration set$Xgafv(java.lang.String $Xgafv) {
+        return (GetDeveloperRegistration) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetDeveloperRegistration setAccessToken(java.lang.String accessToken) {
+        return (GetDeveloperRegistration) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetDeveloperRegistration setAlt(java.lang.String alt) {
+        return (GetDeveloperRegistration) super.setAlt(alt);
+      }
+
+      @Override
+      public GetDeveloperRegistration setCallback(java.lang.String callback) {
+        return (GetDeveloperRegistration) super.setCallback(callback);
+      }
+
+      @Override
+      public GetDeveloperRegistration setFields(java.lang.String fields) {
+        return (GetDeveloperRegistration) super.setFields(fields);
+      }
+
+      @Override
+      public GetDeveloperRegistration setKey(java.lang.String key) {
+        return (GetDeveloperRegistration) super.setKey(key);
+      }
+
+      @Override
+      public GetDeveloperRegistration setOauthToken(java.lang.String oauthToken) {
+        return (GetDeveloperRegistration) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetDeveloperRegistration setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetDeveloperRegistration) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetDeveloperRegistration setQuotaUser(java.lang.String quotaUser) {
+        return (GetDeveloperRegistration) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetDeveloperRegistration setUploadType(java.lang.String uploadType) {
+        return (GetDeveloperRegistration) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetDeveloperRegistration setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetDeveloperRegistration) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The `name` (ID) of the developer registration. */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The `name` (ID) of the developer registration.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** Required. The `name` (ID) of the developer registration. */
+      public GetDeveloperRegistration setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^accounts/[^/]+/developerRegistration$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public GetDeveloperRegistration set(String parameterName, Object value) {
+        return (GetDeveloperRegistration) super.set(parameterName, value);
+      }
+    }
+    /**
      * Note: For the `accounts.list` method, quota and limits usage are charged for each user, and not
      * for the Merchant Center ID or the advanced account ID. To list several sub-accounts, you should
      * use the `accounts.listSubaccounts` method, which is more suitable for advanced accounts use case.
@@ -2434,6 +2574,314 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
         @Override
         public UpdateBusinessInfo set(String parameterName, Object value) {
           return (UpdateBusinessInfo) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
+     * An accessor for creating requests from the DeveloperRegistration collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Merchant merchantapi = new Merchant(...);}
+     *   {@code Merchant.DeveloperRegistration.List request = merchantapi.developerRegistration().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public DeveloperRegistration developerRegistration() {
+      return new DeveloperRegistration();
+    }
+
+    /**
+     * The "developerRegistration" collection of methods.
+     */
+    public class DeveloperRegistration {
+
+      /**
+       * Registers the GCP used for the API call to the shopping account passed in the request. Will
+       * create a user with an "API developer" and add the "developer_email" as a contact with "API
+       * notifications" email preference on.
+       *
+       * Create a request for the method "developerRegistration.registerGcp".
+       *
+       * This request holds the parameters needed by the merchantapi server.  After setting any optional
+       * parameters, call the {@link RegisterGcp#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the developer registration to be created for the merchant account that the GCP
+       *        will be registered with. Format: `accounts/{account}/developerRegistration`
+       * @param content the {@link com.google.api.services.merchantapi.accounts_v1beta.model.RegisterGCPRequest}
+       * @return the request
+       */
+      public RegisterGcp registerGcp(java.lang.String name, com.google.api.services.merchantapi.accounts_v1beta.model.RegisterGCPRequest content) throws java.io.IOException {
+        RegisterGcp result = new RegisterGcp(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class RegisterGcp extends MerchantRequest<com.google.api.services.merchantapi.accounts_v1beta.model.DeveloperRegistration> {
+
+        private static final String REST_PATH = "accounts/v1beta/{+name}:registerGcp";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+/developerRegistration$");
+
+        /**
+         * Registers the GCP used for the API call to the shopping account passed in the request. Will
+         * create a user with an "API developer" and add the "developer_email" as a contact with "API
+         * notifications" email preference on.
+         *
+         * Create a request for the method "developerRegistration.registerGcp".
+         *
+         * This request holds the parameters needed by the the merchantapi server.  After setting any
+         * optional parameters, call the {@link RegisterGcp#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * RegisterGcp#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the developer registration to be created for the merchant account that the GCP
+       *        will be registered with. Format: `accounts/{account}/developerRegistration`
+         * @param content the {@link com.google.api.services.merchantapi.accounts_v1beta.model.RegisterGCPRequest}
+         * @since 1.13
+         */
+        protected RegisterGcp(java.lang.String name, com.google.api.services.merchantapi.accounts_v1beta.model.RegisterGCPRequest content) {
+          super(Merchant.this, "POST", REST_PATH, content, com.google.api.services.merchantapi.accounts_v1beta.model.DeveloperRegistration.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^accounts/[^/]+/developerRegistration$");
+          }
+        }
+
+        @Override
+        public RegisterGcp set$Xgafv(java.lang.String $Xgafv) {
+          return (RegisterGcp) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public RegisterGcp setAccessToken(java.lang.String accessToken) {
+          return (RegisterGcp) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public RegisterGcp setAlt(java.lang.String alt) {
+          return (RegisterGcp) super.setAlt(alt);
+        }
+
+        @Override
+        public RegisterGcp setCallback(java.lang.String callback) {
+          return (RegisterGcp) super.setCallback(callback);
+        }
+
+        @Override
+        public RegisterGcp setFields(java.lang.String fields) {
+          return (RegisterGcp) super.setFields(fields);
+        }
+
+        @Override
+        public RegisterGcp setKey(java.lang.String key) {
+          return (RegisterGcp) super.setKey(key);
+        }
+
+        @Override
+        public RegisterGcp setOauthToken(java.lang.String oauthToken) {
+          return (RegisterGcp) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public RegisterGcp setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (RegisterGcp) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public RegisterGcp setQuotaUser(java.lang.String quotaUser) {
+          return (RegisterGcp) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public RegisterGcp setUploadType(java.lang.String uploadType) {
+          return (RegisterGcp) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public RegisterGcp setUploadProtocol(java.lang.String uploadProtocol) {
+          return (RegisterGcp) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the developer registration to be created for the merchant account
+         * that the GCP will be registered with. Format: `accounts/{account}/developerRegistration`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the developer registration to be created for the merchant account that the
+       GCP will be registered with. Format: `accounts/{account}/developerRegistration`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the developer registration to be created for the merchant account
+         * that the GCP will be registered with. Format: `accounts/{account}/developerRegistration`
+         */
+        public RegisterGcp setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^accounts/[^/]+/developerRegistration$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public RegisterGcp set(String parameterName, Object value) {
+          return (RegisterGcp) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Unregister the calling GCP from the calling shopping account. Note that the GCP will still be
+       * able to access the API for at most 1 day from the unregister succussful call.
+       *
+       * Create a request for the method "developerRegistration.unregisterGcp".
+       *
+       * This request holds the parameters needed by the merchantapi server.  After setting any optional
+       * parameters, call the {@link UnregisterGcp#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the developer registration to be created for the merchant account that the GCP
+       *        will be registered with. Format: `accounts/{account}/developerRegistration`
+       * @param content the {@link com.google.api.services.merchantapi.accounts_v1beta.model.UnregisterGCPRequest}
+       * @return the request
+       */
+      public UnregisterGcp unregisterGcp(java.lang.String name, com.google.api.services.merchantapi.accounts_v1beta.model.UnregisterGCPRequest content) throws java.io.IOException {
+        UnregisterGcp result = new UnregisterGcp(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class UnregisterGcp extends MerchantRequest<com.google.api.services.merchantapi.accounts_v1beta.model.Empty> {
+
+        private static final String REST_PATH = "accounts/v1beta/{+name}:unregisterGcp";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^accounts/[^/]+/developerRegistration$");
+
+        /**
+         * Unregister the calling GCP from the calling shopping account. Note that the GCP will still be
+         * able to access the API for at most 1 day from the unregister succussful call.
+         *
+         * Create a request for the method "developerRegistration.unregisterGcp".
+         *
+         * This request holds the parameters needed by the the merchantapi server.  After setting any
+         * optional parameters, call the {@link UnregisterGcp#execute()} method to invoke the remote
+         * operation. <p> {@link UnregisterGcp#initialize(com.google.api.client.googleapis.services.Abstra
+         * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+         * the constructor. </p>
+         *
+         * @param name Required. The name of the developer registration to be created for the merchant account that the GCP
+       *        will be registered with. Format: `accounts/{account}/developerRegistration`
+         * @param content the {@link com.google.api.services.merchantapi.accounts_v1beta.model.UnregisterGCPRequest}
+         * @since 1.13
+         */
+        protected UnregisterGcp(java.lang.String name, com.google.api.services.merchantapi.accounts_v1beta.model.UnregisterGCPRequest content) {
+          super(Merchant.this, "POST", REST_PATH, content, com.google.api.services.merchantapi.accounts_v1beta.model.Empty.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^accounts/[^/]+/developerRegistration$");
+          }
+        }
+
+        @Override
+        public UnregisterGcp set$Xgafv(java.lang.String $Xgafv) {
+          return (UnregisterGcp) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public UnregisterGcp setAccessToken(java.lang.String accessToken) {
+          return (UnregisterGcp) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public UnregisterGcp setAlt(java.lang.String alt) {
+          return (UnregisterGcp) super.setAlt(alt);
+        }
+
+        @Override
+        public UnregisterGcp setCallback(java.lang.String callback) {
+          return (UnregisterGcp) super.setCallback(callback);
+        }
+
+        @Override
+        public UnregisterGcp setFields(java.lang.String fields) {
+          return (UnregisterGcp) super.setFields(fields);
+        }
+
+        @Override
+        public UnregisterGcp setKey(java.lang.String key) {
+          return (UnregisterGcp) super.setKey(key);
+        }
+
+        @Override
+        public UnregisterGcp setOauthToken(java.lang.String oauthToken) {
+          return (UnregisterGcp) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public UnregisterGcp setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (UnregisterGcp) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public UnregisterGcp setQuotaUser(java.lang.String quotaUser) {
+          return (UnregisterGcp) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public UnregisterGcp setUploadType(java.lang.String uploadType) {
+          return (UnregisterGcp) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public UnregisterGcp setUploadProtocol(java.lang.String uploadProtocol) {
+          return (UnregisterGcp) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the developer registration to be created for the merchant account
+         * that the GCP will be registered with. Format: `accounts/{account}/developerRegistration`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the developer registration to be created for the merchant account that the
+       GCP will be registered with. Format: `accounts/{account}/developerRegistration`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the developer registration to be created for the merchant account
+         * that the GCP will be registered with. Format: `accounts/{account}/developerRegistration`
+         */
+        public UnregisterGcp setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^accounts/[^/]+/developerRegistration$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public UnregisterGcp set(String parameterName, Object value) {
+          return (UnregisterGcp) super.set(parameterName, value);
         }
       }
 
@@ -6000,28 +6448,22 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * Optional. List of fields being updated. The following fields are supported (in both
-         * `snake_case` and `lowerCamelCase`): - `accept_defective_only` - `accept_exchange` -
-         * `item_conditions` - `policy` - `process_refund_days` - `restocking_fee` -
-         * `return_methods` - `return_policy_uri` - `return_shipping_fee`
+         * Optional. Only support updating the entire OnlineReturnPolicy message. For update_mask,
+         * always use `*`.
          */
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** Optional. List of fields being updated. The following fields are supported (in both `snake_case`
-       and `lowerCamelCase`): - `accept_defective_only` - `accept_exchange` - `item_conditions` - `policy`
-       - `process_refund_days` - `restocking_fee` - `return_methods` - `return_policy_uri` -
-       `return_shipping_fee`
+        /** Optional. Only support updating the entire OnlineReturnPolicy message. For update_mask, always use
+       `*`.
          */
         public String getUpdateMask() {
           return updateMask;
         }
 
         /**
-         * Optional. List of fields being updated. The following fields are supported (in both
-         * `snake_case` and `lowerCamelCase`): - `accept_defective_only` - `accept_exchange` -
-         * `item_conditions` - `policy` - `process_refund_days` - `restocking_fee` -
-         * `return_methods` - `return_policy_uri` - `return_shipping_fee`
+         * Optional. Only support updating the entire OnlineReturnPolicy message. For update_mask,
+         * always use `*`.
          */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;

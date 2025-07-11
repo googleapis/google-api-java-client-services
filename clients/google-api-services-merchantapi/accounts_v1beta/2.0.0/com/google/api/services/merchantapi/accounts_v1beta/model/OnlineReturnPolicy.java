@@ -61,13 +61,13 @@ public final class OnlineReturnPolicy extends com.google.api.client.json.Generic
   private java.util.List<java.lang.String> itemConditions;
 
   /**
-   * Required. Immutable. This field represents the unique user-defined label of the return policy.
-   * It is important to note that the same label cannot be used in different return policies for the
-   * same country. Unless a product specifies a specific label attribute, policies will be
-   * automatically labeled as 'default'. To assign a custom return policy to certain product groups,
-   * follow the instructions provided in the [Return policy label]
-   * (https://support.google.com/merchants/answer/9445425). The label can contain up to 50
-   * characters.
+   * Optional. Immutable. This field represents the unique user-defined label of the return policy
+   * for the given country. It is important to note that the same label cannot be used in different
+   * return policies for the same country. If not given, policies will be automatically treated as
+   * the 'default' for the country. When using label, you are creating an exception policy in that
+   * country to assign a custom return policy to certain product groups, follow the instructions
+   * provided in the [Return policy label] (https://support.google.com/merchants/answer/9445425).
+   * The label can contain up to 50 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -222,13 +222,13 @@ public final class OnlineReturnPolicy extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required. Immutable. This field represents the unique user-defined label of the return policy.
-   * It is important to note that the same label cannot be used in different return policies for the
-   * same country. Unless a product specifies a specific label attribute, policies will be
-   * automatically labeled as 'default'. To assign a custom return policy to certain product groups,
-   * follow the instructions provided in the [Return policy label]
-   * (https://support.google.com/merchants/answer/9445425). The label can contain up to 50
-   * characters.
+   * Optional. Immutable. This field represents the unique user-defined label of the return policy
+   * for the given country. It is important to note that the same label cannot be used in different
+   * return policies for the same country. If not given, policies will be automatically treated as
+   * the 'default' for the country. When using label, you are creating an exception policy in that
+   * country to assign a custom return policy to certain product groups, follow the instructions
+   * provided in the [Return policy label] (https://support.google.com/merchants/answer/9445425).
+   * The label can contain up to 50 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getLabel() {
@@ -236,13 +236,13 @@ public final class OnlineReturnPolicy extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required. Immutable. This field represents the unique user-defined label of the return policy.
-   * It is important to note that the same label cannot be used in different return policies for the
-   * same country. Unless a product specifies a specific label attribute, policies will be
-   * automatically labeled as 'default'. To assign a custom return policy to certain product groups,
-   * follow the instructions provided in the [Return policy label]
-   * (https://support.google.com/merchants/answer/9445425). The label can contain up to 50
-   * characters.
+   * Optional. Immutable. This field represents the unique user-defined label of the return policy
+   * for the given country. It is important to note that the same label cannot be used in different
+   * return policies for the same country. If not given, policies will be automatically treated as
+   * the 'default' for the country. When using label, you are creating an exception policy in that
+   * country to assign a custom return policy to certain product groups, follow the instructions
+   * provided in the [Return policy label] (https://support.google.com/merchants/answer/9445425).
+   * The label can contain up to 50 characters.
    * @param label label or {@code null} for none
    */
   public OnlineReturnPolicy setLabel(java.lang.String label) {

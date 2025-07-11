@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-secretmanager</artifactId>
-  <version>v1beta2-rev20250626-2.0.0</version>
-  <name>Secret Manager API v1beta2-rev20250626-2.0.0</name>
+  <version>v1beta2-rev20250704-2.0.0</version>
+  <name>Secret Manager API v1beta2-rev20250704-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

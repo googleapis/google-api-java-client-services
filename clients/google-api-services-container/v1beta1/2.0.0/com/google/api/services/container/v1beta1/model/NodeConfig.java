@@ -54,6 +54,13 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   private AdvancedMachineFeatures advancedMachineFeatures;
 
   /**
+   * Boot disk configuration for the node pool.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BootDisk bootDisk;
+
+  /**
    * The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the
    * node pool. This should be of the form
    * projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For
@@ -81,8 +88,7 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Size of the disk attached to each node, specified in GB. The smallest allowed disk size is
-   * 10GB. TODO(b/395671893) - Deprecate disk_size_gb and disk_type fields. If unspecified, the
-   * default disk size is 100GB.
+   * 10GB. If unspecified, the default disk size is 100GB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -460,6 +466,23 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Boot disk configuration for the node pool.
+   * @return value or {@code null} for none
+   */
+  public BootDisk getBootDisk() {
+    return bootDisk;
+  }
+
+  /**
+   * Boot disk configuration for the node pool.
+   * @param bootDisk bootDisk or {@code null} for none
+   */
+  public NodeConfig setBootDisk(BootDisk bootDisk) {
+    this.bootDisk = bootDisk;
+    return this;
+  }
+
+  /**
    * The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the
    * node pool. This should be of the form
    * projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For
@@ -522,8 +545,7 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Size of the disk attached to each node, specified in GB. The smallest allowed disk size is
-   * 10GB. TODO(b/395671893) - Deprecate disk_size_gb and disk_type fields. If unspecified, the
-   * default disk size is 100GB.
+   * 10GB. If unspecified, the default disk size is 100GB.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getDiskSizeGb() {
@@ -532,8 +554,7 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Size of the disk attached to each node, specified in GB. The smallest allowed disk size is
-   * 10GB. TODO(b/395671893) - Deprecate disk_size_gb and disk_type fields. If unspecified, the
-   * default disk size is 100GB.
+   * 10GB. If unspecified, the default disk size is 100GB.
    * @param diskSizeGb diskSizeGb or {@code null} for none
    */
   public NodeConfig setDiskSizeGb(java.lang.Integer diskSizeGb) {

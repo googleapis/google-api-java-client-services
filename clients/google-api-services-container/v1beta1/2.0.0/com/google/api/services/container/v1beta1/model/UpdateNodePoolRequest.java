@@ -46,6 +46,14 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
   }
 
   /**
+   * The desired boot disk config for nodes in the node pool. Initiates an upgrade operation that
+   * migrates the nodes in the node pool to the specified boot disk config.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BootDisk bootDisk;
+
+  /**
    * Deprecated. The name of the cluster to upgrade. This field has been deprecated and replaced by
    * the name field.
    * The value may be {@code null}.
@@ -328,6 +336,25 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
    */
   public UpdateNodePoolRequest setAccelerators(java.util.List<AcceleratorConfig> accelerators) {
     this.accelerators = accelerators;
+    return this;
+  }
+
+  /**
+   * The desired boot disk config for nodes in the node pool. Initiates an upgrade operation that
+   * migrates the nodes in the node pool to the specified boot disk config.
+   * @return value or {@code null} for none
+   */
+  public BootDisk getBootDisk() {
+    return bootDisk;
+  }
+
+  /**
+   * The desired boot disk config for nodes in the node pool. Initiates an upgrade operation that
+   * migrates the nodes in the node pool to the specified boot disk config.
+   * @param bootDisk bootDisk or {@code null} for none
+   */
+  public UpdateNodePoolRequest setBootDisk(BootDisk bootDisk) {
+    this.bootDisk = bootDisk;
     return this;
   }
 

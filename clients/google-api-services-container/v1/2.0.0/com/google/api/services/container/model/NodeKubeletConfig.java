@@ -97,6 +97,43 @@ public final class NodeKubeletConfig extends com.google.api.client.json.GenericJ
   private java.lang.String cpuManagerPolicy;
 
   /**
+   * Optional. eviction_max_pod_grace_period_seconds is the maximum allowed grace period (in
+   * seconds) to use when terminating pods in response to a soft eviction threshold being met. This
+   * value effectively caps the Pod's terminationGracePeriodSeconds value during soft evictions.
+   * Default: 0. Range: [0, 300].
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer evictionMaxPodGracePeriodSeconds;
+
+  /**
+   * Optional. eviction_minimum_reclaim is a map of signal names to quantities that defines minimum
+   * reclaims, which describe the minimum amount of a given resource the kubelet will reclaim when
+   * performing a pod eviction while that resource is under pressure.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EvictionMinimumReclaim evictionMinimumReclaim;
+
+  /**
+   * Optional. eviction_soft is a map of signal names to quantities that defines soft eviction
+   * thresholds. Each signal is compared to its corresponding threshold to determine if a pod
+   * eviction should occur.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EvictionSignals evictionSoft;
+
+  /**
+   * Optional. eviction_soft_grace_period is a map of signal names to quantities that defines grace
+   * periods for each soft eviction signal. The grace period is the amount of time that a pod must
+   * be under pressure before an eviction occurs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EvictionGracePeriod evictionSoftGracePeriod;
+
+  /**
    * Optional. Defines the percent of disk usage after which image garbage collection is always run.
    * The percent is calculated as this field value out of 100. The value must be between 10 and 85,
    * inclusive and greater than image_gc_low_threshold_percent. The default value is 85 if
@@ -145,6 +182,16 @@ public final class NodeKubeletConfig extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean insecureKubeletReadonlyPortEnabled;
+
+  /**
+   * Optional. Defines the maximum number of image pulls in parallel. The range is 2 to 5,
+   * inclusive. The default value is 2 or 3 depending on the disk type. See
+   * https://kubernetes.io/docs/concepts/containers/images/#maximum-parallel-image-pulls for more
+   * details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer maxParallelImagePulls;
 
   /**
    * Optional. Controls NUMA-aware Memory Manager configuration on the node. For more information,
@@ -331,6 +378,92 @@ public final class NodeKubeletConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * Optional. eviction_max_pod_grace_period_seconds is the maximum allowed grace period (in
+   * seconds) to use when terminating pods in response to a soft eviction threshold being met. This
+   * value effectively caps the Pod's terminationGracePeriodSeconds value during soft evictions.
+   * Default: 0. Range: [0, 300].
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getEvictionMaxPodGracePeriodSeconds() {
+    return evictionMaxPodGracePeriodSeconds;
+  }
+
+  /**
+   * Optional. eviction_max_pod_grace_period_seconds is the maximum allowed grace period (in
+   * seconds) to use when terminating pods in response to a soft eviction threshold being met. This
+   * value effectively caps the Pod's terminationGracePeriodSeconds value during soft evictions.
+   * Default: 0. Range: [0, 300].
+   * @param evictionMaxPodGracePeriodSeconds evictionMaxPodGracePeriodSeconds or {@code null} for none
+   */
+  public NodeKubeletConfig setEvictionMaxPodGracePeriodSeconds(java.lang.Integer evictionMaxPodGracePeriodSeconds) {
+    this.evictionMaxPodGracePeriodSeconds = evictionMaxPodGracePeriodSeconds;
+    return this;
+  }
+
+  /**
+   * Optional. eviction_minimum_reclaim is a map of signal names to quantities that defines minimum
+   * reclaims, which describe the minimum amount of a given resource the kubelet will reclaim when
+   * performing a pod eviction while that resource is under pressure.
+   * @return value or {@code null} for none
+   */
+  public EvictionMinimumReclaim getEvictionMinimumReclaim() {
+    return evictionMinimumReclaim;
+  }
+
+  /**
+   * Optional. eviction_minimum_reclaim is a map of signal names to quantities that defines minimum
+   * reclaims, which describe the minimum amount of a given resource the kubelet will reclaim when
+   * performing a pod eviction while that resource is under pressure.
+   * @param evictionMinimumReclaim evictionMinimumReclaim or {@code null} for none
+   */
+  public NodeKubeletConfig setEvictionMinimumReclaim(EvictionMinimumReclaim evictionMinimumReclaim) {
+    this.evictionMinimumReclaim = evictionMinimumReclaim;
+    return this;
+  }
+
+  /**
+   * Optional. eviction_soft is a map of signal names to quantities that defines soft eviction
+   * thresholds. Each signal is compared to its corresponding threshold to determine if a pod
+   * eviction should occur.
+   * @return value or {@code null} for none
+   */
+  public EvictionSignals getEvictionSoft() {
+    return evictionSoft;
+  }
+
+  /**
+   * Optional. eviction_soft is a map of signal names to quantities that defines soft eviction
+   * thresholds. Each signal is compared to its corresponding threshold to determine if a pod
+   * eviction should occur.
+   * @param evictionSoft evictionSoft or {@code null} for none
+   */
+  public NodeKubeletConfig setEvictionSoft(EvictionSignals evictionSoft) {
+    this.evictionSoft = evictionSoft;
+    return this;
+  }
+
+  /**
+   * Optional. eviction_soft_grace_period is a map of signal names to quantities that defines grace
+   * periods for each soft eviction signal. The grace period is the amount of time that a pod must
+   * be under pressure before an eviction occurs.
+   * @return value or {@code null} for none
+   */
+  public EvictionGracePeriod getEvictionSoftGracePeriod() {
+    return evictionSoftGracePeriod;
+  }
+
+  /**
+   * Optional. eviction_soft_grace_period is a map of signal names to quantities that defines grace
+   * periods for each soft eviction signal. The grace period is the amount of time that a pod must
+   * be under pressure before an eviction occurs.
+   * @param evictionSoftGracePeriod evictionSoftGracePeriod or {@code null} for none
+   */
+  public NodeKubeletConfig setEvictionSoftGracePeriod(EvictionGracePeriod evictionSoftGracePeriod) {
+    this.evictionSoftGracePeriod = evictionSoftGracePeriod;
+    return this;
+  }
+
+  /**
    * Optional. Defines the percent of disk usage after which image garbage collection is always run.
    * The percent is calculated as this field value out of 100. The value must be between 10 and 85,
    * inclusive and greater than image_gc_low_threshold_percent. The default value is 85 if
@@ -442,6 +575,29 @@ public final class NodeKubeletConfig extends com.google.api.client.json.GenericJ
    */
   public NodeKubeletConfig setInsecureKubeletReadonlyPortEnabled(java.lang.Boolean insecureKubeletReadonlyPortEnabled) {
     this.insecureKubeletReadonlyPortEnabled = insecureKubeletReadonlyPortEnabled;
+    return this;
+  }
+
+  /**
+   * Optional. Defines the maximum number of image pulls in parallel. The range is 2 to 5,
+   * inclusive. The default value is 2 or 3 depending on the disk type. See
+   * https://kubernetes.io/docs/concepts/containers/images/#maximum-parallel-image-pulls for more
+   * details.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMaxParallelImagePulls() {
+    return maxParallelImagePulls;
+  }
+
+  /**
+   * Optional. Defines the maximum number of image pulls in parallel. The range is 2 to 5,
+   * inclusive. The default value is 2 or 3 depending on the disk type. See
+   * https://kubernetes.io/docs/concepts/containers/images/#maximum-parallel-image-pulls for more
+   * details.
+   * @param maxParallelImagePulls maxParallelImagePulls or {@code null} for none
+   */
+  public NodeKubeletConfig setMaxParallelImagePulls(java.lang.Integer maxParallelImagePulls) {
+    this.maxParallelImagePulls = maxParallelImagePulls;
     return this;
   }
 

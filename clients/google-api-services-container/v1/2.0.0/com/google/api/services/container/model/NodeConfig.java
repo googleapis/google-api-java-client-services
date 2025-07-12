@@ -54,6 +54,13 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
   private AdvancedMachineFeatures advancedMachineFeatures;
 
   /**
+   * The boot disk configuration for the node pool.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BootDisk bootDisk;
+
+  /**
    * The Customer Managed Encryption Key used to encrypt the boot disk attached to each node in the
    * node pool. This should be of the form
    * projects/[KEY_PROJECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME]. For
@@ -438,6 +445,23 @@ public final class NodeConfig extends com.google.api.client.json.GenericJson {
    */
   public NodeConfig setAdvancedMachineFeatures(AdvancedMachineFeatures advancedMachineFeatures) {
     this.advancedMachineFeatures = advancedMachineFeatures;
+    return this;
+  }
+
+  /**
+   * The boot disk configuration for the node pool.
+   * @return value or {@code null} for none
+   */
+  public BootDisk getBootDisk() {
+    return bootDisk;
+  }
+
+  /**
+   * The boot disk configuration for the node pool.
+   * @param bootDisk bootDisk or {@code null} for none
+   */
+  public NodeConfig setBootDisk(BootDisk bootDisk) {
+    this.bootDisk = bootDisk;
     return this;
   }
 

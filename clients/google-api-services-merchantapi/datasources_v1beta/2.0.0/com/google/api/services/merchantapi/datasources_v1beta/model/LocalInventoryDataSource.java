@@ -17,7 +17,8 @@
 package com.google.api.services.merchantapi.datasources_v1beta.model;
 
 /**
- * The local inventory data source.
+ * The local inventory data source type is only available for file inputs and can't be used to
+ * create API local inventory data sources.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:

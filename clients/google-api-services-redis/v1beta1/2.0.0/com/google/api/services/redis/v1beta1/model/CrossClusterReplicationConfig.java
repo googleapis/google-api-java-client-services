@@ -31,7 +31,7 @@ package com.google.api.services.redis.v1beta1.model;
 public final class CrossClusterReplicationConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * The role of the cluster in cross cluster replication.
+   * Output only. The role of the cluster in cross cluster replication.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,7 +74,7 @@ public final class CrossClusterReplicationConfig extends com.google.api.client.j
   private String updateTime;
 
   /**
-   * The role of the cluster in cross cluster replication.
+   * Output only. The role of the cluster in cross cluster replication.
    * @return value or {@code null} for none
    */
   public java.lang.String getClusterRole() {
@@ -82,7 +82,7 @@ public final class CrossClusterReplicationConfig extends com.google.api.client.j
   }
 
   /**
-   * The role of the cluster in cross cluster replication.
+   * Output only. The role of the cluster in cross cluster replication.
    * @param clusterRole clusterRole or {@code null} for none
    */
   public CrossClusterReplicationConfig setClusterRole(java.lang.String clusterRole) {

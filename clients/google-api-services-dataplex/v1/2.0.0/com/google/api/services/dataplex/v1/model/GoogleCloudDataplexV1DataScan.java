@@ -26,7 +26,6 @@ package com.google.api.services.dataplex.v1.model;
  * (https://cloud.google.com/dataplex/docs/data-profiling-overview). Data discovery: scans data in
  * Cloud Storage buckets to extract and then catalog metadata. For more information, see Discover
  * and catalog Cloud Storage data (https://cloud.google.com/bigquery/docs/automatic-discovery).
- * LINT.IfChange
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Dataplex API. For a detailed explanation see:
@@ -133,7 +132,7 @@ public final class GoogleCloudDataplexV1DataScan extends com.google.api.client.j
   /**
    * Output only. Identifier. The relative resource name of the scan, of the form:
    * projects/{project}/locations/{location_id}/dataScans/{datascan_id}, where project refers to a
-   * project_id or project_number and location_id refers to a GCP region.
+   * project_id or project_number and location_id refers to a Google Cloud region.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -394,7 +393,7 @@ public final class GoogleCloudDataplexV1DataScan extends com.google.api.client.j
   /**
    * Output only. Identifier. The relative resource name of the scan, of the form:
    * projects/{project}/locations/{location_id}/dataScans/{datascan_id}, where project refers to a
-   * project_id or project_number and location_id refers to a GCP region.
+   * project_id or project_number and location_id refers to a Google Cloud region.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -404,7 +403,7 @@ public final class GoogleCloudDataplexV1DataScan extends com.google.api.client.j
   /**
    * Output only. Identifier. The relative resource name of the scan, of the form:
    * projects/{project}/locations/{location_id}/dataScans/{datascan_id}, where project refers to a
-   * project_id or project_number and location_id refers to a GCP region.
+   * project_id or project_number and location_id refers to a Google Cloud region.
    * @param name name or {@code null} for none
    */
   public GoogleCloudDataplexV1DataScan setName(java.lang.String name) {

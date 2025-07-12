@@ -1984,49 +1984,48 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
          * Lists operations that match the specified filter in the request. If the server doesn't support
          * this method, it returns UNIMPLEMENTED.
          *
-         * Create a request for the method "operations.listOperations".
+         * Create a request for the method "operations.list".
          *
          * This request holds the parameters needed by the dataplex server.  After setting any optional
-         * parameters, call the {@link ListOperations#execute()} method to invoke the remote operation.
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param name The name of the operation's parent resource.
          * @return the request
          */
-        public ListOperations listOperations(java.lang.String name) throws java.io.IOException {
-          ListOperations result = new ListOperations(name);
+        public List list(java.lang.String name) throws java.io.IOException {
+          List result = new List(name);
           initialize(result);
           return result;
         }
 
-        public class ListOperations extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleLongrunningListOperationsResponse> {
+        public class List extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleLongrunningListOperationsResponse> {
 
-          private static final String REST_PATH = "v1/{+name}";
+          private static final String REST_PATH = "v1/{+name}/operations";
 
           private final java.util.regex.Pattern NAME_PATTERN =
-              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/operations/[^/]+$");
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
 
           /**
            * Lists operations that match the specified filter in the request. If the server doesn't support
            * this method, it returns UNIMPLEMENTED.
            *
-           * Create a request for the method "operations.listOperations".
+           * Create a request for the method "operations.list".
            *
            * This request holds the parameters needed by the the dataplex server.  After setting any
-           * optional parameters, call the {@link ListOperations#execute()} method to invoke the remote
-           * operation. <p> {@link ListOperations#initialize(com.google.api.client.googleapis.services.Abstr
-           * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
-           * the constructor. </p>
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name The name of the operation's parent resource.
            * @since 1.13
            */
-          protected ListOperations(java.lang.String name) {
+          protected List(java.lang.String name) {
             super(CloudDataplex.this, "GET", REST_PATH, null, com.google.api.services.dataplex.v1.model.GoogleLongrunningListOperationsResponse.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                   "Parameter name must conform to the pattern " +
-                  "^organizations/[^/]+/locations/[^/]+/operations/[^/]+$");
+                  "^organizations/[^/]+/locations/[^/]+$");
             }
           }
 
@@ -2041,58 +2040,58 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
 
           @Override
-          public ListOperations set$Xgafv(java.lang.String $Xgafv) {
-            return (ListOperations) super.set$Xgafv($Xgafv);
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
           }
 
           @Override
-          public ListOperations setAccessToken(java.lang.String accessToken) {
-            return (ListOperations) super.setAccessToken(accessToken);
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
           }
 
           @Override
-          public ListOperations setAlt(java.lang.String alt) {
-            return (ListOperations) super.setAlt(alt);
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
           }
 
           @Override
-          public ListOperations setCallback(java.lang.String callback) {
-            return (ListOperations) super.setCallback(callback);
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
           }
 
           @Override
-          public ListOperations setFields(java.lang.String fields) {
-            return (ListOperations) super.setFields(fields);
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
           }
 
           @Override
-          public ListOperations setKey(java.lang.String key) {
-            return (ListOperations) super.setKey(key);
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
           }
 
           @Override
-          public ListOperations setOauthToken(java.lang.String oauthToken) {
-            return (ListOperations) super.setOauthToken(oauthToken);
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
           }
 
           @Override
-          public ListOperations setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (ListOperations) super.setPrettyPrint(prettyPrint);
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
           }
 
           @Override
-          public ListOperations setQuotaUser(java.lang.String quotaUser) {
-            return (ListOperations) super.setQuotaUser(quotaUser);
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
           }
 
           @Override
-          public ListOperations setUploadType(java.lang.String uploadType) {
-            return (ListOperations) super.setUploadType(uploadType);
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
           }
 
           @Override
-          public ListOperations setUploadProtocol(java.lang.String uploadProtocol) {
-            return (ListOperations) super.setUploadProtocol(uploadProtocol);
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
           }
 
           /** The name of the operation's parent resource. */
@@ -2106,11 +2105,11 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
 
           /** The name of the operation's parent resource. */
-          public ListOperations setName(java.lang.String name) {
+          public List setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                   "Parameter name must conform to the pattern " +
-                  "^organizations/[^/]+/locations/[^/]+/operations/[^/]+$");
+                  "^organizations/[^/]+/locations/[^/]+$");
             }
             this.name = name;
             return this;
@@ -2127,7 +2126,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
 
           /** The standard list filter. */
-          public ListOperations setFilter(java.lang.String filter) {
+          public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
           }
@@ -2143,7 +2142,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
 
           /** The standard list page size. */
-          public ListOperations setPageSize(java.lang.Integer pageSize) {
+          public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
           }
@@ -2159,14 +2158,14 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           }
 
           /** The standard list page token. */
-          public ListOperations setPageToken(java.lang.String pageToken) {
+          public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;
           }
 
           @Override
-          public ListOperations set(String parameterName, Object value) {
-            return (ListOperations) super.set(parameterName, value);
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
           }
         }
 
@@ -5997,7 +5996,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The resource name of the parent location: projects/{project}/locations/{location_id} where
-         *        project refers to a project_id or project_number and location_id refers to a GCP region.
+         *        project refers to a project_id or project_number and location_id refers to a Google Cloud
+         *        region.
          * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1DataScan}
          * @return the request
          */
@@ -6026,7 +6026,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The resource name of the parent location: projects/{project}/locations/{location_id} where
-         *        project refers to a project_id or project_number and location_id refers to a GCP region.
+         *        project refers to a project_id or project_number and location_id refers to a Google Cloud
+         *        region.
            * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1DataScan}
            * @since 1.13
            */
@@ -6098,13 +6099,14 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           /**
            * Required. The resource name of the parent location:
            * projects/{project}/locations/{location_id} where project refers to a project_id or
-           * project_number and location_id refers to a GCP region.
+           * project_number and location_id refers to a Google Cloud region.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The resource name of the parent location: projects/{project}/locations/{location_id}
-         where project refers to a project_id or project_number and location_id refers to a GCP region.
+         where project refers to a project_id or project_number and location_id refers to a Google Cloud
+         region.
            */
           public java.lang.String getParent() {
             return parent;
@@ -6113,7 +6115,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           /**
            * Required. The resource name of the parent location:
            * projects/{project}/locations/{location_id} where project refers to a project_id or
-           * project_number and location_id refers to a GCP region.
+           * project_number and location_id refers to a Google Cloud region.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -6188,7 +6190,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
          *
          * @param name Required. The resource name of the dataScan:
          *        projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where project refers
-         *        to a project_id or project_number and location_id refers to a GCP region.
+         *        to a project_id or project_number and location_id refers to a Google Cloud region.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -6217,7 +6219,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            *
            * @param name Required. The resource name of the dataScan:
          *        projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where project refers
-         *        to a project_id or project_number and location_id refers to a GCP region.
+         *        to a project_id or project_number and location_id refers to a Google Cloud region.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -6288,14 +6290,15 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           /**
            * Required. The resource name of the dataScan:
            * projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where project
-           * refers to a project_id or project_number and location_id refers to a GCP region.
+           * refers to a project_id or project_number and location_id refers to a Google Cloud
+           * region.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The resource name of the dataScan:
          projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where project refers to a
-         project_id or project_number and location_id refers to a GCP region.
+         project_id or project_number and location_id refers to a Google Cloud region.
            */
           public java.lang.String getName() {
             return name;
@@ -6304,7 +6307,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           /**
            * Required. The resource name of the dataScan:
            * projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where project
-           * refers to a project_id or project_number and location_id refers to a GCP region.
+           * refers to a project_id or project_number and location_id refers to a Google Cloud
+           * region.
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -6502,7 +6506,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
          *
          * @param name Required. The resource name of the dataScan:
          *        projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where project refers
-         *        to a project_id or project_number and location_id refers to a GCP region.
+         *        to a project_id or project_number and location_id refers to a Google Cloud region.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -6530,7 +6534,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            *
            * @param name Required. The resource name of the dataScan:
          *        projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where project refers
-         *        to a project_id or project_number and location_id refers to a GCP region.
+         *        to a project_id or project_number and location_id refers to a Google Cloud region.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -6611,14 +6615,15 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           /**
            * Required. The resource name of the dataScan:
            * projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where project
-           * refers to a project_id or project_number and location_id refers to a GCP region.
+           * refers to a project_id or project_number and location_id refers to a Google Cloud
+           * region.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The resource name of the dataScan:
          projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where project refers to a
-         project_id or project_number and location_id refers to a GCP region.
+         project_id or project_number and location_id refers to a Google Cloud region.
            */
           public java.lang.String getName() {
             return name;
@@ -6627,7 +6632,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           /**
            * Required. The resource name of the dataScan:
            * projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where project
-           * refers to a project_id or project_number and location_id refers to a GCP region.
+           * refers to a project_id or project_number and location_id refers to a Google Cloud
+           * region.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -6866,7 +6872,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The resource name of the parent location: projects/{project}/locations/{location_id} where
-         *        project refers to a project_id or project_number and location_id refers to a GCP region.
+         *        project refers to a project_id or project_number and location_id refers to a Google Cloud
+         *        region.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -6893,7 +6900,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The resource name of the parent location: projects/{project}/locations/{location_id} where
-         *        project refers to a project_id or project_number and location_id refers to a GCP region.
+         *        project refers to a project_id or project_number and location_id refers to a Google Cloud
+         *        region.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -6974,13 +6982,14 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           /**
            * Required. The resource name of the parent location:
            * projects/{project}/locations/{location_id} where project refers to a project_id or
-           * project_number and location_id refers to a GCP region.
+           * project_number and location_id refers to a Google Cloud region.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The resource name of the parent location: projects/{project}/locations/{location_id}
-         where project refers to a project_id or project_number and location_id refers to a GCP region.
+         where project refers to a project_id or project_number and location_id refers to a Google Cloud
+         region.
            */
           public java.lang.String getParent() {
             return parent;
@@ -6989,7 +6998,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           /**
            * Required. The resource name of the parent location:
            * projects/{project}/locations/{location_id} where project refers to a project_id or
-           * project_number and location_id refers to a GCP region.
+           * project_number and location_id refers to a Google Cloud region.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -7107,7 +7116,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
          *
          * @param name Output only. Identifier. The relative resource name of the scan, of the form:
          *        projects/{project}/locations/{location_id}/dataScans/{datascan_id}, where project refers
-         *        to a project_id or project_number and location_id refers to a GCP region.
+         *        to a project_id or project_number and location_id refers to a Google Cloud region.
          * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1DataScan}
          * @return the request
          */
@@ -7137,7 +7146,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            *
            * @param name Output only. Identifier. The relative resource name of the scan, of the form:
          *        projects/{project}/locations/{location_id}/dataScans/{datascan_id}, where project refers
-         *        to a project_id or project_number and location_id refers to a GCP region.
+         *        to a project_id or project_number and location_id refers to a Google Cloud region.
            * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1DataScan}
            * @since 1.13
            */
@@ -7209,14 +7218,15 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           /**
            * Output only. Identifier. The relative resource name of the scan, of the form:
            * projects/{project}/locations/{location_id}/dataScans/{datascan_id}, where project
-           * refers to a project_id or project_number and location_id refers to a GCP region.
+           * refers to a project_id or project_number and location_id refers to a Google Cloud
+           * region.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Output only. Identifier. The relative resource name of the scan, of the form:
          projects/{project}/locations/{location_id}/dataScans/{datascan_id}, where project refers to a
-         project_id or project_number and location_id refers to a GCP region.
+         project_id or project_number and location_id refers to a Google Cloud region.
            */
           public java.lang.String getName() {
             return name;
@@ -7225,7 +7235,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           /**
            * Output only. Identifier. The relative resource name of the scan, of the form:
            * projects/{project}/locations/{location_id}/dataScans/{datascan_id}, where project
-           * refers to a project_id or project_number and location_id refers to a GCP region.
+           * refers to a project_id or project_number and location_id refers to a Google Cloud
+           * region.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -7290,8 +7301,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
          *
          * @param name Required. The resource name of the DataScan:
          *        projects/{project}/locations/{location_id}/dataScans/{data_scan_id}. where project refers
-         *        to a project_id or project_number and location_id refers to a GCP region.Only OnDemand
-         *        data scans are allowed.
+         *        to a project_id or project_number and location_id refers to a Google Cloud region.Only
+         *        OnDemand data scans are allowed.
          * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1RunDataScanRequest}
          * @return the request
          */
@@ -7320,8 +7331,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            *
            * @param name Required. The resource name of the DataScan:
          *        projects/{project}/locations/{location_id}/dataScans/{data_scan_id}. where project refers
-         *        to a project_id or project_number and location_id refers to a GCP region.Only OnDemand
-         *        data scans are allowed.
+         *        to a project_id or project_number and location_id refers to a Google Cloud region.Only
+         *        OnDemand data scans are allowed.
            * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1RunDataScanRequest}
            * @since 1.13
            */
@@ -7393,16 +7404,16 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           /**
            * Required. The resource name of the DataScan:
            * projects/{project}/locations/{location_id}/dataScans/{data_scan_id}. where project
-           * refers to a project_id or project_number and location_id refers to a GCP region.Only
-           * OnDemand data scans are allowed.
+           * refers to a project_id or project_number and location_id refers to a Google Cloud
+           * region.Only OnDemand data scans are allowed.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The resource name of the DataScan:
          projects/{project}/locations/{location_id}/dataScans/{data_scan_id}. where project refers to a
-         project_id or project_number and location_id refers to a GCP region.Only OnDemand data scans are
-         allowed.
+         project_id or project_number and location_id refers to a Google Cloud region.Only OnDemand data
+         scans are allowed.
            */
           public java.lang.String getName() {
             return name;
@@ -7411,8 +7422,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           /**
            * Required. The resource name of the DataScan:
            * projects/{project}/locations/{location_id}/dataScans/{data_scan_id}. where project
-           * refers to a project_id or project_number and location_id refers to a GCP region.Only
-           * OnDemand data scans are allowed.
+           * refers to a project_id or project_number and location_id refers to a Google Cloud
+           * region.Only OnDemand data scans are allowed.
            */
           public Run setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -7904,8 +7915,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            *
            * @param name Required. The resource name of the DataScanJob:
            *        projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/jobs/{data_scan_job_id
-           *        } where project refers to a project_id or project_number and location_id refers to a GCP
-           *        region.
+           *        } where project refers to a project_id or project_number and location_id refers to a
+           *        Google Cloud region.
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -7933,8 +7944,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
              *
              * @param name Required. The resource name of the DataScanJob:
            *        projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/jobs/{data_scan_job_id
-           *        } where project refers to a project_id or project_number and location_id refers to a GCP
-           *        region.
+           *        } where project refers to a project_id or project_number and location_id refers to a
+           *        Google Cloud region.
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -8015,14 +8026,14 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             /**
              * Required. The resource name of the DataScanJob: projects/{project}/locations/{locatio
              * n_id}/dataScans/{data_scan_id}/jobs/{data_scan_job_id} where project refers to a
-             * project_id or project_number and location_id refers to a GCP region.
+             * project_id or project_number and location_id refers to a Google Cloud region.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Required. The resource name of the DataScanJob:
            projects/{project}/locations/{location_id}/dataScans/{data_scan_id}/jobs/{data_scan_job_id} where
-           project refers to a project_id or project_number and location_id refers to a GCP region.
+           project refers to a project_id or project_number and location_id refers to a Google Cloud region.
              */
             public java.lang.String getName() {
               return name;
@@ -8031,7 +8042,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             /**
              * Required. The resource name of the DataScanJob: projects/{project}/locations/{locatio
              * n_id}/dataScans/{data_scan_id}/jobs/{data_scan_job_id} where project refers to a
-             * project_id or project_number and location_id refers to a GCP region.
+             * project_id or project_number and location_id refers to a Google Cloud region.
              */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -8074,7 +8085,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            *
            * @param parent Required. The resource name of the parent environment:
            *        projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where project refers
-           *        to a project_id or project_number and location_id refers to a GCP region.
+           *        to a project_id or project_number and location_id refers to a Google Cloud region.
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -8102,7 +8113,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
              *
              * @param parent Required. The resource name of the parent environment:
            *        projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where project refers
-           *        to a project_id or project_number and location_id refers to a GCP region.
+           *        to a project_id or project_number and location_id refers to a Google Cloud region.
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -8183,14 +8194,15 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             /**
              * Required. The resource name of the parent environment:
              * projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where project
-             * refers to a project_id or project_number and location_id refers to a GCP region.
+             * refers to a project_id or project_number and location_id refers to a Google Cloud
+             * region.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. The resource name of the parent environment:
            projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where project refers to a
-           project_id or project_number and location_id refers to a GCP region.
+           project_id or project_number and location_id refers to a Google Cloud region.
              */
             public java.lang.String getParent() {
               return parent;
@@ -8199,7 +8211,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             /**
              * Required. The resource name of the parent environment:
              * projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where project
-             * refers to a project_id or project_number and location_id refers to a GCP region.
+             * refers to a project_id or project_number and location_id refers to a Google Cloud
+             * region.
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -9012,8 +9025,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The resource name of the DataTaxonomy location, of the form:
-         *        projects/{project_number}/locations/{location_id} where location_id refers to a GCP
-         *        region.
+         *        projects/{project_number}/locations/{location_id} where location_id refers to a Google
+         *        Cloud region.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -9040,8 +9053,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The resource name of the DataTaxonomy location, of the form:
-         *        projects/{project_number}/locations/{location_id} where location_id refers to a GCP
-         *        region.
+         *        projects/{project_number}/locations/{location_id} where location_id refers to a Google
+         *        Cloud region.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -9121,14 +9134,15 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The resource name of the DataTaxonomy location, of the form:
-           * projects/{project_number}/locations/{location_id} where location_id refers to a GCP
-           * region.
+           * projects/{project_number}/locations/{location_id} where location_id refers to a Google
+           * Cloud region.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The resource name of the DataTaxonomy location, of the form:
-         projects/{project_number}/locations/{location_id} where location_id refers to a GCP region.
+         projects/{project_number}/locations/{location_id} where location_id refers to a Google Cloud
+         region.
            */
           public java.lang.String getParent() {
             return parent;
@@ -9136,8 +9150,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The resource name of the DataTaxonomy location, of the form:
-           * projects/{project_number}/locations/{location_id} where location_id refers to a GCP
-           * region.
+           * projects/{project_number}/locations/{location_id} where location_id refers to a Google
+           * Cloud region.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -11165,8 +11179,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The resource name of the entryGroup, of the form:
-         *        projects/{project_number}/locations/{location_id} where location_id refers to a GCP
-         *        region.
+         *        projects/{project_number}/locations/{location_id} where location_id refers to a Google
+         *        Cloud region.
          * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1EntryGroup}
          * @return the request
          */
@@ -11195,8 +11209,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The resource name of the entryGroup, of the form:
-         *        projects/{project_number}/locations/{location_id} where location_id refers to a GCP
-         *        region.
+         *        projects/{project_number}/locations/{location_id} where location_id refers to a Google
+         *        Cloud region.
            * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1EntryGroup}
            * @since 1.13
            */
@@ -11267,14 +11281,15 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The resource name of the entryGroup, of the form:
-           * projects/{project_number}/locations/{location_id} where location_id refers to a GCP
-           * region.
+           * projects/{project_number}/locations/{location_id} where location_id refers to a Google
+           * Cloud region.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The resource name of the entryGroup, of the form:
-         projects/{project_number}/locations/{location_id} where location_id refers to a GCP region.
+         projects/{project_number}/locations/{location_id} where location_id refers to a Google Cloud
+         region.
            */
           public java.lang.String getParent() {
             return parent;
@@ -11282,8 +11297,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The resource name of the entryGroup, of the form:
-           * projects/{project_number}/locations/{location_id} where location_id refers to a GCP
-           * region.
+           * projects/{project_number}/locations/{location_id} where location_id refers to a Google
+           * Cloud region.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -16060,8 +16075,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The parent resource where this Glossary will be created. Format:
-         *        projects/{project_id_or_number}/locations/{location_id} where location_id refers to a GCP
-         *        region.
+         *        projects/{project_id_or_number}/locations/{location_id} where location_id refers to a
+         *        Google Cloud region.
          * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1Glossary}
          * @return the request
          */
@@ -16090,8 +16105,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The parent resource where this Glossary will be created. Format:
-         *        projects/{project_id_or_number}/locations/{location_id} where location_id refers to a GCP
-         *        region.
+         *        projects/{project_id_or_number}/locations/{location_id} where location_id refers to a
+         *        Google Cloud region.
            * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1Glossary}
            * @since 1.13
            */
@@ -16163,13 +16178,14 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           /**
            * Required. The parent resource where this Glossary will be created. Format:
            * projects/{project_id_or_number}/locations/{location_id} where location_id refers to a
-           * GCP region.
+           * Google Cloud region.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The parent resource where this Glossary will be created. Format:
-         projects/{project_id_or_number}/locations/{location_id} where location_id refers to a GCP region.
+         projects/{project_id_or_number}/locations/{location_id} where location_id refers to a Google Cloud
+         region.
            */
           public java.lang.String getParent() {
             return parent;
@@ -16178,7 +16194,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           /**
            * Required. The parent resource where this Glossary will be created. Format:
            * projects/{project_id_or_number}/locations/{location_id} where location_id refers to a
-           * GCP region.
+           * Google Cloud region.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -16750,8 +16766,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The parent, which has this collection of Glossaries. Format:
-         *        projects/{project_id_or_number}/locations/{location_id} where location_id refers to a GCP
-         *        region.
+         *        projects/{project_id_or_number}/locations/{location_id} where location_id refers to a
+         *        Google Cloud region.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -16778,8 +16794,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The parent, which has this collection of Glossaries. Format:
-         *        projects/{project_id_or_number}/locations/{location_id} where location_id refers to a GCP
-         *        region.
+         *        projects/{project_id_or_number}/locations/{location_id} where location_id refers to a
+         *        Google Cloud region.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -16860,13 +16876,14 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           /**
            * Required. The parent, which has this collection of Glossaries. Format:
            * projects/{project_id_or_number}/locations/{location_id} where location_id refers to a
-           * GCP region.
+           * Google Cloud region.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The parent, which has this collection of Glossaries. Format:
-         projects/{project_id_or_number}/locations/{location_id} where location_id refers to a GCP region.
+         projects/{project_id_or_number}/locations/{location_id} where location_id refers to a Google Cloud
+         region.
            */
           public java.lang.String getParent() {
             return parent;
@@ -16875,7 +16892,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           /**
            * Required. The parent, which has this collection of Glossaries. Format:
            * projects/{project_id_or_number}/locations/{location_id} where location_id refers to a
-           * GCP region.
+           * Google Cloud region.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -17498,7 +17515,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            *
            * @param parent Required. The parent resource where this GlossaryCategory will be created. Format:
            *        projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id} where
-           *        locationId refers to a GCP region.
+           *        locationId refers to a Google Cloud region.
            * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1GlossaryCategory}
            * @return the request
            */
@@ -17528,7 +17545,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
              *
              * @param parent Required. The parent resource where this GlossaryCategory will be created. Format:
            *        projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id} where
-           *        locationId refers to a GCP region.
+           *        locationId refers to a Google Cloud region.
              * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1GlossaryCategory}
              * @since 1.13
              */
@@ -17600,14 +17617,14 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             /**
              * Required. The parent resource where this GlossaryCategory will be created. Format:
              * projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id}
-             * where locationId refers to a GCP region.
+             * where locationId refers to a Google Cloud region.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. The parent resource where this GlossaryCategory will be created. Format:
            projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id} where locationId
-           refers to a GCP region.
+           refers to a Google Cloud region.
              */
             public java.lang.String getParent() {
               return parent;
@@ -17616,7 +17633,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             /**
              * Required. The parent resource where this GlossaryCategory will be created. Format:
              * projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id}
-             * where locationId refers to a GCP region.
+             * where locationId refers to a Google Cloud region.
              */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -18144,7 +18161,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            *
            * @param parent Required. The parent, which has this collection of GlossaryCategories. Format:
            *        projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id} Location
-           *        is the GCP region.
+           *        is the Google Cloud region.
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -18172,7 +18189,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
              *
              * @param parent Required. The parent, which has this collection of GlossaryCategories. Format:
            *        projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id} Location
-           *        is the GCP region.
+           *        is the Google Cloud region.
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -18253,14 +18270,14 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             /**
              * Required. The parent, which has this collection of GlossaryCategories. Format:
              * projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id}
-             * Location is the GCP region.
+             * Location is the Google Cloud region.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. The parent, which has this collection of GlossaryCategories. Format:
            projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id} Location is the
-           GCP region.
+           Google Cloud region.
              */
             public java.lang.String getParent() {
               return parent;
@@ -18269,7 +18286,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             /**
              * Required. The parent, which has this collection of GlossaryCategories. Format:
              * projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id}
-             * Location is the GCP region.
+             * Location is the Google Cloud region.
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -18884,7 +18901,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            *
            * @param parent Required. The parent resource where the GlossaryTerm will be created. Format:
            *        projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id} where
-           *        location_id refers to a GCP region.
+           *        location_id refers to a Google Cloud region.
            * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1GlossaryTerm}
            * @return the request
            */
@@ -18914,7 +18931,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
              *
              * @param parent Required. The parent resource where the GlossaryTerm will be created. Format:
            *        projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id} where
-           *        location_id refers to a GCP region.
+           *        location_id refers to a Google Cloud region.
              * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1GlossaryTerm}
              * @since 1.13
              */
@@ -18986,14 +19003,14 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             /**
              * Required. The parent resource where the GlossaryTerm will be created. Format:
              * projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id}
-             * where location_id refers to a GCP region.
+             * where location_id refers to a Google Cloud region.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. The parent resource where the GlossaryTerm will be created. Format:
            projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id} where location_id
-           refers to a GCP region.
+           refers to a Google Cloud region.
              */
             public java.lang.String getParent() {
               return parent;
@@ -19002,7 +19019,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             /**
              * Required. The parent resource where the GlossaryTerm will be created. Format:
              * projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id}
-             * where location_id refers to a GCP region.
+             * where location_id refers to a Google Cloud region.
              */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -19531,7 +19548,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            *
            * @param parent Required. The parent, which has this collection of GlossaryTerms. Format:
            *        projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id} where
-           *        location_id refers to a GCP region.
+           *        location_id refers to a Google Cloud region.
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -19559,7 +19576,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
              *
              * @param parent Required. The parent, which has this collection of GlossaryTerms. Format:
            *        projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id} where
-           *        location_id refers to a GCP region.
+           *        location_id refers to a Google Cloud region.
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -19640,14 +19657,14 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             /**
              * Required. The parent, which has this collection of GlossaryTerms. Format:
              * projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id}
-             * where location_id refers to a GCP region.
+             * where location_id refers to a Google Cloud region.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
             /** Required. The parent, which has this collection of GlossaryTerms. Format:
            projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id} where location_id
-           refers to a GCP region.
+           refers to a Google Cloud region.
              */
             public java.lang.String getParent() {
               return parent;
@@ -19656,7 +19673,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
             /**
              * Required. The parent, which has this collection of GlossaryTerms. Format:
              * projects/{project_id_or_number}/locations/{location_id}/glossaries/{glossary_id}
-             * where location_id refers to a GCP region.
+             * where location_id refers to a Google Cloud region.
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -20786,8 +20803,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The resource name of the lake location, of the form:
-         *        projects/{project_number}/locations/{location_id} where location_id refers to a GCP
-         *        region.
+         *        projects/{project_number}/locations/{location_id} where location_id refers to a Google
+         *        Cloud region.
          * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1Lake}
          * @return the request
          */
@@ -20816,8 +20833,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The resource name of the lake location, of the form:
-         *        projects/{project_number}/locations/{location_id} where location_id refers to a GCP
-         *        region.
+         *        projects/{project_number}/locations/{location_id} where location_id refers to a Google
+         *        Cloud region.
            * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1Lake}
            * @since 1.13
            */
@@ -20888,14 +20905,15 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The resource name of the lake location, of the form:
-           * projects/{project_number}/locations/{location_id} where location_id refers to a GCP
-           * region.
+           * projects/{project_number}/locations/{location_id} where location_id refers to a Google
+           * Cloud region.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The resource name of the lake location, of the form:
-         projects/{project_number}/locations/{location_id} where location_id refers to a GCP region.
+         projects/{project_number}/locations/{location_id} where location_id refers to a Google Cloud
+         region.
            */
           public java.lang.String getParent() {
             return parent;
@@ -20903,8 +20921,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The resource name of the lake location, of the form:
-           * projects/{project_number}/locations/{location_id} where location_id refers to a GCP
-           * region.
+           * projects/{project_number}/locations/{location_id} where location_id refers to a Google
+           * Cloud region.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -21467,8 +21485,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The resource name of the lake location, of the form:
-         *        projects/{project_number}/locations/{location_id} where location_id refers to a GCP
-         *        region.
+         *        projects/{project_number}/locations/{location_id} where location_id refers to a Google
+         *        Cloud region.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -21495,8 +21513,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The resource name of the lake location, of the form:
-         *        projects/{project_number}/locations/{location_id} where location_id refers to a GCP
-         *        region.
+         *        projects/{project_number}/locations/{location_id} where location_id refers to a Google
+         *        Cloud region.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -21576,14 +21594,15 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The resource name of the lake location, of the form:
-           * projects/{project_number}/locations/{location_id} where location_id refers to a GCP
-           * region.
+           * projects/{project_number}/locations/{location_id} where location_id refers to a Google
+           * Cloud region.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The resource name of the lake location, of the form:
-         projects/{project_number}/locations/{location_id} where location_id refers to a GCP region.
+         projects/{project_number}/locations/{location_id} where location_id refers to a Google Cloud
+         region.
            */
           public java.lang.String getParent() {
             return parent;
@@ -21591,8 +21610,8 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The resource name of the lake location, of the form:
-           * projects/{project_number}/locations/{location_id} where location_id refers to a GCP
-           * region.
+           * projects/{project_number}/locations/{location_id} where location_id refers to a Google
+           * Cloud region.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {

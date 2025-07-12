@@ -49,15 +49,39 @@ public final class LinuxNodeConfig extends com.google.api.client.json.GenericJso
    * following parameters are supported. net.core.busy_poll net.core.busy_read
    * net.core.netdev_max_backlog net.core.rmem_max net.core.rmem_default net.core.wmem_default
    * net.core.wmem_max net.core.optmem_max net.core.somaxconn net.ipv4.tcp_rmem net.ipv4.tcp_wmem
-   * net.ipv4.tcp_tw_reuse net.netfilter.nf_conntrack_max net.netfilter.nf_conntrack_buckets
-   * net.netfilter.nf_conntrack_tcp_timeout_close_wait
+   * net.ipv4.tcp_tw_reuse net.ipv4.tcp_max_orphans net.netfilter.nf_conntrack_max
+   * net.netfilter.nf_conntrack_buckets net.netfilter.nf_conntrack_tcp_timeout_close_wait
    * net.netfilter.nf_conntrack_tcp_timeout_time_wait
    * net.netfilter.nf_conntrack_tcp_timeout_established net.netfilter.nf_conntrack_acct
-   * kernel.shmmni kernel.shmmax kernel.shmall vm.max_map_count
+   * kernel.shmmni kernel.shmmax kernel.shmall fs.aio-max-nr fs.file-max
+   * fs.inotify.max_user_instances fs.inotify.max_user_watches fs.nr_open vm.dirty_background_ratio
+   * vm.dirty_expire_centisecs vm.dirty_ratio vm.dirty_writeback_centisecs vm.max_map_count
+   * vm.overcommit_memory vm.overcommit_ratio vm.vfs_cache_pressure vm.swappiness
+   * vm.watermark_scale_factor vm.min_free_kbytes
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> sysctls;
+
+  /**
+   * Optional. Defines the transparent hugepage defrag configuration on the node. VM hugepage
+   * allocation can be managed by either limiting defragmentation for delayed allocation or skipping
+   * it entirely for immediate allocation only. See https://docs.kernel.org/admin-
+   * guide/mm/transhuge.html for more details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String transparentHugepageDefrag;
+
+  /**
+   * Optional. Transparent hugepage support for anonymous memory can be entirely disabled (mostly
+   * for debugging purposes) or only enabled inside MADV_HUGEPAGE regions (to avoid the risk of
+   * consuming more memory resources) or enabled system wide. See https://docs.kernel.org/admin-
+   * guide/mm/transhuge.html for more details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String transparentHugepageEnabled;
 
   /**
    * cgroup_mode specifies the cgroup mode to be used on the node.
@@ -98,11 +122,15 @@ public final class LinuxNodeConfig extends com.google.api.client.json.GenericJso
    * following parameters are supported. net.core.busy_poll net.core.busy_read
    * net.core.netdev_max_backlog net.core.rmem_max net.core.rmem_default net.core.wmem_default
    * net.core.wmem_max net.core.optmem_max net.core.somaxconn net.ipv4.tcp_rmem net.ipv4.tcp_wmem
-   * net.ipv4.tcp_tw_reuse net.netfilter.nf_conntrack_max net.netfilter.nf_conntrack_buckets
-   * net.netfilter.nf_conntrack_tcp_timeout_close_wait
+   * net.ipv4.tcp_tw_reuse net.ipv4.tcp_max_orphans net.netfilter.nf_conntrack_max
+   * net.netfilter.nf_conntrack_buckets net.netfilter.nf_conntrack_tcp_timeout_close_wait
    * net.netfilter.nf_conntrack_tcp_timeout_time_wait
    * net.netfilter.nf_conntrack_tcp_timeout_established net.netfilter.nf_conntrack_acct
-   * kernel.shmmni kernel.shmmax kernel.shmall vm.max_map_count
+   * kernel.shmmni kernel.shmmax kernel.shmall fs.aio-max-nr fs.file-max
+   * fs.inotify.max_user_instances fs.inotify.max_user_watches fs.nr_open vm.dirty_background_ratio
+   * vm.dirty_expire_centisecs vm.dirty_ratio vm.dirty_writeback_centisecs vm.max_map_count
+   * vm.overcommit_memory vm.overcommit_ratio vm.vfs_cache_pressure vm.swappiness
+   * vm.watermark_scale_factor vm.min_free_kbytes
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getSysctls() {
@@ -114,15 +142,65 @@ public final class LinuxNodeConfig extends com.google.api.client.json.GenericJso
    * following parameters are supported. net.core.busy_poll net.core.busy_read
    * net.core.netdev_max_backlog net.core.rmem_max net.core.rmem_default net.core.wmem_default
    * net.core.wmem_max net.core.optmem_max net.core.somaxconn net.ipv4.tcp_rmem net.ipv4.tcp_wmem
-   * net.ipv4.tcp_tw_reuse net.netfilter.nf_conntrack_max net.netfilter.nf_conntrack_buckets
-   * net.netfilter.nf_conntrack_tcp_timeout_close_wait
+   * net.ipv4.tcp_tw_reuse net.ipv4.tcp_max_orphans net.netfilter.nf_conntrack_max
+   * net.netfilter.nf_conntrack_buckets net.netfilter.nf_conntrack_tcp_timeout_close_wait
    * net.netfilter.nf_conntrack_tcp_timeout_time_wait
    * net.netfilter.nf_conntrack_tcp_timeout_established net.netfilter.nf_conntrack_acct
-   * kernel.shmmni kernel.shmmax kernel.shmall vm.max_map_count
+   * kernel.shmmni kernel.shmmax kernel.shmall fs.aio-max-nr fs.file-max
+   * fs.inotify.max_user_instances fs.inotify.max_user_watches fs.nr_open vm.dirty_background_ratio
+   * vm.dirty_expire_centisecs vm.dirty_ratio vm.dirty_writeback_centisecs vm.max_map_count
+   * vm.overcommit_memory vm.overcommit_ratio vm.vfs_cache_pressure vm.swappiness
+   * vm.watermark_scale_factor vm.min_free_kbytes
    * @param sysctls sysctls or {@code null} for none
    */
   public LinuxNodeConfig setSysctls(java.util.Map<String, java.lang.String> sysctls) {
     this.sysctls = sysctls;
+    return this;
+  }
+
+  /**
+   * Optional. Defines the transparent hugepage defrag configuration on the node. VM hugepage
+   * allocation can be managed by either limiting defragmentation for delayed allocation or skipping
+   * it entirely for immediate allocation only. See https://docs.kernel.org/admin-
+   * guide/mm/transhuge.html for more details.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTransparentHugepageDefrag() {
+    return transparentHugepageDefrag;
+  }
+
+  /**
+   * Optional. Defines the transparent hugepage defrag configuration on the node. VM hugepage
+   * allocation can be managed by either limiting defragmentation for delayed allocation or skipping
+   * it entirely for immediate allocation only. See https://docs.kernel.org/admin-
+   * guide/mm/transhuge.html for more details.
+   * @param transparentHugepageDefrag transparentHugepageDefrag or {@code null} for none
+   */
+  public LinuxNodeConfig setTransparentHugepageDefrag(java.lang.String transparentHugepageDefrag) {
+    this.transparentHugepageDefrag = transparentHugepageDefrag;
+    return this;
+  }
+
+  /**
+   * Optional. Transparent hugepage support for anonymous memory can be entirely disabled (mostly
+   * for debugging purposes) or only enabled inside MADV_HUGEPAGE regions (to avoid the risk of
+   * consuming more memory resources) or enabled system wide. See https://docs.kernel.org/admin-
+   * guide/mm/transhuge.html for more details.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTransparentHugepageEnabled() {
+    return transparentHugepageEnabled;
+  }
+
+  /**
+   * Optional. Transparent hugepage support for anonymous memory can be entirely disabled (mostly
+   * for debugging purposes) or only enabled inside MADV_HUGEPAGE regions (to avoid the risk of
+   * consuming more memory resources) or enabled system wide. See https://docs.kernel.org/admin-
+   * guide/mm/transhuge.html for more details.
+   * @param transparentHugepageEnabled transparentHugepageEnabled or {@code null} for none
+   */
+  public LinuxNodeConfig setTransparentHugepageEnabled(java.lang.String transparentHugepageEnabled) {
+    this.transparentHugepageEnabled = transparentHugepageEnabled;
     return this;
   }
 

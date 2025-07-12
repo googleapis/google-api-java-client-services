@@ -132,6 +132,13 @@ public final class AddonsConfig extends com.google.api.client.json.GenericJson {
   private KubernetesDashboard kubernetesDashboard;
 
   /**
+   * Configuration for the Lustre CSI driver.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LustreCsiDriverConfig lustreCsiDriverConfig;
+
+  /**
    * Configuration for NetworkPolicy. This only tracks whether the addon is enabled or not on the
    * Master, it does not track whether network policy is enabled for the nodes.
    * The value may be {@code null}.
@@ -396,6 +403,23 @@ public final class AddonsConfig extends com.google.api.client.json.GenericJson {
    */
   public AddonsConfig setKubernetesDashboard(KubernetesDashboard kubernetesDashboard) {
     this.kubernetesDashboard = kubernetesDashboard;
+    return this;
+  }
+
+  /**
+   * Configuration for the Lustre CSI driver.
+   * @return value or {@code null} for none
+   */
+  public LustreCsiDriverConfig getLustreCsiDriverConfig() {
+    return lustreCsiDriverConfig;
+  }
+
+  /**
+   * Configuration for the Lustre CSI driver.
+   * @param lustreCsiDriverConfig lustreCsiDriverConfig or {@code null} for none
+   */
+  public AddonsConfig setLustreCsiDriverConfig(LustreCsiDriverConfig lustreCsiDriverConfig) {
+    this.lustreCsiDriverConfig = lustreCsiDriverConfig;
     return this;
   }
 

@@ -31,7 +31,8 @@ package com.google.api.services.redis.v1beta1.model;
 public final class RemoteCluster extends com.google.api.client.json.GenericJson {
 
   /**
-   * The full resource path of the remote cluster in the format: projects//locations//clusters/
+   * Output only. The full resource path of the remote cluster in the format:
+   * projects//locations//clusters/
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +46,8 @@ public final class RemoteCluster extends com.google.api.client.json.GenericJson 
   private java.lang.String uid;
 
   /**
-   * The full resource path of the remote cluster in the format: projects//locations//clusters/
+   * Output only. The full resource path of the remote cluster in the format:
+   * projects//locations//clusters/
    * @return value or {@code null} for none
    */
   public java.lang.String getCluster() {
@@ -53,7 +55,8 @@ public final class RemoteCluster extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The full resource path of the remote cluster in the format: projects//locations//clusters/
+   * Output only. The full resource path of the remote cluster in the format:
+   * projects//locations//clusters/
    * @param cluster cluster or {@code null} for none
    */
   public RemoteCluster setCluster(java.lang.String cluster) {

@@ -18,7 +18,7 @@ package com.google.api.services.redis.v1beta1.model;
 
 /**
  * DatabaseResourceFeed is the top level proto to be used to ingest different database resource
- * level events into Condor platform. Next ID: 8
+ * level events into Condor platform. Next ID: 9
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud Memorystore for Redis API. For a
@@ -30,6 +30,14 @@ package com.google.api.services.redis.v1beta1.model;
  */
 @SuppressWarnings("javadoc")
 public final class DatabaseResourceFeed extends com.google.api.client.json.GenericJson {
+
+  /**
+   * Config based signal data is used to ingest signals that are generated based on the
+   * configuration of the database resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ConfigBasedSignalData configBasedSignalData;
 
   /**
    * Required. Timestamp when feed is generated.
@@ -76,6 +84,25 @@ public final class DatabaseResourceFeed extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private DatabaseResourceMetadata resourceMetadata;
+
+  /**
+   * Config based signal data is used to ingest signals that are generated based on the
+   * configuration of the database resource.
+   * @return value or {@code null} for none
+   */
+  public ConfigBasedSignalData getConfigBasedSignalData() {
+    return configBasedSignalData;
+  }
+
+  /**
+   * Config based signal data is used to ingest signals that are generated based on the
+   * configuration of the database resource.
+   * @param configBasedSignalData configBasedSignalData or {@code null} for none
+   */
+  public DatabaseResourceFeed setConfigBasedSignalData(ConfigBasedSignalData configBasedSignalData) {
+    this.configBasedSignalData = configBasedSignalData;
+    return this;
+  }
 
   /**
    * Required. Timestamp when feed is generated.

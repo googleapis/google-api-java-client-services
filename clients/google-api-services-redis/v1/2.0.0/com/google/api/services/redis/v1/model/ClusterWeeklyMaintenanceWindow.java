@@ -31,21 +31,21 @@ package com.google.api.services.redis.v1.model;
 public final class ClusterWeeklyMaintenanceWindow extends com.google.api.client.json.GenericJson {
 
   /**
-   * Allows to define schedule that runs specified day of the week.
+   * Optional. Allows to define schedule that runs specified day of the week.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String day;
 
   /**
-   * Start time of the window in UTC.
+   * Optional. Start time of the window in UTC.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TimeOfDay startTime;
 
   /**
-   * Allows to define schedule that runs specified day of the week.
+   * Optional. Allows to define schedule that runs specified day of the week.
    * @return value or {@code null} for none
    */
   public java.lang.String getDay() {
@@ -53,7 +53,7 @@ public final class ClusterWeeklyMaintenanceWindow extends com.google.api.client.
   }
 
   /**
-   * Allows to define schedule that runs specified day of the week.
+   * Optional. Allows to define schedule that runs specified day of the week.
    * @param day day or {@code null} for none
    */
   public ClusterWeeklyMaintenanceWindow setDay(java.lang.String day) {
@@ -62,7 +62,7 @@ public final class ClusterWeeklyMaintenanceWindow extends com.google.api.client.
   }
 
   /**
-   * Start time of the window in UTC.
+   * Optional. Start time of the window in UTC.
    * @return value or {@code null} for none
    */
   public TimeOfDay getStartTime() {
@@ -70,7 +70,7 @@ public final class ClusterWeeklyMaintenanceWindow extends com.google.api.client.
   }
 
   /**
-   * Start time of the window in UTC.
+   * Optional. Start time of the window in UTC.
    * @param startTime startTime or {@code null} for none
    */
   public ClusterWeeklyMaintenanceWindow setStartTime(TimeOfDay startTime) {

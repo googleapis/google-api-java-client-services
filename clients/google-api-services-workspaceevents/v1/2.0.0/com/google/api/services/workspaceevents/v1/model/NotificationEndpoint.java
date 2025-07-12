@@ -33,7 +33,7 @@ public final class NotificationEndpoint extends com.google.api.client.json.Gener
   /**
    * Immutable. The Pub/Sub topic that receives events for the subscription. Format:
    * `projects/{project}/topics/{topic}` You must create the topic in the same Google Cloud project
-   * where you create this subscription. Note: The Workspace Events API uses [ordering
+   * where you create this subscription. Note: The Google Workspace Events API uses [ordering
    * keys](https://cloud.google.com/pubsub/docs/ordering) for the benefit of sequential events. If
    * the Cloud Pub/Sub topic has a [message storage
    * policy](https://cloud.google.com/pubsub/docs/resource-location-restriction#exceptions)
@@ -49,7 +49,7 @@ public final class NotificationEndpoint extends com.google.api.client.json.Gener
   /**
    * Immutable. The Pub/Sub topic that receives events for the subscription. Format:
    * `projects/{project}/topics/{topic}` You must create the topic in the same Google Cloud project
-   * where you create this subscription. Note: The Workspace Events API uses [ordering
+   * where you create this subscription. Note: The Google Workspace Events API uses [ordering
    * keys](https://cloud.google.com/pubsub/docs/ordering) for the benefit of sequential events. If
    * the Cloud Pub/Sub topic has a [message storage
    * policy](https://cloud.google.com/pubsub/docs/resource-location-restriction#exceptions)
@@ -66,7 +66,7 @@ public final class NotificationEndpoint extends com.google.api.client.json.Gener
   /**
    * Immutable. The Pub/Sub topic that receives events for the subscription. Format:
    * `projects/{project}/topics/{topic}` You must create the topic in the same Google Cloud project
-   * where you create this subscription. Note: The Workspace Events API uses [ordering
+   * where you create this subscription. Note: The Google Workspace Events API uses [ordering
    * keys](https://cloud.google.com/pubsub/docs/ordering) for the benefit of sequential events. If
    * the Cloud Pub/Sub topic has a [message storage
    * policy](https://cloud.google.com/pubsub/docs/resource-location-restriction#exceptions)

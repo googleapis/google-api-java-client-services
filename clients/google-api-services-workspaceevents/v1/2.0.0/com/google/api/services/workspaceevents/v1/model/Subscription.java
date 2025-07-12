@@ -98,7 +98,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Options about what data to include in the event payload. Only supported for Google
-   * Chat events.
+   * Chat and Google Drive events.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -313,7 +313,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Options about what data to include in the event payload. Only supported for Google
-   * Chat events.
+   * Chat and Google Drive events.
    * @return value or {@code null} for none
    */
   public PayloadOptions getPayloadOptions() {
@@ -322,7 +322,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Options about what data to include in the event payload. Only supported for Google
-   * Chat events.
+   * Chat and Google Drive events.
    * @param payloadOptions payloadOptions or {@code null} for none
    */
   public Subscription setPayloadOptions(PayloadOptions payloadOptions) {

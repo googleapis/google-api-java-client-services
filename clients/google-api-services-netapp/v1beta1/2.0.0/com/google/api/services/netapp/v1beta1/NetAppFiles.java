@@ -7577,6 +7577,146 @@ public class NetAppFiles extends com.google.api.client.googleapis.services.json.
           }
         }
         /**
+         * Restore files from a backup to a volume.
+         *
+         * Create a request for the method "volumes.restore".
+         *
+         * This request holds the parameters needed by the netapp server.  After setting any optional
+         * parameters, call the {@link Restore#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The volume resource name, in the format
+         *        `projects/{project_id}/locations/{location}/volumes/{volume_id}`
+         * @param content the {@link com.google.api.services.netapp.v1beta1.model.RestoreBackupFilesRequest}
+         * @return the request
+         */
+        public Restore restore(java.lang.String name, com.google.api.services.netapp.v1beta1.model.RestoreBackupFilesRequest content) throws java.io.IOException {
+          Restore result = new Restore(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Restore extends NetAppFilesRequest<com.google.api.services.netapp.v1beta1.model.Operation> {
+
+          private static final String REST_PATH = "v1beta1/{+name}:restore";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/volumes/[^/]+$");
+
+          /**
+           * Restore files from a backup to a volume.
+           *
+           * Create a request for the method "volumes.restore".
+           *
+           * This request holds the parameters needed by the the netapp server.  After setting any optional
+           * parameters, call the {@link Restore#execute()} method to invoke the remote operation. <p>
+           * {@link
+           * Restore#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The volume resource name, in the format
+         *        `projects/{project_id}/locations/{location}/volumes/{volume_id}`
+           * @param content the {@link com.google.api.services.netapp.v1beta1.model.RestoreBackupFilesRequest}
+           * @since 1.13
+           */
+          protected Restore(java.lang.String name, com.google.api.services.netapp.v1beta1.model.RestoreBackupFilesRequest content) {
+            super(NetAppFiles.this, "POST", REST_PATH, content, com.google.api.services.netapp.v1beta1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/volumes/[^/]+$");
+            }
+          }
+
+          @Override
+          public Restore set$Xgafv(java.lang.String $Xgafv) {
+            return (Restore) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Restore setAccessToken(java.lang.String accessToken) {
+            return (Restore) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Restore setAlt(java.lang.String alt) {
+            return (Restore) super.setAlt(alt);
+          }
+
+          @Override
+          public Restore setCallback(java.lang.String callback) {
+            return (Restore) super.setCallback(callback);
+          }
+
+          @Override
+          public Restore setFields(java.lang.String fields) {
+            return (Restore) super.setFields(fields);
+          }
+
+          @Override
+          public Restore setKey(java.lang.String key) {
+            return (Restore) super.setKey(key);
+          }
+
+          @Override
+          public Restore setOauthToken(java.lang.String oauthToken) {
+            return (Restore) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Restore setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Restore) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Restore setQuotaUser(java.lang.String quotaUser) {
+            return (Restore) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Restore setUploadType(java.lang.String uploadType) {
+            return (Restore) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Restore setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Restore) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The volume resource name, in the format
+           * `projects/{project_id}/locations/{location}/volumes/{volume_id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The volume resource name, in the format
+         `projects/{project_id}/locations/{location}/volumes/{volume_id}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The volume resource name, in the format
+           * `projects/{project_id}/locations/{location}/volumes/{volume_id}`
+           */
+          public Restore setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/volumes/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Restore set(String parameterName, Object value) {
+            return (Restore) super.set(parameterName, value);
+          }
+        }
+        /**
          * Revert an existing volume to a specified snapshot. Warning! This operation will permanently
          * revert all changes made after the snapshot was created.
          *

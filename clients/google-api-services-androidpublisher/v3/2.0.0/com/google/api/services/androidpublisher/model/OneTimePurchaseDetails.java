@@ -38,11 +38,28 @@ public final class OneTimePurchaseDetails extends com.google.api.client.json.Gen
   private java.lang.String offerId;
 
   /**
+   * ID of the purchase option. This field is set for both purchase options and variant offers. For
+   * purchase options, this ID identifies the purchase option itself. For variant offers, this ID
+   * refers to the associated purchase option, and in conjunction with offer_id it identifies the
+   * variant offer.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String purchaseOptionId;
+
+  /**
    * The number of items purchased (for multi-quantity item purchases).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer quantity;
+
+  /**
+   * The details of a rent purchase. Only set if it is a rent purchase.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RentalDetails rentalDetails;
 
   /**
    * The offer ID of the one-time purchase offer.
@@ -62,6 +79,29 @@ public final class OneTimePurchaseDetails extends com.google.api.client.json.Gen
   }
 
   /**
+   * ID of the purchase option. This field is set for both purchase options and variant offers. For
+   * purchase options, this ID identifies the purchase option itself. For variant offers, this ID
+   * refers to the associated purchase option, and in conjunction with offer_id it identifies the
+   * variant offer.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPurchaseOptionId() {
+    return purchaseOptionId;
+  }
+
+  /**
+   * ID of the purchase option. This field is set for both purchase options and variant offers. For
+   * purchase options, this ID identifies the purchase option itself. For variant offers, this ID
+   * refers to the associated purchase option, and in conjunction with offer_id it identifies the
+   * variant offer.
+   * @param purchaseOptionId purchaseOptionId or {@code null} for none
+   */
+  public OneTimePurchaseDetails setPurchaseOptionId(java.lang.String purchaseOptionId) {
+    this.purchaseOptionId = purchaseOptionId;
+    return this;
+  }
+
+  /**
    * The number of items purchased (for multi-quantity item purchases).
    * @return value or {@code null} for none
    */
@@ -75,6 +115,23 @@ public final class OneTimePurchaseDetails extends com.google.api.client.json.Gen
    */
   public OneTimePurchaseDetails setQuantity(java.lang.Integer quantity) {
     this.quantity = quantity;
+    return this;
+  }
+
+  /**
+   * The details of a rent purchase. Only set if it is a rent purchase.
+   * @return value or {@code null} for none
+   */
+  public RentalDetails getRentalDetails() {
+    return rentalDetails;
+  }
+
+  /**
+   * The details of a rent purchase. Only set if it is a rent purchase.
+   * @param rentalDetails rentalDetails or {@code null} for none
+   */
+  public OneTimePurchaseDetails setRentalDetails(RentalDetails rentalDetails) {
+    this.rentalDetails = rentalDetails;
     return this;
   }
 

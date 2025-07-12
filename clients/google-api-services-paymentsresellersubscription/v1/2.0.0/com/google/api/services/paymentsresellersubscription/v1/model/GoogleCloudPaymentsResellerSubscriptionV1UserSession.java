@@ -25,7 +25,7 @@ package com.google.api.services.paymentsresellersubscription.v1.model;
  * the previous tokens being expired or not. You don't need to worry about multiple sessions
  * resulting in duplicate fulfillments as guaranteed by the same subscription id. Please refer to
  * the [Google Managed Signup](/payments/reseller/subscription/reference/index/User.Signup.Integrati
- * on/Google.Managed.Signup.\(In.Preview\)) documentation for additional integration details.
+ * on/Google.Managed.Signup) documentation for additional integration details.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Payments Reseller Subscription API. For a detailed

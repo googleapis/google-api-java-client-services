@@ -31,14 +31,16 @@ package com.google.api.services.paymentsresellersubscription.v1.model;
 public final class GoogleCloudPaymentsResellerSubscriptionV1EntitleSubscriptionIntent extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The name of the subscription resource that is entitled to the current end user.
+   * Required. The name of the subscription resource that is entitled to the current end user. It is
+   * in the format of "partners/{partner_id}/subscriptions/{subscriptionId}".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Required. The name of the subscription resource that is entitled to the current end user.
+   * Required. The name of the subscription resource that is entitled to the current end user. It is
+   * in the format of "partners/{partner_id}/subscriptions/{subscriptionId}".
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -46,7 +48,8 @@ public final class GoogleCloudPaymentsResellerSubscriptionV1EntitleSubscriptionI
   }
 
   /**
-   * Required. The name of the subscription resource that is entitled to the current end user.
+   * Required. The name of the subscription resource that is entitled to the current end user. It is
+   * in the format of "partners/{partner_id}/subscriptions/{subscriptionId}".
    * @param name name or {@code null} for none
    */
   public GoogleCloudPaymentsResellerSubscriptionV1EntitleSubscriptionIntent setName(java.lang.String name) {

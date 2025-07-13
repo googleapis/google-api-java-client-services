@@ -68,6 +68,14 @@ public final class Job extends com.google.api.client.json.GenericJson {
   private Status error;
 
   /**
+   * Optional. Insert silence and duplicate frames when timestamp gaps are detected in a given
+   * stream.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean fillContentGaps;
+
+  /**
    * Input only. Specify the `input_uri` to populate empty `uri` fields in each element of
    * `Job.config.inputs` or `JobTemplate.config.inputs` when using template. URI of the media. Input
    * files must be at least 5 seconds in duration and stored in Cloud Storage (for example,
@@ -236,6 +244,25 @@ public final class Job extends com.google.api.client.json.GenericJson {
    */
   public Job setError(Status error) {
     this.error = error;
+    return this;
+  }
+
+  /**
+   * Optional. Insert silence and duplicate frames when timestamp gaps are detected in a given
+   * stream.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getFillContentGaps() {
+    return fillContentGaps;
+  }
+
+  /**
+   * Optional. Insert silence and duplicate frames when timestamp gaps are detected in a given
+   * stream.
+   * @param fillContentGaps fillContentGaps or {@code null} for none
+   */
+  public Job setFillContentGaps(java.lang.Boolean fillContentGaps) {
+    this.fillContentGaps = fillContentGaps;
     return this;
   }
 

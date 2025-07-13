@@ -1958,6 +1958,480 @@ public class ChromeManagement extends com.google.api.client.googleapis.services.
         }
       }
 
+      /**
+       * An accessor for creating requests from the Commands collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code ChromeManagement chromemanagement = new ChromeManagement(...);}
+       *   {@code ChromeManagement.Commands.List request = chromemanagement.commands().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Commands commands() {
+        return new Commands();
+      }
+
+      /**
+       * The "commands" collection of methods.
+       */
+      public class Commands {
+
+        /**
+         * Creates a Chrome browser profile remote command.
+         *
+         * Create a request for the method "commands.create".
+         *
+         * This request holds the parameters needed by the chromemanagement server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Format: customers/{customer_id}/profiles/{profile_permanent_id}
+         * @param content the {@link com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1ChromeBrowserProfileCommand}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1ChromeBrowserProfileCommand content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends ChromeManagementRequest<com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1ChromeBrowserProfileCommand> {
+
+          private static final String REST_PATH = "v1/{+parent}/commands";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^customers/[^/]+/profiles/[^/]+$");
+
+          /**
+           * Creates a Chrome browser profile remote command.
+           *
+           * Create a request for the method "commands.create".
+           *
+           * This request holds the parameters needed by the the chromemanagement server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Format: customers/{customer_id}/profiles/{profile_permanent_id}
+           * @param content the {@link com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1ChromeBrowserProfileCommand}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1ChromeBrowserProfileCommand content) {
+            super(ChromeManagement.this, "POST", REST_PATH, content, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1ChromeBrowserProfileCommand.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^customers/[^/]+/profiles/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Format: customers/{customer_id}/profiles/{profile_permanent_id} */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Format: customers/{customer_id}/profiles/{profile_permanent_id}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. Format: customers/{customer_id}/profiles/{profile_permanent_id} */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^customers/[^/]+/profiles/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets a Chrome browser profile remote command.
+         *
+         * Create a request for the method "commands.get".
+         *
+         * This request holds the parameters needed by the chromemanagement server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Format: customers/{customer_id}/profiles/{profile_permanent_id}/commands/{command_id}
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends ChromeManagementRequest<com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1ChromeBrowserProfileCommand> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^customers/[^/]+/profiles/[^/]+/commands/[^/]+$");
+
+          /**
+           * Gets a Chrome browser profile remote command.
+           *
+           * Create a request for the method "commands.get".
+           *
+           * This request holds the parameters needed by the the chromemanagement server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Format: customers/{customer_id}/profiles/{profile_permanent_id}/commands/{command_id}
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(ChromeManagement.this, "GET", REST_PATH, null, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1ChromeBrowserProfileCommand.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^customers/[^/]+/profiles/[^/]+/commands/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Format:
+           * customers/{customer_id}/profiles/{profile_permanent_id}/commands/{command_id}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Format: customers/{customer_id}/profiles/{profile_permanent_id}/commands/{command_id}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Format:
+           * customers/{customer_id}/profiles/{profile_permanent_id}/commands/{command_id}
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^customers/[^/]+/profiles/[^/]+/commands/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists remote commands of a Chrome browser profile.
+         *
+         * Create a request for the method "commands.list".
+         *
+         * This request holds the parameters needed by the chromemanagement server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Format: customers/{customer_id}/profiles/{profile_permanent_id}
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends ChromeManagementRequest<com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1ListChromeBrowserProfileCommandsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/commands";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^customers/[^/]+/profiles/[^/]+$");
+
+          /**
+           * Lists remote commands of a Chrome browser profile.
+           *
+           * Create a request for the method "commands.list".
+           *
+           * This request holds the parameters needed by the the chromemanagement server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Format: customers/{customer_id}/profiles/{profile_permanent_id}
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(ChromeManagement.this, "GET", REST_PATH, null, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1ListChromeBrowserProfileCommandsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^customers/[^/]+/profiles/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. Format: customers/{customer_id}/profiles/{profile_permanent_id} */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Format: customers/{customer_id}/profiles/{profile_permanent_id}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. Format: customers/{customer_id}/profiles/{profile_permanent_id} */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^customers/[^/]+/profiles/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of commands to return. The default page size is 100 if
+           * page_size is unspecified, and the maximum page size allowed is 100.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of commands to return. The default page size is 100 if page_size is
+         unspecified, and the maximum page size allowed is 100.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of commands to return. The default page size is 100 if
+           * page_size is unspecified, and the maximum page size allowed is 100.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** Optional. The page token used to retrieve a specific page of the listing request. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. The page token used to retrieve a specific page of the listing request.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** Optional. The page token used to retrieve a specific page of the listing request. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
     }
     /**
      * An accessor for creating requests from the Reports collection.

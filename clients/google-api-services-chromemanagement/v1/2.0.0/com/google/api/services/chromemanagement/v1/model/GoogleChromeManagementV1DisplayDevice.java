@@ -52,6 +52,13 @@ public final class GoogleChromeManagementV1DisplayDevice extends com.google.api.
   private java.lang.Integer displayWidthMm;
 
   /**
+   * Output only. EDID version.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String edidVersion;
+
+  /**
    * Output only. Is display internal or not.
    * The value may be {@code null}.
    */
@@ -78,6 +85,13 @@ public final class GoogleChromeManagementV1DisplayDevice extends com.google.api.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer modelId;
+
+  /**
+   * Output only. Serial number.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer serialNumber;
 
   /**
    * Output only. Display height in millimeters.
@@ -127,6 +141,23 @@ public final class GoogleChromeManagementV1DisplayDevice extends com.google.api.
    */
   public GoogleChromeManagementV1DisplayDevice setDisplayWidthMm(java.lang.Integer displayWidthMm) {
     this.displayWidthMm = displayWidthMm;
+    return this;
+  }
+
+  /**
+   * Output only. EDID version.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEdidVersion() {
+    return edidVersion;
+  }
+
+  /**
+   * Output only. EDID version.
+   * @param edidVersion edidVersion or {@code null} for none
+   */
+  public GoogleChromeManagementV1DisplayDevice setEdidVersion(java.lang.String edidVersion) {
+    this.edidVersion = edidVersion;
     return this;
   }
 
@@ -195,6 +226,23 @@ public final class GoogleChromeManagementV1DisplayDevice extends com.google.api.
    */
   public GoogleChromeManagementV1DisplayDevice setModelId(java.lang.Integer modelId) {
     this.modelId = modelId;
+    return this;
+  }
+
+  /**
+   * Output only. Serial number.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getSerialNumber() {
+    return serialNumber;
+  }
+
+  /**
+   * Output only. Serial number.
+   * @param serialNumber serialNumber or {@code null} for none
+   */
+  public GoogleChromeManagementV1DisplayDevice setSerialNumber(java.lang.Integer serialNumber) {
+    this.serialNumber = serialNumber;
     return this;
   }
 

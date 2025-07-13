@@ -44,6 +44,13 @@ public final class ReservationBlockPhysicalTopology extends com.google.api.clien
   private java.lang.String cluster;
 
   /**
+   * The detailed instances information for a given Block
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ReservationBlockPhysicalTopologyInstance> instances;
+
+  /**
    * The hash of the capacity block within the cluster.
    * @return value or {@code null} for none
    */
@@ -74,6 +81,23 @@ public final class ReservationBlockPhysicalTopology extends com.google.api.clien
    */
   public ReservationBlockPhysicalTopology setCluster(java.lang.String cluster) {
     this.cluster = cluster;
+    return this;
+  }
+
+  /**
+   * The detailed instances information for a given Block
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ReservationBlockPhysicalTopologyInstance> getInstances() {
+    return instances;
+  }
+
+  /**
+   * The detailed instances information for a given Block
+   * @param instances instances or {@code null} for none
+   */
+  public ReservationBlockPhysicalTopology setInstances(java.util.List<ReservationBlockPhysicalTopologyInstance> instances) {
+    this.instances = instances;
     return this;
   }
 

@@ -100,6 +100,13 @@ public final class YoutubeAndPartnersSettings extends com.google.api.client.json
   private YoutubeAndPartnersThirdPartyMeasurementSettings thirdPartyMeasurementSettings;
 
   /**
+   * Optional. The settings to control which inventory is allowed for this line item.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private VideoAdInventoryControl videoAdInventoryControl;
+
+  /**
    * Optional. The settings related to VideoAdSequence.
    * The value may be {@code null}.
    */
@@ -276,6 +283,23 @@ public final class YoutubeAndPartnersSettings extends com.google.api.client.json
    */
   public YoutubeAndPartnersSettings setThirdPartyMeasurementSettings(YoutubeAndPartnersThirdPartyMeasurementSettings thirdPartyMeasurementSettings) {
     this.thirdPartyMeasurementSettings = thirdPartyMeasurementSettings;
+    return this;
+  }
+
+  /**
+   * Optional. The settings to control which inventory is allowed for this line item.
+   * @return value or {@code null} for none
+   */
+  public VideoAdInventoryControl getVideoAdInventoryControl() {
+    return videoAdInventoryControl;
+  }
+
+  /**
+   * Optional. The settings to control which inventory is allowed for this line item.
+   * @param videoAdInventoryControl videoAdInventoryControl or {@code null} for none
+   */
+  public YoutubeAndPartnersSettings setVideoAdInventoryControl(VideoAdInventoryControl videoAdInventoryControl) {
+    this.videoAdInventoryControl = videoAdInventoryControl;
     return this;
   }
 

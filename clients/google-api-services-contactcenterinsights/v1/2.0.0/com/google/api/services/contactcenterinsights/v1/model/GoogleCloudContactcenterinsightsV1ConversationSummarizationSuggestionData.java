@@ -54,6 +54,13 @@ public final class GoogleCloudContactcenterinsightsV1ConversationSummarizationSu
   private java.lang.String conversationModel;
 
   /**
+   * Agent Assist generator ID.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String generatorId;
+
+  /**
    * A map that contains metadata about the summarization and the document from which it originates.
    * The value may be {@code null}.
    */
@@ -127,6 +134,23 @@ public final class GoogleCloudContactcenterinsightsV1ConversationSummarizationSu
    */
   public GoogleCloudContactcenterinsightsV1ConversationSummarizationSuggestionData setConversationModel(java.lang.String conversationModel) {
     this.conversationModel = conversationModel;
+    return this;
+  }
+
+  /**
+   * Agent Assist generator ID.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGeneratorId() {
+    return generatorId;
+  }
+
+  /**
+   * Agent Assist generator ID.
+   * @param generatorId generatorId or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1ConversationSummarizationSuggestionData setGeneratorId(java.lang.String generatorId) {
+    this.generatorId = generatorId;
     return this;
   }
 

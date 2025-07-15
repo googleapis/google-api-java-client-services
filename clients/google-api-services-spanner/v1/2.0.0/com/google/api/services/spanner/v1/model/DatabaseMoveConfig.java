@@ -30,29 +30,30 @@ package com.google.api.services.spanner.v1.model;
 public final class DatabaseMoveConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The unique identifier of the database resource in the Instance. For example if the
-   * database uri is projects/foo/instances/bar/databases/baz, the id to supply here is baz.
+   * Required. The unique identifier of the database resource in the Instance. For example, if the
+   * database uri is `projects/foo/instances/bar/databases/baz`, then the id to supply here is baz.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String databaseId;
 
   /**
-   * Optional. Encryption configuration to be used for the database in target configuration. Should
-   * be specified for every database which currently uses CMEK encryption. If a database currently
-   * uses GOOGLE_MANAGED encryption and a target encryption config is not specified, it defaults to
-   * GOOGLE_MANAGED. If a database currently uses Google-managed encryption and a target encryption
-   * config is specified, the request is rejected. If a database currently uses CMEK encryption, a
-   * target encryption config must be specified. You cannot move a CMEK database to a Google-managed
-   * encryption database by MoveInstance.
+   * Optional. Encryption configuration to be used for the database in the target configuration. The
+   * encryption configuration must be specified for every database which currently uses CMEK
+   * encryption. If a database currently uses Google-managed encryption and a target encryption
+   * configuration is not specified, then the database defaults to Google-managed encryption. If a
+   * database currently uses Google-managed encryption and a target CMEK encryption is specified,
+   * the request is rejected. If a database currently uses CMEK encryption, then a target encryption
+   * configuration must be specified. You can't move a CMEK database to a Google-managed encryption
+   * database using the MoveInstance API.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private InstanceEncryptionConfig encryptionConfig;
 
   /**
-   * Required. The unique identifier of the database resource in the Instance. For example if the
-   * database uri is projects/foo/instances/bar/databases/baz, the id to supply here is baz.
+   * Required. The unique identifier of the database resource in the Instance. For example, if the
+   * database uri is `projects/foo/instances/bar/databases/baz`, then the id to supply here is baz.
    * @return value or {@code null} for none
    */
   public java.lang.String getDatabaseId() {
@@ -60,8 +61,8 @@ public final class DatabaseMoveConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required. The unique identifier of the database resource in the Instance. For example if the
-   * database uri is projects/foo/instances/bar/databases/baz, the id to supply here is baz.
+   * Required. The unique identifier of the database resource in the Instance. For example, if the
+   * database uri is `projects/foo/instances/bar/databases/baz`, then the id to supply here is baz.
    * @param databaseId databaseId or {@code null} for none
    */
   public DatabaseMoveConfig setDatabaseId(java.lang.String databaseId) {
@@ -70,13 +71,14 @@ public final class DatabaseMoveConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. Encryption configuration to be used for the database in target configuration. Should
-   * be specified for every database which currently uses CMEK encryption. If a database currently
-   * uses GOOGLE_MANAGED encryption and a target encryption config is not specified, it defaults to
-   * GOOGLE_MANAGED. If a database currently uses Google-managed encryption and a target encryption
-   * config is specified, the request is rejected. If a database currently uses CMEK encryption, a
-   * target encryption config must be specified. You cannot move a CMEK database to a Google-managed
-   * encryption database by MoveInstance.
+   * Optional. Encryption configuration to be used for the database in the target configuration. The
+   * encryption configuration must be specified for every database which currently uses CMEK
+   * encryption. If a database currently uses Google-managed encryption and a target encryption
+   * configuration is not specified, then the database defaults to Google-managed encryption. If a
+   * database currently uses Google-managed encryption and a target CMEK encryption is specified,
+   * the request is rejected. If a database currently uses CMEK encryption, then a target encryption
+   * configuration must be specified. You can't move a CMEK database to a Google-managed encryption
+   * database using the MoveInstance API.
    * @return value or {@code null} for none
    */
   public InstanceEncryptionConfig getEncryptionConfig() {
@@ -84,13 +86,14 @@ public final class DatabaseMoveConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. Encryption configuration to be used for the database in target configuration. Should
-   * be specified for every database which currently uses CMEK encryption. If a database currently
-   * uses GOOGLE_MANAGED encryption and a target encryption config is not specified, it defaults to
-   * GOOGLE_MANAGED. If a database currently uses Google-managed encryption and a target encryption
-   * config is specified, the request is rejected. If a database currently uses CMEK encryption, a
-   * target encryption config must be specified. You cannot move a CMEK database to a Google-managed
-   * encryption database by MoveInstance.
+   * Optional. Encryption configuration to be used for the database in the target configuration. The
+   * encryption configuration must be specified for every database which currently uses CMEK
+   * encryption. If a database currently uses Google-managed encryption and a target encryption
+   * configuration is not specified, then the database defaults to Google-managed encryption. If a
+   * database currently uses Google-managed encryption and a target CMEK encryption is specified,
+   * the request is rejected. If a database currently uses CMEK encryption, then a target encryption
+   * configuration must be specified. You can't move a CMEK database to a Google-managed encryption
+   * database using the MoveInstance API.
    * @param encryptionConfig encryptionConfig or {@code null} for none
    */
   public DatabaseMoveConfig setEncryptionConfig(InstanceEncryptionConfig encryptionConfig) {

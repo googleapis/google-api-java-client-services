@@ -30,14 +30,9 @@ package com.google.api.services.spanner.v1.model;
 public final class BatchWriteRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. When `exclude_txn_from_change_streams` is set to `true`: * Modifications from all
-   * transactions in this batch write operation are not be recorded in change streams with DDL
-   * option `allow_txn_exclusion=true` that are tracking columns modified by these transactions. *
-   * Modifications from all transactions in this batch write operation are recorded in change
-   * streams with DDL option `allow_txn_exclusion=false or not set` that are tracking columns
-   * modified by these transactions. When `exclude_txn_from_change_streams` is set to `false` or not
-   * set, Modifications from all transactions in this batch write operation are recorded in all
-   * change streams that are tracking columns modified by these transactions.
+   * Optional. If you don't set the `exclude_txn_from_change_streams` option or if it's set to
+   * `false`, then any change streams monitoring columns modified by transactions will capture the
+   * updates made within that transaction.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,14 +53,9 @@ public final class BatchWriteRequest extends com.google.api.client.json.GenericJ
   private RequestOptions requestOptions;
 
   /**
-   * Optional. When `exclude_txn_from_change_streams` is set to `true`: * Modifications from all
-   * transactions in this batch write operation are not be recorded in change streams with DDL
-   * option `allow_txn_exclusion=true` that are tracking columns modified by these transactions. *
-   * Modifications from all transactions in this batch write operation are recorded in change
-   * streams with DDL option `allow_txn_exclusion=false or not set` that are tracking columns
-   * modified by these transactions. When `exclude_txn_from_change_streams` is set to `false` or not
-   * set, Modifications from all transactions in this batch write operation are recorded in all
-   * change streams that are tracking columns modified by these transactions.
+   * Optional. If you don't set the `exclude_txn_from_change_streams` option or if it's set to
+   * `false`, then any change streams monitoring columns modified by transactions will capture the
+   * updates made within that transaction.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getExcludeTxnFromChangeStreams() {
@@ -73,14 +63,9 @@ public final class BatchWriteRequest extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. When `exclude_txn_from_change_streams` is set to `true`: * Modifications from all
-   * transactions in this batch write operation are not be recorded in change streams with DDL
-   * option `allow_txn_exclusion=true` that are tracking columns modified by these transactions. *
-   * Modifications from all transactions in this batch write operation are recorded in change
-   * streams with DDL option `allow_txn_exclusion=false or not set` that are tracking columns
-   * modified by these transactions. When `exclude_txn_from_change_streams` is set to `false` or not
-   * set, Modifications from all transactions in this batch write operation are recorded in all
-   * change streams that are tracking columns modified by these transactions.
+   * Optional. If you don't set the `exclude_txn_from_change_streams` option or if it's set to
+   * `false`, then any change streams monitoring columns modified by transactions will capture the
+   * updates made within that transaction.
    * @param excludeTxnFromChangeStreams excludeTxnFromChangeStreams or {@code null} for none
    */
   public BatchWriteRequest setExcludeTxnFromChangeStreams(java.lang.Boolean excludeTxnFromChangeStreams) {

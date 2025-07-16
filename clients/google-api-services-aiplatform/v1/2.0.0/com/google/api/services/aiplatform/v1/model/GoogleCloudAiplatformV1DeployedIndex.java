@@ -102,6 +102,17 @@ public final class GoogleCloudAiplatformV1DeployedIndex extends com.google.api.c
   private java.lang.Boolean enableAccessLogging;
 
   /**
+   * Optional. If true, logs to Cloud Logging errors relating to datapoint upserts. Under normal
+   * operation conditions, these log entries should be very rare. However, if incompatible datapoint
+   * updates are being uploaded to an index, a high volume of log entries may be generated in a
+   * short period of time. Note that logs may incur a cost, especially if the deployed index
+   * receives a high volume of datapoint upserts. Estimate your costs before enabling this option.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableDatapointUpsertLogging;
+
+  /**
    * Required. The user specified ID of the DeployedIndex. The ID can be up to 128 characters long
    * and must start with a letter and only contain letters, numbers, and underscores. The ID must be
    * unique within the project it is created in.
@@ -324,6 +335,31 @@ public final class GoogleCloudAiplatformV1DeployedIndex extends com.google.api.c
    */
   public GoogleCloudAiplatformV1DeployedIndex setEnableAccessLogging(java.lang.Boolean enableAccessLogging) {
     this.enableAccessLogging = enableAccessLogging;
+    return this;
+  }
+
+  /**
+   * Optional. If true, logs to Cloud Logging errors relating to datapoint upserts. Under normal
+   * operation conditions, these log entries should be very rare. However, if incompatible datapoint
+   * updates are being uploaded to an index, a high volume of log entries may be generated in a
+   * short period of time. Note that logs may incur a cost, especially if the deployed index
+   * receives a high volume of datapoint upserts. Estimate your costs before enabling this option.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableDatapointUpsertLogging() {
+    return enableDatapointUpsertLogging;
+  }
+
+  /**
+   * Optional. If true, logs to Cloud Logging errors relating to datapoint upserts. Under normal
+   * operation conditions, these log entries should be very rare. However, if incompatible datapoint
+   * updates are being uploaded to an index, a high volume of log entries may be generated in a
+   * short period of time. Note that logs may incur a cost, especially if the deployed index
+   * receives a high volume of datapoint upserts. Estimate your costs before enabling this option.
+   * @param enableDatapointUpsertLogging enableDatapointUpsertLogging or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1DeployedIndex setEnableDatapointUpsertLogging(java.lang.Boolean enableDatapointUpsertLogging) {
+    this.enableDatapointUpsertLogging = enableDatapointUpsertLogging;
     return this;
   }
 

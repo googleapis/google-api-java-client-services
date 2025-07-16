@@ -18154,6 +18154,280 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
         }
       }
 
+      /**
+       * An accessor for creating requests from the LiveChat collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code YouTube youtube = new YouTube(...);}
+       *   {@code YouTube.LiveChat.List request = youtube.liveChat().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public LiveChat liveChat() {
+        return new LiveChat();
+      }
+
+      /**
+       * The "liveChat" collection of methods.
+       */
+      public class LiveChat {
+
+        /**
+         * An accessor for creating requests from the Messages collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code YouTube youtube = new YouTube(...);}
+         *   {@code YouTube.Messages.List request = youtube.messages().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Messages messages() {
+          return new Messages();
+        }
+
+        /**
+         * The "messages" collection of methods.
+         */
+        public class Messages {
+
+          /**
+           * Allows a user to load live chat through a server-streamed RPC.
+           *
+           * Create a request for the method "messages.stream".
+           *
+           * This request holds the parameters needed by the youtube server.  After setting any optional
+           * parameters, call the {@link Stream#execute()} method to invoke the remote operation.
+           *
+           * @return the request
+           */
+          public Stream stream() throws java.io.IOException {
+            Stream result = new Stream();
+            initialize(result);
+            return result;
+          }
+
+          public class Stream extends YouTubeRequest<com.google.api.services.youtube.model.LiveChatMessageListResponse> {
+
+            private static final String REST_PATH = "youtube/v3/liveChat/messages/stream";
+
+            /**
+             * Allows a user to load live chat through a server-streamed RPC.
+             *
+             * Create a request for the method "messages.stream".
+             *
+             * This request holds the parameters needed by the the youtube server.  After setting any optional
+             * parameters, call the {@link Stream#execute()} method to invoke the remote operation. <p> {@link
+             * Stream#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @since 1.13
+             */
+            protected Stream() {
+              super(YouTube.this, "GET", REST_PATH, null, com.google.api.services.youtube.model.LiveChatMessageListResponse.class);
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Stream set$Xgafv(java.lang.String $Xgafv) {
+              return (Stream) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Stream setAccessToken(java.lang.String accessToken) {
+              return (Stream) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Stream setAlt(java.lang.String alt) {
+              return (Stream) super.setAlt(alt);
+            }
+
+            @Override
+            public Stream setCallback(java.lang.String callback) {
+              return (Stream) super.setCallback(callback);
+            }
+
+            @Override
+            public Stream setFields(java.lang.String fields) {
+              return (Stream) super.setFields(fields);
+            }
+
+            @Override
+            public Stream setKey(java.lang.String key) {
+              return (Stream) super.setKey(key);
+            }
+
+            @Override
+            public Stream setOauthToken(java.lang.String oauthToken) {
+              return (Stream) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Stream setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Stream) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Stream setQuotaUser(java.lang.String quotaUser) {
+              return (Stream) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Stream setUploadType(java.lang.String uploadType) {
+              return (Stream) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Stream setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Stream) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Specifies the localization language in which the system messages should be returned.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String hl;
+
+            /** Specifies the localization language in which the system messages should be returned.
+             */
+            public java.lang.String getHl() {
+              return hl;
+            }
+
+            /**
+             * Specifies the localization language in which the system messages should be returned.
+             */
+            public Stream setHl(java.lang.String hl) {
+              this.hl = hl;
+              return this;
+            }
+
+            /** The id of the live chat for which comments should be returned. */
+            @com.google.api.client.util.Key
+            private java.lang.String liveChatId;
+
+            /** The id of the live chat for which comments should be returned.
+             */
+            public java.lang.String getLiveChatId() {
+              return liveChatId;
+            }
+
+            /** The id of the live chat for which comments should be returned. */
+            public Stream setLiveChatId(java.lang.String liveChatId) {
+              this.liveChatId = liveChatId;
+              return this;
+            }
+
+            /**
+             * The *maxResults* parameter specifies the maximum number of items that should be
+             * returned in the result set. Not used in the streaming RPC.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Long maxResults;
+
+            /** The *maxResults* parameter specifies the maximum number of items that should be returned in the
+           result set. Not used in the streaming RPC. [default: 500] [minimum: 200] [maximum: 2000]
+             */
+            public java.lang.Long getMaxResults() {
+              return maxResults;
+            }
+
+            /**
+             * The *maxResults* parameter specifies the maximum number of items that should be
+             * returned in the result set. Not used in the streaming RPC.
+             */
+            public Stream setMaxResults(java.lang.Long maxResults) {
+              this.maxResults = maxResults;
+              return this;
+            }
+
+            /**
+             * The *pageToken* parameter identifies a specific page in the result set that should be
+             * returned. In an API response, the nextPageToken property identify other pages that
+             * could be retrieved.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** The *pageToken* parameter identifies a specific page in the result set that should be returned. In
+           an API response, the nextPageToken property identify other pages that could be retrieved.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * The *pageToken* parameter identifies a specific page in the result set that should be
+             * returned. In an API response, the nextPageToken property identify other pages that
+             * could be retrieved.
+             */
+            public Stream setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            /**
+             * The *part* parameter specifies the liveChatComment resource parts that the API
+             * response will include. Supported values are id, snippet, and authorDetails.
+             */
+            @com.google.api.client.util.Key
+            private java.util.List<java.lang.String> part;
+
+            /** The *part* parameter specifies the liveChatComment resource parts that the API response will
+           include. Supported values are id, snippet, and authorDetails.
+             */
+            public java.util.List<java.lang.String> getPart() {
+              return part;
+            }
+
+            /**
+             * The *part* parameter specifies the liveChatComment resource parts that the API
+             * response will include. Supported values are id, snippet, and authorDetails.
+             */
+            public Stream setPart(java.util.List<java.lang.String> part) {
+              this.part = part;
+              return this;
+            }
+
+            /** Specifies the size of the profile image that should be returned for each user. */
+            @com.google.api.client.util.Key
+            private java.lang.Long profileImageSize;
+
+            /** Specifies the size of the profile image that should be returned for each user.
+
+           [minimum: 16] [maximum: 720]
+             */
+            public java.lang.Long getProfileImageSize() {
+              return profileImageSize;
+            }
+
+            /** Specifies the size of the profile image that should be returned for each user. */
+            public Stream setProfileImageSize(java.lang.Long profileImageSize) {
+              this.profileImageSize = profileImageSize;
+              return this;
+            }
+
+            @Override
+            public Stream set(String parameterName, Object value) {
+              return (Stream) super.set(parameterName, value);
+            }
+          }
+
+        }
+      }
     }
   }
 

@@ -32,6 +32,8 @@ package com.google.api.services.searchconsole.v1.model;
 public final class SearchAnalyticsQueryResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * An object that may be returned with your query results, providing context about the state of
+   * the data. See details in Metadata object documentation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,6 +60,8 @@ public final class SearchAnalyticsQueryResponse extends com.google.api.client.js
   }
 
   /**
+   * An object that may be returned with your query results, providing context about the state of
+   * the data. See details in Metadata object documentation.
    * @return value or {@code null} for none
    */
   public Metadata getMetadata() {
@@ -65,6 +69,8 @@ public final class SearchAnalyticsQueryResponse extends com.google.api.client.js
   }
 
   /**
+   * An object that may be returned with your query results, providing context about the state of
+   * the data. See details in Metadata object documentation.
    * @param metadata metadata or {@code null} for none
    */
   public SearchAnalyticsQueryResponse setMetadata(Metadata metadata) {

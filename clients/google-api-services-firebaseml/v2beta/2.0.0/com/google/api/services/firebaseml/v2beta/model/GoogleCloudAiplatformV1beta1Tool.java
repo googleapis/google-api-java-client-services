@@ -73,6 +73,13 @@ public final class GoogleCloudAiplatformV1beta1Tool extends com.google.api.clien
   }
 
   /**
+   * Optional. GoogleMaps tool type. Tool to support Google Maps in Model.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1GoogleMaps googleMaps;
+
+  /**
    * Optional. GoogleSearch tool type. Tool to support Google Search in Model. Powered by Google.
    * The value may be {@code null}.
    */
@@ -180,6 +187,23 @@ public final class GoogleCloudAiplatformV1beta1Tool extends com.google.api.clien
    */
   public GoogleCloudAiplatformV1beta1Tool setFunctionDeclarations(java.util.List<GoogleCloudAiplatformV1beta1FunctionDeclaration> functionDeclarations) {
     this.functionDeclarations = functionDeclarations;
+    return this;
+  }
+
+  /**
+   * Optional. GoogleMaps tool type. Tool to support Google Maps in Model.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GoogleMaps getGoogleMaps() {
+    return googleMaps;
+  }
+
+  /**
+   * Optional. GoogleMaps tool type. Tool to support Google Maps in Model.
+   * @param googleMaps googleMaps or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Tool setGoogleMaps(GoogleCloudAiplatformV1beta1GoogleMaps googleMaps) {
+    this.googleMaps = googleMaps;
     return this;
   }
 

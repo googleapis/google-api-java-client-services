@@ -39,7 +39,7 @@ public final class GoSettings extends com.google.api.client.json.GenericJson {
 
   /**
    * Map of service names to renamed services. Keys are the package relative service names and
-   * values are the name to be used for the service client and call options. publishing:
+   * values are the name to be used for the service client and call options. Example: publishing:
    * go_settings: renamed_services: Publisher: TopicAdmin
    * The value may be {@code null}.
    */
@@ -65,7 +65,7 @@ public final class GoSettings extends com.google.api.client.json.GenericJson {
 
   /**
    * Map of service names to renamed services. Keys are the package relative service names and
-   * values are the name to be used for the service client and call options. publishing:
+   * values are the name to be used for the service client and call options. Example: publishing:
    * go_settings: renamed_services: Publisher: TopicAdmin
    * @return value or {@code null} for none
    */
@@ -75,7 +75,7 @@ public final class GoSettings extends com.google.api.client.json.GenericJson {
 
   /**
    * Map of service names to renamed services. Keys are the package relative service names and
-   * values are the name to be used for the service client and call options. publishing:
+   * values are the name to be used for the service client and call options. Example: publishing:
    * go_settings: renamed_services: Publisher: TopicAdmin
    * @param renamedServices renamedServices or {@code null} for none
    */

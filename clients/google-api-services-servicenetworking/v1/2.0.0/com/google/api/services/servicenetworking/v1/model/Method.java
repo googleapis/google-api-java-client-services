@@ -31,6 +31,13 @@ package com.google.api.services.servicenetworking.v1.model;
 public final class Method extends com.google.api.client.json.GenericJson {
 
   /**
+   * The source edition string, only valid when syntax is SYNTAX_EDITIONS.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String edition;
+
+  /**
    * The simple name of this method.
    * The value may be {@code null}.
    */
@@ -78,6 +85,23 @@ public final class Method extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String syntax;
+
+  /**
+   * The source edition string, only valid when syntax is SYNTAX_EDITIONS.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEdition() {
+    return edition;
+  }
+
+  /**
+   * The source edition string, only valid when syntax is SYNTAX_EDITIONS.
+   * @param edition edition or {@code null} for none
+   */
+  public Method setEdition(java.lang.String edition) {
+    this.edition = edition;
+    return this;
+  }
 
   /**
    * The simple name of this method.

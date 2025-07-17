@@ -36,6 +36,13 @@ package com.google.api.services.servicenetworking.v1beta.model;
 public final class Api extends com.google.api.client.json.GenericJson {
 
   /**
+   * The source edition string, only valid when syntax is SYNTAX_EDITIONS.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String edition;
+
+  /**
    * The methods of this interface, in unspecified order.
    * The value may be {@code null}.
    */
@@ -94,6 +101,23 @@ public final class Api extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String version;
+
+  /**
+   * The source edition string, only valid when syntax is SYNTAX_EDITIONS.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEdition() {
+    return edition;
+  }
+
+  /**
+   * The source edition string, only valid when syntax is SYNTAX_EDITIONS.
+   * @param edition edition or {@code null} for none
+   */
+  public Api setEdition(java.lang.String edition) {
+    this.edition = edition;
+    return this;
+  }
 
   /**
    * The methods of this interface, in unspecified order.

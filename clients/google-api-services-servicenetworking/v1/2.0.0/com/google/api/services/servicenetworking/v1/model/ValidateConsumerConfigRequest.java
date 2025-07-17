@@ -56,8 +56,8 @@ public final class ValidateConsumerConfigRequest extends com.google.api.client.j
   private ConsumerProject consumerProject;
 
   /**
-   * RANGES_EXHAUSTED, RANGES_EXHAUSTED, and RANGES_DELETED_LATER are done when range_reservation is
-   * provided.
+   * RANGES_EXHAUSTED, RANGES_NOT_RESERVED, and RANGES_DELETED_LATER are done when range_reservation
+   * is provided.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -134,8 +134,8 @@ public final class ValidateConsumerConfigRequest extends com.google.api.client.j
   }
 
   /**
-   * RANGES_EXHAUSTED, RANGES_EXHAUSTED, and RANGES_DELETED_LATER are done when range_reservation is
-   * provided.
+   * RANGES_EXHAUSTED, RANGES_NOT_RESERVED, and RANGES_DELETED_LATER are done when range_reservation
+   * is provided.
    * @return value or {@code null} for none
    */
   public RangeReservation getRangeReservation() {
@@ -143,8 +143,8 @@ public final class ValidateConsumerConfigRequest extends com.google.api.client.j
   }
 
   /**
-   * RANGES_EXHAUSTED, RANGES_EXHAUSTED, and RANGES_DELETED_LATER are done when range_reservation is
-   * provided.
+   * RANGES_EXHAUSTED, RANGES_NOT_RESERVED, and RANGES_DELETED_LATER are done when range_reservation
+   * is provided.
    * @param rangeReservation rangeReservation or {@code null} for none
    */
   public ValidateConsumerConfigRequest setRangeReservation(RangeReservation rangeReservation) {

@@ -558,6 +558,148 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
       public class Instances {
 
         /**
+         * Initiated by Cloud Console for Oauth consent flow for Workbench Instances. Do not use this method
+         * directly. Design doc: go/wbi-euc:auth-dd
+         *
+         * Create a request for the method "instances.checkAuthorization".
+         *
+         * This request holds the parameters needed by the notebooks server.  After setting any optional
+         * parameters, call the {@link CheckAuthorization#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the Notebook Instance resource. Format:
+         *        `projects/{project}/locations/{location}/instances/{instance}`
+         * @param content the {@link com.google.api.services.notebooks.v2.model.CheckAuthorizationRequest}
+         * @return the request
+         */
+        public CheckAuthorization checkAuthorization(java.lang.String name, com.google.api.services.notebooks.v2.model.CheckAuthorizationRequest content) throws java.io.IOException {
+          CheckAuthorization result = new CheckAuthorization(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class CheckAuthorization extends AIPlatformNotebooksRequest<com.google.api.services.notebooks.v2.model.CheckAuthorizationResponse> {
+
+          private static final String REST_PATH = "v2/{+name}:checkAuthorization";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+
+          /**
+           * Initiated by Cloud Console for Oauth consent flow for Workbench Instances. Do not use this
+           * method directly. Design doc: go/wbi-euc:auth-dd
+           *
+           * Create a request for the method "instances.checkAuthorization".
+           *
+           * This request holds the parameters needed by the the notebooks server.  After setting any
+           * optional parameters, call the {@link CheckAuthorization#execute()} method to invoke the remote
+           * operation. <p> {@link CheckAuthorization#initialize(com.google.api.client.googleapis.services.A
+           * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param name Required. The name of the Notebook Instance resource. Format:
+         *        `projects/{project}/locations/{location}/instances/{instance}`
+           * @param content the {@link com.google.api.services.notebooks.v2.model.CheckAuthorizationRequest}
+           * @since 1.13
+           */
+          protected CheckAuthorization(java.lang.String name, com.google.api.services.notebooks.v2.model.CheckAuthorizationRequest content) {
+            super(AIPlatformNotebooks.this, "POST", REST_PATH, content, com.google.api.services.notebooks.v2.model.CheckAuthorizationResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+          }
+
+          @Override
+          public CheckAuthorization set$Xgafv(java.lang.String $Xgafv) {
+            return (CheckAuthorization) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public CheckAuthorization setAccessToken(java.lang.String accessToken) {
+            return (CheckAuthorization) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public CheckAuthorization setAlt(java.lang.String alt) {
+            return (CheckAuthorization) super.setAlt(alt);
+          }
+
+          @Override
+          public CheckAuthorization setCallback(java.lang.String callback) {
+            return (CheckAuthorization) super.setCallback(callback);
+          }
+
+          @Override
+          public CheckAuthorization setFields(java.lang.String fields) {
+            return (CheckAuthorization) super.setFields(fields);
+          }
+
+          @Override
+          public CheckAuthorization setKey(java.lang.String key) {
+            return (CheckAuthorization) super.setKey(key);
+          }
+
+          @Override
+          public CheckAuthorization setOauthToken(java.lang.String oauthToken) {
+            return (CheckAuthorization) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public CheckAuthorization setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (CheckAuthorization) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public CheckAuthorization setQuotaUser(java.lang.String quotaUser) {
+            return (CheckAuthorization) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public CheckAuthorization setUploadType(java.lang.String uploadType) {
+            return (CheckAuthorization) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public CheckAuthorization setUploadProtocol(java.lang.String uploadProtocol) {
+            return (CheckAuthorization) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the Notebook Instance resource. Format:
+           * `projects/{project}/locations/{location}/instances/{instance}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the Notebook Instance resource. Format:
+         `projects/{project}/locations/{location}/instances/{instance}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the Notebook Instance resource. Format:
+           * `projects/{project}/locations/{location}/instances/{instance}`
+           */
+          public CheckAuthorization setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public CheckAuthorization set(String parameterName, Object value) {
+            return (CheckAuthorization) super.set(parameterName, value);
+          }
+        }
+        /**
          * Checks whether a notebook instance is upgradable.
          *
          * Create a request for the method "instances.checkUpgradability".
@@ -1145,6 +1287,143 @@ public class AIPlatformNotebooks extends com.google.api.client.googleapis.servic
           @Override
           public Diagnose set(String parameterName, Object value) {
             return (Diagnose) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Called by VM to return an EUC for the instance owner. Do not use this method directly. Design
+         * doc: go/wbi-euc:dd
+         *
+         * Create a request for the method "instances.generateAccessToken".
+         *
+         * This request holds the parameters needed by the notebooks server.  After setting any optional
+         * parameters, call the {@link GenerateAccessToken#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Format: `projects/{project}/locations/{location}/instances/{instance_id}`
+         * @param content the {@link com.google.api.services.notebooks.v2.model.GenerateAccessTokenRequest}
+         * @return the request
+         */
+        public GenerateAccessToken generateAccessToken(java.lang.String name, com.google.api.services.notebooks.v2.model.GenerateAccessTokenRequest content) throws java.io.IOException {
+          GenerateAccessToken result = new GenerateAccessToken(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class GenerateAccessToken extends AIPlatformNotebooksRequest<com.google.api.services.notebooks.v2.model.GenerateAccessTokenResponse> {
+
+          private static final String REST_PATH = "v2/{+name}:generateAccessToken";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+
+          /**
+           * Called by VM to return an EUC for the instance owner. Do not use this method directly. Design
+           * doc: go/wbi-euc:dd
+           *
+           * Create a request for the method "instances.generateAccessToken".
+           *
+           * This request holds the parameters needed by the the notebooks server.  After setting any
+           * optional parameters, call the {@link GenerateAccessToken#execute()} method to invoke the remote
+           * operation. <p> {@link GenerateAccessToken#initialize(com.google.api.client.googleapis.services.
+           * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param name Required. Format: `projects/{project}/locations/{location}/instances/{instance_id}`
+           * @param content the {@link com.google.api.services.notebooks.v2.model.GenerateAccessTokenRequest}
+           * @since 1.13
+           */
+          protected GenerateAccessToken(java.lang.String name, com.google.api.services.notebooks.v2.model.GenerateAccessTokenRequest content) {
+            super(AIPlatformNotebooks.this, "POST", REST_PATH, content, com.google.api.services.notebooks.v2.model.GenerateAccessTokenResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+          }
+
+          @Override
+          public GenerateAccessToken set$Xgafv(java.lang.String $Xgafv) {
+            return (GenerateAccessToken) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GenerateAccessToken setAccessToken(java.lang.String accessToken) {
+            return (GenerateAccessToken) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GenerateAccessToken setAlt(java.lang.String alt) {
+            return (GenerateAccessToken) super.setAlt(alt);
+          }
+
+          @Override
+          public GenerateAccessToken setCallback(java.lang.String callback) {
+            return (GenerateAccessToken) super.setCallback(callback);
+          }
+
+          @Override
+          public GenerateAccessToken setFields(java.lang.String fields) {
+            return (GenerateAccessToken) super.setFields(fields);
+          }
+
+          @Override
+          public GenerateAccessToken setKey(java.lang.String key) {
+            return (GenerateAccessToken) super.setKey(key);
+          }
+
+          @Override
+          public GenerateAccessToken setOauthToken(java.lang.String oauthToken) {
+            return (GenerateAccessToken) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GenerateAccessToken setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GenerateAccessToken) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GenerateAccessToken setQuotaUser(java.lang.String quotaUser) {
+            return (GenerateAccessToken) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GenerateAccessToken setUploadType(java.lang.String uploadType) {
+            return (GenerateAccessToken) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GenerateAccessToken setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GenerateAccessToken) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Format: `projects/{project}/locations/{location}/instances/{instance_id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Format: `projects/{project}/locations/{location}/instances/{instance_id}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Format: `projects/{project}/locations/{location}/instances/{instance_id}`
+           */
+          public GenerateAccessToken setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public GenerateAccessToken set(String parameterName, Object value) {
+            return (GenerateAccessToken) super.set(parameterName, value);
           }
         }
         /**

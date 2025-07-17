@@ -79,6 +79,13 @@ public final class GoogleCloudRunV2WorkerPoolRevisionTemplate extends com.google
   private String encryptionKeyShutdownDuration;
 
   /**
+   * Optional. True if GPU zonal redundancy is disabled on this worker pool.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean gpuZonalRedundancyDisabled;
+
+  /**
    * Optional. Unstructured key value map that can be used to organize and categorize objects. User-
    * provided labels are shared with Google's billing system, so they can be used to filter, or
    * break down billing charges by team, component, environment, state, etc. For more information,
@@ -241,6 +248,23 @@ public final class GoogleCloudRunV2WorkerPoolRevisionTemplate extends com.google
    */
   public GoogleCloudRunV2WorkerPoolRevisionTemplate setEncryptionKeyShutdownDuration(String encryptionKeyShutdownDuration) {
     this.encryptionKeyShutdownDuration = encryptionKeyShutdownDuration;
+    return this;
+  }
+
+  /**
+   * Optional. True if GPU zonal redundancy is disabled on this worker pool.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getGpuZonalRedundancyDisabled() {
+    return gpuZonalRedundancyDisabled;
+  }
+
+  /**
+   * Optional. True if GPU zonal redundancy is disabled on this worker pool.
+   * @param gpuZonalRedundancyDisabled gpuZonalRedundancyDisabled or {@code null} for none
+   */
+  public GoogleCloudRunV2WorkerPoolRevisionTemplate setGpuZonalRedundancyDisabled(java.lang.Boolean gpuZonalRedundancyDisabled) {
+    this.gpuZonalRedundancyDisabled = gpuZonalRedundancyDisabled;
     return this;
   }
 

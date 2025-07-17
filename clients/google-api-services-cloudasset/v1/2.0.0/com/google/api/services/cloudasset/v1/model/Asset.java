@@ -63,6 +63,13 @@ public final class Asset extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> ancestors;
 
   /**
+   * The exceptions of a resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<AssetException> assetExceptions;
+
+  /**
    * The type of the asset. Example: `compute.googleapis.com/Disk` See [Supported asset
    * types](https://cloud.google.com/asset-inventory/docs/supported-asset-types) for more
    * information.
@@ -212,6 +219,23 @@ public final class Asset extends com.google.api.client.json.GenericJson {
    */
   public Asset setAncestors(java.util.List<java.lang.String> ancestors) {
     this.ancestors = ancestors;
+    return this;
+  }
+
+  /**
+   * The exceptions of a resource.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<AssetException> getAssetExceptions() {
+    return assetExceptions;
+  }
+
+  /**
+   * The exceptions of a resource.
+   * @param assetExceptions assetExceptions or {@code null} for none
+   */
+  public Asset setAssetExceptions(java.util.List<AssetException> assetExceptions) {
+    this.assetExceptions = assetExceptions;
     return this;
   }
 

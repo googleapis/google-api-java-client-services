@@ -6704,8 +6704,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The location and project in which this worker pool should be created. Format:
-         *        projects/{project}/locations/{location}, where {project} can be project id or number. Only
-         *        lowercase characters, digits, and hyphens.
+         *        `projects/{project}/locations/{location}`, where `{project}` can be project id or number.
+         *        Only lowercase characters, digits, and hyphens.
          * @param content the {@link com.google.api.services.run.v2.model.GoogleCloudRunV2WorkerPool}
          * @return the request
          */
@@ -6733,8 +6733,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The location and project in which this worker pool should be created. Format:
-         *        projects/{project}/locations/{location}, where {project} can be project id or number. Only
-         *        lowercase characters, digits, and hyphens.
+         *        `projects/{project}/locations/{location}`, where `{project}` can be project id or number.
+         *        Only lowercase characters, digits, and hyphens.
            * @param content the {@link com.google.api.services.run.v2.model.GoogleCloudRunV2WorkerPool}
            * @since 1.13
            */
@@ -6805,14 +6805,14 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Required. The location and project in which this worker pool should be created. Format:
-           * projects/{project}/locations/{location}, where {project} can be project id or number.
-           * Only lowercase characters, digits, and hyphens.
+           * `projects/{project}/locations/{location}`, where `{project}` can be project id or
+           * number. Only lowercase characters, digits, and hyphens.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The location and project in which this worker pool should be created. Format:
-         projects/{project}/locations/{location}, where {project} can be project id or number. Only
+         `projects/{project}/locations/{location}`, where `{project}` can be project id or number. Only
          lowercase characters, digits, and hyphens.
            */
           public java.lang.String getParent() {
@@ -6821,8 +6821,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Required. The location and project in which this worker pool should be created. Format:
-           * projects/{project}/locations/{location}, where {project} can be project id or number.
-           * Only lowercase characters, digits, and hyphens.
+           * `projects/{project}/locations/{location}`, where `{project}` can be project id or
+           * number. Only lowercase characters, digits, and hyphens.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -6860,14 +6860,14 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Required. The unique identifier for the WorkerPool. It must begin with letter, and
            * cannot end with hyphen; must contain fewer than 50 characters. The name of the worker
-           * pool becomes {parent}/workerPools/{worker_pool_id}.
+           * pool becomes `{parent}/workerPools/{worker_pool_id}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String workerPoolId;
 
           /** Required. The unique identifier for the WorkerPool. It must begin with letter, and cannot end with
          hyphen; must contain fewer than 50 characters. The name of the worker pool becomes
-         {parent}/workerPools/{worker_pool_id}.
+         `{parent}/workerPools/{worker_pool_id}`.
            */
           public java.lang.String getWorkerPoolId() {
             return workerPoolId;
@@ -6876,7 +6876,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Required. The unique identifier for the WorkerPool. It must begin with letter, and
            * cannot end with hyphen; must contain fewer than 50 characters. The name of the worker
-           * pool becomes {parent}/workerPools/{worker_pool_id}.
+           * pool becomes `{parent}/workerPools/{worker_pool_id}`.
            */
           public Create setWorkerPoolId(java.lang.String workerPoolId) {
             this.workerPoolId = workerPoolId;
@@ -6897,8 +6897,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
          * @param name Required. The full name of the WorkerPool. Format:
-         *        projects/{project}/locations/{location}/workerPools/{worker_pool}, where {project} can be
-         *        project id or number.
+         *        `projects/{project}/locations/{location}/workerPools/{worker_pool}`, where `{project}` can
+         *        be project id or number.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -6925,8 +6925,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. The full name of the WorkerPool. Format:
-         *        projects/{project}/locations/{location}/workerPools/{worker_pool}, where {project} can be
-         *        project id or number.
+         *        `projects/{project}/locations/{location}/workerPools/{worker_pool}`, where `{project}` can
+         *        be project id or number.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -6996,15 +6996,15 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Required. The full name of the WorkerPool. Format:
-           * projects/{project}/locations/{location}/workerPools/{worker_pool}, where {project} can
-           * be project id or number.
+           * `projects/{project}/locations/{location}/workerPools/{worker_pool}`, where `{project}`
+           * can be project id or number.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The full name of the WorkerPool. Format:
-         projects/{project}/locations/{location}/workerPools/{worker_pool}, where {project} can be project
-         id or number.
+         `projects/{project}/locations/{location}/workerPools/{worker_pool}`, where `{project}` can be
+         project id or number.
            */
           public java.lang.String getName() {
             return name;
@@ -7012,8 +7012,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Required. The full name of the WorkerPool. Format:
-           * projects/{project}/locations/{location}/workerPools/{worker_pool}, where {project} can
-           * be project id or number.
+           * `projects/{project}/locations/{location}/workerPools/{worker_pool}`, where `{project}`
+           * can be project id or number.
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -7084,8 +7084,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
          * @param name Required. The full name of the WorkerPool. Format:
-         *        projects/{project}/locations/{location}/workerPools/{worker_pool}, where {project} can be
-         *        project id or number.
+         *        `projects/{project}/locations/{location}/workerPools/{worker_pool}`, where `{project}` can
+         *        be project id or number.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -7112,8 +7112,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. The full name of the WorkerPool. Format:
-         *        projects/{project}/locations/{location}/workerPools/{worker_pool}, where {project} can be
-         *        project id or number.
+         *        `projects/{project}/locations/{location}/workerPools/{worker_pool}`, where `{project}` can
+         *        be project id or number.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -7193,15 +7193,15 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Required. The full name of the WorkerPool. Format:
-           * projects/{project}/locations/{location}/workerPools/{worker_pool}, where {project} can
-           * be project id or number.
+           * `projects/{project}/locations/{location}/workerPools/{worker_pool}`, where `{project}`
+           * can be project id or number.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The full name of the WorkerPool. Format:
-         projects/{project}/locations/{location}/workerPools/{worker_pool}, where {project} can be project
-         id or number.
+         `projects/{project}/locations/{location}/workerPools/{worker_pool}`, where `{project}` can be
+         project id or number.
            */
           public java.lang.String getName() {
             return name;
@@ -7209,8 +7209,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Required. The full name of the WorkerPool. Format:
-           * projects/{project}/locations/{location}/workerPools/{worker_pool}, where {project} can
-           * be project id or number.
+           * `projects/{project}/locations/{location}/workerPools/{worker_pool}`, where `{project}`
+           * can be project id or number.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -7434,8 +7434,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The location and project to list resources on. Location must be a valid Google Cloud
-         *        region, and cannot be the "-" wildcard. Format: projects/{project}/locations/{location},
-         *        where {project} can be project id or number.
+         *        region, and cannot be the "-" wildcard. Format: `projects/{project}/locations/{location}`,
+         *        where `{project}` can be project id or number.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -7462,8 +7462,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The location and project to list resources on. Location must be a valid Google Cloud
-         *        region, and cannot be the "-" wildcard. Format: projects/{project}/locations/{location},
-         *        where {project} can be project id or number.
+         *        region, and cannot be the "-" wildcard. Format: `projects/{project}/locations/{location}`,
+         *        where `{project}` can be project id or number.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -7544,14 +7544,15 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Required. The location and project to list resources on. Location must be a valid
            * Google Cloud region, and cannot be the "-" wildcard. Format:
-           * projects/{project}/locations/{location}, where {project} can be project id or number.
+           * `projects/{project}/locations/{location}`, where `{project}` can be project id or
+           * number.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The location and project to list resources on. Location must be a valid Google Cloud
-         region, and cannot be the "-" wildcard. Format: projects/{project}/locations/{location}, where
-         {project} can be project id or number.
+         region, and cannot be the "-" wildcard. Format: `projects/{project}/locations/{location}`, where
+         `{project}` can be project id or number.
            */
           public java.lang.String getParent() {
             return parent;
@@ -7560,7 +7561,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Required. The location and project to list resources on. Location must be a valid
            * Google Cloud region, and cannot be the "-" wildcard. Format:
-           * projects/{project}/locations/{location}, where {project} can be project id or number.
+           * `projects/{project}/locations/{location}`, where `{project}` can be project id or
+           * number.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -7642,7 +7644,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
          * @param name The fully qualified name of this WorkerPool. In CreateWorkerPoolRequest, this field is ignored, and
          *        instead composed from CreateWorkerPoolRequest.parent and
          *        CreateWorkerPoolRequest.worker_id. Format:
-         *        projects/{project}/locations/{location}/workerPools/{worker_id}
+         *        `projects/{project}/locations/{location}/workerPools/{worker_id}`
          * @param content the {@link com.google.api.services.run.v2.model.GoogleCloudRunV2WorkerPool}
          * @return the request
          */
@@ -7672,7 +7674,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * @param name The fully qualified name of this WorkerPool. In CreateWorkerPoolRequest, this field is ignored, and
          *        instead composed from CreateWorkerPoolRequest.parent and
          *        CreateWorkerPoolRequest.worker_id. Format:
-         *        projects/{project}/locations/{location}/workerPools/{worker_id}
+         *        `projects/{project}/locations/{location}/workerPools/{worker_id}`
            * @param content the {@link com.google.api.services.run.v2.model.GoogleCloudRunV2WorkerPool}
            * @since 1.13
            */
@@ -7745,14 +7747,14 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * The fully qualified name of this WorkerPool. In CreateWorkerPoolRequest, this field is
            * ignored, and instead composed from CreateWorkerPoolRequest.parent and
            * CreateWorkerPoolRequest.worker_id. Format:
-           * projects/{project}/locations/{location}/workerPools/{worker_id}
+           * `projects/{project}/locations/{location}/workerPools/{worker_id}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** The fully qualified name of this WorkerPool. In CreateWorkerPoolRequest, this field is ignored, and
          instead composed from CreateWorkerPoolRequest.parent and CreateWorkerPoolRequest.worker_id. Format:
-         projects/{project}/locations/{location}/workerPools/{worker_id}
+         `projects/{project}/locations/{location}/workerPools/{worker_id}`
            */
           public java.lang.String getName() {
             return name;
@@ -7762,7 +7764,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
            * The fully qualified name of this WorkerPool. In CreateWorkerPoolRequest, this field is
            * ignored, and instead composed from CreateWorkerPoolRequest.parent and
            * CreateWorkerPoolRequest.worker_id. Format:
-           * projects/{project}/locations/{location}/workerPools/{worker_id}
+           * `projects/{project}/locations/{location}/workerPools/{worker_id}`
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

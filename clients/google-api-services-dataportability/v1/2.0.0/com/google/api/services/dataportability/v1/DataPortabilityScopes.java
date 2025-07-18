@@ -26,9 +26,6 @@ public class DataPortabilityScopes {
   /** Move a copy of the Google Alerts subscriptions you created. */
   public static final String DATAPORTABILITY_ALERTS_SUBSCRIPTIONS = "https://www.googleapis.com/auth/dataportability.alerts.subscriptions";
 
-  /** Move a copy of messages between you and the businesses you have conversations with across Google services. */
-  public static final String DATAPORTABILITY_BUSINESSMESSAGING_CONVERSATIONS = "https://www.googleapis.com/auth/dataportability.businessmessaging.conversations";
-
   /** Move a copy of the information you entered into online forms in Chrome. */
   public static final String DATAPORTABILITY_CHROME_AUTOFILL = "https://www.googleapis.com/auth/dataportability.chrome.autofill";
 
@@ -232,7 +229,6 @@ public class DataPortabilityScopes {
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
     set.add(DATAPORTABILITY_ALERTS_SUBSCRIPTIONS);
-    set.add(DATAPORTABILITY_BUSINESSMESSAGING_CONVERSATIONS);
     set.add(DATAPORTABILITY_CHROME_AUTOFILL);
     set.add(DATAPORTABILITY_CHROME_BOOKMARKS);
     set.add(DATAPORTABILITY_CHROME_DICTIONARY);

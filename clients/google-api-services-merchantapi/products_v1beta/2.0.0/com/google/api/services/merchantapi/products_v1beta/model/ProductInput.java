@@ -84,8 +84,8 @@ public final class ProductInput extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Immutable. The label that lets you categorize and identify your products. The maximum
-   * allowed characters are 20, and the supported characters are `A-Z`, `0-9`, hyphen, and
+   * Required. Immutable. The feed label that lets you categorize and identify your products. The
+   * maximum allowed characters are 20, and the supported characters are `A-Z`, `0-9`, hyphen, and
    * underscore. The feed label must not include any spaces. For more information, see [Using feed
    * labels](//support.google.com/merchants/answer/14994087).
    * The value may be {@code null}.
@@ -216,8 +216,8 @@ public final class ProductInput extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Immutable. The label that lets you categorize and identify your products. The maximum
-   * allowed characters are 20, and the supported characters are `A-Z`, `0-9`, hyphen, and
+   * Required. Immutable. The feed label that lets you categorize and identify your products. The
+   * maximum allowed characters are 20, and the supported characters are `A-Z`, `0-9`, hyphen, and
    * underscore. The feed label must not include any spaces. For more information, see [Using feed
    * labels](//support.google.com/merchants/answer/14994087).
    * @return value or {@code null} for none
@@ -227,8 +227,8 @@ public final class ProductInput extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Immutable. The label that lets you categorize and identify your products. The maximum
-   * allowed characters are 20, and the supported characters are `A-Z`, `0-9`, hyphen, and
+   * Required. Immutable. The feed label that lets you categorize and identify your products. The
+   * maximum allowed characters are 20, and the supported characters are `A-Z`, `0-9`, hyphen, and
    * underscore. The feed label must not include any spaces. For more information, see [Using feed
    * labels](//support.google.com/merchants/answer/14994087).
    * @param feedLabel feedLabel or {@code null} for none

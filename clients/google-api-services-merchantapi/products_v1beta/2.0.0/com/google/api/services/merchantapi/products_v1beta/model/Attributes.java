@@ -37,7 +37,7 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> additionalImageLinks;
 
   /**
-   * Used to group items in an arbitrary way. Only for CPA%, discouraged otherwise. For more
+   * Used to group items in an arbitrary way. Only for CPA, discouraged otherwise. For more
    * information, see [Display ads attribute](https://support.google.com/merchants/answer/6069387).
    * The value may be {@code null}.
    */
@@ -75,7 +75,7 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
 
   /**
    * A safeguard in the [automated discounts] (https://support.google.com/merchants/answer/10295759)
-   * and "Dynamic Promotions" (https://support.google.com/merchants/answer/13949249) projects,
+   * and ["dynamic promotions"](https://support.google.com/merchants/answer/13949249) projects,
    * ensuring that discounts on business offers do not fall below this value, thereby preserving the
    * offer's value and profitability.
    * The value may be {@code null}.
@@ -316,8 +316,9 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> gtin;
 
   /**
-   * Global Trade Item Numbers ([GTIN](https://support.google.com/merchants/answer/188494#gtin)) of
-   * the item. You can provide up to 10 GTINs.
+   * A list of Global Trade Item Numbers
+   * ([GTIN](https://support.google.com/merchants/answer/188494#gtin)) of the item. You can provide
+   * up to 10 GTINs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -784,7 +785,7 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Used to group items in an arbitrary way. Only for CPA%, discouraged otherwise. For more
+   * Used to group items in an arbitrary way. Only for CPA, discouraged otherwise. For more
    * information, see [Display ads attribute](https://support.google.com/merchants/answer/6069387).
    * @return value or {@code null} for none
    */
@@ -793,7 +794,7 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Used to group items in an arbitrary way. Only for CPA%, discouraged otherwise. For more
+   * Used to group items in an arbitrary way. Only for CPA, discouraged otherwise. For more
    * information, see [Display ads attribute](https://support.google.com/merchants/answer/6069387).
    * @param adsGrouping adsGrouping or {@code null} for none
    */
@@ -874,7 +875,7 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
 
   /**
    * A safeguard in the [automated discounts] (https://support.google.com/merchants/answer/10295759)
-   * and "Dynamic Promotions" (https://support.google.com/merchants/answer/13949249) projects,
+   * and ["dynamic promotions"](https://support.google.com/merchants/answer/13949249) projects,
    * ensuring that discounts on business offers do not fall below this value, thereby preserving the
    * offer's value and profitability.
    * @return value or {@code null} for none
@@ -885,7 +886,7 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
 
   /**
    * A safeguard in the [automated discounts] (https://support.google.com/merchants/answer/10295759)
-   * and "Dynamic Promotions" (https://support.google.com/merchants/answer/13949249) projects,
+   * and ["dynamic promotions"](https://support.google.com/merchants/answer/13949249) projects,
    * ensuring that discounts on business offers do not fall below this value, thereby preserving the
    * offer's value and profitability.
    * @param autoPricingMinPrice autoPricingMinPrice or {@code null} for none
@@ -1447,8 +1448,9 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Global Trade Item Numbers ([GTIN](https://support.google.com/merchants/answer/188494#gtin)) of
-   * the item. You can provide up to 10 GTINs.
+   * A list of Global Trade Item Numbers
+   * ([GTIN](https://support.google.com/merchants/answer/188494#gtin)) of the item. You can provide
+   * up to 10 GTINs.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getGtins() {
@@ -1456,8 +1458,9 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Global Trade Item Numbers ([GTIN](https://support.google.com/merchants/answer/188494#gtin)) of
-   * the item. You can provide up to 10 GTINs.
+   * A list of Global Trade Item Numbers
+   * ([GTIN](https://support.google.com/merchants/answer/188494#gtin)) of the item. You can provide
+   * up to 10 GTINs.
    * @param gtins gtins or {@code null} for none
    */
   public Attributes setGtins(java.util.List<java.lang.String> gtins) {

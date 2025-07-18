@@ -38,7 +38,7 @@ public final class ArtifactConfig extends com.google.api.client.json.GenericJson
   private GoogleArtifactAnalysis googleArtifactAnalysis;
 
   /**
-   * Optional. Set if the artifact is stored in Artifact regsitry.
+   * Optional. Set if the artifact is stored in Artifact registry.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,7 +71,7 @@ public final class ArtifactConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Set if the artifact is stored in Artifact regsitry.
+   * Optional. Set if the artifact is stored in Artifact registry.
    * @return value or {@code null} for none
    */
   public GoogleArtifactRegistry getGoogleArtifactRegistry() {
@@ -79,7 +79,7 @@ public final class ArtifactConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Set if the artifact is stored in Artifact regsitry.
+   * Optional. Set if the artifact is stored in Artifact registry.
    * @param googleArtifactRegistry googleArtifactRegistry or {@code null} for none
    */
   public ArtifactConfig setGoogleArtifactRegistry(GoogleArtifactRegistry googleArtifactRegistry) {

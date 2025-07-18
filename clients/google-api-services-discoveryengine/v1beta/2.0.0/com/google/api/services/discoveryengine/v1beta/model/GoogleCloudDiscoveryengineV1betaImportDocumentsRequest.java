@@ -122,7 +122,7 @@ public final class GoogleCloudDiscoveryengineV1betaImportDocumentsRequest extend
    * sources: * GcsSource. GcsSource.data_schema must be `custom` or `csv`. Otherwise, an
    * INVALID_ARGUMENT error is thrown. * BigQuerySource. BigQuerySource.data_schema must be `custom`
    * or `csv`. Otherwise, an INVALID_ARGUMENT error is thrown. * SpannerSource. * CloudSqlSource. *
-   * FirestoreSource. * BigtableSource.
+   * BigtableSource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -361,7 +361,7 @@ public final class GoogleCloudDiscoveryengineV1betaImportDocumentsRequest extend
    * sources: * GcsSource. GcsSource.data_schema must be `custom` or `csv`. Otherwise, an
    * INVALID_ARGUMENT error is thrown. * BigQuerySource. BigQuerySource.data_schema must be `custom`
    * or `csv`. Otherwise, an INVALID_ARGUMENT error is thrown. * SpannerSource. * CloudSqlSource. *
-   * FirestoreSource. * BigtableSource.
+   * BigtableSource.
    * @return value or {@code null} for none
    */
   public java.lang.String getIdField() {
@@ -381,7 +381,7 @@ public final class GoogleCloudDiscoveryengineV1betaImportDocumentsRequest extend
    * sources: * GcsSource. GcsSource.data_schema must be `custom` or `csv`. Otherwise, an
    * INVALID_ARGUMENT error is thrown. * BigQuerySource. BigQuerySource.data_schema must be `custom`
    * or `csv`. Otherwise, an INVALID_ARGUMENT error is thrown. * SpannerSource. * CloudSqlSource. *
-   * FirestoreSource. * BigtableSource.
+   * BigtableSource.
    * @param idField idField or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaImportDocumentsRequest setIdField(java.lang.String idField) {

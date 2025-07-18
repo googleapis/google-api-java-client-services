@@ -21978,6 +21978,169 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
           }
 
           /**
+           * An accessor for creating requests from the Assistants collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
+           *   {@code DiscoveryEngine.Assistants.List request = discoveryengine.assistants().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public Assistants assistants() {
+            return new Assistants();
+          }
+
+          /**
+           * The "assistants" collection of methods.
+           */
+          public class Assistants {
+
+            /**
+             * Assists the user with a query in a streaming fashion.
+             *
+             * Create a request for the method "assistants.streamAssist".
+             *
+             * This request holds the parameters needed by the discoveryengine server.  After setting any
+             * optional parameters, call the {@link StreamAssist#execute()} method to invoke the remote
+             * operation.
+             *
+             * @param name Required. The resource name of the Assistant. Format: `projects/{project}/locations/{location}/colle
+             *        ctions/{collection}/engines/{engine}/assistants/{assistant}`
+             * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaStreamAssistRequest}
+             * @return the request
+             */
+            public StreamAssist streamAssist(java.lang.String name, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaStreamAssistRequest content) throws java.io.IOException {
+              StreamAssist result = new StreamAssist(name, content);
+              initialize(result);
+              return result;
+            }
+
+            public class StreamAssist extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaStreamAssistResponse> {
+
+              private static final String REST_PATH = "v1alpha/{+name}:streamAssist";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+$");
+
+              /**
+               * Assists the user with a query in a streaming fashion.
+               *
+               * Create a request for the method "assistants.streamAssist".
+               *
+               * This request holds the parameters needed by the the discoveryengine server.  After setting any
+               * optional parameters, call the {@link StreamAssist#execute()} method to invoke the remote
+               * operation. <p> {@link
+               * StreamAssist#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The resource name of the Assistant. Format: `projects/{project}/locations/{location}/colle
+             *        ctions/{collection}/engines/{engine}/assistants/{assistant}`
+               * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaStreamAssistRequest}
+               * @since 1.13
+               */
+              protected StreamAssist(java.lang.String name, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaStreamAssistRequest content) {
+                super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaStreamAssistResponse.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+$");
+                }
+              }
+
+              @Override
+              public StreamAssist set$Xgafv(java.lang.String $Xgafv) {
+                return (StreamAssist) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public StreamAssist setAccessToken(java.lang.String accessToken) {
+                return (StreamAssist) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public StreamAssist setAlt(java.lang.String alt) {
+                return (StreamAssist) super.setAlt(alt);
+              }
+
+              @Override
+              public StreamAssist setCallback(java.lang.String callback) {
+                return (StreamAssist) super.setCallback(callback);
+              }
+
+              @Override
+              public StreamAssist setFields(java.lang.String fields) {
+                return (StreamAssist) super.setFields(fields);
+              }
+
+              @Override
+              public StreamAssist setKey(java.lang.String key) {
+                return (StreamAssist) super.setKey(key);
+              }
+
+              @Override
+              public StreamAssist setOauthToken(java.lang.String oauthToken) {
+                return (StreamAssist) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public StreamAssist setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (StreamAssist) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public StreamAssist setQuotaUser(java.lang.String quotaUser) {
+                return (StreamAssist) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public StreamAssist setUploadType(java.lang.String uploadType) {
+                return (StreamAssist) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public StreamAssist setUploadProtocol(java.lang.String uploadProtocol) {
+                return (StreamAssist) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The resource name of the Assistant. Format: `projects/{project}/locations
+               * /{location}/collections/{collection}/engines/{engine}/assistants/{assistant}`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The resource name of the Assistant. Format: `projects/{project}/locations/{location}/coll
+             ections/{collection}/engines/{engine}/assistants/{assistant}`
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The resource name of the Assistant. Format: `projects/{project}/locations
+               * /{location}/collections/{collection}/engines/{engine}/assistants/{assistant}`
+               */
+              public StreamAssist setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/assistants/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public StreamAssist set(String parameterName, Object value) {
+                return (StreamAssist) super.set(parameterName, value);
+              }
+            }
+
+          }
+          /**
            * An accessor for creating requests from the CompletionConfig collection.
            *
            * <p>The typical use is:</p>

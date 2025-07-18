@@ -31,14 +31,6 @@ package com.google.api.services.videointelligence.v1beta2.model;
 public final class GoogleCloudVideointelligenceV1p1beta1VideoAnnotationProgress extends com.google.api.client.json.GenericJson {
 
   /**
-   * Status of exporting annotation response to user specified `output_uri`. Only set if
-   * `output_uri` is set in the request.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudVideointelligenceV1p1beta1ExportToOutputUriStatus exportStatus;
-
-  /**
    * Specifies which feature is being tracked if the request contains more than one feature.
    * The value may be {@code null}.
    */
@@ -79,25 +71,6 @@ public final class GoogleCloudVideointelligenceV1p1beta1VideoAnnotationProgress 
    */
   @com.google.api.client.util.Key
   private String updateTime;
-
-  /**
-   * Status of exporting annotation response to user specified `output_uri`. Only set if
-   * `output_uri` is set in the request.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudVideointelligenceV1p1beta1ExportToOutputUriStatus getExportStatus() {
-    return exportStatus;
-  }
-
-  /**
-   * Status of exporting annotation response to user specified `output_uri`. Only set if
-   * `output_uri` is set in the request.
-   * @param exportStatus exportStatus or {@code null} for none
-   */
-  public GoogleCloudVideointelligenceV1p1beta1VideoAnnotationProgress setExportStatus(GoogleCloudVideointelligenceV1p1beta1ExportToOutputUriStatus exportStatus) {
-    this.exportStatus = exportStatus;
-    return this;
-  }
 
   /**
    * Specifies which feature is being tracked if the request contains more than one feature.

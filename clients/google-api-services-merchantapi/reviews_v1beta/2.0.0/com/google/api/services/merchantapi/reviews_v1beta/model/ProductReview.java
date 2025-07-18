@@ -31,13 +31,6 @@ package com.google.api.services.merchantapi.reviews_v1beta.model;
 public final class ProductReview extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. A list of product review attributes.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private ProductReviewAttributes attributes;
-
-  /**
    * Optional. A list of custom (merchant-provided) attributes.
    * The value may be {@code null}.
    */
@@ -66,6 +59,13 @@ public final class ProductReview extends com.google.api.client.json.GenericJson 
   private java.lang.String name;
 
   /**
+   * Optional. A list of product review attributes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ProductReviewAttributes productReviewAttributes;
+
+  /**
    * Required. The permanent, unique identifier for the product review in the publisher’s system.
    * The value may be {@code null}.
    */
@@ -79,23 +79,6 @@ public final class ProductReview extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private ProductReviewStatus productReviewStatus;
-
-  /**
-   * Optional. A list of product review attributes.
-   * @return value or {@code null} for none
-   */
-  public ProductReviewAttributes getAttributes() {
-    return attributes;
-  }
-
-  /**
-   * Optional. A list of product review attributes.
-   * @param attributes attributes or {@code null} for none
-   */
-  public ProductReview setAttributes(ProductReviewAttributes attributes) {
-    this.attributes = attributes;
-    return this;
-  }
 
   /**
    * Optional. A list of custom (merchant-provided) attributes.
@@ -147,6 +130,23 @@ public final class ProductReview extends com.google.api.client.json.GenericJson 
    */
   public ProductReview setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. A list of product review attributes.
+   * @return value or {@code null} for none
+   */
+  public ProductReviewAttributes getProductReviewAttributes() {
+    return productReviewAttributes;
+  }
+
+  /**
+   * Optional. A list of product review attributes.
+   * @param productReviewAttributes productReviewAttributes or {@code null} for none
+   */
+  public ProductReview setProductReviewAttributes(ProductReviewAttributes productReviewAttributes) {
+    this.productReviewAttributes = productReviewAttributes;
     return this;
   }
 

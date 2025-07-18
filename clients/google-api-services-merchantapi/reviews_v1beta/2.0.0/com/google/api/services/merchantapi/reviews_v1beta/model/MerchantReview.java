@@ -31,13 +31,6 @@ package com.google.api.services.merchantapi.reviews_v1beta.model;
 public final class MerchantReview extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. A list of merchant review attributes.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private MerchantReviewAttributes attributes;
-
-  /**
    * Optional. A list of custom (merchant-provided) attributes. It can also be used for submitting
    * any attribute of the data specification in its generic form (for example, `{ "name": "size
    * type", "value": "regular" }`). This is useful for submitting attributes not explicitly exposed
@@ -64,6 +57,13 @@ public final class MerchantReview extends com.google.api.client.json.GenericJson
   private java.lang.String dataSource;
 
   /**
+   * Optional. A list of merchant review attributes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MerchantReviewAttributes merchantReviewAttributes;
+
+  /**
    * Required. The user provided merchant review ID to uniquely identify the merchant review.
    * The value may be {@code null}.
    */
@@ -85,23 +85,6 @@ public final class MerchantReview extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
-
-  /**
-   * Optional. A list of merchant review attributes.
-   * @return value or {@code null} for none
-   */
-  public MerchantReviewAttributes getAttributes() {
-    return attributes;
-  }
-
-  /**
-   * Optional. A list of merchant review attributes.
-   * @param attributes attributes or {@code null} for none
-   */
-  public MerchantReview setAttributes(MerchantReviewAttributes attributes) {
-    this.attributes = attributes;
-    return this;
-  }
 
   /**
    * Optional. A list of custom (merchant-provided) attributes. It can also be used for submitting
@@ -146,6 +129,23 @@ public final class MerchantReview extends com.google.api.client.json.GenericJson
    */
   public MerchantReview setDataSource(java.lang.String dataSource) {
     this.dataSource = dataSource;
+    return this;
+  }
+
+  /**
+   * Optional. A list of merchant review attributes.
+   * @return value or {@code null} for none
+   */
+  public MerchantReviewAttributes getMerchantReviewAttributes() {
+    return merchantReviewAttributes;
+  }
+
+  /**
+   * Optional. A list of merchant review attributes.
+   * @param merchantReviewAttributes merchantReviewAttributes or {@code null} for none
+   */
+  public MerchantReview setMerchantReviewAttributes(MerchantReviewAttributes merchantReviewAttributes) {
+    this.merchantReviewAttributes = merchantReviewAttributes;
     return this;
   }
 

@@ -60,7 +60,7 @@ public final class GoogleCloudAiplatformV1beta1Tool extends com.google.api.clien
    * with the current user query. Model may decide to call a subset of these functions by populating
    * FunctionCall in the response. User should provide a FunctionResponse for each function call in
    * the next turn. Based on the function responses, Model will generate the final response back to
-   * the user. Maximum 128 function declarations can be provided.
+   * the user. Maximum 512 function declarations can be provided.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -170,7 +170,7 @@ public final class GoogleCloudAiplatformV1beta1Tool extends com.google.api.clien
    * with the current user query. Model may decide to call a subset of these functions by populating
    * FunctionCall in the response. User should provide a FunctionResponse for each function call in
    * the next turn. Based on the function responses, Model will generate the final response back to
-   * the user. Maximum 128 function declarations can be provided.
+   * the user. Maximum 512 function declarations can be provided.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudAiplatformV1beta1FunctionDeclaration> getFunctionDeclarations() {
@@ -182,7 +182,7 @@ public final class GoogleCloudAiplatformV1beta1Tool extends com.google.api.clien
    * with the current user query. Model may decide to call a subset of these functions by populating
    * FunctionCall in the response. User should provide a FunctionResponse for each function call in
    * the next turn. Based on the function responses, Model will generate the final response back to
-   * the user. Maximum 128 function declarations can be provided.
+   * the user. Maximum 512 function declarations can be provided.
    * @param functionDeclarations functionDeclarations or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Tool setFunctionDeclarations(java.util.List<GoogleCloudAiplatformV1beta1FunctionDeclaration> functionDeclarations) {

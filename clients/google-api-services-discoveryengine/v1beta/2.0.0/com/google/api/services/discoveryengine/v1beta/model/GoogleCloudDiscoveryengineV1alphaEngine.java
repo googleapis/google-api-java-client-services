@@ -89,7 +89,7 @@ public final class GoogleCloudDiscoveryengineV1alphaEngine extends com.google.ap
    * `*`: all features, if it's present, all other feature state settings are ignored. * `agent-
    * gallery` * `no-code-agent-builder` * `prompt-gallery` * `model-selector` * `notebook-lm` *
    * `people-search` * `people-search-org-chart` * `bi-directional-audio` * `feedback` * `session-
-   * sharing`
+   * sharing` * `personalization-memory` - Enables personalization based on user preferences.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -295,7 +295,7 @@ public final class GoogleCloudDiscoveryengineV1alphaEngine extends com.google.ap
    * `*`: all features, if it's present, all other feature state settings are ignored. * `agent-
    * gallery` * `no-code-agent-builder` * `prompt-gallery` * `model-selector` * `notebook-lm` *
    * `people-search` * `people-search-org-chart` * `bi-directional-audio` * `feedback` * `session-
-   * sharing`
+   * sharing` * `personalization-memory` - Enables personalization based on user preferences.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getFeatures() {
@@ -307,7 +307,7 @@ public final class GoogleCloudDiscoveryengineV1alphaEngine extends com.google.ap
    * `*`: all features, if it's present, all other feature state settings are ignored. * `agent-
    * gallery` * `no-code-agent-builder` * `prompt-gallery` * `model-selector` * `notebook-lm` *
    * `people-search` * `people-search-org-chart` * `bi-directional-audio` * `feedback` * `session-
-   * sharing`
+   * sharing` * `personalization-memory` - Enables personalization based on user preferences.
    * @param features features or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaEngine setFeatures(java.util.Map<String, java.lang.String> features) {

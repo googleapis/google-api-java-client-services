@@ -26,6 +26,9 @@ public class DiscoveryEngineScopes {
   /** See, edit, configure, and delete your Google Cloud data and see the email address for your Google Account.. */
   public static final String CLOUD_PLATFORM = "https://www.googleapis.com/auth/cloud-platform";
 
+  /** Search your organization's data in the Cloud Search index. */
+  public static final String CLOUD_SEARCH_QUERY = "https://www.googleapis.com/auth/cloud_search.query";
+
   /**
    * Returns an unmodifiable set that contains all scopes declared by this class.
    *
@@ -34,6 +37,7 @@ public class DiscoveryEngineScopes {
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
     set.add(CLOUD_PLATFORM);
+    set.add(CLOUD_SEARCH_QUERY);
     return java.util.Collections.unmodifiableSet(set);
   }
 

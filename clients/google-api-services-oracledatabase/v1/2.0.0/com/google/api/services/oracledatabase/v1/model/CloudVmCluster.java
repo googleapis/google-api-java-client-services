@@ -32,6 +32,14 @@ package com.google.api.services.oracledatabase.v1.model;
 public final class CloudVmCluster extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The name of the backup OdbSubnet associated with the VM Cluster. Format:
+   * projects/{project}/locations/{location}/odbNetworks/{odb_network}/odbSubnets/{odb_subnet}
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String backupOdbSubnet;
+
+  /**
    * Optional. CIDR range of the backup subnet.
    * The value may be {@code null}.
    */
@@ -99,11 +107,47 @@ public final class CloudVmCluster extends com.google.api.client.json.GenericJson
   private java.lang.String network;
 
   /**
+   * Optional. The name of the OdbNetwork associated with the VM Cluster. Format:
+   * projects/{project}/locations/{location}/odbNetworks/{odb_network} It is optional but if
+   * specified, this should match the parent ODBNetwork of the odb_subnet and backup_odb_subnet.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String odbNetwork;
+
+  /**
+   * Optional. The name of the OdbSubnet associated with the VM Cluster for IP allocation. Format:
+   * projects/{project}/locations/{location}/odbNetworks/{odb_network}/odbSubnets/{odb_subnet}
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String odbSubnet;
+
+  /**
    * Optional. Various properties of the VM Cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private CloudVmClusterProperties properties;
+
+  /**
+   * Optional. The name of the backup OdbSubnet associated with the VM Cluster. Format:
+   * projects/{project}/locations/{location}/odbNetworks/{odb_network}/odbSubnets/{odb_subnet}
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBackupOdbSubnet() {
+    return backupOdbSubnet;
+  }
+
+  /**
+   * Optional. The name of the backup OdbSubnet associated with the VM Cluster. Format:
+   * projects/{project}/locations/{location}/odbNetworks/{odb_network}/odbSubnets/{odb_subnet}
+   * @param backupOdbSubnet backupOdbSubnet or {@code null} for none
+   */
+  public CloudVmCluster setBackupOdbSubnet(java.lang.String backupOdbSubnet) {
+    this.backupOdbSubnet = backupOdbSubnet;
+    return this;
+  }
 
   /**
    * Optional. CIDR range of the backup subnet.
@@ -263,6 +307,46 @@ public final class CloudVmCluster extends com.google.api.client.json.GenericJson
    */
   public CloudVmCluster setNetwork(java.lang.String network) {
     this.network = network;
+    return this;
+  }
+
+  /**
+   * Optional. The name of the OdbNetwork associated with the VM Cluster. Format:
+   * projects/{project}/locations/{location}/odbNetworks/{odb_network} It is optional but if
+   * specified, this should match the parent ODBNetwork of the odb_subnet and backup_odb_subnet.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOdbNetwork() {
+    return odbNetwork;
+  }
+
+  /**
+   * Optional. The name of the OdbNetwork associated with the VM Cluster. Format:
+   * projects/{project}/locations/{location}/odbNetworks/{odb_network} It is optional but if
+   * specified, this should match the parent ODBNetwork of the odb_subnet and backup_odb_subnet.
+   * @param odbNetwork odbNetwork or {@code null} for none
+   */
+  public CloudVmCluster setOdbNetwork(java.lang.String odbNetwork) {
+    this.odbNetwork = odbNetwork;
+    return this;
+  }
+
+  /**
+   * Optional. The name of the OdbSubnet associated with the VM Cluster for IP allocation. Format:
+   * projects/{project}/locations/{location}/odbNetworks/{odb_network}/odbSubnets/{odb_subnet}
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOdbSubnet() {
+    return odbSubnet;
+  }
+
+  /**
+   * Optional. The name of the OdbSubnet associated with the VM Cluster for IP allocation. Format:
+   * projects/{project}/locations/{location}/odbNetworks/{odb_network}/odbSubnets/{odb_subnet}
+   * @param odbSubnet odbSubnet or {@code null} for none
+   */
+  public CloudVmCluster setOdbSubnet(java.lang.String odbSubnet) {
+    this.odbSubnet = odbSubnet;
     return this;
   }
 

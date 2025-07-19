@@ -2003,144 +2003,6 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
-         * Get worker stacktraces from debug capture.
-         *
-         * Create a request for the method "debug.getWorkerStacktraces".
-         *
-         * This request holds the parameters needed by the dataflow server.  After setting any optional
-         * parameters, call the {@link GetWorkerStacktraces#execute()} method to invoke the remote
-         * operation.
-         *
-         * @param projectId The project id.
-         * @param jobId The job for which to get stacktraces.
-         * @param content the {@link com.google.api.services.dataflow.model.GetWorkerStacktracesRequest}
-         * @return the request
-         */
-        public GetWorkerStacktraces getWorkerStacktraces(java.lang.String projectId, java.lang.String jobId, com.google.api.services.dataflow.model.GetWorkerStacktracesRequest content) throws java.io.IOException {
-          GetWorkerStacktraces result = new GetWorkerStacktraces(projectId, jobId, content);
-          initialize(result);
-          return result;
-        }
-
-        public class GetWorkerStacktraces extends DataflowRequest<com.google.api.services.dataflow.model.GetWorkerStacktracesResponse> {
-
-          private static final String REST_PATH = "v1b3/projects/{projectId}/jobs/{jobId}/debug/getWorkerStacktraces";
-
-          /**
-           * Get worker stacktraces from debug capture.
-           *
-           * Create a request for the method "debug.getWorkerStacktraces".
-           *
-           * This request holds the parameters needed by the the dataflow server.  After setting any
-           * optional parameters, call the {@link GetWorkerStacktraces#execute()} method to invoke the
-           * remote operation. <p> {@link GetWorkerStacktraces#initialize(com.google.api.client.googleapis.s
-           * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
-           * after invoking the constructor. </p>
-           *
-           * @param projectId The project id.
-           * @param jobId The job for which to get stacktraces.
-           * @param content the {@link com.google.api.services.dataflow.model.GetWorkerStacktracesRequest}
-           * @since 1.13
-           */
-          protected GetWorkerStacktraces(java.lang.String projectId, java.lang.String jobId, com.google.api.services.dataflow.model.GetWorkerStacktracesRequest content) {
-            super(Dataflow.this, "POST", REST_PATH, content, com.google.api.services.dataflow.model.GetWorkerStacktracesResponse.class);
-            this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
-            this.jobId = com.google.api.client.util.Preconditions.checkNotNull(jobId, "Required parameter jobId must be specified.");
-          }
-
-          @Override
-          public GetWorkerStacktraces set$Xgafv(java.lang.String $Xgafv) {
-            return (GetWorkerStacktraces) super.set$Xgafv($Xgafv);
-          }
-
-          @Override
-          public GetWorkerStacktraces setAccessToken(java.lang.String accessToken) {
-            return (GetWorkerStacktraces) super.setAccessToken(accessToken);
-          }
-
-          @Override
-          public GetWorkerStacktraces setAlt(java.lang.String alt) {
-            return (GetWorkerStacktraces) super.setAlt(alt);
-          }
-
-          @Override
-          public GetWorkerStacktraces setCallback(java.lang.String callback) {
-            return (GetWorkerStacktraces) super.setCallback(callback);
-          }
-
-          @Override
-          public GetWorkerStacktraces setFields(java.lang.String fields) {
-            return (GetWorkerStacktraces) super.setFields(fields);
-          }
-
-          @Override
-          public GetWorkerStacktraces setKey(java.lang.String key) {
-            return (GetWorkerStacktraces) super.setKey(key);
-          }
-
-          @Override
-          public GetWorkerStacktraces setOauthToken(java.lang.String oauthToken) {
-            return (GetWorkerStacktraces) super.setOauthToken(oauthToken);
-          }
-
-          @Override
-          public GetWorkerStacktraces setPrettyPrint(java.lang.Boolean prettyPrint) {
-            return (GetWorkerStacktraces) super.setPrettyPrint(prettyPrint);
-          }
-
-          @Override
-          public GetWorkerStacktraces setQuotaUser(java.lang.String quotaUser) {
-            return (GetWorkerStacktraces) super.setQuotaUser(quotaUser);
-          }
-
-          @Override
-          public GetWorkerStacktraces setUploadType(java.lang.String uploadType) {
-            return (GetWorkerStacktraces) super.setUploadType(uploadType);
-          }
-
-          @Override
-          public GetWorkerStacktraces setUploadProtocol(java.lang.String uploadProtocol) {
-            return (GetWorkerStacktraces) super.setUploadProtocol(uploadProtocol);
-          }
-
-          /** The project id. */
-          @com.google.api.client.util.Key
-          private java.lang.String projectId;
-
-          /** The project id.
-           */
-          public java.lang.String getProjectId() {
-            return projectId;
-          }
-
-          /** The project id. */
-          public GetWorkerStacktraces setProjectId(java.lang.String projectId) {
-            this.projectId = projectId;
-            return this;
-          }
-
-          /** The job for which to get stacktraces. */
-          @com.google.api.client.util.Key
-          private java.lang.String jobId;
-
-          /** The job for which to get stacktraces.
-           */
-          public java.lang.String getJobId() {
-            return jobId;
-          }
-
-          /** The job for which to get stacktraces. */
-          public GetWorkerStacktraces setJobId(java.lang.String jobId) {
-            this.jobId = jobId;
-            return this;
-          }
-
-          @Override
-          public GetWorkerStacktraces set(String parameterName, Object value) {
-            return (GetWorkerStacktraces) super.set(parameterName, value);
-          }
-        }
-        /**
          * Send encoded debug capture data for component.
          *
          * Create a request for the method "debug.sendCapture".
@@ -4850,6 +4712,172 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
             @Override
             public GetConfig set(String parameterName, Object value) {
               return (GetConfig) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Get worker stacktraces from debug capture.
+           *
+           * Create a request for the method "debug.getWorkerStacktraces".
+           *
+           * This request holds the parameters needed by the dataflow server.  After setting any optional
+           * parameters, call the {@link GetWorkerStacktraces#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param projectId The project id.
+           * @param location The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+           *        contains the job specified by job_id.
+           * @param jobId The job for which to get stacktraces.
+           * @param content the {@link com.google.api.services.dataflow.model.GetWorkerStacktracesRequest}
+           * @return the request
+           */
+          public GetWorkerStacktraces getWorkerStacktraces(java.lang.String projectId, java.lang.String location, java.lang.String jobId, com.google.api.services.dataflow.model.GetWorkerStacktracesRequest content) throws java.io.IOException {
+            GetWorkerStacktraces result = new GetWorkerStacktraces(projectId, location, jobId, content);
+            initialize(result);
+            return result;
+          }
+
+          public class GetWorkerStacktraces extends DataflowRequest<com.google.api.services.dataflow.model.GetWorkerStacktracesResponse> {
+
+            private static final String REST_PATH = "v1b3/projects/{projectId}/locations/{location}/jobs/{jobId}/debug/getWorkerStacktraces";
+
+            /**
+             * Get worker stacktraces from debug capture.
+             *
+             * Create a request for the method "debug.getWorkerStacktraces".
+             *
+             * This request holds the parameters needed by the the dataflow server.  After setting any
+             * optional parameters, call the {@link GetWorkerStacktraces#execute()} method to invoke the
+             * remote operation. <p> {@link GetWorkerStacktraces#initialize(com.google.api.client.googleapis.s
+             * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+             * after invoking the constructor. </p>
+             *
+             * @param projectId The project id.
+             * @param location The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+           *        contains the job specified by job_id.
+             * @param jobId The job for which to get stacktraces.
+             * @param content the {@link com.google.api.services.dataflow.model.GetWorkerStacktracesRequest}
+             * @since 1.13
+             */
+            protected GetWorkerStacktraces(java.lang.String projectId, java.lang.String location, java.lang.String jobId, com.google.api.services.dataflow.model.GetWorkerStacktracesRequest content) {
+              super(Dataflow.this, "POST", REST_PATH, content, com.google.api.services.dataflow.model.GetWorkerStacktracesResponse.class);
+              this.projectId = com.google.api.client.util.Preconditions.checkNotNull(projectId, "Required parameter projectId must be specified.");
+              this.location = com.google.api.client.util.Preconditions.checkNotNull(location, "Required parameter location must be specified.");
+              this.jobId = com.google.api.client.util.Preconditions.checkNotNull(jobId, "Required parameter jobId must be specified.");
+            }
+
+            @Override
+            public GetWorkerStacktraces set$Xgafv(java.lang.String $Xgafv) {
+              return (GetWorkerStacktraces) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public GetWorkerStacktraces setAccessToken(java.lang.String accessToken) {
+              return (GetWorkerStacktraces) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public GetWorkerStacktraces setAlt(java.lang.String alt) {
+              return (GetWorkerStacktraces) super.setAlt(alt);
+            }
+
+            @Override
+            public GetWorkerStacktraces setCallback(java.lang.String callback) {
+              return (GetWorkerStacktraces) super.setCallback(callback);
+            }
+
+            @Override
+            public GetWorkerStacktraces setFields(java.lang.String fields) {
+              return (GetWorkerStacktraces) super.setFields(fields);
+            }
+
+            @Override
+            public GetWorkerStacktraces setKey(java.lang.String key) {
+              return (GetWorkerStacktraces) super.setKey(key);
+            }
+
+            @Override
+            public GetWorkerStacktraces setOauthToken(java.lang.String oauthToken) {
+              return (GetWorkerStacktraces) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public GetWorkerStacktraces setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (GetWorkerStacktraces) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public GetWorkerStacktraces setQuotaUser(java.lang.String quotaUser) {
+              return (GetWorkerStacktraces) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public GetWorkerStacktraces setUploadType(java.lang.String uploadType) {
+              return (GetWorkerStacktraces) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public GetWorkerStacktraces setUploadProtocol(java.lang.String uploadProtocol) {
+              return (GetWorkerStacktraces) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** The project id. */
+            @com.google.api.client.util.Key
+            private java.lang.String projectId;
+
+            /** The project id.
+             */
+            public java.lang.String getProjectId() {
+              return projectId;
+            }
+
+            /** The project id. */
+            public GetWorkerStacktraces setProjectId(java.lang.String projectId) {
+              this.projectId = projectId;
+              return this;
+            }
+
+            /**
+             * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+             * endpoints) that contains the job specified by job_id.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String location;
+
+            /** The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+           contains the job specified by job_id.
+             */
+            public java.lang.String getLocation() {
+              return location;
+            }
+
+            /**
+             * The [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
+             * endpoints) that contains the job specified by job_id.
+             */
+            public GetWorkerStacktraces setLocation(java.lang.String location) {
+              this.location = location;
+              return this;
+            }
+
+            /** The job for which to get stacktraces. */
+            @com.google.api.client.util.Key
+            private java.lang.String jobId;
+
+            /** The job for which to get stacktraces.
+             */
+            public java.lang.String getJobId() {
+              return jobId;
+            }
+
+            /** The job for which to get stacktraces. */
+            public GetWorkerStacktraces setJobId(java.lang.String jobId) {
+              this.jobId = jobId;
+              return this;
+            }
+
+            @Override
+            public GetWorkerStacktraces set(String parameterName, Object value) {
+              return (GetWorkerStacktraces) super.set(parameterName, value);
             }
           }
           /**

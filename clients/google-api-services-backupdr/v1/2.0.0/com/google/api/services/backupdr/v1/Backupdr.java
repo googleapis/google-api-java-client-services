@@ -8820,6 +8820,152 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
+         * Returns the Assured Workloads compliance metadata for a given project.
+         *
+         * Create a request for the method "managementServers.msComplianceMetadata".
+         *
+         * This request holds the parameters needed by the backupdr server.  After setting any optional
+         * parameters, call the {@link MsComplianceMetadata#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param parent Required. The project and location to be used to check CSS metadata for target project information,
+         *        in the format 'projects/{project_id}/locations/{location}'. In Cloud BackupDR, locations
+         *        map to Google Cloud regions, for example **us-central1**.
+         * @param content the {@link com.google.api.services.backupdr.v1.model.FetchMsComplianceMetadataRequest}
+         * @return the request
+         */
+        public MsComplianceMetadata msComplianceMetadata(java.lang.String parent, com.google.api.services.backupdr.v1.model.FetchMsComplianceMetadataRequest content) throws java.io.IOException {
+          MsComplianceMetadata result = new MsComplianceMetadata(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class MsComplianceMetadata extends BackupdrRequest<com.google.api.services.backupdr.v1.model.FetchMsComplianceMetadataResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}:msComplianceMetadata";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/managementServers$");
+
+          /**
+           * Returns the Assured Workloads compliance metadata for a given project.
+           *
+           * Create a request for the method "managementServers.msComplianceMetadata".
+           *
+           * This request holds the parameters needed by the the backupdr server.  After setting any
+           * optional parameters, call the {@link MsComplianceMetadata#execute()} method to invoke the
+           * remote operation. <p> {@link MsComplianceMetadata#initialize(com.google.api.client.googleapis.s
+           * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+           * after invoking the constructor. </p>
+           *
+           * @param parent Required. The project and location to be used to check CSS metadata for target project information,
+         *        in the format 'projects/{project_id}/locations/{location}'. In Cloud BackupDR, locations
+         *        map to Google Cloud regions, for example **us-central1**.
+           * @param content the {@link com.google.api.services.backupdr.v1.model.FetchMsComplianceMetadataRequest}
+           * @since 1.13
+           */
+          protected MsComplianceMetadata(java.lang.String parent, com.google.api.services.backupdr.v1.model.FetchMsComplianceMetadataRequest content) {
+            super(Backupdr.this, "POST", REST_PATH, content, com.google.api.services.backupdr.v1.model.FetchMsComplianceMetadataResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/managementServers$");
+            }
+          }
+
+          @Override
+          public MsComplianceMetadata set$Xgafv(java.lang.String $Xgafv) {
+            return (MsComplianceMetadata) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public MsComplianceMetadata setAccessToken(java.lang.String accessToken) {
+            return (MsComplianceMetadata) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public MsComplianceMetadata setAlt(java.lang.String alt) {
+            return (MsComplianceMetadata) super.setAlt(alt);
+          }
+
+          @Override
+          public MsComplianceMetadata setCallback(java.lang.String callback) {
+            return (MsComplianceMetadata) super.setCallback(callback);
+          }
+
+          @Override
+          public MsComplianceMetadata setFields(java.lang.String fields) {
+            return (MsComplianceMetadata) super.setFields(fields);
+          }
+
+          @Override
+          public MsComplianceMetadata setKey(java.lang.String key) {
+            return (MsComplianceMetadata) super.setKey(key);
+          }
+
+          @Override
+          public MsComplianceMetadata setOauthToken(java.lang.String oauthToken) {
+            return (MsComplianceMetadata) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public MsComplianceMetadata setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (MsComplianceMetadata) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public MsComplianceMetadata setQuotaUser(java.lang.String quotaUser) {
+            return (MsComplianceMetadata) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public MsComplianceMetadata setUploadType(java.lang.String uploadType) {
+            return (MsComplianceMetadata) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public MsComplianceMetadata setUploadProtocol(java.lang.String uploadProtocol) {
+            return (MsComplianceMetadata) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The project and location to be used to check CSS metadata for target project
+           * information, in the format 'projects/{project_id}/locations/{location}'. In Cloud
+           * BackupDR, locations map to Google Cloud regions, for example **us-central1**.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The project and location to be used to check CSS metadata for target project information,
+         in the format 'projects/{project_id}/locations/{location}'. In Cloud BackupDR, locations map to
+         Google Cloud regions, for example **us-central1**.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The project and location to be used to check CSS metadata for target project
+           * information, in the format 'projects/{project_id}/locations/{location}'. In Cloud
+           * BackupDR, locations map to Google Cloud regions, for example **us-central1**.
+           */
+          public MsComplianceMetadata setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/managementServers$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public MsComplianceMetadata set(String parameterName, Object value) {
+            return (MsComplianceMetadata) super.set(parameterName, value);
+          }
+        }
+        /**
          * Sets the access control policy on the specified resource. Replaces any existing policy. Can
          * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
          *

@@ -37,6 +37,13 @@ public final class AllocationResourceStatus extends com.google.api.client.json.G
   private AllocationResourceStatusAggregateAllocation aggregateAllocation;
 
   /**
+   * [Output only] Health information for the reservation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AllocationResourceStatusHealthInfo healthInfo;
+
+  /**
    * The number of reservation blocks associated with this reservation.
    * The value may be {@code null}.
    */
@@ -71,6 +78,23 @@ public final class AllocationResourceStatus extends com.google.api.client.json.G
    */
   public AllocationResourceStatus setAggregateAllocation(AllocationResourceStatusAggregateAllocation aggregateAllocation) {
     this.aggregateAllocation = aggregateAllocation;
+    return this;
+  }
+
+  /**
+   * [Output only] Health information for the reservation.
+   * @return value or {@code null} for none
+   */
+  public AllocationResourceStatusHealthInfo getHealthInfo() {
+    return healthInfo;
+  }
+
+  /**
+   * [Output only] Health information for the reservation.
+   * @param healthInfo healthInfo or {@code null} for none
+   */
+  public AllocationResourceStatus setHealthInfo(AllocationResourceStatusHealthInfo healthInfo) {
+    this.healthInfo = healthInfo;
     return this;
   }
 

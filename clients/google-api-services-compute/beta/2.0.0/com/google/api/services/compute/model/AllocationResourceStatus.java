@@ -30,6 +30,13 @@ package com.google.api.services.compute.model;
 public final class AllocationResourceStatus extends com.google.api.client.json.GenericJson {
 
   /**
+   * [Output only] Health information for the reservation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AllocationResourceStatusHealthInfo healthInfo;
+
+  /**
    * The number of reservation blocks associated with this reservation.
    * The value may be {@code null}.
    */
@@ -49,6 +56,23 @@ public final class AllocationResourceStatus extends com.google.api.client.json.G
    */
   @com.google.api.client.util.Key
   private AllocationResourceStatusSpecificSKUAllocation specificSkuAllocation;
+
+  /**
+   * [Output only] Health information for the reservation.
+   * @return value or {@code null} for none
+   */
+  public AllocationResourceStatusHealthInfo getHealthInfo() {
+    return healthInfo;
+  }
+
+  /**
+   * [Output only] Health information for the reservation.
+   * @param healthInfo healthInfo or {@code null} for none
+   */
+  public AllocationResourceStatus setHealthInfo(AllocationResourceStatusHealthInfo healthInfo) {
+    this.healthInfo = healthInfo;
+    return this;
+  }
 
   /**
    * The number of reservation blocks associated with this reservation.

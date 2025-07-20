@@ -58,6 +58,14 @@ public final class ServerAndClientVerification extends com.google.api.client.jso
   private java.lang.String clientKey;
 
   /**
+   * Optional. The hostname mentioned in the Subject or SAN extension of the server certificate. If
+   * this field is not provided, the hostname in the server certificate is not validated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serverCertificateHostname;
+
+  /**
    * Required. Input only. PEM-encoded server root CA certificate.
    * @return value or {@code null} for none
    */
@@ -115,6 +123,25 @@ public final class ServerAndClientVerification extends com.google.api.client.jso
    */
   public ServerAndClientVerification setClientKey(java.lang.String clientKey) {
     this.clientKey = clientKey;
+    return this;
+  }
+
+  /**
+   * Optional. The hostname mentioned in the Subject or SAN extension of the server certificate. If
+   * this field is not provided, the hostname in the server certificate is not validated.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServerCertificateHostname() {
+    return serverCertificateHostname;
+  }
+
+  /**
+   * Optional. The hostname mentioned in the Subject or SAN extension of the server certificate. If
+   * this field is not provided, the hostname in the server certificate is not validated.
+   * @param serverCertificateHostname serverCertificateHostname or {@code null} for none
+   */
+  public ServerAndClientVerification setServerCertificateHostname(java.lang.String serverCertificateHostname) {
+    this.serverCertificateHostname = serverCertificateHostname;
     return this;
   }
 

@@ -103,6 +103,13 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   private String lastConnectionTime;
 
   /**
+   * Output only. The type of the membership.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String membershipType;
+
+  /**
    * Optional. The monitoring config information for this membership.
    * The value may be {@code null}.
    */
@@ -314,6 +321,23 @@ public final class Membership extends com.google.api.client.json.GenericJson {
    */
   public Membership setLastConnectionTime(String lastConnectionTime) {
     this.lastConnectionTime = lastConnectionTime;
+    return this;
+  }
+
+  /**
+   * Output only. The type of the membership.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMembershipType() {
+    return membershipType;
+  }
+
+  /**
+   * Output only. The type of the membership.
+   * @param membershipType membershipType or {@code null} for none
+   */
+  public Membership setMembershipType(java.lang.String membershipType) {
+    this.membershipType = membershipType;
     return this;
   }
 

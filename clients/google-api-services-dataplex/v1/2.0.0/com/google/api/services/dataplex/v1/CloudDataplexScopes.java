@@ -26,9 +26,6 @@ public class CloudDataplexScopes {
   /** See, edit, configure, and delete your Google Cloud data and see the email address for your Google Account.. */
   public static final String CLOUD_PLATFORM = "https://www.googleapis.com/auth/cloud-platform";
 
-  /** View your data across Google Cloud services and see the email address of your Google Account. */
-  public static final String CLOUD_PLATFORM_READ_ONLY = "https://www.googleapis.com/auth/cloud-platform.read-only";
-
   /**
    * Returns an unmodifiable set that contains all scopes declared by this class.
    *
@@ -37,7 +34,6 @@ public class CloudDataplexScopes {
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
     set.add(CLOUD_PLATFORM);
-    set.add(CLOUD_PLATFORM_READ_ONLY);
     return java.util.Collections.unmodifiableSet(set);
   }
 

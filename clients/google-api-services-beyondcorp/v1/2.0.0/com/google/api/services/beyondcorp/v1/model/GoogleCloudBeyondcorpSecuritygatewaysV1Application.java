@@ -71,6 +71,13 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1Application extends co
   private String updateTime;
 
   /**
+   * Optional. Which upstream resources to forward traffic to.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudBeyondcorpSecuritygatewaysV1ApplicationUpstream> upstreams;
+
+  /**
    * Output only. Timestamp when the resource was created.
    * @return value or {@code null} for none
    */
@@ -164,6 +171,23 @@ public final class GoogleCloudBeyondcorpSecuritygatewaysV1Application extends co
    */
   public GoogleCloudBeyondcorpSecuritygatewaysV1Application setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
+    return this;
+  }
+
+  /**
+   * Optional. Which upstream resources to forward traffic to.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudBeyondcorpSecuritygatewaysV1ApplicationUpstream> getUpstreams() {
+    return upstreams;
+  }
+
+  /**
+   * Optional. Which upstream resources to forward traffic to.
+   * @param upstreams upstreams or {@code null} for none
+   */
+  public GoogleCloudBeyondcorpSecuritygatewaysV1Application setUpstreams(java.util.List<GoogleCloudBeyondcorpSecuritygatewaysV1ApplicationUpstream> upstreams) {
+    this.upstreams = upstreams;
     return this;
   }
 

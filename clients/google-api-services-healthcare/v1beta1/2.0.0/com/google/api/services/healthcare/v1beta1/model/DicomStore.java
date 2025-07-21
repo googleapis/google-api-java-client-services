@@ -57,6 +57,19 @@ public final class DicomStore extends com.google.api.client.json.GenericJson {
   private NotificationConfig notificationConfig;
 
   /**
+   * Optional. Specifies where and whether to send notifications upon changes to a DICOM store.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<DicomNotificationConfig> notificationConfigs;
+
+  static {
+    // hack to force ProGuard to consider DicomNotificationConfig used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(DicomNotificationConfig.class);
+  }
+
+  /**
    * Optional. A list of streaming configs used to configure the destination of streaming exports
    * for every DICOM instance insertion in this DICOM store. After a new config is added to
    * `stream_configs`, DICOM instance insertions are streamed to the new destination. When a config
@@ -127,6 +140,23 @@ public final class DicomStore extends com.google.api.client.json.GenericJson {
    */
   public DicomStore setNotificationConfig(NotificationConfig notificationConfig) {
     this.notificationConfig = notificationConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies where and whether to send notifications upon changes to a DICOM store.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<DicomNotificationConfig> getNotificationConfigs() {
+    return notificationConfigs;
+  }
+
+  /**
+   * Optional. Specifies where and whether to send notifications upon changes to a DICOM store.
+   * @param notificationConfigs notificationConfigs or {@code null} for none
+   */
+  public DicomStore setNotificationConfigs(java.util.List<DicomNotificationConfig> notificationConfigs) {
+    this.notificationConfigs = notificationConfigs;
     return this;
   }
 

@@ -33,14 +33,14 @@ package com.google.api.services.documentai.v1.model;
 public final class GoogleCloudDocumentaiV1ProcessorVersion extends com.google.api.client.json.GenericJson {
 
   /**
-   * The time the processor version was created.
+   * Output only. The time the processor version was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * If set, information about the eventual deprecation of this version.
+   * Output only. If set, information about the eventual deprecation of this version.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,7 +54,7 @@ public final class GoogleCloudDocumentaiV1ProcessorVersion extends com.google.ap
   private java.lang.String displayName;
 
   /**
-   * The schema of the processor version. Describes the output.
+   * Output only. The schema of the processor version. Describes the output.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,21 +75,21 @@ public final class GoogleCloudDocumentaiV1ProcessorVersion extends com.google.ap
   private java.lang.Boolean googleManaged;
 
   /**
-   * The KMS key name used for encryption.
+   * Output only. The KMS key name used for encryption.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kmsKeyName;
 
   /**
-   * The KMS key version with which data is encrypted.
+   * Output only. The KMS key version with which data is encrypted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kmsKeyVersionName;
 
   /**
-   * The most recently invoked evaluation for the processor version.
+   * Output only. The most recently invoked evaluation for the processor version.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -132,7 +132,7 @@ public final class GoogleCloudDocumentaiV1ProcessorVersion extends com.google.ap
   private java.lang.String state;
 
   /**
-   * The time the processor version was created.
+   * Output only. The time the processor version was created.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -140,7 +140,7 @@ public final class GoogleCloudDocumentaiV1ProcessorVersion extends com.google.ap
   }
 
   /**
-   * The time the processor version was created.
+   * Output only. The time the processor version was created.
    * @param createTime createTime or {@code null} for none
    */
   public GoogleCloudDocumentaiV1ProcessorVersion setCreateTime(String createTime) {
@@ -149,7 +149,7 @@ public final class GoogleCloudDocumentaiV1ProcessorVersion extends com.google.ap
   }
 
   /**
-   * If set, information about the eventual deprecation of this version.
+   * Output only. If set, information about the eventual deprecation of this version.
    * @return value or {@code null} for none
    */
   public GoogleCloudDocumentaiV1ProcessorVersionDeprecationInfo getDeprecationInfo() {
@@ -157,7 +157,7 @@ public final class GoogleCloudDocumentaiV1ProcessorVersion extends com.google.ap
   }
 
   /**
-   * If set, information about the eventual deprecation of this version.
+   * Output only. If set, information about the eventual deprecation of this version.
    * @param deprecationInfo deprecationInfo or {@code null} for none
    */
   public GoogleCloudDocumentaiV1ProcessorVersion setDeprecationInfo(GoogleCloudDocumentaiV1ProcessorVersionDeprecationInfo deprecationInfo) {
@@ -183,7 +183,7 @@ public final class GoogleCloudDocumentaiV1ProcessorVersion extends com.google.ap
   }
 
   /**
-   * The schema of the processor version. Describes the output.
+   * Output only. The schema of the processor version. Describes the output.
    * @return value or {@code null} for none
    */
   public GoogleCloudDocumentaiV1DocumentSchema getDocumentSchema() {
@@ -191,7 +191,7 @@ public final class GoogleCloudDocumentaiV1ProcessorVersion extends com.google.ap
   }
 
   /**
-   * The schema of the processor version. Describes the output.
+   * Output only. The schema of the processor version. Describes the output.
    * @param documentSchema documentSchema or {@code null} for none
    */
   public GoogleCloudDocumentaiV1ProcessorVersion setDocumentSchema(GoogleCloudDocumentaiV1DocumentSchema documentSchema) {
@@ -234,7 +234,7 @@ public final class GoogleCloudDocumentaiV1ProcessorVersion extends com.google.ap
   }
 
   /**
-   * The KMS key name used for encryption.
+   * Output only. The KMS key name used for encryption.
    * @return value or {@code null} for none
    */
   public java.lang.String getKmsKeyName() {
@@ -242,7 +242,7 @@ public final class GoogleCloudDocumentaiV1ProcessorVersion extends com.google.ap
   }
 
   /**
-   * The KMS key name used for encryption.
+   * Output only. The KMS key name used for encryption.
    * @param kmsKeyName kmsKeyName or {@code null} for none
    */
   public GoogleCloudDocumentaiV1ProcessorVersion setKmsKeyName(java.lang.String kmsKeyName) {
@@ -251,7 +251,7 @@ public final class GoogleCloudDocumentaiV1ProcessorVersion extends com.google.ap
   }
 
   /**
-   * The KMS key version with which data is encrypted.
+   * Output only. The KMS key version with which data is encrypted.
    * @return value or {@code null} for none
    */
   public java.lang.String getKmsKeyVersionName() {
@@ -259,7 +259,7 @@ public final class GoogleCloudDocumentaiV1ProcessorVersion extends com.google.ap
   }
 
   /**
-   * The KMS key version with which data is encrypted.
+   * Output only. The KMS key version with which data is encrypted.
    * @param kmsKeyVersionName kmsKeyVersionName or {@code null} for none
    */
   public GoogleCloudDocumentaiV1ProcessorVersion setKmsKeyVersionName(java.lang.String kmsKeyVersionName) {
@@ -268,7 +268,7 @@ public final class GoogleCloudDocumentaiV1ProcessorVersion extends com.google.ap
   }
 
   /**
-   * The most recently invoked evaluation for the processor version.
+   * Output only. The most recently invoked evaluation for the processor version.
    * @return value or {@code null} for none
    */
   public GoogleCloudDocumentaiV1EvaluationReference getLatestEvaluation() {
@@ -276,7 +276,7 @@ public final class GoogleCloudDocumentaiV1ProcessorVersion extends com.google.ap
   }
 
   /**
-   * The most recently invoked evaluation for the processor version.
+   * Output only. The most recently invoked evaluation for the processor version.
    * @param latestEvaluation latestEvaluation or {@code null} for none
    */
   public GoogleCloudDocumentaiV1ProcessorVersion setLatestEvaluation(GoogleCloudDocumentaiV1EvaluationReference latestEvaluation) {

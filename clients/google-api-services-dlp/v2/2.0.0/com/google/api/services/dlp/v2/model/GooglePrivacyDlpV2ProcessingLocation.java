@@ -33,11 +33,35 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2ProcessingLocation extends com.google.api.client.json.GenericJson {
 
   /**
+   * Document processing will fall back using this configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GooglePrivacyDlpV2DocumentFallbackLocation documentFallbackLocation;
+
+  /**
    * Image processing will fall back using this configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2ImageFallbackLocation imageFallbackLocation;
+
+  /**
+   * Document processing will fall back using this configuration.
+   * @return value or {@code null} for none
+   */
+  public GooglePrivacyDlpV2DocumentFallbackLocation getDocumentFallbackLocation() {
+    return documentFallbackLocation;
+  }
+
+  /**
+   * Document processing will fall back using this configuration.
+   * @param documentFallbackLocation documentFallbackLocation or {@code null} for none
+   */
+  public GooglePrivacyDlpV2ProcessingLocation setDocumentFallbackLocation(GooglePrivacyDlpV2DocumentFallbackLocation documentFallbackLocation) {
+    this.documentFallbackLocation = documentFallbackLocation;
+    return this;
+  }
 
   /**
    * Image processing will fall back using this configuration.

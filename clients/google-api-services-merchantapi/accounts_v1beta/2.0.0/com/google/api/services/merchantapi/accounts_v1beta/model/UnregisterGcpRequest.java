@@ -27,16 +27,16 @@ package com.google.api.services.merchantapi.accounts_v1beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class UnregisterGCPRequest extends com.google.api.client.json.GenericJson {
+public final class UnregisterGcpRequest extends com.google.api.client.json.GenericJson {
 
   @Override
-  public UnregisterGCPRequest set(String fieldName, Object value) {
-    return (UnregisterGCPRequest) super.set(fieldName, value);
+  public UnregisterGcpRequest set(String fieldName, Object value) {
+    return (UnregisterGcpRequest) super.set(fieldName, value);
   }
 
   @Override
-  public UnregisterGCPRequest clone() {
-    return (UnregisterGCPRequest) super.clone();
+  public UnregisterGcpRequest clone() {
+    return (UnregisterGcpRequest) super.clone();
   }
 
 }

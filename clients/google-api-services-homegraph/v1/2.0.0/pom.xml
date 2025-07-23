@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-homegraph</artifactId>
-  <version>v1-rev20250410-2.0.0</version>
-  <name>HomeGraph API v1-rev20250410-2.0.0</name>
+  <version>v1-rev20250716-2.0.0</version>
+  <name>HomeGraph API v1-rev20250716-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

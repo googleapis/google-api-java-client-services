@@ -30,6 +30,13 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1DeployRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * The custom model to deploy from a Google Cloud Storage URI.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1DeployRequestCustomModel customModel;
+
+  /**
    * Optional. The deploy config to use for the deployment. If not specified, the default deploy
    * config will be used.
    * The value may be {@code null}.
@@ -68,6 +75,23 @@ public final class GoogleCloudAiplatformV1beta1DeployRequest extends com.google.
    */
   @com.google.api.client.util.Key
   private java.lang.String publisherModelName;
+
+  /**
+   * The custom model to deploy from a Google Cloud Storage URI.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1DeployRequestCustomModel getCustomModel() {
+    return customModel;
+  }
+
+  /**
+   * The custom model to deploy from a Google Cloud Storage URI.
+   * @param customModel customModel or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1DeployRequest setCustomModel(GoogleCloudAiplatformV1beta1DeployRequestCustomModel customModel) {
+    this.customModel = customModel;
+    return this;
+  }
 
   /**
    * Optional. The deploy config to use for the deployment. If not specified, the default deploy

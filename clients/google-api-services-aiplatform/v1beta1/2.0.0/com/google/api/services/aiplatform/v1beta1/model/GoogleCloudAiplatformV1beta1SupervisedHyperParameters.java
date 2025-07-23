@@ -46,7 +46,7 @@ public final class GoogleCloudAiplatformV1beta1SupervisedHyperParameters extends
 
   /**
    * Optional. Multiplier for adjusting the default learning rate. Mutually exclusive with
-   * `learning_rate`.
+   * `learning_rate`. This feature is only available for 1P models.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,7 +90,7 @@ public final class GoogleCloudAiplatformV1beta1SupervisedHyperParameters extends
 
   /**
    * Optional. Multiplier for adjusting the default learning rate. Mutually exclusive with
-   * `learning_rate`.
+   * `learning_rate`. This feature is only available for 1P models.
    * @return value or {@code null} for none
    */
   public java.lang.Double getLearningRateMultiplier() {
@@ -99,7 +99,7 @@ public final class GoogleCloudAiplatformV1beta1SupervisedHyperParameters extends
 
   /**
    * Optional. Multiplier for adjusting the default learning rate. Mutually exclusive with
-   * `learning_rate`.
+   * `learning_rate`. This feature is only available for 1P models.
    * @param learningRateMultiplier learningRateMultiplier or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1SupervisedHyperParameters setLearningRateMultiplier(java.lang.Double learningRateMultiplier) {

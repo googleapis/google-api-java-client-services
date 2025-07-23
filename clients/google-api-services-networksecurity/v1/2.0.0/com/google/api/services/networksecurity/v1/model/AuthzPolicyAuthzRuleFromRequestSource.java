@@ -30,12 +30,23 @@ package com.google.api.services.networksecurity.v1.model;
 public final class AuthzPolicyAuthzRuleFromRequestSource extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. A list of IPs or CIDRs to match against the source IP of a request. Limited to 5
-   * ip_blocks.
+   * Optional. A list of IP addresses or IP address ranges to match against the source IP address of
+   * the request. Limited to 5 ip_blocks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<AuthzPolicyAuthzRuleIpBlock> ipBlocks;
+
+  /**
+   * Optional. A list of identities derived from the client's certificate. This field will not match
+   * on a request unless frontend mutual TLS is enabled for the forwarding rule or Gateway and the
+   * client certificate has been successfully validated by mTLS. Each identity is a string whose
+   * value is matched against a list of URI SANs, DNS Name SANs, or the common name in the client's
+   * certificate. A match happens when any principal matches with the rule. Limited to 5 principals.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<AuthzPolicyAuthzRulePrincipal> principals;
 
   /**
    * Optional. A list of resources to match against the resource of the source VM of a request.
@@ -46,8 +57,8 @@ public final class AuthzPolicyAuthzRuleFromRequestSource extends com.google.api.
   private java.util.List<AuthzPolicyAuthzRuleRequestResource> resources;
 
   /**
-   * Optional. A list of IPs or CIDRs to match against the source IP of a request. Limited to 5
-   * ip_blocks.
+   * Optional. A list of IP addresses or IP address ranges to match against the source IP address of
+   * the request. Limited to 5 ip_blocks.
    * @return value or {@code null} for none
    */
   public java.util.List<AuthzPolicyAuthzRuleIpBlock> getIpBlocks() {
@@ -55,12 +66,37 @@ public final class AuthzPolicyAuthzRuleFromRequestSource extends com.google.api.
   }
 
   /**
-   * Optional. A list of IPs or CIDRs to match against the source IP of a request. Limited to 5
-   * ip_blocks.
+   * Optional. A list of IP addresses or IP address ranges to match against the source IP address of
+   * the request. Limited to 5 ip_blocks.
    * @param ipBlocks ipBlocks or {@code null} for none
    */
   public AuthzPolicyAuthzRuleFromRequestSource setIpBlocks(java.util.List<AuthzPolicyAuthzRuleIpBlock> ipBlocks) {
     this.ipBlocks = ipBlocks;
+    return this;
+  }
+
+  /**
+   * Optional. A list of identities derived from the client's certificate. This field will not match
+   * on a request unless frontend mutual TLS is enabled for the forwarding rule or Gateway and the
+   * client certificate has been successfully validated by mTLS. Each identity is a string whose
+   * value is matched against a list of URI SANs, DNS Name SANs, or the common name in the client's
+   * certificate. A match happens when any principal matches with the rule. Limited to 5 principals.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<AuthzPolicyAuthzRulePrincipal> getPrincipals() {
+    return principals;
+  }
+
+  /**
+   * Optional. A list of identities derived from the client's certificate. This field will not match
+   * on a request unless frontend mutual TLS is enabled for the forwarding rule or Gateway and the
+   * client certificate has been successfully validated by mTLS. Each identity is a string whose
+   * value is matched against a list of URI SANs, DNS Name SANs, or the common name in the client's
+   * certificate. A match happens when any principal matches with the rule. Limited to 5 principals.
+   * @param principals principals or {@code null} for none
+   */
+  public AuthzPolicyAuthzRuleFromRequestSource setPrincipals(java.util.List<AuthzPolicyAuthzRulePrincipal> principals) {
+    this.principals = principals;
     return this;
   }
 

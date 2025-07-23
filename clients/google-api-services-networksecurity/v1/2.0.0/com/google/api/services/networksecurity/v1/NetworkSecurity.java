@@ -12080,7 +12080,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
          * @param name Required. Name of the ClientTlsPolicy resource. It matches the pattern
-         *        `projects/locations/{location}/clientTlsPolicies/{client_tls_policy}`
+         *        `projects/{project}/locations/{location}/clientTlsPolicies/{client_tls_policy}`
          * @param content the {@link com.google.api.services.networksecurity.v1.model.ClientTlsPolicy}
          * @return the request
          */
@@ -12109,7 +12109,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. Name of the ClientTlsPolicy resource. It matches the pattern
-         *        `projects/locations/{location}/clientTlsPolicies/{client_tls_policy}`
+         *        `projects/{project}/locations/{location}/clientTlsPolicies/{client_tls_policy}`
            * @param content the {@link com.google.api.services.networksecurity.v1.model.ClientTlsPolicy}
            * @since 1.13
            */
@@ -12180,13 +12180,13 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. Name of the ClientTlsPolicy resource. It matches the pattern
-           * `projects/locations/{location}/clientTlsPolicies/{client_tls_policy}`
+           * `projects/{project}/locations/{location}/clientTlsPolicies/{client_tls_policy}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. Name of the ClientTlsPolicy resource. It matches the pattern
-         `projects/locations/{location}/clientTlsPolicies/{client_tls_policy}`
+         `projects/{project}/locations/{location}/clientTlsPolicies/{client_tls_policy}`
            */
           public java.lang.String getName() {
             return name;
@@ -12194,7 +12194,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. Name of the ClientTlsPolicy resource. It matches the pattern
-           * `projects/locations/{location}/clientTlsPolicies/{client_tls_policy}`
+           * `projects/{project}/locations/{location}/clientTlsPolicies/{client_tls_policy}`
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

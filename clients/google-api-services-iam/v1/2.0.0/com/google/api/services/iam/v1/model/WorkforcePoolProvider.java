@@ -128,6 +128,20 @@ public final class WorkforcePoolProvider extends com.google.api.client.json.Gene
   private String expireTime;
 
   /**
+   * Optional. The configuration for OAuth 2.0 client used to get the extended group memberships for
+   * user identities. Only the `AZURE_AD_GROUPS_ID` attribute type is supported. Extended groups
+   * supports a subset of Google Cloud services. When the user accesses these services, extended
+   * group memberships override the mapped `google.groups` attribute. Extended group memberships
+   * cannot be used in attribute mapping or attribute condition expressions. To keep extended group
+   * memberships up to date, extended groups are retrieved when the user signs in and at regular
+   * intervals during the user's active session. Each user identity in the workforce identity pool
+   * must map to a specific, unique Microsoft Entra ID user.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleIamAdminV1WorkforcePoolProviderExtraAttributesOAuth2Client extendedAttributesOauth2Client;
+
+  /**
    * Optional. The configuration for OAuth 2.0 client used to get the additional user attributes.
    * This should be used when users can't get the desired claims in authentication credentials.
    * Currently this configuration is only supported with OIDC protocol.
@@ -377,6 +391,37 @@ public final class WorkforcePoolProvider extends com.google.api.client.json.Gene
    */
   public WorkforcePoolProvider setExpireTime(String expireTime) {
     this.expireTime = expireTime;
+    return this;
+  }
+
+  /**
+   * Optional. The configuration for OAuth 2.0 client used to get the extended group memberships for
+   * user identities. Only the `AZURE_AD_GROUPS_ID` attribute type is supported. Extended groups
+   * supports a subset of Google Cloud services. When the user accesses these services, extended
+   * group memberships override the mapped `google.groups` attribute. Extended group memberships
+   * cannot be used in attribute mapping or attribute condition expressions. To keep extended group
+   * memberships up to date, extended groups are retrieved when the user signs in and at regular
+   * intervals during the user's active session. Each user identity in the workforce identity pool
+   * must map to a specific, unique Microsoft Entra ID user.
+   * @return value or {@code null} for none
+   */
+  public GoogleIamAdminV1WorkforcePoolProviderExtraAttributesOAuth2Client getExtendedAttributesOauth2Client() {
+    return extendedAttributesOauth2Client;
+  }
+
+  /**
+   * Optional. The configuration for OAuth 2.0 client used to get the extended group memberships for
+   * user identities. Only the `AZURE_AD_GROUPS_ID` attribute type is supported. Extended groups
+   * supports a subset of Google Cloud services. When the user accesses these services, extended
+   * group memberships override the mapped `google.groups` attribute. Extended group memberships
+   * cannot be used in attribute mapping or attribute condition expressions. To keep extended group
+   * memberships up to date, extended groups are retrieved when the user signs in and at regular
+   * intervals during the user's active session. Each user identity in the workforce identity pool
+   * must map to a specific, unique Microsoft Entra ID user.
+   * @param extendedAttributesOauth2Client extendedAttributesOauth2Client or {@code null} for none
+   */
+  public WorkforcePoolProvider setExtendedAttributesOauth2Client(GoogleIamAdminV1WorkforcePoolProviderExtraAttributesOAuth2Client extendedAttributesOauth2Client) {
+    this.extendedAttributesOauth2Client = extendedAttributesOauth2Client;
     return this;
   }
 

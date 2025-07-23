@@ -3730,9 +3730,12 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * Chat app's membership](https://developers.google.com/workspace/chat/get-members). Supports the
        * following types of [authentication](https://developers.google.com/workspace/chat/authenticate-
        * authorize): - [App authentication](https://developers.google.com/workspace/chat/authenticate-
-       * authorize-chat-app) with the authorization scope: - `https://www.googleapis.com/auth/chat.bot` -
-       * [User authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
-       * user) with one of the following authorization scopes: -
+       * authorize-chat-app) with one of the following authorization scopes: -
+       * `https://www.googleapis.com/auth/chat.bot` -
+       * `https://www.googleapis.com/auth/chat.app.memberships` (requires [administrator
+       * approval](https://support.google.com/a?p=chat-app-auth)) - [User
+       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+       * with one of the following authorization scopes: -
        * `https://www.googleapis.com/auth/chat.memberships.readonly` -
        * `https://www.googleapis.com/auth/chat.memberships` - User authentication grants administrator
        * privileges when an administrator account authenticates, `use_admin_access` is `true`, and one of
@@ -3771,9 +3774,12 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * Chat app's membership](https://developers.google.com/workspace/chat/get-members). Supports the
          * following types of [authentication](https://developers.google.com/workspace/chat/authenticate-
          * authorize): - [App authentication](https://developers.google.com/workspace/chat/authenticate-
-         * authorize-chat-app) with the authorization scope: - `https://www.googleapis.com/auth/chat.bot`
-         * - [User authentication](https://developers.google.com/workspace/chat/authenticate-authorize-
-         * chat-user) with one of the following authorization scopes: -
+         * authorize-chat-app) with one of the following authorization scopes: -
+         * `https://www.googleapis.com/auth/chat.bot` -
+         * `https://www.googleapis.com/auth/chat.app.memberships` (requires [administrator
+         * approval](https://support.google.com/a?p=chat-app-auth)) - [User
+         * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+         * with one of the following authorization scopes: -
          * `https://www.googleapis.com/auth/chat.memberships.readonly` -
          * `https://www.googleapis.com/auth/chat.memberships` - User authentication grants administrator
          * privileges when an administrator account authenticates, `use_admin_access` is `true`, and one
@@ -3961,7 +3967,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * lists memberships in spaces that the authenticated user has access to. Supports the following
        * types of [authentication](https://developers.google.com/workspace/chat/authenticate-authorize): -
        * [App authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-
-       * app) with the authorization scope: - `https://www.googleapis.com/auth/chat.bot` - [User
+       * app) with one of the following authorization scopes: - `https://www.googleapis.com/auth/chat.bot`
+       * - `https://www.googleapis.com/auth/chat.app.memberships` (requires [administrator
+       * approval](https://support.google.com/a?p=chat-app-auth)) - [User
        * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
        * with one of the following authorization scopes: -
        * `https://www.googleapis.com/auth/chat.memberships.readonly` -
@@ -4004,7 +4012,10 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
          * lists memberships in spaces that the authenticated user has access to. Supports the following
          * types of [authentication](https://developers.google.com/workspace/chat/authenticate-authorize):
          * - [App authentication](https://developers.google.com/workspace/chat/authenticate-authorize-
-         * chat-app) with the authorization scope: - `https://www.googleapis.com/auth/chat.bot` - [User
+         * chat-app) with one of the following authorization scopes: -
+         * `https://www.googleapis.com/auth/chat.bot` -
+         * `https://www.googleapis.com/auth/chat.app.memberships` (requires [administrator
+         * approval](https://support.google.com/a?p=chat-app-auth)) - [User
          * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
          * with one of the following authorization scopes: -
          * `https://www.googleapis.com/auth/chat.memberships.readonly` -

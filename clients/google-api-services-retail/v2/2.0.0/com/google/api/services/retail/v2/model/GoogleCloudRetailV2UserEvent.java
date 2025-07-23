@@ -180,6 +180,19 @@ public final class GoogleCloudRetailV2UserEvent extends com.google.api.client.js
   private java.lang.String pageViewId;
 
   /**
+   * Optional. List of panels associated with this event. Used for panel-level impression data.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudRetailV2PanelInfo> panels;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudRetailV2PanelInfo used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudRetailV2PanelInfo.class);
+  }
+
+  /**
    * The main product details related to the event. This field is optional except for the following
    * event types: * `add-to-cart` * `detail-page-view` * `purchase-complete` In a `search` event,
    * this field represents the products returned to the end user on the current page (the end user
@@ -586,6 +599,23 @@ public final class GoogleCloudRetailV2UserEvent extends com.google.api.client.js
    */
   public GoogleCloudRetailV2UserEvent setPageViewId(java.lang.String pageViewId) {
     this.pageViewId = pageViewId;
+    return this;
+  }
+
+  /**
+   * Optional. List of panels associated with this event. Used for panel-level impression data.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudRetailV2PanelInfo> getPanels() {
+    return panels;
+  }
+
+  /**
+   * Optional. List of panels associated with this event. Used for panel-level impression data.
+   * @param panels panels or {@code null} for none
+   */
+  public GoogleCloudRetailV2UserEvent setPanels(java.util.List<GoogleCloudRetailV2PanelInfo> panels) {
+    this.panels = panels;
     return this;
   }
 

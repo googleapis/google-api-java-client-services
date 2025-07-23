@@ -70,6 +70,16 @@ public final class GoogleCloudAiplatformV1DeployRequestModelConfig extends com.g
   private java.lang.String modelDisplayName;
 
   /**
+   * Optional. The ID to use for the uploaded Model, which will become the final component of the
+   * model resource name. When not provided, Vertex AI will generate a value for this ID. When Model
+   * Registry model is provided, this field will be ignored. This value may be up to 63 characters,
+   * and valid characters are `[a-z0-9_-]`. The first character cannot be a number or hyphen.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String modelUserId;
+
+  /**
    * Optional. Whether the user accepts the End User License Agreement (EULA) for the model.
    * @return value or {@code null} for none
    */
@@ -161,6 +171,29 @@ public final class GoogleCloudAiplatformV1DeployRequestModelConfig extends com.g
    */
   public GoogleCloudAiplatformV1DeployRequestModelConfig setModelDisplayName(java.lang.String modelDisplayName) {
     this.modelDisplayName = modelDisplayName;
+    return this;
+  }
+
+  /**
+   * Optional. The ID to use for the uploaded Model, which will become the final component of the
+   * model resource name. When not provided, Vertex AI will generate a value for this ID. When Model
+   * Registry model is provided, this field will be ignored. This value may be up to 63 characters,
+   * and valid characters are `[a-z0-9_-]`. The first character cannot be a number or hyphen.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getModelUserId() {
+    return modelUserId;
+  }
+
+  /**
+   * Optional. The ID to use for the uploaded Model, which will become the final component of the
+   * model resource name. When not provided, Vertex AI will generate a value for this ID. When Model
+   * Registry model is provided, this field will be ignored. This value may be up to 63 characters,
+   * and valid characters are `[a-z0-9_-]`. The first character cannot be a number or hyphen.
+   * @param modelUserId modelUserId or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1DeployRequestModelConfig setModelUserId(java.lang.String modelUserId) {
+    this.modelUserId = modelUserId;
     return this;
   }
 

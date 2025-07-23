@@ -119,6 +119,14 @@ public final class GoogleCloudAiplatformV1beta1Endpoint extends com.google.api.c
   private java.lang.String etag;
 
   /**
+   * Configures the Google Distributed Cloud (GDC) environment for online prediction. Only set this
+   * field when the Endpoint is to be deployed in a GDC environment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1GdcConfig gdcConfig;
+
+  /**
    * Optional. Configuration for GenAiAdvancedFeatures. If the endpoint is serving GenAI models,
    * advanced features like native RAG integration can be configured. Currently, only Model Garden
    * models are supported.
@@ -404,6 +412,25 @@ public final class GoogleCloudAiplatformV1beta1Endpoint extends com.google.api.c
    */
   public GoogleCloudAiplatformV1beta1Endpoint setEtag(java.lang.String etag) {
     this.etag = etag;
+    return this;
+  }
+
+  /**
+   * Configures the Google Distributed Cloud (GDC) environment for online prediction. Only set this
+   * field when the Endpoint is to be deployed in a GDC environment.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GdcConfig getGdcConfig() {
+    return gdcConfig;
+  }
+
+  /**
+   * Configures the Google Distributed Cloud (GDC) environment for online prediction. Only set this
+   * field when the Endpoint is to be deployed in a GDC environment.
+   * @param gdcConfig gdcConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Endpoint setGdcConfig(GoogleCloudAiplatformV1beta1GdcConfig gdcConfig) {
+    this.gdcConfig = gdcConfig;
     return this;
   }
 

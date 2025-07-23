@@ -30,6 +30,14 @@ package com.google.api.services.firebaseml.v2beta.model;
 public final class GoogleCloudAiplatformV1beta1GroundingChunkMaps extends com.google.api.client.json.GenericJson {
 
   /**
+   * Sources used to generate the place answer. This includes review snippets and photos that were
+   * used to generate the answer, as well as uris to flag content.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1GroundingChunkMapsPlaceAnswerSources placeAnswerSources;
+
+  /**
    * This Place's resource name, in `places/{place_id}` format. Can be used to look up the Place.
    * The value may be {@code null}.
    */
@@ -56,6 +64,25 @@ public final class GoogleCloudAiplatformV1beta1GroundingChunkMaps extends com.go
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
+
+  /**
+   * Sources used to generate the place answer. This includes review snippets and photos that were
+   * used to generate the answer, as well as uris to flag content.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GroundingChunkMapsPlaceAnswerSources getPlaceAnswerSources() {
+    return placeAnswerSources;
+  }
+
+  /**
+   * Sources used to generate the place answer. This includes review snippets and photos that were
+   * used to generate the answer, as well as uris to flag content.
+   * @param placeAnswerSources placeAnswerSources or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GroundingChunkMaps setPlaceAnswerSources(GoogleCloudAiplatformV1beta1GroundingChunkMapsPlaceAnswerSources placeAnswerSources) {
+    this.placeAnswerSources = placeAnswerSources;
+    return this;
+  }
 
   /**
    * This Place's resource name, in `places/{place_id}` format. Can be used to look up the Place.

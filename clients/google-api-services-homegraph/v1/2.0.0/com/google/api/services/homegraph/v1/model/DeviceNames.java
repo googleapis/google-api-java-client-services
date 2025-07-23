@@ -38,7 +38,9 @@ public final class DeviceNames extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> defaultNames;
 
   /**
-   * Primary name of the device, generally provided by the user.
+   * Primary name of the device, generally provided by the user. Names will be truncated if over the
+   * 60 Unicode code point (character) limit and no errors will be thrown. Developers are
+   * responsible for handling long names.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,7 +73,9 @@ public final class DeviceNames extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Primary name of the device, generally provided by the user.
+   * Primary name of the device, generally provided by the user. Names will be truncated if over the
+   * 60 Unicode code point (character) limit and no errors will be thrown. Developers are
+   * responsible for handling long names.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -79,7 +83,9 @@ public final class DeviceNames extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Primary name of the device, generally provided by the user.
+   * Primary name of the device, generally provided by the user. Names will be truncated if over the
+   * 60 Unicode code point (character) limit and no errors will be thrown. Developers are
+   * responsible for handling long names.
    * @param name name or {@code null} for none
    */
   public DeviceNames setName(java.lang.String name) {

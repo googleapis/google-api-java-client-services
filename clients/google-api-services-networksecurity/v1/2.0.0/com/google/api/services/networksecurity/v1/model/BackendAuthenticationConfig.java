@@ -23,7 +23,7 @@ package com.google.api.services.networksecurity.v1.model;
  * should trust backend server certificates that are issued by public certificate authorities, in
  * addition to certificates trusted by the TrustConfig. * `clientCertificate` is a client
  * certificate that the load balancer uses to express its identity to the backend, if the connection
- * to the backend uses mTLS. You can attach the BackendAuthenticationConfig to the load balancer’s
+ * to the backend uses mTLS. You can attach the BackendAuthenticationConfig to the load balancer's
  * BackendService directly determining how that BackendService negotiates TLS.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

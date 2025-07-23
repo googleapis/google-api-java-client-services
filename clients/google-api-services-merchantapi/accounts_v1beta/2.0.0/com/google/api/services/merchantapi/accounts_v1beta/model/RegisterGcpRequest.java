@@ -27,7 +27,7 @@ package com.google.api.services.merchantapi.accounts_v1beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class RegisterGCPRequest extends com.google.api.client.json.GenericJson {
+public final class RegisterGcpRequest extends com.google.api.client.json.GenericJson {
 
   /**
    * Immutable. If the developer email provided is associated with a user in the merchant account
@@ -63,19 +63,19 @@ public final class RegisterGCPRequest extends com.google.api.client.json.Generic
    * preference
    * @param developerEmail developerEmail or {@code null} for none
    */
-  public RegisterGCPRequest setDeveloperEmail(java.lang.String developerEmail) {
+  public RegisterGcpRequest setDeveloperEmail(java.lang.String developerEmail) {
     this.developerEmail = developerEmail;
     return this;
   }
 
   @Override
-  public RegisterGCPRequest set(String fieldName, Object value) {
-    return (RegisterGCPRequest) super.set(fieldName, value);
+  public RegisterGcpRequest set(String fieldName, Object value) {
+    return (RegisterGcpRequest) super.set(fieldName, value);
   }
 
   @Override
-  public RegisterGCPRequest clone() {
-    return (RegisterGCPRequest) super.clone();
+  public RegisterGcpRequest clone() {
+    return (RegisterGcpRequest) super.clone();
   }
 
 }

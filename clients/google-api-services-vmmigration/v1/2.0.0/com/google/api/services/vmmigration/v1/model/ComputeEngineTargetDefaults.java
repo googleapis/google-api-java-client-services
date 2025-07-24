@@ -174,7 +174,7 @@ public final class ComputeEngineTargetDefaults extends com.google.api.client.jso
   private java.lang.Boolean secureBoot;
 
   /**
-   * The service account to associate the VM with.
+   * Optional. The service account to associate the VM with.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -546,7 +546,7 @@ public final class ComputeEngineTargetDefaults extends com.google.api.client.jso
   }
 
   /**
-   * The service account to associate the VM with.
+   * Optional. The service account to associate the VM with.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccount() {
@@ -554,7 +554,7 @@ public final class ComputeEngineTargetDefaults extends com.google.api.client.jso
   }
 
   /**
-   * The service account to associate the VM with.
+   * Optional. The service account to associate the VM with.
    * @param serviceAccount serviceAccount or {@code null} for none
    */
   public ComputeEngineTargetDefaults setServiceAccount(java.lang.String serviceAccount) {

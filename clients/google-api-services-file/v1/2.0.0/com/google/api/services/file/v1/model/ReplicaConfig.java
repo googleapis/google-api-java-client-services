@@ -59,6 +59,13 @@ public final class ReplicaConfig extends com.google.api.client.json.GenericJson 
   private java.util.List<java.lang.String> stateReasons;
 
   /**
+   * Output only. The time when the replica state was updated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String stateUpdateTime;
+
+  /**
    * Output only. The timestamp of the latest replication snapshot taken on the active instance and
    * is already replicated safely.
    * @return value or {@code null} for none
@@ -125,6 +132,23 @@ public final class ReplicaConfig extends com.google.api.client.json.GenericJson 
    */
   public ReplicaConfig setStateReasons(java.util.List<java.lang.String> stateReasons) {
     this.stateReasons = stateReasons;
+    return this;
+  }
+
+  /**
+   * Output only. The time when the replica state was updated.
+   * @return value or {@code null} for none
+   */
+  public String getStateUpdateTime() {
+    return stateUpdateTime;
+  }
+
+  /**
+   * Output only. The time when the replica state was updated.
+   * @param stateUpdateTime stateUpdateTime or {@code null} for none
+   */
+  public ReplicaConfig setStateUpdateTime(String stateUpdateTime) {
+    this.stateUpdateTime = stateUpdateTime;
     return this;
   }
 

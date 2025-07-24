@@ -17,8 +17,9 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * Output only. Annotations associated with the plain-text body of the message. To add basic
- * formatting to a text message, see [Format text
+ * Annotations can be associated with the plain-text body of the message or with chips that link to
+ * Google Workspace resources like Google Docs or Sheets with a `start_index` and `length` of 0. To
+ * add basic formatting to a text message, see [Format text
  * messages](https://developers.google.com/workspace/chat/format-messages). Example plain-text
  * message body: ``` Hello @FooBot how are you!" ``` The corresponding annotations metadata: ```
  * "annotations":[{ "type":"USER_MENTION", "startIndex":6, "length":7, "userMention": { "user": {
@@ -43,7 +44,8 @@ public final class Annotation extends com.google.api.client.json.GenericJson {
   private CustomEmojiMetadata customEmojiMetadata;
 
   /**
-   * Length of the substring in the plain-text message body this annotation corresponds to.
+   * Length of the substring in the plain-text message body this annotation corresponds to. If not
+   * present, indicates a length of 0.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,7 +104,8 @@ public final class Annotation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Length of the substring in the plain-text message body this annotation corresponds to.
+   * Length of the substring in the plain-text message body this annotation corresponds to. If not
+   * present, indicates a length of 0.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getLength() {
@@ -110,7 +113,8 @@ public final class Annotation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Length of the substring in the plain-text message body this annotation corresponds to.
+   * Length of the substring in the plain-text message body this annotation corresponds to. If not
+   * present, indicates a length of 0.
    * @param length length or {@code null} for none
    */
   public Annotation setLength(java.lang.Integer length) {

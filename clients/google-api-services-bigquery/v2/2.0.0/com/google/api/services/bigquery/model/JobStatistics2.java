@@ -429,6 +429,15 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   private java.lang.Long totalPartitionsProcessed;
 
   /**
+   * Output only. Total slot-milliseconds for the job that run on external services and billed on
+   * the service SKU. This field is only populated for jobs that have external service costs, and is
+   * the total of the usage for costs whose billing method is "SERVICES_SKU".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long totalServicesSkuSlotMs;
+
+  /**
    * Output only. Slot-milliseconds for the job.
    * The value may be {@code null}.
    */
@@ -1337,6 +1346,27 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
    */
   public JobStatistics2 setTotalPartitionsProcessed(java.lang.Long totalPartitionsProcessed) {
     this.totalPartitionsProcessed = totalPartitionsProcessed;
+    return this;
+  }
+
+  /**
+   * Output only. Total slot-milliseconds for the job that run on external services and billed on
+   * the service SKU. This field is only populated for jobs that have external service costs, and is
+   * the total of the usage for costs whose billing method is "SERVICES_SKU".
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getTotalServicesSkuSlotMs() {
+    return totalServicesSkuSlotMs;
+  }
+
+  /**
+   * Output only. Total slot-milliseconds for the job that run on external services and billed on
+   * the service SKU. This field is only populated for jobs that have external service costs, and is
+   * the total of the usage for costs whose billing method is "SERVICES_SKU".
+   * @param totalServicesSkuSlotMs totalServicesSkuSlotMs or {@code null} for none
+   */
+  public JobStatistics2 setTotalServicesSkuSlotMs(java.lang.Long totalServicesSkuSlotMs) {
+    this.totalServicesSkuSlotMs = totalServicesSkuSlotMs;
     return this;
   }
 

@@ -29,33 +29,6 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 @SuppressWarnings("javadoc")
 public final class GoogleCloudDiscoveryengineV1alphaStreamAssistRequestToolsSpecWebGroundingSpec extends com.google.api.client.json.GenericJson {
 
-  /**
-   * Optional. Deprecated. Please refrain from using this field. Whether the web grounding tool is
-   * enabled.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean enabled;
-
-  /**
-   * Optional. Deprecated. Please refrain from using this field. Whether the web grounding tool is
-   * enabled.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getEnabled() {
-    return enabled;
-  }
-
-  /**
-   * Optional. Deprecated. Please refrain from using this field. Whether the web grounding tool is
-   * enabled.
-   * @param enabled enabled or {@code null} for none
-   */
-  public GoogleCloudDiscoveryengineV1alphaStreamAssistRequestToolsSpecWebGroundingSpec setEnabled(java.lang.Boolean enabled) {
-    this.enabled = enabled;
-    return this;
-  }
-
   @Override
   public GoogleCloudDiscoveryengineV1alphaStreamAssistRequestToolsSpecWebGroundingSpec set(String fieldName, Object value) {
     return (GoogleCloudDiscoveryengineV1alphaStreamAssistRequestToolsSpecWebGroundingSpec) super.set(fieldName, value);

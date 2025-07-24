@@ -47,6 +47,13 @@ public final class GoogleCloudDiscoveryengineV1alphaProvisionProjectRequest exte
   private java.lang.String dataUseTermsVersion;
 
   /**
+   * Optional. Parameters for Agentspace.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1alphaProvisionProjectRequestSaasParams saasParams;
+
+  /**
    * Required. Set to `true` to specify that caller has read and would like to give consent to the
    * [Terms for data use](https://cloud.google.com/retail/data-use-terms).
    * @return value or {@code null} for none
@@ -83,6 +90,23 @@ public final class GoogleCloudDiscoveryengineV1alphaProvisionProjectRequest exte
    */
   public GoogleCloudDiscoveryengineV1alphaProvisionProjectRequest setDataUseTermsVersion(java.lang.String dataUseTermsVersion) {
     this.dataUseTermsVersion = dataUseTermsVersion;
+    return this;
+  }
+
+  /**
+   * Optional. Parameters for Agentspace.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaProvisionProjectRequestSaasParams getSaasParams() {
+    return saasParams;
+  }
+
+  /**
+   * Optional. Parameters for Agentspace.
+   * @param saasParams saasParams or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaProvisionProjectRequest setSaasParams(GoogleCloudDiscoveryengineV1alphaProvisionProjectRequestSaasParams saasParams) {
+    this.saasParams = saasParams;
     return this;
   }
 

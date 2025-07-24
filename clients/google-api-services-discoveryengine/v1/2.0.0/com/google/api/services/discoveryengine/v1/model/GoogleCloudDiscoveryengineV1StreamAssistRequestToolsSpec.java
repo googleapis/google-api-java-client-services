@@ -37,14 +37,6 @@ public final class GoogleCloudDiscoveryengineV1StreamAssistRequestToolsSpec exte
   private GoogleCloudDiscoveryengineV1StreamAssistRequestToolsSpecImageGenerationSpec imageGenerationSpec;
 
   /**
-   * Optional. The name of the tool registry to use. Format:
-   * `projects/{project}/locations/{location}/toolRegistries/{tool_registry}`
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String toolRegistry;
-
-  /**
    * Optional. Specification of the Vertex AI Search tool.
    * The value may be {@code null}.
    */
@@ -81,25 +73,6 @@ public final class GoogleCloudDiscoveryengineV1StreamAssistRequestToolsSpec exte
    */
   public GoogleCloudDiscoveryengineV1StreamAssistRequestToolsSpec setImageGenerationSpec(GoogleCloudDiscoveryengineV1StreamAssistRequestToolsSpecImageGenerationSpec imageGenerationSpec) {
     this.imageGenerationSpec = imageGenerationSpec;
-    return this;
-  }
-
-  /**
-   * Optional. The name of the tool registry to use. Format:
-   * `projects/{project}/locations/{location}/toolRegistries/{tool_registry}`
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getToolRegistry() {
-    return toolRegistry;
-  }
-
-  /**
-   * Optional. The name of the tool registry to use. Format:
-   * `projects/{project}/locations/{location}/toolRegistries/{tool_registry}`
-   * @param toolRegistry toolRegistry or {@code null} for none
-   */
-  public GoogleCloudDiscoveryengineV1StreamAssistRequestToolsSpec setToolRegistry(java.lang.String toolRegistry) {
-    this.toolRegistry = toolRegistry;
     return this;
   }
 

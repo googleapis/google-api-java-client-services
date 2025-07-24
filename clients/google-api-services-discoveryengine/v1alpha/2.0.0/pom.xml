@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-discoveryengine</artifactId>
-  <version>v1alpha-rev20250716-2.0.0</version>
-  <name>Discovery Engine API v1alpha-rev20250716-2.0.0</name>
+  <version>v1alpha-rev20250723-2.0.0</version>
+  <name>Discovery Engine API v1alpha-rev20250723-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

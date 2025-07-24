@@ -37,7 +37,7 @@ public final class GoogleCloudDiscoveryengineV1betaCmekConfig extends com.google
   private java.lang.Boolean isDefault;
 
   /**
-   * KMS key resource name which will be used to encrypt resources
+   * Required. KMS key resource name which will be used to encrypt resources
    * `projects/{project}/locations/{location}/keyRings/{keyRing}/cryptoKeys/{keyId}`.
    * The value may be {@code null}.
    */
@@ -45,7 +45,7 @@ public final class GoogleCloudDiscoveryengineV1betaCmekConfig extends com.google
   private java.lang.String kmsKey;
 
   /**
-   * KMS key version resource name which will be used to encrypt resources
+   * Output only. KMS key version resource name which will be used to encrypt resources
    * `/cryptoKeyVersions/{keyVersion}`.
    * The value may be {@code null}.
    */
@@ -107,7 +107,7 @@ public final class GoogleCloudDiscoveryengineV1betaCmekConfig extends com.google
   }
 
   /**
-   * KMS key resource name which will be used to encrypt resources
+   * Required. KMS key resource name which will be used to encrypt resources
    * `projects/{project}/locations/{location}/keyRings/{keyRing}/cryptoKeys/{keyId}`.
    * @return value or {@code null} for none
    */
@@ -116,7 +116,7 @@ public final class GoogleCloudDiscoveryengineV1betaCmekConfig extends com.google
   }
 
   /**
-   * KMS key resource name which will be used to encrypt resources
+   * Required. KMS key resource name which will be used to encrypt resources
    * `projects/{project}/locations/{location}/keyRings/{keyRing}/cryptoKeys/{keyId}`.
    * @param kmsKey kmsKey or {@code null} for none
    */
@@ -126,7 +126,7 @@ public final class GoogleCloudDiscoveryengineV1betaCmekConfig extends com.google
   }
 
   /**
-   * KMS key version resource name which will be used to encrypt resources
+   * Output only. KMS key version resource name which will be used to encrypt resources
    * `/cryptoKeyVersions/{keyVersion}`.
    * @return value or {@code null} for none
    */
@@ -135,7 +135,7 @@ public final class GoogleCloudDiscoveryengineV1betaCmekConfig extends com.google
   }
 
   /**
-   * KMS key version resource name which will be used to encrypt resources
+   * Output only. KMS key version resource name which will be used to encrypt resources
    * `/cryptoKeyVersions/{keyVersion}`.
    * @param kmsKeyVersion kmsKeyVersion or {@code null} for none
    */

@@ -37,6 +37,15 @@ public final class GoogleCloudDiscoveryengineV1AssistAnswer extends com.google.a
   private java.util.List<java.lang.String> assistSkippedReasons;
 
   /**
+   * Immutable. Identifier. Resource name of the `AssistAnswer`. Format: `projects/{project}/locatio
+   * ns/{location}/collections/{collection}/engines/{engine}/sessions/{session}/assistAnswers/{assis
+   * t_answer}` This field must be a UTF-8 encoded string with a length limit of 1024 characters.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String name;
+
+  /**
    * Replies of the assistant.
    * The value may be {@code null}.
    */
@@ -64,6 +73,27 @@ public final class GoogleCloudDiscoveryengineV1AssistAnswer extends com.google.a
    */
   public GoogleCloudDiscoveryengineV1AssistAnswer setAssistSkippedReasons(java.util.List<java.lang.String> assistSkippedReasons) {
     this.assistSkippedReasons = assistSkippedReasons;
+    return this;
+  }
+
+  /**
+   * Immutable. Identifier. Resource name of the `AssistAnswer`. Format: `projects/{project}/locatio
+   * ns/{location}/collections/{collection}/engines/{engine}/sessions/{session}/assistAnswers/{assis
+   * t_answer}` This field must be a UTF-8 encoded string with a length limit of 1024 characters.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getName() {
+    return name;
+  }
+
+  /**
+   * Immutable. Identifier. Resource name of the `AssistAnswer`. Format: `projects/{project}/locatio
+   * ns/{location}/collections/{collection}/engines/{engine}/sessions/{session}/assistAnswers/{assis
+   * t_answer}` This field must be a UTF-8 encoded string with a length limit of 1024 characters.
+   * @param name name or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1AssistAnswer setName(java.lang.String name) {
+    this.name = name;
     return this;
   }
 

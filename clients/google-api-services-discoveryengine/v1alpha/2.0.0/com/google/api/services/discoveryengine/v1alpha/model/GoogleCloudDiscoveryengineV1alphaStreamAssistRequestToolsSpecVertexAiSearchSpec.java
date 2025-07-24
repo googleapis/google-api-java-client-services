@@ -44,14 +44,6 @@ public final class GoogleCloudDiscoveryengineV1alphaStreamAssistRequestToolsSpec
   }
 
   /**
-   * Optional. Deprecated. Please refrain from using this field. Whether the Vertex AI Search tool
-   * is disabled. Default value is false, the tool is enabled by default.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean disabled;
-
-  /**
    * Optional. The filter syntax consists of an expression language for constructing a predicate
    * from one or more fields of the documents being filtered. Filter expression is case-sensitive.
    * If this field is unrecognizable, an `INVALID_ARGUMENT` is returned. Filtering in Vertex AI
@@ -82,25 +74,6 @@ public final class GoogleCloudDiscoveryengineV1alphaStreamAssistRequestToolsSpec
    */
   public GoogleCloudDiscoveryengineV1alphaStreamAssistRequestToolsSpecVertexAiSearchSpec setDataStoreSpecs(java.util.List<GoogleCloudDiscoveryengineV1alphaSearchRequestDataStoreSpec> dataStoreSpecs) {
     this.dataStoreSpecs = dataStoreSpecs;
-    return this;
-  }
-
-  /**
-   * Optional. Deprecated. Please refrain from using this field. Whether the Vertex AI Search tool
-   * is disabled. Default value is false, the tool is enabled by default.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getDisabled() {
-    return disabled;
-  }
-
-  /**
-   * Optional. Deprecated. Please refrain from using this field. Whether the Vertex AI Search tool
-   * is disabled. Default value is false, the tool is enabled by default.
-   * @param disabled disabled or {@code null} for none
-   */
-  public GoogleCloudDiscoveryengineV1alphaStreamAssistRequestToolsSpecVertexAiSearchSpec setDisabled(java.lang.Boolean disabled) {
-    this.disabled = disabled;
     return this;
   }
 

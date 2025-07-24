@@ -15731,22 +15731,30 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * A filter to apply on the list results. The supported features are: user_pseudo_id,
-               * state, starred. Examples: "user_pseudo_id = some_id" "starred = true"
+               * A comma-separated list of fields to filter by, in EBNF grammar. The supported
+               * fields are: * `user_pseudo_id` * `state` * `display_name` * `starred` * `is_pinned`
+               * * `labels` * `create_time` * `update_time` Examples: "user_pseudo_id = some_id"
+               * "display_name = \"some_name\"" "starred = true" "is_pinned=true AND (NOT
+               * labels:hidden)" "create_time > \"1970-01-01T12:00:00Z\""
                */
               @com.google.api.client.util.Key
               private java.lang.String filter;
 
-              /** A filter to apply on the list results. The supported features are: user_pseudo_id, state, starred.
-             Examples: "user_pseudo_id = some_id" "starred = true"
+              /** A comma-separated list of fields to filter by, in EBNF grammar. The supported fields are: *
+             `user_pseudo_id` * `state` * `display_name` * `starred` * `is_pinned` * `labels` * `create_time` *
+             `update_time` Examples: "user_pseudo_id = some_id" "display_name = \"some_name\"" "starred = true"
+             "is_pinned=true AND (NOT labels:hidden)" "create_time > \"1970-01-01T12:00:00Z\""
                */
               public java.lang.String getFilter() {
                 return filter;
               }
 
               /**
-               * A filter to apply on the list results. The supported features are: user_pseudo_id,
-               * state, starred. Examples: "user_pseudo_id = some_id" "starred = true"
+               * A comma-separated list of fields to filter by, in EBNF grammar. The supported
+               * fields are: * `user_pseudo_id` * `state` * `display_name` * `starred` * `is_pinned`
+               * * `labels` * `create_time` * `update_time` Examples: "user_pseudo_id = some_id"
+               * "display_name = \"some_name\"" "starred = true" "is_pinned=true AND (NOT
+               * labels:hidden)" "create_time > \"1970-01-01T12:00:00Z\""
                */
               public List setFilter(java.lang.String filter) {
                 this.filter = filter;
@@ -26665,22 +26673,30 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               }
 
               /**
-               * A filter to apply on the list results. The supported features are: user_pseudo_id,
-               * state, starred. Examples: "user_pseudo_id = some_id" "starred = true"
+               * A comma-separated list of fields to filter by, in EBNF grammar. The supported
+               * fields are: * `user_pseudo_id` * `state` * `display_name` * `starred` * `is_pinned`
+               * * `labels` * `create_time` * `update_time` Examples: "user_pseudo_id = some_id"
+               * "display_name = \"some_name\"" "starred = true" "is_pinned=true AND (NOT
+               * labels:hidden)" "create_time > \"1970-01-01T12:00:00Z\""
                */
               @com.google.api.client.util.Key
               private java.lang.String filter;
 
-              /** A filter to apply on the list results. The supported features are: user_pseudo_id, state, starred.
-             Examples: "user_pseudo_id = some_id" "starred = true"
+              /** A comma-separated list of fields to filter by, in EBNF grammar. The supported fields are: *
+             `user_pseudo_id` * `state` * `display_name` * `starred` * `is_pinned` * `labels` * `create_time` *
+             `update_time` Examples: "user_pseudo_id = some_id" "display_name = \"some_name\"" "starred = true"
+             "is_pinned=true AND (NOT labels:hidden)" "create_time > \"1970-01-01T12:00:00Z\""
                */
               public java.lang.String getFilter() {
                 return filter;
               }
 
               /**
-               * A filter to apply on the list results. The supported features are: user_pseudo_id,
-               * state, starred. Examples: "user_pseudo_id = some_id" "starred = true"
+               * A comma-separated list of fields to filter by, in EBNF grammar. The supported
+               * fields are: * `user_pseudo_id` * `state` * `display_name` * `starred` * `is_pinned`
+               * * `labels` * `create_time` * `update_time` Examples: "user_pseudo_id = some_id"
+               * "display_name = \"some_name\"" "starred = true" "is_pinned=true AND (NOT
+               * labels:hidden)" "create_time > \"1970-01-01T12:00:00Z\""
                */
               public List setFilter(java.lang.String filter) {
                 this.filter = filter;
@@ -27101,6 +27117,276 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
                 @Override
                 public Get set(String parameterName, Object value) {
                   return (Get) super.set(parameterName, value);
+                }
+              }
+
+            }
+            /**
+             * An accessor for creating requests from the Files collection.
+             *
+             * <p>The typical use is:</p>
+             * <pre>
+             *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
+             *   {@code DiscoveryEngine.Files.List request = discoveryengine.files().list(parameters ...)}
+             * </pre>
+             *
+             * @return the resource collection
+             */
+            public Files files() {
+              return new Files();
+            }
+
+            /**
+             * The "files" collection of methods.
+             */
+            public class Files {
+
+              /**
+               * Lists metadata for all files in the current session.
+               *
+               * Create a request for the method "files.list".
+               *
+               * This request holds the parameters needed by the discoveryengine server.  After setting any
+               * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+               *
+               * @param parent Required. The resource name of the Session. Format: `projects/{project}/locations/{location}/collect
+               *        ions/{collection}/engines/{engine}/sessions/{session}` Name of the session resource to
+               *        which the file belong.
+               * @return the request
+               */
+              public List list(java.lang.String parent) throws java.io.IOException {
+                List result = new List(parent);
+                initialize(result);
+                return result;
+              }
+
+              public class List extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaListFilesResponse> {
+
+                private static final String REST_PATH = "v1alpha/{+parent}/files";
+
+                private final java.util.regex.Pattern PARENT_PATTERN =
+                    java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/sessions/[^/]+$");
+
+                /**
+                 * Lists metadata for all files in the current session.
+                 *
+                 * Create a request for the method "files.list".
+                 *
+                 * This request holds the parameters needed by the the discoveryengine server.  After setting any
+                 * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+                 * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+                 * must be called to initialize this instance immediately after invoking the constructor. </p>
+                 *
+                 * @param parent Required. The resource name of the Session. Format: `projects/{project}/locations/{location}/collect
+               *        ions/{collection}/engines/{engine}/sessions/{session}` Name of the session resource to
+               *        which the file belong.
+                 * @since 1.13
+                 */
+                protected List(java.lang.String parent) {
+                  super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaListFilesResponse.class);
+                  this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                        "Parameter parent must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/sessions/[^/]+$");
+                  }
+                }
+
+                @Override
+                public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                  return super.executeUsingHead();
+                }
+
+                @Override
+                public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                  return super.buildHttpRequestUsingHead();
+                }
+
+                @Override
+                public List set$Xgafv(java.lang.String $Xgafv) {
+                  return (List) super.set$Xgafv($Xgafv);
+                }
+
+                @Override
+                public List setAccessToken(java.lang.String accessToken) {
+                  return (List) super.setAccessToken(accessToken);
+                }
+
+                @Override
+                public List setAlt(java.lang.String alt) {
+                  return (List) super.setAlt(alt);
+                }
+
+                @Override
+                public List setCallback(java.lang.String callback) {
+                  return (List) super.setCallback(callback);
+                }
+
+                @Override
+                public List setFields(java.lang.String fields) {
+                  return (List) super.setFields(fields);
+                }
+
+                @Override
+                public List setKey(java.lang.String key) {
+                  return (List) super.setKey(key);
+                }
+
+                @Override
+                public List setOauthToken(java.lang.String oauthToken) {
+                  return (List) super.setOauthToken(oauthToken);
+                }
+
+                @Override
+                public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                  return (List) super.setPrettyPrint(prettyPrint);
+                }
+
+                @Override
+                public List setQuotaUser(java.lang.String quotaUser) {
+                  return (List) super.setQuotaUser(quotaUser);
+                }
+
+                @Override
+                public List setUploadType(java.lang.String uploadType) {
+                  return (List) super.setUploadType(uploadType);
+                }
+
+                @Override
+                public List setUploadProtocol(java.lang.String uploadProtocol) {
+                  return (List) super.setUploadProtocol(uploadProtocol);
+                }
+
+                /**
+                 * Required. The resource name of the Session. Format: `projects/{project}/locations
+                 * /{location}/collections/{collection}/engines/{engine}/sessions/{session}` Name of
+                 * the session resource to which the file belong.
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String parent;
+
+                /** Required. The resource name of the Session. Format: `projects/{project}/locations/{location}/collec
+               tions/{collection}/engines/{engine}/sessions/{session}` Name of the session resource to which the
+               file belong.
+                 */
+                public java.lang.String getParent() {
+                  return parent;
+                }
+
+                /**
+                 * Required. The resource name of the Session. Format: `projects/{project}/locations
+                 * /{location}/collections/{collection}/engines/{engine}/sessions/{session}` Name of
+                 * the session resource to which the file belong.
+                 */
+                public List setParent(java.lang.String parent) {
+                  if (!getSuppressPatternChecks()) {
+                    com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                        "Parameter parent must conform to the pattern " +
+                        "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+/sessions/[^/]+$");
+                  }
+                  this.parent = parent;
+                  return this;
+                }
+
+                /**
+                 * Optional. The filter syntax consists of an expression language for constructing a
+                 * predicate from one or more fields of the files being filtered. Filter expression
+                 * is case-sensitive. Currently supported field names are: * upload_time *
+                 * last_add_time * last_use_time * file_name * mime_type Some examples of filters
+                 * would be: * "file_name = 'file_1'" * "file_name = 'file_1' AND mime_type =
+                 * 'text/plain'" * "last_use_time > '2025-06-14T12:00:00Z'" For a full description
+                 * of the filter format, please see https://google.aip.dev/160.
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String filter;
+
+                /** Optional. The filter syntax consists of an expression language for constructing a predicate from
+               one or more fields of the files being filtered. Filter expression is case-sensitive. Currently
+               supported field names are: * upload_time * last_add_time * last_use_time * file_name * mime_type
+               Some examples of filters would be: * "file_name = 'file_1'" * "file_name = 'file_1' AND mime_type =
+               'text/plain'" * "last_use_time > '2025-06-14T12:00:00Z'" For a full description of the filter
+               format, please see https://google.aip.dev/160.
+                 */
+                public java.lang.String getFilter() {
+                  return filter;
+                }
+
+                /**
+                 * Optional. The filter syntax consists of an expression language for constructing a
+                 * predicate from one or more fields of the files being filtered. Filter expression
+                 * is case-sensitive. Currently supported field names are: * upload_time *
+                 * last_add_time * last_use_time * file_name * mime_type Some examples of filters
+                 * would be: * "file_name = 'file_1'" * "file_name = 'file_1' AND mime_type =
+                 * 'text/plain'" * "last_use_time > '2025-06-14T12:00:00Z'" For a full description
+                 * of the filter format, please see https://google.aip.dev/160.
+                 */
+                public List setFilter(java.lang.String filter) {
+                  this.filter = filter;
+                  return this;
+                }
+
+                /**
+                 * Optional. The maximum number of files to return. The service may return fewer
+                 * than this value. If unspecified, at most 100 files will be returned. The maximum
+                 * value is 1000; values above 1000 will be coerced to 1000. If user specifies a
+                 * value less than or equal to 0 - the request will be rejected with an
+                 * INVALID_ARGUMENT error.
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.Integer pageSize;
+
+                /** Optional. The maximum number of files to return. The service may return fewer than this value. If
+               unspecified, at most 100 files will be returned. The maximum value is 1000; values above 1000 will
+               be coerced to 1000. If user specifies a value less than or equal to 0 - the request will be
+               rejected with an INVALID_ARGUMENT error.
+                 */
+                public java.lang.Integer getPageSize() {
+                  return pageSize;
+                }
+
+                /**
+                 * Optional. The maximum number of files to return. The service may return fewer
+                 * than this value. If unspecified, at most 100 files will be returned. The maximum
+                 * value is 1000; values above 1000 will be coerced to 1000. If user specifies a
+                 * value less than or equal to 0 - the request will be rejected with an
+                 * INVALID_ARGUMENT error.
+                 */
+                public List setPageSize(java.lang.Integer pageSize) {
+                  this.pageSize = pageSize;
+                  return this;
+                }
+
+                /**
+                 * Optional. A page token received from a previous `ListFiles` call. Provide this to
+                 * retrieve the subsequent page. When paginating, all other parameters provided to
+                 * `ListFiles` must match the call that provided the page token (except `page_size`,
+                 * which may differ).
+                 */
+                @com.google.api.client.util.Key
+                private java.lang.String pageToken;
+
+                /** Optional. A page token received from a previous `ListFiles` call. Provide this to retrieve the
+               subsequent page. When paginating, all other parameters provided to `ListFiles` must match the call
+               that provided the page token (except `page_size`, which may differ).
+                 */
+                public java.lang.String getPageToken() {
+                  return pageToken;
+                }
+
+                /**
+                 * Optional. A page token received from a previous `ListFiles` call. Provide this to
+                 * retrieve the subsequent page. When paginating, all other parameters provided to
+                 * `ListFiles` must match the call that provided the page token (except `page_size`,
+                 * which may differ).
+                 */
+                public List setPageToken(java.lang.String pageToken) {
+                  this.pageToken = pageToken;
+                  return this;
+                }
+
+                @Override
+                public List set(String parameterName, Object value) {
+                  return (List) super.set(parameterName, value);
                 }
               }
 
@@ -37873,22 +38159,30 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * A filter to apply on the list results. The supported features are: user_pseudo_id,
-             * state, starred. Examples: "user_pseudo_id = some_id" "starred = true"
+             * A comma-separated list of fields to filter by, in EBNF grammar. The supported fields
+             * are: * `user_pseudo_id` * `state` * `display_name` * `starred` * `is_pinned` *
+             * `labels` * `create_time` * `update_time` Examples: "user_pseudo_id = some_id"
+             * "display_name = \"some_name\"" "starred = true" "is_pinned=true AND (NOT
+             * labels:hidden)" "create_time > \"1970-01-01T12:00:00Z\""
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
-            /** A filter to apply on the list results. The supported features are: user_pseudo_id, state, starred.
-           Examples: "user_pseudo_id = some_id" "starred = true"
+            /** A comma-separated list of fields to filter by, in EBNF grammar. The supported fields are: *
+           `user_pseudo_id` * `state` * `display_name` * `starred` * `is_pinned` * `labels` * `create_time` *
+           `update_time` Examples: "user_pseudo_id = some_id" "display_name = \"some_name\"" "starred = true"
+           "is_pinned=true AND (NOT labels:hidden)" "create_time > \"1970-01-01T12:00:00Z\""
              */
             public java.lang.String getFilter() {
               return filter;
             }
 
             /**
-             * A filter to apply on the list results. The supported features are: user_pseudo_id,
-             * state, starred. Examples: "user_pseudo_id = some_id" "starred = true"
+             * A comma-separated list of fields to filter by, in EBNF grammar. The supported fields
+             * are: * `user_pseudo_id` * `state` * `display_name` * `starred` * `is_pinned` *
+             * `labels` * `create_time` * `update_time` Examples: "user_pseudo_id = some_id"
+             * "display_name = \"some_name\"" "starred = true" "is_pinned=true AND (NOT
+             * labels:hidden)" "create_time > \"1970-01-01T12:00:00Z\""
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;

@@ -59,7 +59,7 @@ public final class GoogleCloudSecuritycenterV2Resource extends com.google.api.cl
   private java.lang.String displayName;
 
   /**
-   * The GCP metadata associated with the finding.
+   * The Google Cloud metadata associated with the finding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -183,7 +183,7 @@ public final class GoogleCloudSecuritycenterV2Resource extends com.google.api.cl
   }
 
   /**
-   * The GCP metadata associated with the finding.
+   * The Google Cloud metadata associated with the finding.
    * @return value or {@code null} for none
    */
   public GcpMetadata getGcpMetadata() {
@@ -191,7 +191,7 @@ public final class GoogleCloudSecuritycenterV2Resource extends com.google.api.cl
   }
 
   /**
-   * The GCP metadata associated with the finding.
+   * The Google Cloud metadata associated with the finding.
    * @param gcpMetadata gcpMetadata or {@code null} for none
    */
   public GoogleCloudSecuritycenterV2Resource setGcpMetadata(GcpMetadata gcpMetadata) {

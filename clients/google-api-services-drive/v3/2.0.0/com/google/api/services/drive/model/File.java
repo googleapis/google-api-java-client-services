@@ -1798,8 +1798,8 @@ public final class File extends com.google.api.client.json.GenericJson {
     private java.lang.Boolean canChangeCopyRequiresWriterPermission;
 
     /**
-     * Output only. Whether the current user can change the owner-applied download restrictions of the
-     * file.
+     * Output only. Whether the current user can change the owner or organizer-applied download
+     * restrictions of the file.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -2194,8 +2194,8 @@ public final class File extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Output only. Whether the current user can change the owner-applied download restrictions of the
-     * file.
+     * Output only. Whether the current user can change the owner or organizer-applied download
+     * restrictions of the file.
      * @return value or {@code null} for none
      */
     public java.lang.Boolean getCanChangeItemDownloadRestriction() {
@@ -2203,8 +2203,8 @@ public final class File extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Output only. Whether the current user can change the owner-applied download restrictions of the
-     * file.
+     * Output only. Whether the current user can change the owner or organizer-applied download
+     * restrictions of the file.
      * @param canChangeItemDownloadRestriction canChangeItemDownloadRestriction or {@code null} for none
      */
     public Capabilities setCanChangeItemDownloadRestriction(java.lang.Boolean canChangeItemDownloadRestriction) {

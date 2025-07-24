@@ -30,8 +30,8 @@ package com.google.api.services.drive.model;
 public final class DownloadRestrictionsMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * The effective download restriction applied to this file. This considers all restriction
-   * settings and DLP rules.
+   * Output only. The effective download restriction applied to this file. This considers all
+   * restriction settings and DLP rules.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,8 +46,8 @@ public final class DownloadRestrictionsMetadata extends com.google.api.client.js
   private DownloadRestriction itemDownloadRestriction;
 
   /**
-   * The effective download restriction applied to this file. This considers all restriction
-   * settings and DLP rules.
+   * Output only. The effective download restriction applied to this file. This considers all
+   * restriction settings and DLP rules.
    * @return value or {@code null} for none
    */
   public DownloadRestriction getEffectiveDownloadRestrictionWithContext() {
@@ -55,8 +55,8 @@ public final class DownloadRestrictionsMetadata extends com.google.api.client.js
   }
 
   /**
-   * The effective download restriction applied to this file. This considers all restriction
-   * settings and DLP rules.
+   * Output only. The effective download restriction applied to this file. This considers all
+   * restriction settings and DLP rules.
    * @param effectiveDownloadRestrictionWithContext effectiveDownloadRestrictionWithContext or {@code null} for none
    */
   public DownloadRestrictionsMetadata setEffectiveDownloadRestrictionWithContext(DownloadRestriction effectiveDownloadRestrictionWithContext) {

@@ -1270,6 +1270,32 @@ public class Connectors extends com.google.api.client.googleapis.services.json.A
             return this;
           }
 
+          /**
+           * Optional. If set to true, any child EndUserAuthentication/EventSubscription resources
+           * will also be deleted. Otherwise, the request will fail if the connection has any
+           * children. Followed the best practice from https://aip.dev/135#cascading-delete
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean force;
+
+          /** Optional. If set to true, any child EndUserAuthentication/EventSubscription resources will also be
+         deleted. Otherwise, the request will fail if the connection has any children. Followed the best
+         practice from https://aip.dev/135#cascading-delete
+           */
+          public java.lang.Boolean getForce() {
+            return force;
+          }
+
+          /**
+           * Optional. If set to true, any child EndUserAuthentication/EventSubscription resources
+           * will also be deleted. Otherwise, the request will fail if the connection has any
+           * children. Followed the best practice from https://aip.dev/135#cascading-delete
+           */
+          public Delete setForce(java.lang.Boolean force) {
+            this.force = force;
+            return this;
+          }
+
           @Override
           public Delete set(String parameterName, Object value) {
             return (Delete) super.set(parameterName, value);

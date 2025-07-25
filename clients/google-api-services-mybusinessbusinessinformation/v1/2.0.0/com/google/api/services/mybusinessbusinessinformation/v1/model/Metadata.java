@@ -113,6 +113,13 @@ public final class Metadata extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean hasVoiceOfMerchant;
 
   /**
+   * Output only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isParticularlyPersonalPlace;
+
+  /**
    * Output only. A link to the location on Maps.
    * The value may be {@code null}.
    */
@@ -330,6 +337,23 @@ public final class Metadata extends com.google.api.client.json.GenericJson {
    */
   public Metadata setHasVoiceOfMerchant(java.lang.Boolean hasVoiceOfMerchant) {
     this.hasVoiceOfMerchant = hasVoiceOfMerchant;
+    return this;
+  }
+
+  /**
+   * Output only.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsParticularlyPersonalPlace() {
+    return isParticularlyPersonalPlace;
+  }
+
+  /**
+   * Output only.
+   * @param isParticularlyPersonalPlace isParticularlyPersonalPlace or {@code null} for none
+   */
+  public Metadata setIsParticularlyPersonalPlace(java.lang.Boolean isParticularlyPersonalPlace) {
+    this.isParticularlyPersonalPlace = isParticularlyPersonalPlace;
     return this;
   }
 

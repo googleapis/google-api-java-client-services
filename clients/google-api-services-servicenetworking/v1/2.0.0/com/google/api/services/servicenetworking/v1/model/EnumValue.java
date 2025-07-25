@@ -17,7 +17,10 @@
 package com.google.api.services.servicenetworking.v1.model;
 
 /**
- * Enum value definition.
+ * Enum value definition. New usages of this message as an alternative to EnumValueDescriptorProto
+ * are strongly discouraged. This message does not reliability preserve all information necessary to
+ * model the schema and preserve semantics. Instead make use of FileDescriptorSet which preserves
+ * the necessary information.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Service Networking API. For a detailed explanation

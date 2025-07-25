@@ -22,7 +22,10 @@ package com.google.api.services.servicenetworking.v1beta.model;
  * are different from API Services, which represent a concrete implementation of an interface as
  * opposed to simply a description of methods and bindings. They are also sometimes simply referred
  * to as "APIs" in other contexts, such as the name of this message itself. See
- * https://cloud.google.com/apis/design/glossary for detailed terminology.
+ * https://cloud.google.com/apis/design/glossary for detailed terminology. New usages of this
+ * message as an alternative to ServiceDescriptorProto are strongly discouraged. This message does
+ * not reliability preserve all information necessary to model the schema and preserve semantics.
+ * Instead make use of FileDescriptorSet which preserves the necessary information.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Service Networking API. For a detailed explanation

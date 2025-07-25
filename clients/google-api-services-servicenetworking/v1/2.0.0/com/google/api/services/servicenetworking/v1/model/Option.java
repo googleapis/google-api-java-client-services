@@ -17,7 +17,9 @@
 package com.google.api.services.servicenetworking.v1.model;
 
 /**
- * A protocol buffer option, which can be attached to a message, field, enumeration, etc.
+ * A protocol buffer option, which can be attached to a message, field, enumeration, etc. New usages
+ * of this message as an alternative to FileOptions, MessageOptions, FieldOptions, EnumOptions,
+ * EnumValueOptions, ServiceOptions, or MethodOptions are strongly discouraged.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Service Networking API. For a detailed explanation

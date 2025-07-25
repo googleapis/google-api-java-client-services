@@ -6285,17 +6285,24 @@ public class ShoppingContent extends com.google.api.client.googleapis.services.j
         return this;
       }
 
-      /** Optional. List of fields being updated. */
+      /**
+       * Optional. List of fields being updated. The following fields can be updated:
+       * `attribution_settings`, `display_name`, `currency_code`.
+       */
       @com.google.api.client.util.Key
       private String updateMask;
 
-      /** Optional. List of fields being updated.
+      /** Optional. List of fields being updated. The following fields can be updated:
+     `attribution_settings`, `display_name`, `currency_code`.
        */
       public String getUpdateMask() {
         return updateMask;
       }
 
-      /** Optional. List of fields being updated. */
+      /**
+       * Optional. List of fields being updated. The following fields can be updated:
+       * `attribution_settings`, `display_name`, `currency_code`.
+       */
       public Patch setUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;

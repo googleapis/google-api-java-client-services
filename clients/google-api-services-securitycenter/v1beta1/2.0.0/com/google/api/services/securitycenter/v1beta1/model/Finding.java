@@ -127,6 +127,13 @@ public final class Finding extends com.google.api.client.json.GenericJson {
   private CloudDlpInspection cloudDlpInspection;
 
   /**
+   * Details about the compliance implications of the finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ComplianceDetails complianceDetails;
+
+  /**
    * Contains compliance information for security standards associated to the finding.
    * The value may be {@code null}.
    */
@@ -776,6 +783,23 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    */
   public Finding setCloudDlpInspection(CloudDlpInspection cloudDlpInspection) {
     this.cloudDlpInspection = cloudDlpInspection;
+    return this;
+  }
+
+  /**
+   * Details about the compliance implications of the finding.
+   * @return value or {@code null} for none
+   */
+  public ComplianceDetails getComplianceDetails() {
+    return complianceDetails;
+  }
+
+  /**
+   * Details about the compliance implications of the finding.
+   * @param complianceDetails complianceDetails or {@code null} for none
+   */
+  public Finding setComplianceDetails(ComplianceDetails complianceDetails) {
+    this.complianceDetails = complianceDetails;
     return this;
   }
 

@@ -41,13 +41,6 @@ public final class SecurityContext extends com.google.api.client.json.GenericJso
   private java.lang.Boolean allowPrivilegeEscalation;
 
   /**
-   * Optional. Adds and removes POSIX capabilities from running containers.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private Capabilities capabilities;
-
-  /**
    * Run container in privileged mode.
    * The value may be {@code null}.
    */
@@ -107,23 +100,6 @@ public final class SecurityContext extends com.google.api.client.json.GenericJso
    */
   public SecurityContext setAllowPrivilegeEscalation(java.lang.Boolean allowPrivilegeEscalation) {
     this.allowPrivilegeEscalation = allowPrivilegeEscalation;
-    return this;
-  }
-
-  /**
-   * Optional. Adds and removes POSIX capabilities from running containers.
-   * @return value or {@code null} for none
-   */
-  public Capabilities getCapabilities() {
-    return capabilities;
-  }
-
-  /**
-   * Optional. Adds and removes POSIX capabilities from running containers.
-   * @param capabilities capabilities or {@code null} for none
-   */
-  public SecurityContext setCapabilities(Capabilities capabilities) {
-    this.capabilities = capabilities;
     return this;
   }
 

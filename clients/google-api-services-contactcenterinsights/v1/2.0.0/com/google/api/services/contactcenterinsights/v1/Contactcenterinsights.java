@@ -11368,6 +11368,29 @@ public class Contactcenterinsights extends com.google.api.client.googleapis.serv
           }
 
           /**
+           * Optional. Defaults to false. If set to true, and the conversation is not found, a new
+           * conversation will be created. In this situation, `update_mask` is ignored.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean allowMissing;
+
+          /** Optional. Defaults to false. If set to true, and the conversation is not found, a new conversation
+         will be created. In this situation, `update_mask` is ignored.
+           */
+          public java.lang.Boolean getAllowMissing() {
+            return allowMissing;
+          }
+
+          /**
+           * Optional. Defaults to false. If set to true, and the conversation is not found, a new
+           * conversation will be created. In this situation, `update_mask` is ignored.
+           */
+          public Patch setAllowMissing(java.lang.Boolean allowMissing) {
+            this.allowMissing = allowMissing;
+            return this;
+          }
+
+          /**
            * The list of fields to be updated. All possible fields can be updated by passing `*`, or
            * a subset of the following updateable fields can be provided: * `agent_id` *
            * `language_code` * `labels` * `metadata` * `quality_metadata` * `call_metadata` *

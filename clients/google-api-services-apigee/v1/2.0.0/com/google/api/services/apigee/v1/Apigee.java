@@ -28695,8 +28695,8 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
              * parameters, call the {@link Get#execute()} method to invoke the remote operation.
              *
              * @param name Required. The name of the debug session to retrieve. Must be of the form: `organizations/{organizati
-             *        on}/environments/{environment}/apis/{api}/revisions/{revision}/debugsessions/{session}`.
-             *        If the API proxy resource has the `space` attribute set, IAM permissions are checked
+             *        on}/environments/{environment}/apis/{api}/revisions/{revision}/debugsessions/{debug_sessio
+             *        n}`. If the API proxy resource has the `space` attribute set, IAM permissions are checked
              *        differently . To learn more, read the [Apigee Spaces
              *        Overview](https://cloud.google.com/apigee/docs/api-platform/system-
              *        administration/spaces/apigee-spaces-overview).
@@ -28726,8 +28726,8 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
                * called to initialize this instance immediately after invoking the constructor. </p>
                *
                * @param name Required. The name of the debug session to retrieve. Must be of the form: `organizations/{organizati
-             *        on}/environments/{environment}/apis/{api}/revisions/{revision}/debugsessions/{session}`.
-             *        If the API proxy resource has the `space` attribute set, IAM permissions are checked
+             *        on}/environments/{environment}/apis/{api}/revisions/{revision}/debugsessions/{debug_sessio
+             *        n}`. If the API proxy resource has the `space` attribute set, IAM permissions are checked
              *        differently . To learn more, read the [Apigee Spaces
              *        Overview](https://cloud.google.com/apigee/docs/api-platform/system-
              *        administration/spaces/apigee-spaces-overview).
@@ -28811,17 +28811,17 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
               /**
                * Required. The name of the debug session to retrieve. Must be of the form: `organiza
                * tions/{organization}/environments/{environment}/apis/{api}/revisions/{revision}/deb
-               * ugsessions/{session}`. If the API proxy resource has the `space` attribute set, IAM
-               * permissions are checked differently . To learn more, read the [Apigee Spaces
-               * Overview](https://cloud.google.com/apigee/docs/api-platform/system-
+               * ugsessions/{debug_session}`. If the API proxy resource has the `space` attribute
+               * set, IAM permissions are checked differently . To learn more, read the [Apigee
+               * Spaces Overview](https://cloud.google.com/apigee/docs/api-platform/system-
                * administration/spaces/apigee-spaces-overview).
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
               /** Required. The name of the debug session to retrieve. Must be of the form: `organizations/{organizat
-             ion}/environments/{environment}/apis/{api}/revisions/{revision}/debugsessions/{session}`. If the
-             API proxy resource has the `space` attribute set, IAM permissions are checked differently . To
+             ion}/environments/{environment}/apis/{api}/revisions/{revision}/debugsessions/{debug_session}`. If
+             the API proxy resource has the `space` attribute set, IAM permissions are checked differently . To
              learn more, read the [Apigee Spaces Overview](https://cloud.google.com/apigee/docs/api-
              platform/system-administration/spaces/apigee-spaces-overview).
                */
@@ -28832,9 +28832,9 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
               /**
                * Required. The name of the debug session to retrieve. Must be of the form: `organiza
                * tions/{organization}/environments/{environment}/apis/{api}/revisions/{revision}/deb
-               * ugsessions/{session}`. If the API proxy resource has the `space` attribute set, IAM
-               * permissions are checked differently . To learn more, read the [Apigee Spaces
-               * Overview](https://cloud.google.com/apigee/docs/api-platform/system-
+               * ugsessions/{debug_session}`. If the API proxy resource has the `space` attribute
+               * set, IAM permissions are checked differently . To learn more, read the [Apigee
+               * Spaces Overview](https://cloud.google.com/apigee/docs/api-platform/system-
                * administration/spaces/apigee-spaces-overview).
                */
               public Get setName(java.lang.String name) {
@@ -29016,39 +29016,43 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
                 return this;
               }
 
-              /** Maximum number of debug sessions to return. The page size defaults to 25. */
+              /**
+               * Optional. Maximum number of debug sessions to return. The page size defaults to 25.
+               */
               @com.google.api.client.util.Key
               private java.lang.Integer pageSize;
 
-              /** Maximum number of debug sessions to return. The page size defaults to 25.
+              /** Optional. Maximum number of debug sessions to return. The page size defaults to 25.
                */
               public java.lang.Integer getPageSize() {
                 return pageSize;
               }
 
-              /** Maximum number of debug sessions to return. The page size defaults to 25. */
+              /**
+               * Optional. Maximum number of debug sessions to return. The page size defaults to 25.
+               */
               public List setPageSize(java.lang.Integer pageSize) {
                 this.pageSize = pageSize;
                 return this;
               }
 
               /**
-               * Page token, returned from a previous ListDebugSessions call, that you can use to
-               * retrieve the next page.
+               * Optional. Page token, returned from a previous ListDebugSessions call, that you can
+               * use to retrieve the next page.
                */
               @com.google.api.client.util.Key
               private java.lang.String pageToken;
 
-              /** Page token, returned from a previous ListDebugSessions call, that you can use to retrieve the next
-             page.
+              /** Optional. Page token, returned from a previous ListDebugSessions call, that you can use to retrieve
+             the next page.
                */
               public java.lang.String getPageToken() {
                 return pageToken;
               }
 
               /**
-               * Page token, returned from a previous ListDebugSessions call, that you can use to
-               * retrieve the next page.
+               * Optional. Page token, returned from a previous ListDebugSessions call, that you can
+               * use to retrieve the next page.
                */
               public List setPageToken(java.lang.String pageToken) {
                 this.pageToken = pageToken;
@@ -29090,9 +29094,9 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
                * parameters, call the {@link Get#execute()} method to invoke the remote operation.
                *
                * @param name Required. The name of the debug session transaction. Must be of the form: `organizations/{organizati
-               *        on}/environments/{environment}/apis/{api}/revisions/{revision}/debugsessions/{session}/dat
-               *        a/{transaction}`. If the API proxy resource has the `space` attribute set, IAM permissions
-               *        are checked differently . To learn more, read the [Apigee Spaces
+               *        on}/environments/{environment}/apis/{api}/revisions/{revision}/debugsessions/{debug_sessio
+               *        n}/data/{transaction}`. If the API proxy resource has the `space` attribute set, IAM
+               *        permissions are checked differently . To learn more, read the [Apigee Spaces
                *        Overview](https://cloud.google.com/apigee/docs/api-platform/system-
                *        administration/spaces/apigee-spaces-overview).
                * @return the request
@@ -29121,9 +29125,9 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
                  * called to initialize this instance immediately after invoking the constructor. </p>
                  *
                  * @param name Required. The name of the debug session transaction. Must be of the form: `organizations/{organizati
-               *        on}/environments/{environment}/apis/{api}/revisions/{revision}/debugsessions/{session}/dat
-               *        a/{transaction}`. If the API proxy resource has the `space` attribute set, IAM permissions
-               *        are checked differently . To learn more, read the [Apigee Spaces
+               *        on}/environments/{environment}/apis/{api}/revisions/{revision}/debugsessions/{debug_sessio
+               *        n}/data/{transaction}`. If the API proxy resource has the `space` attribute set, IAM
+               *        permissions are checked differently . To learn more, read the [Apigee Spaces
                *        Overview](https://cloud.google.com/apigee/docs/api-platform/system-
                *        administration/spaces/apigee-spaces-overview).
                  * @since 1.13
@@ -29206,18 +29210,18 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
                 /**
                  * Required. The name of the debug session transaction. Must be of the form: `organi
                  * zations/{organization}/environments/{environment}/apis/{api}/revisions/{revision}
-                 * /debugsessions/{session}/data/{transaction}`. If the API proxy resource has the
-                 * `space` attribute set, IAM permissions are checked differently . To learn more,
-                 * read the [Apigee Spaces Overview](https://cloud.google.com/apigee/docs/api-
+                 * /debugsessions/{debug_session}/data/{transaction}`. If the API proxy resource has
+                 * the `space` attribute set, IAM permissions are checked differently . To learn
+                 * more, read the [Apigee Spaces Overview](https://cloud.google.com/apigee/docs/api-
                  * platform/system-administration/spaces/apigee-spaces-overview).
                  */
                 @com.google.api.client.util.Key
                 private java.lang.String name;
 
                 /** Required. The name of the debug session transaction. Must be of the form: `organizations/{organizat
-               ion}/environments/{environment}/apis/{api}/revisions/{revision}/debugsessions/{session}/data/{trans
-               action}`. If the API proxy resource has the `space` attribute set, IAM permissions are checked
-               differently . To learn more, read the [Apigee Spaces
+               ion}/environments/{environment}/apis/{api}/revisions/{revision}/debugsessions/{debug_session}/data/
+               {transaction}`. If the API proxy resource has the `space` attribute set, IAM permissions are
+               checked differently . To learn more, read the [Apigee Spaces
                Overview](https://cloud.google.com/apigee/docs/api-platform/system-administration/spaces/apigee-
                spaces-overview).
                  */
@@ -29228,9 +29232,9 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
                 /**
                  * Required. The name of the debug session transaction. Must be of the form: `organi
                  * zations/{organization}/environments/{environment}/apis/{api}/revisions/{revision}
-                 * /debugsessions/{session}/data/{transaction}`. If the API proxy resource has the
-                 * `space` attribute set, IAM permissions are checked differently . To learn more,
-                 * read the [Apigee Spaces Overview](https://cloud.google.com/apigee/docs/api-
+                 * /debugsessions/{debug_session}/data/{transaction}`. If the API proxy resource has
+                 * the `space` attribute set, IAM permissions are checked differently . To learn
+                 * more, read the [Apigee Spaces Overview](https://cloud.google.com/apigee/docs/api-
                  * platform/system-administration/spaces/apigee-spaces-overview).
                  */
                 public Get setName(java.lang.String name) {
@@ -52411,22 +52415,22 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
         }
 
         /**
-         * Optional. The list of fields to update. Valid fields to update are `profile`, `scope`,
-         * `include_all_resources`, `include`, and `exclude`.
+         * Optional. The list of fields to update. Valid fields to update are
+         * `include_all_resources` and `include`.
          */
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** Optional. The list of fields to update. Valid fields to update are `profile`, `scope`,
-       `include_all_resources`, `include`, and `exclude`.
+        /** Optional. The list of fields to update. Valid fields to update are `include_all_resources` and
+       `include`.
          */
         public String getUpdateMask() {
           return updateMask;
         }
 
         /**
-         * Optional. The list of fields to update. Valid fields to update are `profile`, `scope`,
-         * `include_all_resources`, `include`, and `exclude`.
+         * Optional. The list of fields to update. Valid fields to update are
+         * `include_all_resources` and `include`.
          */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;

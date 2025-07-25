@@ -130,6 +130,13 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
   private GoogleCloudSecuritycenterV2CloudDlpInspection cloudDlpInspection;
 
   /**
+   * Details about the compliance implications of the finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudSecuritycenterV2ComplianceDetails complianceDetails;
+
+  /**
    * Contains compliance information for security standards associated to the finding.
    * The value may be {@code null}.
    */
@@ -798,6 +805,23 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
    */
   public GoogleCloudSecuritycenterV2Finding setCloudDlpInspection(GoogleCloudSecuritycenterV2CloudDlpInspection cloudDlpInspection) {
     this.cloudDlpInspection = cloudDlpInspection;
+    return this;
+  }
+
+  /**
+   * Details about the compliance implications of the finding.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2ComplianceDetails getComplianceDetails() {
+    return complianceDetails;
+  }
+
+  /**
+   * Details about the compliance implications of the finding.
+   * @param complianceDetails complianceDetails or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2Finding setComplianceDetails(GoogleCloudSecuritycenterV2ComplianceDetails complianceDetails) {
+    this.complianceDetails = complianceDetails;
     return this;
   }
 

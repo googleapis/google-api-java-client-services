@@ -17,7 +17,7 @@
 package com.google.api.services.redis.v1.model;
 
 /**
- * Common model for database resource instance metadata. Next ID: 25
+ * Common model for database resource instance metadata. Next ID: 26
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Cloud Memorystore for Redis API. For a
@@ -50,6 +50,13 @@ public final class DatabaseResourceMetadata extends com.google.api.client.json.G
    */
   @com.google.api.client.util.Key
   private BackupRun backupRun;
+
+  /**
+   * Optional. BackupDR Configuration for the resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BackupDRConfiguration backupdrConfiguration;
 
   /**
    * The creation time of the resource, i.e. the time when resource is created and recorded in
@@ -250,6 +257,23 @@ public final class DatabaseResourceMetadata extends com.google.api.client.json.G
    */
   public DatabaseResourceMetadata setBackupRun(BackupRun backupRun) {
     this.backupRun = backupRun;
+    return this;
+  }
+
+  /**
+   * Optional. BackupDR Configuration for the resource.
+   * @return value or {@code null} for none
+   */
+  public BackupDRConfiguration getBackupdrConfiguration() {
+    return backupdrConfiguration;
+  }
+
+  /**
+   * Optional. BackupDR Configuration for the resource.
+   * @param backupdrConfiguration backupdrConfiguration or {@code null} for none
+   */
+  public DatabaseResourceMetadata setBackupdrConfiguration(BackupDRConfiguration backupdrConfiguration) {
+    this.backupdrConfiguration = backupdrConfiguration;
     return this;
   }
 

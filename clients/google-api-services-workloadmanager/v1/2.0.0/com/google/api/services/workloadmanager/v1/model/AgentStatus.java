@@ -79,6 +79,13 @@ public final class AgentStatus extends com.google.api.client.json.GenericJson {
   private java.lang.String installedVersion;
 
   /**
+   * Output only. The URI of the instance. Format: projects//zones//instances/
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String instanceUri;
+
+  /**
    * Output only. The kernel version of the system.
    * The value may be {@code null}.
    */
@@ -229,6 +236,23 @@ public final class AgentStatus extends com.google.api.client.json.GenericJson {
    */
   public AgentStatus setInstalledVersion(java.lang.String installedVersion) {
     this.installedVersion = installedVersion;
+    return this;
+  }
+
+  /**
+   * Output only. The URI of the instance. Format: projects//zones//instances/
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getInstanceUri() {
+    return instanceUri;
+  }
+
+  /**
+   * Output only. The URI of the instance. Format: projects//zones//instances/
+   * @param instanceUri instanceUri or {@code null} for none
+   */
+  public AgentStatus setInstanceUri(java.lang.String instanceUri) {
+    this.instanceUri = instanceUri;
     return this;
   }
 

@@ -33,21 +33,21 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2ProcessingLocation extends com.google.api.client.json.GenericJson {
 
   /**
-   * Document processing will fall back using this configuration.
+   * Document processing falls back using this configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2DocumentFallbackLocation documentFallbackLocation;
 
   /**
-   * Image processing will fall back using this configuration.
+   * Image processing falls back using this configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GooglePrivacyDlpV2ImageFallbackLocation imageFallbackLocation;
 
   /**
-   * Document processing will fall back using this configuration.
+   * Document processing falls back using this configuration.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2DocumentFallbackLocation getDocumentFallbackLocation() {
@@ -55,7 +55,7 @@ public final class GooglePrivacyDlpV2ProcessingLocation extends com.google.api.c
   }
 
   /**
-   * Document processing will fall back using this configuration.
+   * Document processing falls back using this configuration.
    * @param documentFallbackLocation documentFallbackLocation or {@code null} for none
    */
   public GooglePrivacyDlpV2ProcessingLocation setDocumentFallbackLocation(GooglePrivacyDlpV2DocumentFallbackLocation documentFallbackLocation) {
@@ -64,7 +64,7 @@ public final class GooglePrivacyDlpV2ProcessingLocation extends com.google.api.c
   }
 
   /**
-   * Image processing will fall back using this configuration.
+   * Image processing falls back using this configuration.
    * @return value or {@code null} for none
    */
   public GooglePrivacyDlpV2ImageFallbackLocation getImageFallbackLocation() {
@@ -72,7 +72,7 @@ public final class GooglePrivacyDlpV2ProcessingLocation extends com.google.api.c
   }
 
   /**
-   * Image processing will fall back using this configuration.
+   * Image processing falls back using this configuration.
    * @param imageFallbackLocation imageFallbackLocation or {@code null} for none
    */
   public GooglePrivacyDlpV2ProcessingLocation setImageFallbackLocation(GooglePrivacyDlpV2ImageFallbackLocation imageFallbackLocation) {
